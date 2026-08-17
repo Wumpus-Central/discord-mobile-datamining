@@ -1,12 +1,12 @@
 // _runtime/06446_map.js
-import _slicedToArray from "_slicedToArray";
-import { useMemo } from "noop";
-import { hash } from "06434_hash.js";
-import { items2 } from "06435_items2.js";
-import { isNativeEvent } from "06447_isNativeEvent.js";
-import { 06420__ } from "metro/06420__.js";
+import _mod6420 from "module_6420" /* 6420 */;
+import hash from "hash" /* 6434 */;
+import items2 from "items2" /* 6435 */;
+import isNativeEvent from "isNativeEvent" /* 6447 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import { useMemo } from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 const map = new Map();
 function DEFAULT_PROPS_TRANSFORMER(arg0) {
   return arg0;
@@ -36,7 +36,7 @@ export const resolveInternalConfigProps = function resolveInternalConfigProps(us
   const disableReanimated = useAnimated.disableReanimated;
   let result = !disableReanimated;
   if (!disableReanimated) {
-    result = undefined !== 06420__.Reanimated;
+    result = undefined !== _mod6420.Reanimated;
   }
   if (result) {
     result = hash.hasWorkletEventHandlers(useAnimated);
@@ -113,32 +113,32 @@ export const prepareConfigForNativeSide = function prepareConfigForNativeSide(cl
   return obj;
 };
 export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(gestureHandlerProps, map, transformHoverProps) {
-  let closure_0 = gestureHandlerProps;
+  closure_0 = gestureHandlerProps;
   let tmp = map;
   if (map === undefined) {
     tmp = map;
   }
-  const dependencyMap = tmp;
+  closure_1 = tmp;
   let tmp2 = transformHoverProps;
   if (transformHoverProps === undefined) {
     tmp2 = DEFAULT_PROPS_TRANSFORMER;
   }
-  let _slicedToArray = tmp2;
+  closure_2 = tmp2;
   const items = [gestureHandlerProps, tmp, tmp2];
   return useMemo(() => {
     const obj = {};
     const merged = Object.assign(obj);
-    const item = tmp.forEach((arg0, arg1) => {
+    const item = closure_1.forEach((arg0, arg1) => {
       if (arg1 in obj) {
         tmp3[arg0] = tmp3[arg1];
         delete tmp[tmp2];
       }
     });
-    const tmp3 = tmp2(obj);
+    const tmp3 = callback(obj);
     let useAnimated = tmp3.useAnimated;
     if (!useAnimated) {
-      useAnimated = gestureHandlerProps(tmp[4]).isNativeAnimatedEvent(tmp3.onUpdate);
-      const obj2 = gestureHandlerProps(tmp[4]);
+      useAnimated = gestureHandlerProps(closure_1[4]).isNativeAnimatedEvent(tmp3.onUpdate);
+      const obj2 = gestureHandlerProps(closure_1[4]);
     }
     tmp3.dispatchesAnimatedEvents = useAnimated;
     if (tmp3.dispatchesAnimatedEvents) {
@@ -147,17 +147,17 @@ export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(ge
     const disableReanimated = tmp3.disableReanimated;
     let result = !disableReanimated;
     if (!disableReanimated) {
-      result = undefined !== gestureHandlerProps(tmp[5]).Reanimated;
+      result = undefined !== gestureHandlerProps(closure_1[5]).Reanimated;
     }
     if (result) {
-      result = gestureHandlerProps(tmp[3]).hasWorkletEventHandlers(tmp3);
-      const obj3 = gestureHandlerProps(tmp[3]);
+      result = gestureHandlerProps(closure_1[3]).hasWorkletEventHandlers(tmp3);
+      const obj3 = gestureHandlerProps(closure_1[3]);
     }
     if (result) {
       result = !tmp3.dispatchesAnimatedEvents;
     }
     tmp3.shouldUseReanimatedDetector = result;
-    tmp3.needsPointerData = gestureHandlerProps(tmp[4]).shouldHandleTouchEvents(tmp3);
+    tmp3.needsPointerData = gestureHandlerProps(closure_1[4]).shouldHandleTouchEvents(tmp3);
     return tmp3;
   }, items);
 };

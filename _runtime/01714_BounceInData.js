@@ -1,14 +1,5 @@
 // _runtime/01714_BounceInData.js
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
+import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
 
 obj = { BounceIn: { name: "BounceIn", style: obj, duration: 0.6 }, BounceInRight: { name: "BounceInRight", style: obj, duration: 0.6 }, BounceInLeft: { name: "BounceInLeft", style: obj1, duration: 0.6 }, BounceInUp: { name: "BounceInUp", style: obj2, duration: 0.6 }, BounceInDown: { name: "BounceInDown", style: obj3, duration: 0.6 } };
 obj = { 0: { transform: items }, 55: null, 70: null, 85: null, 100: null };

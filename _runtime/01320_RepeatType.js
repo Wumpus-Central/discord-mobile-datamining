@@ -1,6 +1,7 @@
 // _runtime/01320_RepeatType.js
-import { lowerCamelCase } from "01321_lowerCamelCase.js";
-const require = arg1;
+import lowerCamelCase from "lowerCamelCase" /* 1321 */;
+
+require = arg1;
 const dependencyMap = arg6;
 ScalarType.ScalarType = undefined;
 ScalarType.LongType = undefined;
@@ -105,7 +106,7 @@ ScalarType.normalizeFieldInfo = function normalizeFieldInfo(localName) {
   return localName;
 };
 ScalarType.readFieldOptions = function readFieldOptions(fields, arg1, arg2, fromJson) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   fields = fields.fields;
   const found = fields.find((localName) => {
     let tmp2 = localName.localName == closure_0;
@@ -129,7 +130,7 @@ ScalarType.readFieldOptions = function readFieldOptions(fields, arg1, arg2, from
   return fromJsonResult;
 };
 ScalarType.readFieldOption = function readFieldOption(fields, arg1, arg2, fromJson) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   fields = fields.fields;
   const found = fields.find((localName) => {
     let tmp2 = localName.localName == closure_0;

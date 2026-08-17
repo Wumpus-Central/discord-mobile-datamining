@@ -1,9 +1,9 @@
 // _runtime/07761_updateSession.js
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
-import consoleSandbox from "consoleSandbox";
-import "SyncPromise";
-import { addContextToFrame } from "07749_addContextToFrame.js";
-import { dateTimestampInSeconds } from "07752_dateTimestampInSeconds.js";
+import addContextToFrame from "addContextToFrame" /* 7749 */;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 7752 */;
+import SyncPromise from "SyncPromise" /* 7762 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
+import consoleSandbox from "consoleSandbox" /* 7738 */;
 
 function updateSession(ipAddress) {
   let obj = arg1;
@@ -102,6 +102,7 @@ function updateSession(ipAddress) {
     ipAddress.sid = sid;
   }
 }
+SyncPromise;
 
 export const closeSession = function closeSession(status) {
   if (arg1) {
@@ -118,25 +119,30 @@ export const closeSession = function closeSession(status) {
 export const makeSession = function makeSession(arg0) {
   obj = obj(7752);
   const timestampInSecondsResult = obj.timestampInSeconds();
-  obj = { sid: null, init: true, timestamp: null, started: null, duration: 0, status: "ok", errors: 0, ignoreDuration: false, toJSON: null };
-  obj[0] = obj(7749).uuid4();
-  obj[2] = timestampInSecondsResult;
-  obj[3] = timestampInSecondsResult;
-  obj[8] = function toJSON() {
-    obj = obj(outer1_1[5]);
-    obj = { sid: "" + obj.sid, init: obj.init, started: null, timestamp: null, status: null, errors: null, did: null, duration: null, abnormal_mechanism: null, attrs: null };
-    obj[2] = new Date(1000 * obj.started).toISOString();
-    const date = new Date(1000 * obj.started);
-    obj[3] = new Date(1000 * obj.timestamp).toISOString();
-    ({ status: obj2[4], errors: obj2[5] } = obj);
-    if (typeof obj.did === "number") {
-      const _HermesInternal = HermesInternal;
-      const combined = "" + tmp.did;
+  obj = {
+    sid: obj(7749).uuid4(),
+    init: true,
+    timestamp: timestampInSecondsResult,
+    started: timestampInSecondsResult,
+    duration: 0,
+    status: "ok",
+    errors: 0,
+    ignoreDuration: false,
+    toJSON() {
+      obj = obj(closure_1_1[5]);
+      obj = { sid: "" + obj.sid, init: obj.init, started: new Date(1000 * obj.started).toISOString(), timestamp: null, status: null, errors: null, did: null, duration: null, abnormal_mechanism: null, attrs: null };
+      const date = new Date(1000 * obj.started);
+      obj[3] = new Date(1000 * obj.timestamp).toISOString();
+      ({ status: obj2[4], errors: obj2[5] } = obj);
+      if (typeof obj.did === "number") {
+        const _HermesInternal = HermesInternal;
+        const combined = "" + tmp.did;
+      }
+      obj[6] = combined;
+      ({ duration: obj2[7], abnormal_mechanism: obj2[8] } = obj);
+      obj[9] = { release: obj.release, environment: obj.environment, ip_address: obj.ipAddress, user_agent: obj.userAgent };
+      return obj.dropUndefinedKeys(obj);
     }
-    obj[6] = combined;
-    ({ duration: obj2[7], abnormal_mechanism: obj2[8] } = obj);
-    obj[9] = { release: obj.release, environment: obj.environment, ip_address: obj.ipAddress, user_agent: obj.userAgent };
-    return obj.dropUndefinedKeys(obj);
   };
   if (arg0) {
     updateSession(obj, arg0);

@@ -1,8 +1,8 @@
 // _runtime/03736_getDayOfYear.js
-import _typeof from "_typeof";
-import startOfYear from "startOfYear";
-import differenceInCalendarDays from "differenceInCalendarDays";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import startOfYear from "startOfYear" /* 3691 */;
+import differenceInCalendarDays from "differenceInCalendarDays" /* 3634 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -11,7 +11,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!startOfYear) {
   obj = { default: null };
   obj[0] = startOfYear;
@@ -19,7 +19,7 @@ if (!startOfYear) {
 } else {
   tmp5 = startOfYear;
 }
-let closure_1 = tmp5;
+startOfYear = tmp5;
 if (!differenceInCalendarDays) {
   obj = { default: null };
   obj[0] = differenceInCalendarDays;
@@ -27,19 +27,19 @@ if (!differenceInCalendarDays) {
 } else {
   tmp7 = differenceInCalendarDays;
 }
-let obj1 = tmp7;
+differenceInCalendarDays = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c3 = tmp9;
+requiredArgs = tmp9;
 
 export default function getDayOfYear(arg0) {
-  tmp9.default(1, arguments);
-  const defaultResult1 = tmp3.default(arg0);
-  return tmp7.default(defaultResult1, tmp5.default(defaultResult1)) + 1;
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
 };
 export default exports.default;

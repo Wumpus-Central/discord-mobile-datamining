@@ -1,27 +1,15 @@
 // _runtime/07016_memo.js
-import _slicedToArray from "_slicedToArray";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import closure_12 from "noop";
-import { jsx } from "jsxProd";
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
+import closure_12 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
-let forwardRef;
-let memo;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 let closure_3 = ["name", "stackBehavior", "enableDismissOnClose", "onDismiss", "onAnimate", "index", "snapPoints", "enablePanDownToClose", "animateOnMount", "containerComponent", "onChange", "children"];
-({ useCallback: closure_6, useImperativeHandle: error, useMemo: metroImportAll, useRef: c9, useState: c10, createElement: unpackModuleId, forwardRef, memo } = noop);
+({ useCallback: closure_6, useImperativeHandle: error, useMemo: closure_8, useRef: c9, useState: c10, createElement: unpackModuleId, forwardRef, memo } = noop);
 let closure_14 = { mount: false, data: "Array" };
 const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
-  let containerHeight;
-  let containerOffset;
-  let hostName;
-  let mountSheet;
   const _require = arg1;
   name = name.name;
   let DEFAULT_STACK_BEHAVIOR = name.stackBehavior;
@@ -39,12 +27,12 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
   if (undefined !== index) {
     num = index;
   }
-  const enablePanDownToClose = name.enablePanDownToClose;
+  let enablePanDownToClose = name.enablePanDownToClose;
   let tmp5 = undefined === enablePanDownToClose;
   if (!tmp5) {
     tmp5 = enablePanDownToClose;
   }
-  const callback = tmp5;
+  enablePanDownToClose = tmp5;
   const animateOnMount = name.animateOnMount;
   let Fragment = name.containerComponent;
   if (undefined === Fragment) {
@@ -56,28 +44,28 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
   const tmp9 = onDismiss(mountSheet(closure_14), 2);
   const first = tmp9[0];
   const mount = first.mount;
-  const callback2 = tmp9[1];
+  const callback = tmp9[1];
   let obj = _require(DEFAULT_STACK_BEHAVIOR[5]);
   const bottomSheetModalInternal = obj.useBottomSheetModalInternal();
   ({ hostName, mountSheet } = bottomSheetModalInternal);
   const unmountSheet = bottomSheetModalInternal.unmountSheet;
   willUnmountSheet = bottomSheetModalInternal.willUnmountSheet;
   ({ containerHeight, containerOffset } = bottomSheetModalInternal);
-  let obj1 = _require(DEFAULT_STACK_BEHAVIOR[6]);
+  obj1 = _require(DEFAULT_STACK_BEHAVIOR[6]);
   const removePortal = obj1.usePortal(hostName).removePortal;
-  const tmp15 = callback2(null);
+  const tmp15 = callback(null);
   closure_14 = tmp15;
   let num2 = -1;
   if (!(undefined === animateOnMount || animateOnMount)) {
     num2 = num;
   }
-  let closure_15 = tmp14(num2);
-  let closure_16 = tmp14(null);
-  let closure_17 = tmp14(-1);
-  let closure_18 = tmp14(false);
-  let closure_19 = tmp14(false);
-  const tmp14Result = callback2(false);
-  let closure_20 = tmp14Result;
+  closure_15 = tmp14(num2);
+  closure_16 = tmp14(null);
+  closure_17 = tmp14(-1);
+  closure_18 = tmp14(false);
+  closure_19 = tmp14(false);
+  const tmp14Result = callback(false);
+  closure_20 = tmp14Result;
   tmp14Result.current = mount;
   let items = [name];
   const tmp17 = onChange(() => {
@@ -89,7 +77,7 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
     }
     return combined;
   }, items);
-  let closure_21 = tmp17;
+  closure_21 = tmp17;
   function resetVariables() {
     let obj = callback(DEFAULT_STACK_BEHAVIOR[8]);
     obj = { component: closure_15.name, method: resetVariables.name };
@@ -101,24 +89,24 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
     closure_19.current = false;
   }
   const tmp18 = num(resetVariables, []);
-  let closure_22 = tmp18;
+  closure_22 = tmp18;
   let items1 = [tmp17, tmp18, unmountSheet, removePortal, onDismiss];
   const tmp19 = num(function unmount(ref) {
-    tmp18();
+    callback3();
     unmountSheet(closure_21);
     removePortal(closure_21);
-    if (tmp14Result.current) {
+    if (ref4.current) {
       callback2(closure_14);
     }
     if (onDismiss) {
       onDismiss();
     }
   }, items1);
-  let closure_23 = tmp19;
-  let closure_24 = num(() => {
+  closure_23 = tmp19;
+  closure_24 = num(() => {
     const items = [...arguments];
     if (!closure_18.current) {
-      const current = tmp15.current;
+      const current = closure_14.current;
       if (current != null) {
         const snapToIndex = current.snapToIndex;
         const items1 = [];
@@ -127,10 +115,10 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
       }
     }
   }, []);
-  let closure_25 = num(() => {
+  closure_25 = num(() => {
     const items = [...arguments];
     if (!closure_18.current) {
-      const current = tmp15.current;
+      const current = closure_14.current;
       if (current != null) {
         const snapToPosition = current.snapToPosition;
         const items1 = [];
@@ -139,10 +127,10 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
       }
     }
   }, []);
-  let closure_26 = num(() => {
+  closure_26 = num(() => {
     const items = [...arguments];
     if (!closure_18.current) {
-      const current = tmp15.current;
+      const current = closure_14.current;
       if (current != null) {
         const expand = current.expand;
         const items1 = [];
@@ -151,10 +139,10 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
       }
     }
   }, []);
-  let closure_27 = num(() => {
+  closure_27 = num(() => {
     const items = [...arguments];
     if (!closure_18.current) {
-      const current = tmp15.current;
+      const current = closure_14.current;
       if (current != null) {
         const collapse = current.collapse;
         const items1 = [];
@@ -163,10 +151,10 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
       }
     }
   }, []);
-  let closure_28 = num(() => {
+  closure_28 = num(() => {
     const items = [...arguments];
     if (!closure_18.current) {
-      const current = tmp15.current;
+      const current = closure_14.current;
       if (current != null) {
         const close = current.close;
         const items1 = [];
@@ -175,10 +163,10 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
       }
     }
   }, []);
-  let closure_29 = num(() => {
+  closure_29 = num(() => {
     const items = [...arguments];
     if (!closure_18.current) {
-      const current = tmp15.current;
+      const current = closure_14.current;
       if (current != null) {
         const forceClose = current.forceClose;
         const items1 = [];
@@ -188,15 +176,15 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
     }
   }, []);
   const items2 = [tmp17, DEFAULT_STACK_BEHAVIOR, mountSheet];
-  let closure_30 = num(function handlePresent(arg0) {
-    let closure_0 = arg0;
+  closure_30 = num(function handlePresent(arg0) {
+    closure_0 = arg0;
     const animationFrame = requestAnimationFrame(() => {
-      outer1_9({ mount: true, data: closure_0 });
-      outer1_10(outer1_21, closure_0, outer1_2);
+      closure_1_9({ mount: true, data: closure_0 });
+      closure_1_10(closure_1_21, closure_0, closure_1_2);
     });
   }, items2);
   const items3 = [willUnmountSheet, tmp19, tmp17, tmp5];
-  let closure_31 = num(function handleDismiss(arg0) {
+  closure_31 = num(function handleDismiss(arg0) {
     let tmp3 = -1 !== closure_15.current;
     if (!tmp3) {
       tmp3 = false !== closure_18.current;
@@ -208,17 +196,17 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
       if (tmp) {
         willUnmountSheet(closure_21);
         closure_19.current = true;
-        const current = tmp15.current;
+        const current = closure_14.current;
         if (current != null) {
           current.forceClose(arg0);
         }
       } else if (closure_18.current) {
-        tmp19();
+        callback4();
       }
     }
   }, items3);
   const items4 = [num];
-  let closure_32 = num(function handleMinimize() {
+  closure_32 = num(function handleMinimize() {
     if (!closure_18.current) {
       tmp.current = true;
       if (-1 === closure_15.current) {
@@ -226,20 +214,20 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
       } else {
         closure_17.current = tmp2.current;
       }
-      const current = tmp15.current;
+      const current = closure_14.current;
       if (current != null) {
         current.close();
       }
     }
   }, items4);
-  let closure_33 = num(function handleRestore() {
+  closure_33 = num(function handleRestore() {
     let current = closure_18.current;
     if (current) {
       current = !ref3.current;
     }
     if (current) {
       closure_18.current = false;
-      const current2 = tmp15.current;
+      const current2 = closure_14.current;
       if (current2 != null) {
         current2.snapToIndex(ref2.current);
       }
@@ -247,7 +235,7 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
   }, []);
   const items5 = [tmp17, tmp19, willUnmountSheet];
   const tmp21 = num(function handlePortalRender(arg0) {
-    if (tmp14Result.current) {
+    if (ref4.current) {
       arg0();
     }
   }, []);
@@ -263,10 +251,10 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
       closure_20.current = false;
       closure_19.current = true;
       if (closure_18.current) {
-        tmp19();
+        callback4();
       } else {
         willUnmountSheet(closure_21);
-        const current = tmp15.current;
+        const current = closure_14.current;
         if (current != null) {
           current.close();
         }
@@ -287,7 +275,7 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
       tmp(arg0, current, arg2, arg3, arg4);
     }
   }, items7);
-  callback(arg1, () => ({ snapToIndex: closure_24, snapToPosition: closure_25, expand: closure_26, collapse: closure_27, close: closure_28, forceClose: closure_29, dismiss: closure_31, present: closure_30, minimize: closure_32, restore: closure_33 }));
+  enablePanDownToClose(arg1, () => ({ snapToIndex: closure_24, snapToPosition: closure_25, expand: closure_26, collapse: closure_27, close: closure_28, forceClose: closure_29, dismiss: closure_31, present: closure_30, minimize: closure_32, restore: closure_33 }));
   let tmp27Result = null;
   if (mount) {
     obj = { name: null, hostName: null, handleOnMount: null, handleOnUpdate: null, handleOnUnmount: null, children: null };

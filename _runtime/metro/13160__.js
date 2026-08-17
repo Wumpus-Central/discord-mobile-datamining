@@ -1,8 +1,9 @@
 // _runtime/metro/13160__.js
+import Comparator from "Comparator" /* 13151 */;
 import { SemVer } from "../13123_SemVer.js";
-import { Comparator } from "../13151_Comparator.js";
 import { Range } from "../13152_Range.js";
 import { Range } from "../13154_Range.js";
+
 
 export default (arg0, arg1, arg2, arg3) => {
   let obj;
@@ -10,10 +11,10 @@ export default (arg0, arg1, arg2, arg3) => {
   const tmp3 = new _SemVer(arg0, arg3);
   const tmp4 = new _Range(arg1, arg3);
   if (">" === arg2) {
-    let dependencyMap = tmp(13143);
+    dependencyMap = tmp(13143);
     let tmpResult = tmp(13148);
     tmpResult = tmp(13144);
-    let closure_2 = tmpResult;
+    closure_2 = tmpResult;
     let str3 = ">=";
     let str = ">";
     let tmpResult1 = tmpResult;
@@ -56,9 +57,9 @@ export default (arg0, arg1, arg2, arg3) => {
             tmp7 = tmp;
           }
           _null2 = tmp7;
-          if (_null2(tmp.semver, _null.semver, _null)) {
+          if (_null2(tmp.semver, _null.semver, c0)) {
             _null = tmp;
-          } else if (tmpResult1(tmp.semver, _null2.semver, _null)) {
+          } else if (callback(tmp.semver, _null2.semver, c0)) {
             _null2 = tmp;
           }
         });

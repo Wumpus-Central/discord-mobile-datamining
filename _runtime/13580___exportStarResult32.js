@@ -1,7 +1,9 @@
 // _runtime/13580___exportStarResult32.js
-import { digitsToString } from "13581_digitsToString.js";
-import { TEN } from "13584_TEN.js";
-const require = arg1;
+import digitsToString from "digitsToString" /* 13581 */;
+import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
+import TEN from "TEN" /* 13584 */;
+
+require = arg1;
 const dependencyMap = arg6;
 class ToNumber {
   constructor(arg0) {
@@ -101,7 +103,7 @@ class MonthFromTime {
       num6 = 0;
       num7 = 0;
       num8 = 0;
-      setUTCHoursResult = require("digitsToString");
+      setUTCHoursResult = require("module_0");
       result = date1.getTime() / tmp;
     } else {
       _Date = Date;
@@ -510,7 +512,7 @@ arg5.DateFromTime = function DateFromTime(arg0) {
     return diff - 333 - num13;
   } else {
     const _Error = Error;
-    const error = new Error("Invalid time");
+    error = new Error("Invalid time");
     throw error;
   }
   const date2 = new Date(arg0);

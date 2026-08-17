@@ -1,5 +1,5 @@
 // _runtime/01622_useScrollToTop.js
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 
@@ -9,7 +9,7 @@ export const useScrollToTop = function useScrollToTop(ref) {
   route = _require(context[1]).useRoute();
   if (undefined === context) {
     const _Error = Error;
-    const error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
+    error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
     throw error;
   } else {
     let items = [context, ref, route.key];
@@ -23,11 +23,11 @@ export const useScrollToTop = function useScrollToTop(ref) {
       }
       if (0 !== items.length) {
         closure_1 = items.map((addListener) => addListener.addListener("tabPress", (arg0) => {
-          let closure_0 = arg0;
-          let closure_1 = outer1_1.isFocused();
-          let hasItem = closure_0.includes(outer1_1);
+          closure_0 = arg0;
+          closure_1 = closure_1_1.isFocused();
+          let hasItem = closure_0.includes(closure_1_1);
           if (!hasItem) {
-            hasItem = outer1_1.getState().routes[0].key === outer1_2.key;
+            hasItem = closure_1_1.getState().routes[0].key === closure_1_2.key;
           }
           const animationFrame = requestAnimationFrame(() => {
             if (null == ref.current) {

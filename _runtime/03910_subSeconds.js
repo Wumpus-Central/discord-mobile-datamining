@@ -1,7 +1,7 @@
 // _runtime/03910_subSeconds.js
-import toInteger from "toInteger";
-import addSeconds from "addSeconds";
-import requiredArgs from "requiredArgs";
+import toInteger from "toInteger" /* 3476 */;
+import addSeconds from "addSeconds" /* 3639 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!toInteger) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!toInteger) {
 } else {
   tmp3 = toInteger;
 }
-let c0 = tmp3;
+toInteger = tmp3;
 if (!addSeconds) {
   obj = { default: null };
   obj[0] = addSeconds;
@@ -18,7 +18,7 @@ if (!addSeconds) {
 } else {
   tmp5 = addSeconds;
 }
-let closure_1 = tmp5;
+addSeconds = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,9 +26,10 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function subSeconds(arg0, arg1) {
-  tmp7.default(2, arguments);
-  return tmp5.default(arg0, -tmp3.default(arg1));
+  requiredArgs.default(2, arguments);
+  return addSeconds.default(arg0, -toInteger.default(arg1));
 };
 export default exports.default;

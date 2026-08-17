@@ -1,18 +1,6 @@
 // _runtime/13220_inflate_fast.js
 
 export default function inflate_fast(avail_in) {
-  let _window;
-  let bits;
-  let distcode;
-  let hold;
-  let input;
-  let lencode;
-  let next_in;
-  let next_out;
-  let output;
-  let state;
-  let wnext;
-  let wsize;
   ({ state, next_in, input } = avail_in);
   let sum = next_in + (avail_in.avail_in - 5);
   ({ next_out, output } = avail_in);

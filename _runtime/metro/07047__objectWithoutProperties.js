@@ -1,5 +1,6 @@
 // _runtime/metro/07047__objectWithoutProperties.js
-import { _objectWithoutPropertiesLoose } from "../07048__objectWithoutPropertiesLoose.js";
+import _objectWithoutPropertiesLoose from "_objectWithoutPropertiesLoose" /* 7048 */;
+
 
 export default function _objectWithoutProperties(arg0, arr) {
   if (null == arg0) {

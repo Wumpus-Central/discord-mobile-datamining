@@ -18,25 +18,25 @@ arg5.makePromiseBuffer = function makePromiseBuffer() {
       promise = arg0();
       obj.add(promise);
       promise.then(() => {
-        outer1_1.delete(promise);
+        closure_1_1.delete(promise);
       }, () => {
-        outer1_1.delete(promise);
+        closure_1_1.delete(promise);
       });
       return promise;
     } else {
-      return num(set[0]).rejectedSyncPromise(outer1_2);
+      return num(set[0]).rejectedSyncPromise(closure_1_2);
     }
     obj = set;
   };
   obj.drain = function drain(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     if (set.size) {
       const _Array = Array;
       const nextPromise = Promise.allSettled(Array.from(tmp)).then(() => true);
       if (arg0) {
         const items = [nextPromise, ];
         const promise = new Promise((arg0) => {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           return setTimeout(() => callback(false), closure_0);
         });
         items[1] = promise;

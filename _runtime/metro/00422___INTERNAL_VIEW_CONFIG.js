@@ -1,10 +1,11 @@
 // _runtime/metro/00422___INTERNAL_VIEW_CONFIG.js
-import "noop";
-import weakSet from "weakSet";
-import setRuntimeConfigProvider from "setRuntimeConfigProvider";
-import { renderElement } from "../00114_renderElement.js";
+import noopAll from "noop" /* 19 */;
+import renderElement from "renderElement" /* 114 */;
+import weakSet from "weakSet" /* 106 */;
+import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let obj = { uiViewClassName: "AndroidSwitch", bubblingEventTypes: { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } } }, validAttributes: null };
 obj = { disabled: true, enabled: true, thumbColor: require("result").colorAttribute, trackColorForFalse: require("result").colorAttribute, trackColorForTrue: require("result").colorAttribute, value: true, on: true, thumbTintColor: require("result").colorAttribute, trackTintColor: require("result").colorAttribute };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onChange: true }));

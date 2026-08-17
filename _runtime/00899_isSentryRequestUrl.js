@@ -1,6 +1,7 @@
 // _runtime/00899_isSentryRequestUrl.js
-import { getHttpSpanDetailsFromUrlObject } from "00900_getHttpSpanDetailsFromUrlObject.js";
-const require = arg1;
+import getHttpSpanDetailsFromUrlObject from "getHttpSpanDetailsFromUrlObject" /* 900 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {

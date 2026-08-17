@@ -1,13 +1,12 @@
 // _runtime/01194__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let StyleSheet;
-let closure_6;
 const TouchEventBoundary = arg1;
 function _isNativeReflectConstruct() {
   try {
@@ -20,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -38,10 +37,10 @@ let c12 = "data-sentry-source-file";
 class TouchEventBoundary {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, TouchEventBoundary);
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(TouchEventBoundary);
-    tmp3 = _isNativeReflectConstruct;
+    tmp = closure_2(this, TouchEventBoundary);
+    tmp2 = closure_4;
+    obj = closure_4(TouchEventBoundary);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -57,7 +56,7 @@ class TouchEventBoundary {
     return tmp3Result;
   }
 }
-require("_inherits")(TouchEventBoundary, importAllResult.Component);
+_inheritsDefault(TouchEventBoundary, importAllResult.Component);
 let items = [
   {
     key: "componentDidMount",
@@ -126,7 +125,7 @@ let items = [
     key: "_isNameIgnored",
     value: function _isNameIgnored(label) {
       const self = this;
-      let closure_0 = label;
+      closure_0 = label;
       let tmp = this.props.ignoreNames || [];
       let obj = tmp;
       if (self.props.ignoredDisplayNames) {
@@ -338,18 +337,18 @@ importDefaultResultResult.defaultProps = { breadcrumbCategory: "touch", breadcru
 
 export const TouchEventBoundary = importDefaultResultResult;
 export const withTouchEventBoundary = (arg0, arg1) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   class WrappedComponent {
     constructor(arg0) {
-      obj = outer1_5;
+      obj = closure_1_5;
       obj = closure_1;
-      tmp = outer1_13;
+      tmp = closure_1_13;
       if (null == closure_1) {
         obj = {};
       }
       merged = Object.assign({}, obj);
-      return outer1_5.createElement(tmp, merged, obj.createElement(closure_0, Object.assign({}, arg0)));
+      return closure_1_5.createElement(tmp, merged, obj.createElement(closure_0, Object.assign({}, arg0)));
     }
   }
   WrappedComponent.displayName = "WithTouchEventBoundary";

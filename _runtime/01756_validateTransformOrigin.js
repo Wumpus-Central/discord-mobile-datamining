@@ -1,12 +1,9 @@
 // _runtime/01756_validateTransformOrigin.js
-import _slicedToArray from "_slicedToArray";
-import { t } from "01665_t.js";
+import t from "t" /* 1665 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function validateTransformOrigin(arg0) {
-  let obj;
-  let obj2;
-  let tmp30;
   if (3 !== arg0.length) {
     const reanimatedError = new t.ReanimatedError("Transform origin must have exactly 3 values.");
     throw reanimatedError;

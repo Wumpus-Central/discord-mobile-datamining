@@ -3,11 +3,11 @@ const require = arg1;
 let dependencyMap = arg6;
 function aggregateExceptionsFromError(arg0, arg1, arg2, errors, source, arg5, mechanism, exception_id) {
   const _require = arg0;
-  const dependencyMap = arg1;
-  const aggregateExceptionsFromError = arg2;
-  let closure_3 = source;
-  let closure_4 = mechanism;
-  let closure_5 = exception_id;
+  dependencyMap = arg1;
+  aggregateExceptionsFromError = arg2;
+  closure_3 = source;
+  closure_4 = mechanism;
+  closure_5 = exception_id;
   if (arg5.length >= arg2 + 1) {
     return arg5;
   } else {
@@ -92,8 +92,8 @@ arg5.applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(arg0, ar
           if (tmp5) {
             exception.exception.values = aggregateExceptionsFromError(arg0, arg1, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0).map((value) => {
               if (value.value) {
-                value.value = num(outer1_1[1]).truncate(value.value, num);
-                const obj = num(outer1_1[1]);
+                value.value = num(closure_1_1[1]).truncate(value.value, num);
+                const obj = num(closure_1_1[1]);
               }
               return value;
             });

@@ -1,10 +1,10 @@
 // _runtime/00292_isActiveSignal.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import { measure } from "00068_measure.js";
-import { PressabilityPerformanceEventEmitter } from "00293_PressabilityPerformanceEventEmitter.js";
-import { SoundManager } from "00294_SoundManager.js";
-import { 00038__ } from "metro/00038__.js";
+import _modDef38 from "module_38" /* 38 */;
+import _createClassDefault from "_createClass" /* 42 */;
+import measureDefault from "measure" /* 68 */;
+import PressabilityPerformanceEventEmitterDefault from "PressabilityPerformanceEventEmitter" /* 293 */;
+import SoundManagerDefault from "SoundManager" /* 294 */;
+import closure_4 from "_classCallCheck" /* 41 */;
 
 const Pressability = arg1;
 let closure_5 = Object.freeze({ NOT_RESPONDER: { DELAY: "ERROR", RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN", RESPONDER_RELEASE: "ERROR", RESPONDER_TERMINATED: "ERROR", ENTER_PRESS_RECT: "ERROR", LEAVE_PRESS_RECT: "ERROR", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_INACTIVE_PRESS_IN: { DELAY: "RESPONDER_ACTIVE_PRESS_IN", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_INACTIVE_PRESS_OUT: { DELAY: "RESPONDER_ACTIVE_PRESS_OUT", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_ACTIVE_PRESS_IN: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN" }, RESPONDER_ACTIVE_PRESS_OUT: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_ACTIVE_LONG_PRESS_IN: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT", LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN" }, RESPONDER_ACTIVE_LONG_PRESS_OUT: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, ERROR: { DELAY: "NOT_RESPONDER", RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "NOT_RESPONDER", LEAVE_PRESS_RECT: "NOT_RESPONDER", LONG_PRESS_DETECTED: "NOT_RESPONDER" } });
@@ -25,7 +25,7 @@ let c13 = 10;
 class Pressability {
   constructor(arg0) {
     self = this;
-    tmp = outer1_4(this, self);
+    tmp = closure_4(this, self);
     this._eventHandlers = null;
     this._hoverInDelayTimeout = null;
     this._hoverOutDelayTimeout = null;
@@ -118,7 +118,7 @@ const items = [
           return !self._config.disabled;
         },
         onResponderGrant(persist) {
-          let closure_0 = persist;
+          closure_0 = persist;
           persist.persist();
           const result = self._cancelPressOutDelayTimeout();
           self._responderID = persist.currentTarget;
@@ -132,7 +132,7 @@ const items = [
           if (bound > 0) {
             const _setTimeout = setTimeout;
             obj._pressDelayTimeout = setTimeout(() => {
-              outer1_2._receiveSignal("DELAY", closure_0);
+              closure_1_2._receiveSignal("DELAY", closure_0);
             }, bound);
           } else {
             obj._receiveSignal("DELAY", persist);
@@ -142,20 +142,18 @@ const items = [
             delayLongPress = 500 - bound;
           }
           self._longPressDelayTimeout = setTimeout(() => {
-            outer1_2._handleLongPress(closure_0);
+            closure_1_2._handleLongPress(closure_0);
           }, Math.max(10, delayLongPress) + bound);
           return true === self._config.blockNativeResponder;
         },
         onResponderMove(nativeEvent) {
-          let changedTouches;
-          let touches;
           const onPressMove = self._config.onPressMove;
           if (null != onPressMove) {
             onPressMove(nativeEvent);
           }
           const _responderRegion = obj._responderRegion;
           if (null != _responderRegion) {
-            if (typeof outer1_14 !== "function") {
+            if (typeof closure_1_14 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             ({ changedTouches, touches } = nativeEvent.nativeEvent);
@@ -169,7 +167,7 @@ const items = [
               } else {
                 if (null != obj._touchActivatePosition) {
                   const _Math = Math;
-                  if (Math.hypot(obj._touchActivatePosition.pageX - nativeEvent.pageX, obj._touchActivatePosition.pageY - nativeEvent.pageY) > outer1_13) {
+                  if (Math.hypot(obj._touchActivatePosition.pageX - nativeEvent.pageX, obj._touchActivatePosition.pageY - nativeEvent.pageY) > closure_1_13) {
                     const result1 = obj._cancelLongPressDelayTimeout();
                   }
                 }
@@ -245,9 +243,7 @@ const items = [
         const onHoverOut = _config.onHoverOut;
         if (null != onHoverIn) {
           obj.onPointerEnter = (persist) => {
-            let clientX;
-            let clientY;
-            let closure_0 = persist;
+            closure_0 = persist;
             self._isHovered = true;
             const result = self._cancelHoverOutDelayTimeout();
             if (null != onHoverIn) {
@@ -260,13 +256,11 @@ const items = [
                 persist.persist();
                 const _setTimeout = setTimeout;
                 tmp._hoverInDelayTimeout = setTimeout(() => {
-                  let clientX;
-                  let clientY;
                   ({ clientX, clientY } = persist.nativeEvent);
                   const obj = {};
                   const merged = Object.assign(persist);
                   obj.nativeEvent = { clientX, clientY, pageX: clientX, pageY: clientY, timestamp: persist.timeStamp };
-                  outer1_1(obj);
+                  closure_1_1(obj);
                 }, bound);
               } else {
                 ({ clientX, clientY } = persist.nativeEvent);
@@ -286,9 +280,7 @@ const items = [
         }
         if (null != onHoverOut) {
           obj.onPointerLeave = (persist) => {
-            let clientX;
-            let clientY;
-            let closure_0 = persist;
+            closure_0 = persist;
             let obj = self;
             if (self._isHovered) {
               obj._isHovered = false;
@@ -303,8 +295,6 @@ const items = [
                   persist.persist();
                   const _setTimeout = setTimeout;
                   obj._hoverOutDelayTimeout = setTimeout(() => {
-                    let clientX;
-                    let clientY;
                     ({ clientX, clientY } = persist.nativeEvent);
                     const obj = {};
                     const merged = Object.assign(persist);
@@ -328,7 +318,7 @@ const items = [
             }
           };
         }
-        const obj1 = {};
+        obj1 = {};
         let merged = Object.assign(obj);
         const merged1 = Object.assign(obj);
         const merged2 = Object.assign(obj);
@@ -344,11 +334,11 @@ const items = [
   {
     key: "_receiveSignal",
     value: function _receiveSignal(arg0, nativeEvent) {
-      let closure_0 = arg0;
-      const importDefault = nativeEvent;
+      closure_0 = arg0;
+      importDefault = nativeEvent;
       if (null != nativeEvent.nativeEvent.timestamp) {
-        PressabilityPerformanceEventEmitter.emitEvent(() => ({ signal: closure_0, nativeTimestamp: nativeEvent.nativeEvent.timestamp }));
-        const obj = PressabilityPerformanceEventEmitter;
+        PressabilityPerformanceEventEmitterDefault.emitEvent(() => ({ signal: closure_0, nativeTimestamp: nativeEvent.nativeEvent.timestamp }));
+        const obj = PressabilityPerformanceEventEmitterDefault;
       }
       const self = this;
       const _touchState = this._touchState;
@@ -365,12 +355,12 @@ const items = [
         if (typeof self._responderID === "number") {
           str3 = self._responderID;
         }
-        00038__(tmp10, "Pressability: Invalid signal `%s` for state `%s` on responder: %s", arg0, _touchState, str3);
+        _modDef38(tmp10, "Pressability: Invalid signal `%s` for state `%s` on responder: %s", arg0, _touchState, str3);
         if (_touchState !== tmp5) {
           const result = self._performTransitionSideEffects(_touchState, tmp5, arg0, nativeEvent);
           self._touchState = tmp5;
         }
-        const tmp9 = 00038__;
+        const tmp9 = _modDef38;
       }
     }
   },
@@ -478,8 +468,8 @@ const items = [
               }
               if (!tmp26) {
                 if (true !== tmp24) {
-                  SoundManager.playTouchSound();
-                  const obj = SoundManager;
+                  SoundManagerDefault.playTouchSound();
+                  const obj = SoundManagerDefault;
                 }
                 onPress(nativeEvent);
               }
@@ -500,8 +490,6 @@ const items = [
   {
     key: "_activate",
     value: function _activate(nativeEvent) {
-      let changedTouches;
-      let touches;
       const self = this;
       const onPressIn = this._config.onPressIn;
       if (typeof getTouchFromPressEvent !== "function") {
@@ -533,7 +521,7 @@ const items = [
     key: "_deactivate",
     value: function _deactivate(persist) {
       const self = this;
-      let closure_0 = persist;
+      closure_0 = persist;
       const onPressOut = this._config.onPressOut;
       if (null != onPressOut) {
         let num = self._config.minPressDuration;
@@ -572,8 +560,8 @@ const items = [
       const self = this;
       if (null != this._responderID) {
         if (typeof self._responderID === "number") {
-          measure.measure(self._responderID, self._measureCallback);
-          const obj = measure;
+          measureDefault.measure(self._responderID, self._measureCallback);
+          const obj = measureDefault;
         } else {
           const _responderID = self._responderID;
           _responderID.measureAsyncOnUI(self._measureCallback);
@@ -584,10 +572,6 @@ const items = [
   {
     key: "_isTouchWithinResponderRegion",
     value: function _isTouchWithinResponderRegion(nativeEvent, _responderRegion) {
-      let bottom;
-      let left;
-      let right;
-      let top;
       const rect = Pressability(297).normalizeRect(this._config.hitSlop);
       const obj = Pressability(297);
       const rect2 = Pressability(297).normalizeRect(this._config.pressRectOffset);
@@ -735,7 +719,7 @@ const items = [
 obj = {
   key: "setLongPressDeactivationDistance",
   value: function setLongPressDeactivationDistance(arg0) {
-    let closure_13 = arg0;
+    closure_13 = arg0;
   }
 };
 const items1 = [obj];
@@ -743,4 +727,4 @@ function getTouchFromPressEvent(arg0) {
 
 }
 
-export default _createClass(Pressability, items, items1);
+export default _createClassDefault(Pressability, items, items1);

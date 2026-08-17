@@ -1,5 +1,8 @@
 // _runtime/metro/12269__.js
+import _mod12199 from "module_12199" /* 12199 */;
+import mergeDefs from "mergeDefs" /* 12203 */;
 import { 12199__ } from "12199__.js";
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -55,9 +58,9 @@ if (self2) {
     const _Object3 = Object;
     exports.ZodError = undefined;
     exports.ZodRealError = undefined;
-    const fnResult = fn(require("module_12199"));
+    const fnResult = fn(_mod12199);
     let c4 = fnResult;
-    let closure_5 = fn(require("mergeDefs"));
+    let closure_5 = fn(mergeDefs);
     function initializer(prototype) {
       const _require = prototype;
       const $ZodError = _12199__.$ZodError;
@@ -65,19 +68,19 @@ if (self2) {
       prototype.name = "ZodError";
       let obj = {
         value(arg0) {
-          return outer1_4.formatError(closure_0, arg0);
+          return closure_1_4.formatError(closure_0, arg0);
         }
       };
       obj = {
         value(arg0) {
-          return outer1_4.flattenError(closure_0, arg0);
+          return closure_1_4.flattenError(closure_0, arg0);
         }
       };
       obj = {
         value(arg0) {
           const issues = prototype.issues;
           issues.push(arg0);
-          prototype.message = JSON.stringify(prototype.issues, outer1_5.jsonStringifyReplacer, 2);
+          prototype.message = JSON.stringify(prototype.issues, closure_1_5.jsonStringifyReplacer, 2);
         }
       };
       Object.defineProperties(prototype, {
@@ -89,7 +92,7 @@ if (self2) {
             const issues = prototype.issues;
             const items = [...arg0];
             issues.push.apply(items);
-            prototype.message = JSON.stringify(prototype.issues, outer1_5.jsonStringifyReplacer, 2);
+            prototype.message = JSON.stringify(prototype.issues, closure_1_5.jsonStringifyReplacer, 2);
           }
         },
         isEmpty: {

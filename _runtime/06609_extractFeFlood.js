@@ -1,30 +1,28 @@
 // _runtime/06609_extractFeFlood.js
-import noop from "noop";
-import { extractOpacity } from "06577_extractOpacity.js";
-import { extractBrush } from "06589_extractBrush.js";
+import extractOpacityDefault from "extractOpacity" /* 6577 */;
+import extractBrushDefault from "extractBrush" /* 6589 */;
+import closure_2 from "noop" /* 19 */;
 
 const re3 = /\s+/;
 let obj = { type: 0, payload: require("get ActivityIndicator").processColor("black") };
 
 export default function extractFeFlood(arg0) {
-  let floodColor;
-  let floodOpacity;
   ({ floodColor, floodOpacity } = arg0);
   if (null == floodColor) {
     let tmp = obj;
   } else {
-    tmp = extractBrush(floodColor);
+    tmp = extractBrushDefault(floodColor);
   }
   obj = { floodColor: tmp };
   if (null != floodOpacity) {
-    obj.floodOpacity = extractOpacity(floodOpacity);
+    obj.floodOpacity = extractOpacityDefault(floodOpacity);
   }
   return obj;
 };
 export const extractFilter = (arg0) => ({ x: arg0.x, y: arg0.y, width: arg0.width, height: arg0.height, result: arg0.result });
 export const extractIn = (arg0) => {
   if (arg0.in) {
-    let obj = { in1: null };
+    obj = { in1: null };
     obj[0] = arg0.in;
   } else {
     obj = {};
@@ -32,7 +30,7 @@ export const extractIn = (arg0) => {
   return obj;
 };
 export const extractFeBlend = (in2) => {
-  const obj = {};
+  obj = {};
   if (in2.in2) {
     obj.in2 = in2.in2;
   }
@@ -42,7 +40,7 @@ export const extractFeBlend = (in2) => {
   return obj;
 };
 export const extractFeColorMatrix = (type) => {
-  const obj = {};
+  obj = {};
   if (undefined !== type.values) {
     const _Array = Array;
     const values = type.values;
@@ -75,8 +73,8 @@ export const extractFeColorMatrix = (type) => {
   return obj;
 };
 export const extractFeComposite = (arg0) => {
-  let closure_0 = arg0;
-  const obj = { in1: arg0.in || "", in2: tmp2, operator1: tmp3 };
+  closure_0 = arg0;
+  obj = { in1: arg0.in || "", in2: tmp2, operator1: tmp3 };
   const items = ["k1", "k2", "k3", "k4"];
   const item = items.forEach((arg0) => {
     if (undefined !== table[arg0]) {
@@ -89,7 +87,7 @@ export const extractFeComposite = (arg0) => {
   return obj;
 };
 export const extractFeGaussianBlur = (stdDeviation) => {
-  const obj = {};
+  obj = {};
   if (Array.isArray(stdDeviation.stdDeviation)) {
     const _Number5 = Number;
     obj.stdDeviationX = Number(stdDeviation.stdDeviation[0]) || 0;
@@ -138,10 +136,10 @@ export const extractFeGaussianBlur = (stdDeviation) => {
   return obj;
 };
 export const extractFeMerge = (children) => {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   if (children.children) {
     const Children = React.Children;
-    let mapped = Children.map(children.children, (arg0) => outer1_2.cloneElement(arg0, { parent: closure_0 }));
+    let mapped = Children.map(children.children, (arg0) => closure_1_2.cloneElement(arg0, { parent: closure_0 }));
   } else {
     mapped = [];
   }

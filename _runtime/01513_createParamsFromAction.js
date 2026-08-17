@@ -1,7 +1,5 @@
 // _runtime/01513_createParamsFromAction.js
 arg5.createParamsFromAction = function createParamsFromAction(routeParamList) {
-  let name;
-  let params;
   routeParamList = routeParamList.routeParamList;
   ({ name, params } = routeParamList.action.payload);
   let tmp = params;

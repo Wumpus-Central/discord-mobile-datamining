@@ -4,14 +4,14 @@ import { isArrayLike } from "00603_isArrayLike.js";
 
 export default function baseMap(arg0, arg1) {
   const _require = arg1;
-  const dependencyMap = -1;
+  dependencyMap = -1;
   if (_isArrayLike(arg0)) {
     const _Array = Array;
     let ArrayResult = Array(arg0.length);
   } else {
     ArrayResult = [];
   }
-  let closure_2 = ArrayResult;
+  closure_2 = ArrayResult;
   _baseForOwn(arg0, (arg0, arg1, arg2) => {
     const sum = c1 + 1;
     c1 = sum;

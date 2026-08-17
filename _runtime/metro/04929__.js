@@ -1,7 +1,8 @@
 // _runtime/metro/04929__.js
-import { readTag } from "../04930_readTag.js";
-import { importDefaultResult1 } from "../04931_importDefaultResult1.js";
-const require = arg1;
+import readTag from "readTag" /* 4930 */;
+import importDefaultResult1 from "importDefaultResult1" /* 4931 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 let c3 = "Exif IFD Pointer";

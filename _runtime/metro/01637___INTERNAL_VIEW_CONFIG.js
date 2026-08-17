@@ -1,5 +1,5 @@
 // _runtime/metro/01637___INTERNAL_VIEW_CONFIG.js
-import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
 const obj = { uiViewClassName: "RNCSafeAreaView", validAttributes: { mode: true, edges: true } };
 

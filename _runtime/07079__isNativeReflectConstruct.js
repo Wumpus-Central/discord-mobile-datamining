@@ -1,9 +1,10 @@
 // _runtime/07079__isNativeReflectConstruct.js
-import RVGridLayoutManagerImpl from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 7074 */;
+import RVGridLayoutManagerImpl from "_classCallCheck" /* 7050 */;
+import closure_1 from "_possibleConstructorReturn" /* 7069 */;
+import closure_2 from "_getPrototypeOf" /* 7071 */;
+import closure_3 from "_get" /* 7072 */;
+import importDefaultResult from "_createClass" /* 7051 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -16,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -31,9 +32,9 @@ class RVGridLayoutManagerImpl {
     items = [, ];
     items[0] = global;
     items[1] = arg1;
-    tmp2 = __esModule;
-    obj = __esModule(RVGridLayoutManagerImpl);
-    tmp3 = __esModule;
+    tmp2 = closure_2;
+    obj = closure_2(RVGridLayoutManagerImpl);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -47,19 +48,19 @@ class RVGridLayoutManagerImpl {
     return tmp3Result;
   }
 }
-require("_inherits")(RVGridLayoutManagerImpl, require("RVLayoutManager").RVLayoutManager);
+_inheritsDefault(RVGridLayoutManagerImpl, require("RVLayoutManager").RVLayoutManager);
 let items = [
   {
     key: "updateLayoutParams",
     value: function updateLayoutParams(windowSize) {
       let self = this;
       self = this;
-      let c1;
+      closure_1 = undefined;
       const tmp = callback2(callback(self.prototype), "updateLayoutParams", this);
-      c1 = tmp;
+      closure_1 = tmp;
       let fn = tmp;
       if (typeof tmp === "function") {
-        fn = (items) => _undefined.apply(self, items);
+        fn = (items) => callback.apply(self, items);
       }
       const items = [windowSize];
       !fn(items);
@@ -125,8 +126,6 @@ let items = [
   {
     key: "recomputeLayouts",
     value: function recomputeLayouts(arg0, arg1) {
-      let x;
-      let y;
       const self = this;
       let result = this.locateFirstIndexInRow(Math.max(0, arg0 - 1));
       const layout = this.getLayout(result);
@@ -164,8 +163,6 @@ let items = [
   {
     key: "processAndReturnTallestItemInRow",
     value: function processAndReturnTallestItemInRow(arg0) {
-      let height;
-      let minHeight;
       const self = this;
       const result = this.locateFirstIndexInRow(arg0);
       let flag = false;

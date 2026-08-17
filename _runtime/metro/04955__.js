@@ -1,8 +1,9 @@
 // _runtime/metro/04955__.js
-import { getDataView } from "../04910_getDataView.js";
-import { readTag } from "../04930_readTag.js";
-import { importDefaultResult1 } from "../04931_importDefaultResult1.js";
-const require = arg1;
+import getDataView from "getDataView" /* 4910 */;
+import readTag from "readTag" /* 4930 */;
+import importDefaultResult1 from "importDefaultResult1" /* 4931 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 let c3 = 16;
@@ -11,7 +12,7 @@ arg5.default = {
     let iter;
     let obj = module(4915);
     const byteOrder = obj.getByteOrder(buffer, sum);
-    let obj1 = readTag;
+    obj1 = readTag;
     let obj2 = readTag;
     const ifd = obj1.readIfd(buffer, importDefaultResult1.IFD_TYPE_MPF, sum, obj2.get0thIfdOffset(buffer, sum, byteOrder), byteOrder, arg2);
     if (ifd.MPEntry) {

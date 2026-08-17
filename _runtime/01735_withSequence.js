@@ -5,7 +5,7 @@ let closure_2 = { code: "function pnpm_sequenceTs2(){const{getReduceMotionForAni
 let closure_3 = { code: "function pnpm_sequenceTs3(){const{_animations,getReduceMotionForAnimation,reduceMotion}=this.__closure;const animations=_animations.map(function(a){const result=typeof a==='function'?a():a;result.finished=false;return result;});function findNextNonReducedMotionAnimationIndex(index){while(index<animations.length-1&&animations[index].reduceMotion){index++;}return index;}const callback=function(finished){if(finished){return;}animations.forEach(function(animation){if(typeof animation.callback==='function'&&!animation.finished){animation.callback(finished);}});};function sequence(animation,now){const currentAnim=animations[animation.animationIndex];const finished=currentAnim.onFrame(currentAnim,now);animation.current=currentAnim.current;if(finished){if(currentAnim.callback){currentAnim.callback(true);}currentAnim.finished=true;animation.animationIndex=findNextNonReducedMotionAnimationIndex(animation.animationIndex+1);if(animation.animationIndex<animations.length){const nextAnim=animations[animation.animationIndex];nextAnim.onStart(nextAnim,currentAnim.current,now,currentAnim);return false;}return true;}return false;}function onStart(animation,value,now,previousAnimation){animations.forEach(function(anim){if(anim.reduceMotion===undefined){anim.reduceMotion=animation.reduceMotion;}});animation.animationIndex=findNextNonReducedMotionAnimationIndex(0);if(previousAnimation===undefined){previousAnimation=animations[animations.length-1];}const currentAnimation=animations[animation.animationIndex];currentAnimation.onStart(currentAnimation,value,now,previousAnimation);}return{isHigherOrder:true,onFrame:sequence,onStart:onStart,animationIndex:0,current:animations[0].current,callback:callback,reduceMotion:getReduceMotionForAnimation(reduceMotion)};}" };
 function withSequence(withTimingResult, withTimingResult1, withTimingResult2, arg3) {
   const substr = [...arguments].slice();
-  let dependencyMap;
+  dependencyMap = undefined;
   if (!withTimingResult) {
     if (0 === substr.length) {
       const logger = substr(1658).logger;
@@ -21,9 +21,8 @@ function withSequence(withTimingResult, withTimingResult1, withTimingResult2, ar
           },
           current: 0,
           animationIndex: 0,
-          reduceMotion: null
+          reduceMotion: substr(withTimingResult[1]).getReduceMotionForAnimation(withTimingResult)
         };
-        obj[4] = substr(withTimingResult[1]).getReduceMotionForAnimation(withTimingResult);
         return obj;
       };
       let obj = { getReduceMotionForAnimation: null, reduceMotion: null };
@@ -83,7 +82,7 @@ function withSequence(withTimingResult, withTimingResult1, withTimingResult2, ar
             }
           },
           onStart(arg0, arg1, arg2, arg3) {
-            const mapped = arg0;
+            mapped = arg0;
             const item = mapped.forEach((reduceMotion) => {
               if (undefined === reduceMotion.reduceMotion) {
                 reduceMotion.reduceMotion = reduceMotion.reduceMotion;
@@ -115,7 +114,7 @@ function withSequence(withTimingResult, withTimingResult1, withTimingResult2, ar
           animationIndex: 0,
           current: mapped[0].current,
           callback(arg0) {
-            const mapped = arg0;
+            mapped = arg0;
             if (!arg0) {
               const item = mapped.forEach((callback) => {
                 callback = callback.callback;
@@ -129,9 +128,8 @@ function withSequence(withTimingResult, withTimingResult1, withTimingResult2, ar
               });
             }
           },
-          reduceMotion: null
+          reduceMotion: substr(withTimingResult[1]).getReduceMotionForAnimation(withTimingResult)
         };
-        obj[6] = substr(withTimingResult[1]).getReduceMotionForAnimation(withTimingResult);
         return obj;
       };
       obj = { _animations: null, getReduceMotionForAnimation: null, reduceMotion: null };

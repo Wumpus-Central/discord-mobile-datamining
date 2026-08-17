@@ -1,24 +1,18 @@
 // _runtime/06496_hitSlop.js
-import _slicedToArray from "_slicedToArray";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import "noop";
-import { Platform } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import tagMessage from "tagMessage";
+import noopDefault from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import tagMessage from "tagMessage" /* 6382 */;
 
-let c5;
-let c9;
-let closure_12;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 let closure_2 = ["testOnly_pressed", "hitSlop", "pressRetentionOffset", "delayHoverIn", "delayHoverOut", "delayLongPress", "unstable_pressDelay", "onHoverIn", "onHoverOut", "onPress", "onPressIn", "onPressOut", "onLongPress", "onLayout", "style", "children", "android_disableSound", "android_ripple", "disabled", "accessible", "simultaneousWithExternalGesture", "requireExternalGestureToFail", "blocksExternalGesture"];
-({ useCallback: c5, useEffect: closure_6, useMemo: error, useRef: metroImportAll, useState: c9 } = noop);
+({ useCallback: c5, useEffect: closure_6, useMemo: error, useRef: closure_8, useState: c9 } = noop);
+noopDefault;
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-tagMessage = tagMessage.isTestEnv();
+let closure_13 = tagMessage.isTestEnv();
 let closure_14 = { code: "function pnpm_PressableTsx1(event){const{hoverInTimeout,clearTimeout,delayHoverOut,hoverOutTimeout,setTimeout,onHoverOut,gestureToPressableEvent}=this.__closure;var _onHoverOut2;if(hoverInTimeout.current){clearTimeout(hoverInTimeout.current);}if(delayHoverOut){hoverOutTimeout.current=setTimeout(function(){var _onHoverOut;return(_onHoverOut=onHoverOut)===null||_onHoverOut===void 0?void 0:_onHoverOut(gestureToPressableEvent(event));},delayHoverOut);return;}(_onHoverOut2=onHoverOut)===null||_onHoverOut2===void 0||_onHoverOut2(gestureToPressableEvent(event));}" };
 let closure_15 = { code: "function pnpm_PressableTsx2(event){const{hoverOutTimeout,clearTimeout,delayHoverIn,hoverInTimeout,setTimeout,onHoverIn,gestureToPressableEvent}=this.__closure;var _onHoverIn2;if(hoverOutTimeout.current){clearTimeout(hoverOutTimeout.current);}if(delayHoverIn){hoverInTimeout.current=setTimeout(function(){var _onHoverIn;return(_onHoverIn=onHoverIn)===null||_onHoverIn===void 0?void 0:_onHoverIn(gestureToPressableEvent(event));},delayHoverIn);return;}(_onHoverIn2=onHoverIn)===null||_onHoverIn2===void 0||_onHoverIn2(gestureToPressableEvent(event));}" };
 let closure_16 = { code: "function pnpm_PressableTsx3(_event,success){const{Platform,stateMachine,StateMachineEvent,handleFinalize}=this.__closure;if(Platform.OS==='web'){if(success){stateMachine.handleEvent(StateMachineEvent.FINALIZE);}else{stateMachine.handleEvent(StateMachineEvent.CANCEL);}handleFinalize();}}" };
@@ -31,19 +25,6 @@ let closure_22 = { code: "function pnpm_PressableTsx9(){const{Platform,isScreenR
 let closure_23 = { code: "function pnpm_PressableTsx10(event){const{Platform,gestureTouchToPressableEvent,stateMachine,handlePressOut}=this.__closure;if(Platform.OS!=='macos'&&Platform.OS!=='web'){const pressableEvent=gestureTouchToPressableEvent(event);stateMachine.reset();handlePressOut(pressableEvent,false);}}" };
 
 export default function _default(pressRetentionOffset) {
-  let accessible;
-  let android_disableSound;
-  let android_ripple;
-  let blocksExternalGesture;
-  let children;
-  let closure_15;
-  let disabled;
-  let hitSlop;
-  let requireExternalGestureToFail;
-  let simultaneousWithExternalGesture;
-  let style;
-  let testOnly_pressed;
-  let tmp4;
   ({ testOnly_pressed, hitSlop } = pressRetentionOffset);
   pressRetentionOffset = pressRetentionOffset.pressRetentionOffset;
   const delayHoverIn = pressRetentionOffset.delayHoverIn;
@@ -59,18 +40,18 @@ export default function _default(pressRetentionOffset) {
   const onLayout = pressRetentionOffset.onLayout;
   ({ style, children, android_disableSound, android_ripple } = pressRetentionOffset);
   ({ disabled, accessible, simultaneousWithExternalGesture, requireExternalGestureToFail, blocksExternalGesture } = pressRetentionOffset);
-  let closure_14 = { simultaneousWithExternalGesture, requireExternalGestureToFail, blocksExternalGesture };
+  closure_14 = { simultaneousWithExternalGesture, requireExternalGestureToFail, blocksExternalGesture };
   if (testOnly_pressed == null) {
     testOnly_pressed = false;
   }
   const tmp = delayLongPress(pressRetentionOffset, delayHoverIn);
   const tmp2 = onPressIn;
   [tmp4, closure_15] = delayHoverOut(onPressIn(testOnly_pressed), 2);
-  let closure_16 = onPress(null);
-  let closure_17 = onPress(null);
-  let closure_18 = onPress(true);
-  let closure_19 = onPress(false);
-  let closure_20 = onPress({ width: 0, height: 0 });
+  closure_16 = onPress(null);
+  closure_17 = onPress(null);
+  closure_18 = onPress(true);
+  closure_19 = onPress(false);
+  closure_20 = onPress({ width: 0, height: 0 });
   const items = [hitSlop];
   const tmp5 = onHoverOut(() => {
     if (typeof hitSlop === "number") {
@@ -84,7 +65,7 @@ export default function _default(pressRetentionOffset) {
     }
     return numberAsInsetResult;
   }, items);
-  let closure_21 = tmp5;
+  closure_21 = tmp5;
   const items1 = [pressRetentionOffset];
   let tmp3 = delayHoverOut(onPressIn(testOnly_pressed), 2);
   let obj = hitSlop(pressRetentionOffset[6]);
@@ -108,7 +89,7 @@ export default function _default(pressRetentionOffset) {
       closure_18.current = true;
     }
   }, []);
-  let closure_23 = tmp8;
+  closure_23 = tmp8;
   let tmp9 = unstable_pressDelay(() => {
     if (ref2.current) {
       const _clearTimeout = clearTimeout;
@@ -116,30 +97,30 @@ export default function _default(pressRetentionOffset) {
       tmp.current = null;
     }
   }, []);
-  let closure_24 = tmp9;
+  closure_24 = tmp9;
   const items2 = [onLongPress, tmp8, delayLongPress];
   const tmp10 = unstable_pressDelay((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     if (onLongPress) {
-      tmp8();
+      callback2();
       let num = delayLongPress;
       if (delayLongPress == null) {
         num = 500;
       }
       closure_16.current = setTimeout(() => {
-        outer1_18.current = false;
-        outer1_11(closure_0);
+        closure_1_18.current = false;
+        closure_1_11(closure_0);
       }, num);
       const tmp3 = closure_16;
     }
   }, items2);
-  let closure_25 = tmp10;
+  closure_25 = tmp10;
   const items3 = [onPressIn, tmp10];
   const tmp11 = unstable_pressDelay((arg0) => {
     if (onPressIn != null) {
       tmp(arg0);
     }
-    tmp10(arg0);
+    callback4(arg0);
     callback(true);
     if (ref2.current) {
       const _clearTimeout = clearTimeout;
@@ -147,32 +128,32 @@ export default function _default(pressRetentionOffset) {
       tmp5.current = null;
     }
   }, items3);
-  let closure_26 = tmp11;
+  closure_26 = tmp11;
   const items4 = [tmp9, tmp8];
-  let tmp12 = unstable_pressDelay(() => {
+  const tmp12 = unstable_pressDelay(() => {
     closure_19.current = false;
-    tmp8();
-    tmp9();
+    callback2();
+    callback3();
     callback(false);
   }, items4);
-  let closure_27 = tmp12;
+  closure_27 = tmp12;
   const items5 = [tmp11, tmp5, unstable_pressDelay];
   const tmp13 = unstable_pressDelay((nativeEvent) => {
-    let closure_0 = nativeEvent;
+    closure_0 = nativeEvent;
     const changedTouches = nativeEvent.nativeEvent.changedTouches;
     if (obj.isTouchWithinInset(ref5.current, closure_21, changedTouches.at(-1))) {
       closure_19.current = true;
       if (unstable_pressDelay) {
         const _setTimeout = setTimeout;
         closure_17.current = setTimeout(() => {
-          outer1_26(closure_0);
+          closure_1_26(closure_0);
         }, tmp2);
       } else {
-        tmp11(nativeEvent);
+        callback5(nativeEvent);
       }
     }
   }, items5);
-  let closure_28 = tmp13;
+  closure_28 = tmp13;
   const items6 = [tmp12, tmp11, onPress, onPressOut];
   const tmp14 = unstable_pressDelay((arg0) => {
     let flag = arg1;
@@ -182,7 +163,7 @@ export default function _default(pressRetentionOffset) {
     if (ref4.current) {
       tmp.current = false;
       if (ref2.current) {
-        tmp11(arg0);
+        callback5(arg0);
       }
       if (onPressOut != null) {
         onPressOut(arg0);
@@ -192,24 +173,24 @@ export default function _default(pressRetentionOffset) {
           onPress(arg0);
         }
       }
-      tmp12 = tmp12();
+      callback6();
       tmp9 = ref3.current && flag;
     }
   }, items6);
-  let closure_29 = tmp14;
+  closure_29 = tmp14;
   const tmp15 = onHoverOut(() => {
     const pressableStateMachine = new hitSlop(pressRetentionOffset[7]).PressableStateMachine();
     return pressableStateMachine;
   }, []);
-  let closure_30 = tmp15;
-  let obj1 = hitSlop(pressRetentionOffset[8]);
+  closure_30 = tmp15;
+  obj1 = hitSlop(pressRetentionOffset[8]);
   const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   const items7 = [tmp13, tmp14, tmp15, isScreenReaderEnabled];
   onHoverIn(() => {
-    tmp15.setStates(hitSlop(pressRetentionOffset[9]).getStatesConfig(closure_28, closure_29, isScreenReaderEnabled));
+    states.setStates(hitSlop(pressRetentionOffset[9]).getStatesConfig(closure_28, closure_29, isScreenReaderEnabled));
   }, items7);
-  let closure_32 = onPress(null);
-  let closure_33 = onPress(null);
+  closure_32 = onPress(null);
+  closure_33 = onPress(null);
   const items8 = [delayHoverIn, delayHoverOut, onHoverIn, onHoverOut];
   const items9 = [tmp15, tmp12, tmp14, isScreenReaderEnabled];
   const tmp6 = onHoverOut(() => {
@@ -230,7 +211,7 @@ export default function _default(pressRetentionOffset) {
     const HoverResult = GestureObjects.Hover();
     const manualActivationResult = GestureObjects.Hover().manualActivation(true);
     const fn = function n(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       if (ref2.current) {
         const _clearTimeout = clearTimeout;
         clearTimeout(tmp.current);
@@ -239,41 +220,41 @@ export default function _default(pressRetentionOffset) {
         const _setTimeout = setTimeout;
         closure_32.current = setTimeout(() => {
           let tmpResult;
-          if (outer1_6 != null) {
-            tmpResult = tmp(outer2_0(outer2_1[6]).gestureToPressableEvent(closure_0));
-            const obj = outer2_0(outer2_1[6]);
+          if (closure_1_6 != null) {
+            tmpResult = tmp(closure_2_0(closure_2_1[6]).gestureToPressableEvent(closure_0));
+            const obj = closure_2_0(closure_2_1[6]);
           }
           return tmpResult;
         }, tmp4);
       } else if (closure_6 != null) {
-        tmp5(outer1_0(outer1_1[6]).gestureToPressableEvent(arg0));
-        let obj = outer1_0(outer1_1[6]);
+        tmp5(closure_1_0(closure_1_1[6]).gestureToPressableEvent(arg0));
+        let obj = closure_1_0(closure_1_1[6]);
       }
     };
     let obj = { hoverOutTimeout: closure_33, clearTimeout: clearTimeout, delayHoverIn, hoverInTimeout: closure_32, setTimeout: setTimeout, onHoverIn, gestureToPressableEvent: hitSlop(pressRetentionOffset[6]).gestureToPressableEvent };
     fn.__closure = obj;
     fn.__workletHash = 145410820733;
-    fn.__initData = outer1_15;
+    fn.__initData = closure_1_15;
     const cancelsTouchesInViewResult = GestureObjects.Hover().manualActivation(true).cancelsTouchesInView(false);
     const fn2 = function t(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       if (ref.current) {
         const _clearTimeout = clearTimeout;
         clearTimeout(tmp.current);
       }
-      if (_slicedToArray) {
+      if (closure_3) {
         const _setTimeout = setTimeout;
         closure_33.current = setTimeout(() => {
           let tmpResult;
-          if (outer1_7 != null) {
-            tmpResult = tmp(outer2_0(outer2_1[6]).gestureToPressableEvent(closure_0));
-            const obj = outer2_0(outer2_1[6]);
+          if (closure_1_7 != null) {
+            tmpResult = tmp(closure_2_0(closure_2_1[6]).gestureToPressableEvent(closure_0));
+            const obj = closure_2_0(closure_2_1[6]);
           }
           return tmpResult;
         }, tmp4);
       } else if (closure_7 != null) {
-        tmp5(outer1_0(outer1_1[6]).gestureToPressableEvent(arg0));
-        let obj = outer1_0(outer1_1[6]);
+        tmp5(closure_1_0(closure_1_1[6]).gestureToPressableEvent(arg0));
+        let obj = closure_1_0(closure_1_1[6]);
       }
     };
     obj = { hoverInTimeout: closure_32, clearTimeout: clearTimeout, delayHoverOut, hoverOutTimeout: closure_33, setTimeout: setTimeout, onHoverOut, gestureToPressableEvent: hitSlop(pressRetentionOffset[6]).gestureToPressableEvent };
@@ -282,12 +263,12 @@ export default function _default(pressRetentionOffset) {
     fn2.__initData = closure_14;
     return GestureObjects.Hover().manualActivation(true).cancelsTouchesInView(false).onBegin(fn).onFinalize(fn2);
   }, items8);
-  let closure_34 = tmp20;
+  closure_34 = tmp20;
   const items11 = [
     onHoverOut(() => {
       const GestureObjects = hitSlop(pressRetentionOffset[10]).GestureObjects;
       const fn = function o(arg0) {
-        const result = outer1_0(outer1_1[6]).gestureTouchToPressableEvent(arg0);
+        const result = closure_1_0(closure_1_1[6]).gestureTouchToPressableEvent(arg0);
         navigation.reset();
         callback2(result, false);
       };
@@ -298,10 +279,10 @@ export default function _default(pressRetentionOffset) {
       const NativeResult = GestureObjects.Native();
       const fn2 = function s() {
         const handleEvent = navigation.handleEvent;
-        const NATIVE_BEGIN = outer1_0(outer1_1[9]).StateMachineEvent.NATIVE_BEGIN;
+        const NATIVE_BEGIN = closure_1_0(closure_1_1[9]).StateMachineEvent.NATIVE_BEGIN;
         if (closure_31) {
-          handleEvent(NATIVE_BEGIN, outer1_0(outer1_1[6]).viewCenterToPressableEvent(ref.current));
-          const obj = outer1_0(outer1_1[6]);
+          handleEvent(NATIVE_BEGIN, closure_1_0(closure_1_1[6]).viewCenterToPressableEvent(ref.current));
+          const obj = closure_1_0(closure_1_1[6]);
         } else {
           handleEvent(NATIVE_BEGIN);
         }
@@ -318,10 +299,10 @@ export default function _default(pressRetentionOffset) {
       fn3.__closure = { Platform: onPressOut, stateMachine: closure_30, StateMachineEvent: hitSlop(pressRetentionOffset[9]).StateMachineEvent };
       fn3.__workletHash = 1583717288778;
       fn3.__initData = closure_21;
-      const obj1 = { Platform: onPressOut, stateMachine: closure_30, StateMachineEvent: hitSlop(pressRetentionOffset[9]).StateMachineEvent };
+      obj1 = { Platform: onPressOut, stateMachine: closure_30, StateMachineEvent: hitSlop(pressRetentionOffset[9]).StateMachineEvent };
       const fn4 = function t(arg0, arg1) {
         const handleEvent = navigation.handleEvent;
-        const StateMachineEvent = outer1_0(outer1_1[9]).StateMachineEvent;
+        const StateMachineEvent = closure_1_0(closure_1_1[9]).StateMachineEvent;
         if (arg1) {
           handleEvent(StateMachineEvent.FINALIZE);
         } else {
@@ -342,8 +323,8 @@ export default function _default(pressRetentionOffset) {
       const minDurationResult = GestureObjects.LongPress().minDuration(hitSlop(pressRetentionOffset[5]).INT32_MAX);
       const maxDistanceResult = GestureObjects.LongPress().minDuration(hitSlop(pressRetentionOffset[5]).INT32_MAX).maxDistance(hitSlop(pressRetentionOffset[5]).INT32_MAX);
       const fn = function o(arg0) {
-        const result = outer1_0(outer1_1[6]).gestureTouchToPressableEvent(arg0);
-        navigation.handleEvent(outer1_0(outer1_1[9]).StateMachineEvent.LONG_PRESS_TOUCHES_DOWN, result);
+        const result = closure_1_0(closure_1_1[6]).gestureTouchToPressableEvent(arg0);
+        navigation.handleEvent(closure_1_0(closure_1_1[9]).StateMachineEvent.LONG_PRESS_TOUCHES_DOWN, result);
       };
       let obj = { gestureTouchToPressableEvent: hitSlop(pressRetentionOffset[6]).gestureTouchToPressableEvent, stateMachine: closure_30, StateMachineEvent: hitSlop(pressRetentionOffset[9]).StateMachineEvent };
       fn.__closure = obj;
@@ -362,7 +343,7 @@ export default function _default(pressRetentionOffset) {
       fn2.__initData = closure_18;
       const onTouchesDownResult = GestureObjects.LongPress().minDuration(hitSlop(pressRetentionOffset[5]).INT32_MAX).maxDistance(hitSlop(pressRetentionOffset[5]).INT32_MAX).cancelsTouchesInView(false).onTouchesDown(fn);
       const fn3 = function n(arg0) {
-        const result = outer1_0(outer1_1[6]).gestureTouchToPressableEvent(arg0);
+        const result = closure_1_0(closure_1_1[6]).gestureTouchToPressableEvent(arg0);
         navigation.reset();
         callback2(result, false);
       };
@@ -370,7 +351,7 @@ export default function _default(pressRetentionOffset) {
       fn3.__closure = { gestureTouchToPressableEvent: hitSlop(pressRetentionOffset[6]).gestureTouchToPressableEvent, stateMachine: closure_30, handlePressOut: closure_29 };
       fn3.__workletHash = 8223505277740;
       fn3.__initData = closure_17;
-      const obj1 = { gestureTouchToPressableEvent: hitSlop(pressRetentionOffset[6]).gestureTouchToPressableEvent, stateMachine: closure_30, handlePressOut: closure_29 };
+      obj1 = { gestureTouchToPressableEvent: hitSlop(pressRetentionOffset[6]).gestureTouchToPressableEvent, stateMachine: closure_30, handlePressOut: closure_29 };
       const fn4 = function t(arg0, arg1) {
 
       };
@@ -383,16 +364,14 @@ export default function _default(pressRetentionOffset) {
     tmp18
   ];
   function _loop(iter) {
-    let closure_0 = iter;
+    closure_0 = iter;
     iter.enabled(closure_34);
     iter.runOnJS(true);
     iter.hitSlop(closure_22);
     const entries = Object.entries(closure_14);
     const item = entries.forEach((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
-      iter(outer1_1[11]).applyRelationProp(iter, tmp, tmp2);
+      iter(closure_1_1[11]).applyRelationProp(iter, tmp, tmp2);
     });
   }
   const iter = items11[Symbol.iterator]();
@@ -408,8 +387,8 @@ export default function _default(pressRetentionOffset) {
     const minDurationResult = GestureObjects.LongPress().minDuration(hitSlop(pressRetentionOffset[5]).INT32_MAX);
     const maxDistanceResult = GestureObjects.LongPress().minDuration(hitSlop(pressRetentionOffset[5]).INT32_MAX).maxDistance(hitSlop(pressRetentionOffset[5]).INT32_MAX);
     const fn = function o(arg0) {
-      const result = outer1_0(outer1_1[6]).gestureTouchToPressableEvent(arg0);
-      navigation.handleEvent(outer1_0(outer1_1[9]).StateMachineEvent.LONG_PRESS_TOUCHES_DOWN, result);
+      const result = closure_1_0(closure_1_1[6]).gestureTouchToPressableEvent(arg0);
+      navigation.handleEvent(closure_1_0(closure_1_1[9]).StateMachineEvent.LONG_PRESS_TOUCHES_DOWN, result);
     };
     let obj = { gestureTouchToPressableEvent: hitSlop(pressRetentionOffset[6]).gestureTouchToPressableEvent, stateMachine: closure_30, StateMachineEvent: hitSlop(pressRetentionOffset[9]).StateMachineEvent };
     fn.__closure = obj;
@@ -428,7 +407,7 @@ export default function _default(pressRetentionOffset) {
     fn2.__initData = closure_18;
     const onTouchesDownResult = GestureObjects.LongPress().minDuration(hitSlop(pressRetentionOffset[5]).INT32_MAX).maxDistance(hitSlop(pressRetentionOffset[5]).INT32_MAX).cancelsTouchesInView(false).onTouchesDown(fn);
     const fn3 = function n(arg0) {
-      const result = outer1_0(outer1_1[6]).gestureTouchToPressableEvent(arg0);
+      const result = closure_1_0(closure_1_1[6]).gestureTouchToPressableEvent(arg0);
       navigation.reset();
       callback2(result, false);
     };
@@ -436,7 +415,7 @@ export default function _default(pressRetentionOffset) {
     fn3.__closure = { gestureTouchToPressableEvent: hitSlop(pressRetentionOffset[6]).gestureTouchToPressableEvent, stateMachine: closure_30, handlePressOut: closure_29 };
     fn3.__workletHash = 8223505277740;
     fn3.__initData = closure_17;
-    const obj1 = { gestureTouchToPressableEvent: hitSlop(pressRetentionOffset[6]).gestureTouchToPressableEvent, stateMachine: closure_30, handlePressOut: closure_29 };
+    obj1 = { gestureTouchToPressableEvent: hitSlop(pressRetentionOffset[6]).gestureTouchToPressableEvent, stateMachine: closure_30, handlePressOut: closure_29 };
     const fn4 = function t(arg0, arg1) {
 
     };

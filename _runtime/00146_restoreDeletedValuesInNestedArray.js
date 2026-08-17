@@ -2,23 +2,22 @@
 const module = arg2;
 const dependencyMap = arg6;
 function restoreDeletedValuesInNestedArray(arg0, arg1, arg2) {
-  let c4;
   if (Array.isArray(arg1)) {
     if (+arg1.length) {
       let diff = tmp6 - 1;
-      if (c4 > 0) {
+      if (closure_4 > 0) {
         restoreDeletedValuesInNestedArray(arg0, arg1[diff], arg2);
         while (+diff) {
           diff = tmp11 - 1;
-          let tmp12 = c4;
-          if (c4 <= 0) {
+          let tmp12 = closure_4;
+          if (closure_4 <= 0) {
             break;
           }
         }
       }
     }
   } else if (arg1) {
-    if (c4 > 0) {
+    if (closure_4 > 0) {
       for (const key10009 in c3) {
         let tmp14 = key10009;
         let tmp15 = _null;
@@ -50,8 +49,8 @@ function restoreDeletedValuesInNestedArray(arg0, arg1, arg2) {
               }
               let tmp4 = _null;
               _null[key10009] = false;
-              let tmp5 = c4;
-              c4 = c4 - 1;
+              let tmp5 = closure_4;
+              closure_4 = closure_4 - 1;
               continue;
             }
             continue;
@@ -384,7 +383,7 @@ function diffProperties(arr, arr, closure_2, arg3) {
             if (typeof obj5.diff !== "function") {
               if (typeof obj5.process !== "function") {
                 obj1 = null;
-                let closure_4 = 0;
+                closure_4 = 0;
                 let tmp66 = diffNestedProperty;
                 let num5 = 0;
                 let tmp67 = tmp8;

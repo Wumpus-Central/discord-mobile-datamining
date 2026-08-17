@@ -1,6 +1,6 @@
 // _runtime/03831_isThisMonth.js
-import isSameMonth from "isSameMonth";
-import requiredArgs from "requiredArgs";
+import isSameMonth from "isSameMonth" /* 3823 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!isSameMonth) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!isSameMonth) {
 } else {
   tmp3 = isSameMonth;
 }
-let c0 = tmp3;
+isSameMonth = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,10 +17,10 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function isThisMonth(arg0) {
-  tmp5.default(1, arguments);
-  return tmp3.default(Date.now(), arg0);
+  requiredArgs.default(1, arguments);
+  return isSameMonth.default(Date.now(), arg0);
 };
 export default exports.default;

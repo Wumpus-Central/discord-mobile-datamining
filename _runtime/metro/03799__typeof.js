@@ -1,6 +1,6 @@
 // _runtime/metro/03799__typeof.js
-import setUTCISODay from "setUTCISODay";
-import { Parser } from "Parser";
+import Parser2 from "Parser" /* 3778 */;
+import setUTCISODay from "setUTCISODay" /* 3800 */;
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -8,9 +8,9 @@ function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -30,7 +30,7 @@ function _typeof(arg0) {
   };
 }
 function _setPrototypeOf(ISODayParser, Parser) {
-  let _setPrototypeOf = Object.setPrototypeOf;
+  _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
     _setPrototypeOf = function _setPrototypeOf(ISODayParser, Parser) {
       ISODayParser.__proto__ = Parser;
@@ -42,7 +42,7 @@ function _setPrototypeOf(ISODayParser, Parser) {
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;
-    let _getPrototypeOf = Object.getPrototypeOf;
+    _getPrototypeOf = Object.getPrototypeOf;
   } else {
     _getPrototypeOf = function _getPrototypeOf(arg0) {
       let __proto__ = arg0.__proto__;
@@ -62,11 +62,12 @@ if (!setUTCISODay) {
 } else {
   tmp3 = setUTCISODay;
 }
-let c3 = tmp3;
+setUTCISODay = tmp3;
+const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
 class ISODayParser {
   constructor() {
-    if (this instanceof c1) {
+    if (this instanceof closure_1) {
       length = arguments.length;
       _Array = Array;
       tmp6 = new.target;
@@ -258,7 +259,7 @@ let items = [
   {
     key: "set",
     value: function set(arg0, arg1, arg2) {
-      const defaultResult = tmp3.default(arg0, arg2);
+      const defaultResult = setUTCISODay.default(arg0, arg2);
       defaultResult.setUTCHours(0, 0, 0, 0);
       return defaultResult;
     }

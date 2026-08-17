@@ -1,9 +1,10 @@
 // _runtime/06501__isNativeReflectConstruct.js
-import RotationGesture from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import RotationGesture from "_classCallCheck" /* 41 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_get" /* 96 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -16,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -44,9 +45,9 @@ class RotationGesture {
   constructor() {
     self = this;
     tmp = RotationGesture(this, RotationGesture);
-    tmp2 = __esModule;
-    obj = __esModule(RotationGesture);
-    tmp3 = __esModule;
+    tmp2 = closure_2;
+    obj = closure_2(RotationGesture);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -59,7 +60,7 @@ class RotationGesture {
     return tmp3Result;
   }
 }
-require("_inherits")(RotationGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
+_inheritsDefault(RotationGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
 let items = [
   {
     key: "onChange",

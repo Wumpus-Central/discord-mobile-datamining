@@ -1,7 +1,8 @@
 // _runtime/13659_isSupportedCurrency.js
-import { _formatToParts } from "13576__formatToParts.js";
-import { 13660__ } from "metro/13660__.js";
-const require = arg1;
+import _formatToParts from "_formatToParts" /* 13576 */;
+import _mod13660 from "module_13660" /* 13660 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function isSupportedCurrency(arr3, locale) {
   let str = locale;
@@ -24,7 +25,7 @@ function isSupportedCurrency(arr3, locale) {
 }
 arg5.getSupportedCurrencies = function getSupportedCurrencies(locale) {
   const items = [];
-  const currencies = 13660__.currencies;
+  const currencies = _mod13660.currencies;
   for (let num = 0; num < currencies.length; num = num + 1) {
     let arr3 = currencies[num];
     let tmp = num;

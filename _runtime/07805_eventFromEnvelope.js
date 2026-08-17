@@ -1,5 +1,5 @@
 // _runtime/07805_eventFromEnvelope.js
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { forEachEnvelopeItem } from "07782_forEachEnvelopeItem.js";
 
 function eventFromEnvelope(arg0, arg1) {
@@ -11,7 +11,7 @@ function eventFromEnvelope(arg0, arg1) {
       if (Array.isArray(arg0)) {
         tmp3 = arg0[1];
       }
-      let closure_1 = tmp3;
+      closure_1 = tmp3;
     }
     return closure_1;
   });
@@ -20,8 +20,8 @@ function eventFromEnvelope(arg0, arg1) {
 
 export { eventFromEnvelope };
 export function makeMultiplexedTransport(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   return (arg0) => {
     const callback = arg0;
     function getTransport(arg0, arg1) {
@@ -47,15 +47,15 @@ export function makeMultiplexedTransport(arg0, arg1) {
             merged = Object.assign(merged);
             result.url = envelopeEndpointWithUrlEncodedAuth;
             lib = undefined;
-            let c1;
+            table = undefined;
             let tmp9Result = tmp9(result);
-            c1 = tmp9Result;
+            table = tmp9Result;
             let obj = {};
             const merged1 = Object.assign(tmp9Result);
-            tmp9 = outer2_2;
-            lib = outer2_2((arg0) => {
-              let closure_0 = arg0;
-              let c1 = 0;
+            tmp9 = closure_2_2;
+            lib = closure_2_2((arg0) => {
+              closure_0 = arg0;
+              c1 = 0;
               return (function*(arg0) {
                 if (c1 === 2) {
                   c1 = 3;
@@ -82,7 +82,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      const tmp6 = outer2_3(closure_0, ["event", "transaction", "profile", "replay_event"]);
+                      const tmp6 = closure_2_3(closure_0, ["event", "transaction", "profile", "replay_event"]);
                       if (tmp6) {
                         tmp6.release = closure_0;
                       }
@@ -124,12 +124,12 @@ export function makeMultiplexedTransport(arg0, arg1) {
     }
     function _send() {
       const self = this;
-      const tmp = outer2_2((arg0) => {
-        let closure_0 = arg0;
-        let c2 = 0;
-        let c1 = 0;
+      const tmp = closure_2_2((arg0) => {
+        closure_0 = arg0;
+        c2 = 0;
+        c1 = 0;
         return (function*(arg0) {
-          const obj1 = { envelope: null, getEvent: null };
+          obj1 = { envelope: null, getEvent: null };
           obj1[0] = closure_0;
           obj1[1] = function getEvent() { ... };
           const mapped = v0(obj1).map(() => { ... });
@@ -144,7 +144,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
           return arg1[0];
         })();
       });
-      const _send = tmp;
+      closure_4 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -155,23 +155,23 @@ export function makeMultiplexedTransport(arg0, arg1) {
     }
     function _flush() {
       const self = this;
-      const tmp = outer2_2((arg0) => {
-        let closure_0 = arg0;
-        let c3 = 0;
-        let c4 = 0;
+      const tmp = closure_2_2((arg0) => {
+        closure_0 = arg0;
+        c3 = 0;
+        c4 = 0;
         return (function*(arg0, arr) {
-          let closure_2 = tmp2;
-          let closure_1 = 0;
+          closure_2 = tmp2;
+          closure_1 = 0;
           const items = [];
-          const arraySpreadResult = HermesBuiltin.arraySpread(outer1_2.values(), closure_1);
+          const arraySpreadResult = HermesBuiltin.arraySpread(closure_1_2.values(), closure_1);
           closure_1 = arraySpreadResult;
-          items[arraySpreadResult] = outer1_1;
+          items[arraySpreadResult] = closure_1_1;
           closure_1 = closure_1 + 1;
           yield Promise.all(items.map(() => { ... }));
           return arr.every(/* F120654 */ function() { ... });
         })();
       });
-      const _flush = tmp;
+      closure_5 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -180,7 +180,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
       }
       return applyArgumentsResult;
     }
-    let closure_1 = callback(arg0);
+    closure_1 = callback(arg0);
     const map = new Map();
     return {
       send(arg0) {

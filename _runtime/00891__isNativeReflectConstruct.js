@@ -1,11 +1,12 @@
 // _runtime/00891__isNativeReflectConstruct.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import c4 from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import _inherits from "_inherits";
+import isErrorEvent from "isErrorEvent" /* 876 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import closure_6 from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
 
 const ServerRuntimeClient = require;
 function _isNativeReflectConstruct() {
@@ -19,10 +20,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -31,16 +32,16 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class ServerRuntimeClient {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, ServerRuntimeClient);
+    tmp = closure_3(this, ServerRuntimeClient);
     obj = require("registerSpanErrorInstrumentation");
     result = obj.registerSpanErrorInstrumentation();
     obj2 = require("addUserAgentToTransportHeaders");
     result1 = obj2.addUserAgentToTransportHeaders(global);
     items = [];
     items[0] = global;
-    tmp4 = outer1_5;
-    obj3 = outer1_5(ServerRuntimeClient);
-    tmp5 = outer1_4;
+    tmp4 = closure_5;
+    obj3 = closure_5(ServerRuntimeClient);
+    tmp5 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -53,7 +54,7 @@ class ServerRuntimeClient {
     return tmp5Result;
   }
 }
-_inherits(ServerRuntimeClient, require("isErrorEvent").Client);
+_inherits(ServerRuntimeClient, isErrorEvent.Client);
 let items = [
   {
     key: "eventFromException",
@@ -101,7 +102,7 @@ let items = [
         }
       }
       const self = this;
-      let fn = _get(_getPrototypeOf(self.prototype), "captureException", this);
+      let fn = callback4(callback3(self.prototype), "captureException", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -151,7 +152,7 @@ let items = [
         const obj = ServerRuntimeClient(848);
       }
       const self = this;
-      let fn = _get(_getPrototypeOf(self.prototype), "captureEvent", this);
+      let fn = callback4(callback3(self.prototype), "captureEvent", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -162,8 +163,6 @@ let items = [
   {
     key: "captureCheckIn",
     value: function captureCheckIn(checkInId) {
-      let tmp11;
-      let tmp12;
       if ("checkInId" in checkInId) {
         if (checkInId.checkInId) {
           checkInId = checkInId.checkInId;
@@ -185,9 +184,9 @@ let items = [
             obj.monitor_config = obj;
           }
           const obj4 = ServerRuntimeClient(881);
-          [tmp11, tmp12] = _slicedToArray(ServerRuntimeClient(881)._getTraceInfoFromScope(self, arg2), 2);
+          [tmp11, tmp12] = callback(ServerRuntimeClient(881)._getTraceInfoFromScope(self, arg2), 2);
           if (tmp12) {
-            const obj1 = { trace: null };
+            obj1 = { trace: null };
             obj1[0] = tmp12;
             obj.contexts = obj1;
           }
@@ -236,7 +235,7 @@ let items = [
       if (self._options.serverName) {
         platform.server_name = platform.server_name || self._options.serverName;
       }
-      let fn = _get(_getPrototypeOf(self.prototype), "_prepareEvent", self);
+      let fn = callback4(callback3(self.prototype), "_prepareEvent", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

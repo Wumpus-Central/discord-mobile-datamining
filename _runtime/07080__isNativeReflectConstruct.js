@@ -1,9 +1,10 @@
 // _runtime/07080__isNativeReflectConstruct.js
-import RVLinearLayoutManagerImpl from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 7074 */;
+import RVLinearLayoutManagerImpl from "_classCallCheck" /* 7050 */;
+import closure_1 from "_possibleConstructorReturn" /* 7069 */;
+import closure_2 from "_getPrototypeOf" /* 7071 */;
+import closure_3 from "_get" /* 7072 */;
+import importDefaultResult from "_createClass" /* 7051 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -16,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -31,9 +32,9 @@ class RVLinearLayoutManagerImpl {
     items = [, ];
     items[0] = global;
     items[1] = arg1;
-    tmp2 = __esModule;
-    obj = __esModule(RVLinearLayoutManagerImpl);
-    tmp3 = __esModule;
+    tmp2 = closure_2;
+    obj = closure_2(RVLinearLayoutManagerImpl);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -50,7 +51,7 @@ class RVLinearLayoutManagerImpl {
     return tmp3Result;
   }
 }
-require("_inherits")(RVLinearLayoutManagerImpl, require("RVLayoutManager").RVLayoutManager);
+_inheritsDefault(RVLinearLayoutManagerImpl, require("RVLayoutManager").RVLayoutManager);
 let items = [
   {
     key: "updateLayoutParams",

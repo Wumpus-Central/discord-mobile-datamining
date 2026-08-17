@@ -1,8 +1,11 @@
 // _runtime/04353_TouchableHaptic.js
-import { Pressable } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noop from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-require("noop").useCallback;
+noop.useCallback;
+const Pressable = get_ActivityIndicator.Pressable;
+const jsx = jsxProd.jsx;
 
 export const TouchableHaptic = function TouchableHaptic(hapticType) {
   let impactMedium = hapticType.hapticType;
@@ -18,18 +21,18 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
   const onPress = hapticType.onPress;
   const onLongPress = hapticType.onLongPress;
   const merged = Object.assign(hapticType, Object.create(null));
-  let c6;
+  closure_6 = undefined;
   const items = [impactMedium, hapticOptions];
   const tmp4 = onPressIn(() => {
     str(hapticOptions[4]).trigger(impactMedium, hapticOptions);
   }, items);
-  c6 = tmp4;
+  closure_6 = tmp4;
   const items1 = [str, tmp4, onPressIn];
   const items2 = [str, tmp4, onPress];
   const items3 = [str, tmp4, onLongPress];
   const tmp5 = onPressIn((arg0) => {
     if ("onPressIn" === str) {
-      _undefined();
+      callback();
     }
     if (onPressIn != null) {
       tmp3(arg0);
@@ -37,7 +40,7 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
   }, items1);
   const tmp6 = onPressIn((arg0) => {
     if ("onPress" === str) {
-      _undefined();
+      callback();
     }
     if (onPress != null) {
       tmp3(arg0);
@@ -48,7 +51,7 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
     onPressIn: tmp5,
     onPress: onPressIn((arg0) => {
       if ("onPress" === str) {
-        _undefined();
+        callback();
       }
       if (onPress != null) {
         tmp3(arg0);
@@ -56,7 +59,7 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
     }, items2),
     onLongPress: onPressIn((arg0) => {
       if ("onLongPress" === str) {
-        _undefined();
+        callback();
       }
       if (onLongPress != null) {
         tmp3(arg0);

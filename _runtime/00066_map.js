@@ -10,7 +10,7 @@ arg5.customDirectEventTypes = obj;
 arg5.register = function register(arg0, fn) {
   module(38)(!map.has(arg0), "Tried to register two views with the same name %s", arg0);
   let str = "null";
-  const obj = map;
+  obj = map;
   const tmp = module(38);
   if (null !== fn) {
     str = typeof fn;
@@ -20,8 +20,6 @@ arg5.register = function register(arg0, fn) {
   return arg0;
 };
 arg5.get = function get(arg0) {
-  let bubblingEventTypes;
-  let directEventTypes;
   let value = map1.get(arg0);
   if (null == value) {
     value = map.get(arg0);

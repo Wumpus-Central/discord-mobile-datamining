@@ -1,7 +1,8 @@
 // _runtime/07856_callFrameToStackFrame.js
-import { createStackParser } from "07741_createStackParser.js";
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
-const require = arg1;
+import createStackParser from "createStackParser" /* 7741 */;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {
   let replaced;
@@ -17,10 +18,7 @@ arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {
     sum1 = location.location.lineNumber + 1;
   }
   let obj = addNonEnumerableProperty;
-  obj = { filename: replaced, module: arg2(replaced), function: null, colno: null, lineno: null, in_app: null };
-  obj[2] = location.functionName || createStackParser.UNKNOWN_FUNCTION;
-  obj[3] = sum;
-  obj[4] = sum1;
+  obj = { filename: replaced, module: arg2(replaced), function: location.functionName || createStackParser.UNKNOWN_FUNCTION, colno: sum, lineno: sum1, in_app: null };
   let filenameIsInAppResult;
   if (replaced) {
     filenameIsInAppResult = tmp4(7854).filenameIsInApp(replaced);
@@ -30,12 +28,12 @@ arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {
   return obj.dropUndefinedKeys(obj);
 };
 arg5.watchdogTimer = function watchdogTimer(arg0, arg1, arg2, arg3) {
-  let closure_0 = arg1;
-  let closure_1 = arg2;
-  let closure_2 = arg3;
-  let closure_3 = arg0();
-  let c4 = false;
-  let c5 = true;
+  closure_0 = arg1;
+  closure_1 = arg2;
+  closure_2 = arg3;
+  closure_3 = arg0();
+  c4 = false;
+  c5 = true;
   const timerId = setInterval(() => {
     const timeMs = navigation.getTimeMs();
     let tmp2 = false === c4;
@@ -57,7 +55,7 @@ arg5.watchdogTimer = function watchdogTimer(arg0, arg1, arg2, arg3) {
       navigation.reset();
     },
     enabled(arg0) {
-      let closure_5 = arg0;
+      closure_5 = arg0;
     }
   };
 };

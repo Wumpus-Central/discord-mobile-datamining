@@ -1,6 +1,6 @@
 // _runtime/10321_context.js
-import importDefaultResult from "noop";
-import { jsx } from "jsxProd";
+import importDefaultResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let context = importDefaultResult.createContext({});
@@ -9,8 +9,6 @@ let closure_6 = { code: "function pnpm_indexTsx2(dimensions){const{containerSize
 
 export const GlobalStateContext = context;
 export const GlobalStateProvider = (arg0) => {
-  let children;
-  let value;
   let sharedValue;
   let sharedValue1;
   ({ children, value } = arg0);
@@ -46,7 +44,7 @@ export const useGlobalState = () => {
     return context;
   } else {
     const _Error = Error;
-    const error = new Error("useGlobalState must be used within a GlobalStateProvider");
+    error = new Error("useGlobalState must be used within a GlobalStateProvider");
     throw error;
   }
 };

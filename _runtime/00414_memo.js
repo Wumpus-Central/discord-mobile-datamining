@@ -1,42 +1,15 @@
 // _runtime/00414_memo.js
-import _slicedToArray from "_slicedToArray";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import "noop";
-import noop from "noop";
-import jsxProd from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
-let error;
-let jsx;
-let memo;
-let metroImportAll;
 let closure_2 = ["accessible", "accessibilityState", "aria-live", "android_disableSound", "android_ripple", "aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-label", "aria-selected", "blockNativeResponder", "cancelable", "children", "delayHoverIn", "delayHoverOut", "delayLongPress", "disabled", "focusable", "hitSlop", "onBlur", "onFocus", "onHoverIn", "onHoverOut", "onLongPress", "onPress", "onPressIn", "onPressMove", "onPressOut", "pressRetentionOffset", "style", "testOnly_pressed", "unstable_pressDelay"];
+noopAll;
 ({ useMemo: c5, useRef: closure_6, useState: error, memo } = noop);
-({ jsx, jsxs: metroImportAll } = jsxProd);
+({ jsx, jsxs: closure_8 } = jsxProd);
 const memoResult = memo(function Pressable(ref) {
-  let accessibilityLabel;
-  let accessibilityLiveRegion;
-  let accessibilityState;
-  let accessible;
-  let android_disableSound;
-  let android_ripple;
-  let blockNativeResponder;
-  let children;
-  let delayHoverIn;
-  let focusable;
-  let style;
-  let testOnly_pressed;
-  let tmp15;
-  let tmp16;
-  let tmp18;
-  let tmp19;
-  let tmp2;
-  let tmp3;
-  let tmp4;
-  let tmp5;
-  let tmp6;
-  let unstable_pressDelay;
   const merged = Object.assign(ref, Object.create(null));
   android_disableSound = undefined;
   blockNativeResponder = undefined;
@@ -57,9 +30,9 @@ const memoResult = memo(function Pressable(ref) {
   let onPressOut;
   let pressRetentionOffset;
   unstable_pressDelay = undefined;
-  let c19;
-  let c20;
-  let c21;
+  closure_19 = undefined;
+  c20 = undefined;
+  closure_21 = undefined;
   ({ accessibilityState, aria-live: accessibilityLiveRegion, android_disableSound } = merged);
   ({ aria-busy: tmp2, aria-checked: tmp3, aria-disabled: tmp4, aria-expanded: tmp5, aria-label: accessibilityLabel, aria-selected: tmp6, blockNativeResponder } = merged);
   cancelable = merged.cancelable;
@@ -83,7 +56,7 @@ const memoResult = memo(function Pressable(ref) {
   const tmp7 = delayHoverOut(merged, cancelable);
   const tmp8 = disabled(null);
   const tmp12 = android_disableSound(blockNativeResponder[5])(android_ripple, tmp8);
-  c19 = tmp12;
+  closure_19 = tmp12;
   const tmp11 = android_disableSound(blockNativeResponder[4])(ref.ref, tmp8);
   const tmp13 = delayHoverIn;
   [tmp15, tmp16] = delayHoverIn(hitSlop(false), 2);
@@ -95,7 +68,7 @@ const memoResult = memo(function Pressable(ref) {
   if (typeof children !== "function") {
     tmp20 = typeof style === "function";
   }
-  c21 = tmp20;
+  closure_21 = tmp20;
   if (tmp2 == null) {
     let busy;
     if (accessibilityState != null) {
@@ -188,7 +161,7 @@ const memoResult = memo(function Pressable(ref) {
   if (accessibilityLabel == null) {
     accessibilityLabel = merged.accessibilityLabel;
   }
-  const obj1 = {};
+  obj1 = {};
   const merged2 = Object.assign(tmp7);
   let viewProps;
   if (tmp12 != null) {

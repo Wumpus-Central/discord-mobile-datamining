@@ -1,8 +1,9 @@
 // _runtime/01788__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 const SequencedTransition = arg1;
 function _isNativeReflectConstruct() {
@@ -16,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,12 +30,12 @@ class SequencedTransition {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_2(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(closure_0);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -43,7 +44,7 @@ class SequencedTransition {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.reversed = false;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
@@ -82,16 +83,16 @@ class SequencedTransition {
         obj[2] = callbackV;
         return obj;
       };
-      obj = { delayFunction, delay, withSequence: _undefined(outer1_1[5]).withSequence, withTiming: _undefined(outer1_1[5]).withTiming, reverse: reversed, config: obj, callback: callbackV };
+      obj = { delayFunction, delay, withSequence: callback(closure_1_1[5]).withSequence, withTiming: callback(closure_1_1[5]).withTiming, reverse: reversed, config: obj, callback: callbackV };
       fn.__closure = obj;
       fn.__workletHash = 255577740024;
-      fn.__initData = outer1_6;
+      fn.__initData = closure_1_6;
       return fn;
     };
     return tmp3Result;
   }
 }
-require("_inherits")(SequencedTransition, require("BaseAnimationBuilder").BaseAnimationBuilder);
+_inheritsDefault(SequencedTransition, require("BaseAnimationBuilder").BaseAnimationBuilder);
 let obj = {
   key: "reverse",
   value: function reverse() {

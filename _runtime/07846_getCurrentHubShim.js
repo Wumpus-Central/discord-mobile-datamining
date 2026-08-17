@@ -1,8 +1,9 @@
 // _runtime/07846_getCurrentHubShim.js
-import { getClient } from "07765_getClient.js";
-import { _flush } from "07786__flush.js";
-import { addBreadcrumb } from "07811_addBreadcrumb.js";
-const require = arg1;
+import getClient from "getClient" /* 7765 */;
+import _flush from "_flush" /* 7786 */;
+import addBreadcrumb from "addBreadcrumb" /* 7811 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function getCurrentHubShim() {
   return {

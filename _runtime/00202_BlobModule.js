@@ -1,5 +1,7 @@
 // _runtime/00202_BlobModule.js
-const value = require("get").get("BlobModule");
+import getAll from "get" /* 30 */;
+
+const value = getAll.get("BlobModule");
 let c0 = value;
 let tmp3 = null;
 let c1 = null;

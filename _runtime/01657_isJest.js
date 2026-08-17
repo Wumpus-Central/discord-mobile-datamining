@@ -1,7 +1,9 @@
 // _runtime/01657_isJest.js
-import { version } from "noop";
-import { Platform } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noop from "noop" /* 19 */;
 
+const version = noop.version;
+const Platform = get_ActivityIndicator.Platform;
 
 export const isJest = function isJest() {
   return process.env.JEST_WORKER_ID;

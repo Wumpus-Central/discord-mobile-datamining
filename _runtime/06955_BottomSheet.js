@@ -1,25 +1,17 @@
 // _runtime/06955_BottomSheet.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import "noop";
-import get_ActivityIndicator from "BottomSheetFooter";
-import jsxProd from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import cancelAnimationDefault from "cancelAnimation" /* 1654 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_6;
-let error;
-let forwardRef;
-let memo;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 ({ useMemo: c4, useCallback: c5, useImperativeHandle: closure_6, useEffect: error, forwardRef, memo } = noop);
-({ Platform: metroImportAll, StyleSheet: c9 } = get_ActivityIndicator);
+noopDefault;
+({ Platform: closure_8, StyleSheet: c9 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const result = require("cancelAnimation").addWhitelistedUIProps({ decelerationRate: true });
+const result = cancelAnimationDefault.addWhitelistedUIProps({ decelerationRate: true });
 let closure_12 = { code: "function pnpm_BottomSheetTsx1(){const{topInset,bottomInset,$modal,_animatedContainerHeight}=this.__closure;const verticalInset=topInset+bottomInset;return $modal?_animatedContainerHeight.value-verticalInset:_animatedContainerHeight.value;}" };
 let closure_13 = { code: "function pnpm_BottomSheetTsx2(){const{animatedSnapPoints}=this.__closure;return animatedSnapPoints.value[animatedSnapPoints.value.length-1];}" };
 let closure_14 = { code: "function pnpm_BottomSheetTsx3(){const{animatedContainerHeight,$modal,detached,bottomInset}=this.__closure;let closedPosition=animatedContainerHeight.value;if($modal||detached){closedPosition=animatedContainerHeight.value+bottomInset;}return closedPosition;}" };
@@ -55,7 +47,7 @@ class BottomSheet {
     if (undefined !== index) {
       num = index;
     }
-    c1 = num;
+    index = num;
     ({ snapPoints, initialPosition } = global);
     if (undefined === initialPosition) {
       tmp = animationConfigs;
@@ -74,7 +66,7 @@ class BottomSheet {
       tmp6 = DEFAULT_ANIMATE_ON_MOUNT;
       DEFAULT_ENABLE_CONTENT_PANNING_GESTURE = require("DEFAULT_HANDLE_HEIGHT").DEFAULT_ENABLE_CONTENT_PANNING_GESTURE;
     }
-    _slicedToArray = DEFAULT_ENABLE_CONTENT_PANNING_GESTURE;
+    closure_3 = DEFAULT_ENABLE_CONTENT_PANNING_GESTURE;
     ({ enableOverDrag, enableHandlePanningGesture } = global);
     if (undefined === enableOverDrag) {
       tmp7 = animationConfigs;
@@ -88,7 +80,7 @@ class BottomSheet {
       tmp10 = DEFAULT_ANIMATE_ON_MOUNT;
       DEFAULT_ENABLE_PAN_DOWN_TO_CLOSE = require("DEFAULT_HANDLE_HEIGHT").DEFAULT_ENABLE_PAN_DOWN_TO_CLOSE;
     }
-    enablePanDownToClose = DEFAULT_ENABLE_PAN_DOWN_TO_CLOSE;
+    closure_5 = DEFAULT_ENABLE_PAN_DOWN_TO_CLOSE;
     DEFAULT_DYNAMIC_SIZING = global.enableDynamicSizing;
     if (undefined === DEFAULT_DYNAMIC_SIZING) {
       tmp11 = animationConfigs;
@@ -101,7 +93,7 @@ class BottomSheet {
       tmp14 = DEFAULT_ANIMATE_ON_MOUNT;
       DEFAULT_OVER_DRAG_RESISTANCE_FACTOR = require("DEFAULT_HANDLE_HEIGHT").DEFAULT_OVER_DRAG_RESISTANCE_FACTOR;
     }
-    overDragResistanceFactor = DEFAULT_OVER_DRAG_RESISTANCE_FACTOR;
+    closure_7 = DEFAULT_OVER_DRAG_RESISTANCE_FACTOR;
     overrideReduceMotion = global.overrideReduceMotion;
     ({ keyboardBehavior, style, containerStyle, backgroundStyle, handleStyle, handleIndicatorStyle, gestureEventsHandlersHook } = global);
     if (undefined === keyboardBehavior) {
@@ -116,14 +108,14 @@ class BottomSheet {
       tmp18 = DEFAULT_ANIMATE_ON_MOUNT;
       DEFAULT_KEYBOARD_BLUR_BEHAVIOR = require("DEFAULT_HANDLE_HEIGHT").DEFAULT_KEYBOARD_BLUR_BEHAVIOR;
     }
-    keyboardBlurBehavior = DEFAULT_KEYBOARD_BLUR_BEHAVIOR;
+    closure_10 = DEFAULT_KEYBOARD_BLUR_BEHAVIOR;
     DEFAULT_KEYBOARD_INPUT_MODE = global.android_keyboardInputMode;
     if (undefined === DEFAULT_KEYBOARD_INPUT_MODE) {
       tmp19 = animationConfigs;
       tmp20 = DEFAULT_ANIMATE_ON_MOUNT;
       DEFAULT_KEYBOARD_INPUT_MODE = require("DEFAULT_HANDLE_HEIGHT").DEFAULT_KEYBOARD_INPUT_MODE;
     }
-    android_keyboardInputMode = DEFAULT_KEYBOARD_INPUT_MODE;
+    closure_11 = DEFAULT_KEYBOARD_INPUT_MODE;
     DEFAULT_ENABLE_BLUR_KEYBOARD_ON_GESTURE = global.enableBlurKeyboardOnGesture;
     if (undefined === DEFAULT_ENABLE_BLUR_KEYBOARD_ON_GESTURE) {
       tmp21 = animationConfigs;
@@ -143,13 +135,13 @@ class BottomSheet {
     if (undefined !== topInset) {
       num2 = topInset;
     }
-    c14 = num2;
+    topInset = num2;
     bottomInset = global.bottomInset;
     num3 = 0;
     if (undefined !== bottomInset) {
       num3 = bottomInset;
     }
-    c15 = num3;
+    bottomInset = num3;
     ({ maxDynamicContentSize, contentHeight, handleHeight, animatedPosition } = global);
     animatedIndex = global.animatedIndex;
     simultaneousHandlers = global.simultaneousHandlers;
@@ -163,10 +155,10 @@ class BottomSheet {
     onAnimate = global.onAnimate;
     $modal = global.$modal;
     tmp25 = undefined !== $modal && $modal;
-    closure_27 = tmp25;
+    $modal = tmp25;
     detached = global.detached;
     tmp26 = undefined !== detached && detached;
-    closure_28 = tmp26;
+    detached = tmp26;
     handleComponent = global.handleComponent;
     ({ backdropComponent, backgroundComponent, renderFooter, accessible, children, BodyComponent } = global);
     if (undefined === accessible) {
@@ -215,15 +207,15 @@ class BottomSheet {
       containerOffset = require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_OFFSET;
     }
     reactiveSharedValue1 = tmp33Result1.useReactiveSharedValue(containerOffset);
-    useDerivedValue = reactiveSharedValue1;
+    closure_32 = reactiveSharedValue1;
     tmp33Result2 = require("useBottomSheet");
     if (handleHeight == null) {
       handleHeight = require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT;
     }
     reactiveSharedValue2 = tmp33Result2.useReactiveSharedValue(handleHeight);
-    INITIAL_HANDLE_HEIGHT = reactiveSharedValue2;
+    closure_33 = reactiveSharedValue2;
     tmp33Result3 = require("cancelAnimation");
-    sharedValue = require("_slicedToArray");
+    sharedValue = require("module_0");
     closure_34 = sharedValue;
     tmp33Result4 = require("cancelAnimation");
     if (contentHeight == null) {
@@ -232,11 +224,11 @@ class BottomSheet {
     sharedValue1 = tmp33Result4.useSharedValue(contentHeight);
     closure_35 = sharedValue1;
     tmp33Result5 = require("useBottomSheet");
-    tmp41 = _slicedToArray(tmp33Result5.useAnimatedSnapPoints(snapPoints, derivedValue, sharedValue1, reactiveSharedValue2, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize), 2);
+    tmp41 = closure_3(tmp33Result5.useAnimatedSnapPoints(snapPoints, derivedValue, sharedValue1, reactiveSharedValue2, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize), 2);
     first = tmp41[0];
     closure_36 = first;
     tmp43 = tmp41[1];
-    _ = tmp43;
+    closure_37 = tmp43;
     tmp33Result6 = require("cancelAnimation");
     class I {
       constructor() {
@@ -254,35 +246,35 @@ class BottomSheet {
     class T {
       constructor() {
         sum = closure_31.value;
-        tmp = closure_27;
+        tmp = $modal;
         iter = closure_31;
-        if (!closure_27) {
-          tmp = closure_28;
+        if (!$modal) {
+          tmp = detached;
         }
         if (tmp) {
-          tmp2 = c15;
-          sum = iter.value + c15;
+          tmp2 = bottomInset;
+          sum = iter.value + bottomInset;
         }
         return sum;
       }
     }
     T.__closure = { animatedContainerHeight: derivedValue, $modal: tmp25, detached: tmp26, bottomInset: num3 };
     T.__workletHash = 1052527833249;
-    T.__initData = c14;
+    T.__initData = topInset;
     items2 = [, , , ];
     items2[0] = derivedValue;
     items2[1] = tmp25;
     items2[2] = tmp26;
     items2[3] = num3;
     derivedValue2 = tmp33Result7.useDerivedValue(T, items2);
-    BottomSheet = derivedValue2;
+    closure_39 = derivedValue2;
     tmp33Result8 = require("cancelAnimation");
     fn2 = function j() {
       return derivedValue.value - derivedValue1.value;
     };
     fn2.__closure = { animatedContainerHeight: derivedValue, animatedHighestSnapPoint: derivedValue1 };
     fn2.__workletHash = 12626261619737;
-    fn2.__initData = c15;
+    fn2.__initData = bottomInset;
     items3 = [, ];
     items3[0] = derivedValue;
     items3[1] = derivedValue1;
@@ -297,7 +289,7 @@ class BottomSheet {
     closure_41 = reactiveSharedValue3;
     tmp33Result10 = require("cancelAnimation");
     sharedValue2 = tmp33Result10.useSharedValue(initialPosition);
-    INITIAL_CONTAINER_HEIGHT = sharedValue2;
+    closure_42 = sharedValue2;
     tmp33Result11 = require("cancelAnimation");
     sharedValue3 = tmp33Result11.useSharedValue(require("DEFAULT_HANDLE_HEIGHT").INITIAL_VALUE);
     closure_43 = sharedValue3;
@@ -310,7 +302,7 @@ class BottomSheet {
       tmp51 = -1 === num;
     }
     sharedValue5 = tmp33Result13.useSharedValue(tmp51);
-    useDerivedValue = sharedValue5;
+    closure_45 = sharedValue5;
     tmp33Result14 = require("cancelAnimation");
     sharedValue6 = tmp33Result14.useSharedValue(false);
     closure_46 = sharedValue6;
@@ -332,12 +324,12 @@ class BottomSheet {
         }
         flag2 = false;
         if (null === handleComponent) {
-          tmp5 = INITIAL_HANDLE_HEIGHT;
+          tmp5 = closure_33;
           num = 0;
-          INITIAL_HANDLE_HEIGHT.value = 0;
+          closure_33.value = 0;
           flag2 = true;
         }
-        if (INITIAL_HANDLE_HEIGHT.value !== require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT) {
+        if (closure_33.value !== require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT) {
           flag2 = true;
         }
         flag3 = false;
@@ -370,7 +362,7 @@ class BottomSheet {
     closure_48 = sharedValue7;
     tmp33Result17 = require("cancelAnimation");
     sharedValue8 = tmp33Result17.useSharedValue(false);
-    useDerivedValue = sharedValue8;
+    closure_49 = sharedValue8;
     tmp33Result18 = require("cancelAnimation");
     sharedValue9 = tmp33Result18.useSharedValue(false);
     closure_50 = sharedValue9;
@@ -379,7 +371,7 @@ class BottomSheet {
     closure_51 = sharedValue10;
     tmp33Result20 = require("cancelAnimation");
     sharedValue11 = tmp33Result20.useSharedValue(require("LegacyBaseButton").State.UNDETERMINED);
-    UNDETERMINED = sharedValue11;
+    closure_52 = sharedValue11;
     tmp33Result21 = require("useBottomSheet");
     scrollable = tmp33Result21.useScrollable();
     animatedScrollableType = scrollable.animatedScrollableType;
@@ -399,11 +391,11 @@ class BottomSheet {
     shouldHandleKeyboardEvents = keyboard.shouldHandleKeyboardEvents;
     closure_63 = shouldHandleKeyboardEvents;
     tmp33Result23 = require("cancelAnimation");
-    sharedValue12 = require("_slicedToArray");
+    sharedValue12 = require("module_0");
     closure_64 = sharedValue12;
     tmp33Result24 = require("cancelAnimation");
     reducedMotion = tmp33Result24.useReducedMotion();
-    useReducedMotion = reducedMotion;
+    closure_65 = reducedMotion;
     items5 = [, ];
     items5[0] = reducedMotion;
     items5[1] = overrideReduceMotion;
@@ -469,7 +461,7 @@ class BottomSheet {
     tmp33Result28 = require("cancelAnimation");
     class Z {
       constructor() {
-        if (_slicedToArray) {
+        if (closure_3) {
           tmp3 = animationConfigs;
           tmp4 = DEFAULT_ANIMATE_ON_MOUNT;
           iter = closure_55;
@@ -532,7 +524,7 @@ class BottomSheet {
       const reversed1 = mapped.reverse();
       reversed.push(derivedValue.value);
       reversed1.push(-1);
-      let num = -1;
+      num = -1;
       if (derivedValue4.value) {
         const obj3 = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]);
         value = sharedValue2.value;
@@ -573,14 +565,14 @@ class BottomSheet {
     items8[8] = sharedValue7;
     items8[9] = derivedValue4;
     derivedValue7 = tmp33Result29.useDerivedValue(fn4, items8);
-    q = derivedValue7;
+    closure_71 = derivedValue7;
     items9 = [, , ];
     items9[0] = onChange;
     items9[1] = reactiveSharedValue3;
     items9[2] = tmp43;
-    tmp70 = enablePanDownToClose(function handleOnChange(arg0, arg1) {
+    tmp70 = closure_5(function handleOnChange(arg0, arg1) {
       if (onChange) {
-        if (arg0 === tmp43.value) {
+        if (arg0 === value.value) {
           let PROVIDED = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).SNAP_POINT_TYPE.DYNAMIC;
         } else {
           PROVIDED = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).SNAP_POINT_TYPE.PROVIDED;
@@ -588,12 +580,12 @@ class BottomSheet {
         tmp(arg0, arg1, PROVIDED);
       }
     }, items9);
-    useDerivedValue = tmp70;
+    closure_72 = tmp70;
     items10 = [, , ];
     items10[0] = onAnimate;
     items10[1] = reactiveSharedValue3;
     items10[2] = sharedValue2;
-    tmp71 = enablePanDownToClose(function handleOnAnimate(arg0, arg1, arg2) {
+    tmp71 = closure_5(function handleOnAnimate(arg0, arg1, arg2) {
       if (onAnimate) {
         let tmp3 = arg0 === reactiveSharedValue3.value;
         if (tmp3) {
@@ -605,12 +597,12 @@ class BottomSheet {
         iter = reactiveSharedValue3;
       }
     }, items10);
-    ANIMATION_STATE = tmp71;
+    closure_73 = tmp71;
     tmp33Result30 = require("cancelAnimation");
     class Q {
       constructor() {
         obj = require("cancelAnimation");
-        cancelAnimationResult = obj.cancelAnimation(INITIAL_CONTAINER_HEIGHT);
+        cancelAnimationResult = obj.cancelAnimation(closure_42);
         closure_68.value = require("GESTURE_SOURCE").ANIMATION_SOURCE.NONE;
         closure_67.value = require("GESTURE_SOURCE").ANIMATION_STATE.STOPPED;
         return;
@@ -625,7 +617,7 @@ class BottomSheet {
     items11[1] = sharedValue13;
     items11[2] = sharedValue14;
     workletCallback = tmp33Result30.useWorkletCallback(Q, items11);
-    Q = workletCallback;
+    closure_74 = workletCallback;
     tmp33Result31 = require("cancelAnimation");
     animateToPositionCompleted = function animateToPositionCompleted(arg0) {
       if (arg0) {
@@ -646,10 +638,10 @@ class BottomSheet {
     animateToPositionCompleted.__workletHash = 16634512058026;
     animateToPositionCompleted.__initData = activeOffsetY;
     workletCallback1 = tmp33Result31.useWorkletCallback(animateToPositionCompleted);
-    INITIAL_VALUE = workletCallback1;
+    closure_75 = workletCallback1;
     tmp33Result32 = require("cancelAnimation");
     animateToPosition = function animateToPosition(initialPosition, GESTURE, arg2) {
-      let num = arg2;
+      num = arg2;
       if (arg2 === undefined) {
         num = 0;
       }
@@ -669,7 +661,7 @@ class BottomSheet {
             if (tmp8) {
               tmp8 = initialPosition < iter.value;
             }
-            let num2 = 0;
+            num2 = 0;
             if (tmp8) {
               num2 = sharedValue12.value;
             }
@@ -703,7 +695,7 @@ class BottomSheet {
     items12[2] = animationConfigs;
     items12[3] = overrideReduceMotion;
     workletCallback2 = tmp33Result32.useWorkletCallback(animateToPosition, items12);
-    animate = workletCallback2;
+    closure_76 = workletCallback2;
     tmp33Result33 = require("cancelAnimation");
     setToPosition = function setToPosition(value) {
       let tmp2 = value === sharedValue2.value;
@@ -726,12 +718,12 @@ class BottomSheet {
         sharedValue9.value = false;
       }
     };
-    obj7 = { animatedPosition: sharedValue2, animatedAnimationState: sharedValue13, ANIMATION_STATE: require("GESTURE_SOURCE").ANIMATION_STATE, animatedNextPosition: sharedValue3, __DEV__: false, runOnJS: require("cancelAnimation").runOnJS, print: require("normalizeSnapPoint").print, BottomSheet, animatedNextPositionIndex: sharedValue4, animatedSnapPoints: first, stopAnimation: workletCallback, animatedContainerHeightDidChange: sharedValue9 };
+    obj7 = { animatedPosition: sharedValue2, animatedAnimationState: sharedValue13, ANIMATION_STATE: require("GESTURE_SOURCE").ANIMATION_STATE, animatedNextPosition: sharedValue3, __DEV__: false, runOnJS: require("cancelAnimation").runOnJS, print: require("normalizeSnapPoint").print, BottomSheet: closure_39, animatedNextPositionIndex: sharedValue4, animatedSnapPoints: first, stopAnimation: workletCallback, animatedContainerHeightDidChange: sharedValue9 };
     setToPosition.__closure = obj7;
     setToPosition.__workletHash = 1470510512522;
     setToPosition.__initData = failOffsetY;
     workletCallback3 = tmp33Result33.useWorkletCallback(setToPosition, []);
-    ANIMATION_STATE = workletCallback3;
+    closure_77 = workletCallback3;
     tmp33Result34 = require("cancelAnimation");
     getEvaluatedPosition = function getEvaluatedPosition(arg0) {
       let value = reactiveSharedValue3.value;
@@ -800,7 +792,7 @@ class BottomSheet {
     items13[11] = DEFAULT_KEYBOARD_BLUR_BEHAVIOR;
     items13[12] = num;
     workletCallback4 = tmp33Result34.useWorkletCallback(getEvaluatedPosition, items13);
-    KEYBOARD_BEHAVIOR = workletCallback4;
+    closure_78 = workletCallback4;
     tmp33Result35 = require("cancelAnimation");
     evaluatePosition = function evaluatePosition(arg0, arg1) {
       if (!sharedValue8.value) {
@@ -847,7 +839,7 @@ class BottomSheet {
     items14[2] = workletCallback3;
     items14[3] = tmp64;
     workletCallback5 = tmp33Result35.useWorkletCallback(evaluatePosition, items14);
-    ANIMATION_STATE = workletCallback5;
+    closure_79 = workletCallback5;
     tmp33Result36 = require("useBottomSheet");
     stableCallback = tmp33Result36.useStableCallback(function handleSnapToIndex(arg0, arg1) {
       let value = first.get();
@@ -876,7 +868,7 @@ class BottomSheet {
         const tmp4 = -1(DEFAULT_ANIMATE_ON_MOUNT[10]);
       }
     });
-    useStableCallback = stableCallback;
+    closure_80 = stableCallback;
     tmp33Result37 = require("cancelAnimation");
     handleSnapToPosition = function handleSnapToPosition(arg0, arg1) {
       const normalizeSnapPointResult = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[9]).normalizeSnapPoint(arg0, derivedValue.value);
@@ -894,7 +886,7 @@ class BottomSheet {
         const runOnUIResult = tmp(tmp2[4]).runOnUI(workletCallback2);
       }
     };
-    obj10 = { __DEV__: false, print: require("normalizeSnapPoint").print, BottomSheet, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, animatedContainerHeight: derivedValue, isLayoutCalculated: derivedValue4, animatedNextPosition: sharedValue3, isForcedClosing: sharedValue8, isInTemporaryPosition: sharedValue7, runOnUI: require("cancelAnimation").runOnUI, animateToPosition: workletCallback2, ANIMATION_SOURCE: require("GESTURE_SOURCE").ANIMATION_SOURCE };
+    obj10 = { __DEV__: false, print: require("normalizeSnapPoint").print, BottomSheet: closure_39, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, animatedContainerHeight: derivedValue, isLayoutCalculated: derivedValue4, animatedNextPosition: sharedValue3, isForcedClosing: sharedValue8, isInTemporaryPosition: sharedValue7, runOnUI: require("cancelAnimation").runOnUI, animateToPosition: workletCallback2, ANIMATION_SOURCE: require("GESTURE_SOURCE").ANIMATION_SOURCE };
     handleSnapToPosition.__closure = obj10;
     handleSnapToPosition.__workletHash = 15646490046918;
     handleSnapToPosition.__initData = onAnimate;
@@ -907,7 +899,7 @@ class BottomSheet {
     items15[5] = derivedValue;
     items15[6] = sharedValue2;
     workletCallback6 = tmp33Result37.useWorkletCallback(handleSnapToPosition, items15);
-    ANIMATION_SOURCE = workletCallback6;
+    closure_81 = workletCallback6;
     items16 = [, , , , , ];
     items16[0] = workletCallback2;
     items16[1] = sharedValue8;
@@ -915,7 +907,7 @@ class BottomSheet {
     items16[3] = sharedValue7;
     items16[4] = sharedValue3;
     items16[5] = derivedValue2;
-    tmp80 = enablePanDownToClose(function handleClose(arg0) {
+    tmp80 = closure_5(function handleClose(arg0) {
       let value = derivedValue2.value;
       value = derivedValue4.value;
       if (value) {
@@ -931,14 +923,14 @@ class BottomSheet {
         const runOnUIResult = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]).runOnUI(workletCallback2);
       }
     }, items16);
-    handleSnapToPosition = tmp80;
+    closure_82 = tmp80;
     items17 = [, , , , ];
     items17[0] = workletCallback2;
     items17[1] = sharedValue8;
     items17[2] = sharedValue7;
     items17[3] = sharedValue3;
     items17[4] = derivedValue2;
-    tmp81 = enablePanDownToClose(function handleForceClose(arg0) {
+    tmp81 = closure_5(function handleForceClose(arg0) {
       let value = derivedValue2.value;
       value = value === sharedValue3.value;
       if (!value) {
@@ -952,7 +944,7 @@ class BottomSheet {
         const runOnUIResult = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]).runOnUI(workletCallback2);
       }
     }, items17);
-    handleForceClose = tmp81;
+    closure_83 = tmp81;
     items18 = [, , , , , , ];
     items18[0] = workletCallback2;
     items18[1] = sharedValue7;
@@ -961,7 +953,7 @@ class BottomSheet {
     items18[4] = first;
     items18[5] = sharedValue3;
     items18[6] = sharedValue4;
-    tmp82 = enablePanDownToClose(function handleExpand(arg0) {
+    tmp82 = closure_5(function handleExpand(arg0) {
       let value = first.value;
       value = derivedValue4.value;
       if (value) {
@@ -980,7 +972,7 @@ class BottomSheet {
         const runOnUIResult = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]).runOnUI(workletCallback2);
       }
     }, items18);
-    ANIMATION_STATE = tmp82;
+    closure_84 = tmp82;
     items19 = [, , , , , , ];
     items19[0] = workletCallback2;
     items19[1] = sharedValue8;
@@ -989,7 +981,7 @@ class BottomSheet {
     items19[4] = first;
     items19[5] = sharedValue3;
     items19[6] = sharedValue4;
-    tmp83 = enablePanDownToClose(function handleCollapse(arg0) {
+    tmp83 = closure_5(function handleCollapse(arg0) {
       first = first.value[0];
       let tmp2 = derivedValue4;
       if (derivedValue4) {
@@ -1008,7 +1000,7 @@ class BottomSheet {
         const runOnUIResult = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]).runOnUI(workletCallback2);
       }
     }, items19);
-    handleExpand = tmp83;
+    closure_85 = tmp83;
     tmp84 = DEFAULT_DYNAMIC_SIZING(arg1, () => ({ snapToIndex: stableCallback, snapToPosition: workletCallback6, expand: closure_84, collapse: closure_85, close: closure_82, forceClose: closure_83 }));
     items20 = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
     items20[0] = derivedValue7;
@@ -1071,7 +1063,7 @@ class BottomSheet {
     }
     Ra.__closure = { animatedContainerHeight: derivedValue };
     Ra.__workletHash = 12308480249646;
-    Ra.__initData = closure_27;
+    Ra.__initData = $modal;
     class Pa {
       constructor(arg0, arg1) {
         tmp = animationConfigs;
@@ -1092,9 +1084,9 @@ class BottomSheet {
             tmp4 = -1 === closure_44.value;
           }
           if (tmp4) {
-            tmp6 = animate;
+            tmp6 = closure_76;
             tmp7 = closure_39;
-            tmp8 = animate(closure_39.value, require("GESTURE_SOURCE").ANIMATION_SOURCE.GESTURE);
+            tmp8 = closure_76(closure_39.value, require("GESTURE_SOURCE").ANIMATION_SOURCE.GESTURE);
           }
         }
         return;
@@ -1103,7 +1095,7 @@ class BottomSheet {
     obj11 = { INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, animatedContainerHeightDidChange: sharedValue9, animatedAnimationState: sharedValue13, ANIMATION_STATE: require("GESTURE_SOURCE").ANIMATION_STATE, animatedAnimationSource: sharedValue14, ANIMATION_SOURCE: require("GESTURE_SOURCE").ANIMATION_SOURCE, animatedNextPositionIndex: sharedValue4, animateToPosition: workletCallback2, animatedClosedPosition: derivedValue2 };
     Pa.__closure = obj11;
     Pa.__workletHash = 14620022635386;
-    Pa.__initData = closure_28;
+    Pa.__initData = detached;
     animatedReaction = tmp33Result38.useAnimatedReaction(Ra, Pa);
     tmp33Result39 = require("cancelAnimation");
     class Ha {
@@ -1166,23 +1158,23 @@ class BottomSheet {
             num2 = 0;
             if (0 === _keyboardHeight) {
               tmp6.value = 0;
-              tmp14 = android_keyboardInputMode;
-              if (android_keyboardInputMode !== require("GESTURE_SOURCE").KEYBOARD_INPUT_MODE.adjustResize) {
+              tmp14 = closure_11;
+              if (closure_11 !== require("GESTURE_SOURCE").KEYBOARD_INPUT_MODE.adjustResize) {
                 iter = closure_51;
                 if (closure_51.value !== require("LegacyBaseButton").State.ACTIVE) {
                   if (iter.value !== require("LegacyBaseButton").State.BEGAN) {
-                    iter2 = UNDETERMINED;
-                    if (UNDETERMINED.value !== require("LegacyBaseButton").State.ACTIVE) {
+                    iter2 = closure_52;
+                    if (closure_52.value !== require("LegacyBaseButton").State.ACTIVE) {
                       if (iter2.value !== require("LegacyBaseButton").State.BEGAN) {
                         if (_keyboardState !== require("GESTURE_SOURCE").KEYBOARD_STATE.HIDDEN) {
                           tmp2Result = require("normalizeSnapPoint");
                           tmp17 = animationEasing;
                           tmp18 = animationDuration;
-                          tmp20 = ANIMATION_STATE;
+                          tmp20 = closure_79;
                           keyboardAnimationConfigs = tmp2Result.getKeyboardAnimationConfigs(animationEasing.value, animationDuration.value);
-                          tmp21 = ANIMATION_STATE(require("GESTURE_SOURCE").ANIMATION_SOURCE.KEYBOARD, keyboardAnimationConfigs);
+                          tmp21 = closure_79(require("GESTURE_SOURCE").ANIMATION_SOURCE.KEYBOARD, keyboardAnimationConfigs);
                         } else {
-                          tmp16 = keyboardBlurBehavior;
+                          tmp16 = closure_10;
                         }
                       }
                     }
@@ -1193,19 +1185,19 @@ class BottomSheet {
                 tmp15 = DEFAULT_KEYBOARD_BEHAVIOR;
               }
             } else {
-              tmp7 = closure_27;
+              tmp7 = $modal;
               diff = globalThis;
               _Math = Math;
               abs = Math.abs;
-              if (closure_27) {
+              if ($modal) {
                 _Math2 = diff.Math;
-                tmp11 = c15;
-                tmp12 = useDerivedValue;
-                diff = _keyboardHeight - _Math2.abs(c15 - useDerivedValue.value.bottom);
+                tmp11 = bottomInset;
+                tmp12 = closure_32;
+                diff = _keyboardHeight - _Math2.abs(bottomInset - closure_32.value.bottom);
                 absResult = abs(diff);
               } else {
-                tmp9 = useDerivedValue;
-                absResult = abs(_keyboardHeight - useDerivedValue.value.bottom);
+                tmp9 = closure_32;
+                absResult = abs(_keyboardHeight - closure_32.value.bottom);
               }
               tmp13 = absResult;
             }
@@ -1214,10 +1206,10 @@ class BottomSheet {
         return;
       }
     }
-    obj13 = { KEYBOARD_STATE: require("GESTURE_SOURCE").KEYBOARD_STATE, animatedAnimationState: sharedValue13, ANIMATION_STATE: require("GESTURE_SOURCE").ANIMATION_STATE, animatedAnimationSource: sharedValue14, ANIMATION_SOURCE: require("GESTURE_SOURCE").ANIMATION_SOURCE, __DEV__: false, runOnJS: require("cancelAnimation").runOnJS, print: require("normalizeSnapPoint").print, BottomSheet, animatedKeyboardHeightInContainer: sharedValue12, $modal: tmp25, bottomInset: num3, animatedContainerOffset: reactiveSharedValue1, Platform: overrideReduceMotion, android_keyboardInputMode: DEFAULT_KEYBOARD_INPUT_MODE, KEYBOARD_INPUT_MODE: require("GESTURE_SOURCE").KEYBOARD_INPUT_MODE, keyboardBehavior, KEYBOARD_BEHAVIOR: require("GESTURE_SOURCE").KEYBOARD_BEHAVIOR, animatedContentGestureState: sharedValue10, State: require("LegacyBaseButton").State, animatedHandleGestureState: sharedValue11, keyboardBlurBehavior: DEFAULT_KEYBOARD_BLUR_BEHAVIOR, KEYBOARD_BLUR_BEHAVIOR: require("GESTURE_SOURCE").KEYBOARD_BLUR_BEHAVIOR, getKeyboardAnimationConfigs: require("normalizeSnapPoint").getKeyboardAnimationConfigs, keyboardAnimationEasing: animationEasing, keyboardAnimationDuration: animationDuration, evaluatePosition: workletCallback5 };
+    obj13 = { KEYBOARD_STATE: require("GESTURE_SOURCE").KEYBOARD_STATE, animatedAnimationState: sharedValue13, ANIMATION_STATE: require("GESTURE_SOURCE").ANIMATION_STATE, animatedAnimationSource: sharedValue14, ANIMATION_SOURCE: require("GESTURE_SOURCE").ANIMATION_SOURCE, __DEV__: false, runOnJS: require("cancelAnimation").runOnJS, print: require("normalizeSnapPoint").print, BottomSheet: closure_39, animatedKeyboardHeightInContainer: sharedValue12, $modal: tmp25, bottomInset: num3, animatedContainerOffset: reactiveSharedValue1, Platform: overrideReduceMotion, android_keyboardInputMode: DEFAULT_KEYBOARD_INPUT_MODE, KEYBOARD_INPUT_MODE: require("GESTURE_SOURCE").KEYBOARD_INPUT_MODE, keyboardBehavior, KEYBOARD_BEHAVIOR: require("GESTURE_SOURCE").KEYBOARD_BEHAVIOR, animatedContentGestureState: sharedValue10, State: require("LegacyBaseButton").State, animatedHandleGestureState: sharedValue11, keyboardBlurBehavior: DEFAULT_KEYBOARD_BLUR_BEHAVIOR, KEYBOARD_BLUR_BEHAVIOR: require("GESTURE_SOURCE").KEYBOARD_BLUR_BEHAVIOR, getKeyboardAnimationConfigs: require("normalizeSnapPoint").getKeyboardAnimationConfigs, keyboardAnimationEasing: animationEasing, keyboardAnimationDuration: animationDuration, evaluatePosition: workletCallback5 };
     Da.__closure = obj13;
     Da.__workletHash = 3826286975425;
-    Da.__initData = useDerivedValue;
+    Da.__initData = closure_32;
     items23 = [, , , , , , ];
     items23[0] = tmp25;
     items23[1] = num3;
@@ -1233,13 +1225,13 @@ class BottomSheet {
     };
     xa.__closure = { animatedPosition: sharedValue2 };
     xa.__workletHash = 14107338560521;
-    xa.__initData = INITIAL_HANDLE_HEIGHT;
+    xa.__initData = closure_33;
     class Ba {
       constructor(arg0) {
         if (animatedPosition) {
           tmp2 = global;
-          tmp3 = c14;
-          tmp.value = global + c14;
+          tmp3 = topInset;
+          tmp.value = global + topInset;
         }
         return;
       }
@@ -1270,7 +1262,7 @@ class BottomSheet {
     };
     ya.__closure = { animatedIndex: derivedValue7, animatedPosition: sharedValue2, animatedAnimationState: sharedValue13, animatedContentGestureState: sharedValue10, animatedHandleGestureState: sharedValue11 };
     ya.__workletHash = 4984898715723;
-    ya.__initData = _;
+    ya.__initData = closure_37;
     class Ma {
       constructor(arg0) {
         ({ _animatedIndex, _animatedPosition, _contentGestureState, _handleGestureState } = global);
@@ -1321,8 +1313,8 @@ class BottomSheet {
             if (_animatedIndex !== closure_41.value) {
               closure_41.value = _animatedIndex;
               tmpResult = require("cancelAnimation");
-              tmp13 = useDerivedValue;
-              tmp14 = tmpResult.runOnJS(useDerivedValue)(_animatedIndex, _animatedPosition);
+              tmp13 = closure_72;
+              tmp14 = tmpResult.runOnJS(closure_72)(_animatedIndex, _animatedPosition);
             }
             num3 = -1;
             tmp15 = -1 === _animatedIndex && onClose;
@@ -1336,7 +1328,7 @@ class BottomSheet {
         return;
       }
     }
-    obj14 = { ANIMATION_STATE: require("GESTURE_SOURCE").ANIMATION_STATE, animatedNextPosition: sharedValue3, INITIAL_VALUE: require("DEFAULT_HANDLE_HEIGHT").INITIAL_VALUE, animatedNextPositionIndex: sharedValue4, State: require("LegacyBaseButton").State, reduceMotion: tmp64, animatedCurrentIndex: reactiveSharedValue3, animatedSnapPoints: first, __DEV__: false, runOnJS: require("cancelAnimation").runOnJS, print: require("normalizeSnapPoint").print, BottomSheet, handleOnChange: tmp70, _providedOnClose: onClose };
+    obj14 = { ANIMATION_STATE: require("GESTURE_SOURCE").ANIMATION_STATE, animatedNextPosition: sharedValue3, INITIAL_VALUE: require("DEFAULT_HANDLE_HEIGHT").INITIAL_VALUE, animatedNextPositionIndex: sharedValue4, State: require("LegacyBaseButton").State, reduceMotion: tmp64, animatedCurrentIndex: reactiveSharedValue3, animatedSnapPoints: first, __DEV__: false, runOnJS: require("cancelAnimation").runOnJS, print: require("normalizeSnapPoint").print, BottomSheet: closure_39, handleOnChange: tmp70, _providedOnClose: onClose };
     Ma.__closure = obj14;
     Ma.__workletHash = 11608666988638;
     Ma.__initData = closure_38;
@@ -1350,7 +1342,7 @@ class BottomSheet {
     items25[1] = num;
     items25[2] = sharedValue5;
     items25[3] = stableCallback;
-    tmp93 = overDragResistanceFactor(() => {
+    tmp93 = closure_7(() => {
       let tmp = DEFAULT_ANIMATE_ON_MOUNT;
       if (DEFAULT_ANIMATE_ON_MOUNT) {
         tmp = !sharedValue5.value;
@@ -1359,10 +1351,10 @@ class BottomSheet {
         stableCallback(num);
       }
     }, items25);
-    tmp94 = keyboardBlurBehavior;
+    tmp94 = closure_10;
     obj15 = { value: tmp86, children: null };
     obj16 = { value: tmp85, children: null };
-    tmp95 = android_keyboardInputMode;
+    tmp95 = closure_11;
     obj17 = { gestureEventsHandlersHook, children: null };
     tmp94Result = null;
     tmp96 = require("sharedValue");

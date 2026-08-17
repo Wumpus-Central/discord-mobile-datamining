@@ -1,7 +1,7 @@
 // _runtime/03773_isMatch.js
-import _typeof from "_typeof";
-import isValid from "isValid";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3774 */;
+import isValid from "isValid" /* 3654 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!isValid) {
   obj = { default: null };
   obj[0] = isValid;
@@ -18,7 +18,7 @@ if (!isValid) {
 } else {
   tmp5 = isValid;
 }
-let closure_1 = tmp5;
+isValid = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,9 +26,10 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function isMatch(arg0, arg1, arg2) {
-  tmp7.default(2, arguments);
-  return tmp5.default(tmp3.default(arg0, arg1, new Date(), arg2));
+  requiredArgs.default(2, arguments);
+  return isValid.default(_typeof.default(arg0, arg1, new Date(), arg2));
 };
 export default exports.default;

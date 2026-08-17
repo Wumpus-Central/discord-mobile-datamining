@@ -1,25 +1,23 @@
 // _runtime/01146_instrumentReactRouter.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 1024 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 import { getStatics } from "01140_getStatics.js";
 
 function instrumentReactRouter(f103592, arg1, arg2, location) {
-  let tmp5;
-  let tmp6;
   const _require = f103592;
-  const dependencyMap = arg4;
+  dependencyMap = arg4;
   let items = arg5;
   if (arg5 === undefined) {
     items = [];
   }
-  let closure_3 = arg6;
+  closure_3 = arg6;
   function normalizeTransactionName(pathname) {
-    let items;
     if (0 !== items.length) {
       if (closure_3) {
-        const tmp3 = outer1_5(tmp, pathname, tmp8);
+        const tmp3 = closure_1_5(tmp, pathname, tmp8);
         for (const item10011 of tmp3) {
           let tmp6 = item10011;
           if (item10011.match.isExact) {
@@ -68,8 +66,6 @@ function instrumentReactRouter(f103592, arg1, arg2, location) {
   }
   if (listen) {
     location.listen((pathname) => {
-      let tmp5;
-      let tmp6;
       if (arg1) {
         if ("PUSH" === arg1) {
           [tmp5, tmp6] = items(normalizeTransactionName(pathname.pathname), 2);
@@ -90,8 +86,8 @@ function instrumentReactRouter(f103592, arg1, arg2, location) {
   }
 }
 function matchRoutes(pathname, search, arg2) {
-  let closure_0 = search;
-  let closure_1 = arg2;
+  closure_0 = search;
+  closure_1 = arg2;
   let items = arg3;
   if (arg3 === undefined) {
     items = [];
@@ -214,10 +210,6 @@ function matchRoutes(pathname, search, arg2) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const reactRouterV4BrowserTracingIntegration = function reactRouterV4BrowserTracingIntegration(instrumentNavigation) {
-  let _slicedToArray;
-  let dependencyMap;
-  let instrumentPageLoad;
-  let noop;
   let obj = feedbackAsyncIntegration;
   obj = {};
   const merged = Object.assign(instrumentNavigation);
@@ -225,10 +217,10 @@ export const reactRouterV4BrowserTracingIntegration = function reactRouterV4Brow
   obj.instrumentNavigation = false;
   const result = obj.browserTracingIntegration(obj);
   require = result;
-  ({ history: dependencyMap, routes: _slicedToArray, matchPath: noop, instrumentPageLoad } = instrumentNavigation);
-  let closure_4 = undefined === instrumentPageLoad || instrumentPageLoad;
+  ({ history: dependencyMap, routes: closure_2, matchPath: closure_3, instrumentPageLoad } = instrumentNavigation);
+  closure_4 = undefined === instrumentPageLoad || instrumentPageLoad;
   instrumentNavigation = instrumentNavigation.instrumentNavigation;
-  let closure_5 = undefined === instrumentNavigation || instrumentNavigation;
+  closure_5 = undefined === instrumentNavigation || instrumentNavigation;
   obj = {};
   const merged1 = Object.assign(result);
   obj.afterAllSetup = function afterAllSetup(arg0) {
@@ -238,10 +230,6 @@ export const reactRouterV4BrowserTracingIntegration = function reactRouterV4Brow
   return obj;
 };
 export const reactRouterV5BrowserTracingIntegration = function reactRouterV5BrowserTracingIntegration(instrumentNavigation) {
-  let _slicedToArray;
-  let dependencyMap;
-  let instrumentPageLoad;
-  let noop;
   let obj = feedbackAsyncIntegration;
   obj = {};
   const merged = Object.assign(instrumentNavigation);
@@ -249,10 +237,10 @@ export const reactRouterV5BrowserTracingIntegration = function reactRouterV5Brow
   obj.instrumentNavigation = false;
   const result = obj.browserTracingIntegration(obj);
   require = result;
-  ({ history: dependencyMap, routes: _slicedToArray, matchPath: noop, instrumentPageLoad } = instrumentNavigation);
-  let closure_4 = undefined === instrumentPageLoad || instrumentPageLoad;
+  ({ history: dependencyMap, routes: closure_2, matchPath: closure_3, instrumentPageLoad } = instrumentNavigation);
+  closure_4 = undefined === instrumentPageLoad || instrumentPageLoad;
   instrumentNavigation = instrumentNavigation.instrumentNavigation;
-  let closure_5 = undefined === instrumentNavigation || instrumentNavigation;
+  closure_5 = undefined === instrumentNavigation || instrumentNavigation;
   obj = {};
   const merged1 = Object.assign(result);
   obj.afterAllSetup = function afterAllSetup(arg0) {
@@ -275,8 +263,8 @@ export const withSentryRouting = function withSentryRouting(displayName) {
       if (isExact) {
         path = displayName.computedMatch.path;
         tmp2 = closure_0;
-        tmp3 = outer1_1;
-        obj = closure_0(outer1_1[3]);
+        tmp3 = closure_1_1;
+        obj = closure_0(closure_1_1[3]);
         activeSpan = obj.getActiveSpan();
         rootSpan = activeSpan;
         if (activeSpan) {
@@ -306,7 +294,7 @@ export const withSentryRouting = function withSentryRouting(displayName) {
       }
       obj = {};
       merged = Object.assign(displayName);
-      return outer1_3.createElement(closure_0, obj);
+      return closure_1_3.createElement(closure_0, obj);
     }
   }
   WrappedRoute.displayName = "sentryRoute(" + displayName.displayName || displayName.name + ")";

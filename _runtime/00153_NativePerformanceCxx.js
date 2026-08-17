@@ -1,6 +1,9 @@
 // _runtime/00153_NativePerformanceCxx.js
-if (require("NativePerformanceCxx")) {
-  require("setUpPerformanceModern")();
+import NativePerformanceCxxDefault from "NativePerformanceCxx" /* 154 */;
+import setUpPerformanceModernDefault from "setUpPerformanceModern" /* 155 */;
+
+if (NativePerformanceCxxDefault) {
+  setUpPerformanceModernDefault();
 } else if (!global.performance) {
   const obj = { mark: null, clearMarks: null, measure: null, clearMeasures: null, now: null };
   obj[0] = function mark() {

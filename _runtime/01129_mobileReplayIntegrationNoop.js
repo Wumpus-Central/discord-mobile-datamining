@@ -1,6 +1,6 @@
 // _runtime/01129_mobileReplayIntegrationNoop.js
 import { isHermesEnabled } from "01002_isHermesEnabled.js";
-let require = arg1;
+const require = arg1;
 let dependencyMap = arg6;
 let fn = this;
 if (this) {
@@ -8,16 +8,16 @@ if (this) {
 }
 if (!fn) {
   fn = (arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     let _Promise = arg2;
-    let closure_3 = arg3;
+    closure_3 = arg3;
     if (!arg2) {
       _Promise = Promise;
     }
     _Promise = new _Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function fulfilled(arg0) {
         try {
           step(iter.next(arg0));
@@ -81,12 +81,12 @@ arg5.mobileReplayIntegration = () => {
   if (arg0 === undefined) {
     tmp = closure_4;
   }
-  const require = tmp;
-  let dependencyMap;
+  const _require = tmp;
+  dependencyMap = undefined;
   function updateCachedReplayId(arg0, arg1, arg2, arg3) {
-    let closure_1 = arg0;
+    closure_1 = arg0;
   }
-  let obj = isHermesEnabled;
+  let obj = _isHermesEnabled;
   if (obj.isExpoGo()) {
     let debug = tmp2(817).debug;
     let _HermesInternal = HermesInternal;
@@ -118,7 +118,7 @@ arg5.mobileReplayIntegration = () => {
             if (!replay_id.replay_id) {
               let tmp = currentReplayId;
               if (null === currentReplayId) {
-                const NATIVE = outer1_0(1001).NATIVE;
+                const NATIVE = closure_1_0(1001).NATIVE;
                 currentReplayId = NATIVE.getCurrentReplayId();
                 tmp = currentReplayId;
                 if (currentReplayId) {
@@ -133,7 +133,7 @@ arg5.mobileReplayIntegration = () => {
           on.on("processMetric", (attributes) => {
             let tmp = currentReplayId;
             if (null === currentReplayId) {
-              const NATIVE = outer1_0(1001).NATIVE;
+              const NATIVE = closure_1_0(1001).NATIVE;
               currentReplayId = NATIVE.getCurrentReplayId();
               tmp = currentReplayId;
               if (currentReplayId) {
@@ -149,8 +149,8 @@ arg5.mobileReplayIntegration = () => {
         }
       };
       obj[2] = function processEvent(arg0, arg1) {
-        let closure_0 = arg0;
-        let closure_1 = arg1;
+        closure_0 = arg0;
+        closure_1 = arg1;
         return updateCachedReplayId(this, undefined, undefined, function*() {
           if (c5 === 2) {
             c5 = 3;
@@ -179,11 +179,11 @@ arg5.mobileReplayIntegration = () => {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  let dependencyMap = tmp3;
+                  dependencyMap = tmp3;
                   let lib = isHardCrashResult;
                   lib = undefined;
                   dependencyMap = undefined;
-                  const exception = outer1_0.exception;
+                  const exception = closure_1_0.exception;
                   let values;
                   if (null !== exception) {
                     if (undefined !== exception) {
@@ -191,35 +191,35 @@ arg5.mobileReplayIntegration = () => {
                     }
                   }
                   if (values) {
-                    if (outer1_0.exception.values.length > 0) {
-                      if (outer1_0.beforeErrorSampling) {
-                        let c3 = 1;
-                        if (false === obj7.beforeErrorSampling(outer1_0, outer1_1)) {
+                    if (closure_1_0.exception.values.length > 0) {
+                      if (closure_1_0.beforeErrorSampling) {
+                        c3 = 1;
+                        if (false === obj7.beforeErrorSampling(closure_1_0, closure_1_1)) {
                           const debug5 = lib(817).debug;
                           const _HermesInternal5 = HermesInternal;
-                          debug5.log("[Sentry] " + outer2_3 + " not sent; beforeErrorSampling conditions not met for event " + outer1_0.event_id + ".");
+                          debug5.log("[Sentry] " + closure_2_3 + " not sent; beforeErrorSampling conditions not met for event " + closure_1_0.event_id + ".");
                           c3 = 0;
                           c5 = 3;
-                          const obj1 = { value: null, done: true };
-                          obj1[0] = outer1_0;
+                          obj1 = { value: null, done: true };
+                          obj1[0] = closure_1_0;
                           return obj1;
                         } else {
                           c3 = 0;
                         }
                       }
-                      obj7 = outer1_0;
+                      obj7 = closure_1_0;
                     }
                   }
                   c5 = 3;
                   const obj2 = { value: null, done: true };
-                  obj2[0] = outer1_0;
+                  obj2[0] = closure_1_0;
                   return obj2;
                 }
               } else if (1 === isHardCrashResult) {
                 c3 = 0;
                 const debug4 = lib(817).debug;
                 const _HermesInternal4 = HermesInternal;
-                debug4.error("[Sentry] " + outer2_3 + " beforeErrorSampling callback threw an error, proceeding with replay capture", closure_2);
+                debug4.error("[Sentry] " + closure_2_3 + " beforeErrorSampling callback threw an error, proceeding with replay capture", closure_2);
               } else if (arg0 === 1) {
                 c5 = 3;
                 throw arg1;
@@ -231,10 +231,10 @@ arg5.mobileReplayIntegration = () => {
               } else {
                 lib = arg1;
                 if (lib) {
-                  outer1_2(lib);
+                  closure_1_2(lib);
                   const debug3 = lib(817).debug;
                   const _HermesInternal3 = HermesInternal;
-                  debug3.log("[Sentry] " + outer2_3 + " Captured recording replay " + lib + " for event " + lib.event_id + ".");
+                  debug3.log("[Sentry] " + closure_2_3 + " Captured recording replay " + lib + " for event " + lib.event_id + ".");
                   let contexts = lib.contexts;
                   if (!contexts) {
                     contexts = {};
@@ -251,16 +251,16 @@ arg5.mobileReplayIntegration = () => {
                   const NATIVE = lib(1001).NATIVE;
                   dependencyMap = NATIVE.getCurrentReplayId();
                   if (!dependencyMap) {
-                    outer1_2(null);
+                    closure_1_2(null);
                     const debug = lib(817).debug;
                     const _HermesInternal = HermesInternal;
-                    debug.log("[Sentry] " + outer2_3 + " not sampled for event " + lib.event_id + ".");
+                    debug.log("[Sentry] " + closure_2_3 + " not sampled for event " + lib.event_id + ".");
                   }
                 }
-                outer1_2(outer1_1);
+                closure_1_2(closure_1_1);
                 const debug2 = lib(817).debug;
                 const _HermesInternal2 = HermesInternal;
-                debug2.log("[Sentry] " + outer2_3 + " assign already recording replay " + outer1_1 + " for event " + lib.event_id + ".");
+                debug2.log("[Sentry] " + closure_2_3 + " assign already recording replay " + closure_1_1 + " for event " + lib.event_id + ".");
                 let contexts1 = lib.contexts;
                 if (!contexts1) {
                   contexts1 = {};
@@ -274,7 +274,7 @@ arg5.mobileReplayIntegration = () => {
                 const tmp30 = lib;
               }
               const NATIVE2 = lib(1001).NATIVE;
-              isHardCrashResult = lib(1013).isHardCrash(outer1_0);
+              isHardCrashResult = lib(1013).isHardCrash(closure_1_0);
               NATIVE2.captureReplay(isHardCrashResult);
               c4 = 2;
               c5 = 1;
@@ -295,7 +295,7 @@ arg5.mobileReplayIntegration = () => {
       obj[4] = function getReplayId() {
         let tmp = currentReplayId;
         if (null === currentReplayId) {
-          const NATIVE = tmp(_null[2]).NATIVE;
+          const NATIVE = callback(_null[2]).NATIVE;
           currentReplayId = NATIVE.getCurrentReplayId();
           tmp = currentReplayId;
           if (currentReplayId) {

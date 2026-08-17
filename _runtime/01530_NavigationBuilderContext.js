@@ -1,6 +1,8 @@
 // _runtime/01530_NavigationBuilderContext.js
+import noopAll from "noop" /* 19 */;
 
-export const NavigationBuilderContext = require("noop").createContext({
+
+export const NavigationBuilderContext = noopAll.createContext({
   onDispatchAction(target, arg1) {
 
   },
@@ -14,11 +16,11 @@ export const NavigationBuilderContext = require("noop").createContext({
     return false;
   },
   scheduleUpdate() {
-    const error = new Error("Couldn't find a context for scheduling updates.");
+    error = new Error("Couldn't find a context for scheduling updates.");
     throw error;
   },
   flushUpdates() {
-    const error = new Error("Couldn't find a context for flushing updates.");
+    error = new Error("Couldn't find a context for flushing updates.");
     throw error;
   }
 });

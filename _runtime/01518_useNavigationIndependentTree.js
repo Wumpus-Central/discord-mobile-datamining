@@ -1,8 +1,8 @@
 // _runtime/01518_useNavigationIndependentTree.js
-import noop from "noop";
-import { NavigationIndependentTreeContext } from "01519_NavigationIndependentTreeContext.js";
+import NavigationIndependentTreeContext from "NavigationIndependentTreeContext" /* 1519 */;
+import closure_2 from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 
 export const useNavigationIndependentTree = function useNavigationIndependentTree() {
   return React.useContext(NavigationIndependentTreeContext.NavigationIndependentTreeContext);

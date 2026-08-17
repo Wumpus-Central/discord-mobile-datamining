@@ -1,41 +1,18 @@
 // _runtime/09019__isNativeReflectConstruct.js
-import _inherits from "_inherits";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import importDefaultResult1 from "_inherits";
-import importDefaultResult3 from "emptyFunction";
-import importDefaultResult4 from "emptyFunction";
-import importDefaultResult5 from "emptyFunction";
-import importDefaultResult6 from "emptyFunction";
-import importDefaultResult7 from "emptyFunction";
-import importDefaultResult8 from "emptyFunction";
-import importDefaultResult9 from "emptyFunction";
-import importDefaultResult10 from "emptyFunction";
-import importDefaultResult11 from "emptyFunction";
-import importDefaultResult12 from "emptyFunction";
-import importDefaultResult13 from "emptyFunction";
-import importDefaultResult14 from "emptyFunction";
-import importDefaultResult15 from "emptyFunction";
-import importDefaultResult16 from "emptyFunction";
-import importDefaultResult17 from "emptyFunction";
-import importDefaultResult18 from "emptyFunction";
-import importDefaultResult19 from "emptyFunction";
-import importDefaultResult20 from "emptyFunction";
+import noopDefault from "noop" /* 19 */;
+import _modDef9022 from "module_9022" /* 9022 */;
+import _modDef9023 from "module_9023" /* 9023 */;
+import _modDef9042 from "module_9042" /* 9042 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import importDefaultResult3 from "emptyFunction" /* 4205 */;
 
-let Platform;
-let c10;
-let c9;
-let closure_12;
-let error;
-let map1;
-let metroImportAll;
-let requireNativeComponent;
-let unpackModuleId;
 const Video = importDefault;
 function _isNativeReflectConstruct() {
   try {
@@ -48,27 +25,28 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+noopDefault;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-({ NativeModules: error, View: metroImportAll, Image: c9, Platform, findNodeHandle: c10, UIManager: unpackModuleId, requireNativeComponent } = get_ActivityIndicator);
+({ NativeModules: error, View: closure_8, Image: c9, Platform, findNodeHandle: c10, UIManager: unpackModuleId, requireNativeComponent } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const styles = StyleSheet.create({ base: { overflow: "hidden" } });
 class Video {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, f117545);
+    tmp = closure_3(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(f117545);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_5;
+    obj = closure_5(closure_0);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -77,11 +55,11 @@ class Video {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    f117545 = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.seek = (arg0) => {
       if (isNaN(arg0)) {
         const _Error = Error;
-        const error = new Error("Specified time is not a number");
+        error = new Error("Specified time is not a number");
         throw error;
       } else {
         const obj = { seek: null };
@@ -95,14 +73,14 @@ class Video {
     tmp3Result.dismissFullscreenPlayer = () => {
       store.setNativeProps({ fullscreen: false });
     };
-    f117545 = undefined;
-    f117545 = _isNativeReflectConstruct((arg0) => {
-      let closure_0 = arg0;
-      let c2 = 0;
-      let c1 = 0;
+    closure_0 = undefined;
+    closure_0 = closure_2((arg0) => {
+      closure_0 = arg0;
+      c2 = 0;
+      c1 = 0;
       return (function*(arg0) {
-        const VideoManager = outer2_7.VideoManager;
-        yield VideoManager.save(_root, outer2_10(_root._root));
+        const VideoManager = closure_2_7.VideoManager;
+        yield VideoManager.save(_root, closure_2_10(_root._root));
         return arg1;
       })();
     });
@@ -273,32 +251,32 @@ class Video {
               const resolved = Promise.resolve(drm.getLicense(nativeEvent.spcBase64, nativeEvent.contentId, nativeEvent.licenseUrl));
               resolved.then((arg0) => {
                 if (undefined !== arg0) {
-                  const VideoManager2 = outer1_7.VideoManager;
-                  VideoManager2.setLicenseResult(arg0, outer1_10(closure_0._root));
-                } else if (outer1_7.VideoManager.setLicenseError) {
-                  const VideoManager = outer1_7.VideoManager;
-                  VideoManager.setLicenseError("Empty license result", outer1_10(closure_0._root));
+                  const VideoManager2 = closure_1_7.VideoManager;
+                  VideoManager2.setLicenseResult(arg0, closure_1_10(closure_0._root));
+                } else if (closure_1_7.VideoManager.setLicenseError) {
+                  const VideoManager = closure_1_7.VideoManager;
+                  VideoManager.setLicenseError("Empty license result", closure_1_10(closure_0._root));
                 }
               }).catch((arg0) => {
-                if (outer1_7.VideoManager.setLicenseError) {
+                if (closure_1_7.VideoManager.setLicenseError) {
                   const VideoManager = tmp.VideoManager;
-                  VideoManager.setLicenseError(arg0, outer1_10(closure_0._root));
+                  VideoManager.setLicenseError(arg0, closure_1_10(closure_0._root));
                 }
               });
               const nextPromise = resolved.then((arg0) => {
                 if (undefined !== arg0) {
-                  const VideoManager2 = outer1_7.VideoManager;
-                  VideoManager2.setLicenseResult(arg0, outer1_10(closure_0._root));
-                } else if (outer1_7.VideoManager.setLicenseError) {
-                  const VideoManager = outer1_7.VideoManager;
-                  VideoManager.setLicenseError("Empty license result", outer1_10(closure_0._root));
+                  const VideoManager2 = closure_1_7.VideoManager;
+                  VideoManager2.setLicenseResult(arg0, closure_1_10(closure_0._root));
+                } else if (closure_1_7.VideoManager.setLicenseError) {
+                  const VideoManager = closure_1_7.VideoManager;
+                  VideoManager.setLicenseError("Empty license result", closure_1_10(closure_0._root));
                 }
               });
             }
           }
-          if (outer1_7.VideoManager.setLicenseError) {
-            let VideoManager = outer1_7.VideoManager;
-            VideoManager.setLicenseError("No spc received", outer1_10(tmp._root));
+          if (closure_1_7.VideoManager.setLicenseError) {
+            let VideoManager = closure_1_7.VideoManager;
+            VideoManager.setLicenseError("No spc received", closure_1_10(tmp._root));
           }
         }
       }
@@ -315,7 +293,7 @@ class Video {
     return tmp3Result;
   }
 }
-require("_inherits")(Video, require("noop").Component);
+importDefaultResult1(Video, require("noop").Component);
 let obj = {
   key: "setNativeProps",
   value: function setNativeProps(arg0) {
@@ -354,7 +332,7 @@ let items = [
     key: "stringsOnlyObject",
     value: function stringsOnlyObject(headers) {
       const self = this;
-      let closure_1 = headers;
+      closure_1 = headers;
       const obj = {};
       const keys = Object.keys(headers);
       const item = keys.forEach((arg0) => {
@@ -429,7 +407,7 @@ let items = [
       obj = {};
       const merged2 = Object.assign(StyleSheet.absoluteFillObject);
       obj.resizeMode = self.props.posterResizeMode || "contain";
-      const obj1 = { style: merged.style, children: null };
+      obj1 = { style: merged.style, children: null };
       const obj2 = { ref: self._assignRoot };
       const merged3 = Object.assign(merged);
       obj2.style = StyleSheet.absoluteFill;
@@ -451,118 +429,135 @@ let items = [
 ];
 const importDefaultResultResult = importDefaultResult(Video, items);
 obj = { filter: null, filterEnabled: null, src: null, seek: null, fullscreen: null, onVideoLoadStart: null, onVideoLoad: null, onVideoBuffer: null, onVideoError: null, onVideoProgress: null, onVideoBandwidthUpdate: null, onVideoSeek: null, onVideoEnd: null, onTimedMetadata: null, onVideoAudioBecomingNoisy: null, onVideoExternalPlaybackChange: null, onVideoFullscreenPlayerWillPresent: null, onVideoFullscreenPlayerDidPresent: null, onVideoFullscreenPlayerWillDismiss: null, onVideoFullscreenPlayerDidDismiss: null, source: null, drm: null, minLoadRetryCount: null, maxBitRate: null, resizeMode: null, poster: null, posterResizeMode: null, repeat: null, automaticallyWaitsToMinimizeStalling: null, allowsExternalPlayback: null, selectedAudioTrack: null, selectedVideoTrack: null, selectedTextTrack: null, textTracks: null, paused: null, muted: null, volume: null, bufferConfig: null, stereoPan: null, rate: null, pictureInPicture: null, playInBackground: null, preferredForwardBufferDuration: null, playWhenInactive: null, ignoreSilentSwitch: null, reportBandwidth: null, disableFocus: null, controls: null, audioOnly: null, currentTime: null, fullscreenAutorotate: null, fullscreenOrientation: null, progressUpdateInterval: null, useTextureView: null, hideShutterView: null, onLoadStart: null, onLoad: null, onBuffer: null, onError: null, onProgress: null, onBandwidthUpdate: null, onSeek: null, onEnd: null, onFullscreenPlayerWillPresent: null, onFullscreenPlayerDidPresent: null, onFullscreenPlayerWillDismiss: null, onFullscreenPlayerDidDismiss: null, onReadyForDisplay: null, onPlaybackStalled: null, onPlaybackResume: null, onPlaybackRateChange: null, onAudioFocusChanged: null, onAudioBecomingNoisy: null, onPictureInPictureStatusChanged: null, needsToRestoreUserInterfaceForPictureInPictureStop: null, onExternalPlaybackChange: null, scaleX: null, scaleY: null, translateX: null, translateY: null, rotation: null };
-let items1 = [require("module_9022").NONE, require("module_9022").INVERT, require("module_9022").MONOCHROME, require("module_9022").POSTERIZE, require("module_9022").FALSE, require("module_9022").MAXIMUMCOMPONENT, require("module_9022").MINIMUMCOMPONENT, require("module_9022").CHROME, require("module_9022").FADE, require("module_9022").INSTANT, require("module_9022").MONO, require("module_9022").NOIR, require("module_9022").PROCESS, require("module_9022").TONAL, require("module_9022").TRANSFER, require("module_9022").SEPIA];
-obj[0] = require("emptyFunction").oneOf(items1);
-obj[1] = require("emptyFunction").bool;
-obj[2] = require("emptyFunction").object;
-const items2 = [require("emptyFunction").number, require("emptyFunction").object];
-obj[3] = require("emptyFunction").oneOfType(items2);
-obj[4] = require("emptyFunction").bool;
-obj[5] = require("emptyFunction").func;
-obj[6] = require("emptyFunction").func;
-obj[7] = require("emptyFunction").func;
-obj[8] = require("emptyFunction").func;
-obj[9] = require("emptyFunction").func;
-obj[10] = require("emptyFunction").func;
-obj[11] = require("emptyFunction").func;
-obj[12] = require("emptyFunction").func;
-obj[13] = require("emptyFunction").func;
-obj[14] = require("emptyFunction").func;
-obj[15] = require("emptyFunction").func;
-obj[16] = require("emptyFunction").func;
-obj[17] = require("emptyFunction").func;
-obj[18] = require("emptyFunction").func;
-obj[19] = require("emptyFunction").func;
-obj = { uri: require("emptyFunction").string };
-const items3 = [require("emptyFunction").shape(obj), require("emptyFunction").number];
+let items1 = [_modDef9022.NONE, _modDef9022.INVERT, _modDef9022.MONOCHROME, _modDef9022.POSTERIZE, _modDef9022.FALSE, _modDef9022.MAXIMUMCOMPONENT, _modDef9022.MINIMUMCOMPONENT, _modDef9022.CHROME, _modDef9022.FADE, _modDef9022.INSTANT, _modDef9022.MONO, _modDef9022.NOIR, _modDef9022.PROCESS, _modDef9022.TONAL, _modDef9022.TRANSFER, _modDef9022.SEPIA];
+obj[0] = importDefaultResult3.oneOf(items1);
+obj[1] = importDefaultResult3.bool;
+obj[2] = importDefaultResult3.object;
+const items2 = [importDefaultResult3.number, importDefaultResult3.object];
+obj[3] = importDefaultResult3.oneOfType(items2);
+obj[4] = importDefaultResult3.bool;
+obj[5] = importDefaultResult3.func;
+obj[6] = importDefaultResult3.func;
+obj[7] = importDefaultResult3.func;
+obj[8] = importDefaultResult3.func;
+obj[9] = importDefaultResult3.func;
+obj[10] = importDefaultResult3.func;
+obj[11] = importDefaultResult3.func;
+obj[12] = importDefaultResult3.func;
+obj[13] = importDefaultResult3.func;
+obj[14] = importDefaultResult3.func;
+obj[15] = importDefaultResult3.func;
+obj[16] = importDefaultResult3.func;
+obj[17] = importDefaultResult3.func;
+obj[18] = importDefaultResult3.func;
+obj[19] = importDefaultResult3.func;
+const importDefaultResult4 = importDefaultResult3;
+const importDefaultResult5 = importDefaultResult3;
+obj = { uri: importDefaultResult3.string };
+const items3 = [importDefaultResult3.shape(obj), importDefaultResult3.number];
 obj[20] = importDefaultResult5.oneOfType(items3);
+const importDefaultResult6 = importDefaultResult3;
 let obj1 = { type: null, licenseServer: null, headers: null, base64Certificate: null, certificateUrl: null, getLicense: null };
-const items4 = [require("module_9023").CLEARKEY, require("module_9023").FAIRPLAY, require("module_9023").WIDEVINE, require("module_9023").PLAYREADY];
-obj1[0] = require("emptyFunction").oneOf(items4);
-obj1[1] = require("emptyFunction").string;
-obj1[2] = require("emptyFunction").shape({});
-obj1[3] = require("emptyFunction").bool;
-obj1[4] = require("emptyFunction").string;
-obj1[5] = require("emptyFunction").func;
+const importDefaultResult7 = importDefaultResult3;
+const items4 = [_modDef9023.CLEARKEY, _modDef9023.FAIRPLAY, _modDef9023.WIDEVINE, _modDef9023.PLAYREADY];
+obj1[0] = importDefaultResult3.oneOf(items4);
+obj1[1] = importDefaultResult3.string;
+const importDefaultResult8 = importDefaultResult3;
+obj1[2] = importDefaultResult3.shape({});
+obj1[3] = importDefaultResult3.bool;
+obj1[4] = importDefaultResult3.string;
+obj1[5] = importDefaultResult3.func;
 obj[21] = importDefaultResult7.shape(obj1);
-obj[22] = require("emptyFunction").number;
-obj[23] = require("emptyFunction").number;
-obj[24] = require("emptyFunction").string;
-obj[25] = require("emptyFunction").string;
+obj[22] = importDefaultResult3.number;
+obj[23] = importDefaultResult3.number;
+obj[24] = importDefaultResult3.string;
+obj[25] = importDefaultResult3.string;
 obj[26] = require("get ColorPropType").ImagePropTypes.resizeMode;
-obj[27] = require("emptyFunction").bool;
-obj[28] = require("emptyFunction").bool;
-obj[29] = require("emptyFunction").bool;
-let obj2 = { type: require("emptyFunction").string.isRequired, value: null };
-const items5 = [require("emptyFunction").string, require("emptyFunction").number];
-obj2[1] = require("emptyFunction").oneOfType(items5);
+obj[27] = importDefaultResult3.bool;
+obj[28] = importDefaultResult3.bool;
+obj[29] = importDefaultResult3.bool;
+const importDefaultResult9 = importDefaultResult3;
+let obj2 = { type: importDefaultResult3.string.isRequired, value: null };
+const importDefaultResult10 = importDefaultResult3;
+const items5 = [importDefaultResult3.string, importDefaultResult3.number];
+obj2[1] = importDefaultResult3.oneOfType(items5);
 obj[30] = importDefaultResult10.shape(obj2);
-let obj3 = { type: require("emptyFunction").string.isRequired, value: null };
-const items6 = [require("emptyFunction").string, require("emptyFunction").number];
-obj3[1] = require("emptyFunction").oneOfType(items6);
+const importDefaultResult11 = importDefaultResult3;
+let obj3 = { type: importDefaultResult3.string.isRequired, value: null };
+const importDefaultResult12 = importDefaultResult3;
+const items6 = [importDefaultResult3.string, importDefaultResult3.number];
+obj3[1] = importDefaultResult3.oneOfType(items6);
 obj[31] = importDefaultResult12.shape(obj3);
-let obj4 = { type: require("emptyFunction").string.isRequired, value: null };
-const items7 = [require("emptyFunction").string, require("emptyFunction").number];
-obj4[1] = require("emptyFunction").oneOfType(items7);
+const importDefaultResult13 = importDefaultResult3;
+let obj4 = { type: importDefaultResult3.string.isRequired, value: null };
+const importDefaultResult14 = importDefaultResult3;
+const items7 = [importDefaultResult3.string, importDefaultResult3.number];
+obj4[1] = importDefaultResult3.oneOfType(items7);
 obj[32] = importDefaultResult14.shape(obj4);
-const obj5 = { title: require("emptyFunction").string, uri: require("emptyFunction").string.isRequired, type: null, language: null };
-const items8 = [require("module_9042").SRT, require("module_9042").TTML, require("module_9042").VTT];
-obj5[2] = require("emptyFunction").oneOf(items8);
-obj5[3] = require("emptyFunction").string.isRequired;
+const importDefaultResult15 = importDefaultResult3;
+const importDefaultResult16 = importDefaultResult3;
+const obj5 = { title: importDefaultResult3.string, uri: importDefaultResult3.string.isRequired, type: null, language: null };
+const importDefaultResult17 = importDefaultResult3;
+const items8 = [_modDef9042.SRT, _modDef9042.TTML, _modDef9042.VTT];
+obj5[2] = importDefaultResult3.oneOf(items8);
+obj5[3] = importDefaultResult3.string.isRequired;
 obj[33] = importDefaultResult16.arrayOf(importDefaultResult17.shape(obj5));
-obj[34] = require("emptyFunction").bool;
-obj[35] = require("emptyFunction").bool;
-obj[36] = require("emptyFunction").number;
-obj[37] = importDefaultResult19.shape({ minBufferMs: require("emptyFunction").number, maxBufferMs: require("emptyFunction").number, bufferForPlaybackMs: require("emptyFunction").number, bufferForPlaybackAfterRebufferMs: require("emptyFunction").number });
-obj[38] = require("emptyFunction").number;
-obj[39] = require("emptyFunction").number;
-obj[40] = require("emptyFunction").bool;
-obj[41] = require("emptyFunction").bool;
-obj[42] = require("emptyFunction").number;
-obj[43] = require("emptyFunction").bool;
-const obj6 = { minBufferMs: require("emptyFunction").number, maxBufferMs: require("emptyFunction").number, bufferForPlaybackMs: require("emptyFunction").number, bufferForPlaybackAfterRebufferMs: require("emptyFunction").number };
-obj[44] = require("emptyFunction").oneOf(["ignore", "obey"]);
-obj[45] = require("emptyFunction").bool;
-obj[46] = require("emptyFunction").bool;
-obj[47] = require("emptyFunction").bool;
-obj[48] = require("emptyFunction").bool;
-obj[49] = require("emptyFunction").number;
-obj[50] = require("emptyFunction").bool;
-obj[51] = require("emptyFunction").oneOf(["all", "landscape", "portrait"]);
-obj[52] = require("emptyFunction").number;
-obj[53] = require("emptyFunction").bool;
-obj[54] = require("emptyFunction").bool;
-obj[55] = require("emptyFunction").func;
-obj[56] = require("emptyFunction").func;
-obj[57] = require("emptyFunction").func;
-obj[58] = require("emptyFunction").func;
-obj[59] = require("emptyFunction").func;
-obj[60] = require("emptyFunction").func;
-obj[61] = require("emptyFunction").func;
-obj[62] = require("emptyFunction").func;
-obj[63] = require("emptyFunction").func;
-obj[64] = require("emptyFunction").func;
-obj[65] = require("emptyFunction").func;
-obj[66] = require("emptyFunction").func;
-obj[67] = require("emptyFunction").func;
-obj[68] = require("emptyFunction").func;
-obj[69] = require("emptyFunction").func;
-obj[70] = require("emptyFunction").func;
-obj[71] = require("emptyFunction").func;
-obj[72] = require("emptyFunction").func;
-obj[73] = require("emptyFunction").func;
-obj[74] = require("emptyFunction").func;
-obj[75] = require("emptyFunction").func;
-obj[76] = require("emptyFunction").number;
-obj[77] = require("emptyFunction").number;
-obj[78] = require("emptyFunction").number;
-obj[79] = require("emptyFunction").number;
-obj[80] = require("emptyFunction").number;
+obj[34] = importDefaultResult3.bool;
+obj[35] = importDefaultResult3.bool;
+obj[36] = importDefaultResult3.number;
+const importDefaultResult18 = importDefaultResult3;
+const importDefaultResult19 = importDefaultResult3;
+obj[37] = importDefaultResult19.shape({ minBufferMs: importDefaultResult3.number, maxBufferMs: importDefaultResult3.number, bufferForPlaybackMs: importDefaultResult3.number, bufferForPlaybackAfterRebufferMs: importDefaultResult3.number });
+obj[38] = importDefaultResult3.number;
+obj[39] = importDefaultResult3.number;
+obj[40] = importDefaultResult3.bool;
+obj[41] = importDefaultResult3.bool;
+obj[42] = importDefaultResult3.number;
+obj[43] = importDefaultResult3.bool;
+const obj6 = { minBufferMs: importDefaultResult3.number, maxBufferMs: importDefaultResult3.number, bufferForPlaybackMs: importDefaultResult3.number, bufferForPlaybackAfterRebufferMs: importDefaultResult3.number };
+obj[44] = importDefaultResult3.oneOf(["ignore", "obey"]);
+obj[45] = importDefaultResult3.bool;
+obj[46] = importDefaultResult3.bool;
+obj[47] = importDefaultResult3.bool;
+obj[48] = importDefaultResult3.bool;
+obj[49] = importDefaultResult3.number;
+obj[50] = importDefaultResult3.bool;
+const importDefaultResult20 = importDefaultResult3;
+obj[51] = importDefaultResult3.oneOf(["all", "landscape", "portrait"]);
+obj[52] = importDefaultResult3.number;
+obj[53] = importDefaultResult3.bool;
+obj[54] = importDefaultResult3.bool;
+obj[55] = importDefaultResult3.func;
+obj[56] = importDefaultResult3.func;
+obj[57] = importDefaultResult3.func;
+obj[58] = importDefaultResult3.func;
+obj[59] = importDefaultResult3.func;
+obj[60] = importDefaultResult3.func;
+obj[61] = importDefaultResult3.func;
+obj[62] = importDefaultResult3.func;
+obj[63] = importDefaultResult3.func;
+obj[64] = importDefaultResult3.func;
+obj[65] = importDefaultResult3.func;
+obj[66] = importDefaultResult3.func;
+obj[67] = importDefaultResult3.func;
+obj[68] = importDefaultResult3.func;
+obj[69] = importDefaultResult3.func;
+obj[70] = importDefaultResult3.func;
+obj[71] = importDefaultResult3.func;
+obj[72] = importDefaultResult3.func;
+obj[73] = importDefaultResult3.func;
+obj[74] = importDefaultResult3.func;
+obj[75] = importDefaultResult3.func;
+obj[76] = importDefaultResult3.number;
+obj[77] = importDefaultResult3.number;
+obj[78] = importDefaultResult3.number;
+obj[79] = importDefaultResult3.number;
+obj[80] = importDefaultResult3.number;
 let merged = Object.assign(require("get ColorPropType").ViewPropTypes);
 importDefaultResultResult.propTypes = obj;
 let closure_16 = requireNativeComponent("RNVVideo", importDefaultResultResult, { nativeOnly: { src: true, seek: true, fullscreen: true } });
 
 export default importDefaultResultResult;
-export const TextTrackType = require("module_9042");
-export const FilterType = require("module_9022");
-export const DRMType = require("module_9023");
+export const TextTrackType = _modDef9042;
+export const FilterType = _modDef9022;
+export const DRMType = _modDef9023;

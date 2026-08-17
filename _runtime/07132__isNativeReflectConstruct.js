@@ -1,17 +1,16 @@
 // _runtime/07132__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/07133___INTERNAL_VIEW_CONFIG.js";
+import noopDefault from "noop" /* 19 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 7133 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_classCallCheck" /* 41 */;
+import closure_6 from "_possibleConstructorReturn" /* 93 */;
+import closure_7 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c9;
-let metroImportAll;
-let LottieView = arg1;
+const LottieView = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -23,27 +22,27 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 let closure_3 = ["style", "source", "autoPlay", "duration", "textFiltersAndroid", "textFiltersIOS", "resizeMode", "containerStyle"];
-({ View: metroImportAll, processColor: c9 } = get_ActivityIndicator);
+({ View: closure_8, processColor: c9 } = get_ActivityIndicator);
 let obj = { source: "sa", progress: null, speed: true, loop: false, autoPlay: false, enableMergePathsAndroidForKitKatAndAbove: false, enableSafeModeAndroid: true, cacheComposition: false, useNativeLooping: "contain", resizeMode: null, colorFilters: [], textFiltersAndroid: [], textFiltersIOS: true };
 obj[12] = [];
 class LottieView {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, apply);
+    tmp = closure_5(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_7;
+    obj = closure_7(closure_0);
+    tmp3 = closure_6;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -52,23 +51,23 @@ class LottieView {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.onAnimationFinish = (nativeEvent) => {
-      const props = tmp3Result.props;
+      const props = closure_0.props;
       const onAnimationFinish = props.onAnimationFinish;
       if (onAnimationFinish != null) {
         onAnimationFinish(nativeEvent.nativeEvent.isCancelled);
       }
     };
     tmp3Result.onAnimationFailure = (nativeEvent) => {
-      const props = tmp3Result.props;
+      const props = closure_0.props;
       const onAnimationFailure = props.onAnimationFailure;
       if (onAnimationFailure != null) {
         onAnimationFailure(nativeEvent.nativeEvent.error);
       }
     };
     tmp3Result.onAnimationLoaded = () => {
-      const props = tmp3Result.props;
+      const props = closure_0.props;
       const onAnimationLoaded = props.onAnimationLoaded;
       if (onAnimationLoaded != null) {
         onAnimationLoaded();
@@ -89,7 +88,7 @@ class LottieView {
     return tmp3Result;
   }
 }
-importDefaultResult1(LottieView, require("noop").PureComponent);
+importDefaultResult1(LottieView, noopDefault.PureComponent);
 obj = {
   key: "play",
   value: function play(arg0, arg1) {
@@ -143,14 +142,6 @@ let items = [
   {
     key: "renderLottieView",
     value: function renderLottieView() {
-      let autoPlay;
-      let containerStyle;
-      let duration;
-      let resizeMode;
-      let source;
-      let style;
-      let textFiltersAndroid;
-      let textFiltersIOS;
       const self = this;
       const props = this.props;
       ({ source, duration, containerStyle } = props);
@@ -186,7 +177,7 @@ let items = [
           obj.autoPlay = autoPlay;
           obj.resizeMode = resizeMode;
           const merged1 = Object.assign(parsePossibleSourcesResult);
-          return jsx(__INTERNAL_VIEW_CONFIG, { ref: null });
+          return jsx(__INTERNAL_VIEW_CONFIGDefault, { ref: null });
         }
       }
       speed = self.props.speed;
@@ -195,8 +186,6 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let containerStyle;
-      let source;
       const self = this;
       ({ source, containerStyle } = this.props);
       if (null == source) {

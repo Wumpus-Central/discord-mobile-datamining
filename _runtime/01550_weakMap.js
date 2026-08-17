@@ -7,10 +7,9 @@ function createNormalizedConfigs(arg0) {
 
 }
 arg5.getActionFromState = function getActionFromState(index, obj) {
-  let routes;
   if (obj) {
     let obj2 = weakMap;
-    let obj1 = weakMap.get(obj);
+    obj1 = weakMap.get(obj);
     if (!obj1) {
       if (typeof createNormalizedConfigItem !== "function") {
         HermesBuiltin.throwTypeError();
@@ -32,8 +31,6 @@ arg5.getActionFromState = function getActionFromState(index, obj) {
         const _Object = Object;
         const entries = Object.entries(obj.screens);
         reduced = entries.reduce((arg0, arg1) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg1;
           if (typeof closure_1 !== "function") {
             HermesBuiltin.throwTypeError();
@@ -50,8 +47,6 @@ arg5.getActionFromState = function getActionFromState(index, obj) {
                 let _Object = Object;
                 let entries = Object.entries(tmp2.screens);
                 reduced = entries.reduce((arg0, arg1) => {
-                  let tmp;
-                  let tmp2;
                   [tmp, tmp2] = arg1;
                   if (typeof closure_1 !== "function") {
                     HermesBuiltin.throwTypeError();
@@ -68,8 +63,6 @@ arg5.getActionFromState = function getActionFromState(index, obj) {
                         let _Object = Object;
                         let entries = Object.entries(tmp2.screens);
                         reduced = entries.reduce((arg0, arg1) => {
-                          let tmp;
-                          let tmp2;
                           [tmp, tmp2] = arg1;
                           if (typeof closure_1 !== "function") {
                             HermesBuiltin.throwTypeError();
@@ -86,8 +79,6 @@ arg5.getActionFromState = function getActionFromState(index, obj) {
                                 let _Object = Object;
                                 let entries = Object.entries(tmp2.screens);
                                 reduced = entries.reduce((arg0, arg1) => {
-                                  let tmp;
-                                  let tmp2;
                                   [tmp, tmp2] = arg1;
                                   if (typeof closure_1 !== "function") {
                                     HermesBuiltin.throwTypeError();

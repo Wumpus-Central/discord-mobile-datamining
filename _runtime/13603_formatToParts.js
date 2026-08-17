@@ -1,36 +1,16 @@
 // _runtime/13603_formatToParts.js
-import e from "e";
-import digitsToString from "digitsToString";
+import digitsToString from "digitsToString" /* 13581 */;
+import _mod13604 from "module_13604" /* 13604 */;
+import e from "e" /* 1281 */;
 
-const regExp = new RegExp("^".concat(require("module_13604").S_UNICODE_REGEX.source));
-const regExp1 = new RegExp("".concat(require("module_13604").S_UNICODE_REGEX.source, "$"));
+let closure_2 = e.__importDefault(digitsToString);
+const regExp = new RegExp("^".concat(_mod13604.S_UNICODE_REGEX.source));
+const regExp1 = new RegExp("".concat(_mod13604.S_UNICODE_REGEX.source, "$"));
 const re5 = /[#0](?:[\.,][#0]+)*/g;
 
 export default function formatToParts(magnitude, numbers, arg2, currencyDisplay) {
   let arr1;
-  let arr2;
   let arr3;
-  let arr4;
-  let arr6;
-  let arr8;
-  let compactDisplay;
-  let exponent;
-  let formattedString2;
-  let notation;
-  let numberingSystem;
-  let roundedNumber;
-  let roundedNumber2;
-  let sign;
-  let sign2;
-  let style;
-  let tmp14;
-  let tmp21;
-  let tmp26;
-  let tmp31;
-  let tmp81;
-  let tmp82;
-  let unit;
-  let unitDisplay;
   ({ sign, exponent } = magnitude);
   ({ notation, style, numberingSystem } = currencyDisplay);
   let first = numbers.numbers.nu[0];
@@ -242,7 +222,7 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
           obj[1] = tmp40.plusSign;
           arr = items.push(obj);
         } else if ("%" === str50) {
-          let obj1 = { type: "percentSign", value: null };
+          obj1 = { type: "percentSign", value: null };
           obj1[1] = tmp40.percentSign;
           arr1 = items.push(obj1);
         } else if ("\u00A4" === str50) {
@@ -383,7 +363,7 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
             fn = -exponent;
           }
           items2 = new.target;
-          let _default = new digitsToString.default(fn);
+          let _default = new mod.default(fn);
           const obj12 = { type: "exponentInteger", value: null };
           formattedString = fn(13601).ToRawFixed(_default, 0, 0, roundingIncrement, formattedString).formattedString;
           obj12[1] = formattedString;
@@ -408,12 +388,12 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
     if ("name" === currencyDisplay.currencyDisplay) {
       if (numbers.currencies[currencyDisplay.currency]) {
         const roundedNumber5 = magnitude.roundedNumber;
-        first = digitsToString;
-        const timesResult = roundedNumber5.times(digitsToString.default.pow(10, exponent));
+        first = mod;
+        const timesResult = roundedNumber5.times(mod.default.pow(10, exponent));
         const displayName = tmp99.displayName;
         first = displayName[arg2.select(arg2, timesResult.toNumber(timesResult))] || displayName.other;
         let currency3 = first;
-        const _default3 = digitsToString.default;
+        const _default3 = mod.default;
       } else {
         currency3 = currencyDisplay.currency;
       }
@@ -443,15 +423,15 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
     ({ unit, unitDisplay } = currencyDisplay);
     if (numbers.units.simple[unit]) {
       const roundedNumber4 = magnitude.roundedNumber;
-      const timesResult1 = roundedNumber4.times(digitsToString.default.pow(10, exponent));
+      const timesResult1 = roundedNumber4.times(mod.default.pow(10, exponent));
       let str59 = numbers.units.simple[unit][unitDisplay][arg2.select(arg2, timesResult1.toNumber(timesResult1))] || numbers.units.simple[unit][unitDisplay].other;
-      const _default2 = digitsToString.default;
+      const _default2 = mod.default;
       const tmp90 = numbers.units.simple[unit][unitDisplay][arg2.select(arg2, timesResult1.toNumber(timesResult1))] || numbers.units.simple[unit][unitDisplay].other;
     } else {
       const parts7 = unit.split("-per-");
       [tmp81, tmp82] = parts7;
       const roundedNumber3 = magnitude.roundedNumber;
-      _default = digitsToString.default;
+      _default = mod.default;
       const timesResult2 = roundedNumber3.times(_default.pow(10, exponent));
       const tmp86 = numbers.units.simple[tmp81][unitDisplay][arg2.select(arg2, timesResult2.toNumber(timesResult2))] || numbers.units.simple[tmp81][unitDisplay].other;
       const str53 = numbers.units.simple[tmp82].perUnit[unitDisplay];

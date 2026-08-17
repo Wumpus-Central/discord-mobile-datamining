@@ -1,6 +1,6 @@
 // _runtime/03768_isEqual.js
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,12 +17,12 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function isEqual(arg0, arg1) {
-  tmp5.default(2, arguments);
-  const defaultResult1 = tmp3.default(arg0);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
   const time = defaultResult1.getTime();
-  return time === tmp3.default(arg1).getTime();
+  return time === _typeof.default(arg1).getTime();
 };
 export default exports.default;

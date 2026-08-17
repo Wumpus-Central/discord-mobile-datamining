@@ -1,12 +1,13 @@
 // _runtime/00157__isNativeReflectConstruct.js
-import DOMException from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import _classPrivateFieldBase from "_classPrivateFieldBase";
-import importDefaultResult3 from "_classPrivateFieldKey";
-import setPlatformObject from "setPlatformObject";
+import _wrapNativeSuperDefault from "_wrapNativeSuper" /* 158 */;
+import DOMException from "_classCallCheck" /* 41 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import closure_3 from "_classPrivateFieldBase" /* 90 */;
+import importDefaultResult3 from "_classPrivateFieldKey" /* 91 */;
+import setPlatformObject from "setPlatformObject" /* 126 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -19,10 +20,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -37,9 +38,9 @@ class DOMException {
     tmp = DOMException(this, DOMException);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(DOMException);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_2;
+    obj = closure_2(DOMException);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -48,25 +49,25 @@ class DOMException {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp7 = name;
-    definePropertyResult = Object.defineProperty(tmp3Result, name, { writable: true, value: "a" });
-    tmp9 = code;
-    definePropertyResult1 = Object.defineProperty(tmp3Result, code, { writable: true, value: "a" });
+    tmp7 = closure_6;
+    definePropertyResult = Object.defineProperty(tmp3Result, closure_6, { writable: true, value: "a" });
+    tmp9 = closure_7;
+    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_7, { writable: true, value: "a" });
     if (undefined === arg1) {
-      tmp16 = _isNativeReflectConstruct;
+      tmp16 = closure_3;
       str = "Error";
-      _isNativeReflectConstruct(tmp3Result, tmp7)[tmp7] = "Error";
+      closure_3(tmp3Result, tmp7)[tmp7] = "Error";
       num2 = 0;
-      _isNativeReflectConstruct(tmp3Result, tmp9)[tmp9] = 0;
+      closure_3(tmp3Result, tmp9)[tmp9] = 0;
     } else {
-      tmp11 = _isNativeReflectConstruct;
+      tmp11 = closure_3;
       _String = String;
-      tmp12 = _isNativeReflectConstruct(tmp3Result, tmp7);
+      tmp12 = closure_3(tmp3Result, tmp7);
       tmp12[tmp7] = String(arg1);
-      tmp14 = _isNativeReflectConstruct;
-      num = _isNativeReflectConstruct[tmp3Result.name];
+      tmp14 = closure_5;
+      num = closure_5[tmp3Result.name];
       tmp15 = null;
-      tmp13 = _isNativeReflectConstruct(tmp3Result, tmp9);
+      tmp13 = closure_3(tmp3Result, tmp9);
       if (num == null) {
         num = 0;
       }
@@ -75,7 +76,7 @@ class DOMException {
     return tmp3Result;
   }
 }
-importDefaultResult1(DOMException, require("_wrapNativeSuper")(Error));
+importDefaultResult1(DOMException, _wrapNativeSuperDefault(Error));
 obj = {
   key: "name",
   get() {
@@ -92,7 +93,6 @@ let items = [
   }
 ];
 const importDefaultResultResult = importDefaultResult(DOMException, items);
-const metroImportAll = importDefaultResultResult;
 for (const key10045 in obj) {
   let tmp9 = key10045;
   let _Object = Object;

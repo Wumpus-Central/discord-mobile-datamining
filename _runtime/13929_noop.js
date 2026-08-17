@@ -1,3 +1,5 @@
 // _runtime/13929_noop.js
+import noopAll from "noop" /* 19 */;
 
-export default require("noop").createContext(undefined);
+
+export default noopAll.createContext(undefined);

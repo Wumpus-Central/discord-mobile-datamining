@@ -2,9 +2,6 @@
 const require = arg1;
 const dependencyMap = arg6;
 arg5.gestureActivationCriteria = (direction) => {
-  let gestureDirection;
-  let gestureResponseDistance;
-  let layout;
   ({ gestureDirection, gestureResponseDistance, layout } = direction);
   if (undefined === gestureResponseDistance) {
     if ("vertical" === gestureDirection) {
@@ -21,7 +18,7 @@ arg5.gestureActivationCriteria = (direction) => {
     obj[2] = obj;
     return obj;
   } else if ("vertical-inverted" === gestureDirection) {
-    const obj1 = { maxDeltaX: 15, minOffsetY: -5, hitSlop: null, enableTrackpadTwoFingerGesture: true };
+    obj1 = { maxDeltaX: 15, minOffsetY: -5, hitSlop: null, enableTrackpadTwoFingerGesture: true };
     const obj2 = { top: null };
     obj2[0] = -layout.height + gestureResponseDistance;
     obj1[2] = obj2;

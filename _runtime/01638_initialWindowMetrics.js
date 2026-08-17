@@ -1,5 +1,5 @@
 // _runtime/01638_initialWindowMetrics.js
-import importDefaultResult from "RNCSafeAreaContext";
+import importDefaultResult from "RNCSafeAreaContext" /* 1639 */;
 
 let initialWindowMetrics;
 if (importDefaultResult != null) {

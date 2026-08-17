@@ -1,8 +1,9 @@
 // _runtime/metro/04953__.js
-import { getDataView } from "../04910_getDataView.js";
-import { readTag } from "../04930_readTag.js";
-import { importDefaultResult1 } from "../04931_importDefaultResult1.js";
-const require = arg1;
+import getDataView from "getDataView" /* 4910 */;
+import readTag from "readTag" /* 4930 */;
+import importDefaultResult1 from "importDefaultResult1" /* 4931 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.default = {
   read(byteLength, sum, arg2, byteOrder) {

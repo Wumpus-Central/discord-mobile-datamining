@@ -1,10 +1,9 @@
 // _runtime/06425_attachHandlers.js
-import { Platform } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const Platform = get_ActivityIndicator.Platform;
 
 export const attachHandlers = function attachHandlers(preparedGesture) {
-  let handlerName;
-  let handlerTag;
   preparedGesture = preparedGesture.preparedGesture;
   const gestureConfig = preparedGesture.gestureConfig;
   const gesturesToAttach = preparedGesture.gesturesToAttach;

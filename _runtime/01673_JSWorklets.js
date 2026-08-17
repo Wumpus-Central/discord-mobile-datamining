@@ -1,10 +1,11 @@
 // _runtime/01673_JSWorklets.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const JSWorklets = arg1;
 class JSWorklets {
   constructor() {
-    tmp = outer1_2(this, JSWorklets);
+    tmp = closure_2(this, JSWorklets);
     return;
   }
 }
@@ -17,7 +18,7 @@ const items = [
     }
   }
 ];
-let closure_3 = require("_createClass")(JSWorklets, items);
+let closure_3 = _createClassDefault(JSWorklets, items);
 
 export const createJSWorkletsModule = function createJSWorkletsModule() {
   return new closure_3();

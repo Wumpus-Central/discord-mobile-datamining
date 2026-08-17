@@ -1,6 +1,7 @@
 // _runtime/06996_styles.js
-import { StyleSheet } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const StyleSheet = get_ActivityIndicator.StyleSheet;
 let obj = { container: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

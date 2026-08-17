@@ -27,7 +27,7 @@ arg5.default = function codegenNativeComponent(arg0, paperComponentName) {
           str = "(unknown)";
         }
         const _HermesInternal = HermesInternal;
-        const error = new Error("Failed to find native component for either " + arg0 + " or " + str);
+        error = new Error("Failed to find native component for either " + arg0 + " or " + str);
         throw error;
       }
       obj2 = module(68);

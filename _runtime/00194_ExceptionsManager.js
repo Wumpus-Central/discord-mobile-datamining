@@ -1,5 +1,7 @@
 // _runtime/00194_ExceptionsManager.js
-const enforcing = require("get").getEnforcing("ExceptionsManager");
+import getAll from "get" /* 30 */;
+
+const enforcing = getAll.getEnforcing("ExceptionsManager");
 const obj = {
   reportFatalException(message, stack, id) {
     closure_0.reportFatalException(message, stack, id);

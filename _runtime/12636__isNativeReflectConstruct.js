@@ -1,12 +1,13 @@
 // _runtime/12636__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_inherits";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult1 from "_createClass";
-import importDefaultResult2 from "_inherits";
-import { Linking } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult1 from "_createClass" /* 42 */;
+import importDefaultResult2 from "_inherits" /* 98 */;
+import { Linking } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const DeepLinking = arg1;
 let closure_1 = dependencyMap;
@@ -21,10 +22,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -35,12 +36,12 @@ class DeepLinking {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_2(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(closure_0);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -49,14 +50,14 @@ class DeepLinking {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.handleChange = (url) => {
-      _undefined.push(url.url);
+
     };
     return tmp3Result;
   }
 }
-importDefaultResult2(DeepLinking, require("noop").Component);
+importDefaultResult2(DeepLinking, noopDefault.Component);
 let obj = {
   key: "push",
   value: function push(str) {
@@ -68,8 +69,8 @@ let items = [obj, , , ];
 obj = { key: "componentDidMount", value: null };
 closure_1 = importDefaultResult(function() {
   const self = this;
-  let c4 = 0;
-  let c5 = 0;
+  c4 = 0;
+  c5 = 0;
   return (function*() {
     if (c5 === 2) {
       c5 = 3;
@@ -98,12 +99,12 @@ closure_1 = importDefaultResult(function() {
             return obj;
           } else {
             let arr = closure_0;
-            let _classCallCheck = closure_0;
-            let closure_1 = tmp2;
+            closure_2 = closure_0;
+            closure_1 = tmp2;
             closure_0 = undefined;
             c4 = 1;
             c5 = 1;
-            const obj1 = { value: null, done: false };
+            obj1 = { value: null, done: false };
             obj1[0] = c5.getInitialURL();
             return obj1;
           }

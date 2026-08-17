@@ -6,7 +6,7 @@ arg5.ArtboardByIndex = (arg0) => {
     return obj;
   } else {
     const _Error = Error;
-    const error = new Error("Artboard index must be an integer");
+    error = new Error("Artboard index must be an integer");
     throw error;
   }
 };

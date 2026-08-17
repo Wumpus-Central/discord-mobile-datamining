@@ -1,8 +1,8 @@
 // _runtime/03683_eachQuarterOfInterval.js
-import addQuarters from "addQuarters";
-import startOfQuarter from "startOfQuarter";
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import addQuarters from "addQuarters" /* 3638 */;
+import startOfQuarter from "startOfQuarter" /* 3684 */;
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!addQuarters) {
   let obj = { default: null };
@@ -11,7 +11,7 @@ if (!addQuarters) {
 } else {
   tmp3 = addQuarters;
 }
-let c0 = tmp3;
+addQuarters = tmp3;
 if (!startOfQuarter) {
   obj = { default: null };
   obj[0] = startOfQuarter;
@@ -19,7 +19,7 @@ if (!startOfQuarter) {
 } else {
   tmp5 = startOfQuarter;
 }
-let closure_1 = tmp5;
+startOfQuarter = tmp5;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -27,36 +27,36 @@ if (!_typeof) {
 } else {
   tmp7 = _typeof;
 }
-let obj1 = tmp7;
+_typeof = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c3 = tmp9;
+requiredArgs = tmp9;
 
 export default function eachQuarterOfInterval(arg0) {
   let time2;
   let obj = arg0;
-  tmp9.default(1, arguments);
+  requiredArgs.default(1, arguments);
   if (!arg0) {
     obj = {};
   }
-  const defaultResult1 = tmp7.default(obj.start);
-  const defaultResult2 = tmp7.default(obj.end);
+  const defaultResult1 = _typeof.default(obj.start);
+  const defaultResult2 = _typeof.default(obj.end);
   const time = defaultResult2.getTime();
   if (defaultResult1.getTime() <= time) {
-    let defaultResult3 = tmp5.default(defaultResult1);
-    const time1 = tmp5.default(defaultResult2).getTime();
+    let defaultResult3 = startOfQuarter.default(defaultResult1);
+    const time1 = startOfQuarter.default(defaultResult2).getTime();
     const items = [];
     if (defaultResult3.getTime() <= time1) {
       do {
-        let tmp10 = tmp7;
-        let arr = items.push(tmp7.default(defaultResult3));
-        let tmp12 = tmp3;
-        let defaultResult5 = tmp3.default(defaultResult3, 1);
+        let tmp10 = _typeof;
+        let arr = items.push(_typeof.default(defaultResult3));
+        let tmp12 = addQuarters;
+        let defaultResult5 = addQuarters.default(defaultResult3, 1);
         defaultResult3 = defaultResult5;
         time2 = defaultResult5.getTime();
       } while (time2 <= time1);

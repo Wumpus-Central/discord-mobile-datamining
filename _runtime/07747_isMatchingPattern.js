@@ -1,6 +1,7 @@
 // _runtime/07747_isMatchingPattern.js
-import { isInstanceOf } from "07745_isInstanceOf.js";
-const require = arg1;
+import isInstanceOf from "isInstanceOf" /* 7745 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.isMatchingPattern = function isMatchingPattern(arr, test) {
   let flag = arg2;
@@ -87,7 +88,7 @@ arg5.snipLine = function snipLine(arr) {
   }
 };
 arg5.stringMatchesSomePattern = function stringMatchesSomePattern(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let items = arg1;
   if (arg1 === undefined) {
     items = [];

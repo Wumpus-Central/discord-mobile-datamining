@@ -12,7 +12,7 @@ arg5.getReactNativeDimensionsWithDimensions = function getReactNativeDimensionsW
       ({ scale: obj3[2], fontScale: obj3[3] } = width);
     }
     if (value) {
-      const obj1 = { windowWidth: null, windowHeight: null, windowScale: null, windowFontScale: null };
+      obj1 = { windowWidth: null, windowHeight: null, windowScale: null, windowFontScale: null };
       const _Math3 = Math;
       obj1[0] = Math.ceil(value.width);
       const _Math4 = Math;

@@ -1,7 +1,7 @@
 // _runtime/10322_CarouselLayout.js
-import importDefaultResult from "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import importDefaultResult from "noop" /* 19 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let closure_4 = { code: "function pnpm_CarouselLayoutTsx1(){const{size,dataLength,handlerOffset,loop}=this.__closure;const totalSize=size*dataLength;const x=handlerOffset.value%totalSize;if(!loop)return handlerOffset.value;return Number.isNaN(x)?0:x;}" };
@@ -9,23 +9,6 @@ let closure_5 = { code: "function pnpm_CarouselLayoutTsx2(){const{width,height}=
 const styles = StyleSheet.create({ layoutContainer: { display: "flex" }, contentContainer: { overflow: "hidden" }, itemsHorizontal: { flexDirection: "row" }, itemsVertical: { flexDirection: "column" } });
 
 export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
-  let autoPlay;
-  let autoPlayInterval;
-  let autoPlayReverse;
-  let containerStyle;
-  let customAnimation;
-  let data;
-  let defaultIndex;
-  let fixedDirection;
-  let mode;
-  let onProgressChange;
-  let renderItem;
-  let scrollAnimationDuration;
-  let style;
-  let testID;
-  let vertical;
-  let windowSize;
-  let withAnimation;
   let obj = loop(autoFillData[3]);
   const globalState = obj.useGlobalState();
   const props = globalState.props;
@@ -39,7 +22,7 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
   const onSnapToItem = props.onSnapToItem;
   const onScrollStart = props.onScrollStart;
   ({ testID, data, mode, style, containerStyle, vertical, autoPlay, windowSize, autoPlayReverse, autoPlayInterval, scrollAnimationDuration, withAnimation, fixedDirection, renderItem, onProgressChange, customAnimation, defaultIndex } = props);
-  let obj1 = loop(autoFillData[4]);
+  obj1 = loop(autoFillData[4]);
   const commonVariables = obj1.useCommonVariables(props);
   const size = commonVariables.size;
   const handlerOffset = commonVariables.handlerOffset;
@@ -153,9 +136,8 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
   const animatedStyle = loop(autoFillData[6]).useAnimatedStyle(Q, items6);
   obj1 = { style: items7, children: null };
   items7 = [onScrollEnd.layoutContainer, containerStyle];
-  obj2 = { size, translation: handlerOffset, style: items8, testID, onScrollStart: callback1, onScrollEnd: callback2, onTouchBegin: callback3, onTouchEnd: callback4, children: null };
+  obj2 = { size, translation: handlerOffset, style: items8, testID, onScrollStart: callback1, onScrollEnd: callback2, onTouchBegin: callback3, onTouchEnd: callback4, children: tmp17(tmp(tmp2[13]).ItemRenderer, { data, dataLength, rawDataLength, loop, size, windowSize, autoFillData, offsetX: derivedValue, handlerOffset, layoutConfig, renderItem, customAnimation }) };
   items8 = [onScrollEnd.contentContainer, animatedStyle, style, vertical ? onScrollEnd.itemsVertical : onScrollEnd.itemsHorizontal];
-  obj2[8] = rawDataLength(tmp(tmp2[13]).ItemRenderer, { data, dataLength, rawDataLength, loop, size, windowSize, autoFillData, offsetX: derivedValue, handlerOffset, layoutConfig, renderItem, customAnimation });
   obj1[1] = rawDataLength(loop(autoFillData[12]).ScrollViewGesture, obj2, mode);
   return rawDataLength(loop(autoFillData[11]).GestureHandlerRootView, obj1);
 });

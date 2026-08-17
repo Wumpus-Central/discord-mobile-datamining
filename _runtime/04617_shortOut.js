@@ -1,13 +1,13 @@
 // _runtime/04617_shortOut.js
 
 export default function shortOut(arg0) {
-  let closure_0 = arg0;
-  let c1 = 0;
-  let c2 = 0;
+  closure_0 = arg0;
+  c1 = 0;
+  c2 = 0;
   return () => {
     const tmp = callback();
-    let c2 = tmp;
-    if (0 < 16 - (tmp - c2)) {
+    closure_2 = tmp;
+    if (0 < 16 - (tmp - closure_2)) {
       const sum = c1 + 1;
       c1 = sum;
       if (800 <= sum) {

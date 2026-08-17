@@ -1,9 +1,9 @@
 // _runtime/13641_emitUnicodeLanguageId.js
-import { e } from "01281_e.js";
-const require = arg1;
+import e from "e" /* 1281 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.emitUnicodeLanguageId = function emitUnicodeLanguageId(arg0) {
-  let variants;
   let str = "";
   if (arg0) {
     const items = [, , ];
@@ -20,10 +20,6 @@ arg5.emitUnicodeLanguageId = function emitUnicodeLanguageId(arg0) {
   return str;
 };
 arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResult) {
-  let extensions;
-  let lang;
-  let variants;
-  let variants2;
   ({ lang, extensions } = parseUnicodeLocaleIdResult);
   let str = "";
   if (lang) {

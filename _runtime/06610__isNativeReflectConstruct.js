@@ -1,8 +1,9 @@
 // _runtime/06610__isNativeReflectConstruct.js
-import FilterPrimitive from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import FilterPrimitive from "_classCallCheck" /* 41 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -15,10 +16,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -27,12 +28,12 @@ class FilterPrimitive {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = FilterPrimitive(this, apply);
+    closure_0 = undefined;
+    tmp = FilterPrimitive(this, closure_0);
     items1 = [...items];
-    tmp2 = __esModule;
-    obj = __esModule(apply);
-    tmp3 = __esModule;
+    tmp2 = closure_2;
+    obj = closure_2(closure_0);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -41,13 +42,13 @@ class FilterPrimitive {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.root = null;
     tmp3Result.refMethod = (root) => {
-      c0.root = root;
+      closure_0.root = root;
     };
     tmp3Result.setNativeProps = (arg0) => {
-      const root = _undefined.root;
+      root = root.root;
       if (root != null) {
         root.setNativeProps(arg0);
       }
@@ -55,7 +56,7 @@ class FilterPrimitive {
     return tmp3Result;
   }
 }
-require("_inherits")(FilterPrimitive, require("noop").Component);
+_inheritsDefault(FilterPrimitive, require("noop").Component);
 const importDefaultResultResult = importDefaultResult(FilterPrimitive);
 importDefaultResultResult.defaultPrimitiveProps = {};
 

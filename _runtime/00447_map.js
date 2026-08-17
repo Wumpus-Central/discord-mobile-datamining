@@ -1,6 +1,7 @@
 // _runtime/00447_map.js
-import { renderElement } from "00114_renderElement.js";
-const require = arg1;
+import renderElement from "renderElement" /* 114 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 const items = [["change", "touchExplorationDidChange"], ["reduceMotionChanged", "reduceMotionDidChange"], ["highTextContrastChanged", "highTextContrastDidChange"], ["screenReaderChanged", "touchExplorationDidChange"], ["accessibilityServiceChanged", "accessibilityServiceDidChange"], ["invertColorsChanged", "invertColorDidChange"], ["grayscaleChanged", "grayscaleModeDidChange"]];
@@ -21,7 +22,7 @@ arg5.default = {
         const tmpResult = callback(table[0]);
       } else {
         const _Error = Error;
-        const error = new Error("NativeAccessibilityInfoAndroid.isGrayscaleEnabled is not available");
+        error = new Error("NativeAccessibilityInfoAndroid.isGrayscaleEnabled is not available");
         arg1(error);
       }
     });
@@ -38,7 +39,7 @@ arg5.default = {
         const tmpResult = callback(table[0]);
       } else {
         const _Error = Error;
-        const error = new Error("NativeAccessibilityInfoAndroid.isInvertColorsEnabled is not available");
+        error = new Error("NativeAccessibilityInfoAndroid.isInvertColorsEnabled is not available");
         arg1(error);
       }
     });
@@ -50,7 +51,7 @@ arg5.default = {
         const tmpResult = callback(table[0]);
       } else {
         const _Error = Error;
-        const error = new Error("NativeAccessibilityInfoAndroid is not available");
+        error = new Error("NativeAccessibilityInfoAndroid is not available");
         arg1(error);
       }
     });
@@ -67,7 +68,7 @@ arg5.default = {
         const tmpResult = callback(table[0]);
       } else {
         const _Error = Error;
-        const error = new Error("NativeAccessibilityInfoAndroid.isHighTextContrastEnabled is not available");
+        error = new Error("NativeAccessibilityInfoAndroid.isHighTextContrastEnabled is not available");
         arg1(error);
       }
     });
@@ -88,7 +89,7 @@ arg5.default = {
         const tmpResult = callback(table[0]);
       } else {
         const _Error = Error;
-        const error = new Error("NativeAccessibilityInfoAndroid is not available");
+        error = new Error("NativeAccessibilityInfoAndroid is not available");
         arg1(error);
       }
     });
@@ -101,7 +102,7 @@ arg5.default = {
           const tmpResult = tmp(tmp2[0]);
         }
       }
-      const error = new Error("NativeAccessibilityInfoAndroid.isAccessibilityServiceEnabled is not available");
+      error = new Error("NativeAccessibilityInfoAndroid.isAccessibilityServiceEnabled is not available");
       arg1(error);
     });
   },
@@ -139,14 +140,14 @@ arg5.default = {
   },
   getRecommendedTimeoutMillis(closure_0, arg1) {
     return new Promise((arg0, arg1) => {
-      const tmp3 = outer1_1(outer1_2[0]);
+      const tmp3 = closure_1_1(closure_1_2[0]);
       let prop;
       if (tmp3 != null) {
         prop = tmp3.getRecommendedTimeoutMillis;
       }
       if (null != prop) {
-        const recommendedTimeoutMillis = outer1_1(outer1_2[0]).getRecommendedTimeoutMillis(closure_0, arg0);
-        const tmpResult = outer1_1(outer1_2[0]);
+        const recommendedTimeoutMillis = closure_1_1(closure_1_2[0]).getRecommendedTimeoutMillis(closure_0, arg0);
+        const tmpResult = closure_1_1(closure_1_2[0]);
       } else {
         arg0(closure_0);
       }

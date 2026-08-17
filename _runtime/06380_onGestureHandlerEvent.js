@@ -1,9 +1,9 @@
 // _runtime/06380_onGestureHandlerEvent.js
-import { DeviceEventEmitter } from "get ActivityIndicator";
-import { map } from "06381_map.js";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import map2 from "map" /* 6381 */;
 
 function onGestureHandlerEvent(handlerTag) {
-  let obj = map;
+  let obj = map2;
   const findHandlerResult = obj.findHandler(handlerTag.handlerTag);
   if (findHandlerResult) {
     if (null != handlerTag.oldState) {
@@ -142,6 +142,7 @@ function onGestureHandlerEvent(handlerTag) {
     const tmpResult = tmp(6381);
   }
 }
+const DeviceEventEmitter = get_ActivityIndicator.DeviceEventEmitter;
 let c3 = null;
 let c4 = null;
 const map = new Map();

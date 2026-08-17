@@ -1,79 +1,21 @@
 // _runtime/09933_StyleSheet.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-let c10;
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 ({ Animated: c5, Platform, StatusBar: closure_6, StyleSheet } = get_ActivityIndicator);
-({ useAnimatedValue: metroImportAll, View: c9 } = get_ActivityIndicator);
+({ useAnimatedValue: closure_8, View: c9 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 function SceneView(arg0) {
-  let animation;
-  let animationDuration;
-  let animationMatchesGesture;
-  let autoHideHomeIndicator;
-  let contentStyle;
-  let descriptor;
-  let focused;
-  let freezeOnBlur;
-  let fullScreenGestureEnabled;
-  let gestureDirection;
-  let gestureEnabled;
-  let gestureResponseDistance;
-  let header;
-  let headerBackButtonMenuEnabled;
-  let headerBackground;
-  let headerShown;
-  let headerTransparent;
-  let index;
-  let isPreloaded;
-  let keyboardHandlingEnabled;
-  let navigation;
-  let navigationBarColor;
-  let navigationBarHidden;
-  let navigationBarTranslucent;
-  let nextDescriptor;
-  let onAppear;
-  let onDisappear;
-  let onDismissed;
-  let onGestureCancel;
-  let onHeaderBackButtonClicked;
-  let onNativeDismissCancelled;
-  let onSheetDetentChanged;
-  let onWillAppear;
-  let onWillDisappear;
-  let options;
-  let orientation;
-  let previousDescriptor;
-  let route;
-  let scrollEdgeEffects;
-  let sheetAllowedDetents;
-  let shouldFreeze;
-  let statusBarAnimation;
-  let statusBarBackgroundColor;
-  let statusBarHidden;
-  let statusBarStyle;
-  let statusBarTranslucent;
-  let tmp17;
-  let tmp18;
-  let unstable_headerInsets;
-  let unstable_sheetFooter;
   ({ descriptor, previousDescriptor, nextDescriptor } = arg0);
   let safeAreaInsets;
   let num6;
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   let React;
-  let c5;
+  closure_5 = undefined;
   let title;
   ({ route, navigation, options } = descriptor);
   let str = options.presentation;
@@ -140,7 +82,7 @@ function SceneView(arg0) {
     str = "card";
   }
   let obj = num6(1501);
-  let obj1 = num6(1632);
+  obj1 = num6(1632);
   safeAreaInsets = obj1.useSafeAreaInsets();
   let obj2 = React;
   const context = React.useContext(num6(6319).HeaderShownContext);
@@ -194,11 +136,11 @@ function SceneView(arg0) {
   React = tmp24;
   const items = [num8, tmp24];
   let tmp26 = statusBarTranslucent;
-  const memo = obj2.useMemo(() => _undefined3.add(c4, c3), items);
+  const memo = obj2.useMemo(() => set.add(closure_4, c3), items);
   if (typeof statusBarTranslucent !== "boolean") {
     tmp26 = 0 !== num6;
   }
-  c5 = tmp27;
+  closure_5 = tmp27;
   if (previousDescriptor) {
     title = tmp8(6319).getHeaderTitle(previousDescriptor.options, previousDescriptor.route.name);
     const tmp8Result2 = tmp8(6319);
@@ -207,7 +149,7 @@ function SceneView(arg0) {
   }
   const items1 = [null != previousDescriptor || null != context1, title];
   const memo1 = obj2.useMemo(() => {
-    if (c5) {
+    if (closure_5) {
       const obj = { href: "Array", title: 0 };
       obj[1] = title;
       return obj;
@@ -263,7 +205,7 @@ function SceneView(arg0) {
         }
       }
     };
-    eventResult = c5.event(items2, obj2);
+    eventResult = closure_5.event(items2, obj2);
   }
   obj3 = { route, navigation, children: null };
   const obj4 = { screenId: route.key, activityState: null, style: null, "aria-hidden": null, customAnimationOnSwipe: null, fullScreenSwipeEnabled: null, fullScreenSwipeShadowEnabled: null, freezeOnBlur: null, gestureEnabled: false, homeIndicatorHidden: null, hideKeyboardOnSwipe: null, navigationBarColor: null, navigationBarTranslucent: null, navigationBarHidden: null, replaceAnimation: null, stackPresentation: null, stackAnimation: null, screenOrientation: null, sheetAllowedDetents: null, sheetLargestUndimmedDetentIndex: null, sheetGrabberVisible: null, sheetInitialDetentIndex: null, sheetCornerRadius: null, sheetElevation: null, sheetExpandsWhenScrolledToEdge: null, sheetShouldOverflowTopInset: null, sheetDefaultResizeAnimationEnabled: null, statusBarAnimation: null, statusBarHidden: null, statusBarStyle: null, statusBarColor: null, statusBarTranslucent: null, swipeDirection: null, transitionDuration: null, onWillAppear: null, onWillDisappear: null, onAppear: null, onDisappear: null, onDismissed: null, onGestureCancel: null, onSheetDetentChanged: null, gestureResponseDistance: null, nativeBackButtonDismissalEnabled: false, onHeaderBackButtonClicked: null, preventNativeDismiss: null, scrollEdgeEffects: null, onNativeDismissCancelled: null, onHeaderHeightChange: null, contentStyle: null, headerConfig: null, unstable_sheetFooter: null, shouldFreeze: null, children: null };
@@ -411,7 +353,7 @@ function SceneView(arg0) {
       obj13[0] = function onLayout(nativeEvent) {
         const height = nativeEvent.nativeEvent.layout.height;
         _undefined(height);
-        _undefined2.setValue(height);
+        value.setValue(height);
       };
       obj13[1] = { pointerEvents: "box-none" };
       const obj14 = { back: null, options: null, route: null, navigation: null };
@@ -430,12 +372,12 @@ function SceneView(arg0) {
     tmp47 = tmp39;
   }
   const obj15 = { value: tmp47, children: null };
-  const obj16 = { value: memo1, children: null };
-  obj16[1] = descriptor.render();
-  obj15[1] = closure_10(num6(6319).HeaderBackContext.Provider, obj16);
+  const tmp38 = closure_11;
+  const tmp8Result3 = num6(9935);
+  obj15[1] = closure_10(num6(6319).HeaderBackContext.Provider, { value: memo1, children: descriptor.render() });
   items5[2] = closure_10(num6(6319).HeaderShownContext.Provider, obj15);
   obj8[1] = items5;
-  obj7[1] = closure_11(num6(6319).HeaderHeightContext.Provider, obj8);
+  obj7[1] = tmp38(num6(6319).HeaderHeightContext.Provider, obj8);
   obj4[52] = closure_10(num6(9937).AnimatedHeaderHeightContext.Provider, obj7);
   obj3[2] = closure_10(num6(4670).ScreenStackItem, obj4);
   return closure_10(num6(1501).NavigationProvider, obj3);
@@ -443,14 +385,12 @@ function SceneView(arg0) {
 const styles = StyleSheet.create({ container: { flex: 1 }, header: { zIndex: 1 }, absolute: { position: "absolute", top: 0, start: 0, end: 0 }, translucent: { position: "absolute", top: 0, start: 0, end: 0, zIndex: 1, elevation: 1 }, background: { overflow: "hidden" } });
 
 export const NativeStackView = function NativeStackView(state) {
-  let descriptors;
-  let require;
   state = state.state;
   ({ navigation: require, descriptors } = state);
   const describe = state.describe;
   let setNextDismissedKey;
   let modalRouteKeys;
-  let closure_6;
+  closure_6 = undefined;
   let obj = require(descriptors[11]);
   setNextDismissedKey = obj.useDismissedRouteError(state).setNextDismissedKey;
   const invalidPreventRemoveError = require(descriptors[12]).useInvalidPreventRemoveError(descriptors);
@@ -470,7 +410,7 @@ export const NativeStackView = function NativeStackView(state) {
   const routes = state.routes;
   const combined = routes.concat(state.preloadedRoutes);
   obj[1] = combined.map((key, index) => {
-    const state = key;
+    state = key;
     let tmp2 = descriptors[key.key];
     if (tmp2 == null) {
       tmp2 = dependencyMap[key.key];
@@ -518,7 +458,7 @@ export const NativeStackView = function NativeStackView(state) {
         tmp15 = !flag;
       }
     }
-    return outer1_10(outer1_12, {
+    return closure_1_10(closure_1_12, {
       index,
       focused: state.index === index,
       shouldFreeze: tmp15,
@@ -528,49 +468,49 @@ export const NativeStackView = function NativeStackView(state) {
       isPresentationModal: hasItem,
       isPreloaded: undefined !== dependencyMap[key.key] && undefined === descriptors[key.key],
       onWillDisappear(onDidDisappear, arg1) {
-        outer1_1.emit({ type: "transitionStart", data: { closing: true }, target: key.key });
+        closure_1_1.emit({ type: "transitionStart", data: { closing: true }, target: key.key });
       },
       onWillAppear() {
-        outer1_1.emit({ type: "transitionStart", data: { closing: false }, target: key.key });
+        closure_1_1.emit({ type: "transitionStart", data: { closing: false }, target: key.key });
       },
       onAppear() {
-        outer1_1.emit({ type: "transitionEnd", data: { closing: false }, target: key.key });
+        closure_1_1.emit({ type: "transitionEnd", data: { closing: false }, target: key.key });
       },
       onDisappear() {
-        outer1_1.emit({ type: "transitionEnd", data: { closing: true }, target: key.key });
+        closure_1_1.emit({ type: "transitionEnd", data: { closing: true }, target: key.key });
       },
       onDismissed(nativeEvent) {
         const obj = {};
-        const StackActions = outer2_1(descriptors[4]).StackActions;
+        const StackActions = closure_2_1(descriptors[4]).StackActions;
         const merged = Object.assign(StackActions.pop(nativeEvent.nativeEvent.dismissCount));
         obj.source = key.key;
         obj.target = key.key;
-        outer1_1.dispatch(obj);
-        outer1_4(key.key);
+        closure_1_1.dispatch(obj);
+        closure_1_4(key.key);
       },
       onHeaderBackButtonClicked() {
         const obj = {};
-        const StackActions = outer2_1(descriptors[4]).StackActions;
+        const StackActions = closure_2_1(descriptors[4]).StackActions;
         const merged = Object.assign(StackActions.pop());
         obj.source = key.key;
         obj.target = key.key;
-        outer1_1.dispatch(obj);
+        closure_1_1.dispatch(obj);
       },
       onNativeDismissCancelled(nativeEvent) {
         const obj = {};
-        const StackActions = outer2_1(descriptors[4]).StackActions;
+        const StackActions = closure_2_1(descriptors[4]).StackActions;
         const merged = Object.assign(StackActions.pop(nativeEvent.nativeEvent.dismissCount));
         obj.source = key.key;
         obj.target = key.key;
-        outer1_1.dispatch(obj);
+        closure_1_1.dispatch(obj);
       },
       onGestureCancel() {
-        outer1_1.emit({ type: "gestureCancel", target: key.key });
+        closure_1_1.emit({ type: "gestureCancel", target: key.key });
       },
       onSheetDetentChanged(index) {
         obj = { type: "sheetDetentChange", target: key.key, data: obj };
         obj = { index: index.nativeEvent.index, stable: index.nativeEvent.isStable };
-        outer1_1.emit(obj);
+        closure_1_1.emit(obj);
       }
     }, key.key);
   });

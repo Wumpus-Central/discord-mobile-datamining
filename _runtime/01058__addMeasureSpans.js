@@ -1,8 +1,10 @@
 // _runtime/01058__addMeasureSpans.js
-import _slicedToArray from "_slicedToArray";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import triggerHandlers from "triggerHandlers" /* 1034 */;
+import getNavigationEntry from "getNavigationEntry" /* 1043 */;
+import extractNetworkProtocol from "extractNetworkProtocol" /* 1059 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { triggerHandlers } from "01034_triggerHandlers.js";
-import { getNavigationEntry } from "01043_getNavigationEntry.js";
 import { extractNetworkProtocol } from "01059_extractNetworkProtocol.js";
 
 function _addMeasureSpans(activeSpan, entryType) {
@@ -38,8 +40,6 @@ function _addMeasureSpans(activeSpan, entryType) {
         obj["sentry.browser.measure_start_time"] = sum;
       }
       (function _addDetailToSpanAttributes(arg0, detail) {
-        let tmp17;
-        let tmp18;
         try {
           detail = detail.detail;
           if (detail) {
@@ -98,18 +98,18 @@ function _addMeasureSpans(activeSpan, entryType) {
 }
 function _addNavigationSpans(activeSpan, requestStart) {
   const _require = activeSpan;
-  const dependencyMap = requestStart;
-  let closure_2 = arg2;
+  dependencyMap = requestStart;
+  closure_2 = arg2;
   const items = ["unloadEvent", "redirect", "domContentLoadedEvent", "loadEvent", "connect"];
   const item = items.forEach((arg0) => {
-    outer1_9(closure_0, closure_1, arg0, closure_2);
+    closure_1_9(closure_0, closure_1, arg0, closure_2);
   });
   _addPerformanceNavigationTiming(activeSpan, requestStart, "secureConnection", arg2, "TLS/SSL");
   _addPerformanceNavigationTiming(activeSpan, requestStart, "fetch", arg2, "cache");
   _addPerformanceNavigationTiming(activeSpan, requestStart, "domainLookup", arg2, "DNS");
   let obj = _extractNetworkProtocol;
   const sum = arg2 + obj.msToSec(requestStart.requestStart);
-  let obj1 = _extractNetworkProtocol;
+  obj1 = _extractNetworkProtocol;
   const sum1 = arg2 + obj1.msToSec(requestStart.responseEnd);
   let obj2 = _extractNetworkProtocol;
   const sum2 = arg2 + obj2.msToSec(requestStart.responseStart);
@@ -151,7 +151,7 @@ function _addPerformanceNavigationTiming(activeSpan, requestStart, domainLookup,
   }
   if (tmp5) {
     let obj = extractNetworkProtocol;
-    let obj1 = extractNetworkProtocol;
+    obj1 = extractNetworkProtocol;
     const sum = arg3 + obj1.msToSec(tmp4);
     let obj2 = extractNetworkProtocol;
     const sum1 = arg3 + obj2.msToSec(tmp3);
@@ -201,8 +201,6 @@ function _addResourceSpans(activeSpan, initiatorType, arr, arg3, arg4, arg5, arr
         const items = [["responseStatus", "http.response.status_code"], ["transferSize", "http.response_transfer_size"], ["encodedBodySize", "http.response_content_length"], ["decodedBodySize", "http.decoded_response_content_length"], ["renderBlockingStatus", "resource.render_blocking_status"], ["deliveryType", "http.response_delivery_type"]];
         _require = initiatorType;
         const item = items.forEach((arg0) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg0;
           let tmp4 = null != tmp3;
           if (tmp4) {
@@ -244,11 +242,9 @@ export { _addMeasureSpans };
 export { _addNavigationSpans };
 export { _addResourceSpans };
 export const _setResourceRequestAttributes = function _setResourceRequestAttributes(arg0, arg1, arr) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   const item = arr.forEach((arg0) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
     let tmp4 = null != tmp3;
     if (tmp4) {
@@ -267,10 +263,8 @@ export const _setResourceRequestAttributes = function _setResourceRequestAttribu
   });
 };
 export const addPerformanceEntries = function addPerformanceEntries(setAttribute, recordClsOnPageloadSpan) {
-  let requestStart;
-  let responseStart;
   let _require = setAttribute;
-  const dependencyMap = recordClsOnPageloadSpan;
+  dependencyMap = recordClsOnPageloadSpan;
   let obj = _extractNetworkProtocol;
   const browserPerformanceAPI = obj.getBrowserPerformanceAPI();
   const result = _registerSpanErrorInstrumentation.browserPerformanceTimeOrigin();
@@ -282,7 +276,7 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
     if (result) {
       let tmp3Result = tmp3(1059);
       let msToSecResult = tmp3Result.msToSec(result);
-      const _slicedToArray = msToSecResult;
+      closure_2 = msToSecResult;
       const entries = browserPerformanceAPI.getEntries();
       tmp3Result = tmp3(817);
       const spanToJSONResult = tmp3Result.spanToJSON(setAttribute);
@@ -292,22 +286,22 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
       const substr = entries.slice(closure_5);
       const item = substr.forEach((startTime) => {
         let obj = setAttribute(closure_1[1]);
-        const msToSecResult = obj.msToSec(startTime.startTime);
+        msToSecResult = obj.msToSec(startTime.startTime);
         const msToSecResult1 = setAttribute(closure_1[1]).msToSec(Math.max(0, startTime.duration));
         const entryType = startTime.entryType;
         if ("navigation" === entryType) {
-          outer1_8(setAttribute, startTime, closure_2);
+          closure_1_8(setAttribute, startTime, closure_2);
         } else {
           if ("mark" !== entryType) {
             if ("paint" !== entryType) {
               if ("measure" !== entryType) {
                 if ("resource" === entryType) {
-                  outer1_10(setAttribute, startTime, startTime.name, msToSecResult, msToSecResult1, closure_2, closure_1.ignoreResourceSpans);
+                  closure_1_10(setAttribute, startTime, startTime.name, msToSecResult, msToSecResult1, closure_2, closure_1.ignoreResourceSpans);
                 }
               }
             }
           }
-          outer1_7(setAttribute, startTime, msToSecResult, msToSecResult1, closure_2, closure_1.ignorePerformanceApiSpans);
+          closure_1_7(setAttribute, startTime, msToSecResult, msToSecResult1, closure_2, closure_1.ignorePerformanceApiSpans);
           const tmp15 = startTime.startTime < setAttribute(closure_1[7]).getVisibilityWatcher().firstHiddenTime;
           if (tmp16) {
             obj = { value: null, unit: "millisecond" };
@@ -373,8 +367,6 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
         const _Object = Object;
         const entries1 = Object.entries(closure_6);
         const item1 = entries1.forEach((arg0) => {
-          let iter;
-          let tmp;
           [tmp, iter] = arg0;
           setAttribute(closure_1[2]).setMeasurement(tmp, iter.value, iter.unit);
         });
@@ -487,9 +479,6 @@ export const startTrackingInteractions = function startTrackingInteractions() {
 };
 export const startTrackingLongAnimationFrames = function startTrackingLongAnimationFrames() {
   const performanceObserver = new globalThis.PerformanceObserver((getEntries) => {
-    let sourceCharPosition;
-    let sourceFunctionName;
-    let sourceURL;
     let obj = callback(817);
     const activeSpan = obj.getActiveSpan();
     if (activeSpan) {
@@ -615,11 +604,9 @@ export const startTrackingLongTasks = function startTrackingLongTasks() {
   });
 };
 export const startTrackingWebVitals = function startTrackingWebVitals(client) {
-  let recordClsStandaloneSpans;
-  let recordLcpStandaloneSpans;
   client = client.client;
   let _require;
-  let dependencyMap;
+  dependencyMap = undefined;
   let result1;
   ({ recordClsStandaloneSpans, recordLcpStandaloneSpans } = client);
   const browserPerformanceAPI = _extractNetworkProtocol.getBrowserPerformanceAPI();
@@ -640,7 +627,7 @@ export const startTrackingWebVitals = function startTrackingWebVitals(client) {
             const obj = { value: null, unit: "millisecond" };
             obj[0] = iter.value;
             closure_6.lcp = obj;
-            let closure_3 = tmp;
+            closure_3 = tmp;
           }
         }, true);
         const tmpResult1 = tmp(1034);
@@ -663,7 +650,7 @@ export const startTrackingWebVitals = function startTrackingWebVitals(client) {
             const obj = { value: null, unit: "" };
             obj[0] = iter.value;
             closure_6.cls = obj;
-            let closure_4 = tmp;
+            closure_4 = tmp;
           }
         }, true);
         const tmpResult4 = tmp(1034);

@@ -1,6 +1,7 @@
 // _runtime/07860_supportsHistory.js
-import { getGlobalSingleton } from "07739_getGlobalSingleton.js";
-const require = arg1;
+import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.supportsHistory = function supportsHistory() {
   const chrome = getGlobalSingleton.GLOBAL_OBJ.chrome;

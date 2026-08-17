@@ -1,8 +1,8 @@
 // _runtime/01586__toPropertyKey.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "_objectWithoutProperties" /* 109 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 function _toPropertyKey(obj) {
@@ -38,29 +38,16 @@ function _toPropertyKey(obj) {
 }
 
 export const useDescriptors = function useDescriptors(state) {
-  let addListener;
-  let c12;
-  let c22;
-  let c23;
-  let _slicedToArray;
-  let noop;
-  let closure_7;
-  let dependencyMap;
-  let emitter;
-  let navigation;
-  let onAction;
-  let router;
-  let tmp2;
   state = state.state;
   ({ screens: dependencyMap, navigation } = state);
-  ({ screenOptions: _slicedToArray, screenLayout: noop, onAction } = state);
+  ({ screenOptions: closure_3, screenLayout: closure_4, onAction } = state);
   const getState = state.getState;
   ({ setState: closure_7, addListener } = state);
   const addKeyedListener = state.addKeyedListener;
   const onRouteFocus = state.onRouteFocus;
-  let closure_11;
+  closure_11 = undefined;
   c12 = undefined;
-  let c13;
+  c13 = undefined;
   let onDispatchAction;
   let onEmitEvent;
   let onOptionsChange;
@@ -68,7 +55,7 @@ export const useDescriptors = function useDescriptors(state) {
   let flushUpdates;
   let stackRef;
   let getIsStateEmitted;
-  let closure_21;
+  closure_21 = undefined;
   c22 = undefined;
   c23 = undefined;
   let getOptions;
@@ -97,14 +84,14 @@ export const useDescriptors = function useDescriptors(state) {
 
   };
   render = function render(route, navigation, options, routeState) {
-    let closure_0 = route;
+    closure_0 = route;
     const props = tmp.props;
     let layout = props.layout;
     if (layout == null) {
       layout = tmp.layout;
     }
     if (layout == null) {
-      layout = noop;
+      layout = closure_4;
     }
     let obj = {
       navigation,
@@ -115,17 +102,17 @@ export const useDescriptors = function useDescriptors(state) {
       setState: closure_7,
       options,
       clearOptions() {
-        return outer1_13((arg0) => {
+        return closure_1_13((arg0) => {
           if (closure_0.key in arg0) {
             const items = [closure_0.key];
-            return outer2_2(arg0, items.map(outer2_6));
+            return closure_2_2(arg0, items.map(closure_2_6));
           } else {
             return arg0;
           }
         });
       }
     };
-    const tmp5 = onAction(state(outer1_1[8]).SceneView, obj);
+    const tmp5 = onAction(state(closure_1_1[8]).SceneView, obj);
     let layoutResult = tmp5;
     if (null != layout) {
       obj = { route: null, navigation: null, options: null, theme: null, children: null };
@@ -136,17 +123,16 @@ export const useDescriptors = function useDescriptors(state) {
       obj[4] = tmp5;
       layoutResult = layout(obj);
     }
-    obj = { value: closure_21, children: null };
-    obj[1] = onAction(state(outer1_1[9]).NavigationProvider, { route, navigation, children: layoutResult });
-    return onAction(state(outer1_1[5]).NavigationBuilderContext.Provider, obj, route.key);
+    obj = { value: closure_21, children: tmp2(tmp3(tmp4[9]).NavigationProvider, obj1) };
+    return onAction(state(closure_1_1[5]).NavigationBuilderContext.Provider, obj, route.key);
   };
   reduced = routeCache.reduce((arg0, key) => {
     if (typeof getOptions !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let state = key;
-    const dependencyMap = tmp;
-    const items = [_slicedToArray, , ];
+    state = key;
+    dependencyMap = tmp;
+    const items = [closure_3, , ];
     if (dependencyMap[key.name].options) {
       const options = tmp2.options;
       const _Boolean = Boolean;
@@ -157,13 +143,13 @@ export const useDescriptors = function useDescriptors(state) {
     const arraySpreadResult = HermesBuiltin.arraySpread(found, 1);
     items[arraySpreadResult] = dependencyMap[key.name].props.options;
     items[arraySpreadResult + 1] = _undefined[key.key];
-    const reduced = items.reduce((arg0, fn) => {
+    reduced = items.reduce((arg0, fn) => {
       let tmp = fn;
       if (typeof fn === "function") {
         const obj = { route: null, navigation: null, theme: null };
         obj[0] = closure_0;
         obj[1] = closure_1;
-        obj[2] = outer1_11;
+        obj[2] = closure_1_11;
         tmp = fn(obj);
       }
       return Object.assign(arg0, tmp);
@@ -185,9 +171,9 @@ export const useDescriptors = function useDescriptors(state) {
         if (typeof getOptions !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        let closure_0 = key;
-        const dependencyMap = tmp7;
-        const items = [_slicedToArray, , ];
+        closure_0 = key;
+        dependencyMap = tmp7;
+        const items = [closure_3, , ];
         if (dependencyMap[key.name].options) {
           const options = tmp10.options;
           const _Boolean = Boolean;
@@ -199,13 +185,13 @@ export const useDescriptors = function useDescriptors(state) {
         const arraySpreadResult = HermesBuiltin.arraySpread(found, 1);
         items[arraySpreadResult] = dependencyMap[key.name].props.options;
         items[arraySpreadResult + 1] = obj;
-        const reduced = items.reduce((arg0, fn) => {
+        reduced = items.reduce((arg0, fn) => {
           let tmp = fn;
           if (typeof fn === "function") {
             const obj = { route: null, navigation: null, theme: null };
             obj[0] = closure_0;
             obj[1] = closure_1;
-            obj[2] = outer1_11;
+            obj[2] = closure_1_11;
             tmp = fn(obj);
           }
           return Object.assign(arg0, tmp);
@@ -224,7 +210,7 @@ export const useDescriptors = function useDescriptors(state) {
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const error = new Error("Couldn't find a route with the key " + key.key + ".");
+        error = new Error("Couldn't find a route with the key " + key.key + ".");
         throw error;
       }
     },

@@ -1,7 +1,7 @@
 // _runtime/03676_differenceInWeeks.js
-import compareLocalAsc from "compareLocalAsc";
-import requiredArgs from "requiredArgs";
-import { getRoundingMethod } from "03666_getRoundingMethod.js";
+import getRoundingMethod from "getRoundingMethod" /* 3666 */;
+import compareLocalAsc from "compareLocalAsc" /* 3663 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!compareLocalAsc) {
   let obj = { default: null };
@@ -10,6 +10,7 @@ if (!compareLocalAsc) {
 } else {
   tmp3 = compareLocalAsc;
 }
+compareLocalAsc = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,11 +18,11 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let c3 = tmp5;
+requiredArgs = tmp5;
 
 export default function differenceInWeeks(arg0, arg1, roundingMethod) {
-  tmp5.default(2, arguments);
-  const result = tmp3.default(arg0, arg1) / 7;
+  requiredArgs.default(2, arguments);
+  const result = compareLocalAsc.default(arg0, arg1) / 7;
   roundingMethod = undefined;
   if (null != roundingMethod) {
     roundingMethod = roundingMethod.roundingMethod;

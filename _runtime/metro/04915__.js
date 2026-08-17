@@ -11,7 +11,7 @@ arg5.default = {
       return c1;
     } else {
       const _Error = Error;
-      const error = new Error("Illegal byte order value. Faulty image.");
+      error = new Error("Illegal byte order value. Faulty image.");
       throw error;
     }
   }

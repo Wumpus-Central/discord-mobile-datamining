@@ -1,13 +1,14 @@
 // _runtime/07797__isNativeReflectConstruct.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import c4 from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import _inherits from "_inherits";
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
-import dateTimestampInSeconds from "dateTimestampInSeconds";
+import isErrorEvent from "isErrorEvent" /* 7793 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import closure_6 from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 7752 */;
 
 const ServerRuntimeClient = require;
 function _isNativeReflectConstruct() {
@@ -21,10 +22,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -32,14 +33,14 @@ function _isNativeReflectConstruct() {
 class ServerRuntimeClient {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, ServerRuntimeClient);
+    tmp = closure_3(this, ServerRuntimeClient);
     obj = require("errorCallback");
     result = obj.registerSpanErrorInstrumentation();
     items = [];
     items[0] = global;
-    tmp3 = outer1_5;
-    obj2 = outer1_5(ServerRuntimeClient);
-    tmp4 = outer1_4;
+    tmp3 = closure_5;
+    obj2 = closure_5(ServerRuntimeClient);
+    tmp4 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp6 = globalThis;
       _Reflect = Reflect;
@@ -50,7 +51,7 @@ class ServerRuntimeClient {
     return tmp4(self, constructResult);
   }
 }
-_inherits(ServerRuntimeClient, require("isErrorEvent").BaseClient);
+_inherits(ServerRuntimeClient, isErrorEvent.BaseClient);
 let items = [
   {
     key: "eventFromException",
@@ -90,7 +91,7 @@ let items = [
           const obj = ServerRuntimeClient(7765);
         }
       }
-      let fn = _get(_getPrototypeOf(self.prototype), "captureException", self);
+      let fn = callback4(callback3(self.prototype), "captureException", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -125,7 +126,7 @@ let items = [
           tmp = type.type || "exception";
         }
       }
-      let fn = _get(_getPrototypeOf(self.prototype), "captureEvent", self);
+      let fn = callback4(callback3(self.prototype), "captureEvent", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -141,7 +142,7 @@ let items = [
         const _sessionFlusher = self._sessionFlusher;
         _sessionFlusher.close();
       }
-      let fn = _get(_getPrototypeOf(self.prototype), "close", self);
+      let fn = callback4(callback3(self.prototype), "close", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -169,8 +170,6 @@ let items = [
   {
     key: "captureCheckIn",
     value: function captureCheckIn(checkInId) {
-      let tmp10;
-      let tmp9;
       if ("checkInId" in checkInId) {
         if (checkInId.checkInId) {
           checkInId = checkInId.checkInId;
@@ -191,9 +190,9 @@ let items = [
             ({ schedule: obj3[0], checkinMargin: obj3[1], maxRuntime: obj3[2], timezone: obj3[3], failureIssueThreshold: obj3[4], recoveryThreshold: obj3[5] } = arg1);
             obj.monitor_config = obj;
           }
-          [tmp9, tmp10] = _slicedToArray(self._getTraceInfoFromScope(arg2), 2);
+          [tmp9, tmp10] = callback(self._getTraceInfoFromScope(arg2), 2);
           if (tmp10) {
-            const obj1 = { trace: null };
+            obj1 = { trace: null };
             obj1[0] = tmp10;
             obj.contexts = obj1;
           }
@@ -250,7 +249,7 @@ let items = [
       if (self._options.serverName) {
         platform.server_name = platform.server_name || self._options.serverName;
       }
-      let fn = _get(_getPrototypeOf(self.prototype), "_prepareEvent", self);
+      let fn = callback4(callback3(self.prototype), "_prepareEvent", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

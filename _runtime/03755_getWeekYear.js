@@ -1,9 +1,9 @@
 // _runtime/03755_getWeekYear.js
-import startOfWeek from "startOfWeek";
-import _typeof from "_typeof";
-import toInteger from "toInteger";
-import requiredArgs from "requiredArgs";
-import { getDefaultOptions } from "03477_getDefaultOptions.js";
+import getDefaultOptions from "getDefaultOptions" /* 3477 */;
+import startOfWeek from "startOfWeek" /* 3631 */;
+import _typeof from "_typeof" /* 3472 */;
+import toInteger from "toInteger" /* 3476 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!startOfWeek) {
   let obj = { default: null };
@@ -12,7 +12,7 @@ if (!startOfWeek) {
 } else {
   tmp3 = startOfWeek;
 }
-let obj1 = tmp3;
+startOfWeek = tmp3;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -20,7 +20,7 @@ if (!_typeof) {
 } else {
   tmp5 = _typeof;
 }
-let c3 = tmp5;
+_typeof = tmp5;
 if (!toInteger) {
   obj = { default: null };
   obj[0] = toInteger;
@@ -28,19 +28,19 @@ if (!toInteger) {
 } else {
   tmp7 = toInteger;
 }
-let c4 = tmp7;
+toInteger = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c5 = tmp9;
+requiredArgs = tmp9;
 
 export default function getWeekYear(arg0, firstWeekContainsDate) {
-  tmp9.default(1, arguments);
-  const defaultResult1 = tmp5.default(arg0);
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
   const fullYear = defaultResult1.getFullYear();
   const defaultOptions = getDefaultOptions.getDefaultOptions();
   let prop;
@@ -89,7 +89,7 @@ export default function getWeekYear(arg0, firstWeekContainsDate) {
       num = prop;
     }
   }
-  const defaultResult2 = tmp7.default(num);
+  const defaultResult2 = toInteger.default(num);
   if (defaultResult2 >= 1) {
     if (defaultResult2 <= 7) {
       const _Date = Date;
@@ -100,8 +100,7 @@ export default function getWeekYear(arg0, firstWeekContainsDate) {
       const date1 = new Date(0);
       date1.setFullYear(fullYear, 0, defaultResult2);
       date1.setHours(0, 0, 0, 0);
-      const defaultResult3 = tmp3.default(date, firstWeekContainsDate);
-      tmp9 = globalThis;
+      const defaultResult3 = startOfWeek.default(date, firstWeekContainsDate);
       const time = defaultResult1.getTime();
       if (time >= defaultResult3.getTime()) {
         let sum = fullYear + 1;

@@ -1,5 +1,6 @@
 // _runtime/00313_elementsThatOverlapOffsets.js
-import _slicedToArray from "_slicedToArray";
+import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function elementsThatOverlapOffsets(items, getItemCount, getCellMetricsApprox, arg3) {
   let num = arg3;
@@ -47,13 +48,6 @@ export const newRangeCount = function newRangeCount(last, last2) {
   return sum - Math.max(0, sum1 - Math.max(last2.first, last.first));
 };
 export const computeWindowedRenderLimits = function computeWindowedRenderLimits(getItemCount, result2, tmpResult2, last, _listMetrics, _scrollMetrics) {
-  let tmp12;
-  let tmp13;
-  let tmp14;
-  let tmp61;
-  let velocity;
-  let visibleLength;
-  let zoomScale;
   const itemCount = getItemCount.getItemCount(getItemCount.data);
   if (0 === itemCount) {
     return { first: 0, last: -1 };
@@ -121,7 +115,7 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
           let tmp26 = tmp21 >= result2;
           let tmp27 = importAll;
           let tmp28 = dependencyMap;
-          let obj1 = importAll(27);
+          obj1 = javaScriptFlagGetterAll;
           let tmp29 = tmp23 <= last.first;
           let tmp30 = tmp21;
           let tmp31 = tmp22;
@@ -255,7 +249,7 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
       obj1[3] = num4;
       obj1[4] = diff;
       obj1[5] = obj;
-      const error = new Error("Bad window calculation " + JSON.stringify(obj1));
+      error = new Error("Bad window calculation " + JSON.stringify(obj1));
       throw error;
     }
   }

@@ -1,17 +1,16 @@
 // _runtime/01749_JSPropsUpdaterPaper.js
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import get_ActivityIndicator from "get ActivityIndicator";
-import isJest from "isJest";
+import runWorkletOnJS from "runWorkletOnJS" /* 1661 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import isJest from "isJest" /* 1657 */;
 
-let Platform;
-let c4;
 let JSPropsUpdaterWeb = global;
-const require = arg1;
+require = arg1;
 ({ NativeEventEmitter: c4, Platform } = get_ActivityIndicator);
 class JSPropsUpdaterPaper {
   constructor() {
-    tmp = outer1_3(this, JSPropsUpdaterWeb);
+    tmp = closure_3(this, JSPropsUpdaterWeb);
     tmp2 = new NativeEventEmitter(undefined);
     this._reanimatedEventEmitter = tmp2;
     return;
@@ -58,7 +57,7 @@ let closure_5 = { code: "function pnpm_JSPropsUpdaterTs1(){const{runOnJS,updater
 class JSPropsUpdaterFabric {
   constructor() {
     tmp = updater;
-    tmp2 = outer1_3(this, updater);
+    tmp2 = closure_3(this, updater);
     if (!updater.isInitialized) {
       updater = function updater(value, props) {
         const _tagToComponentMapping = updater._tagToComponentMapping;
@@ -72,7 +71,7 @@ class JSPropsUpdaterFabric {
       obj = require("runWorkletOnJS");
       fn = function t() {
         JSPropsUpdaterWeb.updateJSProps = (arg0, arg1) => {
-          outer2_1(outer2_2[4]).runOnJS(closure_0)(arg0, arg1);
+          closure_2_1(closure_2_2[4]).runOnJS(closure_0)(arg0, arg1);
         };
       };
       obj = { runOnJS: null, updater: null };
@@ -81,8 +80,8 @@ class JSPropsUpdaterFabric {
       fn.__closure = obj;
       num = 2068327241111;
       fn.__workletHash = 2068327241111;
-      tmp5 = Map;
-      fn.__initData = Map;
+      tmp5 = closure_5;
+      fn.__initData = closure_5;
       tmp6 = obj.runOnUIImmediately(fn)();
       flag = true;
       tmp.isInitialized = true;
@@ -119,7 +118,7 @@ importDefaultResultResult1.isInitialized = false;
 if (isJest) {
   class JSPropsUpdaterWeb {
     constructor() {
-      tmp = outer1_3(this, JSPropsUpdaterWeb);
+      tmp = closure_3(this, JSPropsUpdaterWeb);
       return;
     }
   }
@@ -137,7 +136,7 @@ if (isJest) {
 } else {
   class JSPropsUpdaterWeb {
     constructor() {
-      tmp = outer1_3(this, JSPropsUpdaterWeb);
+      tmp = closure_3(this, JSPropsUpdaterWeb);
       return;
     }
   }

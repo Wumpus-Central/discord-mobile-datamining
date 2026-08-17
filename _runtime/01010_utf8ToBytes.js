@@ -105,7 +105,7 @@ arg5.utf8ToBytes = function utf8ToBytes(str) {
       }
     }
     const _Error = Error;
-    const error = new Error("Invalid code point");
+    error = new Error("Invalid code point");
     throw error;
   }
   return items;

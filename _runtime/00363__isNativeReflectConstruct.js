@@ -1,9 +1,11 @@
 // _runtime/00363__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 366 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_5 from "_get" /* 96 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 let AnimatedInterpolation = importDefault;
 function _isNativeReflectConstruct() {
@@ -17,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -73,12 +75,12 @@ const re7 = /[+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?/g;
 class AnimatedInterpolation {
   constructor(arg0, arg1) {
     self = this;
-    tmp = mapStringToNumericComponents(this, AnimatedInterpolation);
+    tmp = closure_2(this, AnimatedInterpolation);
     items = [];
     items[0] = arg1;
-    tmp2 = __esModule;
-    obj = __esModule(AnimatedInterpolation);
-    tmp3 = __esModule;
+    tmp2 = closure_4;
+    obj = closure_4(AnimatedInterpolation);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -92,25 +94,21 @@ class AnimatedInterpolation {
     return tmp3Result;
   }
 }
-require("_inherits")(AnimatedInterpolation, require("_isNativeReflectConstruct"));
+_inheritsDefault(AnimatedInterpolation, _isNativeReflectConstructDefault);
 let items = [
   {
     key: "_getInterpolation",
     value: function _getInterpolation() {
-      let c0;
-      let easing;
-      let easing2;
-      let f67343;
       const self = this;
       if (!this._interpolation) {
         const _config = self._config;
         if (_config.outputRange) {
           if (typeof _config.outputRange[0] === "string") {
-            let AnimatedInterpolation = _config;
-            AnimatedInterpolation(f67343[7])(_config.outputRange.length >= 2, "Bad output range");
+            AnimatedInterpolation = _config;
+            AnimatedInterpolation(_interpolation[7])(_config.outputRange.length >= 2, "Bad output range");
             const outputRange = _config.outputRange;
             let mapped = outputRange.map(mapStringToNumericComponents);
-            f67343 = mapped;
+            _interpolation = mapped;
             const isColor = mapped[0].isColor;
             easing = isColor;
             const mapped1 = mapped.map((components) => {
@@ -125,9 +123,6 @@ let items = [
             let extrapolate = mapped1;
             const first = mapped1[0];
             extrapolate = first.map((arg0, arg1) => {
-              let c0;
-              let c1;
-              let easing;
               let _undefined = arg1;
               const obj = {};
               const merged = Object.assign(_undefined);
@@ -139,7 +134,7 @@ let items = [
               extrapolate = undefined;
               ({ outputRange: c0, inputRange: c1, easing } = obj);
               if (!easing) {
-                easing = _undefined(f67343[6]).linear;
+                easing = _undefined(_interpolation[6]).linear;
               }
               extrapolate = "extend";
               if (undefined !== obj.extrapolateLeft) {
@@ -226,7 +221,7 @@ let items = [
               };
             });
             self._interpolation = isColor ? ((arg0) => {
-              let closure_0 = arg0;
+              closure_0 = arg0;
               const mapped = extrapolate.map((arg0, arg1) => {
                 const tmp = arg0(closure_0);
                 if (arg1 < 3) {
@@ -240,14 +235,14 @@ let items = [
               });
               return "rgba(" + mapped[0] + ", " + mapped[1] + ", " + mapped[2] + ", " + mapped[3] + ")";
             }) : ((arg0) => {
-              let closure_0 = arg0;
+              closure_0 = arg0;
               const table = extrapolate.map((arg0) => arg0(closure_0));
-              let c2 = 0;
+              c2 = 0;
               const components = table[0].components;
               const mapped = components.map((num) => {
                 let tmp = num;
                 if (typeof num === "number") {
-                  let _classCallCheck = tmp4 + 1;
+                  closure_2 = tmp4 + 1;
                   tmp = table[tmp4];
                 }
                 return tmp;
@@ -267,13 +262,13 @@ let items = [
           obj.inputRange = _config.inputRange;
           obj.outputRange = Array.from(Array(outputRange1.length).keys());
           AnimatedInterpolation = undefined;
-          f67343 = undefined;
+          _interpolation = undefined;
           easing = undefined;
           extrapolate = undefined;
           extrapolate = undefined;
-          ({ outputRange: c0, inputRange: f67343, easing: easing2 } = obj);
+          ({ outputRange: c0, inputRange: _interpolation, easing: easing2 } = obj);
           if (!easing2) {
-            easing2 = AnimatedInterpolation(f67343[6]).linear;
+            easing2 = AnimatedInterpolation(_interpolation[6]).linear;
           }
           easing = easing2;
           extrapolate = "extend";
@@ -288,7 +283,7 @@ let items = [
           } else if (undefined !== obj.extrapolate) {
             extrapolate = obj.extrapolate;
           }
-          f67343 = (num) => {
+          _interpolation = (num) => {
             _undefined(_undefined2[7])(typeof num === "number", "Cannot interpolate an input which is not a number");
             num = 1;
             if (1 < _undefined2.length - 1) {
@@ -360,7 +355,7 @@ let items = [
             return tmp13;
           };
           self._interpolation = (arg0) => {
-            const tmp = f67343(arg0);
+            const tmp = _interpolation(arg0);
             if (!Number.isInteger(tmp)) {
               const _console = console;
               console.warn("PlatformColor interpolation should happen natively, here we fallback to the closest color");
@@ -369,9 +364,9 @@ let items = [
           };
           const arr = Array.from(Array(outputRange1.length).keys());
         } else {
-          ({ outputRange: c0, inputRange: f67343, easing } = _config);
+          ({ outputRange: c0, inputRange: _interpolation, easing } = _config);
           if (!easing) {
-            easing = AnimatedInterpolation(f67343[6]).linear;
+            easing = AnimatedInterpolation(_interpolation[6]).linear;
           }
           extrapolate = "extend";
           if (undefined !== _config.extrapolateLeft) {
@@ -498,7 +493,7 @@ let items = [
       } else {
         constructResult = obj.apply(obj, items);
       }
-      const tmp4Result = _possibleConstructorReturn(obj, constructResult);
+      const tmp4Result = closure_3(obj, constructResult);
       tmp4Result._parent = this;
       tmp4Result._config = _config;
       return tmp4Result;
@@ -540,13 +535,13 @@ let items = [
       let platform_color = null;
       if (typeof outputRange[0] === "string") {
         let mapped = outputRange.map((arg0) => {
-          const tmp3 = platform_color(outer1_1[9])(arg0);
+          const tmp3 = platform_color(closure_1_1[9])(arg0);
           if (typeof tmp3 === "number") {
             const color = "color";
             let transformDataTypeResult = tmp3;
           } else {
-            transformDataTypeResult = platform_color(outer1_1[10]).transformDataType(arg0);
-            const tmpResult = platform_color(outer1_1[10]);
+            transformDataTypeResult = platform_color(closure_1_1[10]).transformDataType(arg0);
+            const tmpResult = platform_color(closure_1_1[10]);
           }
           return transformDataTypeResult;
         });

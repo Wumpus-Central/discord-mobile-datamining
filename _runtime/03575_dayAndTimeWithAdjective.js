@@ -1,5 +1,5 @@
 // _runtime/03575_dayAndTimeWithAdjective.js
-import isSameUTCWeek from "isSameUTCWeek";
+import isSameUTCWeek from "isSameUTCWeek" /* 3474 */;
 
 if (!isSameUTCWeek) {
   const obj = { default: null };
@@ -9,21 +9,21 @@ if (!isSameUTCWeek) {
   tmp3 = isSameUTCWeek;
 }
 function dayAndTimeWithAdjective(arg0, arg1, arg2, arg3) {
-  if (tmp3.default(arg1, arg2, arg3)) {
+  if (isSameUTCWeek.default(arg1, arg2, arg3)) {
     let tmp2 = closure_2;
   } else if ("lastWeek" === arg0) {
     tmp2 = closure_1;
   } else if ("nextWeek" !== arg0) {
     const _Error = Error;
     const concat = "Cannot determine adjectives for token ".concat;
-    const error = new Error("Cannot determine adjectives for token ".concat(arg0));
+    error = new Error("Cannot determine adjectives for token ".concat(arg0));
     throw error;
   } else {
     tmp2 = closure_3;
   }
   return "'".concat(tmp2[table[arg1.getUTCDay(arg1)]], "' eeee 'o' p");
 }
-let c0 = tmp3;
+isSameUTCWeek = tmp3;
 let closure_1 = { masculine: "ostatni", feminine: "ostatnia" };
 let closure_2 = { masculine: "ten", feminine: "ta" };
 let closure_3 = { masculine: "nast\u0119pny", feminine: "nast\u0119pna" };

@@ -1,15 +1,14 @@
 // _runtime/00428__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importAllResult from "noop";
-import { cloneElement } from "noop";
-import jsxProd from "jsxProd";
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import closure_5 from "_possibleConstructorReturn" /* 93 */;
+import closure_6 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importAllResult from "noop" /* 19 */;
+import { cloneElement } from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
 const TouchableHighlightImpl = importDefault;
 function _isNativeReflectConstruct() {
   try {
@@ -22,10 +21,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -37,11 +36,11 @@ class TouchableHighlightImpl {
   constructor() {
     self = this;
     items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, TouchableHighlightImpl);
+    tmp = closure_4(this, TouchableHighlightImpl);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(TouchableHighlightImpl);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_6;
+    obj = closure_6(TouchableHighlightImpl);
+    tmp3 = closure_5;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -64,7 +63,7 @@ class TouchableHighlightImpl {
     return tmp3Result;
   }
 }
-require("_inherits")(TouchableHighlightImpl, importAllResult.Component);
+_inheritsDefault(TouchableHighlightImpl, importAllResult.Component);
 let items = [
   {
     key: "_createPressabilityConfig",
@@ -88,7 +87,7 @@ let items = [
       obj[7] = self.props.pressRetentionOffset;
       obj[8] = self.props.touchSoundDisabled;
       obj[9] = function onBlur(arg0) {
-        if (self(outer1_1[9]).isTV) {
+        if (self(closure_1_1[9]).isTV) {
           self._hideUnderlay();
         }
         if (null != self.props.onBlur) {
@@ -97,7 +96,7 @@ let items = [
         }
       };
       obj[10] = function onFocus(arg0) {
-        if (self(outer1_1[9]).isTV) {
+        if (self(closure_1_1[9]).isTV) {
           self._showUnderlay();
         }
         if (null != self.props.onFocus) {
@@ -111,7 +110,7 @@ let items = [
           const _clearTimeout = clearTimeout;
           clearTimeout(obj._hideTimeout);
         }
-        if (!self(outer1_1[9]).isTV) {
+        if (!self(closure_1_1[9]).isTV) {
           obj._showUnderlay();
           let num = obj.props.delayPressOut;
           if (num == null) {
@@ -210,8 +209,6 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let onBlur;
-      let onFocus;
       const self = this;
       const Children = importAllResult.Children;
       const onlyResult = Children.only(this.props.children);
@@ -369,7 +366,7 @@ class TouchableHighlight {
     obj = {};
     merged = Object.assign(Object.assign(global, Object.create(null)));
     obj.hostRef = global.ref;
-    return jsx(_createPressabilityConfig, obj);
+    return jsx(closure_12, obj);
   }
 }
 TouchableHighlight.displayName = "TouchableHighlight";

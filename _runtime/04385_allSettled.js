@@ -1,9 +1,13 @@
 // _runtime/04385_allSettled.js
-import callBind from "callBind";
-import defineProperty from "defineProperty";
+import requirePromise from "requirePromise" /* 4386 */;
+import getPolyfill from "getPolyfill" /* 4387 */;
+import allSettled2 from "allSettled" /* 4388 */;
+import shimAllSettled from "shimAllSettled" /* 4463 */;
+import callBind from "callBind" /* 1422 */;
+import defineProperty from "defineProperty" /* 4415 */;
 
-require("requirePromise")();
-let closure_0 = callBind(require("getPolyfill")());
+requirePromise();
+let closure_0 = callBind(getPolyfill());
 function allSettled(arg0) {
   let self = this;
   if (undefined === this) {
@@ -12,9 +16,9 @@ function allSettled(arg0) {
   return closure_0(self, arg0);
 }
 const obj = { getPolyfill: null, implementation: null, shim: null };
-obj[0] = require("getPolyfill");
-obj[1] = require("allSettled");
-obj[2] = require("shimAllSettled");
+obj[0] = getPolyfill;
+obj[1] = allSettled2;
+obj[2] = shimAllSettled;
 defineProperty(allSettled, obj);
 
 export default allSettled;

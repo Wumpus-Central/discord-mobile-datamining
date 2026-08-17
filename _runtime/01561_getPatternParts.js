@@ -1,10 +1,8 @@
 // _runtime/01561_getPatternParts.js
-import _slicedToArray from "_slicedToArray";
+import closure_0 from "_slicedToArray" /* 32 */;
 
 
 export const getPatternParts = function getPatternParts(path) {
-  let tmp49;
-  let tmp50;
   const items = [];
   let obj = { segment: "" };
   let num = 0;
@@ -42,7 +40,7 @@ export const getPatternParts = function getPatternParts(path) {
             let str8 = "Encountered ':' in the middle of a segment in path: ";
             let tmp31 = new.target;
             let tmp32 = new.target;
-            let error = new Error("Encountered ':' in the middle of a segment in path: " + path);
+            error = new Error("Encountered ':' in the middle of a segment in path: " + path);
             let tmp34 = error;
             throw error;
           }

@@ -1,6 +1,6 @@
 // _runtime/03630_startOfISOWeek.js
-import startOfWeek from "startOfWeek";
-import requiredArgs from "requiredArgs";
+import startOfWeek from "startOfWeek" /* 3631 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!startOfWeek) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!startOfWeek) {
 } else {
   tmp3 = startOfWeek;
 }
-let c0 = tmp3;
+startOfWeek = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,10 +17,10 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function startOfISOWeek(arg0) {
-  tmp5.default(1, arguments);
-  return tmp3.default(arg0, { weekStartsOn: 1 });
+  requiredArgs.default(1, arguments);
+  return startOfWeek.default(arg0, { weekStartsOn: 1 });
 };
 export default exports.default;

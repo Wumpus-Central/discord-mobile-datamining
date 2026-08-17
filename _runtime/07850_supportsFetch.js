@@ -1,6 +1,7 @@
 // _runtime/07850_supportsFetch.js
-import { getGlobalSingleton } from "07739_getGlobalSingleton.js";
-const require = arg1;
+import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function supportsFetch() {
   if ("fetch" in getGlobalSingleton.GLOBAL_OBJ) {

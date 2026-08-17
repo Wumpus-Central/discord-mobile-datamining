@@ -1,5 +1,5 @@
 // _runtime/06416_PlatformConstants.js
-import get_ActivityIndicator from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let PlatformConstants;

@@ -1,10 +1,10 @@
 // _runtime/00171__isNativeReflectConstruct.js
-import PerformanceLongTaskTiming from "_get";
-import importDefaultResult from "_createClass";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult1 from "_inherits";
+import PerformanceLongTaskTiming from "_get" /* 96 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_1 from "_classCallCheck" /* 41 */;
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -17,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -28,10 +28,10 @@ function _isNativeReflectConstruct() {
 class TaskAttributionTiming {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, PerformanceLongTaskTiming);
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(PerformanceLongTaskTiming);
-    tmp3 = _isNativeReflectConstruct;
+    tmp = closure_1(this, PerformanceLongTaskTiming);
+    tmp2 = closure_3;
+    obj = closure_3(PerformanceLongTaskTiming);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -59,12 +59,12 @@ let closure_5 = Object.preventExtensions([]);
 class PerformanceLongTaskTiming {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, PerformanceLongTaskTiming);
+    tmp = closure_1(this, PerformanceLongTaskTiming);
     items = ["longtask"];
     items[1] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(PerformanceLongTaskTiming);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(PerformanceLongTaskTiming);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -88,10 +88,10 @@ let items = [
     value: function toJSON() {
       const self = this;
       const tmp = PerformanceLongTaskTiming(callback2(self.prototype), "toJSON", this);
-      let _classCallCheck = tmp;
+      closure_1 = tmp;
       let fn = tmp;
       if (typeof tmp === "function") {
-        fn = (arg0) => tmp.apply(self, arg0);
+        fn = (arg0) => callback.apply(self, arg0);
       }
       const obj = {};
       const merged = Object.assign(fn([]));

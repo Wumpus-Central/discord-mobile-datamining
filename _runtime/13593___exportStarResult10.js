@@ -1,10 +1,9 @@
 // _runtime/13593___exportStarResult10.js
-import { __exportStarResult7 } from "13590___exportStarResult7.js";
-const require = arg1;
+import __exportStarResult7 from "__exportStarResult7" /* 13590 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.IsWellFormedUnitIdentifier = function IsWellFormedUnitIdentifier(GetOptionResult3) {
-  let tmp3;
-  let tmp4;
   const str = GetOptionResult3.replace(/([A-Z])/g, (arg0, str) => str.toLowerCase());
   if (__exportStarResult7.IsSanctionedSimpleUnitIdentifier(str)) {
     return true;

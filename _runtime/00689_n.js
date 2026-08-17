@@ -54,7 +54,7 @@ let fn = function n() {
     return applyResult1;
   }
   function unpack(arg0, arg1) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     let tmp = arg1;
     if (undefined === arg1) {
       tmp = null;
@@ -270,13 +270,13 @@ let fn = function n() {
     }
     name() {
       tmp = rgb2hex_1(this._rgb, "rgb");
-      keys = Object.keys(f68026);
+      keys = Object.keys(closure_121);
       num = 0;
       if (0 < keys.length) {
         str = keys[num];
-        tmp2 = f68026;
+        tmp2 = closure_121;
         tmp3 = num;
-        while (f68026[str] !== tmp) {
+        while (closure_121[str] !== tmp) {
           num = num + 1;
         }
         return str.toLowerCase();
@@ -320,7 +320,7 @@ let fn = function n() {
         if (arg1 < 3) {
           let tmp3 = arg0;
           if (false !== c0) {
-            tmp3 = outer1_132(arg0);
+            tmp3 = closure_1_132(arg0);
           }
           tmp = tmp3;
         }
@@ -383,7 +383,7 @@ let fn = function n() {
         num = 1;
       }
       labResult = this.lab();
-      labResult[0] = labResult[0] - push.Kn * num;
+      labResult[0] = labResult[0] - closure_163.Kn * num;
       obj = Color(labResult, "lab");
       return obj.alpha(this.alpha(), true);
     }
@@ -465,13 +465,13 @@ let fn = function n() {
               return tmp37;
             } else {
               num5 = 20;
-              Math = 20;
+              closure_1 = 20;
               test = function test(interpolateResult, interpolateResult2) {
                 interpolateResult = interpolateResult.interpolate(interpolateResult2, 0.5, "rgb");
                 const luminanceResult = interpolateResult.luminance();
                 let tmp3 = interpolateResult;
                 if (Math.abs(closure_0 - luminanceResult) >= 0.0000001) {
-                  let closure_1 = tmp5 - 1;
+                  closure_1 = tmp5 - 1;
                   tmp3 = interpolateResult;
                   if (+closure_1) {
                     if (luminanceResult > closure_0) {
@@ -496,9 +496,9 @@ let fn = function n() {
                 num3 = 0.0000001;
                 tmp21 = interpolateResult;
                 if (Math.abs(arg0 - luminanceResult) >= 0.0000001) {
-                  tmp51 = Math;
-                  tmp52 = +Math;
-                  Math = tmp52 - 1;
+                  tmp51 = closure_1;
+                  tmp52 = +closure_1;
+                  closure_1 = tmp52 - 1;
                   tmp21 = interpolateResult;
                   if (tmp52) {
                     if (luminanceResult > arg0) {
@@ -507,9 +507,9 @@ let fn = function n() {
                       _Math5 = tmp3.Math;
                       tmp3 = interpolateResult1;
                       if (_Math5.abs(arg0 - str3) >= 0.0000001) {
-                        tmp27 = Math;
-                        tmp28 = +Math;
-                        Math = tmp28 - 1;
+                        tmp27 = closure_1;
+                        tmp28 = +closure_1;
+                        closure_1 = tmp28 - 1;
                         tmp3 = interpolateResult1;
                         if (tmp28) {
                           tmp29 = str3 > arg0 ? test(obj2, interpolateResult1) : test(interpolateResult1, interpolateResult);
@@ -522,9 +522,9 @@ let fn = function n() {
                       _Math4 = Math;
                       tmp23 = interpolateResult2;
                       if (Math.abs(arg0 - luminanceResult1) >= 0.0000001) {
-                        tmp24 = Math;
-                        tmp25 = +Math;
-                        Math = tmp25 - 1;
+                        tmp24 = closure_1;
+                        tmp25 = +closure_1;
+                        closure_1 = tmp25 - 1;
                         tmp23 = interpolateResult2;
                         if (tmp25) {
                           tmp26 = luminanceResult1 > arg0 ? test(interpolateResult, interpolateResult2) : test(interpolateResult2, self);
@@ -549,9 +549,9 @@ let fn = function n() {
                 num7 = 0.0000001;
                 obj6 = interpolateResult3;
                 if (Math.abs(arg0 - luminanceResult2) >= 0.0000001) {
-                  tmp49 = Math;
-                  tmp50 = +Math;
-                  Math = tmp50 - 1;
+                  tmp49 = closure_1;
+                  tmp50 = +closure_1;
+                  closure_1 = tmp50 - 1;
                   obj6 = interpolateResult3;
                   if (tmp50) {
                     if (luminanceResult2 > arg0) {
@@ -560,9 +560,9 @@ let fn = function n() {
                       _Math2 = Math;
                       tmp11 = str2;
                       if (Math.abs(arg0 - luminanceResult3) >= 0.0000001) {
-                        tmp12 = Math;
-                        tmp13 = +Math;
-                        Math = tmp13 - 1;
+                        tmp12 = closure_1;
+                        tmp13 = +closure_1;
+                        closure_1 = tmp13 - 1;
                         tmp11 = str2;
                         if (tmp13) {
                           tmp14 = luminanceResult3 > arg0 ? test(self, str2) : test(str2, interpolateResult3);
@@ -575,9 +575,9 @@ let fn = function n() {
                       _Math = Math;
                       tmp6 = interpolateResult4;
                       if (Math.abs(arg0 - luminanceResult4) >= 0.0000001) {
-                        tmp7 = Math;
-                        tmp8 = +Math;
-                        Math = tmp8 - 1;
+                        tmp7 = closure_1;
+                        tmp8 = +closure_1;
+                        closure_1 = tmp8 - 1;
                         tmp6 = interpolateResult4;
                         if (tmp8) {
                           tmp9 = luminanceResult4 > arg0 ? test(interpolateResult3, interpolateResult4) : test(interpolateResult4, tmp46);
@@ -640,7 +640,7 @@ let fn = function n() {
       }
       self = this;
       lchResult = this.lch();
-      lchResult[1] = lchResult[1] + push.Kn * num;
+      lchResult[1] = lchResult[1] + closure_175.Kn * num;
       if (lchResult[1] < 0) {
         lchResult[1] = 0;
       }
@@ -789,9 +789,9 @@ let fn = function n() {
     }
     let num = 0;
     const tmp4 = unpack(items, "rgb");
-    const result = tmp4[0] / 255;
-    const result1 = tmp4[1] / 255;
-    const result2 = tmp4[2] / 255;
+    result = tmp4[0] / 255;
+    result1 = tmp4[1] / 255;
+    result2 = tmp4[2] / 255;
     const diff1 = 1 - max(result, max(result1, result2));
     if (diff1 < 1) {
       num = 1 / (1 - diff1);
@@ -816,10 +816,6 @@ let fn = function n() {
   };
   obj.format.cmyk = function cmyk2rgb_1() {
     let tmp3;
-    let tmp4;
-    let tmp5;
-    let tmp6;
-    let tmp7;
     const items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
@@ -909,12 +905,12 @@ let fn = function n() {
       } while (tmp3);
     }
     const arr2 = unpack(items, "rgba");
-    const result = arr2[0] / 255;
-    const result1 = arr2[1] / 255;
-    const result2 = arr2[2] / 255;
+    result = arr2[0] / 255;
+    result1 = arr2[1] / 255;
+    result2 = arr2[2] / 255;
     const bound = Math.min(result, result1, result2);
     const bound1 = Math.max(result, result1, result2);
-    const result3 = (bound1 + bound) / 2;
+    result3 = (bound1 + bound) / 2;
     if (bound1 === bound) {
       const _Number = Number;
       let _NaN = Number.NaN;
@@ -985,13 +981,13 @@ let fn = function n() {
       HermesBuiltin.throwTypeError();
     }
     arr2[0] = Math.round(100 * (arr2[0] || 0)) / 100;
-    const result = 100 * arr2[1];
+    result = 100 * arr2[1];
     if (typeof rnd !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let num2 = 1;
     arr2[1] = `${Math.round(100 * tmp13) / 100}%`;
-    const result1 = 100 * arr2[2];
+    result1 = 100 * arr2[2];
     if (typeof rnd !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -1023,7 +1019,7 @@ let fn = function n() {
     const arr2 = unpack(items, "hsl");
     let items4 = arr2[1];
     if (0 === items4) {
-      const result = 255 * tmp5;
+      result = 255 * tmp5;
       while (true) {
         let num11 = 3;
         if (arr2.length > 3) {
@@ -1039,13 +1035,13 @@ let fn = function n() {
     } else {
       const items3 = [0, 0, 0];
       if (tmp5 < 0.5) {
-        let result1 = tmp5 * (1 + items4);
+        result1 = tmp5 * (1 + items4);
       } else {
         result1 = tmp5 + items4 - tmp5 * items4;
       }
       items4 = [0, 0, 0];
       const diff1 = 2 * tmp5 - result1;
-      const result2 = tmp4 / 360;
+      result2 = tmp4 / 360;
       items4[0] = result2 + 0.3333333333333333;
       items4[1] = result2;
       items4[2] = result2 - 0.3333333333333333;
@@ -1304,9 +1300,6 @@ let fn = function n() {
   };
   function rgb2hcg_1(_rgb) {
     let tmp3;
-    let tmp5;
-    let tmp6;
-    let tmp7;
     const items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
@@ -1321,13 +1314,13 @@ let fn = function n() {
     const bound = Math.min(tmp5, tmp6, tmp7);
     const bound1 = Math.max(tmp5, tmp6, tmp7);
     const diff1 = bound1 - bound;
-    const result = 100 * diff1;
-    const result1 = bound / (255 - diff1);
+    result = 100 * diff1;
+    result1 = bound / (255 - diff1);
     if (0 === diff1) {
       const _Number = Number;
       let _NaN = Number.NaN;
     } else {
-      let result2;
+      result2 = undefined;
       if (tmp5 === bound1) {
         result2 = (tmp6 - tmp7) / diff1;
       }
@@ -1337,7 +1330,7 @@ let fn = function n() {
       if (tmp7 === bound1) {
         result2 = 4 + (tmp5 - tmp6) / diff1;
       }
-      const result3 = result2 * 60;
+      result3 = result2 * 60;
       _NaN = result3;
       if (result3 < 0) {
         _NaN = result3 + 360;
@@ -1362,12 +1355,7 @@ let fn = function n() {
     return new bind.apply(Color, items1.concat(items, ["hcg"]))();
   };
   obj.format.hcg = function hcg2rgb_1() {
-    let num;
     let tmp3;
-    let tmp4;
-    let tmp7;
-    let tmp8;
-    let tmp9;
     const items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
@@ -1380,8 +1368,8 @@ let fn = function n() {
     }
     const arr2 = unpack(items, "hcg");
     [num, tmp4] = arr2;
-    const result = arr2[2] * 255;
-    const result1 = 255 * tmp4;
+    result = arr2[2] * 255;
+    result1 = 255 * tmp4;
     if (0 !== tmp4) {
       let diff1 = num;
       if (num > 360) {
@@ -1391,10 +1379,10 @@ let fn = function n() {
       if (diff1 < 0) {
         sum = diff1 + 360;
       }
-      const result2 = sum / 60;
+      result2 = sum / 60;
       const tmp14 = floor(result2);
       const diff2 = result2 - tmp14;
-      const result3 = result * (1 - tmp4);
+      result3 = result * (1 - tmp4);
       const sum1 = result3 + result1 * diff2;
       const sum2 = result3 + result1;
       if (0 === tmp14) {
@@ -1458,9 +1446,6 @@ let fn = function n() {
   round = Math.round;
   function rgb2hex_1(_rgb, rgb) {
     let tmp3;
-    let tmp5;
-    let tmp6;
-    let tmp7;
     const items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
@@ -1567,7 +1552,7 @@ let fn = function n() {
       return items1;
     } else {
       const _Error = Error;
-      const error = new Error("unknown hex color: " + str);
+      error = new Error("unknown hex color: " + str);
       throw error;
     }
   }
@@ -1632,10 +1617,10 @@ let fn = function n() {
       } while (tmp3);
     }
     const tmp4 = unpack(items, "rgb");
-    const result = tmp4[0] / 255;
-    const result1 = tmp4[1] / 255;
-    const result2 = tmp4[2] / 255;
-    const result3 = (result + result1 + result2) / 3;
+    result = tmp4[0] / 255;
+    result1 = tmp4[1] / 255;
+    result2 = tmp4[2] / 255;
+    result3 = (result + result1 + result2) / 3;
     let num = 0;
     if (0 < result3) {
       num = 1 - min(result, result1, result2) / result3;
@@ -1670,10 +1655,7 @@ let fn = function n() {
     return new bind.apply(Color, items1.concat(items, ["hsi"]))();
   };
   obj.format.hsi = function hsi2rgb_1() {
-    let num;
-    let num2;
     let tmp3;
-    let tmp4;
     const items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
@@ -1694,11 +1676,11 @@ let fn = function n() {
     if (diff1 < 0) {
       sum = diff1 + 360;
     }
-    const result = sum / 360;
+    result = sum / 360;
     if (result < 0.3333333333333333) {
-      const result1 = (1 - num2) / 3;
-      const result2 = closure_63 * result;
-      const result3 = num2 * cos(result2);
+      result1 = (1 - num2) / 3;
+      result2 = closure_63 * result;
+      result3 = num2 * cos(result2);
       const result4 = (1 + result3 / cos(result1 - result2)) / 3;
       let diff2 = 1 - (result1 + result4);
       let diff3 = result1;
@@ -1839,9 +1821,6 @@ let fn = function n() {
   floor = Math.floor;
   function rgb2hsv$1(_rgb) {
     let tmp3;
-    let tmp5;
-    let tmp6;
-    let tmp7;
     const items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
@@ -1856,14 +1835,14 @@ let fn = function n() {
     const tmp4 = unpack(items, "rgb");
     const tmp9 = max(tmp5, tmp6, tmp7);
     const diff1 = tmp9 - min(tmp5, tmp6, tmp7);
-    const result = tmp9 / 255;
+    result = tmp9 / 255;
     if (0 === tmp9) {
       const _Number = Number;
       let _NaN = Number.NaN;
       let num4 = 0;
     } else {
-      const result1 = diff1 / tmp9;
-      let result2;
+      result1 = diff1 / tmp9;
+      result2 = undefined;
       if (tmp5 === tmp9) {
         result2 = (tmp6 - tmp7) / diff1;
       }
@@ -1873,7 +1852,7 @@ let fn = function n() {
       if (tmp7 === tmp9) {
         result2 = 4 + (tmp5 - tmp6) / diff1;
       }
-      const result3 = result2 * 60;
+      result3 = result2 * 60;
       num4 = result1;
       _NaN = result3;
       if (result3 < 0) {
@@ -1900,12 +1879,7 @@ let fn = function n() {
     return new bind.apply(Color, items1.concat(items, ["hsv"]))();
   };
   obj.format.hsv = function hsv2rgb_1() {
-    let num;
     let tmp3;
-    let tmp4;
-    let tmp6;
-    let tmp7;
-    let tmp8;
     const items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
@@ -1918,7 +1892,7 @@ let fn = function n() {
     }
     const arr2 = unpack(items, "hsv");
     [num, tmp4] = arr2;
-    const result = arr2[2] * 255;
+    result = arr2[2] * 255;
     if (0 !== tmp4) {
       let diff1 = num;
       if (num > 360) {
@@ -1928,11 +1902,11 @@ let fn = function n() {
       if (diff1 < 0) {
         sum = diff1 + 360;
       }
-      const result1 = sum / 60;
+      result1 = sum / 60;
       const tmp13 = floor(result1);
       const diff2 = result1 - tmp13;
-      const result2 = result * (1 - tmp4);
-      const result3 = result * (1 - tmp4 * (1 - diff2));
+      result2 = result * (1 - tmp4);
+      result3 = result * (1 - tmp4 * (1 - diff2));
       if (0 === tmp13) {
         const items1 = [result, result3, result2];
         [tmp8, tmp7, tmp6] = items1;
@@ -2003,9 +1977,6 @@ let fn = function n() {
   }
   function rgb2lab_1(_rgb, arg1, arg2) {
     let tmp3;
-    let tmp5;
-    let tmp6;
-    let tmp7;
     const items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
@@ -2023,18 +1994,18 @@ let fn = function n() {
     if (typeof rgb_xyz !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const result = tmp5 / 255;
+    result = tmp5 / 255;
     if (result <= 0.04045) {
-      let result1 = result / 12.92;
+      result1 = result / 12.92;
     } else {
       result1 = pow((result + 0.055) / 1.055, 2.4);
     }
     if (typeof rgb_xyz !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const result2 = tmp6 / 255;
+    result2 = tmp6 / 255;
     if (result2 <= 0.04045) {
-      let result3 = result2 / 12.92;
+      result3 = result2 / 12.92;
     } else {
       result3 = pow((result2 + 0.055) / 1.055, 2.4);
     }
@@ -2105,7 +2076,7 @@ let fn = function n() {
       } while (tmp3);
     }
     const arr2 = unpack(items, "lab");
-    const result = (arr2[0] + 16) / 116;
+    result = (arr2[0] + 16) / 116;
     let sum = result;
     if (!isNaN(arr2[1])) {
       sum = result + tmp4 / 500;
@@ -2118,16 +2089,16 @@ let fn = function n() {
       HermesBuiltin.throwTypeError();
     }
     if (result > obj7.t1) {
-      let result1 = result * result * result;
+      result1 = result * result * result;
     } else {
       result1 = tmp9.t2 * (result - tmp9.t0);
     }
-    const result2 = obj7.Yn * result1;
+    result2 = obj7.Yn * result1;
     if (typeof lab_xyz !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (sum > obj7.t1) {
-      let result3 = sum * sum * sum;
+      result3 = sum * sum * sum;
     } else {
       result3 = tmp9.t2 * (sum - tmp9.t0);
     }
@@ -2264,7 +2235,7 @@ let fn = function n() {
       num = 0;
     }
     const items1 = [tmp4[0], , ];
-    const result = num * result2;
+    result = num * result2;
     items1[1] = cos(result) * tmp4[1];
     items1[2] = sin(result) * tmp4[1];
     return items1;
@@ -2355,7 +2326,7 @@ let fn = function n() {
   };
   let items1 = ["lch", "hcl"];
   let item = items1.forEach((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const autodetect = obj.autodetect;
     obj = {
       p: 2,
@@ -2371,8 +2342,8 @@ let fn = function n() {
             diff = tmp3 - 1;
           } while (tmp3);
         }
-        const arr2 = outer1_115(items, closure_0);
-        if (typeof outer1_116 !== "function") {
+        const arr2 = closure_1_115(items, closure_0);
+        if (typeof closure_1_116 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const call = toString.call;
@@ -2392,7 +2363,7 @@ let fn = function n() {
       return hex2rgb_1(tmp2[formatted]);
     } else {
       const _Error = Error;
-      const error = new Error("unknown color name: " + formatted);
+      error = new Error("unknown color name: " + formatted);
       throw error;
     }
   };
@@ -2470,7 +2441,7 @@ let fn = function n() {
         }
       }
     }
-    const error = new Error("unknown num color: " + arg0);
+    error = new Error("unknown num color: " + arg0);
     throw error;
   };
   const autodetect9 = obj.autodetect;
@@ -2577,7 +2548,7 @@ let fn = function n() {
     }
   });
   function temperature2rgb_1(arg0) {
-    const result = arg0 / 100;
+    result = arg0 / 100;
     if (result < 66) {
       let num2 = 0;
       if (result >= 6) {
@@ -2604,7 +2575,6 @@ let fn = function n() {
   }
   round = Math.round;
   function rgb2temperature_1(_rgb) {
-    let result;
     let tmp20;
     let tmp3;
     let tmp8;
@@ -2630,7 +2600,7 @@ let fn = function n() {
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       result = 0.5 * (tmp8 + num2);
-      let result1 = result / 100;
+      result1 = result / 100;
       if (result1 < 66) {
         let num5 = 0;
         if (result1 >= 6) {
@@ -2695,9 +2665,6 @@ let fn = function n() {
   obj.format.temp = temperature2rgb_1;
   pow = Math.pow;
   function rgb2oklab_1(_rgb, arg1, arg2) {
-    let tmp23;
-    let tmp24;
-    let tmp25;
     let tmp3;
     const items = [];
     const tmp = +arguments.length;
@@ -2710,19 +2677,19 @@ let fn = function n() {
       } while (tmp3);
     }
     const tmp4 = unpack(items, "rgb");
-    const result = tmp4[0] / 255;
+    result = tmp4[0] / 255;
     const absolute = Math.abs(result);
     if (absolute < 0.04045) {
-      let result1 = result / 12.92;
+      result1 = result / 12.92;
     } else {
       result1 = (sign(result) || 1) * pow((absolute + 0.055) / 1.055, 2.4);
       const tmp8 = sign(result) || 1;
     }
     const items1 = [result1, , ];
-    const result2 = tmp4[1] / 255;
+    result2 = tmp4[1] / 255;
     const absolute1 = Math.abs(result2);
     if (absolute1 < 0.04045) {
-      let result3 = result2 / 12.92;
+      result3 = result2 / 12.92;
     } else {
       result3 = (sign(result2) || 1) * pow((absolute1 + 0.055) / 1.055, 2.4);
       const tmp14 = sign(result2) || 1;
@@ -2748,9 +2715,6 @@ let fn = function n() {
   sign = Math.sign;
   function oklab2rgb_1(arg0, arg1, arg2) {
     let tmp3;
-    let tmp4;
-    let tmp5;
-    let tmp6;
     const items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
@@ -2769,7 +2733,7 @@ let fn = function n() {
     const sum = 4.0767416621 * tmp8 - 3.3077115913 * tmp9 + 0.2309699292 * tmp10;
     const absolute = Math.abs(sum);
     if (absolute > 0.0031308) {
-      let result = (sign(sum) || 1) * (1.055 * tmp7(absolute, 0.4166666666666667) - 0.055);
+      result = (sign(sum) || 1) * (1.055 * tmp7(absolute, 0.4166666666666667) - 0.055);
       const tmp15 = sign(sum) || 1;
     } else {
       result = 12.92 * sum;
@@ -2778,7 +2742,7 @@ let fn = function n() {
     const diff1 = -1.2684380046 * tmp8 + 2.6097574011 * tmp9 - 0.3413193965 * tmp10;
     const absolute1 = Math.abs(diff1);
     if (absolute1 > 0.0031308) {
-      let result1 = (sign(diff1) || 1) * (1.055 * tmp7(absolute1, 0.4166666666666667) - 0.055);
+      result1 = (sign(diff1) || 1) * (1.055 * tmp7(absolute1, 0.4166666666666667) - 0.055);
       const tmp20 = sign(diff1) || 1;
     } else {
       result1 = 12.92 * diff1;
@@ -2787,7 +2751,7 @@ let fn = function n() {
     const sum1 = -0.0041960863 * tmp8 - 0.7034186147 * tmp9 + 1.707614701 * tmp10;
     const absolute2 = Math.abs(sum1);
     if (absolute2 > 0.0031308) {
-      let result2 = (sign(sum1) || 1) * (1.055 * tmp7(absolute2, 0.4166666666666667) - 0.055);
+      result2 = (sign(sum1) || 1) * (1.055 * tmp7(absolute2, 0.4166666666666667) - 0.055);
       const tmp25 = sign(sum1) || 1;
     } else {
       result2 = 12.92 * sum1;
@@ -2931,17 +2895,17 @@ let fn = function n() {
     if (typeof luminance_x !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const result = arg0 / 255;
+    result = arg0 / 255;
     if (result <= 0.03928) {
-      let result1 = result / 12.92;
+      result1 = result / 12.92;
     } else {
       result1 = pow((result + 0.055) / 1.055, 2.4);
     }
-    const result2 = 0.2126 * result1;
+    result2 = 0.2126 * result1;
     if (typeof luminance_x !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const result3 = arg1 / 255;
+    result3 = arg1 / 255;
     if (result3 <= 0.03928) {
       let result4 = result3 / 12.92;
     } else {
@@ -2990,7 +2954,7 @@ let fn = function n() {
       }
       const _Object2 = Object;
       const call = toString.call;
-      let obj = arg0;
+      obj = arg0;
       if ("object" !== tmp17) {
         obj = Color(arg0);
       }
@@ -3011,7 +2975,7 @@ let fn = function n() {
       return obj3.alpha(alphaResult + num * (obj2.alpha() - obj.alpha()));
     } else {
       const _Error = Error;
-      const error = new Error("interpolation mode " + first + " is not defined");
+      error = new Error("interpolation mode " + first + " is not defined");
       throw error;
     }
     tmp6 = obj15[first] || items.length;
@@ -3045,15 +3009,12 @@ let fn = function n() {
   sqrt = Math.sqrt;
   pow = Math.pow;
   obj15.lrgb = (_rgb, _rgb2) => {
-    let tmp;
-    let tmp2;
-    let tmp3;
     _rgb = _rgb._rgb;
     [tmp, tmp2, tmp3] = _rgb2._rgb;
-    const result = pow(_rgb[0], 2) * (1 - arg2);
-    const result1 = pow(_rgb[1], 2) * (1 - arg2);
+    result = pow(_rgb[0], 2) * (1 - arg2);
+    result1 = pow(_rgb[1], 2) * (1 - arg2);
     const tmp5 = sqrt(result + pow(tmp, 2) * arg2);
-    const result2 = pow(_rgb[2], 2) * (1 - arg2);
+    result2 = pow(_rgb[2], 2) * (1 - arg2);
     const tmp7 = sqrt(result1 + pow(tmp2, 2) * arg2);
     return Color(tmp5, sqrt(result1 + pow(tmp2, 2) * arg2), sqrt(result2 + pow(tmp3, 2) * arg2), "rgb");
   };
@@ -3063,12 +3024,6 @@ let fn = function n() {
     return Color(labResult[0] + arg2 * (labResult1[0] - labResult[0]), labResult[1] + arg2 * (labResult1[1] - labResult[1]), labResult[2] + arg2 * (labResult1[2] - labResult[2]), "lab");
   };
   function _hsx(hsl, hsl2, arg2, hcg) {
-    let tmp4;
-    let tmp5;
-    let tmp6;
-    let tmp7;
-    let tmp8;
-    let tmp9;
     if ("hsl" === hcg) {
       let hslResult = hsl.hsl();
       let hslResult1 = hsl2.hsl();
@@ -3197,32 +3152,32 @@ let fn = function n() {
   }
   pow = Math.pow;
   function scale$2(items) {
-    let closure_0 = items;
+    closure_0 = items;
     const rgb = "rgb";
-    let closure_2 = chroma$k("#ccc");
-    let c3 = 0;
-    let closure_4 = [0, 1];
-    let closure_5 = [];
-    let closure_6 = [0, 0];
-    let c7 = false;
-    let closure_8 = [];
-    let c9 = false;
-    let c10 = 0;
-    let c11 = 1;
-    let c12 = false;
-    let closure_13 = {};
-    let c14 = true;
-    let c15 = 1;
+    closure_2 = chroma$k("#ccc");
+    c3 = 0;
+    closure_4 = [0, 1];
+    closure_5 = [];
+    closure_6 = [0, 0];
+    c7 = false;
+    closure_8 = [];
+    c9 = false;
+    c10 = 0;
+    c11 = 1;
+    c12 = false;
+    closure_13 = {};
+    c14 = true;
+    c15 = 1;
     function setColors(closure_0) {
       let length;
       let length2;
-      let items = closure_0;
+      items = closure_0;
       if (!closure_0) {
         items = ["#fff", "#000"];
       }
       let brewer = items;
       if (items) {
-        if (typeof outer1_202 !== "function") {
+        if (typeof closure_1_202 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
@@ -3232,16 +3187,16 @@ let fn = function n() {
         const tmp4 = closure_0[typeof call === "unknown" ? toString(items) : call(toString, items)] || "object";
       }
       if (brewer) {
-        brewer = outer1_201.brewer;
+        brewer = closure_1_201.brewer;
       }
       if (brewer) {
-        brewer = outer1_201.brewer[items.toLowerCase(items)];
+        brewer = closure_1_201.brewer[items.toLowerCase(items)];
       }
       let arr2 = items;
       if (brewer) {
-        arr2 = outer1_201.brewer[items.toLowerCase(items)];
+        arr2 = closure_1_201.brewer[items.toLowerCase(items)];
       }
-      if (typeof outer1_202 !== "function") {
+      if (typeof closure_1_202 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const call2 = toString2.call;
@@ -3252,12 +3207,12 @@ let fn = function n() {
           const items1 = [arr2[0], arr2[0]];
           arr4 = items1;
         }
-        const substr = arr4.slice(0);
+        let substr = arr4.slice(0);
         let num2 = 0;
         if (0 < substr.length) {
           do {
-            let tmp11 = outer1_201;
-            substr[num2] = outer1_201(substr[num2]);
+            let tmp11 = closure_1_201;
+            substr[num2] = closure_1_201(substr[num2]);
             num2 = num2 + 1;
             length = substr.length;
           } while (num2 < length);
@@ -3278,8 +3233,8 @@ let fn = function n() {
       if (typeof resetCache !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      let closure_13 = {};
-      let closure_8 = tmp10;
+      closure_13 = {};
+      substr = tmp10;
       return tmp10;
     }
     function tMapLightness(arg0) {
@@ -3295,7 +3250,7 @@ let fn = function n() {
       }
       if (!isNaN(arg0)) {
         if (null !== arg0) {
-          let result = arg0;
+          result = arg0;
           if (!flag) {
             if (c7) {
               if (c7.length > 2) {
@@ -3337,7 +3292,7 @@ let fn = function n() {
           }
           let tmp17 = tmp14;
           if (1 !== c15) {
-            tmp17 = outer1_203(tmp14, tmp16);
+            tmp17 = closure_1_203(tmp14, tmp16);
           }
           const _Math = Math;
           const _Math2 = Math;
@@ -3350,7 +3305,7 @@ let fn = function n() {
             }
             return tmp51;
           }
-          if (typeof outer1_202 !== "function") {
+          if (typeof closure_1_202 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const _Object = Object;
@@ -3371,12 +3326,12 @@ let fn = function n() {
                   let sum1 = num11 + 1;
                   if (bound < arr[sum1]) {
                     let tmp42 = arr;
-                    let tmp43 = outer1_201;
+                    let tmp43 = closure_1_201;
                     let tmp44 = arr2;
                     let tmp45 = arr2;
                     let tmp46 = rgb;
-                    let tmp47 = outer1_201;
-                    interpolateResult = outer1_201.interpolate(arr2[num11], arr2[sum1], (bound - tmp35) / (arr[sum1] - tmp35), rgb);
+                    let tmp47 = closure_1_201;
+                    interpolateResult = closure_1_201.interpolate(arr2[num11], arr2[sum1], (bound - tmp35) / (arr[sum1] - tmp35), rgb);
                   }
                 }
                 let sum2 = num11 + 1;
@@ -3401,7 +3356,7 @@ let fn = function n() {
             dependencyMap3[rounded] = interpolateResult;
             tmp51 = interpolateResult;
           }
-          tmp26 = outer1_202;
+          tmp26 = closure_1_202;
           tmp29 = closure_0[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
         }
       }
@@ -3412,7 +3367,7 @@ let fn = function n() {
     }
     setColors(closure_0);
     let fn = function f(arg0) {
-      const tmp = outer1_201(getColor(arg0));
+      const tmp = closure_1_201(getColor(arg0));
       let tmp2 = tmp;
       if (c9) {
         tmp2 = tmp;
@@ -3424,16 +3379,16 @@ let fn = function n() {
     };
     fn.classes = (arg0) => {
       if (null != arg0) {
-        if (typeof outer1_202 !== "function") {
+        if (typeof closure_1_202 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
         const call = toString.call;
         if ("array" === tmp5) {
-          let closure_7 = arg0;
-          const items = [arg0[0], arg0[arg0.length - 1]];
+          closure_7 = arg0;
+          items = [arg0[0], arg0[arg0.length - 1]];
         } else {
-          const analyzeResult = outer1_201.analyze(items);
+          const analyzeResult = closure_1_201.analyze(items);
           if (0 === arg0) {
             const items1 = [, ];
             ({ min: arr[0], max: arr[1] } = analyzeResult);
@@ -3442,7 +3397,7 @@ let fn = function n() {
             limitsResult = obj.limits(analyzeResult, "e", arg0);
           }
           closure_7 = limitsResult;
-          obj = outer1_201;
+          obj = closure_1_201;
         }
         return fn;
       } else {
@@ -3451,10 +3406,10 @@ let fn = function n() {
     };
     fn.domain = (arr) => {
       let length2;
-      let closure_0 = arr;
+      closure_0 = arr;
       if (arguments.length) {
-        let closure_10 = arr[0];
-        let closure_11 = arr[arr.length - 1];
+        closure_10 = arr[0];
+        closure_11 = arr[arr.length - 1];
         arr = [];
         if (arr.length === arr2.length) {
           if (closure_10 !== closure_11) {
@@ -3473,7 +3428,7 @@ let fn = function n() {
               } while (num4 < length2);
             }
           }
-          const items = [closure_10, closure_11];
+          items = [closure_10, closure_11];
           return fn;
         }
         for (let num2 = 0; num2 < length; num2 = num2 + 1) {
@@ -3481,10 +3436,10 @@ let fn = function n() {
           arr = arr.push(num2 / (length - 1));
         }
         if (arr.length > 2) {
-          let closure_1 = arr.map((arg0, arg1) => arg1 / (arr.length - 1));
+          closure_1 = arr.map((arg0, arg1) => arg1 / (arr.length - 1));
           const mapped = arr.map((arg0) => (arg0 - closure_10) / (closure_11 - closure_10));
           if (!mapped.every((arg0, arg1) => dependencyMap[arg1] === arg0)) {
-            function tMapDomain(arg0) {
+            tMapDomain = function tMapDomain(arg0) {
               let tmp4;
               if (arg0 > 0) {
                 if (arg0 < 1) {
@@ -3506,7 +3461,7 @@ let fn = function n() {
                 }
               }
               return arg0;
-            }
+            };
           }
         }
       } else {
@@ -3515,11 +3470,11 @@ let fn = function n() {
     };
     fn.mode = (arg0) => {
       if (arguments.length) {
-        let closure_1 = arg0;
+        closure_1 = arg0;
         if (typeof resetCache !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        let closure_13 = {};
+        closure_13 = {};
         let tmp = fn;
       } else {
         tmp = closure_1;
@@ -3531,12 +3486,12 @@ let fn = function n() {
       return fn;
     };
     fn.out = (arg0) => {
-      let closure_9 = arg0;
+      closure_9 = arg0;
       return fn;
     };
     fn.spread = (arg0) => {
       if (arguments.length) {
-        let closure_3 = arg0;
+        closure_3 = arg0;
         let tmp = fn;
       } else {
         tmp = closure_3;
@@ -3551,11 +3506,11 @@ let fn = function n() {
       if (typeof resetCache !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      let closure_13 = {};
+      closure_13 = {};
       if (flag) {
-        let fn = (arg0) => {
+        fn = (arg0) => {
           const first = callback(0, true).lab()[0];
-          const obj = callback(0, true);
+          obj = callback(0, true);
           const first1 = callback(1, true).lab()[0];
           const obj2 = callback(1, true);
           const tmp3 = first > first1;
@@ -3573,7 +3528,7 @@ let fn = function n() {
               let tmp11 = num3;
               let tmp12 = tmp6;
               let tmp13 = tmp7;
-              let result = tmp6;
+              result = tmp6;
               let tmp9 = num;
               if (tmp3) {
                 result = tmp6 * -1;
@@ -3615,29 +3570,29 @@ let fn = function n() {
     };
     fn.padding = (arg0) => {
       if (null != arg0) {
-        if (typeof outer1_202 !== "function") {
+        if (typeof closure_1_202 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
         const call = toString.call;
         let tmp6 = arg0;
         if ("number" === tmp5) {
-          const items = [arg0, arg0];
+          items = [arg0, arg0];
           tmp6 = items;
         }
-        let closure_6 = tmp6;
+        items = tmp6;
         let tmp = fn;
         const tmp3 = closure_0;
         tmp5 = closure_0[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
       } else {
-        tmp = closure_6;
+        tmp = items;
       }
       return tmp;
     };
     fn.colors = (arg0, arg1) => {
       let diff;
       let tmp14;
-      let closure_0 = arg0;
+      closure_0 = arg0;
       let str = arg1;
       let hex = arg1;
       if (arguments.length < 2) {
@@ -3650,7 +3605,7 @@ let fn = function n() {
         if (typeof fn !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        const tmp18 = outer1_201(getColor(0.5));
+        const tmp18 = closure_1_201(getColor(0.5));
         let tmp19 = tmp18;
         if (c9) {
           tmp19 = tmp18;
@@ -3658,11 +3613,11 @@ let fn = function n() {
             tmp19 = tmp18[c9]();
           }
         }
-        const items = [tmp19];
+        items = [tmp19];
         substr = items;
       } else if (arg0 > 1) {
         const first = dependencyMap[0];
-        let closure_3 = dependencyMap[1] - first;
+        closure_3 = dependencyMap[1] - first;
         const items1 = [];
         let num3 = 0;
         if (0 < arg0 ? 0 < arg0 : 0 > arg0) {
@@ -3675,15 +3630,15 @@ let fn = function n() {
         }
         substr = items1.map((arg0) => {
           const sum = first + arg0 / (closure_0 - 1) * closure_3;
-          if (typeof outer1_21 !== "function") {
+          if (typeof closure_1_21 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          const tmp2 = outer1_201(outer1_19(sum));
+          const tmp2 = closure_1_201(closure_1_19(sum));
           let tmp3 = tmp2;
-          if (outer1_9) {
+          if (closure_1_9) {
             tmp3 = tmp2;
-            if (tmp2[outer1_9]) {
-              tmp3 = tmp2[outer1_9]();
+            if (tmp2[closure_1_9]) {
+              tmp3 = tmp2[closure_1_9]();
             }
           }
           return tmp3;
@@ -3714,7 +3669,7 @@ let fn = function n() {
             if (typeof closure_21 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            const tmp = outer1_201(callback(arg0));
+            const tmp = closure_1_201(callback(arg0));
             let tmp2 = tmp;
             if (closure_9) {
               tmp2 = tmp;
@@ -3728,14 +3683,14 @@ let fn = function n() {
         arr = dependencyMap;
       }
       let mapped = substr;
-      if (outer1_201[str]) {
+      if (closure_1_201[str]) {
         mapped = substr.map((arg0) => arg0[hex]());
       }
       return mapped;
     };
     fn.cache = (arg0) => {
       if (null != arg0) {
-        let closure_14 = arg0;
+        closure_14 = arg0;
         let tmp = fn;
       } else {
         tmp = closure_14;
@@ -3744,7 +3699,7 @@ let fn = function n() {
     };
     fn.gamma = (arg0) => {
       if (null != arg0) {
-        let closure_15 = arg0;
+        closure_15 = arg0;
         let tmp = fn;
       } else {
         tmp = closure_15;
@@ -3753,7 +3708,7 @@ let fn = function n() {
     };
     fn.nodata = (arg0) => {
       if (null != arg0) {
-        let closure_2 = outer1_201(arg0);
+        closure_2 = closure_1_201(arg0);
         let tmp = fn;
       } else {
         tmp = closure_2;
@@ -3767,7 +3722,7 @@ let fn = function n() {
       return tmp[arg2](arg0, arg1);
     } else {
       const _Error = Error;
-      const error = new Error("unknown blend mode " + arg2);
+      error = new Error("unknown blend mode " + arg2);
       throw error;
     }
     tmp = blend;
@@ -3777,7 +3732,7 @@ let fn = function n() {
     return items;
   };
   blend.normal = (arg0, arg1) => {
-    const obj = chroma$k(arg1);
+    obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
     return chroma$k.rgb(f103033(rgbResult, chroma$k(arg0).rgb()));
   };
@@ -3786,7 +3741,7 @@ let fn = function n() {
     return items;
   };
   blend.multiply = (arg0, arg1) => {
-    const obj = chroma$k(arg1);
+    obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
     return chroma$k.rgb(f103033(rgbResult, chroma$k(arg0).rgb()));
   };
@@ -3795,7 +3750,7 @@ let fn = function n() {
     return items;
   };
   blend.screen = (arg0, arg1) => {
-    const obj = chroma$k(arg1);
+    obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
     return chroma$k.rgb(f103033(rgbResult, chroma$k(arg0).rgb()));
   };
@@ -3804,7 +3759,7 @@ let fn = function n() {
     return items;
   };
   blend.overlay = (arg0, arg1) => {
-    const obj = chroma$k(arg1);
+    obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
     return chroma$k.rgb(f103033(rgbResult, chroma$k(arg0).rgb()));
   };
@@ -3813,7 +3768,7 @@ let fn = function n() {
     return items;
   };
   blend.darken = (arg0, arg1) => {
-    const obj = chroma$k(arg1);
+    obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
     return chroma$k.rgb(f103033(rgbResult, chroma$k(arg0).rgb()));
   };
@@ -3822,7 +3777,7 @@ let fn = function n() {
     return items;
   };
   blend.lighten = (arg0, arg1) => {
-    const obj = chroma$k(arg1);
+    obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
     return chroma$k.rgb(f103033(rgbResult, chroma$k(arg0).rgb()));
   };
@@ -3831,7 +3786,7 @@ let fn = function n() {
     return items;
   };
   blend.dodge = (arg0, arg1) => {
-    const obj = chroma$k(arg1);
+    obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
     return chroma$k.rgb(f103033(rgbResult, chroma$k(arg0).rgb()));
   };
@@ -3840,7 +3795,7 @@ let fn = function n() {
     return items;
   };
   blend.burn = (arg0, arg1) => {
-    const obj = chroma$k(arg1);
+    obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
     return chroma$k.rgb(f103033(rgbResult, chroma$k(arg0).rgb()));
   };
@@ -3852,11 +3807,11 @@ let fn = function n() {
   pow = Math.pow;
   floor = Math.floor;
   function analyze(arg0, arg1) {
-    let c0 = arg1;
+    c0 = arg1;
     if (undefined === arg1) {
       c0 = null;
     }
-    const obj = { min: Number.MAX_VALUE, max: -1 * Number.MAX_VALUE, sum: 0, values: [], count: 0 };
+    obj = { min: Number.MAX_VALUE, max: -1 * Number.MAX_VALUE, sum: 0, values: [], count: 0 };
     if (typeof type$p !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -3869,7 +3824,7 @@ let fn = function n() {
     const item = values.forEach((arg0) => {
       let tmp2 = c0;
       if (c0) {
-        if (typeof outer1_218 !== "function") {
+        if (typeof closure_1_218 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
@@ -3903,14 +3858,11 @@ let fn = function n() {
     const items = [, ];
     ({ min: arr2[0], max: arr2[1] } = obj);
     obj.domain = items;
-    obj.limits = (arg0, arg1) => outer1_224(obj, arg0, arg1);
+    obj.limits = (arg0, arg1) => closure_1_224(obj, arg0, arg1);
     return obj;
   }
   function limits(analyzeResult, arg1, arg2) {
     let flag;
-    let max;
-    let min;
-    let values;
     let str = arg1;
     if (undefined === arg1) {
       str = "equal";
@@ -3947,13 +3899,13 @@ let fn = function n() {
       } else if ("l" === str.substr(0, 1)) {
         if (min <= 0) {
           const _Error = Error;
-          const error = new Error("Logarithmic scales are only possible for values > 0");
+          error = new Error("Logarithmic scales are only possible for values > 0");
           throw error;
         } else {
           const _Math = Math;
-          const result = Math.LOG10E * log(min);
+          result = Math.LOG10E * log(min);
           const _Math2 = Math;
-          const result1 = Math.LOG10E * log(max);
+          result1 = Math.LOG10E * log(max);
           items1.push(min);
           for (let num19 = 1; num19 < num; num19 = num19 + 1) {
             let tmp47 = pow;
@@ -3964,7 +3916,7 @@ let fn = function n() {
       } else if ("q" === str.substr(0, 1)) {
         items1.push(min);
         for (let num18 = 1; num18 < num; num18 = num18 + 1) {
-          let result2 = (sorted.length - 1) * num18 / num;
+          result2 = (sorted.length - 1) * num18 / num;
           let tmp40 = floor;
           let tmp41 = floor(result2);
           let tmp42 = num18;
@@ -4059,7 +4011,7 @@ let fn = function n() {
           items2 = array1;
           num4 = sum1;
         } while (flag);
-        const obj = {};
+        obj = {};
         for (let num12 = 0; num12 < num; num12 = num12 + 1) {
           obj[num12] = [];
         }
@@ -4134,7 +4086,7 @@ let fn = function n() {
       mapped = arr.map(() => 1);
       tmp = mapped;
     }
-    let closure_2 = length / tmp.reduce((arg0, arg1) => arg0 + arg1);
+    closure_2 = length / tmp.reduce((arg0, arg1) => arg0 + arg1);
     const item = tmp.forEach((arg0, arg1) => {
       mapped[arg1] = mapped[arg1] * closure_2;
     });
@@ -4147,7 +4099,7 @@ let fn = function n() {
       let num12 = 0;
       if (0 < mapped1.length) {
         do {
-          let result = tmp[num12] / tmp34;
+          result = tmp[num12] / tmp34;
           let _rgb = mapped1[num12]._rgb;
           let tmp36 = pow;
           items[0] = items[0] + pow(_rgb[0], 2) * result;
@@ -4170,10 +4122,10 @@ let fn = function n() {
     } else {
       arr = mapped1.shift();
       let value = arr.get(str);
-      const last = value;
+      last = value;
       const items1 = [];
-      let closure_5 = 0;
-      let closure_6 = 0;
+      closure_5 = 0;
+      closure_6 = 0;
       let num7 = 1;
       for (let num3 = 0; num3 < value.length; num3 = num3 + num7) {
         let num = value[num3];
@@ -4192,7 +4144,7 @@ let fn = function n() {
           let _isNaN2 = isNaN;
           if (!isNaN(value[num3])) {
             let tmp13 = PI;
-            let result1 = value[num3] / 180 * PI;
+            result1 = value[num3] / 180 * PI;
             let tmp15 = closure_5;
             let tmp16 = cos;
             closure_5 = closure_5 + cos(result1) * tmp[0];
@@ -4202,9 +4154,9 @@ let fn = function n() {
           }
         }
       }
-      let closure_7 = arr.alpha() * tmp[0];
+      closure_7 = arr.alpha() * tmp[0];
       const item1 = mapped1.forEach((get) => {
-        const value = get.get(lrgb);
+        value = get.get(lrgb);
         closure_7 = closure_7 + get.alpha() * mapped[arg1 + 1];
         let num = 0;
         if (0 < value.length) {
@@ -4217,14 +4169,14 @@ let fn = function n() {
               items1[num] = items1[num] + mapped[arg1 + 1];
               let tmp5 = lrgb;
               if ("h" === lrgb.charAt(num)) {
-                let tmp7 = outer1_196;
-                let result = value[num] / 180 * outer1_196;
+                let tmp7 = closure_1_196;
+                result = value[num] / 180 * closure_1_196;
                 let tmp9 = closure_5;
-                let tmp10 = outer1_197;
-                closure_5 = closure_5 + outer1_197(result) * tmp4[arg1 + 1];
+                let tmp10 = closure_1_197;
+                closure_5 = closure_5 + closure_1_197(result) * tmp4[arg1 + 1];
                 let tmp11 = closure_6;
-                let tmp12 = outer1_198;
-                closure_6 = closure_6 + outer1_198(result) * tmp4[arg1 + 1];
+                let tmp12 = closure_1_198;
+                closure_6 = closure_6 + closure_1_198(result) * tmp4[arg1 + 1];
               } else {
                 let tmp6 = value;
                 value[num] = value[num] + value[num] * tmp4[arg1 + 1];
@@ -4242,7 +4194,7 @@ let fn = function n() {
           let tmp22 = closure_6;
           let tmp23 = closure_5;
           let tmp24 = PI;
-          let result2 = atan2(closure_6 / items1[num5], closure_5 / items1[num5]) / PI * 180;
+          result2 = atan2(closure_6 / items1[num5], closure_5 / items1[num5]) / PI * 180;
           let tmp26 = result2;
           if (result2 < 0) {
             do {
@@ -4264,7 +4216,7 @@ let fn = function n() {
         }
       }
       closure_7 = closure_7 / length;
-      const obj = Color(value, str);
+      obj = Color(value, str);
       if (closure_7 <= 0.99999) {
         num7 = closure_7;
       }
@@ -4272,36 +4224,33 @@ let fn = function n() {
     }
   };
   chroma$k.bezier = (arr) => {
-    let fn;
-    let last;
-    let type$p;
     const mapped = arr.map((arg0) => callback(arg0));
     if (2 === mapped.length) {
       const mapped1 = mapped.map((lab) => lab.lab());
       [fn, type$p] = mapped1;
       fn = function a(arg0) {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         const items = [0, 1, 2];
-        return outer1_204(items.map((arg0) => dependencyMap[arg0] + dependencyMap * (outer1_1[arg0] - dependencyMap[arg0])), "lab");
+        return closure_1_204(items.map((arg0) => dependencyMap[arg0] + dependencyMap * (closure_1_1[arg0] - dependencyMap[arg0])), "lab");
       };
     } else if (3 === mapped.length) {
       const mapped2 = mapped.map((lab) => lab.lab());
       [fn, type$p, type$p] = mapped2;
       fn = function a(arg0) {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         const items = [0, 1, 2];
-        return outer1_204(items.map((arg0) => (1 - table) * (1 - table) * table[arg0] + 2 * (1 - table) * table * outer1_1[arg0] + table * table * outer1_2[arg0]), "lab");
+        return closure_1_204(items.map((arg0) => (1 - table) * (1 - table) * table[arg0] + 2 * (1 - table) * table * closure_1_1[arg0] + table * table * closure_1_2[arg0]), "lab");
       };
     } else if (4 === mapped.length) {
       const mapped3 = mapped.map((lab) => lab.lab());
       [fn, type$p, type$p, last] = mapped3;
       fn = function a(arg0) {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         const items = [0, 1, 2];
-        return outer1_204(items.map((arg0) => (1 - table) * (1 - table) * (1 - table) * table[arg0] + 3 * (1 - table) * (1 - table) * table * outer1_1[arg0] + 3 * (1 - table) * table * table * outer1_2[arg0] + table * table * table * outer1_3[arg0]), "lab");
+        return closure_1_204(items.map((arg0) => (1 - table) * (1 - table) * (1 - table) * table[arg0] + 3 * (1 - table) * (1 - table) * table * closure_1_1[arg0] + 3 * (1 - table) * table * table * closure_1_2[arg0] + table * table * table * closure_1_3[arg0]), "lab");
       };
     } else if (mapped.length >= 5) {
-      let closure_4 = mapped.map((lab) => lab.lab());
+      closure_4 = mapped.map((lab) => lab.lab());
       const diff = mapped.length - 1;
       let items = [1, 1];
       let num2 = 1;
@@ -4324,15 +4273,15 @@ let fn = function n() {
           tmp7 = items1;
         } while (num2 < diff);
       }
-      type$p = tmp7;
+      items1 = tmp7;
       fn = function a(arg0) {
-        let closure_0 = arg0;
-        let closure_1 = 1 - arg0;
+        closure_0 = arg0;
+        closure_1 = 1 - arg0;
         const items = [0, 1, 2];
-        return outer1_204(items.map((arg0) => {
-          let closure_0 = arg0;
-          return outer1_4.reduce((arg0, arg1, exponent) => {
-            const result = outer2_5[exponent] * Math.pow(outer1_1, outer2_6 - exponent);
+        return closure_1_204(items.map((arg0) => {
+          closure_0 = arg0;
+          return closure_1_4.reduce((arg0, arg1, exponent) => {
+            result = closure_2_5[exponent] * Math.pow(closure_1_1, closure_2_6 - exponent);
             return arg0 + result * Math.pow(closure_0, exponent) * arg1[closure_0];
           }, 0);
         }), "lab");
@@ -4342,15 +4291,15 @@ let fn = function n() {
       const rangeError = new RangeError("No point in running bezier with only one color.");
       throw rangeError;
     }
-    fn.scale = () => outer1_205(fn);
+    fn.scale = () => closure_1_205(fn);
     return fn;
   };
   chroma$k.blend = blend;
   chroma$k.cubehelix = (arg0, arg1, arg2, arg3, arg4) => {
-    let c0 = arg0;
-    let c1 = arg1;
-    let c2 = arg2;
-    let c3 = arg3;
+    c0 = arg0;
+    c1 = arg1;
+    c2 = arg2;
+    c3 = arg3;
     let tmp = arg4;
     let items1 = arg4;
     if (undefined === arg0) {
@@ -4370,13 +4319,13 @@ let fn = function n() {
       items1 = items;
       tmp = items;
     }
-    let c6 = 0;
+    c6 = 0;
     if (typeof type$p !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let call = toString.call;
     if ("array" === tmp3) {
-      let c5 = items1[1] - items1[0];
+      c5 = items1[1] - items1[0];
     } else {
       c5 = 0;
       items1 = [, ];
@@ -4385,19 +4334,19 @@ let fn = function n() {
     }
     const fn = function f(arg0) {
       const sum = (c0 + 120) / 360 + c1 * arg0;
-      const tmp3 = outer1_211(items1[0] + c5 * arg0, c3);
+      const tmp3 = closure_1_211(items1[0] + c5 * arg0, c3);
       if (0 !== c6) {
         let sum1 = dependencyMap[0] + arg0 * c6;
       } else {
         sum1 = dependencyMap;
       }
-      const result = outer1_210 * sum;
-      const result1 = sum1 * tmp3 * (1 - tmp3) / 2;
-      const tmp9 = outer1_213(result);
-      const tmp10 = outer1_212(result);
+      result = closure_1_210 * sum;
+      result1 = sum1 * tmp3 * (1 - tmp3) / 2;
+      const tmp9 = closure_1_213(result);
+      const tmp10 = closure_1_212(result);
       const items = [255 * (tmp3 + result1 * (-0.14861 * tmp9 + 1.78277 * tmp10)), 255 * (tmp3 + result1 * (-0.29227 * tmp9 - 0.90649 * tmp10)), 255 * (tmp3 + result1 * (1.97294 * tmp9)), 1];
-      outer1_209(items);
-      return outer1_214(items);
+      closure_1_209(items);
+      return closure_1_214(items);
     };
     fn.start = (arg0) => {
       if (null == arg0) {
@@ -4431,14 +4380,14 @@ let fn = function n() {
         let tmp8 = dependencyMap;
       } else {
         dependencyMap = arg0;
-        if (typeof outer1_208 !== "function") {
+        if (typeof closure_1_208 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
         const call = toString.call;
         if ("array" === tmp3) {
           const diff = dependencyMap[1] - dependencyMap[0];
-          let c6 = diff;
+          c6 = diff;
           if (0 == diff) {
             dependencyMap = dependencyMap[1];
           }
@@ -4455,14 +4404,14 @@ let fn = function n() {
       if (null == arg0) {
         let tmp4 = items;
       } else {
-        if (typeof outer1_208 !== "function") {
+        if (typeof closure_1_208 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
         const call = toString.call;
         if ("array" === tmp3) {
           items = arg0;
-          let c5 = arg0[1] - arg0[0];
+          c5 = arg0[1] - arg0[0];
         } else {
           items = [arg0, arg0];
           c5 = 0;
@@ -4473,7 +4422,7 @@ let fn = function n() {
       }
       return tmp4;
     };
-    fn.scale = () => outer1_214.scale(fn);
+    fn.scale = () => closure_1_214.scale(fn);
     fn.hue(c2);
     return fn;
   };
@@ -4495,23 +4444,17 @@ let fn = function n() {
   chroma$k.scale = scale$2;
   chroma$k.analyze = analyze;
   chroma$k.contrast = (arg0, arg1) => {
-    const obj = Color(arg0);
+    obj = Color(arg0);
     const luminanceResult = obj.luminance();
     const luminanceResult1 = Color(arg1).luminance();
     if (luminanceResult > luminanceResult1) {
-      let result = (luminanceResult + 0.05) / (luminanceResult1 + 0.05);
+      result = (luminanceResult + 0.05) / (luminanceResult1 + 0.05);
     } else {
       result = (luminanceResult1 + 0.05) / (luminanceResult + 0.05);
     }
     return result;
   };
   chroma$k.deltaE = (arg0, arg1, arg2, arg3, arg4) => {
-    let tmp2;
-    let tmp3;
-    let tmp4;
-    let tmp6;
-    let tmp7;
-    let tmp8;
     let num = arg2;
     if (undefined === arg2) {
       num = 1;
@@ -4524,21 +4467,21 @@ let fn = function n() {
     if (undefined === arg4) {
       num3 = 1;
     }
-    const obj = Color(arg0);
+    obj = Color(arg0);
     let arr = Array.from(obj.lab());
     [tmp2, tmp3, tmp4] = arr;
     arr = Array.from(Color(arg1).lab());
     [tmp6, tmp7, tmp8] = arr;
-    const result = (tmp2 + tmp6) / 2;
+    result = (tmp2 + tmp6) / 2;
     const obj2 = Color(arg1);
     const tmp12 = pow(tmp3, 2);
     const tmp13 = sqrt(pow(tmp3, 2) + pow(tmp4, 2));
-    const result1 = (tmp13 + sqrt(pow(tmp7, 2) + pow(tmp8, 2))) / 2;
+    result1 = (tmp13 + sqrt(pow(tmp7, 2) + pow(tmp8, 2))) / 2;
     const tmp14 = pow(tmp7, 2);
     const tmp16 = pow(result1, 7);
     const sum = 1 + 0.5 * (1 - sqrt(tmp16 / (pow(result1, 7) + pow(25, 7))));
-    const result2 = tmp3 * sum;
-    const result3 = tmp7 * sum;
+    result2 = tmp3 * sum;
+    result3 = tmp7 * sum;
     const tmp17 = pow(result1, 7);
     const tmp22 = sqrt(pow(result2, 2) + pow(tmp4, 2));
     const tmp21 = pow(result2, 2);
@@ -4591,7 +4534,7 @@ let fn = function n() {
     if (undefined === arg2) {
       str = "lab";
     }
-    const obj = Color(arg0);
+    obj = Color(arg0);
     let value = obj.get(str);
     let num = 0;
     let num2 = 0;

@@ -1,13 +1,11 @@
 // _runtime/08830_getTheme.js
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { DatePickerAndroid } from "getStyle";
-import { colorToHex } from "08835_colorToHex.js";
+import noopDefault from "noop" /* 19 */;
+import colorToHex from "colorToHex" /* 8835 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import { DatePickerAndroid } from "getStyle" /* 8831 */;
 
-let Platform;
-let Text;
-let obj1;
-const require = arg1;
+require = arg1;
 ({ Appearance: obj1, Platform, Text } = get_ActivityIndicator);
 function getTheme(arg0) {
 
@@ -25,7 +23,7 @@ function getTitle(arg0) {
 
 }
 
-export default require("noop").memo((theme) => {
+export default noopDefault.memo((theme) => {
   const obj = {};
   const merged = Object.assign(theme);
   if (typeof getTextColor !== "function") {

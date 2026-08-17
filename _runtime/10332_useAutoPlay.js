@@ -1,17 +1,17 @@
 // _runtime/10332_useAutoPlay.js
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 
 export const useAutoPlay = function useAutoPlay(autoPlay) {
   autoPlay = autoPlay.autoPlay;
   const React = tmp;
   const autoPlayReverse = autoPlay.autoPlayReverse;
-  let closure_1 = tmp2;
+  closure_1 = tmp2;
   const autoPlayInterval = autoPlay.autoPlayInterval;
   const prev = iter.prev;
   const next = iter.next;
-  let closure_5 = React.useRef();
-  let closure_6 = React.useRef(!tmp);
+  closure_5 = React.useRef();
+  closure_6 = React.useRef(!tmp);
   const items = [undefined !== autoPlayReverse && autoPlayReverse, autoPlayInterval, prev, next];
   const callback = React.useCallback(() => {
     if (!ref2.current) {
@@ -35,7 +35,7 @@ export const useAutoPlay = function useAutoPlay(autoPlay) {
   }, items);
   const items1 = [undefined !== autoPlay && autoPlay];
   const pause = React.useCallback(() => {
-    if (noop) {
+    if (closure_0) {
       if (ref.current) {
         const _clearTimeout = clearTimeout;
         clearTimeout(tmp.current);
@@ -45,14 +45,14 @@ export const useAutoPlay = function useAutoPlay(autoPlay) {
   }, items1);
   const items2 = [callback, undefined !== autoPlay && autoPlay];
   const start = React.useCallback(() => {
-    if (noop) {
+    if (closure_0) {
       closure_6.current = false;
       callback();
     }
   }, items2);
   const items3 = [pause, start, undefined !== autoPlay && autoPlay];
   const effect = React.useEffect(() => {
-    if (noop) {
+    if (closure_0) {
       start();
     } else {
       pause();

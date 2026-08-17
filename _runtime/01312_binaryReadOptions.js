@@ -1,7 +1,7 @@
 // _runtime/01312_binaryReadOptions.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const BinaryReader = require;
 let closure_4 = {
@@ -13,7 +13,7 @@ let closure_4 = {
 class BinaryReader {
   constructor(arg0, arg1) {
     textDecoder = require;
-    tmp2 = outer1_3(this, BinaryReader);
+    tmp2 = closure_3(this, BinaryReader);
     this.varint64 = require("varint64read").varint64read;
     this.uint32 = require("varint64read").varint32read;
     this.buf = global;
@@ -45,7 +45,7 @@ let items = [
           }
         }
       }
-      const error = new Error("illegal tag: field no " + tmp2 + " wire type " + tmp3);
+      error = new Error("illegal tag: field no " + tmp2 + " wire type " + tmp3);
       throw error;
     }
   },
@@ -82,7 +82,7 @@ let items = [
             }
           } else {
             const _Error = Error;
-            const error = new Error("cant skip wire type " + arg0);
+            error = new Error("cant skip wire type " + arg0);
             throw error;
           }
         }
@@ -131,9 +131,7 @@ let items = [
   {
     key: "sint64",
     value: function sint64() {
-      let tmp2;
-      let tmp3;
-      [tmp2, tmp3] = _slicedToArray(this.varint64(), 2);
+      [tmp2, tmp3] = callback(this.varint64(), 2);
       const pbLong = new BinaryReader(1314).PbLong((tmp2 >>> 1 | (1 & tmp3) << 31) ^ tmp4, tmp3 >>> 1 ^ tmp4);
       return pbLong;
     }
@@ -141,7 +139,7 @@ let items = [
   {
     key: "bool",
     value: function bool() {
-      const tmp = _slicedToArray(this.varint64(), 2);
+      const tmp = callback(this.varint64(), 2);
       return 0 !== tmp[0] || 0 !== tmp[1];
     }
   },

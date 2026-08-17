@@ -1,5 +1,5 @@
 // _runtime/00995_flushWithTimeout.js
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function flushWithTimeout(arg0) {
   const self = this;
@@ -13,24 +13,24 @@ function flushWithTimeout(arg0) {
 }
 function _flushWithTimeout() {
   const self = this;
-  const tmp = asyncGeneratorStep((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+  const tmp = callback((arg0) => {
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
-      let closure_2 = tmp3;
-      let c4 = 1;
-      const debug3 = callback(outer1_1[1]).debug;
+      closure_2 = tmp3;
+      c4 = 1;
+      const debug3 = callback(closure_1_1[1]).debug;
       debug3.log("Flushing events...");
-      const obj1 = callback(outer1_1[2]);
+      obj1 = callback(closure_1_1[2]);
       yield obj1.flush(callback);
       if (1 === tmp7) {
         c4 = 0;
         callback = closure_3;
         const debug2 = callback(824).debug;
         debug2.log("Error while flushing events:\n", callback);
-        let c6 = 3;
+        c6 = 3;
       } else if (arg0 === 1) {
         c6 = 3;
         throw arg1;
@@ -43,7 +43,7 @@ function _flushWithTimeout() {
       return arg1;
     })();
   });
-  const _flushWithTimeout = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -54,10 +54,10 @@ function _flushWithTimeout() {
 }
 function _flushIfServerless() {
   const self = this;
-  const tmp = asyncGeneratorStep(() => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+  const tmp = callback(() => {
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*() {
       if (c4 === 2) {
         c4 = 3;
@@ -87,7 +87,7 @@ function _flushIfServerless() {
             } else {
               let num4 = tmp5;
               let timeout = tmp2;
-              let obj1;
+              obj1 = undefined;
               if (obj1 === undefined) {
                 obj1 = {};
               }
@@ -193,7 +193,7 @@ function _flushIfServerless() {
     iter.next();
     return iter;
   });
-  const _flushIfServerless = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

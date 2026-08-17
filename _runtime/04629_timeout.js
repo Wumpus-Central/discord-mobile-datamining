@@ -1,6 +1,6 @@
 // _runtime/04629_timeout.js
 exports.exports.timeout = (arg0, arg1) => {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   if (typeof closure_0 !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -12,20 +12,20 @@ exports.exports.timeout = (arg0, arg1) => {
   }
   new.target.stack = Error().stack;
   new.target.message = "Timeout";
-  let closure_2 = tmp;
+  closure_2 = tmp;
   const items = [
     arg0,
     new Promise((arg0, arg1) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const timeout = setTimeout(() => {
-        callback(outer1_2);
+        callback(closure_1_2);
       }, closure_0);
     })
   ];
   const promise = new Promise((arg0, arg1) => {
-    let closure_0 = arg1;
+    closure_0 = arg1;
     const timeout = setTimeout(() => {
-      callback(outer1_2);
+      callback(closure_1_2);
     }, closure_0);
   });
   return Promise.race(items).then((arg0) => {

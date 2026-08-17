@@ -1,10 +1,10 @@
 // _runtime/06648_offsetComparator.js
-import noop from "noop";
-import { Children } from "noop";
-import { processColor } from "get ActivityIndicator";
-import { extractOpacity } from "06577_extractOpacity.js";
-import { appendTransformProps } from "06579_appendTransformProps.js";
-import { 06649__ } from "metro/06649__.js";
+import extractOpacityDefault from "extractOpacity" /* 6577 */;
+import appendTransformPropsDefault from "appendTransformProps" /* 6579 */;
+import _modDef6649 from "module_6649" /* 6649 */;
+import closure_2 from "noop" /* 19 */;
+import { Children } from "noop" /* 19 */;
+import { processColor } from "get ActivityIndicator" /* 17 */;
 
 const re5 = /^([+-]?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)(%?)$/;
 function offsetComparator(arg0, arg1) {
@@ -12,17 +12,11 @@ function offsetComparator(arg0, arg1) {
 }
 
 export default function extractGradient(arg0, arg1) {
-  let children;
-  let gradientTransform;
-  let gradientUnits;
-  let id;
-  let offset;
-  let style;
-  const importDefault = arg1;
+  importDefault = arg1;
   ({ id, children, gradientTransform, gradientUnits } = arg0);
   if (id) {
     if (children) {
-      let mapped = Children.map(children, (arg0) => outer1_2.cloneElement(arg0, { parent: closure_0 }));
+      let mapped = Children.map(children, (arg0) => closure_1_2.cloneElement(arg0, { parent: closure_0 }));
     } else {
       mapped = [];
     }
@@ -96,7 +90,7 @@ export default function extractGradient(arg0, arg1) {
             let _Math = Math;
             let tmp12 = importDefault;
             let tmp13 = dependencyMap;
-            let items1 = [num9, 16777215 & tmp10 | Math.round(255 * extractOpacity(stopOpacity)) << 24];
+            let items1 = [num9, 16777215 & tmp10 | Math.round(255 * extractOpacityDefault(stopOpacity)) << 24];
             let arr = items.push(items1);
           }
           num7 = num7 + 1;
@@ -123,7 +117,7 @@ export default function extractGradient(arg0, arg1) {
     obj[2] = mapped;
     let num12 = gradientUnits;
     if (gradientUnits) {
-      num12 = 06649__[gradientUnits];
+      num12 = _modDef6649[gradientUnits];
     }
     if (!num12) {
       num12 = 0;
@@ -135,7 +129,7 @@ export default function extractGradient(arg0, arg1) {
     if (!gradientTransform) {
       gradientTransform = arg0;
     }
-    obj[4] = appendTransformProps(gradientTransform);
+    obj[4] = appendTransformPropsDefault(gradientTransform);
     return obj;
   } else {
     return null;

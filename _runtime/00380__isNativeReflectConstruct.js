@@ -1,18 +1,19 @@
 // _runtime/00380__isNativeReflectConstruct.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
-import _classPrivateFieldBase from "_classPrivateFieldBase";
-import importDefaultResult2 from "_classPrivateFieldKey";
-import importDefaultResult1 from "_inherits";
-import { flattenStyle } from "00148_flattenStyle.js";
-import { set } from "00357_set.js";
-import { _assertNativeAnimatedModule } from "00367__assertNativeAnimatedModule.js";
-import { _isNativeReflectConstruct } from "00381__isNativeReflectConstruct.js";
-import { 00038__ } from "metro/00038__.js";
+import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
+import _modDef38 from "module_38" /* 38 */;
+import flattenStyleDefault from "flattenStyle" /* 148 */;
+import setDefault from "set" /* 357 */;
+import _assertNativeAnimatedModuleDefault from "_assertNativeAnimatedModule" /* 367 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 381 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_classCallCheck" /* 41 */;
+import closure_6 from "_possibleConstructorReturn" /* 93 */;
+import closure_7 from "_getPrototypeOf" /* 95 */;
+import closure_8 from "_get" /* 96 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_9 from "_classPrivateFieldBase" /* 90 */;
+import importDefaultResult2 from "_classPrivateFieldKey" /* 91 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
 
 const AnimatedProps = arg1;
 function _isNativeReflectConstruct() {
@@ -26,35 +27,35 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 function _connectAnimatedView2(instance) {
   const self = this;
-  00038__(this.__isNative, "Expected node to be marked as \"native\"");
+  _modDef38(this.__isNative, "Expected node to be marked as \"native\"");
   const findNodeHandleResult = AnimatedProps(114).findNodeHandle(instance.instance);
   if (null == findNodeHandleResult) {
     const _Error = Error;
-    const error = new Error("Unable to locate attached view in the native tree");
+    error = new Error("Unable to locate attached view in the native tree");
     throw error;
   } else {
-    const API = tmp(357).API;
+    const API = setDefault.API;
     const result = API.connectAnimatedNodeToView(self.__getNativeTag(), findNodeHandleResult);
     instance.connectedViewTag = findNodeHandleResult;
   }
   const obj = AnimatedProps(114);
-  tmp = importDefault;
+  const tmp = importDefault;
 }
 function _connectShadowNode2(instance) {
   if (obj.cxxNativeAnimatedEnabled()) {
     if (tmpResult.useSharedAnimatedBackend()) {
       const self = this;
-      00038__(this.__isNative, "Expected node to be marked as \"native\"");
+      _modDef38(this.__isNative, "Expected node to be marked as \"native\"");
       const nodeFromPublicInstance = AnimatedProps(272).getNodeFromPublicInstance(instance.instance);
       if (null != nodeFromPublicInstance) {
         const API = tmp4(357).API;
@@ -63,15 +64,15 @@ function _connectShadowNode2(instance) {
       const obj3 = AnimatedProps(272);
       tmp4 = importDefault;
     }
-    tmpResult = importAll(27);
+    tmpResult = javaScriptFlagGetterAll;
   }
 }
 function _disconnectAnimatedView2(connectedViewTag) {
   const self = this;
-  00038__(this.__isNative, "Expected node to be marked as \"native\"");
+  _modDef38(this.__isNative, "Expected node to be marked as \"native\"");
   connectedViewTag = connectedViewTag.connectedViewTag;
   if (null != connectedViewTag) {
-    const API = set.API;
+    const API = setDefault.API;
     const result = API.disconnectAnimatedNodeFromView(self.__getNativeTag(), connectedViewTag);
     connectedViewTag.connectedViewTag = null;
   }
@@ -82,12 +83,12 @@ let closure_13 = importDefaultResult2("disconnectAnimatedView");
 class AnimatedProps {
   constructor(arg0, arg1, arg2, arg3, arg4) {
     self = this;
-    tmp = outer1_5(this, AnimatedProps);
+    tmp = closure_5(this, AnimatedProps);
     items = [];
     items[0] = module;
-    tmp2 = __esModule;
-    obj = __esModule(AnimatedProps);
-    tmp3 = __esModule;
+    tmp2 = closure_7;
+    obj = closure_7(AnimatedProps);
+    tmp3 = closure_6;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -97,11 +98,11 @@ class AnimatedProps {
     }
     tmp3Result = tmp3(self, constructResult);
     obj = { value: _disconnectAnimatedView2 };
-    definePropertyResult = Object.defineProperty(tmp3Result, disconnectAnimatedView, obj);
+    definePropertyResult = Object.defineProperty(tmp3Result, closure_13, obj);
     obj1 = { value: _connectShadowNode2 };
-    definePropertyResult1 = Object.defineProperty(tmp3Result, connectShadowNode, obj1);
+    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_12, obj1);
     obj2 = { value: _connectAnimatedView2 };
-    definePropertyResult2 = Object.defineProperty(tmp3Result, connectAnimatedView, obj2);
+    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_11, obj2);
     tmp3Result._target = null;
     tmp3Result._rootTag = undefined;
     items1 = [];
@@ -165,14 +166,14 @@ class AnimatedProps {
     items3[0] = items1;
     items3[1] = items2;
     items3[2] = obj3;
-    tmp24 = outer1_4(items3, 3);
+    tmp24 = closure_4(items3, 3);
     [tmp6._nodeKeys, tmp6._nodes, tmp6._props] = tmp24;
     tmp3Result._callback = arg1;
     tmp3Result._rootTag = importAll;
     return tmp3Result;
   }
 }
-require("_inherits")(AnimatedProps, require("_assertNativeAnimatedModule"));
+importDefaultResult1(AnimatedProps, _assertNativeAnimatedModuleDefault);
 let items = [
   {
     key: "__getValue",
@@ -185,7 +186,7 @@ let items = [
         let tmp2 = importDefault;
         let tmp3 = dependencyMap;
         let tmp4 = num;
-        if (obj2 instanceof _assertNativeAnimatedModule) {
+        if (obj2 instanceof _assertNativeAnimatedModuleDefault) {
           obj[tmp] = obj2.__getValue();
         } else {
           let tmp5 = AnimatedProps;
@@ -216,8 +217,8 @@ let items = [
           if ("style" === tmp2) {
             let tmp8 = importDefault;
             let tmp9 = dependencyMap;
-            tmp10 = flattenStyle(style.style);
-            if (obj2 instanceof _isNativeReflectConstruct) {
+            tmp10 = flattenStyleDefault(style.style);
+            if (obj2 instanceof _isNativeReflectConstructDefault) {
               break;
             } else {
               obj[tmp2] = tmp10;
@@ -225,7 +226,7 @@ let items = [
           } else {
             let tmp4 = importDefault;
             let tmp5 = dependencyMap;
-            if (obj2 instanceof _assertNativeAnimatedModule) {
+            if (obj2 instanceof _assertNativeAnimatedModuleDefault) {
               obj[tmp2] = obj2.__getValue();
             } else {
               let tmp6 = AnimatedProps;
@@ -295,7 +296,7 @@ let items = [
         let obj = _nodes[num];
         let __addChildResult = obj.__addChild(self);
       }
-      let fn = callback4(callback3(self.prototype), "__attach", self);
+      fn = callback4(callback3(self.prototype), "__attach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -320,7 +321,7 @@ let items = [
         let obj = _nodes[num];
         let __removeChildResult = obj.__removeChild(self);
       }
-      let fn = callback4(callback3(self.prototype), "__detach", self);
+      fn = callback4(callback3(self.prototype), "__detach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -344,7 +345,7 @@ let items = [
       }
       if (!self.__isNative) {
         self.__isNative = true;
-        let fn;
+        fn = undefined;
         fn = callback4(callback3(self.prototype), "__setPlatformConfig", self);
         if (typeof fn === "function") {
           fn = (items) => fn.apply(self, items);
@@ -388,7 +389,7 @@ let items = [
     value: function __restoreDefaultValues() {
       const self = this;
       if (this.__isNative) {
-        const API = set.API;
+        const API = setDefault.API;
         API.restoreDefaultValues(self.__getNativeTag());
       }
     }
@@ -404,10 +405,8 @@ let items = [
         let __makeNativeResult = obj2.__makeNative(tmp);
         obj[this._nodeKeys[num]] = obj2.__getNativeTag();
       }
-      obj = { type: "props", props: obj, rootTag: null, debugID: null };
-      const _rootTag = self._rootTag;
-      obj[2] = _rootTag;
-      obj[3] = self.__getDebugID();
+      obj = { type: "props", props: obj, rootTag: _rootTag, debugID: self.__getDebugID() };
+      _rootTag = self._rootTag;
       return obj;
     }
   }
@@ -424,7 +423,7 @@ let obj = {
       let tmp2 = importDefault;
       let tmp3 = dependencyMap;
       let tmp4 = num;
-      if (obj2 instanceof _assertNativeAnimatedModule) {
+      if (obj2 instanceof _assertNativeAnimatedModuleDefault) {
         obj[tmp] = obj2.__getValue();
       } else {
         let tmp5 = AnimatedProps;

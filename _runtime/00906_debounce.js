@@ -1,8 +1,8 @@
 // _runtime/00906_debounce.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.debounce = function debounce(arg0, arg1, maxWait) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   function invokeFunc() {
     if (undefined !== c3) {
       const _clearTimeout = clearTimeout;
@@ -15,7 +15,7 @@ arg5.debounce = function debounce(arg0, arg1, maxWait) {
     c4 = undefined;
     c3 = undefined;
     const tmp7 = callback();
-    let closure_2 = tmp7;
+    closure_2 = tmp7;
     return tmp7;
   }
   maxWait = undefined;

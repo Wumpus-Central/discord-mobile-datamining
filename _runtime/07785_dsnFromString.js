@@ -1,12 +1,12 @@
 // _runtime/07785_dsnFromString.js
-import _slicedToArray from "_slicedToArray";
+import closure_2 from "_slicedToArray" /* 32 */;
 import { consoleSandbox } from "07738_consoleSandbox.js";
 
 function dsnFromString(arg0) {
   const _require = arg0;
   const match = regex.exec(arg0);
   if (match) {
-    const tmp5 = _slicedToArray(match.slice(1), 6);
+    const tmp5 = callback(match.slice(1), 6);
     let str = tmp5[1];
     let str3 = "";
     if (undefined !== tmp5[2]) {
@@ -72,13 +72,6 @@ const re3 = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
 
 export { dsnFromString };
 export const dsnToString = function dsnToString(arg0) {
-  let host;
-  let pass;
-  let path;
-  let port;
-  let projectId;
-  let protocol;
-  let publicKey;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -105,9 +98,6 @@ export const dsnToString = function dsnToString(arg0) {
   return "" + protocol + "://" + publicKey + str + "@" + host + str3 + "/" + combined + projectId;
 };
 export const makeDsn = function makeDsn(str) {
-  let port;
-  let projectId;
-  let protocol;
   if (typeof str === "string") {
     let obj = dsnFromString(str);
   } else {
@@ -121,7 +111,7 @@ export const makeDsn = function makeDsn(str) {
     obj[6] = str.projectId;
   }
   if (obj) {
-    let error = obj;
+    error = obj;
     let flag = true;
     if (obj(7737).DEBUG_BUILD) {
       ({ port, projectId, protocol } = obj);
@@ -129,7 +119,7 @@ export const makeDsn = function makeDsn(str) {
       const found = items.find((arg0) => {
         let flag = !tmp;
         if (!obj[arg0]) {
-          const logger = obj(outer1_1[1]).logger;
+          const logger = obj(closure_1_1[1]).logger;
           const _HermesInternal = HermesInternal;
           logger.error("Invalid Sentry Dsn: " + arg0 + " missing");
           flag = true;

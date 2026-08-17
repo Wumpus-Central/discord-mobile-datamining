@@ -1,9 +1,11 @@
 // _runtime/00325__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
+import noopAll from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_5 from "_get" /* 96 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 const StateSafePureComponent = importDefault;
 function _isNativeReflectConstruct() {
@@ -17,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -28,12 +30,12 @@ function _isNativeReflectConstruct() {
 class StateSafePureComponent {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, StateSafePureComponent);
+    tmp = closure_2(this, StateSafePureComponent);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(StateSafePureComponent);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(StateSafePureComponent);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -47,7 +49,7 @@ class StateSafePureComponent {
     return tmp3Result;
   }
 }
-require("_inherits")(StateSafePureComponent, require("noop").PureComponent);
+_inheritsDefault(StateSafePureComponent, noopAll.PureComponent);
 let items = [
   {
     key: "setState",
@@ -88,27 +90,25 @@ let items = [
   {
     key: "_installSetStateHooks",
     value: function _installSetStateHooks() {
-      let _classCallCheck;
-      let dependencyMap;
       const self = this;
-      ({ props: dependencyMap, state: _classCallCheck } = this);
+      ({ props: dependencyMap, state: closure_2 } = this);
       let obj = {
         get() {
-          self(outer1_1[7])(!self._inAsyncStateUpdate, "\"this.props\" should not be accessed during state updates");
+          self(closure_1_1[7])(!self._inAsyncStateUpdate, "\"this.props\" should not be accessed during state updates");
           return closure_1;
         },
         set(arg0) {
-          let closure_1 = arg0;
+          closure_1 = arg0;
         }
       };
       Object.defineProperty(this, "props", obj);
       obj = {
         get() {
-          self(outer1_1[7])(!self._inAsyncStateUpdate, "\"this.state\" should not be acceessed during state updates");
-          return _classCallCheck;
+          self(closure_1_1[7])(!self._inAsyncStateUpdate, "\"this.state\" should not be acceessed during state updates");
+          return closure_2;
         },
         set(arg0) {
-          let _classCallCheck = arg0;
+          closure_2 = arg0;
         }
       };
       Object.defineProperty(this, "state", obj);

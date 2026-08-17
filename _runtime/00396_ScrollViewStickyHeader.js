@@ -1,18 +1,13 @@
 // _runtime/00396_ScrollViewStickyHeader.js
-import _slicedToArray from "_slicedToArray";
-import closure_4 from "noop";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
-({ cloneElement: c5, useCallback: closure_6, useEffect: error, useMemo: metroImportAll, useRef: c9, useState: c10 } = noop);
-let closure_12 = require("get hairlineWidth").create({ fill: { flex: 1 }, header: { zIndex: 10 } });
+({ cloneElement: c5, useCallback: closure_6, useEffect: error, useMemo: closure_8, useRef: c9, useState: c10 } = noop);
+let closure_12 = get_hairlineWidthDefault.create({ fill: { flex: 1 }, header: { zIndex: 10 } });
 
 export default function ScrollViewStickyHeader(ref) {
   let merged = Object.assign(ref, Object.create(null));
@@ -27,16 +22,16 @@ export default function ScrollViewStickyHeader(ref) {
   let first2;
   let callback3;
   let first3;
-  let closure_12;
+  closure_12 = undefined;
   let first4;
-  let closure_14;
+  closure_14 = undefined;
   let first5;
-  let closure_16;
-  let c17;
-  let closure_18;
-  let closure_19;
-  let closure_20;
-  let c21;
+  closure_16 = undefined;
+  closure_17 = undefined;
+  closure_18 = undefined;
+  closure_19 = undefined;
+  closure_20 = undefined;
+  closure_21 = undefined;
   inverted = merged.inverted;
   scrollViewHeight = merged.scrollViewHeight;
   hiddenOnScroll = merged.hiddenOnScroll;
@@ -85,11 +80,11 @@ export default function ScrollViewStickyHeader(ref) {
     }
     return diffClampResult;
   }, items);
-  c17 = tmp18;
+  closure_17 = tmp18;
   const tmp19 = hiddenOnScroll(callback3(() => {
     const interpolateResult = scrollAnimatedValue.interpolate({ inputRange: [-1, 0], outputRange: [0, 0] });
     let addResult = interpolateResult;
-    if (null != c17) {
+    if (null != closure_17) {
       addResult = inverted(scrollViewHeight[5]).add(interpolateResult, tmp2);
       const obj = inverted(scrollViewHeight[5]);
     }
@@ -110,7 +105,7 @@ export default function ScrollViewStickyHeader(ref) {
   }, items1);
   const tmp21 = callback((value) => {
     value = value.value;
-    const merged = value;
+    merged = value;
     if (0 === value) {
       if (!ref.current) {
         tmp.current = true;
@@ -120,9 +115,9 @@ export default function ScrollViewStickyHeader(ref) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp2.current);
     }
-    ref2.current = setTimeout(() => outer1_12(closure_0), 15);
+    ref2.current = setTimeout(() => closure_1_12(closure_0), 15);
   }, []);
-  c21 = tmp21;
+  closure_21 = tmp21;
   const items2 = [first4, first, first2, first1, scrollViewHeight, scrollAnimatedValue, inverted, tmp18, tmp21, first5];
   first1(() => {
     const items = [-1, 0];
@@ -167,21 +162,21 @@ export default function ScrollViewStickyHeader(ref) {
     const interpolateResult = scrollAnimatedValue.interpolate({ inputRange: items, outputRange: items1 });
     inverted = interpolateResult;
     let obj = interpolateResult;
-    if (null != c17) {
+    if (null != closure_17) {
       const addResult = inverted(scrollViewHeight[5]).add(interpolateResult, tmp18);
       inverted = addResult;
       obj = addResult;
       const obj2 = inverted(scrollViewHeight[5]);
     }
     if (first5) {
-      let closure_0 = obj.addListener(c21);
+      closure_0 = obj.addListener(closure_21);
     }
     callback5(obj);
     return () => {
       if (closure_0) {
         addResult.removeListener(tmp);
       }
-      if (null != outer1_20.current) {
+      if (null != closure_1_20.current) {
         const _clearTimeout = clearTimeout;
         clearTimeout(tmp4.current);
       }
@@ -203,7 +198,19 @@ export default function ScrollViewStickyHeader(ref) {
       tmp24 = obj;
     }
   }
-  const obj1 = {
+  const tmp17 = inverted(scrollViewHeight[4])(callback((closure_0) => {
+    if (null != closure_0) {
+      closure_0.setNextHeaderY = closure_14;
+      callback4(merged(scrollViewHeight[3]).isPublicInstance(closure_0));
+      const obj = merged(scrollViewHeight[3]);
+    }
+  }, []), ref.ref);
+  const items4 = [onlyResult.props.style, closure_12.header, ];
+  const items5 = [{ translateY: tmp19[0] }];
+  items4[2] = { transform: items5 };
+  let obj2 = { onLayout: "Array", style: 0 };
+  obj2[1] = closure_12.fill;
+  return first3(tmp15(tmp16[5]).View, {
     collapsable: false,
     nativeID: merged.nativeID,
     onLayout(nativeEvent) {
@@ -227,13 +234,6 @@ export default function ScrollViewStickyHeader(ref) {
     }, []), ref.ref),
     style: items4,
     passthroughAnimatedPropExplicitValues: tmp24,
-    children: null
-  };
-  items4 = [onlyResult.props.style, closure_12.header, ];
-  const items5 = [{ translateY: tmp19[0] }];
-  items4[2] = { transform: items5 };
-  let obj2 = { onLayout: "Array", style: 0 };
-  obj2[1] = closure_12.fill;
-  obj1[6] = first(onlyResult, obj2);
-  return first3(tmp15(tmp16[5]).View, obj1);
+    children: first(onlyResult, obj2)
+  });
 };

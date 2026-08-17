@@ -21,8 +21,8 @@ arg5.PROFILE_QUEUE = {
     dependencyMap[arg0] = arg1;
   },
   clear() {
-    let closure_1 = {};
-    let closure_0 = [];
+    closure_1 = {};
+    closure_0 = [];
   },
   get(arg0) {
     return dependencyMap[arg0];

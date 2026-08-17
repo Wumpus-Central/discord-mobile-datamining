@@ -1,4 +1,7 @@
 // _runtime/metro/12267__.js
+import _mod12199 from "module_12199" /* 12199 */;
+import _mod12265 from "module_12265" /* 12265 */;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -68,9 +71,9 @@ if (self2) {
     exports.duration = function duration(enc) {
       return closure_3._isoDuration(exports.ZodISODuration, enc);
     };
-    const fnResult = fn(require("module_12199"));
+    const fnResult = fn(_mod12199);
     let c3 = fnResult;
-    let closure_4 = fn(require("module_12265"));
+    let closure_4 = fn(_mod12265);
     exports.ZodISODateTime = fnResult.$constructor("ZodISODateTime", (arg0, arg1) => {
       const $ZodISODateTime = closure_3.$ZodISODateTime;
       $ZodISODateTime.init(arg0, arg1);

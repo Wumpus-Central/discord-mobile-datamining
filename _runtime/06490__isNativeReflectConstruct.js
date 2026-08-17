@@ -1,20 +1,16 @@
 // _runtime/06490__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult1 from "_inherits";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import ButtonComponent from "ButtonComponent";
-import { ButtonComponent } from "06473_ButtonComponent.js";
+import ButtonComponentDefault from "ButtonComponent" /* 6473 */;
+import itemsDefault from "items" /* 6491 */;
+import closure_6 from "_objectWithoutProperties" /* 109 */;
+import closure_7 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_8 from "_possibleConstructorReturn" /* 93 */;
+import closure_9 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-let closure_12;
-let map1;
 let InnerBorderlessButton = arg1;
 function _isNativeReflectConstruct() {
   try {
@@ -27,10 +23,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -41,23 +37,24 @@ let closure_5 = ["children", "style", "innerRef", "activeOpacity"];
 const Animated = get_ActivityIndicator.Animated;
 ({ Platform, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
+let closure_15 = itemsDefault(ButtonComponentDefault, { shouldCancelWhenOutside: false, shouldActivateOnStart: false });
 class LegacyRawButton {
   constructor(arg0) {
     obj = {};
     merged = Object.assign(global);
     obj.needsOffscreenAlphaCompositing = true;
-    return jsx(ButtonComponent, obj);
+    return jsx(closure_15, obj);
   }
 }
 class InnerBaseButton {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, apply);
+    tmp = closure_7(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_9;
+    obj = closure_9(closure_0);
+    tmp3 = closure_8;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -66,17 +63,15 @@ class InnerBaseButton {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.handleEvent = (nativeEvent) => {
-      let pointerInside;
-      let state;
       nativeEvent = nativeEvent.nativeEvent;
       ({ state, pointerInside } = nativeEvent);
       let tmp = pointerInside;
       if (pointerInside) {
-        let tmp4 = state === tmp3Result(outer1_2[11]).State.BEGAN;
+        let tmp4 = state === lib(closure_1_2[11]).State.BEGAN;
         if (!tmp4) {
-          tmp4 = state === tmp3Result(outer1_2[11]).State.ACTIVE;
+          tmp4 = state === lib(closure_1_2[11]).State.ACTIVE;
         }
         tmp = tmp4;
       }
@@ -87,10 +82,10 @@ class InnerBaseButton {
       const longPressDetected = tmp7.longPressDetected;
       let onPress = !longPressDetected;
       if (!longPressDetected) {
-        onPress = nativeEvent.oldState === tmp3Result(outer1_2[11]).State.ACTIVE;
+        onPress = nativeEvent.oldState === lib(closure_1_2[11]).State.ACTIVE;
       }
       if (onPress) {
-        onPress = state !== tmp3Result(outer1_2[11]).State.CANCELLED;
+        onPress = state !== lib(closure_1_2[11]).State.CANCELLED;
       }
       if (onPress) {
         onPress = tmp7.lastIsPressed;
@@ -102,8 +97,8 @@ class InnerBaseButton {
         const props2 = tmp7.props;
         props2.onPress(pointerInside);
       }
-      if (!tmp3Result.lastIsPressed) {
-        if (state === tmp3Result(outer1_2[11]).State.BEGAN) {
+      if (!lib.lastIsPressed) {
+        if (state === lib(closure_1_2[11]).State.BEGAN) {
           if (pointerInside) {
             tmp7.longPressDetected = false;
             if (tmp7.props.onLongPress) {
@@ -114,16 +109,16 @@ class InnerBaseButton {
           tmp7.lastIsPressed = tmp;
         }
       }
-      let tmp18 = state !== tmp3Result(outer1_2[11]).State.ACTIVE || pointerInside || undefined === tmp7.longPressTimeout;
+      let tmp18 = state !== lib(closure_1_2[11]).State.ACTIVE || pointerInside || undefined === tmp7.longPressTimeout;
       if (tmp18) {
         let tmp19 = undefined === tmp7.longPressTimeout;
         if (!tmp19) {
-          let tmp22 = state !== tmp3Result(outer1_2[11]).State.END;
+          let tmp22 = state !== lib(closure_1_2[11]).State.END;
           if (tmp22) {
-            tmp22 = state !== tmp3Result(outer1_2[11]).State.CANCELLED;
+            tmp22 = state !== lib(closure_1_2[11]).State.CANCELLED;
           }
           if (tmp22) {
-            tmp22 = state !== tmp3Result(outer1_2[11]).State.FAILED;
+            tmp22 = state !== lib(closure_1_2[11]).State.FAILED;
           }
           tmp19 = tmp22;
         }
@@ -136,27 +131,27 @@ class InnerBaseButton {
       }
     };
     tmp3Result.onLongPress = () => {
-      tmp3Result.longPressDetected = true;
-      const props = tmp3Result.props;
+      lib.longPressDetected = true;
+      const props = lib.props;
       const onLongPress = props.onLongPress;
       if (onLongPress != null) {
         onLongPress();
       }
     };
     tmp3Result.onHandlerStateChange = (arg0) => {
-      const props = tmp3Result.props;
+      const props = lib.props;
       if (props.onHandlerStateChange != null) {
         onHandlerStateChange(arg0);
       }
-      tmp3Result.handleEvent(arg0);
+      lib.handleEvent(arg0);
     };
     tmp3Result.onGestureEvent = (arg0) => {
-      const props = tmp3Result.props;
+      const props = lib.props;
       const onGestureEvent = props.onGestureEvent;
       if (onGestureEvent != null) {
         onGestureEvent(arg0);
       }
-      tmp3Result.handleEvent(arg0);
+      lib.handleEvent(arg0);
     };
     tmp3Result.lastIsPressed = false;
     tmp3Result.longPressDetected = false;
@@ -168,8 +163,6 @@ importDefaultResult1(InnerBaseButton, importAllResult.Component);
 let obj = {
   key: "render",
   value: function render() {
-    let rippleColor;
-    let style;
     const props = this.props;
     ({ rippleColor, style } = props);
     const obj = { ref: this.props.innerRef, rippleColor, style: items };
@@ -187,7 +180,7 @@ class LegacyBaseButton {
   constructor(arg0) {
     obj = { innerRef: global.ref };
     merged = Object.assign(Object.assign(global, Object.create(null)));
-    return jsx(InnerBaseButton, obj);
+    return jsx(closure_17, obj);
   }
 }
 function AnimatedBaseButton(innerRef) {
@@ -198,12 +191,12 @@ const styles = StyleSheet.create({ underlay: { position: "absolute", left: 0, ri
 class InnerRectButton {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, apply);
+    tmp = closure_7(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_9;
+    obj = closure_9(closure_0);
+    tmp3 = closure_8;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -212,9 +205,9 @@ class InnerRectButton {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.onActiveStateChange = (arg0) => {
-      const props = tmp3Result.props;
+      props = props.props;
       const onActiveStateChange = props.onActiveStateChange;
       if (onActiveStateChange != null) {
         onActiveStateChange(arg0);
@@ -230,8 +223,6 @@ importDefaultResult1(InnerRectButton, importAllResult.Component);
 obj = {
   key: "render",
   value: function render() {
-    let children;
-    let style;
     const self = this;
     const props = this.props;
     ({ children, style } = props);
@@ -256,12 +247,12 @@ importDefaultResultResult1.defaultProps = { activeOpacity: 0.105, underlayColor:
 class InnerBorderlessButton {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, apply);
+    tmp = closure_7(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_9;
+    obj = closure_9(closure_0);
+    tmp3 = closure_8;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -270,9 +261,9 @@ class InnerBorderlessButton {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.onActiveStateChange = (arg0) => {
-      const props = tmp3Result.props;
+      props = props.props;
       const onActiveStateChange = props.onActiveStateChange;
       if (onActiveStateChange != null) {
         onActiveStateChange(arg0);
@@ -287,9 +278,6 @@ importDefaultResult1(InnerBorderlessButton, importAllResult.Component);
 obj = {
   key: "render",
   value: function render() {
-    let children;
-    let innerRef;
-    let style;
     const props = this.props;
     ({ children, style, innerRef } = props);
     const obj = {};
@@ -320,5 +308,5 @@ export const LegacyPureNativeButton = (arg0) => {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.needsOffscreenAlphaCompositing = true;
-  return callback4(ButtonComponent, obj);
+  return callback4(ButtonComponentDefault, obj);
 };

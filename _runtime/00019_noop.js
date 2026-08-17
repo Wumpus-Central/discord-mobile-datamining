@@ -1,3 +1,5 @@
 // _runtime/00019_noop.js
+import noop from "noop" /* 20 */;
 
-export { default } from "noop";
+
+export default noop;

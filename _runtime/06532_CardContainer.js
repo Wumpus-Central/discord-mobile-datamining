@@ -1,67 +1,14 @@
 // _runtime/06532_CardContainer.js
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let c5;
 const require = arg1;
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const styles = StyleSheet.create({ container: { flex: 1 }, header: { zIndex: 1 }, scene: { flex: 1 } });
 
 export const CardContainer = importAllResult.memo(function CardContainerInner(active) {
-  let animation;
-  let c10;
-  let c11;
-  let c12;
-  let cardOverlay;
-  let cardOverlayEnabled;
-  let cardShadowEnabled;
-  let cardStyle;
-  let cardStyleInterpolator;
-  let closing;
-  let closure_2;
-  let closure_3;
-  let closure_4;
-  let closure_5;
-  let closure_6;
-  let closure_7;
-  let dependencyMap;
-  let detachCurrentScreen;
-  let focused;
-  let gesture;
-  let gestureDirection;
-  let gestureEnabled;
-  let gestureResponseDistance;
-  let gestureVelocityImpact;
-  let getFocusedRoute;
-  let getPreviousScene;
-  let hasAbsoluteFloatHeader;
-  let headerHeight;
-  let headerMode;
-  let headerShown;
-  let index;
-  let interpolationIndex;
-  let isNextScreenTransparent;
-  let isParentHeaderShown;
-  let layout;
-  let modal;
-  let onHeaderHeightChange;
-  let opening;
-  let options;
-  let preloaded;
-  let presentation;
-  let renderHeader;
-  let route;
-  let safeAreaInsetBottom;
-  let safeAreaInsetLeft;
-  let safeAreaInsetRight;
-  let safeAreaInsetTop;
-  let scene;
-  let transitionSpec;
   active = active.active;
   ({ focused, getPreviousScene, headerHeight, isParentHeaderShown, layout, onCloseRoute: dependencyMap, onOpenRoute: closure_2, onGestureCancel: closure_3, onGestureEnd: closure_4, onGestureStart: closure_5, onTransitionEnd: closure_6, onTransitionStart: closure_7, scene } = active);
   let ref;
@@ -70,11 +17,11 @@ export const CardContainer = importAllResult.memo(function CardContainerInner(ac
   c12 = undefined;
   let headerTitle;
   let href;
-  let c15;
+  closure_15 = undefined;
   let obj = importAllResult;
   ({ interpolationIndex, index, opening, closing, gesture, modal, getFocusedRoute, hasAbsoluteFloatHeader, onHeaderHeightChange, isNextScreenTransparent, detachCurrentScreen, preloaded, renderHeader, safeAreaInsetBottom, safeAreaInsetLeft, safeAreaInsetRight, safeAreaInsetTop } = active);
   ref = importAllResult.useRef(null);
-  let obj1 = active(1501);
+  obj1 = active(1501);
   let num = importAllResult.useContext(active(6319).HeaderHeightContext);
   let tmp4 = focused;
   if (focused) {
@@ -99,10 +46,10 @@ export const CardContainer = importAllResult.memo(function CardContainerInner(ac
         });
       }
     }
-    const active = addListenerResult;
+    active = addListenerResult;
     return () => {
       if (closure_0) {
-        const next = outer1_8.progress.next;
+        const next = closure_1_8.progress.next;
         if (next != null) {
           const removeListener = next.removeListener;
           if (removeListener != null) {
@@ -125,10 +72,10 @@ export const CardContainer = importAllResult.memo(function CardContainerInner(ac
     tmp9 = headerTitle;
     const tmp2Result2 = tmp2(6319);
   }
-  c15 = tmp12;
+  closure_15 = tmp12;
   const items1 = [null != previousScene, tmp9, tmp8];
   const memo = obj.useMemo(() => {
-    if (c15) {
+    if (closure_15) {
       const obj = { href: null, title: null };
       obj[0] = href;
       obj[1] = headerTitle;

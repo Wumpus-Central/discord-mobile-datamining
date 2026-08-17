@@ -1,8 +1,8 @@
 // _runtime/03687_eachWeekendOfMonth.js
-import eachWeekendOfInterval from "eachWeekendOfInterval";
-import startOfMonth from "startOfMonth";
-import endOfMonth from "endOfMonth";
-import requiredArgs from "requiredArgs";
+import eachWeekendOfInterval from "eachWeekendOfInterval" /* 3686 */;
+import startOfMonth from "startOfMonth" /* 3688 */;
+import endOfMonth from "endOfMonth" /* 3673 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!eachWeekendOfInterval) {
   let obj = { default: null };
@@ -11,7 +11,7 @@ if (!eachWeekendOfInterval) {
 } else {
   tmp3 = eachWeekendOfInterval;
 }
-let c0 = tmp3;
+eachWeekendOfInterval = tmp3;
 if (!startOfMonth) {
   obj = { default: null };
   obj[0] = startOfMonth;
@@ -19,7 +19,7 @@ if (!startOfMonth) {
 } else {
   tmp5 = startOfMonth;
 }
-let closure_1 = tmp5;
+startOfMonth = tmp5;
 if (!endOfMonth) {
   obj = { default: null };
   obj[0] = endOfMonth;
@@ -27,19 +27,19 @@ if (!endOfMonth) {
 } else {
   tmp7 = endOfMonth;
 }
-let obj1 = tmp7;
+endOfMonth = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c3 = tmp9;
+requiredArgs = tmp9;
 
 export default function eachWeekendOfMonth(arg0) {
-  tmp9.default(1, arguments);
-  const defaultResult1 = tmp5.default(arg0);
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = startOfMonth.default(arg0);
   if (isNaN(defaultResult1.getTime())) {
     const _RangeError = RangeError;
     const rangeError = new RangeError("The passed date is invalid");
@@ -47,8 +47,8 @@ export default function eachWeekendOfMonth(arg0) {
   } else {
     const obj = { start: null, end: null };
     obj[0] = defaultResult1;
-    obj[1] = tmp7.default(arg0);
-    return tmp3.default(obj);
+    obj[1] = endOfMonth.default(arg0);
+    return eachWeekendOfInterval.default(obj);
   }
 };
 export default exports.default;

@@ -1,6 +1,7 @@
 // _runtime/01003_getExpoConstants.js
-import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
-const require = arg1;
+import RN_GLOBAL_OBJ from "RN_GLOBAL_OBJ" /* 816 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.getExpoConstants = function getExpoConstants() {
   const expo = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.expo;

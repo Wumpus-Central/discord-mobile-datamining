@@ -1,6 +1,6 @@
 // _runtime/07813__getEventFilterUrl.js
-import setupIntegration from "setupIntegration";
-import { __SENTRY_DEBUG__ } from "metro/07766___SENTRY_DEBUG__.js";
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7766 */;
+import setupIntegration from "setupIntegration" /* 7794 */;
 
 function _getEventFilterUrl(arg0) {
   try {
@@ -9,7 +9,7 @@ function _getEventFilterUrl(arg0) {
     if (frames) {
       tmp4 = (function _getLastValidUrl(frames) {
         let tmp2;
-        let items = frames;
+        items = frames;
         if (frames === undefined) {
           items = [];
         }
@@ -54,14 +54,14 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
     name: "InboundFilters",
     processEvent(type, arg1, getOptions) {
       let options = getOptions.getOptions();
-      let obj = items2;
+      obj = items2;
       if (items2 === undefined) {
         obj = {};
       }
       if (options === undefined) {
         options = {};
       }
-      let items = [...obj.allowUrls || [], ...tmp2];
+      items = [...obj.allowUrls || [], ...tmp2];
       const items1 = [...obj.denyUrls || [], ...tmp4];
       items2 = [...obj.ignoreErrors || [], ...tmp6, ...tmp7];
       const items3 = [...obj.ignoreTransactions || [], ...tmp9];
@@ -74,12 +74,12 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
           }
         })(type)) {
           let flag6 = true;
-          if (obj(outer1_1[1]).DEBUG_BUILD) {
-            const logger6 = obj(outer1_1[2]).logger;
+          if (obj(closure_1_1[1]).DEBUG_BUILD) {
+            const logger6 = obj(closure_1_1[2]).logger;
             const _HermesInternal6 = HermesInternal;
-            logger6.warn("Event dropped due to being internal Sentry Error.\nEvent: " + obj(outer1_1[3]).getEventDescription(type));
+            logger6.warn("Event dropped due to being internal Sentry Error.\nEvent: " + obj(closure_1_1[3]).getEventDescription(type));
             flag6 = true;
-            const obj12 = obj(outer1_1[3]);
+            const obj12 = obj(closure_1_1[3]);
           }
         }
         let tmp77 = null;
@@ -93,7 +93,7 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
         flag = false;
         if (items2.length) {
           flag = (function _getPossibleEventMessages(message) {
-            const items = [];
+            items = [];
             if (message.message) {
               items.push(message.message);
             }
@@ -113,9 +113,9 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
               return items;
             } catch (err) {
             }
-          })(type).some((arg0) => items2(outer1_1[4]).stringMatchesSomePattern(arg0, items2));
+          })(type).some((arg0) => items2(closure_1_1[4]).stringMatchesSomePattern(arg0, items2));
           const obj3 = (function _getPossibleEventMessages(message) {
-            const items = [];
+            items = [];
             if (message.message) {
               items.push(message.message);
             }
@@ -140,12 +140,12 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
       }
       if (flag) {
         flag6 = true;
-        if (obj(outer1_1[1]).DEBUG_BUILD) {
-          const logger5 = obj(outer1_1[2]).logger;
+        if (obj(closure_1_1[1]).DEBUG_BUILD) {
+          const logger5 = obj(closure_1_1[2]).logger;
           const _HermesInternal5 = HermesInternal;
-          logger5.warn("Event dropped due to being matched by `ignoreErrors` option.\nEvent: " + obj(outer1_1[3]).getEventDescription(type));
+          logger5.warn("Event dropped due to being matched by `ignoreErrors` option.\nEvent: " + obj(closure_1_1[3]).getEventDescription(type));
           flag6 = true;
-          const obj11 = obj(outer1_1[3]);
+          const obj11 = obj(closure_1_1[3]);
         }
       } else {
         let flag2 = false;
@@ -182,12 +182,12 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
         }
         if (flag2) {
           flag6 = true;
-          if (obj(outer1_1[1]).DEBUG_BUILD) {
-            const logger4 = obj(outer1_1[2]).logger;
+          if (obj(closure_1_1[1]).DEBUG_BUILD) {
+            const logger4 = obj(closure_1_1[2]).logger;
             const _HermesInternal4 = HermesInternal;
-            logger4.warn("Event dropped due to not having an error message, error type or stacktrace.\nEvent: " + obj(outer1_1[3]).getEventDescription(type));
+            logger4.warn("Event dropped due to not having an error message, error type or stacktrace.\nEvent: " + obj(closure_1_1[3]).getEventDescription(type));
             flag6 = true;
-            const obj10 = obj(outer1_1[3]);
+            const obj10 = obj(closure_1_1[3]);
           }
         } else {
           let flag3 = false;
@@ -197,63 +197,63 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
               const transaction = type.transaction;
               let result = transaction;
               if (result) {
-                result = obj(outer1_1[4]).stringMatchesSomePattern(transaction, items3);
-                const obj4 = obj(outer1_1[4]);
+                result = obj(closure_1_1[4]).stringMatchesSomePattern(transaction, items3);
+                const obj4 = obj(closure_1_1[4]);
               }
               flag3 = result;
             }
           }
           if (flag3) {
             flag6 = true;
-            if (obj(outer1_1[1]).DEBUG_BUILD) {
-              const logger3 = obj(outer1_1[2]).logger;
+            if (obj(closure_1_1[1]).DEBUG_BUILD) {
+              const logger3 = obj(closure_1_1[2]).logger;
               const _HermesInternal3 = HermesInternal;
-              logger3.warn("Event dropped due to being matched by `ignoreTransactions` option.\nEvent: " + obj(outer1_1[3]).getEventDescription(type));
+              logger3.warn("Event dropped due to being matched by `ignoreTransactions` option.\nEvent: " + obj(closure_1_1[3]).getEventDescription(type));
               flag6 = true;
-              const obj9 = obj(outer1_1[3]);
+              const obj9 = obj(closure_1_1[3]);
             }
           } else {
             let flag4 = false;
             if (items1.length) {
-              const tmp16 = outer1_3(type);
+              const tmp16 = closure_1_3(type);
               let result1 = tmp16;
               if (result1) {
-                result1 = obj(outer1_1[4]).stringMatchesSomePattern(tmp16, items1);
-                const obj5 = obj(outer1_1[4]);
+                result1 = obj(closure_1_1[4]).stringMatchesSomePattern(tmp16, items1);
+                const obj5 = obj(closure_1_1[4]);
               }
               flag4 = result1;
             }
             if (flag4) {
               flag6 = true;
-              if (obj(outer1_1[1]).DEBUG_BUILD) {
-                const logger2 = obj(outer1_1[2]).logger;
-                const eventDescription = obj(outer1_1[3]).getEventDescription(type);
+              if (obj(closure_1_1[1]).DEBUG_BUILD) {
+                const logger2 = obj(closure_1_1[2]).logger;
+                const eventDescription = obj(closure_1_1[3]).getEventDescription(type);
                 const _HermesInternal2 = HermesInternal;
-                logger2.warn("Event dropped due to being matched by `denyUrls` option.\nEvent: " + eventDescription + ".\nUrl: " + outer1_3(type));
+                logger2.warn("Event dropped due to being matched by `denyUrls` option.\nEvent: " + eventDescription + ".\nUrl: " + closure_1_3(type));
                 flag6 = true;
-                const obj8 = obj(outer1_1[3]);
+                const obj8 = obj(closure_1_1[3]);
               }
             } else {
               let flag5 = true;
               if (items.length) {
-                const tmp21 = outer1_3(type);
+                const tmp21 = closure_1_3(type);
                 let result2 = !tmp21;
                 if (tmp21) {
-                  result2 = obj(outer1_1[4]).stringMatchesSomePattern(tmp21, items);
-                  const obj6 = obj(outer1_1[4]);
+                  result2 = obj(closure_1_1[4]).stringMatchesSomePattern(tmp21, items);
+                  const obj6 = obj(closure_1_1[4]);
                 }
                 flag5 = result2;
               }
               flag6 = false;
               if (!flag5) {
                 flag6 = true;
-                if (obj(outer1_1[1]).DEBUG_BUILD) {
-                  const logger = obj(outer1_1[2]).logger;
-                  const eventDescription1 = obj(outer1_1[3]).getEventDescription(type);
+                if (obj(closure_1_1[1]).DEBUG_BUILD) {
+                  const logger = obj(closure_1_1[2]).logger;
+                  const eventDescription1 = obj(closure_1_1[3]).getEventDescription(type);
                   let _HermesInternal = HermesInternal;
-                  logger.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + eventDescription1 + ".\nUrl: " + outer1_3(type));
+                  logger.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + eventDescription1 + ".\nUrl: " + closure_1_3(type));
                   flag6 = true;
-                  const obj7 = obj(outer1_1[3]);
+                  const obj7 = obj(closure_1_1[3]);
                 }
               }
             }

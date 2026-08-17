@@ -1,12 +1,12 @@
 // _runtime/06338_Text.js
-import { Text } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { createStandardNavigationFactories } from "01501_createStandardNavigationFactories.js";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
 
+const Text = get_ActivityIndicator.Text;
+const jsx = jsxProd.jsx;
 
 export const Text = function Text(style) {
-  let colors;
-  let fonts;
   const merged = Object.assign(style, Object.create(null));
   let obj = createStandardNavigationFactories;
   const theme = obj.useTheme();

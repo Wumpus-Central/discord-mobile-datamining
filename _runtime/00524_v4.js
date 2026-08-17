@@ -1,6 +1,7 @@
 // _runtime/00524_v4.js
-import { unsafeStringify } from "00517_unsafeStringify.js";
-const require = arg1;
+import unsafeStringify from "unsafeStringify" /* 517 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function v4(arg0, arg1, arg2) {

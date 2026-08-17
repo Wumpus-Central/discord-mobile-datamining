@@ -1,9 +1,9 @@
 // _runtime/00168_structuredCloneInternal.js
-import _slicedToArray from "_slicedToArray";
-import { setPlatformObject } from "00126_setPlatformObject.js";
-import { _isNativeReflectConstruct } from "00157__isNativeReflectConstruct.js";
+import setPlatformObject from "setPlatformObject" /* 126 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 157 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function structuredCloneInternal(style) {
   if (null == style) {
     return style;
@@ -17,7 +17,7 @@ function structuredCloneInternal(style) {
               tmp = dependencyMap;
               tmp = globalThis;
               const _String2 = String;
-              tmp = _isNativeReflectConstruct;
+              tmp = _isNativeReflectConstructDefault;
               const _HermesInternal2 = HermesInternal;
               tmp = new.target;
               tmp = new.target;
@@ -31,7 +31,7 @@ function structuredCloneInternal(style) {
                 tmp = globalThis;
                 const _Array = Array;
                 if (Array.isArray(style)) {
-                  const items = [];
+                  items = [];
                   const result = obj8.set(style, items);
                   const _Object4 = Object;
                   const keys = Object.keys(style);
@@ -95,7 +95,7 @@ function structuredCloneInternal(style) {
                       const _Set = Set;
                       if (style instanceof Set) {
                         const _Set2 = Set;
-                        const set = new Set();
+                        set = new Set();
                         const result5 = map.set(style, set);
                         const tmp60 = style[Symbol.iterator]();
                         while (tmp60 !== undefined) {
@@ -143,7 +143,7 @@ function structuredCloneInternal(style) {
                                 return closure_9 in style;
                               })(style)) {
                                 if (!tmp14Result.isPlatformObject(style)) {
-                                  const obj1 = {};
+                                  obj1 = {};
                                   const result9 = map.set(style, obj1);
                                   const _Object2 = Object;
                                   const keys2 = Object.keys(style);
@@ -157,7 +157,7 @@ function structuredCloneInternal(style) {
                                 tmp14Result = tmp14(126);
                               }
                               const _String = String;
-                              let tmp25 = _isNativeReflectConstruct;
+                              let tmp25 = _isNativeReflectConstructDefault;
                               const _HermesInternal = HermesInternal;
                               tmp25 = new tmp25("Failed to execute 'structuredClone' on 'Window': " + String(style) + " could not be cloned.", "DataCloneError");
                               throw tmp25;

@@ -1,6 +1,7 @@
 // _runtime/00875_getEnvelopeEndpointWithUrlEncodedAuth.js
-import { dsnFromString } from "00837_dsnFromString.js";
-const require = arg1;
+import dsnFromString from "dsnFromString" /* 837 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(protocol, arg1, name) {
@@ -63,7 +64,7 @@ arg5.getReportDialogEndpoint = function getReportDialogEndpoint(arg0, user) {
     const _HermesInternal5 = HermesInternal;
     const combined = "" + "" + str + "//" + host + str3 + str5 + "/api/" + "embed/error-page/";
     const _HermesInternal6 = HermesInternal;
-    let combined1 = "dsn=" + tmp2(837).dsnToString(url);
+    let combined1 = "dsn=" + dsnFromString.dsnToString(url);
     let tmp16 = combined1;
     const keys = Object.keys();
     if (keys !== undefined) {
@@ -122,5 +123,5 @@ arg5.getReportDialogEndpoint = function getReportDialogEndpoint(arg0, user) {
     return "";
   }
   const obj = dsnFromString;
-  tmp2 = require;
+  const tmp2 = require;
 };

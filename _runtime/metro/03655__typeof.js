@@ -1,13 +1,13 @@
 // _runtime/metro/03655__typeof.js
-import requiredArgs from "requiredArgs";
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -33,10 +33,10 @@ if (!requiredArgs) {
 } else {
   tmp3 = requiredArgs;
 }
-let c0 = tmp3;
+requiredArgs = tmp3;
 
 export default function isDate(arg0) {
-  tmp3.default(1, arguments);
+  requiredArgs.default(1, arguments);
   let tmp2 = arg0 instanceof Date;
   if (!tmp2) {
     const tmp4 = "object" === _typeof(arg0);
@@ -49,7 +49,6 @@ export default function isDate(arg0) {
       str2 = "[object Date]";
       const tmp5 = typeof call === "unknown" ? str2() : call(arg0);
     }
-    tmp3 = _typeof;
   }
   return tmp2;
 };

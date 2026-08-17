@@ -1,26 +1,21 @@
 // _runtime/13779_reactNativeCorePlugins.js
-import asyncGeneratorStep from "sendToReactotron";
-import get_ActivityIndicator from "get ActivityIndicator";
-import getConstants from "getConstants";
-import getReactNativeVersion from "getReactNativeVersion";
-import getReactNativeDimensions from "getReactNativeDimensions";
-import sendToReactotron from "sendToReactotron";
-import OverlayCreator from "OverlayCreator";
-import 13788__ from "metro/13788__.js";
-import objectifyError from "objectifyError";
-import onSend from "onSend";
-import 13804__ from "metro/13804__.js";
-import getDevMenu from "getDevMenu";
-import keys from "keys";
-import getReactNativePlatformConstants from "getReactNativePlatformConstants";
-import { getHostFromUrl } from "13809_getHostFromUrl.js";
+import keys2 from "keys" /* 13790 */;
+import getHostFromUrl from "getHostFromUrl" /* 13809 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import getConstants from "getConstants" /* 82 */;
+import getReactNativeVersion from "getReactNativeVersion" /* 13780 */;
+import getReactNativeDimensions from "getReactNativeDimensions" /* 13782 */;
+import sendToReactotron from "sendToReactotron" /* 13784 */;
+import OverlayCreator from "OverlayCreator" /* 13785 */;
+import 13788__ from "metro/13788__.js" /* 13788 */;
+import objectifyError from "objectifyError" /* 13789 */;
+import onSend from "onSend" /* 13802 */;
+import 13804__ from "metro/13804__.js" /* 13804 */;
+import getDevMenu from "getDevMenu" /* 13806 */;
+import keys from "keys" /* 13807 */;
+import getReactNativePlatformConstants from "getReactNativePlatformConstants" /* 13808 */;
 
-let forceTouch;
-let interfaceIdiom;
-let osRelease;
-let serial;
-let serverHost;
-let uiMode;
 if (!getConstants) {
   const obj6 = { default: null };
   obj6[0] = getConstants;
@@ -28,7 +23,7 @@ if (!getConstants) {
 } else {
   tmp13 = getConstants;
 }
-let c3 = tmp13;
+getConstants = tmp13;
 if (!getReactNativeVersion) {
   const obj7 = { default: null };
   obj7[0] = getReactNativeVersion;
@@ -117,15 +112,15 @@ const obj18 = {
   },
   host: ((localhost) => {
     try {
-      const scriptURL = tmp13.default.getConstants().scriptURL;
+      const scriptURL = getConstants.default.getConstants().scriptURL;
       if (typeof scriptURL !== "string") {
         const _Error = Error;
-        const error = new Error("Invalid non-string URL");
+        error = new Error("Invalid non-string URL");
         throw error;
       } else {
         return getHostFromUrl.getHostFromUrl(scriptURL);
       }
-      const _default = tmp13.default;
+      const _default = getConstants.default;
     } catch (tmp8) {
       const _console = console;
       const _HermesInternal = HermesInternal;
@@ -146,9 +141,9 @@ obj19 = { reactotronLibraryName: "reactotron-react-native", reactotronLibraryVer
 const merged = Object.assign(obj11.default());
 obj18[5] = obj19;
 let closure_14 = asyncGeneratorStep(() => {
-  let closure_0 = arg0;
-  let c3 = 0;
-  let c4 = 0;
+  closure_0 = arg0;
+  c3 = 0;
+  c4 = 0;
   const iter = (function*() {
     if (screenScale === 2) {
       screenScale = 3;
@@ -177,7 +172,7 @@ let closure_14 = asyncGeneratorStep(() => {
             return obj;
           } else {
             let screenWidth = tmp5;
-            let closure_1 = tmp2;
+            closure_1 = tmp2;
             let str2;
             if (str2 === undefined) {
               str2 = "";
@@ -186,8 +181,8 @@ let closure_14 = asyncGeneratorStep(() => {
             screenWidth = undefined;
             screenHeight = undefined;
             screenScale = undefined;
-            let closure_5;
-            let closure_6;
+            closure_5 = undefined;
+            closure_6 = undefined;
             screenHeight = 1;
             screenScale = 1;
             return { value: "ct", done: true };
@@ -197,7 +192,7 @@ let closure_14 = asyncGeneratorStep(() => {
           throw arg1;
         } else if (arg0 === 2) {
           screenScale = 3;
-          const obj1 = { value: null, done: true };
+          obj1 = { value: null, done: true };
           obj1[0] = arg1;
           return obj1;
         } else if (closure_18.asyncStorageHandler) {
@@ -246,8 +241,8 @@ obj18[6] = function getClientId() {
   return applyArgumentsResult;
 };
 let closure_13 = asyncGeneratorStep((arg0) => {
-  let closure_0 = arg0;
-  let c1 = 0;
+  closure_0 = arg0;
+  c1 = 0;
   return (function*(arg0) {
     if (c1 === 2) {
       c1 = 3;
@@ -273,10 +268,10 @@ let closure_13 = asyncGeneratorStep((arg0) => {
           obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
-        } else if (outer1_18.asyncStorageHandler) {
+        } else if (closure_1_18.asyncStorageHandler) {
           c1 = 3;
           obj = { value: null, done: true };
-          obj[0] = outer1_18.asyncStorageHandler.setItem(outer1_15, tmp4);
+          obj[0] = closure_1_18.asyncStorageHandler.setItem(closure_1_15, tmp4);
           return obj;
         } else {
           c1 = 3;
@@ -300,7 +295,7 @@ obj18[7] = function setClientId(payload) {
   return applyArgumentsResult;
 };
 let items = [obj13.default(), obj19.default(), obj28.default(), obj17.default(), obj15.default(), obj22.default(), obj24.default(), obj26.default()];
-const client = require("keys").createClient(obj18);
+const client = keys2.createClient(obj18);
 client.useReactNative = () => {
   let obj = arg0;
   if (arg0 === undefined) {

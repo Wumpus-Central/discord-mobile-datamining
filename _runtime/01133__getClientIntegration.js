@@ -1,6 +1,7 @@
 // _runtime/01133__getClientIntegration.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-const require = arg1;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+
+require = arg1;
 const dependencyMap = arg6;
 let fn = this;
 if (this) {
@@ -58,11 +59,6 @@ function _getClientIntegration() {
 }
 arg5.MOBILE_FEEDBACK_INTEGRATION_NAME = "MobileFeedback";
 arg5.feedbackIntegration = (D) => {
-  let buttonOptions;
-  let colorScheme;
-  let screenshotButtonOptions;
-  let themeDark;
-  let themeLight;
   let obj = D;
   if (D === undefined) {
     obj = {};

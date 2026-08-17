@@ -1,23 +1,22 @@
 // _runtime/06463_handleStateChangeEvent.js
-import { _isNativeReflectConstruct } from "06398__isNativeReflectConstruct.js";
-import { isGestureEnabled } from "06445_isGestureEnabled.js";
-import { 06383__ } from "metro/06383__.js";
-import { 06385__ } from "metro/06385__.js";
-const require = arg1;
+import _mod6383 from "module_6383" /* 6383 */;
+import _mod6385 from "module_6385" /* 6385 */;
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 6398 */;
+import isGestureEnabled from "isGestureEnabled" /* 6445 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function handleStateChangeEvent(result, arg1, lastUpdateEvent, arg3) {
-  let oldState;
-  let state;
   ({ oldState, state } = result);
   let obj = isGestureEnabled;
   result = obj.flattenAndFilterEvent(result);
-  if (oldState === 06383__.State.UNDETERMINED) {
+  if (oldState === _mod6383.State.UNDETERMINED) {
     if (state === tmp(6383).State.BEGAN) {
       let tmpResult = tmp(6445);
       tmpResult.runCallback(tmp(6398).CALLBACK_TYPE.BEGAN, arg1, result);
     }
   }
-  if (oldState === 06383__.State.BEGAN) {
+  if (oldState === _mod6383.State.BEGAN) {
     if (state === tmp(6383).State.ACTIVE) {
       if (arg3 != null) {
         arg3(result);
@@ -70,7 +69,7 @@ handleUpdateEvent.__closure = obj;
 handleUpdateEvent.__workletHash = 13503118278355;
 handleUpdateEvent.__initData = { code: "function handleUpdateEvent_Pnpm_eventHandlerTs2(eventWithData,handlers,changeEventCalculator,context){const{flattenAndFilterEvent,runCallback,CALLBACK_TYPE}=this.__closure;const eventWithChanges=changeEventCalculator?changeEventCalculator(eventWithData,context?context.lastUpdateEvent:undefined):eventWithData;const event=flattenAndFilterEvent(eventWithChanges);runCallback(CALLBACK_TYPE.UPDATE,handlers,event);if(context){context.lastUpdateEvent=eventWithData;}}" };
 function handleTouchEvent(eventType) {
-  if (eventType.eventType !== 06385__.TouchEventType.UNDETERMINED) {
+  if (eventType.eventType !== _mod6385.TouchEventType.UNDETERMINED) {
     let tmpResult = tmp(6445);
     tmpResult = tmp(6445);
     tmpResult.runCallback(tmpResult.touchEventTypeToCallbackType(eventType.eventType), arg1, eventType);

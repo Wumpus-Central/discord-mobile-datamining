@@ -1,7 +1,7 @@
 // _runtime/metro/03789__typeof.js
-import setUTCWeek from "setUTCWeek";
-import startOfUTCWeek from "startOfUTCWeek";
-import { Parser } from "Parser";
+import Parser2 from "Parser" /* 3778 */;
+import setUTCWeek from "setUTCWeek" /* 3790 */;
+import startOfUTCWeek from "startOfUTCWeek" /* 3475 */;
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -9,9 +9,9 @@ function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -31,7 +31,7 @@ function _typeof(arg0) {
   };
 }
 function _setPrototypeOf(LocalWeekParser, Parser) {
-  let _setPrototypeOf = Object.setPrototypeOf;
+  _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
     _setPrototypeOf = function _setPrototypeOf(LocalWeekParser, Parser) {
       LocalWeekParser.__proto__ = Parser;
@@ -43,7 +43,7 @@ function _setPrototypeOf(LocalWeekParser, Parser) {
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;
-    let _getPrototypeOf = Object.getPrototypeOf;
+    _getPrototypeOf = Object.getPrototypeOf;
   } else {
     _getPrototypeOf = function _getPrototypeOf(arg0) {
       let __proto__ = arg0.__proto__;
@@ -63,7 +63,7 @@ if (!setUTCWeek) {
 } else {
   tmp3 = setUTCWeek;
 }
-let c3 = tmp3;
+setUTCWeek = tmp3;
 if (!startOfUTCWeek) {
   obj = { default: null };
   obj[0] = startOfUTCWeek;
@@ -71,11 +71,12 @@ if (!startOfUTCWeek) {
 } else {
   tmp5 = startOfUTCWeek;
 }
-let c4 = tmp5;
+startOfUTCWeek = tmp5;
+const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
 class LocalWeekParser {
   constructor() {
-    if (this instanceof c1) {
+    if (this instanceof closure_1) {
       length = arguments.length;
       _Array = Array;
       tmp6 = new.target;
@@ -248,7 +249,7 @@ let items = [
   {
     key: "set",
     value: function set(arg0, arg1, arg2, arg3) {
-      return tmp5.default(tmp3.default(arg0, arg2, arg3), arg3);
+      return startOfUTCWeek.default(setUTCWeek.default(arg0, arg2, arg3), arg3);
     }
   }
 ];

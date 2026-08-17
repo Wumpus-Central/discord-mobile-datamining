@@ -1,8 +1,9 @@
 // _runtime/00938_extractClientInfo.js
-import { isJsonRpcNotification } from "00936_isJsonRpcNotification.js";
-import { weakMap } from "00939_weakMap.js";
-import { 00940__ } from "metro/00940__.js";
-const require = arg1;
+import isJsonRpcNotification from "isJsonRpcNotification" /* 936 */;
+import weakMap from "weakMap" /* 939 */;
+import _mod940 from "module_940" /* 940 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function extractClientInfo(requestInfo) {
   let remoteAddress;
@@ -106,27 +107,25 @@ arg5.buildServerAttributesFromInfo = function buildServerAttributesFromInfo(serv
   }
   const obj = {};
   if (name) {
-    obj[00940__.MCP_SERVER_NAME_ATTRIBUTE] = serverInfo.name;
+    obj[_mod940.MCP_SERVER_NAME_ATTRIBUTE] = serverInfo.name;
   }
   let title;
   if (serverInfo != null) {
     title = serverInfo.title;
   }
   if (title) {
-    obj[00940__.MCP_SERVER_TITLE_ATTRIBUTE] = serverInfo.title;
+    obj[_mod940.MCP_SERVER_TITLE_ATTRIBUTE] = serverInfo.title;
   }
   let version;
   if (serverInfo != null) {
     version = serverInfo.version;
   }
   if (version) {
-    obj[00940__.MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
+    obj[_mod940.MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
   }
   return obj;
 };
 arg5.buildTransportAttributes = function buildTransportAttributes(transport, extra) {
-  let mcpTransport;
-  let networkTransport;
   let sessionId;
   if (transport) {
     if ("sessionId" in transport) {
@@ -177,7 +176,7 @@ arg5.buildTransportAttributes = function buildTransportAttributes(transport, ext
   if (clientInfoForTransport != null) {
     name1 = clientInfoForTransport.name;
   }
-  const obj1 = {};
+  obj1 = {};
   if (name1) {
     obj1["mcp.client.name"] = clientInfoForTransport.name;
   }
@@ -247,9 +246,9 @@ arg5.buildTransportAttributes = function buildTransportAttributes(transport, ext
     port = obj6;
   }
   const merged2 = Object.assign(port);
-  obj4[00940__.MCP_TRANSPORT_ATTRIBUTE] = mcpTransport;
-  obj4[00940__.NETWORK_TRANSPORT_ATTRIBUTE] = networkTransport;
-  obj4[00940__.NETWORK_PROTOCOL_VERSION_ATTRIBUTE] = "2.0";
+  obj4[_mod940.MCP_TRANSPORT_ATTRIBUTE] = mcpTransport;
+  obj4[_mod940.NETWORK_TRANSPORT_ATTRIBUTE] = networkTransport;
+  obj4[_mod940.NETWORK_PROTOCOL_VERSION_ATTRIBUTE] = "2.0";
   let tmp22 = protocolVersionForTransport;
   if (protocolVersionForTransport) {
     const obj7 = {};

@@ -1,5 +1,7 @@
 // _runtime/metro/00160__construct.js
-import { _isNativeReflectConstruct } from "../00161__isNativeReflectConstruct.js";
+import _setPrototypeOf from "_setPrototypeOf" /* 99 */;
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 161 */;
+
 
 export default function _construct(bind) {
   if (_isNativeReflectConstruct()) {
@@ -18,9 +20,9 @@ export default function _construct(bind) {
     bind = bind.bind;
     const tmp9 = new bind.apply(bind, items)();
     if (arg2) {
-      tmp(99)(tmp9, arg2.prototype);
+      _setPrototypeOf(tmp9, arg2.prototype);
     }
     return tmp9;
   }
-  tmp = require;
+  const tmp = require;
 };

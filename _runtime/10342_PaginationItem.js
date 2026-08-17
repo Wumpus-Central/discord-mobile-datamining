@@ -1,22 +1,14 @@
 // _runtime/10342_PaginationItem.js
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
 const require = arg1;
+noopDefault;
 ({ Pressable: c3, View: c4 } = get_ActivityIndicator);
 let closure_6 = { code: "function pnpm_PaginationItemTsx1(){const{horizontal,height,width,index,animValue,count,interpolate,Extrapolation}=this.__closure;var _animValue,_animValue2;const size=horizontal?height:width;let inputRange=[index-1,index,index+1];let outputRange=[-size,0,size];if(index===0&&((_animValue=animValue)===null||_animValue===void 0?void 0:_animValue.value)>count-1){inputRange=[count-1,count,count+1];outputRange=[-size,0,size];}return{transform:[{translateX:interpolate((_animValue2=animValue)===null||_animValue2===void 0?void 0:_animValue2.value,inputRange,outputRange,Extrapolation.CLAMP)}]};}" };
 
 export const PaginationItem = (animValue) => {
-  let activeDotStyle;
-  let children;
-  let dotStyle;
-  let horizontal;
-  let index;
-  let onPress;
-  let size;
   const iter = animValue.animValue;
   ({ dotStyle, index } = animValue);
   const count = animValue.count;
@@ -88,7 +80,7 @@ export const PaginationItem = (animValue) => {
   }
   obj[3] = str;
   obj[4] = { selected: iter.value === index };
-  const obj1 = { width: num, height: size, overflow: "hidden", transform: null };
+  obj1 = { width: num, height: size, overflow: "hidden", transform: null };
   let str3 = "0deg";
   if (horizontal) {
     str3 = "90deg";

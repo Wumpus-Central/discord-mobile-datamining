@@ -1,7 +1,8 @@
 // _runtime/07749_addContextToFrame.js
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
-import { isMatchingPattern } from "07747_isMatchingPattern.js";
-const require = arg1;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+import isMatchingPattern from "isMatchingPattern" /* 7747 */;
+
+require = arg1;
 const dependencyMap = arg6;
 const re2 = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
 arg5.addContextToFrame = function addContextToFrame(arr, lineno) {
@@ -103,10 +104,6 @@ arg5.checkOrSetAlreadyCaught = function checkOrSetAlreadyCaught(__sentry_capture
   }
 };
 arg5.getEventDescription = function getEventDescription(exception) {
-  let event_id;
-  let message;
-  let type;
-  let value;
   ({ message, event_id } = exception);
   if (message) {
     return message;

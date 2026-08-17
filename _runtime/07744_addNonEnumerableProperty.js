@@ -1,9 +1,10 @@
 // _runtime/07744_addNonEnumerableProperty.js
-import { isInstanceOf } from "07745_isInstanceOf.js";
-import { _htmlElementAsString } from "07746__htmlElementAsString.js";
-import { isMatchingPattern } from "07747_isMatchingPattern.js";
-import { __SENTRY_DEBUG__ } from "metro/07737___SENTRY_DEBUG__.js";
-const require = arg1;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
+import isInstanceOf from "isInstanceOf" /* 7745 */;
+import _htmlElementAsString from "_htmlElementAsString" /* 7746 */;
+import isMatchingPattern from "isMatchingPattern" /* 7747 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function addNonEnumerableProperty(arg0, arg1, arg2) {
   try {
@@ -40,7 +41,7 @@ function convertToPlainObject(obj) {
     if (typeof obj === "object") {
       if (null !== obj) {
         obj = {};
-        let obj1 = obj;
+        obj1 = obj;
         const keys = Object.keys();
         if (keys !== undefined) {
           obj1 = obj;
@@ -127,7 +128,7 @@ function serializeEventTarget(arg0) {
   }
 }
 function _dropUndefinedKeys(arr, map) {
-  let closure_0 = map;
+  closure_0 = map;
   if ((function isPojo(arr) {
     if (obj.isPlainObject(arr)) {
       try {
@@ -174,7 +175,7 @@ function _dropUndefinedKeys(arr, map) {
         const items = [];
         const result1 = map.set(arr, items);
         const item = arr.forEach((arg0) => {
-          items.push(outer1_6(arg0, closure_0));
+          items.push(closure_1_6(arg0, closure_0));
         });
         return items;
       }
@@ -267,8 +268,6 @@ arg5.objectify = function objectify(arg0) {
 arg5.urlEncode = function urlEncode(arg0) {
   const entries = Object.entries(arg0);
   const mapped = entries.map((arg0) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
     return "" + encodeURIComponent(tmp) + "=" + encodeURIComponent(tmp2);
   });

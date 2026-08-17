@@ -1,5 +1,6 @@
 // _runtime/00735_hashClear.js
-import { getNative } from "00736_getNative.js";
+import getNative from "getNative" /* 736 */;
+
 
 export default function hashClear() {
   let obj = {};

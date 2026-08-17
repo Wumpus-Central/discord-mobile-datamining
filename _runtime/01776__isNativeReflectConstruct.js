@@ -1,10 +1,10 @@
 // _runtime/01776__isNativeReflectConstruct.js
-import PinwheelOut from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult1 from "_inherits";
+import PinwheelOut from "_slicedToArray" /* 32 */;
+import closure_1 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -17,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -30,12 +30,12 @@ class PinwheelIn {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -44,20 +44,20 @@ class PinwheelIn {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function e() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)), transform: null };
-        obj = { scale: delayFunction(delay, first(1, _possibleConstructorReturn)) };
-        const items = [obj, { rotate: delayFunction(delay, first("0rad", _possibleConstructorReturn)) }];
+        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        obj = { scale: delayFunction(delay, first(1, closure_2)) };
+        const items = [obj, { rotate: delayFunction(delay, first("0rad", closure_2)) }];
         obj[1] = items;
         obj[0] = obj;
         const items1 = [{ scale: 0 }, { rotate: "5rad" }];
@@ -68,7 +68,7 @@ class PinwheelIn {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 8890961567516;
-      fn.__initData = outer1_5;
+      fn.__initData = closure_1_5;
       return fn;
     };
     return tmp3Result;
@@ -90,12 +90,12 @@ class PinwheelOut {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -104,20 +104,20 @@ class PinwheelOut {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function e() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)), transform: null };
-        obj = { scale: delayFunction(delay, first(0, _possibleConstructorReturn)) };
-        const items = [obj, { rotate: delayFunction(delay, first("5rad", _possibleConstructorReturn)) }];
+        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        obj = { scale: delayFunction(delay, first(0, closure_2)) };
+        const items = [obj, { rotate: delayFunction(delay, first("5rad", closure_2)) }];
         obj[1] = items;
         obj[0] = obj;
         const items1 = [{ scale: 1 }, { rotate: "0rad" }];
@@ -128,7 +128,7 @@ class PinwheelOut {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 15028563671839;
-      fn.__initData = outer1_6;
+      fn.__initData = closure_1_6;
       return fn;
     };
     return tmp3Result;

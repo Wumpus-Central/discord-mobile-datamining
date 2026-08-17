@@ -1,17 +1,16 @@
 // _runtime/06509__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { _isNativeReflectConstruct } from "06510__isNativeReflectConstruct.js";
+import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6510 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_classCallCheck" /* 41 */;
+import closure_6 from "_possibleConstructorReturn" /* 93 */;
+import closure_7 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_8 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let TouchableHighlight = arg1;
+const TouchableHighlight = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -23,10 +22,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -36,12 +35,12 @@ let closure_3 = ["style"];
 class TouchableHighlight {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, apply);
+    tmp = closure_5(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_7;
+    obj = closure_7(closure_0);
+    tmp3 = closure_6;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -50,15 +49,15 @@ class TouchableHighlight {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.showUnderlay = () => {
-      let obj = tmp3Result;
-      if (tmp3Result.hasPressHandler()) {
+      let obj = lib;
+      if (lib.hasPressHandler()) {
         obj = { extraChildStyle: null, extraUnderlayStyle: null };
         obj = { opacity: null };
         obj[0] = obj.props.activeOpacity;
         obj[0] = obj;
-        const obj1 = { backgroundColor: null };
+        obj1 = { backgroundColor: null };
         obj1[0] = obj.props.underlayColor;
         obj[1] = obj1;
         obj.setState(obj);
@@ -69,21 +68,21 @@ class TouchableHighlight {
         }
       }
     };
-    tmp3Result.hasPressHandler = () => tmp3Result.props.onPress || tmp3Result.props.onPressIn || tmp3Result.props.onPressOut || tmp3Result.props.onLongPress;
+    tmp3Result.hasPressHandler = () => lib.props.onPress || lib.props.onPressIn || lib.props.onPressOut || lib.props.onLongPress;
     tmp3Result.hideUnderlay = () => {
-      tmp3Result.setState({ extraChildStyle: null, extraUnderlayStyle: null });
-      const props = tmp3Result.props;
+      lib.setState({ extraChildStyle: null, extraUnderlayStyle: null });
+      const props = lib.props;
       const onHideUnderlay = props.onHideUnderlay;
       if (onHideUnderlay != null) {
         onHideUnderlay();
       }
     };
     tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === tmp3Result(outer1_2[9]).TOUCHABLE_STATE.BEGAN) {
-        tmp3Result.showUnderlay();
+      if (arg1 === lib(closure_1_2[9]).TOUCHABLE_STATE.BEGAN) {
+        lib.showUnderlay();
       } else {
         if (!tmp3) {
-          tmp3Result.hideUnderlay();
+          lib.hideUnderlay();
         }
         tmp3 = arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
       }
@@ -92,7 +91,7 @@ class TouchableHighlight {
     return tmp3Result;
   }
 }
-require("_inherits")(TouchableHighlight, require("noop").Component);
+_inheritsDefault(TouchableHighlight, require("noop").Component);
 let obj = {
   key: "renderChildren",
   value: function renderChildren() {
@@ -126,13 +125,13 @@ let items = [
       obj.style = items;
       obj.onStateChange = self.onStateChange;
       obj.children = self.renderChildren();
-      return jsx(_isNativeReflectConstruct, {});
+      return jsx(_isNativeReflectConstructDefault, {});
     }
   }
 ];
 const importDefaultResultResult = importDefaultResult(TouchableHighlight, items);
 obj = {};
-let merged = Object.assign(require("_isNativeReflectConstruct").defaultProps);
+let merged = Object.assign(_isNativeReflectConstructDefault.defaultProps);
 obj.activeOpacity = 0.85;
 obj.delayPressOut = 100;
 obj.underlayColor = "black";

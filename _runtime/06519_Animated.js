@@ -1,18 +1,10 @@
 // _runtime/06519_Animated.js
-import get_ActivityIndicator from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let Animated;
-let Platform;
-let c0;
-let closure_1;
 ({ Animated, Platform } = get_ActivityIndicator);
 ({ add: c0, multiply: closure_1 } = Animated);
 
 export const forUIKit = function forUIKit(arg0) {
-  let current;
-  let direction;
-  let layouts;
-  let next;
   ({ next, layouts } = arg0);
   let num = 100;
   let num2 = 100;
@@ -41,7 +33,7 @@ export const forUIKit = function forUIKit(arg0) {
   obj = { leftButtonStyle: null, leftLabelStyle: null, rightButtonStyle: null, titleStyle: null, backgroundStyle: null };
   obj = { opacity: tmp2Result.interpolate({ inputRange: [0.3, 1, 1.5], outputRange: [0, 1, 0] }) };
   obj[0] = obj;
-  const obj1 = { transform: null };
+  obj1 = { transform: null };
   const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
   const tmp2 = closure_0;
   const items = [num2, 0, -result];

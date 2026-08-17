@@ -1,14 +1,13 @@
 // _runtime/00338__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import jsxProd from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import closure_5 from "_possibleConstructorReturn" /* 93 */;
+import closure_6 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let error;
-let metroImportAll;
 const ImageBackground = importDefault;
 function _isNativeReflectConstruct() {
   try {
@@ -21,26 +20,26 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 let closure_2 = ["children", "style", "imageStyle", "imageRef", "importantForAccessibility"];
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 class ImageBackground {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_4(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_6;
+    obj = closure_6(closure_0);
+    tmp3 = closure_5;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -49,15 +48,15 @@ class ImageBackground {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result._viewRef = null;
     tmp3Result._captureRef = (_viewRef) => {
-      c0._viewRef = _viewRef;
+      closure_0._viewRef = _viewRef;
     };
     return tmp3Result;
   }
 }
-importDefaultResult1(ImageBackground, require("noop").Component);
+importDefaultResult1(ImageBackground, noopAll.Component);
 let items = [
   {
     key: "setNativeProps",
@@ -71,11 +70,6 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let children;
-      let imageRef;
-      let imageStyle;
-      let importantForAccessibility;
-      let style;
       const props = this.props;
       ({ style, importantForAccessibility } = props);
       ({ children, imageStyle, imageRef } = props);

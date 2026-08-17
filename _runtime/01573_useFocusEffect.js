@@ -1,51 +1,52 @@
 // _runtime/01573_useFocusEffect.js
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 
-export const useFocusEffect = function useFocusEffect(c5) {
-  const _require = c5;
+export const useFocusEffect = function useFocusEffect(closure_2) {
+  const _require = closure_2;
   navigation = _require(navigation[1]).useNavigation();
   if (undefined !== arguments[1]) {
     const _console = console;
     console.error("You passed a second argument to 'useFocusEffect', but it only accepts one argument. If you want to pass a dependency array, you can use 'React.useCallback':\n\nuseFocusEffect(\n  React.useCallback(() => {\n    // Your code here\n  }, [depA, depB])\n);\n\nSee usage guide: https://reactnavigation.org/docs/use-focus-effect");
   }
-  const items = [c5, navigation];
+  const items = [closure_2, navigation];
   const effect = React.useEffect(() => {
-    let navigation = false;
+    navigation = false;
     if (navigation.isFocused()) {
-      const tmp2 = c5();
+      const tmp2 = callback();
       if (undefined === tmp2) {
         let tmp3 = tmp2;
       }
-      c5 = tmp3;
+      callback = tmp3;
       navigation = true;
     }
-    let noop = obj.addListener("focus", () => {
+    closure_2 = obj.addListener("focus", () => {
       if (!c1) {
-        if (undefined !== tmp3) {
-          tmp3();
+        if (undefined !== callback) {
+          callback();
         }
-        tmp3 = tmp3();
+        const tmp3 = callback();
         if (undefined === tmp3) {
           const tmp4 = tmp3;
         }
-        tmp3 = tmp4;
+        callback = tmp4;
         c1 = true;
       }
     });
-    let closure_3 = obj.addListener("blur", () => {
-      if (undefined !== tmp3) {
-        tmp3();
+    closure_3 = obj.addListener("blur", () => {
+      if (undefined !== callback) {
+        callback();
       }
-      let c1 = false;
+      callback = undefined;
+      c1 = false;
     });
     return () => {
-      if (undefined !== tmp3) {
-        tmp3();
+      if (undefined !== callback) {
+        callback();
       }
-      callback();
-      tmp3 = callback2();
+      callback2();
+      callback3();
     };
   }, items);
 };

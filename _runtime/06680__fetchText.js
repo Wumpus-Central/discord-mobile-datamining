@@ -1,14 +1,14 @@
 // _runtime/06680__fetchText.js
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Platform } from "get ActivityIndicator";
-import { Buffer } from "00511_Buffer.js";
+import Buffer from "Buffer" /* 511 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
 
-const require = arg1;
+require = arg1;
 function _fetchText() {
   let self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c1 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -49,12 +49,12 @@ function _fetchText() {
               } catch (tmp3) {
                 const _Error = Error;
                 const _HermesInternal = HermesInternal;
-                const error = new Error("Decoding " + tmp + " failed with error: " + tmp3);
+                error = new Error("Decoding " + tmp + " failed with error: " + tmp3);
                 throw error;
               }
             })(obj4);
           } else if (obj4.startsWith("data:image/svg+xml;base64")) {
-            tmp4 = outer1_4(obj4);
+            tmp4 = closure_1_4(obj4);
           } else {
             tmp4 = (function fetchUriData(arg0) {
               const self = this;
@@ -74,7 +74,7 @@ function _fetchText() {
       }
     })();
   });
-  const _fetchText = tmp;
+  closure_3 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -86,23 +86,23 @@ function _fetchText() {
 function _fetchUriData() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c3 = 0;
     return (function*(arg0) {
       const _fetch = fetch;
-      let closure_1 = yield fetch(closure_0);
+      closure_1 = yield fetch(closure_0);
       if (!closure_1.ok) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const error = new Error("Fetching " + closure_0 + " failed with status " + closure_1.status);
+        error = new Error("Fetching " + closure_0 + " failed with status " + closure_1.status);
         throw error;
       }
       yield closure_1.text();
       return arg1;
     })();
   });
-  const _fetchUriData = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

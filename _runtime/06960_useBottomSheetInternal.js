@@ -1,7 +1,8 @@
 // _runtime/06960_useBottomSheetInternal.js
-import { useContext } from "noop";
-import { context } from "06961_context.js";
+import noop from "noop" /* 19 */;
+import context from "context" /* 6961 */;
 
+const useContext = noop.useContext;
 
 export const useBottomSheetInternal = function useBottomSheetInternal(arg0) {
   const tmp = useContext(context.BottomSheetInternalContext);

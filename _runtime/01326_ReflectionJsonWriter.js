@@ -1,12 +1,12 @@
 // _runtime/01326_ReflectionJsonWriter.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const ReflectionJsonWriter = require;
 class ReflectionJsonWriter {
   constructor(arg0) {
-    tmp = outer1_3(this, ReflectionJsonWriter);
+    tmp = closure_3(this, ReflectionJsonWriter);
     fields = global.fields;
     if (null === fields) {
       fields = [];
@@ -70,8 +70,6 @@ let items = [
     value: function field(kind, obj, enumAsInteger) {
       let length;
       let length2;
-      let str6;
-      let tmp56;
       const self = this;
       if ("map" == kind.kind) {
         let tmp49 = typeof obj === "object";
@@ -87,8 +85,8 @@ let items = [
           const entries = Object.entries(obj);
           const tmp95 = entries[Symbol.iterator]();
           while (tmp95 !== undefined) {
-            let tmp99 = _slicedToArray;
-            scalarResult = _slicedToArray(tmp97, 2);
+            let tmp99 = callback;
+            scalarResult = callback(tmp97, 2);
             let str8 = 32;
             scalarResult = self;
             let flag5 = false;
@@ -110,8 +108,8 @@ let items = [
           const entries1 = Object.entries(obj);
           const tmp77 = entries1[Symbol.iterator]();
           while (tmp77 !== undefined) {
-            let tmp81 = _slicedToArray;
-            let tmp82 = _slicedToArray(tmp79, 2);
+            let tmp81 = callback;
+            let tmp82 = callback(tmp79, 2);
             let str7 = tmp82[0];
             let tmp83 = self;
             let tmp84 = TResult;
@@ -134,8 +132,8 @@ let items = [
           scalarResult = Object.entries(obj);
           scalarResult = scalarResult[Symbol.iterator]();
           while (scalarResult !== undefined) {
-            let tmp54 = _slicedToArray;
-            let tmp55 = _slicedToArray(tmp52, 2);
+            let tmp54 = callback;
+            let tmp55 = callback(tmp52, 2);
             [str6, tmp56] = tmp55;
             let tmp57 = tmp56;
             let tmp58 = ReflectionJsonWriter;

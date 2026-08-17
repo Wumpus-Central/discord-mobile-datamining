@@ -1,9 +1,10 @@
 // _runtime/01286__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 1278 */;
+import closure_1 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -16,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -60,7 +61,6 @@ let closure_5 = {
     return { type: AstBuilder.Code, content };
   },
   $link(content) {
-    let tmp;
     [tmp] = arg2;
     return { type: AstBuilder.Link, target: tmp, content };
   },
@@ -71,10 +71,10 @@ let closure_5 = {
 class AstBuilder {
   constructor() {
     self = this;
-    tmp = outer1_1(this, AstBuilder);
-    tmp2 = outer1_3;
-    obj = outer1_3(AstBuilder);
-    tmp3 = outer1_2;
+    tmp = closure_1(this, AstBuilder);
+    tmp2 = closure_3;
+    obj = closure_3(AstBuilder);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -90,7 +90,7 @@ class AstBuilder {
     return tmp3Result;
   }
 }
-_inherits(AstBuilder, require("_isNativeReflectConstruct").FormatBuilder);
+_inherits(AstBuilder, _isNativeReflectConstruct2.FormatBuilder);
 obj = {
   key: "pushRichTextTag",
   value: function pushRichTextTag(formatting) {

@@ -1,13 +1,13 @@
 // _runtime/13151_Comparator.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const Comparator = require;
 let closure_3 = Symbol("SemVer ANY");
 class Comparator {
   constructor(arg0, arg1) {
     self = this;
-    tmp = outer1_2(this, Comparator);
+    tmp = closure_2(this, Comparator);
     tmp2 = Comparator;
     tmp3 = closure_1;
     tmp4 = require("module_13124")(require);
@@ -26,7 +26,7 @@ class Comparator {
     self.options = tmp4;
     self.loose = tmp4.loose;
     parsed = self.parse(joined);
-    if (self.semver === c3) {
+    if (self.semver === closure_3) {
       str3 = "";
       self.value = "";
     } else {

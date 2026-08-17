@@ -1,17 +1,13 @@
 // _runtime/16503_siteKey.js
-import noop from "noop";
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let c5;
-let closure_6;
-let obj1;
 ({ useMemo: obj1, useCallback: c3 } = noop);
+noopDefault;
 ({ Linking: c4, StyleSheet, View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
+const jsx = jsxProd.jsx;
 let closure_8 = "(" + String(() => {
   function patchedPostMessage(arg0, arg1, arg2) {
     postMessage(arg0, arg1, arg2);
@@ -22,20 +18,13 @@ let closure_8 = "(" + String(() => {
 const styles = StyleSheet.create({ loadingOverlay: { bottom: 0, justifyContent: "center", left: 0, position: "absolute", right: 0, top: 0 } });
 
 export default function _default(siteKey) {
-  let cancelButtonText;
-  let languageCode;
-  let loadingIndicatorColor;
-  let onMessage;
-  let showLoading;
-  let style;
-  let url;
   siteKey = siteKey.siteKey;
   ({ languageCode, cancelButtonText, loadingIndicatorColor } = siteKey);
   const backgroundColor = siteKey.backgroundColor;
   const theme = siteKey.theme;
   let combined = theme;
   const rqdata = siteKey.rqdata;
-  let closure_4 = rqdata;
+  closure_4 = rqdata;
   let text2;
   let str = siteKey;
   ({ onMessage, style, url, showLoading } = siteKey);
@@ -102,10 +91,10 @@ export default function _default(siteKey) {
   items2 = [{ backgroundColor: "transparent", width: "100%" }, style];
   obj = { html: tmp8, baseUrl: null };
   const tmp9 = combined(() => {
-    obj = { style: items, children: outer1_7(outer1_6, obj) };
-    items = [outer1_9.loadingOverlay];
+    obj = { style: items, children: closure_1_7(closure_1_6, obj) };
+    items = [closure_1_9.loadingOverlay];
     obj = { size: "large", color: loadingIndicatorColor };
-    return outer1_7(text2, obj);
+    return closure_1_7(text2, obj);
   }, items1);
   obj[1] = "" + url;
   obj[8] = obj;

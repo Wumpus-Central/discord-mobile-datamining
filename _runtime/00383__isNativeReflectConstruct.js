@@ -1,9 +1,11 @@
 // _runtime/00383__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 366 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_5 from "_get" /* 96 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 const AnimatedTransform = importDefault;
 function _isNativeReflectConstruct() {
@@ -17,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -28,12 +30,12 @@ function _isNativeReflectConstruct() {
 class AnimatedTransform {
   constructor(arg0, arg1, arg2) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, AnimatedTransform);
+    tmp = closure_2(this, AnimatedTransform);
     items = [];
     items[0] = importDefault;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(AnimatedTransform);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(AnimatedTransform);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -47,7 +49,7 @@ class AnimatedTransform {
     return tmp3Result;
   }
 }
-require("_inherits")(AnimatedTransform, require("_isNativeReflectConstruct"));
+_inheritsDefault(AnimatedTransform, _isNativeReflectConstructDefault);
 let obj = {
   key: "__makeNative",
   value: function __makeNative(arg0) {
@@ -78,8 +80,8 @@ let items = [
           let tmp5 = key10006;
           let arr = arg0[key10006];
           let tmp6 = f102876;
-          let tmp7 = outer1_1;
-          if (arr instanceof f102876(outer1_1[6])) {
+          let tmp7 = closure_1_1;
+          if (arr instanceof f102876(closure_1_1[6])) {
             let tmp4 = f102876;
             obj[key10006] = f102876(arr);
             continue;
@@ -88,7 +90,7 @@ let items = [
             if (Array.isArray(arr)) {
               obj[key10006] = arr.map((arg0) => {
                 let tmp = arg0;
-                if (arg0 instanceof outer1_0(outer1_1[6])) {
+                if (arg0 instanceof closure_1_0(closure_1_1[6])) {
                   tmp = callback(arg0);
                 }
                 return tmp;
@@ -102,9 +104,9 @@ let items = [
                   let tmp8 = key10013;
                   let tmp9 = arr[key10013];
                   let tmp10 = f102876;
-                  let tmp11 = outer1_1;
+                  let tmp11 = closure_1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f102876(outer1_1[6])) {
+                  if (tmp9 instanceof f102876(closure_1_1[6])) {
                     let tmp2 = f102876;
                     tmp3 = f102876(tmp9);
                   }
@@ -141,8 +143,8 @@ let items = [
           let tmp5 = key10006;
           let arr = arg0[key10006];
           let tmp6 = f102876;
-          let tmp7 = outer1_1;
-          if (arr instanceof f102876(outer1_1[6])) {
+          let tmp7 = closure_1_1;
+          if (arr instanceof f102876(closure_1_1[6])) {
             let tmp4 = f102876;
             obj[key10006] = f102876(arr);
             continue;
@@ -151,7 +153,7 @@ let items = [
             if (Array.isArray(arr)) {
               obj[key10006] = arr.map((arg0) => {
                 let tmp = arg0;
-                if (arg0 instanceof outer1_0(outer1_1[6])) {
+                if (arg0 instanceof closure_1_0(closure_1_1[6])) {
                   tmp = callback(arg0);
                 }
                 return tmp;
@@ -165,9 +167,9 @@ let items = [
                   let tmp8 = key10013;
                   let tmp9 = arr[key10013];
                   let tmp10 = f102876;
-                  let tmp11 = outer1_1;
+                  let tmp11 = closure_1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f102876(outer1_1[6])) {
+                  if (tmp9 instanceof f102876(closure_1_1[6])) {
                     let tmp2 = f102876;
                     tmp3 = f102876(tmp9);
                   }
@@ -195,8 +197,8 @@ let items = [
           let tmp5 = key10006;
           let arr = arg0[key10006];
           let tmp6 = f102876;
-          let tmp7 = outer1_1;
-          if (arr instanceof f102876(outer1_1[6])) {
+          let tmp7 = closure_1_1;
+          if (arr instanceof f102876(closure_1_1[6])) {
             let tmp4 = f102876;
             obj[key10006] = f102876(arr);
             continue;
@@ -205,7 +207,7 @@ let items = [
             if (Array.isArray(arr)) {
               obj[key10006] = arr.map((arg0) => {
                 let tmp = arg0;
-                if (arg0 instanceof outer1_0(outer1_1[6])) {
+                if (arg0 instanceof closure_1_0(closure_1_1[6])) {
                   tmp = callback(arg0);
                 }
                 return tmp;
@@ -219,9 +221,9 @@ let items = [
                   let tmp8 = key10013;
                   let tmp9 = arr[key10013];
                   let tmp10 = f102876;
-                  let tmp11 = outer1_1;
+                  let tmp11 = closure_1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f102876(outer1_1[6])) {
+                  if (tmp9 instanceof f102876(closure_1_1[6])) {
                     let tmp2 = f102876;
                     tmp3 = f102876(tmp9);
                   }
@@ -255,8 +257,8 @@ let items = [
           let tmp5 = key10006;
           let arr = arg0[key10006];
           let tmp6 = f102876;
-          let tmp7 = outer1_1;
-          if (arr instanceof f102876(outer1_1[6])) {
+          let tmp7 = closure_1_1;
+          if (arr instanceof f102876(closure_1_1[6])) {
             let tmp4 = f102876;
             obj[key10006] = f102876(arr);
             continue;
@@ -265,7 +267,7 @@ let items = [
             if (Array.isArray(arr)) {
               obj[key10006] = arr.map((arg0) => {
                 let tmp = arg0;
-                if (arg0 instanceof outer1_0(outer1_1[6])) {
+                if (arg0 instanceof closure_1_0(closure_1_1[6])) {
                   tmp = callback(arg0);
                 }
                 return tmp;
@@ -279,9 +281,9 @@ let items = [
                   let tmp8 = key10013;
                   let tmp9 = arr[key10013];
                   let tmp10 = f102876;
-                  let tmp11 = outer1_1;
+                  let tmp11 = closure_1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f102876(outer1_1[6])) {
+                  if (tmp9 instanceof f102876(closure_1_1[6])) {
                     let tmp2 = f102876;
                     tmp3 = f102876(tmp9);
                   }
@@ -417,10 +419,10 @@ obj = {
       } else {
         constructResult = obj.apply(obj, items2);
       }
-      const tmp16Result = _possibleConstructorReturn(obj, constructResult);
+      const tmp16Result = closure_3(obj, constructResult);
       tmp16Result._nodes = items1;
       tmp16Result._transforms = _transforms;
-      const tmp16 = _possibleConstructorReturn;
+      const tmp16 = closure_3;
     }
   }
 };

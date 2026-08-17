@@ -1,6 +1,5 @@
 // _runtime/01086_applySourceContextToFrame.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -28,8 +27,8 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
   obj = {
     name: "ContextLines",
     processEvent(exception) {
-      const _document = num(outer1_1[0]).GLOBAL_OBJ.document;
-      let _location = num(outer1_1[0]).GLOBAL_OBJ.location;
+      const _document = num(closure_1_1[0]).GLOBAL_OBJ.document;
+      let _location = num(closure_1_1[0]).GLOBAL_OBJ.location;
       if (_location) {
         _location = tmp(tmp2[0]).stripUrlQueryAndFragment(tmp(tmp2[0]).GLOBAL_OBJ.location.href);
         const tmpResult = tmp(tmp2[0]);
@@ -61,8 +60,8 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
                     if (filename.filename === closure_1) {
                       if (filename.lineno) {
                         if (arr.length) {
-                          outer1_0(outer1_1[0]).addContextToFrame(arr, filename, tmp);
-                          const obj = outer1_0(outer1_1[0]);
+                          closure_1_0(closure_1_1[0]).addContextToFrame(arr, filename, tmp);
+                          const obj = closure_1_0(closure_1_1[0]);
                         }
                       }
                     }

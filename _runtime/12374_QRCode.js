@@ -1,9 +1,9 @@
 // _runtime/12374_QRCode.js
-import QRCode from "QRCode";
-import 12379__ from "metro/12379__.js";
-import emptyFunction from "emptyFunction";
-import noop from "noop";
-import QRCodeSvg from "QRCodeSvg";
+import QRCode from "QRCode" /* 12375 */;
+import 12379__ from "metro/12379__.js" /* 12379 */;
+import emptyFunction from "emptyFunction" /* 12384 */;
+import noop from "noop" /* 19 */;
+import QRCodeSvg from "QRCodeSvg" /* 12387 */;
 
 let fn = Object.assign;
 if (!fn) {
@@ -40,7 +40,7 @@ if (!QRCode) {
 } else {
   tmp3 = QRCode;
 }
-let closure_1 = tmp3;
+QRCode = tmp3;
 if (!module_12379) {
   obj = { default: null };
   obj[0] = module_12379;
@@ -48,7 +48,7 @@ if (!module_12379) {
 } else {
   tmp5 = module_12379;
 }
-let obj1 = tmp5;
+module_12379 = tmp5;
 if (!emptyFunction) {
   obj = { default: null };
   obj[0] = emptyFunction;
@@ -57,13 +57,13 @@ if (!emptyFunction) {
   tmp7 = emptyFunction;
 }
 if (!noop) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = noop;
   let tmp8 = obj1;
 } else {
   tmp8 = noop;
 }
-let c3 = tmp8;
+noop = tmp8;
 if (!QRCodeSvg) {
   const obj2 = { default: null };
   obj2[0] = QRCodeSvg;
@@ -71,15 +71,10 @@ if (!QRCodeSvg) {
 } else {
   tmp10 = QRCodeSvg;
 }
-let c4 = tmp10;
+QRCodeSvg = tmp10;
 let items = [tmp7.default.object, tmp7.default.string];
 const items1 = [tmp7.default.object, tmp7.default.string];
 const forwardRefResult = noop.forwardRef((obj) => {
-  let bgColor;
-  let fgColor;
-  let level;
-  let size;
-  let value;
   const items = ["bgColor", "fgColor", "level", "size", "value"];
   obj = {};
   ({ bgColor, fgColor, level, size, value } = obj);
@@ -105,14 +100,14 @@ const forwardRefResult = noop.forwardRef((obj) => {
     }
     continue;
   }
-  let _default = new tmp3.default(-1, tmp5.default[level]);
+  let _default = new QRCode.default(-1, module_12379.default[level]);
   _default.addData(value);
   _default.make();
   const modules = _default.modules;
-  _default = tmp8.default;
+  _default = noop.default;
   obj = { bgColor, bgD: null, fgColor: null, fgD: null, ref: null, size: null, viewBoxSize: null };
   let mapped = modules.map((arr) => {
-    let closure_0 = arg1;
+    closure_0 = arg1;
     const mapped = arr.map((arg0, arg1) => {
       let str = "";
       if (!arg0) {
@@ -125,7 +120,7 @@ const forwardRefResult = noop.forwardRef((obj) => {
   obj[1] = mapped.join(" ");
   obj[2] = fgColor;
   const mapped1 = modules.map((arr) => {
-    let closure_0 = arg1;
+    closure_0 = arg1;
     const mapped = arr.map((arg0, arg1) => {
       let str = "";
       if (arg0) {
@@ -139,7 +134,7 @@ const forwardRefResult = noop.forwardRef((obj) => {
   obj[4] = arg1;
   obj[5] = size;
   obj[6] = modules.length;
-  return <tmp10.default {......fn({}, obj, obj)} />;
+  return <QRCodeSvg.default {......fn({}, obj, obj)} />;
 });
 forwardRefResult.displayName = "QRCode";
 forwardRefResult.propTypes = { bgColor: _default.oneOfType(items), fgColor: _default2.oneOfType(items1), level: tmp7.default.string, size: tmp7.default.number, value: tmp7.default.string.isRequired };

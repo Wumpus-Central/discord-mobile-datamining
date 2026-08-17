@@ -1,4 +1,7 @@
 // _runtime/00621_isBuffer.js
+import _mod609 from "module_609" /* 609 */;
+import stubFalse from "stubFalse" /* 622 */;
+
 let tmp = typeof exports === "object";
 if (typeof exports === "object") {
   tmp = exports;
@@ -25,7 +28,7 @@ if (tmp2) {
 let _Buffer;
 if (tmp2) {
   if (tmp2.exports === tmp) {
-    _Buffer = require("module_609").Buffer;
+    _Buffer = _mod609.Buffer;
   }
 }
 let isBuffer;
@@ -33,7 +36,7 @@ if (_Buffer) {
   isBuffer = _Buffer.isBuffer;
 }
 if (!isBuffer) {
-  isBuffer = require("stubFalse");
+  isBuffer = stubFalse;
 }
 
 export default isBuffer;

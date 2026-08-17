@@ -1,11 +1,12 @@
 // _runtime/06510__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import { Animated } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import { Animated } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const GenericTouchable = arg1;
 function _isNativeReflectConstruct() {
@@ -19,25 +20,26 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+noopAll;
 let obj = { UNDETERMINED: 0, BEGAN: 1, MOVED_OUTSIDE: 2 };
 class GenericTouchable {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_2(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(closure_0);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -46,36 +48,36 @@ class GenericTouchable {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.longPressDetected = false;
     tmp3Result.pointerInside = true;
-    tmp3Result.STATE = jsx.UNDETERMINED;
+    tmp3Result.STATE = closure_8.UNDETERMINED;
     tmp3Result.onGestureEvent = (nativeEvent) => {
       const pointerInside = nativeEvent.nativeEvent.pointerInside;
-      if (_undefined.pointerInside !== pointerInside) {
+      if (lib.pointerInside !== pointerInside) {
         if (pointerInside) {
           obj.onMoveIn();
         } else {
           obj.onMoveOut();
         }
       }
-      _undefined.pointerInside = pointerInside;
+      lib.pointerInside = pointerInside;
     };
     tmp3Result.onHandlerStateChange = (nativeEvent) => {
       const state = nativeEvent.nativeEvent.state;
-      if (state !== _undefined(outer1_1[8]).State.CANCELLED) {
+      if (state !== lib(closure_1_1[8]).State.CANCELLED) {
         if (state !== tmp(tmp2[8]).State.FAILED) {
           if (state === tmp(tmp2[8]).State.BEGAN) {
-            if (_undefined.STATE === outer1_8.UNDETERMINED) {
+            if (lib.STATE === closure_1_8.UNDETERMINED) {
               obj.handlePressIn();
             }
-            obj = _undefined;
+            obj = lib;
           }
           if (state === tmp(tmp2[8]).State.END) {
-            const longPressDetected = _undefined.longPressDetected;
+            const longPressDetected = lib.longPressDetected;
             let tmp5 = !longPressDetected;
             if (!longPressDetected) {
-              tmp5 = obj2.STATE !== outer1_8.MOVED_OUTSIDE;
+              tmp5 = obj2.STATE !== closure_1_8.MOVED_OUTSIDE;
             }
             if (tmp5) {
               tmp5 = undefined === obj2.pressOutTimeout;
@@ -91,11 +93,11 @@ class GenericTouchable {
           }
         }
       }
-      _undefined.moveToState(outer1_8.UNDETERMINED);
+      lib.moveToState(closure_1_8.UNDETERMINED);
     };
     tmp3Result.onLongPressDetected = () => {
-      _undefined.longPressDetected = true;
-      const props = _undefined.props;
+      lib.longPressDetected = true;
+      const props = lib.props;
       const onLongPress = props.onLongPress;
       if (onLongPress != null) {
         onLongPress();
@@ -104,7 +106,7 @@ class GenericTouchable {
     return tmp3Result;
   }
 }
-require("_inherits")(GenericTouchable, require("noop").Component);
+_inheritsDefault(GenericTouchable, require("noop").Component);
 obj = {
   key: "handlePressIn",
   value: function handlePressIn() {
@@ -113,7 +115,7 @@ obj = {
     if (this.props.delayPressIn) {
       const _setTimeout = setTimeout;
       self.pressInTimeout = setTimeout(() => {
-        self.moveToState(outer1_8.BEGAN);
+        self.moveToState(closure_1_8.BEGAN);
         self.pressInTimeout = undefined;
       }, self.props.delayPressIn);
     } else {
@@ -139,7 +141,7 @@ let items = [
         if (!pressOutTimeout) {
           const _setTimeout = setTimeout;
           pressOutTimeout = setTimeout(() => {
-            self.moveToState(outer1_8.MOVED_OUTSIDE);
+            self.moveToState(closure_1_8.MOVED_OUTSIDE);
             self.pressOutTimeout = undefined;
           }, self.props.delayPressOut);
         }
@@ -158,10 +160,10 @@ let items = [
       if (this.props.delayPressOut) {
         const _setTimeout = setTimeout;
         self.pressOutTimeout = setTimeout(() => {
-          if (self.STATE === outer1_8.UNDETERMINED) {
+          if (self.STATE === closure_1_8.UNDETERMINED) {
             obj.moveToState(tmp.BEGAN);
           }
-          self.moveToState(outer1_8.UNDETERMINED);
+          self.moveToState(closure_1_8.UNDETERMINED);
           self.pressOutTimeout = undefined;
         }, self.props.delayPressOut);
       } else {
@@ -181,7 +183,7 @@ let items = [
   {
     key: "reset",
     value: function reset() {
-      const obj = { longPressDetected: false, pointerInside: true };
+      obj = { longPressDetected: false, pointerInside: true };
       clearTimeout(obj.pressInTimeout);
       clearTimeout(obj.pressOutTimeout);
       clearTimeout(obj.longPressTimeout);
@@ -257,7 +259,7 @@ let items = [
     value: function render() {
       const self = this;
       if (typeof this.props.hitSlop === "number") {
-        let obj = { top: null, left: null, bottom: null, right: null };
+        obj = { top: null, left: null, bottom: null, right: null };
         obj[0] = self.props.hitSlop;
         obj[1] = self.props.hitSlop;
         obj[2] = self.props.hitSlop;
@@ -286,7 +288,7 @@ let items = [
       obj[8] = flag;
       obj[9] = !self.props.disabled;
       const merged = Object.assign(self.props.extraButtonProps);
-      const obj1 = {};
+      obj1 = {};
       const merged1 = Object.assign(obj);
       obj1.style = self.props.style;
       obj1.children = self.props.children;

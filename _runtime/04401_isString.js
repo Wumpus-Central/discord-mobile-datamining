@@ -1,7 +1,10 @@
 // _runtime/04401_isString.js
-let closure_0 = require("callBoundIntrinsic")("String.prototype.valueOf");
-let closure_1 = require("callBoundIntrinsic")("Object.prototype.toString");
-let closure_2 = require("hasToStringTagShams")();
+import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import hasToStringTagShams from "hasToStringTagShams" /* 1412 */;
+
+let closure_0 = callBoundIntrinsic("String.prototype.valueOf");
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = hasToStringTagShams();
 
 export default function isString(str) {
   let tmp = typeof str === "string";

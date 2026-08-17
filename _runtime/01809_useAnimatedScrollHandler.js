@@ -1,5 +1,5 @@
 // _runtime/01809_useAnimatedScrollHandler.js
-let require = arg1;
+const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useAnimatedScrollHandlerTs1(event){const{scrollHandlers,context}=this.__closure;const{onScroll:onScroll,onBeginDrag:onBeginDrag,onEndDrag:onEndDrag,onMomentumBegin:onMomentumBegin,onMomentumEnd:onMomentumEnd}=scrollHandlers;if(onScroll&&event.eventName.endsWith('onScroll')){onScroll(event,context);}else if(onBeginDrag&&event.eventName.endsWith('onScrollBeginDrag')){onBeginDrag(event,context);}else if(onEndDrag&&event.eventName.endsWith('onScrollEndDrag')){onEndDrag(event,context);}else if(onMomentumBegin&&event.eventName.endsWith('onMomentumScrollBegin')){onMomentumBegin(event,context);}else if(onMomentumEnd&&event.eventName.endsWith('onMomentumScrollEnd')){onMomentumEnd(event,context);}}" };
 arg5.useAnimatedScrollHandler = function useAnimatedScrollHandler(A, items) {
@@ -9,8 +9,8 @@ arg5.useAnimatedScrollHandler = function useAnimatedScrollHandler(A, items) {
     obj[0] = A;
     tmp = obj;
   }
-  const require = tmp;
-  obj = require(context[0]);
+  obj = tmp;
+  obj = obj(context[0]);
   const handler = obj.useHandler(tmp, items);
   context = handler.context;
   items = ["onScroll"];
@@ -27,12 +27,7 @@ arg5.useAnimatedScrollHandler = function useAnimatedScrollHandler(A, items) {
     items.push("onMomentumScrollEnd");
   }
   const fn = function l(eventName) {
-    let onBeginDrag;
-    let onEndDrag;
-    let onMomentumBegin;
-    let onMomentumEnd;
-    let onScroll;
-    ({ onScroll, onBeginDrag, onEndDrag, onMomentumBegin, onMomentumEnd } = closure_0);
+    ({ onScroll, onBeginDrag, onEndDrag, onMomentumBegin, onMomentumEnd } = obj);
     if (onScroll) {
       eventName = eventName.eventName;
       if (eventName.endsWith("onScroll")) {
@@ -69,5 +64,5 @@ arg5.useAnimatedScrollHandler = function useAnimatedScrollHandler(A, items) {
   fn.__closure = { scrollHandlers: tmp, context };
   fn.__workletHash = 480432859268;
   fn.__initData = closure_2;
-  return require(context[1]).useEvent(fn, items, handler.doDependenciesDiffer);
+  return obj(context[1]).useEvent(fn, items, handler.doDependenciesDiffer);
 };

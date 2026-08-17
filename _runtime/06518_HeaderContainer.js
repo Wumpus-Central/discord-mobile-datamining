@@ -1,26 +1,18 @@
 // _runtime/06518_HeaderContainer.js
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { createStandardNavigationFactories } from "01501_createStandardNavigationFactories.js";
-import { Background } from "06319_Background.js";
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import Background from "Background" /* 6319 */;
+import closure_2 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let StyleSheet;
-let c3;
-const require = arg1;
+require = arg1;
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);
 const styles = StyleSheet.create({ absolute: { position: "absolute", top: 0, start: 0, end: 0 } });
 
 export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
-  let noop;
-  let closure_3;
-  let dependencyMap;
-  let jsx;
-  let require;
-  let scenes;
-  ({ mode: require, scenes, layout: dependencyMap, getPreviousScene: noop, contentHeight: closure_3, onContentHeightChange: jsx } = getFocusedRoute);
+  ({ mode: require, scenes, layout: dependencyMap, getPreviousScene: closure_2, contentHeight: closure_3, onContentHeightChange: jsx } = getFocusedRoute);
   let focusedRoute;
-  let closure_6;
+  closure_6 = undefined;
   let buildHref;
   focusedRoute = getFocusedRoute.getFocusedRoute();
   closure_6 = React.useContext(Background.HeaderBackContext);
@@ -29,9 +21,7 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
   obj = { pointerEvents: "box-none", style: getFocusedRoute.style, children: null };
   let substr = scenes.slice(-2);
   obj[2] = substr.map((descriptor, arg1, arr) => {
-    let header;
-    let headerShown;
-    let closure_0 = descriptor;
+    closure_0 = descriptor;
     if ("screen" !== closure_0) {
       if (descriptor) {
         let options = descriptor.descriptor.options;
@@ -51,7 +41,7 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
               const route = tmp8.descriptor.route;
               if (tmp8) {
                 obj = { title: null, href: null };
-                let obj2 = outer1_0(outer1_1[3]);
+                let obj2 = closure_1_0(closure_1_1[3]);
                 obj[0] = obj2.getHeaderTitle(tmp11, route.name);
                 obj[1] = buildHref(route.name, route.params);
                 tmp9 = obj;
@@ -112,19 +102,19 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
                 if ("vertical" !== gestureDirection) {
                   if ("vertical-inverted" !== gestureDirection) {
                     if ("horizontal-inverted" === gestureDirection) {
-                      let forSlideUp = outer1_0(outer1_1[5]).forSlideRight;
+                      let forSlideUp = closure_1_0(closure_1_1[5]).forSlideRight;
                     } else {
-                      forSlideUp = outer1_0(outer1_1[5]).forSlideLeft;
+                      forSlideUp = closure_1_0(closure_1_1[5]).forSlideLeft;
                     }
                   }
                 }
-                forSlideUp = outer1_0(outer1_1[5]).forSlideUp;
+                forSlideUp = closure_1_0(closure_1_1[5]).forSlideUp;
               }
             } else {
-              forNoAnimation = outer1_0(outer1_1[5]).forNoAnimation;
+              forNoAnimation = closure_1_0(closure_1_1[5]).forNoAnimation;
             }
             obj[6] = forNoAnimation;
-            const obj1 = { route: null, navigation: null, children: null };
+            obj1 = { route: null, navigation: null, children: null };
             obj1[0] = descriptor.descriptor.route;
             obj1[1] = descriptor.descriptor.navigation;
             let str5 = "none";
@@ -140,7 +130,7 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
               let fn;
               if (closure_4) {
                 fn = (height) => {
-                  outer1_4({ route: descriptor.descriptor.route, height: height.nativeEvent.layout.height });
+                  closure_1_4({ route: descriptor.descriptor.route, height: height.nativeEvent.layout.height });
                 };
               }
               const obj3 = { pointerEvents: "box-none", onLayout: null, children: null };
@@ -150,12 +140,12 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
               } else {
                 const obj4 = {};
                 const merged = Object.assign(obj);
-                headerResult = tmp35(outer1_0(outer1_1[6]).Header, obj4);
+                headerResult = tmp35(closure_1_0(closure_1_1[6]).Header, obj4);
               }
               obj3[2] = headerResult;
               obj2[3] = tmp35(tmp38, obj3);
               obj1[2] = tmp35(tmp38, obj2);
-              return tmp35(outer1_0(outer1_1[4]).NavigationProvider, obj1, descriptor.descriptor.route.key);
+              return tmp35(closure_1_0(closure_1_1[4]).NavigationProvider, obj1, descriptor.descriptor.route.key);
             }
             const items = [closure_5.absolute, ];
             let tmp41 = null;

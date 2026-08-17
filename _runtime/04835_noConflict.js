@@ -66,8 +66,8 @@ const fn = function() {
     return tmp2;
   };
   obj.time = () => new Date().getTime() / 1000;
-  let closure_3 = [0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
-  let closure_4 = [0, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335];
+  closure_3 = [0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+  closure_4 = [0, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335];
   obj.date = (str) => {
     if (undefined === arg1) {
       const _Date3 = Date;
@@ -82,6 +82,7 @@ const fn = function() {
       }
     }
     const tmp11 = /\\?([a-z])/gi;
+    const re1 = tmp11;
     function formatChrCb(arg0, arg1) {
       let tmp = arg1;
       if (closure_5[arg0]) {
@@ -89,9 +90,9 @@ const fn = function() {
       }
       return tmp;
     }
-    let closure_3 = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    let closure_4 = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    let closure_5 = {
+    closure_3 = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    closure_4 = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    closure_5 = {
       d() {
         return formatChrCb.pad(closure_5.j(), 2, "0");
       },

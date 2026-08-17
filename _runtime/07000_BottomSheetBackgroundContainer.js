@@ -1,21 +1,20 @@
 // _runtime/07000_BottomSheetBackgroundContainer.js
-import noop from "noop";
-import "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
 
 const useMemo = noop.useMemo;
+noopDefault;
+const StyleSheet = get_ActivityIndicator.StyleSheet;
+const jsx = jsxProd.jsx;
 const memoResult = noop.memo((arg0) => {
-  let animatedIndex;
-  let animatedPosition;
-  let backgroundComponent;
-  let backgroundStyle;
   ({ backgroundComponent, backgroundStyle } = arg0);
   let items = [backgroundStyle];
   ({ animatedIndex, animatedPosition } = arg0);
   const style = useMemo(() => {
-    const items = [backgroundStyle(outer1_1[3]).styles.container, backgroundStyle];
-    return outer1_3.flatten(items);
+    const items = [backgroundStyle(closure_1_1[3]).styles.container, backgroundStyle];
+    return closure_1_3.flatten(items);
   }, items);
   if (backgroundComponent == null) {
     backgroundComponent = backgroundStyle(7002).BottomSheetBackground;

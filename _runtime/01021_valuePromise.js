@@ -1,10 +1,5 @@
 // _runtime/01021_valuePromise.js
-import noop from "noop";
-import noop from "noop";
-import noop from "noop";
-import noop from "noop";
-import noop from "noop";
-import noop from "noop";
+import noop from "noop" /* 1019 */;
 import { noop } from "01019_noop.js";
 
 function valuePromise(_55) {
@@ -14,25 +9,25 @@ function valuePromise(_55) {
   tmp._55 = _55;
   return tmp;
 }
-noop = new noop(require("noop")._61);
+noop = new noop(noop._61);
 noop._65 = 1;
 noop._55 = true;
-noop = new noop(require("noop")._61);
+noop = new noop(noop._61);
 noop._65 = 1;
 noop._55 = false;
-noop = new noop(require("noop")._61);
+noop = new noop(noop._61);
 noop._65 = 1;
 noop._55 = null;
-noop = new noop(require("noop")._61);
+noop = new noop(noop._61);
 noop._65 = 1;
 noop._55 = undefined;
-noop = new noop(require("noop")._61);
+noop = new noop(noop._61);
 noop._65 = 1;
 noop._55 = 0;
-noop = new noop(require("noop")._61);
+noop = new noop(noop._61);
 noop._65 = 1;
 noop._55 = "";
-require("noop").resolve = (self) => {
+noop.resolve = (self) => {
   if (self instanceof noop) {
     return self;
   } else if (null === self) {
@@ -52,7 +47,7 @@ require("noop").resolve = (self) => {
       try {
         const then = self.then;
         if (typeof then === "function") {
-          let tmp4Result = tmp4(1019);
+          let tmp4Result = noop;
           tmp4Result = new tmp4Result(obj.bind(self));
           return tmp4Result;
         }
@@ -67,20 +62,20 @@ require("noop").resolve = (self) => {
     }
     return valuePromise(self);
   }
-  tmp4 = require;
+  const tmp4 = require;
 };
-require("noop").all = (arg0) => {
+noop.all = (arg0) => {
   const call = slice.call;
   const _require = typeof call === "unknown" ? slice() : call(arg0);
   return new _noop((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     function res(arg0, self) {
       let _65;
       const callback = arg0;
       if (self) {
         if (typeof self === "object") {
-          if (self instanceof callback(outer2_1[0])) {
+          if (self instanceof callback(closure_2_1[0])) {
             if (self.then === tmp(tmp2[0]).prototype.then) {
               let tmp13 = self;
               let promise2 = self;
@@ -99,7 +94,7 @@ require("noop").all = (arg0) => {
                   callback2(promise2._55);
                 }
                 promise2.then((arg0) => {
-                  outer1_3(closure_0, arg0);
+                  closure_1_3(closure_0, arg0);
                 }, callback2);
               }
               return tmp18;
@@ -110,7 +105,7 @@ require("noop").all = (arg0) => {
             let tmpResult = tmp(tmp2[0]);
             tmpResult = new tmpResult(then.bind(self));
             tmpResult.then((arg0) => {
-              outer1_3(closure_0, arg0);
+              closure_1_3(closure_0, arg0);
             }, callback2);
           }
         }
@@ -137,25 +132,25 @@ require("noop").all = (arg0) => {
     }
   });
 };
-require("noop").reject = (arg0) => {
+noop.reject = (arg0) => {
   const _require = arg0;
   return new _noop((arg0, arg1) => {
     arg1(closure_0);
   });
 };
-require("noop").race = (arg0) => {
+noop.race = (arg0) => {
   const _require = arg0;
   return new _noop((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     const item = closure_0.forEach((arg0) => {
       const obj = callback(table[0]);
       callback(table[0]).resolve(arg0).then(callback, table);
     });
   });
 };
-require("noop").prototype.catch = function(arg0) {
+noop.prototype.catch = function(arg0) {
   return this.then(null, arg0);
 };
 
-export { default } from "noop";
+export default noop;

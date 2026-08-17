@@ -1,10 +1,10 @@
 // _runtime/00733_mapCacheClear.js
-import { Hash } from "00734_Hash.js";
-import { getNative } from "00747_getNative.js";
+import Hash from "Hash" /* 734 */;
+import getNative from "getNative" /* 747 */;
+
 
 export default function mapCacheClear() {
-  const obj = { hash: null, map: null, string: null };
-  obj[0] = new Hash();
+  const obj = { hash: new Hash(), map: null, string: null };
   let tmp4 = getNative || tmp(748);
   tmp4 = new tmp4();
   obj[1] = tmp4;

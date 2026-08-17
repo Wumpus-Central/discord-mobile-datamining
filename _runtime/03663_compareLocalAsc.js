@@ -1,7 +1,7 @@
 // _runtime/03663_compareLocalAsc.js
-import _typeof from "_typeof";
-import differenceInCalendarDays from "differenceInCalendarDays";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import differenceInCalendarDays from "differenceInCalendarDays" /* 3634 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 function compareLocalAsc(defaultResult1, defaultResult2) {
   const fullYear = defaultResult1.getFullYear();
@@ -47,7 +47,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!differenceInCalendarDays) {
   obj = { default: null };
   obj[0] = differenceInCalendarDays;
@@ -55,7 +55,7 @@ if (!differenceInCalendarDays) {
 } else {
   tmp5 = differenceInCalendarDays;
 }
-let closure_1 = tmp5;
+differenceInCalendarDays = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -63,13 +63,14 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function differenceInDays(arg0, arg1) {
-  tmp7.default(2, arguments);
-  const defaultResult1 = tmp3.default(arg0);
-  const defaultResult2 = tmp3.default(arg1);
-  tmp3 = compareLocalAsc(defaultResult1, defaultResult2);
-  const absolute = Math.abs(tmp5.default(defaultResult1, defaultResult2));
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = _typeof.default(arg1);
+  const tmp3 = compareLocalAsc(defaultResult1, defaultResult2);
+  const absolute = Math.abs(differenceInCalendarDays.default(defaultResult1, defaultResult2));
   defaultResult1.setDate(defaultResult1.getDate() - tmp3 * absolute);
   const result = tmp3 * (absolute - Number(compareLocalAsc(defaultResult1, defaultResult2) === -tmp3));
   let num = 0;

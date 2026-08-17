@@ -1,6 +1,7 @@
 // _runtime/04018_sortedIndexBy.js
-import { baseIteratee } from "00720_baseIteratee.js";
-import { baseSortedIndexBy } from "04019_baseSortedIndexBy.js";
+import baseIteratee from "baseIteratee" /* 720 */;
+import baseSortedIndexBy from "baseSortedIndexBy" /* 4019 */;
+
 
 export default function sortedIndexBy(arg0, arg1, arg2) {
   return baseSortedIndexBy(arg0, arg1, baseIteratee(arg2, 2));

@@ -1,7 +1,11 @@
 // _runtime/01708_startWebLayoutAnimation.js
+import startWebLayoutAnimation from "startWebLayoutAnimation" /* 1709 */;
+import setElementAnimation from "setElementAnimation" /* 1723 */;
+import findDescendantWithExitingAnimation from "findDescendantWithExitingAnimation" /* 1741 */;
 
-export const startWebLayoutAnimation = require("startWebLayoutAnimation").startWebLayoutAnimation;
-export const tryActivateLayoutTransition = require("startWebLayoutAnimation").tryActivateLayoutTransition;
-export const getReducedMotionFromConfig = require("setElementAnimation").getReducedMotionFromConfig;
-export const saveSnapshot = require("setElementAnimation").saveSnapshot;
-export const configureWebLayoutAnimations = require("findDescendantWithExitingAnimation").configureWebLayoutAnimations;
+
+export const startWebLayoutAnimation = startWebLayoutAnimation.startWebLayoutAnimation;
+export const tryActivateLayoutTransition = startWebLayoutAnimation.tryActivateLayoutTransition;
+export const getReducedMotionFromConfig = setElementAnimation.getReducedMotionFromConfig;
+export const saveSnapshot = setElementAnimation.saveSnapshot;
+export const configureWebLayoutAnimations = findDescendantWithExitingAnimation.configureWebLayoutAnimations;

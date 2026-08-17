@@ -1,5 +1,5 @@
 // _runtime/03726_formatDuration.js
-import code from "code";
+import code from "code" /* 3718 */;
 
 if (!code) {
   const obj = { default: null };
@@ -8,6 +8,7 @@ if (!code) {
 } else {
   tmp3 = code;
 }
+code = tmp3;
 let closure_3 = ["years", "months", "weeks", "days", "hours", "minutes", "seconds"];
 
 export default function formatDuration(arg0, locale) {
@@ -27,7 +28,7 @@ export default function formatDuration(arg0, locale) {
       locale = defaultOptions.locale;
     }
     if (null === locale) {
-      locale = tmp3.default;
+      locale = code.default;
     }
     let format;
     if (null != locale) {
@@ -40,6 +41,7 @@ export default function formatDuration(arg0, locale) {
     if (null != locale) {
       zero = locale.zero;
     }
+    code = null !== zero && undefined !== zero && zero;
     let delimiter;
     if (null != locale) {
       delimiter = locale.delimiter;

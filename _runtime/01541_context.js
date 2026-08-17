@@ -1,22 +1,20 @@
 // _runtime/01541_context.js
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
-import { context1 } from "01542_context1.js";
-import { NavigationContext } from "01544_NavigationContext.js";
+import context12 from "context1" /* 1542 */;
+import NavigationContext from "NavigationContext" /* 1544 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 let context = importAllResult.createContext(undefined);
 
 export const NavigationRouteContext = context;
 export const NamedRouteContextListContext = importAllResult.createContext(undefined);
 export const NavigationProvider = function NavigationProvider(route) {
-  let children;
-  let navigation;
   route = route.route;
   ({ navigation, children } = route);
-  const context = importAllResult.useContext(context1.IsFocusedContext);
+  context = importAllResult.useContext(context12.IsFocusedContext);
   let tmp5 = null != context;
-  const context1 = importAllResult.useContext(context1.FocusedRouteKeyContext);
+  const context1 = importAllResult.useContext(context12.FocusedRouteKeyContext);
   if (tmp5) {
     tmp5 = !context;
   }
@@ -25,8 +23,7 @@ export const NavigationProvider = function NavigationProvider(route) {
     tmp6 = context1 === route.key;
   }
   let obj = { value: route, children: null };
-  obj = { value: navigation, children: null };
-  obj[1] = jsx(context1.IsFocusedContext.Provider, { value: tmp6, children });
-  obj[1] = jsx(NavigationContext.NavigationContext.Provider, { value: navigation, children: null });
-  return <context.Provider value={navigation}>{null}</context.Provider>;
+  obj = { value: navigation, children: jsx(tmp(1542).IsFocusedContext.Provider, { value: tmp6, children }) };
+  obj[1] = jsx(NavigationContext.NavigationContext.Provider, { value: navigation, children: jsx(tmp(1542).IsFocusedContext.Provider, { value: tmp6, children }) });
+  return <context.Provider value={navigation}>{jsx(tmp(1542).IsFocusedContext.Provider, { value: tmp6, children })}</context.Provider>;
 };

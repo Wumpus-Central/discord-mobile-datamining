@@ -1,14 +1,14 @@
 // _runtime/00962_extractRequestAttributes.js
-import asyncGeneratorStep from "createChildOrRootSpan";
-import { buildMethodPath } from "00960_buildMethodPath.js";
-import { getOperationName } from "00963_getOperationName.js";
-import { 00839__ } from "metro/00839__.js";
-import { 00958__ } from "metro/00958__.js";
+import _mod839 from "module_839" /* 839 */;
+import _mod958 from "module_958" /* 958 */;
+import buildMethodPath from "buildMethodPath" /* 960 */;
+import getOperationName from "getOperationName" /* 963 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
-function extractRequestAttributes(first, outer1_1) {
+function extractRequestAttributes(first, closure_1_1) {
   let obj = { [closure_0(closure_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "openai" };
-  obj[00958__.GEN_AI_OPERATION_NAME_ATTRIBUTE] = getOperationName.getOperationName(outer1_1);
-  obj[00839__.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.openai";
+  obj[_mod958.GEN_AI_OPERATION_NAME_ATTRIBUTE] = getOperationName.getOperationName(closure_1_1);
+  obj[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.openai";
   if (first.length > 0) {
     if (typeof first[0] === "object") {
       if (null !== first[0]) {
@@ -42,7 +42,7 @@ function extractRequestAttributes(first, outer1_1) {
       return obj;
     }
   }
-  obj[00958__.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = "unknown";
+  obj[_mod958.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = "unknown";
 }
 function addRequestAttributes(setAttribute, input) {
   if ("input" in input) {
@@ -53,7 +53,7 @@ function addRequestAttributes(setAttribute, input) {
   if (input) {
     if (0 !== length) {
       const truncatedJsonString = buildMethodPath.getTruncatedJsonString(input);
-      const attr = setAttribute.setAttribute(00958__.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE, truncatedJsonString);
+      const attr = setAttribute.setAttribute(_mod958.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE, truncatedJsonString);
       if (length) {
         const attr1 = setAttribute.setAttribute(tmp2(958).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE, length);
       }
@@ -78,16 +78,17 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
   obj = {
     get(self) {
       let obj = self[arg1];
-      let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
+      let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
       if (typeof obj === "function") {
         if (tmpResult.shouldInstrument(methodPath)) {
           str = obj;
-          let closure_2 = self;
-          let closure_3 = methodPath;
-          str = outer1_2(() => {
-            let closure_0 = [...arguments];
-            let c3 = 0;
-            let c4 = 0;
+          closure_1 = methodPath;
+          str = self;
+          closure_3 = closure_1;
+          str = closure_1_2(() => {
+            closure_0 = [...arguments];
+            c3 = 0;
+            c4 = 0;
             const iter = (function*() {
               if (c4 === 2) {
                 c4 = 3;
@@ -115,9 +116,9 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      let c2 = tmp5;
-                      let table = tmp2;
-                      table = undefined;
+                      c2 = tmp5;
+                      let dependencyMap = tmp2;
+                      dependencyMap = undefined;
                       c2 = undefined;
                       c3 = undefined;
                       c4 = undefined;
@@ -134,40 +135,39 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     obj1[0] = arg1;
                     return obj1;
                   } else {
-                    table = v0(closure_0, outer1_1);
-                    str = table[str(undefined, methodPath[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
+                    dependencyMap = v0(closure_0, closure_1_1);
+                    str = dependencyMap[str(undefined, dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
                     if (!str) {
                       str = "unknown";
                     }
-                    let closure_2 = str;
-                    obj = str(methodPath[2]);
-                    v0 = obj.getOperationName(outer1_1);
-                    const outer2_4 = str[0];
-                    if (outer2_4) {
-                      if (typeof outer2_4 === "object") {
+                    obj = str(dependencyMap[2]);
+                    v0 = obj.getOperationName(closure_1_1);
+                    const stream = str[0];
+                    if (stream) {
+                      if (typeof stream === "object") {
                         c4 = 3;
                       }
                       let obj2 = { name: null, op: null, attributes: null };
                       const _HermesInternal2 = HermesInternal;
-                      obj2[0] = "" + v0 + " " + closure_2 + " stream-response";
-                      let obj5 = str(methodPath[5]);
-                      obj2[1] = str(methodPath[2]).getSpanOperation(outer1_1);
-                      obj2[2] = methodPath;
+                      obj2[0] = "" + v0 + " " + str + " stream-response";
+                      let obj5 = str(dependencyMap[5]);
+                      obj2[1] = str(dependencyMap[2]).getSpanOperation(closure_1_1);
+                      obj2[2] = dependencyMap;
                       obj5.startSpanManual(obj2, (() => {
-                        let closure_0 = outer2_2(/* F120496 */ function() { ... });
+                        closure_0 = closure_2_2(/* F120496 */ function() { ... });
                         return () => { ... };
                       })());
-                      let obj7 = str(methodPath[2]);
+                      let obj7 = str(dependencyMap[2]);
                     }
-                    obj1 = str(methodPath[5]);
+                    obj1 = str(dependencyMap[5]);
                     let obj3 = { name: null, op: null, attributes: null };
                     const _HermesInternal = HermesInternal;
-                    obj3[0] = "" + v0 + " " + closure_2;
-                    obj3 = str(methodPath[2]);
-                    obj3[1] = obj3.getSpanOperation(outer1_1);
-                    obj3[2] = methodPath;
+                    obj3[0] = "" + v0 + " " + str;
+                    obj3 = str(dependencyMap[2]);
+                    obj3[1] = obj3.getSpanOperation(closure_1_1);
+                    obj3[2] = dependencyMap;
                     obj1.startSpan(obj3, (() => {
-                      let closure_0 = outer2_2(/* F120498 */ function() { ... });
+                      closure_0 = closure_2_2(/* F120498 */ function() { ... });
                       return () => { ... };
                     })());
                   }
@@ -208,16 +208,17 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
             obj = { get: null };
             obj[0] = function get(self) {
               let obj = self[arg1];
-              let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
+              let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
               if (typeof obj === "function") {
                 if (tmpResult.shouldInstrument(methodPath)) {
                   str = obj;
-                  let closure_2 = self;
-                  let closure_3 = methodPath;
-                  str = outer1_2(() => {
-                    let closure_0 = [...arguments];
-                    let c3 = 0;
-                    let c4 = 0;
+                  closure_1 = methodPath;
+                  str = self;
+                  closure_3 = closure_1;
+                  str = closure_1_2(() => {
+                    closure_0 = [...arguments];
+                    c3 = 0;
+                    c4 = 0;
                     const iter = (function*() {
                       if (c4 === 2) {
                         c4 = 3;
@@ -245,9 +246,9 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                               obj[0] = arg1;
                               return obj;
                             } else {
-                              let c2 = tmp5;
-                              let table = tmp2;
-                              table = undefined;
+                              c2 = tmp5;
+                              let dependencyMap = tmp2;
+                              dependencyMap = undefined;
                               c2 = undefined;
                               c3 = undefined;
                               c4 = undefined;
@@ -264,35 +265,34 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                             obj1[0] = arg1;
                             return obj1;
                           } else {
-                            table = v0(closure_0, outer1_1);
-                            str = table[str(undefined, methodPath[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
+                            dependencyMap = v0(closure_0, closure_1_1);
+                            str = dependencyMap[str(undefined, dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
                             if (!str) {
                               str = "unknown";
                             }
-                            let closure_2 = str;
-                            obj = str(methodPath[2]);
-                            v0 = obj.getOperationName(outer1_1);
-                            const outer2_4 = str[0];
-                            if (outer2_4) {
-                              if (typeof outer2_4 === "object") {
+                            obj = str(dependencyMap[2]);
+                            v0 = obj.getOperationName(closure_1_1);
+                            const stream = str[0];
+                            if (stream) {
+                              if (typeof stream === "object") {
                                 c4 = 3;
                               }
                               let obj2 = { name: null, op: null, attributes: null };
                               const _HermesInternal2 = HermesInternal;
-                              obj2[0] = "" + v0 + " " + closure_2 + " stream-response";
-                              let obj5 = str(methodPath[5]);
-                              obj2[1] = str(methodPath[2]).getSpanOperation(outer1_1);
-                              obj2[2] = methodPath;
+                              obj2[0] = "" + v0 + " " + str + " stream-response";
+                              let obj5 = str(dependencyMap[5]);
+                              obj2[1] = str(dependencyMap[2]).getSpanOperation(closure_1_1);
+                              obj2[2] = dependencyMap;
                               obj5.startSpanManual(obj2, (() => { ... })());
-                              let obj7 = str(methodPath[2]);
+                              let obj7 = str(dependencyMap[2]);
                             }
-                            obj1 = str(methodPath[5]);
+                            obj1 = str(dependencyMap[5]);
                             let obj3 = { name: null, op: null, attributes: null };
                             const _HermesInternal = HermesInternal;
-                            obj3[0] = "" + v0 + " " + closure_2;
-                            obj3 = str(methodPath[2]);
-                            obj3[1] = obj3.getSpanOperation(outer1_1);
-                            obj3[2] = methodPath;
+                            obj3[0] = "" + v0 + " " + str;
+                            obj3 = str(dependencyMap[2]);
+                            obj3[1] = obj3.getSpanOperation(closure_1_1);
+                            obj3[2] = dependencyMap;
                             obj1.startSpan(obj3, (() => { ... })());
                           }
                         } catch (tmp40) {
@@ -332,16 +332,17 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     obj = { get: null };
                     obj[0] = function get(self) {
                       let obj = self[arg1];
-                      let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
+                      let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
                       if (typeof obj === "function") {
                         if (tmpResult.shouldInstrument(methodPath)) {
                           str = obj;
-                          let closure_2 = self;
-                          let closure_3 = methodPath;
-                          str = outer1_2(() => {
-                            let closure_0 = [...arguments];
-                            let c3 = 0;
-                            let c4 = 0;
+                          closure_1 = methodPath;
+                          str = self;
+                          closure_3 = closure_1;
+                          str = closure_1_2(() => {
+                            closure_0 = [...arguments];
+                            c3 = 0;
+                            c4 = 0;
                             const iter = (/* F115355 */ function*() { ... })();
                             iter.next();
                             return iter;
@@ -374,13 +375,14 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                             obj = { get: null };
                             obj[0] = function get(self) {
                               let obj = self[arg1];
-                              let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
+                              let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
                               if (typeof obj === "function") {
                                 if (tmpResult.shouldInstrument(methodPath)) {
                                   str = obj;
-                                  let closure_2 = self;
-                                  let closure_3 = methodPath;
-                                  str = outer1_2(() => { ... });
+                                  closure_1 = methodPath;
+                                  str = self;
+                                  closure_3 = closure_1;
+                                  str = closure_1_2(() => { ... });
                                   function instrumentedMethod() { ... }
                                 }
                                 return instrumentedMethod;
@@ -400,25 +402,25 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                     obj = { get: null };
                                     obj[0] = function get() { ... };
                                     instrumentedMethod = new Proxy(obj, obj);
-                                    let tmp10 = methodPath;
+                                    let tmp10 = closure_1;
                                   }
                                 }
                               }
                             };
                             instrumentedMethod = new Proxy(obj, obj);
-                            let tmp10 = methodPath;
+                            let tmp10 = closure_1;
                           }
                         }
                       }
                     };
                     instrumentedMethod = new Proxy(obj, obj);
-                    let tmp10 = methodPath;
+                    let tmp10 = closure_1;
                   }
                 }
               }
             };
             instrumentedMethod = new Proxy(obj, obj);
-            let tmp10 = methodPath;
+            let tmp10 = closure_1;
           }
         }
       }

@@ -3,7 +3,7 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.BaseRouter = {
   getStateForAction(routeNames, type) {
-    let closure_0 = type;
+    closure_0 = type;
     type = type.type;
     if ("SET_PARAMS" !== type) {
       if ("REPLACE_PARAMS" !== type) {
@@ -79,7 +79,6 @@ arg5.BaseRouter = {
       let merged1 = Object.assign(routeNames);
       const routes1 = routeNames.routes;
       obj.routes = routes1.map((params) => {
-        let payload;
         if (arg1 !== index) {
           return params;
         } else {

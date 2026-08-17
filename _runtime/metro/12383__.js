@@ -5,7 +5,7 @@ const obj = {
   glog(self) {
     if (self < 1) {
       const _Error = Error;
-      const error = new Error("glog(" + self + ")");
+      error = new Error("glog(" + self + ")");
       throw error;
     } else {
       return obj.LOG_TABLE[self];

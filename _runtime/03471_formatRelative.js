@@ -1,6 +1,6 @@
 // _runtime/03471_formatRelative.js
-import _typeof from "_typeof";
-import isSameUTCWeek from "isSameUTCWeek";
+import _typeof from "_typeof" /* 3472 */;
+import isSameUTCWeek from "isSameUTCWeek" /* 3474 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!isSameUTCWeek) {
   obj = { default: null };
   obj[0] = isSameUTCWeek;
@@ -17,21 +17,20 @@ if (!isSameUTCWeek) {
 } else {
   tmp5 = isSameUTCWeek;
 }
-let closure_1 = tmp5;
+isSameUTCWeek = tmp5;
 let closure_2 = ["\u043D\u0435\u0434\u0435\u043B\u044F", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u044F\u0434\u0430", "\u0447\u0435\u0442\u0432\u044A\u0440\u0442\u044A\u043A", "\u043F\u0435\u0442\u044A\u043A", "\u0441\u044A\u0431\u043E\u0442\u0430"];
 let closure_3 = {
   lastWeek: function lastWeekFormatToken(arg0, arg1, arg2) {
-    const defaultResult = tmp3.default(arg0);
+    const defaultResult = _typeof.default(arg0);
     const uTCDay = defaultResult.getUTCDay();
     let text = dependencyMap[uTCDay];
-    if (tmp5.default(defaultResult, arg1, arg2)) {
+    if (isSameUTCWeek.default(defaultResult, arg1, arg2)) {
       if (2 === uTCDay) {
         text = `'във ${tmp2}`;
         let text1 = `'във ${tmp2} в' p`;
       } else {
         text1 = `${"'\u0432 " + `'във ${tmp2}`} в' p`;
       }
-      tmp5 = text1;
     } else {
       if (0 !== uTCDay) {
         if (3 !== uTCDay) {
@@ -48,17 +47,16 @@ let closure_3 = {
   today: "'\u0434\u043D\u0435\u0441 \u0432' p",
   tomorrow: "'\u0443\u0442\u0440\u0435 \u0432' p",
   nextWeek: function nextWeekFormatToken(arg0, arg1, arg2) {
-    const defaultResult = tmp3.default(arg0);
+    const defaultResult = _typeof.default(arg0);
     const uTCDay = defaultResult.getUTCDay();
     let text = dependencyMap[uTCDay];
-    if (tmp5.default(defaultResult, arg1, arg2)) {
+    if (isSameUTCWeek.default(defaultResult, arg1, arg2)) {
       if (2 === uTCDay) {
         text = `'във ${tmp2}`;
         let text1 = `'във ${tmp2} в' p`;
       } else {
         text1 = `${"'\u0432 " + `'във ${tmp2}`} в' p`;
       }
-      tmp5 = text1;
     } else {
       if (0 !== uTCDay) {
         if (3 !== uTCDay) {

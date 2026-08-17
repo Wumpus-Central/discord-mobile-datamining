@@ -1,7 +1,7 @@
 // _runtime/07781_createEventEnvelope.js
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
-import consoleSandbox from "consoleSandbox";
-import { forEachEnvelopeItem } from "07782_forEachEnvelopeItem.js";
+import forEachEnvelopeItem from "forEachEnvelopeItem" /* 7782 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
+import consoleSandbox from "consoleSandbox" /* 7738 */;
 
 
 export const createEventEnvelope = function createEventEnvelope(type, arg1, sdk) {
@@ -58,8 +58,7 @@ export const createEventEnvelope = function createEventEnvelope(type, arg1, sdk)
 export const createSessionEnvelope = function createSessionEnvelope(toJSON) {
   let obj = forEachEnvelopeItem;
   const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(arg2);
-  obj = { sent_at: null };
-  obj[0] = new Date().toISOString();
+  obj = { sent_at: new Date().toISOString() };
   let tmp4 = sdkMetadataForEnvelopeHeader;
   if (sdkMetadataForEnvelopeHeader) {
     obj = { sdk: null };
@@ -69,7 +68,7 @@ export const createSessionEnvelope = function createSessionEnvelope(toJSON) {
   const merged = Object.assign(tmp4);
   let tmp6 = arg3 && arg1;
   if (tmp6) {
-    const obj1 = { dsn: null };
+    obj1 = { dsn: null };
     let tmpResult = tmp(7785);
     obj1[0] = tmpResult.dsnToString(arg1);
     tmp6 = obj1;
@@ -96,8 +95,7 @@ export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
   if (getDsn) {
     tunnel = getDsn.getOptions().tunnel;
   }
-  obj = { sent_at: null };
-  obj[0] = new Date().toISOString();
+  obj = { sent_at: new Date().toISOString() };
   let tmp7 = (function dscHasRequiredProps(dynamicSamplingContextFromSpan) {
     return dynamicSamplingContextFromSpan.trace_id && dynamicSamplingContextFromSpan.public_key;
   })(dynamicSamplingContextFromSpan);
@@ -109,7 +107,7 @@ export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
   const merged = Object.assign(tmp7);
   let tmp9 = tunnel && dsn;
   if (tmp9) {
-    const obj1 = { dsn: null };
+    obj1 = { dsn: null };
     obj1[0] = beforeSendSpan(7785).dsnToString(dsn);
     tmp9 = obj1;
     const tmp2Result = beforeSendSpan(7785);
@@ -121,10 +119,10 @@ export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
   }
   if (beforeSendSpan) {
     const fn2 = (arg0) => {
-      const tmp3 = beforeSendSpan(beforeSendSpan(outer1_1[5]).spanToJSON(arg0));
+      const tmp3 = beforeSendSpan(beforeSendSpan(closure_1_1[5]).spanToJSON(arg0));
       if (!tmp3) {
-        beforeSendSpan(outer1_1[5]).showSpanDropWarning();
-        const tmpResult = beforeSendSpan(outer1_1[5]);
+        beforeSendSpan(closure_1_1[5]).showSpanDropWarning();
+        const tmpResult = beforeSendSpan(closure_1_1[5]);
       }
       return tmp3;
     };

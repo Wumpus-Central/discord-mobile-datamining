@@ -1,6 +1,12 @@
 // _runtime/metro/04885__.js
-import { getFileChunk } from "../04882_getFileChunk.js";
-import { 04883__ } from "04883__.js";
+import getFileChunk from "getFileChunk" /* 4882 */;
+import _mod4883 from "module_4883" /* 4883 */;
+import isAAC from "isAAC" /* 4886 */;
+import is7Z from "is7Z" /* 4887 */;
+import isAVIF from "isAVIF" /* 4888 */;
+import isBLEND from "isBLEND" /* 4889 */;
+import isAVI from "isAVI" /* 4890 */;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -40,11 +46,11 @@ if (self2) {
   }
   let _Object2 = Object;
   exports.validateFileType = undefined;
-  fn(require("isAAC"), exports);
-  fn(require("is7Z"), exports);
-  fn(require("isAVIF"), exports);
-  fn(require("isBLEND"), exports);
-  fn(require("isAVI"), exports);
+  fn(isAAC, exports);
+  fn(is7Z, exports);
+  fn(isAVIF, exports);
+  fn(isBLEND, exports);
+  fn(isAVI, exports);
   exports.validateFileType = function validateFileType(fileChunk, arr, chunkSize) {
     let items = [];
     const items1 = [
@@ -67,7 +73,7 @@ if (self2) {
       let tmp3 = require;
       let tmp4 = dependencyMap;
       let tmp5 = dependencyMap;
-      let FileTypes = 04883__.FileTypes;
+      let FileTypes = _mod4883.FileTypes;
       if (typeof call === "unknown") {
         let hasOwnPropertyResult = hasOwnProperty(item10023);
       } else {
@@ -145,10 +151,10 @@ if (self2) {
       let tmp21 = require;
       let tmp22 = dependencyMap;
       let tmp23 = dependencyMap;
-      let FileTypes2 = 04883__.FileTypes;
+      let FileTypes2 = _mod4883.FileTypes;
       let tmp24 = items2;
       items2 = items2.concat(FileTypes2.getSignaturesByName(item10079));
-      let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = 04883__.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
+      let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = _mod4883.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
       if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(item10079.toLowerCase())) {
         let tmp25 = tmp20;
         let tmp26 = tmp22;
@@ -166,7 +172,7 @@ if (self2) {
       num2 = 64;
     }
     fileChunk = getFileChunk.getFileChunk(fileChunk, num2);
-    const FileTypes4 = 04883__.FileTypes;
+    const FileTypes4 = _mod4883.FileTypes;
     const detectSignatureResult = FileTypes4.detectSignature(fileChunk, items2);
     require = detectSignatureResult;
     if (detectSignatureResult) {
@@ -176,9 +182,9 @@ if (self2) {
           return signatures.includes(closure_0);
         });
         if (found.length > 0) {
-          const FileTypes5 = tmp29(4883).FileTypes;
+          const FileTypes5 = _mod4883.FileTypes;
           const result = FileTypes5.detectTypeByAdditionalCheck(fileChunk, found);
-          const dependencyMap = result;
+          dependencyMap = result;
           return result && combined.some((str) => str.toLowerCase() === closure_1);
         }
       }
@@ -196,7 +202,7 @@ if (self2) {
       }
       return combined;
     }));
-    tmp29 = require;
+    const tmp29 = require;
     const tmp30 = require;
   };
 } else {

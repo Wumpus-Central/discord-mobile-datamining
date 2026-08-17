@@ -1,7 +1,7 @@
 // _runtime/03880_roundToNearestMinutes.js
-import _typeof from "_typeof";
-import toInteger from "toInteger";
-import { getRoundingMethod } from "03666_getRoundingMethod.js";
+import getRoundingMethod from "getRoundingMethod" /* 3666 */;
+import _typeof from "_typeof" /* 3472 */;
+import toInteger from "toInteger" /* 3476 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -10,6 +10,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
+_typeof = tmp3;
 if (!toInteger) {
   obj = { default: null };
   obj[0] = toInteger;
@@ -17,7 +18,7 @@ if (!toInteger) {
 } else {
   tmp5 = toInteger;
 }
-let c3 = tmp5;
+toInteger = tmp5;
 
 export default function roundToNearestMinutes(arg0, nearestTo) {
   if (arguments.length < 1) {
@@ -36,10 +37,10 @@ export default function roundToNearestMinutes(arg0, nearestTo) {
         num = nearestTo;
       }
     }
-    const defaultResult = tmp5.default(num);
+    const defaultResult = toInteger.default(num);
     if (defaultResult >= 1) {
       if (defaultResult <= 30) {
-        const defaultResult1 = tmp3.default(arg0);
+        const defaultResult1 = _typeof.default(arg0);
         const seconds = defaultResult1.getSeconds();
         const sum = defaultResult1.getMinutes() + seconds / 60;
         let roundingMethod;

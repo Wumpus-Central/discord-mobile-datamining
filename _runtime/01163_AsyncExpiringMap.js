@@ -1,6 +1,7 @@
 // _runtime/01163_AsyncExpiringMap.js
-import AsyncExpiringMap from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import AsyncExpiringMap from "_slicedToArray" /* 32 */;
+import closure_1 from "_classCallCheck" /* 41 */;
 
 class AsyncExpiringMap {
   constructor() {
@@ -16,7 +17,7 @@ class AsyncExpiringMap {
     if (num2 === undefined) {
       num2 = 2000;
     }
-    tmp = outer1_1(this, AsyncExpiringMap);
+    tmp = closure_1(this, AsyncExpiringMap);
     this._ttl = num2;
     map = new Map();
     this._map = map;
@@ -140,8 +141,6 @@ const items = [
   {
     key: "cleanup",
     value: function cleanup() {
-      let tmp7;
-      let tmp8;
       const self = this;
       const _map = this._map;
       const timestamp = Date.now();
@@ -197,4 +196,4 @@ const items = [
   }
 ];
 
-export const AsyncExpiringMap = require("_createClass")(AsyncExpiringMap, items);
+export const AsyncExpiringMap = _createClassDefault(AsyncExpiringMap, items);

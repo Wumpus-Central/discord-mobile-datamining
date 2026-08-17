@@ -1,10 +1,10 @@
 // _runtime/03898_setWeekYear.js
-import differenceInCalendarDays from "differenceInCalendarDays";
-import startOfWeekYear from "startOfWeekYear";
-import _typeof from "_typeof";
-import toInteger from "toInteger";
-import requiredArgs from "requiredArgs";
-import { getDefaultOptions } from "03477_getDefaultOptions.js";
+import getDefaultOptions from "getDefaultOptions" /* 3477 */;
+import differenceInCalendarDays from "differenceInCalendarDays" /* 3634 */;
+import startOfWeekYear from "startOfWeekYear" /* 3754 */;
+import _typeof from "_typeof" /* 3472 */;
+import toInteger from "toInteger" /* 3476 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!differenceInCalendarDays) {
   let obj = { default: null };
@@ -13,7 +13,7 @@ if (!differenceInCalendarDays) {
 } else {
   tmp3 = differenceInCalendarDays;
 }
-let obj1 = tmp3;
+differenceInCalendarDays = tmp3;
 if (!startOfWeekYear) {
   obj = { default: null };
   obj[0] = startOfWeekYear;
@@ -21,7 +21,7 @@ if (!startOfWeekYear) {
 } else {
   tmp5 = startOfWeekYear;
 }
-let c3 = tmp5;
+startOfWeekYear = tmp5;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -29,15 +29,15 @@ if (!_typeof) {
 } else {
   tmp7 = _typeof;
 }
-let c4 = tmp7;
+_typeof = tmp7;
 if (!toInteger) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = toInteger;
   let tmp9 = obj1;
 } else {
   tmp9 = toInteger;
 }
-let c5 = tmp9;
+toInteger = tmp9;
 if (!requiredArgs) {
   const obj2 = { default: null };
   obj2[0] = requiredArgs;
@@ -45,10 +45,10 @@ if (!requiredArgs) {
 } else {
   tmp11 = requiredArgs;
 }
-let closure_6 = tmp11;
+requiredArgs = tmp11;
 
 export default function setWeekYear(arg0, arg1, firstWeekContainsDate) {
-  tmp11.default(2, arguments);
+  requiredArgs.default(2, arguments);
   const defaultOptions = getDefaultOptions.getDefaultOptions();
   let prop;
   if (null != firstWeekContainsDate) {
@@ -96,15 +96,15 @@ export default function setWeekYear(arg0, arg1, firstWeekContainsDate) {
       num = prop;
     }
   }
-  const defaultResult2 = tmp7.default(arg0);
-  const defaultResult1 = tmp9.default(num);
-  const obj = tmp9;
-  const defaultResult3 = tmp9.default(arg1);
+  const defaultResult2 = _typeof.default(arg0);
+  const defaultResult1 = toInteger.default(num);
+  const obj = toInteger;
+  const defaultResult3 = toInteger.default(arg1);
   const date = new Date(0);
   date.setFullYear(defaultResult3, 0, defaultResult1);
   date.setHours(0, 0, 0, 0);
-  const defaultResult5 = tmp5.default(date, firstWeekContainsDate);
-  defaultResult5.setDate(defaultResult5.getDate() + tmp3.default(defaultResult2, tmp5.default(defaultResult2, firstWeekContainsDate)));
+  const defaultResult5 = startOfWeekYear.default(date, firstWeekContainsDate);
+  defaultResult5.setDate(defaultResult5.getDate() + differenceInCalendarDays.default(defaultResult2, startOfWeekYear.default(defaultResult2, firstWeekContainsDate)));
   return defaultResult5;
 };
 export default exports.default;

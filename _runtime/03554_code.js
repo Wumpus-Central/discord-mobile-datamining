@@ -1,9 +1,9 @@
 // _runtime/03554_code.js
-import translateSeconds from "translateSeconds";
-import buildFormatLongFn from "buildFormatLongFn";
-import formatRelative from "formatRelative";
-import buildLocalizeFn from "buildLocalizeFn";
-import 03559__ from "metro/03559__.js";
+import translateSeconds from "translateSeconds" /* 3555 */;
+import buildFormatLongFn from "buildFormatLongFn" /* 3556 */;
+import formatRelative from "formatRelative" /* 3557 */;
+import buildLocalizeFn from "buildLocalizeFn" /* 3558 */;
+import 03559__ from "metro/03559__.js" /* 3559 */;
 
 if (!translateSeconds) {
   let obj = { default: null };

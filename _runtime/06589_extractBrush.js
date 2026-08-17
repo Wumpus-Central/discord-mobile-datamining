@@ -1,7 +1,8 @@
 // _runtime/06589_extractBrush.js
-import { processColor } from "get ActivityIndicator";
-import { percentTo255 } from "06590_percentTo255.js";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import percentTo255 from "percentTo255" /* 6590 */;
 
+const processColor = get_ActivityIndicator.processColor;
 const re3 = /^url\(#(.+)\)$/;
 let closure_4 = { type: 2 };
 let closure_5 = { type: 3 };

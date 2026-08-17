@@ -1,10 +1,11 @@
 // _runtime/07063_RVEngagedIndicesTrackerImpl.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 7051 */;
+import closure_2 from "_classCallCheck" /* 7050 */;
 
 const RVEngagedIndicesTrackerImpl = arg1;
 class RVEngagedIndicesTrackerImpl {
   constructor() {
-    tmp = outer1_2(this, RVEngagedIndicesTrackerImpl);
+    tmp = closure_2(this, RVEngagedIndicesTrackerImpl);
     this.scrollOffset = 0;
     this.drawDistance = require("PlatformConfig").PlatformConfig.defaultDrawDistance;
     this.enableOffsetProjection = true;
@@ -170,4 +171,4 @@ let items = [
   }
 ];
 
-export const RVEngagedIndicesTrackerImpl = require("_createClass")(RVEngagedIndicesTrackerImpl, items);
+export const RVEngagedIndicesTrackerImpl = _createClassDefault(RVEngagedIndicesTrackerImpl, items);

@@ -1,6 +1,6 @@
 // _runtime/metro/03783__typeof.js
-import startOfUTCISOWeek from "startOfUTCISOWeek";
-import { Parser } from "Parser";
+import Parser2 from "Parser" /* 3778 */;
+import startOfUTCISOWeek from "startOfUTCISOWeek" /* 3709 */;
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -8,9 +8,9 @@ function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -30,7 +30,7 @@ function _typeof(arg0) {
   };
 }
 function _setPrototypeOf(ISOWeekYearParser, Parser) {
-  let _setPrototypeOf = Object.setPrototypeOf;
+  _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
     _setPrototypeOf = function _setPrototypeOf(ISOWeekYearParser, Parser) {
       ISOWeekYearParser.__proto__ = Parser;
@@ -42,7 +42,7 @@ function _setPrototypeOf(ISOWeekYearParser, Parser) {
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;
-    let _getPrototypeOf = Object.getPrototypeOf;
+    _getPrototypeOf = Object.getPrototypeOf;
   } else {
     _getPrototypeOf = function _getPrototypeOf(arg0) {
       let __proto__ = arg0.__proto__;
@@ -62,11 +62,12 @@ if (!startOfUTCISOWeek) {
 } else {
   tmp3 = startOfUTCISOWeek;
 }
-let c3 = tmp3;
+startOfUTCISOWeek = tmp3;
+const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
 class ISOWeekYearParser {
   constructor() {
-    if (this instanceof c1) {
+    if (this instanceof closure_1) {
       length = arguments.length;
       _Array = Array;
       tmp6 = new.target;
@@ -232,7 +233,7 @@ let items = [
       const date = new Date(0);
       date.setUTCFullYear(arg2, 0, 4);
       date.setUTCHours(0, 0, 0, 0);
-      return tmp3.default(date);
+      return startOfUTCISOWeek.default(date);
     }
   }
 ];

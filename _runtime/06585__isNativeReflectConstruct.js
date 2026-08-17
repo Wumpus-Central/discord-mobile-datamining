@@ -1,11 +1,14 @@
 // _runtime/06585__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
-import { extractProps } from "06586_extractProps.js";
+import noopAll from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import extractPropsDefault from "extractProps" /* 6586 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6594 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 let closure_0 = arg1;
 function _isNativeReflectConstruct() {
@@ -19,24 +22,25 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+noopAll;
 class G {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_3(this, closure_0);
     items1 = [...items];
-    tmp2 = __esModule;
-    obj = __esModule(apply);
-    tmp3 = __esModule;
+    tmp2 = closure_5;
+    obj = closure_5(closure_0);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -45,17 +49,17 @@ class G {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.setNativeProps = (matrix) => {
       matrix = matrix.matrix;
       let tmp = !matrix;
       if (!matrix) {
-        tmp = outer1_1(outer1_2[7])(matrix);
+        tmp = closure_1_1(closure_1_2[7])(matrix);
       }
       if (tmp) {
         matrix.matrix = tmp;
       }
-      const root = _undefined.root;
+      root = root.root;
       if (root != null) {
         root.setNativeProps(matrix);
       }
@@ -64,7 +68,7 @@ class G {
   }
 }
 closure_0 = G;
-require("_inherits")(G, require("_isNativeReflectConstruct"));
+_inheritsDefault(G, _isNativeReflectConstructDefault);
 let items = [
   {
     key: "render",
@@ -73,7 +77,7 @@ let items = [
       const props = this.props;
       let obj = self(6586);
       const propsAndStylesResult = obj.propsAndStyles(props);
-      const tmp5 = extractProps(propsAndStylesResult, this);
+      const tmp5 = extractPropsDefault(propsAndStylesResult, this);
       const obj2 = self(6593);
       const tmp4 = importDefault;
       if (typeof hasProps !== "function") {
@@ -91,7 +95,7 @@ let items = [
         };
         const merged = Object.assign(tmp5);
         obj.children = props.children;
-        return jsx(tmp4(6594), { ref: null });
+        return jsx(__INTERNAL_VIEW_CONFIGDefault, { ref: null });
       }
       flag = false;
     }

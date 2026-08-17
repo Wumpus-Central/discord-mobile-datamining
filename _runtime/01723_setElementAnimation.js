@@ -1,14 +1,18 @@
 // _runtime/01723_setElementAnimation.js
+import isWorkletFunction from "isWorkletFunction" /* 1679 */;
+import isReducedMotionEnabledInSystem from "isReducedMotionEnabledInSystem" /* 1695 */;
+import TransitionType from "TransitionType" /* 1710 */;
+import BaseAnimationBuilder from "BaseAnimationBuilder" /* 1724 */;
+import weakMap from "weakMap" /* 1740 */;
 import { isWorkletFunction } from "01679_isWorkletFunction.js";
-import { isReducedMotionEnabledInSystem } from "01695_isReducedMotionEnabledInSystem.js";
 import { TransitionType } from "01710_TransitionType.js";
-import { BaseAnimationBuilder } from "01724_BaseAnimationBuilder.js";
 import { weakMap } from "01740_weakMap.js";
-const require = arg1;
+
+require = arg1;
 let dependencyMap = arg6;
 function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
   const _require = dummy;
-  const dependencyMap = dummyAnimationConfig;
+  dependencyMap = dummyAnimationConfig;
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -17,13 +21,13 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
   if (arg3 === undefined) {
     tmp = null;
   }
-  let closure_3 = tmp;
+  c3 = tmp;
   let animationName;
   let duration;
   let delay;
   let easing;
   let maybeRemoveElement;
-  let c9;
+  c9 = undefined;
   animationName = dummyAnimationConfig.animationName;
   duration = dummyAnimationConfig.duration;
   delay = dummyAnimationConfig.delay;
@@ -73,7 +77,8 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
       }
       obj[4] = obj;
       const snapshots = dummy(dummyAnimationConfig[7]).snapshots;
-      const result = snapshots.set(tmp, obj);
+      const result = snapshots.set(dummy, obj);
+      const tmp = dummy;
     }
     if (typeof maybeRemoveElement !== "function") {
       HermesBuiltin.throwTypeError();
@@ -81,15 +86,15 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
     let isDummy = dummy.isDummy;
     if (isDummy) {
       let hasItem;
-      if (tmp != null) {
+      if (_null != null) {
         hasItem = obj4.contains(obj3);
       }
       isDummy = hasItem;
-      obj4 = tmp;
+      obj4 = _null;
     }
     if (isDummy) {
       obj3.removedAfterAnimation = true;
-      tmp.removeChild(obj3);
+      _null.removeChild(obj3);
     }
     if (typeof maybeCallCallback !== "function") {
       HermesBuiltin.throwTypeError();
@@ -111,15 +116,15 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
     let isDummy = dummy.isDummy;
     if (isDummy) {
       let hasItem;
-      if (null != null) {
+      if (_null != null) {
         hasItem = obj2.contains(obj);
       }
       isDummy = hasItem;
-      obj2 = tmp;
+      obj2 = _null;
     }
     if (isDummy) {
       obj.removedAfterAnimation = true;
-      tmp.removeChild(obj);
+      _null.removeChild(obj);
     }
     if (typeof maybeCallCallback !== "function") {
       HermesBuiltin.throwTypeError();
@@ -154,15 +159,15 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
       let isDummy = dummy.isDummy;
       if (isDummy) {
         let hasItem;
-        if (tmp != null) {
+        if (_null != null) {
           hasItem = obj2.contains(tmp5);
         }
         isDummy = hasItem;
-        obj2 = tmp;
+        obj2 = _null;
       }
       if (isDummy) {
         tmp5.removedAfterAnimation = true;
-        tmp.removeChild(tmp5);
+        _null.removeChild(tmp5);
       }
       if (typeof maybeCallCallback !== "function") {
         HermesBuiltin.throwTypeError();
@@ -297,7 +302,6 @@ arg5.saveSnapshot = function saveSnapshot(_componentDOMRef) {
 };
 arg5.setElementAnimation = setElementAnimation;
 arg5.handleLayoutTransition = function handleLayoutTransition(_componentDOMRef, processedConfig, easingY) {
-  let dummyTransitionKeyframeName;
   const animationName = processedConfig.animationName;
   if ("LinearTransition" === animationName) {
     let ENTRY_EXIT = TransitionType.TransitionType.LINEAR;
@@ -333,7 +337,7 @@ arg5.handleExitingAnimation = function handleExitingAnimation(offsetParent, proc
   const _require = offsetParent;
   offsetParent = offsetParent.offsetParent;
   const cloneNodeResult = offsetParent.cloneNode();
-  const dependencyMap = cloneNodeResult;
+  dependencyMap = cloneNodeResult;
   cloneNodeResult.isDummy = true;
   cloneNodeResult.style.animationName = "";
   offsetParent.dummyClone = cloneNodeResult;

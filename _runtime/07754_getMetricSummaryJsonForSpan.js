@@ -1,18 +1,16 @@
 // _runtime/07754_getMetricSummaryJsonForSpan.js
-import _slicedToArray from "_slicedToArray";
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 const _sentryMetrics = "_sentryMetrics";
 
 export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(self) {
-  let tmp11;
-  let tmp9;
   if (self[_sentryMetrics]) {
     const obj = {};
     const tmp3 = tmp[Symbol.iterator]();
     while (tmp3 !== undefined) {
-      let tmp7 = _slicedToArray;
-      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
+      let tmp7 = callback;
+      let tmp8 = callback(callback(tmp5, 2)[1], 2);
       [tmp9, tmp11] = tmp8;
       let arr = obj[tmp9];
       if (!arr) {
@@ -42,7 +40,7 @@ export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(acti
   const combined = "" + arg1 + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
   const value = obj.get(bucketKey);
   if (value) {
-    const tmp12 = _slicedToArray(value, 2)[1];
+    const tmp12 = callback(value, 2)[1];
     const items = [combined, ];
     obj = { min: null, max: null, count: null, sum: null, tags: null };
     const _Math = Math;

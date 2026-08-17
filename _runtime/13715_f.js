@@ -1,6 +1,6 @@
 // _runtime/13715_f.js
-import 13716__ from "metro/13716__.js";
-import { items } from "13717_items.js";
+import items from "items" /* 13717 */;
+import 13716__ from "metro/13716__.js" /* 13716 */;
 
 let closure_2 = module_13716.concat("length", "prototype");
 

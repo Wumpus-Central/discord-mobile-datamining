@@ -1,11 +1,9 @@
 // _runtime/01579_useFocusEvents.js
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 
 export const useFocusEvents = function useFocusEvents(arg0) {
-  let emitter;
-  let state;
   ({ state, emitter } = arg0);
   let context;
   let React;
@@ -18,7 +16,7 @@ export const useFocusEvents = function useFocusEvents(arg0) {
     let addListenerResult;
     if (context != null) {
       addListenerResult = context.addListener("focus", () => {
-        noop.current = closure_3;
+        closure_2.current = closure_3;
         closure_0.emit({ type: "focus", target: closure_3 });
       });
     }
@@ -29,7 +27,7 @@ export const useFocusEvents = function useFocusEvents(arg0) {
     let addListenerResult;
     if (context != null) {
       addListenerResult = context.addListener("blur", () => {
-        noop.current = undefined;
+        closure_2.current = undefined;
         closure_0.emit({ type: "blur", target: closure_3 });
       });
     }
@@ -66,7 +64,7 @@ export const useFocusEvents = function useFocusEvents(arg0) {
       obj = { type: "blur", target: null };
       obj[1] = current;
       emitter.emit(obj);
-      const obj1 = { type: "focus", target: null };
+      obj1 = { type: "focus", target: null };
       obj1[1] = key;
       emitter.emit(obj1);
     }

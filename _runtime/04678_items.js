@@ -1,6 +1,7 @@
 // _runtime/04678_items.js
-import { Platform } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const Platform = get_ActivityIndicator.Platform;
 const items = [-1];
 const items1 = [1];
 const items2 = [0.5];
@@ -18,7 +19,7 @@ export const assertDetentsArrayIsSorted = function assertDetentsArrayIsSorted(ar
       num = num + 1;
     }
     const _Error = Error;
-    const error = new Error("[RNScreens] The detent array is not sorted in ascending order!");
+    error = new Error("[RNScreens] The detent array is not sorted in ascending order!");
     throw error;
   }
 };

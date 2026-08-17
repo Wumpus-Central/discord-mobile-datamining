@@ -36,7 +36,6 @@ if (getOwnPropertySymbols != null) {
   const _Object = Object;
   bindResult = getOwnPropertySymbols.bind(Object);
 }
-const metroImportAll = bindResult;
 let closure_9 = getOwnPropertyDescriptor.bind(Object);
 let closure_10 = getPrototypeOf.bind(Object);
 let closure_11 = Object.prototype;
@@ -52,7 +51,7 @@ function hoistNonReactStatics(arg0, str) {
         hoistNonReactStatics(arg0, tmp2);
       }
     }
-    const obj = callback2(str);
+    obj = callback2(str);
     let combined = obj;
     if (closure_8) {
       combined = obj.concat(tmp7(str));

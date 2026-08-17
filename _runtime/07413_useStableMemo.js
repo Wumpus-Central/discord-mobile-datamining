@@ -1,7 +1,8 @@
 // _runtime/07413_useStableMemo.js
-import { useRef } from "noop";
-import { areHookInputsEqual } from "07414_areHookInputsEqual.js";
+import noop from "noop" /* 19 */;
+import areHookInputsEqualDefault from "areHookInputsEqual" /* 7414 */;
 
+const useRef = noop.useRef;
 let closure_3 = [];
 
 export default function useStableMemo(arg0, items) {
@@ -10,7 +11,7 @@ export default function useStableMemo(arg0, items) {
   if (tmp2.current === closure_3) {
     tmp.current = arg0();
     tmp2.current = items;
-  } else if (!areHookInputsEqual(items, tmp2.current)) {
+  } else if (!areHookInputsEqualDefault(items, tmp2.current)) {
     tmp.current = arg0();
     tmp2.current = items;
   }

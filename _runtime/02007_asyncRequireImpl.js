@@ -1,5 +1,5 @@
 // _runtime/02007_asyncRequireImpl.js
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 2008 */;
 
 function asyncRequireImpl(closure_0) {
   const _global = closure_0;
@@ -16,7 +16,7 @@ function asyncRequireImpl(closure_0) {
   }
   if (null != tmpResult) {
     let nextPromise = tmpResult.then(function importAll(closure_0) {
-      return outer1_1.importAll(closure_0);
+      return closure_1_1.importAll(closure_0);
     });
   } else {
     nextPromise = require.importAll(closure_0);
@@ -35,10 +35,10 @@ function asyncRequire(arg0, arg1, arg2) {
 }
 function _asyncRequire() {
   const self = this;
-  const tmp = asyncGeneratorStep((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c2 = 0;
+  const tmp = callback((arg0, arg1, arg2) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c2 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c2 === 2) {
         c2 = 3;
@@ -67,7 +67,7 @@ function _asyncRequire() {
           } else {
             c2 = 3;
             obj = { value: null, done: true };
-            obj[0] = outer1_3(closure_0, closure_1);
+            obj[0] = closure_1_3(closure_0, closure_1);
             return obj;
           }
         } catch (tmp7) {
@@ -77,7 +77,7 @@ function _asyncRequire() {
       }
     })();
   });
-  const _asyncRequire = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -101,7 +101,7 @@ asyncRequire.unstable_importMaybeSync = function unstable_importMaybeSync(closur
   }
   if (null != tmpResult) {
     let nextPromise = tmpResult.then(function importAll(closure_0) {
-      return outer1_1.importAll(closure_0);
+      return closure_1_1.importAll(closure_0);
     });
   } else {
     nextPromise = require.importAll(closure_0);

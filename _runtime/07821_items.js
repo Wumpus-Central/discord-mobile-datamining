@@ -1,7 +1,7 @@
 // _runtime/07821_items.js
 let items = ["X-Client-IP", "X-Forwarded-For", "Fly-Client-IP", "CF-Connecting-IP", "Fastly-Client-Ip", "True-Client-Ip", "X-Real-IP", "X-Cluster-Client-IP", "X-Forwarded", "Forwarded-For", "Forwarded", "X-Vercel-Forwarded-For"];
 arg5.getClientIPAddress = function getClientIPAddress(arg0) {
-  const items = arg0;
+  items = arg0;
   let mapped = items.map((arg0) => {
     let str = obj;
     if (Array.isArray(table[arg0])) {

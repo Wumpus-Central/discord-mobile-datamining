@@ -1,14 +1,13 @@
 // _runtime/06364_MissingIcon.js
-import { StyleSheet } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { Text } from "06338_Text.js";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import Text from "Text" /* 6338 */;
 
+const StyleSheet = get_ActivityIndicator.StyleSheet;
+const jsx = jsxProd.jsx;
 const styles = StyleSheet.create({ icon: { backgroundColor: "transparent" } });
 
 export const MissingIcon = function MissingIcon(arg0) {
-  let color;
-  let size;
-  let style;
   ({ color, size, style } = arg0);
   style = [icon.icon, { color, fontSize: size }, ];
   style[2] = style;

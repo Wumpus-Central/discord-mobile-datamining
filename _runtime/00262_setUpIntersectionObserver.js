@@ -1,6 +1,7 @@
 // _runtime/00262_setUpIntersectionObserver.js
-import { polyfillObjectProperty } from "00123_polyfillObjectProperty.js";
-const require = arg1;
+import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
+
+require = arg1;
 const dependencyMap = arg6;
 let c2 = false;
 arg5.default = function setUpIntersectionObserver() {

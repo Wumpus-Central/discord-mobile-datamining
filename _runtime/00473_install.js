@@ -1,6 +1,7 @@
 // _runtime/00473_install.js
-import "noop";
+import noopAll from "noop" /* 19 */;
 
+noopAll;
 
 export default {
   install() {

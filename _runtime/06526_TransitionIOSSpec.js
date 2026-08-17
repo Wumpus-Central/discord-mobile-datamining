@@ -1,11 +1,11 @@
 // _runtime/06526_TransitionIOSSpec.js
-import { Easing } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const Easing = get_ActivityIndicator.Easing;
 let obj = { animation: "timing", config: null };
 obj = { duration: 350, easing: Easing.out(require("module_5")) };
 obj[1] = obj;
-obj = { animation: "timing", config: null };
-obj[1] = { duration: 150, easing: Easing.in(Easing.linear) };
+obj = { animation: "timing", config: { duration: 150, easing: Easing.in(Easing.linear) } };
 const obj2 = { animation: "timing", config: null };
 const obj1 = { duration: 150, easing: Easing.in(Easing.linear) };
 obj2[1] = { duration: 425, easing: Easing.bezier(0.20833, 0.82, 0.25, 1) };

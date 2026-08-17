@@ -1,7 +1,7 @@
 // _runtime/03733_fromUnixTime.js
-import _typeof from "_typeof";
-import toInteger from "toInteger";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import toInteger from "toInteger" /* 3476 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!toInteger) {
   obj = { default: null };
   obj[0] = toInteger;
@@ -18,7 +18,7 @@ if (!toInteger) {
 } else {
   tmp5 = toInteger;
 }
-let closure_1 = tmp5;
+toInteger = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,9 +26,10 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function fromUnixTime(arg0) {
-  tmp7.default(1, arguments);
-  return tmp3.default(1000 * tmp5.default(arg0));
+  requiredArgs.default(1, arguments);
+  return _typeof.default(1000 * toInteger.default(arg0));
 };
 export default exports.default;

@@ -1,6 +1,7 @@
 // _runtime/00831_safeDateNow.js
-import { 00821__ } from "metro/00821__.js";
-const require = arg1;
+import _mod821 from "module_821" /* 821 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.safeDateNow = function safeDateNow() {
@@ -15,7 +16,7 @@ arg5.safeDateNow = function safeDateNow() {
   } else {
     const _Symbol = Symbol;
     const forResult = Symbol.for("__SENTRY_SAFE_RANDOM_ID_WRAPPER__");
-    const GLOBAL_OBJ = 00821__.GLOBAL_OBJ;
+    const GLOBAL_OBJ = _mod821.GLOBAL_OBJ;
     if (forResult in GLOBAL_OBJ) {
       if (typeof GLOBAL_OBJ[forResult] === "function") {
         c2 = tmp8;
@@ -40,7 +41,7 @@ arg5.safeMathRandom = function safeMathRandom() {
   } else {
     const _Symbol = Symbol;
     const forResult = Symbol.for("__SENTRY_SAFE_RANDOM_ID_WRAPPER__");
-    const GLOBAL_OBJ = 00821__.GLOBAL_OBJ;
+    const GLOBAL_OBJ = _mod821.GLOBAL_OBJ;
     if (forResult in GLOBAL_OBJ) {
       if (typeof GLOBAL_OBJ[forResult] === "function") {
         c2 = tmp8;
@@ -59,7 +60,7 @@ arg5.withRandomSafeContext = function withRandomSafeContext(arg0) {
   } else {
     const _Symbol = Symbol;
     const forResult = Symbol.for("__SENTRY_SAFE_RANDOM_ID_WRAPPER__");
-    const GLOBAL_OBJ = 00821__.GLOBAL_OBJ;
+    const GLOBAL_OBJ = _mod821.GLOBAL_OBJ;
     if (forResult in GLOBAL_OBJ) {
       if (typeof GLOBAL_OBJ[forResult] === "function") {
         c2 = tmp8;

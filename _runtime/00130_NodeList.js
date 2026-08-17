@@ -1,20 +1,21 @@
 // _runtime/00130_NodeList.js
-import _classCallCheck from "_classCallCheck";
-import setPlatformObject from "setPlatformObject";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import setPlatformObject from "setPlatformObject" /* 126 */;
 
 const NodeList = arg1;
 let closure_3 = { value: {}, writable: false };
 class NodeList {
   constructor(arg0) {
     self = this;
-    tmp = outer1_2(this, NodeList);
+    tmp = closure_2(this, NodeList);
     num = 0;
     if (0 < global.length) {
       do {
-        tmp2 = outer1_3;
-        outer1_3.value = global[num];
+        tmp2 = closure_3;
+        closure_3.value = global[num];
         _Object = Object;
-        definePropertyResult = Object.defineProperty(self, num, outer1_3);
+        definePropertyResult = Object.defineProperty(self, num, closure_3);
         num = num + 1;
         length = global.length;
       } while (num < length);
@@ -97,8 +98,8 @@ obj = {
   }
 };
 items[6] = obj;
-let tmp2 = require("_createClass")(NodeList, items);
-let c4 = tmp2;
+let tmp2 = _createClassDefault(NodeList, items);
+let closure_4 = tmp2;
 setPlatformObject.setPlatformObject(tmp2);
 
 export default tmp2;

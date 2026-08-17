@@ -1,15 +1,15 @@
 // _runtime/13791_keys.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import 13792__ from "metro/13792__.js";
-import hasLoggerPlugin from "hasLoggerPlugin";
-import 13794__ from "metro/13794__.js";
-import 13795__ from "metro/13795__.js";
-import hasStateResponsePlugin from "hasStateResponsePlugin";
-import 13797__ from "metro/13797__.js";
-import 13798__ from "metro/13798__.js";
-import repl from "repl";
-import serialize from "serialize";
+import hasLoggerPlugin2 from "hasLoggerPlugin" /* 13793 */;
+import hasStateResponsePlugin2 from "hasStateResponsePlugin" /* 13796 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import 13792__ from "metro/13792__.js" /* 13792 */;
+import 13794__ from "metro/13794__.js" /* 13794 */;
+import 13795__ from "metro/13795__.js" /* 13795 */;
+import 13797__ from "metro/13797__.js" /* 13797 */;
+import 13798__ from "metro/13798__.js" /* 13798 */;
+import repl from "repl" /* 13799 */;
+import serialize from "serialize" /* 13800 */;
 
 const ReactotronImpl = require;
 function emptyPromise() {
@@ -22,7 +22,8 @@ if (!module_13792) {
 } else {
   tmp7 = module_13792;
 }
-let c3 = tmp7;
+module_13792 = tmp7;
+let hasLoggerPlugin = _interopRequireWildcard(hasLoggerPlugin2);
 if (!module_13794) {
   const obj2 = { default: null };
   obj2[0] = module_13794;
@@ -37,6 +38,7 @@ if (!module_13795) {
 } else {
   obj7 = module_13795;
 }
+const hasStateResponsePlugin = _interopRequireWildcard(hasStateResponsePlugin2);
 if (!module_13797) {
   hasLoggerPlugin = { default: null };
   hasLoggerPlugin[0] = module_13797;
@@ -65,13 +67,13 @@ if (!serialize) {
 } else {
   tmp14 = serialize;
 }
-let closure_6 = tmp14;
+serialize = tmp14;
 const items = [obj5.default(), hasLoggerPlugin.default(), obj7.default(), hasStateResponsePlugin.default(), obj11.default(), obj13.default(), obj15.default()];
 let closure_9 = ["configure", "connect", "connected", "options", "plugins", "send", "socket", "startTimer", "use"];
 class ReactotronImpl {
   constructor() {
     self = this;
-    tmp = emptyPromise(this, self);
+    tmp = closure_2(this, self);
     this.connected = false;
     this.socket = null;
     this.plugins = [];
@@ -91,7 +93,7 @@ class ReactotronImpl {
         num = 0;
       }
       self.lastMessageDate = date;
-      const defaultResult = outer1_6.default({ type, payload, important, date: date.toISOString(), deltaTime: num }, self.options.proxyHack);
+      const defaultResult = closure_1_6.default({ type, payload, important, date: date.toISOString(), deltaTime: num }, self.options.proxyHack);
       if (self.isReady) {
         try {
           const socket = tmp4.socket;
@@ -133,7 +135,7 @@ const items1 = [
           return null;
         }
       }, this.options, arg0);
-      tmp7.default(merged);
+      module_13792.default(merged);
       this.options = merged;
       if (Array.isArray(this.options.plugins)) {
         const plugins = self.options.plugins;
@@ -156,27 +158,17 @@ const items1 = [
   {
     key: "connect",
     value: function connect() {
-      let _classCallCheck;
-      let _interopRequireWildcard;
-      let client;
-      let closure_6;
-      let createSocket;
-      let dependencyMap;
-      let hasStateResponsePlugin;
-      let host;
-      let port;
-      let secure;
       let self = this;
       self = this;
       this.connected = true;
       let options = this.options;
-      ({ host, environment: dependencyMap, port, name: _classCallCheck, client } = options);
+      ({ host, environment: dependencyMap, port, name: closure_2, client } = options);
       ({ createSocket, secure } = options);
       if (undefined === client) {
         client = {};
       }
       const getClientId = options.getClientId;
-      ({ onCommand: hasStateResponsePlugin, onConnect: closure_6, onDisconnect: _interopRequireWildcard } = self.options);
+      ({ onCommand: hasStateResponsePlugin, onConnect: serialize, onDisconnect: _interopRequireWildcard } = self.options);
       let str = "ws";
       if (secure) {
         str = "wss";
@@ -190,7 +182,7 @@ const items1 = [
         const item = plugins.forEach((onConnect) => onConnect.onConnect && onConnect.onConnect());
         let tmp4 = getClientId;
         if (!getClientId) {
-          tmp4 = outer1_10;
+          tmp4 = closure_1_10;
         }
         tmp4(closure_2).then((clientId) => {
           let length;
@@ -289,19 +281,12 @@ const items1 = [
   {
     key: "display",
     value: function display(name) {
-      let image;
-      let important;
-      let preview;
-      let value;
       ({ value, preview, image, important } = name);
       let tmp = undefined !== important;
       if (tmp) {
         tmp = important;
       }
-      const obj = { name: name.name, value: null, preview: null, image: null };
-      obj[1] = value;
-      obj[2] = preview;
-      obj[3] = image;
+      const obj = { name: name.name, value, preview, image };
       this.send("display", obj, tmp);
     }
   },
@@ -318,11 +303,11 @@ const items1 = [
       self = this;
       if (typeof fn !== "function") {
         const _Error3 = Error;
-        let error = new Error("plugins must be a function");
+        error = new Error("plugins must be a function");
         throw error;
       } else {
         const tmp19 = fn.bind(self)(self);
-        const dependencyMap = tmp19;
+        closure_1 = tmp19;
         if (typeof tmp19 !== "object") {
           let _Error2 = Error;
           let error1 = new Error("plugins must return an object");
@@ -343,14 +328,14 @@ const items1 = [
                 if (typeof closure_0 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof tmp19.features[arg0] !== "function") {
+                if (typeof features.features[arg0] !== "function") {
                   const _Error2 = Error;
                   const _HermesInternal2 = HermesInternal;
-                  const error = new Error("feature " + arg0 + " is not a function");
+                  error = new Error("feature " + arg0 + " is not a function");
                   throw error;
                 } else {
                   closure_0 = arg0;
-                  if (outer1_9.some((arg0) => arg0 === closure_0)) {
+                  if (closure_1_9.some((arg0) => arg0 === closure_0)) {
                     const _Error = Error;
                     const _HermesInternal = HermesInternal;
                     const error1 = new Error("feature " + arg0 + " is a reserved name");
@@ -376,10 +361,6 @@ const items1 = [
   {
     key: "onCustomCommand",
     value: function onCustomCommand(str) {
-      let args;
-      let description;
-      let handler;
-      let title;
       let self = this;
       self = this;
       if (typeof str === "string") {
@@ -395,21 +376,21 @@ const items1 = [
           const found = customCommands.filter((command) => command.command === command);
           if (found.length > 0) {
             const item = found.forEach((id) => {
-              let closure_0 = id;
+              closure_0 = id;
               const customCommands = self.customCommands;
               self.customCommands = customCommands.filter((id) => id.id !== id.id);
               self.send("customCommand.unregister", { id: id.id, command: id.command });
             });
           }
           if (args) {
-            let closure_2 = [];
+            closure_2 = [];
             const item1 = args.forEach((name) => {
               if (name.name) {
                 let arr = closure_2;
                 if (closure_2.indexOf(name.name) > -1) {
                   const _Error2 = Error;
                   const _HermesInternal2 = HermesInternal;
-                  const error = new Error("A arg with the name \"" + name.name + "\" already exists in the command \"" + command + "\"");
+                  error = new Error("A arg with the name \"" + name.name + "\" already exists in the command \"" + command + "\"");
                   throw error;
                 } else {
                   arr = arr.push(name.name);
@@ -444,7 +425,7 @@ const items1 = [
         } else {
           let _Error2 = Error;
           let _HermesInternal = HermesInternal;
-          let error = new Error("A handler is required for command \"" + tmp + "\"");
+          error = new Error("A handler is required for command \"" + tmp + "\"");
           throw error;
         }
       } else {

@@ -1,13 +1,14 @@
 // _runtime/01796_AnimatedScrollView.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import "noop";
-import { jsx } from "jsxProd";
-import createAnimatedComponent from "createAnimatedComponent";
-import isReactRendering from "isReactRendering";
-import { useAnimatedGestureHandler } from "01797_useAnimatedGestureHandler.js";
+import noopDefault from "noop" /* 19 */;
+import useAnimatedGestureHandler from "useAnimatedGestureHandler" /* 1797 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createAnimatedComponent from "createAnimatedComponent" /* 1688 */;
+import isReactRendering from "isReactRendering" /* 1793 */;
 
-const require = arg1;
+require = arg1;
 let closure_2 = ["scrollViewOffset"];
+noopDefault;
 let closure_5 = createAnimatedComponent.createAnimatedComponent(require("get ActivityIndicator").ScrollView);
 
 export const AnimatedScrollView = isReactRendering.componentWithRef((scrollViewOffset) => {

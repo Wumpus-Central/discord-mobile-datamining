@@ -3,9 +3,9 @@ import { SetCache } from "00782_SetCache.js";
 
 export default function equalArrays(arg0, arg1, arg2, arg3, arg4, get) {
   const _require = arg2;
-  const dependencyMap = arg3;
-  let closure_2 = arg4;
-  let closure_3 = get;
+  dependencyMap = arg3;
+  closure_2 = arg4;
+  closure_3 = get;
   if (arg0.length != arg1.length) {
     return false;
   }
@@ -20,13 +20,13 @@ export default function equalArrays(arg0, arg1, arg2, arg3, arg4, get) {
   if (2 & arg2) {
     tmp4 = new _SetCache();
   }
-  let closure_4 = tmp4;
+  closure_4 = tmp4;
   const result = get.set(arg0, arg1);
   const result1 = get.set(arg1, arg0);
   let num = 0;
   let flag2 = true;
   if (0 < arg0.length) {
-    let closure_5 = tmp12;
+    closure_5 = tmp12;
     while (!arg3) {
       if (undefined !== tmp11) {
         flag2 = false;

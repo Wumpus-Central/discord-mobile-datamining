@@ -1,7 +1,7 @@
 // _runtime/01292_DEFAULT_LOCALE.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const IntlManager = require;
 class IntlManager {
@@ -28,7 +28,7 @@ class IntlManager {
     if (flag === undefined) {
       flag = false;
     }
-    tmp5 = outer1_4(self, self);
+    tmp5 = closure_4(self, self);
     self.onLocaleChange = (arg0) => {
       const _self = arg0;
       let _localeSubscriptions = _self._localeSubscriptions;
@@ -57,8 +57,8 @@ let items = [
       const self = this;
       const entries = Object.entries(set);
       while (tmp2 !== undefined) {
-        let tmp4 = _slicedToArray;
-        let tmp5 = _slicedToArray(tmp3, 2);
+        let tmp4 = callback;
+        let tmp5 = callback(tmp3, 2);
         self[tmp5[0]] = self.makeFormatFunction(tmp5[1]);
         continue;
       }
@@ -68,11 +68,9 @@ let items = [
   {
     key: "makeFormatFunction",
     value: function makeFormatFunction(arg0) {
-      let exports;
-      let format;
       const self = this;
       ({ format, builder: exports } = arg0);
-      let closure_0 = format.bind(this);
+      closure_0 = format.bind(this);
       return (arg0, arg1) => {
         let tmp = null;
         if (null != arg0) {

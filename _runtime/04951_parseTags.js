@@ -1,13 +1,14 @@
 // _runtime/04951_parseTags.js
-import { getDataView } from "04910_getDataView.js";
-import { 04952__ } from "metro/04952__.js";
-const require = arg1;
+import getDataView from "getDataView" /* 4910 */;
+import _mod4952 from "module_4952" /* 4952 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function parseTags(buffer) {
   buffer = buffer.buffer;
   if (buffer.byteLength !== buffer.getUint32()) {
     const _Error3 = Error;
-    const error = new Error("ICC profile length not matching");
+    error = new Error("ICC profile length not matching");
     throw error;
   } else if (buffer.byteLength < c2) {
     const _Error2 = Error;
@@ -16,12 +17,12 @@ function parseTags(buffer) {
   } else {
     let obj = {};
     const _Object = Object;
-    const keys = Object.keys(04952__.iccProfile);
+    const keys = Object.keys(_mod4952.iccProfile);
     for (let num = 0; num < keys.length; num = num + 1) {
       let tmp = keys[num];
       let tmp2 = require;
       let tmp3 = dependencyMap;
-      let iter = 04952__.iccProfile[tmp];
+      let iter = _mod4952.iccProfile[tmp];
       let _parseInt = parseInt;
       let valueResult = iter.value(buffer, parseInt(tmp, 10));
       let tmp5 = num;
@@ -80,7 +81,7 @@ function parseTags(buffer) {
                     obj[1] = applyResult;
                     obj[tmp55(4952).iccTags[stringFromDataView].name] = obj;
                   } else {
-                    let obj1 = { value: null, description: null };
+                    obj1 = { value: null, description: null };
                     obj1[0] = applyResult;
                     obj1[1] = applyResult;
                     obj[stringFromDataView] = obj1;
@@ -118,7 +119,7 @@ function parseTags(buffer) {
                     } while (num4 < uint324);
                   }
                   if (1 === uint324) {
-                    let text = items[0].text;
+                    text = items[0].text;
                     if (tmp25(4952).iccTags[stringFromDataView]) {
                       let obj3 = { value: null, description: null };
                       obj3[0] = text;
@@ -143,7 +144,7 @@ function parseTags(buffer) {
                     }
                     let tmp33 = require;
                     let tmp34 = dependencyMap;
-                    if (04952__.iccTags[stringFromDataView]) {
+                    if (_mod4952.iccTags[stringFromDataView]) {
                       obj6 = { value: null, description: null };
                       obj6[0] = obj5;
                       obj6[1] = obj5;
@@ -240,12 +241,12 @@ arg5.default = {
     return (function readIcc(buffer, arr) {
       let length;
       let sum;
-      let closure_0 = arr;
+      closure_0 = arr;
       try {
         let _Uint8Array = Uint8Array;
         let uint8Array = new Uint8Array(arr.reduce((arg0, arg1) => arg0 + arg1.length, 0));
-        let c2 = 0;
-        let closure_3 = (function getBuffer(buffer) {
+        c2 = 0;
+        closure_3 = (function getBuffer(buffer) {
           if (Array.isArray(buffer)) {
             const _DataView = DataView;
             const _Uint8Array = Uint8Array;
@@ -259,16 +260,16 @@ arg5.default = {
           const found = arg0.find((chunkNumber) => chunkNumber.chunkNumber === closure_0);
           if (found) {
             const _Uint8Array = Uint8Array;
-            const uint8Array = new Uint8Array(arr2.slice(found.offset, found.offset + found.length));
+            uint8Array = new Uint8Array(arr2.slice(found.offset, found.offset + found.length));
             const result = uint8Array.set(uint8Array, closure_2);
             closure_2 = closure_2 + uint8Array.length;
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            const error = new Error("ICC chunk " + arg0 + " not found");
+            error = new Error("ICC chunk " + arg0 + " not found");
             throw error;
           }
-          const arr = arg0;
+          arr = arg0;
         }
         let num3 = 1;
         if (1 <= arr.length) {

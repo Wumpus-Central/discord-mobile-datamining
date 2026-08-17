@@ -1,15 +1,20 @@
 // _runtime/01674_NativeWorklets.js
-import _classCallCheck from "_classCallCheck";
-import _classPrivateFieldBase from "_classPrivateFieldBase";
+import _createClassDefault from "_createClass" /* 42 */;
+import _classPrivateFieldKeyDefault from "_classPrivateFieldKey" /* 91 */;
+import t from "t" /* 1665 */;
+import valueUnpacker from "valueUnpacker" /* 1675 */;
+import ReanimatedTurboModule from "ReanimatedTurboModule" /* 1676 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_classPrivateFieldBase" /* 90 */;
 
 const NativeWorklets = global;
-const require = arg1;
-let closure_5 = require("_classPrivateFieldKey")("workletsModuleProxy");
+require = arg1;
+let closure_5 = _classPrivateFieldKeyDefault("workletsModuleProxy");
 class NativeWorklets {
   constructor() {
-    tmp = outer1_3(this, NativeWorklets);
-    tmp2 = workletsModuleProxy;
-    definePropertyResult = Object.defineProperty(this, workletsModuleProxy, { writable: true, value: "a" });
+    tmp = closure_3(this, NativeWorklets);
+    tmp2 = closure_5;
+    definePropertyResult = Object.defineProperty(this, closure_5, { writable: true, value: "a" });
     tmp4 = NativeWorklets;
     if (undefined === NativeWorklets.__workletsModuleProxy) {
       tmp5 = closure_1;
@@ -32,8 +37,8 @@ class NativeWorklets {
       tmp16 = reanimatedError;
       throw reanimatedError;
     } else {
-      tmp10 = __esModule;
-      __esModule(this, tmp2)[tmp2] = tmp4.__workletsModuleProxy;
+      tmp10 = closure_4;
+      closure_4(this, tmp2)[tmp2] = tmp4.__workletsModuleProxy;
       return;
     }
   }
@@ -46,7 +51,7 @@ const items = [
     }
   }
 ];
-let closure_6 = require("_createClass")(NativeWorklets, items);
+let closure_6 = _createClassDefault(NativeWorklets, items);
 
 export const createNativeWorkletsModule = function createNativeWorkletsModule() {
   return new closure_6();

@@ -1,5 +1,7 @@
 // _runtime/00740_isMasked.js
-const match = /[^.]+$/.exec(require("module_741") && require("module_741").keys && require("module_741").keys.IE_PROTO || "");
+import _mod741 from "module_741" /* 741 */;
+
+const match = /[^.]+$/.exec(_mod741 && _mod741.keys && _mod741.keys.IE_PROTO || "");
 let str = "";
 if (match) {
   str = `Symbol(src)_1.${tmp2}`;

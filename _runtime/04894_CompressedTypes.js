@@ -1,6 +1,6 @@
 // _runtime/04894_CompressedTypes.js
-import _createClass from "_createClass";
-import _classCallCheck from "_classCallCheck";
+import _createClass from "_createClass" /* 42 */;
+import closure_0 from "_classCallCheck" /* 41 */;
 
 class CompressedTypes {
   constructor() {

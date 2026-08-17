@@ -1,10 +1,10 @@
 // _runtime/04620_overRest.js
 
 export default function overRest(arg0, arg1, arg2) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let diff = arg1;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
+  closure_1 = arg1;
+  closure_2 = arg2;
   if (undefined === arg1) {
     diff = arg0.length - 1;
   }

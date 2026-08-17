@@ -1,7 +1,8 @@
 // _runtime/00960_buildMethodPath.js
-import { truncateTextByBytes } from "00961_truncateTextByBytes.js";
-import { 00958__ } from "metro/00958__.js";
-const require = arg1;
+import _mod958 from "module_958" /* 958 */;
+import truncateTextByBytes from "truncateTextByBytes" /* 961 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.buildMethodPath = function buildMethodPath(arg0, arg1) {
@@ -72,13 +73,13 @@ arg5.setTokenUsageAttributes = function setTokenUsageAttributes(setAttributes) {
   let num = arg1;
   if (undefined !== arg1) {
     let obj = {};
-    obj[00958__.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = num;
+    obj[_mod958.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = num;
     setAttributes.setAttributes(obj);
   }
   let num2 = arg2;
   if (undefined !== arg2) {
     obj = {};
-    obj[00958__.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = num2;
+    obj[_mod958.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = num2;
     setAttributes.setAttributes(obj);
   }
   let num3 = arg3;

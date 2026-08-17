@@ -1,7 +1,8 @@
 // _runtime/09420_chunk.js
-import { toInteger } from "04553_toInteger.js";
-import { isIterateeCall } from "08050_isIterateeCall.js";
-import { baseSlice } from "09421_baseSlice.js";
+import toInteger from "toInteger" /* 4553 */;
+import isIterateeCall from "isIterateeCall" /* 8050 */;
+import baseSlice from "baseSlice" /* 9421 */;
+
 
 export default function chunk(arg0, arg1, arg2) {
   let sum1;

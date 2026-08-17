@@ -17,7 +17,7 @@ function digitsToString(arg0) {
         let diff1 = 7 - `${arg0[num2]}`.length;
         let tmp8 = text;
         let tmp9 = num2;
-        let sum = text;
+        sum = text;
         if (diff1) {
           let diff2 = diff1 - 1;
           let str4 = "";
@@ -88,7 +88,7 @@ function checkRoundingDigits(d, precision, rounding, arg3) {
   }
   const diff1 = tmp3 - 1;
   if (diff1 < 0) {
-    let sum = diff1 + 7;
+    sum = diff1 + 7;
     let num3 = 0;
   } else {
     const _Math = Math;
@@ -225,7 +225,7 @@ function convertBase(str, arg1, arg2) {
     for (let num2 = 0; num2 < items.length; num2 = num2 + 1) {
       let tmp6 = num2;
       if (items[num2] > tmp) {
-        let sum = num2 + 1;
+        sum = num2 + 1;
         if (undefined === items[sum]) {
           items[sum] = 0;
         }
@@ -256,7 +256,7 @@ function finalise(constructor, precision, rounding, arg3) {
       let tmp2 = arg3;
       const diff = precision - num4;
       if (diff < 0) {
-        let sum = diff + 7;
+        sum = diff + 7;
         const first1 = d[0];
         let num9 = first1 / pow(10, num4 - precision - 1) % 10 | 0;
         let num10 = 0;
@@ -485,7 +485,7 @@ function finiteToString(constructor, arg1, arg2) {
               str24 = str22;
             } while (tmp44);
           }
-          let sum = text1 + str24;
+          sum = text1 + str24;
         }
         let str25 = "e+";
         if (constructor.e < 0) {
@@ -612,11 +612,11 @@ function finiteToString(constructor, arg1, arg2) {
 }
 function intPow(constructor, constructor, arg2, precision) {
   let tmp8;
-  let obj = constructor;
+  obj = constructor;
   let tmp = arg2;
   let obj2 = new constructor(1);
   const rounded = Math.ceil(precision / 7 + 4);
-  let c8 = false;
+  c8 = false;
   while (true) {
     let result = tmp % 2;
     let tmp5 = obj2;
@@ -675,7 +675,6 @@ function intPow(constructor, constructor, arg2, precision) {
 }
 function naturalExponential(constructor, precision) {
   let e;
-  let rounding;
   let tmp39;
   constructor = constructor.constructor;
   ({ rounding, precision } = constructor);
@@ -684,12 +683,12 @@ function naturalExponential(constructor, precision) {
       if (constructor.e <= 17) {
         let tmp = precision;
         if (null == precision) {
-          let c8 = false;
+          c8 = false;
           tmp = precision;
         }
         constructor = new constructor(0.03125);
         let num6 = 0;
-        let obj = constructor;
+        obj = constructor;
         let num7 = 0;
         let tmp6 = constructor;
         if (constructor.e > -2) {
@@ -705,7 +704,7 @@ function naturalExponential(constructor, precision) {
         const _Math = Math;
         const _Math2 = Math;
         const tmp10 = Math.log(pow(2, num7)) / Math.LN10 * 2 + 5 | 0;
-        let sum = tmp + tmp10;
+        sum = tmp + tmp10;
         const constructor1 = new constructor(1);
         let obj2 = constructor1;
         constructor.precision = sum;
@@ -820,10 +819,6 @@ function naturalExponential(constructor, precision) {
   return constructor3;
 }
 function naturalLogarithm(self, sum) {
-  let constructor;
-  let d;
-  let precision;
-  let rounding;
   ({ d, constructor } = self);
   ({ rounding, precision } = constructor);
   if (self.s >= 0) {
@@ -831,7 +826,7 @@ function naturalLogarithm(self, sum) {
       if (d[0]) {
         let tmp4 = sum;
         if (null == sum) {
-          let c8 = false;
+          c8 = false;
           tmp4 = precision;
         }
         sum = tmp4 + 10;
@@ -846,7 +841,7 @@ function naturalLogarithm(self, sum) {
             let tmp15 = charAtResult;
             let arr = str;
             if (1 == charAtResult) {
-              let obj = self;
+              obj = self;
               let num5 = 1;
               tmp14 = self;
               tmp15 = charAtResult;
@@ -974,7 +969,7 @@ function parseDecimal(d, arr) {
   let num3 = 0;
   if (48 === substr.charCodeAt(0)) {
     do {
-      let sum = num2 + 1;
+      sum = num2 + 1;
       num2 = sum;
       num3 = sum;
       charCodeAtResult = substr.charCodeAt(sum);
@@ -1058,14 +1053,14 @@ function taylorSeries(constructor, arg1, timesResult, constructor2, arg4) {
   let tmp = arg1;
   const precision = constructor.precision;
   const rounded = Math.ceil(precision / 7);
-  let c8 = false;
+  c8 = false;
   timesResult = timesResult.times(timesResult);
-  let obj = new constructor(constructor2);
+  obj = new constructor(constructor2);
   let obj2 = constructor2;
   while (true) {
     let tmp4 = f110970;
     let timesResult1 = obj.times(timesResult);
-    let sum = tmp + 1;
+    sum = tmp + 1;
     let tmp7 = new.target;
     let tmp8 = new.target;
     let tmp9 = new constructor(tmp * sum);
@@ -1196,11 +1191,7 @@ function toLessThanHalfPi(constructor, self) {
   }
 }
 function toStringBinary(isFinite, arg1, arg2, arg3) {
-  let d;
-  let e;
-  let precision;
   let result1;
-  let rounding;
   let sum2;
   let tmp22;
   let tmp59;
@@ -1329,7 +1320,7 @@ function toStringBinary(isFinite, arg1, arg2, arg3) {
       let tmp45 = e;
       if (tmp39) {
         let diff3 = diff - 1;
-        const sum = d[diff3] + 1;
+        sum = d[diff3] + 1;
         d[diff3] = sum;
         const diff4 = num4 - 1;
         let tmp49 = e;
@@ -1523,14 +1514,12 @@ function atanh(arg0) {
   return new this(arg0).atanh();
 }
 function atan2(result2, result2) {
-  let precision;
-  let rounding;
-  const self = this;
+  self = this;
   const tmp = new this(result2);
   let s = tmp;
-  const obj = new this(result2);
+  obj = new this(result2);
   ({ precision, rounding } = this);
-  const sum = precision + 4;
+  sum = precision + 4;
   if (tmp.s) {
     if (obj.s) {
       if (!s.d) {
@@ -1626,7 +1615,7 @@ function config(obj) {
   let tmp4;
   if (obj) {
     if (typeof obj === "object") {
-      const self = this;
+      self = this;
       const items = ["precision", 1, 1000000000, "rounding", 0, 8, "toExpNeg", -9000000000000000, 0, "toExpPos", 0, 9000000000000000, "maxE", 0, 9000000000000000, "minE", -9000000000000000, 0, "modulo", 0, 9];
       let num = 0;
       if (0 < items.length) {
@@ -1711,11 +1700,11 @@ function floor(arg0) {
   return tmp;
 }
 function hypot(arg0, arg1) {
-  const self = this;
+  self = this;
   let num = 0;
   const tmp = new this(0);
-  let obj = tmp;
-  let c8 = false;
+  obj = tmp;
+  c8 = false;
   let obj2 = tmp;
   if (0 < arguments.length) {
     while (true) {
@@ -1780,7 +1769,7 @@ function max() {
   let tmp3 = tmp;
   if (1 < arguments.length) {
     const tmp6 = new this(arguments[num]);
-    let obj = tmp2;
+    obj = tmp2;
     tmp3 = tmp6;
     while (tmp6.s) {
       let cmpResult = obj.cmp(tmp6);
@@ -1809,7 +1798,7 @@ function min() {
   let tmp3 = tmp;
   if (1 < arguments.length) {
     const tmp6 = new this(arguments[num]);
-    let obj = tmp2;
+    obj = tmp2;
     tmp3 = tmp6;
     while (tmp6.s) {
       let cmpResult = obj.cmp(tmp6);
@@ -1842,11 +1831,10 @@ function pow(sum, exponent) {
 }
 function random(arg0) {
   let first;
-  let sum;
   let sum2;
   let sum3;
   let tmp37;
-  const self = this;
+  self = this;
   const tmp = new this(1);
   if (undefined === arg0) {
     let precision = self.precision;
@@ -2017,12 +2005,12 @@ function sub(arg0, arg1) {
   return new this(arg0).sub(arg1);
 }
 function sum() {
-  const self = this;
+  self = this;
   const tmp = new this(arguments[0]);
-  let c8 = false;
+  c8 = false;
   let tmp2 = tmp;
   if (tmp.s) {
-    let obj = tmp;
+    obj = tmp;
     let num2 = 1;
     tmp2 = tmp;
     if (1 < arguments.length) {
@@ -2087,10 +2075,10 @@ obj.ceil = function() {
   return constructor;
 };
 const fn2 = function(arg0, arg1) {
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   constructor = new constructor(arg0);
-  let obj = constructor;
+  obj = constructor;
   const constructor1 = new constructor(arg1);
   if (constructor.s) {
     if (constructor1.s) {
@@ -2115,7 +2103,7 @@ const fn2 = function(arg0, arg1) {
 obj.clamp = fn2;
 obj.clampedTo = fn2;
 const fn3 = function(arg0) {
-  const self = this;
+  self = this;
   const d = this.d;
   const constructor = new this.constructor(arg0);
   const d1 = constructor.d;
@@ -2196,10 +2184,8 @@ const fn3 = function(arg0) {
 obj.cmp = fn3;
 obj.comparedTo = fn3;
 const fn4 = function() {
-  let precision;
-  let rounding;
   let tmp22;
-  let self = this;
+  self = this;
   let constructor = this.constructor;
   if (this.d) {
     if (self.d[0]) {
@@ -2207,7 +2193,7 @@ const fn4 = function() {
       const _Math = Math;
       constructor.precision = precision + Math.max(self.e, self.sd()) + 7;
       constructor.rounding = 1;
-      const obj = toLessThanHalfPi(constructor, self);
+      obj = toLessThanHalfPi(constructor, self);
       self = obj.isZero();
       let obj2 = obj;
       if (!self) {
@@ -2271,17 +2257,17 @@ const fn4 = function() {
 obj.cos = fn4;
 obj.cosine = fn4;
 const fn5 = function() {
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   if (this.isFinite()) {
     if (!self.isZero()) {
-      let c8 = false;
+      c8 = false;
       let str = self.s * pow(self.s * self, 0.3333333333333333);
       if (!str) {
         const arr = digitsToString(self.d);
         const e = self.e;
         const result = (e - arr.length + 1) % 3;
-        let sum = arr;
+        sum = arr;
         if (result) {
           if (1 === result) {
             let str2 = "0";
@@ -2393,10 +2379,8 @@ const fn11 = function(arg0) {
 obj.gte = fn11;
 obj.greaterThanOrEqualTo = fn11;
 const fn12 = function() {
-  let precision;
-  let rounding;
   let tmp24;
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   constructor = new constructor(1);
   if (this.isFinite()) {
@@ -2456,10 +2440,8 @@ const fn12 = function() {
 obj.cosh = fn12;
 obj.hyperbolicCosine = fn12;
 const fn13 = function() {
-  let precision;
-  let rounding;
   let tmp21;
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   if (this.isFinite()) {
     if (!self.isZero()) {
@@ -2518,9 +2500,7 @@ const fn13 = function() {
 obj.sinh = fn13;
 obj.hyperbolicSine = fn13;
 const fn14 = function() {
-  let precision;
-  let rounding;
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   if (this.isFinite()) {
     if (self.isZero()) {
@@ -2543,9 +2523,7 @@ const fn14 = function() {
 obj.tanh = fn14;
 obj.hyperbolicTangent = fn14;
 const fn15 = function() {
-  let precision;
-  let rounding;
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   const cmpResult = this.abs().cmp(1);
   ({ precision, rounding } = constructor);
@@ -2567,7 +2545,7 @@ const fn15 = function() {
     }
   } else {
     if (self.isZero()) {
-      const sum = precision + 4;
+      sum = precision + 4;
       if (sum > closure_21) {
         const _Error = Error;
         throw Error(c10);
@@ -2594,7 +2572,7 @@ const fn15 = function() {
 obj.acos = fn15;
 obj.inverseCosine = fn15;
 const fn16 = function() {
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   if (this.lte(1)) {
     let num2 = NaN;
@@ -2609,7 +2587,7 @@ const fn16 = function() {
     const absolute = Math.abs(self.e);
     constructor.precision = precision + Math.max(absolute, self.sd()) + 4;
     constructor.rounding = 1;
-    let c8 = false;
+    c8 = false;
     const timesResult = self.times(self);
     const minusResult = self.times(self).minus(1);
     const sqrtResult = self.times(self).minus(1).sqrt();
@@ -2626,7 +2604,7 @@ const fn16 = function() {
 obj.acosh = fn16;
 obj.inverseHyperbolicCosine = fn16;
 const fn17 = function() {
-  const self = this;
+  self = this;
   const constructor = this.constructor;
   if (this.isFinite()) {
     if (!self.isZero()) {
@@ -2636,7 +2614,7 @@ const fn17 = function() {
       const absolute = Math.abs(self.e);
       constructor.precision = precision + 2 * Math.max(absolute, self.sd()) + 6;
       constructor.rounding = 1;
-      let c8 = false;
+      c8 = false;
       const timesResult = self.times(self);
       const plusResult = self.times(self).plus(1);
       const sqrtResult = self.times(self).plus(1).sqrt();
@@ -2653,9 +2631,7 @@ const fn17 = function() {
 obj.asinh = fn17;
 obj.inverseHyperbolicSine = fn17;
 const fn18 = function() {
-  let precision;
-  let rounding;
-  let self = this;
+  self = this;
   let constructor = this.constructor;
   if (this.isFinite()) {
     if (self.e < 0) {
@@ -2699,9 +2675,7 @@ const fn18 = function() {
 obj.atanh = fn18;
 obj.inverseHyperbolicTangent = fn18;
 const fn19 = function() {
-  let precision;
-  let rounding;
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   if (this.isZero()) {
     constructor = new constructor(self);
@@ -2710,7 +2684,7 @@ const fn19 = function() {
     ({ precision, rounding } = constructor);
     if (-1 !== cmpResult) {
       if (0 === cmpResult) {
-        const sum = precision + 4;
+        sum = precision + 4;
         if (sum > closure_21) {
           const _Error = Error;
           throw Error(c10);
@@ -2743,10 +2717,8 @@ const fn19 = function() {
 obj.asin = fn19;
 obj.inverseSine = fn19;
 const fn20 = function() {
-  let precision;
-  let rounding;
   let tmp30;
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   ({ precision, rounding } = constructor);
   if (this.isFinite()) {
@@ -2756,7 +2728,7 @@ const fn20 = function() {
     } else {
       if (absResult.eq(1)) {
         if (precision + 4 <= closure_21) {
-          const sum = precision + 4;
+          sum = precision + 4;
           if (sum > tmp18) {
             const _Error2 = Error;
             throw Error(c10);
@@ -2809,7 +2781,7 @@ const fn20 = function() {
       tmp23 = diff;
     } while (diff);
   }
-  let c8 = false;
+  c8 = false;
   const rounded = Math.ceil(result);
   const timesResult3 = obj4.times(obj4);
   const constructor4 = new constructor(obj4);
@@ -2869,7 +2841,7 @@ obj.isFinite = function() {
   return this.d;
 };
 const fn21 = function() {
-  const self = this;
+  self = this;
   let d = this.d;
   if (d) {
     d = floor(self.e / 7) > self.d.length - 2;
@@ -2909,10 +2881,8 @@ const fn25 = function(arg0) {
 obj.lte = fn25;
 obj.lessThanOrEqualTo = fn25;
 const fn26 = function(arg0) {
-  let precision;
   let result1;
-  let rounding;
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   ({ precision, rounding } = constructor);
   if (null == arg0) {
@@ -2956,8 +2926,8 @@ const fn26 = function(arg0) {
               flag2 = 1 !== tmp14;
             }
           }
-          let c8 = false;
-          const sum = precision + 5;
+          c8 = false;
+          sum = precision + 5;
           const tmp19 = naturalLogarithm(self, sum);
           if (flag) {
             const sum1 = sum + 10;
@@ -3061,11 +3031,9 @@ obj.logarithm = fn26;
 const fn27 = function(arg0) {
   let diff3;
   let first;
-  let precision;
-  let rounding;
   let tmp34;
   let tmp50;
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   constructor = new constructor(arg0);
   if (this.d) {
@@ -3096,7 +3064,7 @@ const fn27 = function(arg0) {
               }
               const _Math = Math;
               const _Math2 = Math;
-              const sum = Math.max(Math.ceil(precision / 7), length3) + 2;
+              sum = Math.max(Math.ceil(precision / 7), length3) + 2;
               if (tmp27 > sum) {
                 arr1.length = 1;
                 tmp27 = sum;
@@ -3270,7 +3238,7 @@ const fn27 = function(arg0) {
 obj.sub = fn27;
 obj.minus = fn27;
 const fn28 = function(arg0) {
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   constructor = new constructor(arg0);
   if (this.d) {
@@ -3279,7 +3247,7 @@ const fn28 = function(arg0) {
         const constructor1 = new constructor(self);
         finalise(constructor1, constructor.precision, constructor.rounding);
       }
-      let c8 = false;
+      c8 = false;
       if (9 == constructor.modulo) {
         const tmp15 = f110970(self, constructor.abs(), 0, 3, 1);
         tmp15.s = tmp15.s * constructor.s;
@@ -3316,11 +3284,9 @@ obj.neg = fn31;
 obj.negated = fn31;
 const fn32 = function(arg0) {
   let diff2;
-  let precision;
-  let rounding;
   let tmp26;
   let tmp37;
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   constructor = new constructor(arg0);
   if (this.d) {
@@ -3353,7 +3319,7 @@ const fn32 = function(arg0) {
               const _Math = Math;
               const rounded = Math.ceil(precision / 7);
               if (rounded > length) {
-                let sum = rounded + 1;
+                sum = rounded + 1;
               } else {
                 sum = length + 1;
               }
@@ -3468,12 +3434,12 @@ const fn33 = function(arg0) {
       }
     }
   }
-  const self = this;
+  self = this;
   let num3 = NaN;
   if (this.d) {
     const d = self.d;
     const diff = d.length - 1;
-    const sum = 7 * diff + 1;
+    sum = 7 * diff + 1;
     let tmp3 = d[diff];
     let tmp4 = sum;
     if (tmp3) {
@@ -3519,10 +3485,8 @@ obj.round = function() {
   return constructor;
 };
 const fn34 = function() {
-  let precision;
-  let rounding;
   let tmp25;
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   if (this.isFinite()) {
     if (self.isZero()) {
@@ -3533,7 +3497,7 @@ const fn34 = function() {
       const _Math = Math;
       constructor.precision = precision + Math.max(self.e, self.sd()) + 7;
       constructor.rounding = 1;
-      const obj = toLessThanHalfPi(constructor, self);
+      obj = toLessThanHalfPi(constructor, self);
       if (obj.d.length < 3) {
         let tmp26 = obj;
         if (!obj.isZero()) {
@@ -3593,22 +3557,18 @@ const fn34 = function() {
 obj.sin = fn34;
 obj.sine = fn34;
 const fn35 = function() {
-  let constructor;
-  let d;
-  let e;
-  let s;
-  const self = this;
+  self = this;
   ({ d, e, s, constructor } = this);
   if (1 === s) {
     if (d) {
       if (d[0]) {
-        let c8 = false;
+        c8 = false;
         const _Math = Math;
         const str = Math.sqrt(+self);
         if (0 != str) {
           if (str != Infinity) {
             constructor = new constructor(str.toString());
-            const sum = constructor.precision + 3;
+            sum = constructor.precision + 3;
           }
         }
         const arr = digitsToString(d);
@@ -3655,9 +3615,7 @@ const fn35 = function() {
 obj.sqrt = fn35;
 obj.squareRoot = fn35;
 const fn36 = function() {
-  let precision;
-  let rounding;
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   if (this.isFinite()) {
     if (self.isZero()) {
@@ -3690,8 +3648,6 @@ const fn36 = function() {
 obj.tan = fn36;
 obj.tangent = fn36;
 const fn37 = function(arg0) {
-  let constructor;
-  let d;
   let tmp15;
   let tmp28;
   ({ constructor, d } = this);
@@ -3702,7 +3658,7 @@ const fn37 = function(arg0) {
     if (d[0]) {
       if (d) {
         if (d[0]) {
-          const sum = floor(this.e / 7) + floor(constructor.e / 7);
+          sum = floor(this.e / 7) + floor(constructor.e / 7);
           let tmp7 = d;
           let tmp8 = d;
           let tmp9 = length2;
@@ -3836,11 +3792,11 @@ const fn38 = function(arg0, rounding) {
 obj.toDP = fn38;
 obj.toDecimalPlaces = fn38;
 obj.toExponential = function(arg0, rounding) {
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   if (undefined === arg0) {
     let tmp11 = finiteToString(self, true);
-    let obj = self;
+    obj = self;
   } else {
     if (arg0 === ~~arg0) {
       if (arg0 >= 0) {
@@ -3871,7 +3827,7 @@ obj.toExponential = function(arg0, rounding) {
   return text;
 };
 obj.toFixed = function(arg0, rounding) {
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   if (undefined === arg0) {
     let tmp11 = finiteToString(self);
@@ -3905,17 +3861,15 @@ obj.toFixed = function(arg0, rounding) {
 };
 obj.toFraction = function(arg0) {
   let cmpResult;
-  let constructor;
-  let d;
   let result1;
-  const self = this;
+  self = this;
   ({ d, constructor } = this);
   if (d) {
     constructor = new constructor(1);
     const constructor1 = new constructor(0);
     const constructor2 = new constructor(constructor1);
     const diff = d.length - 1;
-    const sum = 7 * diff + 1;
+    sum = 7 * diff + 1;
     let tmp17 = d[diff];
     let tmp18 = sum;
     if (tmp17) {
@@ -3972,7 +3926,7 @@ obj.toFraction = function(arg0) {
       const _Error = Error;
       throw Error(c9 + constructor3);
     }
-    let c8 = false;
+    c8 = false;
     const constructor4 = new constructor(digitsToString(d));
     const result3 = 7 * d.length * 2;
     constructor.precision = result3;
@@ -4089,12 +4043,12 @@ obj.toNearest = function(arg0, arg1) {
     }
   }
   if (constructor1.d[0]) {
-    let c8 = false;
+    c8 = false;
     const timesResult = f110970(constructor, constructor1, 0, rounding, 1).times(constructor1);
     c8 = true;
     finalise(timesResult);
     let tmp9 = timesResult;
-    const obj = f110970(constructor, constructor1, 0, rounding, 1);
+    obj = f110970(constructor, constructor1, 0, rounding, 1);
   } else {
     constructor1.s = constructor.s;
     tmp9 = constructor1;
@@ -4108,9 +4062,7 @@ obj.toOctal = function(arg0, arg1) {
   return toStringBinary(this, 8, arg0, arg1);
 };
 const fn40 = function(arg0) {
-  let precision;
-  let rounding;
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   constructor = new constructor(arg0);
   if (this.d) {
@@ -4176,7 +4128,7 @@ const fn40 = function(arg0) {
                 }
                 if (e <= constructor.maxE + 1) {
                   if (e >= constructor.minE - 1) {
-                    let c8 = false;
+                    c8 = false;
                     constructor1.s = 1;
                     constructor.rounding = 1;
                     const _Math3 = Math;
@@ -4188,7 +4140,7 @@ const fn40 = function(arg0) {
                       d = checkRoundingDigits(constructor5.d, precision, rounding);
                     }
                     if (d) {
-                      const sum = precision + 10;
+                      sum = precision + 10;
                       const tmp55Result = tmp55(constructor.times(tmp56(constructor1, sum + bound)), sum);
                       finalise(tmp55Result, sum + 5, 1);
                       constructor5 = tmp55Result;
@@ -4231,7 +4183,7 @@ const fn40 = function(arg0) {
 obj.pow = fn40;
 obj.toPower = fn40;
 obj.toPrecision = function(precision, rounding) {
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   if (undefined === precision) {
     let tmp15 = self.e <= constructor.toExpNeg;
@@ -4239,7 +4191,7 @@ obj.toPrecision = function(precision, rounding) {
       tmp15 = self.e >= constructor.toExpPos;
     }
     let tmp3Result = finiteToString(self, tmp15);
-    let obj = self;
+    obj = self;
     const tmp14 = finiteToString;
   } else {
     if (precision === ~~precision) {
@@ -4273,7 +4225,7 @@ obj.toPrecision = function(precision, rounding) {
   return text;
 };
 const fn41 = function(precision, rounding) {
-  const self = this;
+  self = this;
   let constructor = this.constructor;
   if (undefined === precision) {
     ({ precision, rounding } = constructor);
@@ -4300,7 +4252,7 @@ const fn41 = function(precision, rounding) {
 obj.toSD = fn41;
 obj.toSignificantDigits = fn41;
 obj.toString = function() {
-  const self = this;
+  self = this;
   const constructor = this.constructor;
   let tmp2 = this.e <= constructor.toExpNeg;
   if (!tmp2) {
@@ -4324,7 +4276,7 @@ const fn42 = function() {
 obj.trunc = fn42;
 obj.truncated = fn42;
 const fn43 = function() {
-  const self = this;
+  self = this;
   const constructor = this.constructor;
   let tmp2 = this.e <= constructor.toExpNeg;
   if (!tmp2) {
@@ -4340,9 +4292,6 @@ obj.toJSON = fn43;
 obj.valueOf = fn43;
 const f110970 = (s, s2, arg2, _exports2) => {
   let num13;
-  let precision;
-  let rounding;
-  let sum;
   let tmp21;
   let tmp27;
   let constructor = s.constructor;
@@ -4882,20 +4831,20 @@ const f110970 = (s, s2, arg2, _exports2) => {
   return constructor1;
 };
 function clone(arg0) {
-  let obj = arg0;
+  obj = arg0;
   class Decimal {
     constructor(arg0) {
       self = this;
       tmp = Decimal;
       if (this instanceof Decimal) {
         self.constructor = tmp;
-        tmp4 = outer1_1;
-        flag = arg0 instanceof outer1_1;
+        tmp4 = closure_1_1;
+        flag = arg0 instanceof closure_1_1;
         if (!flag) {
           tmp5 = arg0;
           if (arg0) {
-            tmp6 = outer1_12;
-            tmp5 = arg0.toStringTag === outer1_12;
+            tmp6 = closure_1_12;
+            tmp5 = arg0.toStringTag === closure_1_12;
           }
           flag = tmp5;
         }
@@ -4904,8 +4853,8 @@ function clone(arg0) {
         }
         if (flag) {
           self.s = arg0.s;
-          tmp70 = outer1_8;
-          if (outer1_8) {
+          tmp70 = c8;
+          if (c8) {
             if (arg0.d) {
               if (arg0.e <= tmp.maxE) {
                 if (arg0.e < tmp.minE) {
@@ -4973,8 +4922,8 @@ function clone(arg0) {
                     num32 = num31;
                   } while (10 <= result);
                 }
-                tmp66 = outer1_8;
-                if (outer1_8) {
+                tmp66 = c8;
+                if (c8) {
                   if (num32 > Decimal.maxE) {
                     num33 = NaN;
                     self.e = NaN;
@@ -5003,8 +4952,8 @@ function clone(arg0) {
               }
             }
             {
-              tmp62 = outer1_32;
-              tmp63 = outer1_32(self, str9.toString());
+              tmp62 = closure_1_32;
+              tmp63 = closure_1_32(self, str9.toString());
               tmp64 = self;
             }
             return tmp64;
@@ -5028,11 +4977,11 @@ function clone(arg0) {
             num8 = 1;
             self.s = 1;
           }
-          obj = outer1_18;
+          obj = closure_1_18;
           tmp10 = substr2;
-          if (outer1_18.test(substr2)) {
-            tmp60 = outer1_32;
-            tmp61 = outer1_32(self, substr2);
+          if (closure_1_18.test(substr2)) {
+            tmp60 = closure_1_32;
+            tmp61 = closure_1_32(self, substr2);
             tmp12 = self;
           } else {
             str2 = "_";
@@ -5042,8 +4991,8 @@ function clone(arg0) {
               replaced = substr2.replace(/(\d)_(?=\d)/g, "$1");
               str5 = replaced;
               if (obj.test(replaced)) {
-                tmp58 = outer1_32;
-                tmp59 = outer1_32(self, replaced);
+                tmp58 = closure_1_32;
+                tmp59 = closure_1_32(self, replaced);
                 tmp12 = self;
               }
             } else {
@@ -5062,24 +5011,24 @@ function clone(arg0) {
               self.d = null;
               tmp12 = self;
             }
-            tmp14 = outer1_16;
+            tmp14 = closure_1_16;
             tmp15 = str5;
-            if (outer1_16.test(str5)) {
+            if (closure_1_16.test(str5)) {
               formatted = str5.toLowerCase();
               num14 = 16;
             } else {
-              tmp16 = outer1_15;
+              tmp16 = closure_1_15;
               num14 = 2;
               formatted = str5;
-              if (!outer1_15.test(str5)) {
-                tmp17 = outer1_17;
+              if (!closure_1_15.test(str5)) {
+                tmp17 = closure_1_17;
                 num14 = 8;
                 formatted = str5;
-                if (!outer1_17.test(str5)) {
+                if (!closure_1_17.test(str5)) {
                   tmp18 = globalThis;
                   _Error = Error;
-                  tmp19 = outer1_9;
-                  throw Error(outer1_9 + str5);
+                  tmp19 = closure_1_9;
+                  throw Error(closure_1_9 + str5);
                 }
               }
             }
@@ -5105,7 +5054,7 @@ function clone(arg0) {
               replaced1 = substr3.replace(".", "");
               length = replaced1.length;
               diff = length - index;
-              tmp30 = outer1_29;
+              tmp30 = closure_1_29;
               tmp31 = new.target;
               tmp32 = new.target;
               tmp33 = num14;
@@ -5115,13 +5064,13 @@ function clone(arg0) {
               num19 = 0;
               tmp36 = constructor;
               tmp37 = diff;
-              tmp27 = outer1_29(constructor, constructor, diff, 2 * diff);
+              tmp27 = closure_1_29(constructor, constructor, diff, 2 * diff);
               tmp26 = length;
               tmp28 = replaced1;
             }
-            tmp38 = outer1_25;
-            tmp39 = outer1_19;
-            arr5 = outer1_25(tmp28, num14, outer1_19);
+            tmp38 = closure_1_25;
+            tmp39 = closure_1_19;
+            arr5 = closure_1_25(tmp28, num14, closure_1_19);
             num20 = 1;
             diff1 = arr5.length - 1;
             tmp41 = diff1;
@@ -5156,29 +5105,29 @@ function clone(arg0) {
               self.e = tmp48;
               self.d = arr5;
               flag2 = false;
-              outer1_8 = false;
+              c8 = false;
               obj2 = self;
               if (tmp24) {
-                tmp49 = outer1_26;
+                tmp49 = closure_1_26;
                 num21 = 4;
-                obj2 = outer1_26(self, tmp27, 4 * tmp26);
+                obj2 = closure_1_26(self, tmp27, 4 * tmp26);
               }
               constructor1 = obj2;
               if (!tmp22) {
                 flag3 = true;
-                outer1_8 = true;
+                c8 = true;
               } else {
                 tmp51 = globalThis;
                 _Math = Math;
                 num22 = 54;
                 if (Math.abs(tmp22) < 54) {
-                  tmp54 = outer1_14;
+                  tmp54 = closure_1_14;
                   num24 = 2;
-                  powResult = outer1_14(2, tmp22);
+                  powResult = closure_1_14(2, tmp22);
                 } else {
-                  tmp52 = outer1_1;
+                  tmp52 = closure_1_1;
                   num23 = 2;
-                  powResult = outer1_1.pow(2, tmp22);
+                  powResult = closure_1_1.pow(2, tmp22);
                 }
                 timesResult = obj2.times(powResult);
               }
@@ -5197,14 +5146,14 @@ function clone(arg0) {
             self.s = 1;
             str = arg0;
           }
-          tmp7 = outer1_32;
-          tmp8 = outer1_32(self, str.toString());
+          tmp7 = closure_1_32;
+          tmp8 = closure_1_32(self, str.toString());
           return self;
         } else {
           tmp75 = globalThis;
           _Error2 = Error;
-          tmp76 = outer1_9;
-          throw Error(outer1_9 + arg0);
+          tmp76 = closure_1_9;
+          throw Error(closure_1_9 + arg0);
         }
       } else {
         tmpResult = tmp(arg0);
@@ -5277,13 +5226,13 @@ function clone(arg0) {
         tmp = Decimal;
         if (this instanceof Decimal) {
           self.constructor = tmp;
-          tmp4 = outer1_1;
-          flag = arg0 instanceof outer1_1;
+          tmp4 = closure_1_1;
+          flag = arg0 instanceof closure_1_1;
           if (!flag) {
             tmp5 = arg0;
             if (arg0) {
-              tmp6 = outer1_12;
-              tmp5 = arg0.toStringTag === outer1_12;
+              tmp6 = closure_1_12;
+              tmp5 = arg0.toStringTag === closure_1_12;
             }
             flag = tmp5;
           }
@@ -5292,8 +5241,8 @@ function clone(arg0) {
           }
           if (flag) {
             self.s = arg0.s;
-            tmp70 = outer1_8;
-            if (outer1_8) {
+            tmp70 = c8;
+            if (c8) {
               if (arg0.d) {
                 if (arg0.e <= tmp.maxE) {
                   if (arg0.e < tmp.minE) {
@@ -5361,8 +5310,8 @@ function clone(arg0) {
                       num32 = num31;
                     } while (10 <= result);
                   }
-                  tmp66 = outer1_8;
-                  if (outer1_8) {
+                  tmp66 = c8;
+                  if (c8) {
                     if (num32 > Decimal.maxE) {
                       num33 = NaN;
                       self.e = NaN;
@@ -5391,8 +5340,8 @@ function clone(arg0) {
                 }
               }
               {
-                tmp62 = outer1_32;
-                tmp63 = outer1_32(self, str9.toString());
+                tmp62 = closure_1_32;
+                tmp63 = closure_1_32(self, str9.toString());
                 tmp64 = self;
               }
               return tmp64;
@@ -5416,11 +5365,11 @@ function clone(arg0) {
               num8 = 1;
               self.s = 1;
             }
-            obj = outer1_18;
+            obj = closure_1_18;
             tmp10 = substr2;
-            if (outer1_18.test(substr2)) {
-              tmp60 = outer1_32;
-              tmp61 = outer1_32(self, substr2);
+            if (closure_1_18.test(substr2)) {
+              tmp60 = closure_1_32;
+              tmp61 = closure_1_32(self, substr2);
               tmp12 = self;
             } else {
               str2 = "_";
@@ -5430,8 +5379,8 @@ function clone(arg0) {
                 replaced = substr2.replace(/(\d)_(?=\d)/g, "$1");
                 str5 = replaced;
                 if (obj.test(replaced)) {
-                  tmp58 = outer1_32;
-                  tmp59 = outer1_32(self, replaced);
+                  tmp58 = closure_1_32;
+                  tmp59 = closure_1_32(self, replaced);
                   tmp12 = self;
                 }
               } else {
@@ -5450,24 +5399,24 @@ function clone(arg0) {
                 self.d = null;
                 tmp12 = self;
               }
-              tmp14 = outer1_16;
+              tmp14 = closure_1_16;
               tmp15 = str5;
-              if (outer1_16.test(str5)) {
+              if (closure_1_16.test(str5)) {
                 formatted = str5.toLowerCase();
                 num14 = 16;
               } else {
-                tmp16 = outer1_15;
+                tmp16 = closure_1_15;
                 num14 = 2;
                 formatted = str5;
-                if (!outer1_15.test(str5)) {
-                  tmp17 = outer1_17;
+                if (!closure_1_15.test(str5)) {
+                  tmp17 = closure_1_17;
                   num14 = 8;
                   formatted = str5;
-                  if (!outer1_17.test(str5)) {
+                  if (!closure_1_17.test(str5)) {
                     tmp18 = globalThis;
                     _Error = Error;
-                    tmp19 = outer1_9;
-                    throw Error(outer1_9 + str5);
+                    tmp19 = closure_1_9;
+                    throw Error(closure_1_9 + str5);
                   }
                 }
               }
@@ -5493,7 +5442,7 @@ function clone(arg0) {
                 replaced1 = substr3.replace(".", "");
                 length = replaced1.length;
                 diff = length - index;
-                tmp30 = outer1_29;
+                tmp30 = closure_1_29;
                 tmp31 = new.target;
                 tmp32 = new.target;
                 tmp33 = num14;
@@ -5503,13 +5452,13 @@ function clone(arg0) {
                 num19 = 0;
                 tmp36 = constructor;
                 tmp37 = diff;
-                tmp27 = outer1_29(constructor, constructor, diff, 2 * diff);
+                tmp27 = closure_1_29(constructor, constructor, diff, 2 * diff);
                 tmp26 = length;
                 tmp28 = replaced1;
               }
-              tmp38 = outer1_25;
-              tmp39 = outer1_19;
-              arr5 = outer1_25(tmp28, num14, outer1_19);
+              tmp38 = closure_1_25;
+              tmp39 = closure_1_19;
+              arr5 = closure_1_25(tmp28, num14, closure_1_19);
               num20 = 1;
               diff1 = arr5.length - 1;
               tmp41 = diff1;
@@ -5544,29 +5493,29 @@ function clone(arg0) {
                 self.e = tmp48;
                 self.d = arr5;
                 flag2 = false;
-                outer1_8 = false;
+                c8 = false;
                 obj2 = self;
                 if (tmp24) {
-                  tmp49 = outer1_26;
+                  tmp49 = closure_1_26;
                   num21 = 4;
-                  obj2 = outer1_26(self, tmp27, 4 * tmp26);
+                  obj2 = closure_1_26(self, tmp27, 4 * tmp26);
                 }
                 constructor1 = obj2;
                 if (!tmp22) {
                   flag3 = true;
-                  outer1_8 = true;
+                  c8 = true;
                 } else {
                   tmp51 = globalThis;
                   _Math = Math;
                   num22 = 54;
                   if (Math.abs(tmp22) < 54) {
-                    tmp54 = outer1_14;
+                    tmp54 = closure_1_14;
                     num24 = 2;
-                    powResult = outer1_14(2, tmp22);
+                    powResult = closure_1_14(2, tmp22);
                   } else {
-                    tmp52 = outer1_1;
+                    tmp52 = closure_1_1;
                     num23 = 2;
-                    powResult = outer1_1.pow(2, tmp22);
+                    powResult = closure_1_1.pow(2, tmp22);
                   }
                   timesResult = obj2.times(powResult);
                 }
@@ -5585,14 +5534,14 @@ function clone(arg0) {
               self.s = 1;
               str = arg0;
             }
-            tmp7 = outer1_32;
-            tmp8 = outer1_32(self, str.toString());
+            tmp7 = closure_1_32;
+            tmp8 = closure_1_32(self, str.toString());
             return self;
           } else {
             tmp75 = globalThis;
             _Error2 = Error;
-            tmp76 = outer1_9;
-            throw Error(outer1_9 + arg0);
+            tmp76 = closure_1_9;
+            throw Error(closure_1_9 + arg0);
           }
         } else {
           tmpResult = tmp(arg0);
@@ -5639,7 +5588,7 @@ const Decimal = self.Decimal;
 class tmp {
   static noConflict() {
     self.Decimal = Decimal;
-    return clone;
+    return closure_1;
   }
 }
 self.Decimal = cloneResult;

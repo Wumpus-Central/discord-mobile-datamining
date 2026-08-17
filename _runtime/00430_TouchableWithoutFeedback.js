@@ -1,20 +1,14 @@
 // _runtime/00430_TouchableWithoutFeedback.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import closure_4 from "noop";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
 let closure_2 = ["onBlur", "onFocus"];
 ({ cloneElement: c5, useMemo: closure_6 } = noop);
 let closure_7 = ["accessibilityActions", "accessibilityElementsHidden", "accessibilityHint", "accessibilityLanguage", "accessibilityIgnoresInvertColors", "accessibilityLabel", "accessibilityLiveRegion", "accessibilityRole", "accessibilityValue", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext", "accessibilityViewIsModal", "aria-modal", "hitSlop", "importantForAccessibility", "nativeID", "onAccessibilityAction", "onBlur", "onFocus", "onLayout", "testID"];
 
 export default function TouchableWithoutFeedback(disabled) {
-  let accessibilityLiveRegion;
-  let onBlur2;
-  let onFocus2;
-  let tmp6;
   disabled = disabled.disabled;
   const rejectResponderTermination = disabled.rejectResponderTermination;
   aria_disabled = disabled["aria-disabled"];

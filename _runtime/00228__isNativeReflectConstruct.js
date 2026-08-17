@@ -1,10 +1,10 @@
 // _runtime/00228__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import c3 from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
-import Event from "Event";
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import Event from "Event" /* 229 */;
 
 let AbortController = require;
 function _isNativeReflectConstruct() {
@@ -18,10 +18,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,10 +29,10 @@ function _isNativeReflectConstruct() {
 class AbortSignal {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, AbortController);
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(AbortController);
-    tmp3 = _isNativeReflectConstruct;
+    tmp = closure_2(this, AbortController);
+    tmp2 = closure_4;
+    obj = closure_4(AbortController);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -46,7 +46,7 @@ class AbortSignal {
   }
 }
 AbortController = AbortSignal;
-_inherits(AbortSignal, require("Event").EventTarget);
+_inherits(AbortSignal, Event.EventTarget);
 let obj = {
   key: "aborted",
   get() {
@@ -81,9 +81,9 @@ if (tmp9) {
 }
 class AbortController {
   constructor() {
-    tmp = _isNativeReflectConstruct(this, AbortController);
-    tmp2 = WeakMap;
-    obj = Object.create(get.prototype);
+    tmp = closure_2(this, AbortController);
+    tmp2 = closure_8;
+    obj = Object.create(closure_6.prototype);
     _EventTarget = require("Event").EventTarget;
     call = _EventTarget.call;
     if (typeof call === "unknown") {
@@ -91,8 +91,8 @@ class AbortController {
     } else {
       callResult = call(obj);
     }
-    result = WeakMap.set(obj, false);
-    result1 = WeakMap.set(this, obj);
+    result = closure_7.set(obj, false);
+    result1 = closure_8.set(this, obj);
     return;
   }
 }

@@ -27,19 +27,19 @@ arg5.flattenArray = function flattenArray(style) {
                     }
                     let item = arr.forEach(() => { ... });
                   } else {
-                    closure_0.push(arr);
+                    arr = arr.push(arr);
                   }
                 });
               } else {
-                closure_0.push(arr);
+                arr = arr.push(arr);
               }
             });
           } else {
-            closure_0.push(arr);
+            arr = arr.push(arr);
           }
         });
       } else {
-        closure_0.push(arr);
+        arr = arr.push(arr);
       }
     });
     return items;

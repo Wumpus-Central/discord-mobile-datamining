@@ -1,18 +1,14 @@
 // _runtime/06353__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_1 from "_objectWithoutProperties" /* 109 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-let requireNativeComponent;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,10 +20,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -35,17 +31,17 @@ function _isNativeReflectConstruct() {
 const MaskedView = ["maskElement", "children"];
 let c5 = importAllResult;
 ({ View: closure_6, StyleSheet: error, requireNativeComponent } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_11 = requireNativeComponent("RNCMaskedView");
 class MaskedView {
   constructor() {
     self = this;
     items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, MaskedView);
+    tmp = closure_2(this, MaskedView);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(MaskedView);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(MaskedView);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -58,13 +54,11 @@ class MaskedView {
     return tmp3Result;
   }
 }
-require("_inherits")(MaskedView, importAllResult.Component);
+_inheritsDefault(MaskedView, importAllResult.Component);
 let items = [
   {
     key: "render",
     value: function render() {
-      let children;
-      let maskElement;
       const self = this;
       const props = this.props;
       ({ maskElement, children } = props);

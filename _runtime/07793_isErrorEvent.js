@@ -1,7 +1,7 @@
 // _runtime/07793_isErrorEvent.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 let BaseClient = require;
 function isErrorEvent(type) {
@@ -15,7 +15,7 @@ class BaseClient {
   constructor(arg0) {
     self = this;
     closure_0 = global;
-    tmp = isTransactionEvent(this, closure_0);
+    tmp = closure_3(this, closure_0);
     this._options = global;
     this._integrations = {};
     this._numProcessing = 0;
@@ -64,7 +64,7 @@ class BaseClient {
       }
       return tmp;
     });
-    f107137 = found;
+    closure_1 = found;
     if (found) {
       tmp5Result1 = require("consoleSandbox");
       consoleSandboxResult = tmp5Result1.consoleSandbox(() => {
@@ -80,7 +80,7 @@ let items = [
     value: function captureException(arg0, arg1, arg2) {
       let self = this;
       self = this;
-      const dependencyMap = arg2;
+      dependencyMap = arg2;
       obj = obj(7749);
       const uuid4Result = obj.uuid4();
       if (obj2.checkOrSetAlreadyCaught(arg0)) {
@@ -104,9 +104,8 @@ let items = [
     value: function captureMessage(arg0, arg1, arg2, arg3) {
       let self = this;
       self = this;
-      const dependencyMap = arg3;
-      const obj = { event_id: null };
-      obj[0] = obj(7749).uuid4();
+      dependencyMap = arg3;
+      obj = { event_id: obj(7749).uuid4() };
       const merged = Object.assign(arg2);
       const obj2 = obj(7749);
       const tmp = obj;
@@ -128,8 +127,6 @@ let items = [
   {
     key: "captureEvent",
     value: function captureEvent(sdkProcessingMetadata, originalException) {
-      let _captureEvent;
-      let _process;
       let obj = BaseClient(7749);
       const uuid4Result = obj.uuid4();
       if (originalException) {
@@ -201,13 +198,13 @@ let items = [
     key: "flush",
     value: function flush(arg0) {
       const self = this;
-      const BaseClient = arg0;
+      BaseClient = arg0;
       const _transport = this._transport;
       if (_transport) {
         self.emit("flush");
         const result = self._isClientDoneProcessing(arg0);
         let nextPromise = result.then((arg0) => {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           return _transport.flush(closure_0).then((arg0) => {
             let tmp = closure_0;
             if (closure_0) {
@@ -286,7 +283,7 @@ let items = [
     value: function sendEvent(arg0) {
       let self = this;
       self = this;
-      const BaseClient = arg0;
+      BaseClient = arg0;
       let obj = arg1;
       if (arg1 === undefined) {
         obj = {};
@@ -347,7 +344,7 @@ let items = [
   {
     key: "on",
     value: function on(arg0, arg1) {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       let items = this._hooks[arg0];
       if (!items) {
         items = [];
@@ -365,7 +362,7 @@ let items = [
   {
     key: "emit",
     value: function emit(arg0) {
-      let closure_0 = [...arguments].slice();
+      closure_0 = [...arguments].slice();
       if (this._hooks[arg0]) {
         const item = arr.forEach((arg0) => arg0(...closure_0));
       }
@@ -467,10 +464,10 @@ let items = [
     key: "_isClientDoneProcessing",
     value: function _isClientDoneProcessing(arg0) {
       const self = this;
-      const BaseClient = arg0;
+      BaseClient = arg0;
       return new BaseClient(self[10]).SyncPromise((arg0) => {
-        let closure_0 = arg0;
-        let c1 = 0;
+        closure_0 = arg0;
+        c1 = 0;
         const interval = setInterval(() => {
           if (0 == _numProcessing._numProcessing) {
             const _clearInterval2 = clearInterval;
@@ -579,20 +576,19 @@ let items = [
   {
     key: "_processEvent",
     value: function _processEvent(type) {
-      let type2;
       let self = this;
       self = this;
-      const dependencyMap = type;
-      let closure_2 = arg1;
-      let closure_3 = arg2;
+      dependencyMap = type;
+      closure_2 = arg1;
+      closure_3 = arg2;
       const options = this.getOptions();
       const sampleRate = options.sampleRate;
-      let closure_5 = "transaction" === type.type;
+      closure_5 = "transaction" === type.type;
       ({ type: type2, type } = type);
       if (!type2) {
         type2 = "error";
       }
-      let closure_6 = "before send for type `" + type2 + "`";
+      closure_6 = "before send for type `" + type2 + "`";
       if (undefined !== sampleRate) {
         const parseSampleRateResult = str(7778).parseSampleRate(sampleRate);
         let obj = str(7778);
@@ -626,9 +622,6 @@ let items = [
             }
           }
           const promise = (function processBeforeSend(self, options, spans, arg3) {
-            let beforeSend;
-            let beforeSendSpan;
-            let beforeSendTransaction;
             ({ beforeSend, beforeSendTransaction, beforeSendSpan } = options);
             if (callback2(spans)) {
               if (beforeSend) {
@@ -713,9 +706,6 @@ let items = [
             }
           }
           const promise = (function processBeforeSend(self, options, spans, arg3) {
-            let beforeSend;
-            let beforeSendSpan;
-            let beforeSendTransaction;
             ({ beforeSend, beforeSendTransaction, beforeSendSpan } = options);
             if (callback2(spans)) {
               if (beforeSend) {
@@ -871,8 +861,6 @@ let items = [
       this._outcomes = {};
       const entries = Object.entries(this._outcomes);
       return entries.map((arg0) => {
-        let str;
-        let tmp;
         [str, tmp] = arg0;
         const tmp2 = callback(str.split(":"), 2);
         return { reason: tmp2[0], category: tmp2[1], quantity: tmp };

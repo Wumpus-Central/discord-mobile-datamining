@@ -1,5 +1,5 @@
 // _runtime/03901_startOfToday.js
-import startOfDay from "startOfDay";
+import startOfDay from "startOfDay" /* 3636 */;
 
 if (!startOfDay) {
   const obj = { default: null };
@@ -8,9 +8,9 @@ if (!startOfDay) {
 } else {
   tmp3 = startOfDay;
 }
-let c0 = tmp3;
+startOfDay = tmp3;
 
 export default function startOfToday() {
-  return tmp3.default(Date.now());
+  return startOfDay.default(Date.now());
 };
 export default exports.default;

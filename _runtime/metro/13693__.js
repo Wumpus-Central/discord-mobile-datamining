@@ -1,8 +1,11 @@
 // _runtime/metro/13693__.js
-let tmp = require("module_13673").process && require("module_13673").process.versions;
+import _mod13673 from "module_13673" /* 13673 */;
+import _mod13694 from "module_13694" /* 13694 */;
+
+let tmp = _mod13673.process && _mod13673.process.versions;
 if (!tmp) {
-  tmp = require("module_13673").Deno && require("module_13673").Deno.version;
-  const tmp2 = require("module_13673").Deno && require("module_13673").Deno.version;
+  tmp = _mod13673.Deno && _mod13673.Deno.version;
+  const tmp2 = _mod13673.Deno && _mod13673.Deno.version;
 }
 let str = tmp;
 if (tmp) {
@@ -21,22 +24,22 @@ if (str) {
 }
 let _module = !tmp3;
 if (!tmp3) {
-  _module = require("module_13694");
+  _module = _mod13694;
 }
 if (_module) {
-  const match = require("module_13694").match(/Edge\/(\d+)/);
+  const match = _mod13694.match(/Edge\/(\d+)/);
   let tmp8 = !match;
   if (match) {
     tmp8 = match[1] >= 74;
   }
   _module = tmp8;
   tmp4 = match;
-  const str3 = require("module_13694");
+  const str3 = _mod13694;
 }
 if (_module) {
-  _module = require("module_13694").match(/Chrome\/(\d+)/);
+  _module = _mod13694.match(/Chrome\/(\d+)/);
   tmp4 = _module;
-  const str4 = require("module_13694");
+  const str4 = _mod13694;
 }
 if (_module) {
   tmp3 = +tmp4[1];

@@ -1,15 +1,15 @@
 // _runtime/03765_intlFormatDistance.js
-import differenceInCalendarDays from "differenceInCalendarDays";
-import differenceInCalendarMonths from "differenceInCalendarMonths";
-import differenceInCalendarQuarters from "differenceInCalendarQuarters";
-import differenceInCalendarWeeks from "differenceInCalendarWeeks";
-import differenceInCalendarYears from "differenceInCalendarYears";
-import differenceInHours from "differenceInHours";
-import differenceInMinutes from "differenceInMinutes";
-import differenceInSeconds from "differenceInSeconds";
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
-import { keys } from "03651_keys.js";
+import keys from "keys" /* 3651 */;
+import differenceInCalendarDays from "differenceInCalendarDays" /* 3634 */;
+import differenceInCalendarMonths from "differenceInCalendarMonths" /* 3658 */;
+import differenceInCalendarQuarters from "differenceInCalendarQuarters" /* 3659 */;
+import differenceInCalendarWeeks from "differenceInCalendarWeeks" /* 3661 */;
+import differenceInCalendarYears from "differenceInCalendarYears" /* 3662 */;
+import differenceInHours from "differenceInHours" /* 3664 */;
+import differenceInMinutes from "differenceInMinutes" /* 3669 */;
+import differenceInSeconds from "differenceInSeconds" /* 3675 */;
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!differenceInCalendarDays) {
   let obj = { default: null };
@@ -18,7 +18,7 @@ if (!differenceInCalendarDays) {
 } else {
   tmp3 = differenceInCalendarDays;
 }
-let obj1 = tmp3;
+differenceInCalendarDays = tmp3;
 if (!differenceInCalendarMonths) {
   obj = { default: null };
   obj[0] = differenceInCalendarMonths;
@@ -26,7 +26,7 @@ if (!differenceInCalendarMonths) {
 } else {
   tmp5 = differenceInCalendarMonths;
 }
-let c3 = tmp5;
+differenceInCalendarMonths = tmp5;
 if (!differenceInCalendarQuarters) {
   obj = { default: null };
   obj[0] = differenceInCalendarQuarters;
@@ -34,15 +34,15 @@ if (!differenceInCalendarQuarters) {
 } else {
   tmp7 = differenceInCalendarQuarters;
 }
-let c4 = tmp7;
+differenceInCalendarQuarters = tmp7;
 if (!differenceInCalendarWeeks) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = differenceInCalendarWeeks;
   let tmp9 = obj1;
 } else {
   tmp9 = differenceInCalendarWeeks;
 }
-let c5 = tmp9;
+differenceInCalendarWeeks = tmp9;
 if (!differenceInCalendarYears) {
   let obj2 = { default: null };
   obj2[0] = differenceInCalendarYears;
@@ -50,7 +50,7 @@ if (!differenceInCalendarYears) {
 } else {
   tmp11 = differenceInCalendarYears;
 }
-let closure_6 = tmp11;
+differenceInCalendarYears = tmp11;
 if (!differenceInHours) {
   const obj3 = { default: null };
   obj3[0] = differenceInHours;
@@ -58,7 +58,7 @@ if (!differenceInHours) {
 } else {
   tmp13 = differenceInHours;
 }
-const error = tmp13;
+differenceInHours = tmp13;
 if (!differenceInMinutes) {
   const obj4 = { default: null };
   obj4[0] = differenceInMinutes;
@@ -66,7 +66,7 @@ if (!differenceInMinutes) {
 } else {
   tmp15 = differenceInMinutes;
 }
-const metroImportAll = tmp15;
+differenceInMinutes = tmp15;
 if (!differenceInSeconds) {
   const obj5 = { default: null };
   obj5[0] = differenceInSeconds;
@@ -74,7 +74,7 @@ if (!differenceInSeconds) {
 } else {
   tmp17 = differenceInSeconds;
 }
-let c9 = tmp17;
+differenceInSeconds = tmp17;
 if (!_typeof) {
   const obj6 = { default: null };
   obj6[0] = _typeof;
@@ -82,7 +82,7 @@ if (!_typeof) {
 } else {
   tmp19 = _typeof;
 }
-let c10 = tmp19;
+_typeof = tmp19;
 if (!requiredArgs) {
   const obj7 = { default: null };
   obj7[0] = requiredArgs;
@@ -90,12 +90,12 @@ if (!requiredArgs) {
 } else {
   tmp21 = requiredArgs;
 }
-const unpackModuleId = tmp21;
+requiredArgs = tmp21;
 
 export default function intlFormatDistance(arg0, arg1, unit) {
-  tmp21.default(2, arguments);
-  const defaultResult1 = tmp19.default(arg0);
-  const defaultResult2 = tmp19.default(arg1);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = _typeof.default(arg1);
   if (null != unit) {
     if (unit.unit) {
       unit = undefined;
@@ -103,32 +103,31 @@ export default function intlFormatDistance(arg0, arg1, unit) {
         unit = unit.unit;
       }
       if ("second" === unit) {
-        let num2 = tmp17.default(defaultResult1, defaultResult2);
+        let num2 = differenceInSeconds.default(defaultResult1, defaultResult2);
         let str = unit;
       } else if ("minute" === unit) {
-        num2 = tmp15.default(defaultResult1, defaultResult2);
+        num2 = differenceInMinutes.default(defaultResult1, defaultResult2);
         str = unit;
       } else if ("hour" === unit) {
-        num2 = tmp13.default(defaultResult1, defaultResult2);
+        num2 = differenceInHours.default(defaultResult1, defaultResult2);
         str = unit;
       } else if ("day" === unit) {
-        num2 = tmp3.default(defaultResult1, defaultResult2);
+        num2 = differenceInCalendarDays.default(defaultResult1, defaultResult2);
         str = unit;
       } else if ("week" === unit) {
-        num2 = tmp9.default(defaultResult1, defaultResult2);
+        num2 = differenceInCalendarWeeks.default(defaultResult1, defaultResult2);
         str = unit;
-        tmp21 = tmp9;
       } else if ("month" === unit) {
-        num2 = tmp5.default(defaultResult1, defaultResult2);
+        num2 = differenceInCalendarMonths.default(defaultResult1, defaultResult2);
         str = unit;
       } else if ("quarter" === unit) {
-        num2 = tmp7.default(defaultResult1, defaultResult2);
+        num2 = differenceInCalendarQuarters.default(defaultResult1, defaultResult2);
         str = unit;
       } else {
         num2 = 0;
         str = unit;
         if ("year" === unit) {
-          num2 = tmp11.default(defaultResult1, defaultResult2);
+          num2 = differenceInCalendarYears.default(defaultResult1, defaultResult2);
           str = unit;
         }
       }
@@ -160,8 +159,8 @@ export default function intlFormatDistance(arg0, arg1, unit) {
     const relativeTimeFormat = new Intl.RelativeTimeFormat(locale, obj);
     return relativeTimeFormat.format(num2, str);
   }
-  obj = tmp17;
-  const defaultResult3 = tmp17.default(defaultResult1, defaultResult2);
+  obj = differenceInSeconds;
+  const defaultResult3 = differenceInSeconds.default(defaultResult1, defaultResult2);
   const absolute = Math.abs(defaultResult3);
   if (absolute < keys.secondsInMinute) {
     num2 = obj.default(defaultResult1, defaultResult2);
@@ -170,22 +169,22 @@ export default function intlFormatDistance(arg0, arg1, unit) {
     const _Math6 = Math;
     const absolute1 = Math.abs(defaultResult3);
     if (absolute1 < tmp6(3651).secondsInHour) {
-      num2 = tmp15.default(defaultResult1, defaultResult2);
+      num2 = differenceInMinutes.default(defaultResult1, defaultResult2);
       str = "minute";
     } else {
       const _Math7 = Math;
       const absolute2 = Math.abs(defaultResult3);
       if (absolute2 < tmp6(3651).secondsInDay) {
         const _Math = Math;
-        if (Math.abs(tmp3.default(defaultResult1, defaultResult2)) < 1) {
-          num2 = tmp13.default(defaultResult1, defaultResult2);
+        if (Math.abs(differenceInCalendarDays.default(defaultResult1, defaultResult2)) < 1) {
+          num2 = differenceInHours.default(defaultResult1, defaultResult2);
           str = "hour";
         }
       }
       const _Math2 = Math;
       const absolute3 = Math.abs(defaultResult3);
       if (absolute3 < tmp6(3651).secondsInWeek) {
-        num2 = tmp3.default(defaultResult1, defaultResult2);
+        num2 = differenceInCalendarDays.default(defaultResult1, defaultResult2);
         if (num2) {
           const _Math3 = Math;
           str = "day";
@@ -194,25 +193,25 @@ export default function intlFormatDistance(arg0, arg1, unit) {
       const _Math4 = Math;
       const absolute4 = Math.abs(defaultResult3);
       if (absolute4 < tmp6(3651).secondsInMonth) {
-        num2 = tmp9.default(defaultResult1, defaultResult2);
+        num2 = differenceInCalendarWeeks.default(defaultResult1, defaultResult2);
         str = "week";
       } else {
         const _Math8 = Math;
         const absolute5 = Math.abs(defaultResult3);
         if (absolute5 < tmp6(3651).secondsInQuarter) {
-          num2 = tmp5.default(defaultResult1, defaultResult2);
+          num2 = differenceInCalendarMonths.default(defaultResult1, defaultResult2);
           str = "month";
         } else {
           const _Math5 = Math;
           const absolute6 = Math.abs(defaultResult3);
           if (absolute6 < tmp6(3651).secondsInYear) {
-            if (tmp7.default(defaultResult1, defaultResult2) < 4) {
+            if (differenceInCalendarQuarters.default(defaultResult1, defaultResult2) < 4) {
               num2 = obj2.default(defaultResult1, defaultResult2);
               str = "quarter";
             }
-            obj2 = tmp7;
+            obj2 = differenceInCalendarQuarters;
           }
-          num2 = tmp11.default(defaultResult1, defaultResult2);
+          num2 = differenceInCalendarYears.default(defaultResult1, defaultResult2);
           str = "year";
         }
       }

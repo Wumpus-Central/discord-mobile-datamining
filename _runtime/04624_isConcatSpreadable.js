@@ -1,13 +1,15 @@
 // _runtime/04624_isConcatSpreadable.js
-import { baseIsArguments } from "00618_baseIsArguments.js";
-import { 00599__ } from "metro/00599__.js";
+import _mod599 from "module_599" /* 599 */;
+import _mod608 from "module_608" /* 608 */;
+import baseIsArguments from "baseIsArguments" /* 618 */;
+
 let isConcatSpreadable;
-if (require("module_608")) {
-  isConcatSpreadable = require("module_608").isConcatSpreadable;
+if (_mod608) {
+  isConcatSpreadable = _mod608.isConcatSpreadable;
 }
 
 export default function isFlattenable(arg0) {
-  let tmp3 = 00599__(arg0) || baseIsArguments(arg0);
+  let tmp3 = _mod599(arg0) || baseIsArguments(arg0);
   if (!tmp3) {
     let tmp5 = isConcatSpreadable;
     if (isConcatSpreadable) {

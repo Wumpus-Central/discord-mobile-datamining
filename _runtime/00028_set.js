@@ -7,19 +7,19 @@ let tmp4 = true === RN$Bridgeless.RN$Bridgeless;
 if (!tmp4) {
   tmp4 = null != RN$Bridgeless.__turboModuleProxy;
 }
-let c5 = tmp4;
+let closure_5 = tmp4;
 arg5.createJavaScriptFlagGetter = function createJavaScriptFlagGetter(animatedShouldDebounceQueueFlush, arg1) {
   const f66219 = () => {
-    outer1_3.add(f66219);
+    closure_1_3.add(f66219);
     let tmp5Result;
-    if (outer1_2 != null) {
-      if (outer1_2[tmp] != null) {
+    if (closure_1_2 != null) {
+      if (closure_1_2[tmp] != null) {
         tmp5Result = tmp5();
       }
     }
     return tmp5Result;
   };
-  let closure_1 = arg1;
+  closure_1 = arg1;
   return () => {
     if (null == closure_2) {
       let tmp2 = f66220();
@@ -35,13 +35,13 @@ arg5.createNativeFlagGetter = function createNativeFlagGetter(cdpInteractionMetr
   const f66220 = () => {
     let hasItem = f66220(table[0]);
     if (!hasItem) {
-      hasItem = outer1_4.has(tmp);
+      hasItem = closure_1_4.has(tmp);
     }
     if (!hasItem) {
-      hasItem = !outer1_5;
+      hasItem = !closure_1_5;
     }
     if (!hasItem) {
-      outer1_4.add(tmp);
+      closure_1_4.add(tmp);
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.error("Could not access feature flag '" + tmp + "' because native module method was not available");
@@ -55,7 +55,7 @@ arg5.createNativeFlagGetter = function createNativeFlagGetter(cdpInteractionMetr
     }
     return tmp13Result;
   };
-  let closure_1 = arg1;
+  closure_1 = arg1;
   return () => {
     if (null == closure_2) {
       let tmp2 = f66220();
@@ -73,7 +73,7 @@ arg5.getOverrides = function getOverrides() {
 arg5.setOverrides = function setOverrides(arg0) {
   if (null != closure_2) {
     const _Error2 = Error;
-    const error = new Error("Feature flags cannot be overridden more than once");
+    error = new Error("Feature flags cannot be overridden more than once");
     throw error;
   } else if (set.size > 0) {
     const _Array = Array;

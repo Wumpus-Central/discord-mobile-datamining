@@ -1,13 +1,11 @@
 // _runtime/06450_NativeEventsManager.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import { findNodeHandle } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { Reanimated } from "module_6420";
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6392 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
+import { findNodeHandle } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import { Reanimated } from "module_6420" /* 6420 */;
 
-let c4;
-let c5;
-let closure_6;
 let closure_2 = ["onGestureHandlerReanimatedStateChange", "onGestureHandlerReanimatedEvent", "onGestureHandlerReanimatedTouchEvent"];
 ({ useEffect: c4, useMemo: c5, useRef: closure_6 } = noop);
 let NativeEventsManager;
@@ -30,27 +28,27 @@ if (tmp4) {
       tmp = closure_6(null);
       closure_2 = tmp;
       onGestureHandlerReanimatedStateChange = global.onGestureHandlerReanimatedStateChange;
-      _objectWithoutProperties = onGestureHandlerReanimatedStateChange;
+      closure_3 = onGestureHandlerReanimatedStateChange;
       onGestureHandlerReanimatedEvent = global.onGestureHandlerReanimatedEvent;
-      useEffect = onGestureHandlerReanimatedEvent;
+      closure_4 = onGestureHandlerReanimatedEvent;
       onGestureHandlerReanimatedTouchEvent = global.onGestureHandlerReanimatedTouchEvent;
-      useMemo = onGestureHandlerReanimatedTouchEvent;
-      tmp2 = _objectWithoutProperties(global, closure_2);
+      closure_5 = onGestureHandlerReanimatedTouchEvent;
+      tmp2 = closure_3(global, closure_2);
       items = [, , ];
       items[0] = onGestureHandlerReanimatedEvent;
       items[1] = onGestureHandlerReanimatedStateChange;
       items[2] = onGestureHandlerReanimatedTouchEvent;
-      tmp3 = useMemo(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
+      tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
       closure_6 = tmp3;
-      tmp4 = useEffect(() => {
-        let num = outer1_7(tmp.current);
+      tmp4 = closure_4(() => {
+        let num = closure_1_7(ref3.current);
         if (num == null) {
           num = -1;
         }
-        tmp.__nativeTag = num;
-        ref2.current = new outer1_9({
+        ref3.__nativeTag = num;
+        ref2.current = new closure_1_9({
           props: closure_6,
-          _componentRef: tmp,
+          _componentRef: ref3,
           _componentViewTag: num,
           getComponentViewTag() {
             return num;
@@ -67,7 +65,7 @@ if (tmp4) {
       }, []);
       items1 = [];
       items1[0] = tmp3;
-      tmp5 = useEffect(() => {
+      tmp5 = closure_4(() => {
         if (ref.current) {
           const current = ref2.current;
           if (current != null) {
@@ -90,27 +88,27 @@ if (tmp4) {
       tmp = closure_6(null);
       closure_2 = tmp;
       onGestureHandlerReanimatedStateChange = global.onGestureHandlerReanimatedStateChange;
-      _objectWithoutProperties = onGestureHandlerReanimatedStateChange;
+      closure_3 = onGestureHandlerReanimatedStateChange;
       onGestureHandlerReanimatedEvent = global.onGestureHandlerReanimatedEvent;
-      useEffect = onGestureHandlerReanimatedEvent;
+      closure_4 = onGestureHandlerReanimatedEvent;
       onGestureHandlerReanimatedTouchEvent = global.onGestureHandlerReanimatedTouchEvent;
-      useMemo = onGestureHandlerReanimatedTouchEvent;
-      tmp2 = _objectWithoutProperties(global, closure_2);
+      closure_5 = onGestureHandlerReanimatedTouchEvent;
+      tmp2 = closure_3(global, closure_2);
       items = [, , ];
       items[0] = onGestureHandlerReanimatedEvent;
       items[1] = onGestureHandlerReanimatedStateChange;
       items[2] = onGestureHandlerReanimatedTouchEvent;
-      tmp3 = useMemo(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
+      tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
       closure_6 = tmp3;
-      tmp4 = useEffect(() => {
-        let num = outer1_7(tmp.current);
+      tmp4 = closure_4(() => {
+        let num = closure_1_7(ref3.current);
         if (num == null) {
           num = -1;
         }
-        tmp.__nativeTag = num;
-        ref2.current = new outer1_9({
+        ref3.__nativeTag = num;
+        ref2.current = new closure_1_9({
           props: closure_6,
-          _componentRef: tmp,
+          _componentRef: ref3,
           _componentViewTag: num,
           getComponentViewTag() {
             return num;
@@ -127,7 +125,7 @@ if (tmp4) {
       }, []);
       items1 = [];
       items1[0] = tmp3;
-      tmp5 = useEffect(() => {
+      tmp5 = closure_4(() => {
         if (ref.current) {
           const current = ref2.current;
           if (current != null) {
@@ -151,27 +149,27 @@ if (tmp4) {
         tmp = closure_6(null);
         closure_2 = tmp;
         onGestureHandlerReanimatedStateChange = global.onGestureHandlerReanimatedStateChange;
-        _objectWithoutProperties = onGestureHandlerReanimatedStateChange;
+        closure_3 = onGestureHandlerReanimatedStateChange;
         onGestureHandlerReanimatedEvent = global.onGestureHandlerReanimatedEvent;
-        useEffect = onGestureHandlerReanimatedEvent;
+        closure_4 = onGestureHandlerReanimatedEvent;
         onGestureHandlerReanimatedTouchEvent = global.onGestureHandlerReanimatedTouchEvent;
-        useMemo = onGestureHandlerReanimatedTouchEvent;
-        tmp2 = _objectWithoutProperties(global, closure_2);
+        closure_5 = onGestureHandlerReanimatedTouchEvent;
+        tmp2 = closure_3(global, closure_2);
         items = [, , ];
         items[0] = onGestureHandlerReanimatedEvent;
         items[1] = onGestureHandlerReanimatedStateChange;
         items[2] = onGestureHandlerReanimatedTouchEvent;
-        tmp3 = useMemo(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
+        tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
         closure_6 = tmp3;
-        tmp4 = useEffect(() => {
-          let num = outer1_7(tmp.current);
+        tmp4 = closure_4(() => {
+          let num = closure_1_7(ref3.current);
           if (num == null) {
             num = -1;
           }
-          tmp.__nativeTag = num;
-          ref2.current = new outer1_9({
+          ref3.__nativeTag = num;
+          ref2.current = new closure_1_9({
             props: closure_6,
-            _componentRef: tmp,
+            _componentRef: ref3,
             _componentViewTag: num,
             getComponentViewTag() {
               return num;
@@ -188,7 +186,7 @@ if (tmp4) {
         }, []);
         items1 = [];
         items1[0] = tmp3;
-        tmp5 = useEffect(() => {
+        tmp5 = closure_4(() => {
           if (ref.current) {
             const current = ref2.current;
             if (current != null) {
@@ -203,7 +201,7 @@ if (tmp4) {
         return jsx(tmp6, obj);
       }
     }
-    LeanReanimatedNativeDetector = obj.createAnimatedComponent(require("__INTERNAL_VIEW_CONFIG"));
+    LeanReanimatedNativeDetector = obj.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);
   }
 }
 

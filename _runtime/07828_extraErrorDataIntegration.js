@@ -1,5 +1,5 @@
 // _runtime/07828_extraErrorDataIntegration.js
-import setupIntegration from "setupIntegration";
+import setupIntegration from "setupIntegration" /* 7794 */;
 
 
 export const extraErrorDataIntegration = setupIntegration.defineIntegration(() => {
@@ -8,7 +8,7 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
     obj = {};
   }
   let num;
-  let closure_1;
+  closure_1 = undefined;
   const depth = obj.depth;
   num = 3;
   if (undefined !== depth) {
@@ -20,7 +20,7 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
     name: "ExtraErrorData",
     processEvent(contexts, arg1, getOptions) {
       const maxValueLength = getOptions.getOptions().maxValueLength;
-      let num = 250;
+      num = 250;
       if (undefined !== maxValueLength) {
         num = maxValueLength;
       }

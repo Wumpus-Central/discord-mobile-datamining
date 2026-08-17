@@ -1,5 +1,5 @@
 // _runtime/metro/04112__.js
-import installWorkletsSupport from "installWorkletsSupport";
+import installWorkletsSupport from "installWorkletsSupport" /* 4113 */;
 
 installWorkletsSupport = installWorkletsSupport.installWorkletsSupport();
 for (const key10017 in require("module_4122")) {

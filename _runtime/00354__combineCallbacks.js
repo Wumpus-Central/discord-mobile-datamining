@@ -1,18 +1,14 @@
 // _runtime/00354__combineCallbacks.js
+import AnimatedEvent from "AnimatedEvent" /* 384 */;
 import { AnimatedEvent } from "00384_AnimatedEvent.js";
-let require = arg1;
+
+require = arg1;
 const module = arg2;
 let dependencyMap = arg6;
 function _combineCallbacks(arg0, arg1) {
 
 }
 function maybeVectorAnim(arg0, obj, decayImpl) {
-  let a;
-  let b;
-  let g;
-  let r;
-  let x;
-  let y;
   if (arg0 instanceof _module(373)) {
     obj = {};
     const merged = Object.assign(obj);
@@ -40,21 +36,21 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
     }
     let items1 = items;
     _module = 0;
-    let dependencyMap = {};
-    let closure_3 = false !== { stopTogether: false }.stopTogether;
-    const obj1 = { start: null, stop: null, reset: null, _startNativeLoop: null, _isUsingNativeDriver: null };
+    dependencyMap = {};
+    closure_3 = false !== { stopTogether: false }.stopTogether;
+    obj1 = { start: null, stop: null, reset: null, _startNativeLoop: null, _isUsingNativeDriver: null };
     obj1[0] = function start(arg0, arg1) {
-      const mapped = arg0;
-      let closure_1 = arg1;
-      if (closure_1 !== mapped.length) {
+      mapped = arg0;
+      c1 = arg1;
+      if (c1 !== mapped.length) {
         const item = mapped.forEach((start) => {
           if (start) {
             start.start(function cb(finished) {
-              outer2_2[length] = true;
-              const sum = closure_1 + 1;
-              closure_1 = sum;
+              closure_2_2[length] = true;
+              const sum = c1 + 1;
+              c1 = sum;
               if (sum === length.length) {
-                closure_1 = 0;
+                c1 = 0;
                 if (length) {
                   tmp5(finished);
                 }
@@ -62,20 +58,20 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
                 finished = finished.finished;
                 let tmp2 = !finished;
                 if (!finished) {
-                  tmp2 = outer2_3;
+                  tmp2 = closure_2_3;
                 }
                 if (tmp2) {
-                  outer2_4.stop();
+                  closure_2_4.stop();
                 }
               }
-            }, closure_1);
+            }, c1);
           } else {
-            const obj = { finished: true };
-            outer1_2[arg1] = true;
-            let sum = closure_1 + 1;
-            closure_1 = sum;
+            obj = { finished: true };
+            closure_1_2[arg1] = true;
+            let sum = c1 + 1;
+            c1 = sum;
             if (sum === length.length) {
-              closure_1 = 0;
+              c1 = 0;
               if (length) {
                 tmp8(obj);
               }
@@ -83,10 +79,10 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
               let finished = obj.finished;
               let tmp5 = !finished;
               if (!finished) {
-                tmp5 = outer1_3;
+                tmp5 = closure_1_3;
               }
               if (tmp5) {
-                outer1_4.stop();
+                closure_1_4.stop();
               }
             }
           }
@@ -107,11 +103,11 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
       const item = mapped.forEach((reset) => {
         reset.reset();
         closure_2[arg1] = false;
-        let c1 = 0;
+        c1 = 0;
       });
     };
     obj1[3] = function _startNativeLoop() {
-      const error = new Error("Loops run using the native driver cannot contain Animated.parallel animations");
+      error = new Error("Loops run using the native driver cannot contain Animated.parallel animations");
       throw error;
     };
     obj1[4] = function _isUsingNativeDriver() {
@@ -163,17 +159,17 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
     closure_3 = false !== { stopTogether: false }.stopTogether;
     obj5 = { start: null, stop: null, reset: null, _startNativeLoop: null, _isUsingNativeDriver: null };
     obj5[0] = function start(arg0, arg1) {
-      const mapped = arg0;
-      let closure_1 = arg1;
-      if (closure_1 !== mapped.length) {
+      mapped = arg0;
+      c1 = arg1;
+      if (c1 !== mapped.length) {
         const item = mapped.forEach((start) => {
           if (start) {
             start.start(function cb(finished) {
-              outer2_2[length] = true;
-              const sum = closure_1 + 1;
-              closure_1 = sum;
+              closure_2_2[length] = true;
+              const sum = c1 + 1;
+              c1 = sum;
               if (sum === length.length) {
-                closure_1 = 0;
+                c1 = 0;
                 if (length) {
                   tmp5(finished);
                 }
@@ -181,20 +177,20 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
                 finished = finished.finished;
                 let tmp2 = !finished;
                 if (!finished) {
-                  tmp2 = outer2_3;
+                  tmp2 = closure_2_3;
                 }
                 if (tmp2) {
-                  outer2_4.stop();
+                  closure_2_4.stop();
                 }
               }
-            }, closure_1);
+            }, c1);
           } else {
-            const obj = { finished: true };
-            outer1_2[arg1] = true;
-            let sum = closure_1 + 1;
-            closure_1 = sum;
+            obj = { finished: true };
+            closure_1_2[arg1] = true;
+            let sum = c1 + 1;
+            c1 = sum;
             if (sum === length.length) {
-              closure_1 = 0;
+              c1 = 0;
               if (length) {
                 tmp8(obj);
               }
@@ -202,10 +198,10 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
               let finished = obj.finished;
               let tmp5 = !finished;
               if (!finished) {
-                tmp5 = outer1_3;
+                tmp5 = closure_1_3;
               }
               if (tmp5) {
-                outer1_4.stop();
+                closure_1_4.stop();
               }
             }
           }
@@ -226,11 +222,11 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
       const item = mapped.forEach((reset) => {
         reset.reset();
         closure_2[arg1] = false;
-        let c1 = 0;
+        c1 = 0;
       });
     };
     obj5[3] = function _startNativeLoop() {
-      const error = new Error("Loops run using the native driver cannot contain Animated.parallel animations");
+      error = new Error("Loops run using the native driver cannot contain Animated.parallel animations");
       throw error;
     };
     obj5[4] = function _isUsingNativeDriver() {
@@ -243,21 +239,21 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
   tmp = _module;
 }
 function springImpl(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   function start(stopTracking, onComplete) {
     if (typeof closure_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let fn = arg2;
-    let closure_0 = arg2;
+    closure_0 = arg2;
     const lib = onComplete;
     if (arg2) {
       if (onComplete.onComplete) {
         fn = () => {
           const items = [...arguments];
-          if (tmp.onComplete) {
-            const onComplete = tmp.onComplete;
+          if (onComplete.onComplete) {
+            onComplete = tmp.onComplete;
             const items1 = [];
             HermesBuiltin.arraySpread(items, 0);
             HermesBuiltin.apply(items1, tmp);
@@ -309,21 +305,21 @@ function springImpl(arg0, arg1) {
   return tmp;
 }
 function timingImpl(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   function start(stopTracking, onComplete) {
     if (typeof closure_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let fn = arg2;
-    let closure_0 = arg2;
+    closure_0 = arg2;
     const v0 = onComplete;
     if (arg2) {
       if (onComplete.onComplete) {
         fn = () => {
           const items = [...arguments];
-          if (tmp.onComplete) {
-            const onComplete = tmp.onComplete;
+          if (onComplete.onComplete) {
+            onComplete = tmp.onComplete;
             const items1 = [];
             HermesBuiltin.arraySpread(items, 0);
             HermesBuiltin.apply(items1, tmp);
@@ -353,7 +349,7 @@ function timingImpl(arg0, arg1) {
   if (!tmp) {
     const obj = { start: null, stop: null, reset: null, _startNativeLoop: null, _isUsingNativeDriver: null };
     obj[0] = function start(arg0, isLooping) {
-      const obj = {};
+      obj = {};
       const merged = Object.assign(c1);
       obj.isLooping = isLooping;
       start(items, obj, arg0);
@@ -365,7 +361,7 @@ function timingImpl(arg0, arg1) {
       items.resetAnimation();
     };
     obj[3] = function _startNativeLoop(iterations) {
-      const obj = {};
+      obj = {};
       const merged = Object.assign(c1);
       obj.iterations = iterations;
       start(items, obj);
@@ -378,24 +374,24 @@ function timingImpl(arg0, arg1) {
   return tmp;
 }
 function decayImpl(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   let tmp = maybeVectorAnim(arg0, arg1, decayImpl);
   if (!tmp) {
     let obj = { start: null, stop: null, reset: null, _startNativeLoop: null, _isUsingNativeDriver: null };
     obj[0] = function start(arg0) {
-      if (typeof outer1_3 !== "function") {
+      if (typeof closure_1_3 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let fn = arg0;
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const lib = tmp;
       if (arg0) {
         if (tmp.onComplete) {
           fn = () => {
             const items = [...arguments];
-            if (tmp.onComplete) {
-              const onComplete = tmp.onComplete;
+            if (onComplete.onComplete) {
+              onComplete = tmp.onComplete;
               const items1 = [];
               HermesBuiltin.arraySpread(items, 0);
               HermesBuiltin.apply(items1, tmp);
@@ -408,7 +404,7 @@ function decayImpl(arg0, arg1) {
           };
         }
         obj.stopTracking();
-        const tmp8 = new lib(outer1_2[12])(tmp);
+        const tmp8 = new lib(closure_1_2[12])(tmp);
         obj.animate(tmp8, fn);
       }
       if (!fn) {
@@ -425,11 +421,11 @@ function decayImpl(arg0, arg1) {
       const obj = {};
       const merged = Object.assign(obj);
       obj.iterations = iterations;
-      if (typeof outer1_3 !== "function") {
+      if (typeof closure_1_3 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       closure_0.stopTracking();
-      closure_0.animate(new lib(outer1_2[12])(obj), obj.onComplete);
+      closure_0.animate(new lib(closure_1_2[12])(obj), obj.onComplete);
     };
     obj[4] = function _isUsingNativeDriver() {
       return lib.useNativeDriver || false;
@@ -439,24 +435,24 @@ function decayImpl(arg0, arg1) {
   return tmp;
 }
 function sequenceImpl(arg0) {
-  let closure_0 = arg0;
-  let c1 = 0;
+  closure_0 = arg0;
+  c1 = 0;
   return {
     start(arg0, arg1) {
-      const items = arg0;
-      let closure_1 = arg1;
+      items = arg0;
+      c1 = arg1;
       function onComplete(finished) {
         if (finished.finished) {
-          const sum = closure_1 + 1;
-          closure_1 = sum;
+          const sum = c1 + 1;
+          c1 = sum;
           if (sum === length.length) {
-            closure_1 = 0;
+            c1 = 0;
             if (length) {
               tmp10(finished);
             }
           } else {
-            tmp5[closure_1].start(onComplete, closure_1);
-            const obj = tmp5[closure_1];
+            tmp5[c1].start(onComplete, c1);
+            obj = tmp5[c1];
           }
         } else if (length) {
           tmp(finished);
@@ -467,14 +463,14 @@ function sequenceImpl(arg0) {
           arg0({ finished: true });
         }
       } else {
-        tmp[closure_1].start(onComplete, arg1);
-        let obj = tmp[closure_1];
+        tmp[c1].start(onComplete, arg1);
+        obj = tmp[c1];
       }
     },
     stop() {
       if (c1 < items.length) {
         tmp[c1].stop();
-        const obj = tmp[c1];
+        obj = tmp[c1];
       }
     },
     reset() {
@@ -483,10 +479,10 @@ function sequenceImpl(arg0) {
           reset.reset();
         }
       });
-      let c1 = 0;
+      c1 = 0;
     },
     _startNativeLoop() {
-      const error = new Error("Loops run using the native driver cannot contain Animated.sequence animations");
+      error = new Error("Loops run using the native driver cannot contain Animated.sequence animations");
       throw error;
     },
     _isUsingNativeDriver() {
@@ -495,27 +491,27 @@ function sequenceImpl(arg0) {
   };
 }
 function parallelImpl(arg0, stopTogether) {
-  let closure_0 = arg0;
-  let c1 = 0;
-  let closure_2 = {};
+  closure_0 = arg0;
+  c1 = 0;
+  closure_2 = {};
   let tmp = stopTogether;
   if (stopTogether) {
     tmp = false === stopTogether.stopTogether;
   }
-  let closure_3 = !tmp;
+  closure_3 = !tmp;
   const obj = {
     start(arg0, arg1) {
-      const mapped = arg0;
-      let closure_1 = arg1;
-      if (closure_1 !== mapped.length) {
+      mapped = arg0;
+      c1 = arg1;
+      if (c1 !== mapped.length) {
         const item = mapped.forEach((start) => {
           if (start) {
             start.start(function cb(finished) {
-              outer2_2[length] = true;
-              const sum = closure_1 + 1;
-              closure_1 = sum;
+              closure_2_2[length] = true;
+              const sum = c1 + 1;
+              c1 = sum;
               if (sum === length.length) {
-                closure_1 = 0;
+                c1 = 0;
                 if (length) {
                   tmp5(finished);
                 }
@@ -523,20 +519,20 @@ function parallelImpl(arg0, stopTogether) {
                 finished = finished.finished;
                 let tmp2 = !finished;
                 if (!finished) {
-                  tmp2 = outer2_3;
+                  tmp2 = closure_2_3;
                 }
                 if (tmp2) {
-                  outer2_4.stop();
+                  closure_2_4.stop();
                 }
               }
-            }, closure_1);
+            }, c1);
           } else {
-            const obj = { finished: true };
-            outer1_2[arg1] = true;
-            let sum = closure_1 + 1;
-            closure_1 = sum;
+            obj = { finished: true };
+            closure_1_2[arg1] = true;
+            let sum = c1 + 1;
+            c1 = sum;
             if (sum === length.length) {
-              closure_1 = 0;
+              c1 = 0;
               if (length) {
                 tmp8(obj);
               }
@@ -544,10 +540,10 @@ function parallelImpl(arg0, stopTogether) {
               let finished = obj.finished;
               let tmp5 = !finished;
               if (!finished) {
-                tmp5 = outer1_3;
+                tmp5 = closure_1_3;
               }
               if (tmp5) {
-                outer1_4.stop();
+                closure_1_4.stop();
               }
             }
           }
@@ -568,11 +564,11 @@ function parallelImpl(arg0, stopTogether) {
       const item = mapped.forEach((reset) => {
         reset.reset();
         closure_2[arg1] = false;
-        let c1 = 0;
+        c1 = 0;
       });
     },
     _startNativeLoop() {
-      const error = new Error("Loops run using the native driver cannot contain Animated.parallel animations");
+      error = new Error("Loops run using the native driver cannot contain Animated.parallel animations");
       throw error;
     },
     _isUsingNativeDriver() {
@@ -587,20 +583,20 @@ function delayImpl(delay) {
   if (typeof timingImpl !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const require = tmp2;
+  closure_0 = tmp2;
   start = function start(stopTracking, onComplete) {
     if (typeof closure_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let fn = arg2;
-    let closure_0 = arg2;
+    closure_0 = arg2;
     const v0 = onComplete;
     if (arg2) {
       if (onComplete.onComplete) {
         fn = () => {
           const items = [...arguments];
-          if (tmp.onComplete) {
-            const onComplete = tmp.onComplete;
+          if (onComplete.onComplete) {
+            onComplete = tmp.onComplete;
             const items1 = [];
             HermesBuiltin.arraySpread(items, 0);
             HermesBuiltin.apply(items1, tmp);
@@ -630,7 +626,7 @@ function delayImpl(delay) {
   if (!tmp3) {
     obj = { start: null, stop: null, reset: null, _startNativeLoop: null, _isUsingNativeDriver: null };
     obj[0] = function start(arg0, isLooping) {
-      const obj = {};
+      obj = {};
       const merged = Object.assign(c1);
       obj.isLooping = isLooping;
       start(items, obj, arg0);
@@ -642,7 +638,7 @@ function delayImpl(delay) {
       items.resetAnimation();
     };
     obj[3] = function _startNativeLoop(iterations) {
-      const obj = {};
+      obj = {};
       const merged = Object.assign(c1);
       obj.iterations = iterations;
       start(items, obj);
@@ -688,12 +684,12 @@ arg5.default = {
     let mapped = arg0;
     mapped = arr.map((arg0, arg1) => {
       const result = items * arg1;
-      if (typeof outer1_10 !== "function") {
+      if (typeof closure_1_10 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const tmp4 = new v0(table[13])(0);
-      let obj = { toValue: 0, delay: result, duration: 0, useNativeDriver: false };
-      if (typeof outer1_6 !== "function") {
+      obj = { toValue: 0, delay: result, duration: 0, useNativeDriver: false };
+      if (typeof closure_1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       items = tmp4;
@@ -703,14 +699,14 @@ arg5.default = {
           HermesBuiltin.throwTypeError();
         }
         let fn = arg2;
-        let closure_0 = arg2;
+        closure_0 = arg2;
         const v0 = onComplete;
         if (arg2) {
           if (onComplete.onComplete) {
             fn = () => {
               const items = [...arguments];
-              if (tmp.onComplete) {
-                const onComplete = tmp.onComplete;
+              if (onComplete.onComplete) {
+                onComplete = tmp.onComplete;
                 const items1 = [];
                 HermesBuiltin.arraySpread(items, 0);
                 HermesBuiltin.apply(items1, tmp);
@@ -736,11 +732,11 @@ arg5.default = {
           fn = onComplete.onComplete;
         }
       }
-      let tmp5 = obj(tmp4, obj, outer1_6);
+      let tmp5 = obj(tmp4, obj, closure_1_6);
       if (!tmp5) {
         obj = { start: null, stop: null, reset: null, _startNativeLoop: null, _isUsingNativeDriver: null };
         obj[0] = function start(arg0, isLooping) {
-          const obj = {};
+          obj = {};
           const merged = Object.assign(c1);
           obj.isLooping = isLooping;
           start(items, obj, arg0);
@@ -752,7 +748,7 @@ arg5.default = {
           items.resetAnimation();
         };
         obj[3] = function _startNativeLoop(iterations) {
-          const obj = {};
+          obj = {};
           const merged = Object.assign(c1);
           obj.iterations = iterations;
           start(items, obj);
@@ -763,26 +759,26 @@ arg5.default = {
         tmp5 = obj;
       }
       items = [tmp5, arg0];
-      if (typeof outer1_8 !== "function") {
+      if (typeof closure_1_8 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       v0 = 0;
       obj = {
         start(arg0, arg1) {
-          const items = arg0;
-          let closure_1 = arg1;
+          items = arg0;
+          c1 = arg1;
           function onComplete(finished) {
             if (finished.finished) {
-              const sum = closure_1 + 1;
-              closure_1 = sum;
+              const sum = c1 + 1;
+              c1 = sum;
               if (sum === length.length) {
-                closure_1 = 0;
+                c1 = 0;
                 if (length) {
                   tmp10(finished);
                 }
               } else {
-                tmp5[closure_1].start(onComplete, closure_1);
-                const obj = tmp5[closure_1];
+                tmp5[c1].start(onComplete, c1);
+                obj = tmp5[c1];
               }
             } else if (length) {
               tmp(finished);
@@ -793,14 +789,14 @@ arg5.default = {
               arg0({ finished: true });
             }
           } else {
-            tmp[closure_1].start(onComplete, arg1);
-            let obj = tmp[closure_1];
+            tmp[c1].start(onComplete, arg1);
+            obj = tmp[c1];
           }
         },
         stop() {
           if (c1 < items.length) {
             tmp[c1].stop();
-            const obj = tmp[c1];
+            obj = tmp[c1];
           }
         },
         reset() {
@@ -809,10 +805,10 @@ arg5.default = {
               reset.reset();
             }
           });
-          let c1 = 0;
+          c1 = 0;
         },
         _startNativeLoop() {
-          const error = new Error("Loops run using the native driver cannot contain Animated.sequence animations");
+          error = new Error("Loops run using the native driver cannot contain Animated.sequence animations");
           throw error;
         },
         _isUsingNativeDriver() {
@@ -824,22 +820,22 @@ arg5.default = {
     if (typeof parallelImpl !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let c1 = 0;
-    let closure_2 = {};
-    let c3 = true;
+    c1 = 0;
+    closure_2 = {};
+    c3 = true;
     let obj = {
       start(arg0, arg1) {
-        const mapped = arg0;
-        let closure_1 = arg1;
-        if (closure_1 !== mapped.length) {
+        mapped = arg0;
+        c1 = arg1;
+        if (c1 !== mapped.length) {
           const item = mapped.forEach((start) => {
             if (start) {
               start.start(function cb(finished) {
-                outer2_2[length] = true;
-                const sum = closure_1 + 1;
-                closure_1 = sum;
+                closure_2_2[length] = true;
+                const sum = c1 + 1;
+                c1 = sum;
                 if (sum === length.length) {
-                  closure_1 = 0;
+                  c1 = 0;
                   if (length) {
                     tmp5(finished);
                   }
@@ -847,20 +843,20 @@ arg5.default = {
                   finished = finished.finished;
                   let tmp2 = !finished;
                   if (!finished) {
-                    tmp2 = outer2_3;
+                    tmp2 = closure_2_3;
                   }
                   if (tmp2) {
-                    outer2_4.stop();
+                    closure_2_4.stop();
                   }
                 }
-              }, closure_1);
+              }, c1);
             } else {
-              const obj = { finished: true };
-              outer1_2[arg1] = true;
-              let sum = closure_1 + 1;
-              closure_1 = sum;
+              obj = { finished: true };
+              closure_1_2[arg1] = true;
+              let sum = c1 + 1;
+              c1 = sum;
               if (sum === length.length) {
-                closure_1 = 0;
+                c1 = 0;
                 if (length) {
                   tmp8(obj);
                 }
@@ -868,10 +864,10 @@ arg5.default = {
                 let finished = obj.finished;
                 let tmp5 = !finished;
                 if (!finished) {
-                  tmp5 = outer1_3;
+                  tmp5 = closure_1_3;
                 }
                 if (tmp5) {
-                  outer1_4.stop();
+                  closure_1_4.stop();
                 }
               }
             }
@@ -892,11 +888,11 @@ arg5.default = {
         const item = mapped.forEach((reset) => {
           reset.reset();
           closure_2[arg1] = false;
-          let c1 = 0;
+          c1 = 0;
         });
       },
       _startNativeLoop() {
-        const error = new Error("Loops run using the native driver cannot contain Animated.parallel animations");
+        error = new Error("Loops run using the native driver cannot contain Animated.parallel animations");
         throw error;
       },
       _isUsingNativeDriver() {
@@ -906,7 +902,7 @@ arg5.default = {
     return obj;
   },
   loop(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     let obj = arg1;
     if (arg1 === undefined) {
       obj = {};
@@ -919,21 +915,21 @@ arg5.default = {
     if (flag === undefined) {
       flag = true;
     }
-    let c3 = false;
-    let c4 = 0;
+    c3 = false;
+    c4 = 0;
     obj = {
       start(arg0) {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         function restart() {
           let obj = arg0;
           if (arg0 === undefined) {
             obj = { finished: true };
           }
-          if (!outer1_3) {
+          if (!closure_1_3) {
             if (closure_4 !== restart) {
               if (false !== obj.finished) {
                 closure_4 = closure_4 + 1;
-                if (outer1_2) {
+                if (closure_1_2) {
                   navigation.reset();
                 }
                 navigation.start(restart, -1 === tmp2);
@@ -973,16 +969,16 @@ arg5.default = {
         }
       },
       stop() {
-        let c3 = true;
+        c3 = true;
         navigation.stop();
       },
       reset() {
-        let c4 = 0;
-        let c3 = false;
+        c4 = 0;
+        c3 = false;
         navigation.reset();
       },
       _startNativeLoop() {
-        const error = new Error("Loops run using the native driver cannot contain Animated.loop animations");
+        error = new Error("Loops run using the native driver cannot contain Animated.loop animations");
         throw error;
       },
       _isUsingNativeDriver() {
@@ -1003,7 +999,7 @@ arg5.default = {
   attachNativeEvent: require("AnimatedEvent").attachNativeEventImpl,
   forkEvent: function forkEventImpl(__addListener, listener) {
     const _require = __addListener;
-    let closure_1 = listener;
+    closure_1 = listener;
     if (!__addListener) {
       return listener;
     } else if (__addListener instanceof _AnimatedEvent.AnimatedEvent) {

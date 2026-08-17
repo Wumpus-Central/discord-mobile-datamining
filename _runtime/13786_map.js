@@ -29,7 +29,7 @@ export default (arg0) => {
       }
     },
     emit(arg0, arg1) {
-      let closure_1 = arg1;
+      closure_1 = arg1;
       let value = map.get(arg0);
       if (value) {
         const substr = value.slice();

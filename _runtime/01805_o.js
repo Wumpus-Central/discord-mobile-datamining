@@ -1,6 +1,7 @@
 // _runtime/01805_o.js
-import { t } from "01665_t.js";
-const require = arg1;
+import t from "t" /* 1665 */;
+
+require = arg1;
 const dependencyMap = arg6;
 const fn = function o(str) {
   let endsWithResult = str.endsWith("px");

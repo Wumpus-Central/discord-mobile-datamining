@@ -5,7 +5,7 @@ let dependencyMap = arg6;
 arg5.DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
 arg5.createTransport = function createTransport(bufferSize) {
   const _require = bufferSize;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   let promiseBuffer = arg2;
   if (arg2 === undefined) {
     let obj = _makePromiseBuffer;
@@ -15,14 +15,14 @@ arg5.createTransport = function createTransport(bufferSize) {
     }
     promiseBuffer = obj.makePromiseBuffer(num);
   }
-  let closure_3 = {};
+  closure_3 = {};
   obj = {
     send(arg0) {
       const items = [];
       bufferSize(table[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
         const result = items(7782).envelopeItemTypeToDataCategory(arg1);
         const obj = items(7782);
-        if (obj2.isRateLimited(outer1_3, result)) {
+        if (obj2.isRateLimited(closure_1_3, result)) {
           if ("event" === arg1) {
             const _Array = Array;
             let tmp6;
@@ -46,8 +46,7 @@ arg5.createTransport = function createTransport(bufferSize) {
 
         }
         return recordEnvelopeLoss.add(() => {
-          const obj = { body: null };
-          obj[0] = items(7782).serializeEnvelope(dependencyMap);
+          const obj = { body: items(7782).serializeEnvelope(dependencyMap) };
           const obj2 = items(7782);
           return dependencyMap(obj).then((statusCode) => {
             let DEBUG_BUILD = undefined !== statusCode.statusCode;
@@ -59,14 +58,14 @@ arg5.createTransport = function createTransport(bufferSize) {
               DEBUG_BUILD = tmp;
             }
             if (DEBUG_BUILD) {
-              DEBUG_BUILD = outer1_0(outer1_1[4]).DEBUG_BUILD;
+              DEBUG_BUILD = closure_1_0(closure_1_1[4]).DEBUG_BUILD;
             }
             if (DEBUG_BUILD) {
-              const logger = outer1_0(outer1_1[5]).logger;
+              const logger = closure_1_0(closure_1_1[5]).logger;
               const _HermesInternal = HermesInternal;
               logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
             }
-            closure_3 = outer1_0(outer1_1[2]).updateRateLimits(closure_3, statusCode);
+            closure_3 = closure_1_0(closure_1_1[2]).updateRateLimits(closure_3, statusCode);
             return statusCode;
           }, (arg0) => {
             if (typeof closure_2 !== "function") {
@@ -82,7 +81,7 @@ arg5.createTransport = function createTransport(bufferSize) {
                 }
                 const tmp = tmp4;
               }
-              network_error.recordDroppedEvent(network_error, outer2_0(outer2_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
+              network_error.recordDroppedEvent(network_error, closure_2_0(closure_2_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
             });
             throw arg0;
           });
@@ -106,7 +105,7 @@ arg5.createTransport = function createTransport(bufferSize) {
                 }
                 const tmp = tmp4;
               }
-              network_error.recordDroppedEvent(network_error, outer2_0(outer2_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
+              network_error.recordDroppedEvent(network_error, closure_2_0(closure_2_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
             });
             tmpResult = tmp(7762);
             return tmpResult.resolvedSyncPromise({});

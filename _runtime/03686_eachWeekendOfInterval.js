@@ -1,8 +1,8 @@
 // _runtime/03686_eachWeekendOfInterval.js
-import eachDayOfInterval from "eachDayOfInterval";
-import isSunday from "isSunday";
-import isWeekend from "isWeekend";
-import requiredArgs from "requiredArgs";
+import eachDayOfInterval from "eachDayOfInterval" /* 3678 */;
+import isSunday from "isSunday" /* 3624 */;
+import isWeekend from "isWeekend" /* 3623 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!eachDayOfInterval) {
   let obj = { default: null };
@@ -11,7 +11,7 @@ if (!eachDayOfInterval) {
 } else {
   tmp3 = eachDayOfInterval;
 }
-let c0 = tmp3;
+eachDayOfInterval = tmp3;
 if (!isSunday) {
   obj = { default: null };
   obj[0] = isSunday;
@@ -19,7 +19,7 @@ if (!isSunday) {
 } else {
   tmp5 = isSunday;
 }
-let closure_1 = tmp5;
+isSunday = tmp5;
 if (!isWeekend) {
   obj = { default: null };
   obj[0] = isWeekend;
@@ -27,34 +27,33 @@ if (!isWeekend) {
 } else {
   tmp7 = isWeekend;
 }
-let obj1 = tmp7;
+isWeekend = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c3 = tmp9;
+requiredArgs = tmp9;
 
 export default function eachWeekendOfInterval(arg0) {
-  let tmp3;
   let tmp5;
-  tmp9.default(1, arguments);
-  const defaultResult1 = tmp3.default(arg0);
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = eachDayOfInterval.default(arg0);
   const items = [];
   let num = 0;
   if (0 < defaultResult1.length) {
     do {
       let sum = num + 1;
-      tmp3 = defaultResult1[num];
-      let tmp4 = tmp7;
+      let tmp3 = defaultResult1[num];
+      let tmp4 = isWeekend;
       tmp5 = sum;
-      if (tmp7.default(tmp3)) {
+      if (isWeekend.default(tmp3)) {
         let arr = items.push(tmp3);
-        tmp7 = tmp5;
+        let tmp7 = isSunday;
         let sum1 = sum;
-        if (tmp5.default(tmp3)) {
+        if (isSunday.default(tmp3)) {
           sum1 = sum + 5;
         }
         tmp5 = sum1;

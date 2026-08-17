@@ -4,8 +4,8 @@ export default function getSideChannelList() {
   let obj = {
     assert(arg0) {
       if (!obj.has(arg0)) {
-        let tmp3 = outer1_0(obj[0]);
-        tmp3 = new tmp3("Side channel does not contain " + outer1_0(obj[1])(arg0));
+        let tmp3 = closure_1_0(obj[0]);
+        tmp3 = new tmp3("Side channel does not contain " + closure_1_0(obj[1])(arg0));
         throw tmp3;
       }
     },

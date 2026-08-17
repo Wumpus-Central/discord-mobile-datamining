@@ -1,5 +1,6 @@
 // _runtime/00175_finally.js
-import _finally from "finally";
+import valuePromiseDefault from "valuePromise" /* 178 */;
+import _finally from "finally" /* 176 */;
 
 
-export { default } from "valuePromise";
+export default valuePromiseDefault;

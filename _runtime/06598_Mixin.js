@@ -1,13 +1,8 @@
 // _runtime/06598_Mixin.js
-let c3;
-let c4;
-let c5;
-let closure_1;
-let closure_6;
-let error;
-let obj1;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+
 let closure_0 = { top: 20, left: 20, right: 20, bottom: 30 };
-const Mixin = require("get ActivityIndicator").Touchable.Mixin;
+const Mixin = get_ActivityIndicator.Touchable.Mixin;
 ({ touchableHandleStartShouldSetResponder: closure_1, touchableHandleResponderTerminationRequest: obj1, touchableHandleResponderGrant: c3, touchableHandleResponderMove: c4, touchableHandleResponderRelease: c5, touchableHandleResponderTerminate: closure_6, touchableGetInitialState: error } = Mixin);
 let obj = {};
 const merged = Object.assign(Mixin);
@@ -139,7 +134,7 @@ export default (self) => {
     do {
       let tmp = keys;
       let tmp2 = table;
-      let obj = table[num];
+      obj = table[num];
       let tmp3 = num;
       let bindResult = obj;
       if (typeof obj === "function") {

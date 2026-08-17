@@ -3,7 +3,7 @@ function formatToList(arg0) {
 
 }
 function validatePathConfig(config) {
-  let closure_0 = config;
+  closure_0 = config;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
@@ -54,8 +54,6 @@ function validatePathConfig(config) {
         const _Object2 = Object;
         const entries = Object.entries(fromEntriesResult);
         const mapped1 = entries.map((arg0) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg0;
           return "- " + tmp + " (" + tmp2 + ")";
         });
@@ -66,13 +64,11 @@ function validatePathConfig(config) {
         const _Object3 = Object;
         const entries1 = Object.entries(obj);
         const mapped2 = entries1.map((arg0) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg0;
           return "- " + tmp + " (" + tmp2 + ")";
         });
         let _HermesInternal2 = HermesInternal;
-        const error = new Error("Found invalid properties in the configuration:\n" + joined + "\n\nYou can only specify the following properties:\n" + mapped2.join("\n") + "\n\nIf you want to specify configuration for screens, you need to specify them under a 'screens' property.\n\nSee https://reactnavigation.org/docs/configuring-links for more details on how to specify a linking configuration.");
+        error = new Error("Found invalid properties in the configuration:\n" + joined + "\n\nYou can only specify the following properties:\n" + mapped2.join("\n") + "\n\nIf you want to specify configuration for screens, you need to specify them under a 'screens' property.\n\nSee https://reactnavigation.org/docs/configuring-links for more details on how to specify a linking configuration.");
         throw error;
       } else {
         if (flag) {
@@ -92,7 +88,6 @@ function validatePathConfig(config) {
           const _Object = Object;
           const entries2 = Object.entries(config.screens);
           const item = entries2.forEach((arg0) => {
-            let tmp;
             [, tmp] = arg0;
             if (typeof tmp !== "string") {
               obj(tmp, false);

@@ -1,6 +1,7 @@
 // _runtime/06381_map.js
-import { tagMessage } from "06382_tagMessage.js";
-const require = arg1;
+import tagMessage from "tagMessage" /* 6382 */;
+
+require = arg1;
 const dependencyMap = arg6;
 const map = new Map();
 const map1 = new Map();

@@ -16,7 +16,7 @@ export default {
           }
         }
         const _Error = Error;
-        const error = new Error("no such scale " + arg1.toString());
+        error = new Error("no such scale " + arg1.toString());
         throw error;
       }
       if (text) {

@@ -1,11 +1,10 @@
 // _runtime/01184_createReleaseFromGlobalReleaseConstants.js
-import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
-import { isHermesEnabled } from "01002_isHermesEnabled.js";
-const require = arg1;
+import RN_GLOBAL_OBJ from "RN_GLOBAL_OBJ" /* 816 */;
+import isHermesEnabled from "isHermesEnabled" /* 1002 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.createReleaseFromGlobalReleaseConstants = function createReleaseFromGlobalReleaseConstants() {
-  let name;
-  let version;
   const SENTRY_RELEASE = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.SENTRY_RELEASE;
   if (SENTRY_RELEASE) {
     ({ name, version } = SENTRY_RELEASE);
@@ -18,10 +17,8 @@ arg5.createReleaseFromGlobalReleaseConstants = function createReleaseFromGlobalR
   }
 };
 arg5.getDefaultRelease = function getDefaultRelease() {
-  let name;
-  let version;
   if (!obj.notWeb()) {
-    const SENTRY_RELEASE = tmp(816).RN_GLOBAL_OBJ.SENTRY_RELEASE;
+    const SENTRY_RELEASE = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.SENTRY_RELEASE;
     let combined;
     if (SENTRY_RELEASE) {
       ({ name, version } = SENTRY_RELEASE);
@@ -35,5 +32,5 @@ arg5.getDefaultRelease = function getDefaultRelease() {
     return combined;
   }
   obj = isHermesEnabled;
-  tmp = require;
+  const tmp = require;
 };

@@ -1,6 +1,6 @@
 // _runtime/metro/13797__.js
 arg5.default = () => (arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const features = {
     apiResponse(request, response, tmp5Result) {
       let status = response;

@@ -1,9 +1,10 @@
 // _runtime/01191__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_5 from "_get" /* 96 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 const ReactNativeProfiler = arg1;
 function _isNativeReflectConstruct() {
@@ -17,10 +18,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -34,15 +35,15 @@ let closure_7 = {
 class ReactNativeProfiler {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, ReactNativeProfiler);
+    tmp = closure_2(this, ReactNativeProfiler);
     obj = require("setSpanDurationAsMeasurementOnTransactionEvent");
     obj2 = require("registerSpanErrorInstrumentation");
     result = obj._setRootComponentCreationTimestampMs(1000 * obj2.timestampInSeconds());
     items = [];
     items[0] = global;
-    tmp3 = __esModule;
-    obj3 = __esModule(ReactNativeProfiler);
-    tmp4 = __esModule;
+    tmp3 = closure_4;
+    obj3 = closure_4(ReactNativeProfiler);
+    tmp4 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp6 = globalThis;
       _Reflect = Reflect;
@@ -55,7 +56,7 @@ class ReactNativeProfiler {
     return tmp4Result;
   }
 }
-require("_inherits")(ReactNativeProfiler, require("init").Profiler);
+_inheritsDefault(ReactNativeProfiler, require("init").Profiler);
 let items = [
   {
     key: "componentDidMount",

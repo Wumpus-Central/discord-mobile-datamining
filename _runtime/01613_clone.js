@@ -1,10 +1,10 @@
 // _runtime/01613_clone.js
-import noop from "noop";
-import { Platform } from "get ActivityIndicator";
-import { BaseNavigationContainer } from "01503_BaseNavigationContainer.js";
-import { useEffect } from "01522_useEffect.js";
+import BaseNavigationContainer from "BaseNavigationContainer" /* 1503 */;
+import useEffectDefault from "useEffect" /* 1522 */;
+import closure_3 from "noop" /* 19 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
 
-const require = arg1;
+require = arg1;
 function clone(obj, arg1, get) {
   let keys = arg1;
   if (arg1 === undefined) {
@@ -117,9 +117,6 @@ let closure_4 = ["payload", "params", "state", "routes"];
 let closure_5 = ["params", "state"];
 
 export const useLinkProps = function useLinkProps(arg0) {
-  let dependencyMap;
-  let importDefault;
-  let require;
   ({ screen: require, params: importDefault, action: dependencyMap } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   let context1;
@@ -131,23 +128,23 @@ export const useLinkProps = function useLinkProps(arg0) {
   }
   if (null == context1) {
     let _Error = Error;
-    let error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
+    error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
     throw error;
   } else {
     const options = obj.useContext(tmp2(1600).LinkingContext).options;
-    const tmp14 = useEffect((preventDefault) => {
+    const tmp14 = useEffectDefault((preventDefault) => {
       if (preventDefault != null) {
         preventDefault.preventDefault();
       }
       if (null != closure_2) {
-        let tmp8 = outer1_6(tmp2);
+        let tmp8 = closure_1_6(tmp2);
       } else if (null == closure_0) {
         const _Error = Error;
-        const error = new Error("Couldn't find a screen to navigate to. Make sure to provide a screen name.");
+        error = new Error("Couldn't find a screen to navigate to. Make sure to provide a screen name.");
         throw error;
       } else {
-        const CommonActions = outer1_0(outer1_2[2]).CommonActions;
-        tmp8 = outer1_6(CommonActions.navigate(tmp3, closure_1));
+        const CommonActions = closure_1_0(closure_1_2[2]).CommonActions;
+        tmp8 = closure_1_6(CommonActions.navigate(tmp3, closure_1));
       }
       context1.dispatch(tmp8);
     });

@@ -1,14 +1,14 @@
 // _runtime/10327_getCommonVariables.js
-import { useMemo } from "noop";
-import { Dimensions } from "get ActivityIndicator";
-import { cancelAnimation } from "01654_cancelAnimation.js";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noop from "noop" /* 19 */;
+import cancelAnimation from "cancelAnimation" /* 1654 */;
 
+const useMemo = noop.useMemo;
+const Dimensions = get_ActivityIndicator.Dimensions;
 let closure_3 = Dimensions.get("window");
 let closure_4 = { code: "function pnpm_stackTs1(_value){const{screen,modeConfig,getCommonVariables,getCommonStyles,interpolate,Extrapolation}=this.__closure;const{showLength:showLength,snapDirection=\"left\",moveSize=screen.width,stackInterval=18,scaleInterval=0.04,opacityInterval=0.1,rotateZDeg=30}=modeConfig;const{validLength:validLength,value:value,inputRange:inputRange}=getCommonVariables({showLength:showLength,value:_value,snapDirection:snapDirection});const{zIndex:zIndex,opacity:opacity}=getCommonStyles({validLength:validLength,value:value,opacityInterval:opacityInterval,snapDirection:snapDirection});let translateX;let scale;let rotateZ;if(snapDirection===\"left\"){translateX=interpolate(value,inputRange,[-moveSize,0,validLength*stackInterval],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1,1,1-validLength*scaleInterval],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[-rotateZDeg,0,0],Extrapolation.CLAMP)+\"deg\";}else if(snapDirection===\"right\"){translateX=interpolate(value,inputRange,[-validLength*stackInterval,0,moveSize],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1-validLength*scaleInterval,1,1],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[0,0,rotateZDeg],Extrapolation.CLAMP)+\"deg\";}const transform=[{translateX:translateX},{scale:scale},{rotateZ:rotateZ}];const styles={transform:transform,zIndex:zIndex,opacity:opacity};return styles;}" };
 let closure_5 = { code: "function pnpm_stackTs2(_value){const{screen,modeConfig,getCommonVariables,getCommonStyles,interpolate,Extrapolation}=this.__closure;const{showLength:showLength,snapDirection=\"left\",moveSize=screen.width,stackInterval=18,scaleInterval=0.04,opacityInterval=0.1,rotateZDeg=30}=modeConfig;const{validLength:validLength,value:value,inputRange:inputRange}=getCommonVariables({showLength:showLength,value:_value,snapDirection:snapDirection});const{zIndex:zIndex,opacity:opacity}=getCommonStyles({validLength:validLength,value:value,opacityInterval:opacityInterval,snapDirection:snapDirection});let translateX;let scale;let rotateZ;let translateY;if(snapDirection===\"left\"){translateX=interpolate(value,inputRange,[-moveSize,0,0],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1,1,1-validLength*scaleInterval],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[-rotateZDeg,0,0],Extrapolation.CLAMP)+\"deg\";translateY=interpolate(value,inputRange,[0,0,validLength*stackInterval],Extrapolation.CLAMP);}else if(snapDirection===\"right\"){translateX=interpolate(value,inputRange,[0,0,moveSize],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1-validLength*scaleInterval,1,1],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[0,0,rotateZDeg],Extrapolation.CLAMP)+\"deg\";translateY=interpolate(value,inputRange,[validLength*stackInterval,0,0],Extrapolation.CLAMP);}const transform=[{translateX:translateX},{scale:scale},{rotateZ:rotateZ},{translateY:translateY}];const styles={transform:transform,zIndex:zIndex,opacity:opacity};return styles;}" };
 function getCommonVariables(showLength) {
-  let snapDirection;
-  let value;
   ({ value, snapDirection } = showLength);
   let rounded = Math.floor(Math.abs(value));
   const result = Math.abs(value) % 1;
@@ -32,7 +32,7 @@ function getCommonVariables(showLength) {
       let items1 = items;
     } else if ("right" !== snapDirection) {
       const _Error = Error;
-      const error = new Error("snapDirection must be set to either left or right");
+      error = new Error("snapDirection must be set to either left or right");
       throw error;
     } else {
       items1 = [-diff, 0, 1];
@@ -48,10 +48,6 @@ getCommonVariables.__closure = {};
 getCommonVariables.__workletHash = 9545327827217;
 getCommonVariables.__initData = { code: "function getCommonVariables_Pnpm_stackTs3(opts){const{showLength:showLength,value:_value,snapDirection:snapDirection}=opts;function easeInOutCubic(v){return v<0.5?4*v*v*v:1-(-2*v+2)**3/2;}const page=Math.floor(Math.abs(_value));const diff=Math.abs(_value)%1;const value=_value<0?-(page+easeInOutCubic(diff)):page+easeInOutCubic(diff);const validLength=showLength-1;let inputRange;if(snapDirection===\"left\")inputRange=[-1,0,validLength];else if(snapDirection===\"right\")inputRange=[-validLength,0,1];else throw new Error(\"snapDirection must be set to either left or right\");return{inputRange:inputRange,validLength:validLength,value:value};}" };
 function getCommonStyles(arg0) {
-  let opacityInterval;
-  let snapDirection;
-  let validLength;
-  let value;
   ({ snapDirection, validLength, value, opacityInterval } = arg0);
   if ("left" === snapDirection) {
     const _Math = Math;
@@ -67,7 +63,7 @@ function getCommonStyles(arg0) {
     const obj2 = cancelAnimation;
   } else if ("right" !== snapDirection) {
     const _Error = Error;
-    const error = new Error("snapDirection must be set to either left or right");
+    error = new Error("snapDirection must be set to either left or right");
     throw error;
   } else {
     const _Math2 = Math;
@@ -89,7 +85,7 @@ function getCommonStyles(arg0) {
   obj = { zIndex: Math.round(result), opacity: interpolateResult };
   return obj;
 }
-getCommonStyles.__closure = { interpolate: require("cancelAnimation").interpolate };
+getCommonStyles.__closure = { interpolate: cancelAnimation.interpolate };
 getCommonStyles.__workletHash = 9067239849373;
 getCommonStyles.__initData = { code: "function getCommonStyles_Pnpm_stackTs4(opts){const{interpolate}=this.__closure;const{snapDirection:snapDirection,validLength:validLength,value:value,opacityInterval:opacityInterval}=opts;let zIndex;let opacity;if(snapDirection===\"left\"){zIndex=Math.floor(interpolate(value,[-1.5,-1,-1+Number.MIN_VALUE,0,validLength],[Number.MIN_VALUE,validLength,validLength,validLength-1,-1])*10000)/100;opacity=interpolate(value,[-1,0,validLength-1,validLength],[0.25,1,1-(validLength-1)*opacityInterval,0.25]);}else if(snapDirection===\"right\"){zIndex=Math.floor(interpolate(value,[-validLength,0,1-Number.MIN_VALUE,1,1.5],[1,validLength-1,validLength,validLength,Number.MIN_VALUE])*10000)/100;opacity=interpolate(value,[-validLength,1-validLength,0,1],[0.25,1-(validLength-1)*opacityInterval,1,0.25]);}else{throw new Error(\"snapDirection must be set to either left or right\");}return{zIndex:Math.round(zIndex),opacity:opacity};}" };
 
@@ -99,10 +95,6 @@ export const horizontalStackLayout = function horizontalStackLayout() {
     obj = {};
   }
   const fn = function l(value) {
-    let inputRange;
-    let opacity;
-    let validLength;
-    let zIndex;
     const snapDirection = obj.snapDirection;
     let str = "left";
     if (undefined !== snapDirection) {
@@ -110,7 +102,7 @@ export const horizontalStackLayout = function horizontalStackLayout() {
     }
     let width = tmp.moveSize;
     if (undefined === width) {
-      width = outer1_3.width;
+      width = closure_1_3.width;
     }
     const stackInterval = tmp.stackInterval;
     let num = 18;
@@ -133,9 +125,9 @@ export const horizontalStackLayout = function horizontalStackLayout() {
       num4 = rotateZDeg;
     }
     obj = { showLength: obj.showLength, value, snapDirection: str };
-    ({ validLength, value, inputRange } = outer1_6(obj));
-    const tmp3 = outer1_6(obj);
-    ({ zIndex, opacity } = outer1_7({ validLength, value, opacityInterval: num3, snapDirection: str }));
+    ({ validLength, value, inputRange } = closure_1_6(obj));
+    const tmp3 = closure_1_6(obj);
+    ({ zIndex, opacity } = closure_1_7({ validLength, value, opacityInterval: num3, snapDirection: str }));
     if ("left" === str) {
       const obj2 = obj(obj[2]);
       const items = [-width, 0, validLength * num];
@@ -184,10 +176,6 @@ export const useHorizontalStackLayout = function useHorizontalStackLayout() {
   }
   obj = { layout: null, config: null };
   const fn = function l(value) {
-    let inputRange;
-    let opacity;
-    let validLength;
-    let zIndex;
     const snapDirection = obj.snapDirection;
     let str = "left";
     if (undefined !== snapDirection) {
@@ -195,7 +183,7 @@ export const useHorizontalStackLayout = function useHorizontalStackLayout() {
     }
     let width = tmp.moveSize;
     if (undefined === width) {
-      width = outer1_3.width;
+      width = closure_1_3.width;
     }
     const stackInterval = tmp.stackInterval;
     let num = 18;
@@ -218,9 +206,9 @@ export const useHorizontalStackLayout = function useHorizontalStackLayout() {
       num4 = rotateZDeg;
     }
     obj = { showLength: obj.showLength, value, snapDirection: str };
-    ({ validLength, value, inputRange } = outer1_6(obj));
-    const tmp3 = outer1_6(obj);
-    ({ zIndex, opacity } = outer1_7({ validLength, value, opacityInterval: num3, snapDirection: str }));
+    ({ validLength, value, inputRange } = closure_1_6(obj));
+    const tmp3 = closure_1_6(obj);
+    ({ zIndex, opacity } = closure_1_7({ validLength, value, opacityInterval: num3, snapDirection: str }));
     if ("left" === str) {
       const obj2 = obj(obj[2]);
       const items = [-width, 0, validLength * num];
@@ -269,10 +257,6 @@ export const verticalStackLayout = function verticalStackLayout() {
     obj = {};
   }
   const fn = function o(value) {
-    let inputRange;
-    let opacity;
-    let validLength;
-    let zIndex;
     const snapDirection = obj.snapDirection;
     let str = "left";
     if (undefined !== snapDirection) {
@@ -280,7 +264,7 @@ export const verticalStackLayout = function verticalStackLayout() {
     }
     let width = tmp.moveSize;
     if (undefined === width) {
-      width = outer1_3.width;
+      width = closure_1_3.width;
     }
     const stackInterval = tmp.stackInterval;
     let num = 18;
@@ -303,37 +287,37 @@ export const verticalStackLayout = function verticalStackLayout() {
       num4 = rotateZDeg;
     }
     obj = { showLength: obj.showLength, value, snapDirection: str };
-    ({ validLength, value, inputRange } = outer1_6(obj));
-    const tmp3 = outer1_6(obj);
-    ({ zIndex, opacity } = outer1_7({ validLength, value, opacityInterval: num3, snapDirection: str }));
+    ({ validLength, value, inputRange } = closure_1_6(obj));
+    const tmp3 = closure_1_6(obj);
+    ({ zIndex, opacity } = closure_1_7({ validLength, value, opacityInterval: num3, snapDirection: str }));
     if ("left" === str) {
-      const obj2 = obj(outer1_1[2]);
+      const obj2 = obj(closure_1_1[2]);
       const items = [-width, 0, 0];
-      let interpolateResult = obj2.interpolate(value, inputRange, items, obj(outer1_1[2]).Extrapolation.CLAMP);
-      const obj3 = obj(outer1_1[2]);
+      let interpolateResult = obj2.interpolate(value, inputRange, items, obj(closure_1_1[2]).Extrapolation.CLAMP);
+      const obj3 = obj(closure_1_1[2]);
       const items1 = [1, 1, 1 - validLength * num2];
-      let interpolateResult1 = obj3.interpolate(value, inputRange, items1, obj(outer1_1[2]).Extrapolation.CLAMP);
-      const obj4 = obj(outer1_1[2]);
+      let interpolateResult1 = obj3.interpolate(value, inputRange, items1, obj(closure_1_1[2]).Extrapolation.CLAMP);
+      const obj4 = obj(closure_1_1[2]);
       const items2 = [-num4, 0, 0];
       const _HermesInternal = HermesInternal;
-      let combined = "" + obj4.interpolate(value, inputRange, items2, obj(outer1_1[2]).Extrapolation.CLAMP) + "deg";
-      const obj5 = obj(outer1_1[2]);
+      let combined = "" + obj4.interpolate(value, inputRange, items2, obj(closure_1_1[2]).Extrapolation.CLAMP) + "deg";
+      const obj5 = obj(closure_1_1[2]);
       const items3 = [0, 0, validLength * num];
-      let interpolateResult2 = obj5.interpolate(value, inputRange, items3, obj(outer1_1[2]).Extrapolation.CLAMP);
+      let interpolateResult2 = obj5.interpolate(value, inputRange, items3, obj(closure_1_1[2]).Extrapolation.CLAMP);
     } else if ("right" === str) {
-      const obj6 = obj(outer1_1[2]);
+      const obj6 = obj(closure_1_1[2]);
       const items4 = [0, 0, width];
-      interpolateResult = obj6.interpolate(value, inputRange, items4, obj(outer1_1[2]).Extrapolation.CLAMP);
-      const obj7 = obj(outer1_1[2]);
+      interpolateResult = obj6.interpolate(value, inputRange, items4, obj(closure_1_1[2]).Extrapolation.CLAMP);
+      const obj7 = obj(closure_1_1[2]);
       const items5 = [1 - validLength * num2, 1, 1];
-      interpolateResult1 = obj7.interpolate(value, inputRange, items5, obj(outer1_1[2]).Extrapolation.CLAMP);
-      const obj8 = obj(outer1_1[2]);
+      interpolateResult1 = obj7.interpolate(value, inputRange, items5, obj(closure_1_1[2]).Extrapolation.CLAMP);
+      const obj8 = obj(closure_1_1[2]);
       const items6 = [0, 0, num4];
       const _HermesInternal2 = HermesInternal;
-      combined = "" + obj8.interpolate(value, inputRange, items6, obj(outer1_1[2]).Extrapolation.CLAMP) + "deg";
-      const obj9 = obj(outer1_1[2]);
+      combined = "" + obj8.interpolate(value, inputRange, items6, obj(closure_1_1[2]).Extrapolation.CLAMP) + "deg";
+      const obj9 = obj(closure_1_1[2]);
       const items7 = [validLength * num, 0, 0];
-      interpolateResult2 = obj9.interpolate(value, inputRange, items7, obj(outer1_1[2]).Extrapolation.CLAMP);
+      interpolateResult2 = obj9.interpolate(value, inputRange, items7, obj(closure_1_1[2]).Extrapolation.CLAMP);
     }
     const transform = [{ translateX: interpolateResult }, { scale: interpolateResult1 }, { rotateZ: combined }, { translateY: interpolateResult2 }];
     return { transform, zIndex, opacity };

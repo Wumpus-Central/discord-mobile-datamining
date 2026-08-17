@@ -1,13 +1,16 @@
 // _runtime/04415_defineProperty.js
-import { defineDataProperty } from "01425_defineDataProperty.js";
-import { keys } from "04416_keys.js";
+import hasPropertyDescriptors from "hasPropertyDescriptors" /* 1424 */;
+import defineDataProperty from "defineDataProperty" /* 1425 */;
+import keys from "keys" /* 4416 */;
+
 let tmp = typeof Symbol === "function";
 if (typeof Symbol === "function") {
   const _Symbol = Symbol;
   tmp = typeof Symbol("foo") === "symbol";
 }
-let tmp2 = require("hasPropertyDescriptors")();
-let c5 = tmp2;
+let closure_2 = tmp;
+let tmp2 = hasPropertyDescriptors();
+let closure_5 = tmp2;
 function defineProperty(arg0, arg1, arg2, arg3) {
 
 }

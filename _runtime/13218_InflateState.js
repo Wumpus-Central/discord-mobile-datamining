@@ -1,9 +1,10 @@
 // _runtime/13218_InflateState.js
-import { assign } from "13208_assign.js";
-import { inflate_table } from "13219_inflate_table.js";
-import { inflate_fast } from "13220_inflate_fast.js";
-import { 13215__ } from "metro/13215__.js";
-const require = arg1;
+import assign from "assign" /* 13208 */;
+import _mod13215 from "module_13215" /* 13215 */;
+import inflate_table from "inflate_table" /* 13219 */;
+import inflate_fast from "inflate_fast" /* 13220 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function InflateState() {
   const obj = { mode: 0, last: false, wrap: 0, havedict: false, flags: 0, dmax: 0, check: 0, total: 0, head: null, wbits: 0, wsize: 0, whave: 0, wnext: 0, window: null, hold: 0, bits: 0, length: 0, offset: 0, extra: 0, lencode: null, distcode: null, lenbits: 0, distbits: 0, ncode: 0, nlen: 0, ndist: 0, have: 0, next: null };
@@ -227,24 +228,7 @@ arg5.inflateInit = function inflateInit(strm) {
 };
 arg5.inflateInit2 = inflateInit2;
 arg5.inflate = function inflate(state) {
-  let avail_in;
-  let avail_in2;
-  let avail_out;
-  let avail_out2;
-  let bits;
-  let bits2;
-  let hold;
-  let hold2;
-  let input;
-  let input2;
-  let lens2;
   let mode;
-  let next_in;
-  let next_in2;
-  let next_out;
-  let next_out2;
-  let output;
-  let output2;
   let buf8 = new assign.Buf8(4);
   const items = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
   if (state) {
@@ -299,7 +283,7 @@ arg5.inflate = function inflate(state) {
                     buf8 = check10;
                     num = 2;
                     num = 0;
-                    state.check = 13215__(check10, tmp2, 2, 0);
+                    state.check = _mod13215(check10, tmp2, 2, 0);
                     state.mode = 2;
                     bits = 0;
                     hold = 0;
@@ -422,7 +406,7 @@ arg5.inflate = function inflate(state) {
                     buf8 = check3;
                     let num89 = 2;
                     let num90 = 0;
-                    state.check = 13215__(check3, tmp2, 2, 0);
+                    state.check = _mod13215(check3, tmp2, 2, 0);
                   }
                   state.mode = 3;
                   let num91 = 0;
@@ -511,7 +495,7 @@ arg5.inflate = function inflate(state) {
                             buf8 = input;
                             buf8 = length4;
                             buf8 = tmp14;
-                            state.check = 13215__(check7, tmp16, length4, buf8);
+                            state.check = _mod13215(check7, tmp16, length4, buf8);
                           }
                           buf8 = tmp12 - length4;
                           buf8 = tmp14 + length4;
@@ -575,7 +559,7 @@ arg5.inflate = function inflate(state) {
                                 buf8 = check9;
                                 buf8 = input;
                                 buf8 = tmp14;
-                                state.check = 13215__(check9, tmp16, buf8, buf8);
+                                state.check = _mod13215(check9, tmp16, buf8, buf8);
                               }
                               buf8 = tmp12 - buf8;
                               buf8 = tmp14 + buf8;
@@ -1985,7 +1969,7 @@ arg5.inflate = function inflate(state) {
                           let check8 = state.check;
                           buf8 = check8;
                           buf8 = input;
-                          state.check = 13215__(check8, tmp16, buf8, buf8);
+                          state.check = _mod13215(check8, tmp16, buf8, buf8);
                         }
                         buf8 = buf8 - buf8;
                         buf8 = buf8 + buf8;
@@ -2039,7 +2023,7 @@ arg5.inflate = function inflate(state) {
                     buf8 = check6;
                     num = 2;
                     num = 0;
-                    num = 13215__(check6, tmp2, 2, 0);
+                    num = _mod13215(check6, tmp2, 2, 0);
                     state.check = num;
                     num = 0;
                     num = 0;
@@ -2071,7 +2055,7 @@ arg5.inflate = function inflate(state) {
                   buf8 = check5;
                   let num97 = 2;
                   let num98 = 0;
-                  state.check = 13215__(check5, tmp2, 2, 0);
+                  state.check = _mod13215(check5, tmp2, 2, 0);
                 }
                 state.mode = 5;
                 num99 = 0;
@@ -2111,7 +2095,7 @@ arg5.inflate = function inflate(state) {
                 buf8 = check4;
                 let num93 = 4;
                 let num94 = 0;
-                state.check = 13215__(check4, tmp2, 4, 0);
+                state.check = _mod13215(check4, tmp2, 4, 0);
               }
               state.mode = 4;
               num95 = 0;

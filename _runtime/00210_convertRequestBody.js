@@ -1,6 +1,7 @@
 // _runtime/00210_convertRequestBody.js
-import { Blob } from "00203_Blob.js";
-const require = arg1;
+import Blob from "Blob" /* 203 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.default = function convertRequestBody(str) {
   if (typeof str === "string") {
@@ -12,7 +13,7 @@ arg5.default = function convertRequestBody(str) {
     obj[0] = str.data;
     tmp2 = obj;
   } else if (str instanceof tmp3(211).default) {
-    const obj1 = { formData: null };
+    obj1 = { formData: null };
     obj1[0] = str.getParts();
     tmp2 = obj1;
   } else {

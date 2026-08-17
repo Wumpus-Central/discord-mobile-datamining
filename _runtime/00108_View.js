@@ -1,34 +1,19 @@
 // _runtime/00108_View.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import { use } from "noop";
-import { jsx } from "jsxProd";
-import { noop } from "00111_noop.js";
-import { Commands } from "00112_Commands.js";
+import noopAll from "noop" /* 19 */;
+import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
+import noopDefault from "noop" /* 111 */;
+import CommandsDefault from "Commands" /* 112 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import { use } from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 let closure_3 = ["accessibilityState", "accessibilityValue", "aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-hidden", "aria-label", "aria-labelledby", "aria-live", "aria-selected", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext", "id", "tabIndex"];
-const forwardRefResult = require("noop").forwardRef(function View_withRef(arg0, ref) {
-  let accessibilityState;
-  let accessibilityValue;
-  let id;
-  let str;
-  let tabIndex;
-  let tmp;
-  let tmp10;
-  let tmp11;
-  let tmp12;
-  let tmp2;
-  let tmp3;
-  let tmp4;
-  let tmp5;
-  let tmp6;
-  let tmp7;
-  let tmp8;
-  let tmp9;
+const forwardRefResult = noopAll.forwardRef(function View_withRef(arg0, ref) {
   if (arg0 == null) {
     HermesBuiltin.throwTypeError();
   } else {
     const merged = Object.assign(arg0, undefined);
-    const tmp45 = use(noop);
+    const tmp45 = use(noopDefault);
     let tmp24 = merged;
     if (!obj6.enableNativeViewPropTransformations()) {
       ({ accessibilityState, accessibilityValue, aria-busy: tmp, aria-checked: tmp2, aria-disabled: tmp3, aria-expanded: tmp4, aria-hidden: tmp5, aria-label: tmp6, aria-labelledby: str, aria-live: tmp7, aria-selected: tmp8, aria-valuemax: tmp9, aria-valuemin: tmp10, aria-valuenow: tmp11, aria-valuetext: tmp12, id, tabIndex } = merged);
@@ -138,17 +123,17 @@ const forwardRefResult = require("noop").forwardRef(function View_withRef(arg0, 
       tmp17 = null == accessibilityState && null == tmp && null == tmp2 && null == tmp3 && null == tmp4 && null == tmp8;
       tmp23 = null == accessibilityValue && null == tmp9 && null == tmp10 && null == tmp11 && null == tmp12;
     }
-    obj6 = importAll(27);
+    obj6 = javaScriptFlagGetterAll;
     if (null == ref) {
       obj = {};
       const merged1 = Object.assign(tmp24);
-      let obj1 = obj;
+      obj1 = obj;
     } else {
       obj1 = {};
       const merged2 = Object.assign(tmp24);
       obj1.ref = ref;
     }
-    const tmp30Result = jsx(Commands, obj1);
+    const tmp30Result = jsx(CommandsDefault, obj1);
     if (tmp45) {
       const obj2 = { value: false, children: null };
       obj2[1] = tmp30Result;
@@ -156,7 +141,7 @@ const forwardRefResult = require("noop").forwardRef(function View_withRef(arg0, 
     } else {
       return tmp30Result;
     }
-    const tmp43Result = Commands;
+    const tmp43Result = CommandsDefault;
   }
 });
 forwardRefResult.displayName = "View";

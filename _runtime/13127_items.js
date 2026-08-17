@@ -1,5 +1,7 @@
 // _runtime/13127_items.js
-import _slicedToArray from "_slicedToArray";
+import _mod13125 from "module_13125" /* 13125 */;
+import _mod13126 from "module_13126" /* 13126 */;
+import closure_0 from "_slicedToArray" /* 32 */;
 
 let obj = {};
 const items = [];
@@ -11,17 +13,15 @@ obj.src = items2;
 obj = {};
 obj.t = obj;
 const items3 = [["\\s", 1], , ];
-const items4 = ["\\d", require("module_13125").MAX_LENGTH];
+const items4 = ["\\d", _mod13125.MAX_LENGTH];
 items3[1] = items4;
-const items5 = ["[a-zA-Z0-9-]", require("module_13125").MAX_SAFE_BUILD_LENGTH];
+const items5 = ["[a-zA-Z0-9-]", _mod13125.MAX_SAFE_BUILD_LENGTH];
 items3[2] = items5;
 let regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -45,25 +45,23 @@ let regExp40 = ((regExp40) => {
   }
   return str;
 })("0|[1-9]\\d*");
-require("module_13126")("NUMERICIDENTIFIER", 0, "0|[1-9]\\d*");
+_mod13126("NUMERICIDENTIFIER", 0, "0|[1-9]\\d*");
 obj.NUMERICIDENTIFIER = 0;
 items2[0] = "0|[1-9]\\d*";
 const regExp = new RegExp("0|[1-9]\\d*", undefined);
 items[0] = regExp;
 const regExp1 = new RegExp(regExp40, undefined);
 items1[0] = regExp1;
-require("module_13126")("NUMERICIDENTIFIERLOOSE", 1, "\\d+");
+_mod13126("NUMERICIDENTIFIERLOOSE", 1, "\\d+");
 obj.NUMERICIDENTIFIERLOOSE = 1;
 items2[1] = "\\d+";
 const regExp2 = new RegExp("\\d+", undefined);
 items[1] = regExp2;
 const regExp3 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -90,12 +88,10 @@ const regExp3 = new RegExp(((regExp40) => {
 items1[1] = regExp3;
 const combined = "\\d*[a-zA-Z-]" + "[a-zA-Z0-9-]" + "*";
 let tmp5 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -119,18 +115,16 @@ let tmp5 = ((regExp40) => {
   }
   return str;
 })("\\d+");
-require("module_13126")("NONNUMERICIDENTIFIER", 2, combined);
+_mod13126("NONNUMERICIDENTIFIER", 2, combined);
 obj.NONNUMERICIDENTIFIER = 2;
 items2[2] = combined;
 const regExp4 = new RegExp(combined, undefined);
 items[2] = regExp4;
 const regExp5 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -157,12 +151,10 @@ const regExp5 = new RegExp(((regExp40) => {
 items1[2] = regExp5;
 const combined1 = "(" + items2[obj.NUMERICIDENTIFIER] + ")\\.(" + items2[obj.NUMERICIDENTIFIER] + ")\\.(" + items2[obj.NUMERICIDENTIFIER] + ")";
 let tmp10 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -186,18 +178,16 @@ let tmp10 = ((regExp40) => {
   }
   return str;
 })(combined);
-require("module_13126")("MAINVERSION", 3, combined1);
+_mod13126("MAINVERSION", 3, combined1);
 obj.MAINVERSION = 3;
 items2[3] = combined1;
 const regExp6 = new RegExp(combined1, undefined);
 items[3] = regExp6;
 const regExp7 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -224,12 +214,10 @@ const regExp7 = new RegExp(((regExp40) => {
 items1[3] = regExp7;
 const combined2 = "(" + items2[obj.NUMERICIDENTIFIERLOOSE] + ")\\.(" + items2[obj.NUMERICIDENTIFIERLOOSE] + ")\\.(" + items2[obj.NUMERICIDENTIFIERLOOSE] + ")";
 const tmp15 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -253,18 +241,16 @@ const tmp15 = ((regExp40) => {
   }
   return str;
 })(combined1);
-require("module_13126")("MAINVERSIONLOOSE", 4, combined2);
+_mod13126("MAINVERSIONLOOSE", 4, combined2);
 obj.MAINVERSIONLOOSE = 4;
 items2[4] = combined2;
 const regExp8 = new RegExp(combined2, undefined);
 items[4] = regExp8;
 const regExp9 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -291,12 +277,10 @@ const regExp9 = new RegExp(((regExp40) => {
 items1[4] = regExp9;
 const combined3 = "(?:" + items2[obj.NUMERICIDENTIFIER] + "|" + items2[obj.NONNUMERICIDENTIFIER] + ")";
 const tmp20 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -320,18 +304,16 @@ const tmp20 = ((regExp40) => {
   }
   return str;
 })(combined2);
-require("module_13126")("PRERELEASEIDENTIFIER", 5, combined3);
+_mod13126("PRERELEASEIDENTIFIER", 5, combined3);
 obj.PRERELEASEIDENTIFIER = 5;
 items2[5] = combined3;
 const regExp10 = new RegExp(combined3, undefined);
 items[5] = regExp10;
 const regExp11 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -358,12 +340,10 @@ const regExp11 = new RegExp(((regExp40) => {
 items1[5] = regExp11;
 const combined4 = "(?:" + items2[obj.NUMERICIDENTIFIERLOOSE] + "|" + items2[obj.NONNUMERICIDENTIFIER] + ")";
 const tmp25 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -387,18 +367,16 @@ const tmp25 = ((regExp40) => {
   }
   return str;
 })(combined3);
-require("module_13126")("PRERELEASEIDENTIFIERLOOSE", 6, combined4);
+_mod13126("PRERELEASEIDENTIFIERLOOSE", 6, combined4);
 obj.PRERELEASEIDENTIFIERLOOSE = 6;
 items2[6] = combined4;
 const regExp12 = new RegExp(combined4, undefined);
 items[6] = regExp12;
 const regExp13 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -425,12 +403,10 @@ const regExp13 = new RegExp(((regExp40) => {
 items1[6] = regExp13;
 const combined5 = "(?:-(" + items2[obj.PRERELEASEIDENTIFIER] + "(?:\\." + items2[obj.PRERELEASEIDENTIFIER] + ")*))";
 const tmp30 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -454,18 +430,16 @@ const tmp30 = ((regExp40) => {
   }
   return str;
 })(combined4);
-require("module_13126")("PRERELEASE", 7, combined5);
+_mod13126("PRERELEASE", 7, combined5);
 obj.PRERELEASE = 7;
 items2[7] = combined5;
 const regExp14 = new RegExp(combined5, undefined);
 items[7] = regExp14;
 const regExp15 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -492,12 +466,10 @@ const regExp15 = new RegExp(((regExp40) => {
 items1[7] = regExp15;
 const combined6 = "(?:-?(" + items2[obj.PRERELEASEIDENTIFIERLOOSE] + "(?:\\." + items2[obj.PRERELEASEIDENTIFIERLOOSE] + ")*))";
 const tmp35 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -521,18 +493,16 @@ const tmp35 = ((regExp40) => {
   }
   return str;
 })(combined5);
-require("module_13126")("PRERELEASELOOSE", 8, combined6);
+_mod13126("PRERELEASELOOSE", 8, combined6);
 obj.PRERELEASELOOSE = 8;
 items2[8] = combined6;
 const regExp16 = new RegExp(combined6, undefined);
 items[8] = regExp16;
 const regExp17 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -559,12 +529,10 @@ const regExp17 = new RegExp(((regExp40) => {
 items1[8] = regExp17;
 const combined7 = "" + "[a-zA-Z0-9-]" + "+";
 const tmp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -588,18 +556,16 @@ const tmp40 = ((regExp40) => {
   }
   return str;
 })(combined6);
-require("module_13126")("BUILDIDENTIFIER", 9, combined7);
+_mod13126("BUILDIDENTIFIER", 9, combined7);
 obj.BUILDIDENTIFIER = 9;
 items2[9] = combined7;
 const regExp18 = new RegExp(combined7, undefined);
 items[9] = regExp18;
 const regExp19 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -626,12 +592,10 @@ const regExp19 = new RegExp(((regExp40) => {
 items1[9] = regExp19;
 const combined8 = "(?:\\+(" + items2[obj.BUILDIDENTIFIER] + "(?:\\." + items2[obj.BUILDIDENTIFIER] + ")*))";
 const tmp45 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -655,18 +619,16 @@ const tmp45 = ((regExp40) => {
   }
   return str;
 })(combined7);
-require("module_13126")("BUILD", 10, combined8);
+_mod13126("BUILD", 10, combined8);
 obj.BUILD = 10;
 items2[10] = combined8;
 const regExp20 = new RegExp(combined8, undefined);
 items[10] = regExp20;
 const regExp21 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -693,12 +655,10 @@ const regExp21 = new RegExp(((regExp40) => {
 items1[10] = regExp21;
 const combined9 = "v?" + items2[obj.MAINVERSION] + items2[obj.PRERELEASE] + "?" + items2[obj.BUILD] + "?";
 const tmp50 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -722,18 +682,16 @@ const tmp50 = ((regExp40) => {
   }
   return str;
 })(combined8);
-require("module_13126")("FULLPLAIN", 11, combined9);
+_mod13126("FULLPLAIN", 11, combined9);
 obj.FULLPLAIN = 11;
 items2[11] = combined9;
 const regExp22 = new RegExp(combined9, undefined);
 items[11] = regExp22;
 const regExp23 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -760,12 +718,10 @@ const regExp23 = new RegExp(((regExp40) => {
 items1[11] = regExp23;
 const combined10 = "^" + items2[obj.FULLPLAIN] + "$";
 const tmp55 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -789,18 +745,16 @@ const tmp55 = ((regExp40) => {
   }
   return str;
 })(combined9);
-require("module_13126")("FULL", 12, combined10);
+_mod13126("FULL", 12, combined10);
 obj.FULL = 12;
 items2[12] = combined10;
 const regExp24 = new RegExp(combined10, undefined);
 items[12] = regExp24;
 const regExp25 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -827,12 +781,10 @@ const regExp25 = new RegExp(((regExp40) => {
 items1[12] = regExp25;
 const combined11 = "[v=\\s]*" + items2[obj.MAINVERSIONLOOSE] + items2[obj.PRERELEASELOOSE] + "?" + items2[obj.BUILD] + "?";
 const tmp60 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -856,18 +808,16 @@ const tmp60 = ((regExp40) => {
   }
   return str;
 })(combined10);
-require("module_13126")("LOOSEPLAIN", 13, combined11);
+_mod13126("LOOSEPLAIN", 13, combined11);
 obj.LOOSEPLAIN = 13;
 items2[13] = combined11;
 const regExp26 = new RegExp(combined11, undefined);
 items[13] = regExp26;
 const regExp27 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -894,12 +844,10 @@ const regExp27 = new RegExp(((regExp40) => {
 items1[13] = regExp27;
 const combined12 = "^" + items2[obj.LOOSEPLAIN] + "$";
 const tmp65 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -923,18 +871,16 @@ const tmp65 = ((regExp40) => {
   }
   return str;
 })(combined11);
-require("module_13126")("LOOSE", 14, combined12);
+_mod13126("LOOSE", 14, combined12);
 obj.LOOSE = 14;
 items2[14] = combined12;
 const regExp28 = new RegExp(combined12, undefined);
 items[14] = regExp28;
 const regExp29 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -960,12 +906,10 @@ const regExp29 = new RegExp(((regExp40) => {
 })(combined12), undefined);
 items1[14] = regExp29;
 const tmp70 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -989,18 +933,16 @@ const tmp70 = ((regExp40) => {
   }
   return str;
 })(combined12);
-require("module_13126")("GTLT", 15, "((?:<|>)?=?)");
+_mod13126("GTLT", 15, "((?:<|>)?=?)");
 obj.GTLT = 15;
 items2[15] = "((?:<|>)?=?)";
 const regExp30 = new RegExp("((?:<|>)?=?)", undefined);
 items[15] = regExp30;
 const regExp31 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1027,12 +969,10 @@ const regExp31 = new RegExp(((regExp40) => {
 items1[15] = regExp31;
 const combined13 = "" + items2[obj.NUMERICIDENTIFIERLOOSE] + "|x|X|\\*";
 const tmp74 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1056,18 +996,16 @@ const tmp74 = ((regExp40) => {
   }
   return str;
 })("((?:<|>)?=?)");
-require("module_13126")("XRANGEIDENTIFIERLOOSE", 16, combined13);
+_mod13126("XRANGEIDENTIFIERLOOSE", 16, combined13);
 obj.XRANGEIDENTIFIERLOOSE = 16;
 items2[16] = combined13;
 const regExp32 = new RegExp(combined13, undefined);
 items[16] = regExp32;
 const regExp33 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1094,12 +1032,10 @@ const regExp33 = new RegExp(((regExp40) => {
 items1[16] = regExp33;
 const combined14 = "" + items2[obj.NUMERICIDENTIFIER] + "|x|X|\\*";
 const tmp79 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1123,18 +1059,16 @@ const tmp79 = ((regExp40) => {
   }
   return str;
 })(combined13);
-require("module_13126")("XRANGEIDENTIFIER", 17, combined14);
+_mod13126("XRANGEIDENTIFIER", 17, combined14);
 obj.XRANGEIDENTIFIER = 17;
 items2[17] = combined14;
 const regExp34 = new RegExp(combined14, undefined);
 items[17] = regExp34;
 const regExp35 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1161,12 +1095,10 @@ const regExp35 = new RegExp(((regExp40) => {
 items1[17] = regExp35;
 const combined15 = "[v=\\s]*(" + items2[obj.XRANGEIDENTIFIER] + ")(?:\\.(" + items2[obj.XRANGEIDENTIFIER] + ")(?:\\.(" + items2[obj.XRANGEIDENTIFIER] + ")(?:" + items2[obj.PRERELEASE] + ")?" + items2[obj.BUILD] + "?)?)?";
 const tmp84 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1190,18 +1122,16 @@ const tmp84 = ((regExp40) => {
   }
   return str;
 })(combined14);
-require("module_13126")("XRANGEPLAIN", 18, combined15);
+_mod13126("XRANGEPLAIN", 18, combined15);
 obj.XRANGEPLAIN = 18;
 items2[18] = combined15;
 const regExp36 = new RegExp(combined15, undefined);
 items[18] = regExp36;
 const regExp37 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1228,12 +1158,10 @@ const regExp37 = new RegExp(((regExp40) => {
 items1[18] = regExp37;
 const combined16 = "[v=\\s]*(" + items2[obj.XRANGEIDENTIFIERLOOSE] + ")(?:\\.(" + items2[obj.XRANGEIDENTIFIERLOOSE] + ")(?:\\.(" + items2[obj.XRANGEIDENTIFIERLOOSE] + ")(?:" + items2[obj.PRERELEASELOOSE] + ")?" + items2[obj.BUILD] + "?)?)?";
 const tmp89 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1257,18 +1185,16 @@ const tmp89 = ((regExp40) => {
   }
   return str;
 })(combined15);
-require("module_13126")("XRANGEPLAINLOOSE", 19, combined16);
+_mod13126("XRANGEPLAINLOOSE", 19, combined16);
 obj.XRANGEPLAINLOOSE = 19;
 items2[19] = combined16;
 const regExp38 = new RegExp(combined16, undefined);
 items[19] = regExp38;
 const regExp39 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1295,12 +1221,10 @@ const regExp39 = new RegExp(((regExp40) => {
 items1[19] = regExp39;
 const combined17 = "^" + items2[obj.GTLT] + "\\s*" + items2[obj.XRANGEPLAIN] + "$";
 const tmp94 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1324,18 +1248,16 @@ const tmp94 = ((regExp40) => {
   }
   return str;
 })(combined16);
-regExp40 = require("module_13126")("XRANGE", 20, combined17);
+regExp40 = _mod13126("XRANGE", 20, combined17);
 obj.XRANGE = 20;
 items2[20] = combined17;
 regExp40 = new RegExp(combined17, undefined);
 items[20] = regExp40;
 regExp40 = new RegExp(((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1362,12 +1284,10 @@ regExp40 = new RegExp(((regExp40) => {
 items1[20] = regExp40;
 regExp40 = "^" + items2[obj.GTLT] + "\\s*" + items2[obj.XRANGEPLAINLOOSE] + "$";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1391,21 +1311,19 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("XRANGELOOSE", 21, regExp40);
+regExp40 = _mod13126("XRANGELOOSE", 21, regExp40);
 obj.XRANGELOOSE = 21;
 items2[21] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
 items[21] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
 items1[21] = regExp40;
-regExp40 = "(^|[^\\d])(\\d{1," + require("module_13125").MAX_SAFE_COMPONENT_LENGTH + "})(?:\\.(\\d{1," + require("module_13125").MAX_SAFE_COMPONENT_LENGTH + "}))?(?:\\.(\\d{1," + require("module_13125").MAX_SAFE_COMPONENT_LENGTH + "}))?";
+regExp40 = "(^|[^\\d])(\\d{1," + _mod13125.MAX_SAFE_COMPONENT_LENGTH + "})(?:\\.(\\d{1," + _mod13125.MAX_SAFE_COMPONENT_LENGTH + "}))?(?:\\.(\\d{1," + _mod13125.MAX_SAFE_COMPONENT_LENGTH + "}))?";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1429,7 +1347,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("COERCEPLAIN", 22, regExp40);
+regExp40 = _mod13126("COERCEPLAIN", 22, regExp40);
 obj.COERCEPLAIN = 22;
 items2[22] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
@@ -1438,12 +1356,10 @@ regExp40 = new RegExp(regExp40, undefined);
 items1[22] = regExp40;
 regExp40 = "" + items2[obj.COERCEPLAIN] + "(?:$|[^\\d])";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1467,7 +1383,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("COERCE", 23, regExp40);
+regExp40 = _mod13126("COERCE", 23, regExp40);
 obj.COERCE = 23;
 items2[23] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
@@ -1477,12 +1393,10 @@ items1[23] = regExp40;
 regExp40 = items2[obj.COERCEPLAIN] + "(?:" + items2[obj.PRERELEASE] + ")?";
 regExp40 = regExp40 + "(?:" + items2[obj.BUILD] + ")?(?:$|[^\\d])";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1506,7 +1420,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("COERCEFULL", 24, regExp40);
+regExp40 = _mod13126("COERCEFULL", 24, regExp40);
 obj.COERCEFULL = 24;
 items2[24] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
@@ -1515,12 +1429,10 @@ regExp40 = new RegExp(regExp40, undefined);
 items1[24] = regExp40;
 regExp40 = items2[obj.COERCE];
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1544,7 +1456,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("COERCERTL", 25, regExp40);
+regExp40 = _mod13126("COERCERTL", 25, regExp40);
 obj.COERCERTL = 25;
 items2[25] = regExp40;
 regExp40 = new RegExp(regExp40, "g");
@@ -1553,12 +1465,10 @@ regExp40 = new RegExp(regExp40, "g");
 items1[25] = regExp40;
 regExp40 = items2[obj.COERCEFULL];
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1582,7 +1492,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("COERCERTLFULL", 26, regExp40);
+regExp40 = _mod13126("COERCERTLFULL", 26, regExp40);
 obj.COERCERTLFULL = 26;
 items2[26] = regExp40;
 regExp40 = new RegExp(regExp40, "g");
@@ -1590,12 +1500,10 @@ items[26] = regExp40;
 regExp40 = new RegExp(regExp40, "g");
 items1[26] = regExp40;
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1619,7 +1527,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })("(?:~>?)");
-regExp40 = require("module_13126")("LONETILDE", 27, "(?:~>?)");
+regExp40 = _mod13126("LONETILDE", 27, "(?:~>?)");
 obj.LONETILDE = 27;
 items2[27] = "(?:~>?)";
 regExp40 = new RegExp("(?:~>?)", undefined);
@@ -1628,12 +1536,10 @@ regExp40 = new RegExp(regExp40, undefined);
 items1[27] = regExp40;
 regExp40 = "(\\s*)" + items2[obj.LONETILDE] + "\\s+";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1657,7 +1563,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("TILDETRIM", 28, regExp40);
+regExp40 = _mod13126("TILDETRIM", 28, regExp40);
 obj.TILDETRIM = 28;
 items2[28] = regExp40;
 regExp40 = new RegExp(regExp40, "g");
@@ -1667,12 +1573,10 @@ items1[28] = regExp40;
 obj.tildeTrimReplace = "$1~";
 regExp40 = "^" + items2[obj.LONETILDE] + items2[obj.XRANGEPLAIN] + "$";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1696,7 +1600,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("TILDE", 29, regExp40);
+regExp40 = _mod13126("TILDE", 29, regExp40);
 obj.TILDE = 29;
 items2[29] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
@@ -1705,12 +1609,10 @@ regExp40 = new RegExp(regExp40, undefined);
 items1[29] = regExp40;
 regExp40 = "^" + items2[obj.LONETILDE] + items2[obj.XRANGEPLAINLOOSE] + "$";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1734,7 +1636,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("TILDELOOSE", 30, regExp40);
+regExp40 = _mod13126("TILDELOOSE", 30, regExp40);
 obj.TILDELOOSE = 30;
 items2[30] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
@@ -1742,12 +1644,10 @@ items[30] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
 items1[30] = regExp40;
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1771,7 +1671,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })("(?:\\^)");
-regExp40 = require("module_13126")("LONECARET", 31, "(?:\\^)");
+regExp40 = _mod13126("LONECARET", 31, "(?:\\^)");
 obj.LONECARET = 31;
 items2[31] = "(?:\\^)";
 regExp40 = new RegExp("(?:\\^)", undefined);
@@ -1780,12 +1680,10 @@ regExp40 = new RegExp(regExp40, undefined);
 items1[31] = regExp40;
 regExp40 = "(\\s*)" + items2[obj.LONECARET] + "\\s+";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1809,7 +1707,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("CARETTRIM", 32, regExp40);
+regExp40 = _mod13126("CARETTRIM", 32, regExp40);
 obj.CARETTRIM = 32;
 items2[32] = regExp40;
 regExp40 = new RegExp(regExp40, "g");
@@ -1819,12 +1717,10 @@ items1[32] = regExp40;
 obj.caretTrimReplace = "$1^";
 regExp40 = "^" + items2[obj.LONECARET] + items2[obj.XRANGEPLAIN] + "$";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1848,7 +1744,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("CARET", 33, regExp40);
+regExp40 = _mod13126("CARET", 33, regExp40);
 obj.CARET = 33;
 items2[33] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
@@ -1857,12 +1753,10 @@ regExp40 = new RegExp(regExp40, undefined);
 items1[33] = regExp40;
 regExp40 = "^" + items2[obj.LONECARET] + items2[obj.XRANGEPLAINLOOSE] + "$";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1886,7 +1780,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("CARETLOOSE", 34, regExp40);
+regExp40 = _mod13126("CARETLOOSE", 34, regExp40);
 obj.CARETLOOSE = 34;
 items2[34] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
@@ -1895,12 +1789,10 @@ regExp40 = new RegExp(regExp40, undefined);
 items1[34] = regExp40;
 regExp40 = "^" + items2[obj.GTLT] + "\\s*(" + items2[obj.LOOSEPLAIN] + ")$|^$";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1924,7 +1816,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("COMPARATORLOOSE", 35, regExp40);
+regExp40 = _mod13126("COMPARATORLOOSE", 35, regExp40);
 obj.COMPARATORLOOSE = 35;
 items2[35] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
@@ -1933,12 +1825,10 @@ regExp40 = new RegExp(regExp40, undefined);
 items1[35] = regExp40;
 regExp40 = "^" + items2[obj.GTLT] + "\\s*(" + items2[obj.FULLPLAIN] + ")$|^$";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -1962,7 +1852,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("COMPARATOR", 36, regExp40);
+regExp40 = _mod13126("COMPARATOR", 36, regExp40);
 obj.COMPARATOR = 36;
 items2[36] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
@@ -1971,12 +1861,10 @@ regExp40 = new RegExp(regExp40, undefined);
 items1[36] = regExp40;
 regExp40 = "(\\s*)" + items2[obj.GTLT] + "\\s*(" + items2[obj.LOOSEPLAIN] + "|" + items2[obj.XRANGEPLAIN] + ")";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -2000,7 +1888,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("COMPARATORTRIM", 37, regExp40);
+regExp40 = _mod13126("COMPARATORTRIM", 37, regExp40);
 obj.COMPARATORTRIM = 37;
 items2[37] = regExp40;
 regExp40 = new RegExp(regExp40, "g");
@@ -2010,12 +1898,10 @@ items1[37] = regExp40;
 obj.comparatorTrimReplace = "$1$2$3";
 regExp40 = "^\\s*(" + items2[obj.XRANGEPLAIN] + ")\\s+-\\s+(" + items2[obj.XRANGEPLAIN] + ")\\s*$";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -2039,7 +1925,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("HYPHENRANGE", 38, regExp40);
+regExp40 = _mod13126("HYPHENRANGE", 38, regExp40);
 obj.HYPHENRANGE = 38;
 items2[38] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
@@ -2048,12 +1934,10 @@ regExp40 = new RegExp(regExp40, undefined);
 items1[38] = regExp40;
 regExp40 = "^\\s*(" + items2[obj.XRANGEPLAINLOOSE] + ")\\s+-\\s+(" + items2[obj.XRANGEPLAINLOOSE] + ")\\s*$";
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -2077,7 +1961,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })(regExp40);
-regExp40 = require("module_13126")("HYPHENRANGELOOSE", 39, regExp40);
+regExp40 = _mod13126("HYPHENRANGELOOSE", 39, regExp40);
 obj.HYPHENRANGELOOSE = 39;
 items2[39] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
@@ -2085,12 +1969,10 @@ items[39] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
 items1[39] = regExp40;
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -2114,7 +1996,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })("(<|>)?=?\\s*\\*");
-regExp40 = require("module_13126")("STAR", 40, "(<|>)?=?\\s*\\*");
+regExp40 = _mod13126("STAR", 40, "(<|>)?=?\\s*\\*");
 obj.STAR = 40;
 items2[40] = "(<|>)?=?\\s*\\*";
 regExp40 = new RegExp("(<|>)?=?\\s*\\*", undefined);
@@ -2122,12 +2004,10 @@ items[40] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
 items1[40] = regExp40;
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -2151,7 +2031,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })("^\\s*>=\\s*0\\.0\\.0\\s*$");
-regExp40 = require("module_13126")("GTE0", 41, "^\\s*>=\\s*0\\.0\\.0\\s*$");
+regExp40 = _mod13126("GTE0", 41, "^\\s*>=\\s*0\\.0\\.0\\s*$");
 obj.GTE0 = 41;
 items2[41] = "^\\s*>=\\s*0\\.0\\.0\\s*$";
 regExp40 = new RegExp("^\\s*>=\\s*0\\.0\\.0\\s*$", undefined);
@@ -2159,12 +2039,10 @@ items[41] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
 items1[41] = regExp40;
 regExp40 = ((regExp40) => {
-  let tmp6;
-  let tmp7;
   let str = regExp40;
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = str;
     let _HermesInternal = HermesInternal;
@@ -2188,7 +2066,7 @@ regExp40 = ((regExp40) => {
   }
   return str;
 })("^\\s*>=\\s*0\\.0\\.0-0\\s*$");
-regExp40 = require("module_13126")("GTE0PRE", 42, "^\\s*>=\\s*0\\.0\\.0-0\\s*$");
+regExp40 = _mod13126("GTE0PRE", 42, "^\\s*>=\\s*0\\.0\\.0-0\\s*$");
 obj.GTE0PRE = 42;
 items2[42] = "^\\s*>=\\s*0\\.0\\.0-0\\s*$";
 regExp40 = new RegExp("^\\s*>=\\s*0\\.0\\.0-0\\s*$", undefined);

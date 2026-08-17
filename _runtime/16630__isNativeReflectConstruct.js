@@ -1,9 +1,10 @@
 // _runtime/16630__isNativeReflectConstruct.js
-import _createClass from "_createClass";
-import _classCallCheck from "_classCallCheck";
-import c3 from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
+import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
 const TimeoutError = require;
 function _isNativeReflectConstruct() {
@@ -17,10 +18,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -28,12 +29,12 @@ function _isNativeReflectConstruct() {
 class TimeoutError {
   constructor(arg0) {
     self = this;
-    tmp = outer1_2(this, TimeoutError);
+    tmp = closure_2(this, TimeoutError);
     items = [];
     items[0] = global;
-    tmp2 = outer1_4;
-    obj = outer1_4(TimeoutError);
-    tmp3 = outer1_3;
+    tmp2 = closure_4;
+    obj = closure_4(TimeoutError);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -46,12 +47,12 @@ class TimeoutError {
     return tmp3Result;
   }
 }
-_inherits(TimeoutError, require("_wrapNativeSuper")(Error));
+_inherits(TimeoutError, _wrapNativeSuper(Error));
 const _moduleResult = _createClass(TimeoutError);
 function pTimeout(arg0, arg1, arg2) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
   return new Promise((arg0, arg1) => {
     const table = arg1;
     if (typeof table === "number") {
@@ -64,7 +65,7 @@ function pTimeout(arg0, arg1, arg2) {
               if (tmp instanceof Error) {
                 let tmp8 = tmp;
               } else {
-                tmp8 = outer2_6;
+                tmp8 = closure_2_6;
                 if (typeof tmp === "string") {
                   let combined = tmp;
                 } else {

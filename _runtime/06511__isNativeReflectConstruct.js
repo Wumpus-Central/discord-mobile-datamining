@@ -1,12 +1,14 @@
 // _runtime/06511__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import { Platform } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6510 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import closure_5 from "_possibleConstructorReturn" /* 93 */;
+import closure_6 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const TouchableNativeFeedback = importDefault;
 function _isNativeReflectConstruct() {
@@ -20,22 +22,23 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 let closure_2 = ["style"];
+noopAll;
 class TouchableNativeFeedback {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, TouchableNativeFeedback);
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(TouchableNativeFeedback);
-    tmp3 = _isNativeReflectConstruct;
+    tmp = closure_4(this, TouchableNativeFeedback);
+    tmp2 = closure_6;
+    obj = closure_6(TouchableNativeFeedback);
+    tmp3 = closure_5;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -49,7 +52,7 @@ class TouchableNativeFeedback {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(TouchableNativeFeedback, require("noop").Component);
+_inheritsDefault(TouchableNativeFeedback, require("noop").Component);
 let obj = {
   key: "getExtraButtonProps",
   value: function getExtraButtonProps() {
@@ -91,7 +94,7 @@ const items = [
 ];
 const importDefaultResultResult = importDefaultResult(TouchableNativeFeedback, items);
 obj = {};
-let merged = Object.assign(require("_isNativeReflectConstruct").defaultProps);
+let merged = Object.assign(_isNativeReflectConstructDefault.defaultProps);
 obj.useForeground = true;
 obj.extraButtonProps = { rippleColor: null };
 importDefaultResultResult.defaultProps = obj;

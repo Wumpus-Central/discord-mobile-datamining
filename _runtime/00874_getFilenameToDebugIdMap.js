@@ -1,7 +1,8 @@
 // _runtime/00874_getFilenameToDebugIdMap.js
-import { createStackParser } from "00833_createStackParser.js";
+import createStackParser from "createStackParser" /* 833 */;
 import { 00821__ } from "metro/00821__.js";
-const require = arg1;
+
+require = arg1;
 const dependencyMap = arg6;
 function getFilenameToDebugIdMap(arg0) {
   const _require = arg0;

@@ -1,10 +1,10 @@
 // _runtime/06375_PanGestureHandler.js
-import noop from "noop";
-import { jsx } from "jsxProd";
-import { GestureHandlerRefContext } from "06376_GestureHandlerRefContext.js";
-import { LegacyBaseButton } from "06377_LegacyBaseButton.js";
+import GestureHandlerRefContext from "GestureHandlerRefContext" /* 6376 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
+import closure_2 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 
 export const PanGestureHandler = function PanGestureHandler(arg0) {
   const ref = React.useRef(null);

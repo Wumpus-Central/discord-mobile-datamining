@@ -1,5 +1,6 @@
 // _runtime/07064_ConsecutiveNumbers.js
-import ConsecutiveNumbers from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 7051 */;
+import ConsecutiveNumbers from "_classCallCheck" /* 7050 */;
 
 class ConsecutiveNumbers {
   constructor(arg0, arg1) {
@@ -122,8 +123,8 @@ obj = {
   key: Symbol.iterator,
   value() {
     const self = this;
-    let c3 = 0;
-    let c4 = 0;
+    c3 = 0;
+    c4 = 0;
     return (function* value() {
       if (c4 === 2) {
         c4 = 3;
@@ -152,13 +153,13 @@ obj = {
               return obj;
             } else {
               const endIndex = _self;
-              let closure_1 = tmp4;
+              closure_1 = tmp4;
               _self = undefined;
               _self = _self.startIndex;
               if (_self <= _self.endIndex) {
                 c3 = 1;
                 c4 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = _self;
                 return obj1;
               } else {
@@ -184,7 +185,7 @@ obj = {
   }
 };
 items[9] = obj;
-let tmp2 = require("_createClass")(ConsecutiveNumbers, items);
+let tmp2 = _createClassDefault(ConsecutiveNumbers, items);
 tmp2 = new tmp2(-1, -2);
 tmp2.EMPTY = tmp2;
 

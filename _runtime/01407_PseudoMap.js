@@ -47,15 +47,15 @@ class PseudoMap {
     self = this;
     closure_0 = global;
     tmp = require;
-    closure_1 = require;
+    self = require;
     if (!require) {
       tmp = self;
     }
-    closure_1 = tmp;
+    self = tmp;
     keys = Object.keys(self._data);
     item = keys.forEach(function(arg0) {
       if ("size" !== arg0) {
-        const self = this;
+        self = this;
         const call = closure_0.call;
         const value = this._data[arg0].value;
         if (typeof call === "unknown") {
@@ -64,7 +64,7 @@ class PseudoMap {
           call(tmp2, value, key);
         }
         tmp = closure_0;
-        tmp2 = closure_1;
+        tmp2 = self;
       }
     }, self);
     return;
@@ -240,7 +240,7 @@ Object.defineProperty(PseudoMap.prototype, "size", {
   configurable: true
 });
 const fn = () => {
-  const error = new Error("iterators are not implemented in this version");
+  error = new Error("iterators are not implemented in this version");
   throw error;
 };
 PseudoMap.prototype.entries = fn;

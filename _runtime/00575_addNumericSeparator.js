@@ -1,8 +1,8 @@
 // _runtime/00575_addNumericSeparator.js
+import _mod576 from "module_576" /* 576 */;
 import { 00576__ } from "metro/00576__.js";
+
 function addNumericSeparator(cause, typeError1) {
-  let call5;
-  let call6;
   if (cause !== Infinity) {
     if (cause !== -Infinity) {
       if (cause == cause) {
@@ -93,8 +93,6 @@ function isSymbol(custom) {
   }
 }
 function inspectString(cause, maxStringLength) {
-  let call;
-  let call2;
   if (cause.length > maxStringLength.maxStringLength) {
     const diff = cause.length - maxStringLength.maxStringLength;
     let str4 = "";
@@ -187,7 +185,7 @@ function arrObjKeys(cause, inspect) {
     items = [];
   }
   if (closure_26) {
-    const obj = {};
+    obj = {};
     let num = 0;
     let tmp10 = obj;
     if (0 < items.length) {
@@ -400,18 +398,18 @@ if (!getPrototypeOf) {
   getPrototypeOf = fn;
 }
 let custom = null;
-if (isSymbol(require("module_576").custom)) {
-  custom = require("module_576").custom;
+if (isSymbol(_mod576.custom)) {
+  custom = _mod576.custom;
 }
 let closure_32 = Object.create(null);
 let obj = Object.create(null);
 obj[0] = /(["\\])/g;
 obj[1] = /(['\\])/g;
 function inspect_(cause, maxStringLength, arg2, closure_2) {
-  let closure_0 = cause;
-  let obj = maxStringLength;
+  closure_0 = cause;
+  obj = maxStringLength;
   let _require = arg2;
-  let dependencyMap = closure_2;
+  dependencyMap = closure_2;
   if (!maxStringLength) {
     obj = {};
   }
@@ -658,26 +656,26 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
         function inspect(arg0, arg1, arg2) {
           if (!arg1) {
             if (arg2) {
-              const obj = { depth: null };
+              obj = { depth: null };
               obj[0] = obj.depth;
-              const call2 = outer1_35.call;
+              const call2 = closure_1_35.call;
               if (typeof call2 === "unknown") {
-                let call2Result = outer1_35("quoteStyle");
+                let call2Result = closure_1_35("quoteStyle");
               } else {
                 call2Result = call2(tmp10, "quoteStyle");
               }
               if (call2Result) {
                 obj.quoteStyle = tmp10.quoteStyle;
               }
-              return outer1_39(arg0, obj, c1 + 1, arr);
+              return closure_1_39(arg0, obj, c1 + 1, arr);
             } else {
-              return outer1_39(arg0, obj, c1 + 1, arr);
+              return closure_1_39(arg0, obj, c1 + 1, arr);
             }
           } else {
-            const call = outer1_21.call;
-            arr = typeof call === "unknown" ? outer1_21() : call(arr);
+            const call = closure_1_21.call;
+            arr = typeof call === "unknown" ? closure_1_21() : call(arr);
             arr = arr.push(arg1);
-            const tmp = outer1_21;
+            const tmp = closure_1_21;
           }
         }
         if (typeof cause === "function") {
@@ -1035,9 +1033,9 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                     const call31 = typeError1.call;
                     const fn2 = (arg0, arg1) => {
                       if (!closure_0) {
-                        const obj = { depth: null };
+                        obj = { depth: null };
                         obj[0] = obj.depth;
-                        const call2 = outer1_35.call;
+                        const call2 = closure_1_35.call;
                         if (typeof call2 === "unknown") {
                           let call2Result = tmp7("quoteStyle");
                         } else {
@@ -1047,21 +1045,21 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                           obj.quoteStyle = tmp6.quoteStyle;
                         }
                         if (!tmp3) {
-                          tmp2(tmp14 + outer1_39(arg0, tmp6, tmp11 + 1, arr));
+                          tmp2(tmp14 + closure_1_39(arg0, tmp6, tmp11 + 1, arr));
                         } else {
-                          const call3 = outer1_21.call;
-                          const arr2 = typeof call3 === "unknown" ? outer1_21() : call3(arr);
+                          const call3 = closure_1_21.call;
+                          const arr2 = typeof call3 === "unknown" ? closure_1_21() : call3(arr);
                           arr = arr2;
                           arr = arr2.push(tmp3);
-                          const tmp15 = outer1_21;
+                          const tmp15 = closure_1_21;
                         }
                         tmp11 = c1;
-                        tmp7 = outer1_35;
+                        tmp7 = closure_1_35;
                       } else {
-                        const call = outer1_21.call;
-                        arr = typeof call === "unknown" ? outer1_21() : call(arr);
+                        const call = closure_1_21.call;
+                        arr = typeof call === "unknown" ? closure_1_21() : call(arr);
                         arr = arr.push(tmp3);
-                        const tmp4 = outer1_21;
+                        const tmp4 = closure_1_21;
                       }
                     };
                     if (typeof call31 === "unknown") {
@@ -1136,12 +1134,12 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                     const call27 = typeError1.call;
                     const fn = (arg0) => {
                       if (!closure_0) {
-                        tmp2(outer1_39(arg0, obj, c1 + 1, arr));
+                        tmp2(closure_1_39(arg0, obj, c1 + 1, arr));
                       } else {
-                        const call = outer1_21.call;
-                        arr = typeof call === "unknown" ? outer1_21() : call(arr);
+                        const call = closure_1_21.call;
+                        arr = typeof call === "unknown" ? closure_1_21() : call(arr);
                         arr = arr.push(tmp3);
-                        const tmp4 = outer1_21;
+                        const tmp4 = closure_1_21;
                       }
                     };
                     if (typeof call27 === "unknown") {

@@ -1,5 +1,5 @@
 // _runtime/01064__onElementTiming.js
-import _slicedToArray from "_slicedToArray";
+import closure_2 from "_slicedToArray" /* 32 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 function _onElementTiming(arg0) {
@@ -19,10 +19,6 @@ function _onElementTiming(arg0) {
     transactionName = currentScope.getScopeData().transactionName;
   }
   const item = entries.forEach((identifier) => {
-    let element;
-    let loadTime;
-    let name;
-    let renderTime;
     if (identifier.identifier) {
       ({ name, renderTime, loadTime } = identifier);
       if (loadTime) {
@@ -37,7 +33,7 @@ function _onElementTiming(arg0) {
         items2 = [tmp(tmp2[2]).timestampInSeconds(), "entry-emission"];
         const tmpResult1 = tmp(tmp2[2]);
       }
-      const tmp4 = outer1_2(items2, 2);
+      const tmp4 = closure_1_2(items2, 2);
       const first = tmp4[0];
       let num3 = 0;
       if ("image-paint" === name) {
@@ -49,13 +45,13 @@ function _onElementTiming(arg0) {
         if (loadTime == null) {
           num5 = 0;
         }
-        num3 = transactionName(outer1_1[1]).msToSec(Math.max(0, num4 - num5));
-        const obj4 = transactionName(outer1_1[1]);
+        num3 = transactionName(closure_1_1[1]).msToSec(Math.max(0, num4 - num5));
+        const obj4 = transactionName(closure_1_1[1]);
       }
       let obj = {};
-      obj[transactionName(outer1_1[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.elementtiming";
-      obj[transactionName(outer1_1[2]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "ui.elementtiming";
-      obj[transactionName(outer1_1[2]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "component";
+      obj[transactionName(closure_1_1[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.elementtiming";
+      obj[transactionName(closure_1_1[2]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "ui.elementtiming";
+      obj[transactionName(closure_1_1[2]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "component";
       obj["sentry.span_start_time_source"] = tmp4[1];
       obj["sentry.transaction_name"] = first;
       ({ id: obj5["element.id"], element } = identifier);
@@ -87,10 +83,10 @@ function _onElementTiming(arg0) {
       obj[0] = "element[" + identifier.identifier + "]";
       obj[1] = obj;
       obj[2] = first;
-      transactionName(outer1_1[2]).startSpan(obj, (end) => {
+      transactionName(closure_1_1[2]).startSpan(obj, (end) => {
         end.end(first + num3);
       });
-      const obj6 = transactionName(outer1_1[2]);
+      const obj6 = transactionName(closure_1_1[2]);
     }
   });
 }

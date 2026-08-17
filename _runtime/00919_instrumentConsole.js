@@ -1,23 +1,24 @@
 // _runtime/00919_instrumentConsole.js
-import { consoleSandbox } from "00824_consoleSandbox.js";
-import { addHandler } from "00850_addHandler.js";
-import { 00821__ } from "metro/00821__.js";
-const require = arg1;
+import _mod821 from "module_821" /* 821 */;
+import consoleSandbox from "consoleSandbox" /* 824 */;
+import addHandler from "addHandler" /* 850 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function instrumentConsole() {
-  if ("console" in 00821__.GLOBAL_OBJ) {
+  if ("console" in _mod821.GLOBAL_OBJ) {
     const CONSOLE_LEVELS = consoleSandbox.CONSOLE_LEVELS;
     const item = CONSOLE_LEVELS.forEach((arg0) => {
       const callback = arg0;
       if (arg0 in callback(table[1]).GLOBAL_OBJ.console) {
         tmp(tmp2[3]).fill(tmp(tmp2[1]).GLOBAL_OBJ.console, arg0, (arg0) => {
-          callback(outer1_1[2]).originalConsoleMethods[callback] = arg0;
+          callback(closure_1_1[2]).originalConsoleMethods[callback] = arg0;
           return () => {
             const items = [...arguments];
-            outer1_0(outer1_1[0]).triggerHandlers("console", { args: items, level: closure_0 });
-            const obj3 = outer1_0(outer1_1[2]).originalConsoleMethods[closure_0];
+            closure_1_0(closure_1_1[0]).triggerHandlers("console", { args: items, level: closure_0 });
+            const obj3 = closure_1_0(closure_1_1[2]).originalConsoleMethods[closure_0];
             if (obj3 != null) {
-              obj3.apply(outer1_0(outer1_1[1]).GLOBAL_OBJ.console, items);
+              obj3.apply(closure_1_0(closure_1_1[1]).GLOBAL_OBJ.console, items);
             }
           };
         });

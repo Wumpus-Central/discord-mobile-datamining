@@ -1,10 +1,11 @@
 // _runtime/01066_instrumentHistory.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { WINDOW } from "01039_WINDOW.js";
-const require = arg1;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import WINDOW2 from "WINDOW" /* 1039 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function instrumentHistory() {
-  const WINDOW = WINDOW.WINDOW;
+  const WINDOW = WINDOW2.WINDOW;
   const listener = WINDOW.addEventListener("popstate", () => {
     const href = callback(table[1]).WINDOW.location.href;
     if (href !== href) {
@@ -17,7 +18,7 @@ function instrumentHistory() {
   });
   if (obj.supportsHistory()) {
     function historyReplacementFunction(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       return function() {
         const items = [...arguments];
         let tmp;
@@ -36,17 +37,17 @@ function instrumentHistory() {
               return tmp;
             }
           })(String(tmp));
-          const outer1_2 = tmp4;
-          if (outer1_2 === tmp4) {
+          closure_2 = tmp4;
+          if (closure_2 === tmp4) {
             return callback.apply(self, items);
           } else {
             const obj = { from: null, to: null };
             obj[0] = tmp2;
             obj[1] = tmp4;
-            callback(outer1_1[0]).triggerHandlers("history", obj);
-            const obj2 = callback(outer1_1[0]);
+            callback(closure_1_1[0]).triggerHandlers("history", obj);
+            const obj2 = callback(closure_1_1[0]);
           }
-          tmp2 = outer1_2;
+          tmp2 = closure_2;
         }
         return callback.apply(self, items);
       };

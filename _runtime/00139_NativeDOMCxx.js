@@ -1,3 +1,5 @@
 // _runtime/00139_NativeDOMCxx.js
+import getAll from "get" /* 30 */;
 
-export default require("get").get("NativeDOMCxx");
+
+export default getAll.get("NativeDOMCxx");

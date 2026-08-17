@@ -1,20 +1,14 @@
 // _runtime/06336_ButtonLink.js
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { createStandardNavigationFactories } from "01501_createStandardNavigationFactories.js";
-import { Color } from "06328_Color.js";
-import { Animated } from "06337_Animated.js";
-import { Text } from "06338_Text.js";
+import noopAll from "noop" /* 19 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import ColorDefault from "Color" /* 6328 */;
+import Animated from "Animated" /* 6337 */;
+import Text from "Text" /* 6338 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-const require = arg1;
+require = arg1;
 function ButtonLink(arg0) {
-  let action;
-  let href;
-  let params;
-  let screen;
   ({ screen, params, action, href } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   let obj = createStandardNavigationFactories;
@@ -25,10 +19,6 @@ function ButtonLink(arg0) {
   return <ButtonBase />;
 }
 function ButtonBase(variant) {
-  let android_ripple;
-  let children;
-  let color;
-  let style;
   let str = variant.variant;
   if (str === undefined) {
     str = "tinted";
@@ -45,10 +35,10 @@ function ButtonBase(variant) {
     let str3 = "transparent";
     let tmp5 = color;
   } else if ("tinted" === str) {
-    const obj4 = Color(color);
-    str3 = Color(color).fade(0.85).string();
+    const obj4 = ColorDefault(color);
+    str3 = ColorDefault(color).fade(0.85).string();
     tmp5 = color;
-    const fadeResult = Color(color).fade(0.85);
+    const fadeResult = ColorDefault(color).fade(0.85);
   } else if ("filled" === str) {
     let str4 = "white";
     if (!obj10.isDark()) {
@@ -58,14 +48,14 @@ function ButtonBase(variant) {
     }
     tmp5 = str4;
     str3 = color;
-    obj10 = Color(color);
+    obj10 = ColorDefault(color);
     tmp9 = importDefault;
   }
   obj = {};
   const merged1 = Object.assign(merged);
   obj = { radius: 40, color: null };
-  const obj8 = Color(tmp5);
-  obj[1] = Color(tmp5).fade(0.85).string();
+  const obj8 = ColorDefault(tmp5);
+  obj[1] = ColorDefault(tmp5).fade(0.85).string();
   const merged2 = Object.assign(android_ripple);
   obj.android_ripple = obj;
   obj.pressOpacity = 1;
@@ -76,6 +66,7 @@ function ButtonBase(variant) {
   obj.children = jsx(Text.Text, { style: items1, children });
   return jsx(Animated.PlatformPressable, { radius: 40, color: null });
 }
+noopAll;
 ({ Platform, StyleSheet } = get_ActivityIndicator);
 const styles = StyleSheet.create({ button: { paddingHorizontal: 24, paddingVertical: 10, borderRadius: 40, borderCurve: "continuous" }, text: { fontSize: 14, lineHeight: 20, letterSpacing: 0.1, textAlign: "center" } });
 

@@ -1,11 +1,11 @@
 // _runtime/01863_forwardRef.js
-import noop from "noop";
-import "noop";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let forwardRef;
 ({ useMemo: c3, forwardRef } = noop);
+noopDefault;
+const jsx = jsxProd.jsx;
 let closure_5 = { code: "function pnpm_indexTsx1(){const{interpolate,progress,closed,opened,enabled,height}=this.__closure;const offset=interpolate(progress.value,[0,1],[closed,opened]);return{transform:[{translateY:enabled?height.value+offset:closed}]};}" };
 
 export default forwardRef((offset, ref) => {

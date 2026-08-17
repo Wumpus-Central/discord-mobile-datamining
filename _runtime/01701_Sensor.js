@@ -1,11 +1,11 @@
 // _runtime/01701_Sensor.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const Sensor = arg1;
 class Sensor {
   constructor(arg0, arg1) {
-    tmp = outer1_2(this, Sensor);
+    tmp = closure_2(this, Sensor);
     this.listenersNumber = 0;
     this.sensorId = null;
     this.sensorType = global;
@@ -27,8 +27,6 @@ const items = [
   {
     key: "register",
     value: function register(arg0) {
-      let config;
-      let sensorType;
       const self = this;
       ({ config, sensorType } = this);
       const ReanimatedModule = Sensor(1662).ReanimatedModule;
@@ -79,4 +77,4 @@ const items = [
   }
 ];
 
-export default _createClass(Sensor, items);
+export default _createClassDefault(Sensor, items);

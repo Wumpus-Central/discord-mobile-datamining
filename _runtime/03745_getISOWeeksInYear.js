@@ -1,7 +1,7 @@
 // _runtime/03745_getISOWeeksInYear.js
-import startOfISOWeekYear from "startOfISOWeekYear";
-import addWeeks from "addWeeks";
-import requiredArgs from "requiredArgs";
+import startOfISOWeekYear from "startOfISOWeekYear" /* 3633 */;
+import addWeeks from "addWeeks" /* 3640 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!startOfISOWeekYear) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!startOfISOWeekYear) {
 } else {
   tmp3 = startOfISOWeekYear;
 }
-let c0 = tmp3;
+startOfISOWeekYear = tmp3;
 if (!addWeeks) {
   obj = { default: null };
   obj[0] = addWeeks;
@@ -18,7 +18,7 @@ if (!addWeeks) {
 } else {
   tmp5 = addWeeks;
 }
-let closure_1 = tmp5;
+addWeeks = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,12 +26,13 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 let c3 = 604800000;
 
 export default function getISOWeeksInYear(arg0) {
-  tmp7.default(1, arguments);
-  const defaultResult1 = tmp3.default(arg0);
-  const defaultResult2 = tmp3.default(tmp5.default(defaultResult1, 60));
-  return Math.round((tmp3.default(tmp5.default(defaultResult1, 60)).valueOf() - defaultResult1.valueOf()) / c3);
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
+  const defaultResult2 = startOfISOWeekYear.default(addWeeks.default(defaultResult1, 60));
+  return Math.round((startOfISOWeekYear.default(addWeeks.default(defaultResult1, 60)).valueOf() - defaultResult1.valueOf()) / c3);
 };
 export default exports.default;

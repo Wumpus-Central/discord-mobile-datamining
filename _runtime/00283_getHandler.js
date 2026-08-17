@@ -1,12 +1,12 @@
 // _runtime/00283_getHandler.js
-import recordTouchStart from "recordTouchStart";
-import { getFabricUIManager } from "00071_getFabricUIManager.js";
-import { SymbolResult1 } from "00134_SymbolResult1.js";
-import { getInstanceHandle } from "00136_getInstanceHandle.js";
-import { _isNativeReflectConstruct } from "00141__isNativeReflectConstruct.js";
-import { _isNativeReflectConstruct } from "00285__isNativeReflectConstruct.js";
+import getFabricUIManager from "getFabricUIManager" /* 71 */;
+import SymbolResult1 from "SymbolResult1" /* 134 */;
+import getInstanceHandle from "getInstanceHandle" /* 136 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 141 */;
+import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 285 */;
+import closure_3 from "recordTouchStart" /* 284 */;
 
-const require = arg1;
+require = arg1;
 function getHandler(arg0, arg1) {
   const tmp = getInstanceHandle.getCurrentProps(arg0)[arg1];
   return typeof tmp === "function" ? tmp : undefined;
@@ -16,7 +16,7 @@ function dispatchResponderEvent(nativeElementReference3, responderEnd, responder
   if (null != registrationName) {
     const tmp4 = getHandler(nativeElementReference3, registrationName);
     if (null != tmp4) {
-      const tmp14 = new _isNativeReflectConstruct(responderEnd, { bubbles: false, cancelable: true }, responderIgnoreScroll, tmp, recordTouchStart.touchHistory);
+      const tmp14 = new _isNativeReflectConstructDefault2(responderEnd, { bubbles: false, cancelable: true }, responderIgnoreScroll, tmp, closure_3.touchHistory);
       let tmp16 = null;
       if (null != self) {
         tmp16 = self;
@@ -31,7 +31,7 @@ function dispatchResponderEvent(nativeElementReference3, responderEnd, responder
       } catch (tmp21) {
         if (!c9) {
           c9 = true;
-          let c8 = tmp21;
+          c8 = tmp21;
         }
       }
       const obj = SymbolResult1;
@@ -50,7 +50,7 @@ let c9 = false;
 export const rethrowCaughtError = function rethrowCaughtError() {
   if (c9) {
     c9 = false;
-    let c8 = null;
+    c8 = null;
     throw c8;
   }
 };
@@ -81,7 +81,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
       }
     }
     let tmp11 = null;
-    if (self instanceof _isNativeReflectConstruct) {
+    if (self instanceof _isNativeReflectConstructDefault) {
       tmp11 = self;
     }
     let tmp12 = null != tmp11;
@@ -135,7 +135,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                 parentElement3 = parentElement3.parentElement;
               } while (null != parentElement3);
             }
-            const tmp34 = new _isNativeReflectConstruct(str13, { bubbles: true, cancelable: true }, responderIgnoreScroll, dependencyMap[str13], recordTouchStart.touchHistory);
+            const tmp34 = new _isNativeReflectConstructDefault2(str13, { bubbles: true, cancelable: true }, responderIgnoreScroll, dependencyMap[str13], closure_3.touchHistory);
             SymbolResult1.setTarget(tmp34, tmp11);
             const phasedRegistrationNames = tmp25.phasedRegistrationNames;
             tmp21 = null;
@@ -368,5 +368,5 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
       }
     }
   }
-  recordTouchStart.recordTouchTrack(arg0, responderIgnoreScroll);
+  closure_3.recordTouchTrack(arg0, responderIgnoreScroll);
 };

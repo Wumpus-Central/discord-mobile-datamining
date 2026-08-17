@@ -1,16 +1,10 @@
 // _runtime/06520_Header.js
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 
 export const Header = importAllResult.memo(function Header(navigation) {
-  let back;
-  let layout;
-  let options;
-  let progress;
-  let route;
-  let styleInterpolator;
   ({ back, options, route } = navigation);
   navigation = navigation.navigation;
   ({ layout, progress, styleInterpolator } = navigation);

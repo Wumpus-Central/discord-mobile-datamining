@@ -1,5 +1,7 @@
 // _runtime/13706_call.js
-if (require("module_13681")) {
+import _mod13681 from "module_13681" /* 13681 */;
+
+if (_mod13681) {
   let fn = call.bind(call);
 } else {
   fn = () => {

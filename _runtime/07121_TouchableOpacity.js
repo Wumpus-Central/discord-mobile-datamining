@@ -1,5 +1,7 @@
 // _runtime/07121_TouchableOpacity.js
+import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
 
-export const TouchableOpacity = require("LegacyBaseButton").TouchableOpacity;
-export const TouchableHighlight = require("LegacyBaseButton").TouchableHighlight;
-export const TouchableWithoutFeedback = require("LegacyBaseButton").TouchableWithoutFeedback;
+
+export const TouchableOpacity = LegacyBaseButton.TouchableOpacity;
+export const TouchableHighlight = LegacyBaseButton.TouchableHighlight;
+export const TouchableWithoutFeedback = LegacyBaseButton.TouchableWithoutFeedback;

@@ -1,5 +1,5 @@
 // _runtime/07826_debugIntegration.js
-import setupIntegration from "setupIntegration";
+import setupIntegration from "setupIntegration" /* 7794 */;
 
 
 export const debugIntegration = setupIntegration.defineIntegration(() => {
@@ -14,9 +14,9 @@ export const debugIntegration = setupIntegration.defineIntegration(() => {
     name: "Debug",
     setup(on) {
       on.on("beforeSendEvent", (arg0, arg1) => {
-        let closure_0 = arg0;
-        let closure_1 = arg1;
-        outer1_0(outer1_1[0]).consoleSandbox(() => {
+        closure_0 = arg0;
+        closure_1 = arg1;
+        closure_1_0(closure_1_1[0]).consoleSandbox(() => {
           const _console = console;
           if (stringify.stringify) {
             const _JSON = JSON;

@@ -1,8 +1,10 @@
 // _runtime/03984_translate.js
+import t from "t" /* 3975 */;
+
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      const _module = require("t");
+      const _module = t;
       const translate2 = function translate(arg0, arg1, arg2) {
         const text = `${arg0} `;
         if ("ss" === arg2) {
@@ -346,45 +348,49 @@ function translate(arg0, arg1, arg2) {
     return text + str3;
   }
 }
-obj = { months: null, monthsShort: null, monthsParseExact: true, weekdays: null, weekdaysShort: null, weekdaysMin: null, weekdaysParseExact: true, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: "%d.", week: null };
-obj[0] = { format: "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split("_"), standalone: "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split("_") };
-obj[1] = "sij._velj._o\u017Eu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_");
-obj[3] = "nedjelja_ponedjeljak_utorak_srijeda_\u010Detvrtak_petak_subota".split("_");
-obj[4] = "ned._pon._uto._sri._\u010Det._pet._sub.".split("_");
-obj[5] = "ne_po_ut_sr_\u010De_pe_su".split("_");
-obj[7] = { LT: "H:mm", LTS: "H:mm:ss", L: "DD.MM.YYYY", LL: "D. MMMM YYYY", LLL: "D. MMMM YYYY H:mm", LLLL: "dddd, D. MMMM YYYY H:mm" };
-obj[8] = {
-  sameDay: "[danas u] LT",
-  nextDay: "[sutra u] LT",
-  nextWeek() {
-    const dayResult = this.day();
-    if (0 === dayResult) {
-      return "[u] [nedjelju] [u] LT";
-    } else if (3 === dayResult) {
-      return "[u] [srijedu] [u] LT";
-    } else if (6 === dayResult) {
-      return "[u] [subotu] [u] LT";
-    } else {
-      return "[u] dddd [u] LT";
-    }
-  },
-  lastDay: "[ju\u010Der u] LT",
-  lastWeek() {
-    const dayResult = this.day();
-    if (0 !== dayResult) {
-      if (3 !== dayResult) {
-        if (6 === dayResult) {
-          return "[pro\u0161le] [subote] [u] LT";
-        } else {
-          return "[pro\u0161li] dddd [u] LT";
+obj = {
+  months: { format: "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split("_"), standalone: "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split("_") },
+  monthsShort: "sij._velj._o\u017Eu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_"),
+  monthsParseExact: true,
+  weekdays: "nedjelja_ponedjeljak_utorak_srijeda_\u010Detvrtak_petak_subota".split("_"),
+  weekdaysShort: "ned._pon._uto._sri._\u010Det._pet._sub.".split("_"),
+  weekdaysMin: "ne_po_ut_sr_\u010De_pe_su".split("_"),
+  weekdaysParseExact: true,
+  longDateFormat: { LT: "H:mm", LTS: "H:mm:ss", L: "DD.MM.YYYY", LL: "D. MMMM YYYY", LLL: "D. MMMM YYYY H:mm", LLLL: "dddd, D. MMMM YYYY H:mm" },
+  calendar: {
+    sameDay: "[danas u] LT",
+    nextDay: "[sutra u] LT",
+    nextWeek() {
+      const dayResult = this.day();
+      if (0 === dayResult) {
+        return "[u] [nedjelju] [u] LT";
+      } else if (3 === dayResult) {
+        return "[u] [srijedu] [u] LT";
+      } else if (6 === dayResult) {
+        return "[u] [subotu] [u] LT";
+      } else {
+        return "[u] dddd [u] LT";
+      }
+    },
+    lastDay: "[ju\u010Der u] LT",
+    lastWeek() {
+      const dayResult = this.day();
+      if (0 !== dayResult) {
+        if (3 !== dayResult) {
+          if (6 === dayResult) {
+            return "[pro\u0161le] [subote] [u] LT";
+          } else {
+            return "[pro\u0161li] dddd [u] LT";
+          }
         }
       }
-    }
-    return "[pro\u0161lu] dddd [u] LT";
+      return "[pro\u0161lu] dddd [u] LT";
+    },
+    sameElse: "L"
   },
-  sameElse: "L"
+  relativeTime: { future: "za %s", past: "prije %s", s: "par sekundi", ss: translate, m: translate, mm: translate, h: translate, hh: translate, d: "dan", dd: translate, M: "mjesec", MM: translate, y: "godinu", yy: translate },
+  dayOfMonthOrdinalParse: /\d{1,2}\./,
+  ordinal: "%d.",
+  week: { dow: 1, doy: 7 }
 };
-obj[9] = { future: "za %s", past: "prije %s", s: "par sekundi", ss: translate, m: translate, mm: translate, h: translate, hh: translate, d: "dan", dd: translate, M: "mjesec", MM: translate, y: "godinu", yy: translate };
-obj[10] = /\d{1,2}\./;
-obj[12] = { dow: 1, doy: 7 };
 moment.defineLocale("hr", obj);

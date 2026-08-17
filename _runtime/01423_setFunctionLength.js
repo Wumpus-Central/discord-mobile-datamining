@@ -1,13 +1,16 @@
 // _runtime/01423_setFunctionLength.js
-import { defineDataProperty } from "01425_defineDataProperty.js";
-import { 00541__ } from "metro/00541__.js";
-import { 00542__ } from "metro/00542__.js";
-let closure_2 = require("hasPropertyDescriptors")();
-let closure_3 = require("getEvalledConstructor")("%Math.floor%");
+import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
+import _mod541 from "module_541" /* 541 */;
+import _mod542 from "module_542" /* 542 */;
+import hasPropertyDescriptors from "hasPropertyDescriptors" /* 1424 */;
+import defineDataProperty from "defineDataProperty" /* 1425 */;
+
+let closure_2 = hasPropertyDescriptors();
+let closure_3 = getEvalledConstructor("%Math.floor%");
 
 export default function setFunctionLength(fn, num) {
   if (typeof fn !== "function") {
-    const tmp25 = new 00541__("`fn` is not a function");
+    const tmp25 = new _mod541("`fn` is not a function");
     throw tmp25;
   } else {
     if (typeof num === "number") {
@@ -19,7 +22,7 @@ export default function setFunctionLength(fn, num) {
             if ("length" in fn) {
               flag = true;
               flag2 = true;
-              if (00542__) {
+              if (_mod542) {
                 const tmp4 = tmp2(542)(fn, "length");
                 let tmp5 = tmp4;
                 if (tmp4) {
@@ -61,7 +64,7 @@ export default function setFunctionLength(fn, num) {
         }
       }
     }
-    const tmp19 = new 00541__("`length` must be a positive 32-bit integer");
+    const tmp19 = new _mod541("`length` must be a positive 32-bit integer");
     throw tmp19;
   }
 };

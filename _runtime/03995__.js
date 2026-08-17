@@ -1,4 +1,6 @@
 // _runtime/03995__.js
+import t from "t" /* 3975 */;
+
 const fn = function _(moment) {
   function relativeTimeWithPlural(arg0, arg1, arg2) {
     if ("m" === arg2) {
@@ -158,7 +160,7 @@ const fn = function _(moment) {
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      fn(require("t"));
+      fn(t);
     }
   }
 }

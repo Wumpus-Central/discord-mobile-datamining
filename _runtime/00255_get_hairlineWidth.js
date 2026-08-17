@@ -1,6 +1,9 @@
 // _runtime/00255_get_hairlineWidth.js
-import { result } from "00026_result.js";
+import resultDefault from "result" /* 26 */;
+import flattenStyleDefault from "flattenStyle" /* 148 */;
+import composeStylesDefault from "composeStyles" /* 256 */;
 import { PixelRatio } from "00087_PixelRatio.js";
+
 const require = arg1;
 let obj = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0 };
 obj = {};
@@ -20,10 +23,10 @@ Object.defineProperty(obj, "hairlineWidth", {
 });
 obj.absoluteFill = obj;
 obj.absoluteFillObject = obj;
-obj.compose = require("composeStyles");
-obj.flatten = require("flattenStyle");
+obj.compose = composeStylesDefault;
+obj.flatten = flattenStyleDefault;
 obj.setStyleAttributePreprocessor = function setStyleAttributePreprocessor(arg0, process) {
-  if (true === result[arg0]) {
+  if (true === resultDefault[arg0]) {
     let obj = { process: null };
     obj[0] = process;
   } else if (typeof tmp(26)[arg0] !== "object") {
@@ -35,7 +38,7 @@ obj.setStyleAttributePreprocessor = function setStyleAttributePreprocessor(arg0,
     const merged = Object.assign(tmp(26)[arg0]);
     obj.process = process;
   }
-  result[arg0] = obj;
+  resultDefault[arg0] = obj;
 };
 obj.create = function create(arg0) {
   return arg0;

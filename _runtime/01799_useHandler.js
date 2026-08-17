@@ -1,21 +1,17 @@
 // _runtime/01799_useHandler.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 import { isJest } from "01657_isJest.js";
 import { isWorkletFunction } from "01679_isWorkletFunction.js";
 import { freezeObjectInDev } from "01684_freezeObjectInDev.js";
 import { isAnimated } from "01800_isAnimated.js";
 
-let c3;
-let obj1;
 ({ useEffect: obj1, useRef: c3 } = noop);
 
 export const useHandler = function useHandler(memoizedGestureCallbacks, items10) {
-  let context;
-  let savedDependencies;
   const tmp = callback2(null);
-  const require = tmp;
+  const _require = tmp;
   if (null === tmp.current) {
-    let obj = freezeObjectInDev;
+    let obj = _freezeObjectInDev;
     obj = { context: null, savedDependencies: null };
     obj[0] = obj.makeShareable({});
     obj[1] = [];
@@ -27,9 +23,9 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
   ({ context, savedDependencies } = tmp.current);
   for (const key10024 in arg0) {
     let tmp13 = key10024;
-    let tmp14 = require;
+    let tmp14 = _require;
     let tmp15 = dependencyMap;
-    let obj8 = isWorkletFunction;
+    let obj8 = _isWorkletFunction;
     if (obj8.isWorkletFunction(arg0[key10024])) {
       continue;
     } else {
@@ -41,13 +37,13 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
       throw reanimatedError;
     }
   }
-  const dependencies = isAnimated.buildDependencies(items10, memoizedGestureCallbacks);
-  const obj3 = isAnimated;
-  const tmp9 = require;
+  const dependencies = _isAnimated.buildDependencies(items10, memoizedGestureCallbacks);
+  const obj3 = _isAnimated;
+  const tmp9 = _require;
   tmp.current.savedDependencies = dependencies;
-  obj = { context, doDependenciesDiffer: !isAnimated.areDependenciesEqual(dependencies, savedDependencies), useWeb: null };
-  const obj4 = isAnimated;
-  let isWebResult = isJest.isWeb();
+  obj = { context, doDependenciesDiffer: !_isAnimated.areDependenciesEqual(dependencies, savedDependencies), useWeb: null };
+  const obj4 = _isAnimated;
+  let isWebResult = _isJest.isWeb();
   if (!isWebResult) {
     isWebResult = tmp9(1657).isJest();
     const tmp9Result = tmp9(1657);

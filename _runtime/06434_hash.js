@@ -1,9 +1,10 @@
 // _runtime/06434_hash.js
-import _slicedToArray from "_slicedToArray";
-import { items2 } from "06435_items2.js";
+import _mod6420 from "module_6420" /* 6420 */;
+import items2 from "items2" /* 6435 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import { 06420__ } from "metro/06420__.js";
 
-const require = arg1;
+require = arg1;
 function hash(str) {
   let num = 5381;
   let num2 = 0;
@@ -25,7 +26,7 @@ let closure_5 = require("n").NativeProxy.updateGestureHandlerConfig;
 let closure_6 = { code: "function pnpm_reanimatedUtilsTs2(sharedValue,configKey){const{hash,baseListenerId,updateGestureHandlerConfig,handlerTag,shouldUseReanimatedDetector}=this.__closure;const keyHash=hash(configKey);const listenerId=baseListenerId+keyHash;sharedValue.addListener(listenerId,function(value){updateGestureHandlerConfig(handlerTag,configKey==='runOnJS'?{dispatchesReanimatedEvents:shouldUseReanimatedDetector&&!value}:{[configKey]:value});});}" };
 let closure_7 = { code: "function pnpm_reanimatedUtilsTs3(){const{maybeSharedValue,listenerId}=this.__closure;maybeSharedValue.removeListener(listenerId);}" };
 function maybeUnpackValue(enabled) {
-  const Reanimated = 06420__.Reanimated;
+  const Reanimated = _mod6420.Reanimated;
   let isSharedValueResult;
   if (Reanimated != null) {
     isSharedValueResult = Reanimated.isSharedValue(enabled);
@@ -40,7 +41,7 @@ maybeUnpackValue.__closure = { Reanimated: require("module_6420").Reanimated };
 maybeUnpackValue.__workletHash = 6251032010993;
 maybeUnpackValue.__initData = { code: "function maybeUnpackValue_Pnpm_reanimatedUtilsTs4(v){const{Reanimated}=this.__closure;var _Reanimated;return(_Reanimated=Reanimated)!==null&&_Reanimated!==void 0&&_Reanimated.isSharedValue(v)?v.value:v;}" };
 function getEnabledSharedValues(Reanimated) {
-  if (undefined === 06420__.Reanimated) {
+  if (undefined === _mod6420.Reanimated) {
     return [];
   } else {
     if (tmpResult.isComposedGesture(Reanimated)) {
@@ -62,17 +63,15 @@ function getEnabledSharedValues(Reanimated) {
 }
 
 export const SHARED_VALUE_OFFSET = 1.618;
-export const bindSharedValues = function bindSharedValues(closure_1, _slicedToArray) {
-  let tmp6;
-  let tmp7;
-  const _require = _slicedToArray;
+export const bindSharedValues = function bindSharedValues(closure_1, closure_2) {
+  const _require = closure_2;
   if (undefined !== _06420__.Reanimated) {
-    const sum = _slicedToArray + c4;
-    const dependencyMap = sum;
+    const sum = closure_2 + c4;
+    dependencyMap = sum;
     const shouldUseReanimatedDetector = closure_1.shouldUseReanimatedDetector;
     const fn = function c(addListener, str) {
-      let closure_0 = str;
-      if (typeof outer1_3 !== "function") {
+      closure_0 = str;
+      if (typeof closure_1_3 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let num = 5381;
@@ -87,8 +86,8 @@ export const bindSharedValues = function bindSharedValues(closure_1, _slicedToAr
       }
       addListener.addListener(closure_1 + (num3 >>> 0), (arg0) => {
         if ("runOnJS" === closure_0) {
-          let tmp4 = outer1_2;
-          if (outer1_2) {
+          let tmp4 = closure_1_2;
+          if (closure_1_2) {
             tmp4 = !arg0;
           }
           let obj = { dispatchesReanimatedEvents: null };
@@ -97,14 +96,14 @@ export const bindSharedValues = function bindSharedValues(closure_1, _slicedToAr
           obj = {};
           obj[tmp3] = arg0;
         }
-        outer2_5(closure_0, obj);
+        closure_2_5(closure_0, obj);
       });
     };
     let obj = { hash: null, baseListenerId: null, updateGestureHandlerConfig: null, handlerTag: null, shouldUseReanimatedDetector: null };
     obj[0] = hash;
     obj[1] = sum;
     obj[2] = closure_5;
-    obj[3] = _slicedToArray;
+    obj[3] = closure_2;
     obj[4] = shouldUseReanimatedDetector;
     fn.__closure = obj;
     fn.__workletHash = 16966290399534;
@@ -134,15 +133,15 @@ export const bindSharedValues = function bindSharedValues(closure_1, _slicedToAr
     }
   }
 };
-export const unbindSharedValues = function unbindSharedValues(closure_1, _slicedToArray) {
+export const unbindSharedValues = function unbindSharedValues(closure_1, closure_2) {
   if (undefined !== _06420__.Reanimated) {
-    _require = _slicedToArray + c4;
+    _require = closure_2 + c4;
     const _Object = Object;
     function _loop(iter) {
       const callback = iter;
       const Reanimated = callback(6420).Reanimated;
       if (Reanimated.isSharedValue(iter)) {
-        if (typeof outer1_3 !== "function") {
+        if (typeof closure_1_3 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let num3 = 5381;
@@ -166,7 +165,7 @@ export const unbindSharedValues = function unbindSharedValues(closure_1, _sliced
         obj[1] = sum;
         fn.__closure = obj;
         fn.__workletHash = 11226855247881;
-        fn.__initData = outer1_7;
+        fn.__initData = closure_1_7;
         Reanimated2.runOnUI(fn)();
       } else {
         return 1;
@@ -177,7 +176,7 @@ export const unbindSharedValues = function unbindSharedValues(closure_1, _sliced
     while (tmp7 !== undefined) {
       let tmp11 = callback;
       let tmp12 = callback(tmp9, 2);
-      let dependencyMap = tmp12[0];
+      dependencyMap = tmp12[0];
       let _loopResult = _loop(tmp12[1]);
       continue;
     }

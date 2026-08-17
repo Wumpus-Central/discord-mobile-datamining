@@ -1,17 +1,12 @@
 // _runtime/04703_FullWindowOverlay.js
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-let c0;
-let closure_1;
+noopDefault;
 ({ Platform, StyleSheet, View: c0, useWindowDimensions: closure_1 } = get_ActivityIndicator);
 
 export default function FullWindowOverlay(arg0) {
-  let height;
-  let width;
   ({ width, height } = callback());
   console.warn("Using FullWindowOverlay is only valid on iOS devices.");
   const merged = Object.assign(arg0);

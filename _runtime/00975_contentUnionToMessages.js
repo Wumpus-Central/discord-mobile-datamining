@@ -1,6 +1,7 @@
 // _runtime/00975_contentUnionToMessages.js
-import { 00974__ } from "metro/00974__.js";
-const require = arg1;
+import _mod974 from "module_974" /* 974 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 function contentUnionToMessages(contents, user) {
@@ -17,7 +18,7 @@ function contentUnionToMessages(contents, user) {
   } else {
     const _Array = Array;
     if (Array.isArray(contents)) {
-      flatMapResult = contents.flatMap((arg0) => outer1_2(arg0, str));
+      flatMapResult = contents.flatMap((arg0) => closure_1_2(arg0, str));
     } else {
       if (typeof contents === "object") {
         if (contents) {
@@ -49,13 +50,13 @@ arg5.isStreamingMethod = function isStreamingMethod(arr) {
   return arr.includes("Stream");
 };
 arg5.shouldInstrument = function shouldInstrument(str) {
-  const GOOGLE_GENAI_INSTRUMENTED_METHODS = 00974__.GOOGLE_GENAI_INSTRUMENTED_METHODS;
+  const GOOGLE_GENAI_INSTRUMENTED_METHODS = _mod974.GOOGLE_GENAI_INSTRUMENTED_METHODS;
   if (GOOGLE_GENAI_INSTRUMENTED_METHODS.includes(str)) {
     return true;
   } else {
     const parts = str.split(".");
-    const GOOGLE_GENAI_INSTRUMENTED_METHODS2 = tmp(974).GOOGLE_GENAI_INSTRUMENTED_METHODS;
+    const GOOGLE_GENAI_INSTRUMENTED_METHODS2 = _mod974.GOOGLE_GENAI_INSTRUMENTED_METHODS;
     return GOOGLE_GENAI_INSTRUMENTED_METHODS2.includes(parts.pop());
   }
-  tmp = require;
+  const tmp = require;
 };

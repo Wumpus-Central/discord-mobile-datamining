@@ -1,6 +1,8 @@
 // _runtime/01589_StaticContainer.js
+import noopAll from "noop" /* 19 */;
 
-export const StaticContainer = require("noop").memo(function StaticContainer(children) {
+
+export const StaticContainer = noopAll.memo(function StaticContainer(children) {
   return children.children;
 }, (arg0, arg1) => {
   const keys = Object.keys(arg0);

@@ -1,8 +1,6 @@
 // _runtime/04682_isSearchBarAvailableForCurrentPlatform.js
-import get_ActivityIndicator from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let Platform;
-let c0;
 ({ BackHandler: c0, Platform } = get_ActivityIndicator);
 const items = ["ios", "android"];
 

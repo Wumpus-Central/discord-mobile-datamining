@@ -1,6 +1,7 @@
 // _runtime/07037_isNewArch.js
-import { Platform } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const Platform = get_ActivityIndicator.Platform;
 
 export const isNewArch = function isNewArch() {
   if (undefined !== c1) {

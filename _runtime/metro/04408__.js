@@ -1,8 +1,12 @@
 // _runtime/metro/04408__.js
-let closure_0 = require("callBoundIntrinsic")("Object.prototype.toString");
-if (require("_Symbol")()) {
-  let closure_1 = require("callBoundIntrinsic")("Symbol.prototype.toString");
-  let closure_2 = require("regexTester")(/^Symbol\(.*\)$/);
+import _Symbol from "_Symbol" /* 544 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import regexTester from "regexTester" /* 1414 */;
+
+let closure_0 = callBoundIntrinsic("Object.prototype.toString");
+if (_Symbol()) {
+  let closure_1 = callBoundIntrinsic("Symbol.prototype.toString");
+  let closure_2 = regexTester(/^Symbol\(.*\)$/);
   module.exports = function isSymbol(obj) {
     if (typeof obj === "symbol") {
       return true;

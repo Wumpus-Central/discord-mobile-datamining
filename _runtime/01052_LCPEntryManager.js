@@ -1,6 +1,6 @@
 // _runtime/01052_LCPEntryManager.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import LCPEntryManager from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class LCPEntryManager {
@@ -9,7 +9,6 @@ class LCPEntryManager {
     return;
   }
 }
-_classCallCheck = LCPEntryManager;
 const items = [
   {
     key: "_processEntry",

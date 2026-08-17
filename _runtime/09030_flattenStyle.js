@@ -57,8 +57,8 @@ export default function DeprecatedStyleSheetPropType(arg0) {
                       tmp6 = obj;
                       if (0 < length2) {
                         do {
-                          let tmp7 = outer1_2;
-                          let tmp8 = outer1_2(arr2[num4]);
+                          let tmp7 = closure_1_2;
+                          let tmp8 = closure_1_2(arr2[num4]);
                           let tmp9 = num4;
                           if (tmp8) {
                             let tmp10 = tmp8;

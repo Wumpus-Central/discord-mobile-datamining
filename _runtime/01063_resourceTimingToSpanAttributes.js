@@ -1,6 +1,7 @@
 // _runtime/01063_resourceTimingToSpanAttributes.js
-import { extractNetworkProtocol } from "01059_extractNetworkProtocol.js";
-const require = arg1;
+import extractNetworkProtocol from "extractNetworkProtocol" /* 1059 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.resourceTimingToSpanAttributes = function resourceTimingToSpanAttributes(nextHopProtocol) {
@@ -166,7 +167,6 @@ arg5.resourceTimingToSpanAttributes = function resourceTimingToSpanAttributes(ne
     const _Object2 = Object;
     const entries = Object.entries(obj);
     let fromEntriesResult = Object.fromEntries(entries.filter((arg0) => {
-      let tmp;
       [, tmp] = arg0;
       return null != tmp;
     }));

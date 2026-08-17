@@ -1,6 +1,7 @@
 // _runtime/01015_breadcrumbFromObject.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-const require = arg1;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.DEFAULT_BREADCRUMB_LEVEL = "info";
 arg5.breadcrumbFromObject = function breadcrumbFromObject(type) {

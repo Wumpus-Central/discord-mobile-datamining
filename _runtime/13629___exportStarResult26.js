@@ -1,13 +1,11 @@
 // _runtime/13629___exportStarResult26.js
-import { getMultiInternalSlots } from "13582_getMultiInternalSlots.js";
-import { __exportStarResult3 } from "13585___exportStarResult3.js";
-import { __exportStarResult4 } from "13587___exportStarResult4.js";
-const require = arg1;
+import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
+import __exportStarResult3 from "__exportStarResult3" /* 13585 */;
+import __exportStarResult4 from "__exportStarResult4" /* 13587 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(internalSlots, result1, minimumFractionDigits, arg3, GetOptionResult1) {
-  let maximumFractionDigits;
-  let maximumSignificantDigits;
-  let minimumSignificantDigits;
   let tmp = arg3;
   ({ minimumFractionDigits, maximumFractionDigits, minimumSignificantDigits, maximumSignificantDigits } = result1);
   internalSlots.minimumIntegerDigits = __exportStarResult3.GetNumberOption(result1, "minimumIntegerDigits", 1, 21, 1);

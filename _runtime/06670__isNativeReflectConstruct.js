@@ -1,14 +1,16 @@
 // _runtime/06670__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
-import extractFont from "extractFont";
-import { extractProps } from "06586_extractProps.js";
-import { extractFont } from "06593_extractFont.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/06671___INTERNAL_VIEW_CONFIG.js";
+import noopAll from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import extractPropsDefault from "extractProps" /* 6586 */;
+import extractFontDefault from "extractFont" /* 6593 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6671 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import { jsx } from "jsxProd" /* 21 */;
+import extractFont from "extractFont" /* 6593 */;
 
 const TSpan = arg1;
 function _isNativeReflectConstruct() {
@@ -22,24 +24,25 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+noopAll;
 class TSpan {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_3(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_5;
+    obj = closure_5(closure_0);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -48,28 +51,28 @@ class TSpan {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.setNativeProps = (matrix) => {
       matrix = matrix.matrix;
       let tmp = !matrix;
       if (!matrix) {
-        tmp = outer1_1(outer1_2[7])(matrix);
+        tmp = closure_1_1(closure_1_2[7])(matrix);
       }
       if (tmp) {
         matrix.matrix = tmp;
       }
-      const propsAndStylesResult = _undefined(outer1_2[8]).propsAndStyles(matrix);
-      const obj = _undefined(outer1_2[8]);
-      const merged = Object.assign(propsAndStylesResult, _undefined(outer1_2[9]).pickNotNil(outer1_1(outer1_2[10])(propsAndStylesResult, false)));
-      if (_undefined.root) {
-        const root = _undefined.root;
+      const propsAndStylesResult = lib(closure_1_2[8]).propsAndStyles(matrix);
+      const obj = lib(closure_1_2[8]);
+      const merged = Object.assign(propsAndStylesResult, lib(closure_1_2[9]).pickNotNil(closure_1_1(closure_1_2[10])(propsAndStylesResult, false)));
+      if (lib.root) {
+        const root = lib.root;
         root.setNativeProps(propsAndStylesResult);
       }
     };
     return tmp3Result;
   }
 }
-require("_inherits")(TSpan, require("_isNativeReflectConstruct"));
+_inheritsDefault(TSpan, _isNativeReflectConstructDefault);
 let items = [
   {
     key: "render",
@@ -80,13 +83,13 @@ let items = [
       const merged = Object.assign(propsAndStylesResult);
       obj.x = null;
       obj.y = null;
-      const tmp2Result = extractProps(obj, this);
-      const merged1 = Object.assign(tmp2Result, extractFont(propsAndStylesResult, false));
+      const tmp2Result = extractPropsDefault(obj, this);
+      const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
       tmp2Result.ref = this.refMethod;
       obj = {};
-      const tmp2 = extractProps;
+      const tmp2 = extractPropsDefault;
       const merged2 = Object.assign(tmp2Result);
-      return jsx(__INTERNAL_VIEW_CONFIG, {});
+      return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
     }
   }
 ];

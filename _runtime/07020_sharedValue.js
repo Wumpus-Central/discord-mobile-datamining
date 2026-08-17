@@ -1,14 +1,10 @@
 // _runtime/07020_sharedValue.js
-import noop from "noop";
-import "noop";
-import jsxProd from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-let obj1;
 ({ useCallback: obj1, useMemo: c3, useRef: c4 } = noop);
+noopDefault;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 
 export default function _default(children) {
@@ -19,8 +15,8 @@ export default function _default(children) {
   let callback3;
   let callback4;
   let callback5;
-  let c7;
-  let c8;
+  closure_7 = undefined;
+  closure_8 = undefined;
   let obj = sharedValue(sharedValue1[2]);
   sharedValue = obj.useSharedValue(sharedValue(sharedValue1[3]).INITIAL_CONTAINER_HEIGHT);
   sharedValue1 = sharedValue(sharedValue1[2]).useSharedValue(sharedValue(sharedValue1[3]).INITIAL_CONTAINER_OFFSET);
@@ -28,7 +24,7 @@ export default function _default(children) {
   callback = tmp3;
   callback2 = callback3([]);
   const tmp4 = callback((arg0, current) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     current = closure_3.current;
     const substr = current.slice();
     const findIndexResult = substr.findIndex((key) => key.key === closure_0);
@@ -74,7 +70,7 @@ export default function _default(children) {
   }, []);
   callback3 = tmp4;
   let tmp5 = callback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     let current = closure_3.current;
     const substr = current.slice();
     const findIndexResult = substr.findIndex((key) => key.key === closure_0);
@@ -102,7 +98,7 @@ export default function _default(children) {
   }, []);
   callback4 = tmp5;
   const tmp6 = callback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     let current = closure_3.current;
     const substr = current.slice();
     const findIndexResult = substr.findIndex((key) => key.key === closure_0);
@@ -122,7 +118,7 @@ export default function _default(children) {
   }, []);
   callback5 = tmp6;
   let tmp7 = callback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     let current = closure_3.current;
     if (arg0) {
       let found = current.find((key) => key.key === closure_0);
@@ -143,7 +139,7 @@ export default function _default(children) {
     }
     return flag;
   }, []);
-  c7 = tmp7;
+  closure_7 = tmp7;
   let tmp8 = callback(() => {
     let current = closure_3.current;
     const mapped = current.map((ref) => {
@@ -155,13 +151,13 @@ export default function _default(children) {
       }
     });
   }, []);
-  c8 = tmp8;
+  closure_8 = tmp8;
   const items = [tmp7, tmp8];
   const items1 = [tmp3, sharedValue, sharedValue1, tmp4, tmp5, tmp6];
   const obj2 = sharedValue(sharedValue1[2]);
-  const tmp9 = callback2(() => ({ dismiss: c7, dismissAll: c8 }), items);
+  const tmp9 = callback2(() => ({ dismiss: closure_7, dismissAll: closure_8 }), items);
   obj = { value: tmp9, children: null };
-  obj = { value: callback2(() => ({ hostName: c2, containerHeight: sharedValue, containerOffset: sharedValue1, mountSheet: c4, unmountSheet: c5, willUnmountSheet: c6 }), items1), children: null };
+  obj = { value: callback2(() => ({ hostName: closure_2, containerHeight: sharedValue, containerOffset: sharedValue1, mountSheet: closure_4, unmountSheet: closure_5, willUnmountSheet: closure_6 }), items1), children: null };
   const items2 = [callback4(sharedValue(sharedValue1[7]).BottomSheetHostingContainer, { containerOffset: sharedValue1, containerHeight: sharedValue }), callback4(sharedValue(sharedValue1[8]).PortalProvider, { rootHostName: tmp3, children: children.children })];
   obj[1] = items2;
   obj[1] = callback5(sharedValue(sharedValue1[6]).BottomSheetModalInternalProvider, obj);

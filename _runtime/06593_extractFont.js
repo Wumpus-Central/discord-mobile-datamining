@@ -1,28 +1,12 @@
 // _runtime/06593_extractFont.js
-import "noop";
-import { Children } from "noop";
-import { jsx } from "jsxProd";
-import { pickNotNil } from "06587_pickNotNil.js";
-import { extractLengthList } from "06592_extractLengthList.js";
+import noopAll from "noop" /* 19 */;
+import pickNotNil from "pickNotNil" /* 6587 */;
+import extractLengthListDefault from "extractLengthList" /* 6592 */;
+import { Children } from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 function extractFont(propsAndStylesResult) {
-  let font;
-  let fontData;
-  let fontFamily;
-  let fontFeatureSettings;
-  let fontSize;
-  let fontStretch;
-  let fontStyle;
-  let fontVariant;
-  let fontVariantLigatures;
-  let fontVariationSettings;
-  let fontWeight;
-  let kerning;
-  let letterSpacing;
-  let textAnchor;
-  let textDecoration;
-  let wordSpacing;
   ({ fontFamily, fontFeatureSettings, font } = propsAndStylesResult);
   ({ fontData, fontStyle, fontVariant, fontWeight, fontStretch, fontSize, textAnchor, textDecoration, letterSpacing, wordSpacing, kerning, fontVariantLigatures, fontVariationSettings } = propsAndStylesResult);
   let obj = pickNotNil;
@@ -63,7 +47,7 @@ function extractFont(propsAndStylesResult) {
     if (!num) {
       num = 12;
     }
-    const obj1 = { fontSize: null, fontWeight: null, fontStyle: null, fontFamily: null };
+    obj1 = { fontSize: null, fontWeight: null, fontStyle: null, fontFamily: null };
     obj1[0] = num;
     let str4 = "normal";
     let str5 = "normal";
@@ -98,6 +82,7 @@ function getChild(str) {
   }
   return tmp4;
 }
+noopAll;
 const re6 = /^\s*((?:(?:normal|bold|italic)\s+)*)(?:(\d+(?:\.\d+)?(?:%|px|em|pt|pc|mm|cm|in]))*(?:\s*\/.*?)?\s+)?\s*"?([^"]*)/i;
 const re7 = /^[\s"']*/;
 const re8 = /[\s"']*$/;
@@ -129,11 +114,11 @@ export default function extractText(children) {
     obj[4] = tmp8;
     obj[5] = tmp9;
     obj[6] = extractFont(children);
-    obj[7] = extractLengthList(tmp);
-    obj[8] = extractLengthList(tmp2);
-    obj[9] = extractLengthList(tmp3);
-    obj[10] = extractLengthList(tmp4);
-    obj[11] = extractLengthList(tmp5);
+    obj[7] = extractLengthListDefault(tmp);
+    obj[8] = extractLengthListDefault(tmp2);
+    obj[9] = extractLengthListDefault(tmp3);
+    obj[10] = extractLengthListDefault(tmp4);
+    obj[11] = extractLengthListDefault(tmp5);
     return obj;
   }
   let tmp13 = null;
@@ -147,5 +132,5 @@ export default function extractText(children) {
 };
 export { extractFont };
 export function setTSpan(importDefaultResultResult) {
-  let closure_3 = importDefaultResultResult;
+  closure_3 = importDefaultResultResult;
 }

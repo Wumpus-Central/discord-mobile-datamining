@@ -24,7 +24,7 @@ arg5.formatConsoleArgs = function formatConsoleArgs(args, arg1, arg2) {
     return applyResult;
   }
   _require = arg1;
-  const dependencyMap = arg2;
+  dependencyMap = arg2;
   const mapped = args.map((arg0) => {
     if (obj.isPrimitive(arg0)) {
       const _String = String;
@@ -42,8 +42,8 @@ arg5.hasConsoleSubstitutions = function hasConsoleSubstitutions(arg0) {
   return /%[sdifocO]/.test(arg0);
 };
 arg5.safeJoinConsoleArgs = function safeJoinConsoleArgs(arr) {
-  let closure_0 = arg1;
-  let closure_1 = arg2;
+  closure_0 = arg1;
+  closure_1 = arg2;
   const mapped = arr.map((arg0) => {
     if (obj.isPrimitive(arg0)) {
       const _String = String;

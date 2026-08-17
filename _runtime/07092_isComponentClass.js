@@ -1,5 +1,5 @@
 // _runtime/07092_isComponentClass.js
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 
 export const isComponentClass = (fn) => {

@@ -1,6 +1,7 @@
 // _runtime/00890_convertSpanJsonToTransactionEvent.js
-import { 00839__ } from "metro/00839__.js";
-const require = arg1;
+import _mod839 from "module_839" /* 839 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.convertSpanJsonToTransactionEvent = function convertSpanJsonToTransactionEvent(beforeSendSpanResult) {
@@ -10,15 +11,15 @@ arg5.convertSpanJsonToTransactionEvent = function convertSpanJsonToTransactionEv
   const merged = Object.assign(beforeSendSpanResult.data);
   let profile_id = beforeSendSpanResult.profile_id;
   if (profile_id) {
-    const obj1 = {};
-    obj1[00839__.SEMANTIC_ATTRIBUTE_PROFILE_ID] = beforeSendSpanResult.profile_id;
+    obj1 = {};
+    obj1[_mod839.SEMANTIC_ATTRIBUTE_PROFILE_ID] = beforeSendSpanResult.profile_id;
     profile_id = obj1;
   }
   const merged1 = Object.assign(profile_id);
   let exclusive_time = beforeSendSpanResult.exclusive_time;
   if (exclusive_time) {
     const obj2 = {};
-    obj2[00839__.SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME] = beforeSendSpanResult.exclusive_time;
+    obj2[_mod839.SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME] = beforeSendSpanResult.exclusive_time;
     exclusive_time = obj2;
   }
   const obj3 = { trace: null };
@@ -30,13 +31,6 @@ arg5.convertSpanJsonToTransactionEvent = function convertSpanJsonToTransactionEv
   return obj;
 };
 arg5.convertTransactionEventToSpanJson = function convertTransactionEventToSpanJson(contexts) {
-  let data;
-  let op;
-  let origin;
-  let parent_span_id;
-  let span_id;
-  let status;
-  let trace_id;
   contexts = contexts.contexts;
   let trace;
   if (contexts != null) {
@@ -70,12 +64,12 @@ arg5.convertTransactionEventToSpanJson = function convertTransactionEventToSpanJ
   obj[9] = origin;
   let tmp;
   if (data != null) {
-    tmp = data[require(undefined, 839).SEMANTIC_ATTRIBUTE_PROFILE_ID];
+    tmp = data[_mod839.SEMANTIC_ATTRIBUTE_PROFILE_ID];
   }
   obj[10] = tmp;
   let tmp4;
   if (data != null) {
-    tmp4 = data[require(undefined, 839).SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME];
+    tmp4 = data[_mod839.SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME];
   }
   obj[11] = tmp4;
   obj[12] = contexts.measurements;

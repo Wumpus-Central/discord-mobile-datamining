@@ -5,8 +5,8 @@ const dependencyMap = arg6;
 let c3 = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
 let c4 = "6ba7b811-9dad-11d1-80b4-00c04fd430c8";
 arg5.default = function v35(name) {
-  let closure_0 = arg1;
-  let closure_1 = arg2;
+  closure_0 = arg1;
+  closure_1 = arg2;
   function generateUUID(str, str2) {
     let arr = str;
     if (typeof str === "string") {
@@ -27,7 +27,7 @@ arg5.default = function v35(name) {
     }
     let arr2 = str2;
     if (typeof str2 === "string") {
-      arr2 = callback2(outer1_2[0])(str2);
+      arr2 = callback2(closure_1_2[0])(str2);
     }
     length = undefined;
     if (null !== arr2) {
@@ -58,7 +58,7 @@ arg5.default = function v35(name) {
         } while (num4 < 16);
         return arg2;
       } else {
-        return callback(outer1_2[1]).unsafeStringify(tmp17);
+        return callback(closure_1_2[1]).unsafeStringify(tmp17);
       }
     }
   }

@@ -1,9 +1,7 @@
 // _runtime/01675_valueUnpacker.js
 const global = arg0;
 function valueUnpacker(__workletHash) {
-  let __handleCache;
-  let __workletsCache;
-  let closure_0 = arg2;
+  closure_0 = arg2;
   ({ __workletsCache, __handleCache } = closure_0);
   if (undefined === __workletsCache) {
     const _Map = Map;
@@ -60,7 +58,7 @@ function valueUnpacker(__workletHash) {
         const _HermesInternal = HermesInternal;
         str = "function `" + tmp + "`";
       }
-      const error = new Error("[Reanimated] Tried to synchronously call a non-worklet " + str + " on the UI thread.\nSee https://docs.swmansion.com/react-native-reanimated/docs/guides/troubleshooting#tried-to-synchronously-call-a-non-worklet-function-on-the-ui-thread for more details.");
+      error = new Error("[Reanimated] Tried to synchronously call a non-worklet " + str + " on the UI thread.\nSee https://docs.swmansion.com/react-native-reanimated/docs/guides/troubleshooting#tried-to-synchronously-call-a-non-worklet-function-on-the-ui-thread for more details.");
       throw error;
     }
     fun.__remoteFunction = __workletHash;
@@ -68,7 +66,7 @@ function valueUnpacker(__workletHash) {
   } else {
     const _Error = Error;
     let _HermesInternal = HermesInternal;
-    let error = new Error("[Reanimated] Data type in category \"" + arg1 + "\" not recognized by value unpacker: \"" + globalThis._toString(__workletHash) + "\".");
+    error = new Error("[Reanimated] Data type in category \"" + arg1 + "\" not recognized by value unpacker: \"" + globalThis._toString(__workletHash) + "\".");
     throw error;
   }
 }

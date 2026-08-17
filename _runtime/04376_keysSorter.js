@@ -3,7 +3,7 @@ import { 04378__ } from "metro/04378__.js";
 const require = arg1;
 let dependencyMap = arg6;
 function keysSorter(arr) {
-  let closure_0 = arr;
+  closure_0 = arr;
   if (Array.isArray(arr)) {
     let sorted = arr.sort();
   } else {
@@ -36,7 +36,7 @@ arg5.parse = (str) => {
     };
   } else {
     fn = "bracket" === arrayFormat ? ((str) => {
-      let closure_0 = /(\[\])$/.exec(str);
+      closure_0 = /(\[\])$/.exec(str);
       const replaced = str.replace(/\[\]$/, "");
       if (closure_0) {
         if (undefined !== arg2[replaced]) {
@@ -103,9 +103,9 @@ arg5.parse = (str) => {
                     sorted1 = keys;
                     if (typeof keys === "object") {
                       const _Object2 = Object;
-                      const sorted2 = outer1_2(Object.keys(keys)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
+                      const sorted2 = closure_1_2(Object.keys(keys)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
                       sorted1 = sorted2.map((arg0) => keys[arg0]);
-                      const obj3 = outer1_2(Object.keys(keys));
+                      const obj3 = closure_1_2(Object.keys(keys));
                     }
                   }
                   keys = sorted1.sort((arg0, arg1) => Number(arg0) - Number(arg1));
@@ -127,7 +127,7 @@ arg5.parse = (str) => {
 };
 arg5.stringify = (arg0, arg1) => {
   let _require = arg0;
-  let dependencyMap = arg1;
+  dependencyMap = arg1;
   const tmp = _04378__({ encode: true, strict: true, arrayFormat: "none" }, arg1);
   dependencyMap = tmp;
   _require = tmp;
@@ -256,7 +256,7 @@ arg5.stringify = (arg0, arg1) => {
           const substr = arr.slice();
           const item = substr.forEach((arg0) => {
             if (undefined !== arg0) {
-              items.push(outer1_2(closure_0, arg0, items.length));
+              items.push(closure_1_2(closure_0, arg0, items.length));
             }
           });
           return items.join("&");

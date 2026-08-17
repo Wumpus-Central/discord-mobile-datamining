@@ -1,9 +1,10 @@
 // _runtime/04710_TabsAccessory.js
-import "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/04711___INTERNAL_VIEW_CONFIG.js";
+import noopDefault from "noop" /* 19 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4711 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
+noopDefault;
 
 export default function TabsAccessory(style) {
   const obj = {};
@@ -11,5 +12,5 @@ export default function TabsAccessory(style) {
   obj.collapsable = false;
   const items = [style.style, StyleSheet.absoluteFill];
   obj.style = items;
-  return jsx(__INTERNAL_VIEW_CONFIG, {});
+  return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
 };

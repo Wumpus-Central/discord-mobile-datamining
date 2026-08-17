@@ -1,12 +1,13 @@
 // _runtime/12637__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import { jsx } from "jsxProd";
-import importDefaultResult2 from "noop";
+import emptyFunctionDefault from "emptyFunction" /* 4205 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import closure_5 from "_possibleConstructorReturn" /* 93 */;
+import closure_6 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importDefaultResult2 from "noop" /* 19 */;
 
 let Link = arg1;
 function _isNativeReflectConstruct() {
@@ -20,10 +21,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -33,12 +34,12 @@ class Link {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_4(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_6;
+    obj = closure_6(closure_0);
+    tmp3 = closure_5;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -47,10 +48,10 @@ class Link {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.handlePress = (defaultPrevented, str) => {
-      if (_undefined.props.onPress) {
-        const props = tmp.props;
+      if (props.props.onPress) {
+        props = tmp.props;
         props.onPress(defaultPrevented);
       }
       if (!defaultPrevented.defaultPrevented) {
@@ -65,26 +66,23 @@ class Link {
     return tmp3Result;
   }
 }
-importDefaultResult1(Link, require("noop").Component);
+importDefaultResult1(Link, importDefaultResult2.Component);
 let obj = {
   key: "render",
   value: function render() {
-    let dependencyMap;
-    let replace;
-    let to;
     const self = this;
     const props = this.props;
     ({ component: dependencyMap, to, replace } = props);
-    const Link = callback(props, self);
+    Link = callback(props, self);
     return jsx(Link(4208).__HistoryContext.Consumer, {
       children(arg0) {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         const obj = {};
         const merged = Object.assign(closure_0);
         obj.onPress = function onPress(arg0) {
-          return outer1_2.handlePress(arg0, closure_0);
+          return closure_1_2.handlePress(arg0, closure_0);
         };
-        return outer1_7(closure_1, obj);
+        return closure_1_7(closure_1, obj);
       }
     });
   }
@@ -92,9 +90,9 @@ let obj = {
 let items = [obj];
 const importDefaultResultResult = importDefaultResult(Link, items);
 importDefaultResultResult.defaultProps = { component: require("get ActivityIndicator").TouchableHighlight, replace: false };
-obj = { onPress: require("emptyFunction").func, component: require("emptyFunction").elementType, replace: require("emptyFunction").bool, to: null };
-let items1 = [require("emptyFunction").string, require("emptyFunction").object];
-obj[3] = require("emptyFunction").oneOfType(items1);
+obj = { onPress: emptyFunctionDefault.func, component: emptyFunctionDefault.elementType, replace: emptyFunctionDefault.bool, to: null };
+let items1 = [emptyFunctionDefault.string, emptyFunctionDefault.object];
+obj[3] = emptyFunctionDefault.oneOfType(items1);
 importDefaultResultResult.propTypes = obj;
 
 export default importDefaultResultResult;

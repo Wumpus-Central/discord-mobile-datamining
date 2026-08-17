@@ -1,15 +1,13 @@
 // _runtime/01178_createUserFeedbackEnvelope.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-const require = arg1;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.header = 0;
 arg5.items = 1;
 arg5.createUserFeedbackEnvelope = function createUserFeedbackEnvelope(event_id, tunnel) {
-  let dsn;
-  let metadata;
   ({ metadata, dsn } = tunnel);
-  let obj = { event_id: event_id.event_id, sent_at: null };
-  obj[1] = new Date().toISOString();
+  let obj = { event_id: event_id.event_id, sent_at: new Date().toISOString() };
   let sdk;
   if (null != metadata) {
     sdk = metadata.sdk;
@@ -28,7 +26,7 @@ arg5.createUserFeedbackEnvelope = function createUserFeedbackEnvelope(event_id, 
     tunnel = dsn;
   }
   if (tunnel) {
-    const obj1 = { dsn: null };
+    obj1 = { dsn: null };
     obj1[0] = registerSpanErrorInstrumentation.dsnToString(dsn);
     tunnel = obj1;
     const obj6 = registerSpanErrorInstrumentation;

@@ -10,5 +10,6 @@ arg5.default = function _default() {
   ${error2.stack}`);
     }
   }
+  error = console.error;
   error.apply(console, items);
 };

@@ -1,6 +1,6 @@
 // _runtime/03837_isToday.js
-import isSameDay from "isSameDay";
-import requiredArgs from "requiredArgs";
+import isSameDay from "isSameDay" /* 3653 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!isSameDay) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!isSameDay) {
 } else {
   tmp3 = isSameDay;
 }
-let c0 = tmp3;
+isSameDay = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,10 +17,10 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function isToday(arg0) {
-  tmp5.default(1, arguments);
-  return tmp3.default(arg0, Date.now());
+  requiredArgs.default(1, arguments);
+  return isSameDay.default(arg0, Date.now());
 };
 export default exports.default;

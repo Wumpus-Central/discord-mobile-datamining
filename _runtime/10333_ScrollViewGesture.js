@@ -1,6 +1,6 @@
 // _runtime/10333_ScrollViewGesture.js
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 require("noop").useCallback;
@@ -22,10 +22,6 @@ let closure_20 = { code: "function pnpm_ScrollViewGestureTsx15(e,_success){const
 let closure_21 = { code: "function pnpm_ScrollViewGestureTsx16(e){const{updateContainerSize}=this.__closure;updateContainerSize({width:e.nativeEvent.layout.width,height:e.nativeEvent.layout.height});}" };
 
 export const ScrollViewGesture = function ScrollViewGesture(testID) {
-  let enabled;
-  let onConfigurePanGesture;
-  let onTouchBegin;
-  let onTouchEnd;
   let obj = vertical(snapEnabled[2]);
   const globalState = obj.useGlobalState();
   const props = globalState.props;
@@ -73,8 +69,8 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
   const sharedValue5 = vertical(snapEnabled[3]).useSharedValue(0);
   const tmpResult5 = vertical(snapEnabled[3]);
   const animatedRef = vertical(snapEnabled[3]).useAnimatedRef();
-  let closure_25 = tmp12;
-  let closure_26 = tmp13;
+  closure_25 = tmp12;
+  closure_26 = tmp13;
   class P {
     constructor() {
       if (!loop) {
@@ -83,8 +79,8 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
           tmp2 = vertical;
           tmp3 = snapEnabled;
           obj = vertical(snapEnabled[3]);
-          tmp4 = useDerivedValue;
-          measureResult = obj.measure(useDerivedValue);
+          tmp4 = closure_24;
+          measureResult = obj.measure(closure_24);
           tmp6 = null;
           num = undefined;
           if (measureResult != null) {
@@ -128,8 +124,8 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
           tmp = onFinished;
         }
         if (tmp) {
-          onFinished(outer1_2[3]).runOnJS(onFinished)();
-          const obj = onFinished(outer1_2[3]);
+          onFinished(closure_1_2[3]).runOnJS(onFinished)();
+          const obj = onFinished(closure_1_2[3]);
         }
       };
       obj1 = { onFinished: arg1, runOnJS: null };
@@ -154,7 +150,7 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
       obj = vertical(snapEnabled[3]);
       obj = { velocity: arg1, deceleration: 0.999 };
       withDecayResult = obj.withDecay(obj);
-      if (!c25) {
+      if (!closure_25) {
         tmp6 = arg2;
         tmp7 = globalThis;
         _Math2 = Math;
@@ -184,14 +180,14 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
               if (loop) {
                 result = -floorResult + tmp11 * tmp8;
                 result1 = result;
-                tmp22 = withAnimation;
+                tmp22 = closure_28;
                 if (!tmp46) {
                   tmp25 = overscrollEnabled;
                   result1 = result;
                   if (!overscrollEnabled) {
-                    tmp26 = measure;
+                    tmp26 = closure_27;
                     _Math12 = Math;
-                    tmp27 = measure();
+                    tmp27 = closure_27();
                     _Math13 = Math;
                     _Math14 = Math;
                     _Math15 = Math;
@@ -208,14 +204,14 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
                 diff = dataLength - 1;
                 result2 = -Math.min(diff, Math.max(0, floorResult + tmp11)) * tmp8;
                 result3 = result2;
-                tmp15 = withAnimation;
+                tmp15 = closure_28;
                 if (!tmp46) {
                   tmp18 = overscrollEnabled;
                   result3 = result2;
                   if (!overscrollEnabled) {
-                    tmp19 = measure;
+                    tmp19 = closure_27;
                     _Math8 = Math;
-                    tmp20 = measure();
+                    tmp20 = closure_27();
                     _Math9 = Math;
                     _Math10 = Math;
                     _Math11 = Math;
@@ -230,14 +226,14 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
           result4 = -floorResult * tmp8;
           tmp31 = loop;
           result5 = result4;
-          tmp29 = withAnimation;
+          tmp29 = closure_28;
           if (!loop) {
             tmp33 = overscrollEnabled;
             result5 = result4;
             if (!overscrollEnabled) {
-              tmp34 = measure;
+              tmp34 = closure_27;
               _Math16 = Math;
-              tmp35 = measure();
+              tmp35 = closure_27();
               _Math17 = Math;
               _Math18 = Math;
               _Math19 = Math;
@@ -256,14 +252,14 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
           result6 = -tmp9 * tmp8;
           tmp40 = loop;
           result7 = result6;
-          tmp38 = withAnimation;
+          tmp38 = closure_28;
           if (!loop) {
             tmp42 = overscrollEnabled;
             result7 = result6;
             if (!overscrollEnabled) {
-              tmp43 = measure;
+              tmp43 = closure_27;
               _Math20 = Math;
-              tmp44 = measure();
+              tmp44 = closure_27();
               _Math21 = Math;
               _Math22 = Math;
               _Math23 = Math;
@@ -299,7 +295,7 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
       }
     }
   };
-  const obj1 = { translation, withDecay: vertical(snapEnabled[3]).withDecay, maxScrollDistancePerSwipeIsSet: typeof maxScrollDistancePerSwipe === "number", maxScrollDistancePerSwipe, size, pagingEnabled, withSpring: callback1, loop, maxPage: dataLength, snapEnabled, overscrollEnabled, getLimit: callback };
+  obj1 = { translation, withDecay: vertical(snapEnabled[3]).withDecay, maxScrollDistancePerSwipeIsSet: typeof maxScrollDistancePerSwipe === "number", maxScrollDistancePerSwipe, size, pagingEnabled, withSpring: callback1, loop, maxPage: dataLength, snapEnabled, overscrollEnabled, getLimit: callback };
   fn2.__closure = { touching: sharedValue2, onScrollEnd, runOnJS: vertical(snapEnabled[3]).runOnJS };
   fn2.__workletHash = 13381002348098;
   fn2.__initData = size;
@@ -313,7 +309,7 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
       fn = function n(arg0) {
         return callback(arg0);
       };
-      obj1 = { onFinish: runOnJS };
+      obj1 = { onFinish: closure_30 };
       fn.__closure = obj1;
       fn.__workletHash = 13082713046354;
       fn.__initData = translation;
@@ -335,14 +331,14 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
         if (translation.value > 0) {
           tmp = closure_22;
           if (closure_22.value < 0) {
-            tmp10 = runOnJS;
-            tmp11 = runOnJS();
+            tmp10 = closure_31;
+            tmp11 = closure_31();
             return;
           } else {
             tmp12 = loop;
             if (!loop) {
-              tmp2 = withAnimation;
-              iter.value = withAnimation(0);
+              tmp2 = closure_28;
+              iter.value = closure_28(0);
               return;
             }
           }
@@ -351,14 +347,14 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
         if (iter.value < -dataLength - 1 * size) {
           tmp5 = closure_22;
           if (closure_22.value > 0) {
-            tmp8 = runOnJS;
-            tmp9 = runOnJS();
+            tmp8 = closure_31;
+            tmp9 = closure_31();
             return;
           } else {
             tmp6 = loop;
             if (!loop) {
-              tmp7 = withAnimation;
-              iter.value = withAnimation(-tmp3 - 1 * tmp4);
+              tmp7 = closure_28;
+              iter.value = closure_28(-tmp3 - 1 * tmp4);
             }
           }
         }
@@ -425,8 +421,8 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
         tmp6 = overscrollEnabled;
       }
       if (!tmp6) {
-        tmp7 = measure;
-        tmp5.value = measure();
+        tmp7 = closure_27;
+        tmp5.value = closure_27();
       }
       closure_19.value = translation.value;
       return;
@@ -483,9 +479,6 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
   bn.__initData = sharedValue1;
   const items9 = [derivedValue, sharedValue, sharedValue1, loop, overscrollEnabled, fixedDirection, translation, sharedValue3, sharedValue2];
   function yn(velocityX) {
-    let translationX;
-    let translationY;
-    let velocityY;
     if (undefined !== sharedValue1.value) {
       ({ velocityY, translationY, translationX } = velocityX);
       if (derivedValue.value) {
@@ -589,7 +582,6 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
   const items11 = [updateContainerSize];
   const panGestureProxy = vertical(snapEnabled[6]).usePanGestureProxy({ onConfigurePanGesture, onGestureStart: tmp21, onGestureUpdate: tmp22, onGestureEnd: tmp23, options: { enabled } });
   const callback6 = loop.useCallback(Pn, items11);
-  const obj6 = { gesture: panGestureProxy, children: null };
-  obj6[1] = withAnimation(pagingEnabled(snapEnabled[3]).View, { ref: animatedRef, testID: testID.testID, style, onTouchStart: onTouchBegin, onTouchEnd, onLayout: callback6, children: testID.children });
-  return withAnimation(vertical(snapEnabled[7]).GestureDetector, obj6);
+  const tmpResult8 = vertical(snapEnabled[6]);
+  return withAnimation(vertical(snapEnabled[7]).GestureDetector, { gesture: panGestureProxy, children: withAnimation(pagingEnabled(snapEnabled[3]).View, obj7) });
 };

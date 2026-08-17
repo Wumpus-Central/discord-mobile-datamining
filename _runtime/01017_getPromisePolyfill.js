@@ -1,10 +1,12 @@
 // _runtime/01017_getPromisePolyfill.js
-import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import RN_GLOBAL_OBJ from "RN_GLOBAL_OBJ" /* 816 */;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import TurboModuleRegistry from "TurboModuleRegistry" /* 997 */;
 import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
 import { valuePromise } from "01021_valuePromise.js";
 import { items } from "01022_items.js";
-const require = arg1;
+
+require = arg1;
 const dependencyMap = arg6;
 function getPromisePolyfill() {
   return valuePromise;

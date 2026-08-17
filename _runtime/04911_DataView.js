@@ -1,6 +1,6 @@
 // _runtime/04911_DataView.js
-import DataView from "_classCallCheck";
-import _createClass from "_createClass";
+import _createClassDefault from "_createClass" /* 42 */;
+import DataView from "_classCallCheck" /* 41 */;
 
 class DataView {
   constructor(arg0) {
@@ -93,4 +93,4 @@ const items = [
   }
 ];
 
-export default _createClass(DataView, items);
+export default _createClassDefault(DataView, items);

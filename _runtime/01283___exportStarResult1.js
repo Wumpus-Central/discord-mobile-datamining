@@ -1,17 +1,18 @@
 // _runtime/01283___exportStarResult1.js
-import { 01284__ } from "metro/01284__.js";
-const require = arg1;
+import _mod1284 from "module_1284" /* 1284 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.parseNumberSkeletonFromString = undefined;
 arg5.parseNumberSkeleton = undefined;
 arg5.parseNumberSkeletonFromString = function parseNumberSkeletonFromString(str) {
   if (0 === str.length) {
     const _Error3 = Error;
-    const error = new Error("Number skeleton cannot be empty");
+    error = new Error("Number skeleton cannot be empty");
     throw error;
   } else {
     const items = [];
-    const parts = str.split(01284__.WHITE_SPACE_REGEX);
+    const parts = str.split(_mod1284.WHITE_SPACE_REGEX);
     const found = parts.filter((arg0) => arg0.length > 0);
     let num2 = 0;
     if (0 < found.length) {
@@ -65,7 +66,7 @@ arg5.parseNumberSkeleton = function parseNumberSkeleton(arg0) {
           if (arg3) {
             if (arg4) {
               const _Error2 = Error;
-              const error = new Error("We currently do not support maximum integer digits");
+              error = new Error("We currently do not support maximum integer digits");
               throw error;
             }
           }

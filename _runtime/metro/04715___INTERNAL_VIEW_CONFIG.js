@@ -1,16 +1,16 @@
 // _runtime/metro/04715___INTERNAL_VIEW_CONFIG.js
-import { codegenNativeComponent } from "get ActivityIndicator";
-import resolveAssetSource from "resolveAssetSource";
-import resolveAssetSource from "resolveAssetSource";
-import resolveAssetSource from "resolveAssetSource";
-import weakSet from "weakSet";
-import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import result from "result" /* 26 */;
+import resolveAssetSource from "resolveAssetSource" /* 81 */;
+import weakSet from "weakSet" /* 106 */;
+import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
+const codegenNativeComponent = get_ActivityIndicator.codegenNativeComponent;
 let obj = { uiViewClassName: "RNSTabsScreen", directEventTypes: { topLifecycleStateChange: { registrationName: "onLifecycleStateChange" }, topWillAppear: { registrationName: "onWillAppear" }, topDidAppear: { registrationName: "onDidAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topDidDisappear: { registrationName: "onDidDisappear" } }, validAttributes: null };
 if ("default" in resolveAssetSource) {
   resolveAssetSource = resolveAssetSource.default;
 }
-obj = { isFocused: true, tabKey: true, title: true, isTitleUndefined: true, badgeValue: true, tabBarItemTestID: true, tabBarItemAccessibilityLabel: true, orientation: true, drawableIconResourceName: true, imageIconResource: { process: resolveAssetSource }, tabBarItemBadgeTextColor: require("result").colorAttribute, tabBarItemBadgeBackgroundColor: require("result").colorAttribute, standardAppearance: true, scrollEdgeAppearance: true, iconType: true, iconImageSource: null, iconResourceName: true, selectedIconImageSource: null, selectedIconResourceName: true, systemItem: true, specialEffects: true, overrideScrollViewContentInsetAdjustmentBehavior: true, bottomScrollEdgeEffect: true, leftScrollEdgeEffect: true, rightScrollEdgeEffect: true, topScrollEdgeEffect: true, userInterfaceStyle: true };
+obj = { isFocused: true, tabKey: true, title: true, isTitleUndefined: true, badgeValue: true, tabBarItemTestID: true, tabBarItemAccessibilityLabel: true, orientation: true, drawableIconResourceName: true, imageIconResource: { process: resolveAssetSource }, tabBarItemBadgeTextColor: result.colorAttribute, tabBarItemBadgeBackgroundColor: result.colorAttribute, standardAppearance: true, scrollEdgeAppearance: true, iconType: true, iconImageSource: null, iconResourceName: true, selectedIconImageSource: null, selectedIconResourceName: true, systemItem: true, specialEffects: true, overrideScrollViewContentInsetAdjustmentBehavior: true, bottomScrollEdgeEffect: true, leftScrollEdgeEffect: true, rightScrollEdgeEffect: true, topScrollEdgeEffect: true, userInterfaceStyle: true };
 if ("default" in resolveAssetSource) {
   resolveAssetSource = resolveAssetSource.default;
 }

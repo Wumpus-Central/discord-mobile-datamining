@@ -4,9 +4,6 @@ const dependencyMap = arg6;
 let closure_2 = { evenodd: 0, nonzero: 1 };
 const obj = { type: 0, payload: require("get ActivityIndicator").processColor("black") };
 arg5.default = function extractFill(arg0, arg1, arr) {
-  let fill;
-  let fillOpacity;
-  let fillRule;
   ({ fill, fillRule, fillOpacity } = arg1);
   if (null != fill) {
     arr.push("fill");

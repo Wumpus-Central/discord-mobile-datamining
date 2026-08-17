@@ -1,3 +1,5 @@
 // _runtime/00330_ImageLoader.js
+import getAll from "get" /* 30 */;
 
-export default require("get").getEnforcing("ImageLoader");
+
+export default getAll.getEnforcing("ImageLoader");

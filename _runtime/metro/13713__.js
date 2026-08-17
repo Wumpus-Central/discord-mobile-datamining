@@ -1,9 +1,10 @@
 // _runtime/metro/13713__.js
-import { call } from "../13696_call.js";
-import { 13714__ } from "13714__.js";
+import call from "call" /* 13696 */;
+import _mod13714 from "module_13714" /* 13714 */;
+
 
 export default (arg0, arg1, arg2) => {
-  const arr = 13714__(arg1);
+  const arr = _mod13714(arg1);
   for (let num = 0; num < arr.length; num = num + 1) {
     let tmp3 = arr[num];
     let tmp4 = require;

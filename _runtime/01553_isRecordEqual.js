@@ -1,7 +1,7 @@
 // _runtime/01553_isRecordEqual.js
 arg5.isRecordEqual = function isRecordEqual(value, arg1) {
-  let closure_0 = value;
-  let closure_1 = arg1;
+  closure_0 = value;
+  closure_1 = arg1;
   if (value === arg1) {
     return true;
   } else {

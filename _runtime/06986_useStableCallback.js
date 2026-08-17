@@ -1,10 +1,6 @@
 // _runtime/06986_useStableCallback.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 
-let c0;
-let c3;
-let closure_1;
-let obj1;
 ({ useCallback: c0, useEffect: closure_1, useLayoutEffect: obj1, useRef: c3 } = noop);
 
 export const useStableCallback = function useStableCallback(arg0) {

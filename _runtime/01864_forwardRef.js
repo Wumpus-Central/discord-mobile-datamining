@@ -1,16 +1,9 @@
 // _runtime/01864_forwardRef.js
-import sharedValue from "sharedValue";
-import noop from "noop";
-import closure_8 from "noop";
-import jsxProd from "jsxProd";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
+import closure_8 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_6;
-let error;
-let forwardRef;
 const require = arg1;
 ({ useCallback: c4, useEffect: c5, useImperativeHandle: closure_6, useMemo: error, forwardRef } = noop);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -32,8 +25,6 @@ let closure_25 = { code: "function pnpm_indexTsx15(){const{enabled,currentKeyboa
 let closure_26 = { code: "function pnpm_indexTsx16(){const{enabled,mode,currentKeyboardFrameHeight}=this.__closure;return enabled&&mode===\"layout\"?{paddingBottom:currentKeyboardFrameHeight.value+1}:{};}" };
 
 export default forwardRef((bottomOffset) => {
-  let children;
-  let onLayout;
   ({ children, onLayout } = bottomOffset);
   let _require = onLayout;
   let num = bottomOffset.bottomOffset;
@@ -84,20 +75,20 @@ export default forwardRef((bottomOffset) => {
   let sharedValue12;
   let sharedValue13;
   let height;
-  let c29;
-  let c30;
-  let c31;
-  let c32;
-  let c33;
-  let c34;
-  let c35;
-  let c36;
-  let c37;
+  closure_29 = undefined;
+  closure_30 = undefined;
+  closure_31 = undefined;
+  closure_32 = undefined;
+  closure_33 = undefined;
+  closure_34 = undefined;
+  closure_35 = undefined;
+  closure_36 = undefined;
+  closure_37 = undefined;
   let obj = _require(flag[3]);
   animatedRef = obj.useAnimatedRef();
   ref = ref.useRef(null);
   const tmp8 = num(flag[4])(animatedRef, ref);
-  let obj1 = _require(flag[3]);
+  obj1 = _require(flag[3]);
   sharedValue = obj1.useSharedValue(null);
   let obj2 = _require(flag[3]);
   sharedValue1 = obj2.useSharedValue(0);
@@ -136,10 +127,10 @@ export default forwardRef((bottomOffset) => {
   height = _require(flag[6]).useWindowDimensions().height;
   _require = undefined;
   _require = flag2((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
+    c3 = 0;
     return (function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
@@ -167,20 +158,20 @@ export default forwardRef((bottomOffset) => {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp3;
-              let closure_1 = tmp7;
+              closure_2 = tmp3;
+              closure_1 = tmp7;
               let callback;
-              const findNodeHandleResult = callback(flag[7]).findNodeHandle(outer1_7.current);
-              outer1_9.value = findNodeHandleResult;
+              const findNodeHandleResult = callback(flag[7]).findNodeHandle(closure_1_7.current);
+              closure_1_9.value = findNodeHandleResult;
               if (callback != null) {
                 callback(tmp21);
               }
               if (null !== findNodeHandleResult) {
-                let c3 = 1;
+                c3 = 1;
                 const KeyboardControllerNative = tmp22(tmp23[8]).KeyboardControllerNative;
                 c4 = 2;
                 c5 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = KeyboardControllerNative.viewPositionInWindow(findNodeHandleResult);
                 return obj1;
               }
@@ -197,7 +188,7 @@ export default forwardRef((bottomOffset) => {
               throw arg1;
             } else if (arg0 !== 2) {
               callback = arg1.y;
-              outer1_27.value = callback;
+              closure_1_27.value = callback;
               c3 = 0;
             }
             c3 = 0;
@@ -236,20 +227,20 @@ export default forwardRef((bottomOffset) => {
         flag = false;
       }
       if (c3) {
-        iter = c22;
-        value = c22.value;
+        iter = closure_22;
+        value = closure_22.value;
         tmp = null;
         prop = undefined;
         if (value != null) {
           prop = value.parentScrollViewTarget;
         }
-        tmp3 = c9;
-        if (prop !== c9.value) {
+        tmp3 = closure_9;
+        if (prop !== closure_9.value) {
           num8 = 0;
           return 0;
         } else {
-          iter2 = c15;
-          diff = height - c15.value;
+          iter2 = closure_15;
+          diff = height - closure_15.value;
           value = iter.value;
           num2 = undefined;
           tmp34 = height;
@@ -271,49 +262,49 @@ export default forwardRef((bottomOffset) => {
           tmp5 = c1;
           if (diff - sum <= c1) {
             tmp16 = bottomOffset;
-            tmp18 = f104397;
+            tmp18 = closure_0;
             tmp19 = c2;
             sum1 = iter2.value - (tmp34 - sum) + tmp5;
-            obj2 = f104397(c2[3]);
-            tmp20 = c18;
+            obj2 = closure_0(c2[3]);
+            tmp20 = closure_18;
             items = [, ];
-            items[0] = c18.value;
+            items[0] = closure_18.value;
             items[1] = iter2.value;
-            tmp21 = f104397;
+            tmp21 = closure_0;
             tmp22 = c2;
-            obj3 = f104397(c2[9]);
-            tmp23 = c10;
+            obj3 = closure_0(c2[9]);
+            tmp23 = closure_10;
             tmp24 = snapToOffsets;
             items1 = [0];
-            items1[1] = obj3.scrollDistanceWithRespectToSnapPoints(sum1 + c10.value, snapToOffsets) - c10.value;
+            items1[1] = obj3.scrollDistanceWithRespectToSnapPoints(sum1 + closure_10.value, snapToOffsets) - closure_10.value;
             interpolateResult = obj2.interpolate(bottomOffset, items, items1);
             tmp26 = globalThis;
             _Math = Math;
             num6 = 0;
-            tmp28 = f104397;
+            tmp28 = closure_0;
             tmp29 = c2;
-            sum2 = Math.max(interpolateResult, 0) + c10.value;
-            obj4 = f104397(c2[3]);
-            tmp30 = c7;
+            sum2 = Math.max(interpolateResult, 0) + closure_10.value;
+            obj4 = closure_0(c2[3]);
+            tmp30 = closure_7;
             tmp31 = obj4;
             num7 = 0;
             tmp32 = flag;
-            scrollToResult = obj4.scrollTo(c7, 0, sum2, flag);
+            scrollToResult = obj4.scrollTo(closure_7, 0, sum2, flag);
             return interpolateResult;
           } else {
-            tmp6 = c27;
-            if (sum < c27.value) {
-              tmp8 = c10;
-              tmp10 = f104397;
+            tmp6 = closure_27;
+            if (sum < closure_27.value) {
+              tmp8 = closure_10;
+              tmp10 = closure_0;
               tmp11 = c2;
               diff1 = diff - tmp5;
-              sum3 = c10.value + sum;
-              obj = f104397(c2[3]);
-              tmp12 = c7;
+              sum3 = closure_10.value + sum;
+              obj = closure_0(c2[3]);
+              tmp12 = closure_7;
               num4 = 0;
               tmp13 = obj;
               tmp14 = flag;
-              scrollToResult1 = obj.scrollTo(c7, 0, sum3 - diff1, flag);
+              scrollToResult1 = obj.scrollTo(closure_7, 0, sum3 - diff1, flag);
             }
             num5 = 0;
             return 0;
@@ -331,42 +322,42 @@ export default forwardRef((bottomOffset) => {
   M.__initData = offset;
   let items1 = [num, flag2, height, snapToOffsets];
   const tmp26 = num2(M, items1);
-  c29 = tmp26;
+  closure_29 = tmp26;
   class Y {
     constructor(arg0) {
       flag = "layout" !== insets;
       if (flag) {
-        tmp = c16;
-        flag = !c16.value;
+        tmp = closure_16;
+        flag = !closure_16.value;
       }
       if (flag) {
-        tmp2 = c24;
+        tmp2 = closure_24;
         num = 0;
-        flag = c24.value > 0;
+        flag = closure_24.value > 0;
       }
       if (flag) {
         tmp3 = bottomOffset;
-        tmp4 = f104397;
+        tmp4 = closure_0;
         tmp5 = c2;
-        obj = f104397(c2[3]);
-        tmp6 = c7;
-        tmp7 = c10;
-        obj2 = f104397(c2[3]);
-        tmp8 = c18;
+        obj = closure_0(c2[3]);
+        tmp6 = closure_7;
+        tmp7 = closure_10;
+        obj2 = closure_0(c2[3]);
+        tmp8 = closure_18;
         items = [, ];
-        items[0] = c18.value;
-        tmp9 = c15;
-        items[1] = c15.value;
-        tmp10 = c24;
+        items[0] = closure_18.value;
+        tmp9 = closure_15;
+        items[1] = closure_15.value;
+        tmp10 = closure_24;
         items1 = [, ];
-        items1[0] = c24.value;
+        items1[0] = closure_24.value;
         num2 = 0;
         items1[1] = 0;
         flag2 = false;
         tmp11 = obj;
-        tmp12 = c7;
+        tmp12 = closure_7;
         num3 = 0;
-        scrollToResult = obj.scrollTo(c7, 0, c10.value - obj2.interpolate(bottomOffset, items, items1), false);
+        scrollToResult = obj.scrollTo(closure_7, 0, closure_10.value - obj2.interpolate(bottomOffset, items, items1), false);
         flag = true;
       }
       return flag;
@@ -378,12 +369,12 @@ export default forwardRef((bottomOffset) => {
   Y.__initData = layout;
   const items2 = [str];
   const tmp27 = num2(Y, items2);
-  c30 = tmp27;
+  closure_30 = tmp27;
   class I {
     constructor(arg0) {
-      c10.value = bottomOffset;
-      tmp = scrollTo(c15.value, true);
-      c10.value = c10.value;
+      closure_10.value = bottomOffset;
+      tmp = closure_29(closure_15.value, true);
+      closure_10.value = closure_10.value;
       return;
     }
   }
@@ -392,15 +383,15 @@ export default forwardRef((bottomOffset) => {
   I.__initData = size;
   const items3 = [sharedValue1, sharedValue3, tmp26];
   const tmp28 = num2(I, items3);
-  c31 = tmp28;
+  closure_31 = tmp28;
   class B {
     constructor(arg0) {
-      obj = f104397(c2[3]);
+      obj = closure_0(c2[3]);
       items = [0];
-      items[1] = c15.value;
+      items[1] = closure_15.value;
       items1 = [0];
-      items1[1] = c15.value + c4;
-      c14.value = obj.interpolate(bottomOffset.height, items, items1);
+      items1[1] = closure_15.value + c4;
+      closure_14.value = obj.interpolate(bottomOffset.height, items, items1);
       return;
     }
   }
@@ -410,10 +401,10 @@ export default forwardRef((bottomOffset) => {
   B.__initData = sharedValue2;
   const items4 = [num2];
   const tmp29 = num2(B, items4);
-  c32 = tmp29;
+  closure_32 = tmp29;
   class G {
     constructor() {
-      value = c23.value;
+      value = closure_23.value;
       if (value != null) {
         y = value.selection.end.y;
       }
@@ -428,20 +419,20 @@ export default forwardRef((bottomOffset) => {
         num = !y;
       }
       if (!num) {
-        tmp2 = c22;
+        tmp2 = closure_22;
         obj = {};
         tmp3 = obj;
         merged = Object.assign(iter.value);
         obj = {};
         tmp5 = obj;
         merged1 = Object.assign(iter.value.layout);
-        tmp7 = f104397;
+        tmp7 = closure_0;
         tmp8 = c2;
-        obj3 = f104397(c2[3]);
+        obj3 = closure_0(c2[3]);
         num2 = 0;
         obj.height = obj3.clamp(y, 0, iter.value.layout.height);
         obj.layout = obj;
-        c22.value = obj;
+        closure_22.value = obj;
         num = 0;
       }
       return !num;
@@ -453,15 +444,15 @@ export default forwardRef((bottomOffset) => {
   G.__initData = sharedValue3;
   const items5 = [input, sharedValue9, sharedValue8];
   const tmp30 = num2(G, items5);
-  c33 = tmp30;
+  closure_33 = tmp30;
   class E {
     constructor() {
-      tmp = c22;
-      if (c33()) {
-        tmp2 = interpolate;
+      tmp = closure_22;
+      if (closure_33()) {
+        tmp2 = closure_31;
         tmp3 = offset;
-        tmp4 = interpolate(offset.value);
-        tmp.value = c22.value;
+        tmp4 = closure_31(offset.value);
+        tmp.value = closure_22.value;
       }
       return;
     }
@@ -471,23 +462,23 @@ export default forwardRef((bottomOffset) => {
   E.__initData = sharedValue4;
   const items6 = [tmp28];
   const tmp31 = num2(E, items6);
-  c34 = tmp31;
+  closure_34 = tmp31;
   let fn = function j() {
-    _undefined6();
+    callback7();
   };
   fn.__closure = { scrollFromCurrentPosition: tmp31 };
   fn.__workletHash = 1300972162638;
   fn.__initData = sharedValue5;
   const items7 = [tmp31];
   const tmp32 = num2(fn, items7);
-  c35 = tmp32;
+  closure_35 = tmp32;
   const items8 = [tmp32];
-  const tmp33 = animatedRef(() => callback(flag[9]).debounce(c35, 200), items8);
-  c36 = tmp33;
+  const tmp33 = animatedRef(() => callback(flag[9]).debounce(closure_35, 200), items8);
+  closure_36 = tmp33;
   class N {
     constructor(arg0) {
-      iter = c23;
-      value = c23.value;
+      iter = closure_23;
+      value = closure_23.value;
       target = undefined;
       if (value != null) {
         target = value.target;
@@ -497,14 +488,14 @@ export default forwardRef((bottomOffset) => {
         selection = value.selection;
       }
       iter.value = bottomOffset;
-      c26.value = true;
+      closure_26.value = true;
       if (bottomOffset.target === target) {
-        tmp16 = c25;
-        if (!c25.value) {
+        tmp16 = closure_25;
+        if (!closure_25.value) {
           if (bottomOffset.selection.end.position !== bottomOffset.selection.start.position) {
             if (bottomOffset.selection.start.position === bottomOffset.selection.end.position) {
-              tmp3 = clamp;
-              tmp4 = clamp();
+              tmp3 = closure_36;
+              tmp4 = closure_36();
             }
             return tmp5;
           } else {
@@ -513,28 +504,28 @@ export default forwardRef((bottomOffset) => {
               y = selection.end.y;
             }
           }
-          tmp6 = E;
-          tmp5 = E();
+          tmp6 = closure_34;
+          tmp5 = closure_34();
         }
       }
-      if (c25.value) {
+      if (closure_25.value) {
         flag = false;
         tmp7.value = false;
-        tmp8 = c33;
-        tmp9 = c33();
-        tmp10 = c16;
-        value1 = c16.value;
+        tmp8 = closure_33;
+        tmp9 = closure_33();
+        tmp10 = closure_16;
+        value1 = closure_16.value;
         tmp11 = !value1;
         if (!value1) {
-          tmp12 = c15;
+          tmp12 = closure_15;
           num = 0;
-          tmp11 = c15.value > 0;
+          tmp11 = closure_15.value > 0;
         }
         if (tmp11) {
           tmp13 = offset;
-          tmp14 = scrollTo;
-          tmp15 = c15;
-          offset.value = offset.value + scrollTo(c15.value, true);
+          tmp14 = closure_29;
+          tmp15 = closure_15;
+          offset.value = offset.value + closure_29(closure_15.value, true);
         }
       }
       return;
@@ -552,16 +543,16 @@ export default forwardRef((bottomOffset) => {
   obj3 = { onStart: null, onMove: null, onEnd: null };
   class Q {
     constructor(arg0) {
-      iter = c15;
-      tmp = c15.value !== bottomOffset.height;
+      iter = closure_15;
+      tmp = closure_15.value !== bottomOffset.height;
       if (tmp) {
         num = 0;
         tmp = bottomOffset.height > 0;
       }
-      iter2 = c16;
+      iter2 = closure_16;
       iter2.value = bottomOffset.height > 0 && 0 === iter.value;
-      tmp3 = c17.value !== bottomOffset.target;
-      tmp2 = c17;
+      tmp3 = closure_17.value !== bottomOffset.target;
+      tmp2 = closure_17;
       if (tmp3) {
         num2 = -1;
         tmp3 = -1 !== bottomOffset.target;
@@ -570,30 +561,30 @@ export default forwardRef((bottomOffset) => {
         tmp3 = tmp;
       }
       if (tmp) {
-        tmp4 = c18;
-        c18.value = iter.value;
+        tmp4 = closure_18;
+        closure_18.value = iter.value;
       }
       if (0 === bottomOffset.height) {
-        tmp5 = c18;
-        c18.value = 0;
-        tmp6 = c10;
-        tmp7 = c19;
-        c10.value = c19.value;
-        tmp8 = c25;
+        tmp5 = closure_18;
+        closure_18.value = 0;
+        tmp6 = closure_10;
+        tmp7 = closure_19;
+        closure_10.value = closure_19.value;
+        tmp8 = closure_25;
         flag = false;
-        c25.value = false;
+        closure_25.value = false;
       }
       tmp9 = iter2.value || tmp || tmp3;
       if (tmp9) {
-        tmp10 = c10;
+        tmp10 = closure_10;
         tmp11 = offset;
-        c10.value = offset.value;
+        closure_10.value = offset.value;
         iter.value = bottomOffset.height;
         tmp12 = insets;
         str = "insets";
         if ("insets" === insets) {
-          tmp13 = height;
-          tmp14 = height(bottomOffset);
+          tmp13 = closure_32;
+          tmp14 = closure_32(bottomOffset);
         }
       }
       if (!tmp3) {
@@ -601,34 +592,34 @@ export default forwardRef((bottomOffset) => {
           tmp3 = !iter2.value;
         }
         if (tmp3) {
-          tmp28 = c25;
-          if (!c25.value) {
+          tmp28 = closure_25;
+          if (!closure_25.value) {
             tmp29 = offset;
-            tmp30 = scrollTo;
+            tmp30 = closure_29;
             flag4 = true;
-            offset.value = offset.value + scrollTo(bottomOffset.height, true);
+            offset.value = offset.value + closure_29(bottomOffset.height, true);
           }
         }
         tmp31 = insets;
         str2 = "insets";
         if ("insets" === insets) {
-          tmp32 = c24;
+          tmp32 = closure_24;
           tmp33 = layout;
           tmp34 = size;
-          c24.value = offset.value + layout.value.height - size.value.height;
-          if (c24.value > 0) {
-            tmp35 = c10;
-            c10.value = iter5.value;
+          closure_24.value = offset.value + layout.value.height - size.value.height;
+          if (closure_24.value > 0) {
+            tmp35 = closure_10;
+            closure_10.value = iter5.value;
           }
         }
         return;
       } else {
         tmp2.value = bottomOffset.target;
-        value = c23.value;
+        value = closure_23.value;
         tmp15 = null;
         flag2 = undefined;
         target = undefined;
-        iter3 = c23;
+        iter3 = closure_23;
         if (value != null) {
           target = value.target;
         }
@@ -639,26 +630,26 @@ export default forwardRef((bottomOffset) => {
             target1 = value.target;
           }
           if (target1 === bottomOffset.target) {
-            tmp20 = c33;
-            tmp21 = c33();
+            tmp20 = closure_33;
+            tmp21 = closure_33();
           } else if (input.value) {
-            tmp19 = c22;
-            c22.value = iter4.value;
+            tmp19 = closure_22;
+            closure_22.value = iter4.value;
           }
-          tmp22 = c25;
+          tmp22 = closure_25;
           flag3 = true;
-          c25.value = true;
-          tmp26 = c19;
+          closure_25.value = true;
+          tmp26 = closure_19;
           tmp27 = offset;
-          c19.value = offset.value;
+          closure_19.value = offset.value;
         } else {
-          tmp17 = c26;
+          tmp17 = closure_26;
         }
-        tmp23 = c33;
-        tmp24 = c33();
-        tmp25 = c25;
+        tmp23 = closure_33;
+        tmp24 = closure_33();
+        tmp25 = closure_25;
         flag2 = false;
-        c25.value = false;
+        closure_25.value = false;
       }
       return;
     }
@@ -669,21 +660,21 @@ export default forwardRef((bottomOffset) => {
   obj3[0] = Q;
   class J {
     constructor(arg0) {
-      if (!c30(bottomOffset.height)) {
+      if (!closure_30(bottomOffset.height)) {
         tmp = insets;
         str = "layout";
         if ("layout" === insets) {
-          tmp2 = height;
-          tmp3 = height(bottomOffset);
+          tmp2 = closure_32;
+          tmp3 = closure_32(bottomOffset);
         }
         tmp4 = c2;
         if (c2) {
-          tmp5 = c16;
-          tmp4 = !c16.value;
+          tmp5 = closure_16;
+          tmp4 = !closure_16.value;
         }
         if (!tmp4) {
-          tmp6 = scrollTo;
-          tmp7 = scrollTo(bottomOffset.height);
+          tmp6 = closure_29;
+          tmp7 = closure_29(bottomOffset.height);
         }
       }
       return;
@@ -694,7 +685,7 @@ export default forwardRef((bottomOffset) => {
   J.__initData = input;
   obj3[1] = J;
   const fn2 = function q(height) {
-    _undefined2(height.height);
+    callback3(height.height);
     sharedValue3.value = height.height;
     sharedValue1.value = offset.value;
     if (0 === height.height) {
@@ -702,7 +693,7 @@ export default forwardRef((bottomOffset) => {
     } else if (sharedValue4.value) {
       sharedValue11.value = false;
     }
-    _undefined4(height);
+    callback5(height);
   };
   fn2.__closure = { removeGhostPadding: tmp27, keyboardHeight: sharedValue3, scrollPosition: sharedValue1, position: offset, selectionUpdatedSinceHide: sharedValue12, keyboardWillAppear: sharedValue4, pendingSelectionForFocus: sharedValue11, syncKeyboardFrame: tmp29 };
   fn2.__workletHash = 15672596601321;
@@ -738,13 +729,13 @@ export default forwardRef((bottomOffset) => {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp5;
+            closure_1 = tmp5;
             let fn = tmp2;
             fn = undefined;
             table = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_21();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_21();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -763,8 +754,8 @@ export default forwardRef((bottomOffset) => {
           obj2[0] = closure_34;
           fn.__closure = obj2;
           fn.__workletHash = 15498084251450;
-          fn.__initData = outer1_22;
-          outer1_0(table[3]).runOnUI(fn)();
+          fn.__initData = closure_1_22;
+          closure_1_0(table[3]).runOnUI(fn)();
           c3 = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
         }
@@ -774,7 +765,7 @@ export default forwardRef((bottomOffset) => {
       }
     }
   }), items12);
-  c37 = tmp37;
+  closure_37 = tmp37;
   const items13 = [tmp37];
   snapToOffsets(arg1, () => {
     const current = ref.current;
@@ -793,7 +784,7 @@ export default forwardRef((bottomOffset) => {
   }, items13);
   const items14 = [num];
   str(() => {
-    _undefined8();
+    callback9();
   }, items14);
   const obj23 = _require(flag[10]);
   class De {
@@ -827,8 +818,8 @@ export default forwardRef((bottomOffset) => {
         tmp3 = height !== height1;
       }
       if (tmp3) {
-        tmp6 = E;
-        tmp7 = E();
+        tmp6 = closure_34;
+        tmp7 = closure_34();
       }
       return;
     }
@@ -842,8 +833,8 @@ export default forwardRef((bottomOffset) => {
     constructor() {
       num = 0;
       if (c3) {
-        tmp = c14;
-        num = c14.value;
+        tmp = closure_14;
+        num = closure_14.value;
       }
       return num;
     }

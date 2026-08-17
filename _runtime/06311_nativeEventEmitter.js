@@ -1,5 +1,5 @@
 // _runtime/06311_nativeEventEmitter.js
-import get_ActivityIndicator from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(undefined);

@@ -1,7 +1,6 @@
 // _runtime/03654_isValid.js
-import _typeof from "_typeof";
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3655 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -10,7 +9,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -18,7 +17,7 @@ if (!_typeof) {
 } else {
   tmp5 = _typeof;
 }
-let closure_1 = tmp5;
+_typeof = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,14 +25,15 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function isValid(num) {
-  tmp7.default(1, arguments);
-  if (!tmp3.default(num)) {
+  requiredArgs.default(1, arguments);
+  if (!_typeof.default(num)) {
     if (typeof num !== "number") {
       return false;
     }
   }
-  return !isNaN(Number(tmp5.default(num)));
+  return !isNaN(Number(_typeof.default(num)));
 };
 export default exports.default;

@@ -142,9 +142,9 @@ function canonicalizeLocaleList(arg0) {
 
 export default function getPluralRules(arg0, arg1, arg2, arg3) {
   const PluralRules = arg0;
-  const _defineProperties = arg1;
-  let closure_2 = arg2;
-  let closure_3 = arg3;
+  _defineProperties = arg1;
+  closure_2 = arg2;
+  closure_3 = arg3;
   function findLocale(arg0) {
     let str = arg0;
     while (!callback(str)) {
@@ -177,8 +177,8 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
           self = this;
           tmp2 = PluralRules;
           if (this instanceof PluralRules) {
-            obj2 = WeakMap;
-            if (WeakMap.has(self)) {
+            obj2 = closure_5;
+            if (closure_5.has(self)) {
               first = globalThis;
               _TypeError18 = TypeError;
               first = new.target;
@@ -188,8 +188,8 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
               throw first;
             } else {
               result = obj2.set(self, { writable: true, value: "a" });
-              obj3 = WeakMap;
-              if (WeakMap.has(self)) {
+              obj3 = closure_6;
+              if (closure_6.has(self)) {
                 first = globalThis;
                 _TypeError17 = TypeError;
                 first = new.target;
@@ -199,8 +199,8 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                 throw first;
               } else {
                 result1 = obj3.set(self, { writable: true, value: "a" });
-                obj4 = WeakMap;
-                if (WeakMap.has(self)) {
+                obj4 = closure_7;
+                if (closure_7.has(self)) {
                   first = globalThis;
                   _TypeError16 = TypeError;
                   first = new.target;
@@ -210,8 +210,8 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                   throw first;
                 } else {
                   result2 = obj4.set(self, { writable: true, value: "a" });
-                  obj5 = WeakMap;
-                  if (WeakMap.has(self)) {
+                  obj5 = closure_8;
+                  if (closure_8.has(self)) {
                     first = globalThis;
                     _TypeError15 = TypeError;
                     first = new.target;
@@ -221,8 +221,8 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                     throw first;
                   } else {
                     result3 = obj5.set(self, { writable: true, value: "a" });
-                    obj6 = WeakMap;
-                    if (WeakMap.has(self)) {
+                    obj6 = closure_9;
+                    if (closure_9.has(self)) {
                       first = globalThis;
                       _TypeError14 = TypeError;
                       first = new.target;
@@ -300,9 +300,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                           tmp36 = typeError;
                           throw typeError;
                         }
-                        obj8 = WeakMap;
-                        obj9 = WeakMap;
-                        if (WeakMap.has(self)) {
+                        obj8 = closure_7;
+                        obj9 = closure_5;
+                        if (closure_5.has(self)) {
                           iter = obj9.get(self);
                           if (iter.get) {
                             get = iter.get;
@@ -332,7 +332,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                 tmp55 = typeError1;
                                 throw typeError1;
                               }
-                              obj10 = WeakMap;
+                              obj10 = closure_6;
                               tmp57 = closure_3;
                               if (obj9.has(self)) {
                                 iter2 = obj9.get(self);
@@ -364,7 +364,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                       tmp75 = typeError2;
                                       throw typeError2;
                                     }
-                                    obj11 = WeakMap;
+                                    obj11 = closure_8;
                                     tmp77 = globalThis;
                                     _Object = Object;
                                     hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -419,14 +419,14 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                         tmp90 = typeError3;
                                         throw typeError3;
                                       }
-                                      obj12 = WeakMap;
+                                      obj12 = closure_9;
                                       tmp92 = PluralRules;
                                       tmp93 = new.target;
                                       str20 = "en";
                                       tmp94 = new.target;
                                       tmp95 = obj;
                                       tmp96 = new PluralRules("en", obj);
-                                      if (WeakMap.has(self)) {
+                                      if (closure_9.has(self)) {
                                         first = tmp96;
                                         first = obj12.get(self);
                                         if (first.set) {
@@ -542,12 +542,6 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
   let obj = {
     key: "resolvedOptions",
     value: function resolvedOptions() {
-      let maximumFractionDigits;
-      let maximumSignificantDigits;
-      let minimumFractionDigits;
-      let minimumIntegerDigits;
-      let minimumSignificantDigits;
-      let roundingPriority;
       const self = this;
       let obj = weakMap4;
       if (weakMap4.has(this)) {

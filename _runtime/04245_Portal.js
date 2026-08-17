@@ -1,10 +1,6 @@
 // _runtime/04245_Portal.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 
-let c3;
-let c4;
-let c5;
-let obj1;
 ({ useCallback: obj1, useEffect: c3, useMemo: c4, useRef: c5 } = noop);
 const memoResult = noop.memo((name) => {
   name = name.name;
@@ -14,10 +10,10 @@ const memoResult = noop.memo((name) => {
   const children = name.children;
   let addPortal;
   let removePortal;
-  let closure_7;
-  let c8;
-  let c9;
-  let c10;
+  closure_7 = undefined;
+  closure_8 = undefined;
+  closure_9 = undefined;
+  closure_10 = undefined;
   const portal = name(handleOnMount[1]).usePortal(name.hostName);
   addPortal = portal.addPortal;
   removePortal = portal.removePortal;
@@ -31,11 +27,11 @@ const memoResult = noop.memo((name) => {
     return nanoidResult;
   }, items);
   const tmp2 = addPortal();
-  c8 = tmp2;
+  closure_8 = tmp2;
   const tmp3 = addPortal();
-  c9 = tmp3;
+  closure_9 = tmp3;
   const tmp4 = addPortal();
-  c10 = tmp4;
+  closure_10 = tmp4;
   const items1 = [handleOnMount, addPortal];
   tmp2.current = handleOnUnmount(() => {
     if (handleOnMount) {
@@ -61,7 +57,7 @@ const memoResult = noop.memo((name) => {
     }
   }, items3);
   handleOnUpdate(() => {
-    let current = _undefined.current;
+    let current = ref.current;
     if (current != null) {
       current();
     }
@@ -77,7 +73,7 @@ const memoResult = noop.memo((name) => {
   }, []);
   const items4 = [children];
   handleOnUpdate(() => {
-    const current = _undefined2.current;
+    const current = ref2.current;
     if (current != null) {
       current();
     }

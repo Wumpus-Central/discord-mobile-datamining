@@ -1,8 +1,9 @@
 // _runtime/00848_getClient.js
-import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
-import { generateSpanId } from "00829_generateSpanId.js";
-import { getAsyncContextStrategy } from "00841_getAsyncContextStrategy.js";
-const require = arg1;
+import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
+import generateSpanId from "generateSpanId" /* 829 */;
+import getAsyncContextStrategy from "getAsyncContextStrategy" /* 841 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getClient = function getClient() {
@@ -46,8 +47,6 @@ arg5.getTraceContextFromScope = function getTraceContextFromScope(getPropagation
   return obj;
 };
 arg5.withIsolationScope = function withIsolationScope() {
-  let tmp2;
-  let tmp3;
   const items = [...arguments];
   const mainCarrier = getGlobalSingleton.getMainCarrier();
   const obj = getGlobalSingleton;
@@ -66,8 +65,6 @@ arg5.withIsolationScope = function withIsolationScope() {
   const obj2 = getAsyncContextStrategy;
 };
 arg5.withScope = function withScope() {
-  let tmp2;
-  let tmp3;
   const items = [...arguments];
   const mainCarrier = getGlobalSingleton.getMainCarrier();
   const obj = getGlobalSingleton;

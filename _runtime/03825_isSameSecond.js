@@ -1,6 +1,6 @@
 // _runtime/03825_isSameSecond.js
-import startOfSecond from "startOfSecond";
-import requiredArgs from "requiredArgs";
+import startOfSecond from "startOfSecond" /* 3826 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!startOfSecond) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!startOfSecond) {
 } else {
   tmp3 = startOfSecond;
 }
-let c0 = tmp3;
+startOfSecond = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,12 +17,12 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function isSameSecond(arg0, arg1) {
-  tmp5.default(2, arguments);
-  const defaultResult1 = tmp3.default(arg0);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfSecond.default(arg0);
   const time = defaultResult1.getTime();
-  return time === tmp3.default(arg1).getTime();
+  return time === startOfSecond.default(arg1).getTime();
 };
 export default exports.default;

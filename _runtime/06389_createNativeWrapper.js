@@ -1,11 +1,12 @@
 // _runtime/06389_createNativeWrapper.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import "noop";
-import { useEffect } from "noop";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import { useEffect } from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
+noopDefault;
 
 export default function createNativeWrapper(displayName) {
   const _require = displayName;
@@ -46,7 +47,7 @@ export default function createNativeWrapper(displayName) {
       closure_0 = displayName;
       onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER = displayName.onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
       closure_1 = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
-      keys = Object.keys(outer1_3(displayName, Native));
+      keys = Object.keys(closure_1_3(displayName, Native));
       obj = { gestureHandlerProps: null, childProps: null };
       obj = {};
       merged = Object.assign(closure_1);
@@ -62,13 +63,13 @@ export default function createNativeWrapper(displayName) {
       tmp4 = closure_1;
       obj3 = closure_0(closure_1[5]);
       nativeGesture = obj3.useNativeGesture(gestureHandlerProps);
-      useNativeGesture = nativeGesture;
+      closure_2 = nativeGesture;
       items = [, ];
       items[0] = nativeGesture;
       items[1] = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
-      tmp6 = outer1_4(() => { ... }, items);
-      tmp7 = useNativeGesture;
-      if (useNativeGesture === closure_0(closure_1[3]).GestureDetectorType.Intercepting) {
+      tmp6 = closure_1_4(() => { ... }, items);
+      tmp7 = closure_2;
+      if (closure_2 === closure_0(closure_1[3]).GestureDetectorType.Intercepting) {
         NativeDetector = tmp3(tmp4[3]).InterceptingGestureDetector;
       } else if (tmp7 === tmp3(tmp4[3]).GestureDetectorType.Virtual) {
         NativeDetector = tmp3(tmp4[6]).VirtualDetector;
@@ -79,8 +80,8 @@ export default function createNativeWrapper(displayName) {
       obj2 = {};
       merged1 = Object.assign(childProps);
       obj2.ref = displayName.ref;
-      obj1[1] = outer1_5(closure_0, obj2);
-      return outer1_5(NativeDetector, obj1);
+      obj1[1] = closure_1_5(closure_0, obj2);
+      return closure_1_5(NativeDetector, obj1);
     }
   }
   ComponentWrapper.displayName = str;

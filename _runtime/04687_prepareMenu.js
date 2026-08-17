@@ -1,15 +1,13 @@
 // _runtime/04687_prepareMenu.js
-import get_ActivityIndicator from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let c0;
-let closure_1;
 ({ Image: c0, processColor: closure_1 } = get_ActivityIndicator);
 function prepareMenu(arg0, arg1, arg2) {
 
 }
 
 export const prepareHeaderBarButtonItems = (arr) => {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   let mapped;
   if (arr != null) {
     mapped = arr.map((type) => {
@@ -37,12 +35,12 @@ export const prepareHeaderBarButtonItems = (arr) => {
         if (type.titleStyle) {
           let obj = {};
           let merged = Object.assign(type.titleStyle);
-          obj.color = outer1_1(type.titleStyle.color);
+          obj.color = closure_1_1(type.titleStyle.color);
           tmp7 = obj;
         }
         let tmp11;
         if (type.tintColor) {
-          tmp11 = outer1_1(type.tintColor);
+          tmp11 = closure_1_1(type.tintColor);
         }
         let tmp13;
         if (type.badge) {
@@ -55,19 +53,19 @@ export const prepareHeaderBarButtonItems = (arr) => {
           if (style != null) {
             color = style.color;
           }
-          obj.color = outer1_1(color);
+          obj.color = closure_1_1(color);
           const style2 = type.badge.style;
           let backgroundColor;
           if (style2 != null) {
             backgroundColor = style2.backgroundColor;
           }
-          obj.backgroundColor = outer1_1(backgroundColor);
+          obj.backgroundColor = closure_1_1(backgroundColor);
           obj.style = obj;
           tmp13 = obj;
-          const tmp18 = outer1_1;
-          const tmp20 = outer1_1;
+          const tmp18 = closure_1_1;
+          const tmp20 = closure_1_1;
         }
-        const obj1 = {};
+        obj1 = {};
         let merged3 = Object.assign(type);
         obj1.imageSource = assetSource;
         obj1.templateSource = assetSource1;
@@ -106,11 +104,11 @@ export const prepareHeaderBarButtonItems = (arr) => {
             const obj3 = {};
             const merged5 = Object.assign(obj1);
             const menu = type.menu;
-            if (typeof outer1_2 !== "function") {
+            if (typeof closure_1_2 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             closure_0 = arg1;
-            let closure_1 = closure_0;
+            closure_1 = closure_0;
             const obj4 = {};
             const merged6 = Object.assign(menu);
             let items = menu.items;
@@ -158,7 +156,7 @@ export const prepareHeaderBarButtonItems = (arr) => {
                 obj.xcassetName = tmp4;
                 obj.imageSource = assetSource;
                 obj.templateSource = assetSource1;
-                if (typeof outer1_2 !== "function") {
+                if (typeof closure_1_2 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 closure_0 = arg1;
@@ -209,7 +207,7 @@ export const prepareHeaderBarButtonItems = (arr) => {
                     obj.xcassetName = tmp4;
                     obj.imageSource = assetSource;
                     obj.templateSource = assetSource1;
-                    if (typeof outer1_2 !== "function") {
+                    if (typeof closure_1_2 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     closure_0 = arg1;
@@ -260,7 +258,7 @@ export const prepareHeaderBarButtonItems = (arr) => {
                         obj.xcassetName = tmp4;
                         obj.imageSource = assetSource;
                         obj.templateSource = assetSource1;
-                        if (typeof outer1_2 !== "function") {
+                        if (typeof closure_1_2 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         closure_0 = arg1;

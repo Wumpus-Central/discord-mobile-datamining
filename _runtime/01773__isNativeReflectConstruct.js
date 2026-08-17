@@ -1,10 +1,10 @@
 // _runtime/01773__isNativeReflectConstruct.js
-import FadeOutDown from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult1 from "_inherits";
+import FadeOutDown from "_slicedToArray" /* 32 */;
+import closure_1 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -17,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -30,12 +30,12 @@ class FadeIn {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -44,18 +44,18 @@ class FadeIn {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(1, closure_2)) };
         obj[0] = obj;
         obj = { opacity: 0 };
         const merged = Object.assign(initialValues);
@@ -65,7 +65,7 @@ class FadeIn {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 4187624806586;
-      fn.__initData = outer1_5;
+      fn.__initData = closure_1_5;
       return fn;
     };
     return tmp3Result;
@@ -87,12 +87,12 @@ class FadeInRight {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -101,19 +101,19 @@ class FadeInRight {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)), transform: null };
-        obj = { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -125,7 +125,7 @@ class FadeInRight {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 5328703857616;
-      fn.__initData = outer1_6;
+      fn.__initData = closure_1_6;
       return fn;
     };
     return tmp3Result;
@@ -147,12 +147,12 @@ class FadeInLeft {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -161,19 +161,19 @@ class FadeInLeft {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)), transform: null };
-        obj = { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -185,7 +185,7 @@ class FadeInLeft {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 3876464806620;
-      fn.__initData = outer1_7;
+      fn.__initData = closure_1_7;
       return fn;
     };
     return tmp3Result;
@@ -207,12 +207,12 @@ class FadeInUp {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -221,19 +221,19 @@ class FadeInUp {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)), transform: null };
-        obj = { translateY: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -245,7 +245,7 @@ class FadeInUp {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 14652570092763;
-      fn.__initData = outer1_8;
+      fn.__initData = closure_1_8;
       return fn;
     };
     return tmp3Result;
@@ -268,12 +268,12 @@ class FadeInDown {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -282,19 +282,19 @@ class FadeInDown {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)), transform: null };
-        obj = { translateY: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -306,7 +306,7 @@ class FadeInDown {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 3370389664855;
-      fn.__initData = outer1_9;
+      fn.__initData = closure_1_9;
       return fn;
     };
     return tmp3Result;
@@ -329,12 +329,12 @@ class FadeOut {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -343,18 +343,18 @@ class FadeOut {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(0, closure_2)) };
         obj[0] = obj;
         obj = { opacity: 1 };
         const merged = Object.assign(initialValues);
@@ -364,7 +364,7 @@ class FadeOut {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 12496093665501;
-      fn.__initData = outer1_10;
+      fn.__initData = closure_1_10;
       return fn;
     };
     return tmp3Result;
@@ -387,12 +387,12 @@ class FadeOutRight {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -401,19 +401,19 @@ class FadeOutRight {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)), transform: null };
-        obj = { translateX: delayFunction(delay, first(25, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        obj = { translateX: delayFunction(delay, first(25, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -425,7 +425,7 @@ class FadeOutRight {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 8966511332149;
-      fn.__initData = outer1_11;
+      fn.__initData = closure_1_11;
       return fn;
     };
     return tmp3Result;
@@ -448,12 +448,12 @@ class FadeOutLeft {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -462,19 +462,19 @@ class FadeOutLeft {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)), transform: null };
-        obj = { translateX: delayFunction(delay, first(-25, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        obj = { translateX: delayFunction(delay, first(-25, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -486,7 +486,7 @@ class FadeOutLeft {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 7570822684087;
-      fn.__initData = outer1_12;
+      fn.__initData = closure_1_12;
       return fn;
     };
     return tmp3Result;
@@ -509,12 +509,12 @@ class FadeOutUp {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -523,19 +523,19 @@ class FadeOutUp {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)), transform: null };
-        obj = { translateY: delayFunction(delay, first(-25, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        obj = { translateY: delayFunction(delay, first(-25, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -547,7 +547,7 @@ class FadeOutUp {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 7080775562358;
-      fn.__initData = outer1_13;
+      fn.__initData = closure_1_13;
       return fn;
     };
     return tmp3Result;
@@ -570,12 +570,12 @@ class FadeOutDown {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -584,19 +584,19 @@ class FadeOutDown {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)), transform: null };
-        obj = { translateY: delayFunction(delay, first(25, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        obj = { translateY: delayFunction(delay, first(25, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -608,7 +608,7 @@ class FadeOutDown {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 4897427935171;
-      fn.__initData = outer1_14;
+      fn.__initData = closure_1_14;
       return fn;
     };
     return tmp3Result;

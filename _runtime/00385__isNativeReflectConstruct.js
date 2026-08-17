@@ -1,13 +1,16 @@
 // _runtime/00385__isNativeReflectConstruct.js
-import "_readOnlyError";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult1 from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import bezier from "bezier" /* 364 */;
+import _readOnlyErrorDefault from "_readOnlyError" /* 377 */;
+import AnimationDefault from "Animation" /* 379 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import closure_5 from "_possibleConstructorReturn" /* 93 */;
+import closure_6 from "_getPrototypeOf" /* 95 */;
+import closure_7 from "_get" /* 96 */;
+import importDefaultResult1 from "_createClass" /* 42 */;
 
 const TimingAnimation = global;
-const require = arg1;
+require = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -19,23 +22,24 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+_readOnlyErrorDefault;
 class TimingAnimation {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, TimingAnimation);
+    tmp = closure_4(this, TimingAnimation);
     items = [];
     items[0] = global;
-    tmp2 = __esModule;
-    obj = __esModule(TimingAnimation);
-    tmp3 = __esModule;
+    tmp2 = closure_6;
+    obj = closure_6(TimingAnimation);
+    tmp3 = closure_5;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -46,13 +50,13 @@ class TimingAnimation {
     tmp3Result = tmp3(self, constructResult);
     ({ toValue: tmp6._toValue, easing } = global);
     if (easing == null) {
-      tmp7 = outer1_3;
-      if (!outer1_3) {
+      tmp7 = closure_3;
+      if (!closure_3) {
         tmp8 = closure_1;
         tmp9 = closure_2;
         _default = require("bezier").default;
         inOutResult = _default.inOut(_default.ease);
-        outer1_3 = inOutResult;
+        closure_3 = inOutResult;
         tmp7 = inOutResult;
       }
       easing = tmp7;
@@ -72,7 +76,7 @@ class TimingAnimation {
     return tmp3Result;
   }
 }
-require("_inherits")(TimingAnimation, require("Animation"));
+_inheritsDefault(TimingAnimation, AnimationDefault);
 let items = [
   {
     key: "__getNativeAnimationConfig",
@@ -91,10 +95,10 @@ let items = [
     key: "start",
     value: function start(_fromValue, _onUpdate, arg2, arg3, self) {
       self = this;
-      self = this;
+      closure_1 = this;
       self = this;
       const tmp = callback3(callback2(self.prototype), "start", this);
-      self = tmp;
+      closure_1 = tmp;
       let fn = tmp;
       if (typeof tmp === "function") {
         fn = (items) => fn.apply(self, items);
@@ -106,8 +110,8 @@ let items = [
       if (self._delay) {
         const _setTimeout = setTimeout;
         self._timeout = setTimeout(function start() {
-          self._startTime = Date.now();
-          if (!self.__startAnimationIfNative(self)) {
+          closure_1._startTime = Date.now();
+          if (!closure_1.__startAnimationIfNative(self)) {
             if (0 === obj._duration) {
               obj._onUpdate(obj._toValue);
               obj.__notifyAnimationEnd({ finished: true });
@@ -135,10 +139,6 @@ let items = [
   {
     key: "onUpdate",
     value: function onUpdate() {
-      let _fromValue;
-      let _fromValue2;
-      let _onUpdate;
-      let _onUpdate2;
       const self = this;
       const timestamp = Date.now();
       if (timestamp >= this._startTime + this._duration) {

@@ -1,5 +1,5 @@
 // _runtime/07814_linkedErrorsIntegration.js
-import setupIntegration from "setupIntegration";
+import setupIntegration from "setupIntegration" /* 7794 */;
 
 
 export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
@@ -7,8 +7,8 @@ export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => 
   if (arg0 === undefined) {
     obj = {};
   }
-  let closure_0;
-  let closure_1;
+  closure_0 = undefined;
+  closure_1 = undefined;
   closure_0 = obj.limit || 5;
   closure_1 = obj.key || "cause";
   obj = {

@@ -1,14 +1,14 @@
 // _runtime/07838_MetricsAggregator.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const MetricsAggregator = require;
 class MetricsAggregator {
   constructor(arg0) {
     self = this;
     self = this;
-    tmp = outer1_3(this, self);
+    tmp = closure_3(this, self);
     this._client = global;
     map = new Map();
     this._buckets = map;
@@ -110,8 +110,6 @@ const items = [
   {
     key: "_flush",
     value: function _flush() {
-      let tmp16;
-      let tmp17;
       const self = this;
       if (this._forceFlush) {
         self._forceFlush = false;
@@ -128,8 +126,8 @@ const items = [
         const _buckets = self._buckets;
         const tmp10 = _buckets[Symbol.iterator]();
         while (tmp10 !== undefined) {
-          let tmp14 = _slicedToArray;
-          let tmp15 = _slicedToArray(tmp12, 2);
+          let tmp14 = callback;
+          let tmp15 = callback(tmp12, 2);
           [tmp16, tmp17] = tmp15;
           let tmp18 = tmp17;
           if (tmp17.timestamp <= diff) {
@@ -142,9 +140,9 @@ const items = [
         }
         const tmp23 = map[Symbol.iterator]();
         while (tmp23 !== undefined) {
-          let tmp27 = _slicedToArray;
+          let tmp27 = callback;
           let _buckets2 = self._buckets;
-          let deleteResult = _buckets2.delete(_slicedToArray(tmp25, 1)[0]);
+          let deleteResult = _buckets2.delete(callback(tmp25, 1)[0]);
           continue;
         }
         self._captureMetrics(map);
@@ -158,7 +156,6 @@ const items = [
         const self = this;
         const _Array = Array;
         const mapped = Array.from(_buckets).map((arg0) => {
-          let tmp;
           [, tmp] = arg0;
           return tmp;
         });

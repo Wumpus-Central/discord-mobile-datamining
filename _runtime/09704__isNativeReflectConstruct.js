@@ -1,9 +1,11 @@
 // _runtime/09704__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import c3 from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
+import _asyncLoop from "_asyncLoop" /* 9699 */;
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 9705 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
 let SHA224 = require;
 function _isNativeReflectConstruct() {
@@ -17,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -31,12 +33,12 @@ const uint32Array2 = new Uint32Array(64);
 class SHA256 {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, SHA224);
+    tmp = closure_2(this, SHA224);
     items = [64, 32, 8];
     items[3] = false;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(SHA224);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(SHA224);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -45,19 +47,19 @@ class SHA256 {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.A = outer1_7[0] | 0;
-    tmp3Result.B = outer1_7[1] | 0;
-    tmp3Result.C = outer1_7[2] | 0;
-    tmp3Result.D = outer1_7[3] | 0;
-    tmp3Result.E = outer1_7[4] | 0;
-    tmp3Result.F = outer1_7[5] | 0;
-    tmp3Result.G = outer1_7[6] | 0;
-    tmp3Result.H = outer1_7[7] | 0;
+    tmp3Result.A = closure_7[0] | 0;
+    tmp3Result.B = closure_7[1] | 0;
+    tmp3Result.C = closure_7[2] | 0;
+    tmp3Result.D = closure_7[3] | 0;
+    tmp3Result.E = closure_7[4] | 0;
+    tmp3Result.F = closure_7[5] | 0;
+    tmp3Result.G = closure_7[6] | 0;
+    tmp3Result.H = closure_7[7] | 0;
     return tmp3Result;
   }
 }
 SHA224 = SHA256;
-_inherits(SHA256, require("_isNativeReflectConstruct").HashMD);
+_inherits(SHA256, _isNativeReflectConstruct2.HashMD);
 let items = [
   {
     key: "get",
@@ -76,14 +78,6 @@ let items = [
   {
     key: "process",
     value: function process(getUint32, sum) {
-      let A;
-      let B;
-      let C;
-      let D;
-      let E;
-      let F;
-      let G;
-      let H;
       let num2;
       let tmp22;
       let tmp23;
@@ -169,10 +163,10 @@ let c9 = _moduleResult;
 class SHA224 {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, SHA224);
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(SHA224);
-    tmp3 = _isNativeReflectConstruct;
+    tmp = closure_2(this, SHA224);
+    tmp2 = closure_4;
+    obj = closure_4(SHA224);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -197,5 +191,5 @@ _inherits(SHA224, _moduleResult);
 let closure_10 = _createClass(SHA224);
 
 export const SHA256 = _moduleResult;
-export const sha256 = require("_asyncLoop").wrapConstructor(() => new closure_9());
-export const sha224 = require("_asyncLoop").wrapConstructor(() => new closure_10());
+export const sha256 = _asyncLoop.wrapConstructor(() => new closure_9());
+export const sha224 = _asyncLoop.wrapConstructor(() => new closure_10());

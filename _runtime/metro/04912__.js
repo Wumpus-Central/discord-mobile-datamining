@@ -1,6 +1,7 @@
 // _runtime/metro/04912__.js
-import { getDataView } from "../04910_getDataView.js";
-const require = arg1;
+import getDataView from "getDataView" /* 4910 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {
@@ -29,7 +30,7 @@ arg5.default = {
       if (tmpResult3.isPngFile(byteLength)) {
         const tmpResult4 = tmp(4917);
         const findPngOffsetsResult = tmp(4917).findPngOffsets(byteLength, flag2);
-        const obj1 = { fileType: null };
+        obj1 = { fileType: null };
         obj1[0] = { value: "png", description: "PNG" };
         return getDataView.objectAssign({}, findPngOffsetsResult, obj1);
       }
@@ -85,7 +86,7 @@ arg5.default = {
       }
       tmpResult13 = tmp(4925);
     }
-    const error = new Error("Invalid image format");
+    error = new Error("Invalid image format");
     throw error;
   }
 };

@@ -1,7 +1,8 @@
 // _runtime/01761_importDefaultResult1.js
-import _classCallCheck from "_classCallCheck";
-import _classPrivateFieldBase from "_classPrivateFieldBase";
-import importDefaultResult1 from "_classPrivateFieldKey";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_classPrivateFieldBase" /* 90 */;
+import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
 
 const NativeEventsManager = arg1;
 let closure_4 = importDefaultResult1("managedComponent");
@@ -9,14 +10,14 @@ let closure_5 = importDefaultResult1("componentOptions");
 let closure_6 = importDefaultResult1("eventViewTag");
 class NativeEventsManager {
   constructor(arg0, arg1) {
-    tmp = outer1_2(this, NativeEventsManager);
-    definePropertyResult = Object.defineProperty(this, managedComponent, { writable: true, value: "a" });
-    definePropertyResult1 = Object.defineProperty(this, componentOptions, { writable: true, value: "a" });
-    definePropertyResult2 = Object.defineProperty(this, eventViewTag, { writable: true, value: -1 });
-    __esModule(this, managedComponent)[managedComponent] = global;
-    __esModule(this, componentOptions)[componentOptions] = arg1;
-    tmp5 = __esModule(this, eventViewTag);
-    tmp5[eventViewTag] = this.getEventViewTag();
+    tmp = closure_2(this, NativeEventsManager);
+    definePropertyResult = Object.defineProperty(this, closure_4, { writable: true, value: "a" });
+    definePropertyResult1 = Object.defineProperty(this, closure_5, { writable: true, value: "a" });
+    definePropertyResult2 = Object.defineProperty(this, closure_6, { writable: true, value: -1 });
+    closure_3(this, closure_4)[closure_4] = global;
+    closure_3(this, closure_5)[closure_5] = arg1;
+    tmp5 = closure_3(this, closure_6);
+    tmp5[closure_6] = this.getEventViewTag();
     return;
   }
 }
@@ -254,4 +255,4 @@ const items = [
   }
 ];
 
-export const NativeEventsManager = require("_createClass")(NativeEventsManager, items);
+export const NativeEventsManager = _createClassDefault(NativeEventsManager, items);

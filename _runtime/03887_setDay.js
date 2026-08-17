@@ -1,9 +1,9 @@
 // _runtime/03887_setDay.js
-import addDays from "addDays";
-import _typeof from "_typeof";
-import toInteger from "toInteger";
-import requiredArgs from "requiredArgs";
-import { getDefaultOptions } from "03477_getDefaultOptions.js";
+import getDefaultOptions from "getDefaultOptions" /* 3477 */;
+import addDays from "addDays" /* 3620 */;
+import _typeof from "_typeof" /* 3472 */;
+import toInteger from "toInteger" /* 3476 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!addDays) {
   let obj = { default: null };
@@ -12,7 +12,7 @@ if (!addDays) {
 } else {
   tmp3 = addDays;
 }
-let obj1 = tmp3;
+addDays = tmp3;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -20,7 +20,7 @@ if (!_typeof) {
 } else {
   tmp5 = _typeof;
 }
-let c3 = tmp5;
+_typeof = tmp5;
 if (!toInteger) {
   obj = { default: null };
   obj[0] = toInteger;
@@ -28,18 +28,18 @@ if (!toInteger) {
 } else {
   tmp7 = toInteger;
 }
-let c4 = tmp7;
+toInteger = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c5 = tmp9;
+requiredArgs = tmp9;
 
 export default function setDay(arg0, arg1, weekStartsOn) {
-  tmp9.default(2, arguments);
+  requiredArgs.default(2, arguments);
   const defaultOptions = getDefaultOptions.getDefaultOptions();
   weekStartsOn = undefined;
   if (null != weekStartsOn) {
@@ -87,21 +87,20 @@ export default function setDay(arg0, arg1, weekStartsOn) {
       num = weekStartsOn;
     }
   }
-  const defaultResult1 = tmp7.default(num);
+  const defaultResult1 = toInteger.default(num);
   if (defaultResult1 >= 0) {
     if (defaultResult1 <= 6) {
-      const defaultResult2 = tmp5.default(arg0);
-      const defaultResult3 = tmp7.default(arg1);
+      const defaultResult2 = _typeof.default(arg0);
+      const defaultResult3 = toInteger.default(arg1);
       const day = defaultResult2.getDay();
       const diff = 7 - defaultResult1;
       if (defaultResult3 >= 0) {
         if (defaultResult3 <= 6) {
           let diff1 = ((defaultResult3 % 7 + 7) % 7 + diff) % 7 - (day + diff) % 7;
         }
-        return tmp3.default(defaultResult2, diff1);
+        return addDays.default(defaultResult2, diff1);
       }
       diff1 = defaultResult3 - (day + diff) % 7;
-      tmp9 = arg1;
     }
   }
   const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");

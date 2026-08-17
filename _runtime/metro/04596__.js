@@ -1,7 +1,9 @@
 // _runtime/metro/04596__.js
-import { arrayPush } from "../00794_arrayPush.js";
-import { getOwnPropertySymbols } from "../00795_getOwnPropertySymbols.js";
-import { overArg } from "../04592_overArg.js";
+import arrayPush from "arrayPush" /* 794 */;
+import getOwnPropertySymbols from "getOwnPropertySymbols" /* 795 */;
+import stubArray from "stubArray" /* 796 */;
+import overArg from "overArg" /* 4592 */;
+
 if (Object.getOwnPropertySymbols) {
   let fn = (arg0) => {
     let tmp = arg0;
@@ -18,7 +20,7 @@ if (Object.getOwnPropertySymbols) {
     return items;
   };
 } else {
-  fn = require("stubArray");
+  fn = stubArray;
 }
 
 export default fn;

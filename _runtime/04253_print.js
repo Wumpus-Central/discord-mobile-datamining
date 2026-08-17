@@ -6,9 +6,6 @@ function print() {
 }
 if (BooleanResult) {
   print = function print(arg0) {
-    let component;
-    let method;
-    let params;
     ({ component, method, params } = arg0);
     if (params) {
       if (typeof params === "object") {
@@ -40,7 +37,7 @@ const frozen = Object.freeze(print);
 arg5.print = print;
 arg5.enableLogging = () => {
   if (closure_1) {
-    let c0 = true;
+    c0 = true;
   } else {
     const _console = console;
     console.warn("[Portal] could not enable logging on production!");

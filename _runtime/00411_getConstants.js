@@ -1,10 +1,11 @@
 // _runtime/00411_getConstants.js
-import { I18nManager } from "00412_I18nManager.js";
-if (require("I18nManager")) {
-  const constants = require("I18nManager").getConstants();
+import I18nManagerDefault from "I18nManager" /* 412 */;
+
+if (I18nManagerDefault) {
+  const constants = I18nManagerDefault.getConstants();
   let obj = { isRTL: null, doLeftAndRightSwapInRTL: null, localeIdentifier: null };
   ({ isRTL: obj3[0], doLeftAndRightSwapInRTL: obj3[1], localeIdentifier: obj3[2] } = constants);
-  const importDefaultResult = require("I18nManager");
+  const importDefaultResult = I18nManagerDefault;
 } else {
   obj = { isRTL: false, doLeftAndRightSwapInRTL: true };
 }
@@ -14,21 +15,21 @@ export default {
     return obj;
   },
   allowRTL(arg0) {
-    if (I18nManager) {
-      I18nManager.allowRTL(arg0);
-      const tmpResult = I18nManager;
+    if (I18nManagerDefault) {
+      I18nManagerDefault.allowRTL(arg0);
+      const tmpResult = I18nManagerDefault;
     }
   },
   forceRTL(arg0) {
-    if (I18nManager) {
-      I18nManager.forceRTL(arg0);
-      const tmpResult = I18nManager;
+    if (I18nManagerDefault) {
+      I18nManagerDefault.forceRTL(arg0);
+      const tmpResult = I18nManagerDefault;
     }
   },
   swapLeftAndRightInRTL(arg0) {
-    if (I18nManager) {
-      const result = I18nManager.swapLeftAndRightInRTL(arg0);
-      const tmpResult = I18nManager;
+    if (I18nManagerDefault) {
+      const result = I18nManagerDefault.swapLeftAndRightInRTL(arg0);
+      const tmpResult = I18nManagerDefault;
     }
   },
   isRTL: obj.isRTL,

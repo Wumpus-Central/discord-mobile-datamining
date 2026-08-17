@@ -1,5 +1,5 @@
 // _runtime/04007_isIterable.js
-import _slicedToArray from "_slicedToArray";
+import closure_0 from "_slicedToArray" /* 32 */;
 
 function isIterable(arg0) {
 
@@ -8,14 +8,12 @@ function hasIterableEntries(arg0) {
 
 }
 function compareEntries(arr, arr2) {
-  let tmp12;
-  let tmp14;
   let map = arr;
   if (!(arr instanceof Map)) {
     const _Map = Map;
     map = new Map(arr.entries());
   }
-  let map1 = arr2;
+  map1 = arr2;
   if (!(arr2 instanceof Map)) {
     const _Map2 = Map;
     map1 = new Map(arr2.entries());
@@ -25,8 +23,8 @@ function compareEntries(arr, arr2) {
   } else {
     const obj2 = map[Symbol.iterator]();
     while (obj2 !== undefined) {
-      let tmp10 = _slicedToArray;
-      let tmp11 = _slicedToArray(tmp8, 2);
+      let tmp10 = callback;
+      let tmp11 = callback(tmp8, 2);
       [tmp12, tmp14] = tmp11;
       let tmp13 = tmp12;
       if (map1.has(tmp12)) {
@@ -44,8 +42,8 @@ function compareEntries(arr, arr2) {
 }
 
 export const shallow = function shallow(current, current2) {
-  let closure_0 = current;
-  let closure_1 = current2;
+  closure_0 = current;
+  closure_1 = current2;
   let isResult = Object.is(current, current2);
   if (!isResult) {
     let tmp2 = typeof current === "object";

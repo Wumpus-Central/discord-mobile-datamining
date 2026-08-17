@@ -1,17 +1,15 @@
 // _runtime/06373__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { GestureHandlerRootView } from "PanGestureHandler";
-import importAllResult from "noop";
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import closure_5 from "_possibleConstructorReturn" /* 93 */;
+import closure_6 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import { GestureHandlerRootView } from "PanGestureHandler" /* 6374 */;
+import importAllResult from "noop" /* 19 */;
 
-let StyleSheet;
-let View;
 let StackView = arg1;
 function _isNativeReflectConstruct() {
   try {
@@ -24,10 +22,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -44,12 +42,12 @@ class StackView {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_4(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_6;
+    obj = closure_6(closure_0);
+    tmp3 = closure_5;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -58,7 +56,7 @@ class StackView {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     obj = { routes: [], previousState: "y", openingRouteKeys: 72, closingRouteKeys: 180, replacingRouteKeys: null, descriptors: null };
     obj[2] = [];
     obj[3] = [];
@@ -66,8 +64,6 @@ class StackView {
     obj[5] = {};
     tmp3Result.state = obj;
     tmp3Result.getPreviousRoute = (route) => {
-      let c1;
-      let c2;
       route = route.route;
       c1 = undefined;
       c2 = undefined;
@@ -89,13 +85,9 @@ class StackView {
     };
     tmp3Result.renderHeader = (arg0) => {
       const merged = Object.assign(arg0);
-      return callback(_undefined(table[10]).HeaderContainer, {});
+      return callback(lib(table[10]).HeaderContainer, {});
     };
     tmp3Result.handleOpenRoute = (route) => {
-      let closingRouteKeys;
-      let navigation;
-      let replacingRouteKeys;
-      let state;
       route = route.route;
       ({ state, navigation } = route.props);
       ({ closingRouteKeys, replacingRouteKeys } = route.state);
@@ -109,7 +101,7 @@ class StackView {
                 routes = routes.routes;
                 const items = [];
                 items[HermesBuiltin.arraySpread(routes.filter((key) => key.key !== key.key), 0)] = route;
-                const CommonActions = route(outer1_1[11]).CommonActions;
+                const CommonActions = route(closure_1_1[11]).CommonActions;
                 const obj = {};
                 const merged = Object.assign(routes);
                 obj.routes = items;
@@ -121,11 +113,7 @@ class StackView {
         }
       }
       route.setState((routes) => {
-        let closingRouteKeys;
-        let openingRouteKeys;
-        let replacingRouteKeys;
-        let routes2;
-        let closure_0 = routes;
+        closure_0 = routes;
         routes = routes.routes;
         routes = routes.routes;
         const substr = routes.slice(0, routes.findIndex((key) => key.key === closure_0.key));
@@ -139,71 +127,62 @@ class StackView {
       });
     };
     tmp3Result.handleCloseRoute = (route) => {
-      let navigation;
-      let state;
       route = route.route;
       let obj = route;
       ({ state, navigation } = route.props);
       const routes = state.routes;
       if (routes.some((key) => key.key === route.key)) {
         obj = {};
-        const StackActions = _undefined(outer1_1[11]).StackActions;
+        const StackActions = lib(closure_1_1[11]).StackActions;
         const merged = Object.assign(StackActions.pop());
         obj.source = route.key;
         obj.target = state.key;
         navigation.dispatch(obj);
       } else {
         obj.setState((arg0) => {
-          let closingRouteKeys;
-          let openingRouteKeys;
-          let routes;
           ({ routes, openingRouteKeys, closingRouteKeys } = arg0);
           return { routes: routes.filter((key) => key.key !== closure_0.key), openingRouteKeys: openingRouteKeys.filter((arg0) => arg0 !== closure_0.key), closingRouteKeys: closingRouteKeys.filter((arg0) => arg0 !== closure_0.key) };
         });
       }
     };
     tmp3Result.handleTransitionStart = (route, closing) => {
-      const navigation = _undefined.props.navigation;
+      const navigation = lib.props.navigation;
       obj = { type: "transitionStart", data: obj, target: route.route.key };
       obj = { closing };
       return navigation.emit(obj);
     };
     tmp3Result.handleTransitionEnd = (route, closing) => {
-      const navigation = _undefined.props.navigation;
+      const navigation = lib.props.navigation;
       obj = { type: "transitionEnd", data: obj, target: route.route.key };
       obj = { closing };
       return navigation.emit(obj);
     };
     tmp3Result.handleGestureStart = (route) => {
-      const navigation = _undefined.props.navigation;
+      const navigation = lib.props.navigation;
       navigation.emit({ type: "gestureStart", target: route.route.key });
     };
     tmp3Result.handleGestureEnd = (route) => {
-      const navigation = _undefined.props.navigation;
+      const navigation = lib.props.navigation;
       navigation.emit({ type: "gestureEnd", target: route.route.key });
     };
     tmp3Result.handleGestureCancel = (route) => {
-      const navigation = _undefined.props.navigation;
+      const navigation = lib.props.navigation;
       navigation.emit({ type: "gestureCancel", target: route.route.key });
     };
     return tmp3Result;
   }
 }
-importDefaultResult1(StackView, require("noop").Component);
+importDefaultResult1(StackView, importAllResult.Component);
 let obj = {
   key: "render",
   value: function render() {
-    let _objectWithoutProperties;
-    let _classCallCheck;
-    let _possibleConstructorReturn;
-    let _getPrototypeOf;
     const self = this;
     let props = this.props;
     const state = props.state;
     closure_2 = callback(props, closure_2);
-    ({ routes: _objectWithoutProperties, descriptors: _classCallCheck, openingRouteKeys: _possibleConstructorReturn, closingRouteKeys: _getPrototypeOf } = this.state);
+    ({ routes: closure_3, descriptors: closure_4, openingRouteKeys: closure_5, closingRouteKeys: closure_6 } = this.state);
     const preloadedRoutes = state.preloadedRoutes;
-    const StackView = preloadedRoutes.reduce((arg0, key) => {
+    StackView = preloadedRoutes.reduce((arg0, key) => {
       let describeResult = arg0[key.key];
       if (!describeResult) {
         const props = self.props;
@@ -213,7 +192,7 @@ let obj = {
       return arg0;
     }, {});
     let obj = { style: container.container, children: null };
-    obj = { children: null };
+    obj = { children: self(StackView(state[13]).SafeAreaInsetsContext.Consumer, obj) };
     obj = {
       children(arg0) {
         let callback = arg0;
@@ -222,15 +201,14 @@ let obj = {
             const callback = arg0;
             return self(callback(state[12]).HeaderShownContext.Consumer, {
               children(isParentHeaderShown) {
-                const merged = Object.assign(outer2_2);
-                return self(callback(state[15]).CardStack, { insets: callback, isParentHeaderShown, isParentModal: callback, getPreviousRoute: outer2_7.getPreviousRoute, routes: outer2_3, openingRouteKeys: outer2_5, closingRouteKeys: outer2_6, onOpenRoute: outer2_7.handleOpenRoute, onCloseRoute: outer2_7.handleCloseRoute, onTransitionStart: outer2_7.handleTransitionStart, onTransitionEnd: outer2_7.handleTransitionEnd, renderHeader: outer2_7.renderHeader, state: outer2_1, descriptors: outer2_4, onGestureStart: outer2_7.handleGestureStart, onGestureEnd: outer2_7.handleGestureEnd, onGestureCancel: outer2_7.handleGestureCancel, preloadedDescriptors: callback });
+                const merged = Object.assign(closure_2_2);
+                return self(callback(state[15]).CardStack, { insets: callback, isParentHeaderShown, isParentModal: callback, getPreviousRoute: closure_2_7.getPreviousRoute, routes: closure_2_3, openingRouteKeys: closure_2_5, closingRouteKeys: closure_2_6, onOpenRoute: closure_2_7.handleOpenRoute, onCloseRoute: closure_2_7.handleCloseRoute, onTransitionStart: closure_2_7.handleTransitionStart, onTransitionEnd: closure_2_7.handleTransitionEnd, renderHeader: closure_2_7.renderHeader, state: closure_2_1, descriptors: closure_2_4, onGestureStart: closure_2_7.handleGestureStart, onGestureEnd: closure_2_7.handleGestureEnd, onGestureCancel: closure_2_7.handleGestureCancel, preloadedDescriptors: callback });
               }
             });
           }
         });
       }
     };
-    obj[0] = self(StackView(state[13]).SafeAreaInsetsContext.Consumer, obj);
     obj[1] = self(StackView(state[12]).SafeAreaProviderCompat, obj);
     return self(GestureHandlerRootView, obj);
   }
@@ -239,10 +217,8 @@ let items = [obj];
 obj = {
   key: "getDerivedStateFromProps",
   value: function getDerivedStateFromProps(state, previousState) {
-    let closingRouteKeys;
-    let openingRouteKeys;
     let arr3 = state;
-    const dependencyMap = previousState;
+    dependencyMap = previousState;
     const items = [...state.state.preloadedRoutes];
     const items1 = [];
     if (previousState.previousState) {
@@ -298,7 +274,7 @@ obj = {
         }
         let mapped2 = substr;
         if (!tmp72) {
-          let closure_2 = items.reduce((arg0, key) => {
+          closure_2 = items.reduce((arg0, key) => {
             arg0[key.key] = key;
             return arg0;
           }, {});
@@ -332,12 +308,12 @@ obj = {
     let replacingRouteKeys = previousState.replacingRouteKeys;
     let items10 = replacingRouteKeys;
     const found2 = closingRouteKeys.filter((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       return !substr3.some((key) => key.key === closure_0);
     });
     found9 = found2;
     const found3 = replacingRouteKeys.filter((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       return !substr3.some((key) => key.key === closure_0);
     });
     items10 = found3;
@@ -345,15 +321,15 @@ obj = {
     if (previousState.previousState) {
       tmp6 = previousState.previousState.routes[previousState.previousState.index];
     }
-    let _getPrototypeOf = tmp6;
-    const jsx = tmp7;
+    closure_6 = tmp6;
+    closure_7 = tmp7;
     function isAnimationEnabled(arg0) {
 
     }
     if (tmp6) {
       if (tmp6.key !== tmp7.key) {
-        if (arr3.some((key) => key.key === tmp7.key)) {
-          if (!substr1.some((key) => key.key === tmp6.key)) {
+        if (arr3.some((key) => key.key === closure_7.key)) {
+          if (!substr1.some((key) => key.key === closure_6.key)) {
             obj = arr3(6524);
             let animation;
             if ((state.descriptors[tmp6.key] || previousState.descriptors[tmp6.key]) != null) {
@@ -367,8 +343,8 @@ obj = {
               const items5 = [];
               items5[HermesBuiltin.arraySpread(found2, 0)] = tmp6.key;
               found9 = items5;
-              found4 = openingRouteKeys.filter((arg0) => arg0 !== tmp6.key);
-              const found5 = found3.filter((arg0) => arg0 !== tmp6.key);
+              found4 = openingRouteKeys.filter((arg0) => arg0 !== closure_6.key);
+              const found5 = found3.filter((arg0) => arg0 !== closure_6.key);
               items10 = found5;
               const items6 = [];
               items6[HermesBuiltin.arraySpread(substr1, 0)] = tmp6;
@@ -396,16 +372,16 @@ obj = {
           if (!openingRouteKeys.includes(tmp7.key)) {
             const items7 = [];
             items7[HermesBuiltin.arraySpread(openingRouteKeys, 0)] = tmp7.key;
-            const found6 = found2.filter((arg0) => arg0 !== tmp7.key);
+            const found6 = found2.filter((arg0) => arg0 !== closure_7.key);
             found9 = found6;
-            const found7 = found3.filter((arg0) => arg0 !== tmp7.key);
+            const found7 = found3.filter((arg0) => arg0 !== closure_7.key);
             items10 = found7;
             tmp9 = found7;
             tmp10 = found6;
             found4 = items7;
             arr11 = substr1;
-            if (!substr1.some((key) => key.key === tmp6.key)) {
-              const found8 = items7.filter((arg0) => arg0 !== tmp6.key);
+            if (!substr1.some((key) => key.key === closure_6.key)) {
+              const found8 = items7.filter((arg0) => arg0 !== closure_6.key);
               let str = state.descriptors[tmp7.key] || previousState.descriptors[tmp7.key].options.animationTypeForReplace;
               if (str == null) {
                 str = "push";
@@ -414,7 +390,7 @@ obj = {
                 const items8 = [];
                 items8[HermesBuiltin.arraySpread(found6, 0)] = tmp6.key;
                 found9 = items8;
-                found4 = found8.filter((arg0) => arg0 !== tmp7.key);
+                found4 = found8.filter((arg0) => arg0 !== closure_7.key);
                 const items9 = [];
                 items9[HermesBuiltin.arraySpread(substr1, 0)] = tmp6;
                 substr3 = items9;
@@ -424,13 +400,13 @@ obj = {
               } else {
                 items10 = [];
                 items10[HermesBuiltin.arraySpread(found7, 0)] = tmp6.key;
-                found9 = found6.filter((arg0) => arg0 !== tmp6.key);
+                found9 = found6.filter((arg0) => arg0 !== closure_6.key);
                 const substr2 = substr1.slice();
                 substr3 = substr2;
                 substr2.splice(substr2.length - 1, 0, tmp6);
                 const routes4 = previousState.routes;
                 const found10 = routes4.filter((key) => {
-                  let closure_0 = key;
+                  closure_0 = key;
                   let hasItem = items10.includes(key.key);
                   if (hasItem) {
                     hasItem = !substr3.some((key) => key.key === key.key);
@@ -478,7 +454,7 @@ obj = {
         return obj;
       } else {
         const _Error = Error;
-        const error = new Error("There should always be at least one route in the navigation state.");
+        error = new Error("There should always be at least one route in the navigation state.");
         throw error;
       }
     }

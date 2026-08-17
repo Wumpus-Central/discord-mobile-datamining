@@ -1,12 +1,12 @@
 // _runtime/13764__isNativeReflectConstruct.js
-import _createClass from "_createClass";
-import _classCallCheck from "_classCallCheck";
-import c4 from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
-import _wrapNativeSuper from "_wrapNativeSuper";
-import { NativeModules } from "get ActivityIndicator";
-import { base64Decode } from "13765_base64Decode.js";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import base64Decode from "base64Decode" /* 13765 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
 
 let QuotaExceededError = global;
 function _isNativeReflectConstruct() {
@@ -20,21 +20,22 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+const NativeModules = get_ActivityIndicator.NativeModules;
 class TypeMismatchError {
   constructor() {
     self = this;
-    tmp = outer1_3(this, QuotaExceededError);
-    tmp2 = outer1_5;
-    obj = outer1_5(QuotaExceededError);
-    tmp3 = outer1_4;
+    tmp = closure_3(this, QuotaExceededError);
+    tmp2 = closure_5;
+    obj = closure_5(QuotaExceededError);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -54,10 +55,10 @@ let closure_8 = _createClass(TypeMismatchError);
 class QuotaExceededError {
   constructor() {
     self = this;
-    tmp = outer1_3(this, QuotaExceededError);
-    tmp2 = outer1_5;
-    obj = outer1_5(QuotaExceededError);
-    tmp3 = outer1_4;
+    tmp = closure_3(this, QuotaExceededError);
+    tmp2 = closure_5;
+    obj = closure_5(QuotaExceededError);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -116,7 +117,7 @@ if (typeof global.crypto.getRandomValues !== "function") {
         randomBase64 = ExpoRandom.getRandomBase64String(byteLength);
       } else {
         const _Error = Error;
-        const error = new Error("Native module not found");
+        error = new Error("Native module not found");
         throw error;
       }
       const _Uint8Array2 = Uint8Array;

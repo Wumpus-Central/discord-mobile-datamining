@@ -1,4 +1,7 @@
 // _runtime/metro/04896__.js
+import _mod4897 from "module_4897" /* 4897 */;
+import _mod4899 from "module_4899" /* 4899 */;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -37,8 +40,8 @@ if (self2) {
     };
   }
   const _Object2 = Object;
-  fn(require("module_4897"), exports);
-  fn(require("module_4899"), exports);
+  fn(_mod4897, exports);
+  fn(_mod4899, exports);
 } else {
   let _Object = Object;
 }

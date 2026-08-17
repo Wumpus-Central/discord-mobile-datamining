@@ -1,7 +1,7 @@
 // _runtime/07818_requestDataIntegration.js
-import _slicedToArray from "_slicedToArray";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import setupIntegration from "setupIntegration";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import setupIntegration from "setupIntegration" /* 7794 */;
 
 let closure_4 = ["ip", "user"];
 let closure_5 = { include: { cookies: true, data: true, headers: true, ip: false, query_string: true, url: true, user: { id: true, username: true, email: true } }, transactionNamingScheme: "methodPath" };
@@ -24,10 +24,8 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
     }
     obj.user = user;
     obj.include = obj;
-    const obj1 = { name: "RequestData", processEvent: null };
+    obj1 = { name: "RequestData", processEvent: null };
     obj1[1] = function processEvent(sdkProcessingMetadata) {
-      let normalizedRequest;
-      let request;
       let prop = sdkProcessingMetadata.sdkProcessingMetadata;
       if (undefined === prop) {
         prop = {};
@@ -91,7 +89,7 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
         if (request) {
           user = request.user;
         }
-        const obj3 = obj(outer1_1[2]);
+        const obj3 = obj(closure_1_1[2]);
         obj = { ipAddress: null, user: null };
         obj[0] = tmp5;
         obj[1] = user;
@@ -100,8 +98,8 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
       } else {
         let result1 = sdkProcessingMetadata;
         if (request) {
-          result1 = obj(outer1_1[2]).addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
-          const obj2 = obj(outer1_1[2]);
+          result1 = obj(closure_1_1[2]).addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
+          const obj2 = obj(closure_1_1[2]);
         }
         return result1;
       }

@@ -1,12 +1,12 @@
 // _runtime/03723_formatDistanceStrict.js
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
-import compareAsc from "compareAsc";
-import _typeof from "_typeof";
-import cloneObject from "cloneObject";
-import assign from "assign";
-import code from "code";
-import requiredArgs from "requiredArgs";
-import { getDefaultOptions } from "03477_getDefaultOptions.js";
+import getDefaultOptions from "getDefaultOptions" /* 3477 */;
+import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
+import compareAsc from "compareAsc" /* 3648 */;
+import _typeof from "_typeof" /* 3472 */;
+import cloneObject from "cloneObject" /* 3721 */;
+import assign from "assign" /* 3722 */;
+import code from "code" /* 3718 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!getTimezoneOffsetInMilliseconds) {
   let obj = { default: null };
@@ -15,7 +15,7 @@ if (!getTimezoneOffsetInMilliseconds) {
 } else {
   tmp3 = getTimezoneOffsetInMilliseconds;
 }
-let obj1 = tmp3;
+getTimezoneOffsetInMilliseconds = tmp3;
 if (!compareAsc) {
   obj = { default: null };
   obj[0] = compareAsc;
@@ -23,7 +23,7 @@ if (!compareAsc) {
 } else {
   tmp5 = compareAsc;
 }
-let c3 = tmp5;
+compareAsc = tmp5;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -31,15 +31,15 @@ if (!_typeof) {
 } else {
   tmp7 = _typeof;
 }
-let c4 = tmp7;
+_typeof = tmp7;
 if (!cloneObject) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = cloneObject;
   let tmp9 = obj1;
 } else {
   tmp9 = cloneObject;
 }
-let c5 = tmp9;
+cloneObject = tmp9;
 if (!assign) {
   const obj2 = { default: null };
   obj2[0] = assign;
@@ -47,7 +47,7 @@ if (!assign) {
 } else {
   tmp11 = assign;
 }
-let closure_6 = tmp11;
+assign = tmp11;
 if (!code) {
   const obj3 = { default: null };
   obj3[0] = code;
@@ -55,7 +55,7 @@ if (!code) {
 } else {
   tmp13 = code;
 }
-const error = tmp13;
+code = tmp13;
 if (!requiredArgs) {
   const obj4 = { default: null };
   obj4[0] = requiredArgs;
@@ -63,14 +63,14 @@ if (!requiredArgs) {
 } else {
   tmp15 = requiredArgs;
 }
-const metroImportAll = tmp15;
+requiredArgs = tmp15;
 let c9 = 60000;
 let c10 = 1440;
 let c11 = 43200;
 let c12 = 525600;
 
 export default function formatDistanceStrict(arg0, arg1, locale) {
-  tmp15.default(2, arguments);
+  requiredArgs.default(2, arguments);
   locale = undefined;
   const defaultOptions = getDefaultOptions.getDefaultOptions();
   if (null != locale) {
@@ -80,10 +80,10 @@ export default function formatDistanceStrict(arg0, arg1, locale) {
     locale = defaultOptions.locale;
   }
   if (null === locale) {
-    locale = tmp13.default;
+    locale = code.default;
   }
   if (locale.formatDistance) {
-    const defaultResult1 = tmp5.default(arg0, arg1);
+    const defaultResult1 = compareAsc.default(arg0, arg1);
     const _isNaN = isNaN;
     if (isNaN(defaultResult1)) {
       const _RangeError4 = RangeError;
@@ -97,13 +97,13 @@ export default function formatDistanceStrict(arg0, arg1, locale) {
       const obj = { addSuffix: null, comparison: null };
       obj[0] = Boolean(addSuffix);
       obj[1] = defaultResult1;
-      const defaultResult3 = tmp11.default(tmp9.default(locale), obj);
+      const defaultResult3 = assign.default(cloneObject.default(locale), obj);
       if (defaultResult1 > 0) {
-        let defaultResult4 = tmp7.default(arg1);
-        let defaultResult5 = tmp7.default(arg0);
+        let defaultResult4 = _typeof.default(arg1);
+        let defaultResult5 = _typeof.default(arg0);
       } else {
-        defaultResult4 = tmp7.default(arg0);
-        defaultResult5 = tmp7.default(arg1);
+        defaultResult4 = _typeof.default(arg0);
+        defaultResult5 = _typeof.default(arg1);
       }
       let roundingMethod;
       if (null != locale) {
@@ -134,8 +134,8 @@ export default function formatDistanceStrict(arg0, arg1, locale) {
       const time = defaultResult5.getTime();
       const diff = time - defaultResult4.getTime();
       const result = diff / c9;
-      const defaultResult2 = tmp9.default(locale);
-      const result1 = (diff - (tmp3.default(defaultResult5) - tmp3.default(defaultResult4))) / c9;
+      const defaultResult2 = cloneObject.default(locale);
+      const result1 = (diff - (getTimezoneOffsetInMilliseconds.default(defaultResult5) - getTimezoneOffsetInMilliseconds.default(defaultResult4))) / c9;
       let unit;
       if (null != locale) {
         unit = locale.unit;
@@ -189,7 +189,7 @@ export default function formatDistanceStrict(arg0, arg1, locale) {
         const rangeError2 = new RangeError("unit must be 'second', 'minute', 'hour', 'day', 'month' or 'year'");
         throw rangeError2;
       }
-      const defaultResult6 = tmp3.default(defaultResult5);
+      const defaultResult6 = getTimezoneOffsetInMilliseconds.default(defaultResult5);
     }
   } else {
     const _RangeError = RangeError;

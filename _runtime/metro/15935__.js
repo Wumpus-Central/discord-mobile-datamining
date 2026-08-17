@@ -7,12 +7,12 @@ if (typeof Symbol === "function") {
   const fn2 = (arg0) => {
     arg0.newStemmer = function newStemmer(english) {
       let obj = { arabic: arabicStemmer, armenian: armenianStemmer, basque: basqueStemmer, catalan: catalanStemmer, czech: czechStemmer, danish: danishStemmer, dutch: dutchStemmer, english: englishStemmer, finnish: finnishStemmer, french: frenchStemmer, german: germanStemmer, hungarian: hungarianStemmer, italian: italianStemmer, irish: irishStemmer, norwegian: norwegianStemmer, porter: porterStemmer, portuguese: portugueseStemmer, romanian: romanianStemmer, russian: russianStemmer, spanish: spanishStemmer, slovene: sloveneStemmer, swedish: swedishStemmer, tamil: tamilStemmer, turkish: turkishStemmer };
-      turkishStemmer = new obj[english.toLowerCase(english)]();
+      closure_0 = new obj[english.toLowerCase(english)]();
       obj = {
         stem(arg0) {
-          tmp.setCurrent(arg0);
-          tmp.stem();
-          return tmp.getCurrent();
+          store.setCurrent(arg0);
+          store.stem();
+          return store.getCurrent();
         }
       };
       return obj;
@@ -20,7 +20,7 @@ if (typeof Symbol === "function") {
     arg0.algorithms = function algorithms() {
       return ["arabic", "armenian", "basque", "catalan", "czech", "danish", "dutch", "english", "finnish", "french", "german", "hungarian", "italian", "irish", "norwegian", "porter", "portuguese", "romanian", "russian", "spanish", "slovene", "swedish", "tamil", "turkish"];
     };
-    const fn = (Among, items, items1) => {
+    fn = (Among, items, items1) => {
       if (items) {
         for (let num = 0; num < items.length; num = num + 1) {
           let tmp3 = items[num];
@@ -111,8 +111,6 @@ if (typeof Symbol === "function") {
       {
         key: "replace$esjava$3",
         value: function replace$esjava$3(length2, length, arg2) {
-          let b;
-          let b2;
           const self = this;
           if (0 === length2) {
             if (length === self.b.length) {
@@ -140,7 +138,7 @@ if (typeof Symbol === "function") {
       {
         key: "subSequence$esjava$2",
         value: function subSequence$esjava$2(arg0, arg1) {
-          const error = new Error("NotImpl: CharSequence::subSequence");
+          error = new Error("NotImpl: CharSequence::subSequence");
           throw error;
         }
       },
@@ -843,8 +841,6 @@ if (typeof Symbol === "function") {
       {
         key: "setCurrent$esjava$1",
         value: function setCurrent$esjava$1(arg0) {
-          let current;
-          let current2;
           ({ current, current: current2 } = this);
           const replaced = current.replace(0, current2.length(), arg0);
           this.cursor = 0;
@@ -1244,8 +1240,6 @@ if (typeof Symbol === "function") {
       {
         key: "slice_check$esjava$0",
         value: function slice_check$esjava$0() {
-          let current;
-          let limit;
           const self = this;
           if (this.bra >= 0) {
             if (self.bra <= self.ket) {
@@ -1254,7 +1248,7 @@ if (typeof Symbol === "function") {
               }
             }
           }
-          const error = new Error("Snowball: faulty slice operation");
+          error = new Error("Snowball: faulty slice operation");
           throw error;
         }
       },
@@ -3438,8 +3432,6 @@ if (typeof Symbol === "function") {
       {
         key: "stem$esjava$0",
         value: function stem$esjava$0() {
-          let cursor;
-          let cursor2;
           const obj = { B_is_noun: true, B_is_verb: true, B_is_defined: false };
           const result = obj.r_Checks1$esjava$0();
           obj.cursor = obj.cursor;
@@ -12375,8 +12367,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_mark_regions$esjava$0",
         value: function r_mark_regions$esjava$0() {
-          let cursor;
-          let cursor2;
           const self = this;
           ({ limit: this.I_pV, limit: this.I_p1, limit: this.I_p2 } = this);
           let tmp = turkishStemmer;
@@ -21295,7 +21285,6 @@ if (typeof Symbol === "function") {
       {
         key: "stem$esjava$0",
         value: function stem$esjava$0() {
-          let cursor;
           const self = this;
           const result = this.r_mark_regions$esjava$0();
           this.cursor = this.cursor;
@@ -36485,7 +36474,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_main_suffix$esjava$0",
         value: function r_main_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_p1) {
             return false;
@@ -36522,7 +36510,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_consonant_pair$esjava$0",
         value: function r_consonant_pair$esjava$0() {
-          let limit_backward;
           const self = this;
           if (!this.cursor >= this.I_p1) {
             return tmp3;
@@ -36551,7 +36538,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_other_suffix$esjava$0",
         value: function r_other_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           this.ket = this.cursor;
           const diff = this.limit - this.cursor;
@@ -36595,9 +36581,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_undouble$esjava$0",
         value: function r_undouble$esjava$0() {
-          let S_ch;
-          let eq_s_b$esjava$1;
-          let limit_backward;
           const self = this;
           if (!this.cursor >= this.I_p1) {
             return tmp2;
@@ -37967,7 +37950,6 @@ if (typeof Symbol === "function") {
       {
         key: "stem$esjava$0",
         value: function stem$esjava$0() {
-          let cursor;
           const result = this.r_prelude$esjava$0();
           this.cursor = this.cursor;
           const result1 = this.r_mark_regions$esjava$0();
@@ -38821,8 +38803,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_mark_regions$esjava$0",
         value: function r_mark_regions$esjava$0() {
-          let cursor;
-          let cursor2;
           const self = this;
           ({ limit: this.I_p1, limit: this.I_p2 } = this);
           ({ cursor, cursor: cursor2 } = this);
@@ -39229,7 +39209,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_postlude$esjava$0",
         value: function r_postlude$esjava$0() {
-          let cursor;
           const self = this;
           if (this.B_Y_found) {
             while (true) {
@@ -39258,7 +39237,6 @@ if (typeof Symbol === "function") {
       {
         key: "stem$esjava$0",
         value: function stem$esjava$0() {
-          let cursor2;
           const self = this;
           const cursor = this.cursor;
           if (!this.r_exception1$esjava$0()) {
@@ -41500,7 +41478,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_particle_etc$esjava$0",
         value: function r_particle_etc$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_p1) {
             return false;
@@ -41538,7 +41515,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_possessive$esjava$0",
         value: function r_possessive$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_p1) {
             return false;
@@ -41620,7 +41596,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_case_ending$esjava$0",
         value: function r_case_ending$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_p1) {
             return false;
@@ -41715,7 +41690,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_other_endings$esjava$0",
         value: function r_other_endings$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_p2) {
             return false;
@@ -41751,7 +41725,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_i_plural$esjava$0",
         value: function r_i_plural$esjava$0() {
-          let limit_backward;
           const self = this;
           if (!this.cursor >= this.I_p1) {
             return tmp2;
@@ -41774,8 +41747,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_t_plural$esjava$0",
         value: function r_t_plural$esjava$0() {
-          let limit_backward;
-          let limit_backward2;
           const self = this;
           if (this.cursor < this.I_p1) {
             return false;
@@ -41834,8 +41805,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_tidy$esjava$0",
         value: function r_tidy$esjava$0() {
-          let S_x;
-          let eq_s_b$esjava$1;
           const self = this;
           if (this.cursor < this.I_p1) {
             return false;
@@ -43918,9 +43887,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_prelude$esjava$0",
         value: function r_prelude$esjava$0() {
-          let cursor;
-          let cursor2;
-          let cursor3;
           const self = this;
           while (true) {
             while (true) {
@@ -43982,7 +43948,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_mark_regions$esjava$0",
         value: function r_mark_regions$esjava$0() {
-          let cursor;
           const self = this;
           ({ limit: this.I_pV, limit: this.I_p1, limit: this.I_p2, cursor } = this);
           let result = turkishStemmer;
@@ -44366,7 +44331,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_i_verb_suffix$esjava$0",
         value: function r_i_verb_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_pV) {
             return false;
@@ -44403,7 +44367,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_verb_suffix$esjava$0",
         value: function r_verb_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_pV) {
             return false;
@@ -44451,7 +44414,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_residual_suffix$esjava$0",
         value: function r_residual_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           const diff = this.limit - this.cursor;
           this.ket = this.cursor;
@@ -44568,7 +44530,6 @@ if (typeof Symbol === "function") {
       {
         key: "stem$esjava$0",
         value: function stem$esjava$0() {
-          let cursor;
           const self = this;
           const result = this.r_prelude$esjava$0();
           this.cursor = this.cursor;
@@ -47494,9 +47455,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_prelude$esjava$0",
         value: function r_prelude$esjava$0() {
-          let cursor;
-          let cursor2;
-          let cursor4;
           const self = this;
           while (true) {
             ({ cursor: self.bra, cursor, cursor: cursor2 } = self);
@@ -47815,7 +47773,6 @@ if (typeof Symbol === "function") {
       {
         key: "stem$esjava$0",
         value: function stem$esjava$0() {
-          let cursor;
           const result = this.r_prelude$esjava$0();
           this.cursor = this.cursor;
           const result1 = this.r_mark_regions$esjava$0();
@@ -54281,7 +54238,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_prelude$esjava$0",
         value: function r_prelude$esjava$0() {
-          let cursor2;
           const self = this;
           self.bra = self.cursor;
           const result = self.find_among$esjava$1(turkishStemmer.a_0);
@@ -54383,8 +54339,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_mark_regions$esjava$0",
         value: function r_mark_regions$esjava$0() {
-          let cursor;
-          let cursor2;
           const self = this;
           ({ limit: this.I_pV, limit: this.I_p1, limit: this.I_p2 } = this);
           let tmp = turkishStemmer;
@@ -54723,7 +54677,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_verb_suffix$esjava$0",
         value: function r_verb_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_pV) {
             return false;
@@ -54800,7 +54753,6 @@ if (typeof Symbol === "function") {
       {
         key: "stem$esjava$0",
         value: function stem$esjava$0() {
-          let cursor;
           const self = this;
           const result = this.r_prelude$esjava$0();
           this.cursor = this.cursor;
@@ -58829,7 +58781,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_main_suffix$esjava$0",
         value: function r_main_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_p1) {
             return false;
@@ -58874,7 +58825,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_consonant_pair$esjava$0",
         value: function r_consonant_pair$esjava$0() {
-          let limit_backward;
           const self = this;
           if (!this.cursor >= this.I_p1) {
             return tmp3;
@@ -58903,7 +58853,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_other_suffix$esjava$0",
         value: function r_other_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_p1) {
             return false;
@@ -60221,8 +60170,6 @@ if (typeof Symbol === "function") {
       {
         key: "stem$esjava$0",
         value: function stem$esjava$0() {
-          let cursor3;
-          let cursor4;
           const self = this;
           this.B_Y_found = false;
           this.bra = this.cursor;
@@ -61733,8 +61680,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_mark_regions$esjava$0",
         value: function r_mark_regions$esjava$0() {
-          let cursor;
-          let cursor2;
           const self = this;
           ({ limit: this.I_pV, limit: this.I_p1, limit: this.I_p2 } = this);
           let tmp = turkishStemmer;
@@ -61900,7 +61845,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_verb_suffix$esjava$0",
         value: function r_verb_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_pV) {
             return false;
@@ -62009,7 +61953,6 @@ if (typeof Symbol === "function") {
       {
         key: "stem$esjava$0",
         value: function stem$esjava$0() {
-          let cursor;
           const self = this;
           const result = this.r_prelude$esjava$0();
           this.cursor = this.cursor;
@@ -65947,7 +65890,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_prelude$esjava$0",
         value: function r_prelude$esjava$0() {
-          let cursor2;
           const self = this;
           while (true) {
             while (true) {
@@ -65988,8 +65930,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_mark_regions$esjava$0",
         value: function r_mark_regions$esjava$0() {
-          let cursor;
-          let cursor2;
           const self = this;
           ({ limit: this.I_pV, limit: this.I_p1, limit: this.I_p2 } = this);
           let tmp = turkishStemmer;
@@ -66261,7 +66201,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_verb_suffix$esjava$0",
         value: function r_verb_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_pV) {
             return false;
@@ -66328,7 +66267,6 @@ if (typeof Symbol === "function") {
       {
         key: "stem$esjava$0",
         value: function stem$esjava$0() {
-          let cursor;
           const self = this;
           const result = this.r_prelude$esjava$0();
           this.cursor = this.cursor;
@@ -75310,8 +75248,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_mark_regions$esjava$0",
         value: function r_mark_regions$esjava$0() {
-          let cursor;
-          let cursor2;
           const self = this;
           ({ limit: this.I_pV, limit: this.I_p1, limit: this.I_p2 } = this);
           let tmp = turkishStemmer;
@@ -75552,7 +75488,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_y_verb_suffix$esjava$0",
         value: function r_y_verb_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_pV) {
             return false;
@@ -75586,7 +75521,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_verb_suffix$esjava$0",
         value: function r_verb_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_pV) {
             return false;
@@ -75683,7 +75617,6 @@ if (typeof Symbol === "function") {
       {
         key: "stem$esjava$0",
         value: function stem$esjava$0() {
-          let cursor;
           const self = this;
           const result = this.r_mark_regions$esjava$0();
           this.cursor = this.cursor;
@@ -79724,7 +79657,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_main_suffix$esjava$0",
         value: function r_main_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_p1) {
             return false;
@@ -79761,7 +79693,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_consonant_pair$esjava$0",
         value: function r_consonant_pair$esjava$0() {
-          let limit_backward;
           const self = this;
           if (!this.cursor >= this.I_p1) {
             return tmp2;
@@ -79792,7 +79723,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_other_suffix$esjava$0",
         value: function r_other_suffix$esjava$0() {
-          let limit_backward;
           const self = this;
           if (this.cursor < this.I_p1) {
             return false;
@@ -80941,14 +80871,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_fix_va_start$esjava$0",
         value: function r_fix_va_start$esjava$0() {
-          let cursor2;
-          let cursor3;
-          let cursor4;
-          let cursor5;
-          let cursor6;
-          let cursor7;
-          let cursor8;
-          let cursor9;
           const self = this;
           const cursor = this.cursor;
           ({ cursor: cursor2, cursor: cursor3 } = this);
@@ -81294,7 +81216,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_remove_question_suffixes$esjava$0",
         value: function r_remove_question_suffixes$esjava$0() {
-          let cursor;
           const self = this;
           if (this.r_has_min_length$esjava$0()) {
             self.B_found_a_match = false;
@@ -81339,7 +81260,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_remove_um$esjava$0",
         value: function r_remove_um$esjava$0() {
-          let cursor;
           const self = this;
           this.B_found_a_match = false;
           if (this.r_has_min_length$esjava$0()) {
@@ -81363,7 +81283,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_remove_common_word_endings$esjava$0",
         value: function r_remove_common_word_endings$esjava$0() {
-          let cursor;
           const self = this;
           this.B_found_a_match = false;
           if (this.r_has_min_length$esjava$0()) {
@@ -81445,7 +81364,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_remove_vetrumai_urupukal$esjava$0",
         value: function r_remove_vetrumai_urupukal$esjava$0() {
-          let cursor;
           const obj = { B_found_a_match: false, B_found_vetrumai_urupu: false };
           if (obj.r_has_min_length$esjava$0()) {
             ({ cursor: obj.limit_backward, limit: obj.cursor } = obj);
@@ -81623,7 +81541,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_remove_tense_suffix$esjava$0",
         value: function r_remove_tense_suffix$esjava$0() {
-          let cursor;
           const self = this;
           this.B_found_a_match = false;
           if (this.r_has_min_length$esjava$0()) {
@@ -86204,8 +86121,6 @@ if (typeof Symbol === "function") {
       {
         key: "r_is_reserved_word$esjava$0",
         value: function r_is_reserved_word$esjava$0() {
-          let cursor;
-          let cursor2;
           const self = this;
           ({ cursor, cursor: cursor2 } = this);
           while (!self.eq_s$esjava$1("ad")) {

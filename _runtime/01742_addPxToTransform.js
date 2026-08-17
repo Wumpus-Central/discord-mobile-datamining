@@ -1,11 +1,11 @@
 // _runtime/01742_addPxToTransform.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _slicedToArray from "_slicedToArray";
-import { TransitionType } from "01710_TransitionType.js";
-import { convertAnimationObjectToKeyframes } from "01712_convertAnimationObjectToKeyframes.js";
-import { findDescendantWithExitingAnimation } from "01741_findDescendantWithExitingAnimation.js";
+import TransitionType from "TransitionType" /* 1710 */;
+import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
+import findDescendantWithExitingAnimation from "findDescendantWithExitingAnimation" /* 1741 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function addPxToTransform(transform) {
   return transform.map((arg0) => {
     const obj = {};
@@ -36,7 +36,7 @@ function addPxToTransform(transform) {
   });
 }
 function generateNextCustomKeyframeName() {
-  let closure_6 = tmp + 1;
+  closure_6 = tmp + 1;
   return "REA" + +closure_6;
 }
 let closure_2 = ["transform"];
@@ -109,7 +109,6 @@ export const createAnimationWithInitialValues = function createAnimationWithInit
       }
       const _Array = Array;
       first.transform = Array.from(map, (arg0) => {
-        let tmp;
         [r10007, tmp] = arg0;
         return { [r10007]: tmp };
       });
@@ -130,9 +129,7 @@ export const createAnimationWithInitialValues = function createAnimationWithInit
   return tmp30;
 };
 export const TransitionGenerator = function TransitionGenerator(ENTRY_EXIT, easingY) {
-  let firstKeyframeObj;
-  let secondKeyframeObj;
-  let closure_6 = tmp + 1;
+  closure_6 = tmp + 1;
   const transitionKeyframeName = `REA${tmp}`;
   if (TransitionType.TransitionType.LINEAR === ENTRY_EXIT) {
     let tmp3Result = tmp3(1743);

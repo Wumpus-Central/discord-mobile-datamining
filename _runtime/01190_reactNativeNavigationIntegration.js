@@ -5,8 +5,6 @@ let dependencyMap = arg6;
 const ReactNativeNavigation = "ReactNativeNavigation";
 arg5.INTEGRATION_NAME = "ReactNativeNavigation";
 arg5.reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
-  let navigation;
-  let routeChangeTimeoutMs;
   ({ navigation, routeChangeTimeoutMs } = enableTabsInstrumentation);
   if (routeChangeTimeoutMs === undefined) {
     routeChangeTimeoutMs = 1000;
@@ -19,15 +17,15 @@ arg5.reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  let dependencyMap;
-  let c3;
-  let c4;
+  dependencyMap = undefined;
+  c3 = undefined;
+  c4 = undefined;
   let defaultIdleOptions;
-  let c7;
+  c7 = undefined;
   let pushRecentComponentId;
   let discardLatestNavigationSpan;
   let clearStateChangeTimeout;
-  let closure_5 = [];
+  closure_5 = [];
   defaultIdleOptions = flag2(1160).defaultIdleOptions;
   c7 = null;
   function startIdleNavigationSpan() {
@@ -74,7 +72,7 @@ arg5.reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
       const result1 = obj5.ignoreEmptyBackNavigation(flag2(_undefined[2]).getClient(), _undefined2);
       const obj6 = flag2(_undefined[2]);
     }
-    let closure_0 = _undefined2;
+    closure_0 = _undefined2;
     const obj2 = flag2(_undefined[0]);
     const obj7 = flag2(_undefined[4]);
     const client = flag2(_undefined[2]).getClient();
@@ -156,7 +154,7 @@ arg5.reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
       if (null != _null) {
         componentName1 = _null.componentName;
       }
-      const obj1 = { from: null, to: null };
+      obj1 = { from: null, to: null };
       obj1[0] = componentName1;
       obj1[1] = componentId.componentName;
       obj[3] = obj1;

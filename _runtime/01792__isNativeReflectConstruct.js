@@ -1,19 +1,15 @@
 // _runtime/01792__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import noop from "noop";
-import "noop";
-import { jsx } from "jsxProd";
-import isJest from "isJest";
+import noopDefault from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import noop from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import isJest from "isJest" /* 1657 */;
 
-let Component;
-let c5;
-let closure_6;
-let createContext;
-let error;
-let LayoutAnimationConfig = arg1;
+const LayoutAnimationConfig = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,17 +21,17 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 function SkipEntering(children) {
   const tmp = callback4(children.shouldSkip);
-  const LayoutAnimationConfig = tmp;
+  closure_0 = tmp;
   const tmp2 = callback4(children.itemKey);
   if (children.itemKey !== tmp2.current) {
     ({ shouldSkip: tmp.current, itemKey: tmp2.current } = children);
@@ -44,18 +40,19 @@ function SkipEntering(children) {
   callback3(() => {
     closure_0.current = false;
   }, items);
-  return jsx(isJest ? context : context.Provider, { value: tmp, children: children.children });
+  return jsx(closure_10 ? context : context.Provider, { value: tmp, children: children.children });
 }
 ({ Children: c5, useEffect: closure_6, useRef: error, Component, createContext } = noop);
-isJest = isJest.isReact19();
+noopDefault;
+let closure_10 = isJest.isReact19();
 const context = createContext(null);
 class LayoutAnimationConfig {
   constructor() {
     self = this;
-    tmp = SkipEntering(this, LayoutAnimationConfig);
-    tmp2 = SkipEntering;
-    obj = SkipEntering(LayoutAnimationConfig);
-    tmp3 = SkipEntering;
+    tmp = closure_2(this, LayoutAnimationConfig);
+    tmp2 = closure_4;
+    obj = closure_4(LayoutAnimationConfig);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -69,15 +66,15 @@ class LayoutAnimationConfig {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(LayoutAnimationConfig, Component);
+_inheritsDefault(LayoutAnimationConfig, Component);
 isJest = {
   key: "getMaybeWrappedChildren",
   value: function getMaybeWrappedChildren() {
     let self = this;
     self = this;
-    if (outer1_5.count(this.props.children) > 1) {
+    if (closure_1_5.count(this.props.children) > 1) {
       if (self.props.skipExiting) {
-        let children = outer1_5.map(self.props.children, (children) => <self itemKey={self.props.itemKey} skipExiting>{arg0}</self>);
+        let children = closure_1_5.map(self.props.children, (children) => <self itemKey={self.props.itemKey} skipExiting>{arg0}</self>);
       }
       return children;
     }

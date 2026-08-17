@@ -59,7 +59,7 @@ arg5.default = function parseHermesStack(str) {
       obj = { type: "NATIVE" };
     } else if ("address at " === match[3]) {
       if ("InternalBytecode.js" === match[4]) {
-        const obj1 = { type: "INTERNAL_BYTECODE", sourceUrl: null, line1Based: null, virtualOffset0Based: null };
+        obj1 = { type: "INTERNAL_BYTECODE", sourceUrl: null, line1Based: null, virtualOffset0Based: null };
         obj1[1] = match[4];
         const _Number6 = Number;
         obj1[2] = Number.parseInt(match[5], 10);

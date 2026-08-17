@@ -1,10 +1,11 @@
 // _runtime/04388_allSettled.js
-import callBind from "callBind";
-import callBind from "callBind";
+import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
+import requirePromise from "requirePromise" /* 4386 */;
+import callBind from "callBind" /* 1422 */;
 
-require("requirePromise")();
-let closure_2 = callBind(require("getEvalledConstructor")("%Promise.all%"));
-let closure_3 = callBind(require("getEvalledConstructor")("%Promise.reject%"));
+requirePromise();
+let closure_2 = callBind(getEvalledConstructor("%Promise.all%"));
+let closure_3 = callBind(getEvalledConstructor("%Promise.reject%"));
 
 export default function allSettled(arg0) {
   const self = this;
@@ -17,7 +18,7 @@ export default function allSettled(arg0) {
       try {
         return promise.then((value) => ({ status: "fulfilled", value }), (reason) => ({ status: "rejected", reason }));
       } catch (tmp3) {
-        return outer1_3(tmp, tmp3);
+        return closure_1_3(tmp, tmp3);
       }
     }));
   }

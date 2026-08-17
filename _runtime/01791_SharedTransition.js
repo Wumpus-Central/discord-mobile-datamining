@@ -1,17 +1,18 @@
 // _runtime/01791_SharedTransition.js
-import _classCallCheck from "_classCallCheck";
-import { isWorkletFunction } from "01679_isWorkletFunction.js";
-import { updateLayoutAnimations } from "01768_updateLayoutAnimations.js";
+import _createClassDefault from "_createClass" /* 42 */;
+import isWorkletFunction from "isWorkletFunction" /* 1679 */;
+import updateLayoutAnimations from "updateLayoutAnimations" /* 1768 */;
+import closure_3 from "_classCallCheck" /* 41 */;
 
 const SharedTransition = global;
-const require = arg1;
+require = arg1;
 let closure_4 = ["width", "height", "originX", "originY", "transform", "borderRadius", "borderTopLeftRadius", "borderTopRightRadius", "borderBottomLeftRadius", "borderBottomRightRadius"];
 let closure_5 = { code: "function pnpm_SharedTransitionTs1(viewTag,values,progress){const{progressAnimationCallback}=this.__closure;const newStyles=progressAnimationCallback(values,progress);global._notifyAboutProgress(viewTag,newStyles,true);}" };
 let closure_6 = { code: "function pnpm_SharedTransitionTs2(values){const{animationFactory,SUPPORTED_PROPS,withTiming,reduceMotion,transitionDuration}=this.__closure;let animations={};const initialValues={};if(animationFactory){animations=animationFactory(values);for(const key in animations){if(!SUPPORTED_PROPS.includes(key)){throw new ReanimatedError(\"The prop '\"+key+\"' is not supported yet.\");}}}else{for(const propName of SUPPORTED_PROPS){if(propName==='transform'){const matrix=values.targetTransformMatrix;animations.transformMatrix=withTiming(matrix,{reduceMotion:reduceMotion,duration:transitionDuration});}else{const capitalizedPropName=\"\"+propName.charAt(0).toUpperCase()+propName.slice(1);const keyToTargetValue=\"target\"+capitalizedPropName;animations[propName]=withTiming(values[keyToTargetValue],{reduceMotion:reduceMotion,duration:transitionDuration});}}}for(const propName in animations){if(propName==='transform'){initialValues.transformMatrix=values.currentTransformMatrix;}else{const capitalizedPropName=propName.charAt(0).toUpperCase()+propName.slice(1);const keyToCurrentValue=\"current\"+capitalizedPropName;initialValues[propName]=values[keyToCurrentValue];}}return{initialValues:initialValues,animations:animations};}" };
 let closure_7 = { code: "function pnpm_SharedTransitionTs3(viewTag,values,progress){const{SUPPORTED_PROPS}=this.__closure;const newStyles={};for(const propertyName of SUPPORTED_PROPS){if(propertyName==='transform'){const currentMatrix=values.currentTransformMatrix;const targetMatrix=values.targetTransformMatrix;const newMatrix=new Array(9);for(let i=0;i<9;i++){newMatrix[i]=progress*(targetMatrix[i]-currentMatrix[i])+currentMatrix[i];}newStyles.transformMatrix=newMatrix;}else{const PropertyName=propertyName.charAt(0).toUpperCase()+propertyName.slice(1);const currentPropertyName=\"current\"+PropertyName;const targetPropertyName=\"target\"+PropertyName;const currentValue=values[currentPropertyName];const targetValue=values[targetPropertyName];newStyles[propertyName]=progress*(targetValue-currentValue)+currentValue;}}global._notifyAboutProgress(viewTag,newStyles,true);}" };
 class SharedTransition {
   constructor() {
-    tmp = _classCallCheck(this, SharedTransition);
+    tmp = closure_3(this, SharedTransition);
     this._customAnimationFactory = null;
     this._animation = null;
     this._transitionDuration = 500;
@@ -22,7 +23,7 @@ class SharedTransition {
     return;
   }
 }
-let obj = {
+obj = {
   key: "custom",
   value: function custom(_customAnimationFactory) {
     this._customAnimationFactory = _customAnimationFactory;
@@ -34,7 +35,7 @@ const items = [
   {
     key: "progressAnimation",
     value: function progressAnimation(progressAnimationCallback) {
-      let closure_0 = progressAnimationCallback;
+      closure_0 = progressAnimationCallback;
       const fn = function i(arg0, arg1, arg2) {
         progressAnimationCallback._notifyAboutProgress(arg0, progressAnimationCallback(arg1, arg2), true);
       };
@@ -81,17 +82,17 @@ const items = [
         if (!self._defaultTransitionType) {
           if (self._customAnimationFactory) {
             if (!self._customProgressAnimation) {
-              self._defaultTransitionType = obj(1679).SharedTransitionType.ANIMATION;
+              self._defaultTransitionType = isWorkletFunction.SharedTransitionType.ANIMATION;
             }
           }
-          self._defaultTransitionType = obj(1679).SharedTransitionType.PROGRESS_ANIMATION;
+          self._defaultTransitionType = isWorkletFunction.SharedTransitionType.PROGRESS_ANIMATION;
         }
-        if (self._defaultTransitionType === obj(1679).SharedTransitionType.ANIMATION) {
-          let SHARED_ELEMENT_TRANSITION_PROGRESS = obj(1679).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
+        if (self._defaultTransitionType === isWorkletFunction.SharedTransitionType.ANIMATION) {
+          let SHARED_ELEMENT_TRANSITION_PROGRESS = isWorkletFunction.LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
         } else {
-          SHARED_ELEMENT_TRANSITION_PROGRESS = obj(1679).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS;
+          SHARED_ELEMENT_TRANSITION_PROGRESS = isWorkletFunction.LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS;
         }
-        obj = obj(1768);
+        obj = updateLayoutAnimations;
         const result = obj.updateLayoutAnimations(componentViewTag, SHARED_ELEMENT_TRANSITION_PROGRESS, transitionAnimation, sharedTransitionTag, flag);
         _progressTransitionManager = SharedTransition._progressTransitionManager;
         _progressTransitionManager.addProgressAnimation(componentViewTag, progressAnimation);
@@ -157,8 +158,8 @@ const items = [
             animations = tmp20;
             while (keys[tmp] !== undefined) {
               let tmp31 = tmp22;
-              let tmp32 = outer1_4;
-              if (outer1_4.includes(tmp22)) {
+              let tmp32 = closure_1_4;
+              if (closure_1_4.includes(tmp22)) {
                 continue;
               } else {
                 let tmp23 = _transitionDuration;
@@ -176,8 +177,8 @@ const items = [
             }
           }
         } else {
-          tmp3 = outer1_4;
-          const iter = outer1_4[Symbol.iterator]();
+          tmp3 = closure_1_4;
+          const iter = closure_1_4[Symbol.iterator]();
           const nextResult = iter.next();
           animations = obj;
           while (iter !== undefined) {
@@ -200,7 +201,7 @@ const items = [
               let tmp12 = _transitionDuration;
               let tmp13 = _reduceMotion;
               let combined = "target" + formatted + str3.slice(1);
-              let obj1 = _transitionDuration(_reduceMotion[6]);
+              obj1 = _transitionDuration(_reduceMotion[6]);
               obj = { reduceMotion: null, duration: null };
               let tmp14 = _reduceMotion;
               obj[0] = _reduceMotion;
@@ -242,8 +243,6 @@ const items = [
         self._progressAnimation = self._customProgressAnimation;
       } else {
         const fn = function t(arg0, arg1, arg2) {
-          let currentTransformMatrix;
-          let targetTransformMatrix;
           const obj = {};
           const iter = dependencyMap[Symbol.iterator]();
           const nextResult = iter.next();
@@ -372,7 +371,7 @@ const items1 = [
     }
   }
 ];
-const tmp2 = require("_createClass")(SharedTransition, items, items1);
+const tmp2 = _createClassDefault(SharedTransition, items, items1);
 const progressTransitionManager = new require("ProgressTransitionManager").ProgressTransitionManager();
 tmp2._progressTransitionManager = progressTransitionManager;
 

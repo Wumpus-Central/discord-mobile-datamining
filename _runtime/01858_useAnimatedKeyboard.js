@@ -8,15 +8,15 @@ let closure_5 = { code: "function pnpm_compatTs3(e){const{height}=this.__closure
 let closure_6 = { code: "function pnpm_compatTs4(e){const{state,KeyboardState,height}=this.__closure;state.set(e.height>0?KeyboardState.OPEN:KeyboardState.CLOSED);height.set(e.height);}" };
 arg5.KeyboardState = obj;
 arg5.useAnimatedKeyboard = () => {
-  const obj = height(state[0]);
+  obj = height(state[0]);
   height = obj.useSharedValue(0);
   state = height(state[0]).useSharedValue(obj.UNKNOWN);
   const obj2 = height(state[0]);
   const fn = function u(height) {
     if (height.height > 0) {
-      let CLOSING = outer1_2.OPENING;
+      let CLOSING = closure_1_2.OPENING;
     } else {
-      CLOSING = outer1_2.CLOSING;
+      CLOSING = closure_1_2.CLOSING;
     }
     const result = state.set(CLOSING);
   };
@@ -37,9 +37,9 @@ arg5.useAnimatedKeyboard = () => {
   fn3.__initData = closure_5;
   const fn4 = function n(height) {
     if (height.height > 0) {
-      let CLOSED = outer1_2.OPEN;
+      let CLOSED = closure_1_2.OPEN;
     } else {
-      CLOSED = outer1_2.CLOSED;
+      CLOSED = closure_1_2.CLOSED;
     }
     const result = state.set(CLOSED);
     const result1 = height.set(height.height);

@@ -26,11 +26,6 @@ function removePortal(closure_21) {
   }
 }
 function reducer(arg0, type) {
-  let hostName;
-  let hostName2;
-  let node;
-  let portalName;
-  let portalName2;
   type = type.type;
   let obj = {};
   const merged = Object.assign(arg0);

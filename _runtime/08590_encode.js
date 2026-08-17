@@ -111,7 +111,7 @@ arg5.decode = (arg0) => {
         }
       }
       const _Error = Error;
-      const error = new Error("Invalid input - it is not base32 encoded string");
+      error = new Error("Invalid input - it is not base32 encoded string");
       throw error;
     }
   }

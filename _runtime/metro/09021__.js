@@ -18,6 +18,6 @@ export default (obj) => {
       return obj;
     }
   }
-  const error = new Error("keyMirror(...): Argument must be an object.");
+  error = new Error("keyMirror(...): Argument must be an object.");
   throw error;
 };

@@ -3,7 +3,7 @@ let closure_0 = [];
 let closure_1 = { name: "default" };
 arg5.default = {
   setActiveScene(arg0) {
-    let closure_1 = arg0;
+    closure_1 = arg0;
     const item = arr.forEach((arg0) => arg0(closure_1));
   },
   getActiveScene() {

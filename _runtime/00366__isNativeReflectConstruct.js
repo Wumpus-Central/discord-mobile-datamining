@@ -1,9 +1,12 @@
 // _runtime/00366__isNativeReflectConstruct.js
-import AnimatedWithChildren from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import setDefault from "set" /* 357 */;
+import _assertNativeAnimatedModuleDefault from "_assertNativeAnimatedModule" /* 367 */;
+import AnimatedWithChildren from "_classCallCheck" /* 41 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_get" /* 96 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -16,25 +19,25 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
-const connectAnimatedNodes = require("set").API.connectAnimatedNodes;
-const disconnectAnimatedNodes = require("set").API.disconnectAnimatedNodes;
+const connectAnimatedNodes = setDefault.API.connectAnimatedNodes;
+const disconnectAnimatedNodes = setDefault.API.disconnectAnimatedNodes;
 class AnimatedWithChildren {
   constructor() {
     self = this;
     items = [...arguments];
     tmp = AnimatedWithChildren(this, AnimatedWithChildren);
     items1 = [...items];
-    tmp2 = __esModule;
-    obj = __esModule(AnimatedWithChildren);
-    tmp3 = __esModule;
+    tmp2 = closure_2;
+    obj = closure_2(AnimatedWithChildren);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -47,7 +50,7 @@ class AnimatedWithChildren {
     return tmp3Result;
   }
 }
-require("_inherits")(AnimatedWithChildren, require("_assertNativeAnimatedModule"));
+_inheritsDefault(AnimatedWithChildren, _assertNativeAnimatedModuleDefault);
 let items = [
   {
     key: "__makeNative",

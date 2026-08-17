@@ -15,8 +15,8 @@ arg5.toArray = function toArray(arg0) {
   return tmp;
 };
 arg5.withPrevAndCurrent = function withPrevAndCurrent(arg0, arg1) {
-  let closure_0 = arg1;
-  let closure_1 = [null];
+  closure_0 = arg1;
+  closure_1 = [null];
   const items = [...arg0];
   const items1 = [];
   const item = items.forEach((arg0, arg1) => {

@@ -1,7 +1,8 @@
 // _runtime/metro/12381__.js
-import { QRPolynomial } from "../12382_QRPolynomial.js";
-import { 12377__ } from "12377__.js";
-import { 12383__ } from "12383__.js";
+import _mod12377 from "module_12377" /* 12377 */;
+import QRPolynomial from "QRPolynomial" /* 12382 */;
+import _mod12383 from "module_12383" /* 12383 */;
+
 const obj = {
   PATTERN_POSITION_TABLE: items,
   G15: 1335,
@@ -83,7 +84,7 @@ const obj = {
       return (arg1 * diff3 % 3 + (arg1 + diff3) % 2) % 2 === 0;
     } else {
       const _Error = Error;
-      const error = new Error("bad maskPattern:" + arg0);
+      error = new Error("bad maskPattern:" + arg0);
       throw error;
     }
   },
@@ -97,7 +98,7 @@ const obj = {
         let tmp3 = require;
         let tmp4 = dependencyMap;
         let tmp5 = QRPolynomial;
-        let obj2 = 12383__;
+        let obj2 = _mod12383;
         let items = [1, obj2.gexp(num)];
         let tmp6 = new.target;
         let tmp7 = new.target;
@@ -115,7 +116,7 @@ const obj = {
   getLengthInBits(arg0, arg1) {
     if (1 <= arg1) {
       if (arg1 < 10) {
-        if (12377__.MODE_NUMBER === arg0) {
+        if (_mod12377.MODE_NUMBER === arg0) {
           return 10;
         } else if (tmp20(12377).MODE_ALPHA_NUM === arg0) {
           return 9;
@@ -123,7 +124,7 @@ const obj = {
           if (tmp20(12377).MODE_8BIT_BYTE !== arg0) {
             if (tmp20(12377).MODE_KANJI !== arg0) {
               const _Error4 = Error;
-              const error = new Error("mode:" + arg0);
+              error = new Error("mode:" + arg0);
               throw error;
             }
           }
@@ -132,7 +133,7 @@ const obj = {
       }
     }
     if (arg1 < 27) {
-      if (12377__.MODE_NUMBER === arg0) {
+      if (_mod12377.MODE_NUMBER === arg0) {
         return 12;
       } else if (tmp13(12377).MODE_ALPHA_NUM === arg0) {
         return 11;
@@ -146,7 +147,7 @@ const obj = {
         throw error1;
       }
     } else if (arg1 < 41) {
-      if (12377__.MODE_NUMBER === arg0) {
+      if (_mod12377.MODE_NUMBER === arg0) {
         return 14;
       } else if (tmp6(12377).MODE_ALPHA_NUM === arg0) {
         return 13;

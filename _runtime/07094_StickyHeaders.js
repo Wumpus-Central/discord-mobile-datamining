@@ -1,21 +1,14 @@
 // _runtime/07094_StickyHeaders.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import "noop";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 7041 */;
+import noop from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
-({ useRef: c3, useState: c4, useMemo: c5, useImperativeHandle: closure_6, useCallback: error, useEffect: metroImportAll } = noop);
+({ useRef: c3, useState: c4, useMemo: c5, useImperativeHandle: closure_6, useCallback: error, useEffect: closure_8 } = noop);
+noopDefault;
 
 export const StickyHeaders = (stickyHeaderIndices) => {
-  let c10;
-  let tmp2;
   stickyHeaderIndices = stickyHeaderIndices.stickyHeaderIndices;
   const stickyHeaderOffset = stickyHeaderIndices.stickyHeaderOffset;
   const renderItem = stickyHeaderIndices.renderItem;
@@ -33,8 +26,8 @@ export const StickyHeaders = (stickyHeaderIndices) => {
   let currentStickyIndex;
   let pushStartsAt;
   let arr2;
-  let c14;
-  let c15;
+  closure_14 = undefined;
+  closure_15 = undefined;
   let current;
   let translateY;
   let opacity;
@@ -50,12 +43,12 @@ export const StickyHeaders = (stickyHeaderIndices) => {
   if (!tmp4) {
     tmp4 = recyclerViewManager.getDataLength() <= arr2[arr2.length - 1];
   }
-  c14 = tmp4;
+  closure_14 = tmp4;
   let items1 = [tmp4, recyclerViewManager, arr2, currentStickyIndex, pushStartsAt, onChangeStickyIndex, stickyHeaderOffset];
   const tmp5 = onChangeStickyIndex(() => {
     let diff1;
     let sum;
-    if (!c14) {
+    if (!closure_14) {
       let obj = recyclerViewManager;
       let diff = arr2.length - 1;
       let num5 = -1;
@@ -134,10 +127,10 @@ export const StickyHeaders = (stickyHeaderIndices) => {
       tmp2 = stickyHeaderOffset;
     }
   }, items1);
-  c15 = tmp5;
+  closure_15 = tmp5;
   let items2 = [tmp5];
   inverted(() => {
-    _undefined2();
+    callback();
   }, items2);
   const items3 = [tmp5];
   extraData(stickyHeaderIndices.stickyHeaderRef, () => ({
@@ -151,7 +144,7 @@ export const StickyHeaders = (stickyHeaderIndices) => {
   const items4 = [recyclerViewManager, currentStickyIndex, scrollY, pushStartsAt, stickyHeaderOffset];
   let tmp3Result = tmp3(() => {
     const tryGetLayoutResult = recyclerViewManager.tryGetLayout(currentStickyIndex);
-    let num;
+    num = undefined;
     if (tryGetLayoutResult != null) {
       num = tryGetLayoutResult.height;
     }
@@ -184,7 +177,7 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     if (-1 !== currentStickyIndex) {
       tmpResult = null;
       if (tmp4 < data.length) {
-        const obj1 = { index: null, item: null, renderItem: null, layout: null, refHolder: null, extraData: null, trailingItem: "accessibilityRole", target: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017416968884238224, hidden: -1524152479688253200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, inverted: -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032459785691222965 };
+        obj1 = { index: null, item: null, renderItem: null, layout: null, refHolder: null, extraData: null, trailingItem: "accessibilityRole", target: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017416968884238224, hidden: -1524152479688253200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, inverted: -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032459785691222965 };
         obj1[0] = tmp4;
         obj1[1] = tmp6[tmp4];
         obj1[2] = renderItem;

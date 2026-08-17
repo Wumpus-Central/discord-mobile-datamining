@@ -1,10 +1,11 @@
 // _runtime/04634_reduce.js
-import { baseForOwn } from "00601_baseForOwn.js";
-import { baseIteratee } from "00720_baseIteratee.js";
-import { 00599__ } from "metro/00599__.js";
+import _mod599 from "module_599" /* 599 */;
+import baseForOwn from "baseForOwn" /* 601 */;
+import baseIteratee from "baseIteratee" /* 720 */;
+
 
 export default function reduce(arg0, arg1, arg2) {
-  if (00599__(arg0)) {
+  if (_mod599(arg0)) {
     let tmpResult = tmp(4635);
   } else {
     tmpResult = tmp(4636);

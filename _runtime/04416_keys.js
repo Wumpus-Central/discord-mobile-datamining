@@ -1,16 +1,18 @@
 // _runtime/04416_keys.js
+import isArguments from "isArguments" /* 4417 */;
+
 if (keys) {
   let keys2 = function keys(arg0) {
     return keys(arg0);
   };
 } else {
-  keys2 = require("isArguments");
+  keys2 = isArguments;
 }
 keys = Object.keys;
 keys2.shim = function shimObjectKeys() {
   if (Object.keys) {
     if (!((arg0, arg1) => {
-      const keys = Object.keys(arguments);
+      keys = Object.keys(arguments);
       let tmp = keys;
       if (keys) {
         tmp = keys.length === arguments.length;

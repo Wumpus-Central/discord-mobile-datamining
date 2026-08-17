@@ -109,10 +109,10 @@ arg5.objectAssign = function objectAssign(objectAssignResult, closure_1, readRes
   return arguments[0];
 };
 arg5.deferInit = function deferInit(Compression, base64, arg2) {
-  let closure_0 = Compression;
-  let closure_1 = base64;
-  let closure_2 = arg2;
-  let c3 = false;
+  closure_0 = Compression;
+  closure_1 = base64;
+  closure_2 = arg2;
+  c3 = false;
   Object.defineProperty(Compression, base64, {
     get() {
       if (!c3) {
@@ -221,7 +221,7 @@ arg5.strRepeat = function strRepeat(_1, arg1) {
 arg5.COMPRESSION_METHOD_NONE = undefined;
 arg5.COMPRESSION_METHOD_DEFLATE = 0;
 arg5.decompress = function decompress(dataView, compressionMethod, arg2, dataview) {
-  let closure_0 = arg2;
+  closure_0 = arg2;
   let str = dataview;
   if (dataview === undefined) {
     str = "string";

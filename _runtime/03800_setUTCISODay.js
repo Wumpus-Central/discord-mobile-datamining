@@ -1,7 +1,7 @@
 // _runtime/03800_setUTCISODay.js
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
-import toInteger from "toInteger";
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "toInteger" /* 3476 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -18,7 +18,7 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 if (!toInteger) {
   obj = { default: null };
   obj[0] = toInteger;
@@ -26,15 +26,16 @@ if (!toInteger) {
 } else {
   tmp7 = toInteger;
 }
+toInteger = tmp7;
 
 export default function setUTCISODay(arg0, arg1) {
-  tmp5.default(2, arguments);
-  const defaultResult1 = tmp7.default(arg1);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = toInteger.default(arg1);
   let diff = defaultResult1;
   if (defaultResult1 % 7 === 0) {
     diff = defaultResult1 - 7;
   }
-  const defaultResult2 = tmp3.default(arg0);
+  const defaultResult2 = _typeof.default(arg0);
   let num = 0;
   const uTCDay = defaultResult2.getUTCDay();
   if ((diff % 7 + 7) % 7 < 1) {

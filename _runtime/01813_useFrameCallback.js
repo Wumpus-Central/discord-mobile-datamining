@@ -1,9 +1,9 @@
 // _runtime/01813_useFrameCallback.js
-import noop from "noop";
+import FrameCallbackRegistryJSDefault from "FrameCallbackRegistryJS" /* 1814 */;
+import noop from "noop" /* 19 */;
 
-let c0;
-let closure_1;
 ({ useEffect: c0, useRef: closure_1 } = noop);
+let closure_2 = new FrameCallbackRegistryJSDefault();
 
 export const useFrameCallback = function useFrameCallback(fn, arg1) {
   const callback = fn;
@@ -14,8 +14,8 @@ export const useFrameCallback = function useFrameCallback(fn, arg1) {
   let callback2;
   const tmp = callback2({
     setActive(isActive) {
-      const result = outer1_2.manageStateFrameCallback(_undefined.current.callbackId, isActive);
-      _undefined.current.isActive = isActive;
+      const result = closure_1_2.manageStateFrameCallback(closure_1.current.callbackId, isActive);
+      closure_1.current.isActive = isActive;
     },
     isActive: flag,
     callbackId: -1
@@ -23,13 +23,11 @@ export const useFrameCallback = function useFrameCallback(fn, arg1) {
   callback2 = tmp;
   const items = [fn, flag];
   callback(() => {
-    let closure_0;
-    let current;
-    _undefined.current.callbackId = outer1_2.registerFrameCallback(closure_0);
-    ({ current: closure_0, current } = _undefined);
-    current.setActive(_undefined.current.isActive);
+    closure_1.current.callbackId = closure_1_2.registerFrameCallback(closure_0);
+    ({ current: closure_0, current } = closure_1);
+    current.setActive(closure_1.current.isActive);
     return () => {
-      const result = outer1_2.unregisterFrameCallback(callbackId.callbackId);
+      const result = closure_1_2.unregisterFrameCallback(callbackId.callbackId);
       callbackId.callbackId = -1;
     };
   }, items);

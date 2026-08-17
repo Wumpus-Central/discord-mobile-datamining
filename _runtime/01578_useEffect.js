@@ -1,5 +1,5 @@
 // _runtime/01578_useEffect.js
-import importAllResult from "noop";
+import importAllResult from "noop" /* 19 */;
 
 if (typeof document !== "undefined") {
   let useEffect = importAllResult.useLayoutEffect;

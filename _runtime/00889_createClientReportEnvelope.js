@@ -1,7 +1,8 @@
 // _runtime/00889_createClientReportEnvelope.js
-import { dateTimestampInSeconds } from "00838_dateTimestampInSeconds.js";
-import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
-const require = arg1;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 838 */;
+import forEachEnvelopeItem from "forEachEnvelopeItem" /* 864 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.createClientReportEnvelope = function createClientReportEnvelope(discarded_events) {

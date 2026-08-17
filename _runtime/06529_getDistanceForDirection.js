@@ -1,6 +1,7 @@
 // _runtime/06529_getDistanceForDirection.js
-import { getInvertedMultiplier } from "06530_getInvertedMultiplier.js";
-const require = arg1;
+import getInvertedMultiplier from "getInvertedMultiplier" /* 6530 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.getDistanceForDirection = function getDistanceForDirection(width, gestureDirection, arg2) {
   const invertedMultiplier = getInvertedMultiplier.getInvertedMultiplier(gestureDirection, arg2);

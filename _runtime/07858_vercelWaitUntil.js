@@ -1,6 +1,7 @@
 // _runtime/07858_vercelWaitUntil.js
-import { getGlobalSingleton } from "07739_getGlobalSingleton.js";
-const require = arg1;
+import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.vercelWaitUntil = function vercelWaitUntil(arg0) {
   let obj = getGlobalSingleton.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];

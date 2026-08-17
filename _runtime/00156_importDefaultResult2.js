@@ -1,24 +1,21 @@
 // _runtime/00156_importDefaultResult2.js
-import _classCallCheck from "_classCallCheck";
-import _classPrivateFieldBase from "_classPrivateFieldBase";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_classPrivateFieldKey";
-import importDefaultResult2Result from "NativePerformanceCxx";
-import setPlatformObject from "setPlatformObject";
-import { _isNativeReflectConstruct } from "00157__isNativeReflectConstruct.js";
+import nullthrowsDefault from "nullthrows" /* 70 */;
+import NativePerformanceCxxDefault from "NativePerformanceCxx" /* 154 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 157 */;
+import structuredCloneInternalDefault from "structuredCloneInternal" /* 168 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import closure_5 from "_classPrivateFieldBase" /* 90 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
+import setPlatformObject from "setPlatformObject" /* 126 */;
 import { importDefaultResult1 } from "00166_importDefaultResult1.js";
 import { importDefaultResult1 } from "00167_importDefaultResult1.js";
-import { structuredCloneInternal } from "00168_structuredCloneInternal.js";
 
-let c10;
-let c9;
-let closure_12;
-let metroImportAll;
-let unpackModuleId;
 const Performance = arg1;
 let closure_6 = ["mark", "measure"];
+const importDefaultResult2Result = nullthrowsDefault(NativePerformanceCxxDefault);
 const error = importDefaultResult2Result;
-({ reportMark: metroImportAll, reportMeasure: c9, getMarkTime: c10, clearMarks: unpackModuleId, clearMeasures: closure_12 } = importDefaultResult2Result);
+({ reportMark: closure_8, reportMeasure: c9, getMarkTime: c10, clearMarks: unpackModuleId, clearMeasures: closure_12 } = importDefaultResult2Result);
 let closure_13 = { startTime: 0, detail: "channel" };
 let closure_14 = { name: "", startTime: 0, duration: 0, detail: "sa" };
 function getMarkTimeForMeasure(arg0) {
@@ -27,11 +24,11 @@ function getMarkTimeForMeasure(arg0) {
 let closure_16 = importDefaultResult1("eventCounts");
 class Performance {
   constructor() {
-    tmp = outer1_4(this, Performance);
+    tmp = closure_4(this, Performance);
     obj = { writable: true, value: null };
     eventCounts = new require("_isNativeReflectConstruct").EventCounts();
     obj[1] = eventCounts;
-    definePropertyResult = Object.defineProperty(this, eventCounts, obj);
+    definePropertyResult = Object.defineProperty(this, closure_16, obj);
     this.now = require("warnNoNativePerformance").getCurrentTimeStamp;
     return;
   }
@@ -46,8 +43,6 @@ let items = [
   {
     key: "memory",
     get() {
-      let hermes_allocatedBytes;
-      let hermes_heapSize;
       const simpleMemoryInfo = importDefaultResult2Result.getSimpleMemoryInfo();
       if (simpleMemoryInfo.hasOwnProperty("hermes_heapSize")) {
         ({ hermes_heapSize, hermes_allocatedBytes } = simpleMemoryInfo);
@@ -65,10 +60,6 @@ let items = [
   {
     key: "rnStartupTiming",
     get() {
-      let endTime;
-      let executeJavaScriptBundleEntryPointStart;
-      let initializeRuntimeStart;
-      let startTime;
       const reactNativeStartupTiming = importDefaultResult2Result.getReactNativeStartupTiming();
       ({ startTime, initializeRuntimeStart, executeJavaScriptBundleEntryPointStart, endTime } = reactNativeStartupTiming);
       return new importDefaultResult1({ startTime, initializeRuntimeStart, executeJavaScriptBundleEntryPointStart, endTime });
@@ -101,8 +92,6 @@ let items = [
   {
     key: "mark",
     value: function mark(StringResult) {
-      let detail;
-      let startTime;
       if (undefined === StringResult) {
         const _TypeError3 = TypeError;
         const typeError = new TypeError("Failed to execute 'mark' on 'Performance': 1 argument required, but only 0 present.");
@@ -142,7 +131,7 @@ let items = [
         }
         let tmp7;
         if (undefined !== detail) {
-          tmp7 = structuredCloneInternal(detail);
+          tmp7 = structuredCloneInternalDefault(detail);
         }
         closure_13.startTime = currentTimeStamp;
         closure_13.detail = tmp7;
@@ -161,10 +150,6 @@ let items = [
   {
     key: "measure",
     value: function measure(str) {
-      let detail;
-      let duration;
-      let end;
-      let start;
       if (undefined === str) {
         let typeError = globalThis;
         const _TypeError4 = TypeError;
@@ -214,7 +199,7 @@ let items = [
                   tmp64 = callback5(start);
                   if (null == tmp64) {
                     const _HermesInternal6 = HermesInternal;
-                    let tmp73 = _isNativeReflectConstruct;
+                    let tmp73 = _isNativeReflectConstructDefault;
                     tmp73 = new tmp73("Failed to execute 'measure' on 'Performance': The mark '" + start + "' does not exist.", "SyntaxError");
                     throw tmp73;
                   }
@@ -229,7 +214,7 @@ let items = [
                     typeError = importDefault;
                     typeError = dependencyMap;
                     const _HermesInternal8 = HermesInternal;
-                    typeError = _isNativeReflectConstruct;
+                    typeError = _isNativeReflectConstructDefault;
                     typeError = new.target;
                     typeError = new.target;
                     typeError = new typeError("Failed to execute 'measure' on 'Performance': The mark '" + StringResult + "' does not exist.", "SyntaxError");
@@ -247,7 +232,7 @@ let items = [
                   tmp80 = callback5(end);
                   if (null == tmp80) {
                     const _HermesInternal7 = HermesInternal;
-                    let tmp89 = _isNativeReflectConstruct;
+                    let tmp89 = _isNativeReflectConstructDefault;
                     tmp89 = new tmp89("Failed to execute 'measure' on 'Performance': The mark '" + end + "' does not exist.", "SyntaxError");
                     throw tmp89;
                   }
@@ -262,7 +247,7 @@ let items = [
                     typeError = importDefault;
                     typeError = dependencyMap;
                     const _HermesInternal9 = HermesInternal;
-                    typeError = _isNativeReflectConstruct;
+                    typeError = _isNativeReflectConstructDefault;
                     typeError = new.target;
                     typeError = new.target;
                     typeError = new typeError("Failed to execute 'measure' on 'Performance': The mark '" + StringResult1 + "' does not exist.", "SyntaxError");
@@ -305,7 +290,7 @@ let items = [
                   typeError = dependencyMap;
                   currentTimeStamp = tmp96;
                   num3 = tmp64;
-                  const tmp10 = structuredCloneInternal(detail);
+                  const tmp10 = structuredCloneInternalDefault(detail);
                 }
               } else {
                 if (undefined === tmp64) {
@@ -324,7 +309,7 @@ let items = [
             const tmp42 = callback5(arg1);
             if (null == tmp42) {
               const _HermesInternal5 = HermesInternal;
-              let tmp57 = _isNativeReflectConstruct;
+              let tmp57 = _isNativeReflectConstructDefault;
               tmp57 = new tmp57("Failed to execute 'measure' on 'Performance': The mark '" + arg1 + "' does not exist.", "SyntaxError");
               throw tmp57;
             } else {
@@ -335,7 +320,7 @@ let items = [
                 const tmp41Result = tmp41(arg2);
                 if (null == tmp41Result) {
                   const _HermesInternal4 = HermesInternal;
-                  let tmp49 = _isNativeReflectConstruct;
+                  let tmp49 = _isNativeReflectConstructDefault;
                   tmp49 = new tmp49("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
                   throw tmp49;
                 } else {
@@ -361,7 +346,7 @@ let items = [
             const tmp21 = callback5(typeError);
             if (null == tmp21) {
               const _HermesInternal3 = HermesInternal;
-              let tmp35 = _isNativeReflectConstruct;
+              let tmp35 = _isNativeReflectConstructDefault;
               tmp35 = new tmp35("Failed to execute 'measure' on 'Performance': The mark '" + typeError + "' does not exist.", "SyntaxError");
               throw tmp35;
             } else {
@@ -372,7 +357,7 @@ let items = [
                 const tmp20Result = tmp20(arg2);
                 if (null == tmp20Result) {
                   const _HermesInternal2 = HermesInternal;
-                  let tmp28 = _isNativeReflectConstruct;
+                  let tmp28 = _isNativeReflectConstructDefault;
                   tmp28 = new tmp28("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
                   throw tmp28;
                 } else {
@@ -395,7 +380,7 @@ let items = [
             const tmp9 = callback5(arg2);
             if (null == tmp9) {
               const _HermesInternal = HermesInternal;
-              let tmp13 = _isNativeReflectConstruct;
+              let tmp13 = _isNativeReflectConstructDefault;
               tmp13 = new tmp13("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
               throw tmp13;
             } else {

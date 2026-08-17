@@ -1,9 +1,10 @@
 // _runtime/06630__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult1 from "_inherits";
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6610 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
 
 let FeFuncA = arg1;
 function _isNativeReflectConstruct() {
@@ -17,10 +18,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,11 +30,11 @@ class FeComponentTransferFunction {
   constructor() {
     self = this;
     items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, FeFuncA);
+    tmp = closure_2(this, FeFuncA);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(FeFuncA);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(FeFuncA);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -47,7 +48,7 @@ class FeComponentTransferFunction {
   }
 }
 FeFuncA = FeComponentTransferFunction;
-importDefaultResult1(FeComponentTransferFunction, require("_isNativeReflectConstruct"));
+importDefaultResult1(FeComponentTransferFunction, _isNativeReflectConstructDefault);
 let items = [
   {
     key: "render",
@@ -63,11 +64,11 @@ class FeFuncR {
   constructor() {
     self = this;
     items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, FeFuncA);
+    tmp = closure_2(this, FeFuncA);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(FeFuncA);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(FeFuncA);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -88,11 +89,11 @@ class FeFuncG {
   constructor() {
     self = this;
     items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, FeFuncA);
+    tmp = closure_2(this, FeFuncA);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(FeFuncA);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(FeFuncA);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -113,11 +114,11 @@ class FeFuncB {
   constructor() {
     self = this;
     items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, FeFuncA);
+    tmp = closure_2(this, FeFuncA);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(FeFuncA);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(FeFuncA);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -138,11 +139,11 @@ class FeFuncA {
   constructor() {
     self = this;
     items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, FeFuncA);
+    tmp = closure_2(this, FeFuncA);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(FeFuncA);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(FeFuncA);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;

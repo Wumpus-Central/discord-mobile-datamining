@@ -5,7 +5,7 @@ function fetchNativeFrames() {
   return new Promise((arg0, arg1) => {
     const callback = arg0;
     const table = arg1;
-    let c2 = false;
+    c2 = false;
     const timeout = setTimeout(() => {
       if (!c2) {
         c2 = true;
@@ -44,16 +44,16 @@ if (this) {
 }
 if (!fn) {
   fn = (arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     let _Promise = arg2;
-    let closure_3 = arg3;
+    closure_3 = arg3;
     if (!arg2) {
       _Promise = Promise;
     }
     _Promise = new _Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function fulfilled(arg0) {
         try {
           step(iter.next(arg0));
@@ -123,11 +123,11 @@ function nativeFramesIntegration() {
     const tmp = _null;
     const tmp2 = asyncExpiringMap;
     const result = asyncExpiringMap.set(spanId, new Promise((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const promise = new Promise((arg0, arg1) => {
         const callback = arg0;
         const table = arg1;
-        let c2 = false;
+        c2 = false;
         const timeout = setTimeout(() => {
           if (!c2) {
             c2 = true;
@@ -159,7 +159,7 @@ function nativeFramesIntegration() {
       new Promise((arg0, arg1) => {
         const callback = arg0;
         const table = arg1;
-        let c2 = false;
+        c2 = false;
         const timeout = setTimeout(() => {
           if (!c2) {
             c2 = true;
@@ -188,14 +188,14 @@ function nativeFramesIntegration() {
           }
         });
       }).then((arg0) => callback(arg0)).then(undefined, (arg0) => {
-        const debug = callback(outer1_1[2]).debug;
-        debug.log("[" + outer1_3 + "] Error while fetching native frames.", arg0);
+        const debug = callback(closure_1_1[2]).debug;
+        debug.log("[" + closure_1_3 + "] Error while fetching native frames.", arg0);
         callback(null);
       });
     }));
   }
   function fetchEndFramesForSpan(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return asyncExpiringMap1(undefined, undefined, undefined, function*() {
       if (c5 === 2) {
         c5 = 3;
@@ -224,28 +224,28 @@ function nativeFramesIntegration() {
               return obj;
             } else {
               let spanId = tmp3;
-              let store = tmp7;
-              store = undefined;
+              let obj5 = tmp7;
+              obj5 = undefined;
               spanId = undefined;
-              let c2;
-              let c3;
+              c2 = undefined;
+              c3 = undefined;
               c4 = undefined;
               c5 = undefined;
-              let closure_6;
-              store = store(outer2_1[2]).timestampInSeconds();
-              spanId = outer1_0.spanContext().spanId;
-              if (outer1_1.has(spanId)) {
-                let obj6 = store(outer2_1[3]);
-                if (obj6.isRootSpan(outer1_0)) {
-                  const debug4 = store(outer2_1[2]).debug;
+              closure_6 = undefined;
+              obj5 = obj5(closure_2_1[2]).timestampInSeconds();
+              spanId = obj5.spanContext().spanId;
+              if (closure_1_1.has(spanId)) {
+                let obj6 = obj5(closure_2_1[3]);
+                if (obj6.isRootSpan(obj5)) {
+                  const debug4 = obj5(closure_2_1[2]).debug;
                   const _HermesInternal4 = HermesInternal;
-                  debug4.log("[" + outer2_3 + "] Fetch frames for root span end (" + spanId + ").");
+                  debug4.log("[" + closure_2_3 + "] Fetch frames for root span end (" + spanId + ").");
                   let promise = new Promise((arg0) => {
-                    let closure_0 = arg0;
+                    closure_0 = arg0;
                     const promise = new Promise((arg0, arg1) => {
                       const callback = arg0;
                       const table = arg1;
-                      let c2 = false;
+                      c2 = false;
                       const timeout = setTimeout(() => { ... }, 2000);
                       const NATIVE = callback(table[0]).NATIVE;
                       const nativeFrames = NATIVE.fetchNativeFrames();
@@ -254,7 +254,7 @@ function nativeFramesIntegration() {
                     new Promise((arg0, arg1) => {
                       const callback = arg0;
                       const table = arg1;
-                      let c2 = false;
+                      c2 = false;
                       const timeout = setTimeout(() => { ... }, 2000);
                       const NATIVE = callback(table[0]).NATIVE;
                       const nativeFrames = NATIVE.fetchNativeFrames();
@@ -267,25 +267,25 @@ function nativeFramesIntegration() {
                       callback(null);
                     });
                   });
-                  const result = outer1_2.set(spanId, promise);
+                  const result = closure_1_2.set(spanId, promise);
                 }
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = obj12.get(spanId);
                 return obj1;
               }
-              const obj11 = store(outer2_1[2]);
-              obj12 = outer1_1;
+              const obj11 = obj5(closure_2_1[2]);
+              obj12 = closure_1_1;
             }
           } else {
             if (1 === tmp7) {
               c3 = 0;
-              const outer2_7 = c2;
-              const debug3 = store(outer2_1[2]).debug;
+              closure_7 = c2;
+              const debug3 = obj5(closure_2_1[2]).debug;
               const _HermesInternal3 = HermesInternal;
-              debug3.log("[" + outer2_3 + "] Error while capturing end frames for span " + outer2_1 + ".", outer2_7);
+              debug3.log("[" + closure_2_3 + "] Error while capturing end frames for span " + closure_2_1 + ".", closure_7);
             } else if (2 === tmp7) {
               if (arg0 === 1) {
                 c5 = 3;
@@ -297,17 +297,17 @@ function nativeFramesIntegration() {
                 obj2[0] = arg1;
                 return obj2;
               } else {
-                const outer2_2 = arg1;
-                if (outer2_2) {
+                closure_2 = arg1;
+                if (closure_2) {
                   c4 = 3;
                   c5 = 1;
                   const obj3 = { value: null, done: false };
-                  obj3[0] = outer2_5();
+                  obj3[0] = closure_2_5();
                   return obj3;
                 } else {
-                  const debug2 = store(outer2_1[2]).debug;
+                  const debug2 = obj5(closure_2_1[2]).debug;
                   const _HermesInternal2 = HermesInternal;
-                  debug2.log("[" + outer2_3 + "] No start frames found for span " + outer2_1 + ", skipping frame data.");
+                  debug2.log("[" + closure_2_3 + "] No start frames found for span " + closure_2_1 + ", skipping frame data.");
                   c3 = 0;
                   c5 = 3;
                   const obj4 = { value: null, done: true };
@@ -331,19 +331,18 @@ function nativeFramesIntegration() {
                 tmp10 = closure_6 > 0;
               }
               if (tmp10) {
-                const attr = store.setAttribute("frames.total", c4);
-                const attr1 = store.setAttribute("frames.slow", c5);
-                const attr2 = store.setAttribute("frames.frozen", closure_6);
-                let debug = store(outer2_1[2]).debug;
+                const attr = obj5.setAttribute("frames.total", c4);
+                const attr1 = obj5.setAttribute("frames.slow", c5);
+                const attr2 = obj5.setAttribute("frames.frozen", closure_6);
+                let debug = obj5(closure_2_1[2]).debug;
                 const _HermesInternal = HermesInternal;
-                debug.log("[" + outer2_3 + "] Attached frame data to span " + spanId + ": total=" + c4 + ", slow=" + c5 + ", frozen=" + closure_6);
+                debug.log("[" + closure_2_3 + "] Attached frame data to span " + spanId + ": total=" + c4 + ", slow=" + c5 + ", frozen=" + closure_6);
               }
-              obj = store(outer2_1[3]);
-              if (!obj.isRootSpan(store)) {
-                const obj5 = { timestamp: null, nativeFrames: null };
-                obj5[0] = store;
+              obj = obj5(closure_2_1[3]);
+              if (!obj.isRootSpan(obj5)) {
+                obj5 = { timestamp: null, nativeFrames: null };
+                obj5[0] = obj5;
                 obj5[1] = c3;
-                outer1_0 = obj5;
               }
               c3 = 0;
             }
@@ -381,7 +380,7 @@ function nativeFramesIntegration() {
       }
     },
     processEvent(arg0) {
-      let closure_0 = arg0;
+      let measurements = arg0;
       return asyncExpiringMap1(undefined, undefined, undefined, function*() {
         if (c3 === 2) {
           c3 = 3;
@@ -414,31 +413,31 @@ function nativeFramesIntegration() {
                   return obj;
                 } else {
                   let op = tmp4;
-                  let lib = 0;
-                  lib = undefined;
+                  c0 = 0;
+                  c0 = undefined;
                   op = undefined;
                   arr = undefined;
                   c3 = undefined;
-                  let c4;
+                  c4 = undefined;
                   let timestamp;
-                  let c6;
-                  throwTypeErrorResult = outer1_0;
-                  if ("transaction" === outer1_0.type) {
-                    if (outer1_0.transaction) {
-                      if (outer1_0.contexts) {
-                        if (outer1_0.contexts.trace) {
-                          if (outer1_0.timestamp) {
-                            if (outer1_0.contexts.trace.span_id) {
-                              throwTypeErrorResult = outer1_0;
-                              op = outer1_0.contexts.trace.op;
-                              throwTypeErrorResult = outer1_0;
-                              const span_id = outer1_0.contexts.trace.span_id;
+                  c6 = undefined;
+                  throwTypeErrorResult = closure_1_0;
+                  if ("transaction" === closure_1_0.type) {
+                    if (closure_1_0.transaction) {
+                      if (closure_1_0.contexts) {
+                        if (closure_1_0.contexts.trace) {
+                          if (closure_1_0.timestamp) {
+                            if (closure_1_0.contexts.trace.span_id) {
+                              throwTypeErrorResult = closure_1_0;
+                              op = closure_1_0.contexts.trace.op;
+                              throwTypeErrorResult = closure_1_0;
+                              const span_id = closure_1_0.contexts.trace.span_id;
                               arr = span_id;
-                              throwTypeErrorResult = outer1_1;
+                              throwTypeErrorResult = closure_1_1;
                               arr = 1;
                               c3 = 1;
-                              const obj1 = { value: null, done: false };
-                              obj1[0] = outer1_1.pop(span_id);
+                              obj1 = { value: null, done: false };
+                              obj1[0] = closure_1_1.pop(span_id);
                               return obj1;
                             }
                           }
@@ -448,7 +447,7 @@ function nativeFramesIntegration() {
                   }
                   c3 = 3;
                   const obj2 = { value: null, done: true };
-                  obj2[0] = outer1_0;
+                  obj2[0] = closure_1_0;
                   return obj2;
                 }
               } else if (1 === tmp4) {
@@ -461,23 +460,23 @@ function nativeFramesIntegration() {
                   obj3[0] = arg1;
                   return obj3;
                 } else {
-                  throwTypeErrorResult = lib;
-                  const outer2_3 = arg1;
-                  throwTypeErrorResult = outer2_3;
+                  throwTypeErrorResult = c0;
+                  closure_3 = arg1;
+                  throwTypeErrorResult = closure_3;
                   throwTypeErrorResult = op;
-                  if (outer2_3) {
+                  if (closure_3) {
                     arr = 2;
                     c3 = 1;
                     const obj4 = { value: null, done: false };
-                    obj4[0] = arr.pop(outer2_2);
+                    obj4[0] = arr.pop(closure_2_2);
                     return obj4;
                   } else {
-                    const debug6 = lib(outer2_1[2]).debug;
+                    const debug6 = measurements(closure_2_1[2]).debug;
                     const _HermesInternal6 = HermesInternal;
-                    debug6.warn("[" + outer2_3 + "] Start frames of transaction " + lib.transaction + " (eventId, " + lib.event_id + ") are missing, but the transaction already ended.");
+                    debug6.warn("[" + closure_3 + "] Start frames of transaction " + c0.transaction + " (eventId, " + c0.event_id + ") are missing, but the transaction already ended.");
                     c3 = 3;
                     const obj5 = { value: null, done: true };
-                    obj5[0] = lib;
+                    obj5[0] = c0;
                     return obj5;
                   }
                 }
@@ -490,63 +489,61 @@ function nativeFramesIntegration() {
                 obj6[0] = arg1;
                 return obj6;
               } else {
-                throwTypeErrorResult = lib;
+                throwTypeErrorResult = c0;
                 timestamp = arg1;
                 throwTypeErrorResult = timestamp;
                 if (timestamp) {
-                  if (outer2_6(timestamp.timestamp, lib.timestamp)) {
-                    const debug3 = lib(outer2_1[2]).debug;
+                  if (obj7(timestamp.timestamp, c0.timestamp)) {
+                    const debug3 = measurements(closure_2_1[2]).debug;
                     const _HermesInternal3 = HermesInternal;
-                    debug3.log("[" + outer2_3 + "] Using frames from root span end (spanId, " + arr + ").");
-                    let outer1_4 = outer1_5.nativeFrames;
+                    debug3.log("[" + closure_3 + "] Using frames from root span end (spanId, " + arr + ").");
+                    let nativeFrames = closure_1_5.nativeFrames;
                   }
-                  const obj7 = { frames_total: null, frames_frozen: null, frames_slow: null };
+                  obj7 = { frames_total: null, frames_frozen: null, frames_slow: null };
                   const obj8 = { value: null, unit: "none" };
-                  obj8[0] = outer2_4.totalFrames - outer2_3.totalFrames;
+                  obj8[0] = closure_2_4.totalFrames - closure_3.totalFrames;
                   obj7[0] = obj8;
                   const obj9 = { value: null, unit: "none" };
-                  obj9[0] = outer2_4.frozenFrames - outer2_3.frozenFrames;
+                  obj9[0] = closure_2_4.frozenFrames - closure_3.frozenFrames;
                   obj7[1] = obj9;
                   const obj10 = { value: null, unit: "none" };
-                  obj10[0] = outer2_4.slowFrames - outer2_3.slowFrames;
+                  obj10[0] = closure_2_4.slowFrames - closure_3.slowFrames;
                   obj7[2] = obj10;
-                  outer2_6 = obj7;
-                  if (outer2_6.frames_frozen.value <= 0) {
-                    if (outer2_6.frames_slow.value <= 0) {
+                  if (obj7.frames_frozen.value <= 0) {
+                    if (obj7.frames_slow.value <= 0) {
                       c3 = 3;
                     }
-                    const debug5 = lib(outer2_1[2]).debug;
+                    const debug5 = measurements(closure_2_1[2]).debug;
                     const _HermesInternal5 = HermesInternal;
-                    debug5.warn("[" + outer2_3 + "] Detected zero slow or frozen frames. Not adding measurements to spanId (" + outer2_2 + ").");
+                    debug5.warn("[" + closure_3 + "] Detected zero slow or frozen frames. Not adding measurements to spanId (" + closure_2_2 + ").");
                   }
-                  const debug4 = lib(outer2_1[2]).debug;
+                  const debug4 = measurements(closure_2_1[2]).debug;
                   const _JSON = JSON;
                   const _HermesInternal4 = HermesInternal;
-                  debug4.log("[" + outer2_3 + "] Adding measurements to " + outer2_1 + " transaction " + lib.transaction + ": " + JSON.stringify(outer2_6, undefined, 2));
-                  const measurements = lib.measurements;
-                  lib = measurements;
+                  debug4.log("[" + closure_3 + "] Adding measurements to " + closure_2_1 + " transaction " + c0.transaction + ": " + JSON.stringify(obj7, undefined, 2));
+                  measurements = c0.measurements;
                   if (null !== measurements) {
-                    if (undefined !== lib) {
-                      let obj11 = lib;
+                    if (undefined !== measurements) {
+                      let obj11 = measurements;
                     }
                     tmp64.measurements = tmp66(tmp68({}, obj11), c6);
                   }
                   obj11 = {};
                 }
-                if (outer1_0) {
-                  if (outer2_6(outer1_0.timestamp, lib.timestamp)) {
-                    const debug2 = lib(outer2_1[2]).debug;
+                if (closure_1_0) {
+                  if (obj7(closure_1_0.timestamp, c0.timestamp)) {
+                    const debug2 = measurements(closure_2_1[2]).debug;
                     const _HermesInternal2 = HermesInternal;
-                    debug2.log("[" + outer2_3 + "] Using native frames from last child span end (spanId, " + arr + ").");
-                    outer1_4 = outer1_0.nativeFrames;
+                    debug2.log("[" + closure_3 + "] Using native frames from last child span end (spanId, " + arr + ").");
+                    nativeFrames = closure_1_0.nativeFrames;
                   }
                 }
-                const debug = lib(outer2_1[2]).debug;
+                const debug = measurements(closure_2_1[2]).debug;
                 const _HermesInternal = HermesInternal;
-                debug.warn("[" + outer2_3 + "] Frames were collected within larger than margin of error delay for spanId (" + arr + "). Dropping the inaccurate values.");
+                debug.warn("[" + closure_3 + "] Frames were collected within larger than margin of error delay for spanId (" + arr + "). Dropping the inaccurate values.");
                 c3 = 3;
                 obj = { value: null, done: true };
-                obj[0] = lib;
+                obj[0] = c0;
                 return obj;
               }
             } catch (throwTypeErrorResult) {
@@ -586,11 +583,11 @@ arg5.createNativeFramesIntegrations = (arg0) => {
     const tmp = _null;
     const tmp2 = asyncExpiringMap;
     const result = asyncExpiringMap.set(spanId, new Promise((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const promise = new Promise((arg0, arg1) => {
         const callback = arg0;
         const table = arg1;
-        let c2 = false;
+        c2 = false;
         const timeout = setTimeout(() => {
           if (!c2) {
             c2 = true;
@@ -622,7 +619,7 @@ arg5.createNativeFramesIntegrations = (arg0) => {
       new Promise((arg0, arg1) => {
         const callback = arg0;
         const table = arg1;
-        let c2 = false;
+        c2 = false;
         const timeout = setTimeout(() => {
           if (!c2) {
             c2 = true;
@@ -651,14 +648,14 @@ arg5.createNativeFramesIntegrations = (arg0) => {
           }
         });
       }).then((arg0) => callback(arg0)).then(undefined, (arg0) => {
-        const debug = callback(outer1_1[2]).debug;
-        debug.log("[" + outer1_3 + "] Error while fetching native frames.", arg0);
+        const debug = callback(closure_1_1[2]).debug;
+        debug.log("[" + closure_1_3 + "] Error while fetching native frames.", arg0);
         callback(null);
       });
     }));
   }
   fetchEndFramesForSpan = function fetchEndFramesForSpan(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return asyncExpiringMap1(undefined, undefined, undefined, function*() {
       if (c5 === 2) {
         c5 = 3;
@@ -687,28 +684,28 @@ arg5.createNativeFramesIntegrations = (arg0) => {
               return obj;
             } else {
               let spanId = tmp3;
-              let store = tmp7;
-              store = undefined;
+              let obj5 = tmp7;
+              obj5 = undefined;
               spanId = undefined;
-              let c2;
-              let c3;
+              c2 = undefined;
+              c3 = undefined;
               c4 = undefined;
               c5 = undefined;
-              let closure_6;
-              store = store(outer2_1[2]).timestampInSeconds();
-              spanId = outer1_0.spanContext().spanId;
-              if (outer1_1.has(spanId)) {
-                let obj6 = store(outer2_1[3]);
-                if (obj6.isRootSpan(outer1_0)) {
-                  const debug4 = store(outer2_1[2]).debug;
+              closure_6 = undefined;
+              obj5 = obj5(closure_2_1[2]).timestampInSeconds();
+              spanId = obj5.spanContext().spanId;
+              if (closure_1_1.has(spanId)) {
+                let obj6 = obj5(closure_2_1[3]);
+                if (obj6.isRootSpan(obj5)) {
+                  const debug4 = obj5(closure_2_1[2]).debug;
                   const _HermesInternal4 = HermesInternal;
-                  debug4.log("[" + outer2_3 + "] Fetch frames for root span end (" + spanId + ").");
+                  debug4.log("[" + closure_2_3 + "] Fetch frames for root span end (" + spanId + ").");
                   let promise = new Promise((arg0) => {
-                    let closure_0 = arg0;
+                    closure_0 = arg0;
                     const promise = new Promise((arg0, arg1) => {
                       const callback = arg0;
                       const table = arg1;
-                      let c2 = false;
+                      c2 = false;
                       const timeout = setTimeout(() => { ... }, 2000);
                       const NATIVE = callback(table[0]).NATIVE;
                       const nativeFrames = NATIVE.fetchNativeFrames();
@@ -717,7 +714,7 @@ arg5.createNativeFramesIntegrations = (arg0) => {
                     new Promise((arg0, arg1) => {
                       const callback = arg0;
                       const table = arg1;
-                      let c2 = false;
+                      c2 = false;
                       const timeout = setTimeout(() => { ... }, 2000);
                       const NATIVE = callback(table[0]).NATIVE;
                       const nativeFrames = NATIVE.fetchNativeFrames();
@@ -730,25 +727,25 @@ arg5.createNativeFramesIntegrations = (arg0) => {
                       callback(null);
                     });
                   });
-                  const result = outer1_2.set(spanId, promise);
+                  const result = closure_1_2.set(spanId, promise);
                 }
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = obj12.get(spanId);
                 return obj1;
               }
-              const obj11 = store(outer2_1[2]);
-              obj12 = outer1_1;
+              const obj11 = obj5(closure_2_1[2]);
+              obj12 = closure_1_1;
             }
           } else {
             if (1 === tmp7) {
               c3 = 0;
-              const outer2_7 = c2;
-              const debug3 = store(outer2_1[2]).debug;
+              closure_7 = c2;
+              const debug3 = obj5(closure_2_1[2]).debug;
               const _HermesInternal3 = HermesInternal;
-              debug3.log("[" + outer2_3 + "] Error while capturing end frames for span " + outer2_1 + ".", outer2_7);
+              debug3.log("[" + closure_2_3 + "] Error while capturing end frames for span " + closure_2_1 + ".", closure_7);
             } else if (2 === tmp7) {
               if (arg0 === 1) {
                 c5 = 3;
@@ -760,17 +757,17 @@ arg5.createNativeFramesIntegrations = (arg0) => {
                 obj2[0] = arg1;
                 return obj2;
               } else {
-                const outer2_2 = arg1;
-                if (outer2_2) {
+                closure_2 = arg1;
+                if (closure_2) {
                   c4 = 3;
                   c5 = 1;
                   const obj3 = { value: null, done: false };
-                  obj3[0] = outer2_5();
+                  obj3[0] = closure_2_5();
                   return obj3;
                 } else {
-                  const debug2 = store(outer2_1[2]).debug;
+                  const debug2 = obj5(closure_2_1[2]).debug;
                   const _HermesInternal2 = HermesInternal;
-                  debug2.log("[" + outer2_3 + "] No start frames found for span " + outer2_1 + ", skipping frame data.");
+                  debug2.log("[" + closure_2_3 + "] No start frames found for span " + closure_2_1 + ", skipping frame data.");
                   c3 = 0;
                   c5 = 3;
                   const obj4 = { value: null, done: true };
@@ -794,19 +791,18 @@ arg5.createNativeFramesIntegrations = (arg0) => {
                 tmp10 = closure_6 > 0;
               }
               if (tmp10) {
-                const attr = store.setAttribute("frames.total", c4);
-                const attr1 = store.setAttribute("frames.slow", c5);
-                const attr2 = store.setAttribute("frames.frozen", closure_6);
-                let debug = store(outer2_1[2]).debug;
+                const attr = obj5.setAttribute("frames.total", c4);
+                const attr1 = obj5.setAttribute("frames.slow", c5);
+                const attr2 = obj5.setAttribute("frames.frozen", closure_6);
+                let debug = obj5(closure_2_1[2]).debug;
                 const _HermesInternal = HermesInternal;
-                debug.log("[" + outer2_3 + "] Attached frame data to span " + spanId + ": total=" + c4 + ", slow=" + c5 + ", frozen=" + closure_6);
+                debug.log("[" + closure_2_3 + "] Attached frame data to span " + spanId + ": total=" + c4 + ", slow=" + c5 + ", frozen=" + closure_6);
               }
-              obj = store(outer2_1[3]);
-              if (!obj.isRootSpan(store)) {
-                const obj5 = { timestamp: null, nativeFrames: null };
-                obj5[0] = store;
+              obj = obj5(closure_2_1[3]);
+              if (!obj.isRootSpan(obj5)) {
+                obj5 = { timestamp: null, nativeFrames: null };
+                obj5[0] = obj5;
                 obj5[1] = c3;
-                outer1_0 = obj5;
               }
               c3 = 0;
             }
@@ -844,7 +840,7 @@ arg5.createNativeFramesIntegrations = (arg0) => {
       }
     },
     processEvent(arg0) {
-      let closure_0 = arg0;
+      let measurements = arg0;
       return asyncExpiringMap1(undefined, undefined, undefined, function*() {
         if (c3 === 2) {
           c3 = 3;
@@ -877,31 +873,31 @@ arg5.createNativeFramesIntegrations = (arg0) => {
                   return obj;
                 } else {
                   let op = tmp4;
-                  let lib = 0;
-                  lib = undefined;
+                  c0 = 0;
+                  c0 = undefined;
                   op = undefined;
                   arr = undefined;
                   c3 = undefined;
-                  let c4;
+                  c4 = undefined;
                   let timestamp;
-                  let c6;
-                  throwTypeErrorResult = outer1_0;
-                  if ("transaction" === outer1_0.type) {
-                    if (outer1_0.transaction) {
-                      if (outer1_0.contexts) {
-                        if (outer1_0.contexts.trace) {
-                          if (outer1_0.timestamp) {
-                            if (outer1_0.contexts.trace.span_id) {
-                              throwTypeErrorResult = outer1_0;
-                              op = outer1_0.contexts.trace.op;
-                              throwTypeErrorResult = outer1_0;
-                              const span_id = outer1_0.contexts.trace.span_id;
+                  c6 = undefined;
+                  throwTypeErrorResult = closure_1_0;
+                  if ("transaction" === closure_1_0.type) {
+                    if (closure_1_0.transaction) {
+                      if (closure_1_0.contexts) {
+                        if (closure_1_0.contexts.trace) {
+                          if (closure_1_0.timestamp) {
+                            if (closure_1_0.contexts.trace.span_id) {
+                              throwTypeErrorResult = closure_1_0;
+                              op = closure_1_0.contexts.trace.op;
+                              throwTypeErrorResult = closure_1_0;
+                              const span_id = closure_1_0.contexts.trace.span_id;
                               arr = span_id;
-                              throwTypeErrorResult = outer1_1;
+                              throwTypeErrorResult = closure_1_1;
                               arr = 1;
                               c3 = 1;
-                              const obj1 = { value: null, done: false };
-                              obj1[0] = outer1_1.pop(span_id);
+                              obj1 = { value: null, done: false };
+                              obj1[0] = closure_1_1.pop(span_id);
                               return obj1;
                             }
                           }
@@ -911,7 +907,7 @@ arg5.createNativeFramesIntegrations = (arg0) => {
                   }
                   c3 = 3;
                   const obj2 = { value: null, done: true };
-                  obj2[0] = outer1_0;
+                  obj2[0] = closure_1_0;
                   return obj2;
                 }
               } else if (1 === tmp4) {
@@ -924,23 +920,23 @@ arg5.createNativeFramesIntegrations = (arg0) => {
                   obj3[0] = arg1;
                   return obj3;
                 } else {
-                  throwTypeErrorResult = lib;
-                  const outer2_3 = arg1;
-                  throwTypeErrorResult = outer2_3;
+                  throwTypeErrorResult = c0;
+                  closure_3 = arg1;
+                  throwTypeErrorResult = closure_3;
                   throwTypeErrorResult = op;
-                  if (outer2_3) {
+                  if (closure_3) {
                     arr = 2;
                     c3 = 1;
                     const obj4 = { value: null, done: false };
-                    obj4[0] = arr.pop(outer2_2);
+                    obj4[0] = arr.pop(closure_2_2);
                     return obj4;
                   } else {
-                    const debug6 = lib(outer2_1[2]).debug;
+                    const debug6 = measurements(closure_2_1[2]).debug;
                     const _HermesInternal6 = HermesInternal;
-                    debug6.warn("[" + outer2_3 + "] Start frames of transaction " + lib.transaction + " (eventId, " + lib.event_id + ") are missing, but the transaction already ended.");
+                    debug6.warn("[" + closure_3 + "] Start frames of transaction " + c0.transaction + " (eventId, " + c0.event_id + ") are missing, but the transaction already ended.");
                     c3 = 3;
                     const obj5 = { value: null, done: true };
-                    obj5[0] = lib;
+                    obj5[0] = c0;
                     return obj5;
                   }
                 }
@@ -953,63 +949,61 @@ arg5.createNativeFramesIntegrations = (arg0) => {
                 obj6[0] = arg1;
                 return obj6;
               } else {
-                throwTypeErrorResult = lib;
+                throwTypeErrorResult = c0;
                 timestamp = arg1;
                 throwTypeErrorResult = timestamp;
                 if (timestamp) {
-                  if (outer2_6(timestamp.timestamp, lib.timestamp)) {
-                    const debug3 = lib(outer2_1[2]).debug;
+                  if (obj7(timestamp.timestamp, c0.timestamp)) {
+                    const debug3 = measurements(closure_2_1[2]).debug;
                     const _HermesInternal3 = HermesInternal;
-                    debug3.log("[" + outer2_3 + "] Using frames from root span end (spanId, " + arr + ").");
-                    let outer1_4 = outer1_5.nativeFrames;
+                    debug3.log("[" + closure_3 + "] Using frames from root span end (spanId, " + arr + ").");
+                    let nativeFrames = closure_1_5.nativeFrames;
                   }
-                  const obj7 = { frames_total: null, frames_frozen: null, frames_slow: null };
+                  obj7 = { frames_total: null, frames_frozen: null, frames_slow: null };
                   const obj8 = { value: null, unit: "none" };
-                  obj8[0] = outer2_4.totalFrames - outer2_3.totalFrames;
+                  obj8[0] = closure_2_4.totalFrames - closure_3.totalFrames;
                   obj7[0] = obj8;
                   const obj9 = { value: null, unit: "none" };
-                  obj9[0] = outer2_4.frozenFrames - outer2_3.frozenFrames;
+                  obj9[0] = closure_2_4.frozenFrames - closure_3.frozenFrames;
                   obj7[1] = obj9;
                   const obj10 = { value: null, unit: "none" };
-                  obj10[0] = outer2_4.slowFrames - outer2_3.slowFrames;
+                  obj10[0] = closure_2_4.slowFrames - closure_3.slowFrames;
                   obj7[2] = obj10;
-                  outer2_6 = obj7;
-                  if (outer2_6.frames_frozen.value <= 0) {
-                    if (outer2_6.frames_slow.value <= 0) {
+                  if (obj7.frames_frozen.value <= 0) {
+                    if (obj7.frames_slow.value <= 0) {
                       c3 = 3;
                     }
-                    const debug5 = lib(outer2_1[2]).debug;
+                    const debug5 = measurements(closure_2_1[2]).debug;
                     const _HermesInternal5 = HermesInternal;
-                    debug5.warn("[" + outer2_3 + "] Detected zero slow or frozen frames. Not adding measurements to spanId (" + outer2_2 + ").");
+                    debug5.warn("[" + closure_3 + "] Detected zero slow or frozen frames. Not adding measurements to spanId (" + closure_2_2 + ").");
                   }
-                  const debug4 = lib(outer2_1[2]).debug;
+                  const debug4 = measurements(closure_2_1[2]).debug;
                   const _JSON = JSON;
                   const _HermesInternal4 = HermesInternal;
-                  debug4.log("[" + outer2_3 + "] Adding measurements to " + outer2_1 + " transaction " + lib.transaction + ": " + JSON.stringify(outer2_6, undefined, 2));
-                  const measurements = lib.measurements;
-                  lib = measurements;
+                  debug4.log("[" + closure_3 + "] Adding measurements to " + closure_2_1 + " transaction " + c0.transaction + ": " + JSON.stringify(obj7, undefined, 2));
+                  measurements = c0.measurements;
                   if (null !== measurements) {
-                    if (undefined !== lib) {
-                      let obj11 = lib;
+                    if (undefined !== measurements) {
+                      let obj11 = measurements;
                     }
                     tmp64.measurements = tmp66(tmp68({}, obj11), c6);
                   }
                   obj11 = {};
                 }
-                if (outer1_0) {
-                  if (outer2_6(outer1_0.timestamp, lib.timestamp)) {
-                    const debug2 = lib(outer2_1[2]).debug;
+                if (closure_1_0) {
+                  if (obj7(closure_1_0.timestamp, c0.timestamp)) {
+                    const debug2 = measurements(closure_2_1[2]).debug;
                     const _HermesInternal2 = HermesInternal;
-                    debug2.log("[" + outer2_3 + "] Using native frames from last child span end (spanId, " + arr + ").");
-                    outer1_4 = outer1_0.nativeFrames;
+                    debug2.log("[" + closure_3 + "] Using native frames from last child span end (spanId, " + arr + ").");
+                    nativeFrames = closure_1_0.nativeFrames;
                   }
                 }
-                const debug = lib(outer2_1[2]).debug;
+                const debug = measurements(closure_2_1[2]).debug;
                 const _HermesInternal = HermesInternal;
-                debug.warn("[" + outer2_3 + "] Frames were collected within larger than margin of error delay for spanId (" + arr + "). Dropping the inaccurate values.");
+                debug.warn("[" + closure_3 + "] Frames were collected within larger than margin of error delay for spanId (" + arr + "). Dropping the inaccurate values.");
                 c3 = 3;
                 obj = { value: null, done: true };
-                obj[0] = lib;
+                obj[0] = c0;
                 return obj;
               }
             } catch (throwTypeErrorResult) {

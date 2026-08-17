@@ -1,11 +1,13 @@
 // _runtime/07062_RecyclerViewManager.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 7051 */;
+import ViewabilityManagerDefault from "ViewabilityManager" /* 7066 */;
+import closure_3 from "_classCallCheck" /* 7050 */;
 
 const RecyclerViewManager = arg1;
 class RecyclerViewManager {
   constructor(arg0) {
     self = this;
-    tmp = outer1_3(this, self);
+    tmp = closure_3(this, self);
     this.initialDrawBatchSize = 2;
     this.isFirstLayoutComplete = false;
     this.hasRenderedProgressively = false;
@@ -18,8 +20,6 @@ class RecyclerViewManager {
     this.isFirstPaintOnUiComplete = false;
     this.isInitialScrollComplete = false;
     this.updateRenderStack = (arg0) => {
-      let getDataKey;
-      let getItemType;
       const renderStackManager = self.renderStackManager;
       ({ getDataKey, getItemType } = self);
       renderStackManager.sync(getDataKey, getItemType, arg0, self.getDataLength());
@@ -144,7 +144,7 @@ const items = [
         return layoutManager.getLayout(arg0);
       } else {
         const _Error = Error;
-        const error = new Error(RecyclerViewManager(7038).ErrorMessages.layoutManagerNotInitializedLayoutInfo);
+        error = new Error(RecyclerViewManager(7038).ErrorMessages.layoutManagerNotInitializedLayoutInfo);
         throw error;
       }
     }
@@ -186,7 +186,7 @@ const items = [
         return layoutManager.getLayoutSize();
       } else {
         const _Error = Error;
-        const error = new Error(RecyclerViewManager(7038).ErrorMessages.layoutManagerNotInitializedChildContainer);
+        error = new Error(RecyclerViewManager(7038).ErrorMessages.layoutManagerNotInitializedChildContainer);
         throw error;
       }
     }
@@ -206,7 +206,7 @@ const items = [
         return layoutManager.getWindowsSize();
       } else {
         const _Error = Error;
-        const error = new Error(RecyclerViewManager(7038).ErrorMessages.layoutManagerNotInitializedWindowSize);
+        error = new Error(RecyclerViewManager(7038).ErrorMessages.layoutManagerNotInitializedWindowSize);
         throw error;
       }
     }
@@ -249,7 +249,6 @@ const items = [
   {
     key: "updateLayoutParams",
     value: function updateLayoutParams(windowSize, firstItemOffset) {
-      let layoutManager2;
       const self = this;
       this.firstItemOffset = firstItemOffset;
       let layoutManagerClass = this.getLayoutManagerClass();
@@ -262,7 +261,7 @@ const items = [
         const _Boolean = Boolean;
         if (BooleanResult !== Boolean(self.propsRef.horizontal)) {
           const _Error = Error;
-          const error = new Error(RecyclerViewManager(7038).ErrorMessages.horizontalPropCannotBeToggled);
+          error = new Error(RecyclerViewManager(7038).ErrorMessages.horizontalPropCannotBeToggled);
           throw error;
         }
         BooleanResult = Boolean(isHorizontalResult);
@@ -301,7 +300,7 @@ const items = [
         return engagedIndicesTracker.computeVisibleIndices(self.layoutManager);
       } else {
         const _Error = Error;
-        const error = new Error(RecyclerViewManager(7038).ErrorMessages.layoutManagerNotInitializedVisibleIndices);
+        error = new Error(RecyclerViewManager(7038).ErrorMessages.layoutManagerNotInitializedVisibleIndices);
         throw error;
       }
     }
@@ -380,8 +379,6 @@ const items = [
   {
     key: "processDataUpdate",
     value: function processDataUpdate() {
-      let engagedIndicesTracker;
-      let updateRenderStack;
       const self = this;
       if (this.hasLayout()) {
         const data = self.propsRef.data;
@@ -502,7 +499,7 @@ const items = [
       if (this.propsRef.masonry) {
         if (self.propsRef.horizontal) {
           const _Error2 = Error;
-          const error = new Error(RecyclerViewManager(7038).ErrorMessages.masonryAndHorizontalIncompatible);
+          error = new Error(RecyclerViewManager(7038).ErrorMessages.masonryAndHorizontalIncompatible);
           throw error;
         }
       }
@@ -613,4 +610,4 @@ const items = [
   }
 ];
 
-export const RecyclerViewManager = require("_createClass")(RecyclerViewManager, items);
+export const RecyclerViewManager = _createClassDefault(RecyclerViewManager, items);

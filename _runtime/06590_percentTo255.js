@@ -1,6 +1,6 @@
 // _runtime/06590_percentTo255.js
 const tmp2 = /^rgba?\(\s*(100%|\d{1,2}(\.\d+)?%)\s*,\s*(100%|\d{1,2}(\.\d+)?%)\s*,\s*(100%|\d{1,2}(\.\d+)?%)\s*(?:,\s*(1|0(\.\d+)?|100%|\d{1,2}(\.\d+)?%)\s*)?\)$/;
-let c0 = tmp2;
+const re0 = tmp2;
 function percentTo255(arg0) {
 
 }
@@ -10,7 +10,7 @@ arg5.convertPercentageColor = (str) => {
     return str;
   } else {
     const replaced = str.replace(/\s/g, "");
-    if (!tmp2.test(replaced)) {
+    if (!regex.test(replaced)) {
       return str;
     } else {
       const match = obj2.exec(replaced);
@@ -54,6 +54,6 @@ arg5.convertPercentageColor = (str) => {
       const combined2 = _HermesInternal2.concat(combined, ", ", result, ")");
       endsWithResult = match[7].endsWith("%");
     }
-    obj2 = tmp2;
+    obj2 = regex;
   }
 };

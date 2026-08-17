@@ -1,8 +1,10 @@
 // _runtime/03992_translate.js
+import t from "t" /* 3975 */;
+
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      const _module = require("t");
+      const _module = t;
       let closure_0;
       let closure_1;
       const translate2 = function translate(arg0, arg1, arg2) {
@@ -254,8 +256,8 @@ if (typeof globalThis.define === "function") {
           return text + str2;
         }
       }
-      let closure_0 = "stycze\u0144_luty_marzec_kwiecie\u0144_maj_czerwiec_lipiec_sierpie\u0144_wrzesie\u0144_pa\u017Adziernik_listopad_grudzie\u0144".split("_");
-      let closure_1 = "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_wrze\u015Bnia_pa\u017Adziernika_listopada_grudnia".split("_");
+      closure_0 = "stycze\u0144_luty_marzec_kwiecie\u0144_maj_czerwiec_lipiec_sierpie\u0144_wrzesie\u0144_pa\u017Adziernik_listopad_grudzie\u0144".split("_");
+      closure_1 = "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_wrze\u015Bnia_pa\u017Adziernika_listopada_grudnia".split("_");
       obj = {
         months(arg0, arg1) {
           if (arg0) {

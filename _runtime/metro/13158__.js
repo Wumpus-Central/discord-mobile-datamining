@@ -4,9 +4,9 @@ import { SemVer } from "../13143_SemVer.js";
 import { Range } from "../13152_Range.js";
 
 export default (arg0, arg1) => {
-  let require;
-  let obj = new Range(arg0, arg1);
-  const tmp3 = new SemVer("0.0.0");
+  let _require;
+  let obj = new _Range(arg0, arg1);
+  const tmp3 = new _SemVer("0.0.0");
   if (obj.test(tmp3)) {
     return tmp3;
   } else {
@@ -21,9 +21,9 @@ export default (arg0, arg1) => {
       if (0 < obj.set.length) {
         do {
           let arr = obj.set[num3];
-          require = null;
+          _require = null;
           let item = arr.forEach((semver) => {
-            const obj = new outer1_0(outer1_1[1])(semver.semver.version);
+            const obj = new _null(closure_1_1[1])(semver.semver.version);
             const operator = semver.operator;
             if (">" === operator) {
               if (0 === obj.prerelease.length) {
@@ -40,7 +40,7 @@ export default (arg0, arg1) => {
                     if ("<=" !== operator) {
                       const _Error = Error;
                       const _HermesInternal = HermesInternal;
-                      const error = new Error("Unexpected operation: " + semver.operator);
+                      error = new Error("Unexpected operation: " + semver.operator);
                       throw error;
                     }
                   }
@@ -48,26 +48,26 @@ export default (arg0, arg1) => {
               }
               let tmp4 = obj;
               if (obj) {
-                tmp4 = !outer1_0(outer1_1[2])(obj, obj);
+                tmp4 = !_null(closure_1_1[2])(obj, obj);
               }
             }
           });
-          let tmp12 = require;
-          let tmp13 = !require;
+          let tmp12 = _require;
+          let tmp13 = !_require;
           let tmp14 = tmp9;
           let tmp15 = num;
-          if (require) {
+          if (_require) {
             let tmp16 = tmp14;
             if (tmp14) {
-              let tmp17 = require;
+              let tmp17 = _require;
               let tmp18 = dependencyMap;
-              let tmp19 = require;
-              tmp16 = !SemVer(tmp14, require);
+              let tmp19 = _require;
+              tmp16 = !_SemVer(tmp14, _require);
             }
             tmp13 = tmp16;
           }
           if (!tmp13) {
-            tmp14 = require;
+            tmp14 = _require;
           }
           num3 = num + 1;
           tmp9 = tmp14;
@@ -85,5 +85,5 @@ export default (arg0, arg1) => {
       return tmp20;
     }
   }
-  tmp = require;
+  tmp = _require;
 };

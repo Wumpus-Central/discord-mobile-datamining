@@ -1,7 +1,8 @@
 // _runtime/00982_extractToolCalls.js
-import { asString } from "00978_asString.js";
-import { 00958__ } from "metro/00958__.js";
-const require = arg1;
+import _mod958 from "module_958" /* 958 */;
+import asString from "asString" /* 978 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function extractToolCalls(substr) {
   if (substr) {
@@ -115,11 +116,11 @@ function extractModelMetadata(setAttribute, item10050) {
     if (typeof item10050.response_metadata === "object") {
       const response_metadata = item10050.response_metadata;
       if (tmp) {
-        const attr = setAttribute.setAttribute(00958__.GEN_AI_RESPONSE_MODEL_ATTRIBUTE, response_metadata.model_name);
+        const attr = setAttribute.setAttribute(_mod958.GEN_AI_RESPONSE_MODEL_ATTRIBUTE, response_metadata.model_name);
       }
       if (tmp6) {
         const items = [response_metadata.finish_reason];
-        const attr1 = setAttribute.setAttribute(00958__.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE, items);
+        const attr1 = setAttribute.setAttribute(_mod958.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE, items);
       }
       tmp = response_metadata.model_name && typeof response_metadata.model_name === "string";
       tmp6 = response_metadata.finish_reason && typeof response_metadata.finish_reason === "string";
@@ -220,11 +221,11 @@ arg5.setResponseAttributes = function setResponseAttributes(setAttribute, c2, cl
         const tmp34 = extractToolCalls(substr);
         if (tmp34) {
           const _JSON = JSON;
-          const attr = setAttribute.setAttribute(00958__.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE, JSON.stringify(tmp34));
+          const attr = setAttribute.setAttribute(_mod958.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE, JSON.stringify(tmp34));
         }
         const result = asString.normalizeLangChainMessages(substr);
         const _JSON2 = JSON;
-        const attr1 = setAttribute.setAttribute(00958__.GEN_AI_RESPONSE_TEXT_ATTRIBUTE, JSON.stringify(result));
+        const attr1 = setAttribute.setAttribute(_mod958.GEN_AI_RESPONSE_TEXT_ATTRIBUTE, JSON.stringify(result));
         let num3 = 0;
         let num4 = 0;
         let num5 = 0;
@@ -242,13 +243,13 @@ arg5.setResponseAttributes = function setResponseAttributes(setAttribute, c2, cl
           continue;
         }
         if (num3 > 0) {
-          const attr2 = setAttribute.setAttribute(00958__.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE, num3);
+          const attr2 = setAttribute.setAttribute(_mod958.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE, num3);
         }
         if (num4 > 0) {
-          const attr3 = setAttribute.setAttribute(00958__.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE, num4);
+          const attr3 = setAttribute.setAttribute(_mod958.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE, num4);
         }
         if (num5 > 0) {
-          const attr4 = setAttribute.setAttribute(00958__.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE, num5);
+          const attr4 = setAttribute.setAttribute(_mod958.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE, num5);
         }
         const obj = asString;
       }

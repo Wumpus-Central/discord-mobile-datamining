@@ -1,12 +1,9 @@
 // _runtime/16439_AnimatedChild.js
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { StyleSheet, View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let closure_6;
-let error;
 const require = arg1;
 let c4 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -35,8 +32,6 @@ let closure_12 = { code: "function pnpm_indexTsx4(v){const{runOnJS,setCloneTimes
 const styles = StyleSheet.create({ hidden: { opacity: 0, zIndex: -9999 }, row: { flexDirection: "row", overflow: "hidden" } });
 
 export const Marquee = importAllResult.memo((speed) => {
-  let tmp4;
-  let tmp5;
   let num = speed.speed;
   if (num === undefined) {
     num = 1;
@@ -48,11 +43,11 @@ export const Marquee = importAllResult.memo((speed) => {
   }
   let sharedValue;
   let sharedValue1;
-  let c5;
+  c5 = undefined;
   let sharedValue2;
   let obj = num(num2[4]);
   sharedValue = obj.useSharedValue(0);
-  let obj1 = num(num2[4]);
+  obj1 = num(num2[4]);
   sharedValue1 = obj1.useSharedValue(0);
   [tmp4, tmp5] = sharedValue(sharedValue1.useState(0), 2);
   c5 = tmp5;
@@ -70,9 +65,9 @@ export const Marquee = importAllResult.memo((speed) => {
   class W {
     constructor() {
       num = 0;
-      if (0 !== c4.value) {
+      if (0 !== closure_4.value) {
         num = 0;
-        if (0 !== c3.value) {
+        if (0 !== closure_3.value) {
           tmp = globalThis;
           _Math = Math;
           num2 = 1;
@@ -105,21 +100,20 @@ export const Marquee = importAllResult.memo((speed) => {
     children: null
   };
   obj1 = { style: closure_13.row, pointerEvents: "box-none", children: null };
-  obj2 = { horizontal: true, style: closure_13.hidden, pointerEvents: "box-none", children: null };
+  obj2 = { horizontal: true, style: closure_13.hidden, pointerEvents: "box-none", children: sharedValue2(c5, obj3) };
   obj3 = {
     onLayout(nativeEvent) {
       sharedValue1.value = nativeEvent.nativeEvent.layout.width;
     },
     children
   };
-  obj2[3] = sharedValue2(c5, obj3);
   const items = [sharedValue2(children(num2[4]).ScrollView, obj2), ];
   let mapped = tmp4 > 0;
   if (mapped) {
     const _Array = Array;
     const items1 = [];
     HermesBuiltin.arraySpread(Array(tmp4).keys(), 0);
-    mapped = items1.map((index) => sharedValue2(outer1_9, { index, anim: sharedValue2, textWidth: sharedValue1, spacing: num2, children }, "clone-" + index));
+    mapped = items1.map((index) => sharedValue2(closure_1_9, { index, anim: sharedValue2, textWidth: sharedValue1, spacing: num2, children }, "clone-" + index));
     const ArrayResult = Array(tmp4);
   }
   items[1] = mapped;

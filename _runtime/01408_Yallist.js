@@ -2,11 +2,11 @@
 class Yallist {
   constructor(arg0) {
     self = this;
-    self = this;
-    tmp = self;
-    if (!(this instanceof self)) {
+    closure_0 = this;
+    tmp = closure_0;
+    if (!(this instanceof closure_0)) {
       tmpResult = tmp();
-      self = tmpResult;
+      closure_0 = tmpResult;
       self = tmpResult;
     }
     self.tail = null;
@@ -15,7 +15,7 @@ class Yallist {
     if (global) {
       if (typeof global.forEach === "function") {
         item = global.forEach((arg0) => {
-          self.push(arg0);
+
         });
       }
       return self;

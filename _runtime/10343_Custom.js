@@ -1,21 +1,16 @@
 // _runtime/10343_Custom.js
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
+noopDefault;
 
 export const Custom = (activeDotStyle) => {
-  let View;
-  let closure_6;
-  let closure_7;
-  let closure_8;
-  let closure_9;
-  let horizontal;
   activeDotStyle = activeDotStyle.activeDotStyle;
   const dotStyle = activeDotStyle.dotStyle;
   ({ progress: View, horizontal } = activeDotStyle);
-  const jsx = tmp;
+  closure_3 = tmp;
   const data = activeDotStyle.data;
   let num = activeDotStyle.size;
   ({ renderItem: closure_6, onPress: closure_7, customReanimatedStyle: closure_8, carouselName: closure_9 } = activeDotStyle);
@@ -85,7 +80,7 @@ export const Custom = (activeDotStyle) => {
             items[2] = tmp2;
             obj[0] = items;
             obj[1] = data.map((arg0, index) => {
-              let closure_0 = index;
+              closure_0 = index;
               const obj = {
                 index,
                 size: num,
@@ -97,15 +92,14 @@ export const Custom = (activeDotStyle) => {
                 customReanimatedStyle: closure_8,
                 onPress() {
                   let tmpResult;
-                  if (outer1_7 != null) {
+                  if (closure_1_7 != null) {
                     tmpResult = tmp(closure_0);
                   }
                   return tmpResult;
                 },
-                accessibilityLabel: null,
+                accessibilityLabel: "Slide " + index + 1 + " of " + data.length + " - " + closure_9,
                 children: null
               };
-              obj[9] = "Slide " + index + 1 + " of " + data.length + " - " + closure_9;
               let tmp2Result;
               if (closure_6 != null) {
                 tmp2Result = tmp2(arg0, index);
@@ -113,12 +107,12 @@ export const Custom = (activeDotStyle) => {
               obj[10] = tmp2Result;
               return closure_3(activeDotStyle(dotStyle[3]).PaginationItem, obj, index);
             });
-            return <View style={null}>{null}</View>;
+            return closure_3(View, obj);
           }
         }
       }
     }
   }
-  const error = new Error("size/width/height must be a number");
+  error = new Error("size/width/height must be a number");
   throw error;
 };

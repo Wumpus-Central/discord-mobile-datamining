@@ -1,6 +1,7 @@
 // _runtime/04916_sum.js
-import { getDataView } from "04910_getDataView.js";
-const require = arg1;
+import getDataView from "getDataView" /* 4910 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 let c3 = 2;
@@ -57,7 +58,7 @@ arg5.default = {
     let tmp6;
     let tmp7;
     let tmp8;
-    let sum = c5;
+    sum = c5;
     let tmp10 = c5;
     let tmp11;
     let tmp12;
@@ -160,7 +161,7 @@ arg5.default = {
           let tmp40 = byteLength.getUint16(sum) === c26;
           if (tmp40) {
             let tmp41 = require;
-            let obj1 = getDataView;
+            obj1 = getDataView;
             let tmp42 = c6;
             tmp40 = obj1.getStringFromDataView(byteLength, sum + c6, length2) === tmp38;
           }

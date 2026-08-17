@@ -1,21 +1,20 @@
 // _runtime/00908_addBreadcrumb.js
-import { getClient } from "00848_getClient.js";
 const require = arg1;
-let dependencyMap = arg6;
+const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addBreadcrumb = function addBreadcrumb(arg0, arg1) {
   const _require = arg1;
-  let consoleSandboxResult = _getClient;
+  let consoleSandboxResult = _require(beforeBreadcrumb[0]);
   const client = consoleSandboxResult.getClient();
-  const isolationScope = _getClient.getIsolationScope();
+  const isolationScope = _require(beforeBreadcrumb[0]).getIsolationScope();
   if (client) {
     const options = client.getOptions();
-    const beforeBreadcrumb = options.beforeBreadcrumb;
+    beforeBreadcrumb = options.beforeBreadcrumb;
     let tmp5 = null;
     if (undefined !== beforeBreadcrumb) {
       tmp5 = beforeBreadcrumb;
     }
-    const dependencyMap = tmp5;
+    beforeBreadcrumb = tmp5;
     const maxBreadcrumbs = options.maxBreadcrumbs;
     let num = 100;
     if (undefined !== maxBreadcrumbs) {
@@ -23,13 +22,13 @@ arg5.addBreadcrumb = function addBreadcrumb(arg0, arg1) {
     }
     if (num > 0) {
       consoleSandboxResult = { timestamp: null };
-      let tmpResult = tmp(838);
+      let tmpResult = tmp(tmp2[1]);
       consoleSandboxResult[0] = tmpResult.dateTimestampInSeconds();
       const merged = Object.assign(arg0);
-      let closure_2 = consoleSandboxResult;
+      closure_2 = consoleSandboxResult;
       if (tmp5) {
-        tmpResult = tmp(824);
-        consoleSandboxResult = tmpResult.consoleSandbox(() => tmp5(closure_2, closure_0));
+        tmpResult = tmp(tmp2[2]);
+        consoleSandboxResult = tmpResult.consoleSandbox(() => beforeBreadcrumb(closure_2, closure_0));
       }
       if (null !== consoleSandboxResult) {
         if (client.emit) {

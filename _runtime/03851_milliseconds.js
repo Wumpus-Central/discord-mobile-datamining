@@ -1,5 +1,5 @@
 // _runtime/03851_milliseconds.js
-import requiredArgs from "requiredArgs";
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!requiredArgs) {
   const obj = { default: null };
@@ -8,19 +8,12 @@ if (!requiredArgs) {
 } else {
   tmp3 = requiredArgs;
 }
-let c0 = tmp3;
+requiredArgs = tmp3;
 let c1 = 365.2425;
 
 export default function milliseconds(arg0) {
-  let days;
-  let hours;
-  let minutes;
-  let months;
-  let seconds;
-  let weeks;
-  let years;
   ({ years, months, weeks, days, hours, minutes, seconds } = arg0);
-  tmp3.default(1, arguments);
+  requiredArgs.default(1, arguments);
   let num = 0;
   if (years) {
     num = years * c1;

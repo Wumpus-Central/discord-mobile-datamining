@@ -1,20 +1,22 @@
 // _runtime/01169_asyncExpiringMap.js
+import AsyncExpiringMap from "AsyncExpiringMap" /* 1163 */;
+
 let fn = this;
 if (this) {
   fn = this.__awaiter;
 }
 if (!fn) {
   fn = (arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     let _Promise = arg2;
-    let closure_3 = arg3;
+    closure_3 = arg3;
     if (!arg2) {
       _Promise = Promise;
     }
     _Promise = new _Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function fulfilled(arg0) {
         try {
           step(iter.next(arg0));
@@ -67,7 +69,7 @@ if (!fn) {
     return _Promise;
   };
 }
-const asyncExpiringMap = new require("AsyncExpiringMap").AsyncExpiringMap({ ttl: 60000 });
+const asyncExpiringMap = new AsyncExpiringMap.AsyncExpiringMap({ ttl: 60000 });
 
 export const addTimeToInitialDisplayFallback = (arg0, arg1) => {
   const result = asyncExpiringMap.set(arg0, arg1);
@@ -102,7 +104,7 @@ export const getTimeToInitialDisplayFallback = (arg0) => {
         } else {
           c0 = 3;
           obj = { value: null, done: true };
-          obj[0] = outer1_1.get(c0);
+          obj[0] = closure_1_1.get(c0);
           return obj;
         }
       } catch (tmp6) {

@@ -1,4 +1,6 @@
 // _runtime/03985_n.js
+import t from "t" /* 3975 */;
+
 const fn = function n(moment) {
   function translate(arg0, arg1, arg2, arg3) {
     if (tmp) {
@@ -15,7 +17,7 @@ const fn = function n(moment) {
     }
     return str + "[" + dependencyMap[this.day(this)] + "] LT[-kor]";
   }
-  let closure_0 = "vas\u00E1rnap h\u00E9tf\u0151n kedden szerd\u00E1n cs\u00FCt\u00F6rt\u00F6k\u00F6n p\u00E9nteken szombaton".split(" ");
+  closure_0 = "vas\u00E1rnap h\u00E9tf\u0151n kedden szerd\u00E1n cs\u00FCt\u00F6rt\u00F6k\u00F6n p\u00E9nteken szombaton".split(" ");
   obj = {
     months: "janu\u00E1r_febru\u00E1r_m\u00E1rcius_\u00E1prilis_m\u00E1jus_j\u00FAnius_j\u00FAlius_augusztus_szeptember_okt\u00F3ber_november_december".split("_"),
     monthsShort: "jan_feb_m\u00E1rc_\u00E1pr_m\u00E1j_j\u00FAn_j\u00FAl_aug_szept_okt_nov_dec".split("_"),
@@ -79,7 +81,7 @@ const fn = function n(moment) {
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      fn(require("t"));
+      fn(t);
     }
   }
 }

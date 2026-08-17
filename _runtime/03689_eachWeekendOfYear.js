@@ -1,8 +1,8 @@
 // _runtime/03689_eachWeekendOfYear.js
-import eachWeekendOfInterval from "eachWeekendOfInterval";
-import endOfYear from "endOfYear";
-import startOfYear from "startOfYear";
-import requiredArgs from "requiredArgs";
+import eachWeekendOfInterval from "eachWeekendOfInterval" /* 3686 */;
+import endOfYear from "endOfYear" /* 3690 */;
+import startOfYear from "startOfYear" /* 3691 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!eachWeekendOfInterval) {
   let obj = { default: null };
@@ -11,7 +11,7 @@ if (!eachWeekendOfInterval) {
 } else {
   tmp3 = eachWeekendOfInterval;
 }
-let c0 = tmp3;
+eachWeekendOfInterval = tmp3;
 if (!endOfYear) {
   obj = { default: null };
   obj[0] = endOfYear;
@@ -19,7 +19,7 @@ if (!endOfYear) {
 } else {
   tmp5 = endOfYear;
 }
-let closure_1 = tmp5;
+endOfYear = tmp5;
 if (!startOfYear) {
   obj = { default: null };
   obj[0] = startOfYear;
@@ -27,19 +27,19 @@ if (!startOfYear) {
 } else {
   tmp7 = startOfYear;
 }
-let obj1 = tmp7;
+startOfYear = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c3 = tmp9;
+requiredArgs = tmp9;
 
 export default function eachWeekendOfYear(arg0) {
-  tmp9.default(1, arguments);
-  const defaultResult1 = tmp7.default(arg0);
-  return tmp3.default({ start: tmp7.default(arg0), end: tmp5.default(arg0) });
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = startOfYear.default(arg0);
+  return eachWeekendOfInterval.default({ start: startOfYear.default(arg0), end: endOfYear.default(arg0) });
 };
 export default exports.default;

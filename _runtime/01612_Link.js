@@ -1,20 +1,11 @@
 // _runtime/01612_Link.js
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
+import closure_2 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let Platform;
-let c3;
 const require = arg1;
 ({ Platform, Text: c3 } = get_ActivityIndicator);
 
 export const Link = function Link(arg0) {
-  let action;
-  let colors;
-  let fonts;
-  let href;
-  let params;
-  let screen;
-  let style;
   ({ screen, params, action, href, style } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   let linkProps;

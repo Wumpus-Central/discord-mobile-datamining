@@ -1,5 +1,5 @@
 // _runtime/01032_makeFetchTransport.js
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -13,10 +13,10 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
   function _makeRequest() {
     const self = this;
     const tmp = v0((arg0) => {
-      let closure_0 = arg0;
-      let c5 = 0;
-      let c6 = 0;
-      let c4 = 0;
+      closure_0 = arg0;
+      c5 = 0;
+      c6 = 0;
+      c4 = 0;
       return (function*(arg0) {
         if (c6 === 2) {
           c6 = 3;
@@ -44,27 +44,27 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_2 = tmp4;
+                closure_2 = tmp4;
                 let config = tmp6;
                 let length;
                 config = undefined;
                 length = length.body.length;
-                outer1_2 = outer1_2 + length;
-                outer1_3 = outer1_3 + 1;
-                const obj1 = { body: null, method: "POST", referrerPolicy: "strict-origin", headers: null, keepalive: null };
+                closure_2 = closure_2 + length;
+                closure_3 = closure_3 + 1;
+                obj1 = { body: null, method: "POST", referrerPolicy: "strict-origin", headers: null, keepalive: null };
                 obj1[0] = length.body;
                 obj1[3] = lib.headers;
-                let tmp31 = outer1_2 <= 60000;
+                let tmp31 = closure_2 <= 60000;
                 if (tmp31) {
-                  tmp31 = outer1_3 < 15;
+                  tmp31 = closure_3 < 15;
                 }
                 obj1[4] = tmp31;
                 const merged = Object.assign(tmp55.fetchOptions);
-                let c4 = 2;
+                c4 = 2;
                 c5 = 3;
                 c6 = 1;
                 let obj2 = { value: null, done: false };
-                obj2[0] = outer1_1(lib.url, obj1);
+                obj2[0] = closure_1_1(lib.url, obj1);
                 return obj2;
               }
             } else if (1 === tmp9) {
@@ -75,7 +75,7 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
             } else if (2 === tmp9) {
               c4 = 1;
               closure_2 = closure_3;
-              obj2 = lib(outer1_1[1]);
+              obj2 = lib(closure_1_1[1]);
               const result = obj2.clearCachedImplementation("fetch");
               throw closure_2;
             } else if (arg0 === 1) {
@@ -121,7 +121,7 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
         }
       })();
     });
-    const _makeRequest = tmp;
+    closure_4 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -130,8 +130,8 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
     }
     return applyArgumentsResult;
   }
-  let c2 = 0;
-  let c3 = 0;
+  c2 = 0;
+  c3 = 0;
   let obj2 = _require(nativeImplementation[2]);
   let num = bufferSize.bufferSize;
   if (!num) {

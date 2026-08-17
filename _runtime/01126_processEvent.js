@@ -2,8 +2,8 @@
 const require = arg1;
 const dependencyMap = arg6;
 function processEvent(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   return fn(this, undefined, undefined, function*() {
     if (c6 === 2) {
       c6 = 3;
@@ -31,10 +31,10 @@ function processEvent(arg0, arg1) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_2 = tmp3;
+            closure_2 = tmp3;
             let attachments = tmp7;
-            let closure_0;
-            const exception = outer1_0.exception;
+            closure_0 = undefined;
+            const exception = closure_1_0.exception;
             let values;
             if (null !== exception) {
               if (undefined !== exception) {
@@ -42,27 +42,27 @@ function processEvent(arg0, arg1) {
               }
             }
             if (values) {
-              if (outer1_0.exception.values.length > 0) {
+              if (closure_1_0.exception.values.length > 0) {
                 closure_0 = null;
-                let c4 = 1;
-                const NATIVE = outer1_0(outer1_1[0]).NATIVE;
+                c4 = 1;
+                const NATIVE = closure_1_0(closure_1_1[0]).NATIVE;
                 c5 = 2;
                 c6 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = NATIVE.fetchViewHierarchy();
                 return obj1;
               }
             }
             c6 = 3;
             const obj2 = { value: null, done: true };
-            obj2[0] = outer1_0;
+            obj2[0] = closure_1_0;
             return obj2;
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
             attachments = closure_3;
-            const debug = outer1_0(outer1_1[1]).debug;
+            const debug = closure_1_0(closure_1_1[1]).debug;
             debug.error("Failed to get view hierarchy from native.", attachments);
           } else if (arg0 === 1) {
             c6 = 3;
@@ -116,16 +116,16 @@ if (this) {
 }
 if (!fn) {
   fn = (arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     let _Promise = arg2;
-    let closure_3 = arg3;
+    closure_3 = arg3;
     if (!arg2) {
       _Promise = Promise;
     }
     _Promise = new _Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function fulfilled(arg0) {
         try {
           step(iter.next(arg0));

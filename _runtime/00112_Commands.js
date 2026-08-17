@@ -1,5 +1,8 @@
 // _runtime/00112_Commands.js
-const value = require("setRuntimeConfigProvider").get("RCTView", () => ({ uiViewClassName: "RCTView" }));
+import setRuntimeConfigProviderAll from "setRuntimeConfigProvider" /* 65 */;
+import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
+
+const value = setRuntimeConfigProviderAll.get("RCTView", () => ({ uiViewClassName: "RCTView" }));
 
 export default value;
-export const Commands = require("codegenNativeCommands")({ supportedCommands: ["focus", "blur", "hotspotUpdate", "setPressed"] });
+export const Commands = codegenNativeCommandsDefault({ supportedCommands: ["focus", "blur", "hotspotUpdate", "setPressed"] });

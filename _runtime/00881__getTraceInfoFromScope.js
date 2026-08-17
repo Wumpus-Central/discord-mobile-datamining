@@ -5,7 +5,7 @@ let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5._getTraceInfoFromScope = function _getTraceInfoFromScope(arg0, arg1) {
   const _require = arg0;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   if (arg1) {
     let withScopeResult = _getClient.withScope(arg1, () => {
       const activeSpan = callback(table[1]).getActiveSpan();

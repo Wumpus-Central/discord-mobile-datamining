@@ -1,10 +1,11 @@
 // _runtime/00857_getDynamicSamplingContextFromSpan.js
-import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
-import { baggageHeaderToDynamicSamplingContext } from "00835_baggageHeaderToDynamicSamplingContext.js";
-import { dsnFromString } from "00837_dsnFromString.js";
-import { getClient } from "00848_getClient.js";
-import { 00858__ } from "metro/00858__.js";
-const require = arg1;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 822 */;
+import baggageHeaderToDynamicSamplingContext from "baggageHeaderToDynamicSamplingContext" /* 835 */;
+import dsnFromString from "dsnFromString" /* 837 */;
+import getClient from "getClient" /* 848 */;
+import _mod858 from "module_858" /* 858 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function getDynamicSamplingContextFromSpan(spanContext) {
   let obj = getClient;
@@ -122,7 +123,7 @@ arg5.getDynamicSamplingContextFromClient = function getDynamicSamplingContextFro
   const options = getOptions.getOptions();
   let DEFAULT_ENVIRONMENT = options.environment;
   if (!DEFAULT_ENVIRONMENT) {
-    DEFAULT_ENVIRONMENT = 00858__.DEFAULT_ENVIRONMENT;
+    DEFAULT_ENVIRONMENT = _mod858.DEFAULT_ENVIRONMENT;
   }
   const obj = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: getOptions.getDsn() || {}.publicKey, trace_id, org_id: null };
   const tmp2 = getOptions.getDsn() || {};
@@ -137,7 +138,7 @@ arg5.getDynamicSamplingContextFromScope = function getDynamicSamplingContextFrom
     const options = getOptions.getOptions();
     let DEFAULT_ENVIRONMENT = options.environment;
     if (!DEFAULT_ENVIRONMENT) {
-      DEFAULT_ENVIRONMENT = 00858__.DEFAULT_ENVIRONMENT;
+      DEFAULT_ENVIRONMENT = _mod858.DEFAULT_ENVIRONMENT;
     }
     const obj = { environment: null, release: null, public_key: null, trace_id: null, org_id: null };
     obj[0] = DEFAULT_ENVIRONMENT;

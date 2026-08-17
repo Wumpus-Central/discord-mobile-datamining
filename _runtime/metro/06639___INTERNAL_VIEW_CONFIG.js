@@ -1,5 +1,5 @@
 // _runtime/metro/06639___INTERNAL_VIEW_CONFIG.js
-import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
 const obj = { uiViewClassName: "RNSVGFilter", validAttributes: { name: true, x: true, y: true, height: true, width: true, filterUnits: true, primitiveUnits: true } };
 

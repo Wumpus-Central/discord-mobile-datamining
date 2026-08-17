@@ -1,24 +1,24 @@
 // _runtime/metro/10312__.js
-import { jsx } from "jsxProd";
-import { useInitProps } from "../10313_useInitProps.js";
-import { useCommonVariables } from "../10316_useCommonVariables.js";
-import { usePropsErrorBoundary } from "../10320_usePropsErrorBoundary.js";
-import { context } from "../10321_context.js";
-import { CarouselLayout } from "../10322_CarouselLayout.js";
+import noopDefault from "noop" /* 19 */;
+import useInitProps from "useInitProps" /* 10313 */;
+import useCommonVariables from "useCommonVariables" /* 10316 */;
+import usePropsErrorBoundary from "usePropsErrorBoundary" /* 10320 */;
+import context from "context" /* 10321 */;
+import CarouselLayout from "CarouselLayout" /* 10322 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 
-export default require("noop").forwardRef((defaultIndex, ref) => {
+export default noopDefault.forwardRef((defaultIndex, ref) => {
   let obj = useInitProps;
   const initProps = obj.useInitProps(defaultIndex);
-  let obj1 = useCommonVariables;
+  obj1 = useCommonVariables;
   const commonVariables = obj1.useCommonVariables(initProps);
   obj = {};
   const merged = Object.assign(initProps);
   obj.dataLength = initProps.dataLength;
   const propsErrorBoundary = usePropsErrorBoundary.usePropsErrorBoundary(obj);
-  obj = { value: { props: initProps, common: commonVariables }, children: null };
+  obj = { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, obj1) };
   obj1 = { ref };
-  obj[1] = jsx(CarouselLayout.CarouselLayout, { ref });
-  return jsx(context.GlobalStateProvider, { value: { props: initProps, common: commonVariables }, children: null });
+  return jsx(context.GlobalStateProvider, { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, { ref }) });
 });

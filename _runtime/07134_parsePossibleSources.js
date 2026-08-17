@@ -1,6 +1,7 @@
 // _runtime/07134_parsePossibleSources.js
-import { Image } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const Image = get_ActivityIndicator.Image;
 
 export const parsePossibleSources = function parsePossibleSources(source) {
   const uri = source.uri;
@@ -24,7 +25,7 @@ export const parsePossibleSources = function parsePossibleSources(source) {
       }
     }
     if (uri.includes(".lottie")) {
-      const obj1 = { sourceDotLottieURI: null };
+      obj1 = { sourceDotLottieURI: null };
       obj1[0] = uri;
       let obj2 = obj1;
     } else {

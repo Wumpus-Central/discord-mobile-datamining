@@ -1,10 +1,13 @@
 // _runtime/00140__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import NativeDOMCxxDefault from "NativeDOMCxx" /* 139 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 141 */;
+import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 143 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
 import { _isNativeReflectConstruct } from "00131__isNativeReflectConstruct.js";
-import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 
 const ReactNativeDocument = arg1;
 function _isNativeReflectConstruct() {
@@ -18,10 +21,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,13 +32,13 @@ function _isNativeReflectConstruct() {
 class ReactNativeDocument {
   constructor(arg0, arg1) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, ReactNativeDocument);
+    tmp = closure_3(this, ReactNativeDocument);
     items = [, ];
     items[0] = arg1;
     items[1] = null;
-    tmp2 = __esModule;
-    obj = __esModule(ReactNativeDocument);
-    tmp3 = __esModule;
+    tmp2 = closure_5;
+    obj = closure_5(ReactNativeDocument);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -58,7 +61,7 @@ class ReactNativeDocument {
     return tmp3Result;
   }
 }
-require("_inherits")(ReactNativeDocument, require("_isNativeReflectConstruct"));
+_inheritsDefault(ReactNativeDocument, require("_isNativeReflectConstruct"));
 let items = [
   {
     key: "childElementCount",
@@ -118,19 +121,19 @@ let items = [
   {
     key: "getElementById",
     value: function getElementById(c8, c8) {
-      const element = NativeDOMCxx.getElementById(this._rootTag, c8);
+      const element = NativeDOMCxxDefault.getElementById(this._rootTag, c8);
       if (null == element) {
         return null;
       } else {
         const publicInstanceFromInstanceHandle = ReactNativeDocument(136).getPublicInstanceFromInstanceHandle(element);
         let tmp6 = null;
-        if (publicInstanceFromInstanceHandle instanceof tmp(141)) {
+        if (publicInstanceFromInstanceHandle instanceof _isNativeReflectConstructDefault) {
           tmp6 = publicInstanceFromInstanceHandle;
         }
         return tmp6;
       }
-      const obj = NativeDOMCxx;
-      tmp = importDefault;
+      const obj = NativeDOMCxxDefault;
+      const tmp = importDefault;
     }
   }
 ];

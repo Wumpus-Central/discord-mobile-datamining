@@ -1,6 +1,7 @@
 // _runtime/01840_computeEasingProgress.js
-import { RNScreensTurboModule } from "01841_RNScreensTurboModule.js";
-const require = arg1;
+import RNScreensTurboModule2 from "RNScreensTurboModule" /* 1841 */;
+
+require = arg1;
 const dependencyMap = arg6;
 let c2 = 400;
 function computeEasingProgress(arg0, arg1, arg2) {
@@ -52,7 +53,7 @@ function maybeScheduleNextFrame(scrollAnimation, arg1, onFinishAnimation, transl
     if (arg4) {
       result = bound / 2;
     }
-    const RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
+    const RNScreensTurboModule = RNScreensTurboModule2.RNScreensTurboModule;
     RNScreensTurboModule.updateTransition(onFinishAnimation.stackTag, result);
     const _requestAnimationFrame = requestAnimationFrame;
     const animationFrame = requestAnimationFrame(scrollAnimation);
@@ -63,15 +64,15 @@ maybeScheduleNextFrame.__closure = obj;
 maybeScheduleNextFrame.__workletHash = 7657931427196;
 maybeScheduleNextFrame.__initData = { code: "function maybeScheduleNextFrame_Pnpm_swipeSimulatorTs4(step,didScreenReachDestination,screenTransitionConfig,event,isTransitionCanceled){const{computeProgress,RNScreensTurboModule}=this.__closure;if(!didScreenReachDestination){const stackTag=screenTransitionConfig.stackTag;const progress=computeProgress(screenTransitionConfig,event,isTransitionCanceled);RNScreensTurboModule.updateTransition(stackTag,progress);requestAnimationFrame(step);}else{var _screenTransitionConf;(_screenTransitionConf=screenTransitionConfig.onFinishAnimation)===null||_screenTransitionConf===void 0||_screenTransitionConf.call(screenTransitionConfig);}}" };
 function getSwipeSimulator(value, screenDimensions, arg2) {
-  let closure_0 = value;
-  let closure_1 = screenDimensions;
-  let closure_2 = arg2;
+  closure_0 = value;
+  closure_1 = screenDimensions;
+  closure_2 = arg2;
   screenDimensions = screenDimensions.screenDimensions;
-  let closure_4 = globalThis._getAnimationTimestamp();
+  closure_4 = globalThis._getAnimationTimestamp();
   const isTransitionCanceled = screenDimensions.isTransitionCanceled;
   let point = { x: value.translationX, y: value.translationY };
   const signResult = Math.sign(value.translationX);
-  let closure_7 = signResult;
+  closure_7 = signResult;
   const signResult1 = Math.sign(value.translationY);
   if (isTransitionCanceled) {
     let point2 = { x: 0, y: 0 };
@@ -81,7 +82,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
     point2[1] = signResult1 * screenDimensions.height;
   }
   const point3 = { x: Math.abs(point2.x - point.x), y: Math.abs(point2.y - point.y) };
-  let closure_10 = { x: false, y: false };
+  closure_10 = { x: false, y: false };
   const point4 = { x: closure_2, y: closure_2 };
   if ("x" === arg2) {
     point4.y = 0;
@@ -109,7 +110,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
   }
   if (isTransitionCanceled) {
     function computeFrame() {
-      const point = point3;
+      point = point3;
       const x = point3.x;
       if (typeof screenDimensions !== "function") {
         HermesBuiltin.throwTypeError();
@@ -203,7 +204,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
     return computeFrame;
   } else {
     function _computeFrame() {
-      const point = point3;
+      point = point3;
       const x = point3.x;
       if (typeof screenDimensions !== "function") {
         HermesBuiltin.throwTypeError();

@@ -1,8 +1,6 @@
 // _runtime/04149_useDisposableMemo.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 
-let c0;
-let closure_1;
 ({ useRef: c0, useEffect: closure_1 } = noop);
 let closure_2 = Symbol("UNINITIALIZED");
 

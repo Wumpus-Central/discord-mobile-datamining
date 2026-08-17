@@ -1,9 +1,9 @@
 // _runtime/01793_isReactRendering.js
-import noop from "noop";
-import { forwardRef } from "noop";
-import isJest from "isJest";
+import closure_0 from "noop" /* 19 */;
+import { forwardRef } from "noop" /* 19 */;
+import isJest from "isJest" /* 1657 */;
 
-isJest = isJest.isReact19();
+let closure_2 = isJest.isReact19();
 
 export const isReactRendering = function isReactRendering() {
   const __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = constants.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
@@ -86,8 +86,8 @@ export const isFirstReactRender = function isFirstReactRender() {
   return tmp5;
 };
 export const componentWithRef = function componentWithRef(BottomSheet) {
-  let noop = BottomSheet;
-  if (isJest) {
+  closure_0 = BottomSheet;
+  if (closure_2) {
     let fn = (ref) => BottomSheet(Object.assign(ref, Object.create(null)), ref.ref);
   } else {
     fn = forwardRef(BottomSheet);

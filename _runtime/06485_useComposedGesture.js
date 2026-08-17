@@ -15,7 +15,7 @@ arg5.useComposedGesture = function useComposedGesture(arg0) {
   if (obj.containsDuplicates(flatMapResult)) {
     const _Error2 = Error;
     let tmp2Result = tmp2(6382);
-    const error = new Error(tmp2Result.tagMessage("Each gesture can be used only once in the gesture composition."));
+    error = new Error(tmp2Result.tagMessage("Each gesture can be used only once in the gesture composition."));
     throw error;
   } else {
     obj = { shouldUseReanimatedDetector: null, dispatchesAnimatedEvents: null };
@@ -43,7 +43,7 @@ arg5.useComposedGesture = function useComposedGesture(arg0) {
     obj[0] = flatMapResult;
     obj[1] = arg0;
     obj[2] = obj;
-    const obj1 = { jsEventHandler: null, reanimatedEventHandler: null, animatedEventHandler: null };
+    obj1 = { jsEventHandler: null, reanimatedEventHandler: null, animatedEventHandler: null };
     obj1[0] = function jsEventHandler(arg0, arg1) {
       for (const item10007 of substr) {
         if (item10007.detectorCallbacks.jsEventHandler) {

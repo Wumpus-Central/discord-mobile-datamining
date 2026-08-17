@@ -1,10 +1,12 @@
 // _runtime/13692_prop.js
-import { 13673__ } from "metro/13673__.js";
+import _mod13673 from "module_13673" /* 13673 */;
+import _mod13677 from "module_13677" /* 13677 */;
+
 let prop = Object.getOwnPropertySymbols;
 if (prop) {
-  prop = !require("module_13677")(() => {
+  prop = !_mod13677(() => {
     const SymbolResult = Symbol("symbol detection");
-    const StringResult = 13673__.String(SymbolResult);
+    const StringResult = _mod13673.String(SymbolResult);
     let tmp5 = !StringResult;
     if (StringResult) {
       const _Object = Object;

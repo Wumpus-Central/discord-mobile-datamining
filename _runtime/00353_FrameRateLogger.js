@@ -1,3 +1,5 @@
 // _runtime/00353_FrameRateLogger.js
+import getAll from "get" /* 30 */;
 
-export default require("get").get("FrameRateLogger");
+
+export default getAll.get("FrameRateLogger");

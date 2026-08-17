@@ -1,5 +1,6 @@
 // _runtime/13763_monadic.js
-import ObjectWithoutPrototypeCache from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import ObjectWithoutPrototypeCache from "_classCallCheck" /* 41 */;
 
 function monadic(call, get, arg2, g_v) {
   let tmp2 = g_v;
@@ -63,7 +64,7 @@ const items = [
     }
   }
 ];
-let closure_5 = require("_createClass")(ObjectWithoutPrototypeCache, items);
+let closure_5 = _createClassDefault(ObjectWithoutPrototypeCache, items);
 let closure_6 = {
   create() {
     return new closure_5();

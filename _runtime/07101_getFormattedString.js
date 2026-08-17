@@ -1,12 +1,8 @@
 // _runtime/07101_getFormattedString.js
-import asyncGeneratorStep from "asyncGeneratorStep";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "asyncGeneratorStep" /* 7084 */;
+import closure_3 from "_slicedToArray" /* 7041 */;
+import noop from "noop" /* 19 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 function getFormattedString(c2) {
   const js = c2.js;
@@ -47,11 +43,11 @@ function runScrollBenchmark(arg0, arg1, arg2) {
 function _runScrollBenchmark() {
   const self = this;
   let tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let asyncGeneratorStep = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
@@ -79,7 +75,7 @@ function _runScrollBenchmark() {
               obj[0] = arg1;
               return obj;
             } else {
-              let c4 = tmp5;
+              c4 = tmp5;
               let horizontal = tmp2;
               horizontal = undefined;
               c4 = undefined;
@@ -111,7 +107,7 @@ function _runScrollBenchmark() {
                   const obj5 = ref(7102);
                   c5 = 1;
                   c6 = 1;
-                  let obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = obj5.autoScroll(scrollNow, 0, 0, diff, diff1, tmp34, tmp33);
                   return obj1;
                 }
@@ -131,7 +127,7 @@ function _runScrollBenchmark() {
               c5 = 2;
               c6 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = obj1.autoScroll(c6, c4, c5, 0, 0, asyncGeneratorStep, dependencyMap);
+              obj3[0] = obj1.autoScroll(c6, c4, c5, 0, 0, closure_2, dependencyMap);
               return obj3;
             }
           } else if (arg0 === 1) {
@@ -152,7 +148,7 @@ function _runScrollBenchmark() {
       }
     })();
   });
-  const _runScrollBenchmark = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -164,24 +160,25 @@ function _runScrollBenchmark() {
 ({ useEffect: c4, useState: c5, useCallback: closure_6, useRef: error } = noop);
 
 export const useBenchmark = function useBenchmark(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
-  let isBenchmarkRunning;
   let callback2;
   let callback3;
+  let callback4;
   let startBenchmark;
-  let tmp = isBenchmarkRunning(callback3(false), 2);
-  isBenchmarkRunning = tmp[0];
-  callback2 = tmp[1];
-  callback3 = callback4(null);
+  let tmp = callback2(callback4(false), 2);
+  const isBenchmarkRunning = tmp[0];
+  callback2 = isBenchmarkRunning;
+  callback3 = tmp[1];
+  callback4 = callback5(null);
   const items = [arg1, arg0, isBenchmarkRunning, , ];
   ({ repeatCount: arr[3], speedMultiplier: arr[4] } = obj);
   startBenchmark = startBenchmark(() => {
-    if (!isBenchmarkRunning) {
+    if (!closure_3) {
       const cancellable = new ref(table[3]).Cancellable();
       ref = cancellable;
       closure_5.current = cancellable;
@@ -194,7 +191,7 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
         }
         if (Number(length) <= 0) {
           const _Error = Error;
-          const error = new Error(tmp(tmp2[4]).ErrorMessages.dataEmptyCannotRunBenchmark);
+          error = new Error(tmp(tmp2[4]).ErrorMessages.dataEmptyCannotRunBenchmark);
           throw error;
         }
       }
@@ -208,7 +205,7 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
           if (arg0 === 1) {
             throw arg1;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
+            obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           } else {
@@ -227,7 +224,7 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let dependencyMap = tmp5;
+                dependencyMap = tmp5;
                 let jSFPSMonitor = tmp2;
                 jSFPSMonitor = undefined;
                 dependencyMap = undefined;
@@ -236,32 +233,32 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
                 jSFPSMonitor = new callback(7103).JSFPSMonitor();
                 jSFPSMonitor.startTracking();
                 dependencyMap = 0;
-                let num8 = outer2_2.repeatCount;
+                let num8 = closure_2_2.repeatCount;
                 if (!num8) {
                   num8 = 1;
                 }
                 if (tmp55 >= num8) {
                   averageFPS = jSFPSMonitor.stopAndGetData();
                   if (averageFPS.averageFPS < 35) {
-                    outer1_1.push("Your average JS FPS is low. This can indicate that your components are doing too much work. Try to optimize your components and reduce re-renders if any");
+                    closure_1_1.push("Your average JS FPS is low. This can indicate that your components are doing too much work. Try to optimize your components and reduce re-renders if any");
                   }
-                  (function computeSuggestions(closure_0, outer1_1) {
+                  (function computeSuggestions(closure_0, closure_1_1) {
                     let current = closure_0.current;
                     if (current) {
                       current = closure_0.current.props.data.length < 200;
                     }
                     if (current) {
-                      outer1_1.push("Data count is low. Try to increase it to a large number (e.g 200) using the 'useDataMultiplier' hook.");
+                      closure_1_1.push("Data count is low. Try to increase it to a large number (e.g 200) using the 'useDataMultiplier' hook.");
                     }
-                  })(callback, outer1_1);
-                  const isBenchmarkRunning = (function generateResult(js, outer1_1, outer1_0) {
-                    return { js, suggestions: outer1_1, interrupted: outer1_0.isCancelled() };
-                  })(obj, outer1_1, outer1_0);
-                  if (!outer1_0.isCancelled()) {
-                    c3.formattedString = outer3_8(c3);
+                  })(callback, closure_1_1);
+                  closure_3 = (function generateResult(js, closure_1_1, closure_1_0) {
+                    return { js, suggestions: closure_1_1, interrupted: closure_1_0.isCancelled() };
+                  })(obj, closure_1_1, closure_1_0);
+                  if (!closure_1_0.isCancelled()) {
+                    c3.formattedString = closure_3_8(c3);
                   }
-                  dependencyMap(outer2_3);
-                  outer2_4(false);
+                  dependencyMap(closure_2_3);
+                  closure_2_4(false);
                   c3 = 3;
                   return { value: "HermesInternal", done: "HermesInternal" };
                 }
@@ -277,20 +274,20 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
               return obj;
             } else {
               dependencyMap = dependencyMap + 1;
-              let num4 = outer2_2.repeatCount;
+              let num4 = closure_2_2.repeatCount;
               if (!num4) {
                 num4 = 1;
               }
               const tmp9 = dependencyMap;
             }
-            let num11 = outer2_2.speedMultiplier;
+            let num11 = closure_2_2.speedMultiplier;
             if (!num11) {
               num11 = 1;
             }
             averageFPS = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer3_9(callback, outer1_0, num11);
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_3_9(callback, closure_1_0, num11);
             return obj1;
           } catch (tmp43) {
             c3 = tmp;
@@ -312,7 +309,7 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
       tmp2 = table;
     }
   }, items);
-  callback2(() => {
+  callback3(() => {
     if (!obj.startManually) {
       let num = tmp.startDelayInMs;
       if (!num) {
@@ -323,8 +320,8 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
       }, num);
       return () => {
         clearTimeout(closure_0);
-        if (outer1_5.current) {
-          const current = outer1_5.current;
+        if (closure_1_5.current) {
+          const current = closure_1_5.current;
           current.cancel();
         }
       };

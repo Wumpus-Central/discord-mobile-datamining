@@ -1,5 +1,5 @@
 // _runtime/03600_buildLocalizeFn.js
-import buildLocalizeFn from "buildLocalizeFn";
+import buildLocalizeFn from "buildLocalizeFn" /* 2002 */;
 
 if (!buildLocalizeFn) {
   let obj = { default: null };

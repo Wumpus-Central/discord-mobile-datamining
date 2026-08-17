@@ -1,5 +1,5 @@
 // _runtime/metro/03777__typeof.js
-import { Parser } from "Parser";
+import Parser2 from "Parser" /* 3778 */;
 
 let _createSuperInternal = function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -39,7 +39,7 @@ let store = function _setPrototypeOf(EraParser, Parser) {
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;
-    let _getPrototypeOf = Object.getPrototypeOf;
+    _getPrototypeOf = Object.getPrototypeOf;
   } else {
     _getPrototypeOf = function _getPrototypeOf(arg0) {
       let __proto__ = arg0.__proto__;
@@ -52,10 +52,11 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
 class EraParser {
   constructor() {
-    if (this instanceof c1) {
+    if (this instanceof closure_1) {
       length = arguments.length;
       _Array = Array;
       tmp6 = new.target;

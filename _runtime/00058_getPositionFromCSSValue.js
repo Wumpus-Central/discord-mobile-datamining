@@ -450,7 +450,7 @@ function parseBackgroundPositionCSSString(str) {
     if (null != str2) {
       let tmp88 = str4;
       if (null != str4) {
-        let obj1 = { top: null, right: null };
+        obj1 = { top: null, right: null };
         let tmp95 = str2;
         obj1[0] = str2;
         let tmp96 = str4;

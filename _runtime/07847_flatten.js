@@ -11,19 +11,19 @@ arg5.flatten = function flatten(arr) {
                 if (Array.isArray(arr)) {
                   let item = arr.forEach(() => { ... });
                 } else {
-                  closure_0.push(arr);
+                  arr = arr.push(arr);
                 }
               });
             } else {
-              closure_0.push(arr);
+              arr = arr.push(arr);
             }
           });
         } else {
-          closure_0.push(arr);
+          arr = arr.push(arr);
         }
       });
     } else {
-      closure_0.push(arr);
+      arr = arr.push(arr);
     }
   });
   return items;

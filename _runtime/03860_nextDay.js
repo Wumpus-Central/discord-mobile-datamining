@@ -1,7 +1,7 @@
 // _runtime/03860_nextDay.js
-import addDays from "addDays";
-import getDay from "getDay";
-import requiredArgs from "requiredArgs";
+import addDays from "addDays" /* 3620 */;
+import getDay from "getDay" /* 3735 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!addDays) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!addDays) {
 } else {
   tmp3 = addDays;
 }
-let c0 = tmp3;
+addDays = tmp3;
 if (!getDay) {
   obj = { default: null };
   obj[0] = getDay;
@@ -18,7 +18,7 @@ if (!getDay) {
 } else {
   tmp5 = getDay;
 }
-let closure_1 = tmp5;
+getDay = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,14 +26,15 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function nextDay(arg0, arg1) {
-  tmp7.default(2, arguments);
-  const diff = arg1 - tmp5.default(arg0);
+  requiredArgs.default(2, arguments);
+  const diff = arg1 - getDay.default(arg0);
   let sum = diff;
   if (diff <= 0) {
     sum = diff + 7;
   }
-  return tmp3.default(arg0, sum);
+  return addDays.default(arg0, sum);
 };
 export default exports.default;

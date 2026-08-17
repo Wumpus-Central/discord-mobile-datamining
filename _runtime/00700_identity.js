@@ -1,6 +1,6 @@
 // _runtime/00700_identity.js
-import noop from "noop";
-import { is } from "00701_is.js";
+import is from "is" /* 701 */;
+import closure_2 from "noop" /* 19 */;
 
 function identity(arg0) {
   return arg0;
@@ -15,10 +15,10 @@ function createWithEqualityFnImpl(arg0, arg1) {
     }
     let tmp2 = arg0;
     if (arg0 === undefined) {
-      tmp2 = outer1_3;
+      tmp2 = closure_1_3;
     }
     const syncExternalStoreWithSelector = callback(store[1]).useSyncExternalStoreWithSelector(store.subscribe, store.getState, store.getInitialState, tmp2, tmp);
-    const debugValue = outer1_2.useDebugValue(syncExternalStoreWithSelector);
+    const debugValue = closure_1_2.useDebugValue(syncExternalStoreWithSelector);
     return syncExternalStoreWithSelector;
   }
   const merged = Object.assign(useBoundStoreWithEqualityFn, store);
@@ -39,10 +39,10 @@ export const createWithEqualityFn = (arg0, arg1) => {
       }
       let tmp2 = arg0;
       if (arg0 === undefined) {
-        tmp2 = outer1_3;
+        tmp2 = closure_1_3;
       }
       const syncExternalStoreWithSelector = callback(store[1]).useSyncExternalStoreWithSelector(store.subscribe, store.getState, store.getInitialState, tmp2, tmp);
-      const debugValue = outer1_2.useDebugValue(syncExternalStoreWithSelector);
+      const debugValue = closure_1_2.useDebugValue(syncExternalStoreWithSelector);
       return syncExternalStoreWithSelector;
     }
     const _Object = Object;
@@ -60,6 +60,6 @@ export const useStoreWithEqualityFn = function useStoreWithEqualityFn(closure_4,
     tmp = identity;
   }
   const syncExternalStoreWithSelector = is.useSyncExternalStoreWithSelector(closure_4.subscribe, closure_4.getState, closure_4.getInitialState, tmp, shallow);
-  const debugValue = noop.useDebugValue(syncExternalStoreWithSelector);
+  const debugValue = closure_2.useDebugValue(syncExternalStoreWithSelector);
   return syncExternalStoreWithSelector;
 };

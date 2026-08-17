@@ -1,22 +1,16 @@
 // _runtime/04757__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import noop from "noop";
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import { LinearGradient } from "04758_LinearGradient.js";
+import noopDefault from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import LinearGradientDefault from "LinearGradient" /* 4758 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_classCallCheck" /* 41 */;
+import closure_6 from "_possibleConstructorReturn" /* 93 */;
+import closure_7 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let Component;
-let c10;
-let c9;
-let closure_12;
-let map1;
-let metroImportAll;
-let unpackModuleId;
 const LinearGradient = global;
 function _isNativeReflectConstruct() {
   try {
@@ -29,16 +23,17 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 let closure_3 = ["children", "colors", "end", "locations", "useAngle", "angleCenter", "angle", "start", "style"];
-({ createRef: metroImportAll, Component } = noop);
+({ createRef: closure_8, Component } = noop);
+noopDefault;
 ({ processColor: c9, StyleSheet: c10, View: unpackModuleId } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 function convertPoint(arg0, arg1) {
@@ -48,11 +43,11 @@ class LinearGradient {
   constructor() {
     self = this;
     items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, LinearGradient);
+    tmp = closure_5(this, LinearGradient);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(LinearGradient);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_7;
+    obj = closure_7(LinearGradient);
+    tmp3 = closure_6;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -65,7 +60,7 @@ class LinearGradient {
     return tmp3Result;
   }
 }
-require("_inherits")(LinearGradient, Component);
+_inheritsDefault(LinearGradient, Component);
 let items = [
   {
     key: "setNativeProps",
@@ -77,15 +72,6 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let angle;
-      let angleCenter;
-      let children;
-      let colors;
-      let end;
-      let locations;
-      let start;
-      let style;
-      let useAngle;
       const props = this.props;
       ({ colors, end, locations, angleCenter, start, style } = props);
       ({ children, useAngle, angle } = props);
@@ -185,7 +171,7 @@ let items = [
         console.warn("LinearGradient '" + "end" + "' property should be an object with fields 'x' and 'y', Array type is deprecated.");
         [obj4[0], obj4[1]] = end;
         tmp24 = { x: null, y: null };
-        const obj1 = { x: null, y: null };
+        obj1 = { x: null, y: null };
       }
       obj[3] = tmp24;
       let substr = null;
@@ -209,7 +195,7 @@ let items = [
       obj[6] = tmp27;
       obj[7] = angle;
       obj[8] = items;
-      const items1 = [tmp17(LinearGradient, obj), children];
+      const items1 = [tmp17(LinearGradientDefault, obj), children];
       obj.children = items1;
       return tmp14(tmp15, obj);
     }

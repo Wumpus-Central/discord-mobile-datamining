@@ -1,4 +1,6 @@
 // _runtime/01841_RNScreensTurboModule.js
+import addLogBoxLog from "addLogBoxLog" /* 1658 */;
+
 let c0 = require;
 let RNScreensTurboModule = global.RNScreensTurboModule;
 if (!RNScreensTurboModule) {
@@ -12,7 +14,7 @@ if (!RNScreensTurboModule) {
     return _undefined;
   };
   const obj1 = { logger: null, defaultReturnValue: null };
-  obj1[0] = require("addLogBoxLog").logger;
+  obj1[0] = addLogBoxLog.logger;
   obj1[1] = obj;
   fn.__closure = obj1;
   fn.__workletHash = 6450550757460;
@@ -25,7 +27,7 @@ if (!RNScreensTurboModule) {
     return _undefined;
   };
   const obj2 = { logger: null, defaultReturnValue: "a" };
-  obj2[0] = require("addLogBoxLog").logger;
+  obj2[0] = addLogBoxLog.logger;
   fn2.__closure = obj2;
   fn2.__workletHash = 6450550757460;
   fn2.__initData = obj;
@@ -37,7 +39,7 @@ if (!RNScreensTurboModule) {
     return _undefined;
   };
   const obj3 = { logger: null, defaultReturnValue: "a" };
-  obj3[0] = require("addLogBoxLog").logger;
+  obj3[0] = addLogBoxLog.logger;
   fn3.__closure = obj3;
   fn3.__workletHash = 6450550757460;
   fn3.__initData = obj;

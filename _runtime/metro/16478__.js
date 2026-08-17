@@ -2,8 +2,6 @@
 globalThis.IntlMessageFormat.__addLocaleData({
   locale: "uk",
   pluralRuleFunction(arg0, arg1) {
-    let arr;
-    let tmp2;
     const parts = String(arg0).split(".");
     [arr, tmp2] = parts;
     let substr1 = Number(parts[0]) == arg0;

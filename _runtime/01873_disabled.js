@@ -1,24 +1,14 @@
 // _runtime/01873_disabled.js
-import "noop";
-import { useMemo } from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import { useMemo } from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let TouchableOpacity;
-let c3;
-let c4;
 const require = arg1;
+noopDefault;
 ({ Platform, TouchableNativeFeedback: c3, TouchableOpacity, View: c4 } = get_ActivityIndicator);
 
 export default function _default(disabled) {
-  let accessibilityHint;
-  let accessibilityLabel;
-  let children;
-  let onPress;
-  let style;
-  let testID;
-  let theme;
   disabled = disabled.disabled;
   let num = disabled.rippleRadius;
   ({ children, onPress, accessibilityLabel, accessibilityHint, testID } = disabled);

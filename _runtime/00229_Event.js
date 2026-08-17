@@ -3,7 +3,7 @@ class Event {
   constructor(arg0, arg1) {
     obj = { eventTarget: global, event: require, eventPhase: 2, currentTarget: global, canceled: false, stopped: false, immediateStopped: false, passiveListener: null, timeStamp: null };
     timeStamp = require.timeStamp;
-    tmp = Object;
+    tmp = closure_0;
     if (!timeStamp) {
       tmp2 = globalThis;
       _Date = Date;
@@ -11,7 +11,7 @@ class Event {
     }
     self = this;
     obj[8] = timeStamp;
-    result = Object.set(this, obj);
+    result = closure_0.set(this, obj);
     definePropertyResult = Object.defineProperty(this, "isTrusted", { value: false, enumerable: true });
     keys = Object.keys(require);
     for (let num = 0; num < keys.length; num = num + 1) {
@@ -19,17 +19,17 @@ class Event {
       tmp6 = num;
       if (!(tmp5 in self)) {
         _Object = Object;
-        Object = tmp5;
+        closure_0 = tmp5;
         obj = { get: null, set: null, configurable: true, enumerable: true };
         obj[0] = function get() {
-          const value = tmp9.get(this);
+          const value = store.get(this);
           console.assert(null != value, "'this' is expected an Event object, but got", this);
-          return value.event[tmp9];
+          return value.event[store];
         };
         obj[1] = function set(arg0) {
-          const value = tmp9.get(this);
+          const value = store.get(this);
           console.assert(null != value, "'this' is expected an Event object, but got", this);
-          value.event[tmp9] = arg0;
+          value.event[store] = arg0;
         };
         definePropertyResult1 = Object.defineProperty(self, tmp5, obj);
       }
@@ -45,7 +45,7 @@ function getWrapper(prototypeOf) {
       if (null == value) {
         const _Object3 = Object;
         const tmp9 = getWrapper(Object.getPrototypeOf(prototypeOf));
-        const weakMap = tmp9;
+        closure_0 = tmp9;
         const _Object4 = Object;
         const keys = Object.keys(prototypeOf);
         let tmp4 = tmp9;
@@ -132,7 +132,7 @@ function getWrapper(prototypeOf) {
               }
               obj = { value: null, configurable: true, enumerable: true };
               obj[0] = function value() {
-                const value = tmp9.get(this);
+                const value = store.get(this);
                 console.assert(null != value, "'this' is expected an Event object, but got", this);
                 const event = value.event;
                 const apply = tmp3.apply;
@@ -143,7 +143,7 @@ function getWrapper(prototypeOf) {
                 }
                 return applyArgumentsResult;
               };
-              let obj1 = obj;
+              obj1 = obj;
             } else {
               class CustomEvent {
                 constructor(arg0, arg1) {
@@ -160,14 +160,14 @@ function getWrapper(prototypeOf) {
               }
               obj1 = { get: null, set: null, configurable: true, enumerable: true };
               obj1[0] = function get() {
-                const value = tmp9.get(this);
+                const value = store.get(this);
                 console.assert(null != value, "'this' is expected an Event object, but got", this);
-                return value.event[tmp9];
+                return value.event[store];
               };
               obj1[1] = function set(arg0) {
-                const value = tmp9.get(this);
+                const value = store.get(this);
                 console.assert(null != value, "'this' is expected an Event object, but got", this);
-                value.event[tmp9] = arg0;
+                value.event[store] = arg0;
               };
             }
             Object.defineProperty(CustomEvent.prototype, tmp, obj1);
@@ -204,14 +204,14 @@ function getListeners(arg0) {
 class EventTarget {
   constructor() {
     if (this instanceof EventTarget) {
-      tmp18 = WeakMap;
+      tmp18 = closure_6;
       tmp19 = globalThis;
       _Map = Map;
       tmp20 = new.target;
       tmp21 = new.target;
       map = new Map();
       tmp23 = map;
-      result = WeakMap.set(tmp, map);
+      result = closure_6.set(tmp, map);
       return;
     } else {
       num = 1;
@@ -247,10 +247,10 @@ class EventTarget {
               tmp16 = first[num6];
               _Object4 = Object;
               _HermesInternal2 = HermesInternal;
-              WeakMap = tmp16;
+              closure_0 = tmp16;
               obj2 = { get: null, set: null, configurable: true, enumerable: true };
               obj2[0] = function get() {
-                const value = outer1_6.get(this);
+                const value = closure_1_6.get(this);
                 if (null == value) {
                   const _TypeError = TypeError;
                   const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
@@ -276,7 +276,7 @@ class EventTarget {
                 if (!tmp2) {
                   tmp = null;
                 }
-                let value = outer1_6.get(this);
+                let value = closure_1_6.get(this);
                 if (null == value) {
                   const _TypeError = TypeError;
                   const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
@@ -384,10 +384,10 @@ class EventTarget {
             tmp14 = arr[num5];
             _Object2 = Object;
             _HermesInternal = HermesInternal;
-            WeakMap = tmp14;
+            closure_0 = tmp14;
             obj4 = { get: null, set: null, configurable: true, enumerable: true };
             obj4[0] = function get() {
-              const value = outer1_6.get(this);
+              const value = closure_1_6.get(this);
               if (null == value) {
                 const _TypeError = TypeError;
                 const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
@@ -413,7 +413,7 @@ class EventTarget {
               if (!tmp2) {
                 tmp = null;
               }
-              let value = outer1_6.get(this);
+              let value = closure_1_6.get(this);
               if (null == value) {
                 const _TypeError = TypeError;
                 const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
@@ -696,7 +696,7 @@ if (typeof window !== "undefined") {
     constructor(arg0, arg1) {
       obj = { eventTarget: global, event: require, eventPhase: 2, currentTarget: global, canceled: false, stopped: false, immediateStopped: false, passiveListener: null, timeStamp: null };
       timeStamp = require.timeStamp;
-      tmp = Object;
+      tmp = closure_0;
       if (!timeStamp) {
         tmp2 = globalThis;
         _Date = Date;
@@ -704,7 +704,7 @@ if (typeof window !== "undefined") {
       }
       self = this;
       obj[8] = timeStamp;
-      result = Object.set(this, obj);
+      result = closure_0.set(this, obj);
       definePropertyResult = Object.defineProperty(this, "isTrusted", { value: false, enumerable: true });
       keys = Object.keys(require);
       for (let num = 0; num < keys.length; num = num + 1) {
@@ -712,17 +712,17 @@ if (typeof window !== "undefined") {
         tmp6 = num;
         if (!(tmp5 in self)) {
           _Object = Object;
-          Object = tmp5;
+          closure_0 = tmp5;
           obj = { get: null, set: null, configurable: true, enumerable: true };
           obj[0] = function get() {
-            const value = tmp9.get(this);
+            const value = store.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
-            return value.event[tmp9];
+            return value.event[store];
           };
           obj[1] = function set(arg0) {
-            const value = tmp9.get(this);
+            const value = store.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
-            value.event[tmp9] = arg0;
+            value.event[store] = arg0;
           };
           definePropertyResult1 = Object.defineProperty(self, tmp5, obj);
         }
@@ -737,7 +737,7 @@ if (tmp4) {
     constructor(arg0, arg1) {
       obj = { eventTarget: global, event: require, eventPhase: 2, currentTarget: global, canceled: false, stopped: false, immediateStopped: false, passiveListener: null, timeStamp: null };
       timeStamp = require.timeStamp;
-      tmp = Object;
+      tmp = closure_0;
       if (!timeStamp) {
         tmp2 = globalThis;
         _Date = Date;
@@ -745,7 +745,7 @@ if (tmp4) {
       }
       self = this;
       obj[8] = timeStamp;
-      result = Object.set(this, obj);
+      result = closure_0.set(this, obj);
       definePropertyResult = Object.defineProperty(this, "isTrusted", { value: false, enumerable: true });
       keys = Object.keys(require);
       for (let num = 0; num < keys.length; num = num + 1) {
@@ -753,17 +753,17 @@ if (tmp4) {
         tmp6 = num;
         if (!(tmp5 in self)) {
           _Object = Object;
-          Object = tmp5;
+          closure_0 = tmp5;
           obj = { get: null, set: null, configurable: true, enumerable: true };
           obj[0] = function get() {
-            const value = tmp9.get(this);
+            const value = store.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
-            return value.event[tmp9];
+            return value.event[store];
           };
           obj[1] = function set(arg0) {
-            const value = tmp9.get(this);
+            const value = store.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
-            value.event[tmp9] = arg0;
+            value.event[store] = arg0;
           };
           definePropertyResult1 = Object.defineProperty(self, tmp5, obj);
         }
@@ -981,7 +981,7 @@ if (typeof window !== "undefined") {
     constructor(arg0, arg1) {
       obj = { eventTarget: global, event: require, eventPhase: 2, currentTarget: global, canceled: false, stopped: false, immediateStopped: false, passiveListener: null, timeStamp: null };
       timeStamp = require.timeStamp;
-      tmp = Object;
+      tmp = closure_0;
       if (!timeStamp) {
         tmp2 = globalThis;
         _Date = Date;
@@ -989,7 +989,7 @@ if (typeof window !== "undefined") {
       }
       self = this;
       obj[8] = timeStamp;
-      result = Object.set(this, obj);
+      result = closure_0.set(this, obj);
       definePropertyResult = Object.defineProperty(this, "isTrusted", { value: false, enumerable: true });
       keys = Object.keys(require);
       for (let num = 0; num < keys.length; num = num + 1) {
@@ -997,17 +997,17 @@ if (typeof window !== "undefined") {
         tmp6 = num;
         if (!(tmp5 in self)) {
           _Object = Object;
-          Object = tmp5;
+          closure_0 = tmp5;
           obj = { get: null, set: null, configurable: true, enumerable: true };
           obj[0] = function get() {
-            const value = tmp9.get(this);
+            const value = store.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
-            return value.event[tmp9];
+            return value.event[store];
           };
           obj[1] = function set(arg0) {
-            const value = tmp9.get(this);
+            const value = store.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
-            value.event[tmp9] = arg0;
+            value.event[store] = arg0;
           };
           definePropertyResult1 = Object.defineProperty(self, tmp5, obj);
         }
@@ -1022,7 +1022,7 @@ if (tmp9) {
     constructor(arg0, arg1) {
       obj = { eventTarget: global, event: require, eventPhase: 2, currentTarget: global, canceled: false, stopped: false, immediateStopped: false, passiveListener: null, timeStamp: null };
       timeStamp = require.timeStamp;
-      tmp = Object;
+      tmp = closure_0;
       if (!timeStamp) {
         tmp2 = globalThis;
         _Date = Date;
@@ -1030,7 +1030,7 @@ if (tmp9) {
       }
       self = this;
       obj[8] = timeStamp;
-      result = Object.set(this, obj);
+      result = closure_0.set(this, obj);
       definePropertyResult = Object.defineProperty(this, "isTrusted", { value: false, enumerable: true });
       keys = Object.keys(require);
       for (let num = 0; num < keys.length; num = num + 1) {
@@ -1038,17 +1038,17 @@ if (tmp9) {
         tmp6 = num;
         if (!(tmp5 in self)) {
           _Object = Object;
-          Object = tmp5;
+          closure_0 = tmp5;
           obj = { get: null, set: null, configurable: true, enumerable: true };
           obj[0] = function get() {
-            const value = tmp9.get(this);
+            const value = store.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
-            return value.event[tmp9];
+            return value.event[store];
           };
           obj[1] = function set(arg0) {
-            const value = tmp9.get(this);
+            const value = store.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
-            value.event[tmp9] = arg0;
+            value.event[store] = arg0;
           };
           definePropertyResult1 = Object.defineProperty(self, tmp5, obj);
         }
@@ -1059,10 +1059,10 @@ if (tmp9) {
   Object.setPrototypeOf(EventTarget.prototype, window.EventTarget.prototype);
 }
 function defineEventAttribute(prototype, abort) {
-  let closure_0 = abort;
+  closure_0 = abort;
   Object.defineProperty(prototype, "on" + abort, {
     get() {
-      const value = outer1_6.get(this);
+      const value = closure_1_6.get(this);
       if (null == value) {
         const _TypeError = TypeError;
         const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
@@ -1088,7 +1088,7 @@ function defineEventAttribute(prototype, abort) {
       if (!tmp2) {
         tmp = null;
       }
-      let value = outer1_6.get(this);
+      let value = closure_1_6.get(this);
       if (null == value) {
         const _TypeError = TypeError;
         const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");

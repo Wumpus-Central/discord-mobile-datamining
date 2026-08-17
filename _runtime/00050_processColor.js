@@ -1,6 +1,7 @@
 // _runtime/00050_processColor.js
-import { normalizeColor } from "00051_normalizeColor.js";
-const require = arg1;
+import normalizeColor from "normalizeColor" /* 51 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.default = function processColor(arg0) {
   if (null == arg0) {

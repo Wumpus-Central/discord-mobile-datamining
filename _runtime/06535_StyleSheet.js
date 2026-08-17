@@ -1,20 +1,14 @@
 // _runtime/06535_StyleSheet.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import getShadowStyle from "getShadowStyle";
-import getShadowStyle from "getShadowStyle";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import getShadowStyle from "getShadowStyle" /* 6540 */;
 
-let Platform;
-let StyleSheet;
-let c5;
-let c9;
-let metroImportAll;
 const require = arg1;
 ({ Animated: c5, Platform, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let c10 = true;
 function hasOpacityStyle(arg0) {
 
@@ -47,26 +41,6 @@ obj[8] = { bottom: 0 };
 const styles = StyleSheet.create(obj);
 
 export const Card = function Card(shadowEnabled) {
-  let cardStyle;
-  let children;
-  let closure_14;
-  let closure_15;
-  let closure_16;
-  let closure_17;
-  let closure_18;
-  let closure_19;
-  let containerStyle;
-  let containerStyle2;
-  let defaultOverlay;
-  let dependencyMap;
-  let gestureResponseDistance;
-  let interpolationIndex;
-  let overlayEnabled;
-  let overlayStyle;
-  let pageOverflowEnabled;
-  let preloaded;
-  let shadowStart;
-  let shadowStyle;
   let flag = shadowEnabled.shadowEnabled;
   if (flag === undefined) {
     flag = false;
@@ -96,22 +70,22 @@ export const Card = function Card(shadowEnabled) {
   ({ onOpen: defaultOverlay, onClose: closure_14, onTransition: closure_15, onGestureBegin: closure_16, onGestureCanceled: closure_17, onGestureEnd: closure_18, transitionSpec: closure_19, preloaded } = shadowEnabled);
   const styleInterpolator = shadowEnabled.styleInterpolator;
   const contentStyle = shadowEnabled.contentStyle;
-  let closure_22;
-  let closure_23;
-  let closure_24;
-  let closure_25;
-  let closure_26;
-  let closure_27;
+  closure_22 = undefined;
+  closure_23 = undefined;
+  closure_24 = undefined;
+  closure_25 = undefined;
+  closure_26 = undefined;
+  closure_27 = undefined;
   let first;
   let first1;
   let first2;
   let first3;
-  let closure_32;
-  let closure_33;
-  let c34;
-  let closure_35;
-  let closure_36;
-  let c37;
+  closure_32 = undefined;
+  closure_33 = undefined;
+  closure_34 = undefined;
+  closure_35 = undefined;
+  closure_36 = undefined;
+  closure_37 = undefined;
   let memo;
   ({ pageOverflowEnabled, children, overlayEnabled, gestureResponseDistance, containerStyle } = shadowEnabled);
   closure_22 = opening.useRef(false);
@@ -125,7 +99,7 @@ export const Card = function Card(shadowEnabled) {
     return value;
   }), 1)[0];
   first1 = interpolationIndex(opening.useState(() => {
-    const value = new closing.Value(flag2(outer1_2[5]).getInvertedMultiplier(gestureDirection, "rtl" === direction));
+    const value = new closing.Value(flag2(closure_1_2[5]).getInvertedMultiplier(gestureDirection, "rtl" === direction));
     return value;
   }), 1)[0];
   first2 = interpolationIndex(opening.useState(() => {
@@ -142,7 +116,7 @@ export const Card = function Card(shadowEnabled) {
   }), 1)[0];
   closure_32 = num(1522)(() => {
     if (null == ref3.current) {
-      const InteractionManager = flag2(outer1_2[7]).InteractionManager;
+      const InteractionManager = flag2(closure_1_2[7]).InteractionManager;
       let interactionHandle;
       if (InteractionManager != null) {
         interactionHandle = InteractionManager.createInteractionHandle();
@@ -152,7 +126,7 @@ export const Card = function Card(shadowEnabled) {
   });
   closure_33 = num(1522)(() => {
     if (null != ref3.current) {
-      const InteractionManager = flag2(outer1_2[7]).InteractionManager;
+      const InteractionManager = flag2(closure_1_2[7]).InteractionManager;
       if (InteractionManager != null) {
         const result = InteractionManager.clearInteractionHandle(tmp.current);
       }
@@ -167,8 +141,8 @@ export const Card = function Card(shadowEnabled) {
       HermesBuiltin.throwTypeError();
     }
     if (closing) {
-      let obj = flag2(outer1_2[4]);
-      let num = obj.getDistanceForDirection(layout, gestureDirection, "rtl" === direction);
+      let obj = flag2(closure_1_2[4]);
+      num = obj.getDistanceForDirection(layout, gestureDirection, "rtl" === direction);
     } else {
       num = 0;
     }
@@ -207,20 +181,20 @@ export const Card = function Card(shadowEnabled) {
       obj.useNativeDriver = insets;
       obj.isInteraction = false;
       timing(gesture, obj).start((finished) => {
-        outer1_33();
+        closure_1_33();
         let _requestAnimationFrame = globalThis;
-        clearTimeout(outer1_26.current);
+        clearTimeout(closure_1_26.current);
         if (finished.finished) {
           if (typeof onFinish !== "function") {
             HermesBuiltin.throwTypeError();
           }
           if (closing) {
-            outer1_14();
+            closure_1_14();
           } else {
-            outer1_13();
+            closure_1_13();
           }
           _requestAnimationFrame = _requestAnimationFrame.requestAnimationFrame;
-          outer1_25.current = _requestAnimationFrame(() => {
+          closure_1_25.current = _requestAnimationFrame(() => {
             callback();
           });
         }
@@ -238,7 +212,7 @@ export const Card = function Card(shadowEnabled) {
       });
     }
   });
-  c34 = tmp7;
+  closure_34 = tmp7;
   let items = [gestureDirection, direction, first1, , , , ];
   ({ width: arr[3], height: arr[4] } = first2);
   ({ width: arr[5], height: arr[6] } = layout);
@@ -247,7 +221,7 @@ export const Card = function Card(shadowEnabled) {
     width.setValue(layout.width);
     const height = first2.height;
     height.setValue(layout.height);
-    first1.setValue(flag2(outer1_2[5]).getInvertedMultiplier(gestureDirection, "rtl" === direction));
+    first1.setValue(flag2(closure_1_2[5]).getInvertedMultiplier(gestureDirection, "rtl" === direction));
   }, items);
   closure_35 = opening.useRef(null);
   const effect = opening.useEffect(() => () => {
@@ -264,9 +238,9 @@ export const Card = function Card(shadowEnabled) {
     clearTimeout(ref5.current);
     clearTimeout(ref6.current);
     if (ref.current) {
-      const current = ref7.current;
+      current = ref7.current;
       if (current != null) {
-        const opening = current.opening;
+        opening = current.opening;
       }
       let tmp7 = null;
       if (ref7.current) {
@@ -274,7 +248,7 @@ export const Card = function Card(shadowEnabled) {
           HermesBuiltin.throwTypeError();
         }
         if (tmp5.current.closing) {
-          let obj = flag2(outer1_2[4]);
+          let obj = flag2(closure_1_2[4]);
           let num2 = obj.getDistanceForDirection(tmp9, tmp10, "rtl" === tmp11);
         } else {
           num2 = 0;
@@ -285,8 +259,8 @@ export const Card = function Card(shadowEnabled) {
         HermesBuiltin.throwTypeError();
       }
       if (closing) {
-        let num3 = flag2(outer1_2[4]).getDistanceForDirection(tmp17, tmp18, "rtl" === tmp19);
-        const obj2 = flag2(outer1_2[4]);
+        let num3 = flag2(closure_1_2[4]).getDistanceForDirection(tmp17, tmp18, "rtl" === tmp19);
+        const obj2 = flag2(closure_1_2[4]);
       } else {
         num3 = 0;
       }
@@ -300,17 +274,17 @@ export const Card = function Card(shadowEnabled) {
             tmp24 = !opening;
           }
           if (tmp24) {
-            gesture.setValue(flag2(outer1_2[4]).getDistanceForDirection(tmp17, tmp18, "rtl" === tmp19));
+            gesture.setValue(flag2(closure_1_2[4]).getDistanceForDirection(tmp17, tmp18, "rtl" === tmp19));
             obj = { closing: null };
             obj[0] = tmp16;
-            _undefined(obj);
-            const obj3 = flag2(outer1_2[4]);
+            callback8(obj);
+            const obj3 = flag2(closure_1_2[4]);
           }
         }
       }
       obj = { closing: null };
       obj[0] = closing;
-      _undefined(obj);
+      callback8(obj);
       const tmp20 = preloaded;
     } else {
       const _clearTimeout = clearTimeout;
@@ -322,11 +296,11 @@ export const Card = function Card(shadowEnabled) {
       }, 0);
     }
   });
-  c37 = tmp11;
+  closure_37 = tmp11;
   const items1 = [tmp7, closing, direction, gesture, gestureDirection, layout, opening, preloaded, tmp11];
   const effect1 = opening.useEffect(() => {
     if (!preloaded) {
-      _undefined2();
+      callback9();
       const obj = { opening: null, closing: null, layout: null, gestureDirection: null, direction: null, preloaded: null };
       obj[0] = opening;
       obj[1] = closing;
@@ -377,7 +351,7 @@ export const Card = function Card(shadowEnabled) {
         obj[0] = insets;
         tmp2(items, obj);
       }
-      const obj1 = { translationY: null };
+      obj1 = { translationY: null };
       obj1[0] = gesture;
       obj = obj1;
     }
@@ -395,7 +369,7 @@ export const Card = function Card(shadowEnabled) {
   const items5 = [gesture(closing.View, { style: { opacity: current }, collapsable: false }), , ];
   let tmp19Result = null;
   if (overlayEnabled) {
-    let obj1 = { pointerEvents: "box-none", style: null, children: null };
+    obj1 = { pointerEvents: "box-none", style: null, children: null };
     obj1[1] = obj.absoluteFill;
     let obj2 = { style: null };
     obj2[0] = overlayStyle;
@@ -414,11 +388,9 @@ export const Card = function Card(shadowEnabled) {
     enabled: tmp23,
     onGestureEvent: memo2,
     onHandlerStateChange: num(1522)((nativeEvent) => {
-      let translationY;
-      let velocityY;
       nativeEvent = nativeEvent.nativeEvent;
       const state = nativeEvent.state;
-      if (flag2(outer1_2[8]).GestureState.ACTIVE === state) {
+      if (flag2(closure_1_2[8]).GestureState.ACTIVE === state) {
         const _clearTimeout = clearTimeout;
         clearTimeout(ref5.current);
         const _clearTimeout2 = clearTimeout;
@@ -448,7 +420,7 @@ export const Card = function Card(shadowEnabled) {
                 let obj = { closing: null, velocity: null };
                 obj[0] = tmp8;
                 obj[1] = velocityY;
-                _undefined(obj);
+                callback8(obj);
                 if (tmp8) {
                   const _setTimeout = setTimeout;
                   ref5.current = setTimeout(() => {
@@ -477,7 +449,7 @@ export const Card = function Card(shadowEnabled) {
           obj = { closing: null, velocity: null };
           obj[0] = closing;
           obj[1] = velocityY2;
-          _undefined(obj);
+          callback8(obj);
           if (callback4 != null) {
             callback4();
           }
@@ -488,11 +460,9 @@ export const Card = function Card(shadowEnabled) {
   };
   tmp5 = num;
   let tmp8 = num(1522)((nativeEvent) => {
-    let translationY;
-    let velocityY;
     nativeEvent = nativeEvent.nativeEvent;
     const state = nativeEvent.state;
-    if (flag2(outer1_2[8]).GestureState.ACTIVE === state) {
+    if (flag2(closure_1_2[8]).GestureState.ACTIVE === state) {
       const _clearTimeout = clearTimeout;
       clearTimeout(ref5.current);
       const _clearTimeout2 = clearTimeout;
@@ -522,7 +492,7 @@ export const Card = function Card(shadowEnabled) {
               let obj = { closing: null, velocity: null };
               obj[0] = tmp8;
               obj[1] = velocityY;
-              _undefined(obj);
+              callback8(obj);
               if (tmp8) {
                 const _setTimeout = setTimeout;
                 ref5.current = setTimeout(() => {
@@ -551,7 +521,7 @@ export const Card = function Card(shadowEnabled) {
         obj = { closing: null, velocity: null };
         obj[0] = closing;
         obj[1] = velocityY2;
-        _undefined(obj);
+        callback8(obj);
         if (callback4 != null) {
           callback4();
         }

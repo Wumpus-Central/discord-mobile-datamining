@@ -1,6 +1,7 @@
 // _runtime/04923_getDataView.js
-import { getDataView } from "04910_getDataView.js";
-const require = arg1;
+import getDataView from "getDataView" /* 4910 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {

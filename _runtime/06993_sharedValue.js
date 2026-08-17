@@ -1,17 +1,12 @@
 // _runtime/06993_sharedValue.js
-import "noop";
-import { useMemo } from "noop";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import { useMemo } from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
+noopDefault;
 
 export default function _default(children) {
-  let animatedContentGestureState;
-  let animatedHandleGestureState;
-  let handleOnChange;
-  let handleOnEnd;
-  let handleOnFinalize;
-  let handleOnStart;
   let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
   if (useGestureEventsHandlersDefault === undefined) {
     useGestureEventsHandlersDefault = sharedValue(gestureHandler[2]).useGestureEventsHandlersDefault;

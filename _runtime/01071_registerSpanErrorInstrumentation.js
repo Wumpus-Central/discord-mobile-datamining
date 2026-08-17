@@ -1,6 +1,7 @@
 // _runtime/01071_registerSpanErrorInstrumentation.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-const require = arg1;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.uiProfiler = {

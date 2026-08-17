@@ -1,13 +1,13 @@
 // _runtime/04350__playHaptic.js
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Platform } from "get ActivityIndicator";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
 
 function _playHaptic() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg1;
-    let closure_1 = arg2;
-    let c2 = 0;
+    closure_0 = arg1;
+    closure_1 = arg2;
+    c2 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c2 === 2) {
         c2 = 3;
@@ -37,7 +37,7 @@ function _playHaptic() {
             obj = callback(table[2]);
             if (obj.isEnabled()) {
               c2 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = tmp6(tmp7[2]).triggerPattern(tmp4, tmp5);
               return obj1;
             } else {
@@ -56,7 +56,7 @@ function _playHaptic() {
       }
     })();
   });
-  const _playHaptic = tmp;
+  closure_3 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

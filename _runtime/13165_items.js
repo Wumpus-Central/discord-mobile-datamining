@@ -1,11 +1,12 @@
 // _runtime/13165_items.js
-import { SemVer } from "13137_SemVer.js";
-import { Comparator } from "13151_Comparator.js";
-import { Range } from "13152_Range.js";
-import { Range } from "13154_Range.js";
-const items = [new require("Comparator")(">=0.0.0-0")];
-let tmp = new require("Comparator")(">=0.0.0-0");
-const items1 = [new require("Comparator")(">=0.0.0")];
+import SemVer from "SemVer" /* 13137 */;
+import Comparator from "Comparator" /* 13151 */;
+import Range from "Range" /* 13152 */;
+import Range2 from "Range" /* 13154 */;
+
+const items = [new Comparator(">=0.0.0-0")];
+let tmp = new Comparator(">=0.0.0-0");
+const items1 = [new Comparator(">=0.0.0")];
 function simpleSubset(arg0, item10015, includePrerelease) {
   let tmp3;
   let tmp4;
@@ -193,7 +194,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
                   tmp = dependencyMap;
                   let _String4 = String;
                   tmp = nextResult2;
-                  tmp = Range;
+                  tmp = Range2;
                   if (!tmp(tmp.semver, String(tmp97), includePrerelease)) {
                     tmp = iter3;
                     iter3.return();
@@ -255,7 +256,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
                   tmp = tmp2;
                   let _String5 = String;
                   tmp = nextResult2;
-                  tmp = Range;
+                  tmp = Range2;
                   if (!tmp(tmp2.semver, String(tmp97), includePrerelease)) {
                     tmp = iter3;
                     iter3.return();
@@ -328,7 +329,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
             iter2.return();
             return null;
           }
-          tmp57 = Range;
+          tmp57 = Range2;
         }
         if (tmp2) {
           const _String2 = String;
@@ -336,7 +337,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
             iter2.return();
             return null;
           }
-          tmp67 = Range;
+          tmp67 = Range2;
         }
         for (const item10134 of tmp13) {
           let tmp74 = require;
@@ -345,7 +346,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
           let tmp77 = dependencyMap;
           let tmp79 = nextResult1;
           let _String3 = String;
-          let tmp78 = Range;
+          let tmp78 = Range2;
           if (tmp78(tmp51, String(item10134), arg2)) {
             continue;
           } else {

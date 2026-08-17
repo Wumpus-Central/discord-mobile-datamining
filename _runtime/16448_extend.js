@@ -1,6 +1,7 @@
 // _runtime/16448_extend.js
-import { extend } from "16449_extend.js";
-const require = arg1;
+import extend from "extend" /* 16449 */;
+
+require = arg1;
 const dependencyMap = arg6;
 let tmp = (() => {
   try {

@@ -1,21 +1,16 @@
 // _runtime/06449_context.js
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let StyleSheet;
-let c0;
-let c3;
-let c4;
-let c5;
-let closure_1;
-let obj1;
 ({ useCallback: c0, useEffect: closure_1, useMemo: obj1, useRef: c3 } = noop);
 ({ Keyboard: c4, StyleSheet, View: c5 } = get_ActivityIndicator);
+const jsx = jsxProd.jsx;
 let c7 = 0;
 let closure_8 = [];
 let c9 = false;
-const context = require("noop").createContext(null);
+const context = noopDefault.createContext(null);
 const styles = StyleSheet.create({ logicalResponder: { display: "contents" } });
 
 export default function _default(children) {
@@ -55,14 +50,14 @@ export default function _default(children) {
           if (tmp2) {
             tmp2 = height > 0;
           }
-          let closure_9 = tmp2;
+          closure_9 = tmp2;
         }
-        let closure_9 = tmp5;
+        closure_9 = tmp5;
         const items = [
           obj.addListener("keyboardDidShow", setVisible),
           obj.addListener("keyboardWillShow", setVisible),
           obj.addListener("keyboardDidHide", () => {
-                let c9 = false;
+                c9 = false;
               })
         ];
       }
@@ -76,27 +71,27 @@ export default function _default(children) {
             let removeResult = item10008.remove();
             continue;
           }
-          let closure_8 = [];
-          let c9 = false;
+          closure_8 = [];
+          c9 = false;
         }
       })();
     };
   }, []);
   const items1 = [keyboardShouldPersistTaps];
-  let tmp2 = callback2(() => ({ isRNGHResponderEvent: c1, keyboardShouldPersistTaps }), items);
+  let tmp2 = callback2(() => ({ isRNGHResponderEvent: closure_1, keyboardShouldPersistTaps }), items);
   let obj = { value: tmp2, children: null };
   obj = {
     collapsable: false,
     onStartShouldSetResponderCapture: keyboardShouldPersistTaps(() => {
-      c1.current = false;
+      closure_1.current = false;
       return false;
     }, []),
     onStartShouldSetResponder: keyboardShouldPersistTaps(() => {
       let current = "handled" === keyboardShouldPersistTaps;
       if (current) {
-        current = _undefined.current;
+        current = ref.current;
       }
-      _undefined.current = false;
+      ref.current = false;
       return current;
     }, items1),
     pointerEvents: "box-none",
@@ -104,25 +99,25 @@ export default function _default(children) {
     children: children.children
   };
   obj[1] = <closure_5 collapsable={false} onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
-    c1.current = false;
+    closure_1.current = false;
     return false;
   }, [])} onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
     let current = "handled" === keyboardShouldPersistTaps;
     if (current) {
-      current = _undefined.current;
+      current = ref.current;
     }
-    _undefined.current = false;
+    ref.current = false;
     return current;
   }, items1)} pointerEvents="box-none" style={logicalResponder.logicalResponder}>{arg0.children}</closure_5>;
   return <context collapsable={false} onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
-    c1.current = false;
+    closure_1.current = false;
     return false;
   }, [])} onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
     let current = "handled" === keyboardShouldPersistTaps;
     if (current) {
-      current = _undefined.current;
+      current = ref.current;
     }
-    _undefined.current = false;
+    ref.current = false;
     return current;
   }, items1)} pointerEvents="box-none" style={logicalResponder.logicalResponder}>{arg0.children}</context>;
 };

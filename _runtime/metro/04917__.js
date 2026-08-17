@@ -1,6 +1,7 @@
 // _runtime/metro/04917__.js
-import { getDataView } from "../04910_getDataView.js";
-const require = arg1;
+import getDataView from "getDataView" /* 4910 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 let c3 = "\u0089PNG\r\n\u001A\n";
@@ -36,7 +37,7 @@ arg5.default = {
         let tmp3 = length;
         if (module(4913).USE_PNG_FILE) {
           let tmp4 = require;
-          let obj1 = getDataView;
+          obj1 = getDataView;
           let tmp5 = c7;
           let tmp6 = c5;
           if ("IHDR" === obj1.getStringFromDataView(byteLength, length + c7, c5)) {

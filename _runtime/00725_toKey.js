@@ -1,5 +1,6 @@
 // _runtime/00725_toKey.js
-import { isSymbol } from "00638_isSymbol.js";
+import isSymbol from "isSymbol" /* 638 */;
+
 
 export default function toKey(str) {
   if (typeof str !== "string") {

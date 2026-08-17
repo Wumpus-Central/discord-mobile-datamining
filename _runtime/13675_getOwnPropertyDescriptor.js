@@ -1,12 +1,14 @@
 // _runtime/13675_getOwnPropertyDescriptor.js
-import { text } from "13685_text.js";
-import { 13678__ } from "metro/13678__.js";
-import { 13708__ } from "metro/13708__.js";
-if (!require("getOwnPropertyDescriptor")) {
+import getOwnPropertyDescriptor2 from "getOwnPropertyDescriptor" /* 13676 */;
+import _mod13678 from "module_13678" /* 13678 */;
+import text from "text" /* 13685 */;
+import _mod13708 from "module_13708" /* 13708 */;
+
+if (!getOwnPropertyDescriptor2) {
   getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
-    const tmp3 = 13678__(arg0);
+    const tmp3 = _mod13678(arg0);
     const tmp4 = text(arg1);
-    if (!13708__) {
+    if (!_mod13708) {
       if (tmp(13696)(tmp3, tmp4)) {
         let tmpResult = tmp(13710);
         tmpResult = tmp(13706);

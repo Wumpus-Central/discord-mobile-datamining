@@ -1,11 +1,12 @@
 // _runtime/13749_URLImpl.js
-import _classCallCheck from "_classCallCheck";
+import _createClass from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const URLImpl = require;
 class URLImpl {
   constructor(arg0, arg1) {
     self = this;
-    tmp = outer1_2(this, URLImpl);
+    tmp = closure_2(this, URLImpl);
     [tmp2, tmp3] = require;
     basicURLParseResult = null;
     if (undefined !== tmp3) {
@@ -297,4 +298,4 @@ let items = [
   }
 ];
 
-export const implementation = require("_createClass")(URLImpl, items);
+export const implementation = _createClass(URLImpl, items);

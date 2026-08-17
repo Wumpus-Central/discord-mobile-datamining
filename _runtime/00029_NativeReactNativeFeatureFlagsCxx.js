@@ -1,3 +1,5 @@
 // _runtime/00029_NativeReactNativeFeatureFlagsCxx.js
+import getAll from "get" /* 30 */;
 
-export default require("get").get("NativeReactNativeFeatureFlagsCxx");
+
+export default getAll.get("NativeReactNativeFeatureFlagsCxx");

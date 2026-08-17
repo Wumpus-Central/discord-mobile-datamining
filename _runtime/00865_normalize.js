@@ -1,6 +1,6 @@
 // _runtime/00865_normalize.js
-import _slicedToArray from "_slicedToArray";
-import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 822 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 
 function normalize(arg0) {
   let num = arg1;
@@ -49,7 +49,7 @@ function visit(arg0, __v_isVNode) {
       return items;
     })();
   }
-  _slicedToArray(tmp2, 2);
+  callback(tmp2, 2);
   if (null != __v_isVNode) {
     let items = ["boolean", "string"];
     if (!items.includes(typeof __v_isVNode)) {

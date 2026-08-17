@@ -1,6 +1,6 @@
 // _runtime/03692_eachYearOfInterval.js
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,25 +17,25 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function eachYearOfInterval(arg0) {
   let time1;
   let obj = arg0;
-  tmp5.default(1, arguments);
+  requiredArgs.default(1, arguments);
   if (!arg0) {
     obj = {};
   }
-  const defaultResult1 = tmp3.default(obj.start);
-  const time = tmp3.default(obj.end).getTime();
+  const defaultResult1 = _typeof.default(obj.start);
+  const time = _typeof.default(obj.end).getTime();
   if (defaultResult1.getTime() <= time) {
     const items = [];
     defaultResult1.setHours(0, 0, 0, 0);
     defaultResult1.setMonth(0, 1);
     if (defaultResult1.getTime() <= time) {
       do {
-        let tmp11 = tmp3;
-        let arr = items.push(tmp3.default(defaultResult1));
+        let tmp11 = _typeof;
+        let arr = items.push(_typeof.default(defaultResult1));
         let setFullYearResult = defaultResult1.setFullYear(defaultResult1.getFullYear() + 1);
         time1 = defaultResult1.getTime();
       } while (time1 <= time);
@@ -46,6 +46,6 @@ export default function eachYearOfInterval(arg0) {
     const rangeError = new RangeError("Invalid interval");
     throw rangeError;
   }
-  const defaultResult2 = tmp3.default(obj.end);
+  const defaultResult2 = _typeof.default(obj.end);
 };
 export default exports.default;

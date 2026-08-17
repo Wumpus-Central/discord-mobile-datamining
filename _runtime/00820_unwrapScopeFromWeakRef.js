@@ -1,6 +1,7 @@
 // _runtime/00820_unwrapScopeFromWeakRef.js
-import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
-const require = arg1;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 822 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function unwrapScopeFromWeakRef(obj) {
   if (obj) {

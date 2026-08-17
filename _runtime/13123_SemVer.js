@@ -1,12 +1,12 @@
 // _runtime/13123_SemVer.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import _createClass from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const SemVer = require;
 class SemVer {
   constructor(arg0, arg1) {
     self = this;
-    tmp = outer1_2(this, SemVer);
+    tmp = closure_2(this, SemVer);
     tmp2 = SemVer;
     tmp3 = closure_1;
     tmp4 = require("module_13124")(require);
@@ -145,8 +145,6 @@ let items = [
   {
     key: "format",
     value: function format() {
-      let prerelease;
-      let version;
       const self = this;
       this.version = "" + this.major + "." + this.minor + "." + this.patch;
       if (this.prerelease.length) {
@@ -357,7 +355,7 @@ let items = [
         if (!major2) {
           if (false === arg2) {
             const _Error2 = Error;
-            const error = new Error("invalid increment argument: identifier is empty");
+            error = new Error("invalid increment argument: identifier is empty");
             throw error;
           }
         }

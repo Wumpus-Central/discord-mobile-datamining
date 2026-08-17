@@ -1,24 +1,22 @@
 // _runtime/01093_addPreviousTraceSpanLink.js
-import "addClsInstrumentationHandler";
-import items from "items";
-import breadcrumbsIntegration from "breadcrumbsIntegration";
-import _wrapTimeFunction from "_wrapTimeFunction";
-import browserSessionIntegration from "browserSessionIntegration";
-import _getUnhandledRejectionError from "_getUnhandledRejectionError";
-import httpContextIntegration from "httpContextIntegration";
-import linkedErrorsIntegration from "linkedErrorsIntegration";
-import INTEGRATION_NAME from "INTEGRATION_NAME";
+import ignoreNextOnError from "ignoreNextOnError" /* 1028 */;
+import addClsInstrumentationHandler from "addClsInstrumentationHandler" /* 1033 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1072 */;
+import items from "items" /* 1073 */;
+import breadcrumbsIntegration from "breadcrumbsIntegration" /* 1077 */;
+import _wrapTimeFunction from "_wrapTimeFunction" /* 1076 */;
+import browserSessionIntegration from "browserSessionIntegration" /* 1081 */;
+import _getUnhandledRejectionError from "_getUnhandledRejectionError" /* 1078 */;
+import httpContextIntegration from "httpContextIntegration" /* 1080 */;
+import linkedErrorsIntegration from "linkedErrorsIntegration" /* 1079 */;
+import INTEGRATION_NAME from "INTEGRATION_NAME" /* 1094 */;
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
-import { __SENTRY_DEBUG__ } from "metro/01072___SENTRY_DEBUG__.js";
 
 function addPreviousTraceSpanLink(spanContext, spanContext2, sampleRand) {
-  let spanId;
-  let traceId;
   const _require = sampleRand;
   let obj = _registerSpanErrorInstrumentation;
   const spanToJSONResult = obj.spanToJSON(spanContext2);
-  const dependencyMap = spanToJSONResult;
+  dependencyMap = spanToJSONResult;
   obj = {
     spanContext: spanContext2.spanContext(),
     startTimestamp: spanToJSONResult.start_timestamp,
@@ -63,7 +61,7 @@ function addPreviousTraceSpanLink(spanContext, spanContext2, sampleRand) {
           const _HermesInternal = HermesInternal;
           debug.log("Adding previous_trace `" + json + "` link to span `" + JSON.stringify(obj) + "`");
         }
-        const obj1 = { context: null, attributes: null };
+        obj1 = { context: null, attributes: null };
         obj1[0] = spanContext;
         const obj2 = {};
         obj2[tmp(817).SEMANTIC_LINK_ATTRIBUTE_LINK_TYPE] = "previous_trace";
@@ -111,6 +109,7 @@ function getPreviousTraceFromSessionStorage() {
   }
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+addClsInstrumentationHandler;
 const sentry_previous_trace = "sentry_previous_trace";
 let c3 = "sentry.previous_trace";
 
@@ -120,30 +119,30 @@ export const PREVIOUS_TRACE_TMP_SPAN_ATTRIBUTE = "sentry.previous_trace";
 export { addPreviousTraceSpanLink };
 export { getPreviousTraceFromSessionStorage };
 export const linkTraces = function linkTraces(on, linkPreviousTrace) {
-  let c1;
-  let c2;
-  const require = tmp;
+  closure_1 = undefined;
+  c2 = undefined;
+  closure_0 = tmp;
   let tmp2;
   if ("session-storage" === linkPreviousTrace.linkPreviousTrace) {
     tmp2 = getPreviousTraceFromSessionStorage();
   }
-  c1 = tmp2;
+  closure_1 = tmp2;
   on.on("spanStart", (arg0) => {
     if (obj.getRootSpan(arg0) === arg0) {
-      const currentScope = tmp(_undefined[9]).getCurrentScope();
-      const tmp5 = outer1_4(_undefined, arg0, currentScope.getPropagationContext());
-      _undefined = tmp5;
-      if (tmp) {
-        outer1_5(tmp5);
+      const currentScope = callback(closure_1[9]).getCurrentScope();
+      const tmp5 = closure_1_4(closure_1, arg0, currentScope.getPropagationContext());
+      closure_1 = tmp5;
+      if (callback) {
+        closure_1_5(tmp5);
       }
-      const tmpResult = tmp(_undefined[9]);
+      const tmpResult = callback(closure_1[9]);
     }
   });
   c2 = true;
   if (linkPreviousTrace.consistentTraceSampling) {
     on.on("beforeSampling", (spanAttributes) => {
-      if (_undefined) {
-        let obj = tmp(_undefined[9]);
+      if (closure_1) {
+        let obj = callback(closure_1[9]);
         const currentScope = obj.getCurrentScope();
         const propagationContext = currentScope.getPropagationContext();
         if (c2) {
@@ -156,19 +155,20 @@ export const linkTraces = function linkTraces(on, linkPreviousTrace) {
         obj = {};
         const merged1 = Object.assign(propagationContext.dsc);
         const _String = String;
-        obj.sample_rate = String(_undefined.sampleRate);
+        obj.sample_rate = String(closure_1.sampleRate);
         const _String2 = String;
-        obj.sampled = String(1 === _undefined.spanContext.traceFlags);
+        obj.sampled = String(1 === closure_1.spanContext.traceFlags);
         obj.dsc = obj;
-        obj.sampleRand = _undefined.sampleRand;
+        obj.sampleRand = closure_1.sampleRand;
         const result = currentScope.setPropagationContext(obj);
-        spanAttributes.parentSampled = 1 === _undefined.spanContext.traceFlags;
-        spanAttributes.parentSampleRate = _undefined.sampleRate;
-        const obj1 = {};
+        spanAttributes.parentSampled = 1 === closure_1.spanContext.traceFlags;
+        spanAttributes.parentSampleRate = closure_1.sampleRate;
+        obj1 = {};
         const merged2 = Object.assign(spanAttributes.spanAttributes);
-        obj1[tmp(_undefined[9]).SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE] = _undefined.sampleRate;
+        obj1[callback(closure_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE] = closure_1.sampleRate;
         spanAttributes.spanAttributes = obj1;
-        const tmp2 = _undefined;
+        const tmp = callback;
+        const tmp2 = closure_1;
       }
     });
   }

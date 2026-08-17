@@ -7,8 +7,6 @@ const reduced = items.reduce((arg0, arg1) => {
 }, {});
 const re2 = /\s+/;
 arg5.default = function extractViewBox(arg0) {
-  let preserveAspectRatio;
-  let viewBox;
   ({ viewBox, preserveAspectRatio } = arg0);
   if (viewBox) {
     const _Array = Array;
@@ -29,7 +27,7 @@ arg5.default = function extractViewBox(arg0) {
         } else {
           parts1 = [];
         }
-        const obj = { minX: null, minY: null, vbWidth: null, vbHeight: null, align: null, meetOrSlice: null };
+        obj = { minX: null, minY: null, vbWidth: null, vbHeight: null, align: null, meetOrSlice: null };
         [obj[0], obj[1], obj[2], obj[3]] = mapped;
         let str5 = reduced[parts1[0]];
         if (!str5) {

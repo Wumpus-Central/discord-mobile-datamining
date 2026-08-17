@@ -1,23 +1,22 @@
 // _runtime/01815_t.js
-import runWorkletOnJS from "runWorkletOnJS";
+import runWorkletOnJS from "runWorkletOnJS" /* 1661 */;
 
 const fn = function t() {
-  let obj = { frameCallbackRegistry: null, activeFrameCallbacks: null, previousFrameTimestamp: null, nextCallId: 0, runCallbacks: null, registerFrameCallback: null, unregisterFrameCallback: null, manageStateFrameCallback: null };
-  obj[0] = new Map();
+  let obj = { frameCallbackRegistry: new Map(), activeFrameCallbacks: null, previousFrameTimestamp: null, nextCallId: 0, runCallbacks: null, registerFrameCallback: null, unregisterFrameCallback: null, manageStateFrameCallback: null };
   const map = new Map();
   obj[1] = new Set();
   obj[4] = function runCallbacks(nextCallId) {
     const self = this;
-    let closure_1 = nextCallId;
+    closure_1 = nextCallId;
     function loop(previousFrameTimestamp) {
-      let closure_0 = previousFrameTimestamp;
+      closure_0 = previousFrameTimestamp;
       if (closure_1 === self.nextCallId) {
         if (null === tmp.previousFrameTimestamp) {
           tmp.previousFrameTimestamp = previousFrameTimestamp;
         }
         closure_1 = previousFrameTimestamp - tmp.previousFrameTimestamp;
         const item = tmp.activeFrameCallbacks.forEach((arg0) => {
-          const value = outer1_2.frameCallbackRegistry.get(arg0);
+          const value = closure_1_2.frameCallbackRegistry.get(arg0);
           const startTime = value.startTime;
           if (null === startTime) {
             value.startTime = closure_0;

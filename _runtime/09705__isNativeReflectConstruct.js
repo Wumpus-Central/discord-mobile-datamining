@@ -1,9 +1,10 @@
 // _runtime/09705__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import c3 from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
+import _asyncLoop from "_asyncLoop" /* 9699 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
 const HashMD = require;
 function _isNativeReflectConstruct() {
@@ -17,10 +18,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -28,10 +29,10 @@ function _isNativeReflectConstruct() {
 class HashMD {
   constructor(arg0, arg1, arg2, arg3) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, HashMD);
-    tmp2 = outer1_4;
-    obj = outer1_4(HashMD);
-    tmp3 = outer1_3;
+    tmp = closure_2(this, HashMD);
+    tmp2 = closure_4;
+    obj = closure_4(HashMD);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -54,15 +55,12 @@ class HashMD {
     return tmp3Result;
   }
 }
-_inherits(HashMD, require("_asyncLoop").Hash);
+_inherits(HashMD, _asyncLoop.Hash);
 let items = [
   {
     key: "update",
     value: function update(B) {
-      let blockLen;
-      let buffer;
       let tmp8;
-      let view;
       const self = this;
       HashMD(9700).exists(this);
       ({ buffer, blockLen, view } = this);
@@ -109,10 +107,6 @@ let items = [
   {
     key: "digestInto",
     value: function digestInto(content) {
-      let blockLen;
-      let buffer;
-      let isLE;
-      let view;
       const self = this;
       HashMD(9700).exists(this);
       HashMD(9700).output(content, this);
@@ -161,7 +155,7 @@ let items = [
       const outputLen = self.outputLen;
       if (outputLen % 4) {
         const _Error2 = Error;
-        const error = new Error("_sha2: outputLen should be aligned to 32bit");
+        error = new Error("_sha2: outputLen should be aligned to 32bit");
         throw error;
       } else {
         const result = outputLen / 4;
@@ -186,8 +180,6 @@ let items = [
   {
     key: "digest",
     value: function digest() {
-      let buffer;
-      let outputLen;
       ({ buffer, outputLen } = this);
       this.digestInto(buffer);
       const substr = buffer.slice(0, outputLen);

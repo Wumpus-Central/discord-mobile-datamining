@@ -1,7 +1,7 @@
 // _runtime/01136_init.js
-import noop from "noop";
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 1024 */;
+import closure_2 from "noop" /* 19 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -10,7 +10,7 @@ export const init = function init(arg0) {
   const merged = Object.assign(arg0);
   registerSpanErrorInstrumentation.applySdkMetadata(obj, "react");
   const obj2 = registerSpanErrorInstrumentation;
-  obj = { version: noop.version };
+  obj = { version: version.version };
   feedbackAsyncIntegration.setContext("react", obj);
   const obj3 = feedbackAsyncIntegration;
   return feedbackAsyncIntegration.init(obj);

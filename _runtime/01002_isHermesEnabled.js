@@ -1,11 +1,11 @@
 // _runtime/01002_isHermesEnabled.js
-import _slicedToArray from "_slicedToArray";
-import { Platform } from "get ActivityIndicator";
-import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
-import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
-import { getExpoConstants } from "01003_getExpoConstants.js";
+import RN_GLOBAL_OBJ from "RN_GLOBAL_OBJ" /* 816 */;
+import TurboModuleRegistry from "TurboModuleRegistry" /* 997 */;
+import getExpoConstants from "getExpoConstants" /* 1003 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
 
-const require = arg1;
+require = arg1;
 
 export const isHermesEnabled = function isHermesEnabled() {
   return RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.HermesInternal;
@@ -21,11 +21,8 @@ export const isFabricEnabled = function isFabricEnabled() {
   return null != RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.nativeFabricUIManager;
 };
 export const getReactNativeVersion = function getReactNativeVersion() {
-  let major;
-  let minor;
-  let patch;
   if (TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion) {
-    const version = tmp(997).ReactNativeLibraries.ReactNativeVersion.version;
+    const version = TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion.version;
     ({ major, minor, patch } = version);
     let str2 = "";
     if (null != version.prerelease) {
@@ -35,7 +32,7 @@ export const getReactNativeVersion = function getReactNativeVersion() {
     const _HermesInternal2 = HermesInternal;
     return "" + major + "." + minor + "." + patch + str2;
   }
-  tmp = require;
+  const tmp = require;
 };
 export const isExpo = function isExpo() {
   return null != RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.expo;

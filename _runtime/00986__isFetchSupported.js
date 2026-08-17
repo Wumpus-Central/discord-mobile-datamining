@@ -1,9 +1,10 @@
 // _runtime/00986__isFetchSupported.js
-import { 00821__ } from "metro/00821__.js";
-const require = arg1;
+import _mod821 from "module_821" /* 821 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function _isFetchSupported() {
-  if ("fetch" in 00821__.GLOBAL_OBJ) {
+  if ("fetch" in _mod821.GLOBAL_OBJ) {
     try {
       const _Headers = Headers;
       const headers = new Headers();
@@ -55,13 +56,13 @@ arg5.supportsErrorEvent = function supportsErrorEvent() {
 };
 arg5.supportsFetch = _isFetchSupported;
 arg5.supportsHistory = function supportsHistory() {
-  return "history" in 00821__.GLOBAL_OBJ && 00821__.GLOBAL_OBJ.history;
+  return "history" in _mod821.GLOBAL_OBJ && _mod821.GLOBAL_OBJ.history;
 };
 arg5.supportsNativeFetch = function supportsNativeFetch() {
   if (typeof globalThis.EdgeRuntime === "string") {
     return true;
   } else if (_isFetchSupported()) {
-    if (isNativeFunction(00821__.GLOBAL_OBJ.fetch)) {
+    if (isNativeFunction(_mod821.GLOBAL_OBJ.fetch)) {
       return true;
     } else {
       let flag2 = false;
@@ -114,5 +115,5 @@ arg5.supportsReferrerPolicy = function supportsReferrerPolicy() {
   }
 };
 arg5.supportsReportingObserver = function supportsReportingObserver() {
-  return "ReportingObserver" in 00821__.GLOBAL_OBJ;
+  return "ReportingObserver" in _mod821.GLOBAL_OBJ;
 };

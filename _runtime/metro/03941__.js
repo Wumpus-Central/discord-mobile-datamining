@@ -1,6 +1,7 @@
 // _runtime/metro/03941__.js
-import buildMatchFn from "buildMatchFn";
-import buildMatchPatternFn from "buildMatchPatternFn";
+import localeToNumber from "localeToNumber" /* 3938 */;
+import buildMatchFn from "buildMatchFn" /* 2004 */;
+import buildMatchPatternFn from "buildMatchPatternFn" /* 2005 */;
 
 if (!buildMatchFn) {
   let obj = { default: null };
@@ -16,7 +17,7 @@ if (!buildMatchPatternFn) {
   obj2 = buildMatchPatternFn;
 }
 const obj1 = { ordinalNumber: null, era: null, quarter: null, month: null, day: null, dayPeriod: null };
-obj2 = { matchPattern: /^[०१२३४५६७८९]+/i, parsePattern: /^[०१२३४५६७८९]+/i, valueCallback: require("localeToNumber").localeToNumber };
+obj2 = { matchPattern: /^[०१२३४५६७८९]+/i, parsePattern: /^[०१२३४५६७८९]+/i, valueCallback: localeToNumber.localeToNumber };
 obj1[0] = obj2.default(obj2);
 const items = [/^b/i, /^(a|c)/i];
 obj1[1] = obj.default({ matchPatterns: { narrow: /^(ईसा-पूर्व|ईस्वी)/i, abbreviated: /^(ईसा\.?\s?पूर्व\.?|ईसा\.?)/i, wide: /^(ईसा-पूर्व|ईसवी पूर्व|ईसवी सन|ईसवी)/i }, defaultMatchWidth: "wide", parsePatterns: { any: items }, defaultParseWidth: "any" });

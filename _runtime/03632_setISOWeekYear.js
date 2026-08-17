@@ -1,9 +1,9 @@
 // _runtime/03632_setISOWeekYear.js
-import toInteger from "toInteger";
-import _typeof from "_typeof";
-import startOfISOWeekYear from "startOfISOWeekYear";
-import differenceInCalendarDays from "differenceInCalendarDays";
-import requiredArgs from "requiredArgs";
+import toInteger from "toInteger" /* 3476 */;
+import _typeof from "_typeof" /* 3472 */;
+import startOfISOWeekYear from "startOfISOWeekYear" /* 3633 */;
+import differenceInCalendarDays from "differenceInCalendarDays" /* 3634 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!toInteger) {
   let obj = { default: null };
@@ -12,7 +12,7 @@ if (!toInteger) {
 } else {
   tmp3 = toInteger;
 }
-let c0 = tmp3;
+toInteger = tmp3;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -20,7 +20,7 @@ if (!_typeof) {
 } else {
   tmp5 = _typeof;
 }
-let closure_1 = tmp5;
+_typeof = tmp5;
 if (!startOfISOWeekYear) {
   obj = { default: null };
   obj[0] = startOfISOWeekYear;
@@ -28,15 +28,15 @@ if (!startOfISOWeekYear) {
 } else {
   tmp7 = startOfISOWeekYear;
 }
-let obj1 = tmp7;
+startOfISOWeekYear = tmp7;
 if (!differenceInCalendarDays) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = differenceInCalendarDays;
   let tmp9 = obj1;
 } else {
   tmp9 = differenceInCalendarDays;
 }
-let c3 = tmp9;
+differenceInCalendarDays = tmp9;
 if (!requiredArgs) {
   const obj2 = { default: null };
   obj2[0] = requiredArgs;
@@ -44,17 +44,17 @@ if (!requiredArgs) {
 } else {
   tmp11 = requiredArgs;
 }
-let c4 = tmp11;
+requiredArgs = tmp11;
 
 export default function setISOWeekYear(arg0, arg1) {
-  tmp11.default(2, arguments);
-  const defaultResult1 = tmp5.default(arg0);
-  const defaultResult2 = tmp3.default(arg1);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = toInteger.default(arg1);
   const date = new Date(0);
   date.setFullYear(defaultResult2, 0, 4);
   date.setHours(0, 0, 0, 0);
-  const defaultResult4 = tmp7.default(date);
-  defaultResult4.setDate(defaultResult4.getDate() + tmp9.default(defaultResult1, tmp7.default(defaultResult1)));
+  const defaultResult4 = startOfISOWeekYear.default(date);
+  defaultResult4.setDate(defaultResult4.getDate() + differenceInCalendarDays.default(defaultResult1, startOfISOWeekYear.default(defaultResult1)));
   return defaultResult4;
 };
 export default exports.default;

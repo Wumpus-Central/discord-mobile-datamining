@@ -1,19 +1,20 @@
 // _runtime/06481_StateMachineEvent.js
-import { Platform } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const Platform = get_ActivityIndicator.Platform;
 let obj = { NATIVE_BEGIN: "nativeBegin", NATIVE_START: "nativeStart", FINALIZE: "finalize", LONG_PRESS_TOUCHES_DOWN: "longPressTouchesDown", CANCEL: "cancel" };
 
 export const StateMachineEvent = obj;
 export const getStatesConfig = function getStatesConfig(closure_28, closure_29, isScreenReaderEnabled) {
   if (isScreenReaderEnabled) {
-    let obj = { eventName: null, callback: null };
+    obj = { eventName: null, callback: null };
     obj[0] = obj.NATIVE_BEGIN;
     obj[1] = closure_28;
     const items = [obj, , ];
     obj = { eventName: null, optional: true };
     obj[0] = obj.LONG_PRESS_TOUCHES_DOWN;
     items[1] = obj;
-    const obj1 = { eventName: null, callback: null };
+    obj1 = { eventName: null, callback: null };
     obj1[0] = obj.FINALIZE;
     obj1[1] = closure_29;
     items[2] = obj1;

@@ -1,5 +1,6 @@
 // _runtime/00780_stackSet.js
-import { ListCache } from "00748_ListCache.js";
+import ListCache from "ListCache" /* 748 */;
+
 
 export default function stackSet(arg0, arg1) {
   const self = this;

@@ -1,7 +1,7 @@
 // _runtime/08111__getRequireWildcardCache.js
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import noop from "noop" /* 19 */;
+import closure_3 from "get ActivityIndicator" /* 17 */;
+import closure_4 from "jsxProd" /* 21 */;
 
 function _getRequireWildcardCache(arg0) {
   if (typeof WeakMap !== "function") {
@@ -12,9 +12,9 @@ function _getRequireWildcardCache(arg0) {
     let tmp = weakMap;
     const _WeakMap2 = WeakMap;
     const weakMap1 = new WeakMap();
-    function _getRequireWildcardCache(arg0) {
+    _getRequireWildcardCache = function _getRequireWildcardCache(arg0) {
       return arg0 ? weakMap1 : weakMap;
-    }
+    };
     if (arg0) {
       tmp = weakMap1;
     }
@@ -85,8 +85,6 @@ if (!noop) {
 }
 
 export const StepsIndicator = function StepsIndicator(options) {
-  let isLTR;
-  let sliderWidth;
   options = options.options;
   const currentValue = options.currentValue;
   const StepMarker = options.StepMarker;
@@ -108,14 +106,14 @@ export const StepsIndicator = function StepsIndicator(options) {
     reversed = options.reverse();
   }
   const items1 = [currentValue, StepMarker, options, thumbImage, renderStepNumber, memo];
-  let closure_6 = obj.useCallback((index) => {
+  closure_6 = obj.useCallback((index) => {
     let obj = { style: options(currentValue[4]).styles.stepIndicatorElement, children: null };
     obj = thumbImage;
     obj = { isTrue: currentValue === index, index, thumbImage, StepMarker, currentValue, min: options[0], max: options[options.length - 1] };
     const items = [thumbImage.jsx(options(currentValue[5]).SliderTrackMark, { isTrue: currentValue === index, index, thumbImage, StepMarker, currentValue, min: options[0], max: options[options.length - 1] }, "" + arg1 + "-SliderTrackMark"), ];
     let jsxResult = null;
     if (renderStepNumber) {
-      const obj1 = { i: null, style: null };
+      obj1 = { i: null, style: null };
       obj1[0] = index;
       obj1[1] = memo;
       const _HermesInternal = HermesInternal;

@@ -1,11 +1,12 @@
 // _runtime/00849_instrumentError.js
-import { addHandler } from "00850_addHandler.js";
-import { 00821__ } from "metro/00821__.js";
-const require = arg1;
+import _mod821 from "module_821" /* 821 */;
+import addHandler from "addHandler" /* 850 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function instrumentError() {
-  const onerror = 00821__.GLOBAL_OBJ.onerror;
-  00821__.GLOBAL_OBJ.onerror = function(msg, url, line, column, error) {
+  const onerror = _mod821.GLOBAL_OBJ.onerror;
+  _mod821.GLOBAL_OBJ.onerror = function(msg, url, line, column, error) {
     callback(table[0]).triggerHandlers("error", { column, error, line, msg, url });
     if (!onerror) {
       return tmp2;
@@ -20,7 +21,7 @@ function instrumentError() {
       const tmp3 = onerror;
     }
   };
-  00821__.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
+  _mod821.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = null;

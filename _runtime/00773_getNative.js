@@ -1,5 +1,6 @@
 // _runtime/00773_getNative.js
-import getNative from "getNative";
+import _mod609 from "module_609" /* 609 */;
+import getNative from "getNative" /* 737 */;
 
 
-export default getNative(require("module_609"), "Set");
+export default getNative(_mod609, "Set");

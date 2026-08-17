@@ -1,5 +1,5 @@
 // _runtime/03701_endOfToday.js
-import endOfDay from "endOfDay";
+import endOfDay from "endOfDay" /* 3672 */;
 
 if (!endOfDay) {
   const obj = { default: null };
@@ -8,9 +8,9 @@ if (!endOfDay) {
 } else {
   tmp3 = endOfDay;
 }
-let c0 = tmp3;
+endOfDay = tmp3;
 
 export default function endOfToday() {
-  return tmp3.default(Date.now());
+  return endOfDay.default(Date.now());
 };
 export default exports.default;

@@ -1,21 +1,13 @@
 // _runtime/06305_NativeModules.js
-import noop from "noop";
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let NativeModules;
-let c10;
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-let forwardRef;
-let metroImportAll;
-let unpackModuleId;
 ({ useCallback: c3, useEffect: c4, useImperativeHandle: c5, useMemo: closure_6, useRef: error, forwardRef } = noop);
-({ View: metroImportAll, NativeModules } = get_ActivityIndicator);
+noopDefault;
+({ View: closure_8, NativeModules } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let fn = this;
 if (this) {
@@ -67,37 +59,11 @@ if (!fn) {
     return obj;
   };
 }
-let closure_13 = require("codegenNativeCommands")({ supportedCommands: ["goBack", "goForward", "reload", "stopLoading", "injectJavaScript", "requestFocus", "postMessage", "clearFormData", "clearCache", "clearHistory", "loadUrl"] });
+let closure_13 = codegenNativeCommandsDefault({ supportedCommands: ["goBack", "goForward", "reload", "stopLoading", "injectJavaScript", "requestFocus", "postMessage", "clearFormData", "clearCache", "clearHistory", "loadUrl"] });
 const resolveAssetSource = get_ActivityIndicator.Image.resolveAssetSource;
 let c15 = 0;
 let RNCWebView = NativeModules.RNCWebView;
 const forwardRefResult = forwardRef((overScrollMode) => {
-  let containerStyle;
-  let messagingWithWebViewKeyEnabled;
-  let nativeConfig;
-  let onError;
-  let onHttpError;
-  let onHttpError2;
-  let onLoad;
-  let onLoadEnd;
-  let onLoadProgress;
-  let onLoadStart;
-  let onLoadingError;
-  let onLoadingFinish;
-  let onLoadingProgress;
-  let onLoadingStart;
-  let onMessage;
-  let onNavigationStateChange;
-  let onRenderProcessGone;
-  let onRenderProcessGone2;
-  let onShouldStartLoadWithRequest;
-  let renderError;
-  let renderLoading;
-  let setViewState;
-  let source;
-  let startInLoadingState;
-  let style;
-  let viewState;
   overScrollMode = overScrollMode.overScrollMode;
   let str = "always";
   if (undefined !== overScrollMode) {
@@ -130,7 +96,7 @@ const forwardRefResult = forwardRef((overScrollMode) => {
   c15 = sum;
   current = callback3("WebViewMessageHandler".concat(sum)).current;
   const tmp17 = callback3(null);
-  const importDefault = tmp17;
+  importDefault = tmp17;
   const tmp = undefined === javaScriptEnabled || javaScriptEnabled;
   const tmp11 = undefined === setSupportMultipleWindows || setSupportMultipleWindows;
   const tmp12 = undefined === setBuiltInZoomControls || setBuiltInZoomControls;
@@ -160,10 +126,10 @@ const forwardRefResult = forwardRef((overScrollMode) => {
     onShouldStartLoadWithRequestProp: onShouldStartLoadWithRequest,
     onShouldStartLoadWithRequestCallback: onMessage2((arg0, arg1, arg2) => {
       if (arg2) {
-        const RNCWebView = outer1_9.RNCWebView;
+        const RNCWebView = closure_1_9.RNCWebView;
         const result = RNCWebView.onShouldStartLoadWithRequestCallback(arg0, arg2);
       } else if (arg0) {
-        const url = outer1_13.loadUrl(tmp17.current, arg1);
+        const url = closure_1_13.loadUrl(ref.current, arg1);
       }
     }, [])
   });
@@ -175,35 +141,35 @@ const forwardRefResult = forwardRef((overScrollMode) => {
   ({ onLoadingStart, onHttpError: onHttpError2, onLoadingError, onLoadingFinish, onLoadingProgress, onRenderProcessGone: onRenderProcessGone2 } = webWiewLogic);
   callback(arg1, () => ({
     goForward() {
-      return outer1_13.goForward(closure_1.current);
+      return closure_1_13.goForward(closure_1.current);
     },
     goBack() {
-      return outer1_13.goBack(closure_1.current);
+      return closure_1_13.goBack(closure_1.current);
     },
     reload() {
       callback("LOADING");
-      outer1_13.reload(closure_1.current);
+      closure_1_13.reload(closure_1.current);
     },
     stopLoading(current) {
-      return outer1_13.stopLoading(closure_1.current);
+      return closure_1_13.stopLoading(closure_1.current);
     },
     postMessage(arg0) {
-      return outer1_13.postMessage(closure_1.current, arg0);
+      return closure_1_13.postMessage(closure_1.current, arg0);
     },
     injectJavaScript(PLAYER_FUNCTIONS, PLAYER_FUNCTIONS) {
-      return outer1_13.injectJavaScript(closure_1.current, PLAYER_FUNCTIONS);
+      return closure_1_13.injectJavaScript(closure_1.current, PLAYER_FUNCTIONS);
     },
     requestFocus(current) {
-      return outer1_13.requestFocus(closure_1.current);
+      return closure_1_13.requestFocus(closure_1.current);
     },
     clearFormData(current) {
-      return outer1_13.clearFormData(closure_1.current);
+      return closure_1_13.clearFormData(closure_1.current);
     },
     clearCache(arg0) {
-      return outer1_13.clearCache(closure_1.current, arg0);
+      return closure_1_13.clearCache(closure_1.current, arg0);
     },
     clearHistory(current) {
-      return outer1_13.clearHistory(closure_1.current);
+      return closure_1_13.clearHistory(closure_1.current);
     }
   }), items);
   const items1 = [onMessage2, onShouldStartLoadWithRequest2];
@@ -211,7 +177,7 @@ const forwardRefResult = forwardRef((overScrollMode) => {
   callback = tmp23;
   const items2 = [current, tmp23];
   setViewState(() => {
-    const result = tmp17(onShouldStartLoadWithRequest2[5]).registerCallableModule(current, closure_5);
+    const result = ref(onShouldStartLoadWithRequest2[5]).registerCallableModule(current, closure_5);
   }, items2);
   if ("LOADING" === viewState) {
     if (!renderLoading) {

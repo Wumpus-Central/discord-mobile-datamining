@@ -1,6 +1,7 @@
 // _runtime/07065_RenderStackManager.js
-import RenderStackManager from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 7051 */;
+import RenderStackManager from "_slicedToArray" /* 7041 */;
+import closure_1 from "_classCallCheck" /* 7050 */;
 
 class RenderStackManager {
   constructor() {
@@ -10,7 +11,7 @@ class RenderStackManager {
       _Number = Number;
       MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER;
     }
-    tmp2 = outer1_1(this, RenderStackManager);
+    tmp2 = closure_1(this, RenderStackManager);
     this.disableRecycling = false;
     this.maxItemsInRecyclePool = MAX_SAFE_INTEGER;
     map = new Map();
@@ -31,10 +32,10 @@ let items = [
     value: function sync(arg0, arg1, arr) {
       let self = this;
       self = this;
-      let _classCallCheck = arg0;
-      let closure_2 = arg1;
-      let closure_3 = arr;
-      let closure_0 = arg3;
+      closure_1 = arg0;
+      closure_2 = arg1;
+      closure_3 = arr;
+      closure_0 = arg3;
       this.clearRecyclePool();
       let unProcessedIndices = this.unProcessedIndices;
       unProcessedIndices.clear();
@@ -129,15 +130,6 @@ let items = [
   {
     key: "cleanup",
     value: function cleanup(arg0, arg1, arr) {
-      let index;
-      let itemType;
-      let itemType2;
-      let stableId;
-      let stableId2;
-      let tmp39;
-      let tmp40;
-      let tmp7;
-      let tmp8;
       const self = this;
       arr = new Array();
       const keyMap = this.keyMap;
@@ -346,4 +338,4 @@ let items = [
   }
 ];
 
-export const RenderStackManager = require("_createClass")(RenderStackManager, items);
+export const RenderStackManager = _createClassDefault(RenderStackManager, items);

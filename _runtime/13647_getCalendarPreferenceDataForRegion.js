@@ -1,10 +1,11 @@
 // _runtime/13647_getCalendarPreferenceDataForRegion.js
-import { e } from "01281_e.js";
-import { 13648__ } from "metro/13648__.js";
-import { 13649__ } from "metro/13649__.js";
-import { 13650__ } from "metro/13650__.js";
-import { 13651__ } from "metro/13651__.js";
-const require = arg1;
+import e from "e" /* 1281 */;
+import _mod13648 from "module_13648" /* 13648 */;
+import _mod13649 from "module_13649" /* 13649 */;
+import _mod13650 from "module_13650" /* 13650 */;
+import _mod13651 from "module_13651" /* 13651 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForRegion(region) {
   let str = null;
@@ -14,7 +15,7 @@ arg5.getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForR
   if (!str) {
     str = "";
   }
-  return 13648__.calendars[str] || 13648__.calendars["001"].map((arg0) => {
+  return _mod13648.calendars[str] || _mod13648.calendars["001"].map((arg0) => {
     let str = "gregory";
     if ("gregorian" !== arg0) {
       let str2 = "islamicc";
@@ -32,7 +33,7 @@ arg5.getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCyclesPrefer
   if (region) {
     str = region.toUpperCase();
   }
-  let v001 = 13649__.hourCycles[formatted] || tmp2(13649).hourCycles[str];
+  let v001 = _mod13649.hourCycles[formatted] || tmp2(13649).hourCycles[str];
   if (!v001) {
     const concat = "".concat;
     v001 = tmp2(13649).hourCycles["".concat("", formatted, "-001")];
@@ -45,7 +46,7 @@ arg5.getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCyclesPrefer
 arg5.getTimeZonePreferenceForRegion = function getTimeZonePreferenceForRegion(region) {
   const formatted = region.toLowerCase();
   const items = [];
-  if (13650__.timezones[formatted]) {
+  if (_mod13650.timezones[formatted]) {
     return tmp2(1281).__spreadArray(items, tmp2(13650).timezones[formatted], true);
   } else {
     return items;
@@ -59,5 +60,5 @@ arg5.getWeekDataForRegion = function getWeekDataForRegion(region) {
   if (!str) {
     str = "001";
   }
-  return 13651__.weekData[str] || 13651__.weekData["001"];
+  return _mod13651.weekData[str] || _mod13651.weekData["001"];
 };

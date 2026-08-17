@@ -1,12 +1,11 @@
 // _runtime/01165_userInteractionIntegration.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-const require = arg1;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+
+require = arg1;
 const dependencyMap = arg6;
 const UserInteraction = "UserInteraction";
 arg5.userInteractionIntegration = () => ({ name: UserInteraction });
 arg5.startUserInteractionSpan = (arg0) => {
-  let elementId;
-  let op;
   let obj = registerSpanErrorInstrumentation;
   const client = obj.getClient();
   if (client) {

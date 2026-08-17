@@ -1,12 +1,13 @@
 // _runtime/06997_memo.js
-import noop from "noop";
-import "noop";
-import { Platform } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let memo;
 ({ useMemo: c3, memo } = noop);
+noopDefault;
+const Platform = get_ActivityIndicator.Platform;
+const jsx = jsxProd.jsx;
 let closure_6 = { code: "function pnpm_BottomSheetBodyTsx1(){const{Platform,animatedIndex,animatedPosition}=this.__closure;return{opacity:Platform.OS==='android'&&animatedIndex.get()===-1?0:1,transform:[{translateY:animatedPosition.get()}]};}" };
 const memoResult = memo(function BottomSheetBodyComponent(children) {
   const style = children.style;

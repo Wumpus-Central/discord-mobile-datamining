@@ -1,12 +1,13 @@
 // _runtime/01030__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import c3 from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import _inherits from "_inherits";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_5 from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
 
-let BrowserClient = require;
+const BrowserClient = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -18,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -30,8 +31,8 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class BrowserClient {
   constructor(arg0) {
     self = this;
-    tmp = apply;
-    tmp2 = _isNativeReflectConstruct(this, apply);
+    tmp = closure_0;
+    tmp2 = closure_2(this, closure_0);
     if (typeof globalThis.__SENTRY_RELEASE__ === "string") {
       id = globalThis.__SENTRY_RELEASE__;
     } else {
@@ -72,9 +73,9 @@ class BrowserClient {
     }
     items = [];
     items[0] = obj;
-    tmp10 = outer1_4;
-    obj5 = outer1_4(tmp);
-    tmp11 = outer1_3;
+    tmp10 = closure_4;
+    obj5 = closure_4(tmp);
+    tmp11 = closure_3;
     if (_isNativeReflectConstruct()) {
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj5, items, tmp10(self).constructor);
@@ -82,7 +83,7 @@ class BrowserClient {
       constructResult = obj5.apply(self, items);
     }
     tmp11Result = tmp11(self, constructResult);
-    apply = tmp11Result;
+    closure_0 = tmp11Result;
     _options = tmp11Result._options;
     sendClientReports = _options.sendClientReports;
     enableLogs = _options.enableLogs;
@@ -111,17 +112,17 @@ class BrowserClient {
       _document2 = require("ignoreNextOnError").WINDOW.document;
       str2 = "visibilitychange";
       listener = _document2.addEventListener("visibilitychange", () => {
-        if ("hidden" === tmp11Result(sendClientReports[6]).WINDOW.document.visibilityState) {
+        if ("hidden" === lib(sendClientReports[6]).WINDOW.document.visibilityState) {
           if (sendClientReports) {
-            tmp11Result._flushOutcomes();
+            lib._flushOutcomes();
           }
           if (enableLogs) {
             let tmpResult = tmp(tmp2[7]);
-            const result = tmpResult._INTERNAL_flushLogsBuffer(tmp11Result);
+            const result = tmpResult._INTERNAL_flushLogsBuffer(lib);
           }
           if (enableMetrics) {
             tmpResult = tmp(tmp2[7]);
-            const result1 = tmpResult._INTERNAL_flushMetricsBuffer(tmp11Result);
+            const result1 = tmpResult._INTERNAL_flushMetricsBuffer(lib);
           }
         }
       });
@@ -133,7 +134,7 @@ class BrowserClient {
     return tmp11Result;
   }
 }
-_inherits(BrowserClient, require("registerSpanErrorInstrumentation").Client);
+_inherits(BrowserClient, registerSpanErrorInstrumentation.Client);
 let items = [
   {
     key: "eventFromException",
@@ -157,7 +158,7 @@ let items = [
       platform.platform = platform.platform || "javascript";
       const self = this;
       let fn;
-      fn = _get(_getPrototypeOf(self.prototype), "_prepareEvent", this);
+      fn = callback3(callback2(self.prototype), "_prepareEvent", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

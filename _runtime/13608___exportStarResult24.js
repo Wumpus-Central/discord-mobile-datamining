@@ -1,20 +1,15 @@
 // _runtime/13608___exportStarResult24.js
-import e from "e";
-import digitsToString from "digitsToString";
-import e from "e";
-import formatToParts from "formatToParts";
-import { getMultiInternalSlots } from "13582_getMultiInternalSlots.js";
-import { __exportStarResult13 } from "13596___exportStarResult13.js";
-import { __exportStarResult21 } from "13598___exportStarResult21.js";
+import digitsToString from "digitsToString" /* 13581 */;
+import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
+import __exportStarResult13 from "__exportStarResult13" /* 13596 */;
+import __exportStarResult21 from "__exportStarResult21" /* 13598 */;
+import formatToParts from "formatToParts" /* 13603 */;
+import e from "e" /* 1281 */;
 
+let closure_2 = e.__importDefault(digitsToString);
+let closure_3 = e.__importDefault(formatToParts);
 
 export const PartitionNumberPattern = function PartitionNumberPattern(internalSlots, isNaN) {
-  let dataLocaleData;
-  let formattedString;
-  let num4;
-  let pl;
-  let roundedNumber;
-  let tmp7;
   ({ pl, dataLocaleData } = internalSlots);
   const tmp = dataLocaleData.numbers.symbols[internalSlots.numberingSystem] || dataLocaleData.numbers.symbols[dataLocaleData.numbers.nu[0]];
   if (isNaN.isNaN()) {
@@ -32,10 +27,10 @@ export const PartitionNumberPattern = function PartitionNumberPattern(internalSl
         timesResult = isNaN.times(100);
       }
       [tmp7, num4] = __exportStarResult13.ComputeExponent(internalSlots, timesResult);
-      timesResult1 = timesResult.times(digitsToString.default.pow(10, -tmp7));
+      timesResult1 = timesResult.times(mod.default.pow(10, -tmp7));
       num3 = tmp7;
       const ComputeExponentResult = __exportStarResult13.ComputeExponent(internalSlots, timesResult);
-      const _default = digitsToString.default;
+      const _default = mod.default;
       const tmp3 = require;
     }
     const result = __exportStarResult21.FormatNumericToString(internalSlots, timesResult1);
@@ -87,5 +82,5 @@ export const PartitionNumberPattern = function PartitionNumberPattern(internalSl
       num7 = num8;
     }
   }
-  return formatToParts.default({ roundedNumber, formattedString, exponent: num, magnitude: num2, sign: num7 }, internalSlots.dataLocaleData, pl, internalSlots);
+  return closure_3.default({ roundedNumber, formattedString, exponent: num, magnitude: num2, sign: num7 }, internalSlots.dataLocaleData, pl, internalSlots);
 };

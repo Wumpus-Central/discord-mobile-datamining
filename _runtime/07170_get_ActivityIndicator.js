@@ -1,4 +1,7 @@
 // _runtime/07170_get_ActivityIndicator.js
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import addListener from "addListener" /* 7171 */;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -53,8 +56,8 @@ if (self2) {
     }
     const _Object3 = Object;
     exports.Clipboard = undefined;
-    let closure_2 = require("get ActivityIndicator");
-    let closure_3 = fn(require("addListener"));
+    let closure_2 = get_ActivityIndicator;
+    let closure_3 = fn(addListener);
     let obj = { getString: null, getStrings: null, getImagePNG: null, getImageJPG: null, setImage: null, getImage: null, setString: null, setStrings: null, hasString: null, hasImage: null, hasURL: null, hasNumber: null, hasWebURL: null, addListener: null, removeAllListeners: null };
     obj[0] = function getString() {
       return closure_3.default.getString();

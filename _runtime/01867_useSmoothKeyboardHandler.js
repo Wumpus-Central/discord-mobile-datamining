@@ -1,7 +1,10 @@
 // _runtime/01867_useSmoothKeyboardHandler.js
-import { Easing } from "cancelAnimation";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import cancelAnimation from "cancelAnimation" /* 1654 */;
 
+let closure_2 = get_ActivityIndicator.Platform.Version >= 30 || false;
 let obj = { duration: 250, easing: null };
+const Easing = cancelAnimation.Easing;
 obj[1] = Easing.bezier(0.19919472913616398, 0.010644531250000006, 0.27920937042459737, 0.91025390625);
 let closure_4 = { code: "function pnpm_useSmoothKeyboardHandlerTs1(){const{IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS,persistedHeight,TELEGRAM_ANDROID_TIMING_CONFIG,target,animatedKeyboardHeight}=this.__closure;if(IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS){return;}if(persistedHeight.value===0){return;}const event={duration:TELEGRAM_ANDROID_TIMING_CONFIG.duration,target:target.value,height:animatedKeyboardHeight.value,progress:animatedKeyboardHeight.value/persistedHeight.value};return event;}" };
 let closure_5 = { code: "function pnpm_useSmoothKeyboardHandlerTs2(evt){const{handler,height,persistedHeight}=this.__closure;var _handler$onMove,_handler;if(!evt){return;}(_handler$onMove=(_handler=handler).onMove)===null||_handler$onMove===void 0||_handler$onMove.call(_handler,evt);if(evt.height===height.value){var _handler$onEnd,_handler2;(_handler$onEnd=(_handler2=handler).onEnd)===null||_handler$onEnd===void 0||_handler$onEnd.call(_handler2,evt);persistedHeight.value=height.value;}}" };
@@ -11,9 +14,9 @@ let closure_8 = { code: "function pnpm_useSmoothKeyboardHandlerTs5(e){const{IS_A
 
 export const useSmoothKeyboardHandler = (handler, items1) => {
   const _require = handler;
-  let obj = _require(sharedValue[1]);
+  obj = _require(sharedValue[1]);
   sharedValue = obj.useSharedValue(-1);
-  let obj1 = _require(sharedValue[1]);
+  obj1 = _require(sharedValue[1]);
   const sharedValue1 = obj1.useSharedValue(0);
   const sharedValue2 = _require(sharedValue[1]).useSharedValue(0);
   const obj3 = _require(sharedValue[1]);
@@ -22,7 +25,7 @@ export const useSmoothKeyboardHandler = (handler, items1) => {
   const fn = function s() {
     if (!sharedValue1) {
       if (0 !== sharedValue2.value) {
-        const obj = { duration: null, target: null, height: null, progress: null };
+        obj = { duration: null, target: null, height: null, progress: null };
         obj[0] = sharedValue2.duration;
         obj[1] = sharedValue.value;
         obj[2] = sharedValue3.value;
@@ -111,7 +114,7 @@ export const useSmoothKeyboardHandler = (handler, items1) => {
   obj[0] = fn2;
   class R {
     constructor(arg0) {
-      if (outer1_2) {
+      if (closure_2) {
         onMove = closure_0.onMove;
         tmp2 = null;
         if (onMove != null) {
@@ -128,7 +131,7 @@ export const useSmoothKeyboardHandler = (handler, items1) => {
   obj[1] = R;
   class O {
     constructor(arg0) {
-      if (outer1_2) {
+      if (closure_2) {
         onEnd = closure_0.onEnd;
         tmp2 = null;
         if (onEnd != null) {

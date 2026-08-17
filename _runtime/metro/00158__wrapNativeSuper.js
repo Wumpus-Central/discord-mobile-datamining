@@ -5,10 +5,10 @@ function _wrapNativeSuper(fn) {
     const _Map = Map;
     map = new Map();
   }
-  function _wrapNativeSuper(fn) {
-    let closure_0 = fn;
+  _wrapNativeSuper = function _wrapNativeSuper(fn) {
+    closure_0 = fn;
     if (null !== fn) {
-      if (map(outer1_2[0])(fn)) {
+      if (map(closure_1_2[0])(fn)) {
         if (typeof fn !== "function") {
           const _TypeError = TypeError;
           const typeError = new TypeError("Super expression must either be null or a function");
@@ -16,15 +16,15 @@ function _wrapNativeSuper(fn) {
         } else {
           class Wrapper {
             constructor() {
-              tmp = closure_0(outer1_2[1]);
-              return tmp(closure_0, arguments, closure_0(outer1_2[2])(this).constructor);
+              tmp = closure_0(closure_1_2[1]);
+              return tmp(closure_0, arguments, closure_0(closure_1_2[2])(this).constructor);
             }
           }
           if (undefined !== closure_0) {
             class Wrapper {
               constructor() {
-                tmp = closure_0(outer1_2[1]);
-                return tmp(closure_0, arguments, closure_0(outer1_2[2])(this).constructor);
+                tmp = closure_0(closure_1_2[1]);
+                return tmp(closure_0, arguments, closure_0(closure_1_2[2])(this).constructor);
               }
             }
           }
@@ -38,10 +38,10 @@ function _wrapNativeSuper(fn) {
         }
       }
       tmp7 = map;
-      tmp8 = outer1_2;
+      tmp8 = closure_1_2;
     }
     return fn;
-  }
+  };
   module.exports = _wrapNativeSuper;
   return _wrapNativeSuper(fn);
 }

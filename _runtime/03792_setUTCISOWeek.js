@@ -1,8 +1,8 @@
 // _runtime/03792_setUTCISOWeek.js
-import toInteger from "toInteger";
-import _typeof from "_typeof";
-import getUTCISOWeek from "getUTCISOWeek";
-import requiredArgs from "requiredArgs";
+import toInteger from "toInteger" /* 3476 */;
+import _typeof from "_typeof" /* 3472 */;
+import getUTCISOWeek from "getUTCISOWeek" /* 3708 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!toInteger) {
   let obj = { default: null };
@@ -11,7 +11,7 @@ if (!toInteger) {
 } else {
   tmp3 = toInteger;
 }
-let c0 = tmp3;
+toInteger = tmp3;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -19,7 +19,7 @@ if (!_typeof) {
 } else {
   tmp5 = _typeof;
 }
-let closure_1 = tmp5;
+_typeof = tmp5;
 if (!getUTCISOWeek) {
   obj = { default: null };
   obj[0] = getUTCISOWeek;
@@ -27,20 +27,20 @@ if (!getUTCISOWeek) {
 } else {
   tmp7 = getUTCISOWeek;
 }
-let obj1 = tmp7;
+getUTCISOWeek = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c3 = tmp9;
+requiredArgs = tmp9;
 
 export default function setUTCISOWeek(arg0, arg1) {
-  tmp9.default(2, arguments);
-  const defaultResult1 = tmp5.default(arg0);
-  const diff = tmp7.default(defaultResult1) - tmp3.default(arg1);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = getUTCISOWeek.default(defaultResult1) - toInteger.default(arg1);
   defaultResult1.setUTCDate(defaultResult1.getUTCDate() - 7 * diff);
   return defaultResult1;
 };

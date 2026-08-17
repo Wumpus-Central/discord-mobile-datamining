@@ -1,11 +1,6 @@
 // _runtime/04621_apply.js
 
 export default function apply(call) {
-  let tmp;
-  let tmp2;
-  let tmp3;
-  let tmp5;
-  let tmp6;
   if (0 === arg2.length) {
     const call4 = call.call;
     return typeof call4 === "unknown" ? call() : call4(arg1);

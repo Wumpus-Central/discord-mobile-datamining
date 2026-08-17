@@ -1,6 +1,7 @@
 // _runtime/00847_getDefaultCurrentScope.js
-import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
-const require = arg1;
+import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getDefaultCurrentScope = function getDefaultCurrentScope() {

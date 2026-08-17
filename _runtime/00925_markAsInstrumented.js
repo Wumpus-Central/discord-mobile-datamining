@@ -1,8 +1,8 @@
 // _runtime/00925_markAsInstrumented.js
-import _slicedToArray from "_slicedToArray";
-import _toArray from "_toArray";
-import setupIntegration from "setupIntegration";
-import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_toArray" /* 853 */;
+import setupIntegration from "setupIntegration" /* 887 */;
 
 function markAsInstrumented(arg0) {
   try {
@@ -18,7 +18,7 @@ function isInstrumented(__SENTRY_INSTRUMENTED__) {
   }
 }
 function extractOperation(arg0) {
-  let obj = arg1;
+  obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
@@ -52,7 +52,7 @@ function translateFiltersIntoMethods(str, str2) {
       } else {
         if ("or" !== str) {
           if (!str.endsWith(".or")) {
-            const arr = _toArray(str2.split("."));
+            const arr = callback(str2.split("."));
             const first = arr[0];
             const substr = arr.slice(1);
             let startsWithResult;
@@ -106,7 +106,7 @@ function translateFiltersIntoMethods(str, str2) {
   return "select(*)";
 }
 function instrumentAuthOperation(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -114,9 +114,9 @@ function instrumentAuthOperation(arg0) {
   const proxy = new Proxy(arg0, {
     apply(arg0, arg1, arg2) {
       const lib = arg0;
-      let closure_1 = arg1;
-      let closure_2 = arg2;
-      let obj = lib(flag[2]);
+      closure_1 = arg1;
+      closure_2 = arg2;
+      obj = lib(flag[2]);
       let str = "";
       let str2 = "";
       if (closure_1) {
@@ -130,7 +130,7 @@ function instrumentAuthOperation(arg0) {
       obj["db.operation"] = "auth." + str + lib.name;
       obj[1] = obj;
       return obj.startSpan(obj, (arg0) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         const applyResult = Reflect.apply(closure_0, closure_1, args);
         const nextPromise = Reflect.apply(closure_0, closure_1, args).then((obj) => {
           if (obj) {
@@ -138,13 +138,13 @@ function instrumentAuthOperation(arg0) {
               if ("error" in obj) {
                 if (obj.error) {
                   obj = { code: null };
-                  obj[0] = store(outer1_1[4]).SPAN_STATUS_ERROR;
+                  obj[0] = store(closure_1_1[4]).SPAN_STATUS_ERROR;
                   store.setStatus(obj);
                   obj = { mechanism: null };
                   obj[0] = { handled: false, type: "auto.db.supabase.auth" };
-                  store(outer1_1[5]).captureException(obj.error, obj);
+                  store(closure_1_1[5]).captureException(obj.error, obj);
                   obj = store;
-                  const obj4 = store(outer1_1[5]);
+                  const obj4 = store(closure_1_1[5]);
                 }
                 obj.end();
                 return obj;
@@ -152,22 +152,22 @@ function instrumentAuthOperation(arg0) {
             }
           }
           obj = store;
-          store.setStatus({ code: store(outer1_1[4]).SPAN_STATUS_OK });
+          store.setStatus({ code: store(closure_1_1[4]).SPAN_STATUS_OK });
         });
-        const items = [...closure_2];
+        items = [...closure_2];
         return Reflect.apply(closure_0, closure_1, args).then((obj) => {
           if (obj) {
             if (typeof obj === "object") {
               if ("error" in obj) {
                 if (obj.error) {
                   obj = { code: null };
-                  obj[0] = store(outer1_1[4]).SPAN_STATUS_ERROR;
+                  obj[0] = store(closure_1_1[4]).SPAN_STATUS_ERROR;
                   store.setStatus(obj);
                   obj = { mechanism: null };
                   obj[0] = { handled: false, type: "auto.db.supabase.auth" };
-                  store(outer1_1[5]).captureException(obj.error, obj);
+                  store(closure_1_1[5]).captureException(obj.error, obj);
                   obj = store;
-                  const obj4 = store(outer1_1[5]);
+                  const obj4 = store(closure_1_1[5]);
                 }
                 obj.end();
                 return obj;
@@ -175,12 +175,12 @@ function instrumentAuthOperation(arg0) {
             }
           }
           obj = store;
-          store.setStatus({ code: store(outer1_1[4]).SPAN_STATUS_OK });
+          store.setStatus({ code: store(closure_1_1[4]).SPAN_STATUS_OK });
         }).catch((arg0) => {
-          store.setStatus({ code: store(outer1_1[4]).SPAN_STATUS_ERROR });
+          store.setStatus({ code: store(closure_1_1[4]).SPAN_STATUS_ERROR });
           store.end();
-          const obj = { code: store(outer1_1[4]).SPAN_STATUS_ERROR };
-          store(outer1_1[5]).captureException(arg0, { mechanism: { handled: false, type: "auto.db.supabase.auth" } });
+          obj = { code: store(closure_1_1[4]).SPAN_STATUS_ERROR };
+          store(closure_1_1[5]).captureException(arg0, { mechanism: { handled: false, type: "auto.db.supabase.auth" } });
           throw arg0;
         }).then.apply(items);
       });
@@ -202,40 +202,40 @@ function instrumentSupabaseClient(auth) {
     }
     if (!isInstrumented(constructor.prototype.from)) {
       const _Proxy = Proxy;
-      const obj = { apply: null };
+      obj = { apply: null };
       obj[0] = function apply(arg0, arg1, arg2) {
         let applyResult = Reflect.apply(arg0, arg1, arg2);
         (function instrumentPostgRESTQueryBuilder(constructor) {
-          let closure_0 = constructor;
+          closure_0 = constructor;
           for (const item10007 of closure_7) {
             let tmp = (function _loop(item10007) {
               const ctor = item10007;
-              if (outer1_9(ctor.prototype[item10007])) {
+              if (closure_1_9(ctor.prototype[item10007])) {
                 return 1;
               } else {
                 let _Proxy = Proxy;
-                let obj = { apply: null };
+                obj = { apply: null };
                 obj[0] = function apply(arg0, arg1, arg2) {
                   let applyResult = Reflect.apply(arg0, arg1, arg2);
-                  const constructor = applyResult.constructor;
-                  if (item10007(outer1_1[9]).DEBUG_BUILD) {
-                    const debug = item10007(outer1_1[10]).debug;
+                  constructor = applyResult.constructor;
+                  if (item10007(closure_1_1[9]).DEBUG_BUILD) {
+                    const debug = item10007(closure_1_1[10]).debug;
                     let _HermesInternal = HermesInternal;
                     debug.log("Instrumenting " + item10007 + " operation's PostgRESTFilterBuilder");
                   }
-                  if (!outer1_9(constructor.prototype.then)) {
+                  if (!closure_1_9(constructor.prototype.then)) {
                     const _Proxy = Proxy;
-                    let obj = { apply: null };
+                    obj = { apply: null };
                     obj[0] = function apply() { ... };
                     const proxy = new Proxy(constructor.prototype.then, obj);
                     constructor.prototype.then = proxy;
-                    outer1_8(constructor.prototype.then);
+                    closure_1_8(constructor.prototype.then);
                   }
                   return applyResult;
                 };
                 let proxy = new Proxy(tmp.prototype[item10007], obj);
                 tmp.prototype[item10007] = proxy;
-                outer1_8(tmp.prototype[item10007]);
+                closure_1_8(tmp.prototype[item10007]);
               }
             })(item10007);
             continue;
@@ -307,7 +307,7 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
   supabaseClient = supabaseClient.supabaseClient;
   return {
     setupOnce() {
-      if (typeof outer1_13 !== "function") {
+      if (typeof closure_1_13 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (supabaseClient) {
@@ -316,25 +316,25 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
         if (tmp.constructor !== Function) {
           constructor = tmp.constructor;
         }
-        if (!outer1_9(constructor.prototype.from)) {
+        if (!closure_1_9(constructor.prototype.from)) {
           let _Proxy = Proxy;
-          let obj = { apply: null };
+          obj = { apply: null };
           obj[0] = function apply(arg0, arg1, arg2) {
             let applyResult = Reflect.apply(arg0, arg1, arg2);
             (function instrumentPostgRESTQueryBuilder(constructor) {
-              let closure_0 = constructor;
+              closure_0 = constructor;
               for (const item10007 of closure_7) {
                 let tmp = (function _loop(item10007) {
                   const ctor = item10007;
-                  if (outer1_9(ctor.prototype[item10007])) {
+                  if (closure_1_9(ctor.prototype[item10007])) {
                     return 1;
                   } else {
                     let _Proxy = Proxy;
-                    let obj = { apply: null };
+                    obj = { apply: null };
                     obj[0] = function apply() { ... };
                     let proxy = new Proxy(tmp.prototype[item10007], obj);
                     tmp.prototype[item10007] = proxy;
-                    outer1_8(tmp.prototype[item10007]);
+                    closure_1_8(tmp.prototype[item10007]);
                   }
                 })(item10007);
                 continue;
@@ -344,7 +344,7 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
           };
           let proxy = new Proxy(constructor.prototype.from, obj);
           constructor.prototype.from = proxy;
-          outer1_8(constructor.prototype.from);
+          closure_1_8(constructor.prototype.from);
         }
         (function instrumentSupabaseAuthClient(auth) {
           auth = auth.auth;
@@ -390,12 +390,12 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
           }
         })(tmp);
       } else {
-        if (supabaseClient(outer1_1[9]).DEBUG_BUILD) {
+        if (supabaseClient(closure_1_1[9]).DEBUG_BUILD) {
           let debug = tmp2(tmp3[10]).debug;
           debug.warn("Supabase integration was not installed because no Supabase client was provided.");
         }
         tmp2 = supabaseClient;
-        tmp3 = outer1_1;
+        tmp3 = closure_1_1;
       }
     },
     name: "Supabase"

@@ -1,7 +1,7 @@
 // _runtime/13753_replaceByteInByteSequence.js
-import _slicedToArray from "_slicedToArray";
-import { Buffer } from "00511_Buffer.js";
-import { 13752__ } from "metro/13752__.js";
+import Buffer from "Buffer" /* 511 */;
+import _mod13752 from "module_13752" /* 13752 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function replaceByteInByteSequence(arr) {
   let index = arr.indexOf(43);
@@ -34,7 +34,7 @@ function percentDecode(_Buffer) {
       if (37 === _Buffer[num]) {
         let tmp3 = require;
         let tmp4 = dependencyMap;
-        let obj = 13752__;
+        let obj = _mod13752;
         let sum = num + 1;
         if (obj.isASCIIHex(_Buffer[sum])) {
           let tmp3Result = tmp3(13752);
@@ -185,8 +185,6 @@ export default {
     })(_Buffer.from(arg0));
   },
   serializeUrlencoded(_list) {
-    let arr;
-    let tmp7;
     let str = "utf-8";
     if (undefined !== arg1) {
       str = tmp;
@@ -194,8 +192,8 @@ export default {
     let str2 = "";
     const entries = _list.entries();
     while (tmp3 !== undefined) {
-      let tmp5 = _slicedToArray;
-      let tmp6 = _slicedToArray(tmp4, 2);
+      let tmp5 = callback;
+      let tmp6 = callback(tmp4, 2);
       [tmp7, arr] = tmp6;
       let tmp8 = arr;
       let tmp9 = serializeUrlencodedByte;

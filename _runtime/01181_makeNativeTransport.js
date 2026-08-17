@@ -1,5 +1,6 @@
 // _runtime/01181_makeNativeTransport.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const NativeTransport = arg1;
 function makeNativeTransport() {
@@ -15,7 +16,7 @@ class NativeTransport {
     if (global === undefined) {
       obj = {};
     }
-    tmp = outer1_2(this, NativeTransport);
+    tmp = closure_2(this, NativeTransport);
     obj2 = require("registerSpanErrorInstrumentation");
     num = obj.bufferSize;
     if (!num) {
@@ -29,10 +30,10 @@ const items = [
   {
     key: "send",
     value: function send(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const _buffer = this._buffer;
       return _buffer.add(() => {
-        const NATIVE = callback(outer1_1[3]).NATIVE;
+        const NATIVE = callback(closure_1_1[3]).NATIVE;
         return NATIVE.sendEnvelope(callback);
       }).then(() => ({}));
     }
@@ -45,8 +46,8 @@ const items = [
     }
   }
 ];
-const tmp2 = require("_createClass")(NativeTransport, items);
-let c3 = tmp2;
+const tmp2 = _createClassDefault(NativeTransport, items);
+let closure_3 = tmp2;
 
 export const DEFAULT_BUFFER_SIZE = 30;
 export const NativeTransport = tmp2;

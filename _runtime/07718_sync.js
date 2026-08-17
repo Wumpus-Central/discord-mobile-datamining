@@ -1,5 +1,7 @@
 // _runtime/07718_sync.js
-const RNIapIosSk2 = require("get ActivityIndicator").NativeModules.RNIapIosSk2;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+
+const RNIapIosSk2 = get_ActivityIndicator.NativeModules.RNIapIosSk2;
 
 export const sync = () => RNIapIosSk2.sync();
 export const isEligibleForIntroOffer = (arg0) => RNIapIosSk2.isEligibleForIntroOffer(arg0);

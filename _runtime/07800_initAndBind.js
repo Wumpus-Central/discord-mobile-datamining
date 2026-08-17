@@ -1,8 +1,9 @@
 // _runtime/07800_initAndBind.js
-import { consoleSandbox } from "07738_consoleSandbox.js";
-import { getClient } from "07765_getClient.js";
-import { __SENTRY_DEBUG__ } from "metro/07766___SENTRY_DEBUG__.js";
-const require = arg1;
+import consoleSandbox from "consoleSandbox" /* 7738 */;
+import getClient from "getClient" /* 7765 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7766 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.initAndBind = function initAndBind(arg0, debug) {
   if (true === debug.debug) {

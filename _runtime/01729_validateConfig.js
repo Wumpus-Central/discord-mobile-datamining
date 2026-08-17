@@ -1,10 +1,11 @@
 // _runtime/01729_validateConfig.js
-import { t } from "01665_t.js";
+import t from "t" /* 1665 */;
 import { isValidLayoutAnimationProp } from "01694_isValidLayoutAnimationProp.js";
 import { isValidRubberBandConfig } from "01730_isValidRubberBandConfig.js";
 import { rubberBandDecay } from "01731_rubberBandDecay.js";
 import { rigidDecay } from "01732_rigidDecay.js";
-const require = arg1;
+
+require = arg1;
 let dependencyMap = arg6;
 function validateConfig(clamp) {
   if (clamp.clamp) {
@@ -38,7 +39,7 @@ validateConfig.__initData = { code: "function validateConfig_Pnpm_decayTs1(confi
 let closure_3 = { code: "function pnpm_decayTs3(){const{userConfig,isValidRubberBandConfig,rubberBandDecay,rigidDecay,validateConfig,callback,getReduceMotionForAnimation}=this.__closure;var _config$velocity;const config={deceleration:0.998,velocityFactor:1,velocity:0,rubberBandFactor:0.6};if(userConfig){Object.keys(userConfig).forEach(function(key){return config[key]=userConfig[key];});}const decay=isValidRubberBandConfig(config)?function(animation,now){return rubberBandDecay(animation,now,config);}:function(animation,now){return rigidDecay(animation,now,config);};function onStart(animation,value,now){const initialVelocity=config.velocity;animation.current=value;animation.lastTimestamp=now;animation.startTimestamp=now;animation.initialVelocity=initialVelocity;animation.velocity=initialVelocity;validateConfig(config);if(animation.reduceMotion&&config.clamp){if(value<config.clamp[0]){animation.current=config.clamp[0];}else if(value>config.clamp[1]){animation.current=config.clamp[1];}}}return{onFrame:decay,onStart:onStart,callback:callback,velocity:(_config$velocity=config.velocity)!==null&&_config$velocity!==void 0?_config$velocity:0,initialVelocity:0,current:undefined,lastTimestamp:0,startTimestamp:0,reduceMotion:getReduceMotionForAnimation(config.reduceMotion)};}" };
 let fn = function n(userConfig, callback) {
   const _require = userConfig;
-  const dependencyMap = callback;
+  dependencyMap = callback;
   let obj = _isValidLayoutAnimationProp;
   const fn = function c() {
     let obj = { deceleration: 0.998, velocityFactor: 1, velocity: 0, rubberBandFactor: 0.6 };
@@ -65,7 +66,7 @@ let fn = function n(userConfig, callback) {
         reduceMotion.startTimestamp = lastTimestamp;
         reduceMotion.initialVelocity = velocity;
         reduceMotion.velocity = velocity;
-        outer2_2(obj);
+        closure_2_2(obj);
         if (tmp3) {
           if (current < tmp.clamp[0]) {
             reduceMotion.current = tmp.clamp[0];

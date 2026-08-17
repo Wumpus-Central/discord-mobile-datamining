@@ -1,17 +1,17 @@
 // _runtime/metro/03619__typeof.js
-import addDays from "addDays";
-import addMonths from "addMonths";
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
-import toInteger from "toInteger";
+import addDays from "addDays" /* 3620 */;
+import addMonths from "addMonths" /* 3621 */;
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "toInteger" /* 3476 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -37,7 +37,7 @@ if (!addDays) {
 } else {
   tmp3 = addDays;
 }
-let c0 = tmp3;
+addDays = tmp3;
 if (!addMonths) {
   obj = { default: null };
   obj[0] = addMonths;
@@ -45,7 +45,7 @@ if (!addMonths) {
 } else {
   tmp5 = addMonths;
 }
-let closure_1 = tmp5;
+addMonths = tmp5;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -53,15 +53,15 @@ if (!_typeof) {
 } else {
   tmp7 = _typeof;
 }
-let obj1 = tmp7;
+_typeof = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c3 = tmp9;
+requiredArgs = tmp9;
 if (!toInteger) {
   const obj2 = { default: null };
   obj2[0] = toInteger;
@@ -69,49 +69,48 @@ if (!toInteger) {
 } else {
   tmp11 = toInteger;
 }
-let c4 = tmp11;
+toInteger = tmp11;
 
 export default function add(arg0, years) {
-  tmp9.default(2, arguments);
+  requiredArgs.default(2, arguments);
   if (years) {
     if ("object" === _typeof(years)) {
       let num = 0;
       if (years.years) {
-        num = tmp11.default(years.years);
+        num = toInteger.default(years.years);
       }
       let num2 = 0;
       if (years.months) {
-        num2 = tmp11.default(years.months);
+        num2 = toInteger.default(years.months);
       }
       let num3 = 0;
       if (years.weeks) {
-        num3 = tmp11.default(years.weeks);
+        num3 = toInteger.default(years.weeks);
       }
       let num4 = 0;
       if (years.days) {
-        num4 = tmp11.default(years.days);
+        num4 = toInteger.default(years.days);
       }
       let num5 = 0;
       if (years.hours) {
-        num5 = tmp11.default(years.hours);
+        num5 = toInteger.default(years.hours);
       }
       let num6 = 0;
       if (years.minutes) {
-        num6 = tmp11.default(years.minutes);
+        num6 = toInteger.default(years.minutes);
       }
       let num7 = 0;
       if (years.seconds) {
-        num7 = tmp11.default(years.seconds);
-        tmp9 = tmp11;
+        num7 = toInteger.default(years.seconds);
       }
-      const defaultResult1 = tmp7.default(arg0);
+      const defaultResult1 = _typeof.default(arg0);
       if (num2) {
-        let defaultResult2 = tmp5.default(defaultResult1, num2 + 12 * num);
+        let defaultResult2 = addMonths.default(defaultResult1, num2 + 12 * num);
       } else {
         defaultResult2 = defaultResult1;
       }
       if (num4) {
-        let defaultResult3 = tmp3.default(defaultResult2, num4 + 7 * num3);
+        let defaultResult3 = addDays.default(defaultResult2, num4 + 7 * num3);
       } else {
         defaultResult3 = defaultResult2;
       }

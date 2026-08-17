@@ -1,15 +1,15 @@
 // _runtime/01753_configureProps.js
-import isJest from "isJest";
-import { addLogBoxLog } from "01658_addLogBoxLog.js";
-import { isReanimated3 } from "01698_isReanimated3.js";
-import { 01667__ } from "metro/01667__.js";
+import addLogBoxLog from "addLogBoxLog" /* 1658 */;
+import _mod1667 from "module_1667" /* 1667 */;
+import isReanimated3 from "isReanimated3" /* 1698 */;
+import isJest from "isJest" /* 1657 */;
 
 function configureProps() {
-  for (const key10008 in 01667__.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST) {
+  for (const key10008 in _mod1667.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST) {
     let tmp8 = key10008;
     let tmp9 = require;
     let tmp10 = dependencyMap;
-    if (!(key10008 in 01667__.PropsAllowlists.UI_THREAD_PROPS_WHITELIST)) {
+    if (!(key10008 in _mod1667.PropsAllowlists.UI_THREAD_PROPS_WHITELIST)) {
       continue;
     } else {
       let tmp = globalThis;
@@ -23,33 +23,33 @@ function configureProps() {
       throw reanimatedError;
     }
   }
-  const keys = Object.keys(01667__.PropsAllowlists.UI_THREAD_PROPS_WHITELIST);
-  isReanimated3.jsiConfigureProps(keys, Object.keys(01667__.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST));
+  const keys = Object.keys(_mod1667.PropsAllowlists.UI_THREAD_PROPS_WHITELIST);
+  isReanimated3.jsiConfigureProps(keys, Object.keys(_mod1667.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST));
 }
-isJest = isJest.shouldBeUseWeb();
+let closure_2 = isJest.shouldBeUseWeb();
 const set = new Set();
 configureProps();
 
 export { configureProps };
 export const addWhitelistedNativeProps = function addWhitelistedNativeProps(arg0) {
-  const merged = Object.assign(01667__.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST);
+  const merged = Object.assign(_mod1667.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST);
   const merged1 = Object.assign(arg0);
-  01667__.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST = {};
-  if (Object.keys(01667__.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length !== Object.keys(01667__.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length) {
+  _mod1667.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST = {};
+  if (Object.keys(_mod1667.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length !== Object.keys(_mod1667.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length) {
     configureProps();
   }
 };
 export const addWhitelistedUIProps = function addWhitelistedUIProps(arg0) {
-  const merged = Object.assign(01667__.PropsAllowlists.UI_THREAD_PROPS_WHITELIST);
+  const merged = Object.assign(_mod1667.PropsAllowlists.UI_THREAD_PROPS_WHITELIST);
   const merged1 = Object.assign(arg0);
-  01667__.PropsAllowlists.UI_THREAD_PROPS_WHITELIST = {};
-  if (Object.keys(01667__.PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length !== Object.keys(01667__.PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length) {
+  _mod1667.PropsAllowlists.UI_THREAD_PROPS_WHITELIST = {};
+  if (Object.keys(_mod1667.PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length !== Object.keys(_mod1667.PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length) {
     configureProps();
   }
 };
 export const configureReanimatedLogger = function configureReanimatedLogger(level) {
   addLogBoxLog.updateLoggerConfig(level);
-  if (!isJest) {
+  if (!closure_2) {
     tmp(1698).executeOnUIRuntimeSync(tmp(1658).updateLoggerConfig)(level);
     const tmpResult = tmp(1698);
   }

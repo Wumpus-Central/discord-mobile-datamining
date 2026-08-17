@@ -1,5 +1,6 @@
 // _runtime/13136_prerelease.js
-import { SemVer } from "13122_SemVer.js";
+import SemVer from "SemVer" /* 13122 */;
+
 
 export default (arg0, arg1) => {
   const tmp = SemVer(arg0, arg1);

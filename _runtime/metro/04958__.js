@@ -1,7 +1,8 @@
 // _runtime/metro/04958__.js
-import { getDataView } from "../04910_getDataView.js";
-import { 04917__ } from "04917__.js";
-const require = arg1;
+import getDataView from "getDataView" /* 4910 */;
+import _mod4917 from "module_4917" /* 4917 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {
@@ -10,14 +11,14 @@ arg5.default = {
     for (let num = 0; num < arg1.length; num = num + 1) {
       let tmp = module;
       let tmp2 = dependencyMap;
-      let obj1 = module(4927);
+      obj1 = module(4927);
       let tmp3 = require;
-      let longAt = obj1.getLongAt(byteLength, arg1[num] + 04917__.PNG_CHUNK_LENGTH_OFFSET);
+      let longAt = obj1.getLongAt(byteLength, arg1[num] + _mod4917.PNG_CHUNK_LENGTH_OFFSET);
       let obj2 = getDataView;
-      let sum = arg1[num] + 04917__.PNG_CHUNK_TYPE_OFFSET;
-      let stringFromDataView = obj2.getStringFromDataView(byteLength, sum, 04917__.PNG_CHUNK_TYPE_SIZE);
+      let sum = arg1[num] + _mod4917.PNG_CHUNK_TYPE_OFFSET;
+      let stringFromDataView = obj2.getStringFromDataView(byteLength, sum, _mod4917.PNG_CHUNK_TYPE_SIZE);
       let tmp7 = num;
-      if (stringFromDataView === 04917__.TYPE_PHYS) {
+      if (stringFromDataView === _mod4917.TYPE_PHYS) {
         let tmp22 = arg1[num];
         let tmp23 = 4 <= longAt && tmp22 + tmp3(4917).PNG_CHUNK_DATA_OFFSET + 4 <= byteLength.byteLength;
         let tmp24;

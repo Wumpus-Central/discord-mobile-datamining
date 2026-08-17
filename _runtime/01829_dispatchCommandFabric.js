@@ -1,7 +1,6 @@
 // _runtime/01829_dispatchCommandFabric.js
-import isJest from "isJest";
-import isJest from "isJest";
-import { addLogBoxLog } from "01658_addLogBoxLog.js";
+import addLogBoxLog from "addLogBoxLog" /* 1658 */;
+import isJest from "isJest" /* 1657 */;
 
 function dispatchCommandFabric(arg0, arg1) {
   let items = arg2;
@@ -19,7 +18,7 @@ function dispatchCommandFabric(arg0, arg1) {
     }
   }
 }
-let obj = { logger: require("addLogBoxLog").logger };
+let obj = { logger: addLogBoxLog.logger };
 dispatchCommandFabric.__closure = obj;
 dispatchCommandFabric.__workletHash = 9994297174981;
 dispatchCommandFabric.__initData = { code: "function dispatchCommandFabric_Pnpm_dispatchCommandTs1(animatedRef,commandName,args=[]){const{logger}=this.__closure;if(!_WORKLET){return;}const shadowNodeWrapper=animatedRef();if(!shadowNodeWrapper){logger.warn(\"Tried to dispatch command \\\"\"+commandName+\"\\\" with an uninitialized ref. Make sure to pass the animated ref to the component before using it.\");return;}global._dispatchCommandFabric(shadowNodeWrapper,commandName,args);}" };
@@ -39,7 +38,7 @@ function dispatchCommandPaper(arg0, arg1) {
     }
   }
 }
-obj = { logger: require("addLogBoxLog").logger };
+obj = { logger: addLogBoxLog.logger };
 dispatchCommandPaper.__closure = obj;
 dispatchCommandPaper.__workletHash = 16962176072769;
 dispatchCommandPaper.__initData = { code: "function dispatchCommandPaper_Pnpm_dispatchCommandTs2(animatedRef,commandName,args=[]){const{logger}=this.__closure;if(!_WORKLET){return;}const viewTag=animatedRef();if(viewTag<0){logger.warn(\"Tried to dispatch command \\\"\"+commandName+\"\\\" with an uninitialized ref. Make sure to pass the animated ref to the component before using it.\");return;}global._dispatchCommandPaper(viewTag,commandName,args);}" };
@@ -51,7 +50,7 @@ if (isJest) {
       logger.warn("dispatchCommand() is not supported with Jest.");
     }
   } else {
-    const _module2 = require("isJest");
+    const _module2 = isJest;
     dispatchCommandJest = _module2.isChromeDebugger() ? (function dispatchCommandChromeDebugger() {
       const logger = addLogBoxLog.logger;
       logger.warn("dispatchCommand() is not supported with Chrome Debugger.");

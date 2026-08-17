@@ -1,12 +1,8 @@
 // _runtime/07106_runScrollBenchmark.js
-import asyncGeneratorStep from "asyncGeneratorStep";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "asyncGeneratorStep" /* 7084 */;
+import closure_3 from "_slicedToArray" /* 7041 */;
+import noop from "noop" /* 19 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 function runScrollBenchmark(arg0, arg1, arg2, arg3) {
   const self = this;
@@ -21,12 +17,12 @@ function runScrollBenchmark(arg0, arg1, arg2, arg3) {
 function _runScrollBenchmark() {
   const self = this;
   let tmp = callback((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let asyncGeneratorStep = arg2;
-    let _slicedToArray = arg3;
-    let c6 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    c6 = 0;
+    c7 = 0;
     return (function*(arg0, arg1, arg2, arg3) {
       if (c7 === 2) {
         c7 = 3;
@@ -57,8 +53,8 @@ function _runScrollBenchmark() {
               let num12 = tmp5;
               let num11 = tmp2;
               num12 = dependencyMap;
-              dependencyMap = asyncGeneratorStep;
-              asyncGeneratorStep = c3;
+              dependencyMap = closure_2;
+              closure_2 = c3;
               c3 = undefined;
               num11 = undefined;
               num12 = undefined;
@@ -94,7 +90,7 @@ function _runScrollBenchmark() {
                 const obj5 = ref(7102);
                 c6 = 1;
                 c7 = 1;
-                let obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = obj5.autoScroll(scrollNow, 0, 0, num11, num12, tmp36, tmp35);
                 return obj1;
               }
@@ -113,7 +109,7 @@ function _runScrollBenchmark() {
               c6 = 2;
               c7 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = obj1.autoScroll(c6, num11, num12, 0, 0, asyncGeneratorStep, dependencyMap);
+              obj3[0] = obj1.autoScroll(c6, num11, num12, 0, 0, closure_2, dependencyMap);
               return obj3;
             }
           } else if (arg0 === 1) {
@@ -134,7 +130,7 @@ function _runScrollBenchmark() {
       }
     })();
   });
-  const _runScrollBenchmark = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -146,9 +142,9 @@ function _runScrollBenchmark() {
 ({ useCallback: c4, useEffect: c5, useRef: closure_6, useState: error } = noop);
 
 export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, arg2) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let asyncGeneratorStep = arg2;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
   let tmp = isBenchmarkRunning(callback4(false), 2);
   isBenchmarkRunning = tmp[0];
   const callback2 = tmp[1];
@@ -169,7 +165,7 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
           }
           if (Number(length) <= 0) {
             const _Error = Error;
-            const error = new Error(tmp(tmp2[4]).ErrorMessages.dataEmptyCannotRunBenchmark);
+            error = new Error(tmp(tmp2[4]).ErrorMessages.dataEmptyCannotRunBenchmark);
             throw error;
           }
         }
@@ -203,7 +199,7 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
                 obj[0] = arg1;
                 return obj;
               } else {
-                let dependencyMap = tmp5;
+                dependencyMap = tmp5;
                 let jSFPSMonitor = tmp2;
                 jSFPSMonitor = undefined;
                 dependencyMap = undefined;
@@ -211,22 +207,22 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
                 jSFPSMonitor = new callback(7103).JSFPSMonitor();
                 jSFPSMonitor.startTracking();
                 dependencyMap = 0;
-                let num8 = outer2_2.repeatCount;
+                let num8 = closure_2_2.repeatCount;
                 if (!num8) {
                   num8 = 1;
                 }
                 if (tmp51 >= num8) {
-                  const obj1 = { js: null, suggestions: null, interrupted: null };
+                  obj1 = { js: null, suggestions: null, interrupted: null };
                   obj1[0] = jSFPSMonitor.stopAndGetData();
                   obj1[1] = [];
-                  obj1[2] = outer1_0.isCancelled();
+                  obj1[2] = closure_1_0.isCancelled();
                   c2 = obj1;
-                  if (!outer1_0.isCancelled()) {
+                  if (!closure_1_0.isCancelled()) {
                     let obj2 = callback(7101);
                     c2.formattedString = obj2.getFormattedString(c2);
                   }
-                  outer2_1(c2);
-                  outer2_4(false);
+                  closure_2_1(c2);
+                  closure_2_4(false);
                   c3 = 3;
                   return { value: "HermesInternal", done: "HermesInternal" };
                 }
@@ -242,21 +238,21 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
               return obj;
             } else {
               dependencyMap = dependencyMap + 1;
-              let num4 = outer2_2.repeatCount;
+              let num4 = closure_2_2.repeatCount;
               if (!num4) {
                 num4 = 1;
               }
               const tmp9 = dependencyMap;
             }
-            const targetOffset = outer2_2.targetOffset;
-            let num10 = outer2_2.speedMultiplier;
+            const targetOffset = closure_2_2.targetOffset;
+            let num10 = closure_2_2.speedMultiplier;
             if (!num10) {
               num10 = 1;
             }
             c2 = 1;
             c3 = 1;
             obj2 = { value: null, done: false };
-            obj2[0] = outer3_8(callback, targetOffset, outer1_0, num10);
+            obj2[0] = closure_3_8(callback, targetOffset, closure_1_0, num10);
             return obj2;
           } catch (tmp39) {
             c3 = tmp;
@@ -289,8 +285,8 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
       }, num);
       return () => {
         clearTimeout(closure_0);
-        if (outer1_5.current) {
-          const current = outer1_5.current;
+        if (closure_1_5.current) {
+          const current = closure_1_5.current;
           current.cancel();
         }
       };

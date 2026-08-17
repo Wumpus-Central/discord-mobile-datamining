@@ -1,10 +1,8 @@
 // _runtime/16447_MessageFormat.js
-import extend from "extend";
-import extend from "extend";
-import extend from "extend";
-import extend from "extend";
-import extend from "extend";
-import extend from "extend";
+import extend2 from "extend" /* 16449 */;
+import SyntaxError from "SyntaxError" /* 16450 */;
+import StringFormat from "StringFormat" /* 16452 */;
+import extend from "extend" /* 16448 */;
 
 class MessageFormat {
   constructor(arg0, arg1, arg2) {
@@ -21,7 +19,7 @@ class MessageFormat {
         tmp5 = importDefault;
         tmp6 = MessageFormat;
         _mergeFormatsResult = this._mergeFormats(MessageFormat.formats, importDefault);
-        tmp8 = _compilePattern;
+        tmp8 = closure_0;
         tmp9 = self;
         obj = require("extend");
         obj = { value: null };
@@ -32,7 +30,7 @@ class MessageFormat {
         tmp11 = __parseResult;
         tmp12 = require;
         tmp13 = _mergeFormatsResult;
-        _compilePattern = this._compilePattern(__parseResult, require, _mergeFormatsResult, this._findPluralRuleFunction(this._locale));
+        closure_0 = this._compilePattern(__parseResult, require, _mergeFormatsResult, this._findPluralRuleFunction(this._locale));
         self = this;
         this.format = (arg0) => self._format(closure_0, arg0);
         return;
@@ -206,12 +204,12 @@ obj = {
         MessageFormat.__localeData__[locale.locale.toLowerCase()] = locale;
       }
     }
-    const error = new Error("Locale data provided to IntlMessageFormat is missing a `locale` property");
+    error = new Error("Locale data provided to IntlMessageFormat is missing a `locale` property");
     throw error;
   }
 };
 extend.defineProperty(MessageFormat, "__addLocaleData", obj);
-extend.defineProperty(MessageFormat, "__parse", { value: require("SyntaxError").default.parse });
+extend.defineProperty(MessageFormat, "__parse", { value: SyntaxError.default.parse });
 extend.defineProperty(MessageFormat, "defaultLocale", { enumerable: true, writable: true, value: "HermesInternal" });
 
 export default MessageFormat;

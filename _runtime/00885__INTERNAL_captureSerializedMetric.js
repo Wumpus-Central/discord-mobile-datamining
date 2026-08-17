@@ -1,10 +1,10 @@
 // _runtime/00885__INTERNAL_captureSerializedMetric.js
-import _slicedToArray from "_slicedToArray";
-import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
-import { getClient } from "00848_getClient.js";
-import { mergeScopeData } from "00871_mergeScopeData.js";
-import { createMetricContainerEnvelopeItem } from "00886_createMetricContainerEnvelopeItem.js";
-import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
+import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
+import getClient from "getClient" /* 848 */;
+import mergeScopeData from "mergeScopeData" /* 871 */;
+import createMetricContainerEnvelopeItem from "createMetricContainerEnvelopeItem" /* 886 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function _INTERNAL_captureSerializedMetric(closure_0) {
   const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToMetricBufferMap", () => {
@@ -31,8 +31,6 @@ function _INTERNAL_captureSerializedMetric(closure_0) {
   }
 }
 function _INTERNAL_flushMetricsBuffer(closure_0, value) {
-  let _metadata;
-  let tunnel;
   let items = value;
   if (value == null) {
     const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToMetricBufferMap", () => {
@@ -63,14 +61,6 @@ function _INTERNAL_flushMetricsBuffer(closure_0, value) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attributes, scope) {
-  let _experiments;
-  let beforeSendMetric;
-  let enableMetrics;
-  let environment;
-  let name;
-  let release;
-  let user;
-  let version;
   scope = undefined;
   if (scope != null) {
     scope = scope.scope;
@@ -91,7 +81,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
     client = scope.getClient();
   }
   if (client == null) {
-    let obj1 = getClient;
+    obj1 = getClient;
     client = obj1.getClient();
   }
   if (client) {
@@ -220,7 +210,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
     }
     if (beforeSendMetricResult) {
       let tmp17Result = tmp17(881);
-      const tmp37 = _slicedToArray(tmp17Result._getTraceInfoFromScope(client, scope), 2)[1];
+      const tmp37 = callback(tmp17Result._getTraceInfoFromScope(client, scope), 2)[1];
       tmp17Result = tmp17(844);
       const _getSpanForScopeResult = tmp17Result._getSpanForScope(scope);
       if (_getSpanForScopeResult) {

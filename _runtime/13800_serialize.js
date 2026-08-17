@@ -12,8 +12,8 @@ arg5.default = function serialize(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  let closure_1 = [];
-  let closure_2 = [];
+  closure_1 = [];
+  closure_2 = [];
   return JSON.stringify(arg0, function(arg0, obj) {
     if (true === obj) {
       return true;

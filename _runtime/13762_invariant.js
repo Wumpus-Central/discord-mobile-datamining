@@ -1,6 +1,6 @@
 // _runtime/13762_invariant.js
-import _slicedToArray from "_slicedToArray";
-import monadic from "monadic";
+import closure_0 from "_slicedToArray" /* 32 */;
+import monadic from "monadic" /* 13763 */;
 
 function invariant(arg0, arg1) {
   {
@@ -12,9 +12,6 @@ function invariant(arg0, arg1) {
   }
 }
 function isMatched(region, str) {
-  let arr;
-  let tmp2;
-  let tmp3;
   [tmp2, tmp3, arr] = callback(str.split("-"), 3);
   if (arr) {
     if ("$" === arr[0]) {
@@ -119,7 +116,7 @@ function findMatchingDistanceForLSR(arg0, arg1, matchVariables) {
       return diff;
     }
   }
-  const error = new Error("No matching distance found");
+  error = new Error("No matching distance found");
   throw error;
 }
 function getFallbackCandidates(arg0) {
@@ -140,17 +137,17 @@ function getFallbackCandidates(arg0) {
 function BestFitMatcher(arr2, arr) {
   let items = [];
   const reduced = arr.reduce((arg0, str) => {
-    const replaced = str.replace(outer1_3, "");
+    const replaced = str.replace(closure_1_3, "");
     items.push(replaced);
     arg0[replaced] = str;
     return arg0;
   }, {});
   const tmp2 = (function findBestMatch(items, arr2) {
     let tmp24;
-    let _slicedToArray = arr2;
+    closure_0 = arr2;
     let mapped;
     let Infinity = Infinity;
-    let obj = { matchedDesiredLocale: "", distances: {} };
+    obj = { matchedDesiredLocale: "", distances: {} };
     const value = closure_11.get(arr2);
     mapped = value;
     let tmp6 = value;
@@ -158,7 +155,7 @@ function BestFitMatcher(arr2, arr) {
       mapped = arr2.map((arg0) => {
         try {
           const _Intl = Intl;
-          const items = [arg0];
+          items = [arg0];
           let first = Intl.getCanonicalLocales(items)[0];
           if (!first) {
             first = arg0;
@@ -258,14 +255,14 @@ function BestFitMatcher(arr2, arr) {
     if (!matchedSupportedLocale) {
       Infinity = Infinity;
       let item = items.forEach((arg0, arg1) => {
-        let _slicedToArray = arg0;
-        let closure_1 = arg1;
+        closure_0 = arg0;
+        closure_1 = arg1;
         if (!obj.distances[arg0]) {
           obj.distances[arg0] = {};
         }
         const item = mapped.forEach((arg0, arg1) => {
-          const sum = outer2_9(table, arg0) + 40 * closure_1;
-          outer1_2.distances[table][table[arg1]] = sum;
+          const sum = closure_2_9(table, arg0) + 40 * closure_1;
+          closure_1_2.distances[table][table[arg1]] = sum;
           if (sum < closure_1) {
             closure_1 = sum;
             tmp4.matchedDesiredLocale = table;
@@ -288,7 +285,7 @@ function BestFitMatcher(arr2, arr) {
     const tmp4 = reduced[tmp2.matchedDesiredLocale].slice(tmp2.matchedDesiredLocale.length) || undefined;
   }
   if (prop) {
-    let obj = { locale: null, extension: null };
+    obj = { locale: null, extension: null };
     obj[0] = prop;
     obj[1] = tmp4;
   } else {
@@ -325,13 +322,13 @@ function BestAvailableLocale(items) {
 }
 class ResolveLocale {
   constructor(arg0, arg1, arg2, arg3, arg4, arg5) {
-    _slicedToArray = importDefault;
+    closure_0 = importDefault;
     if ("lookup" === importDefault.localeMatcher) {
       tmp4 = globalThis;
       _Array2 = Array;
       num2 = 0;
       tmp3 = (function LookupMatcher(arg0, arg1, arg2) {
-        const obj = { locale: "" };
+        obj = { locale: "" };
         const iter = arg1[Symbol.iterator]();
         const str = iter.next();
         while (iter !== undefined) {
@@ -370,7 +367,7 @@ class ResolveLocale {
     closure_3 = { locale: "en", dataLocale: locale };
     if (tmp3.extension) {
       num3 = 0;
-      c1 = (function UnicodeExtensionComponents(extension) {
+      closure_1 = (function UnicodeExtensionComponents(extension) {
         if (extension === extension.toLowerCase()) {
           let num = 3;
           if ("-u-" === extension.slice(0, 3)) {
@@ -399,7 +396,7 @@ class ResolveLocale {
                     }
                   }
                   if (2 === tmp15) {
-                    let obj = { key: null, value: "" };
+                    obj = { key: null, value: "" };
                     obj[0] = substr;
                     tmp27 = obj;
                     if (undefined === items1.find((key) => {
@@ -451,9 +448,9 @@ class ResolveLocale {
         }
       })(tmp3.extension).keywords;
     } else {
-      c1 = [];
+      closure_1 = [];
     }
-    extension = [];
+    closure_4 = [];
     tmp5 = importAll[Symbol.iterator]();
     return;
   }
@@ -485,7 +482,7 @@ let closure_9 = monadic.memoize(function findMatchingDistanceImpl(arg0, arg1) {
   const maximizeResult = locale.maximize();
   const locale1 = new Intl.Locale(arg1);
   const maximizeResult1 = locale1.maximize();
-  let obj = { language: maximizeResult.language, script: tmp3, region: tmp4 };
+  obj = { language: maximizeResult.language, script: tmp3, region: tmp4 };
   obj = { language: maximizeResult1.language, script: tmp5, region: tmp6 };
   let tmp7 = obj1;
   if (!obj1) {
@@ -566,7 +563,7 @@ export const LookupSupportedLocales = function LookupSupportedLocales(arg0, arg1
 };
 export { ResolveLocale };
 export const match = function match(items, arg1, arg2, algorithm) {
-  let _slicedToArray = arg2;
+  closure_0 = arg2;
   const canonicalLocales = Intl.getCanonicalLocales(items);
   let str;
   if (algorithm != null) {
@@ -575,5 +572,5 @@ export const match = function match(items, arg1, arg2, algorithm) {
   if (!str) {
     str = "best fit";
   }
-  return ResolveLocale(arg1, canonicalLocales, { localeMatcher: str }, [], {}, () => _slicedToArray).locale;
+  return ResolveLocale(arg1, canonicalLocales, { localeMatcher: str }, [], {}, () => closure_0).locale;
 };

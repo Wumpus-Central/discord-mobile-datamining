@@ -1,12 +1,12 @@
 // _runtime/00894_createCheckInEnvelope.js
-import { dsnFromString } from "00837_dsnFromString.js";
-import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
-const require = arg1;
+import dsnFromString from "dsnFromString" /* 837 */;
+import forEachEnvelopeItem from "forEachEnvelopeItem" /* 864 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk) {
-  let obj = { sent_at: null };
-  obj[0] = new Date().toISOString();
+  let obj = { sent_at: new Date().toISOString() };
   sdk = undefined;
   if (sdk != null) {
     sdk = sdk.sdk;

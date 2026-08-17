@@ -1,6 +1,6 @@
 // _runtime/13761_GetOption.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_createClass" /* 42 */;
 
 let require = arg1;
 function GetOption(obj, arg1, arg2, arr) {
@@ -9,7 +9,7 @@ function GetOption(obj, arg1, arg2, arr) {
     const typeError = new TypeError("Options must be an object");
     throw typeError;
   } else {
-    let require = tmp19;
+    require = tmp19;
     if (undefined !== obj[arg1]) {
       let tmp2 = tmp19;
       if ("boolean" === "string") {
@@ -129,16 +129,16 @@ function createPartsFromList(__INTERNAL_SLOT_MAP__, self) {
   if (0 === arg2.length) {
     return [];
   } else if (2 === length) {
-    let obj = { 0: null, 1: null };
+    obj = { 0: null, 1: null };
     obj = { type: "element", value: null };
     obj[1] = arg2[0];
     obj[0] = obj;
-    const obj1 = { type: "element", value: null };
+    obj1 = { type: "element", value: null };
     obj1[1] = arg2[1];
     obj[1] = obj1;
     return deconstructPattern((function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
       const substr = [...arguments].slice();
-      let c0;
+      c0 = undefined;
       const value = __INTERNAL_SLOT_MAP__.get(self);
       c0 = value;
       if (value) {
@@ -180,7 +180,7 @@ function createPartsFromList(__INTERNAL_SLOT_MAP__, self) {
         obj[1] = tmpResult;
         tmpResult = tmp((function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
           const substr = [...arguments].slice();
-          let c0;
+          c0 = undefined;
           const value = __INTERNAL_SLOT_MAP__.get(self);
           c0 = value;
           if (value) {
@@ -218,7 +218,7 @@ function deconstructPattern(templatePair, arg1) {
         const combined = "Invalid pattern " + arr;
         while (tmp4) {
           if (index > num4) {
-            let obj = { type: "literal", value: null };
+            obj = { type: "literal", value: null };
             obj[1] = arr.substring(num4, index);
             arr = items.push(obj);
           }
@@ -234,7 +234,7 @@ function deconstructPattern(templatePair, arg1) {
             index = index2;
           }
         }
-        const error = new Error(combined);
+        error = new Error(combined);
         throw error;
       }
     }
@@ -251,7 +251,7 @@ function deconstructPattern(templatePair, arg1) {
     let tmp3 = isLiteralPart;
     let iter2 = nextResult;
     if (isLiteralPart(nextResult)) {
-      let obj = { type: "literal", value: null };
+      obj = { type: "literal", value: null };
       let tmp19 = nextResult;
       obj[1] = iter2.value;
       let arr = items.push(obj);
@@ -289,7 +289,7 @@ function serializerDefault() {
 let closure_9 = (() => {
   class ObjectWithoutPrototypeCache {
     constructor() {
-      tmp = outer1_2(this, ObjectWithoutPrototypeCache);
+      tmp = closure_1_2(this, ObjectWithoutPrototypeCache);
       this.cache = Object.create(null);
       return;
     }
@@ -328,7 +328,7 @@ let obj = (() => {
     constructor(arg0, arg1) {
       self = this;
       tmp = ListFormat;
-      tmp2 = outer1_2(this, ListFormat);
+      tmp2 = closure_1_2(this, ListFormat);
       constructor = undefined;
       if (this) {
         if (self instanceof tmp) {
@@ -365,18 +365,18 @@ let obj = (() => {
           tmp52 = typeError;
           throw typeError;
         }
-        tmp18 = outer1_4;
+        tmp18 = closure_1_4;
         str2 = "best fit";
         str3 = "string";
         str4 = "localeMatcher";
         num = 0;
         tmp19 = obj1;
         str5 = "string";
-        obj.localeMatcher = outer1_4(obj1, "localeMatcher", "string", ["best fit", "lookup"], "best fit");
+        obj.localeMatcher = closure_1_4(obj1, "localeMatcher", "string", ["best fit", "lookup"], "best fit");
         localeData = tmp.localeData;
         tmp20 = ListFormat;
-        tmp21 = outer1_1;
-        obj = ListFormat(outer1_1[2]);
+        tmp21 = closure_1_1;
+        obj = ListFormat(closure_1_1[2]);
         tmp22 = obj;
         tmp23 = canonicalLocales;
         tmp24 = obj;
@@ -466,12 +466,12 @@ let obj = (() => {
       }
     }
   }
-  let obj = {
+  obj = {
     key: "format",
     value: function format(arg0) {
-      outer1_13(this, "format");
+      closure_1_13(this, "format");
       let str = "";
-      const iter = outer1_15(ListFormat.__INTERNAL_SLOT_MAP__, this, outer1_14(arg0));
+      const iter = closure_1_15(ListFormat.__INTERNAL_SLOT_MAP__, this, closure_1_14(arg0));
       if (Array.isArray(iter)) {
         for (const item10023 of iter) {
           let tmp4 = str;
@@ -489,12 +489,12 @@ let obj = (() => {
     {
       key: "formatToParts",
       value: function formatToParts(arg0) {
-        outer1_13(this, "format");
-        const tmp2 = outer1_15(ListFormat.__INTERNAL_SLOT_MAP__, this, outer1_14(arg0));
+        closure_1_13(this, "format");
+        const tmp2 = closure_1_15(ListFormat.__INTERNAL_SLOT_MAP__, this, closure_1_14(arg0));
         if (Array.isArray(tmp2)) {
           const items = [];
           for (const item10022 of tmp2) {
-            let obj = {};
+            obj = {};
             let tmp5 = obj;
             let tmp6 = item10022;
             let merged = Object.assign(item10022);
@@ -512,11 +512,11 @@ let obj = (() => {
       key: "resolvedOptions",
       value: function resolvedOptions() {
         const self = this;
-        if (this instanceof outer1_17) {
-          const obj = { locale: null, type: null, style: null };
+        if (this instanceof closure_1_17) {
+          obj = { locale: null, type: null, style: null };
           obj[0] = (function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
             const substr = [...arguments].slice();
-            let c0;
+            c0 = undefined;
             const value = __INTERNAL_SLOT_MAP__.get(self);
             c0 = value;
             if (value) {
@@ -534,7 +534,7 @@ let obj = (() => {
           })(ListFormat.__INTERNAL_SLOT_MAP__, self, "locale").locale;
           obj[1] = (function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
             const substr = [...arguments].slice();
-            let c0;
+            c0 = undefined;
             const value = __INTERNAL_SLOT_MAP__.get(self);
             c0 = value;
             if (value) {
@@ -552,7 +552,7 @@ let obj = (() => {
           })(ListFormat.__INTERNAL_SLOT_MAP__, self, "type").type;
           obj[2] = (function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
             const substr = [...arguments].slice();
-            let c0;
+            c0 = undefined;
             const value = __INTERNAL_SLOT_MAP__.get(self);
             c0 = value;
             if (value) {
@@ -593,7 +593,7 @@ let obj = (() => {
           tmp2(Object(arg1), "localeMatcher", "string", ["lookup", "best fit"], "best fit");
         }
       }
-      return ListFormat(outer1_1[2]).LookupSupportedLocales(Array.from(ListFormat.availableLocales), canonicalLocales);
+      return ListFormat(closure_1_1[2]).LookupSupportedLocales(Array.from(ListFormat.availableLocales), canonicalLocales);
     }
   };
   let items1 = [
@@ -601,8 +601,6 @@ let obj = (() => {
     {
       key: "__addLocaleData",
       value: function __addLocaleData(item10081) {
-        let data;
-        let locale;
         const items = [...arguments];
         const iter = items[Symbol.iterator]();
         while (iter !== undefined) {

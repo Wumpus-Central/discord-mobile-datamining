@@ -1,11 +1,12 @@
 // _runtime/07103_JSFPSMonitor.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 7051 */;
+import closure_2 from "_classCallCheck" /* 7050 */;
 
 const JSFPSMonitor = arg1;
 class JSFPSMonitor {
   constructor() {
     self = this;
-    tmp = outer1_2(this, self);
+    tmp = closure_2(this, self);
     this.startTime = 0;
     this.frameCount = 0;
     this.timeWindow = { frameCount: 0, startTime: 0 };
@@ -52,7 +53,7 @@ const items = [
       const self = this;
       if (0 !== this.startTime) {
         const _Error = Error;
-        const error = new Error(JSFPSMonitor(7038).ErrorMessages.fpsMonitorAlreadyRunning);
+        error = new Error(JSFPSMonitor(7038).ErrorMessages.fpsMonitorAlreadyRunning);
         throw error;
       } else {
         const _Date = Date;
@@ -71,8 +72,7 @@ const items = [
       if (this.minFPS === Number.MAX_SAFE_INTEGER) {
         ({ averageFPS: self.minFPS, averageFPS: self.maxFPS } = self);
       }
-      const obj = { minFPS: null, maxFPS: null, averageFPS: null };
-      obj[0] = JSFPSMonitor(7104).roundToDecimalPlaces(self.minFPS, 1);
+      const obj = { minFPS: JSFPSMonitor(7104).roundToDecimalPlaces(self.minFPS, 1), maxFPS: null, averageFPS: null };
       const obj2 = JSFPSMonitor(7104);
       obj[1] = JSFPSMonitor(7104).roundToDecimalPlaces(self.maxFPS, 1);
       const obj3 = JSFPSMonitor(7104);
@@ -82,4 +82,4 @@ const items = [
   }
 ];
 
-export const JSFPSMonitor = require("_createClass")(JSFPSMonitor, items);
+export const JSFPSMonitor = _createClassDefault(JSFPSMonitor, items);

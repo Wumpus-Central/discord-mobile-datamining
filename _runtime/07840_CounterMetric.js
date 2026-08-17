@@ -1,12 +1,12 @@
 // _runtime/07840_CounterMetric.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import { 07835__ } from "metro/07835__.js";
+import _mod7835 from "module_7835" /* 7835 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 let SetMetric = require;
 class CounterMetric {
   constructor(arg0) {
-    tmp = outer1_2(this, SetMetric);
+    tmp = closure_2(this, SetMetric);
     this._value = global;
     return;
   }
@@ -36,7 +36,7 @@ let items = [
 const _moduleResult = _createClass(CounterMetric, items);
 class GaugeMetric {
   constructor(arg0) {
-    tmp = outer1_2(this, SetMetric);
+    tmp = closure_2(this, SetMetric);
     this._last = global;
     this._min = global;
     this._max = global;
@@ -79,7 +79,7 @@ const items1 = [
 const _moduleResult1 = _createClass(GaugeMetric, items1);
 class DistributionMetric {
   constructor(arg0) {
-    tmp = outer1_2(this, SetMetric);
+    tmp = closure_2(this, SetMetric);
     items = [];
     items[0] = global;
     this._value = items;
@@ -113,7 +113,7 @@ const items2 = [
 const _moduleResult2 = _createClass(DistributionMetric, items2);
 class SetMetric {
   constructor(arg0) {
-    tmp = outer1_2(this, SetMetric);
+    tmp = closure_2(this, SetMetric);
     this.first = global;
     items = [];
     items[0] = global;
@@ -156,5 +156,5 @@ const _moduleResult3 = _createClass(SetMetric, items3);
 export const CounterMetric = _moduleResult;
 export const DistributionMetric = _moduleResult2;
 export const GaugeMetric = _moduleResult1;
-export const METRIC_MAP = { [07835__.COUNTER_METRIC_TYPE]: _moduleResult, [07835__.GAUGE_METRIC_TYPE]: _moduleResult1, [07835__.DISTRIBUTION_METRIC_TYPE]: _moduleResult2, [07835__.SET_METRIC_TYPE]: _moduleResult3 };
+export const METRIC_MAP = { [_mod7835.COUNTER_METRIC_TYPE]: _moduleResult, [_mod7835.GAUGE_METRIC_TYPE]: _moduleResult1, [_mod7835.DISTRIBUTION_METRIC_TYPE]: _moduleResult2, [_mod7835.SET_METRIC_TYPE]: _moduleResult3 };
 export const SetMetric = _moduleResult3;

@@ -1,6 +1,7 @@
 // _runtime/12261_initializeContext.js
-import { $output } from "12259__output.js";
-const require = arg1;
+import $output from "$output" /* 12259 */;
+
+require = arg1;
 let exports = arg5;
 const dependencyMap = arg6;
 function initializeContext(target) {
@@ -130,7 +131,7 @@ function process(_zod, seen) {
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          const error = new Error("[toJSONSchema]: Non-representable type encountered: " + def.type);
+          error = new Error("[toJSONSchema]: Non-representable type encountered: " + def.type);
           throw error;
         }
       }
@@ -173,10 +174,10 @@ function process(_zod, seen) {
   }
 }
 function extractDefs(initializeContextResult, _idmap) {
-  let closure_0 = initializeContextResult;
+  closure_0 = initializeContextResult;
   const seen = initializeContextResult.seen;
   let value = seen.get(_idmap);
-  const exports = value;
+  exports = value;
   if (value) {
     const _Map = Map;
     const map = new Map();
@@ -207,7 +208,7 @@ function extractDefs(initializeContextResult, _idmap) {
             let str3 = "Duplicate schema id \"";
             let tmp28 = new.target;
             let tmp29 = new.target;
-            let error = new Error("Duplicate schema id \"" + tmp18 + "\" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.");
+            error = new Error("Duplicate schema id \"" + tmp18 + "\" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.");
             let tmp31 = error;
             throw error;
           }
@@ -226,7 +227,7 @@ function extractDefs(initializeContextResult, _idmap) {
         }
         if (initializeContextResult.external) {
           const registry = tmp4.external.registry;
-          const value = registry.get(arg0[0]);
+          value = registry.get(arg0[0]);
           let id;
           if (value != null) {
             id = value.id;
@@ -268,7 +269,7 @@ function extractDefs(initializeContextResult, _idmap) {
           obj[1] = combined + id;
         }
         const defId = obj.defId;
-        const obj1 = {};
+        obj1 = {};
         const merged = Object.assign(tmp3.schema);
         arg0[1].def = obj1;
         if (defId) {
@@ -366,7 +367,7 @@ function extractDefs(initializeContextResult, _idmap) {
 }
 function finalize(seen, _standard) {
   let standardJSONSchemaMethod = seen;
-  let closure_0 = seen;
+  closure_0 = seen;
   seen = seen.seen;
   let value = seen.get(_standard);
   if (value) {
@@ -535,7 +536,7 @@ function finalize(seen, _standard) {
         obj.$id = external2.uri(id);
       } else {
         const _Error2 = Error;
-        const error = new Error("Schema is missing an `id` property");
+        error = new Error("Schema is missing an `id` property");
         throw error;
       }
     }
@@ -584,7 +585,7 @@ function finalize(seen, _standard) {
       obj = { value: null, enumerable: false, writable: false };
       obj = {};
       let merged1 = Object.assign(_standard["~standard"]);
-      const obj1 = { input: null, output: null };
+      obj1 = { input: null, output: null };
       obj1[0] = flattenRef.createStandardJSONSchemaMethod(_standard, "input", standardJSONSchemaMethod.processors);
       standardJSONSchemaMethod = flattenRef.createStandardJSONSchemaMethod(_standard, "output", standardJSONSchemaMethod.processors);
       obj1[1] = standardJSONSchemaMethod;
@@ -721,30 +722,30 @@ arg5.process = process;
 arg5.extractDefs = extractDefs;
 arg5.finalize = finalize;
 arg5.createToJSONSchemaMethod = (arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
   return (arg0) => {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(arg0);
     obj.processors = obj;
-    const tmp2 = outer1_3(obj);
-    outer1_4(closure_0, tmp2);
-    outer1_5(tmp2, closure_0);
-    return outer1_6(tmp2, closure_0);
+    const tmp2 = closure_1_3(obj);
+    closure_1_4(closure_0, tmp2);
+    closure_1_5(tmp2, closure_0);
+    return closure_1_6(tmp2, closure_0);
   };
 };
 arg5.createStandardJSONSchemaMethod = (arg0, arg1) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
   return (arg0) => {
-    let obj = arg0;
+    obj = arg0;
     if (arg0 == null) {
       obj = {};
     }
@@ -757,9 +758,9 @@ arg5.createStandardJSONSchemaMethod = (arg0, arg1) => {
     obj.target = obj.target;
     obj.io = closure_1;
     obj.processors = obj;
-    const tmpResult = outer1_3(obj);
-    outer1_4(closure_0, tmpResult);
-    outer1_5(tmpResult, closure_0);
-    return outer1_6(tmpResult, closure_0);
+    const tmpResult = closure_1_3(obj);
+    closure_1_4(closure_0, tmpResult);
+    closure_1_5(tmpResult, closure_0);
+    return closure_1_6(tmpResult, closure_0);
   };
 };

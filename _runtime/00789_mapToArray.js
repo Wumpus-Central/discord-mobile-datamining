@@ -1,7 +1,7 @@
 // _runtime/00789_mapToArray.js
 
 export default function mapToArray(size) {
-  let c0 = -1;
+  c0 = -1;
   const ArrayResult = Array(size.size);
   const item = size.forEach((arg0, arg1) => {
     const sum = c0 + 1;

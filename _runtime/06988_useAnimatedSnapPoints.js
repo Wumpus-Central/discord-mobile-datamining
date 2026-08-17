@@ -8,11 +8,11 @@ let closure_2 = { code: "function pnpm_useAnimatedSnapPointsTs1(){const{containe
 let closure_3 = { code: "function pnpm_useAnimatedSnapPointsTs2(){const{enableDynamicSizing,snapPoints}=this.__closure;if(enableDynamicSizing){return true;}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];if(_snapPoints.length&&_snapPoints.find(function(snapPoint){return typeof snapPoint==='string';})){return true;}return false;}" };
 arg5.useAnimatedSnapPoints = (snapPoints, containerHeight, contentHeight, handleHeight, arg4, enableDynamicSizing, maxDynamicContentSize) => {
   const _require = snapPoints;
-  const dependencyMap = containerHeight;
-  let closure_2 = contentHeight;
-  let closure_3 = handleHeight;
-  let closure_4 = enableDynamicSizing;
-  let closure_5 = maxDynamicContentSize;
+  dependencyMap = containerHeight;
+  closure_2 = contentHeight;
+  closure_3 = handleHeight;
+  closure_4 = enableDynamicSizing;
+  closure_5 = maxDynamicContentSize;
   let obj = _cancelAnimation;
   const sharedValue = obj.useSharedValue(-1);
   class P {
@@ -62,8 +62,8 @@ arg5.useAnimatedSnapPoints = (snapPoints, containerHeight, contentHeight, handle
                 arr = mapped.push(diff);
               }
               sorted = mapped.sort(() => { ... });
-              tmp8 = useSharedValue;
-              useSharedValue.value = sorted.indexOf(diff);
+              tmp8 = closure_6;
+              closure_6.value = sorted.indexOf(diff);
               return sorted;
             }
           }

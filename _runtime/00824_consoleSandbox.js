@@ -1,17 +1,19 @@
 // _runtime/00824_consoleSandbox.js
-import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
+import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
 import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
-const require = arg1;
+
+require = arg1;
 let dependencyMap = arg6;
 function consoleSandbox(arg0) {
   if ("console" in console(821).GLOBAL_OBJ) {
     console = console(821).GLOBAL_OBJ.console;
-    const dependencyMap = {};
+    dependencyMap = {};
     const _Object = Object;
     const keys = Object.keys(obj);
     const item = keys.forEach((arg0) => {
       closure_1[arg0] = console[arg0];
-      console[arg0] = outer1_2[arg0];
+      console[arg0] = closure_1_2[arg0];
     });
     try {
       const item1 = keys.forEach((arg0) => {
@@ -30,7 +32,7 @@ function consoleSandbox(arg0) {
 }
 function _maybeLog(arg0) {
   const _require = arg0;
-  const dependencyMap = [...arguments].slice();
+  dependencyMap = [...arguments].slice();
   let str = _require;
   let fn = dependencyMap;
   const DEBUG_BUILD = ___SENTRY_DEBUG__.DEBUG_BUILD;

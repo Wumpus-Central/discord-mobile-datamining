@@ -1,6 +1,7 @@
 // _runtime/01193_addGestureBreadcrumb.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-const require = arg1;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function addGestureBreadcrumb(message, event) {
   event = event.event;
@@ -55,14 +56,14 @@ arg5.sentryTraceGesture = function sentryTraceGesture(arg0, handlers) {
             const attr = result.setAttribute(tmp(tmp2[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmp(tmp2[3]).SPAN_ORIGIN_AUTO_INTERACTION);
           }
           obj = { event, name: formatted };
-          outer1_5("Gesture " + callback + " begin.", obj);
+          closure_1_5("Gesture " + callback + " begin.", obj);
           if (onBegin) {
             onBegin(event);
           }
         };
         const onEnd = handlers.handlers.onEnd;
         handlers.handlers.onEnd = (event) => {
-          outer1_5("Gesture " + closure_0 + " end.", { event, name: formatted });
+          closure_1_5("Gesture " + closure_0 + " end.", { event, name: formatted });
           if (onEnd) {
             tmp2(event);
           }

@@ -1,7 +1,8 @@
 // _runtime/00061_processTransformOrigin.js
-import "_slicedToArray";
-import { 00038__ } from "metro/00038__.js";
+import _slicedToArrayDefault from "_slicedToArray" /* 32 */;
+import _modDef38 from "module_38" /* 38 */;
 
+_slicedToArrayDefault;
 const re2 = /(top|bottom|left|right|center|\d+(?:%|px)|0)/gi;
 
 export default function processTransformOrigin(str) {
@@ -25,7 +26,7 @@ export default function processTransformOrigin(str) {
                 if ("center" === formatted) {
                   let tmp5 = importDefault;
                   let tmp6 = dependencyMap;
-                  let tmp7 = 00038__(2 !== num4, "Transform-origin value %s cannot be used for z-position", str);
+                  let tmp7 = _modDef38(2 !== num4, "Transform-origin value %s cannot be used for z-position", str);
                   items[num4] = "50%";
                   let num = sum;
                 } else if (str.endsWith("%")) {
@@ -40,7 +41,7 @@ export default function processTransformOrigin(str) {
             }
             let tmp8 = importDefault;
             let tmp9 = dependencyMap;
-            let tmp10 = 00038__(2 !== num4, "Transform-origin %s can only be used for y-position", str);
+            let tmp10 = _modDef38(2 !== num4, "Transform-origin %s can only be used for y-position", str);
             let num2 = "100%";
             if ("top" === formatted) {
               num2 = 0;
@@ -83,7 +84,7 @@ export default function processTransformOrigin(str) {
         }
         let tmp12 = importDefault;
         let tmp13 = dependencyMap;
-        let tmp14 = 00038__(0 === num4, "Transform-origin %s can only be used for x-position", str);
+        let tmp14 = _modDef38(0 === num4, "Transform-origin %s can only be used for x-position", str);
         let num3 = "100%";
         if ("left" === formatted) {
           num3 = 0;

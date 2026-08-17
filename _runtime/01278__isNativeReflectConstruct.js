@@ -1,10 +1,10 @@
 // _runtime/01278__isNativeReflectConstruct.js
-import "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
-import _wrapNativeSuper from "_wrapNativeSuper";
-import _createClass from "_createClass";
-import _classCallCheck from "_classCallCheck";
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_4 from "_classCallCheck" /* 41 */;
 
 const MissingValueError = require;
 function _isNativeReflectConstruct() {
@@ -18,10 +18,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -30,25 +30,17 @@ function isRichTextTag(arg0) {
   return "$" === arg0[0];
 }
 function bindFormatValuesWithBuilder(builder) {
-  let _classCallCheck;
-  let _getPrototypeOf;
-  let _isNativeReflectConstruct;
-  let bindFormatValuesWithBuilder;
-  let closure_7;
-  let dependencyMap;
-  let isRichTextTag;
   let length;
-  let nodes;
   let sum;
   builder = builder.builder;
   ({ originalMessage: dependencyMap, nodes } = builder);
-  ({ locales: _getPrototypeOf, values: _classCallCheck, dataFormatters: _isNativeReflectConstruct, formatConfig: isRichTextTag, currentPluralValue: closure_7, keyPrefix: bindFormatValuesWithBuilder } = builder);
+  ({ locales: closure_3, values: closure_4, dataFormatters: _isNativeReflectConstruct, formatConfig: isRichTextTag, currentPluralValue: closure_7, keyPrefix: bindFormatValuesWithBuilder } = builder);
   if (1 === nodes.length) {
     if (typeof nodes[0] === "string") {
       builder.pushLiteralText(nodes[0]);
     }
   }
-  let c9 = 0;
+  c9 = 0;
   let num = 0;
   if (0 < nodes.length) {
     do {
@@ -195,7 +187,7 @@ function bindFormatValuesWithBuilder(builder) {
                 const _HermesInternal4 = HermesInternal;
                 throw "" + tmp12 + " is not a known option for select value " + pushLiteralTextResult1 + ". Valid options are " + keys.join(", ");
               } else {
-                const obj1 = { builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, keyPrefix: null };
+                obj1 = { builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, keyPrefix: null };
                 obj1[0] = builder;
                 obj1[1] = tmp26;
                 obj1[2] = closure_3;
@@ -217,7 +209,7 @@ function bindFormatValuesWithBuilder(builder) {
                 } else {
                   const obj = { type: null };
                   obj[0] = closure_3;
-                  const pluralRules = outer1_5.getPluralRules(obj);
+                  const pluralRules = closure_1_5.getPluralRules(obj);
                   let num = 0;
                   if (null != pushLiteralTextResult1) {
                     num = pushLiteralTextResult1;
@@ -266,16 +258,8 @@ function bindFormatValuesWithBuilder(builder) {
   }
 }
 function bindFormatValues(Builder) {
-  let currentPluralValue;
-  let dataFormatters;
-  let formatConfig;
-  let keyPrefix;
   let length;
-  let locales;
-  let nodes;
-  let originalMessage;
   let sum;
-  let values;
   ({ nodes, keyPrefix } = Builder);
   ({ originalMessage, locales, dataFormatters, formatConfig, values, currentPluralValue } = Builder);
   let builder = new Builder.Builder({ keyPrefix });
@@ -289,7 +273,7 @@ function bindFormatValues(Builder) {
       }
       finishResult = builder.finish();
     }
-    let c9 = 0;
+    c9 = 0;
     let num2 = 0;
     if (0 < nodes.length) {
       do {
@@ -436,7 +420,7 @@ function bindFormatValues(Builder) {
                   const _HermesInternal4 = HermesInternal;
                   throw "" + tmp12 + " is not a known option for select value " + pushLiteralTextResult1 + ". Valid options are " + keys.join(", ");
                 } else {
-                  const obj1 = { builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, keyPrefix: null };
+                  obj1 = { builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, keyPrefix: null };
                   obj1[0] = builder;
                   obj1[1] = tmp26;
                   obj1[2] = closure_3;
@@ -458,7 +442,7 @@ function bindFormatValues(Builder) {
                   } else {
                     const obj = { type: null };
                     obj[0] = closure_3;
-                    const pluralRules = outer1_5.getPluralRules(obj);
+                    const pluralRules = closure_1_5.getPluralRules(obj);
                     let num = 0;
                     if (null != pushLiteralTextResult1) {
                       num = pushLiteralTextResult1;
@@ -521,9 +505,9 @@ class MissingValueError {
     tmp = closure_4(this, MissingValueError);
     items = [];
     items[0] = "No value for variable '" + global + "' was provided for the localized message '" + require + "'";
-    tmp2 = isRichTextTag;
-    obj = isRichTextTag(MissingValueError);
-    tmp3 = isRichTextTag;
+    tmp2 = closure_3;
+    obj = closure_3(MissingValueError);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);

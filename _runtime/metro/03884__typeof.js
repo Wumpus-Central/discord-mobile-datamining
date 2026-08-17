@@ -1,16 +1,16 @@
 // _runtime/metro/03884__typeof.js
-import _typeof from "_typeof";
-import setMonth from "setMonth";
-import toInteger from "toInteger";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import setMonth from "setMonth" /* 3885 */;
+import toInteger from "toInteger" /* 3476 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -36,7 +36,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!setMonth) {
   obj = { default: null };
   obj[0] = setMonth;
@@ -44,7 +44,7 @@ if (!setMonth) {
 } else {
   tmp5 = setMonth;
 }
-let closure_1 = tmp5;
+setMonth = tmp5;
 if (!toInteger) {
   obj = { default: null };
   obj[0] = toInteger;
@@ -52,21 +52,21 @@ if (!toInteger) {
 } else {
   tmp7 = toInteger;
 }
-let obj1 = tmp7;
+toInteger = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c3 = tmp9;
+requiredArgs = tmp9;
 
 export default function set(arg0, year) {
-  tmp9.default(2, arguments);
+  requiredArgs.default(2, arguments);
   if ("object" === _typeof(year)) {
     if (null !== year) {
-      const defaultResult1 = tmp3.default(arg0);
+      const defaultResult1 = _typeof.default(arg0);
       const _isNaN = isNaN;
       if (isNaN(defaultResult1.getTime())) {
         const _Date = Date;
@@ -78,22 +78,22 @@ export default function set(arg0, year) {
         }
         let defaultResult2 = defaultResult1;
         if (null != year.month) {
-          defaultResult2 = tmp5.default(defaultResult1, year.month);
+          defaultResult2 = setMonth.default(defaultResult1, year.month);
         }
         if (null != year.date) {
-          defaultResult2.setDate(tmp7.default(year.date));
+          defaultResult2.setDate(toInteger.default(year.date));
         }
         if (null != year.hours) {
-          defaultResult2.setHours(tmp7.default(year.hours));
+          defaultResult2.setHours(toInteger.default(year.hours));
         }
         if (null != year.minutes) {
-          defaultResult2.setMinutes(tmp7.default(year.minutes));
+          defaultResult2.setMinutes(toInteger.default(year.minutes));
         }
         if (null != year.seconds) {
-          defaultResult2.setSeconds(tmp7.default(year.seconds));
+          defaultResult2.setSeconds(toInteger.default(year.seconds));
         }
         if (null != year.milliseconds) {
-          defaultResult2.setMilliseconds(tmp7.default(year.milliseconds));
+          defaultResult2.setMilliseconds(toInteger.default(year.milliseconds));
         }
         return defaultResult2;
       }

@@ -1,5 +1,6 @@
 // _runtime/05031_arrayIncludes.js
-import { baseIndexOf } from "05032_baseIndexOf.js";
+import baseIndexOf from "baseIndexOf" /* 5032 */;
+
 
 export default function arrayIncludes(arg0, arg1) {
   let num = 0;

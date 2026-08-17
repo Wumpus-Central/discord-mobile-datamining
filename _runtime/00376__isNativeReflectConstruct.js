@@ -1,10 +1,14 @@
 // _runtime/00376__isNativeReflectConstruct.js
-import "_readOnlyError";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult1 from "_createClass";
+import _modDef38 from "module_38" /* 38 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import _readOnlyErrorDefault from "_readOnlyError" /* 377 */;
+import fromOrigamiTensionAndFrictionAll from "fromOrigamiTensionAndFriction" /* 378 */;
+import AnimationDefault from "Animation" /* 379 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import closure_5 from "_possibleConstructorReturn" /* 93 */;
+import closure_6 from "_getPrototypeOf" /* 95 */;
+import closure_7 from "_get" /* 96 */;
+import importDefaultResult1 from "_createClass" /* 42 */;
 
 const SpringAnimation = global;
 function _isNativeReflectConstruct() {
@@ -18,23 +22,24 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+_readOnlyErrorDefault;
 class SpringAnimation {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, SpringAnimation);
+    tmp = closure_4(this, SpringAnimation);
     items = [];
     items[0] = global;
-    tmp2 = __esModule;
-    obj = __esModule(SpringAnimation);
-    tmp3 = __esModule;
+    tmp2 = closure_6;
+    obj = closure_6(SpringAnimation);
+    tmp3 = closure_5;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -173,7 +178,7 @@ class SpringAnimation {
     return;
   }
 }
-require("_inherits")(SpringAnimation, require("Animation"));
+_inheritsDefault(SpringAnimation, AnimationDefault);
 let items = [
   {
     key: "__getNativeAnimationConfig",
@@ -194,10 +199,10 @@ let items = [
     key: "start",
     value: function start(_startPosition, _onUpdate, arg2, getInternalState, self) {
       self = this;
-      self = this;
+      closure_1 = this;
       self = this;
       const tmp2 = callback3(callback2(self.prototype), "start", this);
-      self = tmp2;
+      closure_1 = tmp2;
       let fn = tmp2;
       if (typeof tmp2 === "function") {
         fn = (items) => fn.apply(self, items);
@@ -218,8 +223,8 @@ let items = [
       if (self._delay) {
         const _setTimeout = setTimeout;
         self._timeout = setTimeout(function start() {
-          if (!self.__startAnimationIfNative(self)) {
-            self.onUpdate();
+          if (!closure_1.__startAnimationIfNative(self)) {
+            closure_1.onUpdate();
           }
         }, self._delay);
       } else if (!self.__startAnimationIfNative(self)) {
@@ -236,8 +241,6 @@ let items = [
   {
     key: "onUpdate",
     value: function onUpdate() {
-      let _mass;
-      let _stiffness;
       const self = this;
       let timestamp = Date.now();
       if (timestamp > this._lastTime + 64) {

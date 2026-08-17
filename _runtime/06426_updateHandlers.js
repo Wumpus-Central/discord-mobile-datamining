@@ -4,7 +4,7 @@ const module = arg2;
 const dependencyMap = arg6;
 arg5.updateHandlers = function updateHandlers(attachedGestures, closure_3, arg2) {
   const _require = attachedGestures;
-  let closure_1 = arg2;
+  closure_1 = arg2;
   closure_3.prepare();
   for (let num = 0; num < arg2.length; num = num + 1) {
     let tmp2 = attachedGestures.attachedGestures[num];

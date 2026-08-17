@@ -1,13 +1,13 @@
 // _runtime/03704_format.js
-import isValid from "isValid";
-import subMilliseconds from "subMilliseconds";
-import _typeof from "_typeof";
-import G from "G";
-import dateLongFormatter from "dateLongFormatter";
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
-import toInteger from "toInteger";
-import requiredArgs from "requiredArgs";
-import code from "code";
+import isValid from "isValid" /* 3654 */;
+import subMilliseconds from "subMilliseconds" /* 3705 */;
+import _typeof from "_typeof" /* 3472 */;
+import G from "G" /* 3706 */;
+import dateLongFormatter from "dateLongFormatter" /* 3717 */;
+import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
+import toInteger from "toInteger" /* 3476 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+import code from "code" /* 3718 */;
 import { getDefaultOptions } from "03477_getDefaultOptions.js";
 
 if (!isValid) {
@@ -17,7 +17,7 @@ if (!isValid) {
 } else {
   tmp3 = isValid;
 }
-let obj1 = tmp3;
+isValid = tmp3;
 if (!subMilliseconds) {
   obj = { default: null };
   obj[0] = subMilliseconds;
@@ -25,7 +25,7 @@ if (!subMilliseconds) {
 } else {
   tmp5 = subMilliseconds;
 }
-let c3 = tmp5;
+subMilliseconds = tmp5;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -33,15 +33,15 @@ if (!_typeof) {
 } else {
   tmp7 = _typeof;
 }
-let c4 = tmp7;
+_typeof = tmp7;
 if (!G) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = G;
   let tmp9 = obj1;
 } else {
   tmp9 = G;
 }
-let c5 = tmp9;
+let closure_5 = tmp9;
 if (!dateLongFormatter) {
   const obj2 = { default: null };
   obj2[0] = dateLongFormatter;
@@ -49,7 +49,7 @@ if (!dateLongFormatter) {
 } else {
   tmp11 = dateLongFormatter;
 }
-let closure_6 = tmp11;
+dateLongFormatter = tmp11;
 if (!getTimezoneOffsetInMilliseconds) {
   const obj3 = { default: null };
   obj3[0] = getTimezoneOffsetInMilliseconds;
@@ -57,7 +57,7 @@ if (!getTimezoneOffsetInMilliseconds) {
 } else {
   tmp13 = getTimezoneOffsetInMilliseconds;
 }
-const error = tmp13;
+getTimezoneOffsetInMilliseconds = tmp13;
 if (!toInteger) {
   const obj4 = { default: null };
   obj4[0] = toInteger;
@@ -65,7 +65,7 @@ if (!toInteger) {
 } else {
   tmp15 = toInteger;
 }
-const metroImportAll = tmp15;
+toInteger = tmp15;
 if (!requiredArgs) {
   const obj5 = { default: null };
   obj5[0] = requiredArgs;
@@ -73,7 +73,7 @@ if (!requiredArgs) {
 } else {
   tmp17 = requiredArgs;
 }
-let c9 = tmp17;
+requiredArgs = tmp17;
 if (!code) {
   const obj6 = { default: null };
   obj6[0] = code;
@@ -81,7 +81,7 @@ if (!code) {
 } else {
   tmp19 = code;
 }
-let c10 = tmp19;
+code = tmp19;
 const re11 = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g;
 const re12 = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
 const re13 = /^'([^]*?)'?$/;
@@ -90,8 +90,9 @@ const re15 = /[a-zA-Z]/;
 
 export default function format(arg0, arg1, locale) {
   const _require = arg0;
-  const dependencyMap = arg1;
-  tmp17.default(2, arguments);
+  dependencyMap = arg1;
+  isValid = locale;
+  requiredArgs.default(2, arguments);
   const defaultOptions = _getDefaultOptions.getDefaultOptions();
   locale = undefined;
   if (null != locale) {
@@ -101,10 +102,10 @@ export default function format(arg0, arg1, locale) {
     locale = defaultOptions.locale;
   }
   if (null === locale) {
-    locale = tmp19.default;
+    locale = code.default;
   }
   let prop;
-  let obj = tmp15;
+  let obj = toInteger;
   if (null != locale) {
     prop = locale.firstWeekContainsDate;
   }
@@ -150,7 +151,7 @@ export default function format(arg0, arg1, locale) {
       num = prop;
     }
   }
-  const defaultResult1 = tmp15.default(num);
+  const defaultResult1 = toInteger.default(num);
   if (defaultResult1 >= 1) {
     if (defaultResult1 <= 7) {
       let weekStartsOn;
@@ -204,9 +205,9 @@ export default function format(arg0, arg1, locale) {
         if (defaultResult2 <= 6) {
           if (locale.localize) {
             if (locale.formatLong) {
-              const defaultResult3 = tmp7.default(arg0);
-              if (tmp3.default(defaultResult3)) {
-                tmp7 = locale.default(defaultResult3, tmp13.default(defaultResult3));
+              const defaultResult3 = _typeof.default(arg0);
+              if (isValid.default(defaultResult3)) {
+                _typeof = locale.default(defaultResult3, getTimezoneOffsetInMilliseconds.default(defaultResult3));
                 obj = { firstWeekContainsDate: null, weekStartsOn: null, locale: null, _originalDate: null };
                 obj[0] = defaultResult1;
                 obj[1] = defaultResult2;
@@ -216,7 +217,7 @@ export default function format(arg0, arg1, locale) {
                 const mapped = match.map((arg0) => {
                   const first = arg0[0];
                   if ("p" === first) {
-                    let tmp2 = outer1_6.default[first](arg0, locale.formatLong);
+                    let tmp2 = closure_1_6.default[first](arg0, locale.formatLong);
                   } else {
                     tmp2 = arg0;
                   }
@@ -228,9 +229,9 @@ export default function format(arg0, arg1, locale) {
                   if ("''" === arg0) {
                     return "'";
                   } else if ("'" === str[0]) {
-                    const match = str.match(outer1_13);
+                    const match = str.match(closure_1_13);
                     if (match) {
-                      str = match[1].replace(outer1_14, "'");
+                      str = match[1].replace(closure_1_14, "'");
                       const str4 = match[1];
                     }
                     return str;
@@ -252,7 +253,7 @@ export default function format(arg0, arg1, locale) {
                       callback(3719).throwProtectedError(str, dependencyMap, String(callback));
                     }
                     return tmp35(closure_4, str, locale.localize, obj);
-                  } else if (str6.match(outer1_15)) {
+                  } else if (str6.match(closure_1_15)) {
                     const _RangeError = RangeError;
                     const rangeError = new RangeError("Format string contains an unescaped latin alphabet character `" + str6 + "`");
                     throw rangeError;

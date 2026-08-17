@@ -1,6 +1,6 @@
 // _runtime/03829_isThisISOWeek.js
-import isSameISOWeek from "isSameISOWeek";
-import requiredArgs from "requiredArgs";
+import isSameISOWeek from "isSameISOWeek" /* 3819 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!isSameISOWeek) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!isSameISOWeek) {
 } else {
   tmp3 = isSameISOWeek;
 }
-let c0 = tmp3;
+isSameISOWeek = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,10 +17,10 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function isThisISOWeek(arg0) {
-  tmp5.default(1, arguments);
-  return tmp3.default(arg0, Date.now());
+  requiredArgs.default(1, arguments);
+  return isSameISOWeek.default(arg0, Date.now());
 };
 export default exports.default;

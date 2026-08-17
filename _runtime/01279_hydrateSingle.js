@@ -1,21 +1,15 @@
 // _runtime/01279_hydrateSingle.js
-import _slicedToArray from "_slicedToArray";
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function hydrateSingle(str) {
   let length;
   let length2;
-  let tmp14;
-  let tmp15;
-  let tmp16;
-  let tmp17;
-  let tmp7;
-  let tmp8;
   if (typeof str === "string") {
-    let obj = { type: 0, value: null };
+    obj = { type: 0, value: null };
     obj[1] = str;
     return obj;
   } else {
-    const first = _slicedToArray(str, 1)[0];
+    const first = callback(str, 1)[0];
     if (obj.Argument === first) {
       obj = { type: null, value: null };
       obj[0] = first;
@@ -61,7 +55,7 @@ function hydrateSingle(str) {
                 } else {
                   const _Error = Error;
                   const _HermesInternal = HermesInternal;
-                  const error = new Error("FormatJS keyless JSON encountered an unknown type: " + first);
+                  error = new Error("FormatJS keyless JSON encountered an unknown type: " + first);
                   throw error;
                 }
               }
@@ -80,7 +74,7 @@ function hydrateSingle(str) {
                   let length3 = arr3.length;
                 } while (num7 < length3);
               }
-              let obj1 = { value: null };
+              obj1 = { value: null };
               obj1[0] = tmp16[key10046];
               tmp16[key10046] = obj1;
               continue;
@@ -133,8 +127,8 @@ function compressFormatJsToAst(value) {
               const entries = Object.entries(value.options);
               const tmp14 = entries[Symbol.iterator]();
               while (tmp14 !== undefined) {
-                let tmp18 = _slicedToArray;
-                let tmp19 = _slicedToArray(tmp16, 2);
+                let tmp18 = callback;
+                let tmp19 = callback(tmp16, 2);
                 let tmp20 = compressFormatJsToAst;
                 obj[tmp19[0]] = compressFormatJsToAst(tmp19[1].value);
                 continue;
@@ -149,8 +143,8 @@ function compressFormatJsToAst(value) {
               const entries1 = Object.entries(value.options);
               const tmp5 = entries1[Symbol.iterator]();
               while (tmp5 !== undefined) {
-                let tmp9 = _slicedToArray;
-                let tmp10 = _slicedToArray(tmp7, 2);
+                let tmp9 = callback;
+                let tmp10 = callback(tmp7, 2);
                 let tmp11 = compressFormatJsToAst;
                 obj[tmp10[0]] = compressFormatJsToAst(tmp10[1].value);
                 continue;

@@ -1,17 +1,18 @@
 // _runtime/00985__resolveResponse.js
-import _slicedToArray from "_slicedToArray";
-import asyncGeneratorStep from "module_821";
-import { isInstanceOf } from "00827_isInstanceOf.js";
+import isInstanceOf from "isInstanceOf" /* 827 */;
+import addHandler from "addHandler" /* 850 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { addHandler } from "00850_addHandler.js";
 
 function _resolveResponse() {
   const self = this;
-  const tmp = asyncGeneratorStep((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c6 = 0;
-    let c5 = 0;
+  const tmp = callback2((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c6 = 0;
+    c5 = 0;
     return (function*(arg0, done) {
       if (done === 2) {
         done = 3;
@@ -44,7 +45,7 @@ function _resolveResponse() {
               body = undefined;
               reader = undefined;
               timeout = undefined;
-              let c4;
+              c4 = undefined;
               let timeout2;
               done = undefined;
               body = undefined;
@@ -75,7 +76,7 @@ function _resolveResponse() {
                   }, 5000);
                   timeout = 3;
                   done = 1;
-                  const obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = reader.read();
                   return obj1;
                 } else {
@@ -136,7 +137,7 @@ function _resolveResponse() {
       }
     })();
   });
-  const _resolveResponse = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -146,7 +147,7 @@ function _resolveResponse() {
   return applyArgumentsResult;
 }
 function streamHandler(clone) {
-  let closure_0 = clone;
+  closure_0 = clone;
   try {
     !(function resolveResponse(arg0, arg1) {
       const self = this;
@@ -158,10 +159,8 @@ function streamHandler(clone) {
       }
       return applyArgumentsResult;
     })(clone.clone(), () => {
-      let obj = clone(outer1_1[2]);
-      obj = { endTimestamp: null, response: null };
-      obj[0] = 1000 * clone(outer1_1[6]).timestampInSeconds();
-      obj[1] = clone;
+      let obj = clone(closure_1_1[2]);
+      obj = { endTimestamp: 1000 * clone(closure_1_1[6]).timestampInSeconds(), response: clone };
       obj.triggerHandlers("fetch-body-resolved", obj);
     });
   } catch (err) {
@@ -169,12 +168,10 @@ function streamHandler(clone) {
   }
 }
 function parseFetchArgs(arg0) {
-  let str4;
-  let tmp8;
   if (0 === arg0.length) {
     return { method: "GET", url: "" };
   } else if (2 === arg0.length) {
-    [str4, tmp8] = _slicedToArray(arg0, 2);
+    [str4, tmp8] = callback(arg0, 2);
     let tmp9 = str4;
     if (typeof str4 !== "string") {
       let str5 = "";
@@ -238,9 +235,7 @@ function parseFetchArgs(arg0) {
   }
 }
 function getHeadersFromFetchArgs(arg0) {
-  let tmp2;
-  let tmp3;
-  [tmp2, tmp3] = _slicedToArray(arg0, 2);
+  [tmp2, tmp3] = callback(arg0, 2);
   try {
     if (typeof tmp3 === "object") {
       if (null !== tmp3) {
@@ -271,33 +266,33 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
     const callback = closure_5;
     {
       callback(822).fill(callback(821).GLOBAL_OBJ, "fetch", (arg0) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         return () => {
           const items = [...arguments];
           let callback;
           let obj;
-          const error = new Error();
+          error = new Error();
           callback = error;
-          const request = outer2_6(items);
+          const request = closure_2_6(items);
           obj = { args: items, fetchData: obj, startTimestamp: null, virtualError: null, headers: null };
           obj = { method: request.method, url: request.url };
-          obj[2] = 1000 * outer2_0(outer2_1[6]).timestampInSeconds();
+          obj[2] = 1000 * closure_2_0(closure_2_1[6]).timestampInSeconds();
           obj[3] = error;
-          obj[4] = outer2_7(items);
+          obj[4] = closure_2_7(items);
           if (!callback) {
             obj = {};
             let merged = Object.assign(obj);
             tmp2(tmp3[2]).triggerHandlers("fetch", obj);
             const tmp2Result = tmp2(tmp3[2]);
           }
-          let obj3 = outer2_0(outer2_1[6]);
+          let obj3 = closure_2_0(closure_2_1[6]);
           callback = undefined;
-          callback = outer2_3((arg0) => {
-            let closure_0 = arg0;
-            let c1 = 0;
+          callback = closure_2_3((arg0) => {
+            closure_0 = arg0;
+            c1 = 0;
             return (/* F120503 */ function*() { ... })();
           });
-          return callback.apply(outer2_0(outer2_1[5]).GLOBAL_OBJ, items).then(function(arg0) {
+          return callback.apply(closure_2_0(closure_2_1[5]).GLOBAL_OBJ, items).then(function(arg0) {
             const self = this;
             const apply = closure_0.apply;
             if (typeof apply === "unknown") {
@@ -307,15 +302,15 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
             }
             return applyArgumentsResult;
           }, (error) => {
-            let obj = lib(outer2_1[2]);
+            obj = lib(closure_2_1[2]);
             obj = {};
             const merged = Object.assign(obj);
-            obj.endTimestamp = 1000 * lib(outer2_1[6]).timestampInSeconds();
+            obj.endTimestamp = 1000 * lib(closure_2_1[6]).timestampInSeconds();
             obj.error = error;
             obj.triggerHandlers("fetch", obj);
-            const obj3 = lib(outer2_1[6]);
+            const obj3 = lib(closure_2_1[6]);
             const tmp3 = obj;
-            const obj4 = lib(outer2_1[7]);
+            const obj4 = lib(closure_2_1[7]);
             if (tmp6) {
               error.stack = lib.stack;
               let tmpResult = tmp(tmp2[4]);
@@ -366,38 +361,38 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
       flag = false;
     }
     if (flag) {
-      flag = !callback(outer1_1[3]).supportsNativeFetch();
-      let obj = callback(outer1_1[3]);
+      flag = !callback(closure_1_1[3]).supportsNativeFetch();
+      let obj = callback(closure_1_1[3]);
     }
     if (!flag) {
-      callback(outer1_1[4]).fill(callback(outer1_1[5]).GLOBAL_OBJ, "fetch", (arg0) => {
-        let closure_0 = arg0;
+      callback(closure_1_1[4]).fill(callback(closure_1_1[5]).GLOBAL_OBJ, "fetch", (arg0) => {
+        closure_0 = arg0;
         return () => {
           const items = [...arguments];
           let callback;
           let obj;
-          const error = new Error();
+          error = new Error();
           callback = error;
-          const request = outer2_6(items);
+          const request = closure_2_6(items);
           obj = { args: items, fetchData: obj, startTimestamp: null, virtualError: null, headers: null };
           obj = { method: request.method, url: request.url };
-          obj[2] = 1000 * outer2_0(outer2_1[6]).timestampInSeconds();
+          obj[2] = 1000 * closure_2_0(closure_2_1[6]).timestampInSeconds();
           obj[3] = error;
-          obj[4] = outer2_7(items);
+          obj[4] = closure_2_7(items);
           if (!callback) {
             obj = {};
             let merged = Object.assign(obj);
             tmp2(tmp3[2]).triggerHandlers("fetch", obj);
             const tmp2Result = tmp2(tmp3[2]);
           }
-          let obj3 = outer2_0(outer2_1[6]);
+          let obj3 = closure_2_0(closure_2_1[6]);
           callback = undefined;
-          callback = outer2_3((arg0) => {
-            let closure_0 = arg0;
-            let c1 = 0;
+          callback = closure_2_3((arg0) => {
+            closure_0 = arg0;
+            c1 = 0;
             return (/* F120503 */ function*() { ... })();
           });
-          return callback.apply(outer2_0(outer2_1[5]).GLOBAL_OBJ, items).then(function(arg0) {
+          return callback.apply(closure_2_0(closure_2_1[5]).GLOBAL_OBJ, items).then(function(arg0) {
             const self = this;
             const apply = closure_0.apply;
             if (typeof apply === "unknown") {
@@ -407,15 +402,15 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
             }
             return applyArgumentsResult;
           }, (error) => {
-            let obj = lib(outer2_1[2]);
+            obj = lib(closure_2_1[2]);
             obj = {};
             const merged = Object.assign(obj);
-            obj.endTimestamp = 1000 * lib(outer2_1[6]).timestampInSeconds();
+            obj.endTimestamp = 1000 * lib(closure_2_1[6]).timestampInSeconds();
             obj.error = error;
             obj.triggerHandlers("fetch", obj);
-            const obj3 = lib(outer2_1[6]);
+            const obj3 = lib(closure_2_1[6]);
             const tmp3 = obj;
-            const obj4 = lib(outer2_1[7]);
+            const obj4 = lib(closure_2_1[7]);
             if (tmp6) {
               error.stack = lib.stack;
               let tmpResult = tmp(tmp2[4]);
@@ -452,7 +447,7 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
           });
         };
       });
-      const obj2 = callback(outer1_1[4]);
+      const obj2 = callback(closure_1_1[4]);
     }
   });
 };

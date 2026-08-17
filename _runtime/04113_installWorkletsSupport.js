@@ -1,7 +1,8 @@
 // _runtime/04113_installWorkletsSupport.js
-import { reactNativeWorkletsCompat } from "../discord_app/modules/gesture_handlers/native/reactNativeWorkletsCompat.js";
-import { getInstalledNitro } from "04118_getInstalledNitro.js";
-let require = arg1;
+import _mod4114 from "module_4114" /* 4114 */;
+import getInstalledNitro from "getInstalledNitro" /* 4118 */;
+
+require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function determine_Pnpm_installWorkletsSupportTs1(value){const{boxedNitroProxy}=this.__closure;const nitroProxy=boxedNitroProxy.unbox();return nitroProxy.isHybridObject(value);}" };
 let closure_3 = { code: "function pack_Pnpm_installWorkletsSupportTs2(value){const{boxedNitroProxy}=this.__closure;const nitroProxy=boxedNitroProxy.unbox();return nitroProxy.box(value);}" };
@@ -37,7 +38,7 @@ arg5.installWorkletsSupport = function installWorkletsSupport() {
     fn3.__workletHash = 16222078380838;
     fn3.__initData = closure_4;
     obj[3] = fn3;
-    const result = reactNativeWorkletsCompat.registerCustomSerializable(obj);
+    const result = _mod4114.registerCustomSerializable(obj);
   } catch (err) {
   }
 };

@@ -1,15 +1,16 @@
 // _runtime/00334_useMergeRefs.js
-import "noop";
+import noopAll from "noop" /* 19 */;
 
+noopAll;
 require("noop").useCallback;
 
 export default function useMergeRefs() {
   let items = [...arguments];
   const items1 = [...items];
   return items(335)(useCallback((arg0) => {
-    const items = arg0;
-    let closure_1 = items.map((fn) => {
-      let closure_0 = fn;
+    items = arg0;
+    closure_1 = items.map((fn) => {
+      closure_0 = fn;
       if (null != fn) {
         if (typeof fn === "function") {
           fn = fn(closure_0);

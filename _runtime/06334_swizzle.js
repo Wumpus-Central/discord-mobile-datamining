@@ -1,5 +1,6 @@
 // _runtime/06334_swizzle.js
-import { isArrayish } from "06335_isArrayish.js";
+import isArrayish from "isArrayish" /* 6335 */;
+
 function swizzle(arg0) {
   let items = [];
   let num = 0;
@@ -22,9 +23,9 @@ function swizzle(arg0) {
   return tmp;
 }
 swizzle.wrap = (arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return () => {
-    if (typeof outer1_4 !== "function") {
+    if (typeof closure_1_4 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const items = [];
@@ -34,19 +35,19 @@ swizzle.wrap = (arg0) => {
     let tmp2 = items;
     if (0 < length) {
       const tmp3 = arguments[num];
-      while (!callback(outer1_1[0])(tmp3)) {
+      while (!callback(closure_1_1[0])(tmp3)) {
         let arr = arr2.push(tmp3);
         let tmp9 = arr2;
         num = num + 1;
         arr2 = tmp7;
         tmp2 = tmp7;
       }
-      const call = outer1_2.call;
-      const call2 = outer1_3.call;
-      const tmp12 = typeof call2 === "unknown" ? outer1_3() : call2(tmp3);
-      typeof call === "unknown" ? outer1_2(tmp12) : call(arr2, tmp12);
-      const tmp10 = outer1_2;
-      const tmp11 = outer1_3;
+      const call = closure_1_2.call;
+      const call2 = closure_1_3.call;
+      const tmp12 = typeof call2 === "unknown" ? closure_1_3() : call2(tmp3);
+      typeof call === "unknown" ? closure_1_2(tmp12) : call(arr2, tmp12);
+      const tmp10 = closure_1_2;
+      const tmp11 = closure_1_3;
     }
     return callback(tmp2);
   };

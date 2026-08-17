@@ -1,7 +1,5 @@
 // _runtime/metro/13792__.js
 arg5.default = (createSocket) => {
-  let host;
-  let port;
   ({ host, port } = createSocket);
   if (null != createSocket.createSocket) {
     let tmp7 = typeof host === "string";
@@ -22,7 +20,7 @@ arg5.default = (createSocket) => {
       if (tmp13) {
         if (typeof tmp !== "function") {
           const _Error4 = Error;
-          const error = new Error("invalid onCommand handler");
+          error = new Error("invalid onCommand handler");
           throw error;
         }
       } else {

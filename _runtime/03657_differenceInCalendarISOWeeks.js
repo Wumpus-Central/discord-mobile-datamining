@@ -1,7 +1,7 @@
 // _runtime/03657_differenceInCalendarISOWeeks.js
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
-import startOfISOWeek from "startOfISOWeek";
-import requiredArgs from "requiredArgs";
+import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
+import startOfISOWeek from "startOfISOWeek" /* 3630 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!getTimezoneOffsetInMilliseconds) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!getTimezoneOffsetInMilliseconds) {
 } else {
   tmp3 = getTimezoneOffsetInMilliseconds;
 }
-let c0 = tmp3;
+getTimezoneOffsetInMilliseconds = tmp3;
 if (!startOfISOWeek) {
   obj = { default: null };
   obj[0] = startOfISOWeek;
@@ -18,7 +18,7 @@ if (!startOfISOWeek) {
 } else {
   tmp5 = startOfISOWeek;
 }
-let closure_1 = tmp5;
+startOfISOWeek = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,15 +26,16 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 let c3 = 604800000;
 
 export default function differenceInCalendarISOWeeks(arg0, arg1) {
-  tmp7.default(2, arguments);
-  const defaultResult1 = tmp5.default(arg0);
-  const defaultResult2 = tmp5.default(arg1);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfISOWeek.default(arg0);
+  const defaultResult2 = startOfISOWeek.default(arg1);
   const time = defaultResult1.getTime();
-  const diff = time - tmp3.default(defaultResult1);
+  const diff = time - getTimezoneOffsetInMilliseconds.default(defaultResult1);
   const time1 = defaultResult2.getTime();
-  return Math.round((diff - (time1 - tmp3.default(defaultResult2))) / c3);
+  return Math.round((diff - (time1 - getTimezoneOffsetInMilliseconds.default(defaultResult2))) / c3);
 };
 export default exports.default;

@@ -1,8 +1,9 @@
 // _runtime/00969_addPrivateRequestAttributes.js
-import asyncGeneratorStep from "captureCheckIn";
-import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
-import { captureCheckIn } from "00869_captureCheckIn.js";
-import { handleResponseError } from "00970_handleResponseError.js";
+import getSpanStatusFromHttpCode from "getSpanStatusFromHttpCode" /* 840 */;
+import captureCheckIn from "captureCheckIn" /* 869 */;
+import _mod958 from "module_958" /* 958 */;
+import handleResponseError from "handleResponseError" /* 970 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function addPrivateRequestAttributes(setAttributes, prompt) {
   let obj = handleResponseError;
@@ -12,7 +13,7 @@ function addPrivateRequestAttributes(setAttributes, prompt) {
   if ("prompt" in prompt) {
     obj = {};
     const _JSON = JSON;
-    obj[tmp(958).GEN_AI_PROMPT_ATTRIBUTE] = JSON.stringify(prompt.prompt);
+    obj[_mod958.GEN_AI_PROMPT_ATTRIBUTE] = JSON.stringify(prompt.prompt);
     setAttributes.setAttributes(obj);
   }
 }
@@ -44,21 +45,22 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
   obj = {
     get(self) {
       let obj = self[arg1];
-      let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
+      let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
       if (typeof obj === "function") {
         if (tmpResult.shouldInstrument(methodPath)) {
           str = obj;
-          let closure_2 = self;
-          let closure_3 = methodPath;
+          closure_1 = methodPath;
+          closure_2 = self;
+          closure_3 = closure_1;
           let _Proxy2 = Proxy;
           obj = { apply: null };
           obj[0] = function apply(closure_0) {
-            let closure_1 = arg2;
-            let obj = { [outer1_0(outer1_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "anthropic" };
+            let dependencyMap = arg2;
+            let obj = { [closure_1_0(closure_1_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "anthropic" };
             let tmp2 = str;
-            let startSpanManual = methodPath;
-            obj[str(methodPath[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(methodPath[2]).getFinalOperationName(closure_1);
-            obj[str(methodPath[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.anthropic";
+            let startSpanManual = dependencyMap;
+            obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[2]).getFinalOperationName(dependencyMap);
+            obj[str(dependencyMap[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.anthropic";
             if (arg2.length > 0) {
               if (typeof arg2[0] === "object") {
                 if (null !== arg2[0]) {
@@ -121,24 +123,24 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                     obj[1] = tmp2(startSpanManual[2]).getSpanOperation(tmp);
                     obj[2] = obj;
                     return tmp2Result.startSpan(obj, (setAttributes) => {
-                      let closure_0 = setAttributes;
+                      closure_0 = setAttributes;
                       if (tmp) {
-                        let obj = str(methodPath[4]);
+                        let obj = str(dependencyMap[4]);
                         const messagesFromParamsResult = obj.messagesFromParams(closure_2);
                         const tmp2 = closure_2;
                         let tmp3 = str;
-                        const tmp4 = methodPath;
-                        str(methodPath[4]).setMessagesAttribute(setAttributes, messagesFromParamsResult);
+                        const tmp4 = dependencyMap;
+                        str(dependencyMap[4]).setMessagesAttribute(setAttributes, messagesFromParamsResult);
                         if ("prompt" in closure_2) {
                           obj = {};
                           let _JSON = JSON;
                           obj[tmp3(tmp4[1]).GEN_AI_PROMPT_ATTRIBUTE] = JSON.stringify(tmp2.prompt);
                           setAttributes.setAttributes(obj);
                         }
-                        const obj2 = str(methodPath[4]);
+                        const obj2 = str(dependencyMap[4]);
                       }
-                      return str(methodPath[9]).handleCallbackErrors(() => setAttributes.apply(outer1_2, closure_1), (arg0) => {
-                        let obj = setAttributes(outer1_1[5]);
+                      return str(dependencyMap[9]).handleCallbackErrors(() => setAttributes.apply(closure_1_2, closure_1), (arg0) => {
+                        let obj = setAttributes(closure_1_1[5]);
                         obj = { function: closure_1 };
                         obj.captureException(arg0, { mechanism: { handled: false, type: "auto.ai.anthropic", data: obj } });
                       }, () => {
@@ -152,8 +154,8 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                         if (tmp) {
                           if ("type" in error) {
                             if ("error" === error.type) {
-                              str(methodPath[4]).handleResponseError(obj, error);
-                              const obj8 = str(methodPath[4]);
+                              str(table[4]).handleResponseError(obj, error);
+                              const obj8 = str(table[4]);
                             }
                           }
                           if (recordOutputs.recordOutputs) {
@@ -165,7 +167,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                           }
                           if (tmp3) {
                             obj = {};
-                            ({ id: obj2[str(undefined, methodPath[1]).GEN_AI_RESPONSE_ID_ATTRIBUTE], model: obj2[str(undefined, methodPath[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] } = error);
+                            ({ id: obj2[str(undefined, closure_1[1]).GEN_AI_RESPONSE_ID_ATTRIBUTE], model: obj2[str(undefined, closure_1[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] } = error);
                             obj.setAttributes(obj);
                             if (tmp7) {
                               obj = {};
@@ -194,10 +196,10 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                     });
                   }
                 }
-                closure_1 = closure_0;
-                let closure_3 = arg2;
-                let closure_4 = tmp;
-                let closure_6 = closure_3;
+                dependencyMap = closure_0;
+                closure_3 = arg2;
+                closure_4 = tmp;
+                closure_6 = closure_3;
                 let str14 = obj[tmp2(undefined, startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
                 if (str14 == null) {
                   str14 = "unknown";
@@ -211,10 +213,10 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                   if (!tmp12) {
                     closure_0 = undefined;
                     closure_0 = _self((arg0) => {
-                      let closure_0 = arg0;
-                      let c6 = 0;
-                      let c7 = 0;
-                      let c5 = 0;
+                      closure_0 = arg0;
+                      c6 = 0;
+                      c7 = 0;
+                      c5 = 0;
                       return (function*(arg0) {
                         if (c7 === 2) {
                           c7 = 3;
@@ -235,8 +237,8 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                             let tmp7 = c6;
                             if (0 !== c6) {
                               if (1 === tmp7) {
-                                let c5 = 0;
-                                tmp7 = callback3(callback3, callback, outer1_4);
+                                c5 = 0;
+                                tmp7 = callback3(callback3, callback, closure_1_4);
                               } else if (arg0 === 1) {
                                 c7 = 3;
                                 throw arg1;
@@ -247,7 +249,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                 obj[0] = arg1;
                                 return obj;
                               } else {
-                                let c1 = arg1;
+                                c1 = arg1;
                                 obj = callback(table[8]);
                                 const recordOutputs = c6.recordOutputs;
                                 c1 = recordOutputs;
@@ -271,7 +273,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                               return obj2;
                             } else {
                               const callback2 = tmp3;
-                              let closure_2 = tmp7;
+                              closure_2 = tmp7;
                               c1 = undefined;
                               c5 = 1;
                               let recordInputs = c6.recordInputs;
@@ -284,7 +286,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                               c6 = 2;
                               c7 = 1;
                               const obj3 = { value: null, done: false };
-                              obj3[0] = callback.apply(outer1_2, outer1_3);
+                              obj3[0] = callback.apply(closure_1_2, closure_1_3);
                               return obj3;
                             }
                           } catch (tmp31) {
@@ -300,7 +302,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                       })();
                     });
                     let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj, function(arg0) {
-                      const self = this;
+                      self = this;
                       const apply = closure_0.apply;
                       if (typeof apply === "unknown") {
                         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -331,13 +333,13 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                     }
                     return callback(dependencyMap[8]).instrumentMessageStream(applyResult, arg0, flag);
                   } catch (tmp13) {
-                    tmp(tmp13, tmp, tmp);
+                    callback2(tmp13, tmp, callback2);
                   }
                 });
                 const tmp2Result2 = tmp2(startSpanManual[2]);
               }
             }
-            if ("models.retrieve" === closure_1) {
+            if ("models.retrieve" === dependencyMap) {
               str = arg2[0];
             } else {
               str = "unknown";
@@ -363,21 +365,22 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
             obj = { get: null };
             obj[0] = function get(self) {
               let obj = self[arg1];
-              let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
+              let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
               if (typeof obj === "function") {
                 if (tmpResult.shouldInstrument(methodPath)) {
                   str = obj;
-                  let closure_2 = self;
-                  let closure_3 = methodPath;
+                  closure_1 = methodPath;
+                  closure_2 = self;
+                  closure_3 = closure_1;
                   let _Proxy2 = Proxy;
                   obj = { apply: null };
                   obj[0] = function apply(closure_0) {
-                    let closure_1 = arg2;
-                    let obj = { [outer1_0(outer1_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "anthropic" };
+                    let dependencyMap = arg2;
+                    let obj = { [closure_1_0(closure_1_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "anthropic" };
                     let tmp2 = str;
-                    let startSpanManual = methodPath;
-                    obj[str(methodPath[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(methodPath[2]).getFinalOperationName(closure_1);
-                    obj[str(methodPath[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.anthropic";
+                    let startSpanManual = dependencyMap;
+                    obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[2]).getFinalOperationName(dependencyMap);
+                    obj[str(dependencyMap[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.anthropic";
                     if (arg2.length > 0) {
                       if (typeof arg2[0] === "object") {
                         if (null !== arg2[0]) {
@@ -440,30 +443,30 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                             obj[1] = tmp2(startSpanManual[2]).getSpanOperation(tmp);
                             obj[2] = obj;
                             return tmp2Result.startSpan(obj, (setAttributes) => {
-                              let closure_0 = setAttributes;
+                              closure_0 = setAttributes;
                               if (tmp) {
-                                let obj = str(methodPath[4]);
+                                let obj = str(dependencyMap[4]);
                                 const messagesFromParamsResult = obj.messagesFromParams(closure_2);
                                 const tmp2 = closure_2;
                                 let tmp3 = str;
-                                const tmp4 = methodPath;
-                                str(methodPath[4]).setMessagesAttribute(setAttributes, messagesFromParamsResult);
+                                const tmp4 = dependencyMap;
+                                str(dependencyMap[4]).setMessagesAttribute(setAttributes, messagesFromParamsResult);
                                 if ("prompt" in closure_2) {
                                   obj = {};
                                   let _JSON = JSON;
                                   obj[tmp3(tmp4[1]).GEN_AI_PROMPT_ATTRIBUTE] = JSON.stringify(tmp2.prompt);
                                   setAttributes.setAttributes(obj);
                                 }
-                                const obj2 = str(methodPath[4]);
+                                const obj2 = str(dependencyMap[4]);
                               }
-                              return str(methodPath[9]).handleCallbackErrors(() => { ... }, () => { ... }, /* F115360 */ function() { ... }, () => { ... });
+                              return str(dependencyMap[9]).handleCallbackErrors(() => { ... }, () => { ... }, /* F115360 */ function() { ... }, () => { ... });
                             });
                           }
                         }
-                        closure_1 = closure_0;
-                        let closure_3 = arg2;
-                        let closure_4 = tmp;
-                        let closure_6 = closure_3;
+                        dependencyMap = closure_0;
+                        closure_3 = arg2;
+                        closure_4 = tmp;
+                        closure_6 = closure_3;
                         let str14 = obj[tmp2(undefined, startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
                         if (str14 == null) {
                           str14 = "unknown";
@@ -477,14 +480,14 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                           if (!tmp12) {
                             closure_0 = undefined;
                             closure_0 = _self((arg0) => {
-                              let closure_0 = arg0;
-                              let c6 = 0;
-                              let c7 = 0;
-                              let c5 = 0;
+                              closure_0 = arg0;
+                              c6 = 0;
+                              c7 = 0;
+                              c5 = 0;
                               return (/* F120500 */ function*() { ... })();
                             });
                             let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj, function(arg0) {
-                              const self = this;
+                              self = this;
                               const apply = closure_0.apply;
                               if (typeof apply === "unknown") {
                                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -515,13 +518,13 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                             }
                             return callback(dependencyMap[8]).instrumentMessageStream(applyResult, arg0, flag);
                           } catch (tmp13) {
-                            tmp(tmp13, tmp, tmp);
+                            callback2(tmp13, tmp, callback2);
                           }
                         });
                         const tmp2Result2 = tmp2(startSpanManual[2]);
                       }
                     }
-                    if ("models.retrieve" === closure_1) {
+                    if ("models.retrieve" === dependencyMap) {
                       str = arg2[0];
                     } else {
                       str = "unknown";
@@ -547,21 +550,22 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                     obj = { get: null };
                     obj[0] = function get(self) {
                       let obj = self[arg1];
-                      let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
+                      let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
                       if (typeof obj === "function") {
                         if (tmpResult.shouldInstrument(methodPath)) {
                           str = obj;
-                          let closure_2 = self;
-                          let closure_3 = methodPath;
+                          closure_1 = methodPath;
+                          closure_2 = self;
+                          closure_3 = closure_1;
                           let _Proxy2 = Proxy;
                           obj = { apply: null };
                           obj[0] = function apply(closure_0) {
-                            let closure_1 = arg2;
-                            let obj = { [outer1_0(outer1_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "anthropic" };
+                            let dependencyMap = arg2;
+                            let obj = { [closure_1_0(closure_1_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "anthropic" };
                             let tmp2 = str;
-                            let startSpanManual = methodPath;
-                            obj[str(methodPath[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(methodPath[2]).getFinalOperationName(closure_1);
-                            obj[str(methodPath[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.anthropic";
+                            let startSpanManual = dependencyMap;
+                            obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[2]).getFinalOperationName(dependencyMap);
+                            obj[str(dependencyMap[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.anthropic";
                             if (arg2.length > 0) {
                               if (typeof arg2[0] === "object") {
                                 if (null !== arg2[0]) {
@@ -626,10 +630,10 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                     return tmp2Result.startSpan(obj, () => { ... });
                                   }
                                 }
-                                closure_1 = closure_0;
-                                let closure_3 = arg2;
-                                let closure_4 = tmp;
-                                let closure_6 = closure_3;
+                                dependencyMap = closure_0;
+                                closure_3 = arg2;
+                                closure_4 = tmp;
+                                closure_6 = closure_3;
                                 let str14 = obj[tmp2(undefined, startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
                                 if (str14 == null) {
                                   str14 = "unknown";
@@ -653,7 +657,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                 const tmp2Result2 = tmp2(startSpanManual[2]);
                               }
                             }
-                            if ("models.retrieve" === closure_1) {
+                            if ("models.retrieve" === dependencyMap) {
                               str = arg2[0];
                             } else {
                               str = "unknown";
@@ -679,12 +683,13 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                             obj = { get: null };
                             obj[0] = function get(self) {
                               let obj = self[arg1];
-                              let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
+                              let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
                               if (typeof obj === "function") {
                                 if (tmpResult.shouldInstrument(methodPath)) {
                                   str = obj;
-                                  let closure_2 = self;
-                                  let closure_3 = methodPath;
+                                  closure_1 = methodPath;
+                                  closure_2 = self;
+                                  closure_3 = closure_1;
                                   let _Proxy2 = Proxy;
                                   obj = { apply: null };
                                   obj[0] = function apply() { ... };
@@ -707,25 +712,25 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                     obj = { get: null };
                                     obj[0] = function get() { ... };
                                     proxy = new Proxy(obj, obj);
-                                    let tmp14 = methodPath;
+                                    let tmp14 = closure_1;
                                   }
                                 }
                               }
                             };
                             proxy = new Proxy(obj, obj);
-                            let tmp14 = methodPath;
+                            let tmp14 = closure_1;
                           }
                         }
                       }
                     };
                     proxy = new Proxy(obj, obj);
-                    let tmp14 = methodPath;
+                    let tmp14 = closure_1;
                   }
                 }
               }
             };
             proxy = new Proxy(obj, obj);
-            let tmp14 = methodPath;
+            let tmp14 = closure_1;
           }
         }
       }

@@ -1,23 +1,16 @@
 // _runtime/00941_createMcpSpan.js
-import { getClient } from "00848_getClient.js";
-import { createChildOrRootSpan } from "00866_createChildOrRootSpan.js";
-import { extractClientInfo } from "00938_extractClientInfo.js";
-import { extractTargetInfo } from "00942_extractTargetInfo.js";
-import { getNotificationAttributes } from "00943_getNotificationAttributes.js";
-import { set } from "00944_set.js";
-import { 00839__ } from "metro/00839__.js";
-import { 00940__ } from "metro/00940__.js";
-const require = arg1;
+import _mod839 from "module_839" /* 839 */;
+import getClient from "getClient" /* 848 */;
+import createChildOrRootSpan from "createChildOrRootSpan" /* 866 */;
+import extractClientInfo from "extractClientInfo" /* 938 */;
+import _mod940 from "module_940" /* 940 */;
+import extractTargetInfo from "extractTargetInfo" /* 942 */;
+import getNotificationAttributes from "getNotificationAttributes" /* 943 */;
+import set from "set" /* 944 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function createMcpSpan(arg0) {
-  let callback;
-  let extra;
-  let message;
-  let method;
-  let options;
-  let params;
-  let transport;
-  let type;
   ({ type, message, options } = arg0);
   ({ method, params } = message);
   let name = method;
@@ -38,7 +31,7 @@ function createMcpSpan(arg0) {
   }
   obj = {};
   const merged = Object.assign(extractClientInfo.buildTransportAttributes(transport, extra));
-  obj[00940__.MCP_METHOD_NAME_ATTRIBUTE] = method;
+  obj[_mod940.MCP_METHOD_NAME_ATTRIBUTE] = method;
   const obj4 = extractClientInfo;
   let recordInputs;
   if (options != null) {
@@ -55,10 +48,10 @@ function createMcpSpan(arg0) {
     MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE = tmp6(940).MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE;
     MCP_NOTIFICATION_ORIGIN_VALUE = tmp6(940).MCP_NOTIFICATION_ORIGIN_VALUE;
   }
-  const obj1 = {};
-  obj1[00839__.SEMANTIC_ATTRIBUTE_SENTRY_OP] = MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE;
-  obj1[00839__.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = MCP_NOTIFICATION_ORIGIN_VALUE;
-  obj1[00839__.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = 00940__.MCP_ROUTE_SOURCE_VALUE;
+  obj1 = {};
+  obj1[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_OP] = MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE;
+  obj1[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = MCP_NOTIFICATION_ORIGIN_VALUE;
+  obj1[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = _mod940.MCP_ROUTE_SOURCE_VALUE;
   const merged2 = Object.assign(obj1);
   let tmp6Result = tmp6(848);
   const client = tmp6Result.getClient();
@@ -74,8 +67,6 @@ function createMcpSpan(arg0) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.buildMcpServerSpanConfig = function buildMcpServerSpanConfig(closure_1, self, closure_2, closure_0) {
-  let method;
-  let params;
   ({ method, params } = closure_1);
   let obj = extractTargetInfo;
   obj = params;
@@ -91,17 +82,17 @@ arg5.buildMcpServerSpanConfig = function buildMcpServerSpanConfig(closure_1, sel
   obj = {};
   let tmpResult = tmp(938);
   const merged = Object.assign(tmpResult.buildTransportAttributes(self, closure_2));
-  obj[00940__.MCP_METHOD_NAME_ATTRIBUTE] = method;
+  obj[_mod940.MCP_METHOD_NAME_ATTRIBUTE] = method;
   tmpResult = tmp(943);
   let recordInputs;
   if (closure_0 != null) {
     recordInputs = closure_0.recordInputs;
   }
   const merged1 = Object.assign(tmpResult.buildTypeSpecificAttributes("request", closure_1, params, recordInputs));
-  const obj1 = {};
-  obj1[00839__.SEMANTIC_ATTRIBUTE_SENTRY_OP] = 00940__.MCP_SERVER_OP_VALUE;
-  obj1[00839__.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = 00940__.MCP_FUNCTION_ORIGIN_VALUE;
-  obj1[00839__.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = 00940__.MCP_ROUTE_SOURCE_VALUE;
+  obj1 = {};
+  obj1[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_OP] = _mod940.MCP_SERVER_OP_VALUE;
+  obj1[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = _mod940.MCP_FUNCTION_ORIGIN_VALUE;
+  obj1[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = _mod940.MCP_ROUTE_SOURCE_VALUE;
   const merged2 = Object.assign(obj1);
   const client = getClient.getClient();
   let sendDefaultPii;
@@ -112,7 +103,7 @@ arg5.buildMcpServerSpanConfig = function buildMcpServerSpanConfig(closure_1, sel
   const BooleanResult = Boolean(sendDefaultPii);
   const obj2 = { name: combined, op: null, forceTransaction: true, attributes: null };
   const result = set.filterMcpPiiFromSpanData(obj, BooleanResult);
-  obj2[1] = 00940__.MCP_SERVER_OP_VALUE;
+  obj2[1] = _mod940.MCP_SERVER_OP_VALUE;
   obj2[3] = result;
   return obj2;
 };

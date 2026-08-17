@@ -1,7 +1,7 @@
 // _runtime/03911_subWeeks.js
-import toInteger from "toInteger";
-import addWeeks from "addWeeks";
-import requiredArgs from "requiredArgs";
+import toInteger from "toInteger" /* 3476 */;
+import addWeeks from "addWeeks" /* 3640 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!toInteger) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!toInteger) {
 } else {
   tmp3 = toInteger;
 }
-let c0 = tmp3;
+toInteger = tmp3;
 if (!addWeeks) {
   obj = { default: null };
   obj[0] = addWeeks;
@@ -18,7 +18,7 @@ if (!addWeeks) {
 } else {
   tmp5 = addWeeks;
 }
-let closure_1 = tmp5;
+addWeeks = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,9 +26,10 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function subWeeks(arg0, arg1) {
-  tmp7.default(2, arguments);
-  return tmp5.default(arg0, -tmp3.default(arg1));
+  requiredArgs.default(2, arguments);
+  return addWeeks.default(arg0, -toInteger.default(arg1));
 };
 export default exports.default;

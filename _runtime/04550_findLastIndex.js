@@ -1,5 +1,6 @@
 // _runtime/04550_findLastIndex.js
-import createFind from "createFind";
+import findLastIndex from "findLastIndex" /* 4552 */;
+import createFind from "createFind" /* 4551 */;
 
 
-export default createFind(require("findLastIndex"));
+export default createFind(findLastIndex);

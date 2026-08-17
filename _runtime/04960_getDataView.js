@@ -1,6 +1,7 @@
 // _runtime/04960_getDataView.js
-import { getDataView } from "04910_getDataView.js";
-const require = arg1;
+import getDataView from "getDataView" /* 4910 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.default = {
   read(byteLength) {
@@ -17,7 +18,7 @@ arg5.default = {
     let tmp5;
     if (8 <= byteLength.byteLength) {
       const uint16 = byteLength.getUint16(6, true);
-      const obj1 = { value: null, description: null };
+      obj1 = { value: null, description: null };
       obj1[0] = uint16;
       const _HermesInternal = HermesInternal;
       obj1[1] = "" + uint16 + "px";

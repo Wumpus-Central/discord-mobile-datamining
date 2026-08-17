@@ -1,7 +1,9 @@
 // _runtime/13696_call.js
-import { 13697__ } from "metro/13697__.js";
-let closure_2 = require("call")({}.hasOwnProperty);
+import call from "call" /* 13680 */;
+import _mod13697 from "module_13697" /* 13697 */;
+
+let closure_2 = call({}.hasOwnProperty);
 
 export default Object.hasOwn || (function hasOwn(arg0, arg1) {
-  return callback(13697__(arg0), arg1);
+  return callback(_mod13697(arg0), arg1);
 });

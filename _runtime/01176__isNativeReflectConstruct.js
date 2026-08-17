@@ -1,10 +1,11 @@
 // _runtime/01176__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
-import { Alert } from "mobileReplayIntegrationNoop";
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_5 from "_get" /* 96 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import { Alert } from "get ActivityIndicator" /* 17 */;
 
 let ReactNativeClient = arg1;
 function _isNativeReflectConstruct() {
@@ -18,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,8 +30,8 @@ function _isNativeReflectConstruct() {
 class ReactNativeClient {
   constructor(arg0) {
     self = this;
-    tmp = apply;
-    tmp2 = _isNativeReflectConstruct(this, apply);
+    tmp = closure_0;
+    tmp2 = closure_2(this, closure_0);
     tmp3 = ReactNativeClient;
     tmp4 = closure_1;
     obj = require("ignoreRequireCycleLogs");
@@ -90,9 +91,9 @@ class ReactNativeClient {
     }
     items = [];
     items[0] = global;
-    tmp13 = __esModule;
-    obj4 = __esModule(tmp);
-    tmp14 = __esModule;
+    tmp13 = closure_4;
+    obj4 = closure_4(tmp);
+    tmp14 = closure_3;
     if (_isNativeReflectConstruct()) {
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj4, items, tmp13(self).constructor);
@@ -100,7 +101,7 @@ class ReactNativeClient {
       constructResult = obj4.apply(self, items);
     }
     tmp14Result = tmp14(self, constructResult);
-    apply = tmp14Result;
+    closure_0 = tmp14Result;
     tmp14Result._outcomesBuffer = [];
     if (true === global.sendDefaultPii) {
       str4 = "beforeSendSession";
@@ -109,16 +110,16 @@ class ReactNativeClient {
     if (global.enableLogs) {
       str5 = "flush";
       onResult1 = tmp14Result.on("flush", () => {
-        const result = tmp14Result(outer1_1[10])._INTERNAL_flushLogsBuffer(tmp14Result);
+        const result = lib(closure_1_1[10])._INTERNAL_flushLogsBuffer(lib);
       });
       str6 = "afterCaptureLog";
       onResult2 = tmp14Result.on("afterCaptureLog", () => {
-        if (tmp14Result._logFlushIdleTimeout) {
+        if (lib._logFlushIdleTimeout) {
           const _clearTimeout = clearTimeout;
           clearTimeout(tmp._logFlushIdleTimeout);
         }
-        tmp14Result._logFlushIdleTimeout = setTimeout(() => {
-          const result = outer1_0(outer1_1[10])._INTERNAL_flushLogsBuffer(closure_0);
+        lib._logFlushIdleTimeout = setTimeout(() => {
+          const result = closure_1_0(closure_1_1[10])._INTERNAL_flushLogsBuffer(closure_0);
         }, 5000);
       });
     }
@@ -126,7 +127,7 @@ class ReactNativeClient {
     return tmp14Result;
   }
 }
-require("_inherits")(ReactNativeClient, require("registerSpanErrorInstrumentation").Client);
+_inheritsDefault(ReactNativeClient, require("registerSpanErrorInstrumentation").Client);
 let items = [
   {
     key: "eventFromException",
@@ -191,7 +192,7 @@ let items = [
             self.emit("beforeEnvelope", arg0);
             const _transport = self._transport;
             _transport.send(arg0).then(null, (arg0) => {
-              if (arg0 instanceof _true(outer1_1[10]).SentryError) {
+              if (arg0 instanceof _true(closure_1_1[10]).SentryError) {
                 _true = false;
                 const debug2 = tmp(tmp2[10]).debug;
                 debug2.error("SentryError while sending event, keeping outcomes buffer:", arg0);

@@ -1,7 +1,8 @@
 // _runtime/01118_enrichAndroidProfileWithEventContext.js
-import { isHermesEnabled } from "01002_isHermesEnabled.js";
-import { getDebugMetadata } from "01119_getDebugMetadata.js";
-const require = arg1;
+import isHermesEnabled from "isHermesEnabled" /* 1002 */;
+import getDebugMetadata from "getDebugMetadata" /* 1119 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
   let obj = { debug_meta: null, build_id: null, device_cpu_frequencies: null, device_is_emulator: null, device_locale: null, device_manufacturer: null, device_model: null, device_os_name: null, device_os_version: null, device_physical_memory_bytes: null, environment: null, profile_id: null, timestamp: null, release: null, dist: null, transaction_id: null, transaction_name: null, trace_id: null, version_name: null, version_code: null };
@@ -390,7 +391,7 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
         }
         obj[4] = flag;
         obj[6] = obj;
-        const obj1 = { name: null, id: null, trace_id: null, active_thread_id: null };
+        obj1 = { name: null, id: null, trace_id: null, active_thread_id: null };
         obj1[0] = contexts.transaction || "";
         obj1[1] = contexts.event_id || "";
         obj1[2] = str;

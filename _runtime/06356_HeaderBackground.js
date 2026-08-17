@@ -1,19 +1,15 @@
 // _runtime/06356_HeaderBackground.js
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { createStandardNavigationFactories } from "01501_createStandardNavigationFactories.js";
+import noopAll from "noop" /* 19 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ Animated: obj1, Platform, StyleSheet } = get_ActivityIndicator);
 const styles = StyleSheet.create({ container: { flex: 1, elevation: 4 } });
 
 export const HeaderBackground = function HeaderBackground(style) {
-  let colors;
-  let dark;
   const merged = Object.assign(style, Object.create(null));
   let obj = createStandardNavigationFactories;
   const theme = obj.useTheme();

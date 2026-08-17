@@ -1,12 +1,14 @@
 // _runtime/04445_result.js
-import hasPropertyDescriptors from "hasPropertyDescriptors";
-import { flag } from "00564_flag.js";
+import flag from "flag" /* 564 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import getEvalledConstructor from "getEvalledConstructor" /* 4430 */;
+import hasPropertyDescriptors from "hasPropertyDescriptors" /* 1424 */;
 
 hasPropertyDescriptors = hasPropertyDescriptors.hasArrayLengthDefineBug();
 if (hasPropertyDescriptors) {
-  hasPropertyDescriptors = require("getEvalledConstructor");
+  hasPropertyDescriptors = getEvalledConstructor;
 }
-let closure_4 = require("callBoundIntrinsic")("Object.prototype.propertyIsEnumerable");
+let closure_4 = callBoundIntrinsic("Object.prototype.propertyIsEnumerable");
 
 export default function DefineOwnProperty(arg0, arg1, arg2, arg3, arg4, __Value__) {
   if (flag) {

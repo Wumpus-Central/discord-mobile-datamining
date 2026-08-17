@@ -1,6 +1,6 @@
 // _runtime/03617_formatRelative.js
-import isSameUTCWeek from "isSameUTCWeek";
-import { 03618__ } from "metro/03618__.js";
+import _mod3618 from "module_3618" /* 3618 */;
+import isSameUTCWeek from "isSameUTCWeek" /* 3474 */;
 
 if (!isSameUTCWeek) {
   const obj = { default: null };
@@ -9,12 +9,13 @@ if (!isSameUTCWeek) {
 } else {
   tmp3 = isSameUTCWeek;
 }
+isSameUTCWeek = tmp3;
 let closure_3 = ["\u043D\u0435\u0434\u0456\u043B\u044E", "\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A", "\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A", "\u0441\u0435\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440", "\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044E", "\u0441\u0443\u0431\u043E\u0442\u0443"];
 let closure_4 = {
   lastWeek: function lastWeekFormat(arg0, arg1, arg2) {
-    const toDateResult = 03618__.toDate(arg0);
+    const toDateResult = _mod3618.toDate(arg0);
     const uTCDay = toDateResult.getUTCDay();
-    if (tmp3.default(toDateResult, arg1, arg2)) {
+    if (isSameUTCWeek.default(toDateResult, arg1, arg2)) {
       let text = `${"'\u0443 " + tmp2} о' p`;
     } else {
       if (0 !== uTCDay) {
@@ -34,9 +35,9 @@ let closure_4 = {
   today: "'\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456 \u043E' p",
   tomorrow: "'\u0437\u0430\u0432\u0442\u0440\u0430 \u043E' p",
   nextWeek: function nextWeekFormat(arg0, arg1, arg2) {
-    const toDateResult = 03618__.toDate(arg0);
+    const toDateResult = _mod3618.toDate(arg0);
     const uTCDay = toDateResult.getUTCDay();
-    if (tmp3.default(toDateResult, arg1, arg2)) {
+    if (isSameUTCWeek.default(toDateResult, arg1, arg2)) {
       let text = `${"'\u0443 " + tmp2} о' p`;
     } else {
       if (0 !== uTCDay) {

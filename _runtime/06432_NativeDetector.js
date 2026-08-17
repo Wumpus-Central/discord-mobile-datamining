@@ -1,17 +1,14 @@
 // _runtime/06432_NativeDetector.js
-import "noop";
-import { useMemo } from "noop";
-import { Platform } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/06392___INTERNAL_VIEW_CONFIG.js";
+import noopDefault from "noop" /* 19 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6392 */;
+import { useMemo } from "noop" /* 19 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
+noopDefault;
 
 export const NativeDetector = function NativeDetector(gesture) {
-  let children;
-  let enableContextMenu;
-  let touchAction;
-  let userSelect;
   gesture = gesture.gesture;
   ({ children, touchAction, userSelect, enableContextMenu } = gesture);
   let obj = gesture(6433);
@@ -20,7 +17,7 @@ export const NativeDetector = function NativeDetector(gesture) {
   } else if (gesture.config.shouldUseReanimatedDetector) {
     ReanimatedNativeDetector = tmp(6450).ReanimatedNativeDetector;
   } else {
-    ReanimatedNativeDetector = __INTERNAL_VIEW_CONFIG;
+    ReanimatedNativeDetector = __INTERNAL_VIEW_CONFIGDefault;
   }
   let tmpResult = tmp(6451);
   const result = tmpResult.ensureNativeDetectorComponent(ReanimatedNativeDetector);

@@ -1,5 +1,6 @@
 // _runtime/04437_Get.js
-import { isObject } from "04391_isObject.js";
+import isObject from "isObject" /* 4391 */;
+
 
 export default function Get(arg0, arg1) {
   if (isObject(arg0)) {

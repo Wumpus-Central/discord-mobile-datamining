@@ -1,5 +1,7 @@
 // _runtime/06536_get_ActivityIndicator.js
-const constants = require("get ActivityIndicator").Platform.constants;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+
+const constants = get_ActivityIndicator.Platform.constants;
 if (constants != null) {
   const reactNativeVersion = constants.reactNativeVersion;
 }
@@ -9,7 +11,7 @@ try {
     major = reactNativeVersion.major;
   }
   if (0 !== major) {
-    const InteractionManager = require("get ActivityIndicator").InteractionManager;
+    const InteractionManager = get_ActivityIndicator.InteractionManager;
   }
   exports.InteractionManager = InteractionManager;
 } catch (err) {

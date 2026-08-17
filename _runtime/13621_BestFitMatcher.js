@@ -4,7 +4,7 @@ const dependencyMap = arg6;
 arg5.BestFitMatcher = function BestFitMatcher(arg0, arr) {
   const items = [];
   const reduced = arr.reduce((arg0, str) => {
-    const replaced = str.replace(items(outer1_1[0]).UNICODE_EXTENSION_SEQUENCE_REGEX, "");
+    const replaced = str.replace(items(closure_1_1[0]).UNICODE_EXTENSION_SEQUENCE_REGEX, "");
     items.push(replaced);
     arg0[replaced] = str;
     return arg0;

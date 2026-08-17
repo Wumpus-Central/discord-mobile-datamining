@@ -1,8 +1,9 @@
 // _runtime/00943_getNotificationAttributes.js
-import { getHttpSpanDetailsFromUrlObject } from "00900_getHttpSpanDetailsFromUrlObject.js";
-import { extractTargetInfo } from "00942_extractTargetInfo.js";
-import { 00940__ } from "metro/00940__.js";
-const require = arg1;
+import getHttpSpanDetailsFromUrlObject from "getHttpSpanDetailsFromUrlObject" /* 900 */;
+import _mod940 from "module_940" /* 940 */;
+import extractTargetInfo from "extractTargetInfo" /* 942 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function getNotificationAttributes(arg0, requestId) {
   const obj = {};
@@ -30,7 +31,7 @@ function getNotificationAttributes(arg0, requestId) {
     }
     if (level) {
       const _String5 = String;
-      obj[00940__.MCP_LOGGING_LEVEL_ATTRIBUTE] = String(requestId.level);
+      obj[_mod940.MCP_LOGGING_LEVEL_ATTRIBUTE] = String(requestId.level);
     }
     let logger;
     if (requestId != null) {
@@ -38,14 +39,14 @@ function getNotificationAttributes(arg0, requestId) {
     }
     if (logger) {
       const _String6 = String;
-      obj[00940__.MCP_LOGGING_LOGGER_ATTRIBUTE] = String(requestId.logger);
+      obj[_mod940.MCP_LOGGING_LOGGER_ATTRIBUTE] = String(requestId.logger);
     }
     let data;
     if (requestId != null) {
       data = requestId.data;
     }
     if (undefined !== data) {
-      obj[00940__.MCP_LOGGING_DATA_TYPE_ATTRIBUTE] = typeof requestId.data;
+      obj[_mod940.MCP_LOGGING_DATA_TYPE_ATTRIBUTE] = typeof requestId.data;
       if (arg2) {
         data = requestId.data;
         let json = data;
@@ -102,7 +103,7 @@ function getNotificationAttributes(arg0, requestId) {
     }
     if (uri) {
       const _String = String;
-      obj[00940__.MCP_RESOURCE_URI_ATTRIBUTE] = String(requestId.uri);
+      obj[_mod940.MCP_RESOURCE_URI_ATTRIBUTE] = String(requestId.uri);
       const _String2 = String;
       const result = getHttpSpanDetailsFromUrlObject.parseStringToURLObject(String(requestId.uri));
       let tmp7 = result;
@@ -138,7 +139,7 @@ arg5.buildTypeSpecificAttributes = function buildTypeSpecificAttributes(request,
       obj[tmp2(940).MCP_REQUEST_ID_ATTRIBUTE] = String(message.id);
       tmp5 = obj;
     }
-    const obj1 = {};
+    obj1 = {};
     const merged = Object.assign(tmp5);
     const merged1 = Object.assign(obj2.extractTargetInfo(message.method, obj).attributes);
     if (recordInputs) {

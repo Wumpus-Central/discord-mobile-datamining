@@ -1,22 +1,10 @@
 // _runtime/06586_extractProps.js
-import { pickNotNil } from "06587_pickNotNil.js";
-const require = arg1;
+import pickNotNil from "pickNotNil" /* 6587 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 function extractProps(markerMid) {
-  let accessibilityLabel;
-  let accessible;
-  let clipPath;
-  let clipRule;
-  let display;
-  let filter;
-  let id;
-  let marker;
-  let markerStart;
-  let mask;
-  let onLayout;
-  let opacity;
-  let testID;
   ({ id, opacity, onLayout, clipPath, clipRule, display, mask, filter, marker, markerStart } = markerMid);
   if (undefined === markerStart) {
     markerStart = marker;

@@ -1,10 +1,10 @@
 // _runtime/01775__isNativeReflectConstruct.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult1 from "_inherits";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
 
 let LightSpeedOutLeft = arg1;
 function _isNativeReflectConstruct() {
@@ -18,10 +18,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -31,12 +31,12 @@ class LightSpeedInRight {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_3(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_5;
+    obj = closure_5(closure_0);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -45,12 +45,12 @@ class LightSpeedInRight {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = outer1_2(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = closure_1_2(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _slicedToArray = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const duration = delayFunction.getDuration();
       const callbackV = delayFunction.callbackV;
@@ -61,9 +61,9 @@ class LightSpeedInRight {
         let obj2 = delayFunction(first[6]);
         obj = { duration };
         obj[0] = delayFunction(delay, obj2.withTiming(1, obj));
-        const obj1 = { translateX: null };
+        obj1 = { translateX: null };
         obj2 = {};
-        const merged = Object.assign(_slicedToArray);
+        const merged = Object.assign(closure_2);
         obj2.duration = 0.7 * duration;
         obj1[0] = delayFunction(delay, first(0, obj2));
         const items = [obj1, ];
@@ -87,9 +87,9 @@ class LightSpeedInRight {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withTiming: _undefined(outer1_1[6]).withTiming, duration, animation: first, config: tmp2[1], withSequence: _undefined(outer1_1[6]).withSequence, initialValues, callback: callbackV };
+      fn.__closure = { delayFunction, delay, withTiming: callback(closure_1_1[6]).withTiming, duration, animation: first, config: tmp2[1], withSequence: callback(closure_1_1[6]).withSequence, initialValues, callback: callbackV };
       fn.__workletHash = 14533434616043;
-      fn.__initData = outer1_7;
+      fn.__initData = closure_1_7;
       return fn;
     };
     return tmp3Result;
@@ -111,12 +111,12 @@ class LightSpeedInLeft {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_3(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_5;
+    obj = closure_5(closure_0);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -125,12 +125,12 @@ class LightSpeedInLeft {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = outer1_2(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = closure_1_2(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _slicedToArray = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const duration = delayFunction.getDuration();
       const callbackV = delayFunction.callbackV;
@@ -141,9 +141,9 @@ class LightSpeedInLeft {
         let obj2 = delayFunction(first[6]);
         obj = { duration };
         obj[0] = delayFunction(delay, obj2.withTiming(1, obj));
-        const obj1 = { translateX: null };
+        obj1 = { translateX: null };
         obj2 = {};
-        const merged = Object.assign(_slicedToArray);
+        const merged = Object.assign(closure_2);
         obj2.duration = 0.7 * duration;
         obj1[0] = delayFunction(delay, first(0, obj2));
         const items = [obj1, ];
@@ -167,9 +167,9 @@ class LightSpeedInLeft {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withTiming: _undefined(outer1_1[6]).withTiming, duration, animation: first, config: tmp2[1], withSequence: _undefined(outer1_1[6]).withSequence, initialValues, callback: callbackV };
+      fn.__closure = { delayFunction, delay, withTiming: callback(closure_1_1[6]).withTiming, duration, animation: first, config: tmp2[1], withSequence: callback(closure_1_1[6]).withSequence, initialValues, callback: callbackV };
       fn.__workletHash = 7816705328872;
-      fn.__initData = outer1_8;
+      fn.__initData = closure_1_8;
       return fn;
     };
     return tmp3Result;
@@ -191,12 +191,12 @@ class LightSpeedOutRight {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_3(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_5;
+    obj = closure_5(closure_0);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -205,20 +205,20 @@ class LightSpeedOutRight {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = outer1_2(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = closure_1_2(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _slicedToArray = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(windowWidth) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, _slicedToArray)), transform: null };
-        obj = { translateX: delayFunction(delay, first(windowWidth.windowWidth, _slicedToArray)) };
-        const items = [obj, { skewX: delayFunction(delay, first("-45deg", _slicedToArray)) }];
+        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        obj = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
+        const items = [obj, { skewX: delayFunction(delay, first("-45deg", closure_2)) }];
         obj[1] = items;
         obj[0] = obj;
         const items1 = [{ translateX: 0 }, { skewX: "0deg" }];
@@ -229,7 +229,7 @@ class LightSpeedOutRight {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 222611120175;
-      fn.__initData = outer1_9;
+      fn.__initData = closure_1_9;
       return fn;
     };
     return tmp3Result;
@@ -251,12 +251,12 @@ class LightSpeedOutLeft {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_3(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_5;
+    obj = closure_5(closure_0);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -265,20 +265,20 @@ class LightSpeedOutLeft {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = outer1_2(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = closure_1_2(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _slicedToArray = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(windowWidth) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, _slicedToArray)), transform: null };
-        obj = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, _slicedToArray)) };
-        const items = [obj, { skewX: delayFunction(delay, first("45deg", _slicedToArray)) }];
+        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        obj = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
+        const items = [obj, { skewX: delayFunction(delay, first("45deg", closure_2)) }];
         obj[1] = items;
         obj[0] = obj;
         const items1 = [{ translateX: 0 }, { skewX: "0deg" }];
@@ -289,7 +289,7 @@ class LightSpeedOutLeft {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 766058259752;
-      fn.__initData = outer1_10;
+      fn.__initData = closure_1_10;
       return fn;
     };
     return tmp3Result;

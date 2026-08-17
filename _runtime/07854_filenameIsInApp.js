@@ -32,7 +32,7 @@ arg5.filenameIsInApp = function filenameIsInApp(str) {
   return tmp2;
 };
 arg5.node = function node(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const re1 = /^\s*[-]{4,}$/;
   const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
   return (str) => {
@@ -168,7 +168,7 @@ arg5.node = function node(arg0) {
   };
 };
 arg5.nodeStackLineParser = function nodeStackLineParser(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const re1 = /^\s*[-]{4,}$/;
   const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
   const items = [

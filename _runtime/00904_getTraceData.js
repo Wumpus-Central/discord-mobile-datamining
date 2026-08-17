@@ -1,15 +1,17 @@
 // _runtime/00904_getTraceData.js
-import { getClient } from "00848_getClient.js";
-const require = arg1;
+import spanToJSON from "spanToJSON" /* 819 */;
+import consoleSandbox from "consoleSandbox" /* 824 */;
+import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
+import regExp from "regExp" /* 834 */;
+import baggageHeaderToDynamicSamplingContext from "baggageHeaderToDynamicSamplingContext" /* 835 */;
+import getAsyncContextStrategy from "getAsyncContextStrategy" /* 841 */;
+import getClient from "getClient" /* 848 */;
+import getDynamicSamplingContextFromSpan from "getDynamicSamplingContextFromSpan" /* 857 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getTraceData = function getTraceData() {
-  let propagationSpanId;
-  let propagationSpanId2;
-  let sampled;
-  let sampled2;
-  let traceId;
-  let traceId2;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -23,40 +25,40 @@ arg5.getTraceData = function getTraceData() {
   let spanToTraceparentHeader = dependencyMap;
   if (obj3.isEnabled()) {
     if (client) {
-      let tmp3Result = tmp3(825);
+      let tmp3Result = getGlobalSingleton;
       const mainCarrier = tmp3Result.getMainCarrier();
-      tmp3Result = tmp3(841);
+      tmp3Result = getAsyncContextStrategy;
       const asyncContextStrategy = tmp3Result.getAsyncContextStrategy(mainCarrier);
       if (asyncContextStrategy.getTraceData) {
         return asyncContextStrategy.getTraceData(obj);
       } else {
         let scope = obj.scope;
         if (!scope) {
-          scope = tmp3(848).getCurrentScope();
-          const tmp3Result1 = tmp3(848);
+          scope = getClient.getCurrentScope();
+          const tmp3Result1 = getClient;
         }
         let span = obj.span;
         if (!span) {
-          span = tmp3(819).getActiveSpan();
-          const tmp3Result2 = tmp3(819);
+          span = spanToJSON.getActiveSpan();
+          const tmp3Result2 = spanToJSON;
         }
         if (span) {
-          let spanToTraceHeaderResult = tmp3(819).spanToTraceHeader(span);
-          const tmp3Result3 = tmp3(819);
+          let spanToTraceHeaderResult = spanToJSON.spanToTraceHeader(span);
+          const tmp3Result3 = spanToJSON;
         } else {
           const propagationContext = scope.getPropagationContext();
           ({ traceId, sampled, propagationSpanId } = propagationContext);
-          spanToTraceHeaderResult = tmp3(834).generateSentryTraceHeader(traceId, propagationSpanId, sampled);
-          const tmp3Result4 = tmp3(834);
+          spanToTraceHeaderResult = regExp.generateSentryTraceHeader(traceId, propagationSpanId, sampled);
+          const tmp3Result4 = regExp;
         }
-        const tmp3Result5 = tmp3(857);
+        const tmp3Result5 = getDynamicSamplingContextFromSpan;
         if (span) {
           let dynamicSamplingContextFromSpan = tmp3Result5.getDynamicSamplingContextFromSpan(span);
         } else {
           dynamicSamplingContextFromSpan = tmp3Result5.getDynamicSamplingContextFromScope(client, scope);
         }
-        const result = tmp3(835).dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
-        const TRACEPARENT_REGEXP = tmp3(834).TRACEPARENT_REGEXP;
+        const result = baggageHeaderToDynamicSamplingContext.dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
+        const TRACEPARENT_REGEXP = regExp.TRACEPARENT_REGEXP;
         if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
           obj = { "sentry-trace": null, baggage: null };
           obj[0] = spanToTraceHeaderResult;
@@ -65,23 +67,23 @@ arg5.getTraceData = function getTraceData() {
             return obj;
           } else {
             if (span) {
-              tmp3 = tmp3(819);
+              tmp3 = spanToJSON;
               spanToTraceparentHeader = tmp3.spanToTraceparentHeader;
               let result1 = spanToTraceparentHeader(span);
             } else {
               const propagationContext1 = scope.getPropagationContext();
               ({ traceId: traceId2, sampled: sampled2, propagationSpanId: propagationSpanId2 } = propagationContext1);
-              result1 = tmp3(834).generateTraceparentHeader(traceId2, propagationSpanId2, sampled2);
-              const tmp3Result7 = tmp3(834);
+              result1 = regExp.generateTraceparentHeader(traceId2, propagationSpanId2, sampled2);
+              const tmp3Result7 = regExp;
             }
             obj.traceparent = result1;
           }
         } else {
-          const debug = tmp3(824).debug;
+          const debug = consoleSandbox.debug;
           debug.warn("Invalid sentry-trace data. Cannot generate trace data");
           return {};
         }
-        const tmp3Result6 = tmp3(835);
+        const tmp3Result6 = baggageHeaderToDynamicSamplingContext;
       }
     }
   }

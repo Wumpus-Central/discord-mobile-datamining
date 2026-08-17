@@ -1,10 +1,10 @@
 // _runtime/07748_generatePropagationContext.js
-import { addContextToFrame } from "07749_addContextToFrame.js";
-const require = arg1;
+import addContextToFrame from "addContextToFrame" /* 7749 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.generatePropagationContext = function generatePropagationContext() {
-  const obj = { traceId: null, spanId: null };
-  obj[0] = addContextToFrame.uuid4();
+  const obj = { traceId: addContextToFrame.uuid4(), spanId: null };
   const obj2 = addContextToFrame;
   const obj3 = addContextToFrame;
   obj[1] = addContextToFrame.uuid4().substring(16);

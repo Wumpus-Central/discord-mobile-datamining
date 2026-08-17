@@ -1,5 +1,5 @@
 // _runtime/04111_NitroRiveView.js
-import 04112__ from "metro/04112__.js";
+import 04112__ from "metro/04112__.js" /* 4112 */;
 import { 04132__ } from "metro/04132__.js";
 
 

@@ -1,24 +1,22 @@
 // _runtime/00031_genModule.js
-import _slicedToArray from "_slicedToArray";
-import { 00038__ } from "metro/00038__.js";
+import _mod38 from "module_38" /* 38 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 
-let require = arg1;
+require = arg1;
 function genModule(arg0, arg1) {
-  let obj;
-  let tmp4;
-  let closure_0 = arg1;
+  closure_0 = arg1;
   if (arg0) {
     const tmp3 = callback(arg0, 5);
     [obj, tmp4] = tmp3;
-    const require = tmp4;
-    const dependencyMap = tmp3[3];
+    require = tmp4;
+    dependencyMap = tmp3[3];
     callback = tmp3[4];
     const startsWithResult = obj.startsWith("RCT");
     let tmp9 = !startsWithResult;
     if (!startsWithResult) {
       tmp9 = !obj.startsWith("RK");
     }
-    00038__(tmp9, `Module name prefixes should've been stripped by the native side but wasn't for ${obj}`);
+    _mod38(tmp9, `Module name prefixes should've been stripped by the native side but wasn't for ${obj}`);
     if (!tmp4) {
       if (!arr) {
         obj = { name: null };
@@ -36,9 +34,9 @@ function genModule(arg0, arg1) {
         if (!flag) {
           flag = false;
         }
-        let flag2 = _slicedToArray;
-        if (_slicedToArray) {
-          flag2 = -1 !== _slicedToArray.indexOf(arg1);
+        let flag2 = closure_3;
+        if (closure_3) {
+          flag2 = -1 !== closure_3.indexOf(arg1);
         }
         if (!flag2) {
           flag2 = false;
@@ -58,13 +56,13 @@ function genModule(arg0, arg1) {
         }
         tmp4 = arg1;
         tmp4 = "promise" === str ? (function promiseMethodWrapper() {
-          let closure_0 = [...arguments];
-          let error;
+          closure_0 = [...arguments];
+          error = undefined;
           error = new Error();
           return new Promise((closure_0) => {
-            const error = arg1;
+            error = arg1;
             error(str[2]).default.enqueueNativeCall(closure_0, error, closure_0, (arg0) => callback(arg0), (arg0) => {
-              let obj = arg0;
+              obj = arg0;
               if (!arg0) {
                 obj = {};
               }
@@ -121,7 +119,7 @@ function genModule(arg0, arg1) {
       const _HermesInternal = HermesInternal;
       console.warn("Unable to define method 'getConstants()' on NativeModule '" + obj + "'. NativeModule '" + obj + "' already has a constant or method called 'getConstants'. Please remove it.");
     }
-    const obj1 = { name: null, module: null };
+    obj1 = { name: null, module: null };
     obj1[0] = obj;
     obj1[1] = obj;
     return obj1;
@@ -140,17 +138,17 @@ if (global.nativeModuleProxy) {
   require("module_38")(__fbBatchedBridgeConfig, "__fbBatchedBridgeConfig is not set, cannot invoke native modules");
   let closure_6 = require("defineLazyObjectProperty").default;
   let item = __fbBatchedBridgeConfig.remoteModuleConfig || [].forEach((arg0, arg1) => {
-    let closure_0 = arg1;
-    let tmp = genModule(arg0, arg1);
-    const require = tmp;
+    closure_0 = arg1;
+    const tmp = genModule(arg0, arg1);
+    closure_1 = tmp;
     if (tmp) {
       if (tmp.module) {
         nativeModuleProxy[tmp.name] = tmp.module;
       } else {
         const obj = { get: null };
         obj[0] = function get() {
-          tmp = tmp(outer1_2[1])(closure_0.nativeRequireModuleConfig, "Can't lazily create module without nativeRequireModuleConfig");
-          const tmp2 = outer1_4(closure_0.nativeRequireModuleConfig(tmp.name), closure_0);
+          lib(closure_1_2[1])(closure_0.nativeRequireModuleConfig, "Can't lazily create module without nativeRequireModuleConfig");
+          const tmp2 = closure_1_4(closure_0.nativeRequireModuleConfig(lib.name), closure_0);
           let _module = tmp2;
           if (tmp2) {
             _module = tmp2.module;

@@ -1,7 +1,6 @@
 // _runtime/01073_items.js
-import _slicedToArray from "_slicedToArray";
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import closure_2 from "_slicedToArray" /* 32 */;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const re3 = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i;
@@ -21,7 +20,7 @@ let items = [
     } else {
       const match1 = regex.exec(str);
       if (match1) {
-        const tmp25 = _slicedToArray(match1, 4);
+        const tmp25 = callback(match1, 4);
         let UNKNOWN_FUNCTION3 = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
         obj = { filename: null, function: null, in_app: true };
         obj[0] = tmp25[1];
@@ -57,7 +56,7 @@ let items = [
           if (!tmp12) {
             if (-1 === UNKNOWN_FUNCTION.indexOf("safari-web-extension")) {
               const items = [UNKNOWN_FUNCTION, tmp11];
-              const tmp19 = _slicedToArray(items, 2);
+              const tmp19 = callback(items, 2);
               let UNKNOWN_FUNCTION2 = tmp19[0];
               let tmp20;
               if (match2[3]) {
@@ -132,7 +131,7 @@ let items1 = [
       if (!tmp9) {
         if (-1 === UNKNOWN_FUNCTION.indexOf("safari-web-extension")) {
           const items = [UNKNOWN_FUNCTION, tmp5];
-          const tmp16 = _slicedToArray(items, 2);
+          const tmp16 = callback(items, 2);
           let UNKNOWN_FUNCTION2 = tmp16[0];
           let tmp17;
           if (match[4]) {

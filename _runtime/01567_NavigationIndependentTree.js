@@ -1,19 +1,20 @@
 // _runtime/01567_NavigationIndependentTree.js
-import "noop";
-import { jsx } from "jsxProd";
-import { NavigationIndependentTreeContext } from "01519_NavigationIndependentTreeContext.js";
-import { context } from "01541_context.js";
-import { context1 } from "01542_context1.js";
-import { NavigationContext } from "01544_NavigationContext.js";
-import { NavigationFocusedRouteStateContext } from "01568_NavigationFocusedRouteStateContext.js";
+import noopAll from "noop" /* 19 */;
+import NavigationIndependentTreeContext from "NavigationIndependentTreeContext" /* 1519 */;
+import context from "context" /* 1541 */;
+import context1 from "context1" /* 1542 */;
+import NavigationContext from "NavigationContext" /* 1544 */;
+import NavigationFocusedRouteStateContext from "NavigationFocusedRouteStateContext" /* 1568 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 
 export const NavigationIndependentTree = function NavigationIndependentTree(children) {
   let obj = { value: "Array", children: 0 };
   obj = { value: "Array", children: 0 };
   obj = { value: "Array", children: 0 };
-  const obj1 = { value: "Array", children: 0 };
+  obj1 = { value: "Array", children: 0 };
   obj1[1] = jsx(NavigationIndependentTreeContext.NavigationIndependentTreeContext.Provider, { value: true, children: children.children });
   obj[1] = jsx(context1.IsFocusedContext.Provider, { value: "Array", children: 0 });
   obj[1] = jsx(NavigationFocusedRouteStateContext.NavigationFocusedRouteStateContext.Provider, { value: "Array", children: 0 });

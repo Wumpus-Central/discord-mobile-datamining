@@ -7,12 +7,12 @@ arg5.primitiveTagIntegration = () => ({
   name: PrimitiveTagIntegration,
   setup(on) {
     on.on("beforeSendEvent", (tags) => {
-      let closure_0 = tags;
+      closure_0 = tags;
       if (tags.tags) {
         const _Object = Object;
         const keys = Object.keys(tags.tags);
         const item = keys.forEach((arg0) => {
-          tags.tags[arg0] = tags(outer1_1[0]).PrimitiveToString(tags.tags[arg0]);
+          tags.tags[arg0] = tags(closure_1_1[0]).PrimitiveToString(tags.tags[arg0]);
         });
       }
     });

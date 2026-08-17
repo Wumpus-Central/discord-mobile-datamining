@@ -92,8 +92,6 @@ arg5.stringifyValidationResult = function stringifyValidationResult(arg0, valida
   const items = ["StaticViewConfigValidator: Invalid static view config for '" + arg0 + "'.", "", ];
   const differences = validateResult.differences;
   items[HermesBuiltin.arraySpread(differences.map((arg0) => {
-    let path;
-    let type;
     ({ type, path } = arg0);
     if ("missing" === type) {
       const _HermesInternal2 = HermesInternal;

@@ -2,8 +2,8 @@
 const require = arg1;
 const dependencyMap = arg6;
 arg5.makeDataFormatters = function makeDataFormatters(items, formatConfig, _forceLookupMatcher) {
-  let closure_0 = items;
-  let closure_1 = formatConfig;
+  closure_0 = items;
+  closure_1 = formatConfig;
   let flag = _forceLookupMatcher;
   if (_forceLookupMatcher === undefined) {
     flag = false;

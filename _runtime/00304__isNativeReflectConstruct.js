@@ -1,10 +1,11 @@
 // _runtime/00304__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import importDefaultResult2 from "getConstants";
+import noopAll from "noop" /* 19 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import importDefaultResult2 from "getConstants" /* 305 */;
 
 const StatusBar = importDefault;
 function _isNativeReflectConstruct() {
@@ -18,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -30,11 +31,11 @@ class StatusBar {
   constructor() {
     self = this;
     items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, StatusBar);
+    tmp = closure_3(this, StatusBar);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(StatusBar);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_5;
+    obj = closure_5(StatusBar);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -47,7 +48,7 @@ class StatusBar {
     return tmp3Result;
   }
 }
-require("_inherits")(StatusBar, require("noop").Component);
+importDefaultResult1(StatusBar, noopAll.Component);
 let obj = {
   key: "componentDidMount",
   value: function componentDidMount() {
@@ -160,7 +161,7 @@ let items1 = [
       obj[2] = animated.translucent;
       let tmp3 = null;
       if (null != animated.hidden) {
-        const obj1 = { value: null, animated: null, transition: null };
+        obj1 = { value: null, animated: null, transition: null };
         obj1[0] = animated.hidden;
         obj1[1] = flag;
         obj1[2] = str;
@@ -216,7 +217,7 @@ let items1 = [
       obj[2] = animated.translucent;
       let tmp3 = null;
       if (null != animated.hidden) {
-        const obj1 = { value: null, animated: null, transition: null };
+        obj1 = { value: null, animated: null, transition: null };
         obj1[0] = animated.hidden;
         obj1[1] = flag;
         obj1[2] = str;
@@ -237,7 +238,7 @@ let items1 = [
 const importDefaultResultResult = importDefaultResult(StatusBar, items, items1);
 let obj1 = importDefaultResultResult;
 importDefaultResultResult._propsStack = [];
-let str = require("getConstants").getConstants().DEFAULT_BACKGROUND_COLOR;
+let str = importDefaultResult2.getConstants().DEFAULT_BACKGROUND_COLOR;
 if (str == null) {
   str = "black";
 }
@@ -280,12 +281,10 @@ obj2[4] = obj.networkActivityIndicatorVisible;
 importDefaultResultResult._defaultProps = obj2;
 importDefaultResultResult._updateImmediate = null;
 importDefaultResultResult._currentValues = null;
-importDefaultResultResult.currentHeight = require("getConstants").getConstants().HEIGHT;
+importDefaultResultResult.currentHeight = importDefaultResult2.getConstants().HEIGHT;
 importDefaultResultResult._updatePropsStack = () => {
   clearImmediate(importDefaultResultResult._updateImmediate);
   importDefaultResultResult._updateImmediate = setImmediate(() => {
-    let _currentValues;
-    let _propsStack;
     ({ _currentValues, _propsStack } = _defaultProps);
     const merged = Object.assign(_defaultProps._defaultProps);
     const reduced = _propsStack.reduce((arg0, obj) => {

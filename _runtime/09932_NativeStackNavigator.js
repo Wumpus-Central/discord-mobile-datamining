@@ -1,23 +1,11 @@
 // _runtime/09932_NativeStackNavigator.js
-import noop from "noop";
-import { jsx } from "jsxProd";
-import createStandardNavigationFactories from "createStandardNavigationFactories";
-import { createStandardNavigationFactories } from "01501_createStandardNavigationFactories.js";
+import createStandardNavigationFactories2 from "createStandardNavigationFactories" /* 1501 */;
+import closure_2 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
 
-const require = arg1;
+require = arg1;
 function NativeStackNavigator(arg0) {
-  let NavigationContent;
-  let UNSTABLE_routeNamesChangeBehavior;
-  let UNSTABLE_router;
-  let children;
-  let describe;
-  let descriptors;
-  let id;
-  let initialRouteName;
-  let layout;
-  let screenLayout;
-  let screenListeners;
-  let screenOptions;
   ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
   let merged = Object.assign(arg0, Object.create(null));
   let state;
@@ -37,7 +25,7 @@ function NativeStackNavigator(arg0) {
       const addListener = navigation.addListener;
       if (addListener != null) {
         addListenerResult = addListener("tabPress", (arg0) => {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           focused = focused.isFocused();
           const animationFrame = requestAnimationFrame(() => {
             let tmp2 = closure_0.index > 0;
@@ -49,7 +37,7 @@ function NativeStackNavigator(arg0) {
             }
             if (tmp2) {
               const obj = {};
-              const StackActions = outer2_0(outer2_1[2]).StackActions;
+              const StackActions = closure_2_0(closure_2_1[2]).StackActions;
               const merged = Object.assign(StackActions.popToTop());
               obj.target = closure_0.key;
               closure_1.dispatch(obj);
@@ -72,6 +60,6 @@ function NativeStackNavigator(arg0) {
 }
 
 export const createNativeStackNavigator = function createNativeStackNavigator(arg0) {
-  return createStandardNavigationFactories.createNavigatorFactory(NativeStackNavigator)(arg0);
+  return createStandardNavigationFactories2.createNavigatorFactory(NativeStackNavigator)(arg0);
 };
 export const createNativeStackScreen = createStandardNavigationFactories.createScreenFactory();

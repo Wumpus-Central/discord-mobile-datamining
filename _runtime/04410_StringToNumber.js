@@ -1,13 +1,19 @@
 // _runtime/04410_StringToNumber.js
-let tmp = require("getEvalledConstructor")("%RegExp%");
-let closure_2 = require("getEvalledConstructor")("%parseInt%");
-let closure_3 = require("callBoundIntrinsic")("String.prototype.slice");
-let closure_4 = require("regexTester")(/^0b[01]+$/i);
-let closure_5 = require("regexTester")(/^0o[0-7]+$/i);
-let closure_6 = require("regexTester")(/^[-+]0x[0-9a-f]+$/i);
+import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
+import _mod541 from "module_541" /* 541 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import regexTester from "regexTester" /* 1414 */;
+import trim from "trim" /* 4411 */;
+
+let tmp = getEvalledConstructor("%RegExp%");
+let closure_2 = getEvalledConstructor("%parseInt%");
+let closure_3 = callBoundIntrinsic("String.prototype.slice");
+let closure_4 = regexTester(/^0b[01]+$/i);
+let closure_5 = regexTester(/^0o[0-7]+$/i);
+let closure_6 = regexTester(/^[-+]0x[0-9a-f]+$/i);
 const items = ["\u0085", "\u200B", "\uFFFE"];
 tmp = new tmp("[" + items.join("") + "]", "g");
-let closure_7 = require("regexTester")(tmp);
+let closure_7 = regexTester(tmp);
 class StringToNumber {
   constructor(arg0) {
     if (typeof global !== "string") {
@@ -22,21 +28,21 @@ class StringToNumber {
     } else {
       tmp19 = closure_4;
       if (closure_4(global)) {
-        tmp11 = c2;
-        tmp12 = c3;
+        tmp11 = closure_2;
+        tmp12 = closure_3;
         num4 = 2;
-        return +c2(c3(global, 2), 2);
+        return +closure_2(closure_3(global, 2), 2);
       } else {
         tmp = closure_5;
         if (closure_5(global)) {
-          tmp9 = c2;
-          tmp10 = c3;
+          tmp9 = closure_2;
+          tmp10 = closure_3;
           num2 = 2;
           num3 = 8;
-          return +c2(c3(global, 2), 8);
+          return +closure_2(closure_3(global, 2), 8);
         } else {
-          tmp2 = c7;
-          if (!c7(global)) {
+          tmp2 = closure_7;
+          if (!closure_7(global)) {
             tmp3 = closure_6;
             if (!closure_6(global)) {
               tmp4 = closure_0;

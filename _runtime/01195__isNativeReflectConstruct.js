@@ -1,22 +1,14 @@
 // _runtime/01195__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import isModalSupported from "isModalSupported";
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import isModalSupported from "isModalSupported" /* 1196 */;
 
-let Platform;
-let c10;
-let c9;
-let closure_12;
-let closure_6;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-let FeedbackWidgetProvider = arg1;
+const FeedbackWidgetProvider = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,26 +20,26 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 let c5 = importAllResult;
-({ Animated: closure_6, Appearance: error, Dimensions: metroImportAll, Easing: c9, Modal: c10, PanResponder: unpackModuleId, Platform, ScrollView: closure_12, View: map1 } = get_ActivityIndicator);
-isModalSupported = isModalSupported.isNativeDriverSupportedForColorAnimations();
+({ Animated: closure_6, Appearance: error, Dimensions: closure_8, Easing: c9, Modal: c10, PanResponder: unpackModuleId, Platform, ScrollView: closure_12, View: map1 } = get_ActivityIndicator);
+let closure_15 = isModalSupported.isNativeDriverSupportedForColorAnimations();
 class FeedbackWidgetProvider {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, apply);
+    tmp = closure_2(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(closure_0);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -56,7 +48,7 @@ class FeedbackWidgetProvider {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     obj = { isButtonVisible: false, isScreenshotButtonVisible: false, isVisible: false, backgroundOpacity: null, panY: null, isScrollAtTop: true };
     value = new Animated.Value(0);
     obj[3] = value;
@@ -65,9 +57,9 @@ class FeedbackWidgetProvider {
     tmp3Result.state = obj;
     obj1 = {
       onStartShouldSetPanResponder(arg0, dy) {
-            let isScrollAtTop = tmp3Result(outer1_1[8]).notWeb();
+            let isScrollAtTop = store(closure_1_1[8]).notWeb();
             if (isScrollAtTop) {
-              isScrollAtTop = tmp3Result.state.isScrollAtTop;
+              isScrollAtTop = store.state.isScrollAtTop;
             }
             if (isScrollAtTop) {
               isScrollAtTop = dy.dy > 0;
@@ -75,9 +67,9 @@ class FeedbackWidgetProvider {
             return isScrollAtTop;
           },
       onMoveShouldSetPanResponder(arg0, dy) {
-            let isScrollAtTop = tmp3Result(outer1_1[8]).notWeb();
+            let isScrollAtTop = store(closure_1_1[8]).notWeb();
             if (isScrollAtTop) {
-              isScrollAtTop = tmp3Result.state.isScrollAtTop;
+              isScrollAtTop = store.state.isScrollAtTop;
             }
             if (isScrollAtTop) {
               isScrollAtTop = dy.dy > 0;
@@ -86,48 +78,47 @@ class FeedbackWidgetProvider {
           },
       onPanResponderMove(arg0, dy) {
             if (dy.dy > 0) {
-              const panY = tmp3Result.state.panY;
+              const panY = store.state.panY;
               panY.setValue(dy.dy);
             }
           },
       onPanResponderRelease(arg0, dy) {
-            if (dy.dy > tmp3Result(outer1_1[9]).PULL_DOWN_CLOSE_THRESHOLD) {
+            if (dy.dy > store(closure_1_1[9]).PULL_DOWN_CLOSE_THRESHOLD) {
               const obj = { toValue: null, duration: null, useNativeDriver: true };
-              obj[0] = outer1_8.get("screen").height;
-              obj[1] = tmp3Result(outer1_1[9]).SLIDE_ANIMATION_DURATION;
-              outer1_6.timing(tmp3Result.state.panY, obj).start(() => {
+              obj[0] = closure_1_8.get("screen").height;
+              obj[1] = store(closure_1_1[9]).SLIDE_ANIMATION_DURATION;
+              closure_1_6.timing(store.state.panY, obj).start(() => {
                 closure_0._handleClose();
               });
-              const timingResult = outer1_6.timing(tmp3Result.state.panY, obj);
+              const timingResult = closure_1_6.timing(store.state.panY, obj);
             } else {
-              outer1_6.spring(tmp3Result.state.panY, { toValue: 0, useNativeDriver: true }).start();
-              const springResult = outer1_6.spring(tmp3Result.state.panY, { toValue: 0, useNativeDriver: true });
+              closure_1_6.spring(store.state.panY, { toValue: 0, useNativeDriver: true }).start();
+              const springResult = closure_1_6.spring(store.state.panY, { toValue: 0, useNativeDriver: true });
             }
           }
     };
     tmp3Result._panResponder = PanResponder.create(obj1);
     tmp3Result._handleScroll = (nativeEvent) => {
-      tmp3Result.setState({ isScrollAtTop: nativeEvent.nativeEvent.contentOffset.y <= 0 });
+      store.setState({ isScrollAtTop: nativeEvent.nativeEvent.contentOffset.y <= 0 });
     };
     tmp3Result._setVisibilityFunction = (arg0) => {
-      let parallel;
-      let timing;
+      const store = arg0;
       if (arg0) {
         let obj = { isVisible: null };
         obj[0] = arg0;
-        tmp3Result.setState(obj);
+        store.setState(obj);
       } else {
         obj = { toValue: null, duration: null, useNativeDriver: true, easing: null };
-        ({ parallel, timing } = outer1_6);
-        obj[0] = outer1_8.get("screen").height;
-        obj[1] = tmp3Result(outer1_1[9]).SLIDE_ANIMATION_DURATION;
-        obj[3] = outer1_9.out(outer1_9.quad);
-        const items = [timing(tmp3Result.state.panY, obj), ];
+        ({ parallel, timing } = closure_1_6);
+        obj[0] = closure_1_8.get("screen").height;
+        obj[1] = store(closure_1_1[9]).SLIDE_ANIMATION_DURATION;
+        obj[3] = closure_1_9.out(closure_1_9.quad);
+        const items = [timing(store.state.panY, obj), ];
         obj = { toValue: 0, duration: null, useNativeDriver: null, easing: null };
-        obj[1] = tmp3Result(outer1_1[9]).BACKGROUND_ANIMATION_DURATION;
-        obj[2] = outer1_15;
-        obj[3] = outer1_9.out(outer1_9.quad);
-        items[1] = outer1_6.timing(tmp3Result.state.backgroundOpacity, obj);
+        obj[1] = store(closure_1_1[9]).BACKGROUND_ANIMATION_DURATION;
+        obj[2] = closure_1_15;
+        obj[3] = closure_1_9.out(closure_1_9.quad);
+        items[1] = closure_1_6.timing(store.state.backgroundOpacity, obj);
         parallel(items).start(() => {
           state.setState({ isVisible: state });
         });
@@ -135,13 +126,13 @@ class FeedbackWidgetProvider {
       }
     };
     tmp3Result._setButtonVisibilityFunction = (isButtonVisible) => {
-      tmp3Result.setState({ isButtonVisible });
+      store.setState({ isButtonVisible });
     };
     tmp3Result._setScreenshotButtonVisibilityFunction = (isScreenshotButtonVisible) => {
-      tmp3Result.setState({ isScreenshotButtonVisible });
+      store.setState({ isScreenshotButtonVisible });
     };
     tmp3Result._handleClose = () => {
-      const FeedbackWidgetManager = tmp3Result(table[9]).FeedbackWidgetManager;
+      const FeedbackWidgetManager = store(table[9]).FeedbackWidgetManager;
       FeedbackWidgetManager.hide();
     };
     FeedbackButtonManager = require("_isNativeReflectConstruct").FeedbackButtonManager;
@@ -153,7 +144,7 @@ class FeedbackWidgetProvider {
     return tmp3Result;
   }
 }
-require("_inherits")(FeedbackWidgetProvider, importAllResult.Component);
+_inheritsDefault(FeedbackWidgetProvider, importAllResult.Component);
 isModalSupported = {
   key: "componentDidMount",
   value: function componentDidMount() {
@@ -177,15 +168,13 @@ let items = [
   {
     key: "componentDidUpdate",
     value: function componentDidUpdate(arg0, isVisible) {
-      let parallel;
-      let timing;
       const self = this;
       if (!isVisible.isVisible) {
         if (self.state.isVisible) {
           let obj = { toValue: 1, duration: null, useNativeDriver: null, easing: null };
           ({ parallel, timing } = RN);
           obj[1] = FeedbackWidgetProvider(1197).BACKGROUND_ANIMATION_DURATION;
-          obj[2] = isModalSupported;
+          obj[2] = closure_15;
           obj[3] = closure_9.in(closure_9.quad);
           const items = [timing(self.state.backgroundOpacity, obj), ];
           obj = { toValue: 0, duration: null, useNativeDriver: true, easing: null };
@@ -208,14 +197,6 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let backgroundOpacity;
-      let createElement;
-      let createElement2;
-      let createElement3;
-      let createElement4;
-      let isButtonVisible;
-      let isScreenshotButtonVisible;
-      let isVisible;
       const self = this;
       let obj = FeedbackWidgetProvider(1196);
       if (obj.isModalSupported()) {
@@ -242,7 +223,7 @@ let items = [
         if (isVisible) {
           obj = { style: null };
           const items = [tmp(1202).modalWrapper, ];
-          const obj1 = { backgroundColor: null };
+          obj1 = { backgroundColor: null };
           obj1[0] = interpolateResult;
           items[1] = obj1;
           obj[0] = items;

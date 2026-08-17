@@ -1,21 +1,22 @@
 // _runtime/08672_get_ActivityIndicator.js
-import { Platform } from "get ActivityIndicator";
-import { DeviceEventEmitter } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let Orientation = require("get ActivityIndicator").NativeModules.Orientation;
+let Orientation = get_ActivityIndicator.NativeModules.Orientation;
+const Platform = get_ActivityIndicator.Platform;
+const DeviceEventEmitter = get_ActivityIndicator.DeviceEventEmitter;
 let closure_2 = {};
 let c3 = 0;
 const __listener_id = "__listener_id";
 
 export default {
   getOrientation(arg0) {
-    const Orientation = arg0;
+    Orientation = arg0;
     const orientation = Orientation.getOrientation((arg0, arg1) => {
       callback(arg0, arg1);
     });
   },
   getSpecificOrientation(arg0) {
-    const Orientation = arg0;
+    Orientation = arg0;
     const specificOrientation = Orientation.getSpecificOrientation((arg0, arg1) => {
       callback(arg0, arg1);
     });
@@ -39,7 +40,7 @@ export default {
     const result = Orientation.unlockAllOrientations();
   },
   addOrientationListener(handleOrientationChange) {
-    let closure_0 = handleOrientationChange;
+    closure_0 = handleOrientationChange;
     if (handleOrientationChange.hasOwnProperty(__listener_id)) {
       let str = handleOrientationChange[tmp];
     } else {
@@ -59,7 +60,7 @@ export default {
     });
   },
   addOrientationDegreesChangeListener(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     if (arg0.hasOwnProperty(__listener_id)) {
       let str = arg0[tmp];
     } else {
@@ -100,7 +101,7 @@ export default {
     }
   },
   addSpecificOrientationListener(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     if (arg0.hasOwnProperty(__listener_id)) {
       let str = arg0[tmp];
     } else {

@@ -59,7 +59,7 @@ arg5.default = function processTransform(str) {
             if (length) {
               let _Number2 = Number;
               let tmp8 = match2[3];
-              let obj1 = { key: null, value: null };
+              obj1 = { key: null, value: null };
               obj1[0] = tmp3;
               obj1[1] = Number(match2[1]);
               obj = obj1;

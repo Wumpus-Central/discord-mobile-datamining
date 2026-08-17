@@ -1,30 +1,25 @@
 // _runtime/00314__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import createContext from "createContext";
-import noop from "createContext";
-import get_ActivityIndicator from "elementsThatOverlapOffsets";
-import jsxProd from "nullthrows";
-import { nullthrows } from "00070_nullthrows.js";
-import { infoLog } from "00317_infoLog.js";
-import { _isNativeReflectConstruct } from "00321__isNativeReflectConstruct.js";
-import { clamp } from "00323_clamp.js";
-import { 00038__ } from "metro/00038__.js";
+import _modDef38 from "module_38" /* 38 */;
+import nullthrowsDefault from "nullthrows" /* 70 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import ListMetricsAggregatorDefault from "ListMetricsAggregator" /* 315 */;
+import ChildListCollectionDefault from "ChildListCollection" /* 316 */;
+import infoLogDefault from "infoLog" /* 317 */;
+import InfoDefault from "Info" /* 318 */;
+import ViewabilityHelperDefault from "ViewabilityHelper" /* 319 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 321 */;
+import clampDefault from "clamp" /* 323 */;
+import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 325 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import closure_6 from "_classCallCheck" /* 41 */;
+import closure_7 from "_possibleConstructorReturn" /* 93 */;
+import closure_8 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_9 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-let c10;
-let closure_12;
-let closure_14;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
-let map1;
-let unpackModuleId;
 let VirtualizedList = arg1;
 function _isNativeReflectConstruct() {
   try {
@@ -37,10 +32,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -55,13 +50,13 @@ let c22 = "";
 class VirtualizedList {
   constructor(arg0) {
     self = this;
-    obj = apply;
-    tmp = _isNativeReflectConstruct(this, apply);
+    obj = closure_0;
+    tmp = closure_6(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj2 = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_8;
+    obj2 = closure_8(closure_0);
+    tmp3 = closure_7;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -70,30 +65,30 @@ class VirtualizedList {
       constructResult = obj2.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
-    tmp3Result._getScrollMetrics = () => tmp3Result._scrollMetrics;
+    closure_0 = tmp3Result;
+    tmp3Result._getScrollMetrics = () => closure_0._scrollMetrics;
     tmp3Result._getOutermostParentListRef = () => {
-      let outermostParentListRef = tmp3Result;
-      if (tmp3Result._isNestedWithSameOrientation()) {
-        const context = tmp3Result.context;
+      let outermostParentListRef = closure_0;
+      if (closure_0._isNestedWithSameOrientation()) {
+        const context = closure_0.context;
         outermostParentListRef = context.getOutermostParentListRef();
       }
       return outermostParentListRef;
     };
     tmp3Result._registerAsNestedChild = (ref) => {
-      const _nestedChildLists = tmp3Result._nestedChildLists;
+      const _nestedChildLists = closure_0._nestedChildLists;
       _nestedChildLists.add(ref.ref, ref.cellKey);
-      if (tmp3Result._hasInteracted) {
+      if (closure_0._hasInteracted) {
         ref.ref.recordInteraction();
         ref = ref.ref;
       }
     };
     tmp3Result._unregisterAsNestedChild = (ref) => {
-      const _nestedChildLists = tmp3Result._nestedChildLists;
+      const _nestedChildLists = closure_0._nestedChildLists;
       _nestedChildLists.remove(ref.ref);
     };
     tmp3Result._onUpdateSeparators = (arr) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const item = arr.forEach((arg0) => {
         let obj = null != arg0;
         if (obj) {
@@ -142,45 +137,45 @@ class VirtualizedList {
     };
     tmp3Result._defaultRenderScrollComponent = (onRefresh) => {
       let progressViewOffset = onRefresh.onRefresh;
-      if (tmp3Result._isNestedWithSameOrientation()) {
+      if (closure_0._isNestedWithSameOrientation()) {
         const onContentSizeChange = onRefresh.onContentSizeChange;
         let obj = {};
         const merged = Object.assign(callback2(onRefresh, closure_4));
-        return outer2_18(outer2_16, obj);
+        return closure_2_18(closure_2_16, obj);
       } else if (progressViewOffset) {
         let str = onRefresh.refreshing;
         if (str == null) {
           str = "undefined";
         }
-        00038__(typeof onRefresh.refreshing === "boolean", `\`refreshing\` prop must be set as a boolean in order to use \`onRefresh\`, but got \`${tmp11(str)}\``);
+        _modDef38(typeof onRefresh.refreshing === "boolean", `\`refreshing\` prop must be set as a boolean in order to use \`onRefresh\`, but got \`${tmp11(str)}\``);
         obj = {};
         const merged1 = Object.assign(onRefresh);
         if (null == onRefresh.refreshControl) {
-          const obj1 = { refreshing: null, onRefresh: null, progressViewOffset: null };
+          obj1 = { refreshing: null, onRefresh: null, progressViewOffset: null };
           obj1[0] = onRefresh.refreshing;
           obj1[1] = progressViewOffset;
           progressViewOffset = onRefresh.progressViewOffset;
           obj1[2] = progressViewOffset;
-          let refreshControl = outer2_18(outer2_13, obj1);
+          let refreshControl = closure_2_18(closure_2_13, obj1);
         } else {
           refreshControl = onRefresh.refreshControl;
         }
         obj.refreshControl = refreshControl;
-        outer2_18(outer2_14, obj);
+        closure_2_18(closure_2_14, obj);
         const tmp13 = typeof onRefresh.refreshing === "boolean";
-        const tmp15 = outer2_18;
-        const tmp16 = outer2_14;
-        const tmp8 = 00038__;
+        const tmp15 = closure_2_18;
+        const tmp16 = closure_2_14;
+        const tmp8 = _modDef38;
       } else {
         obj = {};
         const merged2 = Object.assign(onRefresh);
-        return outer2_18(outer2_14, obj);
+        return closure_2_18(closure_2_14, obj);
       }
     };
     tmp3Result._onCellLayout = (layout, cellKey, cellIndex) => {
-      let obj = tmp3Result;
-      const _listMetrics = tmp3Result._listMetrics;
-      obj = { cellIndex, cellKey, layout: layout.nativeEvent.layout, orientation: tmp3Result._orientation() };
+      let obj = closure_0;
+      const _listMetrics = closure_0._listMetrics;
+      obj = { cellIndex, cellKey, layout: layout.nativeEvent.layout, orientation: closure_0._orientation() };
       if (_listMetrics.notifyCellLayout(obj)) {
         const result = obj._scheduleCellsToRenderUpdate();
       }
@@ -198,16 +193,16 @@ class VirtualizedList {
     };
     tmp3Result._onCellUnmount = (arg0) => {
       delete tmp[tmp2];
-      const _listMetrics = tmp3Result._listMetrics;
+      const _listMetrics = closure_0._listMetrics;
       _listMetrics.notifyCellUnmounted(arg0);
     };
     tmp3Result._onLayout = (nativeEvent) => {
-      if (tmp3Result._isNestedWithSameOrientation()) {
+      if (closure_0._isNestedWithSameOrientation()) {
         const result = obj.measureLayoutRelativeToContainingList();
       } else {
         obj._scrollMetrics.visibleLength = obj._selectLength(nativeEvent.nativeEvent.layout);
       }
-      if (tmp3Result.props.onLayout) {
+      if (closure_0.props.onLayout) {
         const props = obj.props;
         props.onLayout(nativeEvent);
       }
@@ -215,26 +210,26 @@ class VirtualizedList {
       const result2 = obj._maybeCallOnEdgeReached();
     };
     tmp3Result._onLayoutEmpty = (arg0) => {
-      if (tmp3Result.props.onLayout) {
+      if (closure_0.props.onLayout) {
         const props = tmp.props;
         props.onLayout(arg0);
       }
     };
     tmp3Result._onLayoutFooter = (nativeEvent) => {
-      const result = tmp3Result._triggerRemeasureForChildListsInCell(tmp3Result._getFooterCellKey());
-      tmp3Result._footerLength = tmp3Result._selectLength(nativeEvent.nativeEvent.layout);
+      const result = closure_0._triggerRemeasureForChildListsInCell(closure_0._getFooterCellKey());
+      closure_0._footerLength = closure_0._selectLength(nativeEvent.nativeEvent.layout);
     };
     tmp3Result._onLayoutHeader = (nativeEvent) => {
-      tmp3Result._headerLength = tmp3Result._selectLength(nativeEvent.nativeEvent.layout);
+      closure_0._headerLength = closure_0._selectLength(nativeEvent.nativeEvent.layout);
     };
     tmp3Result._onContentSizeChange = (width, height) => {
-      let obj = tmp3Result;
-      const _listMetrics = tmp3Result._listMetrics;
-      obj = { layout: obj, orientation: tmp3Result._orientation() };
+      let obj = closure_0;
+      const _listMetrics = closure_0._listMetrics;
+      obj = { layout: obj, orientation: closure_0._orientation() };
       obj = { width, height };
       const result = _listMetrics.notifyListContentLayout(obj);
-      const result1 = tmp3Result._maybeScrollToInitialScrollIndex(width, height);
-      if (tmp3Result.props.onContentSizeChange) {
+      const result1 = closure_0._maybeScrollToInitialScrollIndex(width, height);
+      if (closure_0.props.onContentSizeChange) {
         const props = obj.props;
         props.onContentSizeChange(width, height);
       }
@@ -242,22 +237,19 @@ class VirtualizedList {
       const result3 = obj._maybeCallOnEdgeReached();
     };
     tmp3Result._convertParentScrollMetrics = (offset) => {
-      const diff = offset.offset - tmp3Result._offsetFromParentVirtualizedList;
-      const _listMetrics = tmp3Result._listMetrics;
-      const diff1 = diff - tmp3Result._scrollMetrics.offset;
+      const diff = offset.offset - closure_0._offsetFromParentVirtualizedList;
+      const _listMetrics = closure_0._listMetrics;
+      const diff1 = diff - closure_0._scrollMetrics.offset;
       return { visibleLength: offset.visibleLength, contentLength: _listMetrics.getContentLength(), offset: diff, dOffset: diff1 };
     };
     tmp3Result._onScroll = (timeStamp) => {
-      let contentLength;
-      let dOffset;
-      let offset;
-      let visibleLength;
-      let obj = tmp3Result;
-      const _nestedChildLists = tmp3Result._nestedChildLists;
+      closure_0 = timeStamp;
+      let obj = closure_0;
+      const _nestedChildLists = closure_0._nestedChildLists;
       const item = _nestedChildLists.forEach((_onScroll) => {
         _onScroll._onScroll(closure_0);
       });
-      if (timeStamp.props.onScroll) {
+      if (closure_0.props.onScroll) {
         const props = obj.props;
         props.onScroll(timeStamp);
       }
@@ -296,7 +288,7 @@ class VirtualizedList {
         obj[0] = num2;
         obj[1] = obj._scrollMetrics.dt;
         obj[2] = contentLength;
-        infoLog("VirtualizedList: You have a large list that is slow to update - make sure your renderItem function renders components that follow React performance best practices like PureComponent, shouldComponentUpdate, etc.", obj);
+        infoLogDefault("VirtualizedList: You have a large list that is slow to update - make sure your renderItem function renders components that follow React performance best practices like PureComponent, shouldComponentUpdate, etc.", obj);
         obj._hasWarned.perf = true;
       }
       let num4 = 1;
@@ -319,23 +311,25 @@ class VirtualizedList {
       }
     };
     tmp3Result._onScrollBeginDrag = (arg0) => {
-      const _nestedChildLists = tmp3Result._nestedChildLists;
+      closure_0 = arg0;
+      const _nestedChildLists = closure_0._nestedChildLists;
       const item = _nestedChildLists.forEach((_onScrollBeginDrag) => {
         _onScrollBeginDrag._onScrollBeginDrag(closure_0);
       });
-      const _viewabilityTuples = tmp3Result._viewabilityTuples;
+      const _viewabilityTuples = closure_0._viewabilityTuples;
       const item1 = _viewabilityTuples.forEach((viewabilityHelper) => {
         viewabilityHelper = viewabilityHelper.viewabilityHelper;
         viewabilityHelper.recordInteraction();
       });
-      arg0._hasInteracted = true;
-      if (arg0.props.onScrollBeginDrag) {
-        const props = arg0.props;
+      closure_0._hasInteracted = true;
+      if (closure_0.props.onScrollBeginDrag) {
+        const props = closure_0.props;
         props.onScrollBeginDrag(arg0);
       }
     };
     tmp3Result._onScrollEndDrag = (nativeEvent) => {
-      const _nestedChildLists = tmp3Result._nestedChildLists;
+      closure_0 = nativeEvent;
+      const _nestedChildLists = closure_0._nestedChildLists;
       const item = _nestedChildLists.forEach((_onScrollEndDrag) => {
         _onScrollEndDrag._onScrollEndDrag(closure_0);
       });
@@ -343,39 +337,41 @@ class VirtualizedList {
       if (velocity) {
         obj._scrollMetrics.velocity = obj._selectOffset(velocity);
       }
-      nativeEvent._computeBlankness();
-      if (nativeEvent.props.onScrollEndDrag) {
+      closure_0._computeBlankness();
+      if (closure_0.props.onScrollEndDrag) {
         const props = obj.props;
         props.onScrollEndDrag(nativeEvent);
       }
     };
     tmp3Result._onMomentumScrollBegin = (arg0) => {
-      const _nestedChildLists = tmp3Result._nestedChildLists;
+      closure_0 = arg0;
+      const _nestedChildLists = closure_0._nestedChildLists;
       const item = _nestedChildLists.forEach((_onMomentumScrollBegin) => {
         const result = _onMomentumScrollBegin._onMomentumScrollBegin(closure_0);
       });
-      if (arg0.props.onMomentumScrollBegin) {
-        const props = arg0.props;
+      if (closure_0.props.onMomentumScrollBegin) {
+        const props = closure_0.props;
         let result = props.onMomentumScrollBegin(arg0);
       }
     };
     tmp3Result._onMomentumScrollEnd = (arg0) => {
-      const _nestedChildLists = tmp3Result._nestedChildLists;
+      closure_0 = arg0;
+      const _nestedChildLists = closure_0._nestedChildLists;
       const item = _nestedChildLists.forEach((_onMomentumScrollEnd) => {
         _onMomentumScrollEnd._onMomentumScrollEnd(closure_0);
       });
-      arg0._scrollMetrics.velocity = 0;
-      arg0._computeBlankness();
-      if (arg0.props.onMomentumScrollEnd) {
-        const props = arg0.props;
+      closure_0._scrollMetrics.velocity = 0;
+      closure_0._computeBlankness();
+      if (closure_0.props.onMomentumScrollEnd) {
+        const props = closure_0.props;
         props.onMomentumScrollEnd(arg0);
       }
     };
     tmp3Result._updateCellsToRender = () => {
-      tmp3Result._updateViewableItems(tmp3Result.props, tmp3Result.state.cellsAroundViewport);
-      tmp3Result.setState((cellsAroundViewport, getItemCount) => {
+      closure_0._updateViewableItems(closure_0.props, closure_0.state.cellsAroundViewport);
+      closure_0.setState((cellsAroundViewport, getItemCount) => {
         const result = closure_0._adjustCellsAroundViewport(getItemCount, cellsAroundViewport.cellsAroundViewport, cellsAroundViewport.pendingScrollUpdateCount);
-        const _createRenderMaskResult = outer1_0._createRenderMask(getItemCount, result, closure_0._getNonViewportRenderRegions(getItemCount));
+        const _createRenderMaskResult = closure_1_0._createRenderMask(getItemCount, result, closure_0._getNonViewportRenderRegions(getItemCount));
         if (result.first === cellsAroundViewport.cellsAroundViewport.first) {
           if (result.last === cellsAroundViewport.cellsAroundViewport.last) {
             let obj = null;
@@ -387,15 +383,15 @@ class VirtualizedList {
     };
     tmp3Result._createViewToken = (index, isViewable, getItem) => {
       const value = getItem.getItem(getItem.data, index);
-      return { index, item: value, key: tmp3Result._keyExtractor(value, index, getItem), isViewable };
+      return { index, item: value, key: closure_0._keyExtractor(value, index, getItem), isViewable };
     };
     tmp3Result._getNonViewportRenderRegions = (getItemCount) => {
-      if (tmp3Result._lastFocusedCellKey) {
+      if (closure_0._lastFocusedCellKey) {
         if (tmp._cellRefs[tmp._lastFocusedCellKey]) {
           const index = tmp._cellRefs[tmp._lastFocusedCellKey].props.index;
           const itemCount = getItemCount.getItemCount(getItemCount.data);
           if (index < itemCount) {
-            if (tmp3Result._getItemKey(getItemCount, index) === tmp._lastFocusedCellKey) {
+            if (closure_0._getItemKey(getItemCount, index) === tmp._lastFocusedCellKey) {
               let diff = index - 1;
               let tmp5 = index;
               let tmp6 = tmp;
@@ -406,11 +402,11 @@ class VirtualizedList {
                 tmp6 = tmp;
                 if (0 < tmp._scrollMetrics.visibleLength) {
                   const diff1 = tmp4 - 1;
-                  const _listMetrics = tmp3Result._listMetrics;
+                  const _listMetrics = closure_0._listMetrics;
                   const sum = num + _listMetrics.getCellMetricsApprox(diff, getItemCount).length;
                   const diff2 = diff - 1;
                   tmp5 = diff1;
-                  tmp6 = tmp3Result;
+                  tmp6 = closure_0;
                   while (0 <= diff2) {
                     diff = diff2;
                     tmp4 = diff1;
@@ -431,7 +427,7 @@ class VirtualizedList {
                 tmp13 = index;
                 if (0 < tmp6._scrollMetrics.visibleLength) {
                   const sum2 = tmp14 + 1;
-                  const _listMetrics2 = tmp3Result._listMetrics;
+                  const _listMetrics2 = closure_0._listMetrics;
                   const sum3 = num2 + _listMetrics2.getCellMetricsApprox(sum1, getItemCount).length;
                   const sum4 = sum1 + 1;
                   tmp13 = sum2;
@@ -444,7 +440,7 @@ class VirtualizedList {
                       break;
                     }
                   }
-                  tmp16 = tmp3Result;
+                  tmp16 = closure_0;
                 }
               }
               const obj = { first: null, last: null };
@@ -466,9 +462,7 @@ class VirtualizedList {
     if (tmp3Result.props.viewabilityConfigCallbackPairs) {
       prop = props.viewabilityConfigCallbackPairs;
       tmp3Result._viewabilityTuples = prop.map((viewabilityConfig) => {
-        const obj = { viewabilityHelper: null, onViewableItemsChanged: null };
-        obj[0] = new callback(table[15])(viewabilityConfig.viewabilityConfig);
-        obj[1] = viewabilityConfig.onViewableItemsChanged;
+        const obj = { viewabilityHelper: new callback(table[15])(viewabilityConfig.viewabilityConfig), onViewableItemsChanged: viewabilityConfig.onViewableItemsChanged };
         return obj;
       });
     } else {
@@ -514,7 +508,7 @@ class VirtualizedList {
     return tmp3Result;
   }
 }
-require("_inherits")(VirtualizedList, require("_isNativeReflectConstruct"));
+_inheritsDefault(VirtualizedList, _isNativeReflectConstructDefault2);
 let obj = {
   key: "scrollToEnd",
   value: function scrollToEnd(animated) {
@@ -541,29 +535,23 @@ let items = [
   {
     key: "scrollToIndex",
     value: function scrollToIndex(animated) {
-      let data;
-      let getItemCount;
-      let index;
-      let onScrollToIndexFailed;
-      let viewOffset;
-      let viewPosition;
       const self = this;
       const props = this.props;
       ({ data, getItemCount, onScrollToIndexFailed } = props);
       ({ index, viewOffset, viewPosition } = animated);
-      00038__(index >= 0, "scrollToIndex out of range: requested index " + index + " but minimum is 0");
+      _modDef38(index >= 0, "scrollToIndex out of range: requested index " + index + " but minimum is 0");
       const tmp = importDefault;
-      const tmp3 = 00038__;
+      const tmp3 = _modDef38;
       const tmp4 = index >= 0;
-      const tmp6 = 00038__;
+      const tmp6 = _modDef38;
       tmp6(getItemCount(data) >= 1, "scrollToIndex out of range: item length " + getItemCount(data) + " but minimum is 1");
       const tmp7 = getItemCount(data) >= 1;
-      const tmp9 = 00038__;
+      const tmp9 = _modDef38;
       tmp9(index < getItemCount(data), "scrollToIndex out of range: requested index " + index + " is out of 0 to " + getItemCount(data) - 1);
       if (!props.getItemLayout) {
         const _listMetrics = self._listMetrics;
         if (index > _listMetrics.getHighestMeasuredCellIndex()) {
-          tmp(38)(onScrollToIndexFailed, "scrollToIndex should be used in conjunction with getItemLayout or onScrollToIndexFailed, otherwise there is no way to know the location of offscreen indices or handle failures.");
+          _modDef38(onScrollToIndexFailed, "scrollToIndex should be used in conjunction with getItemLayout or onScrollToIndexFailed, otherwise there is no way to know the location of offscreen indices or handle failures.");
           let obj = { averageItemLength: null, highestMeasuredFrameIndex: null, index: null };
           const _listMetrics2 = self._listMetrics;
           obj[0] = _listMetrics2.getAverageCellLength();
@@ -656,7 +644,7 @@ let items = [
         }
       }
       if (horizontal) {
-        const obj1 = { x: null };
+        obj1 = { x: null };
         obj1[0] = arg0;
         obj = obj1;
       } else {
@@ -762,11 +750,6 @@ let items = [
   {
     key: "_checkProps",
     value: function _checkProps(arg0) {
-      let data;
-      let getItemCount;
-      let initialScrollIndex;
-      let onScroll;
-      let windowSize;
       ({ onScroll, getItemCount, initialScrollIndex } = arg0);
       ({ windowSize, data } = arg0);
       let tmp4 = !onScroll;
@@ -774,11 +757,11 @@ let items = [
         tmp4 = !onScroll.__isNative;
       }
       const self = this;
-      00038__(tmp4, "Components based on VirtualizedList must be wrapped with Animated.createAnimatedComponent to support native onScroll events with useNativeDriver");
-      const tmp3 = 00038__;
-      const tmpResult = 00038__;
+      _modDef38(tmp4, "Components based on VirtualizedList must be wrapped with Animated.createAnimatedComponent to support native onScroll events with useNativeDriver");
+      const tmp3 = _modDef38;
+      const tmpResult = _modDef38;
       tmpResult(VirtualizedList(320).windowSizeOrDefault(windowSize) > 0, "VirtualizedList: The windowSize prop must be present and set to a value greater than 0.");
-      00038__(getItemCount, "VirtualizedList: The \"getItemCount\" prop must be provided");
+      _modDef38(getItemCount, "VirtualizedList: The \"getItemCount\" prop must be provided");
       const itemCount = getItemCount(data);
       let initialScrollIndex2 = null == initialScrollIndex || self._hasTriggeredInitialScrollToIndex;
       if (!initialScrollIndex2) {
@@ -803,8 +786,6 @@ let items = [
   {
     key: "_adjustCellsAroundViewport",
     value: function _adjustCellsAroundViewport(onEndReachedThreshold, cellsAroundViewport, pendingScrollUpdateCount) {
-      let data;
-      let getItemCount;
       const self = this;
       ({ data, getItemCount } = onEndReachedThreshold);
       let obj = VirtualizedList(320);
@@ -837,8 +818,8 @@ let items = [
             const tmpResult1 = tmp(320);
             windowedRenderLimits = tmpResult.computeWindowedRenderLimits(onEndReachedThreshold, result2, tmp(320).windowSizeOrDefault(onEndReachedThreshold.windowSize), cellsAroundViewport, self._listMetrics, self._scrollMetrics);
             const tmpResult2 = tmp(320);
-            00038__(windowedRenderLimits.last < getItemCount(data), "computeWindowedRenderLimits() should return range in-bounds");
-            const tmp20 = 00038__;
+            _modDef38(windowedRenderLimits.last < getItemCount(data), "computeWindowedRenderLimits() should return range in-bounds");
+            const tmp20 = _modDef38;
           }
           const _nestedChildLists = self._nestedChildLists;
           if (_nestedChildLists.size() > 0) {
@@ -917,15 +898,6 @@ let items = [
   {
     key: "_pushCells",
     value: function _pushCells(items, items1, has, first, last, arg5) {
-      let CellRendererComponent;
-      let ItemSeparatorComponent;
-      let ListItemComponent;
-      let debug;
-      let getItem;
-      let getItemCount;
-      let getItemLayout;
-      let horizontal;
-      let renderItem;
       let self = this;
       self = this;
       const props = this.props;
@@ -960,11 +932,11 @@ let items = [
           }
           let tmp16 = importDefault;
           let tmp17 = dependencyMap;
-          let tmp15 = outer1_18;
+          let tmp15 = closure_1_18;
           let obj = { CellRendererComponent: null, ItemSeparatorComponent: null, ListItemComponent: null, cellKey: null, horizontal: null, index: null, inversionStyle: null, item: null, prevCellKey: null, onUpdateSeparators: null, onCellFocusCapture: null, onUnmount: null, ref: null, renderItem: null };
           obj[0] = CellRendererComponent;
           let tmp19;
-          let tmp18 = _isNativeReflectConstruct;
+          let tmp18 = _isNativeReflectConstructDefault;
           if (sum < diff) {
             tmp19 = ItemSeparatorComponent;
           }
@@ -1014,7 +986,7 @@ let items = [
     key: "_renderEmptyComponent",
     value: function _renderEmptyComponent(type, arg1) {
       const self = this;
-      let closure_0 = type;
+      closure_0 = type;
       let tmp = type;
       if (type.type !== React.Fragment) {
         const obj = { onLayout: null, style: null };
@@ -1034,9 +1006,6 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let ListEmptyComponent;
-      let ListFooterComponent;
-      let ListHeaderComponent;
       const self = this;
       this._checkProps(this.props);
       ({ ListEmptyComponent, ListFooterComponent, ListHeaderComponent } = this.props);
@@ -1070,15 +1039,15 @@ let items = [
             if (!callback4(ListEmptyComponent)) {
               tmp24 = callback6(ListEmptyComponent, {});
             }
-            const obj1 = { cellKey: null, children: null };
+            obj1 = { cellKey: null, children: null };
             obj1[0] = `${self._getCellKey()}-empty`;
             obj1[1] = self._renderEmptyComponent(tmp24, null);
             items.push(callback6(VirtualizedList(322).VirtualizedListCellContextProvider, obj1, "$empty"));
           }
         }
         if (itemCount > 0) {
-          let c21 = false;
-          let c22 = "";
+          c21 = false;
+          c22 = "";
           const renderMask = self.state.renderMask;
           const enumerateRegionsResult = renderMask.enumerateRegions();
           let isSpacer;
@@ -1104,7 +1073,7 @@ let items = [
                     let tmp46 = dependencyMap;
                     let tmp48 = nextResult;
                     let _listMetrics = self._listMetrics;
-                    let tmp47 = clamp;
+                    let tmp47 = clampDefault;
                     let diff = tmp36.first - 1;
                     let last = tmp47(diff, tmp36.last, _listMetrics.getHighestMeasuredCellIndex());
                   }
@@ -1272,8 +1241,6 @@ let items = [
   {
     key: "measureLayoutRelativeToContainingList",
     value: function measureLayoutRelativeToContainingList() {
-      let _scrollRef;
-      let context;
       let self = this;
       self = this;
       try {
@@ -1281,8 +1248,6 @@ let items = [
           ({ _scrollRef, context } = self);
           const outermostParentListRef = context.getOutermostParentListRef();
           _scrollRef.measureLayout(outermostParentListRef.getScrollRef(), (arg0, arg1, width, height) => {
-            let _convertParentScrollMetrics;
-            let context;
             let obj = { x: arg0, y: arg1 };
             self._offsetFromParentVirtualizedList = self._selectOffset(obj);
             const _listMetrics = self._listMetrics;
@@ -1320,7 +1285,7 @@ let items = [
       const self = this;
       const _listMetrics = this._listMetrics;
       const result = this._scrollMetrics.visibleLength / (_listMetrics.getContentLength() || 1);
-      const VirtualizedList = result;
+      VirtualizedList = result;
       const items = [];
       const props = self.props;
       const itemCount = props.getItemCount(self.props.data);
@@ -1343,9 +1308,9 @@ let items = [
       const items2 = [
         items.map((offset) => {
           const style = [, , ];
-          ({ debugOverlayBase: arr[0], debugOverlayFrame: arr[1] } = outer1_23);
+          ({ debugOverlayBase: arr[0], debugOverlayFrame: arr[1] } = closure_1_23);
           style[2] = { top: offset.offset * closure_0, height: offset.length * closure_0 };
-          return outer1_18(outer1_16, { style }, "f" + arg1);
+          return closure_1_18(closure_1_16, { style }, "f" + arg1);
         }),
       ,
 
@@ -1371,8 +1336,6 @@ let items = [
   {
     key: "_selectOffset",
     value: function _selectOffset(arg0) {
-      let x;
-      let y;
       ({ y, x } = arg0);
       if (this._orientation().horizontal) {
         y = x;
@@ -1383,23 +1346,13 @@ let items = [
   {
     key: "_orientation",
     value: function _orientation() {
-      const obj = { horizontal: null, rtl: null };
-      obj[0] = VirtualizedList(320).horizontalOrDefault(this.props.horizontal);
-      obj[1] = isRTL.isRTL;
+      const obj = { horizontal: VirtualizedList(320).horizontalOrDefault(this.props.horizontal), rtl: isRTL.isRTL };
       return obj;
     }
   },
   {
     key: "_maybeCallOnEdgeReached",
     value: function _maybeCallOnEdgeReached() {
-      let data;
-      let getItemCount;
-      let offset;
-      let onEndReached;
-      let onEndReachedThreshold;
-      let onStartReached;
-      let onStartReachedThreshold;
-      let visibleLength;
       const self = this;
       const props = this.props;
       ({ onStartReached, onStartReachedThreshold, onEndReached, onEndReachedThreshold } = props);
@@ -1493,7 +1446,7 @@ let items = [
           }
         }
         const obj = { animated: false, index: null };
-        obj[1] = nullthrows(self.props.initialScrollIndex);
+        obj[1] = nullthrowsDefault(self.props.initialScrollIndex);
         self.scrollToIndex(obj);
       }
     }
@@ -1507,9 +1460,6 @@ let items = [
   {
     key: "_offsetFromScrollEvent",
     value: function _offsetFromScrollEvent(nativeEvent) {
-      let contentOffset;
-      let contentSize;
-      let layoutMeasurement;
       const self = this;
       ({ contentOffset, contentSize, layoutMeasurement } = nativeEvent.nativeEvent);
       const _orientationResult = this._orientation();
@@ -1558,11 +1508,6 @@ let items = [
   {
     key: "_shouldRenderWithPriority",
     value: function _shouldRenderWithPriority() {
-      let first;
-      let last;
-      let offset;
-      let velocity;
-      let visibleLength;
       const self = this;
       ({ first, last } = this.state.cellsAroundViewport);
       ({ offset, visibleLength, velocity } = this._scrollMetrics);
@@ -1639,8 +1584,8 @@ let items = [
     key: "_updateViewableItems",
     value: function _updateViewableItems(props, cellsAroundViewport) {
       const self = this;
-      let closure_1 = props;
-      let closure_0 = cellsAroundViewport;
+      closure_1 = props;
+      closure_0 = cellsAroundViewport;
       if (this.state.pendingScrollUpdateCount <= 0) {
         const _viewabilityTuples = this._viewabilityTuples;
         const item = _viewabilityTuples.forEach((viewabilityHelper) => {
@@ -1693,7 +1638,7 @@ let items1 = [
       if (tmp4) {
         tmp4 = _initialRenderRegionResult.last < itemCount;
       }
-      00038__(tmp4, "Invalid cells around viewport \"[" + _initialRenderRegionResult.first + ", " + _initialRenderRegionResult.last + "]\" was passed to VirtualizedList._createRenderMask");
+      _modDef38(tmp4, "Invalid cells around viewport \"[" + _initialRenderRegionResult.first + ", " + _initialRenderRegionResult.last + "]\" was passed to VirtualizedList._createRenderMask");
       const cellRenderMask = new VirtualizedList(324).CellRenderMask(itemCount);
       if (itemCount > 0) {
         let items1 = closure_0;
@@ -1726,8 +1671,7 @@ let items1 = [
         num = 0;
       }
       const bound = Math.max(0, Math.min(diff, Math.floor(num)));
-      const obj = { first: bound, last: null };
-      obj[1] = Math.min(itemCount, bound + VirtualizedList(320).initialNumToRenderOrDefault(getItemCount.initialNumToRender)) - 1;
+      const obj = { first: bound, last: Math.min(itemCount, bound + VirtualizedList(320).initialNumToRenderOrDefault(getItemCount.initialNumToRender)) - 1 };
       return obj;
     }
   },
@@ -1823,7 +1767,7 @@ let items1 = [
       let obj = VirtualizedList(320);
       obj = { first: null, last: null };
       const bound = Math.max(0, diff - obj.maxToRenderPerBatchOrDefault(getItemCount.maxToRenderPerBatch));
-      obj[0] = clamp(0, first.first, bound);
+      obj[0] = clampDefault(0, first.first, bound);
       obj[1] = Math.min(diff, first.last);
       return obj;
     }
@@ -1837,7 +1781,7 @@ let items1 = [
         const keyExtractorResult = VirtualizedList(313).keyExtractor(value, sum);
         const _String = String;
         if (keyExtractorResult === String(sum)) {
-          let c21 = true;
+          c21 = true;
           if (tmp5) {
             const displayName = value.type.displayName;
           }

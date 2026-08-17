@@ -1,5 +1,5 @@
 // _runtime/metro/06494___INTERNAL_VIEW_CONFIG.js
-import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
 const obj = { uiViewClassName: "RNGestureHandlerRootView", validAttributes: { moduleId: true, unstable_forceActive: true } };
 

@@ -1,10 +1,7 @@
 // _runtime/01817_getWebScrollableElement.js
-import noop from "noop";
-import isJest from "isJest";
+import noop from "noop" /* 19 */;
+import isJest from "isJest" /* 1657 */;
 
-let c3;
-let c4;
-let obj1;
 function getWebScrollableElement(getScrollableNode) {
   let scrollableNode;
   if (getScrollableNode != null) {
@@ -31,7 +28,7 @@ export const useScrollViewOffset = isJest.isWeb() ? (function useScrollViewOffse
   current = closure_4(sharedValue).current;
   const fn = function _() {
     if (closure_0) {
-      const current = tmp.current;
+      current = tmp.current;
       let scrollableNode;
       if (current != null) {
         scrollableNode = current.getScrollableNode();
@@ -54,7 +51,7 @@ export const useScrollViewOffset = isJest.isWeb() ? (function useScrollViewOffse
     if (closure_0) {
       return obj.observe((arg0) => {
         if (arg0) {
-          const current = scrollableNode.current;
+          current = scrollableNode.current;
           scrollableNode = undefined;
           if (current != null) {
             scrollableNode = current.getScrollableNode();
@@ -64,11 +61,11 @@ export const useScrollViewOffset = isJest.isWeb() ? (function useScrollViewOffse
           }
           const listener = scrollableNode.addEventListener("scroll", closure_2);
           return () => {
-            const removed = scrollableNode.removeEventListener("scroll", outer1_2);
+            const removed = scrollableNode.removeEventListener("scroll", closure_1_2);
           };
         } else {
-          const logger = outer1_0(outer1_1[3]).logger;
-          logger.warn(outer1_5);
+          const logger = closure_1_0(closure_1_1[3]).logger;
+          logger.warn(closure_1_5);
         }
       });
     }
@@ -102,15 +99,15 @@ export const useScrollViewOffset = isJest.isWeb() ? (function useScrollViewOffse
   callback2(() => {
     if (closure_0) {
       return obj.observe((arg0) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         if (arg0) {
           workletEventHandler.workletEventHandler.registerForEvents(arg0);
           return () => {
-            outer1_2.workletEventHandler.unregisterFromEvents(closure_0);
+            closure_1_2.workletEventHandler.unregisterFromEvents(closure_0);
           };
         } else {
-          const logger = outer1_0(outer1_1[3]).logger;
-          logger.warn(outer1_5);
+          const logger = closure_1_0(closure_1_1[3]).logger;
+          logger.warn(closure_1_5);
         }
       });
     }

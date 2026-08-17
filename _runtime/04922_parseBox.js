@@ -1,6 +1,7 @@
 // _runtime/04922_parseBox.js
-import { parseBox } from "04919_parseBox.js";
-const require = arg1;
+import parseBox from "parseBox" /* 4919 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.default = {
   isAvifFile(getUint32) {

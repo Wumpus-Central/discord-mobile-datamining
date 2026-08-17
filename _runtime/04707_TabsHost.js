@@ -1,25 +1,18 @@
 // _runtime/04707_TabsHost.js
-import _slicedToArray from "_slicedToArray";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import { useState } from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import closure_6 from "noop" /* 19 */;
+import { useState } from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-let c9;
-let jsx;
-let metroImportAll;
 const require = arg1;
 let closure_3 = ["onNativeFocusChange", "experimentalControlNavigationStateInJS", "bottomAccessory", "nativeContainerStyle"];
-({ Platform, StyleSheet, findNodeHandle: metroImportAll } = get_ActivityIndicator);
+({ Platform, StyleSheet, findNodeHandle: closure_8 } = get_ActivityIndicator);
 ({ jsx, jsxs: c9 } = jsxProd);
 const styles = StyleSheet.create({ fillParent: { flex: 1, width: "100%", height: "100%" } });
 
 export default function TabsHost(onNativeFocusChange) {
-  let bottomAccessory;
-  let nativeContainerStyle;
   let obj = onNativeFocusChange(4708);
   obj.bottomTabsDebugLog("TabsHost render");
   onNativeFocusChange = onNativeFocusChange.onNativeFocusChange;
@@ -30,10 +23,10 @@ export default function TabsHost(onNativeFocusChange) {
   ({ bottomAccessory, nativeContainerStyle } = onNativeFocusChange);
   const tmp4 = callback2(onNativeFocusChange, closure_3);
   ref = React.useRef(null);
-  const dependencyMap = React.useRef(-1);
+  dependencyMap = React.useRef(-1);
   const effect = React.useEffect(() => {
     if (null != ref.current) {
-      let num2 = outer1_8(tmp.current);
+      let num2 = closure_1_8(tmp.current);
       if (num2 == null) {
         num2 = -1;
       }

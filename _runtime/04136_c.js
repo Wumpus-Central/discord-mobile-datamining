@@ -1,6 +1,7 @@
 // _runtime/04136_c.js
-import { __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE as closure_0 } from "noop";
+import noop from "noop" /* 19 */;
 
+let closure_0 = noop.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
 
 export const c = (arg0) => {
   const H = constants.H;

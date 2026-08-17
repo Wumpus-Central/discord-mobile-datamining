@@ -1,7 +1,9 @@
 // _runtime/13695_sum.js
+import call from "call" /* 13680 */;
+
 let c0 = 0;
 let closure_1 = Math.random();
-let closure_2 = require("call")(1.toString);
+let closure_2 = call(1.toString);
 
 export default (arg0) => {
   let str = "";

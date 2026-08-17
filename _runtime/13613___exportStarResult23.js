@@ -1,18 +1,13 @@
 // _runtime/13613___exportStarResult23.js
-import { CanonicalizeLocaleList } from "13577_CanonicalizeLocaleList.js";
-import { __exportStarResult2 } from "13579___exportStarResult2.js";
-import { getMultiInternalSlots } from "13582_getMultiInternalSlots.js";
-import { __exportStarResult4 } from "13587___exportStarResult4.js";
-import { match } from "13614_match.js";
-const require = arg1;
+import CanonicalizeLocaleList from "CanonicalizeLocaleList" /* 13577 */;
+import __exportStarResult2 from "__exportStarResult2" /* 13579 */;
+import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
+import __exportStarResult4 from "__exportStarResult4" /* 13587 */;
+import match from "match" /* 13614 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.InitializeNumberFormat = function InitializeNumberFormat(arg0, arg1, arg2, arg3) {
-  let availableLocales;
-  let currencyDigitsData;
-  let getDefaultLocale;
-  let getInternalSlots;
-  let localeData;
-  let numberingSystemNames;
   ({ localeData, numberingSystemNames, getDefaultLocale } = arg3);
   ({ getInternalSlots, availableLocales, currencyDigitsData } = arg3);
   const result = CanonicalizeLocaleList.CanonicalizeLocaleList(arg1);

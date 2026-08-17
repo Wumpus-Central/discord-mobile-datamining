@@ -1,7 +1,8 @@
 // _runtime/03780_dayPeriodEnumToHours.js
-import { keys } from "03651_keys.js";
-import { 03781__ } from "metro/03781__.js";
-const require = arg1;
+import keys from "keys" /* 3651 */;
+import _mod3781 from "module_3781" /* 3781 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.dayPeriodEnumToHours = function dayPeriodEnumToHours(arg0) {
   if ("morning" === arg0) {
@@ -70,7 +71,7 @@ arg5.normalizeTwoDigitYear = function normalizeTwoDigitYear(year, arg1) {
   return diff2;
 };
 arg5.parseAnyDigitsSigned = function parseAnyDigitsSigned(str) {
-  const match = str.match(03781__.numericPatterns.anyDigitsSigned);
+  const match = str.match(_mod3781.numericPatterns.anyDigitsSigned);
   let tmp2 = null;
   if (match) {
     const obj = { value: null, rest: null };
@@ -83,7 +84,7 @@ arg5.parseAnyDigitsSigned = function parseAnyDigitsSigned(str) {
 };
 arg5.parseNDigits = function parseNDigits(length, str) {
   if (1 === length) {
-    const match = str.match(03781__.numericPatterns.singleDigit);
+    const match = str.match(_mod3781.numericPatterns.singleDigit);
     let tmp20 = null;
     if (match) {
       let obj = { value: null, rest: null };
@@ -94,7 +95,7 @@ arg5.parseNDigits = function parseNDigits(length, str) {
     }
     return tmp20;
   } else if (2 === length) {
-    const match1 = str.match(03781__.numericPatterns.twoDigits);
+    const match1 = str.match(_mod3781.numericPatterns.twoDigits);
     let tmp15 = null;
     if (match1) {
       obj = { value: null, rest: null };
@@ -105,10 +106,10 @@ arg5.parseNDigits = function parseNDigits(length, str) {
     }
     return tmp15;
   } else if (3 === length) {
-    const match2 = str.match(03781__.numericPatterns.threeDigits);
+    const match2 = str.match(_mod3781.numericPatterns.threeDigits);
     let tmp10 = null;
     if (match2) {
-      const obj1 = { value: null, rest: null };
+      obj1 = { value: null, rest: null };
       const _parseInt3 = parseInt;
       obj1[0] = parseInt(match2[0], 10);
       obj1[1] = str.slice(match2[0].length);
@@ -116,7 +117,7 @@ arg5.parseNDigits = function parseNDigits(length, str) {
     }
     return tmp10;
   } else if (4 === length) {
-    const match3 = str.match(03781__.numericPatterns.fourDigits);
+    const match3 = str.match(_mod3781.numericPatterns.fourDigits);
     let tmp5 = null;
     if (match3) {
       const obj2 = { value: null, rest: null };
@@ -143,7 +144,7 @@ arg5.parseNDigits = function parseNDigits(length, str) {
 };
 arg5.parseNDigitsSigned = function parseNDigitsSigned(length, str) {
   if (1 === length) {
-    const match = str.match(03781__.numericPatterns.singleDigitSigned);
+    const match = str.match(_mod3781.numericPatterns.singleDigitSigned);
     let tmp20 = null;
     if (match) {
       let obj = { value: null, rest: null };
@@ -154,7 +155,7 @@ arg5.parseNDigitsSigned = function parseNDigitsSigned(length, str) {
     }
     return tmp20;
   } else if (2 === length) {
-    const match1 = str.match(03781__.numericPatterns.twoDigitsSigned);
+    const match1 = str.match(_mod3781.numericPatterns.twoDigitsSigned);
     let tmp15 = null;
     if (match1) {
       obj = { value: null, rest: null };
@@ -165,10 +166,10 @@ arg5.parseNDigitsSigned = function parseNDigitsSigned(length, str) {
     }
     return tmp15;
   } else if (3 === length) {
-    const match2 = str.match(03781__.numericPatterns.threeDigitsSigned);
+    const match2 = str.match(_mod3781.numericPatterns.threeDigitsSigned);
     let tmp10 = null;
     if (match2) {
-      const obj1 = { value: null, rest: null };
+      obj1 = { value: null, rest: null };
       const _parseInt3 = parseInt;
       obj1[0] = parseInt(match2[0], 10);
       obj1[1] = str.slice(match2[0].length);
@@ -176,7 +177,7 @@ arg5.parseNDigitsSigned = function parseNDigitsSigned(length, str) {
     }
     return tmp10;
   } else if (4 === length) {
-    const match3 = str.match(03781__.numericPatterns.fourDigitsSigned);
+    const match3 = str.match(_mod3781.numericPatterns.fourDigitsSigned);
     let tmp5 = null;
     if (match3) {
       const obj2 = { value: null, rest: null };

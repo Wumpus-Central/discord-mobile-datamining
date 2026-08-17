@@ -1,6 +1,6 @@
 // _runtime/12203_mergeDefs.js
-import _createClass from "_createClass";
-import _classCallCheck from "_classCallCheck";
+import _createClass from "_createClass" /* 42 */;
+import f53362 from "_classCallCheck" /* 41 */;
 
 function mergeDefs(def, arg1) {
   const items = [...arguments];
@@ -63,7 +63,7 @@ if ("captureStackTrace" in Error) {
 
   };
 }
-_classCallCheck = () => {
+f53362 = () => {
   if (typeof navigator !== "undefined") {
     let hasItem;
     if (navigator != null) {
@@ -98,7 +98,7 @@ const items1 = [-Number.MAX_VALUE, Number.MAX_VALUE];
 obj = { int64: null, uint64: null };
 const items2 = [BigInt("-9223372036854775808"), BigInt("9223372036854775807")];
 obj[0] = items2;
-const items3 = [require("_createClass"), BigInt("18446744073709551615")];
+const items3 = [require("module_0"), BigInt("18446744073709551615")];
 obj[1] = items3;
 class Class {
   constructor() {
@@ -117,7 +117,7 @@ export function assertIs(arg0) {
 
 }
 export const assertNever = function assertNever(arg0) {
-  const error = new Error("Unexpected value in exhaustive check");
+  error = new Error("Unexpected value in exhaustive check");
   throw error;
 };
 export function assert(arg0) {
@@ -125,15 +125,13 @@ export function assert(arg0) {
 }
 export const getEnumValues = function getEnumValues(entries) {
   const values = Object.values(entries);
-  let closure_0 = values.filter((num) => typeof num === "number");
+  closure_0 = values.filter((num) => typeof num === "number");
   entries = Object.entries(entries);
   const found = entries.filter((arg0) => {
-    let tmp;
     [tmp, ] = arg0;
     return -1 === closure_0.indexOf(+tmp);
   });
   return found.map((arg0) => {
-    let tmp;
     [, tmp] = arg0;
     return tmp;
   });
@@ -165,7 +163,7 @@ export const jsonStringifyReplacer = function jsonStringifyReplacer(arg0, arg1) 
   return str;
 };
 export const cached = function cached(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const obj = {};
   Object.defineProperty(obj, "value", {
     get: function() {
@@ -224,9 +222,9 @@ export const floatSafeRemainder = function floatSafeRemainder(value, value2) {
   return parsed1 % Number.parseInt(value2.toFixed(parsed).replace(".", "")) / 10 ** parsed;
 };
 export const defineLazy = function defineLazy(_zod, values, arg2) {
-  let closure_0 = _zod;
-  let closure_1 = values;
-  let closure_2 = arg2;
+  closure_0 = _zod;
+  closure_1 = values;
+  closure_2 = arg2;
   Object.defineProperty(_zod, values, {
     get() {
       let tmp = closure_3;
@@ -271,7 +269,7 @@ export const getElementAtPath = function getElementAtPath(arg0, arr) {
   return reduced;
 };
 export const promiseAllObject = function promiseAllObject(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const keys = Object.keys(arg0);
   return Promise.all(keys.map((arg0) => table[arg0])).then((arg0) => {
     let length;
@@ -388,7 +386,7 @@ export const clone = function clone(_zod, arg1, parent) {
   return constr;
 };
 export const normalizeParams = function normalizeParams(enc) {
-  let closure_0 = enc;
+  closure_0 = enc;
   if (enc) {
     if (typeof enc === "string") {
       let obj = { error: null };
@@ -402,7 +400,7 @@ export const normalizeParams = function normalizeParams(enc) {
         message = enc.message;
       }
       if (undefined !== message) {
-        let error;
+        error = undefined;
         if (enc != null) {
           error = enc.error;
         }
@@ -431,7 +429,7 @@ export const normalizeParams = function normalizeParams(enc) {
   }
 };
 export const createTransparentProxy = function createTransparentProxy(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const proxy = new Proxy({}, {
     get(arg0, arg1, arg2) {
       if (closure_1 == null) {
@@ -491,18 +489,18 @@ export const stringifyPrimitive = function stringifyPrimitive(str) {
   return text;
 };
 export const optionalKeys = function optionalKeys(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const keys = Object.keys(arg0);
   return keys.filter((arg0) => "optional" === dependencyMap[arg0]._zod.optin && "optional" === dependencyMap[arg0]._zod.optout);
 };
 export const pick = function pick(_zod) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   const def = _zod._zod.def;
   const checks = def.checks;
   if (checks) {
     if (checks.length > 0) {
       let _Error = Error;
-      let error = new Error(".pick() cannot be used on object schemas containing refinements");
+      error = new Error(".pick() cannot be used on object schemas containing refinements");
       throw error;
     }
   }
@@ -529,7 +527,7 @@ export const pick = function pick(_zod) {
           let str2 = "Unrecognized key: \"";
           let tmp2 = new.target;
           let tmp3 = new.target;
-          let error = new Error("Unrecognized key: \"" + key10003 + "\"");
+          error = new Error("Unrecognized key: \"" + key10003 + "\"");
           let tmp5 = error;
           throw error;
         }
@@ -555,14 +553,14 @@ export const pick = function pick(_zod) {
   return constr;
 };
 export const omit = function omit(importDefaultResult3Result, closure_3, newline) {
-  let closure_0 = importDefaultResult3Result;
-  let closure_1 = closure_3;
+  closure_0 = importDefaultResult3Result;
+  closure_1 = closure_3;
   const def = importDefaultResult3Result._zod.def;
   const checks = def.checks;
   if (checks) {
     if (checks.length > 0) {
       let _Error = Error;
-      let error = new Error(".omit() cannot be used on object schemas containing refinements");
+      error = new Error(".omit() cannot be used on object schemas containing refinements");
       throw error;
     }
   }
@@ -591,7 +589,7 @@ export const omit = function omit(importDefaultResult3Result, closure_3, newline
           let str2 = "Unrecognized key: \"";
           let tmp5 = new.target;
           let tmp6 = new.target;
-          let error = new Error("Unrecognized key: \"" + key10009 + "\"");
+          error = new Error("Unrecognized key: \"" + key10009 + "\"");
           let tmp8 = error;
           throw error;
         }
@@ -617,8 +615,8 @@ export const omit = function omit(importDefaultResult3Result, closure_3, newline
   return constr;
 };
 export const extend = function extend(_zod, obj) {
-  let closure_0 = _zod;
-  let closure_1 = obj;
+  closure_0 = _zod;
+  closure_1 = obj;
   if (isPlainObject(obj)) {
     const checks = _zod._zod.def.checks;
     if (checks) {
@@ -633,7 +631,7 @@ export const extend = function extend(_zod, obj) {
             let tmp9 = new.target;
             let str2 = "Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.";
             let tmp10 = new.target;
-            let error = new Error("Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.");
+            error = new Error("Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.");
             let tmp12 = error;
             throw error;
           }
@@ -643,7 +641,7 @@ export const extend = function extend(_zod, obj) {
     obj = {};
     Object.defineProperty(obj, "shape", {
       get: function() {
-          const obj = {};
+          obj = {};
           const merged = Object.assign(_zod._zod.def.shape);
           const merged1 = Object.assign(closure_1);
           Object.defineProperty(this, "shape", { value: obj, writable: true, enumerable: true, configurable: true });
@@ -671,7 +669,7 @@ export const extend = function extend(_zod, obj) {
   }
 };
 export const safeExtend = function safeExtend(closure_0, arg1) {
-  let closure_1 = arg1;
+  closure_1 = arg1;
   if (isPlainObject(arg1)) {
     let obj = {};
     Object.defineProperty(obj, "shape", {
@@ -699,13 +697,13 @@ export const safeExtend = function safeExtend(closure_0, arg1) {
     return constr;
   } else {
     const _Error = Error;
-    const error = new Error("Invalid input to safeExtend: expected a plain object");
+    error = new Error("Invalid input to safeExtend: expected a plain object");
     throw error;
   }
 };
 export const merge = function merge(_zod) {
-  let closure_0 = _zod;
-  let closure_1 = arg1;
+  closure_0 = _zod;
+  closure_1 = arg1;
   let obj = {};
   Object.defineProperty(obj, "shape", {
     get: function() {
@@ -734,14 +732,14 @@ export const merge = function merge(_zod) {
   return constr;
 };
 export const partial = function partial(arg0, _zod) {
-  let closure_0 = arg0;
-  let closure_1 = _zod;
-  const mergeDefs = arg2;
+  closure_0 = arg0;
+  closure_1 = _zod;
+  mergeDefs = arg2;
   const checks = _zod._zod.def.checks;
   if (checks) {
     if (checks.length > 0) {
       let _Error = Error;
-      let error = new Error(".partial() cannot be used on object schemas containing refinements");
+      error = new Error(".partial() cannot be used on object schemas containing refinements");
       throw error;
     }
   }
@@ -782,7 +780,7 @@ export const partial = function partial(arg0, _zod) {
             let str2 = "Unrecognized key: \"";
             let tmp10 = new.target;
             let tmp11 = new.target;
-            let error = new Error("Unrecognized key: \"" + key10020 + "\"");
+            error = new Error("Unrecognized key: \"" + key10020 + "\"");
             let tmp13 = error;
             throw error;
           }
@@ -826,9 +824,9 @@ export const partial = function partial(arg0, _zod) {
   return constr;
 };
 export const required = function required(arg0, _zod) {
-  let closure_0 = arg0;
-  let closure_1 = _zod;
-  const mergeDefs = arg2;
+  closure_0 = arg0;
+  closure_1 = _zod;
+  mergeDefs = arg2;
   let obj = {};
   Object.defineProperty(obj, "shape", {
     get: function() {
@@ -863,7 +861,7 @@ export const required = function required(arg0, _zod) {
             let str2 = "Unrecognized key: \"";
             let tmp6 = new.target;
             let tmp7 = new.target;
-            let error = new Error("Unrecognized key: \"" + key10014 + "\"");
+            error = new Error("Unrecognized key: \"" + key10014 + "\"");
             let tmp9 = error;
             throw error;
           }
@@ -902,17 +900,17 @@ export const required = function required(arg0, _zod) {
   }
   return constr;
 };
-export const aborted = function aborted(outer1_0, closure_0) {
+export const aborted = function aborted(closure_1_0, closure_0) {
   let num = closure_0;
   if (closure_0 === undefined) {
     num = 0;
   }
-  if (true === outer1_0.aborted) {
+  if (true === closure_1_0.aborted) {
     return true;
   } else {
-    if (num < outer1_0.issues.length) {
+    if (num < closure_1_0.issues.length) {
       while (true) {
-        let tmp2 = outer1_0.issues[num];
+        let tmp2 = closure_1_0.issues[num];
         let tmp3 = num;
         let _continue;
         if (tmp2 != null) {
@@ -950,7 +948,7 @@ export const unwrapMessage = function unwrapMessage(str) {
   }
   return tmp;
 };
-export const finalizeIssue = function finalizeIssue(path, closure_0, outer1_8) {
+export const finalizeIssue = function finalizeIssue(path, closure_0, closure_1_8) {
   const obj = {};
   const merged = Object.assign(path);
   path = path.path;
@@ -964,7 +962,7 @@ export const finalizeIssue = function finalizeIssue(path, closure_0, outer1_8) {
     if (inst != null) {
       const def = inst._zod.def;
       if (def != null) {
-        const error = def.error;
+        error = def.error;
         if (error != null) {
           errorResult = error(path);
         }
@@ -997,7 +995,7 @@ export const finalizeIssue = function finalizeIssue(path, closure_0, outer1_8) {
       str = tmp7;
     }
     if (str == null) {
-      const customError = outer1_8.customError;
+      const customError = closure_1_8.customError;
       let customErrorResult;
       if (customError != null) {
         customErrorResult = customError(path);
@@ -1013,7 +1011,7 @@ export const finalizeIssue = function finalizeIssue(path, closure_0, outer1_8) {
       str = tmp11;
     }
     if (str == null) {
-      const localeError = outer1_8.localeError;
+      const localeError = closure_1_8.localeError;
       let localeErrorResult;
       if (localeError != null) {
         localeErrorResult = localeError(path);
@@ -1104,7 +1102,7 @@ export const parsedType = function parsedType(input) {
     return tmp;
   }
 };
-export const issue = function issue(arg0, value, def) {
+export const issue = function issue(arg0, value, closure_1_1) {
   const items = [...arguments];
   const first = items[0];
   if (typeof first === "string") {
@@ -1122,7 +1120,6 @@ export const issue = function issue(arg0, value, def) {
 export const cleanEnum = function cleanEnum(arg0) {
   const entries = Object.entries(arg0);
   const found = entries.filter((arg0) => {
-    let tmp;
     [tmp, ] = arg0;
     return Number.isNaN(Number.parseInt(tmp, 10));
   });
@@ -1197,7 +1194,7 @@ export const hexToUint8Array = function hexToUint8Array(str) {
   const replaced = str.replace(/^0x/, "");
   if (replaced.length % 2 !== 0) {
     const _Error = Error;
-    const error = new Error("Invalid hex string length");
+    error = new Error("Invalid hex string length");
     throw error;
   } else {
     const _Uint8Array = Uint8Array;
@@ -1294,7 +1291,7 @@ export const getParsedType = (self) => {
     } else {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const error = new Error("Unknown data type: " + tmp);
+      error = new Error("Unknown data type: " + tmp);
       throw error;
     }
   }

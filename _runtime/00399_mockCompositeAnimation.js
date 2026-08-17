@@ -31,8 +31,8 @@ obj = {
   },
   timing(arg0, arg1) {
     let f67594 = arg1;
-    let closure_1 = arg0;
-    const obj = {};
+    closure_1 = arg0;
+    obj = {};
     const merged = Object.assign(closure_1);
     f67594 = (arg0) => {
       value.setValue(f67594.toValue);
@@ -42,35 +42,35 @@ obj = {
     };
     obj.start = (arg0) => {
       let fn = arg0;
-      let closure_0 = arg0;
+      c0 = arg0;
       if (null != arg0) {
         fn = () => {
           const items = [...arguments];
-          if (closure_0) {
+          if (c0) {
             const _console = console;
             console.warn("Ignoring recursive animation callback when running mock animations");
           } else {
-            closure_0 = true;
+            c0 = true;
             try {
               const items1 = [];
               HermesBuiltin.arraySpread(items, 0);
               HermesBuiltin.apply(items1, undefined);
-              closure_0 = false;
+              c0 = false;
             } catch (tmp8) {
-              closure_0 = false;
+              c0 = false;
               throw tmp8;
             }
           }
         };
       }
-      closure_0(fn);
+      c0(fn);
     };
     return obj;
   },
   spring(animation, arg1) {
     let f67595 = arg1;
-    let closure_1 = animation;
-    const obj = {};
+    closure_1 = animation;
+    obj = {};
     const merged = Object.assign(closure_1);
     f67595 = (arg0) => {
       animation.setValue(f67595.toValue);
@@ -80,28 +80,28 @@ obj = {
     };
     obj.start = (arg0) => {
       let fn = arg0;
-      let closure_0 = arg0;
+      c0 = arg0;
       if (null != arg0) {
         fn = () => {
           const items = [...arguments];
-          if (closure_0) {
+          if (c0) {
             const _console = console;
             console.warn("Ignoring recursive animation callback when running mock animations");
           } else {
-            closure_0 = true;
+            c0 = true;
             try {
               const items1 = [];
               HermesBuiltin.arraySpread(items, 0);
               HermesBuiltin.apply(items1, undefined);
-              closure_0 = false;
+              c0 = false;
             } catch (tmp8) {
-              closure_0 = false;
+              c0 = false;
               throw tmp8;
             }
           }
         };
       }
-      closure_0(fn);
+      c0(fn);
     };
     return obj;
   },
@@ -119,7 +119,7 @@ obj = {
       HermesBuiltin.throwTypeError();
     }
     let f67593 = arg0;
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     f67593 = (arg0) => {
       const item = f67593.forEach((start) => start.start());
@@ -129,28 +129,28 @@ obj = {
     };
     obj.start = (arg0) => {
       let fn = arg0;
-      let closure_0 = arg0;
+      c0 = arg0;
       if (null != arg0) {
         fn = () => {
           const items = [...arguments];
-          if (closure_0) {
+          if (c0) {
             const _console = console;
             console.warn("Ignoring recursive animation callback when running mock animations");
           } else {
-            closure_0 = true;
+            c0 = true;
             try {
               const items1 = [];
               HermesBuiltin.arraySpread(items, 0);
               HermesBuiltin.apply(items1, undefined);
-              closure_0 = false;
+              c0 = false;
             } catch (tmp8) {
-              closure_0 = false;
+              c0 = false;
               throw tmp8;
             }
           }
         };
       }
-      closure_0(fn);
+      c0(fn);
     };
     return obj;
   },
@@ -159,7 +159,7 @@ obj = {
       HermesBuiltin.throwTypeError();
     }
     let f67593 = items;
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     f67593 = (arg0) => {
       const item = f67593.forEach((start) => start.start());
@@ -169,28 +169,28 @@ obj = {
     };
     obj.start = (arg0) => {
       let fn = arg0;
-      let closure_0 = arg0;
+      c0 = arg0;
       if (null != arg0) {
         fn = () => {
           const items = [...arguments];
-          if (closure_0) {
+          if (c0) {
             const _console = console;
             console.warn("Ignoring recursive animation callback when running mock animations");
           } else {
-            closure_0 = true;
+            c0 = true;
             try {
               const items1 = [];
               HermesBuiltin.arraySpread(items, 0);
               HermesBuiltin.apply(items1, undefined);
-              closure_0 = false;
+              c0 = false;
             } catch (tmp8) {
-              closure_0 = false;
+              c0 = false;
               throw tmp8;
             }
           }
         };
       }
-      closure_0(fn);
+      c0(fn);
     };
     return obj;
   },
@@ -199,7 +199,7 @@ obj = {
       HermesBuiltin.throwTypeError();
     }
     let f67593 = arg1;
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     f67593 = (arg0) => {
       const item = f67593.forEach((start) => start.start());
@@ -209,33 +209,33 @@ obj = {
     };
     obj.start = (arg0) => {
       let fn = arg0;
-      let closure_0 = arg0;
+      c0 = arg0;
       if (null != arg0) {
         fn = () => {
           const items = [...arguments];
-          if (closure_0) {
+          if (c0) {
             const _console = console;
             console.warn("Ignoring recursive animation callback when running mock animations");
           } else {
-            closure_0 = true;
+            c0 = true;
             try {
               const items1 = [];
               HermesBuiltin.arraySpread(items, 0);
               HermesBuiltin.apply(items1, undefined);
-              closure_0 = false;
+              c0 = false;
             } catch (tmp8) {
-              closure_0 = false;
+              c0 = false;
               throw tmp8;
             }
           }
         };
       }
-      closure_0(fn);
+      c0(fn);
     };
     return obj;
   },
   loop(arg0) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }

@@ -1,9 +1,11 @@
 // _runtime/06595__isNativeReflectConstruct.js
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult1 from "_createClass";
-import { findNodeHandle } from "get ActivityIndicator";
+import _inheritsDefault from "_inherits" /* 98 */;
+import MixinDefault from "Mixin" /* 6598 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_5 from "_classCallCheck" /* 41 */;
+import importDefaultResult1 from "_createClass" /* 42 */;
+import { findNodeHandle } from "get ActivityIndicator" /* 17 */;
 
 let Shape = arg1;
 function _isNativeReflectConstruct() {
@@ -17,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,7 +31,7 @@ let closure_8 = Math.PI / 180;
 class SVGMatrix {
   constructor(arg0) {
     self = this;
-    tmp = outer1_5(this, Shape);
+    tmp = closure_5(this, Shape);
     if (global) {
       ({ a: self.a, b: self.b, c: self.c, d: self.d, e: self.e, f: self.f } = global);
     } else {
@@ -49,16 +51,6 @@ Shape = SVGMatrix;
 let obj = {
   key: "multiply",
   value: function multiply(arg0) {
-    let a;
-    let a2;
-    let b;
-    let b2;
-    let c;
-    let c2;
-    let d;
-    let d2;
-    let e;
-    let f;
     ({ a, b, c, d } = this);
     ({ a: a2, b: b2, c: c2, d: d2, e, f } = arg0);
     let obj = { a: a * a2 + c * b2, c: a * c2 + c * d2, e: a * e + c * f + this.e, b: b * a2 + d * b2, d: b * c2 + d * d2, f: b * e + d * f + this.f };
@@ -73,12 +65,6 @@ let items = [
   {
     key: "inverse",
     value: function inverse() {
-      let a;
-      let b;
-      let c;
-      let d;
-      let e;
-      let f;
       ({ a, b, c, d, e, f } = this);
       const diff = a * d - b * c;
       let obj = { a: d / diff, b: -b / diff, c: -c / diff, d: a / diff, e: (c * f - d * e) / diff, f: -a * f - b * e / diff };
@@ -91,10 +77,6 @@ let items = [
   {
     key: "translate",
     value: function translate(arg0, arg1) {
-      let a;
-      let b;
-      let c;
-      let d;
       ({ a, b, c, d } = this);
       let obj = { a, c, e: a * arg0 + c * arg1 + this.e, b, d, f: b * arg0 + d * arg1 + this.f };
       obj = Object.create(Shape.prototype);
@@ -126,10 +108,6 @@ let items = [
   {
     key: "rotate",
     value: function rotate(arg0) {
-      let a;
-      let b;
-      let c;
-      let d;
       const cosResult = Math.cos(closure_8 * arg0);
       const sinResult = Math.sin(closure_8 * arg0);
       ({ a, b, c, d } = this);
@@ -143,10 +121,6 @@ let items = [
   {
     key: "rotateFromVector",
     value: function rotateFromVector(result2, result2) {
-      let a;
-      let b;
-      let c;
-      let d;
       const atan2Result = Math.atan2(result2, result2);
       const cosResult = Math.cos(closure_8 * atan2Result);
       const sinResult = Math.sin(closure_8 * atan2Result);
@@ -181,8 +155,6 @@ let items = [
   {
     key: "skewX",
     value: function skewX(arg0) {
-      let a;
-      let b;
       const tanResult = Math.tan(closure_8 * arg0);
       ({ a, b } = this);
       let obj = { a, c: a * tanResult + this.c, e: this.e, b, d: b * tanResult + this.d, f: this.f };
@@ -195,8 +167,6 @@ let items = [
   {
     key: "skewY",
     value: function skewY(arg0) {
-      let c;
-      let d;
       const tanResult = Math.tan(closure_8 * arg0);
       ({ c, d } = this);
       let obj = { a: this.a + c * tanResult, c, e: this.e, b: this.b + d * tanResult, d, f: this.f };
@@ -212,7 +182,7 @@ let c9 = importDefaultResult1Result;
 class SVGPoint {
   constructor(arg0) {
     self = this;
-    tmp = outer1_5(this, Shape);
+    tmp = closure_5(this, Shape);
     if (global) {
       ({ x: self.x, y: self.y } = global);
     } else {
@@ -227,8 +197,6 @@ Shape = SVGPoint;
 obj = {
   key: "matrixTransform",
   value: function matrixTransform(arg0) {
-    let x;
-    let y;
     ({ x, y } = this);
     let obj = { x: arg0.a * x + arg0.c * y + arg0.e, y: arg0.b * x + arg0.d * y + arg0.f };
     obj = Object.create(Shape.prototype);
@@ -250,12 +218,12 @@ obj = {
 class Shape {
   constructor(arg0) {
     self = this;
-    tmp = outer1_5(this, apply);
+    tmp = closure_5(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = outer1_4;
-    obj = outer1_4(apply);
-    tmp3 = outer1_3;
+    tmp2 = closure_4;
+    obj = closure_4(closure_0);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -264,7 +232,7 @@ class Shape {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.root = null;
     tmp3Result.refMethod = (root) => {
       closure_0.root = root;
@@ -272,19 +240,19 @@ class Shape {
     tmp3Result.setNativeProps = (obj) => {
       for (const key10004 in arg0) {
         let tmp3 = key10004;
-        let tmp4 = tmp3Result;
-        let tmp5 = outer1_2;
-        let BrushProperties = tmp3Result(outer1_2[7]).BrushProperties;
+        let tmp4 = lib;
+        let tmp5 = closure_1_2;
+        let BrushProperties = lib(closure_1_2[7]).BrushProperties;
         if (!BrushProperties.includes(key10004)) {
           continue;
         } else {
-          let tmp = outer1_1;
-          arg0[key10004] = outer1_1(tmp5[8])(arg0[key10004]);
+          let tmp = closure_1_1;
+          arg0[key10004] = closure_1_1(tmp5[8])(arg0[key10004]);
           continue;
         }
         continue;
       }
-      const root = tmp3Result.root;
+      const root = lib.root;
       if (root != null) {
         root.setNativeProps(obj);
       }
@@ -302,42 +270,42 @@ class Shape {
       markers = undefined === markers || markers;
       let clipped = obj.clipped;
       clipped = undefined === clipped || clipped;
-      const tmp5 = outer1_6(tmp3Result.root);
-      return tmp3Result(outer1_2[9]).default.getBBox(tmp5, { fill, stroke, markers, clipped });
+      const tmp5 = closure_1_6(lib.root);
+      return lib(closure_1_2[9]).default.getBBox(tmp5, { fill, stroke, markers, clipped });
     };
     tmp3Result.getCTM = () => {
-      const tmp = outer1_6(tmp3Result.root);
-      const _default = tmp3Result(outer1_2[9]).default;
-      return new outer1_9(tmp3Result(outer1_2[9]).default.getCTM(tmp));
+      const tmp = closure_1_6(lib.root);
+      const _default = lib(closure_1_2[9]).default;
+      return new closure_1_9(lib(closure_1_2[9]).default.getCTM(tmp));
     };
     tmp3Result.getScreenCTM = () => {
-      const tmp = outer1_6(tmp3Result.root);
-      const _default = tmp3Result(outer1_2[9]).default;
-      return new outer1_9(tmp3Result(outer1_2[9]).default.getScreenCTM(tmp));
+      const tmp = closure_1_6(lib.root);
+      const _default = lib(closure_1_2[9]).default;
+      return new closure_1_9(lib(closure_1_2[9]).default.getScreenCTM(tmp));
     };
     tmp3Result.isPointInFill = (arg0) => {
-      const tmp = outer1_6(tmp3Result.root);
-      return tmp3Result(outer1_2[9]).default.isPointInFill(tmp, arg0);
+      const tmp = closure_1_6(lib.root);
+      return lib(closure_1_2[9]).default.isPointInFill(tmp, arg0);
     };
     tmp3Result.isPointInStroke = (arg0) => {
-      const tmp = outer1_6(tmp3Result.root);
-      return tmp3Result(outer1_2[9]).default.isPointInStroke(tmp, arg0);
+      const tmp = closure_1_6(lib.root);
+      return lib(closure_1_2[9]).default.isPointInStroke(tmp, arg0);
     };
     tmp3Result.getTotalLength = () => {
-      const tmp = outer1_6(tmp3Result.root);
-      return tmp3Result(outer1_2[9]).default.getTotalLength(tmp);
+      const tmp = closure_1_6(lib.root);
+      return lib(closure_1_2[9]).default.getTotalLength(tmp);
     };
     tmp3Result.getPointAtLength = (length) => {
-      const tmp = outer1_6(tmp3Result.root);
-      const _default = tmp3Result(outer1_2[9]).default;
+      const tmp = closure_1_6(lib.root);
+      const _default = lib(closure_1_2[9]).default;
       const obj = { length };
-      return new outer1_10(tmp3Result(outer1_2[9]).default.getPointAtLength(tmp, { length }));
+      return new closure_1_10(lib(closure_1_2[9]).default.getPointAtLength(tmp, { length }));
     };
     tmp7 = require("Mixin")(tmp3Result);
     return tmp3Result;
   }
 }
-require("_inherits")(Shape, require("noop").Component);
+_inheritsDefault(Shape, require("noop").Component);
 const items2 = [
   {
     key: "getNativeScrollRef",
@@ -351,35 +319,17 @@ importDefaultResult1Result2.prototype.ownerSVGElement = obj;
 
 export default importDefaultResult1Result2;
 export const multiplyMatrices = function multiplyMatrices(arg0) {
-  let a;
-  let a2;
-  let b;
-  let b2;
-  let c;
-  let c2;
-  let d;
-  let d2;
-  let e;
-  let f;
   ({ a, b, c, d } = arg0);
   ({ a: a2, b: b2, c: c2, d: d2, e, f } = arg1);
   return { a: a * a2 + c * b2, c: a * c2 + c * d2, e: a * e + c * f + arg0.e, b: b * a2 + d * b2, d: b * c2 + d * d2, f: b * e + d * f + arg0.f };
 };
 export const invert = function invert(permissions) {
-  let a;
-  let b;
-  let c;
-  let d;
-  let e;
-  let f;
   ({ a, b, c, d, e, f } = permissions);
   const diff = a * d - b * c;
   return { a: d / diff, b: -b / diff, c: -c / diff, d: a / diff, e: (c * f - d * e) / diff, f: -a * f - b * e / diff };
 };
 export const SVGMatrix = importDefaultResult1Result;
 export const matrixTransform = function _matrixTransform(arg0) {
-  let x;
-  let y;
   ({ x, y } = arg1);
   return { x: arg0.a * x + arg0.c * y + arg0.e, y: arg0.b * x + arg0.d * y + arg0.f };
 };

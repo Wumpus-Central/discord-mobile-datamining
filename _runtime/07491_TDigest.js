@@ -1,4 +1,6 @@
 // _runtime/07491_TDigest.js
+import Node from "Node" /* 7492 */;
+
 class TDigest {
   constructor(arg0, arg1, arg2) {
     obj = { discrete: false === global };
@@ -62,7 +64,7 @@ class TDigest {
     sum = str + self.n;
     items = [, , , , , ];
     items[0] = `${tmp} samples using ${self.size()} centroids`;
-    items[1] = `min = ${require("Node")}`;
+    items[1] = `min = ${require("module_0")}`;
     items[2] = `Q1  = ${self.percentile(0.25)}`;
     items[3] = `Q2  = ${self.percentile(0.5)}`;
     items[4] = `Q3  = ${self.percentile(0.75)}`;

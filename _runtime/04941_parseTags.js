@@ -62,7 +62,7 @@ function parseTags(byteLength, size, sum) {
             let obj4 = tmp8(4942).iptc[uint16];
             obj.encoding = obj4.encoding_name(items);
           }
-          let obj1 = { tag: null, tagSize: null };
+          obj1 = { tag: null, tagSize: null };
           obj1[0] = obj;
           obj1[1] = uint161;
           obj = obj1;
@@ -183,7 +183,7 @@ arg5.default = {
               }
             }
             const _Error = Error;
-            const error = new Error("Not an IPTC resource block.");
+            error = new Error("Not an IPTC resource block.");
             throw error;
           }
           const error1 = new Error("No IPTC NAA resource block.");

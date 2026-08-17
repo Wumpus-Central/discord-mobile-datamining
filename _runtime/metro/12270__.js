@@ -1,5 +1,6 @@
 // _runtime/metro/12270__.js
-import { 12199__ } from "12199__.js";
+import _mod12199 from "module_12199" /* 12199 */;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -63,18 +64,18 @@ if (self2) {
     exports.getErrorMap = function getErrorMap() {
       return closure_4.config().customError;
     };
-    let closure_4 = fn(require("module_12199"));
+    let closure_4 = fn(_mod12199);
     exports.ZodIssueCode = { invalid_type: "invalid_type", too_big: "too_big", too_small: "too_small", invalid_format: "invalid_format", not_multiple_of: "not_multiple_of", unrecognized_keys: "unrecognized_keys", invalid_union: "invalid_union", invalid_key: "invalid_key", invalid_element: "invalid_element", invalid_value: "invalid_value", custom: "custom" };
     const _Object4 = Object;
     let obj = { enumerable: true, get: null };
     obj[1] = function get() {
-      return 12199__.$brand;
+      return _mod12199.$brand;
     };
     Object.defineProperty(exports, "$brand", obj);
     const _Object5 = Object;
     obj = { enumerable: true, get: null };
     obj[1] = function get() {
-      return 12199__.config;
+      return _mod12199.config;
     };
     Object.defineProperty(exports, "config", obj);
     exports.ZodFirstPartyTypeKind = {};

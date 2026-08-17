@@ -1,11 +1,9 @@
 // _runtime/01748_addTransformToKeepPosition.js
-import _slicedToArray from "_slicedToArray";
-import { TransitionType } from "01710_TransitionType.js";
+import TransitionType from "TransitionType" /* 1710 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function addTransformToKeepPosition(style, style2, props, arg3) {
-  let tmp6;
-  let tmp7;
   const entries = Object.entries(style2);
   while (tmp2 !== undefined) {
     let tmp4 = callback;

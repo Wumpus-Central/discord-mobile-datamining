@@ -1,13 +1,13 @@
 // _runtime/06620__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import noop from "noop";
-import jsxProd from "jsxProd";
+import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6610 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_5 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let closure_6;
-let error;
 const FeDropShadow = importDefault;
 function _isNativeReflectConstruct() {
   try {
@@ -20,10 +20,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -32,10 +32,10 @@ function _isNativeReflectConstruct() {
 class FeDropShadow {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeDropShadow);
-    tmp2 = __esModule;
-    obj = __esModule(FeDropShadow);
-    tmp3 = __esModule;
+    tmp = closure_2(this, FeDropShadow);
+    tmp2 = closure_4;
+    obj = closure_4(FeDropShadow);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -49,13 +49,10 @@ class FeDropShadow {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FeDropShadow, require("_isNativeReflectConstruct"));
+_inheritsDefault(FeDropShadow, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
-    let dx;
-    let dy;
-    let result;
     const self = this;
     const props = this.props;
     const _in = props.in;

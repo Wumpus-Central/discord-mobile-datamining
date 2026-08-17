@@ -1,5 +1,5 @@
 // _runtime/13802_onSend.js
-import _slicedToArray from "_slicedToArray";
+import closure_2 from "_slicedToArray" /* 32 */;
 
 const re3 = /^(image)\/.*$/i;
 let closure_4 = {};
@@ -10,7 +10,7 @@ export default () => {
     obj = {};
   }
   return (arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     function onSend(data, _url) {
       if (merged.ignoreUrls) {
         const ignoreUrls = merged.ignoreUrls;
@@ -24,14 +24,12 @@ export default () => {
       closure_4[c3] = { data, xhr: _url, stopTimer: lib.startTimer() };
     }
     function onResponse(arg0, arg1, _bodyBlob, arg3, arg4, _skipReactotron) {
-      let closure_4;
-      let data;
-      let closure_0 = arg0;
-      let closure_1 = _bodyBlob;
+      closure_0 = arg0;
+      closure_1 = _bodyBlob;
       const regex = _skipReactotron;
       if (!_skipReactotron._skipReactotron) {
         let _url = arg3;
-        let obj = null;
+        obj = null;
         let num2 = -1;
         if (arg3) {
           num2 = _url.indexOf("?");
@@ -41,7 +39,6 @@ export default () => {
           obj = {};
           const parts = _url.substr(num2 + 1).split("&");
           const item = parts.forEach((str) => {
-            let tmp2;
             [tmp2, str] = _skipReactotron(str.split("="), 2);
             let tmp3 = tmp2;
             if (tmp2) {
@@ -91,7 +88,7 @@ export default () => {
               str = closure_1;
             }
           }
-          const obj = { body: str, status: closure_0, headers: tmp2 };
+          obj = { body: str, status: closure_0, headers: tmp2 };
           let tmp5Result = null;
           if (closure_4) {
             tmp5Result = tmp5();
@@ -125,10 +122,10 @@ export default () => {
         const tmp4 = table;
       }
     }
-    const merged = Object.assign({}, outer1_4, closure_0);
-    let closure_2 = merged.ignoreContentTypes || outer1_3;
-    let c3 = 1000;
-    let closure_4 = {};
+    const merged = Object.assign({}, closure_1_4, closure_0);
+    closure_2 = merged.ignoreContentTypes || closure_1_3;
+    c3 = 1000;
+    closure_4 = {};
     return {
       onConnect() {
         const XHRInterceptor = lib(merged[1]).XHRInterceptor;

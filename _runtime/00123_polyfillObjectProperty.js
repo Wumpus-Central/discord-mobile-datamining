@@ -1,7 +1,8 @@
 // _runtime/00123_polyfillObjectProperty.js
-import { defineLazyObjectProperty } from "00049_defineLazyObjectProperty.js";
+import defineLazyObjectProperty from "defineLazyObjectProperty" /* 49 */;
+
 const global = arg0;
-const require = arg1;
+require = arg1;
 const dependencyMap = arg6;
 arg5.polyfillObjectProperty = function polyfillObjectProperty(_navigator, product, arg2) {
   const ownPropertyDescriptor = Object.getOwnPropertyDescriptor(_navigator, product);

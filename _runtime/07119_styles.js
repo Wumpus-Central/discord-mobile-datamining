@@ -1,6 +1,7 @@
 // _runtime/07119_styles.js
-import { StyleSheet } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const StyleSheet = get_ActivityIndicator.StyleSheet;
 let obj = { backdrop: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -1,3 +1,5 @@
 // _runtime/06976_findNodeHandle.js
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-export const findNodeHandle = require("get ActivityIndicator").findNodeHandle;
+
+export const findNodeHandle = get_ActivityIndicator.findNodeHandle;

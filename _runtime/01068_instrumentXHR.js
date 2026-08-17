@@ -1,7 +1,7 @@
 // _runtime/01068_instrumentXHR.js
-import _slicedToArray from "_slicedToArray";
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { WINDOW } from "01039_WINDOW.js";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import WINDOW from "WINDOW" /* 1039 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function instrumentXHR() {
   if (WINDOW.WINDOW.XMLHttpRequest) {
@@ -10,10 +10,10 @@ function instrumentXHR() {
     let obj = { apply: null };
     obj[0] = function apply(apply, onreadystatechange) {
       const callback = onreadystatechange;
-      const error = new Error();
+      error = new Error();
       let obj = callback(error[1]);
-      let closure_2 = 1000 * obj.timestampInSeconds();
-      let obj1 = callback(error[1]);
+      closure_2 = 1000 * obj.timestampInSeconds();
+      obj1 = callback(error[1]);
       let formatted;
       if (obj1.isString(arg2[0])) {
         formatted = arg2[0].toUpperCase();
@@ -72,8 +72,6 @@ function instrumentXHR() {
             const _Proxy2 = Proxy;
             obj1 = { apply: null };
             obj1[0] = function apply(apply) {
-              let str;
-              let tmp2;
               [str, tmp2] = callback(arg2, 2);
               let isStringResult = tmp3;
               if (arg1[onreadystatechangeHandler]) {

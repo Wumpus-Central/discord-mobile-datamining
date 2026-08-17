@@ -1,13 +1,12 @@
 // _runtime/07027_BottomSheetDraggableScrollable.js
-import "noop";
-import { jsx } from "jsxProd";
-import { LegacyBaseButton } from "06377_LegacyBaseButton.js";
+import noopDefault from "noop" /* 19 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
+noopDefault;
 
 export const BottomSheetDraggableScrollable = function BottomSheetDraggableScrollable(arg0) {
-  let children;
-  let scrollableGesture;
   ({ scrollableGesture, children } = arg0);
   let tmp = children;
   if (scrollableGesture) {

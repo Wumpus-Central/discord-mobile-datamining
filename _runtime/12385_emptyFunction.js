@@ -11,7 +11,7 @@ export default () => {
   function shim(arg0, arg1, arg2, arg3, arg4, arg5) {
     if (arg5 !== shim(table[0])) {
       const _Error = Error;
-      const error = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+      error = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
       error.name = "Invariant Violation";
       throw error;
     }

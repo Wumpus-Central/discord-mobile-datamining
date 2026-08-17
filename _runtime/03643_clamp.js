@@ -1,7 +1,6 @@
 // _runtime/03643_clamp.js
-import _typeof from "_typeof";
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3644 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -10,7 +9,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -18,7 +17,7 @@ if (!_typeof) {
 } else {
   tmp5 = _typeof;
 }
-let closure_1 = tmp5;
+_typeof = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,14 +25,13 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function clamp(arg0, arg1) {
-  let end;
-  let start;
   ({ start, end } = arg1);
-  tmp7.default(2, arguments);
+  requiredArgs.default(2, arguments);
   const items = [arg0, start];
-  const items1 = [tmp3.default(items), end];
-  return tmp5.default(items1);
+  const items1 = [_typeof.default(items), end];
+  return _typeof.default(items1);
 };
 export default exports.default;

@@ -1,6 +1,6 @@
 // _runtime/07762_SyncPromise.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const SyncPromise = require;
 let obj = { PENDING: 0 };
@@ -13,7 +13,7 @@ class SyncPromise {
   constructor(arg0) {
     self = this;
     tmp = SyncPromise;
-    tmp2 = outer1_3(this, SyncPromise);
+    tmp2 = closure_3(this, SyncPromise);
     __init = SyncPromise.prototype.__init;
     call = __init.call;
     if (typeof call === "unknown") {
@@ -42,7 +42,7 @@ class SyncPromise {
     } else {
       call4Result = call4(self);
     }
-    self._state = __esModule.PENDING;
+    self._state = closure_2.PENDING;
     self._handlers = [];
     return;
   }
@@ -51,10 +51,10 @@ obj = {
   key: "then",
   value: function then(arg0, arg1) {
     const self = this;
-    let closure_1 = arg0;
+    closure_1 = arg0;
     arg1((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       const _handlers = self._handlers;
       const items = [
         false,
@@ -100,17 +100,17 @@ let items = [
     value: function _finally(arg0) {
       const self = this;
       arg0((arg0, arg1) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         const _self = arg1;
         return _self.then((arg0) => {
-          let c3 = false;
-          let closure_2 = arg0;
+          c3 = false;
+          closure_2 = arg0;
           if (closure_0) {
             tmp();
           }
         }, (arg0) => {
-          let c3 = true;
-          let closure_2 = arg0;
+          c3 = true;
+          closure_2 = arg0;
           if (closure_0) {
             tmp();
           }
@@ -130,7 +130,7 @@ let items = [
     value: function __init() {
       const self = this;
       this._resolve = (arg0) => {
-        self._setResult(outer1_2.RESOLVED, arg0);
+        self._setResult(closure_1_2.RESOLVED, arg0);
       };
     }
   },
@@ -139,7 +139,7 @@ let items = [
     value: function __init2() {
       const self = this;
       this._reject = (arg0) => {
-        self._setResult(outer1_2.REJECTED, arg0);
+        self._setResult(closure_1_2.REJECTED, arg0);
       };
     }
   },
@@ -148,7 +148,7 @@ let items = [
     value: function __init3() {
       const self = this;
       this._setResult = (_state, promise) => {
-        if (self._state === outer1_2.PENDING) {
+        if (self._state === closure_1_2.PENDING) {
           if (obj2.isThenable(promise)) {
             promise.then(obj._resolve, obj._reject);
           } else {
@@ -156,7 +156,7 @@ let items = [
             obj._value = promise;
             obj._executeHandlers();
           }
-          obj2 = self(outer1_1[2]);
+          obj2 = self(closure_1_1[2]);
         }
       };
     }
@@ -166,20 +166,20 @@ let items = [
     value: function __init4() {
       const self = this;
       this._executeHandlers = () => {
-        if (self._state !== outer1_2.PENDING) {
+        if (self._state !== closure_1_2.PENDING) {
           const _handlers = tmp._handlers;
           const substr = _handlers.slice();
           tmp._handlers = [];
           const item = substr.forEach((arg0) => {
             if (!arg0[0]) {
-              if (_state._state === outer1_2.RESOLVED) {
+              if (_state._state === closure_1_2.RESOLVED) {
                 arg0[1](tmp._value);
               }
               if (_state._state === tmp2.REJECTED) {
                 arg0[2](tmp._value);
               }
               arg0[0] = true;
-              tmp2 = outer1_2;
+              tmp2 = closure_1_2;
             }
           });
         }
@@ -192,13 +192,13 @@ let c4 = _moduleResult;
 
 export const SyncPromise = _moduleResult;
 export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return new closure_4((arg0, arg1) => {
     arg1(closure_0);
   });
 };
 export const resolvedSyncPromise = function resolvedSyncPromise(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return new closure_4((arg0) => {
     arg0(closure_0);
   });

@@ -1,11 +1,11 @@
 // _runtime/16736__isNativeReflectConstruct.js
-import _createClass from "_createClass";
-import _classCallCheck from "_classCallCheck";
-import _assertThisInitialized from "_assertThisInitialized";
-import c3 from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
-import _wrapNativeSuper from "_wrapNativeSuper";
+import _createClass from "_createClass" /* 42 */;
+import o from "_classCallCheck" /* 41 */;
+import closure_2 from "_assertThisInitialized" /* 94 */;
+import POSITIVE_INFINITY from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -18,47 +18,48 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+let _moduleResult1 = _createClass;
 if (typeof exports === "object") {
   if (undefined !== module) {
     const _Error = Error;
-    const fn3 = function t(fn) {
+    const fn3 = function t(arg0) {
       const self = this;
-      o(this, fn);
+      o(this, closure_0);
       let str = "Timed out";
-      if (null != fn) {
+      if (null != arg0) {
         const _HermesInternal = HermesInternal;
-        str = "Timed out after waiting for " + fn + " ms";
+        str = "Timed out after waiting for " + arg0 + " ms";
       }
       const items = [str];
-      const obj = outer1_4(fn);
-      if (outer1_7()) {
+      const obj = closure_1_4(closure_0);
+      if (closure_1_7()) {
         const _Reflect = Reflect;
-        let constructResult = Reflect.construct(obj, items, outer1_4(self).constructor);
+        let constructResult = Reflect.construct(obj, items, closure_1_4(self).constructor);
       } else {
         constructResult = obj.apply(self, items);
       }
       const tmp5Result = POSITIVE_INFINITY(self, constructResult);
-      Object.setPrototypeOf(callback(tmp5Result), fn.prototype);
+      Object.setPrototypeOf(callback(tmp5Result), closure_0.prototype);
       return tmp5Result;
     };
-    _createClass = fn3;
+    _moduleResult1 = fn3;
     _inherits(fn3, _wrapNativeSuper(Error));
     const _moduleResult = _createClass(fn3);
-    _createClass = _moduleResult;
-    _classCallCheck = function o(arg0, arg1) {
+    _moduleResult1 = _moduleResult;
+    o = function o(arg0, arg1) {
 
     };
     let obj = { schedule: null };
     obj[0] = function schedule(arg0, arg1) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const timeout = setTimeout(() => {
         if (null != c1) {
           const _clearTimeout = clearTimeout;
@@ -77,11 +78,11 @@ if (typeof exports === "object") {
         }
       };
     };
-    _assertThisInitialized = obj;
+    closure_2 = obj;
     const _Number = Number;
-    c3 = POSITIVE_INFINITY2;
+    POSITIVE_INFINITY = POSITIVE_INFINITY2;
     const fn4 = function r(arg0, num) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       let tmp = num;
       if (typeof num !== "number") {
         let timeout;
@@ -112,32 +113,32 @@ if (typeof exports === "object") {
           num2 = tmp3;
         }
       }
-      let c3 = false;
+      c3 = false;
       let fn;
       if (num !== c3) {
         fn = () => {
           if (typeof num !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          let closure_0 = num2;
+          closure_0 = num2;
           return new Promise((arg0, arg1) => {
             try {
-              tmp2.schedule(arg0, closure_1);
+              closure_0.schedule(arg0, closure_1);
             } catch (tmp5) {
               arg1(tmp5);
             }
           }).then(() => {
-            let c3 = true;
+            c3 = true;
             throw new closure_0(closure_1);
           });
         };
       }
       if (null != fn) {
         let promise = new Promise((arg0, arg1) => {
-          let closure_0 = arg0;
-          let closure_1 = arg1;
+          closure_0 = arg0;
+          closure_1 = arg1;
           function r() {
-            if (!outer1_3) {
+            if (!closure_1_3) {
               let promise = new Promise((arg0, arg1) => {
                 try {
                   arg0(callback());
@@ -153,10 +154,10 @@ if (typeof exports === "object") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
-                  closure_1 = outer1_2;
+                  closure_1 = closure_1_2;
                   const promise = new Promise((arg0, arg1) => {
                     try {
-                      tmp2.schedule(arg0, closure_1);
+                      closure_0.schedule(arg0, closure_1);
                     } catch (tmp5) {
                       arg1(tmp5);
                     }
@@ -164,7 +165,7 @@ if (typeof exports === "object") {
                   promise.then(closure_2).catch(closure_1);
                   const nextPromise = promise.then(closure_2);
                   const tmp2 = r;
-                  const tmp3 = outer1_2;
+                  const tmp3 = closure_1_2;
                 }
               }).catch(closure_1);
               let nextPromise = promise.then((arg0) => {
@@ -175,10 +176,10 @@ if (typeof exports === "object") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
-                  closure_1 = outer1_2;
+                  closure_1 = closure_1_2;
                   const promise = new Promise((arg0, arg1) => {
                     try {
-                      tmp2.schedule(arg0, closure_1);
+                      closure_0.schedule(arg0, closure_1);
                     } catch (tmp5) {
                       arg1(tmp5);
                     }
@@ -186,7 +187,7 @@ if (typeof exports === "object") {
                   promise.then(closure_2).catch(closure_1);
                   const nextPromise = promise.then(closure_2);
                   const tmp2 = r;
-                  const tmp3 = outer1_2;
+                  const tmp3 = closure_1_2;
                 }
               });
             }
@@ -207,10 +208,10 @@ if (typeof exports === "object") {
                   HermesBuiltin.throwTypeError();
                 }
                 callback = r;
-                closure_1 = outer1_2;
+                closure_1 = closure_1_2;
                 const promise = new Promise((arg0, arg1) => {
                   try {
-                    tmp2.schedule(arg0, closure_1);
+                    closure_0.schedule(arg0, closure_1);
                   } catch (tmp5) {
                     arg1(tmp5);
                   }
@@ -218,7 +219,7 @@ if (typeof exports === "object") {
                 promise.then(closure_2).catch(closure_1);
                 const nextPromise = promise.then(closure_2);
                 const tmp2 = r;
-                const tmp3 = outer1_2;
+                const tmp3 = closure_1_2;
               }
             }).catch(arg1);
             let nextPromise = promise.then((arg0) => {
@@ -229,10 +230,10 @@ if (typeof exports === "object") {
                   HermesBuiltin.throwTypeError();
                 }
                 callback = r;
-                closure_1 = outer1_2;
+                closure_1 = closure_1_2;
                 const promise = new Promise((arg0, arg1) => {
                   try {
-                    tmp2.schedule(arg0, closure_1);
+                    closure_0.schedule(arg0, closure_1);
                   } catch (tmp5) {
                     arg1(tmp5);
                   }
@@ -240,7 +241,7 @@ if (typeof exports === "object") {
                 promise.then(closure_2).catch(closure_1);
                 const nextPromise = promise.then(closure_2);
                 const tmp2 = r;
-                const tmp3 = outer1_2;
+                const tmp3 = closure_1_2;
               }
             });
           }
@@ -249,10 +250,10 @@ if (typeof exports === "object") {
         let racePromise = Promise.race(items);
       } else {
         racePromise = new Promise((arg0, arg1) => {
-          let closure_0 = arg0;
-          let closure_1 = arg1;
+          closure_0 = arg0;
+          closure_1 = arg1;
           function r() {
-            if (!outer1_3) {
+            if (!closure_1_3) {
               let promise = new Promise((arg0, arg1) => {
                 try {
                   arg0(callback());
@@ -268,10 +269,10 @@ if (typeof exports === "object") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
-                  closure_1 = outer1_2;
+                  closure_1 = closure_1_2;
                   const promise = new Promise((arg0, arg1) => {
                     try {
-                      tmp2.schedule(arg0, closure_1);
+                      closure_0.schedule(arg0, closure_1);
                     } catch (tmp5) {
                       arg1(tmp5);
                     }
@@ -279,7 +280,7 @@ if (typeof exports === "object") {
                   promise.then(closure_2).catch(closure_1);
                   const nextPromise = promise.then(closure_2);
                   const tmp2 = r;
-                  const tmp3 = outer1_2;
+                  const tmp3 = closure_1_2;
                 }
               }).catch(closure_1);
               let nextPromise = promise.then((arg0) => {
@@ -290,10 +291,10 @@ if (typeof exports === "object") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
-                  closure_1 = outer1_2;
+                  closure_1 = closure_1_2;
                   const promise = new Promise((arg0, arg1) => {
                     try {
-                      tmp2.schedule(arg0, closure_1);
+                      closure_0.schedule(arg0, closure_1);
                     } catch (tmp5) {
                       arg1(tmp5);
                     }
@@ -301,7 +302,7 @@ if (typeof exports === "object") {
                   promise.then(closure_2).catch(closure_1);
                   const nextPromise = promise.then(closure_2);
                   const tmp2 = r;
-                  const tmp3 = outer1_2;
+                  const tmp3 = closure_1_2;
                 }
               });
             }
@@ -322,10 +323,10 @@ if (typeof exports === "object") {
                   HermesBuiltin.throwTypeError();
                 }
                 callback = r;
-                closure_1 = outer1_2;
+                closure_1 = closure_1_2;
                 const promise = new Promise((arg0, arg1) => {
                   try {
-                    tmp2.schedule(arg0, closure_1);
+                    closure_0.schedule(arg0, closure_1);
                   } catch (tmp5) {
                     arg1(tmp5);
                   }
@@ -333,7 +334,7 @@ if (typeof exports === "object") {
                 promise.then(closure_2).catch(closure_1);
                 const nextPromise = promise.then(closure_2);
                 const tmp2 = r;
-                const tmp3 = outer1_2;
+                const tmp3 = closure_1_2;
               }
             }).catch(arg1);
             let nextPromise = promise.then((arg0) => {
@@ -344,10 +345,10 @@ if (typeof exports === "object") {
                   HermesBuiltin.throwTypeError();
                 }
                 callback = r;
-                closure_1 = outer1_2;
+                closure_1 = closure_1_2;
                 const promise = new Promise((arg0, arg1) => {
                   try {
-                    tmp2.schedule(arg0, closure_1);
+                    closure_0.schedule(arg0, closure_1);
                   } catch (tmp5) {
                     arg1(tmp5);
                   }
@@ -355,7 +356,7 @@ if (typeof exports === "object") {
                 promise.then(closure_2).catch(closure_1);
                 const nextPromise = promise.then(closure_2);
                 const tmp2 = r;
-                const tmp3 = outer1_2;
+                const tmp3 = closure_1_2;
               }
             });
           }
@@ -375,35 +376,36 @@ if (typeof exports === "object") {
 if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["exports"], function i(arg0) {
-      let fn = function t(fn) {
+      let fn = function t(arg0) {
         const self = this;
-        o(this, fn);
+        o(this, closure_0);
         let str = "Timed out";
-        if (null != fn) {
+        if (null != arg0) {
           const _HermesInternal = HermesInternal;
-          str = "Timed out after waiting for " + fn + " ms";
+          str = "Timed out after waiting for " + arg0 + " ms";
         }
         const items = [str];
-        const obj = outer1_4(fn);
-        if (outer1_7()) {
+        const obj = closure_1_4(closure_0);
+        if (closure_1_7()) {
           const _Reflect = Reflect;
-          let constructResult = Reflect.construct(obj, items, outer1_4(self).constructor);
+          let constructResult = Reflect.construct(obj, items, closure_1_4(self).constructor);
         } else {
           constructResult = obj.apply(self, items);
         }
         const tmp5Result = POSITIVE_INFINITY(self, constructResult);
-        Object.setPrototypeOf(callback(tmp5Result), fn.prototype);
+        Object.setPrototypeOf(callback(tmp5Result), closure_0.prototype);
         return tmp5Result;
       };
+      _moduleResult1 = fn;
       _inherits(fn, _wrapNativeSuper(Error));
-      let tmp2 = fn(fn);
-      fn = tmp2;
-      function o(arg0, arg1) {
+      let tmp2 = _moduleResult1(fn);
+      _moduleResult1 = tmp2;
+      o = function o(arg0, arg1) {
 
-      }
-      let closure_2 = {
+      };
+      closure_2 = {
         schedule(arg0, arg1) {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           const timeout = setTimeout(() => {
             if (null != c1) {
               const _clearTimeout = clearTimeout;
@@ -423,8 +425,9 @@ if (typeof globalThis.define === "function") {
           };
         }
       };
+      POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
       const fn2 = function r(arg0, num) {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         let tmp = num;
         if (typeof num !== "number") {
           let timeout;
@@ -455,32 +458,32 @@ if (typeof globalThis.define === "function") {
             num2 = tmp3;
           }
         }
-        let c3 = false;
+        c3 = false;
         let fn;
         if (num !== c3) {
           fn = () => {
             if (typeof num !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            let closure_0 = num2;
+            closure_0 = num2;
             return new Promise((arg0, arg1) => {
               try {
-                tmp2.schedule(arg0, closure_1);
+                closure_0.schedule(arg0, closure_1);
               } catch (tmp5) {
                 arg1(tmp5);
               }
             }).then(() => {
-              let c3 = true;
+              c3 = true;
               throw new closure_0(closure_1);
             });
           };
         }
         if (null != fn) {
           let promise = new Promise((arg0, arg1) => {
-            let closure_0 = arg0;
-            let closure_1 = arg1;
+            closure_0 = arg0;
+            closure_1 = arg1;
             function r() {
-              if (!outer1_3) {
+              if (!closure_1_3) {
                 let promise = new Promise((arg0, arg1) => {
                   try {
                     arg0(callback());
@@ -496,12 +499,12 @@ if (typeof globalThis.define === "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     callback = r;
-                    closure_1 = outer1_2;
+                    closure_1 = closure_1_2;
                     const promise = new Promise(() => { ... });
                     promise.then(closure_2).catch(closure_1);
                     const nextPromise = promise.then(closure_2);
                     const tmp2 = r;
-                    const tmp3 = outer1_2;
+                    const tmp3 = closure_1_2;
                   }
                 }).catch(closure_1);
                 let nextPromise = promise.then((arg0) => {
@@ -512,12 +515,12 @@ if (typeof globalThis.define === "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     callback = r;
-                    closure_1 = outer1_2;
+                    closure_1 = closure_1_2;
                     const promise = new Promise(() => { ... });
                     promise.then(closure_2).catch(closure_1);
                     const nextPromise = promise.then(closure_2);
                     const tmp2 = r;
-                    const tmp3 = outer1_2;
+                    const tmp3 = closure_1_2;
                   }
                 });
               }
@@ -538,10 +541,10 @@ if (typeof globalThis.define === "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
-                  closure_1 = outer1_2;
+                  closure_1 = closure_1_2;
                   const promise = new Promise((arg0, arg1) => {
                     try {
-                      tmp2.schedule(arg0, closure_1);
+                      closure_0.schedule(arg0, closure_1);
                     } catch (tmp5) {
                       arg1(tmp5);
                     }
@@ -549,7 +552,7 @@ if (typeof globalThis.define === "function") {
                   promise.then(closure_2).catch(closure_1);
                   const nextPromise = promise.then(closure_2);
                   const tmp2 = r;
-                  const tmp3 = outer1_2;
+                  const tmp3 = closure_1_2;
                 }
               }).catch(arg1);
               let nextPromise = promise.then((arg0) => {
@@ -560,10 +563,10 @@ if (typeof globalThis.define === "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
-                  closure_1 = outer1_2;
+                  closure_1 = closure_1_2;
                   const promise = new Promise((arg0, arg1) => {
                     try {
-                      tmp2.schedule(arg0, closure_1);
+                      closure_0.schedule(arg0, closure_1);
                     } catch (tmp5) {
                       arg1(tmp5);
                     }
@@ -571,7 +574,7 @@ if (typeof globalThis.define === "function") {
                   promise.then(closure_2).catch(closure_1);
                   const nextPromise = promise.then(closure_2);
                   const tmp2 = r;
-                  const tmp3 = outer1_2;
+                  const tmp3 = closure_1_2;
                 }
               });
             }
@@ -580,10 +583,10 @@ if (typeof globalThis.define === "function") {
           let racePromise = Promise.race(items);
         } else {
           racePromise = new Promise((arg0, arg1) => {
-            let closure_0 = arg0;
-            let closure_1 = arg1;
+            closure_0 = arg0;
+            closure_1 = arg1;
             function r() {
-              if (!outer1_3) {
+              if (!closure_1_3) {
                 let promise = new Promise((arg0, arg1) => {
                   try {
                     arg0(callback());
@@ -599,12 +602,12 @@ if (typeof globalThis.define === "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     callback = r;
-                    closure_1 = outer1_2;
+                    closure_1 = closure_1_2;
                     const promise = new Promise(() => { ... });
                     promise.then(closure_2).catch(closure_1);
                     const nextPromise = promise.then(closure_2);
                     const tmp2 = r;
-                    const tmp3 = outer1_2;
+                    const tmp3 = closure_1_2;
                   }
                 }).catch(closure_1);
                 let nextPromise = promise.then((arg0) => {
@@ -615,12 +618,12 @@ if (typeof globalThis.define === "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     callback = r;
-                    closure_1 = outer1_2;
+                    closure_1 = closure_1_2;
                     const promise = new Promise(() => { ... });
                     promise.then(closure_2).catch(closure_1);
                     const nextPromise = promise.then(closure_2);
                     const tmp2 = r;
-                    const tmp3 = outer1_2;
+                    const tmp3 = closure_1_2;
                   }
                 });
               }
@@ -641,10 +644,10 @@ if (typeof globalThis.define === "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
-                  closure_1 = outer1_2;
+                  closure_1 = closure_1_2;
                   const promise = new Promise((arg0, arg1) => {
                     try {
-                      tmp2.schedule(arg0, closure_1);
+                      closure_0.schedule(arg0, closure_1);
                     } catch (tmp5) {
                       arg1(tmp5);
                     }
@@ -652,7 +655,7 @@ if (typeof globalThis.define === "function") {
                   promise.then(closure_2).catch(closure_1);
                   const nextPromise = promise.then(closure_2);
                   const tmp2 = r;
-                  const tmp3 = outer1_2;
+                  const tmp3 = closure_1_2;
                 }
               }).catch(arg1);
               let nextPromise = promise.then((arg0) => {
@@ -663,10 +666,10 @@ if (typeof globalThis.define === "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
-                  closure_1 = outer1_2;
+                  closure_1 = closure_1_2;
                   const promise = new Promise((arg0, arg1) => {
                     try {
-                      tmp2.schedule(arg0, closure_1);
+                      closure_0.schedule(arg0, closure_1);
                     } catch (tmp5) {
                       arg1(tmp5);
                     }
@@ -674,7 +677,7 @@ if (typeof globalThis.define === "function") {
                   promise.then(closure_2).catch(closure_1);
                   const nextPromise = promise.then(closure_2);
                   const tmp2 = r;
-                  const tmp3 = outer1_2;
+                  const tmp3 = closure_1_2;
                 }
               });
             }
@@ -697,40 +700,39 @@ if (typeof globalThis !== "undefined") {
 }
 obj = {};
 self["async-wait-until"] = obj;
-_createClass = undefined;
-_classCallCheck = undefined;
-_assertThisInitialized = undefined;
-c3 = undefined;
-let fn = function t(fn) {
+_moduleResult1 = undefined;
+o = undefined;
+closure_2 = undefined;
+POSITIVE_INFINITY = undefined;
+let fn = function t(arg0) {
   const self = this;
-  o(this, fn);
+  o(this, closure_0);
   let str = "Timed out";
-  if (null != fn) {
+  if (null != arg0) {
     const _HermesInternal = HermesInternal;
-    str = "Timed out after waiting for " + fn + " ms";
+    str = "Timed out after waiting for " + arg0 + " ms";
   }
   const items = [str];
-  const obj = outer1_4(fn);
-  if (outer1_7()) {
+  const obj = closure_1_4(closure_0);
+  if (closure_1_7()) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, items, outer1_4(self).constructor);
+    let constructResult = Reflect.construct(obj, items, closure_1_4(self).constructor);
   } else {
     constructResult = obj.apply(self, items);
   }
   const tmp5Result = POSITIVE_INFINITY(self, constructResult);
-  Object.setPrototypeOf(callback(tmp5Result), fn.prototype);
+  Object.setPrototypeOf(callback(tmp5Result), closure_0.prototype);
   return tmp5Result;
 };
-_createClass = fn;
+_moduleResult1 = fn;
 _inherits(fn, _wrapNativeSuper(Error));
-const _moduleResult1 = _createClass(fn);
-_createClass = _moduleResult1;
-_classCallCheck = function o(arg0, arg1) {
+_moduleResult1 = _createClass(fn);
+o = function o(arg0, arg1) {
 
 };
-_assertThisInitialized = {
+closure_2 = {
   schedule(arg0, arg1) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const timeout = setTimeout(() => {
       if (null != c1) {
         const _clearTimeout = clearTimeout;
@@ -750,9 +752,9 @@ _assertThisInitialized = {
     };
   }
 };
-c3 = POSITIVE_INFINITY;
+POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
 let fn2 = function r(arg0, num) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let tmp = num;
   if (typeof num !== "number") {
     let timeout;
@@ -783,32 +785,32 @@ let fn2 = function r(arg0, num) {
       num2 = tmp3;
     }
   }
-  let c3 = false;
+  c3 = false;
   let fn;
   if (num !== c3) {
     fn = () => {
       if (typeof num !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      let closure_0 = num2;
+      closure_0 = num2;
       return new Promise((arg0, arg1) => {
         try {
-          tmp2.schedule(arg0, closure_1);
+          closure_0.schedule(arg0, closure_1);
         } catch (tmp5) {
           arg1(tmp5);
         }
       }).then(() => {
-        let c3 = true;
+        c3 = true;
         throw new closure_0(closure_1);
       });
     };
   }
   if (null != fn) {
     let promise = new Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function r() {
-        if (!outer1_3) {
+        if (!closure_1_3) {
           let promise = new Promise((arg0, arg1) => {
             try {
               arg0(callback());
@@ -824,10 +826,10 @@ let fn2 = function r(arg0, num) {
                 HermesBuiltin.throwTypeError();
               }
               callback = r;
-              closure_1 = outer1_2;
+              closure_1 = closure_1_2;
               const promise = new Promise((arg0, arg1) => {
                 try {
-                  tmp2.schedule(arg0, closure_1);
+                  closure_0.schedule(arg0, closure_1);
                 } catch (tmp5) {
                   arg1(tmp5);
                 }
@@ -835,7 +837,7 @@ let fn2 = function r(arg0, num) {
               promise.then(closure_2).catch(closure_1);
               const nextPromise = promise.then(closure_2);
               const tmp2 = r;
-              const tmp3 = outer1_2;
+              const tmp3 = closure_1_2;
             }
           }).catch(closure_1);
           let nextPromise = promise.then((arg0) => {
@@ -846,10 +848,10 @@ let fn2 = function r(arg0, num) {
                 HermesBuiltin.throwTypeError();
               }
               callback = r;
-              closure_1 = outer1_2;
+              closure_1 = closure_1_2;
               const promise = new Promise((arg0, arg1) => {
                 try {
-                  tmp2.schedule(arg0, closure_1);
+                  closure_0.schedule(arg0, closure_1);
                 } catch (tmp5) {
                   arg1(tmp5);
                 }
@@ -857,7 +859,7 @@ let fn2 = function r(arg0, num) {
               promise.then(closure_2).catch(closure_1);
               const nextPromise = promise.then(closure_2);
               const tmp2 = r;
-              const tmp3 = outer1_2;
+              const tmp3 = closure_1_2;
             }
           });
         }
@@ -878,10 +880,10 @@ let fn2 = function r(arg0, num) {
               HermesBuiltin.throwTypeError();
             }
             callback = r;
-            closure_1 = outer1_2;
+            closure_1 = closure_1_2;
             const promise = new Promise((arg0, arg1) => {
               try {
-                tmp2.schedule(arg0, closure_1);
+                closure_0.schedule(arg0, closure_1);
               } catch (tmp5) {
                 arg1(tmp5);
               }
@@ -889,7 +891,7 @@ let fn2 = function r(arg0, num) {
             promise.then(closure_2).catch(closure_1);
             const nextPromise = promise.then(closure_2);
             const tmp2 = r;
-            const tmp3 = outer1_2;
+            const tmp3 = closure_1_2;
           }
         }).catch(arg1);
         let nextPromise = promise.then((arg0) => {
@@ -900,10 +902,10 @@ let fn2 = function r(arg0, num) {
               HermesBuiltin.throwTypeError();
             }
             callback = r;
-            closure_1 = outer1_2;
+            closure_1 = closure_1_2;
             const promise = new Promise((arg0, arg1) => {
               try {
-                tmp2.schedule(arg0, closure_1);
+                closure_0.schedule(arg0, closure_1);
               } catch (tmp5) {
                 arg1(tmp5);
               }
@@ -911,7 +913,7 @@ let fn2 = function r(arg0, num) {
             promise.then(closure_2).catch(closure_1);
             const nextPromise = promise.then(closure_2);
             const tmp2 = r;
-            const tmp3 = outer1_2;
+            const tmp3 = closure_1_2;
           }
         });
       }
@@ -920,10 +922,10 @@ let fn2 = function r(arg0, num) {
     let racePromise = Promise.race(items);
   } else {
     racePromise = new Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function r() {
-        if (!outer1_3) {
+        if (!closure_1_3) {
           let promise = new Promise((arg0, arg1) => {
             try {
               arg0(callback());
@@ -939,10 +941,10 @@ let fn2 = function r(arg0, num) {
                 HermesBuiltin.throwTypeError();
               }
               callback = r;
-              closure_1 = outer1_2;
+              closure_1 = closure_1_2;
               const promise = new Promise((arg0, arg1) => {
                 try {
-                  tmp2.schedule(arg0, closure_1);
+                  closure_0.schedule(arg0, closure_1);
                 } catch (tmp5) {
                   arg1(tmp5);
                 }
@@ -950,7 +952,7 @@ let fn2 = function r(arg0, num) {
               promise.then(closure_2).catch(closure_1);
               const nextPromise = promise.then(closure_2);
               const tmp2 = r;
-              const tmp3 = outer1_2;
+              const tmp3 = closure_1_2;
             }
           }).catch(closure_1);
           let nextPromise = promise.then((arg0) => {
@@ -961,10 +963,10 @@ let fn2 = function r(arg0, num) {
                 HermesBuiltin.throwTypeError();
               }
               callback = r;
-              closure_1 = outer1_2;
+              closure_1 = closure_1_2;
               const promise = new Promise((arg0, arg1) => {
                 try {
-                  tmp2.schedule(arg0, closure_1);
+                  closure_0.schedule(arg0, closure_1);
                 } catch (tmp5) {
                   arg1(tmp5);
                 }
@@ -972,7 +974,7 @@ let fn2 = function r(arg0, num) {
               promise.then(closure_2).catch(closure_1);
               const nextPromise = promise.then(closure_2);
               const tmp2 = r;
-              const tmp3 = outer1_2;
+              const tmp3 = closure_1_2;
             }
           });
         }
@@ -993,10 +995,10 @@ let fn2 = function r(arg0, num) {
               HermesBuiltin.throwTypeError();
             }
             callback = r;
-            closure_1 = outer1_2;
+            closure_1 = closure_1_2;
             const promise = new Promise((arg0, arg1) => {
               try {
-                tmp2.schedule(arg0, closure_1);
+                closure_0.schedule(arg0, closure_1);
               } catch (tmp5) {
                 arg1(tmp5);
               }
@@ -1004,7 +1006,7 @@ let fn2 = function r(arg0, num) {
             promise.then(closure_2).catch(closure_1);
             const nextPromise = promise.then(closure_2);
             const tmp2 = r;
-            const tmp3 = outer1_2;
+            const tmp3 = closure_1_2;
           }
         }).catch(arg1);
         let nextPromise = promise.then((arg0) => {
@@ -1015,10 +1017,10 @@ let fn2 = function r(arg0, num) {
               HermesBuiltin.throwTypeError();
             }
             callback = r;
-            closure_1 = outer1_2;
+            closure_1 = closure_1_2;
             const promise = new Promise((arg0, arg1) => {
               try {
-                tmp2.schedule(arg0, closure_1);
+                closure_0.schedule(arg0, closure_1);
               } catch (tmp5) {
                 arg1(tmp5);
               }
@@ -1026,7 +1028,7 @@ let fn2 = function r(arg0, num) {
             promise.then(closure_2).catch(closure_1);
             const nextPromise = promise.then(closure_2);
             const tmp2 = r;
-            const tmp3 = outer1_2;
+            const tmp3 = closure_1_2;
           }
         });
       }

@@ -1,16 +1,14 @@
 // _runtime/15760__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 15761 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleProp;
-let c5;
-let closure_6;
 const ViewShot = importDefault;
 function _isNativeReflectConstruct() {
   try {
@@ -23,10 +21,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -93,7 +91,6 @@ function validateOptions(options) {
   return { options, errors };
 }
 function captureRef(obj, options) {
-  let errors;
   if (ViewShot(15761)) {
     let tmp9 = obj;
     if (obj) {
@@ -105,7 +102,7 @@ function captureRef(obj, options) {
           if (obj.current) {
             if (!obj.current) {
               const _Error2 = Error;
-              const error = new Error("ref.current is null");
+              error = new Error("ref.current is null");
               return Promise.reject(error);
             }
           }
@@ -138,11 +135,12 @@ function releaseCapture(str) {
     const obj = ViewShot(15761);
   }
 }
+noopDefault;
 ({ View: c5, Platform, findNodeHandle: closure_6, StyleProp } = get_ActivityIndicator);
 const promise = new Promise(() => {
 
 });
-if (!require("get ActivityIndicator")) {
+if (!get_ActivityIndicatorDefault) {
   const _console = console;
   console.warn("react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.");
 }
@@ -150,7 +148,7 @@ let items = ["png", "jpg"];
 function ensureModuleIsLoaded() {
   if (!ViewShot(15761)) {
     const _Error = Error;
-    const error = new Error("react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.");
+    error = new Error("react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.");
     throw error;
   }
 }
@@ -162,12 +160,12 @@ class ViewShot {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = outer1_2(this, apply);
+    closure_0 = undefined;
+    tmp = closure_2(this, closure_0);
     items1 = [...items];
-    tmp2 = outer1_4;
-    obj = outer1_4(apply);
-    tmp3 = outer1_3;
+    tmp2 = closure_4;
+    obj = closure_4(closure_0);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -176,17 +174,17 @@ class ViewShot {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     promise = new Promise((resolveFirstLayout) => {
-      c0.resolveFirstLayout = resolveFirstLayout;
+      closure_0.resolveFirstLayout = resolveFirstLayout;
     });
     tmp3Result.firstLayoutPromise = promise;
-    tmp3Result.capture = () => _undefined.firstLayoutPromise.then(() => {
+    tmp3Result.capture = () => closure_0.firstLayoutPromise.then(() => {
       const root = closure_0.root;
       if (root) {
-        let tmp2 = outer1_14(root, tmp.props.options);
+        let tmp2 = closure_1_14(root, tmp.props.options);
       } else {
-        tmp2 = outer1_9;
+        tmp2 = closure_1_9;
       }
       return tmp2;
     }).then((arg0) => {
@@ -197,10 +195,10 @@ class ViewShot {
       throw arg0;
     });
     tmp3Result.onCapture = (lastCapturedURI) => {
-      if (_undefined.root) {
+      if (closure_0.root) {
         if (tmp.lastCapturedURI) {
           const _setTimeout = setTimeout;
-          const timerId = setTimeout(outer1_15, 500, tmp.lastCapturedURI);
+          const timerId = setTimeout(closure_1_15, 500, tmp.lastCapturedURI);
         }
         tmp.lastCapturedURI = lastCapturedURI;
         const onCapture = tmp.props.onCapture;
@@ -210,17 +208,17 @@ class ViewShot {
       }
     };
     tmp3Result.onCaptureFailure = (arg0) => {
-      if (_undefined.root) {
-        const onCaptureFailure = _undefined.props.onCaptureFailure;
+      if (closure_0.root) {
+        const onCaptureFailure = closure_0.props.onCaptureFailure;
         if (onCaptureFailure) {
           onCaptureFailure(arg0);
         }
       }
     };
     tmp3Result.syncCaptureLoop = (arg0) => {
-      cancelAnimationFrame(_undefined._raf);
+      cancelAnimationFrame(c0._raf);
       if ("continuous" === arg0) {
-        _undefined = "-";
+        c0 = "-";
         function loop() {
           lastCapturedURI._raf = requestAnimationFrame(loop);
           if (lastCapturedURI !== lastCapturedURI.lastCapturedURI) {
@@ -229,15 +227,15 @@ class ViewShot {
           }
         }
         const _requestAnimationFrame = requestAnimationFrame;
-        _undefined._raf = requestAnimationFrame(loop);
+        c0._raf = requestAnimationFrame(loop);
       }
     };
     tmp3Result.onRef = (root) => {
-      c0.root = root;
+      closure_0.root = root;
     };
     tmp3Result.onLayout = (nativeEvent) => {
-      const onLayout = _undefined.props.onLayout;
-      const firstLayout = _undefined.resolveFirstLayout(nativeEvent.nativeEvent.layout);
+      const onLayout = closure_0.props.onLayout;
+      const firstLayout = closure_0.resolveFirstLayout(nativeEvent.nativeEvent.layout);
       if (onLayout) {
         onLayout(nativeEvent);
       }
@@ -245,7 +243,7 @@ class ViewShot {
     return tmp3Result;
   }
 }
-require("_inherits")(ViewShot, require("noop").Component);
+_inheritsDefault(ViewShot, require("noop").Component);
 const items2 = [
   {
     key: "componentDidMount",
@@ -296,14 +294,13 @@ export { ensureModuleIsLoaded };
 export { captureRef };
 export { releaseCapture };
 export const captureScreen = function captureScreen(options) {
-  let errors;
   if (ViewShot(15761)) {
     ({ errors, options } = validateOptions(options));
     const tmp10 = validateOptions(options);
     return tmp(15761).captureScreen(options);
   } else {
     const _Error = Error;
-    const error = new Error("react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.");
+    error = new Error("react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.");
     throw error;
   }
   tmp = ViewShot;

@@ -1,18 +1,14 @@
 // _runtime/14412__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import importDefaultResult2 from "noop";
-import importDefaultResult3 from "emptyFunction";
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import importDefaultResult2 from "noop" /* 19 */;
+import importDefaultResult3 from "emptyFunction" /* 12384 */;
 
-let Animated;
-let c5;
-let closure_6;
-let error;
 const CircularProgress = arg1;
 function _isNativeReflectConstruct() {
   try {
@@ -25,10 +21,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -39,11 +35,11 @@ class CircularProgress {
   constructor() {
     self = this;
     items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, CircularProgress);
+    tmp = closure_2(this, CircularProgress);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(CircularProgress);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(CircularProgress);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -56,7 +52,7 @@ class CircularProgress {
     return tmp3Result;
   }
 }
-importDefaultResult1(CircularProgress, require("noop").PureComponent);
+importDefaultResult1(CircularProgress, importDefaultResult2.PureComponent);
 let obj = {
   key: "polarToCartesian",
   value: function polarToCartesian(sum, sum2, diff, arg3) {
@@ -89,24 +85,6 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let arcSweepAngle;
-      let backgroundColor;
-      let backgroundWidth;
-      let children;
-      let childrenContainerStyle;
-      let dashedBackground;
-      let dashedTint;
-      let fill;
-      let fillLineCap;
-      let lineCap;
-      let padding;
-      let renderCap;
-      let rotation;
-      let size;
-      let style;
-      let tintColor;
-      let tintTransparency;
-      let width;
       const self = this;
       const props = this.props;
       ({ size, width, backgroundWidth, backgroundColor, lineCap, fillLineCap } = props);
@@ -156,7 +134,7 @@ let items = [
         mapped1 = values.map((joined) => parseInt(joined));
       }
       obj = { style, children: null };
-      const obj1 = { width: size + padding, height: size + padding, children: null };
+      obj1 = { width: size + padding, height: size + padding, children: null };
       const obj2 = { rotation, originX: (size + padding) / 2, originY: (size + padding) / 2, children: null };
       let tmp23Result = backgroundColor;
       if (backgroundColor) {
@@ -201,25 +179,25 @@ let items = [
   }
 ];
 const importDefaultResultResult = importDefaultResult(CircularProgress, items);
-obj = { style: require("emptyFunction").object, size: null, fill: null, width: null, backgroundWidth: null, tintColor: null, tintTransparency: null, backgroundColor: null, rotation: null, lineCap: null, arcSweepAngle: null, children: null, childrenContainerStyle: null, padding: null, renderCap: null, dashedBackground: null, dashedTint: null };
-let items1 = [require("emptyFunction").number, ];
-items1[1] = require("emptyFunction").instanceOf(Animated.Value);
+obj = { style: importDefaultResult3.object, size: null, fill: null, width: null, backgroundWidth: null, tintColor: null, tintTransparency: null, backgroundColor: null, rotation: null, lineCap: null, arcSweepAngle: null, children: null, childrenContainerStyle: null, padding: null, renderCap: null, dashedBackground: null, dashedTint: null };
+let items1 = [importDefaultResult3.number, ];
+items1[1] = importDefaultResult3.instanceOf(Animated.Value);
 obj[1] = importDefaultResult3.oneOfType(items1).isRequired;
-obj[2] = require("emptyFunction").number.isRequired;
-obj[3] = require("emptyFunction").number.isRequired;
-obj[4] = require("emptyFunction").number;
-obj[5] = require("emptyFunction").string;
-obj[6] = require("emptyFunction").bool;
-obj[7] = require("emptyFunction").string;
-obj[8] = require("emptyFunction").number;
-obj[9] = require("emptyFunction").string;
-obj[10] = require("emptyFunction").number;
-obj[11] = require("emptyFunction").func;
-obj[12] = require("emptyFunction").object;
-obj[13] = require("emptyFunction").number;
-obj[14] = require("emptyFunction").func;
-obj[15] = require("emptyFunction").object;
-obj[16] = require("emptyFunction").object;
+obj[2] = importDefaultResult3.number.isRequired;
+obj[3] = importDefaultResult3.number.isRequired;
+obj[4] = importDefaultResult3.number;
+obj[5] = importDefaultResult3.string;
+obj[6] = importDefaultResult3.bool;
+obj[7] = importDefaultResult3.string;
+obj[8] = importDefaultResult3.number;
+obj[9] = importDefaultResult3.string;
+obj[10] = importDefaultResult3.number;
+obj[11] = importDefaultResult3.func;
+obj[12] = importDefaultResult3.object;
+obj[13] = importDefaultResult3.number;
+obj[14] = importDefaultResult3.func;
+obj[15] = importDefaultResult3.object;
+obj[16] = importDefaultResult3.object;
 importDefaultResultResult.propTypes = obj;
 importDefaultResultResult.defaultProps = { tintColor: "black", tintTransparency: true, rotation: 90, lineCap: "butt", arcSweepAngle: 360, padding: 0, dashedBackground: { width: 0, gap: 0 }, dashedTint: { width: 0, gap: 0 } };
 

@@ -1,5 +1,7 @@
 // _runtime/00629_baseKeys.js
-import { isPrototype } from "00630_isPrototype.js";
+import isPrototype from "isPrototype" /* 630 */;
+import overArg from "overArg" /* 631 */;
+
 
 export default function baseKeys(arg0) {
   if (isPrototype(arg0)) {
@@ -27,7 +29,7 @@ export default function baseKeys(arg0) {
     }
     return items;
   } else {
-    return tmp(631)(arg0);
+    return overArg(arg0);
   }
-  tmp = require;
+  const tmp = require;
 };

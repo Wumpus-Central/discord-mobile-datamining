@@ -81,7 +81,7 @@ arg5.default = {
                                     }
                                   })(value, value, value1, value2, value3, value);
                                 }
-                                let obj = {};
+                                obj = {};
                                 let flag = false;
                                 if (value4) {
                                   obj = { value: null, description: null };
@@ -96,7 +96,7 @@ arg5.default = {
                                     if (value4) {
                                       try {
                                         const result = value4 / (value[0] / value[1]);
-                                        const obj = { value: null, description: null };
+                                        obj = { value: null, description: null };
                                         obj[0] = result;
                                         obj[1] = result.toFixed(1);
                                         return obj;
@@ -115,7 +115,7 @@ arg5.default = {
                                       const _Math = Math;
                                       const _Math2 = Math;
                                       const result = 2 * Math.atan(36 / (2 * value4)) * (180 / Math.PI);
-                                      const obj = { value: null, description: null };
+                                      obj = { value: null, description: null };
                                       obj[0] = result;
                                       obj[1] = result.toFixed(1) + " deg";
                                       return obj;

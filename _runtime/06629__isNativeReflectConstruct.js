@@ -1,8 +1,10 @@
 // _runtime/06629__isNativeReflectConstruct.js
-import FeMergeNode from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6610 */;
+import FeMergeNode from "_classCallCheck" /* 41 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -15,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -27,12 +29,12 @@ class FeMergeNode {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = FeMergeNode(this, apply);
+    closure_0 = undefined;
+    tmp = FeMergeNode(this, closure_0);
     items1 = [...items];
-    tmp2 = __esModule;
-    obj = __esModule(apply);
-    tmp3 = __esModule;
+    tmp2 = closure_2;
+    obj = closure_2(closure_0);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -41,9 +43,9 @@ class FeMergeNode {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.setNativeProps = () => {
-      const parent = _undefined.props.parent;
+      const parent = props.props.parent;
       if (parent) {
         parent.forceUpdate();
       }
@@ -51,7 +53,7 @@ class FeMergeNode {
     return tmp3Result;
   }
 }
-require("_inherits")(FeMergeNode, require("_isNativeReflectConstruct"));
+_inheritsDefault(FeMergeNode, _isNativeReflectConstructDefault);
 let items = [
   {
     key: "render",

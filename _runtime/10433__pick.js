@@ -1,15 +1,15 @@
 // _runtime/10433__pick.js
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Platform } from "get ActivityIndicator";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
 
 const require = arg1;
 function _pick() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0) {
       if (c8 === 2) {
         c8 = 3;
@@ -41,12 +41,12 @@ function _pick() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_4 = tmp;
-              let closure_3 = tmp4;
+              closure_4 = tmp;
+              closure_3 = tmp4;
               let tmp45 = obj1;
               obj1 = undefined;
               let lib;
-              let asyncGeneratorStep;
+              closure_2 = undefined;
               let type;
               if (obj1 != null) {
                 type = tmp45.type;
@@ -64,8 +64,8 @@ function _pick() {
                 let mapped = flatResult.map(fn);
               } else {
                 let tmp20 = callback;
-                let tmp21 = outer1_1;
-                let items1 = [callback(outer1_1[2]).types.allFiles];
+                let tmp21 = closure_1_1;
+                let items1 = [callback(closure_1_1[2]).types.allFiles];
                 obj1 = { mode: "import", allowMultiSelection: false, allowVirtualFiles: false };
                 let tmp23 = obj1;
                 let tmp24 = tmp45;
@@ -85,8 +85,8 @@ function _pick() {
                     }
                   }
                   let tmp34 = callback;
-                  let tmp35 = outer1_1;
-                  let NativeDocumentPicker = callback(outer1_1[3]).NativeDocumentPicker;
+                  let tmp35 = closure_1_1;
+                  let NativeDocumentPicker = callback(closure_1_1[3]).NativeDocumentPicker;
                   c7 = 1;
                   let num5 = 1;
                   c8 = 1;
@@ -119,24 +119,24 @@ function _pick() {
               let tmp42 = closure_3;
               lib = arg1;
               let tmp43 = lib;
-              asyncGeneratorStep = lib;
+              closure_2 = lib;
               let tmp44 = lib;
-              asyncGeneratorStep = lib;
+              closure_2 = lib;
               lib = lib[Symbol.iterator]();
-              let tmp8 = asyncGeneratorStep;
+              let tmp8 = closure_2;
               let tmp9 = lib;
               while (lib !== undefined) {
                 let tmp11 = closure_3;
                 let tmp12 = closure_4;
-                let c6 = 1;
-                asyncGeneratorStep = tmp10;
-                let tmp13 = asyncGeneratorStep;
+                c6 = 1;
+                closure_2 = tmp10;
+                let tmp13 = closure_2;
                 let tmp14 = obj1;
                 let tmp15 = lib;
                 obj = obj1(lib[4]);
                 let tmp16 = obj1;
-                let tmp17 = asyncGeneratorStep;
-                asyncGeneratorStep.hasRequestedType = obj.safeValidate(obj1.type, asyncGeneratorStep);
+                let tmp17 = closure_2;
+                closure_2.hasRequestedType = obj.safeValidate(obj1.type, closure_2);
                 c6 = 0;
                 continue;
               }
@@ -159,7 +159,7 @@ function _pick() {
       }
     })();
   });
-  const _pick = tmp;
+  closure_3 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

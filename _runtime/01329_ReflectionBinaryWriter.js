@@ -1,12 +1,12 @@
 // _runtime/01329_ReflectionBinaryWriter.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const ReflectionBinaryWriter = require;
 class ReflectionBinaryWriter {
   constructor(arg0) {
-    tmp = outer1_3(this, ReflectionBinaryWriter);
+    tmp = closure_3(this, ReflectionBinaryWriter);
     this.info = global;
     return;
   }
@@ -30,8 +30,6 @@ let items = [
   {
     key: "write",
     value: function write(arg0, tag, writeUnknownFields) {
-      let localName;
-      let repeat;
       const self = this;
       this.prepare();
       const iter = this.fields[Symbol.iterator]();
@@ -105,8 +103,8 @@ let items = [
               let tmp13 = entries;
               let tmp14 = entries;
               for (const item10054 of entries) {
-                let tmp15 = _slicedToArray;
-                let tmp16 = _slicedToArray(item10054, 2);
+                let tmp15 = callback;
+                let tmp16 = callback(item10054, 2);
                 let tmp17 = nextResult;
                 let tmp18 = self;
                 let tmp19 = arg1;
@@ -250,10 +248,7 @@ let items = [
   {
     key: "scalar",
     value: function scalar(tag, arg1, arg2, byteLength) {
-      let tmp2;
-      let tmp3;
-      let tmp4;
-      [tmp2, tmp3, tmp4] = _slicedToArray(this.scalarInfo(arg1, byteLength), 3);
+      [tmp2, tmp3, tmp4] = callback(this.scalarInfo(arg1, byteLength), 3);
       if (!tmp4) {
         tag.tag(arg2, tmp2);
         tag[tmp3](byteLength);
@@ -273,7 +268,7 @@ let items = [
         let num2 = 0;
         if (0 < arg3.length) {
           do {
-            let tmp11 = tag[_slicedToArray(undefined, this.scalarInfo(this, arg1), 2)[1]](arg3[num2]);
+            let tmp11 = tag[callback(undefined, this.scalarInfo(this, arg1), 2)[1]](arg3[num2]);
             num2 = num2 + 1;
             length = arg3.length;
           } while (num2 < length);

@@ -1,6 +1,7 @@
 // _runtime/12262_stringProcessor.js
-import _slicedToArray from "_slicedToArray";
-import { mergeDefs } from "12203_mergeDefs.js";
+import mergeDefs from "mergeDefs" /* 12203 */;
+import initializeContext from "initializeContext" /* 12261 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import { initializeContext } from "12261_initializeContext.js";
 
 let closure_4 = { guid: "uuid", url: "uri", datetime: "date-time", json_string: "json-string", regex: "" };
@@ -15,8 +16,8 @@ export const toJSONSchema = function toJSONSchema(_idmap, uri) {
     const entries = _idmap.entries();
     const tmp10 = entries[Symbol.iterator]();
     while (tmp10 !== undefined) {
-      let tmp14 = _slicedToArray;
-      let tmp15 = _slicedToArray(tmp12, 2);
+      let tmp14 = callback;
+      let tmp15 = callback(tmp12, 2);
       let first = tmp15[0];
       let tmp17 = require;
       let tmp18 = dependencyMap;
@@ -30,15 +31,15 @@ export const toJSONSchema = function toJSONSchema(_idmap, uri) {
     if (uri != null) {
       uri = uri.uri;
     }
-    const obj1 = {};
+    obj1 = {};
     obj[1] = uri;
     obj[2] = obj1;
     initializeContextResult.external = obj;
     const _idmap2 = _idmap._idmap;
     const entries1 = _idmap2.entries();
     for (const item10061 of entries1) {
-      let tmp25 = _slicedToArray;
-      let tmp26 = _slicedToArray(item10061, 2);
+      let tmp25 = callback;
+      let tmp26 = callback(item10061, 2);
       let tmp27 = tmp26[1];
       let tmp28 = require;
       let tmp29 = dependencyMap;
@@ -67,11 +68,7 @@ export const toJSONSchema = function toJSONSchema(_idmap, uri) {
   tmp = "_idmap" in _idmap;
 };
 export const stringProcessor = (_zod, arg1, format) => {
-  let contentEncoding;
-  let maximum;
-  let minimum;
-  let patterns;
-  let closure_0 = arg1;
+  closure_0 = arg1;
   format.type = "string";
   ({ minimum, maximum, format, patterns, contentEncoding } = _zod._zod.bag);
   if (typeof minimum === "number") {
@@ -124,12 +121,6 @@ export const stringProcessor = (_zod, arg1, format) => {
   }
 };
 export const numberProcessor = (_zod, target) => {
-  let exclusiveMaximum;
-  let exclusiveMinimum;
-  let format;
-  let maximum;
-  let minimum;
-  let multipleOf;
   ({ minimum, maximum, format, multipleOf, exclusiveMaximum, exclusiveMinimum } = _zod._zod.bag);
   if (typeof format === "string") {
     if (format.includes("int")) {
@@ -193,14 +184,14 @@ export const booleanProcessor = (arg0, arg1, arg2, arg3) => {
 export const bigintProcessor = (arg0, unrepresentable) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
-    const error = new Error("BigInt cannot be represented in JSON Schema");
+    error = new Error("BigInt cannot be represented in JSON Schema");
     throw error;
   }
 };
 export const symbolProcessor = (arg0, unrepresentable) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
-    const error = new Error("Symbols cannot be represented in JSON Schema");
+    error = new Error("Symbols cannot be represented in JSON Schema");
     throw error;
   }
 };
@@ -216,14 +207,14 @@ export const nullProcessor = (arg0, target) => {
 export const undefinedProcessor = (arg0, unrepresentable) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
-    const error = new Error("Undefined cannot be represented in JSON Schema");
+    error = new Error("Undefined cannot be represented in JSON Schema");
     throw error;
   }
 };
 export const voidProcessor = (arg0, unrepresentable) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
-    const error = new Error("Void cannot be represented in JSON Schema");
+    error = new Error("Void cannot be represented in JSON Schema");
     throw error;
   }
 };
@@ -236,7 +227,7 @@ export (arg0, arg1, arg2, arg3) => {
 export const dateProcessor = (arg0, unrepresentable) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
-    const error = new Error("Date cannot be represented in JSON Schema");
+    error = new Error("Date cannot be represented in JSON Schema");
     throw error;
   }
 };
@@ -262,7 +253,7 @@ export const literalProcessor = (arg0, unrepresentable) => {
         let tmp10 = new.target;
         let str2 = "Literal `undefined` cannot be represented in JSON Schema";
         let tmp11 = new.target;
-        let error = new Error("Literal `undefined` cannot be represented in JSON Schema");
+        error = new Error("Literal `undefined` cannot be represented in JSON Schema");
         let tmp13 = error;
         throw error;
       }
@@ -324,7 +315,7 @@ export const literalProcessor = (arg0, unrepresentable) => {
 export const nanProcessor = (arg0, unrepresentable) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
-    const error = new Error("NaN cannot be represented in JSON Schema");
+    error = new Error("NaN cannot be represented in JSON Schema");
     throw error;
   }
 };
@@ -335,14 +326,11 @@ export const templateLiteralProcessor = (_zod) => {
     arg2.pattern = pattern.source;
   } else {
     const _Error = Error;
-    const error = new Error("Pattern not found in template literal");
+    error = new Error("Pattern not found in template literal");
     throw error;
   }
 };
 export const fileProcessor = (_zod) => {
-  let maximum;
-  let mime;
-  let minimum;
   const obj = { type: "string", format: "binary", contentEncoding: "binary" };
   ({ minimum, maximum, mime } = _zod._zod.bag);
   if (undefined !== minimum) {
@@ -372,41 +360,39 @@ export const successProcessor = (arg0, arg1, arg2, arg3) => {
 export const customProcessor = (arg0, unrepresentable) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
-    const error = new Error("Custom types cannot be represented in JSON Schema");
+    error = new Error("Custom types cannot be represented in JSON Schema");
     throw error;
   }
 };
 export const functionProcessor = (arg0, unrepresentable) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
-    const error = new Error("Function types cannot be represented in JSON Schema");
+    error = new Error("Function types cannot be represented in JSON Schema");
     throw error;
   }
 };
 export const transformProcessor = (arg0, unrepresentable) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
-    const error = new Error("Transforms cannot be represented in JSON Schema");
+    error = new Error("Transforms cannot be represented in JSON Schema");
     throw error;
   }
 };
 export const mapProcessor = (arg0, unrepresentable) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
-    const error = new Error("Map cannot be represented in JSON Schema");
+    error = new Error("Map cannot be represented in JSON Schema");
     throw error;
   }
 };
 export const setProcessor = (arg0, unrepresentable) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
-    const error = new Error("Set cannot be represented in JSON Schema");
+    error = new Error("Set cannot be represented in JSON Schema");
     throw error;
   }
 };
 export const arrayProcessor = (_zod, arg1, arg2, path) => {
-  let maximum;
-  let minimum;
   ({ minimum, maximum } = _zod._zod.bag);
   if (typeof minimum === "number") {
     arg2.minItems = minimum;
@@ -481,23 +467,23 @@ export const objectProcessor = (_zod, io, properties, path) => {
   }
 };
 export const unionProcessor = (_zod) => {
-  let closure_0 = arg1;
-  let closure_1 = arg3;
+  closure_0 = arg1;
+  closure_1 = arg3;
   const def = _zod._zod.def;
-  const dependencyMap = tmp;
+  closure_2 = tmp;
   const options = def.options;
   const mapped = options.map((arg0, arg1) => {
     const obj = {};
     const merged = Object.assign(path);
     const items = [...closure_1.path];
     let str = "anyOf";
-    if (callback) {
+    if (table) {
       str = "oneOf";
     }
     items[tmp3] = str;
     items[tmp3 + 1] = arg1;
     obj.path = items;
-    return callback(callback[2]).process(arg0, callback, obj);
+    return callback(table[2]).process(arg0, callback, obj);
   });
   if (false === def.inclusive) {
     arg2.oneOf = mapped;
@@ -542,10 +528,8 @@ export const intersectionProcessor = (_zod, arg1, arg2, path) => {
   arg2.allOf = items2;
 };
 export const tupleProcessor = (_zod, target, items, path) => {
-  let maximum;
-  let minimum;
   const _require = target;
-  let closure_1 = path;
+  closure_1 = path;
   let def = _zod._zod.def;
   items.type = "array";
   let str = "items";
@@ -719,7 +703,7 @@ export const catchProcessor = (_zod, seen) => {
     arg2.default = def.catchValue(undefined);
   } catch (err) {
     const _Error = Error;
-    const error = new Error("Dynamic catch values are not supported in JSON Schema");
+    error = new Error("Dynamic catch values are not supported in JSON Schema");
     throw error;
   }
 };

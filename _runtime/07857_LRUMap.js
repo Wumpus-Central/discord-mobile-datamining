@@ -1,7 +1,7 @@
 // _runtime/07857_LRUMap.js
-import _readOnlyError from "_readOnlyError";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import _readOnlyError from "_readOnlyError" /* 377 */;
+import LRUMap from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 class LRUMap {
   constructor(arg0) {
@@ -12,7 +12,6 @@ class LRUMap {
     return;
   }
 }
-_classCallCheck = LRUMap;
 let items = [
   {
     key: "size",
@@ -38,8 +37,6 @@ let items = [
   {
     key: "set",
     value: function set(arg0, arg1) {
-      let _cache;
-      let _cache2;
       const self = this;
       if (this._cache.size >= this._maxSize) {
         ({ _cache, _cache: _cache2 } = self);

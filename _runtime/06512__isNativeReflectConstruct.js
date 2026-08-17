@@ -1,18 +1,15 @@
 // _runtime/06512__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { _isNativeReflectConstruct } from "06510__isNativeReflectConstruct.js";
+import noopAll from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6510 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_classCallCheck" /* 41 */;
+import closure_6 from "_possibleConstructorReturn" /* 93 */;
+import closure_7 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let metroImportAll;
-let unpackModuleId;
 const TouchableOpacity = arg1;
 function _isNativeReflectConstruct() {
   try {
@@ -25,26 +22,27 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 let closure_3 = ["style"];
-({ Animated: metroImportAll, Easing: c9, StyleSheet: c10, View: unpackModuleId } = get_ActivityIndicator);
+noopAll;
+({ Animated: closure_8, Easing: c9, StyleSheet: c10, View: unpackModuleId } = get_ActivityIndicator);
 class TouchableOpacity {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_5(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_7;
+    obj = closure_7(closure_0);
+    tmp3 = closure_6;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -53,9 +51,9 @@ class TouchableOpacity {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.getChildStyleOpacityWithDefault = () => {
-      const tmp = outer1_10.flatten(_undefined.props.style) || {};
+      const tmp = closure_1_10.flatten(store.props.style) || {};
       let num = 1;
       if (null != tmp.opacity) {
         const opacity = tmp.opacity;
@@ -66,20 +64,20 @@ class TouchableOpacity {
     value = new Animated.Value(tmp3Result.getChildStyleOpacityWithDefault());
     tmp3Result.opacity = value;
     tmp3Result.setOpacityTo = (toValue, duration) => {
-      const obj = { toValue, duration, easing: outer1_9.inOut(outer1_9.quad), useNativeDriver: null };
-      let flag = _undefined.props.useNativeAnimations;
+      const obj = { toValue, duration, easing: closure_1_9.inOut(closure_1_9.quad), useNativeDriver: null };
+      let flag = store.props.useNativeAnimations;
       if (flag == null) {
         flag = true;
       }
       obj[3] = flag;
-      outer1_8.timing(_undefined.opacity, obj).start();
+      closure_1_8.timing(store.opacity, obj).start();
     };
     tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === _undefined(outer1_2[9]).TOUCHABLE_STATE.BEGAN) {
-        _undefined.setOpacityTo(_undefined.props.activeOpacity, 0);
+      if (arg1 === store(closure_1_2[9]).TOUCHABLE_STATE.BEGAN) {
+        store.setOpacityTo(store.props.activeOpacity, 0);
       } else {
         if (!tmp3) {
-          _undefined.setOpacityTo(_undefined.getChildStyleOpacityWithDefault(), 150);
+          store.setOpacityTo(store.getChildStyleOpacityWithDefault(), 150);
         }
         tmp3 = arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
       }
@@ -87,7 +85,7 @@ class TouchableOpacity {
     return tmp3Result;
   }
 }
-require("_inherits")(TouchableOpacity, require("noop").Component);
+_inheritsDefault(TouchableOpacity, require("noop").Component);
 let obj = {
   key: "render",
   value: function render() {
@@ -109,13 +107,13 @@ let obj = {
       children = tmp2(closure_11, {});
     }
     obj.children = children;
-    return jsx(_isNativeReflectConstruct, {});
+    return jsx(_isNativeReflectConstructDefault, {});
   }
 };
 let items = [obj];
 const importDefaultResultResult = importDefaultResult(TouchableOpacity, items);
 obj = {};
-let merged = Object.assign(require("_isNativeReflectConstruct").defaultProps);
+let merged = Object.assign(_isNativeReflectConstructDefault.defaultProps);
 obj.activeOpacity = 0.2;
 importDefaultResultResult.defaultProps = obj;
 

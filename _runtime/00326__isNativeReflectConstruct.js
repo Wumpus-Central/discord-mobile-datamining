@@ -1,19 +1,15 @@
 // _runtime/00326__isNativeReflectConstruct.js
-import _slicedToArray from "_slicedToArray";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importAllResult from "noop";
-import noop from "noop";
-import jsxProd from "jsxProd";
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import closure_6 from "_classCallCheck" /* 41 */;
+import closure_7 from "_possibleConstructorReturn" /* 93 */;
+import closure_8 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importAllResult from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
 const VirtualizedSectionList = arg1;
 function _isNativeReflectConstruct() {
   try {
@@ -26,34 +22,23 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 function ItemWithSeparator(leadingItem) {
-  let closure_3;
-  let _objectWithoutProperties;
-  let _possibleConstructorReturn;
-  let _getPrototypeOf;
-  let index;
-  let inverted;
-  let item;
-  let section;
-  let setSelfHighlightCallback;
-  let setSelfUpdatePropsCallback;
-  let tmp2;
   const LeadingSeparatorComponent = leadingItem.LeadingSeparatorComponent;
   const SeparatorComponent = leadingItem.SeparatorComponent;
   const cellKey = leadingItem.cellKey;
   ({ prevCellKey: closure_3, setSelfHighlightCallback } = leadingItem);
-  ({ updateHighlightFor: _objectWithoutProperties, setSelfUpdatePropsCallback } = leadingItem);
-  ({ updatePropsFor: _possibleConstructorReturn, inverted } = leadingItem);
+  ({ updateHighlightFor: closure_5, setSelfUpdatePropsCallback } = leadingItem);
+  ({ updatePropsFor: closure_7, inverted } = leadingItem);
   ({ item, index, section } = leadingItem);
-  [tmp2, _getPrototypeOf] = setSelfHighlightCallback(callback4(false), 2);
+  [tmp2, closure_8] = setSelfHighlightCallback(callback4(false), 2);
   const tmp3 = setSelfHighlightCallback(callback4(false), 2);
   let obj = { leadingItem: leadingItem.leadingItem, leadingSection: leadingItem.leadingSection, section: leadingItem.section, trailingItem: leadingItem.item, trailingSection: leadingItem.trailingSection };
   const tmp4 = setSelfHighlightCallback(callback4(obj), 2);
@@ -62,7 +47,7 @@ function ItemWithSeparator(leadingItem) {
   obj = { leadingItem: leadingItem.item, leadingSection: leadingItem.leadingSection, section: leadingItem.section, trailingItem: leadingItem.trailingItem, trailingSection: leadingItem.trailingSection };
   const tmp6 = setSelfHighlightCallback(callback4(obj), 2);
   const first1 = tmp6[0];
-  let closure_13 = tmp8;
+  closure_13 = tmp8;
   const items = [cellKey, setSelfHighlightCallback, tmp6[1], setSelfUpdatePropsCallback];
   first(() => {
     setSelfHighlightCallback(cellKey, closure_9);
@@ -109,7 +94,7 @@ function ItemWithSeparator(leadingItem) {
           obj = {};
           const merged4 = Object.assign(first1);
           const merged5 = Object.assign(arg1);
-          obj(obj);
+          callback6(obj);
         }
       }
     }
@@ -119,7 +104,7 @@ function ItemWithSeparator(leadingItem) {
   if (tmp11) {
     let tmp13 = LeadingSeparatorComponent;
     if (!importAllResult.isValidElement(LeadingSeparatorComponent)) {
-      const obj1 = { highlighted: null };
+      obj1 = { highlighted: null };
       obj1[0] = tmp2;
       let merged = Object.assign(first);
       tmp13 = first1(LeadingSeparatorComponent, obj1);
@@ -168,12 +153,12 @@ class VirtualizedSectionList {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = ItemWithSeparator(this, apply);
+    closure_0 = undefined;
+    tmp = closure_6(this, closure_0);
     items1 = [...items];
-    tmp2 = ItemWithSeparator;
-    obj = ItemWithSeparator(apply);
-    tmp3 = ItemWithSeparator;
+    tmp2 = closure_8;
+    obj = closure_8(closure_0);
+    tmp3 = closure_7;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -182,9 +167,9 @@ class VirtualizedSectionList {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result._keyExtractor = (arg0, index) => {
-      const _subExtractorResult = _undefined._subExtractor(index);
+      const _subExtractorResult = lib._subExtractor(index);
       let key = _subExtractorResult;
       if (_subExtractorResult) {
         key = _subExtractorResult.key;
@@ -196,13 +181,13 @@ class VirtualizedSectionList {
       return key;
     };
     tmp3Result._convertViewable = (index) => {
-      outer1_1(outer1_2[9])(null != index.index, "Received a broken ViewToken");
-      const _subExtractorResult = _undefined._subExtractor(index.index);
+      closure_1_1(closure_1_2[9])(null != index.index, "Received a broken ViewToken");
+      const _subExtractorResult = lib._subExtractor(index.index);
       if (_subExtractorResult) {
         const keyExtractor = _subExtractorResult.section.keyExtractor;
         let keyExtractor2 = tmp3.props.keyExtractor;
         if (!keyExtractor2) {
-          keyExtractor2 = _undefined(tmp[10]).keyExtractor;
+          keyExtractor2 = lib(tmp[10]).keyExtractor;
         }
         if (null != keyExtractor) {
           let keyExtractorResult = keyExtractor(index.item, _subExtractorResult.index);
@@ -222,14 +207,12 @@ class VirtualizedSectionList {
       } else {
         return null;
       }
-      tmp = outer1_2;
-      tmp3 = _undefined;
+      tmp = closure_1_2;
+      tmp3 = lib;
     };
     tmp3Result._onViewableItemsChanged = (arg0) => {
-      let changed;
-      let viewableItems;
       ({ viewableItems, changed } = arg0);
-      const onViewableItemsChanged = _undefined.props.onViewableItemsChanged;
+      const onViewableItemsChanged = lib.props.onViewableItemsChanged;
       if (null != onViewableItemsChanged) {
         const obj = { viewableItems: null, changed: null };
         const mapped = viewableItems.map(tmp._convertViewable, tmp);
@@ -242,7 +225,7 @@ class VirtualizedSectionList {
       }
     };
     tmp3Result._renderItem = (arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       return (index) => {
         index = index.index;
         let obj = closure_0;
@@ -272,8 +255,8 @@ class VirtualizedSectionList {
             }
           } else {
             const result = obj._getSeparatorComponent(index, _subExtractorResult, closure_0);
-            outer2_1(outer2_2[9])(_subExtractorResult.section.renderItem || obj.props.renderItem, "no renderItem!");
-            const obj1 = { SeparatorComponent: null, LeadingSeparatorComponent: null, cellKey: null, index: null, item: null, leadingItem: null, leadingSection: null, prevCellKey: null, setSelfHighlightCallback: null, setSelfUpdatePropsCallback: null, updateHighlightFor: null, updatePropsFor: null, renderItem: null, section: null, trailingItem: null, trailingSection: null, inverted: null };
+            closure_2_1(closure_2_2[9])(_subExtractorResult.section.renderItem || obj.props.renderItem, "no renderItem!");
+            obj1 = { SeparatorComponent: null, LeadingSeparatorComponent: null, cellKey: null, index: null, item: null, leadingItem: null, leadingSection: null, prevCellKey: null, setSelfHighlightCallback: null, setSelfUpdatePropsCallback: null, updateHighlightFor: null, updatePropsFor: null, renderItem: null, section: null, trailingItem: null, trailingSection: null, inverted: null };
             obj1[0] = result;
             let prop;
             if (0 === index2) {
@@ -289,7 +272,7 @@ class VirtualizedSectionList {
             obj1[12] = _subExtractorResult.section.renderItem || obj.props.renderItem;
             ({ section: obj2[13], trailingItem: obj2[14], trailingSection: obj2[15] } = _subExtractorResult);
             obj1[16] = obj.props.inverted;
-            return outer2_12(outer2_16, obj1);
+            return closure_2_12(closure_2_16, obj1);
           }
         } else {
           return null;
@@ -297,40 +280,40 @@ class VirtualizedSectionList {
       };
     };
     tmp3Result._updatePropsFor = (arg0, arg1) => {
-      if (null != _undefined._updatePropsMap[arg0]) {
+      if (null != lib._updatePropsMap[arg0]) {
         tmp(arg1);
       }
     };
     tmp3Result._updateHighlightFor = (arg0, arg1) => {
-      if (null != _undefined._updateHighlightMap[arg0]) {
+      if (null != lib._updateHighlightMap[arg0]) {
         tmp(arg1);
       }
     };
     tmp3Result._setUpdateHighlightFor = (arg0, arg1) => {
       if (null != arg1) {
-        _undefined._updateHighlightMap[arg0] = arg1;
+        lib._updateHighlightMap[arg0] = arg1;
       } else {
-        const _updateHighlightFor = _undefined._updateHighlightFor;
+        const _updateHighlightFor = lib._updateHighlightFor;
         delete tmp2[tmp];
       }
     };
     tmp3Result._setUpdatePropsFor = (arg0, arg1) => {
       if (null != arg1) {
-        _undefined._updatePropsMap[arg0] = arg1;
+        lib._updatePropsMap[arg0] = arg1;
       } else {
-        const _updatePropsMap = _undefined._updatePropsMap;
+        const _updatePropsMap = lib._updatePropsMap;
         delete tmp2[tmp];
       }
     };
     tmp3Result._updateHighlightMap = {};
     tmp3Result._updatePropsMap = {};
     tmp3Result._captureRef = (_listRef) => {
-      c0._listRef = _listRef;
+      closure_0._listRef = _listRef;
     };
     return tmp3Result;
   }
 }
-require("_inherits")(VirtualizedSectionList, importAllResult.PureComponent);
+_inheritsDefault(VirtualizedSectionList, importAllResult.PureComponent);
 let items = [
   {
     key: "scrollToLocation",
@@ -377,13 +360,6 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let ItemSeparatorComponent;
-      let SectionSeparatorComponent;
-      let renderItem;
-      let renderSectionFooter;
-      let renderSectionHeader;
-      let sections;
-      let stickySectionHeadersEnabled;
       let self = this;
       self = this;
       const props = this.props;
@@ -470,12 +446,7 @@ let items = [
   {
     key: "_subExtractor",
     value: function _subExtractor(index) {
-      let data;
       let diff;
-      let getItem;
-      let getItemCount;
-      let key;
-      let sections;
       let diff1 = index;
       ({ getItem, getItemCount, sections } = this.props);
       let num = 0;

@@ -1,11 +1,12 @@
 // _runtime/00172__isNativeReflectConstruct.js
-import PerformanceResourceTiming from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
-import _classPrivateFieldBase from "_classPrivateFieldBase";
-import importDefaultResult2 from "_classPrivateFieldKey";
+import _inheritsDefault from "_inherits" /* 98 */;
+import PerformanceResourceTiming from "_classCallCheck" /* 41 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_get" /* 96 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_4 from "_classPrivateFieldBase" /* 90 */;
+import importDefaultResult2 from "_classPrivateFieldKey" /* 91 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -18,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -42,9 +43,9 @@ class PerformanceResourceTiming {
     tmp = PerformanceResourceTiming(this, PerformanceResourceTiming);
     items = ["resource"];
     items[1] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(PerformanceResourceTiming);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_2;
+    obj = closure_2(PerformanceResourceTiming);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -53,21 +54,21 @@ class PerformanceResourceTiming {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    definePropertyResult = Object.defineProperty(tmp3Result, fetchStart, { writable: true, value: "a" });
-    definePropertyResult1 = Object.defineProperty(tmp3Result, requestStart, { writable: true, value: "a" });
-    definePropertyResult2 = Object.defineProperty(tmp3Result, connectStart, { writable: true, value: "a" });
-    definePropertyResult3 = Object.defineProperty(tmp3Result, connectEnd, { writable: true, value: "a" });
-    definePropertyResult4 = Object.defineProperty(tmp3Result, responseStart, { writable: true, value: "a" });
-    definePropertyResult5 = Object.defineProperty(tmp3Result, responseEnd, { writable: true, value: "a" });
-    definePropertyResult6 = Object.defineProperty(tmp3Result, responseStatus, { writable: true, value: "a" });
-    definePropertyResult7 = Object.defineProperty(tmp3Result, contentType, { writable: true, value: "a" });
-    definePropertyResult8 = Object.defineProperty(tmp3Result, encodedBodySize, { writable: true, value: "a" });
-    definePropertyResult9 = Object.defineProperty(tmp3Result, decodedBodySize, { writable: true, value: "a" });
-    ({ fetchStart: _isNativeReflectConstruct(undefined, tmp6, fetchStart)[fetchStart], requestStart: _isNativeReflectConstruct(undefined, tmp6, requestStart)[requestStart], connectStart: _isNativeReflectConstruct(undefined, tmp6, connectStart)[connectStart], connectEnd: _isNativeReflectConstruct(undefined, tmp6, connectEnd)[connectEnd], responseStart: _isNativeReflectConstruct(undefined, tmp6, responseStart)[responseStart], responseEnd: _isNativeReflectConstruct(undefined, tmp6, responseEnd)[responseEnd], responseStatus: _isNativeReflectConstruct(undefined, tmp6, responseStatus)[responseStatus], contentType: _isNativeReflectConstruct(undefined, tmp6, contentType)[contentType], encodedBodySize: _isNativeReflectConstruct(undefined, tmp6, encodedBodySize)[encodedBodySize], decodedBodySize: _isNativeReflectConstruct(undefined, tmp6, decodedBodySize)[decodedBodySize] } = global);
+    definePropertyResult = Object.defineProperty(tmp3Result, closure_6, { writable: true, value: "a" });
+    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_7, { writable: true, value: "a" });
+    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_8, { writable: true, value: "a" });
+    definePropertyResult3 = Object.defineProperty(tmp3Result, closure_9, { writable: true, value: "a" });
+    definePropertyResult4 = Object.defineProperty(tmp3Result, closure_10, { writable: true, value: "a" });
+    definePropertyResult5 = Object.defineProperty(tmp3Result, closure_11, { writable: true, value: "a" });
+    definePropertyResult6 = Object.defineProperty(tmp3Result, closure_12, { writable: true, value: "a" });
+    definePropertyResult7 = Object.defineProperty(tmp3Result, closure_13, { writable: true, value: "a" });
+    definePropertyResult8 = Object.defineProperty(tmp3Result, closure_14, { writable: true, value: "a" });
+    definePropertyResult9 = Object.defineProperty(tmp3Result, closure_15, { writable: true, value: "a" });
+    ({ fetchStart: closure_4(undefined, tmp6, closure_6)[closure_6], requestStart: closure_4(undefined, tmp6, closure_7)[closure_7], connectStart: closure_4(undefined, tmp6, closure_8)[closure_8], connectEnd: closure_4(undefined, tmp6, closure_9)[closure_9], responseStart: closure_4(undefined, tmp6, closure_10)[closure_10], responseEnd: closure_4(undefined, tmp6, closure_11)[closure_11], responseStatus: closure_4(undefined, tmp6, closure_12)[closure_12], contentType: closure_4(undefined, tmp6, closure_13)[closure_13], encodedBodySize: closure_4(undefined, tmp6, closure_14)[closure_14], decodedBodySize: closure_4(undefined, tmp6, closure_15)[closure_15] } = global);
     return tmp3Result;
   }
 }
-require("_inherits")(PerformanceResourceTiming, require("PerformanceEntry").PerformanceEntry);
+_inheritsDefault(PerformanceResourceTiming, require("PerformanceEntry").PerformanceEntry);
 let items = [
   {
     key: "fetchStart",
@@ -135,10 +136,10 @@ let items = [
       let self = this;
       self = this;
       const tmp = callback2(callback(self.prototype), "toJSON", this);
-      let _possibleConstructorReturn = tmp;
+      closure_1 = tmp;
       let fn = tmp;
       if (typeof tmp === "function") {
-        fn = (arg0) => tmp.apply(self, arg0);
+        fn = (arg0) => callback.apply(self, arg0);
       }
       const obj = {};
       const merged = Object.assign(fn([]));

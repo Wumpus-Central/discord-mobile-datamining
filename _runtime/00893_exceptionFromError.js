@@ -1,8 +1,8 @@
 // _runtime/00893_exceptionFromError.js
-import _slicedToArray from "_slicedToArray";
-import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
-import { isInstanceOf } from "00827_isInstanceOf.js";
-import { addContextToFrame } from "00830_addContextToFrame.js";
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 822 */;
+import isInstanceOf from "isInstanceOf" /* 827 */;
+import addContextToFrame from "addContextToFrame" /* 830 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function exceptionFromError(arg0, name) {
   let obj = { type: name.name || name.constructor.name, value: null };
@@ -69,7 +69,7 @@ export const eventFromMessage = function eventFromMessage(arg0, message, arg2, e
         obj = { values: null };
         obj = { value: null, stacktrace: null };
         obj[0] = message;
-        const obj1 = { frames: null };
+        obj1 = { frames: null };
         obj1[0] = arr;
         obj[1] = obj1;
         const items = [obj];
@@ -102,7 +102,7 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
   if (!data) {
     data = { handled: true, type: "generic" };
   }
-  let obj1 = isInstanceOf;
+  obj1 = isInstanceOf;
   if (obj1.isError(name)) {
     const items = [name, undefined];
     let items3 = items;
@@ -216,7 +216,7 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
       items3 = [syntheticException1, undefined];
     }
   }
-  const tmp29 = _slicedToArray(items3, 2);
+  const tmp29 = callback(items3, 2);
   obj = { exception: null };
   obj1 = { values: null };
   const items4 = [exceptionFromError(arg1, tmp29[0])];

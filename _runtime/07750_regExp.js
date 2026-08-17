@@ -1,7 +1,8 @@
 // _runtime/07750_regExp.js
-import { generatePropagationContext } from "07748_generatePropagationContext.js";
-import { baggageHeaderToDynamicSamplingContext } from "07751_baggageHeaderToDynamicSamplingContext.js";
-const require = arg1;
+import generatePropagationContext from "generatePropagationContext" /* 7748 */;
+import baggageHeaderToDynamicSamplingContext from "baggageHeaderToDynamicSamplingContext" /* 7751 */;
+
+require = arg1;
 const dependencyMap = arg6;
 const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
 arg5.TRACEPARENT_REGEXP = regExp;
@@ -45,7 +46,6 @@ arg5.generateSentryTraceHeader = function generateSentryTraceHeader() {
   return "" + traceId + "-" + spanId + str;
 };
 arg5.propagationContextFromHeaders = function propagationContextFromHeaders(str) {
-  let parentSampled;
   let tmp;
   if (str) {
     const match = str.match(regExp);

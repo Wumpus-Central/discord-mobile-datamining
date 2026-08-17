@@ -1,13 +1,9 @@
 // _runtime/06340_getDefaultHeaderHeight.js
-import get_ActivityIndicator from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let PixelRatio;
-let Platform;
 ({ PixelRatio, Platform } = get_ActivityIndicator);
 
-export const getDefaultHeaderHeight = function getDefaultHeaderHeight(layout, closure_0, headerStatusBarHeight) {
-  let height;
-  let width;
+export const getDefaultHeaderHeight = function getDefaultHeaderHeight(layout, modal, headerStatusBarHeight) {
   ({ width, height } = layout);
   return 64 + headerStatusBarHeight;
 };

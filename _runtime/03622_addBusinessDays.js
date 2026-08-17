@@ -1,10 +1,10 @@
 // _runtime/03622_addBusinessDays.js
-import isWeekend from "isWeekend";
-import _typeof from "_typeof";
-import toInteger from "toInteger";
-import requiredArgs from "requiredArgs";
-import isSunday from "isSunday";
-import isSaturday from "isSaturday";
+import isWeekend from "isWeekend" /* 3623 */;
+import _typeof from "_typeof" /* 3472 */;
+import toInteger from "toInteger" /* 3476 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+import isSunday from "isSunday" /* 3624 */;
+import isSaturday from "isSaturday" /* 3625 */;
 
 if (!isWeekend) {
   let obj = { default: null };
@@ -13,7 +13,7 @@ if (!isWeekend) {
 } else {
   tmp3 = isWeekend;
 }
-let c0 = tmp3;
+isWeekend = tmp3;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -21,7 +21,7 @@ if (!_typeof) {
 } else {
   tmp5 = _typeof;
 }
-let closure_1 = tmp5;
+_typeof = tmp5;
 if (!toInteger) {
   obj = { default: null };
   obj[0] = toInteger;
@@ -29,15 +29,15 @@ if (!toInteger) {
 } else {
   tmp7 = toInteger;
 }
-let obj1 = tmp7;
+toInteger = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c3 = tmp9;
+requiredArgs = tmp9;
 if (!isSunday) {
   let obj2 = { default: null };
   obj2[0] = isSunday;
@@ -45,7 +45,7 @@ if (!isSunday) {
 } else {
   tmp11 = isSunday;
 }
-let c4 = tmp11;
+isSunday = tmp11;
 if (!isSaturday) {
   let obj3 = { default: null };
   obj3[0] = isSaturday;
@@ -53,16 +53,15 @@ if (!isSaturday) {
 } else {
   tmp13 = isSaturday;
 }
-let c5 = tmp13;
+isSaturday = tmp13;
 
 export default function addBusinessDays(arg0, arg1) {
   let diff;
-  let tmp9;
-  tmp9.default(2, arguments);
-  const defaultResult1 = tmp5.default(arg0);
-  let obj2 = tmp3;
-  let defaultResult2 = tmp3.default(defaultResult1);
-  const defaultResult3 = tmp7.default(arg1);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  let obj2 = isWeekend;
+  let defaultResult2 = isWeekend.default(defaultResult1);
+  const defaultResult3 = toInteger.default(arg1);
   if (isNaN(defaultResult3)) {
     const _Date = Date;
     const date = new Date(NaN);
@@ -79,10 +78,10 @@ export default function addBusinessDays(arg0, arg1) {
     if (absolute > 0) {
       do {
         let setDateResult1 = defaultResult1.setDate(defaultResult1.getDate() + num3);
-        tmp9 = tmp3;
+        let tmp9 = isWeekend;
         let tmp10 = absolute;
         diff = absolute;
-        if (!tmp3.default(defaultResult1)) {
+        if (!isWeekend.default(defaultResult1)) {
           diff = absolute - 1;
         }
         absolute = diff;
@@ -96,7 +95,7 @@ export default function addBusinessDays(arg0, arg1) {
       defaultResult2 = 0 !== defaultResult3;
     }
     if (defaultResult2) {
-      if (tmp13.default(defaultResult1)) {
+      if (isSaturday.default(defaultResult1)) {
         let num6 = -1;
         if (num3 < 0) {
           num6 = 2;
@@ -104,7 +103,7 @@ export default function addBusinessDays(arg0, arg1) {
         defaultResult1.setDate(defaultResult1.getDate() + num6);
         const date1 = defaultResult1.getDate();
       }
-      if (tmp11.default(defaultResult1)) {
+      if (isSunday.default(defaultResult1)) {
         let num7 = -2;
         if (num3 < 0) {
           num7 = 1;
@@ -116,6 +115,6 @@ export default function addBusinessDays(arg0, arg1) {
     defaultResult1.setHours(hours);
     return defaultResult1;
   }
-  obj3 = tmp7;
+  obj3 = toInteger;
 };
 export default exports.default;

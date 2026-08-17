@@ -1,6 +1,7 @@
 // _runtime/01765_JEST_WORKER_ID.js
-import { Platform } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const Platform = get_ActivityIndicator.Platform;
 let flag = JEST_WORKER_ID;
 if (!JEST_WORKER_ID) {
   flag = false;

@@ -25,7 +25,7 @@ arg5.createViewConfig = function createViewConfig(closure_2) {
       obj2 = closure_2.validAttributes;
       if (null != obj2) {
         if (null != obj2) {
-          let obj1 = {};
+          obj1 = {};
           const merged4 = Object.assign(obj2);
           const merged5 = Object.assign(obj2);
         }

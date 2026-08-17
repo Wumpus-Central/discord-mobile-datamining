@@ -1,6 +1,7 @@
 // _runtime/01031_exceptionFromError.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-const require = arg1;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function exceptionFromError(arg0, name) {
   const arr = parseStackFrames(arg0, name);
@@ -57,7 +58,7 @@ function parseStackFrames(arg0, stacktrace) {
 }
 function extractMessage(message) {
   if (message != null) {
-    let error = message.message;
+    error = message.message;
   }
   let tmp = typeof globalThis.WebAssembly !== "undefined";
   if (typeof globalThis.WebAssembly !== "undefined") {
@@ -107,7 +108,7 @@ function eventFromUnknownInput(arg0, error) {
     tmp2Result = tmp2(817);
     if (!tmp2Result.isDOMException(error)) {
       if (tmp2Result1.isError(error)) {
-        const obj1 = { exception: null };
+        obj1 = { exception: null };
         const obj2 = { values: null };
         const items1 = [exceptionFromError(arg0, error)];
         obj2[0] = items1;
@@ -358,7 +359,7 @@ arg5.eventFromMessage = function eventFromMessage(arg0, message, arg2, synthetic
         obj = { values: null };
         obj = { value: null, stacktrace: null };
         obj[0] = message;
-        const obj1 = { frames: null };
+        obj1 = { frames: null };
         obj1[0] = arr;
         obj[1] = obj1;
         const items = [obj];

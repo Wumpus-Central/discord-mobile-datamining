@@ -1,7 +1,4 @@
 // _runtime/01952_decodeImage.js
-let c0;
-let c1;
-let c2;
 let length3;
 let length6;
 let num2;
@@ -15,10 +12,6 @@ let tmp60;
 let tmp62;
 let tmp64;
 c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
-  let ctype;
-  let tmp69;
-  let tmp70;
-  let tmp71;
   const result = arg1 * arg2;
   const rounded = Math.ceil(arg1 * ([1, null, 3, 1, 2, null, 4][depth.ctype] * depth.depth) / 8);
   uint8Array = new Uint8Array(4 * result);
@@ -304,8 +297,6 @@ c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
   return uint8Array;
 };
 c2 = function _decompress(depth, buffer) {
-  let height;
-  let width;
   const timestamp = Date.now();
   const uint8Array = new Uint8Array((Math.ceil(arg2 * ([1, null, 3, 1, 2, null, 4][depth.ctype] * depth.depth) / 8) + 1 + depth.interlace) * arg3);
   if (depth.tabs.CgBI) {
@@ -961,11 +952,7 @@ do {
   num25 = num25 - 1;
 } while (0 !== tmp64);
 let dither = function v(buffer) {
-  let A;
   let arr2;
-  let g;
-  let k;
-  let n;
   let sum22;
   let _Uint8Array = arg1;
   _Uint8Array = Uint8Array;
@@ -1508,8 +1495,6 @@ let dither = function v(buffer) {
 };
 obj = {
   decode(arg0) {
-    let readUint;
-    let readUshort;
     const uint8Array = new Uint8Array(arg0);
     let obj = c0;
     ({ readUshort, readUint } = c0);
@@ -1637,7 +1622,7 @@ obj = {
             obj[2] = readUint(uint8Array, sum1 + 4);
             obj[3] = readUint(uint8Array, sum1 + 8);
             let ushort = readUshort(uint8Array, sum1 + 22);
-            let obj1 = { rect: null, delay: null, dispose: null, blend: null };
+            obj1 = { rect: null, delay: null, dispose: null, blend: null };
             obj1[0] = obj;
             let num23 = 100;
             let ushort1 = readUshort(uint8Array, sum1 + 20);
@@ -1852,8 +1837,6 @@ obj = {
     throw "The input is not a PNG file!";
   },
   toRGBA8(img) {
-    let height;
-    let width;
     ({ width, height } = img);
     if (null == img.tabs.acTL) {
       const items = [_undefined2(img.data, width, height, img).buffer];
@@ -2136,9 +2119,6 @@ dither = function dither(img, width, height, plte, first, first2) {
   }
 };
 _main = function _main(tmp3Result, depth, height, arg3, arg4) {
-  let writeASCII;
-  let writeUint;
-  let writeUshort;
   let obj = arg4;
   if (null == arg4) {
     obj = {};
@@ -2388,9 +2368,6 @@ _main = function _main(tmp3Result, depth, height, arg3, arg4) {
   return uint8Array.buffer;
 };
 compressPNG = function compressPNG(uint8Array, sum1, size) {
-  let bpl;
-  let bpp;
-  let img;
   let num = 0;
   if (0 < uint8Array.frames.length) {
     while (true) {
@@ -2908,7 +2885,7 @@ compress = function compress(arg0, width2, height2, arg3, width, height, arg6, a
       } while (num32 < length2);
     }
   }
-  const obj1 = {};
+  obj1 = {};
   const plte = [];
   const items2 = [];
   if (0 != arg3) {
@@ -3311,10 +3288,8 @@ function _updateFrame(arg0, width2, height2, frames, first, height, width) {
   }
 }
 function quantize(arg0, arg1, arg2) {
-  let arr2;
   let length3;
   let length6;
-  let tmp5;
   const timestamp = Date.now();
   const uint8Array = new Uint8Array(arg0);
   const substr = uint8Array.slice(0);
@@ -3656,7 +3631,7 @@ function getKDtree(substr, arg1) {
             obj = { i0: null, i1: null, bst: null, est: null, tdst: 0, left: null, right: null };
             obj[0] = sum5;
             obj[1] = tmp26.i1;
-            let obj1 = { R: null, m: null, N: null };
+            obj1 = { R: null, m: null, N: null };
             obj1[0] = [];
             obj1[1] = [];
             obj1[2] = tmp26.bst.N - obj.bst.N;
@@ -3699,7 +3674,6 @@ function getKDtree(substr, arg1) {
   return items1;
 }
 function getNearest(right, arg1, arg2, arg3, arg4) {
-  let left;
   if (null == right.left) {
     const q = right.est.q;
     const diff = arg1 - q[0];
@@ -3770,13 +3744,6 @@ function stats(substr, i0, i1) {
   return { R, m, N };
 }
 function estats(bst) {
-  let N;
-  let R;
-  let m;
-  let tmp;
-  let tmp2;
-  let tmp3;
-  let tmp4;
   ({ R, m, N } = bst);
   [tmp, tmp2, tmp3, tmp4] = m;
   let num = 0;

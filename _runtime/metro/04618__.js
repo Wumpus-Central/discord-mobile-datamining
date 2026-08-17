@@ -1,14 +1,15 @@
 // _runtime/metro/04618__.js
-import { getNative } from "../00805_getNative.js";
-import { constant } from "../04619_constant.js";
-if (require("getNative")) {
+import identity from "identity" /* 634 */;
+import getNative from "getNative" /* 805 */;
+import constant from "constant" /* 4619 */;
+
+if (getNative) {
   let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: null, writable: true };
-    obj[2] = constant(arg1);
+    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
     return getNative(arg0, "toString", obj);
   };
 } else {
-  fn = require("identity");
+  fn = identity;
 }
 
 export default fn;

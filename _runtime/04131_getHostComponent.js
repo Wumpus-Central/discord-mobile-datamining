@@ -1,15 +1,17 @@
 // _runtime/04131_getHostComponent.js
-import { Platform } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import setRuntimeConfigProviderAll from "setRuntimeConfigProvider" /* 65 */;
 
+const Platform = get_ActivityIndicator.Platform;
 
 export const getHostComponent = function getHostComponent(RiveView, arg1) {
-  const importAll = arg1;
-  if (null == importAll(65)) {
+  importAll = arg1;
+  if (null == setRuntimeConfigProviderAll) {
     const _Error = Error;
-    const error = new Error("NativeComponentRegistry is not available on android!");
+    error = new Error("NativeComponentRegistry is not available on android!");
     throw error;
   } else {
-    return tmp(65).get(RiveView, () => {
+    return setRuntimeConfigProviderAll.get(RiveView, () => {
       const tmp = callback();
       const validAttributes = tmp.validAttributes;
       (function wrapValidAttributes(validAttributes) {
@@ -31,7 +33,7 @@ export const getHostComponent = function getHostComponent(RiveView, arg1) {
       return tmp;
     });
   }
-  tmp = importAll;
+  let tmp = importAll;
 };
 export const callback = function callback(fn) {
   let tmp = fn;

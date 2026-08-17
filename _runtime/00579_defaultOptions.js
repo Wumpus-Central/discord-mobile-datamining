@@ -299,13 +299,13 @@ function replaceGetterValues(arg0) {
     let arr;
     let tmp2;
     let tmp = arg1;
-    if (outer1_3.length > 0) {
+    if (closure_1_3.length > 0) {
       let num2 = 0;
       tmp = arg1;
-      if (0 < outer1_3.length) {
+      if (0 < closure_1_3.length) {
         while (true) {
-          arr = outer1_3;
-          tmp2 = outer1_3[num2];
+          arr = closure_1_3;
+          tmp2 = closure_1_3[num2];
           let tmp3 = num2;
           if (tmp2[1] === arg0) {
             if (tmp2[0] === arg1) {

@@ -1,14 +1,12 @@
 // _runtime/metro/13672__.js
-import { getOwnPropertyDescriptor } from "../13675_getOwnPropertyDescriptor.js";
-import { isForced } from "../13712_isForced.js";
-import { 13673__ } from "13673__.js";
+import _mod13673 from "module_13673" /* 13673 */;
+import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 13675 */;
+import isForced from "isForced" /* 13712 */;
+
 
 export default (dontCallGetSet, obj) => {
-  let _global;
-  let stat;
-  let target;
   ({ target, global: _global, stat } = dontCallGetSet);
-  const tmp3 = 13673__;
+  const tmp3 = _mod13673;
   if (_global) {
     let prototype = tmp3;
   } else {

@@ -1,12 +1,10 @@
 // _runtime/01633_context.js
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import closure_2 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { NativeSafeAreaProvider } from "01634_NativeSafeAreaProvider.js";
 
-let StyleSheet;
-let c4;
 const require = arg1;
 let c3 = importAllResult;
 ({ Dimensions: c4, StyleSheet } = get_ActivityIndicator);
@@ -18,18 +16,11 @@ let c9 = "No safe area value available. Make sure you are rendering `<SafeAreaPr
 export const SafeAreaInsetsContext = context;
 export const SafeAreaFrameContext = context1;
 export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
-  let c0;
-  let c1;
-  let children;
-  let initialSafeAreaInsets;
-  let style;
-  let tmp13;
-  let tmp9;
   initialMetrics = initialMetrics.initialMetrics;
   ({ children, initialSafeAreaInsets, style } = initialMetrics);
   const merged = Object.assign(initialMetrics, Object.create(null));
   let _require;
-  let dependencyMap;
+  dependencyMap = undefined;
   let obj = importAllResult;
   context = importAllResult.useContext(context);
   let insets;
@@ -66,8 +57,6 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
   const tmp8 = callback(importAllResult.useState(insets), 2);
   [tmp13, c1] = callback(obj.useState(frame), 2);
   callback = obj.useCallback((nativeEvent) => {
-    let c0;
-    let c1;
     ({ frame: c0, insets: c1 } = nativeEvent.nativeEvent);
     _undefined2((height) => {
       const size = closure_0;
@@ -105,7 +94,7 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
   const merged1 = Object.assign(merged);
   let tmp15Result = null;
   if (null != tmp9) {
-    const obj1 = { value: null, children: null };
+    obj1 = { value: null, children: null };
     obj1[0] = tmp13;
     const obj2 = { value: null, children: null };
     obj2[0] = tmp9;
@@ -117,8 +106,6 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
   return jsx(_NativeSafeAreaProvider.NativeSafeAreaProvider, { style: items, onInsetsChange: callback });
 };
 export const SafeAreaListener = function SafeAreaListener(onChange) {
-  let children;
-  let style;
   onChange = onChange.onChange;
   ({ style, children } = onChange);
   const merged = Object.assign(onChange, Object.create(null));
@@ -136,36 +123,36 @@ export const useSafeAreaInsets = function useSafeAreaInsets() {
   context = importAllResult.useContext(context);
   if (null == context) {
     const _Error = Error;
-    const error = new Error(c9);
+    error = new Error(c9);
     throw error;
   } else {
     return context;
   }
 };
 export const useSafeAreaFrame = function useSafeAreaFrame() {
-  const context = importAllResult.useContext(context1);
+  context = importAllResult.useContext(context1);
   if (null == context) {
     const _Error = Error;
-    const error = new Error(c9);
+    error = new Error(c9);
     throw error;
   } else {
     return context;
   }
 };
 export const withSafeAreaInsets = function withSafeAreaInsets(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return importAllResult.forwardRef((arg0, ref) => {
-    const context = outer1_3.useContext(outer1_6);
+    context = closure_1_3.useContext(closure_1_6);
     if (null == context) {
       const _Error = Error;
-      const error = new Error(outer1_9);
+      error = new Error(closure_1_9);
       throw error;
     } else {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.insets = context;
       obj.ref = ref;
-      return outer1_5(closure_0, obj);
+      return closure_1_5(closure_0, obj);
     }
   });
 };
@@ -173,7 +160,7 @@ export const useSafeArea = function useSafeArea() {
   context = importAllResult.useContext(context);
   if (null == context) {
     const _Error = Error;
-    const error = new Error(c9);
+    error = new Error(c9);
     throw error;
   } else {
     return context;

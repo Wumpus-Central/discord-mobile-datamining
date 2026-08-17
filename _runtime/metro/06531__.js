@@ -1,8 +1,9 @@
 // _runtime/metro/06531__.js
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
+noopAll;
 try {
   let closure_0 = require("enableScreens");
   exports.MaybeScreenContainer = (enabled) => {
@@ -20,8 +21,6 @@ try {
     return tmp8;
   };
   exports.MaybeScreen = (arg0) => {
-    let active;
-    let enabled;
     ({ enabled, active } = arg0);
     const merged = Object.assign(arg0, Object.create(null));
     if (null != closure_0) {

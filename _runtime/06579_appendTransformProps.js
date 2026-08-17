@@ -1,19 +1,11 @@
 // _runtime/06579_appendTransformProps.js
-import { append } from "06580_append.js";
-import { peg$SyntaxError } from "06581_peg_SyntaxError.js";
-import { peg$SyntaxError } from "06582_peg_SyntaxError.js";
-const require = arg1;
+import append from "append" /* 6580 */;
+import peg$SyntaxError from "peg$SyntaxError" /* 6581 */;
+import peg$SyntaxError2 from "peg$SyntaxError" /* 6582 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function appendTransformProps(arg0) {
-  let originX;
-  let originY;
-  let rotation;
-  let scaleX;
-  let scaleY;
-  let skewX;
-  let skewY;
-  let x;
-  let y;
   ({ originX, originY } = arg0);
   ({ x, y, scaleX, scaleY, rotation, skewX, skewY } = arg0);
   append.appendTransform(x + originX, y + originY, scaleX, scaleY, rotation, skewX, skewY, originX, originY);
@@ -83,21 +75,6 @@ function transformsArrayToProps(arr) {
   return obj;
 }
 function props2transform(arr) {
-  let origin;
-  let originX;
-  let originY;
-  let rotation;
-  let scale;
-  let scaleX;
-  let scaleY;
-  let skew;
-  let skewX;
-  let skewY;
-  let translate;
-  let translateX;
-  let translateY;
-  let x;
-  let y;
   if (arr) {
     ({ rotation, translate, translateX, translateY, origin, originX, originY, scale, scaleX, scaleY, skew, skewX, skewY, x, y } = arr);
     if (null == rotation) {
@@ -248,8 +225,8 @@ arg5.props2transform = props2transform;
 arg5.transformToMatrix = transformToMatrix;
 arg5.extractTransformSvgView = function extractTransformSvgView(transform) {
   if (typeof transform.transform === "string") {
-    transform = peg$SyntaxError.parse(transform.transform);
-    const obj = peg$SyntaxError;
+    transform = peg$SyntaxError2.parse(transform.transform);
+    const obj = peg$SyntaxError2;
   } else {
     transform = transform.transform;
   }

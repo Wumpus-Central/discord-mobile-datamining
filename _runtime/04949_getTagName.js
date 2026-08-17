@@ -1,11 +1,9 @@
 // _runtime/04949_getTagName.js
-import _slicedToArray from "_slicedToArray";
-import { getDataView } from "04910_getDataView.js";
-import { 04927__ } from "metro/04927__.js";
+import getDataView from "getDataView" /* 4910 */;
+import _modDef4927 from "module_4927" /* 4927 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 
-let error;
-let length;
-const require = arg1;
+require = arg1;
 function getTagName(dataView, sum1) {
   let obj = getDataView;
   const tmp = callback(obj.getPascalStringFromDataView(dataView, sum1), 2);
@@ -35,13 +33,13 @@ export default {
       const sum = num + closure_7;
       const stringFromDataView = getDataView.getStringFromDataView(dataView, num, closure_7);
       const obj3 = getDataView;
-      const shortAt = 04927__.getShortAt(dataView, sum);
+      const shortAt = _modDef4927.getShortAt(dataView, sum);
       const sum1 = sum + c5;
       const tmp15 = getTagName(dataView, sum1);
       let name = tmp15.tagName;
       const sum2 = sum1 + tmp15.tagNameSize;
-      const obj4 = 04927__;
-      const longAt = 04927__.getLongAt(dataView, sum2);
+      const obj4 = _modDef4927;
+      const longAt = _modDef4927.getLongAt(dataView, sum2);
       const sum3 = sum2 + c6;
       if (stringFromDataView === c4) {
         let tmp5Result = tmp5(4910);
@@ -67,7 +65,7 @@ export default {
         }
       }
       num = sum3 + (longAt + longAt % 2);
-      const obj5 = 04927__;
+      const obj5 = _modDef4927;
     }
     return obj;
   }

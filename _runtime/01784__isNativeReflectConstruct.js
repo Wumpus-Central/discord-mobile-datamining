@@ -1,8 +1,9 @@
 // _runtime/01784__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 const EntryExitTransition = arg1;
 function _isNativeReflectConstruct() {
@@ -16,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,12 +30,12 @@ class EntryExitTransition {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_2(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(closure_0);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -43,25 +44,25 @@ class EntryExitTransition {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.enteringV = require("_isNativeReflectConstruct").FadeIn;
     tmp3Result.exitingV = require("_isNativeReflectConstruct").FadeOut;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      let callbackV = delayFunction.callbackV;
+      const callbackV = delayFunction.callbackV;
       const delay = delayFunction.getDelay();
       const enteringV = delayFunction.enteringV;
       const buildResult = enteringV.build();
-      let _possibleConstructorReturn = buildResult;
+      closure_3 = buildResult;
       const exitingV = delayFunction.exitingV;
       const buildResult1 = exitingV.build();
       const exitingV2 = delayFunction.exitingV;
       const duration = exitingV2.getDuration();
       const fn = function n(targetOriginX) {
         const tmp = buildResult(targetOriginX);
-        const delayFunction = tmp;
+        delayFunction = tmp;
         let tmp2 = buildResult1(targetOriginX);
-        const callbackV = tmp2;
+        closure_1 = tmp2;
         let obj = { transform: [] };
         let keys = Object.keys(tmp2.animations);
         const iter = keys[Symbol.iterator]();
@@ -82,12 +83,12 @@ class EntryExitTransition {
                   let tmp2 = item10011;
                   let tmp4 = closure_0;
                   let tmp5 = obj;
-                  let obj = delayFunction(callbackV[6]);
+                  obj = delayFunction(callbackV[6]);
                   let obj2 = delayFunction(callbackV[6]);
                   let num = 0;
-                  if (tmp2.initialValues.transform) {
+                  if (closure_1.initialValues.transform) {
                     let tmp8 = item10011;
-                    num = tmp2.initialValues.transform[arg1][tmp2];
+                    num = closure_1.initialValues.transform[arg1][tmp2];
                   }
                   obj = {};
                   obj[item10011] = tmp4(tmp5, obj.withSequence(arg0[item10011], obj2.withTiming(num, { duration: 0 })));
@@ -113,7 +114,7 @@ class EntryExitTransition {
               items1 = [tmp2.animations[tmp5], ];
               let tmp7 = delayFunction;
               let tmp8 = callbackV;
-              let obj1 = delayFunction(callbackV[6]);
+              obj1 = delayFunction(callbackV[6]);
               let _Object = Object;
               let keys1 = Object.keys(targetOriginX);
               if (keys1.includes(tmp5)) {
@@ -160,15 +161,15 @@ class EntryExitTransition {
                   let tmp5 = obj;
                   let tmp8 = delayFunction;
                   let tmp9 = callbackV;
-                  let tmp4 = tmp;
-                  let tmp6 = outer1_5;
-                  let sum = obj + outer1_5;
-                  let obj = delayFunction(callbackV[6]);
+                  let tmp4 = lib;
+                  let tmp6 = closure_1_5;
+                  let sum = obj + closure_1_5;
+                  obj = delayFunction(callbackV[6]);
                   let obj2 = delayFunction(callbackV[6]);
                   let num = 0;
-                  if (tmp.initialValues.transform) {
+                  if (lib.initialValues.transform) {
                     let tmp10 = item10011;
-                    num = tmp.initialValues.transform[arg1][tmp2];
+                    num = lib.initialValues.transform[arg1][tmp2];
                   }
                   obj = {};
                   obj = { duration: null };
@@ -220,14 +221,14 @@ class EntryExitTransition {
             length = keys.length;
           }
           if (length < 1) {
-            const logger = tmp(tmp2[7]).logger;
+            const logger = lib(closure_1[7]).logger;
             logger.error("${value} is not a valid Transform object");
             return arg0;
           } else {
             const first = keys[0];
             const current = arg0[first].current;
             if (typeof current === "string") {
-              let obj = {};
+              obj = {};
               if (current.includes("deg")) {
                 obj[first] = "0deg";
                 let tmp3 = obj;
@@ -239,7 +240,7 @@ class EntryExitTransition {
               obj = {};
               if (first.includes("translate")) {
                 obj[first] = 0;
-                tmp2 = obj;
+                let tmp2 = obj;
               } else {
                 obj[first] = 1;
                 tmp2 = obj;
@@ -252,9 +253,8 @@ class EntryExitTransition {
         ({ currentOriginX: obj8.originX, currentOriginY: obj8.originY, currentWidth: obj8.width, currentHeight: obj8.height } = targetOriginX);
         obj.transform = combined;
         obj[0] = obj;
-        obj1 = { originX: null, originY: null, width: null, height: null };
-        let sum = obj + duration;
-        obj1[0] = delayFunction(sum, delayFunction(callbackV[6]).withTiming(targetOriginX.targetOriginX, { duration }));
+        obj1 = { originX: delayFunction(sum, delayFunction(callbackV[6]).withTiming(targetOriginX.targetOriginX, { duration })), originY: null, width: null, height: null };
+        sum = obj + duration;
         const sum1 = obj + duration;
         const obj10 = delayFunction(callbackV[6]);
         let obj2 = { duration };
@@ -270,18 +270,18 @@ class EntryExitTransition {
         obj1[3] = delayFunction(sum3, delayFunction(callbackV[6]).withTiming(targetOriginX.targetHeight, obj5));
         const merged1 = Object.assign(obj);
         obj[1] = obj1;
-        obj[2] = callbackV;
+        obj[2] = closure_1;
         return obj;
       };
-      fn.__closure = { enteringAnimation: buildResult, exitingAnimation: buildResult1, delayFunction, delay, withSequence: _undefined(outer1_1[6]).withSequence, withTiming: _undefined(outer1_1[6]).withTiming, exitingDuration: duration, logger: _undefined(outer1_1[7]).logger, callback: callbackV };
+      fn.__closure = { enteringAnimation: buildResult, exitingAnimation: buildResult1, delayFunction, delay, withSequence: callback(closure_1_1[6]).withSequence, withTiming: callback(closure_1_1[6]).withTiming, exitingDuration: duration, logger: callback(closure_1_1[7]).logger, callback: callbackV };
       fn.__workletHash = 15677837188414;
-      fn.__initData = outer1_6;
+      fn.__initData = closure_1_6;
       return fn;
     };
     return tmp3Result;
   }
 }
-require("_inherits")(EntryExitTransition, require("BaseAnimationBuilder").BaseAnimationBuilder);
+_inheritsDefault(EntryExitTransition, require("BaseAnimationBuilder").BaseAnimationBuilder);
 let obj = {
   key: "entering",
   value: function entering(enteringV) {

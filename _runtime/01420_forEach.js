@@ -1,5 +1,6 @@
 // _runtime/01420_forEach.js
-import { apply } from "01421_apply.js";
+import apply from "apply" /* 1421 */;
+
 
 export default function forEach(str, call) {
   if (apply(call)) {

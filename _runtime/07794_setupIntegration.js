@@ -1,6 +1,6 @@
 // _runtime/07794_setupIntegration.js
-import _slicedToArray from "_slicedToArray";
-import { getClient } from "07765_getClient.js";
+import getClient from "getClient" /* 7765 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import { __SENTRY_DEBUG__ } from "metro/07766___SENTRY_DEBUG__.js";
 
 function setupIntegration(on, name) {
@@ -24,12 +24,12 @@ function setupIntegration(on, name) {
     }
     if (typeof name.preprocessEvent === "function") {
       const preprocessEvent = name.preprocessEvent;
-      const dependencyMap = preprocessEvent.bind(name);
+      dependencyMap = preprocessEvent.bind(name);
       on.on("preprocessEvent", (arg0, arg1) => callback(arg0, arg1, closure_0));
     }
     if (typeof name.processEvent === "function") {
       const processEvent = name.processEvent;
-      let closure_2 = processEvent.bind(name);
+      closure_2 = processEvent.bind(name);
       const _Object = Object;
       const obj = { id: null };
       obj[0] = name.name;
@@ -82,7 +82,7 @@ export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultInt
     arg0.isDefaultInstance = true;
   });
   if (Array.isArray(integrations)) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
     let arr2 = items;
   } else {
@@ -115,18 +115,18 @@ export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultInt
   const values = Object.values(obj);
   const findIndexResult = values.findIndex((name) => "Debug" === name.name);
   if (findIndexResult > -1) {
-    arr = values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
+    arr = values.push(callback(values.splice(findIndexResult, 1), 1)[0]);
   }
   return values;
 };
 export const installedIntegrations = items;
 export { setupIntegration };
 export const setupIntegrations = function setupIntegrations(arg0, arr) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const obj = {};
   const item = arr.forEach((arg0) => {
     if (arg0) {
-      outer1_4(closure_0, arg0, obj);
+      closure_1_4(closure_0, arg0, obj);
     }
   });
   return obj;

@@ -1,8 +1,10 @@
 // _runtime/03978_processRelativeTime.js
+import t from "t" /* 3975 */;
+
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      const _module = require("t");
+      const _module = t;
       const processRelativeTime2 = function processRelativeTime(arg0, arg1, arg2, arg3) {
         const items = [`${arg0} Tage`, `${arg0} Tagen`];
         const items1 = [`${arg0} Monate`, `${arg0} Monaten`];

@@ -71,7 +71,7 @@ function _addListener(_events, type, fn, arg3) {
             const _Error = Error;
             const _String = String;
             const text = `Possible EventEmitter memory leak detected. ${arr2.length}`;
-            const error = new Error(`Possible EventEmitter memory leak detected. ${arr2.length}` + " " + String(type) + " listeners added. Use emitter.setMaxListeners() to increase limit");
+            error = new Error(`Possible EventEmitter memory leak detected. ${arr2.length}` + " " + String(type) + " listeners added. Use emitter.setMaxListeners() to increase limit");
             error.name = "MaxListenersExceededWarning";
             error.emitter = _events;
             error.type = type;
@@ -603,15 +603,18 @@ if (null) {
         return items;
       }
     }
-    let c0 = tmp2;
+    const ownKeys = tmp2;
     const _Number = Number;
+    let closure_2 = Number.isNaN || (function NumberIsNaN(arg0) {
+      return arg0 != arg0;
+    });
     module.exports = EventEmitter;
     module.exports.once = function once(arg0, arg1) {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       return new Promise((arg0, arg1) => {
         let obj = arg0;
-        let error = arg1;
+        error = arg1;
         function errorListener(arg0) {
           obj.removeListener(error, obj);
           error(arg0);
@@ -699,8 +702,8 @@ if (null) {
     obj[2] = function set(num) {
       if (typeof num === "number") {
         if (num >= 0) {
-          if (!tmp3(num)) {
-            let closure_4 = num;
+          if (!callback(num)) {
+            closure_4 = num;
           }
         }
       }

@@ -1,12 +1,12 @@
 // _runtime/metro/13795__.js
 arg5.default = () => (startTimer) => {
-  let closure_0 = startTimer;
+  closure_0 = startTimer;
   startTimer = startTimer.startTimer;
   const features = {
     benchmark(title) {
-      let closure_0 = title;
+      closure_0 = title;
       const items = [];
-      let closure_2 = items();
+      closure_2 = items();
       function step(title) {
         let arr = items;
         let num = 0;

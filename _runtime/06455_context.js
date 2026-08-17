@@ -1,5 +1,5 @@
 // _runtime/06455_context.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 
 const use = noop.use;
 const context = noop.createContext(null);

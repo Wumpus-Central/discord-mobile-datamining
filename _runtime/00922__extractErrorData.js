@@ -1,8 +1,8 @@
 // _runtime/00922__extractErrorData.js
-import setupIntegration from "setupIntegration";
-import { consoleSandbox } from "00824_consoleSandbox.js";
-import { isInstanceOf } from "00827_isInstanceOf.js";
-import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
+import consoleSandbox from "consoleSandbox" /* 824 */;
+import isInstanceOf from "isInstanceOf" /* 827 */;
+import setupIntegration from "setupIntegration" /* 887 */;
 
 function _extractErrorData(cause) {
   try {
@@ -108,7 +108,7 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
     obj = {};
   }
   let num;
-  let closure_1;
+  closure_1 = undefined;
   const depth = obj.depth;
   num = 3;
   if (undefined !== depth) {
@@ -127,7 +127,7 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
       if (obj.originalException) {
         tmp3 = contexts;
         if (obj2.isError(obj.originalException)) {
-          const tmp8 = outer1_2(obj.originalException, table, getOptions.getOptions().maxValueLength);
+          const tmp8 = closure_1_2(obj.originalException, table, getOptions.getOptions().maxValueLength);
           tmp3 = contexts;
           if (tmp8) {
             obj = {};

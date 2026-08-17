@@ -1,12 +1,12 @@
 // _runtime/07759_ScopeClass.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const ScopeClass = require;
 class ScopeClass {
   constructor() {
-    tmp = outer1_3(this, ScopeClass);
+    tmp = closure_3(this, ScopeClass);
     this._notifyingListeners = false;
     this._scopeListeners = [];
     this._eventProcessors = [];
@@ -32,7 +32,7 @@ let items = [
     value: function clone() {
       const self = this;
       let obj = Object.create(ScopeClass.prototype);
-      _classCallCheck(obj, ScopeClass);
+      callback2(obj, ScopeClass);
       obj._notifyingListeners = false;
       obj._scopeListeners = [];
       obj._eventProcessors = [];
@@ -44,7 +44,7 @@ let items = [
       obj._contexts = {};
       obj._sdkProcessingMetadata = {};
       obj = { traceId: null, spanId: null };
-      let obj1 = ScopeClass(7748);
+      obj1 = ScopeClass(7748);
       obj[0] = obj1.generateTraceId();
       let obj2 = ScopeClass(7748);
       obj[1] = obj2.generateSpanId();
@@ -262,14 +262,6 @@ let items = [
   {
     key: "update",
     value: function update(fn) {
-      let contexts;
-      let extra;
-      let fingerprint;
-      let level;
-      let obj3;
-      let tags;
-      let tmp6;
-      let user;
       const self = this;
       if (fn) {
         let obj = fn;
@@ -280,7 +272,7 @@ let items = [
           const items = [obj.getScopeData(), obj.getRequestSession()];
           let items2 = items;
         } else {
-          let obj1 = ScopeClass(7745);
+          obj1 = ScopeClass(7745);
           if (obj1.isPlainObject(obj)) {
             const items1 = [fn, fn.requestSession];
             items2 = items1;
@@ -288,7 +280,7 @@ let items = [
             items2 = [];
           }
         }
-        [obj3, tmp6] = _slicedToArray(items2, 2);
+        [obj3, tmp6] = callback(items2, 2);
         if (!obj) {
           obj = {};
         }
@@ -408,8 +400,7 @@ let items = [
     key: "getScopeData",
     value: function getScopeData() {
       const self = this;
-      const obj = { breadcrumbs: this._breadcrumbs, attachments: this._attachments, contexts: this._contexts, tags: this._tags, extra: this._extra, user: this._user, level: this._level, fingerprint: tmp, eventProcessors: self._eventProcessors, propagationContext: self._propagationContext, sdkProcessingMetadata: self._sdkProcessingMetadata, transactionName: self._transactionName, span: null };
-      obj[12] = ScopeClass(7760)._getSpanForScope(self);
+      const obj = { breadcrumbs: this._breadcrumbs, attachments: this._attachments, contexts: this._contexts, tags: this._tags, extra: this._extra, user: this._user, level: this._level, fingerprint: tmp, eventProcessors: self._eventProcessors, propagationContext: self._propagationContext, sdkProcessingMetadata: self._sdkProcessingMetadata, transactionName: self._transactionName, span: ScopeClass(7760)._getSpanForScope(self) };
       return obj;
     }
   },
@@ -423,8 +414,7 @@ let items = [
   {
     key: "setPropagationContext",
     value: function setPropagationContext(arg0) {
-      const obj = { spanId: null };
-      obj[0] = ScopeClass(7748).generateSpanId();
+      const obj = { spanId: ScopeClass(7748).generateSpanId() };
       const merged = Object.assign(arg0);
       this._propagationContext = obj;
       return this;
@@ -446,7 +436,7 @@ let items = [
         const self = this;
         if (this._client) {
           const _Error = Error;
-          const error = new Error("Sentry syntheticException");
+          error = new Error("Sentry syntheticException");
           const _client = self._client;
           let obj = { originalException: null, syntheticException: null };
           obj[0] = arg0;
@@ -475,7 +465,7 @@ let items = [
         const self = this;
         if (this._client) {
           const _Error = Error;
-          const error = new Error(arg0);
+          error = new Error(arg0);
           const _client = self._client;
           let obj = { originalException: null, syntheticException: null };
           obj[0] = arg0;

@@ -1,8 +1,9 @@
 // _runtime/06394_GestureDetector.js
-import { jsx } from "jsxProd";
-import { useEnsureGestureHandlerRootView } from "06395_useEnsureGestureHandlerRootView.js";
-import { _isNativeReflectConstruct } from "06397__isNativeReflectConstruct.js";
+import jsxProd from "jsxProd" /* 21 */;
+import useEnsureGestureHandlerRootView from "useEnsureGestureHandlerRootView" /* 6395 */;
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 6397 */;
 
+const jsx = jsxProd.jsx;
 
 export const GestureDetector = function GestureDetector(gesture) {
   let obj = useEnsureGestureHandlerRootView;

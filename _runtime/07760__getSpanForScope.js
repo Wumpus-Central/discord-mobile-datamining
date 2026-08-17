@@ -1,6 +1,7 @@
 // _runtime/07760__getSpanForScope.js
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
-const require = arg1;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+
+require = arg1;
 const dependencyMap = arg6;
 const _sentrySpan = "_sentrySpan";
 arg5._getSpanForScope = function _getSpanForScope(arg0) {

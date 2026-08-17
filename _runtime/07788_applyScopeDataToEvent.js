@@ -1,18 +1,10 @@
 // _runtime/07788_applyScopeDataToEvent.js
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
-import { merge } from "07763_merge.js";
-const require = arg1;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+import merge from "merge" /* 7763 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
-  let breadcrumbs;
-  let contexts;
-  let fingerprint;
-  let level;
-  let sdkProcessingMetadata;
-  let span;
-  let tags;
-  let transactionName;
-  let user;
   ({ fingerprint, span, breadcrumbs, sdkProcessingMetadata, level, transactionName } = arg1);
   ({ extra, tags, user, contexts } = arg1);
   let obj = addNonEnumerableProperty;
@@ -49,7 +41,7 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     length3 = Object.keys(dropUndefinedKeysResult2).length;
   }
   if (length3) {
-    const obj1 = {};
+    obj1 = {};
     const merged4 = Object.assign(dropUndefinedKeysResult2);
     const merged5 = Object.assign(extra.user);
     extra.user = obj1;
@@ -137,18 +129,6 @@ arg5.mergeAndOverwriteScopeData = function mergeAndOverwriteScopeData(arg0, arg1
   arg0[arg1] = merge.merge(arg0[arg1], arg2, 1);
 };
 arg5.mergeScopeData = function mergeScopeData(extra) {
-  let attachments;
-  let breadcrumbs;
-  let contexts;
-  let eventProcessors;
-  let fingerprint;
-  let level;
-  let propagationContext;
-  let sdkProcessingMetadata;
-  let span;
-  let tags;
-  let transactionName;
-  let user;
   ({ level, breadcrumbs, fingerprint, eventProcessors, attachments, propagationContext, transactionName, span } = arg1);
   ({ extra, tags, user, contexts, sdkProcessingMetadata } = arg1);
   let obj = merge;

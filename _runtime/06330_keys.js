@@ -1,11 +1,9 @@
 // _runtime/06330_keys.js
-import _slicedToArray from "_slicedToArray";
-import keys from "keys";
-import { keys } from "06331_keys.js";
+import keys2 from "keys" /* 6331 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-let channels;
-let labels;
 let obj = {};
+let keys = Object.keys(keys2);
 for (const item10016 of keys) {
   obj[require("keys")[item10016]] = item10016;
   continue;
@@ -140,9 +138,6 @@ obj.rgb.hsv = (arg0) => {
   return items;
 };
 obj.rgb.hwb = (arg0) => {
-  let tmp;
-  let tmp2;
-  let tmp3;
   [tmp, tmp2, tmp3] = arg0;
   const rgb = obj.rgb;
   const items = [rgb.hsl(arg0)[0], 100 * (0.00392156862745098 * Math.min(tmp, Math.min(tmp2, tmp3))), 100 * (1 - 0.00392156862745098 * Math.max(tmp, Math.max(tmp2, tmp3)))];
@@ -163,14 +158,14 @@ obj.rgb.keyword = (arg0) => {
   } else {
     let num = Infinity;
     const _Object = Object;
-    const keys = Object.keys(keys);
+    const keys = Object.keys(keys2);
     const iter = keys[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp11 = nextResult;
       let tmp12 = require;
       let tmp13 = dependencyMap;
-      let tmp14 = keys[nextResult];
+      let tmp14 = keys2[nextResult];
       let num3 = 2;
       let sum = (arg0[0] - tmp14[0]) ** 2 + (arg0[1] - tmp14[1]) ** 2 + (arg0[2] - tmp14[2]) ** 2;
       let tmp16 = sum;
@@ -184,7 +179,7 @@ obj.rgb.keyword = (arg0) => {
     return tmp;
   }
 };
-obj.keyword.rgb = (arg0) => keys[arg0];
+obj.keyword.rgb = (arg0) => keys2[arg0];
 obj.rgb.xyz = (arg0) => {
   const result = arg0[0] / 255;
   const result1 = arg0[1] / 255;
@@ -475,14 +470,11 @@ obj.lch.lab = (arg0) => {
   return items;
 };
 obj.rgb.ansi16 = (arg0) => {
-  let tmp3;
-  let tmp4;
-  let tmp5;
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = null;
   }
-  [tmp3, tmp4, tmp5] = _slicedToArray(arg0, 3);
+  [tmp3, tmp4, tmp5] = callback(arg0, 3);
   if (null === tmp) {
     const rgb = obj.rgb;
     tmp = rgb.hsv(arg0)[2];
@@ -502,18 +494,13 @@ obj.rgb.ansi16 = (arg0) => {
     }
     return sum1;
   }
-  const tmp2 = _slicedToArray(arg0, 3);
+  const tmp2 = callback(arg0, 3);
 };
 obj.hsv.ansi16 = (arg0) => {
-  let hsv;
-  let rgb;
   ({ rgb, hsv } = obj);
   return rgb.ansi16(hsv.rgb(arg0), arg0[2]);
 };
 obj.rgb.ansi256 = (arg0) => {
-  let tmp;
-  let tmp2;
-  let tmp3;
   [tmp, tmp2, tmp3] = arg0;
   if (tmp === tmp2) {
     if (tmp2 === tmp3) {

@@ -1,7 +1,7 @@
 // _runtime/01293_serializeAst.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const InternalIntlMessage = require;
 function serializeAst(ast, value) {
@@ -60,8 +60,8 @@ function serializeAst(ast, value) {
         let tmp20 = entries;
         let tmp21 = entries;
         for (const item10098 of entries) {
-          let tmp22 = _slicedToArray;
-          let tmp23 = _slicedToArray(item10098, 2);
+          let tmp22 = callback;
+          let tmp23 = callback(item10098, 2);
           arg1.value = arg1.value + (" " + tmp23[0] + " {");
           let tmp24 = serializeAst;
           let tmp25 = serializeAst(tmp23[1], arg1);
@@ -79,8 +79,8 @@ function serializeAst(ast, value) {
         let tmp9 = entries1;
         let tmp10 = entries1;
         for (const item10053 of entries1) {
-          let tmp11 = _slicedToArray;
-          let tmp12 = _slicedToArray(item10053, 2);
+          let tmp11 = callback;
+          let tmp12 = callback(item10053, 2);
           arg1.value = arg1.value + (" " + tmp12[0] + " {");
           let tmp13 = serializeAst;
           let tmp14 = serializeAst(tmp12[1], arg1);
@@ -135,7 +135,7 @@ function serializeAstTag(arg0, value) {
 }
 class InternalIntlMessage {
   constructor(arg0, arg1) {
-    tmp = serializeAstTag(this, InternalIntlMessage);
+    tmp = closure_3(this, InternalIntlMessage);
     this.locale = require;
     tmp2 = InternalIntlMessage;
     tmp3 = closure_1;

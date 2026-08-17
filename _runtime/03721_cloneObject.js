@@ -1,5 +1,5 @@
 // _runtime/03721_cloneObject.js
-import assign from "assign";
+import assign from "assign" /* 3722 */;
 
 if (!assign) {
   const obj = { default: null };
@@ -8,9 +8,9 @@ if (!assign) {
 } else {
   tmp3 = assign;
 }
-let c0 = tmp3;
+assign = tmp3;
 
 export default function cloneObject(arg0) {
-  return tmp3.default({}, arg0);
+  return assign.default({}, arg0);
 };
 export default exports.default;

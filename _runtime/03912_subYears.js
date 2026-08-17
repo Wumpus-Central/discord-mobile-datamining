@@ -1,7 +1,7 @@
 // _runtime/03912_subYears.js
-import toInteger from "toInteger";
-import addYears from "addYears";
-import requiredArgs from "requiredArgs";
+import toInteger from "toInteger" /* 3476 */;
+import addYears from "addYears" /* 3641 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!toInteger) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!toInteger) {
 } else {
   tmp3 = toInteger;
 }
-let c0 = tmp3;
+toInteger = tmp3;
 if (!addYears) {
   obj = { default: null };
   obj[0] = addYears;
@@ -18,7 +18,7 @@ if (!addYears) {
 } else {
   tmp5 = addYears;
 }
-let closure_1 = tmp5;
+addYears = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,9 +26,10 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function subYears(arg0, arg1) {
-  tmp7.default(2, arguments);
-  return tmp5.default(arg0, -tmp3.default(arg1));
+  requiredArgs.default(2, arguments);
+  return addYears.default(arg0, -toInteger.default(arg1));
 };
 export default exports.default;

@@ -1,9 +1,11 @@
 // _runtime/00124__isNativeReflectConstruct.js
-import DOMRect from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import setPlatformObject from "setPlatformObject";
+import _inheritsDefault from "_inherits" /* 98 */;
+import importDefaultResult1Default from "importDefaultResult1" /* 125 */;
+import DOMRect from "_classCallCheck" /* 41 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import setPlatformObject from "setPlatformObject" /* 126 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -16,10 +18,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -28,9 +30,9 @@ class DOMRect {
   constructor() {
     self = this;
     tmp = DOMRect(this, DOMRect);
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(DOMRect);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_2;
+    obj = closure_2(DOMRect);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -44,7 +46,7 @@ class DOMRect {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(DOMRect, require("importDefaultResult1"));
+_inheritsDefault(DOMRect, importDefaultResult1Default);
 let obj = {
   key: "x",
   get() {
@@ -87,10 +89,6 @@ const items = [
 obj = {
   key: "fromRect",
   value: function fromRect(arg0) {
-    let height;
-    let width;
-    let x;
-    let y;
     if (arg0) {
       ({ x, y, width, height } = arg0);
       let tmpResult = tmp(x, y, width, height);

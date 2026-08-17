@@ -1,6 +1,7 @@
 // _runtime/01043_getNavigationEntry.js
-import { WINDOW } from "01039_WINDOW.js";
-const require = arg1;
+import WINDOW from "WINDOW" /* 1039 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getNavigationEntry = () => {

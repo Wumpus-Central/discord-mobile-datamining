@@ -1,9 +1,9 @@
 // _runtime/03667_differenceInISOWeekYears.js
-import _typeof from "_typeof";
-import differenceInCalendarISOWeekYears from "differenceInCalendarISOWeekYears";
-import compareAsc from "compareAsc";
-import subISOWeekYears from "subISOWeekYears";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import differenceInCalendarISOWeekYears from "differenceInCalendarISOWeekYears" /* 3656 */;
+import compareAsc from "compareAsc" /* 3648 */;
+import subISOWeekYears from "subISOWeekYears" /* 3668 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -12,7 +12,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!differenceInCalendarISOWeekYears) {
   obj = { default: null };
   obj[0] = differenceInCalendarISOWeekYears;
@@ -20,7 +20,7 @@ if (!differenceInCalendarISOWeekYears) {
 } else {
   tmp5 = differenceInCalendarISOWeekYears;
 }
-let closure_1 = tmp5;
+differenceInCalendarISOWeekYears = tmp5;
 if (!compareAsc) {
   obj = { default: null };
   obj[0] = compareAsc;
@@ -28,15 +28,15 @@ if (!compareAsc) {
 } else {
   tmp7 = compareAsc;
 }
-let obj1 = tmp7;
+compareAsc = tmp7;
 if (!subISOWeekYears) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = subISOWeekYears;
   let tmp9 = obj1;
 } else {
   tmp9 = subISOWeekYears;
 }
-let c3 = tmp9;
+subISOWeekYears = tmp9;
 if (!requiredArgs) {
   const obj2 = { default: null };
   obj2[0] = requiredArgs;
@@ -44,15 +44,15 @@ if (!requiredArgs) {
 } else {
   tmp11 = requiredArgs;
 }
-let c4 = tmp11;
+requiredArgs = tmp11;
 
 export default function differenceInISOWeekYears(arg0, arg1) {
-  tmp11.default(2, arguments);
-  const defaultResult1 = tmp3.default(arg0);
-  const defaultResult2 = tmp3.default(arg1);
-  const defaultResult3 = tmp7.default(defaultResult1, defaultResult2);
-  const absolute = Math.abs(tmp5.default(defaultResult1, defaultResult2));
-  const result = defaultResult3 * (absolute - Number(tmp7.default(tmp9.default(defaultResult1, defaultResult3 * absolute), defaultResult2) === -defaultResult3));
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = _typeof.default(arg1);
+  const defaultResult3 = compareAsc.default(defaultResult1, defaultResult2);
+  const absolute = Math.abs(differenceInCalendarISOWeekYears.default(defaultResult1, defaultResult2));
+  const result = defaultResult3 * (absolute - Number(compareAsc.default(subISOWeekYears.default(defaultResult1, defaultResult3 * absolute), defaultResult2) === -defaultResult3));
   let num = 0;
   if (0 !== result) {
     num = result;

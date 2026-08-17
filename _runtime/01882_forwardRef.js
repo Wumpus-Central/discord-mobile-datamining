@@ -1,20 +1,15 @@
 // _runtime/01882_forwardRef.js
-import noop from "noop";
-import "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import cancelAnimation from "cancelAnimation";
-import closure_8 from "noop";
-import cancelAnimation from "cancelAnimation";
-import closure_9 from "noop";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noopDefault from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import cancelAnimation from "cancelAnimation" /* 1654 */;
+import closure_8 from "module_0" /* 0 */;
+import closure_9 from "module_0" /* 0 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-let forwardRef;
 ({ useCallback: c3, useMemo: c4, forwardRef } = noop);
+noopDefault;
+const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_10 = { code: "function pnpm_indexTsx1(){const{freeze}=this.__closure;return typeof freeze===\"boolean\"?freeze:freeze.value;}" };
 let closure_11 = { code: "function pnpm_indexTsx2(){const{blankSpace,padding,extraContentPadding}=this.__closure;return Math.max(blankSpace.value,padding.value+extraContentPadding.value);}" };
@@ -23,11 +18,6 @@ let closure_13 = { code: "function pnpm_indexTsx4(){const{currentHeight}=this.__
 const styles = StyleSheet.create({ commitView: { display: "none", position: "absolute" } });
 
 export default forwardRef((onEndVisible) => {
-  let contentOffsetY;
-  let layout;
-  let onLayout2;
-  let scroll;
-  let size;
   let ScrollView = onEndVisible.ScrollViewComponent;
   if (ScrollView === undefined) {
     ScrollView = extraContentPadding(blankSpace[3]).ScrollView;
@@ -105,7 +95,7 @@ export default forwardRef((onEndVisible) => {
   const obj6 = flag2(blankSpace[3]);
   class G {
     constructor() {
-      return padding.value + extraContentPadding.value;
+      return padding.value + closure_1.value;
     }
   }
   G.__closure = { padding, extraContentPadding };
@@ -144,7 +134,7 @@ export default forwardRef((onEndVisible) => {
   const obj8 = flag2(blankSpace[3]);
   obj = { ref: tmp5 };
   const tmp15 = onContentSizeChange(() => {
-    const items = [outer1_14.commitView, animatedStyle];
+    const items = [closure_1_14.commitView, animatedStyle];
     return items;
   }, items2);
   const merged1 = Object.assign(merged);

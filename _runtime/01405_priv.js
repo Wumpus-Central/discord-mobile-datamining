@@ -1,4 +1,7 @@
 // _runtime/01405_priv.js
+import PseudoMap from "PseudoMap" /* 1406 */;
+import Yallist from "Yallist" /* 1408 */;
+
 function priv(self, lruList, max) {
   if (table[lruList]) {
     let tmp3 = tmp[lruList];
@@ -133,8 +136,6 @@ class LRUCache {
       str3 = "lruList";
       tmpResult = tmp(self, "lruList");
       item = tmpResult.forEach(function(arg0) {
-        let key;
-        let value;
         const self = this;
         const tmp = callback(this, "dispose");
         const call = tmp.call;
@@ -156,7 +157,6 @@ class LRUCache {
   dump() {
     arr = priv(this, "lruList");
     mapped = arr.map(function(maxAge) {
-      let now;
       let flag = false;
       if (maxAge) {
         const self = this;
@@ -191,14 +191,14 @@ class LRUCache {
   inspect(arg0, arg1) {
     self = this;
     closure_0 = require;
-    c1 = "LRUCache {";
+    closure_1 = "LRUCache {";
     c2 = false;
-    tmp = priv;
+    tmp = closure_4;
     flag = false;
-    if (priv(this, "allowStale")) {
-      tmp2 = c1;
+    if (closure_4(this, "allowStale")) {
+      tmp2 = closure_1;
       str = "\n  allowStale: true";
-      c1 = `${c1}
+      closure_1 = `${closure_1}
   allowStale: true`;
       flag2 = true;
       c2 = true;
@@ -213,16 +213,16 @@ class LRUCache {
     flag3 = flag;
     if (tmp4) {
       if (flag) {
-        tmp5 = c1;
+        tmp5 = closure_1;
         str2 = ",";
-        c1 = `${c1},`;
+        closure_1 = `${closure_1},`;
       }
-      tmp6 = c1;
+      tmp6 = closure_1;
       tmp7 = closure_0;
-      tmp8 = c1;
+      tmp8 = closure_1;
       obj = require("inspect");
       str3 = "\n  max: ";
-      c1 = `${c1}
+      closure_1 = `${closure_1}
   max: ${obj.inspect(tmp3, require)}`;
       flag4 = true;
       c2 = true;
@@ -233,23 +233,23 @@ class LRUCache {
     flag5 = flag3;
     if (tmpResult1) {
       if (flag3) {
-        tmp10 = c1;
+        tmp10 = closure_1;
         str4 = ",";
-        c1 = `${c1},`;
+        closure_1 = `${closure_1},`;
       }
-      tmp11 = c1;
+      tmp11 = closure_1;
       tmp12 = closure_0;
-      tmp13 = c1;
+      tmp13 = closure_1;
       obj2 = require("inspect");
       str5 = "\n  maxAge: ";
-      c1 = `${c1}
+      closure_1 = `${closure_1}
   maxAge: ${obj2.inspect(tmp9, require)}`;
       flag6 = true;
       c2 = true;
       flag5 = true;
     }
     tmpResult2 = tmp(self, "lengthCalculator");
-    priv = tmpResult2;
+    closure_4 = tmpResult2;
     tmp15 = tmpResult2;
     if (tmpResult2) {
       tmp16 = c5;
@@ -258,17 +258,17 @@ class LRUCache {
     flag7 = flag5;
     if (tmp15) {
       if (flag5) {
-        tmp17 = c1;
+        tmp17 = closure_1;
         str6 = ",";
-        c1 = `${c1},`;
+        closure_1 = `${closure_1},`;
       }
-      tmp18 = c1;
+      tmp18 = closure_1;
       tmp19 = closure_0;
-      tmp20 = c1;
+      tmp20 = closure_1;
       tmp21 = require("inspect");
       str7 = "length";
       str8 = "\n  length: ";
-      c1 = `${c1}
+      closure_1 = `${closure_1}
   length: ${tmp22(tmp(self, "length"), require)}`;
       flag8 = true;
       c2 = true;
@@ -297,7 +297,7 @@ class LRUCache {
       if (key.maxAge !== closure_3) {
         obj.maxAge = maxAge.maxAge;
       }
-      if (tmpResult1 !== c5) {
+      if (callback2 !== c5) {
         obj.length = maxAge.length;
       }
       let flag2 = false;
@@ -312,8 +312,8 @@ class LRUCache {
           maxAge = maxAge.maxAge;
           let tmp12 = diff > maxAge;
         } else {
-          tmp12 = tmpResult1(self, "maxAge") && diff > tmpResult1(self, "maxAge");
-          const tmp11 = tmpResult1;
+          tmp12 = callback2(self, "maxAge") && diff > callback2(self, "maxAge");
+          const tmp11 = callback2;
         }
       }
       if (flag2) {
@@ -331,13 +331,13 @@ class LRUCache {
       tmp24 = flag7;
     }
     if (tmp24) {
-      tmp25 = c1;
+      tmp25 = closure_1;
       str9 = "\n";
-      c1 = `${c1}
+      closure_1 = `${closure_1}
 `;
     }
-    c1 = `${c1}}`;
-    return `${c1}}`;
+    closure_1 = `${closure_1}}`;
+    return `${closure_1}}`;
   }
   set(arg0, arg1, arg2) {
     self = this;
@@ -595,16 +595,12 @@ class LRUCache {
     self = this;
     arr = priv(this, "cache");
     item = arr.forEach((arg0, arg1) => {
-      outer1_8(self, arg1, false);
+      closure_1_8(self, arg1, false);
     });
     return;
   }
 }
 function forEachStep(self, call, iter, arg3) {
-  let key;
-  let key2;
-  let value2;
-  let value3;
   let removeNodeResult = iter.value;
   let flag = false;
   if (removeNodeResult) {
@@ -656,8 +652,6 @@ function forEachStep(self, call, iter, arg3) {
   }
 }
 function get(self) {
-  let key;
-  let value2;
   let str = "cache";
   const iter = priv(self, "cache").get(arg1);
   let value;
@@ -715,8 +709,6 @@ function get(self) {
   return value;
 }
 function trim(self) {
-  let key;
-  let value;
   if (tmp2 > priv(self, "max")) {
     let iter = tmp(self, "lruList").tail;
     if (tmpResult > tmp(self, "max")) {
@@ -825,8 +817,6 @@ Object.defineProperty(LRUCache.prototype, "lengthCalculator", {
       tmp2(self, "lengthCalculator", tmp);
       tmp2(self, "length", 0);
       const item = tmp2(self, "lruList").forEach(function(arg0) {
-        let key;
-        let value;
         const self = this;
         const tmp2 = callback(this, "lengthCalculator");
         const call = tmp2.call;

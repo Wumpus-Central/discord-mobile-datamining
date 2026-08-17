@@ -1,11 +1,7 @@
 // _runtime/07712_RNIapIos.js
-import get_ActivityIndicator from "get ActivityIndicator";
-import { PurchaseError } from "07713_PurchaseError.js";
+import PurchaseError from "PurchaseError" /* 7713 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let NativeModules;
-let Platform;
-let RNIapModule;
-let c3;
 ({ NativeModules, Platform } = get_ActivityIndicator);
 const RNIapIos = NativeModules.RNIapIos;
 ({ RNIapIosSk2: c3, RNIapModule } = NativeModules);
@@ -15,7 +11,7 @@ function checkNativeAndroidAvailable() {
   if (!RNIapModule) {
     if (!RNIapAmazonModule) {
       const _Error = Error;
-      const error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
+      error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
       throw error;
     }
   }
@@ -28,7 +24,7 @@ function getAndroidModule() {
   if (!RNIapModule) {
     if (!RNIapAmazonModule) {
       const _Error = Error;
-      const error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
+      error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
       throw error;
     }
   }
@@ -50,7 +46,7 @@ export const isAndroid = true;
 export const isAmazon = RNIapAmazonModule;
 export const isPlay = RNIapModule;
 export (arg0) => {
-  let closure_7 = arg0;
+  closure_7 = arg0;
 }
 export { checkNativeAndroidAvailable };
 export { getAndroidModule };
@@ -64,7 +60,7 @@ export const getAndroidModuleType = () => {
   if (!RNIapModule) {
     if (!RNIapAmazonModule) {
       const _Error = Error;
-      const error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
+      error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
       throw error;
     }
   }
@@ -95,7 +91,7 @@ export const getNativeModule = () => {
   if (!RNIapModule) {
     if (!RNIapAmazonModule) {
       const _Error = Error;
-      const error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
+      error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
       throw error;
     }
   }
@@ -111,10 +107,10 @@ export const getNativeModule = () => {
 export { isStorekit2Available };
 export () => c6
 export (arg0) => {
-  let closure_10 = arg0;
+  closure_10 = arg0;
 }
 export const storekit2Mode = () => {
-  let closure_10 = closure_3;
+  closure_10 = closure_3;
   if (typeof isStorekit2Available !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -126,7 +122,7 @@ export const storekit2Mode = () => {
   return flag;
 };
 export const storekit1Mode = () => {
-  let closure_10 = RNIapIos;
+  closure_10 = RNIapIos;
   if (typeof isStorekit2Available !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -142,7 +138,7 @@ export const storekitHybridMode = () => {
     HermesBuiltin.throwTypeError();
   }
   if (c6) {
-    let closure_10 = closure_3;
+    closure_10 = closure_3;
     const _console2 = console;
     console.info("Using Storekit 2");
   } else {
@@ -159,7 +155,7 @@ export const getIosModule = () => {
     }
     if (!c6) {
       const _Error = Error;
-      const error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
+      error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
       throw error;
     }
   }

@@ -1,10 +1,10 @@
 // _runtime/04674_Animated.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import importDefaultResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG";
-import animatedComponent from "__INTERNAL_VIEW_CONFIG";
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4675 */;
+import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 4676 */;
+import closure_6 from "_objectWithoutProperties" /* 109 */;
+import importDefaultResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let closure_3 = ["enabled", "freezeOnBlur", "shouldFreeze"];
@@ -12,20 +12,11 @@ let closure_4 = ["active", "activityState", "children", "isNativeStack", "fullSc
 let closure_5 = ["active", "activityState", "style", "onComponentRef"];
 let error = importDefaultResult;
 const Animated = get_ActivityIndicator.Animated;
+let closure_10 = Animated.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);
+const animatedComponent = Animated.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault2);
 const forwardRefResult = importDefaultResult.forwardRef(function InnerScreen(activityState, ref) {
-  let active;
-  let active2;
-  let activityState2;
-  let children;
-  let fullScreenSwipeEnabled;
-  let gestureResponseDistance;
-  let isNativeStack;
-  let onComponentRef;
-  let onGestureCancel;
-  let scrollEdgeEffects;
-  let style;
   const _require = activityState;
-  const importDefault = importDefaultResult.useRef(null);
+  importDefault = importDefaultResult.useRef(null);
   const imperativeHandle = importDefaultResult.useImperativeHandle(ref, () => ref.current, []);
   let obj = _require(setRef[6]);
   const previous = obj.usePrevious(activityState.activityState);
@@ -36,7 +27,7 @@ const forwardRefResult = importDefaultResult.forwardRef(function InnerScreen(act
       onComponentRef(current);
     }
   };
-  let obj1 = Animated;
+  obj1 = Animated;
   let value = new Animated.Value(0);
   const current = importDefaultResult.useRef(value).current;
   value = new Animated.Value(0);
@@ -107,7 +98,7 @@ const forwardRefResult = importDefaultResult.forwardRef(function InnerScreen(act
           if (undefined !== activityState2) {
             if (previous > activityState2) {
               const _Error = Error;
-              const error = new Error("[RNScreens] activityState cannot be decreased in NativeStack");
+              error = new Error("[RNScreens] activityState cannot be decreased in NativeStack");
               throw error;
             }
           }
@@ -122,7 +113,7 @@ const forwardRefResult = importDefaultResult.forwardRef(function InnerScreen(act
       obj = { freeze: null, children: null };
       obj[0] = freezeOnBlur;
       obj = {};
-      const tmp25 = __INTERNAL_VIEW_CONFIG;
+      const tmp25 = closure_10;
       tmp28 = undefined !== active2 && undefined === activityState2;
       const tmp2Result3 = tmp2(tmp3[8]);
       let merged = Object.assign(tmp8Result);

@@ -1,4 +1,6 @@
 // _runtime/04908_load.js
+import errorDefault from "error" /* 4909 */;
+
 const require = arg1;
 function load(response, then) {
   if (then === undefined) {
@@ -7,7 +9,7 @@ function load(response, then) {
   response = then;
   if (typeof response === "string") {
     then.async = true;
-    let obj1 = /^\w+:\/\//;
+    obj1 = /^\w+:\/\//;
     if (obj1.test(response)) {
       let fn = globalThis;
       const _fetch = fetch;
@@ -38,8 +40,8 @@ function load(response, then) {
         }
         length = obj1.length;
         nextPromise = new Promise((arg0, arg1) => {
-          let closure_0 = arg0;
-          let closure_1 = arg1;
+          closure_0 = arg0;
+          closure_1 = arg1;
           let isIntegerResult = Number.isInteger(closure_1);
           if (isIntegerResult) {
             isIntegerResult = tmp >= 0;
@@ -58,7 +60,7 @@ function load(response, then) {
           const value = get(closure_0, obj, (statusCode) => {
             if (statusCode.statusCode >= 200) {
               if (statusCode.statusCode <= 299) {
-                let closure_0 = [];
+                closure_0 = [];
                 statusCode.on("data", (arg0) => arr.push(Buffer.from(arg0)));
                 statusCode.on("error", (arg0) => callback(arg0));
                 statusCode.on("end", () => arr(Buffer.concat(arr)));
@@ -82,8 +84,8 @@ function load(response, then) {
         }
         length = obj2.length;
         resolved = new Promise((arg0, arg1) => {
-          let closure_0 = arg0;
-          let closure_1 = arg1;
+          closure_0 = arg0;
+          closure_1 = arg1;
           let obj = (function requireNodeFs() {
             try {
               return globalThis.__non_webpack_require__("fs");
@@ -91,26 +93,26 @@ function load(response, then) {
             }
           })();
           obj.open(closure_0, (arg0, arg1) => {
-            let closure_0 = arg1;
+            closure_0 = arg1;
             if (arg0) {
               callback(arg0);
             } else {
               obj.stat(closure_0, (arg0, size) => {
                 if (arg0) {
-                  outer1_1(arg0);
+                  closure_1_1(arg0);
                 } else {
                   const bound = Math.min(size.size, undefined !== closure_1 ? closure_1 : size.size);
                   const _Buffer = Buffer;
                   const allocResult = Buffer.alloc(bound);
-                  let closure_0 = allocResult;
-                  const obj = { buffer: null, length: null };
+                  closure_0 = allocResult;
+                  obj = { buffer: null, length: null };
                   obj[0] = allocResult;
                   obj[1] = bound;
-                  outer1_2.read(closure_0, obj, (arg0) => {
+                  closure_1_2.read(closure_0, obj, (arg0) => {
                     if (arg0) {
-                      outer2_1(arg0);
+                      closure_2_1(arg0);
                     } else {
-                      outer2_2.close(allocResult, () => { ... });
+                      closure_2_2.close(allocResult, () => { ... });
                     }
                   });
                 }
@@ -133,7 +135,7 @@ function load(response, then) {
           const uint8Array = new Uint8Array(response);
           buffer = uint8Array.buffer;
         }
-        return outer1_3((function getDataView(buffer) {
+        return closure_1_3((function getDataView(buffer) {
           try {
             const _DataView = DataView;
             const dataView = new DataView(buffer);
@@ -155,7 +157,7 @@ function load(response, then) {
     if (tmp24) {
       then.async = true;
       const promise = new Promise((closure_0) => {
-        let closure_1 = arg1;
+        closure_1 = arg1;
         const fileReader = new FileReader();
         fileReader.onload = (target) => callback(target.target.result);
         fileReader.onerror = () => callback2(fileReader.error);
@@ -175,7 +177,7 @@ function load(response, then) {
           const uint8Array = new Uint8Array(response);
           buffer = uint8Array.buffer;
         }
-        return outer1_3((function getDataView(buffer) {
+        return closure_1_3((function getDataView(buffer) {
           try {
             const _DataView = DataView;
             const dataView = new DataView(buffer);
@@ -215,21 +217,6 @@ function load(response, then) {
   }
 }
 function loadView(byteLength, then) {
-  let byteOrder;
-  let fileDataOffset;
-  let fileType;
-  let gifHeaderOffset;
-  let iccChunks;
-  let iptcDataOffset;
-  let jfifDataOffset;
-  let mpfDataOffset;
-  let pngChunkOffsets;
-  let pngHeaderOffset;
-  let pngTextChunks;
-  let tags;
-  let tiffHeaderOffset;
-  let vp8xChunkOffset;
-  let xmpChunks;
   let obj = then;
   if (then === undefined) {
     obj = { expanded: false, async: false, includeUnknown: false, domParser: "call" };
@@ -301,7 +288,7 @@ function loadView(byteLength, then) {
       delete tmp2[tmp];
     }
   }
-  let importDefault = {};
+  importDefault = {};
   const tmp6 = importDefault;
   const tmp7 = addPngTextTags;
   let obj2 = importDefault(addPngTextTags[3]);
@@ -815,7 +802,7 @@ function loadView(byteLength, then) {
   const tmp6Result17 = tmp6(tmp7[20]);
 }
 
-export default { load, loadView, errors: require("error") };
-export const errors = require("error");
+export default { load, loadView, errors: errorDefault };
+export const errors = errorDefault;
 export { load };
 export { loadView };

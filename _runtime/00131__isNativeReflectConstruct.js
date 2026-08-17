@@ -1,12 +1,13 @@
 // _runtime/00131__isNativeReflectConstruct.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import importAllResult from "javaScriptFlagGetter";
-import setPlatformObject from "setPlatformObject";
+import dispatchDefault from "dispatch" /* 132 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import closure_5 from "_possibleConstructorReturn" /* 93 */;
+import closure_6 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import importAllResult from "javaScriptFlagGetter" /* 27 */;
+import setPlatformObject from "setPlatformObject" /* 126 */;
 import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 
 const ReadOnlyNode = arg1;
@@ -21,10 +22,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -64,17 +65,17 @@ function getChildNodes(parentNode, arg1) {
   const tmp = dependencyMap;
 }
 if (importAllResult.enableNativeEventTargetEventDispatching()) {
-  let _Object = require("dispatch");
+  let _Object = dispatchDefault;
 } else {
   _Object = Object;
 }
 class ReadOnlyNode {
   constructor(arg0, arg1) {
     self = this;
-    tmp = outer1_4(this, ReadOnlyNode);
-    tmp2 = outer1_6;
-    obj = outer1_6(ReadOnlyNode);
-    tmp3 = outer1_5;
+    tmp = closure_4(this, ReadOnlyNode);
+    tmp2 = closure_6;
+    obj = closure_6(ReadOnlyNode);
+    tmp3 = closure_5;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -142,8 +143,6 @@ let items = [
   {
     key: "nextSibling",
     get() {
-      let arr5;
-      let tmp9;
       const self = this;
       const parentNode = this.parentNode;
       if (null == parentNode) {

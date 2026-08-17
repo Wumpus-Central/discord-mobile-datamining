@@ -1,14 +1,12 @@
 // _runtime/07115_memo.js
-import noop from "noop";
-import "noop";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let forwardRef;
-let memo;
-let obj1;
 ({ useCallback: obj1, useEffect: c3 } = noop);
 ({ memo, forwardRef } = noop);
+noopDefault;
+const jsx = jsxProd.jsx;
 const memoResult = memo(forwardRef((onFocus, ref) => {
   onFocus = onFocus.onFocus;
   const onBlur = onFocus.onBlur;

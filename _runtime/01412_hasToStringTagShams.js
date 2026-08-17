@@ -1,5 +1,6 @@
 // _runtime/01412_hasToStringTagShams.js
-import { hasSymbols } from "00545_hasSymbols.js";
+import hasSymbols from "hasSymbols" /* 545 */;
+
 
 export default function hasToStringTagShams() {
   let toStringTag = hasSymbols();

@@ -1,10 +1,10 @@
 // _runtime/01538_createNavigatorFactory.js
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 
 export const createNavigatorFactory = function createNavigatorFactory(AccessibleNativeStackNavigator) {
-  let closure_0 = AccessibleNativeStackNavigator;
+  closure_0 = AccessibleNativeStackNavigator;
   let str = AccessibleNativeStackNavigator.displayName;
   if (str == null) {
     str = AccessibleNativeStackNavigator.name;
@@ -13,7 +13,7 @@ export const createNavigatorFactory = function createNavigatorFactory(Accessible
     str = "Navigator";
   }
   return function createNavigator(arg0) {
-    const AccessibleNativeStackNavigator = arg0;
+    AccessibleNativeStackNavigator = arg0;
     if (null != arg0) {
       let obj = { Navigator: null, Screen: null, Group: null, config: null };
       obj[0] = AccessibleNativeStackNavigator;
@@ -24,11 +24,11 @@ export const createNavigatorFactory = function createNavigatorFactory(Accessible
       obj = { config: null, with: null, getComponent: null };
       obj[0] = arg0;
       obj[1] = function with(IMAGE_ONLY_ANSWERS, arg1) {
-        let closure_0 = IMAGE_ONLY_ANSWERS;
+        closure_0 = IMAGE_ONLY_ANSWERS;
         class WithComponent {
           constructor() {
             obj = { Navigator: WithComponent };
-            return outer3_2.createElement(closure_0, obj);
+            return closure_3_2.createElement(closure_0, obj);
           }
         }
         WithComponent.displayName = "" + closure_1 + "With";

@@ -1,5 +1,6 @@
 // _runtime/00536_items.js
-import { 00534__ } from "metro/00534__.js";
+import _mod534 from "module_534" /* 534 */;
+
 let items = [];
 let num = 0;
 do {
@@ -29,9 +30,9 @@ function arrayToObject(arg0, plainObjects) {
 }
 let c6 = 1024;
 function merge(arr, obj, plainObjects) {
-  let closure_0 = arr;
-  let closure_1 = obj;
-  let closure_2 = plainObjects;
+  closure_0 = arr;
+  closure_1 = obj;
+  closure_2 = plainObjects;
   if (obj) {
     if (typeof obj !== "object") {
       if (typeof obj !== "function") {
@@ -57,7 +58,7 @@ function merge(arr, obj, plainObjects) {
               }
             }
           }
-          const items = [arr, obj];
+          items = [arr, obj];
           return items;
         }
         return arr;
@@ -93,13 +94,13 @@ function merge(arr, obj, plainObjects) {
           if (tmp16(obj)) {
             const item = obj.forEach((obj) => {
               const call = closure_2.call;
-              let arr = closure_0;
+              arr = closure_0;
               if (typeof call === "unknown" ? closure_2(arg1) : call(arr, arg1)) {
                 if (arr[arg1]) {
                   if (typeof tmp2 === "object") {
                     if (obj) {
                       if (typeof obj === "object") {
-                        arr[arg1] = outer1_7(tmp2, obj, closure_2);
+                        arr[arg1] = closure_1_7(tmp2, obj, closure_2);
                       }
                     }
                   }
@@ -118,7 +119,7 @@ function merge(arr, obj, plainObjects) {
         reduced = keys.reduce((arg0, arg1) => {
           const call = closure_2.call;
           if (typeof call === "unknown" ? closure_2(arg1) : call(arg0, arg1)) {
-            arg0[arg1] = outer1_7(arg0[arg1], tmp, closure_2);
+            arg0[arg1] = closure_1_7(arg0[arg1], tmp, closure_2);
           } else {
             arg0[arg1] = tmp;
           }
@@ -137,7 +138,7 @@ function merge(arr, obj, plainObjects) {
 export default {
   arrayToObject,
   assign: function assignSingleSource(arg0, arg1) {
-    let closure_0 = arg1;
+    closure_0 = arg1;
     const keys = Object.keys(arg1);
     return keys.reduce((arg0, arg1) => {
       arg0[arg1] = table[arg1];
@@ -145,12 +146,12 @@ export default {
     }, arg0);
   },
   combine(arg0, arg1) {
-    const items = [];
+    items = [];
     return items.concat(arg0, arg1);
   },
   compact(o) {
     let obj = { o };
-    const items = [{ obj, prop: "o" }];
+    items = [{ obj, prop: "o" }];
     const items1 = [];
     for (let num = 0; num < items.length; num = num + 1) {
       let tmp = items[num];
@@ -239,7 +240,7 @@ export default {
             if (StringResult.length >= c6) {
               substr = StringResult.slice(num2, num2 + tmp4);
             }
-            let items = [];
+            items = [];
             let num = 0;
             if (0 < substr.length) {
               while (true) {
@@ -254,7 +255,7 @@ export default {
                             if (charCodeAtResult < 97) {
                               let tmp9 = require;
                               let tmp10 = dependencyMap;
-                              if (arg4 !== 00534__.RFC1738) {
+                              if (arg4 !== _mod534.RFC1738) {
                                 if (charCodeAtResult < 128) {
                                   let tmp14 = items;
                                   items[items.length] = items[charCodeAtResult];
@@ -326,7 +327,7 @@ export default {
   maybeMap(parts1, arg1) {
     let length;
     if (isArray(parts1)) {
-      const items = [];
+      items = [];
       let num = 0;
       if (0 < parts1.length) {
         do {

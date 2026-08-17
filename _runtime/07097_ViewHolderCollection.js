@@ -1,41 +1,20 @@
 // _runtime/07097_ViewHolderCollection.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import closure_6 from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "_slicedToArray" /* 7041 */;
+import noop from "noop" /* 19 */;
+import closure_6 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let c5;
 const require = arg1;
 ({ useEffect: c3, useImperativeHandle: c4, useLayoutEffect: c5 } = noop);
 
 export const ViewHolderCollection = (data) => {
-  let closure_11;
-  let closure_12;
-  let closure_13;
-  let closure_14;
-  let _slicedToArray;
-  let closure_3;
-  let closure_4;
-  let closure_5;
-  let closure_6;
-  let closure_8;
-  let closure_9;
-  let dependencyMap;
-  let getAdjustmentMargin;
-  let getChildContainerLayout;
-  let horizontal;
-  let jsx;
-  let renderStack;
-  let viewHolderCollectionRef;
   data = data.data;
-  ({ renderStack, getLayout: dependencyMap, refHolder: _slicedToArray, onSizeChanged: closure_3, renderItem: closure_4, extraData: closure_5, onCommitLayoutEffect: closure_6, CellRendererComponent: jsx, ItemSeparatorComponent: closure_8, onCommitEffect: closure_9, horizontal } = data);
+  ({ renderStack, getLayout: dependencyMap, refHolder: closure_2, onSizeChanged: closure_3, renderItem: closure_4, extraData: closure_5, onCommitLayoutEffect: closure_6, CellRendererComponent: jsx, ItemSeparatorComponent: closure_8, onCommitEffect: closure_9, horizontal } = data);
   ({ getAdjustmentMargin, currentStickyIndex: closure_11, hideStickyHeaderRelatedCell: closure_12, isInLastRow: closure_13, inverted: closure_14 } = data);
   ({ viewHolderCollectionRef, getChildContainerLayout } = data);
   const tmp = callback(React.useState(0), 2);
   const first = tmp[0];
-  let closure_16 = tmp3;
+  closure_16 = tmp3;
   let size = getChildContainerLayout();
   if (horizontal) {
     let height;
@@ -47,7 +26,7 @@ export const ViewHolderCollection = (data) => {
     width = size.width;
   }
   let obj = data(7060);
-  let closure_17 = obj.useRecyclerViewContext();
+  closure_17 = obj.useRecyclerViewContext();
   const items = [width];
   callback4(() => {
     if (first > 0) {
@@ -123,7 +102,6 @@ export const ViewHolderCollection = (data) => {
   if (size) {
     const _Array = Array;
     size = Array.from(renderStack.entries(), (arg0) => {
-      let tmp;
       [tmp, ] = arg0;
       let tmp5;
       if (closure_8) {
@@ -135,7 +113,7 @@ export const ViewHolderCollection = (data) => {
       obj = {};
       const merged = Object.assign(callback(tmp2));
       obj[3] = obj;
-      obj[4] = _slicedToArray;
+      obj[4] = closure_2;
       obj[5] = closure_3;
       obj[7] = closure_4;
       obj[8] = closure_5;
@@ -148,7 +126,7 @@ export const ViewHolderCollection = (data) => {
       }
       obj[12] = tmp11;
       obj[13] = closure_14;
-      return outer1_7(data(outer1_1[5]).ViewHolder, obj, tmp);
+      return closure_1_7(data(closure_1_1[5]).ViewHolder, obj, tmp);
     });
   }
   obj[1] = size;

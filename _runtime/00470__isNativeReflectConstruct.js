@@ -1,9 +1,10 @@
 // _runtime/00470__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
+import NativeEventEmitterDefault from "NativeEventEmitter" /* 209 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
 
 const LinkingImpl = importDefault;
 function _isNativeReflectConstruct() {
@@ -17,10 +18,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -28,12 +29,12 @@ function _isNativeReflectConstruct() {
 class LinkingImpl {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, LinkingImpl);
+    tmp = closure_2(this, LinkingImpl);
     items = [];
     items[0] = undefined;
-    tmp2 = __esModule;
-    obj = __esModule(LinkingImpl);
-    tmp3 = __esModule;
+    tmp2 = closure_4;
+    obj = closure_4(LinkingImpl);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -44,7 +45,7 @@ class LinkingImpl {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(LinkingImpl, require("NativeEventEmitter"));
+importDefaultResult1(LinkingImpl, NativeEventEmitterDefault);
 let items = [
   {
     key: "addEventListener",

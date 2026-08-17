@@ -1,6 +1,7 @@
 // _runtime/00364_bezier.js
-import { bezier } from "00365_bezier.js";
-const require = arg1;
+import bezier from "bezier" /* 365 */;
+
+require = arg1;
 const dependencyMap = arg6;
 const obj = {
   step0(arg0) {
@@ -36,7 +37,7 @@ const obj = {
     return arg0 * arg0 * arg0;
   },
   poly(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return (sum) => Math.pow(sum, closure_0);
   },
   sin(arg0) {
@@ -53,7 +54,7 @@ const obj = {
     if (arg0 === undefined) {
       num = 1;
     }
-    let closure_0;
+    closure_0 = undefined;
     closure_0 = num * Math.PI;
     return (arg0) => 1 - Math.pow(Math.cos(arg0 * Math.PI / 2), 3) * Math.cos(arg0 * closure_0);
   },
@@ -85,11 +86,11 @@ const obj = {
     return ease;
   },
   out(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return (arg0) => 1 - callback(1 - arg0);
   },
   inOut(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return (arg0) => {
       if (arg0 < 0.5) {
         let result = callback(2 * arg0) / 2;

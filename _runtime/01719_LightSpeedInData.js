@@ -1,8 +1,5 @@
 // _runtime/01719_LightSpeedInData.js
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
+import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
 
 obj = { LightSpeedInRight: { name: "LightSpeedInRight", style: obj, duration: 0.3 }, LightSpeedInLeft: { name: "LightSpeedInLeft", style: obj, duration: 0.3 } };
 obj = { 0: { transform: items, opacity: 0 }, 70: null, 85: null, 100: null };

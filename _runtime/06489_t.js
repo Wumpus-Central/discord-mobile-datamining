@@ -1,7 +1,8 @@
 // _runtime/06489_t.js
-import { tagMessage } from "06382_tagMessage.js";
-import { 06383__ } from "metro/06383__.js";
-const require = arg1;
+import tagMessage from "tagMessage" /* 6382 */;
+import _mod6383 from "module_6383" /* 6383 */;
+
+require = arg1;
 const dependencyMap = arg6;
 const fn = function t(arg0, arg1) {
   const _globalThis = globalThis;
@@ -12,7 +13,7 @@ const fn = function t(arg0, arg1) {
     const result = globalThis._setGestureStateAsync(arg0, arg1);
   } else {
     const _Error = Error;
-    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+    error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
     throw error;
   }
 };
@@ -22,7 +23,7 @@ fn.__workletHash = 727405139747;
 fn.__initData = { code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}" };
 obj = { activate: null, fail: null, deactivate: null };
 const fn2 = function _(arg0) {
-  const ACTIVE = 06383__.State.ACTIVE;
+  const ACTIVE = _mod6383.State.ACTIVE;
   if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -34,7 +35,7 @@ const fn2 = function _(arg0) {
     const result = globalThis._setGestureStateAsync(arg0, ACTIVE);
   } else {
     const _Error = Error;
-    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+    error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
     throw error;
   }
 };
@@ -44,7 +45,7 @@ fn2.__workletHash = 14928129771754;
 fn2.__initData = { code: "function activate_Pnpm_gestureStateManagerTs2(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.ACTIVE);}" };
 obj[0] = fn2;
 const fn3 = function n(arg0) {
-  const FAILED = 06383__.State.FAILED;
+  const FAILED = _mod6383.State.FAILED;
   if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -56,7 +57,7 @@ const fn3 = function n(arg0) {
     const result = globalThis._setGestureStateAsync(arg0, FAILED);
   } else {
     const _Error = Error;
-    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+    error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
     throw error;
   }
 };
@@ -65,7 +66,7 @@ fn3.__workletHash = 1703030189599;
 fn3.__initData = { code: "function fail_Pnpm_gestureStateManagerTs3(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.FAILED);}" };
 obj[1] = fn3;
 const fn4 = function s(arg0) {
-  const END = 06383__.State.END;
+  const END = _mod6383.State.END;
   if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -77,7 +78,7 @@ const fn4 = function s(arg0) {
     const result = globalThis._setGestureStateAsync(arg0, END);
   } else {
     const _Error = Error;
-    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+    error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
     throw error;
   }
 };

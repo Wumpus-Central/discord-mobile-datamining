@@ -92,8 +92,6 @@ arg5.getHttpSpanDetailsFromUrlObject = function getHttpSpanDetailsFromUrlObject(
   return items1;
 };
 arg5.getSanitizedUrlString = function getSanitizedUrlString(path) {
-  let host;
-  let protocol;
   ({ protocol, host } = path);
   let str = "";
   if (protocol) {

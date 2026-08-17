@@ -1,6 +1,7 @@
 // _runtime/00947_captureError.js
-import { getClient } from "00848_getClient.js";
-const require = arg1;
+import getClient from "getClient" /* 848 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.captureError = function captureError(error, prompt_execution, arg2) {
@@ -24,7 +25,7 @@ arg5.captureError = function captureError(error, prompt_execution, arg2) {
         str = "handler_execution";
       }
       obj = { mechanism: null };
-      const obj1 = { type: "auto.ai.mcp_server", handled: false, data: null };
+      obj1 = { type: "auto.ai.mcp_server", handled: false, data: null };
       const obj2 = { error_type: null };
       obj2[0] = str;
       const merged = Object.assign(arg2);

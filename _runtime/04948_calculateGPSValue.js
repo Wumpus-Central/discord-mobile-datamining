@@ -1,9 +1,8 @@
 // _runtime/04948_calculateGPSValue.js
-import _slicedToArray from "_slicedToArray";
-import { 04933__ } from "metro/04933__.js";
+import _modDef4933 from "module_4933" /* 4933 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function calculateGPSValue(str) {
-  let tmp2;
   [tmp2, str] = callback(str.split(","), 2);
   if (undefined !== tmp2) {
     if (undefined !== str) {
@@ -60,25 +59,25 @@ export default {
     }
     return str;
   },
-  (joined) => 04933__.ResolutionUnit(parseInt(joined, 10)),
+  (joined) => _modDef4933.ResolutionUnit(parseInt(joined, 10)),
   (str) => {
     let XResolutionResult = str;
     if (obj.test(str)) {
-      XResolutionResult = 04933__.XResolution(str.split("/"));
+      XResolutionResult = _modDef4933.XResolution(str.split("/"));
     }
     return XResolutionResult;
   },
   (str) => {
     let YResolutionResult = str;
     if (obj.test(str)) {
-      YResolutionResult = 04933__.YResolution(str.split("/"));
+      YResolutionResult = _modDef4933.YResolution(str.split("/"));
     }
     return YResolutionResult;
   },
   (str) => {
     let ApertureValueResult = str;
     if (obj.test(str)) {
-      ApertureValueResult = 04933__.ApertureValue(str.split("/"));
+      ApertureValueResult = _modDef4933.ApertureValue(str.split("/"));
     }
     return ApertureValueResult;
   },
@@ -87,18 +86,18 @@ export default {
   (str) => {
     let FNumberResult = str;
     if (obj.test(str)) {
-      FNumberResult = 04933__.FNumber(str.split("/"));
+      FNumberResult = _modDef4933.FNumber(str.split("/"));
     }
     return FNumberResult;
   },
   (str) => {
     let FocalLengthResult = str;
     if (obj.test(str)) {
-      FocalLengthResult = 04933__.FocalLength(str.split("/"));
+      FocalLengthResult = _modDef4933.FocalLength(str.split("/"));
     }
     return FocalLengthResult;
   },
-  (joined) => 04933__.FocalPlaneResolutionUnit(parseInt(joined, 10)),
+  (joined) => _modDef4933.FocalPlaneResolutionUnit(parseInt(joined, 10)),
   (joined) => {
     if ("0x" === joined.substring(0, 2)) {
       const _parseInt2 = parseInt;
@@ -107,41 +106,41 @@ export default {
       const _parseInt = parseInt;
       parsed = parseInt(joined, 10);
     }
-    return 04933__.ColorSpace(parsed);
+    return _modDef4933.ColorSpace(parsed);
   },
   (arg0, str) => {
     if (obj.test(str)) {
       const parts = str.split(", ");
       const mapped = parts.map((str) => str.charCodeAt(0));
-      return 04933__.ComponentsConfiguration(mapped);
+      return _modDef4933.ComponentsConfiguration(mapped);
     } else {
       return str;
     }
     obj = /^\d, \d, \d, \d$/;
   },
-  (joined) => 04933__.Contrast(parseInt(joined, 10)),
-  (joined) => 04933__.CustomRendered(parseInt(joined, 10)),
-  (joined) => 04933__.ExposureMode(parseInt(joined, 10)),
-  (joined) => 04933__.ExposureProgram(parseInt(joined, 10)),
+  (joined) => _modDef4933.Contrast(parseInt(joined, 10)),
+  (joined) => _modDef4933.CustomRendered(parseInt(joined, 10)),
+  (joined) => _modDef4933.ExposureMode(parseInt(joined, 10)),
+  (joined) => _modDef4933.ExposureProgram(parseInt(joined, 10)),
   (str) => {
     let ExposureTimeResult = str;
     if (obj.test(str)) {
       const parts = str.split("/");
-      ExposureTimeResult = 04933__.ExposureTime(parts.map((joined) => parseInt(joined, 10)));
-      const obj2 = 04933__;
+      ExposureTimeResult = _modDef4933.ExposureTime(parts.map((joined) => parseInt(joined, 10)));
+      const obj2 = _modDef4933;
     }
     return ExposureTimeResult;
   },
-  (joined) => 04933__.MeteringMode(parseInt(joined, 10)),
-  (joined) => 04933__.Saturation(parseInt(joined, 10)),
-  (joined) => 04933__.SceneCaptureType(parseInt(joined, 10)),
-  (joined) => 04933__.Sharpness(parseInt(joined, 10)),
+  (joined) => _modDef4933.MeteringMode(parseInt(joined, 10)),
+  (joined) => _modDef4933.Saturation(parseInt(joined, 10)),
+  (joined) => _modDef4933.SceneCaptureType(parseInt(joined, 10)),
+  (joined) => _modDef4933.Sharpness(parseInt(joined, 10)),
   (str) => {
     let ShutterSpeedValueResult = str;
     if (obj.test(str)) {
-      ShutterSpeedValueResult = 04933__.ShutterSpeedValue(str.split("/"));
+      ShutterSpeedValueResult = _modDef4933.ShutterSpeedValue(str.split("/"));
     }
     return ShutterSpeedValueResult;
   },
-  (joined) => 04933__.WhiteBalance(parseInt(joined, 10))
+  (joined) => _modDef4933.WhiteBalance(parseInt(joined, 10))
 };

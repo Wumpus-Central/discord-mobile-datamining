@@ -1,4 +1,7 @@
 // _runtime/00394_VScrollViewNativeComponent.js
+import ViewDefault from "View" /* 108 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 395 */;
 
-export const VScrollViewNativeComponent = require("__INTERNAL_VIEW_CONFIG");
-export const VScrollContentViewNativeComponent = require("View");
+
+export const VScrollViewNativeComponent = __INTERNAL_VIEW_CONFIGDefault;
+export const VScrollContentViewNativeComponent = ViewDefault;

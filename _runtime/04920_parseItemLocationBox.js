@@ -1,6 +1,7 @@
 // _runtime/04920_parseItemLocationBox.js
-import { get64BitValue } from "04921_get64BitValue.js";
-const require = arg1;
+import get64BitValue from "get64BitValue" /* 4921 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2, length) {
   const sum = arg2 + 3;
@@ -100,7 +101,7 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
                 break;
               }
             }
-            let obj1 = { extentIndex: tmp24 };
+            obj1 = { extentIndex: tmp24 };
             let sum7 = sum6 + obj.item.extent.extentIndex;
             if (4 === tmp4) {
               let num7 = getUint8.getUint32(sum7);

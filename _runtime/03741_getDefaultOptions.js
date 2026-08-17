@@ -1,6 +1,6 @@
 // _runtime/03741_getDefaultOptions.js
-import assign from "assign";
-import { getDefaultOptions } from "03477_getDefaultOptions.js";
+import getDefaultOptions from "getDefaultOptions" /* 3477 */;
+import assign from "assign" /* 3722 */;
 
 if (!assign) {
   const obj = { default: null };
@@ -9,8 +9,9 @@ if (!assign) {
 } else {
   tmp3 = assign;
 }
+assign = tmp3;
 
 export default function getDefaultOptions() {
-  return tmp3.default({}, getDefaultOptions.getDefaultOptions());
+  return assign.default({}, getDefaultOptions.getDefaultOptions());
 };
 export default exports.default;

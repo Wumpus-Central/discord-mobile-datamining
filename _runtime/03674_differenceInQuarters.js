@@ -1,7 +1,7 @@
 // _runtime/03674_differenceInQuarters.js
-import differenceInMonths from "differenceInMonths";
-import requiredArgs from "requiredArgs";
-import { getRoundingMethod } from "03666_getRoundingMethod.js";
+import getRoundingMethod from "getRoundingMethod" /* 3666 */;
+import differenceInMonths from "differenceInMonths" /* 3670 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!differenceInMonths) {
   let obj = { default: null };
@@ -10,6 +10,7 @@ if (!differenceInMonths) {
 } else {
   tmp3 = differenceInMonths;
 }
+differenceInMonths = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,11 +18,11 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let c3 = tmp5;
+requiredArgs = tmp5;
 
 export default function differenceInQuarters(arg0, arg1, roundingMethod) {
-  tmp5.default(2, arguments);
-  const result = tmp3.default(arg0, arg1) / 3;
+  requiredArgs.default(2, arguments);
+  const result = differenceInMonths.default(arg0, arg1) / 3;
   roundingMethod = undefined;
   if (null != roundingMethod) {
     roundingMethod = roundingMethod.roundingMethod;

@@ -1,11 +1,12 @@
 // _runtime/01504_PrivateValueStore.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_0 from "_classCallCheck" /* 41 */;
 
 class PrivateValueStore {
   constructor() {
-    tmp = _classCallCheck(this, PrivateValueStore);
+    tmp = closure_0(this, PrivateValueStore);
     return;
   }
 }
 
-export const PrivateValueStore = require("_createClass")(PrivateValueStore);
+export const PrivateValueStore = _createClassDefault(PrivateValueStore);

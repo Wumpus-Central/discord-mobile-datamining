@@ -2,8 +2,6 @@
 globalThis.IntlMessageFormat.__addLocaleData({
   locale: "cs",
   pluralRuleFunction(arg0, arg1) {
-    let tmp2;
-    let tmp3;
     const parts = String(arg0).split(".");
     [tmp2, tmp3] = parts;
     let str2 = "other";

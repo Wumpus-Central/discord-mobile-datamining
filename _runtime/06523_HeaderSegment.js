@@ -1,51 +1,24 @@
 // _runtime/06523_HeaderSegment.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let closure_6;
 const require = arg1;
 let closure_2 = ["progress", "layout", "modal", "onGoBack", "backHref", "headerTitle", "headerLeft", "headerRight", "headerBackImage", "headerBackTitle", "headerBackButtonDisplayMode", "headerBackTruncatedTitle", "headerBackAccessibilityLabel", "headerBackTestID", "headerBackAllowFontScaling", "headerBackTitleStyle", "headerTitleContainerStyle", "headerLeftContainerStyle", "headerRightContainerStyle", "headerBackgroundContainerStyle", "headerStyle", "headerStatusBarHeight", "styleInterpolator"];
 ({ Platform, StyleSheet: closure_6 } = get_ActivityIndicator);
 
 export const HeaderSegment = function HeaderSegment(progress) {
-  let backgroundStyle;
-  let closure_10;
-  let closure_14;
-  let closure_15;
-  let closure_16;
-  let closure_17;
-  let closure_18;
-  let closure_19;
-  let closure_20;
-  let headerBackButtonDisplayMode;
-  let headerBackgroundContainerStyle;
-  let headerLeftContainerStyle;
-  let headerRightContainerStyle;
-  let headerStatusBarHeight;
-  let headerStyle;
-  let headerTitle;
-  let headerTitleContainerStyle;
-  let leftButtonStyle;
-  let modal;
-  let onGoBack;
-  let rightButtonStyle;
-  let styleInterpolator;
-  let titleStyle;
   let obj = direction(first[5]);
   direction = obj.useLocale().direction;
   const tmp3 = callback(handleTitleLayout.useState(undefined), 2);
   first = tmp3[0];
-  let closure_2 = tmp3[1];
+  closure_2 = tmp3[1];
   const tmp5 = callback(handleTitleLayout.useState(undefined), 2);
   const first1 = tmp5[0];
   callback = tmp5[1];
   handleTitleLayout = function handleTitleLayout(nativeEvent) {
-    let direction;
-    let first;
     ({ height: direction, width: first } = nativeEvent.nativeEvent.layout);
     callback2((arg0) => {
       let size = arg0;
@@ -56,8 +29,6 @@ export const HeaderSegment = function HeaderSegment(progress) {
     });
   };
   function handleLeftLabelLayout(nativeEvent) {
-    let height;
-    let width;
     ({ height, width } = nativeEvent.nativeEvent.layout);
     const size = first;
     let tmp = first;
@@ -112,7 +83,7 @@ export const HeaderSegment = function HeaderSegment(progress) {
   if (typeof height === "number") {
     tmp10 = height;
   }
-  let closure_22 = tmp10;
+  height = tmp10;
   let items = [styleInterpolator, progress, direction, tmp10, layout, first1, first];
   const memo = obj2.useMemo(() => {
     obj = { current: obj, next: null, direction: null, layouts: null };

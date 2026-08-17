@@ -1,7 +1,7 @@
 // _runtime/03838_isTomorrow.js
-import addDays from "addDays";
-import isSameDay from "isSameDay";
-import requiredArgs from "requiredArgs";
+import addDays from "addDays" /* 3620 */;
+import isSameDay from "isSameDay" /* 3653 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!addDays) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!addDays) {
 } else {
   tmp3 = addDays;
 }
-let c0 = tmp3;
+addDays = tmp3;
 if (!isSameDay) {
   obj = { default: null };
   obj[0] = isSameDay;
@@ -18,7 +18,7 @@ if (!isSameDay) {
 } else {
   tmp5 = isSameDay;
 }
-let closure_1 = tmp5;
+isSameDay = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,9 +26,10 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function isTomorrow(arg0) {
-  tmp7.default(1, arguments);
-  return tmp5.default(arg0, tmp3.default(Date.now(), 1));
+  requiredArgs.default(1, arguments);
+  return isSameDay.default(arg0, addDays.default(Date.now(), 1));
 };
 export default exports.default;

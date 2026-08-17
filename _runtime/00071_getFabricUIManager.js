@@ -10,16 +10,16 @@ arg5.getFabricUIManager = function getFabricUIManager() {
   }
   if (tmp) {
     closure_3 = (function createProxyWithCachedProperties(nativeFabricUIManager, closure_4) {
-      let closure_0 = nativeFabricUIManager;
+      closure_0 = nativeFabricUIManager;
       let obj = Object.create(nativeFabricUIManager);
       function _loop(iter) {
-        let closure_0 = iter;
-        const obj = {
+        closure_0 = iter;
+        obj = {
           get() {
             return iter[iter];
           }
         };
-        obj(outer1_2[0])(obj, iter, obj);
+        obj(closure_1_2[0])(obj, iter, obj);
       }
       const iter = closure_4[Symbol.iterator]();
       while (iter !== undefined) {

@@ -1,5 +1,5 @@
 // _runtime/01525_useKeyedChildListeners.js
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 
 export const useKeyedChildListeners = function useKeyedChildListeners() {
@@ -9,8 +9,8 @@ export const useKeyedChildListeners = function useKeyedChildListeners() {
     keyedListeners: current,
     addKeyedListener: current.useCallback((arg0, arg1, arg2) => {
       const table = arg0;
-      let closure_1 = arg1;
-      let closure_2 = arg2;
+      closure_1 = arg1;
+      closure_2 = arg2;
       table[arg0][arg1] = arg2;
       return () => {
         if (dependencyMap[dependencyMap][closure_1] === closure_2) {

@@ -1,6 +1,6 @@
 // _runtime/03656_differenceInCalendarISOWeekYears.js
-import getISOWeekYear from "getISOWeekYear";
-import requiredArgs from "requiredArgs";
+import getISOWeekYear from "getISOWeekYear" /* 3629 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!getISOWeekYear) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!getISOWeekYear) {
 } else {
   tmp3 = getISOWeekYear;
 }
-let c0 = tmp3;
+getISOWeekYear = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,10 +17,10 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function differenceInCalendarISOWeekYears(arg0, arg1) {
-  tmp5.default(2, arguments);
-  return tmp3.default(arg0) - tmp3.default(arg1);
+  requiredArgs.default(2, arguments);
+  return getISOWeekYear.default(arg0) - getISOWeekYear.default(arg1);
 };
 export default exports.default;

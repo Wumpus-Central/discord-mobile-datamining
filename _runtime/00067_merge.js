@@ -1,13 +1,14 @@
 // _runtime/00067_merge.js
-import { result } from "00026_result.js";
-import { getValidLengthPercentageSizeOrNull } from "00057_getValidLengthPercentageSizeOrNull.js";
-import { sizesDiffer } from "00064_sizesDiffer.js";
-import { measure } from "00068_measure.js";
-import { nullthrows } from "00070_nullthrows.js";
-import { matricesDiffer } from "00077_matricesDiffer.js";
-import { pointsDiffer } from "00078_pointsDiffer.js";
-import { insetsDiffer } from "00079_insetsDiffer.js";
-const require = arg1;
+import result from "result" /* 26 */;
+import getValidLengthPercentageSizeOrNull from "getValidLengthPercentageSizeOrNull" /* 57 */;
+import sizesDiffer from "sizesDiffer" /* 64 */;
+import measure from "measure" /* 68 */;
+import nullthrows from "nullthrows" /* 70 */;
+import matricesDiffer from "matricesDiffer" /* 77 */;
+import pointsDiffer from "pointsDiffer" /* 78 */;
+import insetsDiffer from "insetsDiffer" /* 79 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 function merge(arg0, obj) {
@@ -46,10 +47,6 @@ function merge(arg0, obj) {
   }
 }
 arg5.default = function getNativeComponentAttributes(arg0) {
-  let NativeProps;
-  let baseModuleName;
-  let bubblingEventTypes2;
-  let directEventTypes;
   let bubblingEventTypes = arg0;
   let _default = measure.default;
   const viewManagerConfig = _default.getViewManagerConfig(arg0);
@@ -265,7 +262,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
                   obj[0] = _default1;
                   obj2 = obj;
                 }
-                let obj1 = obj2;
+                obj1 = obj2;
                 prop[obj10] = obj1;
                 continue label0;
               } else {

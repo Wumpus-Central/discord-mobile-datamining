@@ -1,6 +1,7 @@
 // _runtime/07746__htmlElementAsString.js
-import { getGlobalSingleton } from "07739_getGlobalSingleton.js";
-const require = arg1;
+import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function _htmlElementAsString(tagName, arr) {
   const _require = tagName;
@@ -26,7 +27,7 @@ function _htmlElementAsString(tagName, arr) {
         if (arr.length) {
           const found = arr.filter((arg0) => tagName.getAttribute(arg0));
           mapped = found.map((arg0) => {
-            const items = [arg0, tagName.getAttribute(arg0)];
+            items = [arg0, tagName.getAttribute(arg0)];
             return items;
           });
         }

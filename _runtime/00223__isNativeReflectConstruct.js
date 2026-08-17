@@ -1,10 +1,12 @@
 // _runtime/00223__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import { Event } from "00133_Event.js";
-import { FileReaderModule } from "00224_FileReaderModule.js";
+import _inheritsDefault from "_inherits" /* 98 */;
+import dispatchDefault from "dispatch" /* 132 */;
+import EventDefault from "Event" /* 133 */;
+import FileReaderModuleDefault from "FileReaderModule" /* 224 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 const FileReader = arg1;
 function _isNativeReflectConstruct() {
@@ -18,10 +20,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,10 +31,10 @@ function _isNativeReflectConstruct() {
 class FileReader {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FileReader);
-    tmp2 = __esModule;
-    obj = __esModule(FileReader);
-    tmp3 = __esModule;
+    tmp = closure_3(this, FileReader);
+    tmp2 = closure_5;
+    obj = closure_5(FileReader);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -49,7 +51,7 @@ class FileReader {
     return tmp3Result;
   }
 }
-require("_inherits")(FileReader, require("dispatch"));
+_inheritsDefault(FileReader, dispatchDefault);
 const items = [
   {
     key: "_reset",
@@ -60,25 +62,23 @@ const items = [
   {
     key: "_setReadyState",
     value: function _setReadyState(_readyState) {
-      let _error;
-      let dispatchEvent;
       const self = this;
       this._readyState = _readyState;
       let tmp = importDefault;
-      this.dispatchEvent(new Event("readystatechange"));
+      this.dispatchEvent(new EventDefault("readystatechange"));
       if (2 === _readyState) {
         if (self._aborted) {
-          let tmpResult = tmp(133);
+          let tmpResult = EventDefault;
           let tmp6 = new.target;
           tmpResult = new tmpResult("abort");
           self.dispatchEvent(tmpResult);
-          dispatchEvent = tmp(133);
+          dispatchEvent = EventDefault;
           tmp = new.target;
           dispatchEvent = new dispatchEvent("loadend");
           self.dispatchEvent(dispatchEvent);
         } else {
           ({ dispatchEvent, _error } = self);
-          tmpResult = tmp(133);
+          tmpResult = EventDefault;
           tmp6 = new.target;
           if (!_error) {
             const tmpResult1 = new tmpResult("load");
@@ -100,12 +100,12 @@ const items = [
         const typeError = new TypeError("Failed to execute 'readAsArrayBuffer' on 'FileReader': parameter 1 is not of type 'Blob'");
         throw typeError;
       } else {
-        const asDataURL = FileReaderModule.readAsDataURL(closure_0.data);
+        const asDataURL = FileReaderModuleDefault.readAsDataURL(closure_0.data);
         asDataURL.then((arg0) => {
           if (!self._aborted) {
-            obj._result = self(outer1_2[7]).toByteArray(arg0.split(",")[1]).buffer;
+            obj._result = self(closure_1_2[7]).toByteArray(arg0.split(",")[1]).buffer;
             obj._setReadyState(2);
-            const obj2 = self(outer1_2[7]);
+            const obj2 = self(closure_1_2[7]);
           }
         }, (_error) => {
           if (!self._aborted) {
@@ -126,7 +126,7 @@ const items = [
         const typeError = new TypeError("Failed to execute 'readAsDataURL' on 'FileReader': parameter 1 is not of type 'Blob'");
         throw typeError;
       } else {
-        const asDataURL = FileReaderModule.readAsDataURL(closure_0.data);
+        const asDataURL = FileReaderModuleDefault.readAsDataURL(closure_0.data);
         asDataURL.then((_result) => {
           if (!self._aborted) {
             obj._result = _result;
@@ -155,7 +155,7 @@ const items = [
         const typeError = new TypeError("Failed to execute 'readAsText' on 'FileReader': parameter 1 is not of type 'Blob'");
         throw typeError;
       } else {
-        const asText = FileReaderModule.readAsText(_bodyBlob.data, str);
+        const asText = FileReaderModuleDefault.readAsText(_bodyBlob.data, str);
         asText.then((_result) => {
           if (!self._aborted) {
             obj._result = _result;

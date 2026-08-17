@@ -1,7 +1,8 @@
 // _runtime/04214_getStatics.js
-import { num2 } from "04212_num2.js";
+import num2 from "num2" /* 4212 */;
+
 function getStatics(arg0) {
-  const obj = num2;
+  obj = num2;
   if (obj.isMemo(arg0)) {
     let tmp2 = obj;
   } else {
@@ -13,8 +14,8 @@ let closure_2 = { childContextTypes: true, contextType: true, contextTypes: true
 let closure_3 = { name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true };
 let obj = { $$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true };
 obj = {};
-obj[require("num2").ForwardRef] = { $$typeof: true, render: true, defaultProps: true, displayName: true, propTypes: true };
-obj[require("num2").Memo] = obj;
+obj[num2.ForwardRef] = { $$typeof: true, render: true, defaultProps: true, displayName: true, propTypes: true };
+obj[num2.Memo] = obj;
 let closure_12 = Object.prototype;
 function hoistNonReactStatics(arg0, headers) {
   if (typeof headers !== "string") {
@@ -28,7 +29,7 @@ function hoistNonReactStatics(arg0, headers) {
         hoistNonReactStatics(arg0, tmp2, arg2);
       }
     }
-    const obj = getOwnPropertyNames(headers);
+    obj = getOwnPropertyNames(headers);
     let combined = obj;
     if (getOwnPropertySymbols) {
       combined = obj.concat(tmp7(headers));

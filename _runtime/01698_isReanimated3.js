@@ -1,13 +1,17 @@
 // _runtime/01698_isReanimated3.js
-import controlEdgeToEdgeValues from "controlEdgeToEdgeValues";
-import isJest from "isJest";
+import runWorkletOnJS from "runWorkletOnJS" /* 1661 */;
+import ReanimatedModule3 from "ReanimatedModule" /* 1662 */;
+import freezeObjectInDev from "freezeObjectInDev" /* 1684 */;
+import addCompilerSafeGetAndSet from "addCompilerSafeGetAndSet" /* 1691 */;
+import SensorContainer from "SensorContainer" /* 1700 */;
+import createMapperRegistry from "createMapperRegistry" /* 1702 */;
+import runOnRuntime from "runOnRuntime" /* 1704 */;
+import controlEdgeToEdgeValues from "controlEdgeToEdgeValues" /* 1699 */;
+import isJest from "isJest" /* 1657 */;
 import { isJest } from "01657_isJest.js";
-import { ReanimatedModule } from "01662_ReanimatedModule.js";
-import { freezeObjectInDev } from "01684_freezeObjectInDev.js";
-import { SensorContainer } from "01700_SensorContainer.js";
 
-controlEdgeToEdgeValues = controlEdgeToEdgeValues.isEdgeToEdge();
-isJest = isJest.shouldBeUseWeb();
+let closure_3 = controlEdgeToEdgeValues.isEdgeToEdge();
+let closure_4 = isJest.shouldBeUseWeb();
 function isReanimated3() {
   return true;
 }
@@ -15,22 +19,22 @@ let closure_5 = { code: "function handleAndFlushAnimationFrame_Pnpm_coreTs1(even
 let closure_6 = { code: "function handleAndFlushAnimationFrame_Pnpm_coreTs2(state,height){const{eventHandler}=this.__closure;const now=global._getAnimationTimestamp();global.__frameTimestamp=now;eventHandler(state,height);global.__flushAnimationFrame(now);global.__frameTimestamp=undefined;}" };
 let closure_7 = { enableLayoutAnimations: false, setByUser: false };
 
-export const startMapper = require("createMapperRegistry").startMapper;
-export const stopMapper = require("createMapperRegistry").stopMapper;
-export const makeMutable = require("addCompilerSafeGetAndSet").makeMutable;
-export const createWorkletRuntime = require("runOnRuntime").createWorkletRuntime;
-export const runOnRuntime = require("runOnRuntime").runOnRuntime;
-export const makeShareable = require("freezeObjectInDev").makeShareable;
-export const makeShareableCloneRecursive = require("freezeObjectInDev").makeShareableCloneRecursive;
-export const executeOnUIRuntimeSync = require("runWorkletOnJS").executeOnUIRuntimeSync;
-export const runOnJS = require("runWorkletOnJS").runOnJS;
-export const runOnUI = require("runWorkletOnJS").runOnUI;
+export const startMapper = createMapperRegistry.startMapper;
+export const stopMapper = createMapperRegistry.stopMapper;
+export const makeMutable = addCompilerSafeGetAndSet.makeMutable;
+export const createWorkletRuntime = runOnRuntime.createWorkletRuntime;
+export const runOnRuntime = runOnRuntime.runOnRuntime;
+export const makeShareable = freezeObjectInDev.makeShareable;
+export const makeShareableCloneRecursive = freezeObjectInDev.makeShareableCloneRecursive;
+export const executeOnUIRuntimeSync = runWorkletOnJS.executeOnUIRuntimeSync;
+export const runOnJS = runWorkletOnJS.runOnJS;
+export const runOnUI = runWorkletOnJS.runOnUI;
 export { isReanimated3 };
 export const isConfigured = isReanimated3;
 export const getViewProp = function getViewProp(arg0, arg1, arg2) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const _require = arg1;
-  const dependencyMap = arg2;
+  dependencyMap = arg2;
   if (obj.isFabric()) {
     if (!arg2) {
       const reanimatedError = new tmp(1665).ReanimatedError("Function `getViewProp` requires a component to be passed as an argument on Fabric.");
@@ -40,7 +44,7 @@ export const getViewProp = function getViewProp(arg0, arg1, arg2) {
   obj = _isJest;
   tmp = _require;
   return new Promise((arg0, arg1) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const callback = arg1;
     const ReanimatedModule = callback(table[3]).ReanimatedModule;
     return ReanimatedModule.getViewProp(closure_0, callback, table, (str) => {
@@ -54,7 +58,7 @@ export const getViewProp = function getViewProp(arg0, arg1, arg2) {
   });
 };
 export const registerEventHandler = function registerEventHandler(eventHandler) {
-  let closure_0 = eventHandler;
+  closure_0 = eventHandler;
   let num = arg2;
   if (arg2 === undefined) {
     num = -1;
@@ -68,15 +72,15 @@ export const registerEventHandler = function registerEventHandler(eventHandler) 
   handleAndFlushAnimationFrame.__closure = { eventHandler };
   handleAndFlushAnimationFrame.__workletHash = 6793284645440;
   handleAndFlushAnimationFrame.__initData = closure_5;
-  const ReanimatedModule = ReanimatedModule.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
   return ReanimatedModule.registerEventHandler(freezeObjectInDev.makeShareableCloneRecursive(handleAndFlushAnimationFrame), arg1, num);
 };
 export const unregisterEventHandler = function unregisterEventHandler(arg0) {
-  const ReanimatedModule = ReanimatedModule.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
   return ReanimatedModule.unregisterEventHandler(arg0);
 };
 export const subscribeForKeyboardEvents = function subscribeForKeyboardEvents(eventHandler, isStatusBarTranslucentAndroid) {
-  let closure_0 = eventHandler;
+  closure_0 = eventHandler;
   function handleAndFlushAnimationFrame(arg0, arg1) {
     const result = eventHandler._getAnimationTimestamp();
     eventHandler.__frameTimestamp = result;
@@ -87,11 +91,11 @@ export const subscribeForKeyboardEvents = function subscribeForKeyboardEvents(ev
   handleAndFlushAnimationFrame.__closure = { eventHandler };
   handleAndFlushAnimationFrame.__workletHash = 11642615284685;
   handleAndFlushAnimationFrame.__initData = closure_6;
-  const ReanimatedModule = ReanimatedModule.ReanimatedModule;
-  let tmp2 = controlEdgeToEdgeValues;
-  let tmp3 = controlEdgeToEdgeValues;
+  const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
+  let tmp2 = closure_3;
+  let tmp3 = closure_3;
   const shareableCloneRecursive = freezeObjectInDev.makeShareableCloneRecursive(handleAndFlushAnimationFrame);
-  if (!controlEdgeToEdgeValues) {
+  if (!closure_3) {
     let flag = isStatusBarTranslucentAndroid.isStatusBarTranslucentAndroid;
     if (flag == null) {
       flag = false;
@@ -108,7 +112,7 @@ export const subscribeForKeyboardEvents = function subscribeForKeyboardEvents(ev
   return ReanimatedModule.subscribeForKeyboardEvents(shareableCloneRecursive, tmp3, tmp2);
 };
 export const unsubscribeFromKeyboardEvents = function unsubscribeFromKeyboardEvents(arg0) {
-  const ReanimatedModule = ReanimatedModule.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
   return ReanimatedModule.unsubscribeFromKeyboardEvents(arg0);
 };
 export const registerSensor = function registerSensor(arg0, arg1, arg2) {
@@ -143,7 +147,7 @@ export const enableLayoutAnimations = function enableLayoutAnimations(enableLayo
   if (flag) {
     const obj = { enableLayoutAnimations: null, setByUser: true };
     obj[0] = enableLayoutAnimations;
-    const ReanimatedModule2 = ReanimatedModule.ReanimatedModule;
+    const ReanimatedModule2 = ReanimatedModule3.ReanimatedModule;
     const result = ReanimatedModule2.enableLayoutAnimations(enableLayoutAnimations);
   } else {
     let setByUser = obj.setByUser;
@@ -152,30 +156,30 @@ export const enableLayoutAnimations = function enableLayoutAnimations(enableLayo
     }
     if (!setByUser) {
       obj.enableLayoutAnimations = enableLayoutAnimations;
-      const ReanimatedModule = ReanimatedModule.ReanimatedModule;
+      const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
       const result1 = ReanimatedModule.enableLayoutAnimations(enableLayoutAnimations);
     }
   }
 };
 export const configureLayoutAnimationBatch = function configureLayoutAnimationBatch(arg0) {
-  const ReanimatedModule = ReanimatedModule.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
   const result = ReanimatedModule.configureLayoutAnimationBatch(arg0);
 };
 export const setShouldAnimateExitingForTag = function setShouldAnimateExitingForTag(arg0, arg1) {
-  const ReanimatedModule = ReanimatedModule.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
   const result = ReanimatedModule.setShouldAnimateExitingForTag(arg0, arg1);
 };
 export const jsiConfigureProps = function jsiConfigureProps(keys, arg1) {
-  if (!isJest) {
-    const ReanimatedModule = ReanimatedModule.ReanimatedModule;
+  if (!closure_4) {
+    const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
     ReanimatedModule.configureProps(keys, arg1);
   }
 };
 export const markNodeAsRemovable = function markNodeAsRemovable(arg0) {
-  const ReanimatedModule = ReanimatedModule.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
   ReanimatedModule.markNodeAsRemovable(arg0);
 };
 export const unmarkNodeAsRemovable = function unmarkNodeAsRemovable(arg0) {
-  const ReanimatedModule = ReanimatedModule.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
   const result = ReanimatedModule.unmarkNodeAsRemovable(arg0);
 };

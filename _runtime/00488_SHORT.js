@@ -1,6 +1,7 @@
 // _runtime/00488_SHORT.js
-import { ToastAndroid } from "00489_ToastAndroid.js";
-const constants = require("ToastAndroid").getConstants();
+import ToastAndroidDefault from "ToastAndroid" /* 489 */;
+
+const constants = ToastAndroidDefault.getConstants();
 
 export default {
   SHORT: constants.SHORT,
@@ -9,12 +10,12 @@ export default {
   BOTTOM: constants.BOTTOM,
   CENTER: constants.CENTER,
   show(arg0, arg1) {
-    ToastAndroid.show(arg0, arg1);
+    ToastAndroidDefault.show(arg0, arg1);
   },
   showWithGravity(arg0, arg1, arg2) {
-    ToastAndroid.showWithGravity(arg0, arg1, arg2);
+    ToastAndroidDefault.showWithGravity(arg0, arg1, arg2);
   },
   showWithGravityAndOffset(arg0, arg1, arg2, arg3, arg4) {
-    const result = ToastAndroid.showWithGravityAndOffset(arg0, arg1, arg2, arg3, arg4);
+    const result = ToastAndroidDefault.showWithGravityAndOffset(arg0, arg1, arg2, arg3, arg4);
   }
 };

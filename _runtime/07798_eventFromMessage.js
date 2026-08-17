@@ -1,8 +1,8 @@
 // _runtime/07798_eventFromMessage.js
-import _slicedToArray from "_slicedToArray";
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
-import { isInstanceOf } from "07745_isInstanceOf.js";
-import { addContextToFrame } from "07749_addContextToFrame.js";
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+import isInstanceOf from "isInstanceOf" /* 7745 */;
+import addContextToFrame from "addContextToFrame" /* 7749 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 
 export const eventFromMessage = function eventFromMessage(arg0, message, arg2, event_id) {
@@ -22,7 +22,7 @@ export const eventFromMessage = function eventFromMessage(arg0, message, arg2, e
           obj = { values: null };
           obj = { value: null, stacktrace: null };
           obj[0] = message;
-          const obj1 = { frames: null };
+          obj1 = { frames: null };
           obj1[0] = arr;
           obj[1] = obj1;
           const items = [obj];
@@ -46,8 +46,6 @@ export const eventFromMessage = function eventFromMessage(arg0, message, arg2, e
   obj6 = isInstanceOf;
 };
 export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, arg1, name, data) {
-  let error;
-  let tmp27;
   if (data) {
     data = data.data;
   }
@@ -57,7 +55,7 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
   if (!data) {
     data = { handled: true, type: "generic" };
   }
-  let obj1 = isInstanceOf;
+  obj1 = isInstanceOf;
   if (obj1.isError(name)) {
     const items = [name, undefined];
     let items3 = items;
@@ -171,7 +169,7 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
       items3 = [syntheticException, undefined];
     }
   }
-  [error, tmp27] = _slicedToArray(items3, 2);
+  [error, tmp27] = callback(items3, 2);
   obj = { type: error.name || error.constructor.name, value: error.message };
   const arr5 = arg1(error.stack || "", 1);
   if (arr5.length) {
@@ -184,7 +182,7 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
   if (tmp27) {
     obj2.extra = tmp27;
   }
-  const tmp26 = _slicedToArray(items3, 2);
+  const tmp26 = callback(items3, 2);
   const tmp28 = error.name || error.constructor.name;
   const tmp29 = error.stack || "";
   const result1 = addContextToFrame.addExceptionTypeValue(obj2, undefined, undefined);

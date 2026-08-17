@@ -1,11 +1,13 @@
 // _runtime/00268_MutationObserver.js
-import _classCallCheck from "_classCallCheck";
-import setPlatformObject from "setPlatformObject";
+import _createClassDefault from "_createClass" /* 42 */;
+import notifyMutationObserversAll from "notifyMutationObservers" /* 269 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import setPlatformObject from "setPlatformObject" /* 126 */;
 
 const MutationObserver = importDefault;
 class MutationObserver {
   constructor(arg0) {
-    tmp = _classCallCheck(this, MutationObserver);
+    tmp = closure_3(this, MutationObserver);
     set = new Set();
     this._observationTargets = set;
     if (null == global) {
@@ -50,7 +52,7 @@ const items = [
           }
           if (null != attributes) {
             const _Error5 = Error;
-            const error = new Error("Failed to execute 'observe' on 'MutationObserver': attributes is not supported");
+            error = new Error("Failed to execute 'observe' on 'MutationObserver': attributes is not supported");
             throw error;
           } else {
             let attributeFilter;
@@ -91,7 +93,7 @@ const items = [
                   } else {
                     const self = this;
                     const result = this._getOrCreateMutationObserverId();
-                    let obj = importAll(269);
+                    let obj = notifyMutationObserversAll;
                     obj = { mutationObserverId: null, target: null, subtree: null };
                     obj[0] = result;
                     obj[1] = arg0;
@@ -119,11 +121,11 @@ const items = [
     value: function disconnect() {
       const _mutationObserverId = this._mutationObserverId;
       if (null != _mutationObserverId) {
-        importAll(269).unobserveAll(_mutationObserverId);
-        const obj = importAll(269);
-        importAll(269).unregisterObserver(_mutationObserverId);
+        notifyMutationObserversAll.unobserveAll(_mutationObserverId);
+        const obj = notifyMutationObserversAll;
+        notifyMutationObserversAll.unregisterObserver(_mutationObserverId);
         tmp._mutationObserverId = null;
-        const obj2 = importAll(269);
+        const obj2 = notifyMutationObserversAll;
       }
     }
   },
@@ -133,10 +135,10 @@ const items = [
       const self = this;
       let _mutationObserverId = this._mutationObserverId;
       if (null == _mutationObserverId) {
-        const registerObserverResult = importAll(269).registerObserver(self, self._callback);
+        const registerObserverResult = notifyMutationObserversAll.registerObserver(self, self._callback);
         self._mutationObserverId = registerObserverResult;
         _mutationObserverId = registerObserverResult;
-        const obj = importAll(269);
+        const obj = notifyMutationObserversAll;
       }
       return _mutationObserverId;
     }
@@ -148,7 +150,7 @@ const items = [
     }
   }
 ];
-const tmp2 = require("_createClass")(MutationObserver, items);
+const tmp2 = _createClassDefault(MutationObserver, items);
 setPlatformObject.setPlatformObject(tmp2);
 
 export default tmp2;

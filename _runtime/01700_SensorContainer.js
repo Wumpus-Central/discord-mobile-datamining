@@ -1,10 +1,11 @@
 // _runtime/01700_SensorContainer.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const SensorContainer = importDefault;
 class SensorContainer {
   constructor() {
-    tmp = outer1_2(this, SensorContainer);
+    tmp = closure_2(this, SensorContainer);
     map = new Map();
     this.nativeSensors = map;
     return;
@@ -83,4 +84,4 @@ const items = [
   }
 ];
 
-export const SensorContainer = require("_createClass")(SensorContainer, items);
+export const SensorContainer = _createClassDefault(SensorContainer, items);

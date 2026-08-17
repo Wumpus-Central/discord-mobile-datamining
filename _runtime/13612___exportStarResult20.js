@@ -1,7 +1,8 @@
 // _runtime/13612___exportStarResult20.js
-import { __exportStarResult32 } from "13580___exportStarResult32.js";
-import { __exportStarResult24 } from "13608___exportStarResult24.js";
-const require = arg1;
+import __exportStarResult32 from "__exportStarResult32" /* 13580 */;
+import __exportStarResult24 from "__exportStarResult24" /* 13608 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.FormatNumericToParts = function FormatNumericToParts(arg0, isNaN, getInternalSlots) {
   let length;

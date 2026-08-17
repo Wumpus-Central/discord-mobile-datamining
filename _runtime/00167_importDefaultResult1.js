@@ -1,8 +1,9 @@
 // _runtime/00167_importDefaultResult1.js
-import ReactNativeStartupTiming from "_classCallCheck";
-import _classPrivateFieldBase from "_classPrivateFieldBase";
-import importDefaultResult1 from "_classPrivateFieldKey";
-import setPlatformObject from "setPlatformObject";
+import _createClassDefault from "_createClass" /* 42 */;
+import ReactNativeStartupTiming from "_classCallCheck" /* 41 */;
+import closure_1 from "_classPrivateFieldBase" /* 90 */;
+import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
+import setPlatformObject from "setPlatformObject" /* 126 */;
 
 let closure_2 = importDefaultResult1("startTime");
 let closure_3 = importDefaultResult1("initializeRuntimeStart");
@@ -12,17 +13,17 @@ class ReactNativeStartupTiming {
   constructor(arg0) {
     self = this;
     tmp = ReactNativeStartupTiming(this, ReactNativeStartupTiming);
-    tmp2 = startTime;
-    definePropertyResult = Object.defineProperty(this, startTime, { writable: true, value: "a" });
-    tmp4 = initializeRuntimeStart;
-    definePropertyResult1 = Object.defineProperty(this, initializeRuntimeStart, { writable: true, value: "a" });
-    tmp6 = executeJavaScriptBundleEntryPointStart;
-    definePropertyResult2 = Object.defineProperty(this, executeJavaScriptBundleEntryPointStart, { writable: true, value: "a" });
-    tmp8 = endTime;
-    definePropertyResult3 = Object.defineProperty(this, endTime, { writable: true, value: "a" });
+    tmp2 = closure_2;
+    definePropertyResult = Object.defineProperty(this, closure_2, { writable: true, value: "a" });
+    tmp4 = closure_3;
+    definePropertyResult1 = Object.defineProperty(this, closure_3, { writable: true, value: "a" });
+    tmp6 = closure_4;
+    definePropertyResult2 = Object.defineProperty(this, closure_4, { writable: true, value: "a" });
+    tmp8 = closure_5;
+    definePropertyResult3 = Object.defineProperty(this, closure_5, { writable: true, value: "a" });
     if (null != global) {
-      tmp10 = outer1_1;
-      ({ startTime: outer1_1(undefined, self, tmp2)[tmp2], initializeRuntimeStart: outer1_1(undefined, self, tmp4)[tmp4], executeJavaScriptBundleEntryPointStart: outer1_1(undefined, self, tmp6)[tmp6], endTime: outer1_1(undefined, self, tmp8)[tmp8] } = global);
+      tmp10 = closure_1;
+      ({ startTime: closure_1(undefined, self, tmp2)[tmp2], initializeRuntimeStart: closure_1(undefined, self, tmp4)[tmp4], executeJavaScriptBundleEntryPointStart: closure_1(undefined, self, tmp6)[tmp6], endTime: closure_1(undefined, self, tmp8)[tmp8] } = global);
     }
     return;
   }
@@ -53,7 +54,7 @@ const items = [
     }
   }
 ];
-const importDefaultResultResult = require("_createClass")(ReactNativeStartupTiming, items);
+const importDefaultResultResult = _createClassDefault(ReactNativeStartupTiming, items);
 setPlatformObject.setPlatformObject(importDefaultResultResult);
 
 export default importDefaultResultResult;

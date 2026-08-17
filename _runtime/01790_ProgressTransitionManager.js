@@ -1,14 +1,15 @@
 // _runtime/01790_ProgressTransitionManager.js
-import _classCallCheck from "_classCallCheck";
-import { Platform } from "get ActivityIndicator";
-import importDefaultResult from "_createClass";
-import isJest from "isJest";
-import { isJest } from "01657_isJest.js";
+import isJest2 from "isJest" /* 1657 */;
+import t from "t" /* 1665 */;
+import isReanimated3 from "isReanimated3" /* 1698 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import isJest from "isJest" /* 1657 */;
 import { runWorkletOnJS } from "01661_runWorkletOnJS.js";
-import { isReanimated3 } from "01698_isReanimated3.js";
 
 const ProgressTransitionManager = global;
-const require = arg1;
+require = arg1;
 let closure_4 = { code: "function pnpm_ProgressTransitionManagerTs1(){const{viewTag,progressAnimation}=this.__closure;global.ProgressTransitionRegister.addProgressAnimation(viewTag,progressAnimation);}" };
 let closure_5 = { code: "function pnpm_ProgressTransitionManagerTs2(){const{viewTag,isUnmounting}=this.__closure;global.ProgressTransitionRegister.removeProgressAnimation(viewTag,isUnmounting);}" };
 let closure_6 = { code: "function pnpm_ProgressTransitionManagerTs3(event){const{lastProgressValue}=this.__closure;const progress=event.progress;if(progress===lastProgressValue){return;}lastProgressValue=progress;global.ProgressTransitionRegister.frame(progress);}" };
@@ -16,7 +17,7 @@ let closure_7 = { code: "function pnpm_ProgressTransitionManagerTs4(){global.Pro
 let closure_8 = { code: "function pnpm_ProgressTransitionManagerTs5(){global.ProgressTransitionRegister.onAndroidFinishTransitioning();}" };
 class ProgressTransitionManager {
   constructor() {
-    tmp = outer1_3(this, ProgressTransitionManager);
+    tmp = closure_3(this, ProgressTransitionManager);
     this._sharedElementCount = 0;
     this._eventHandler = { isRegistered: false, onTransitionProgress: -1, onAppear: -1, onDisappear: -1, onSwipeDismiss: -1 };
     return;
@@ -25,7 +26,7 @@ class ProgressTransitionManager {
 let obj = {
   key: "addProgressAnimation",
   value: function addProgressAnimation(viewTag, progressAnimation) {
-    let closure_0 = viewTag;
+    closure_0 = viewTag;
     const _require = progressAnimation;
     const fn = function o() {
       const ProgressTransitionRegister = viewTag.ProgressTransitionRegister;
@@ -43,7 +44,7 @@ const items = [
   {
     key: "removeProgressAnimation",
     value: function removeProgressAnimation(viewTag) {
-      let closure_0 = viewTag;
+      closure_0 = viewTag;
       let flag = arg1;
       if (arg1 === undefined) {
         flag = true;
@@ -65,7 +66,7 @@ const items = [
       this._sharedElementCount = this._sharedElementCount + 1;
       if (!this._eventHandler.isRegistered) {
         _eventHandler.isRegistered = true;
-        let c0 = -1;
+        c0 = -1;
         let obj = isReanimated3;
         const fn = function o(progress) {
           progress = progress.progress;
@@ -133,11 +134,11 @@ const items = [
 ];
 function createProgressTransitionRegister() {
   const map = new Map();
-  const map1 = new Map();
+  map1 = new Map();
   const set = new Set();
   const set1 = new Set();
-  let c4 = false;
-  let c5 = false;
+  c4 = false;
+  c5 = false;
   const obj = {
     addProgressAnimation(arg0, arg1) {
       let tmp = set.size > 0;
@@ -145,13 +146,13 @@ function createProgressTransitionRegister() {
         tmp = !map.has(arg0);
       }
       if (tmp) {
-        let c5 = false;
+        c5 = false;
       }
       const result = map.set(arg0, arg1);
     },
     removeProgressAnimation(arg0, arg1) {
       if (set.size > 0) {
-        let c5 = false;
+        c5 = false;
       }
       if (arg1) {
         set1.add(arg0);
@@ -160,7 +161,7 @@ function createProgressTransitionRegister() {
       }
     },
     onTransitionStart(arg0, arg1) {
-      let closure_4 = c5;
+      closure_4 = c5;
       const result = map1.set(arg0, arg1);
       set.add(arg0);
       obj.frame(0);
@@ -192,7 +193,7 @@ function createProgressTransitionRegister() {
       if (0 !== set.size) {
         if (c4) {
           c4 = false;
-          let c5 = false;
+          c5 = false;
         } else {
           for (const item10012 of tmp) {
             let tmp7 = map;
@@ -227,11 +228,11 @@ createProgressTransitionRegister.__initData = { code: "function createProgressTr
 if (isJest.shouldBeUseWeb()) {
   function maybeThrowError() {
     if (!obj.isJest()) {
-      const reanimatedError = new tmp(1665).ReanimatedError("`ProgressTransitionRegister` is not available on non-native platform.");
+      const reanimatedError = new t.ReanimatedError("`ProgressTransitionRegister` is not available on non-native platform.");
       throw reanimatedError;
     }
-    obj = isJest;
-    tmp = require;
+    obj = isJest2;
+    const tmp = require;
   }
   const _Proxy = Proxy;
   obj = { get: null, set: null };
@@ -243,11 +244,11 @@ if (isJest.shouldBeUseWeb()) {
     if (obj.isJest()) {
       return false;
     } else {
-      const reanimatedError = new tmp(1665).ReanimatedError("`ProgressTransitionRegister` is not available on non-native platform.");
+      const reanimatedError = new t.ReanimatedError("`ProgressTransitionRegister` is not available on non-native platform.");
       throw reanimatedError;
     }
-    obj = isJest;
-    tmp = require;
+    obj = isJest2;
+    const tmp = require;
   };
   const proxy = new Proxy({}, obj);
   global.ProgressTransitionRegister = proxy;
@@ -258,11 +259,11 @@ if (isJest.shouldBeUseWeb()) {
       HermesBuiltin.throwTypeError();
     }
     const map = new Map();
-    const map1 = new Map();
+    map1 = new Map();
     const set = new Set();
     const set1 = new Set();
-    let c4 = false;
-    let c5 = false;
+    c4 = false;
+    c5 = false;
     const obj = {
       addProgressAnimation(arg0, arg1) {
         let tmp = set.size > 0;
@@ -270,13 +271,13 @@ if (isJest.shouldBeUseWeb()) {
           tmp = !map.has(arg0);
         }
         if (tmp) {
-          let c5 = false;
+          c5 = false;
         }
         const result = map.set(arg0, arg1);
       },
       removeProgressAnimation(arg0, arg1) {
         if (set.size > 0) {
-          let c5 = false;
+          c5 = false;
         }
         if (arg1) {
           set1.add(arg0);
@@ -285,7 +286,7 @@ if (isJest.shouldBeUseWeb()) {
         }
       },
       onTransitionStart(arg0, arg1) {
-        let closure_4 = c5;
+        closure_4 = c5;
         const result = map1.set(arg0, arg1);
         set.add(arg0);
         obj.frame(0);
@@ -317,7 +318,7 @@ if (isJest.shouldBeUseWeb()) {
         if (0 !== set.size) {
           if (c4) {
             c4 = false;
-            let c5 = false;
+            c5 = false;
           } else {
             for (const item10012 of tmp) {
               let tmp7 = map;
@@ -355,4 +356,4 @@ if (isJest.shouldBeUseWeb()) {
   let obj4 = require("runWorkletOnJS");
 }
 
-export const ProgressTransitionManager = require("_createClass")(ProgressTransitionManager, items);
+export const ProgressTransitionManager = importDefaultResult(ProgressTransitionManager, items);

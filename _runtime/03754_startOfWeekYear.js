@@ -1,9 +1,9 @@
 // _runtime/03754_startOfWeekYear.js
-import getWeekYear from "getWeekYear";
-import startOfWeek from "startOfWeek";
-import toInteger from "toInteger";
-import requiredArgs from "requiredArgs";
-import { getDefaultOptions } from "03477_getDefaultOptions.js";
+import getDefaultOptions from "getDefaultOptions" /* 3477 */;
+import getWeekYear from "getWeekYear" /* 3755 */;
+import startOfWeek from "startOfWeek" /* 3631 */;
+import toInteger from "toInteger" /* 3476 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!getWeekYear) {
   let obj = { default: null };
@@ -12,7 +12,7 @@ if (!getWeekYear) {
 } else {
   tmp3 = getWeekYear;
 }
-let obj1 = tmp3;
+getWeekYear = tmp3;
 if (!startOfWeek) {
   obj = { default: null };
   obj[0] = startOfWeek;
@@ -20,7 +20,7 @@ if (!startOfWeek) {
 } else {
   tmp5 = startOfWeek;
 }
-let c3 = tmp5;
+startOfWeek = tmp5;
 if (!toInteger) {
   obj = { default: null };
   obj[0] = toInteger;
@@ -28,18 +28,18 @@ if (!toInteger) {
 } else {
   tmp7 = toInteger;
 }
-let c4 = tmp7;
+toInteger = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c5 = tmp9;
+requiredArgs = tmp9;
 
 export default function startOfWeekYear(arg0, firstWeekContainsDate) {
-  tmp9.default(1, arguments);
+  requiredArgs.default(1, arguments);
   const defaultOptions = getDefaultOptions.getDefaultOptions();
   let prop;
   if (null != firstWeekContainsDate) {
@@ -87,10 +87,10 @@ export default function startOfWeekYear(arg0, firstWeekContainsDate) {
       num = prop;
     }
   }
-  const defaultResult1 = tmp7.default(num);
+  const defaultResult1 = toInteger.default(num);
   const date = new Date(0);
-  date.setFullYear(tmp3.default(arg0, firstWeekContainsDate), 0, defaultResult1);
+  date.setFullYear(getWeekYear.default(arg0, firstWeekContainsDate), 0, defaultResult1);
   date.setHours(0, 0, 0, 0);
-  return tmp5.default(date, firstWeekContainsDate);
+  return startOfWeek.default(date, firstWeekContainsDate);
 };
 export default exports.default;

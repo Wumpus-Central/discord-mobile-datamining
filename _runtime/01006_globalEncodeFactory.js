@@ -1,9 +1,10 @@
 // _runtime/01006_globalEncodeFactory.js
-import { utf8ToBytes } from "01007_utf8ToBytes.js";
-const require = arg1;
+import utf8ToBytes from "utf8ToBytes" /* 1007 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function globalEncodeFactory(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return (arg0) => new TextEncoder().encode(arg0);
 }
 function encodePolyfill(arr) {

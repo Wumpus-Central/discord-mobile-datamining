@@ -1,11 +1,9 @@
 // _runtime/13617_isMatched.js
-import { 13618__ } from "metro/13618__.js";
-const require = arg1;
+import _mod13618 from "module_13618" /* 13618 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function isMatched(region, str) {
-  let arr;
-  let tmp2;
-  let tmp3;
   const parts = str.split("-");
   [tmp2, tmp3, arr] = parts;
   if (arr) {
@@ -102,7 +100,7 @@ function findMatchingDistanceForLSR(arg0, arg1, matches) {
     }
     return diff;
   }
-  const error = new Error("No matching distance found");
+  error = new Error("No matching distance found");
   throw error;
 }
 function findMatchingDistance(arg0, arg1) {
@@ -114,7 +112,7 @@ function findMatchingDistance(arg0, arg1) {
   obj = { language: maximizeResult1.language, script: tmp5, region: tmp6 };
   let tmp7 = obj1;
   if (!obj1) {
-    let first = 13618__.data.supplemental.languageMatching["written-new"][0];
+    let first = _mod13618.data.supplemental.languageMatching["written-new"][0];
     let paradigmLocales;
     if (null !== first) {
       if (undefined !== first) {
@@ -189,7 +187,7 @@ arg5.invariant = function invariant(arg0, arg1, arg2) {
 };
 arg5.findMatchingDistance = findMatchingDistance;
 arg5.findBestMatch = function findBestMatch(arr) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   let tmp = arg2;
   if (undefined === arg2) {
     tmp = c3;
@@ -197,14 +195,14 @@ arg5.findBestMatch = function findBestMatch(arr) {
   const Infinity = Infinity;
   const obj = { matchedDesiredLocale: "", distances: {} };
   let item = arr.forEach((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     if (!obj.distances[arg0]) {
       obj.distances[arg0] = {};
     }
     const item = closure_0.forEach((matchedSupportedLocale) => {
-      const sum = outer2_6(closure_0, matchedSupportedLocale) + 40 * closure_1;
-      outer1_2.distances[closure_0][matchedSupportedLocale] = sum;
+      const sum = closure_2_6(closure_0, matchedSupportedLocale) + 40 * closure_1;
+      closure_1_2.distances[closure_0][matchedSupportedLocale] = sum;
       if (sum < closure_1) {
         closure_1 = sum;
         tmp3.matchedDesiredLocale = closure_0;

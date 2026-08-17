@@ -1,16 +1,13 @@
 // _runtime/04686_context.js
-import importAllResult from "noop";
+import importAllResult from "noop" /* 19 */;
 
 let c0 = importAllResult;
 let context = importAllResult.createContext({ leftDisabled: false, rightDisabled: false, bottomDisabled: false });
 
 export const EdgeInsetApplicationContext = context;
 export const useEdgeInsetApplication = function useEdgeInsetApplication(flag, flag2, flag3) {
-  let bottomDisabled;
-  let leftDisabled;
-  let rightDisabled;
   let obj = leftDisabled;
-  const context = leftDisabled.useContext(rightDisabled);
+  context = leftDisabled.useContext(rightDisabled);
   ({ leftDisabled, rightDisabled, bottomDisabled } = context);
   if (!leftDisabled) {
     leftDisabled = flag;

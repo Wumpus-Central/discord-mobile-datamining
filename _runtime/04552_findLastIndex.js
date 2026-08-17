@@ -1,7 +1,8 @@
 // _runtime/04552_findLastIndex.js
-import { baseIteratee } from "00720_baseIteratee.js";
-import { toInteger } from "04553_toInteger.js";
-import { baseFindIndex } from "04555_baseFindIndex.js";
+import baseIteratee from "baseIteratee" /* 720 */;
+import toInteger from "toInteger" /* 4553 */;
+import baseFindIndex from "baseFindIndex" /* 4555 */;
+
 
 export default function findLastIndex(arg0, arg1, arg2) {
   let num = 0;

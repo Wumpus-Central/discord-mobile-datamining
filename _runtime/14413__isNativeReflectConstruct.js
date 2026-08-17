@@ -1,13 +1,15 @@
 // _runtime/14413__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import _isNativeReflectConstruct from "_isNativeReflectConstruct";
+import noopDefault from "noop" /* 19 */;
+import emptyFunctionDefault from "emptyFunction" /* 12384 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 14412 */;
+import closure_1 from "_objectWithoutProperties" /* 109 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -20,10 +22,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -31,16 +33,17 @@ function _isNativeReflectConstruct() {
 const AnimatedCircularProgress = ["fill", "prefill"];
 const Animated = get_ActivityIndicator.Animated;
 const Easing = get_ActivityIndicator.Easing;
+let closure_8 = Animated.createAnimatedComponent(_isNativeReflectConstructDefault);
 class AnimatedCircularProgress {
   constructor(arg0) {
     self = this;
     closure_0 = global;
-    tmp = _isNativeReflectConstruct(this, closure_0);
+    tmp = closure_2(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(closure_0);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(closure_0);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -60,7 +63,7 @@ class AnimatedCircularProgress {
     return tmp3Result;
   }
 }
-importDefaultResult1(AnimatedCircularProgress, require("noop").PureComponent);
+importDefaultResult1(AnimatedCircularProgress, noopDefault.PureComponent);
 let obj = {
   key: "componentDidMount",
   value: function componentDidMount() {
@@ -82,13 +85,13 @@ let items = [
     key: "reAnimate",
     value: function reAnimate(arg0, arg1, arg2, arg3) {
       const self = this;
-      let _objectWithoutProperties = arg1;
-      let _classCallCheck = arg2;
-      let closure_0 = arg3;
+      closure_1 = arg1;
+      closure_2 = arg2;
+      closure_0 = arg3;
       const obj = { fillAnimation: null };
       const value = new Animated.Value(arg0);
       obj[0] = value;
-      this.setState(obj, () => self.animate(_objectWithoutProperties, _classCallCheck, closure_0));
+      this.setState(obj, () => self.animate(closure_1, closure_2, closure_0));
     }
   },
   {
@@ -132,27 +135,25 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let fill;
-      let prefill;
       const props = this.props;
       ({ fill, prefill } = props);
       const obj = {};
       const merged = Object.assign(callback(props, AnimatedCircularProgress));
       obj.fill = this.state.fillAnimation;
       obj.tintColor = this.animateColor();
-      return <_isNativeReflectConstruct />;
+      return <closure_8 />;
     }
   }
 ];
 const importDefaultResultResult = importDefaultResult(AnimatedCircularProgress, items);
 obj = {};
-let merged = Object.assign(require("_isNativeReflectConstruct").propTypes);
-obj.prefill = require("emptyFunction").number;
-obj.duration = require("emptyFunction").number;
-obj.easing = require("emptyFunction").func;
-obj.onAnimationComplete = require("emptyFunction").func;
-obj.useNativeDriver = require("emptyFunction").bool;
-obj.delay = require("emptyFunction").number;
+let merged = Object.assign(_isNativeReflectConstructDefault.propTypes);
+obj.prefill = emptyFunctionDefault.number;
+obj.duration = emptyFunctionDefault.number;
+obj.easing = emptyFunctionDefault.func;
+obj.onAnimationComplete = emptyFunctionDefault.func;
+obj.useNativeDriver = emptyFunctionDefault.bool;
+obj.delay = emptyFunctionDefault.number;
 importDefaultResultResult.propTypes = obj;
 obj = { duration: 500, easing: Easing.out(Easing.ease), prefill: 0, useNativeDriver: false, delay: 0 };
 importDefaultResultResult.defaultProps = obj;

@@ -1,6 +1,7 @@
 // _runtime/01821_ReducedMotionConfig.js
-import { useEffect } from "noop";
+import noop from "noop" /* 19 */;
 
+const useEffect = noop.useEffect;
 
 export const ReducedMotionConfig = function ReducedMotionConfig(mode) {
   mode = mode.mode;
@@ -9,8 +10,8 @@ export const ReducedMotionConfig = function ReducedMotionConfig(mode) {
   }, []);
   const items = [mode];
   useEffect(() => {
-    const jsValue = mode(outer1_1[2]).ReducedMotionManager.jsValue;
-    if (mode(outer1_1[3]).ReduceMotion.System === jsValue) {
+    const jsValue = mode(closure_1_1[2]).ReducedMotionManager.jsValue;
+    if (mode(closure_1_1[3]).ReduceMotion.System === jsValue) {
       const ReducedMotionManager3 = tmp(tmp2[2]).ReducedMotionManager;
       ReducedMotionManager3.setEnabled(tmp(tmp2[2]).isReducedMotionEnabledInSystem());
       const tmpResult = tmp(tmp2[2]);
@@ -22,7 +23,7 @@ export const ReducedMotionConfig = function ReducedMotionConfig(mode) {
       ReducedMotionManager.setEnabled(false);
     }
     return () => {
-      const ReducedMotionManager = jsValue(outer1_1[2]).ReducedMotionManager;
+      const ReducedMotionManager = jsValue(closure_1_1[2]).ReducedMotionManager;
       ReducedMotionManager.setEnabled(jsValue);
     };
   }, items);

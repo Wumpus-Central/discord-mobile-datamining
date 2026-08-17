@@ -1,7 +1,8 @@
 // _runtime/07837_addToMetricsAggregator.js
-import { addToMetricsAggregator } from "07834_addToMetricsAggregator.js";
-import { MetricsAggregator } from "07838_MetricsAggregator.js";
-const require = arg1;
+import addToMetricsAggregator from "addToMetricsAggregator" /* 7834 */;
+import MetricsAggregator from "MetricsAggregator" /* 7838 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.metricsDefault = {
   increment(arg0) {

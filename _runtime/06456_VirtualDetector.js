@@ -1,19 +1,12 @@
 // _runtime/06456_VirtualDetector.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import closure_2 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ useCallback: c3, useEffect: c4, useMemo: c5, useRef: closure_6, useState: error } = noop);
-({ findNodeHandle: metroImportAll, Platform } = get_ActivityIndicator);
+({ findNodeHandle: closure_8, Platform } = get_ActivityIndicator);
 
 export const VirtualDetector = function VirtualDetector(children) {
   const _require = children;
@@ -53,7 +46,7 @@ export const VirtualDetector = function VirtualDetector(children) {
       if (-1 !== first) {
         if (obj.gesture.config.dispatchesAnimatedEvents) {
           const _Error = Error;
-          const error = new Error(children(register[5]).tagMessage("VirtualGestureDetector cannot handle Animated events with native driver when used inside InterceptingGestureDetector. Use Reanimated or Animated events without native driver instead."));
+          error = new Error(children(register[5]).tagMessage("VirtualGestureDetector cannot handle Animated events with native driver when used inside InterceptingGestureDetector. Use Reanimated or Animated events without native driver instead."));
           throw error;
         } else {
           if (tmp2.gesture.config.shouldUseReanimatedDetector) {
@@ -66,7 +59,7 @@ export const VirtualDetector = function VirtualDetector(children) {
           ({ userSelect: obj[4], touchAction: obj[5], enableContextMenu: obj[6] } = tmp2);
           register(obj);
           return () => {
-            outer1_2(obj);
+            closure_1_2(obj);
           };
         }
       }
@@ -74,7 +67,7 @@ export const VirtualDetector = function VirtualDetector(children) {
     const tmp17 = setMode((current) => {
       closure_4.current = current;
       if (current) {
-        let num2 = outer1_8(current);
+        let num2 = closure_1_8(current);
         if (num2 == null) {
           num2 = -1;
         }
@@ -91,7 +84,7 @@ export const VirtualDetector = function VirtualDetector(children) {
     return jsx(tmp(tmp2[10]).Wrap, { ref: null, children: null });
   } else {
     let _Error = Error;
-    let error = new Error(tmp(tmp2[5]).tagMessage("VirtualGestureDetector must be a descendant of an InterceptingGestureDetector"));
+    error = new Error(tmp(tmp2[5]).tagMessage("VirtualGestureDetector must be a descendant of an InterceptingGestureDetector"));
     throw error;
   }
 };

@@ -6,10 +6,6 @@ let closure_3 = { code: "function pnpm_useCommonVariablesTs2({shouldComputed:sho
 let closure_4 = { code: "function pnpm_useCommonVariablesTs3(){const{prevSize,size}=this.__closure;const previousSize=prevSize.value;const isSizeChanged=previousSize!==size;const shouldComputed=isSizeChanged;if(shouldComputed)prevSize.value=size;return{shouldComputed:shouldComputed,previousSize:previousSize,size:size};}" };
 let closure_5 = { code: "function pnpm_useCommonVariablesTs4({shouldComputed:shouldComputed,previousSize:previousSize,size:size}){const{handlerOffset,computeOffsetIfSizeChanged}=this.__closure;if(shouldComputed){handlerOffset.value=computeOffsetIfSizeChanged({handlerOffset:handlerOffset.value,prevSize:previousSize,size:size});}}" };
 arg5.useCommonVariables = function useCommonVariables(initProps) {
-  let dataLength;
-  let defaultScrollOffsetValue;
-  let loop;
-  let width;
   ({ width, dataLength } = initProps);
   ({ defaultScrollOffsetValue, loop } = initProps);
   if (initProps.vertical) {

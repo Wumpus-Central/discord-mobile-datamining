@@ -1,15 +1,9 @@
 // _runtime/06337_Animated.js
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import closure_2 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let Fragment;
-let Platform;
-let Pressable;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 let c3 = importAllResult;
 const Animated = get_ActivityIndicator.Animated;
@@ -18,16 +12,8 @@ const Animated = get_ActivityIndicator.Animated;
 let closure_8 = Animated.createAnimatedComponent(Pressable);
 let closure_9 = Platform.Version >= 21;
 const forwardRefResult = importAllResult.forwardRef(function PlatformPressableInternal(disabled) {
-  let android_ripple;
-  let children;
-  let _slicedToArray;
-  let closure_3;
-  let dependencyMap;
-  let pressColor;
-  let pressOpacity;
-  let style;
   disabled = disabled.disabled;
-  ({ onPress: dependencyMap, onPressIn: _slicedToArray, onPressOut: closure_3, android_ripple, pressColor, pressOpacity } = disabled);
+  ({ onPress: dependencyMap, onPressIn: closure_2, onPressOut: closure_3, android_ripple, pressColor, pressOpacity } = disabled);
   if (pressOpacity === undefined) {
     pressOpacity = 0.3;
   }
@@ -37,7 +23,7 @@ const forwardRefResult = importAllResult.forwardRef(function PlatformPressableIn
   const callback2 = arg1;
   let first;
   let animateTo;
-  let closure_9;
+  closure_9 = undefined;
   let obj = disabled(1501);
   first = callback(importAllResult.useState(() => {
     const value = new pressOpacity.Value(1);
@@ -99,7 +85,7 @@ const forwardRefResult = importAllResult.forwardRef(function PlatformPressableIn
         pressOpacity.timing(first, obj).start();
         const timingResult = pressOpacity.timing(first, obj);
       }
-      if (_slicedToArray != null) {
+      if (closure_2 != null) {
         tmp6(arg0);
       }
     };
@@ -152,7 +138,7 @@ const forwardRefResult = importAllResult.forwardRef(function PlatformPressableIn
   const merged2 = Object.assign(merged);
   let tmp13 = null;
   if (!disabled) {
-    const obj1 = {};
+    obj1 = {};
     const merged3 = Object.assign(hoverEffect);
     tmp13 = callback2(f37577, obj1);
   }
@@ -163,9 +149,6 @@ const forwardRefResult = importAllResult.forwardRef(function PlatformPressableIn
 forwardRefResult.displayName = "PlatformPressable";
 String.raw(HermesBuiltin.getTemplateObject(true, "\n  .", " {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-radius: inherit;\n    background-color: var(--overlay-color);\n    opacity: 0;\n    transition: opacity 0.15s;\n    pointer-events: none;\n  }\n\n  a:hover > .", ", button:hover > .", " {\n    opacity: var(--overlay-hover-opacity);\n  }\n\n  a:active > .", ", button:active > .", " {\n    opacity: var(--overlay-active-opacity);\n  }\n"), "__react-navigation_elements_Pressable_hover", "__react-navigation_elements_Pressable_hover", "__react-navigation_elements_Pressable_hover", "__react-navigation_elements_Pressable_hover", "__react-navigation_elements_Pressable_hover");
 const f37577 = (arg0) => {
-  let activeOpacity;
-  let color;
-  let hoverOpacity;
   ({ color, hoverOpacity, activeOpacity } = arg0);
   return null;
 };

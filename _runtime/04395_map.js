@@ -1,18 +1,22 @@
 // _runtime/04395_map.js
-import callBind from "callBind";
-import defineProperty from "defineProperty";
-import { RequireObjectCoercible } from "04400_RequireObjectCoercible.js";
+import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import getPolyfill from "getPolyfill" /* 4396 */;
+import map2 from "map" /* 4398 */;
+import RequireObjectCoercible from "RequireObjectCoercible" /* 4400 */;
+import shimArrayPrototypeMap from "shimArrayPrototypeMap" /* 4461 */;
+import callBind from "callBind" /* 1422 */;
+import defineProperty from "defineProperty" /* 4415 */;
 
-let closure_2 = callBind.apply(require("getPolyfill")());
-let closure_3 = require("callBoundIntrinsic")("Array.prototype.slice");
+let closure_2 = callBind.apply(getPolyfill());
+let closure_3 = callBoundIntrinsic("Array.prototype.slice");
 function map(arg0, arg1) {
   RequireObjectCoercible(arg0);
   return callback(arg0, callback2(arguments, 1));
 }
 const obj = { getPolyfill: null, implementation: null, shim: null };
-obj[0] = require("getPolyfill");
-obj[1] = require("map");
-obj[2] = require("shimArrayPrototypeMap");
+obj[0] = getPolyfill;
+obj[1] = map2;
+obj[2] = shimArrayPrototypeMap;
 defineProperty(map, obj);
 
 export default map;

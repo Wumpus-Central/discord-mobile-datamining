@@ -1,7 +1,8 @@
 // _runtime/metro/00237__.js
-import { 00038__ } from "00038__.js";
+import _mod38 from "module_38" /* 38 */;
+
 const global = arg0;
-const require = arg1;
+require = arg1;
 const dependencyMap = arg6;
 let closure_3 = { log: "log", info: "info", warn: "warn", error: "error", fatal: "error" };
 let c4 = null;
@@ -28,13 +29,13 @@ const obj = {
   },
   logToConsole(arg0) {
     const substr = [...arguments].slice();
-    const tmp3 = 00038__;
+    const tmp3 = _mod38;
     tmp3(table[arg0], `${`Level "${arg0}`}" not one of ${Object.keys(table).toString()}`);
     const items = [...substr];
     console[table[arg0]].apply(items);
   },
   setWarningHandler(arg0) {
-    let closure_4 = arg0;
+    closure_4 = arg0;
   }
 };
 arg5.default = obj;

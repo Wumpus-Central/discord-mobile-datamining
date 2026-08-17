@@ -1,12 +1,14 @@
 // _runtime/metro/00339__.js
-import "noop";
-import { jsx } from "jsxProd";
-import { useWindowDimensions } from "../00340_useWindowDimensions.js";
+import noopAll from "noop" /* 19 */;
+import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 340 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-require("get hairlineWidth").create({ container: { position: "absolute" }, safeAreaView: { flex: 1 } });
+noopAll;
+get_hairlineWidthDefault.create({ container: { position: "absolute" }, safeAreaView: { flex: 1 } });
 
 export default function _default(arg0) {
-  const width = useWindowDimensions().width;
+  const width = useWindowDimensionsDefault().width;
   console.warn("<InputAccessoryView> is only supported on iOS.");
   return null;
 };

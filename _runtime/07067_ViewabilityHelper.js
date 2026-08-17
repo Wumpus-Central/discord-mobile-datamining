@@ -1,11 +1,11 @@
 // _runtime/07067_ViewabilityHelper.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import _createClassDefault from "_createClass" /* 7051 */;
+import closure_2 from "_classCallCheck" /* 7050 */;
 
 const ViewabilityHelper = arg1;
 class ViewabilityHelper {
   constructor(arg0, arg1) {
-    tmp = outer1_2(this, ViewabilityHelper);
+    tmp = closure_2(this, ViewabilityHelper);
     this.possiblyViewableIndices = [];
     this.hasInteracted = false;
     this.viewableIndices = [];
@@ -30,11 +30,11 @@ const items = [
     value: function updateViewableItems(arg0, arg1, arg2, arg3, arg4, possiblyViewableIndices) {
       let self = this;
       self = this;
-      const dependencyMap = arg0;
-      let _classCallCheck = arg1;
-      let closure_3 = arg2;
-      let closure_4 = arg3;
-      let closure_5 = arg4;
+      dependencyMap = arg0;
+      closure_2 = arg1;
+      closure_3 = arg2;
+      closure_4 = arg3;
+      closure_5 = arg4;
       if (undefined !== possiblyViewableIndices) {
         self.possiblyViewableIndices = possiblyViewableIndices;
       }
@@ -63,7 +63,7 @@ const items = [
             }
             if (undefined !== prop3) {
               const _Error = Error;
-              const error = new Error(timerId(7038).ErrorMessages.multipleViewabilityThresholdTypesNotSupported);
+              error = new Error(timerId(7038).ErrorMessages.multipleViewabilityThresholdTypesNotSupported);
               throw error;
             }
           }
@@ -87,7 +87,7 @@ const items = [
           if (viewabilityConfig2 != null) {
             prop1 = viewabilityConfig2.itemVisiblePercentThreshold;
           }
-          return self.isItemViewable(arg0, closure_1, _classCallCheck, closure_3, closure_4, prop, prop1, closure_5);
+          return self.isItemViewable(arg0, closure_1, closure_2, closure_3, closure_4, prop, prop1, closure_5);
         });
         self.viewableIndices = found;
         const viewabilityConfig6 = self.viewabilityConfig;
@@ -179,4 +179,4 @@ const items = [
   }
 ];
 
-export default _createClass(ViewabilityHelper, items);
+export default _createClassDefault(ViewabilityHelper, items);

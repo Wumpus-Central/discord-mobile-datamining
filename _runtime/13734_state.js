@@ -1,13 +1,16 @@
 // _runtime/13734_state.js
-import { state } from "__core-js_shared__";
-import { call } from "13696_call.js";
-import { 13673__ } from "metro/13673__.js";
+import _mod13673 from "module_13673" /* 13673 */;
+import __core_js_shared__ from "__core-js_shared__" /* 13689 */;
+import call from "call" /* 13696 */;
+import _mod13718 from "module_13718" /* 13718 */;
+import all from "all" /* 13735 */;
+import __core_js_shared__2 from "__core-js_shared__" /* 13736 */;
 
-if (!require("all")) {
-  if (!require("__core-js_shared__").state) {
-    const tmp = require("__core-js_shared__")("state");
+if (!all) {
+  if (!__core_js_shared__.state) {
+    const tmp = __core_js_shared__2("state");
     let closure_6 = tmp;
-    require("module_13718")[tmp] = true;
+    _mod13718[tmp] = true;
     let fn = function t(facade) {
       if (call(facade, closure_6)) {
         const typeError = new tmp(13673).TypeError("Object already initialized");
@@ -42,30 +45,31 @@ if (!require("all")) {
     return tmp2;
   };
   obj[4] = function getterFor(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return (arg0) => {
-      if (callback(outer1_1[0])(arg0)) {
-        const tmp4 = outer1_3(arg0);
+      if (callback(closure_1_1[0])(arg0)) {
+        const tmp4 = closure_1_3(arg0);
         if (tmp4.type === callback) {
           return tmp4;
         }
       }
-      const typeError = new callback(outer1_1[1]).TypeError("Incompatible receiver, " + callback + " required");
+      const typeError = new callback(closure_1_1[1]).TypeError("Incompatible receiver, " + callback + " required");
       throw typeError;
     };
   };
   module.exports = obj;
 }
+let state = __core_js_shared__.state;
 if (!state) {
-  const _module = require("__core-js_shared__");
-  const weakMap = new require("module_13673").WeakMap();
+  const _module = __core_js_shared__;
+  const weakMap = new _mod13673.WeakMap();
   _module.state = weakMap;
   state = weakMap;
 }
 ({ get: state.get, has: state.has, set: state.set } = state);
 fn4 = function t(facade) {
   if (state.has(facade)) {
-    const typeError = new 13673__.TypeError("Object already initialized");
+    const typeError = new _mod13673.TypeError("Object already initialized");
     throw typeError;
   } else {
     arg1.facade = facade;

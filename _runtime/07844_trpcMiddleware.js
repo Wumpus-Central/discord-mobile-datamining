@@ -1,25 +1,23 @@
 // _runtime/07844_trpcMiddleware.js
-import asyncGeneratorStep from "dateTimestampInSeconds";
-import "errorCallback";
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
-import consoleSandbox from "consoleSandbox";
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
-import dateTimestampInSeconds from "dateTimestampInSeconds";
-import "SyncPromise";
+import errorCallback from "errorCallback" /* 7734 */;
+import SyncPromise from "SyncPromise" /* 7762 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
+import consoleSandbox from "consoleSandbox" /* 7738 */;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 7752 */;
 
+errorCallback;
+SyncPromise;
 let closure_3 = { mechanism: { handled: false, data: { function: "trpcMiddleware" } } };
 
 export const trpcMiddleware = function trpcMiddleware() {
-  let closure_0;
-  closure_0 = asyncGeneratorStep((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+  closure_0 = undefined;
+  closure_0 = callback((arg0) => {
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
-      let c1;
-      let getRawInput;
-      let rawInput;
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -46,15 +44,15 @@ export const trpcMiddleware = function trpcMiddleware() {
               obj[0] = arg1;
               return obj;
             } else {
-              let obj1 = tmp3;
+              obj1 = tmp3;
               c1 = tmp5;
               let path;
               c1 = undefined;
               obj1 = undefined;
-              let closure_3;
+              closure_3 = undefined;
               path = path.path;
               ({ next: c1, rawInput, getRawInput } = path);
-              const client = lib(outer2_1[8]).getClient();
+              const client = lib(closure_2_1[8]).getClient();
               let options = client;
               if (client) {
                 options = client.getOptions();
@@ -72,12 +70,12 @@ export const trpcMiddleware = function trpcMiddleware() {
               }
               if (sendDefaultPii) {
                 if (undefined !== rawInput) {
-                  let obj3 = lib(outer2_1[9]);
+                  let obj3 = lib(closure_2_1[9]);
                   obj1.input = obj3.normalize(rawInput);
                 }
                 if (undefined !== getRawInput) {
                   if (typeof getRawInput === "function") {
-                    let c4 = 1;
+                    c4 = 1;
                     c5 = 2;
                     c6 = 1;
                     let obj2 = { value: null, done: false };
@@ -86,7 +84,7 @@ export const trpcMiddleware = function trpcMiddleware() {
                   }
                 }
               }
-              const obj9 = lib(outer2_1[8]);
+              const obj9 = lib(closure_2_1[8]);
             }
           } else {
             if (1 === tmp8) {
@@ -96,7 +94,7 @@ export const trpcMiddleware = function trpcMiddleware() {
               throw arg1;
             } else if (arg0 !== 2) {
               closure_3 = arg1;
-              obj = lib(outer2_1[9]);
+              obj = lib(closure_2_1[9]);
               obj1.input = obj.normalize(closure_3);
               c4 = 0;
             }
@@ -106,16 +104,16 @@ export const trpcMiddleware = function trpcMiddleware() {
             obj3[0] = arg1;
             return obj3;
           }
-          lib(outer2_1[8]).withScope((setContext) => {
+          lib(closure_2_1[8]).withScope((setContext) => {
             setContext.setContext("trpc", obj1);
             let obj = path(_undefined[10]);
-            obj = { name: "trpc/" + closure_0, op: "rpc.server", attributes: { [outer1_0(outer1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "route", [outer1_0(outer1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.rpc.trpc" } };
+            obj = { name: "trpc/" + closure_0, op: "rpc.server", attributes: { [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "route", [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.rpc.trpc" } };
             closure_0 = undefined;
             closure_0 = obj1((arg0) => {
-              let closure_0 = arg0;
-              let c5 = 0;
-              let c6 = 0;
-              let c4 = 0;
+              closure_0 = arg0;
+              c5 = 0;
+              c6 = 0;
+              c4 = 0;
               return (/* F120969 */ function*() { ... })();
             });
             return obj.startSpanManual(obj, function(arg0) {
@@ -130,7 +128,7 @@ export const trpcMiddleware = function trpcMiddleware() {
             });
           });
           c6 = 3;
-          const obj5 = lib(outer2_1[8]);
+          const obj5 = lib(closure_2_1[8]);
         } catch (tmp24) {
           closure_3 = tmp24;
           if (tmp4 === c4) {

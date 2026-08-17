@@ -1,14 +1,13 @@
 // _runtime/01095_registerBackgroundTabDetection.js
-import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
-const require = arg1;
+import ignoreNextOnError from "ignoreNextOnError" /* 1028 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.registerBackgroundTabDetection = function registerBackgroundTabDetection() {
   if (ignoreNextOnError.WINDOW.document) {
     const _document = tmp(1028).WINDOW.document;
     const listener = _document.addEventListener("visibilitychange", () => {
-      let op;
-      let status;
       let obj = callback(table[1]);
       const activeSpan = obj.getActiveSpan();
       if (activeSpan) {

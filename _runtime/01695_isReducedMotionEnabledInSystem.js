@@ -1,10 +1,9 @@
 // _runtime/01695_isReducedMotionEnabledInSystem.js
-import isJest from "isJest";
-import addCompilerSafeGetAndSet from "addCompilerSafeGetAndSet";
-import { isJest } from "01657_isJest.js";
+import isJest from "isJest" /* 1657 */;
+import addCompilerSafeGetAndSet from "addCompilerSafeGetAndSet" /* 1691 */;
 
 if (isJest.isWeb()) {
-  const _module1 = require("isJest");
+  const _module1 = isJest;
   let matches = _module1.isWindowAvailable();
   if (matches) {
     let _window = window;

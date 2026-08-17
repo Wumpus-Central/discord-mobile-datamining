@@ -1,16 +1,17 @@
 // _runtime/07292_getMatchRanking.js
-import _extends from "_extends";
+import regExp from "regExp" /* 7294 */;
+import _extends from "_extends" /* 7293 */;
 
 function getMatchRanking(arg0, arg1, keepDiacritics) {
   const text = `${arg0}`;
   let defaultResult = text;
   if (!keepDiacritics.keepDiacritics) {
-    defaultResult = tmp4.default(`${arg0}`);
+    defaultResult = _module1.default(`${arg0}`);
   }
   const text1 = `${arg1}`;
   let defaultResult1 = text1;
   if (!keepDiacritics.keepDiacritics) {
-    defaultResult1 = tmp4.default(`${arg1}`);
+    defaultResult1 = _module1.default(`${arg1}`);
   }
   if (defaultResult1.length > defaultResult.length) {
     let NO_MATCH = obj.NO_MATCH;
@@ -103,15 +104,13 @@ if (_extends) {
   if (typeof _extends === "object") {
     let obj = _extends;
   }
-  const _module1 = require("regExp");
+  let _module1 = regExp;
   if (_module1) {
     if (typeof _module1 === "object") {
       let tmp4 = _module1;
     }
     function matchSorter(valueResult, query, arg2) {
-      let obj;
-      let threshold;
-      let closure_0 = query;
+      closure_0 = query;
       let tmp = arg2;
       obj = arg2;
       if (undefined === arg2) {
@@ -129,10 +128,6 @@ if (_extends) {
       let fn = tmp.sorter;
       if (undefined === fn) {
         fn = (arr) => arr.sort((arg0, arg1) => {
-          let keyIndex;
-          let keyIndex2;
-          let rank;
-          let rank2;
           ({ rank, keyIndex } = arg0);
           ({ rank: rank2, keyIndex: keyIndex2 } = arg1);
           if (rank === rank2) {
@@ -164,11 +159,11 @@ if (_extends) {
               let tmp6 = arr[num4];
               let tmp7 = num4;
               if (typeof tmp6 === "string") {
-                let defaultResult = outer1_5;
+                let defaultResult = closure_1_5;
               } else {
                 let tmp27 = query;
-                let tmp28 = outer1_5;
-                defaultResult = query.default({}, outer1_5, tmp6);
+                let tmp28 = closure_1_5;
+                defaultResult = query.default({}, closure_1_5, tmp6);
               }
               str3 = tmp6;
               if (typeof tmp6 === "object") {
@@ -243,7 +238,7 @@ if (_extends) {
                       }
                       let length4 = applyResult.length;
                       for (let num7 = 0; num7 < length4; num7 = num7 + 1) {
-                        let obj = { itemValue: null, attributes: null };
+                        obj = { itemValue: null, attributes: null };
                         obj[0] = applyResult[num7];
                         obj[1] = defaultResult;
                         arr = items.push(obj);
@@ -270,21 +265,12 @@ if (_extends) {
           }
           obj = { rankedValue: null, rank: null, keyIndex: -1, keyThreshold: null };
           obj[0] = arg1;
-          obj[1] = outer1_2.NO_MATCH;
+          obj[1] = closure_1_2.NO_MATCH;
           obj[3] = tmp2.threshold;
           let reduced = items.reduce((arg0, arg1, arg2) => {
-            let attributes;
-            let itemValue;
-            let keyIndex;
-            let keyThreshold;
-            let maxRanking;
-            let minRanking;
-            let rank;
-            let rankedValue;
-            let threshold;
             ({ rank, rankedValue, keyIndex, keyThreshold } = arg0);
             ({ itemValue, attributes } = arg1);
-            const tmp = outer1_4(itemValue, closure_0, closure_1);
+            const tmp = closure_1_4(itemValue, closure_0, closure_1);
             ({ minRanking, maxRanking, threshold } = attributes);
             if (tmp >= minRanking) {
               minRanking = tmp;
@@ -311,7 +297,7 @@ if (_extends) {
           keyThreshold = threshold;
         }
         if (reduced.rank >= keyThreshold) {
-          const obj1 = { item: null, index: null };
+          obj1 = { item: null, index: null };
           obj1[0] = arg1;
           obj1[1] = arg2;
           arr.push(query.default({}, reduced, obj1));
@@ -319,7 +305,7 @@ if (_extends) {
         return arr;
       }, [])).map((item) => item.item);
     }
-    let closure_1 = tmp4;
+    _module1 = tmp4;
     obj = { CASE_SENSITIVE_EQUAL: 7, EQUAL: 6, STARTS_WITH: 5, WORD_STARTS_WITH: 4, CONTAINS: 3, ACRONYM: 2, MATCHES: 1, NO_MATCH: 0 };
     matchSorter.rankings = obj;
     function defaultBaseSortFn(rankedValue, rankedValue2) {

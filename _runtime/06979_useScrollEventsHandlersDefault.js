@@ -13,8 +13,8 @@ let closure_6 = { code: "function pnpm_useScrollEventsHandlersDefaultTs5({conten
 let closure_7 = { code: "function pnpm_useScrollEventsHandlersDefaultTs6({contentOffset:{y:y}},context){const{animatedScrollableState,SCROLLABLE_STATE,isLockingScroll,scrollTo,scrollableRef,scrollableContentOffsetY,_lockableScrollableContentOffsetY,animatedAnimationState,ANIMATION_STATE,rootScrollableContentOffsetY}=this.__closure;if(animatedScrollableState.value===SCROLLABLE_STATE.LOCKED){var _context$initialConte;if(isLockingScroll.value){return;}const lockPosition=context.shouldLockInitialPosition?(_context$initialConte=context.initialContentOffsetY)!==null&&_context$initialConte!==void 0?_context$initialConte:0:0;isLockingScroll.value=true;scrollTo(scrollableRef,0,lockPosition,false);isLockingScroll.value=false;scrollableContentOffsetY.value=0;_lockableScrollableContentOffsetY.value=0;return;}if(animatedAnimationState.value!==ANIMATION_STATE.RUNNING){scrollableContentOffsetY.value=y;_lockableScrollableContentOffsetY.value=y;rootScrollableContentOffsetY.value=y;}}" };
 arg5.useScrollEventsHandlersDefault = (scrollableRef, scrollableContentOffsetY, lockableScrollableContentOffsetY) => {
   const _require = scrollableRef;
-  const dependencyMap = scrollableContentOffsetY;
-  let closure_2 = lockableScrollableContentOffsetY;
+  dependencyMap = scrollableContentOffsetY;
+  closure_2 = lockableScrollableContentOffsetY;
   let obj = _useBottomSheetInternal;
   const bottomSheetInternal = obj.useBottomSheetInternal();
   const animatedSheetState = bottomSheetInternal.animatedSheetState;
@@ -22,7 +22,7 @@ arg5.useScrollEventsHandlersDefault = (scrollableRef, scrollableContentOffsetY, 
   const animatedAnimationState = bottomSheetInternal.animatedAnimationState;
   const animatedHandleGestureState = bottomSheetInternal.animatedHandleGestureState;
   const animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
-  let obj1 = _cancelAnimation;
+  obj1 = _cancelAnimation;
   const sharedValue = obj1.useSharedValue(0);
   let obj2 = _cancelAnimation;
   const sharedValue1 = obj2.useSharedValue(false);

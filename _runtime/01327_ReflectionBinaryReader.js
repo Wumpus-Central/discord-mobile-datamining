@@ -1,12 +1,12 @@
 // _runtime/01327_ReflectionBinaryReader.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const ReflectionBinaryReader = require;
 class ReflectionBinaryReader {
   constructor(arg0) {
-    tmp = outer1_3(this, ReflectionBinaryReader);
+    tmp = closure_3(this, ReflectionBinaryReader);
     this.info = global;
     return;
   }
@@ -33,11 +33,6 @@ let items = [
   {
     key: "read",
     value: function read(len, arg1, readUnknownField) {
-      let localName;
-      let oneof;
-      let repeat;
-      let tmp4;
-      let tmp5;
       const self = this;
       this.prepare();
       if (undefined === arg3) {
@@ -47,8 +42,8 @@ let items = [
       }
       if (len.pos < len) {
         while (true) {
-          let tmp2 = _slicedToArray;
-          let tmp3 = _slicedToArray(len.tag(), 2);
+          let tmp2 = callback;
+          let tmp3 = callback(len.tag(), 2);
           [tmp4, tmp5] = tmp3;
           let fieldNoToField = self.fieldNoToField;
           let value = fieldNoToField.get(tmp4);
@@ -141,7 +136,7 @@ let items = [
         }
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const error = new Error("Unknown field " + tmp4 + " (wire type " + tmp5 + ") for " + self.info.typeName);
+        error = new Error("Unknown field " + tmp4 + " (wire type " + tmp5 + ") for " + self.info.typeName);
         throw error;
       }
     }
@@ -149,14 +144,12 @@ let items = [
   {
     key: "mapEntry",
     value: function mapEntry(V, pos) {
-      let tmp8;
-      let tmp9;
       const self = this;
       const sum = pos.pos + pos.uint32();
       let tmp4;
       let tmp5;
       if (pos.pos < sum) {
-        [tmp8, tmp9] = _slicedToArray(pos.tag(), 2);
+        [tmp8, tmp9] = callback(pos.tag(), 2);
         while (1 !== tmp8) {
           if (2 === tmp8) {
             let kind = V.V.kind;
@@ -192,7 +185,7 @@ let items = [
             let tmp14 = tmp9;
             let tmp15 = new.target;
             let tmp16 = new.target;
-            let error = new Error("Unknown field " + tmp8 + " (wire type " + tmp9 + ") in map entry for " + self.info.typeName + "#" + V.name);
+            error = new Error("Unknown field " + tmp8 + " (wire type " + tmp9 + ") in map entry for " + self.info.typeName + "#" + V.name);
             let tmp18 = error;
             throw error;
           }
@@ -204,7 +197,7 @@ let items = [
           str = self.scalar(pos, V.K, tmp21(1320).LongType.STRING);
         }
         tmp21 = ReflectionBinaryReader;
-        const tmp7 = _slicedToArray(pos.tag(), 2);
+        const tmp7 = callback(pos.tag(), 2);
       }
       if (undefined === tmp5) {
         const str6 = ReflectionBinaryReader(1328).reflectionScalarDefault(V.K);

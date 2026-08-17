@@ -1,11 +1,11 @@
 // _runtime/01699_controlEdgeToEdgeValues.js
-import get_ActivityIndicator from "get ActivityIndicator";
+import closure_0 from "get ActivityIndicator" /* 17 */;
 
 
 export (arg0) => {
 
 }
 export const isEdgeToEdge = () => {
-  const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+  TurboModuleRegistry = TurboModuleRegistry.TurboModuleRegistry;
   return null != TurboModuleRegistry.get("RNEdgeToEdge");
 };

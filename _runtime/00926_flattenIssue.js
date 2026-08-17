@@ -1,6 +1,6 @@
 // _runtime/00926_flattenIssue.js
-import setupIntegration from "setupIntegration";
-import { isMatchingPattern } from "00832_isMatchingPattern.js";
+import isMatchingPattern from "isMatchingPattern" /* 832 */;
+import setupIntegration from "setupIntegration" /* 887 */;
 
 function flattenIssue(path) {
   const obj = {};
@@ -121,7 +121,7 @@ function applyZodErrorsToEvent(arg0, arg1, exception, originalException) {
             }
             obj = {};
             const merged = Object.assign(exception);
-            const obj1 = {};
+            obj1 = {};
             const merged1 = Object.assign(exception.exception);
             const obj2 = {};
             const merged2 = Object.assign(exception.exception.values[0]);
@@ -178,7 +178,7 @@ export const zodErrorsIntegration = setupIntegration.defineIntegration(() => {
   obj = {
     name: "ZodErrors",
     processEvent(arg0, arg1) {
-      return outer1_5(num, obj.saveZodIssuesAsAttachment, arg0, arg1);
+      return closure_1_5(num, obj.saveZodIssuesAsAttachment, arg0, arg1);
     }
   };
   return obj;

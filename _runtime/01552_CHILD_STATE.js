@@ -1,25 +1,25 @@
 // _runtime/01552_CHILD_STATE.js
-import "_slicedToArray";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
+import _slicedToArrayDefault from "_slicedToArray" /* 32 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "noop" /* 19 */;
 
 const require = arg1;
 let closure_2 = ["state"];
+_slicedToArrayDefault;
 const SymbolResult = Symbol("CHILD_STATE");
 let c5 = SymbolResult;
 
 export const CHILD_STATE = SymbolResult;
 export const useRouteCache = function useRouteCache(routes) {
-  let closure_0 = React.useMemo(() => {
-    const obj = { current: null };
-    obj[0] = new Map();
+  closure_0 = React.useMemo(() => {
+    const obj = { current: new Map() };
     return obj;
   }, []);
   const reduced = routes.reduce((set, key) => {
     const current = ref.current;
     const value = current.get(key.key);
     const state = key.state;
-    const tmp2 = outer1_3(key, outer1_2);
+    const tmp2 = closure_1_3(key, closure_1_2);
     let tmp3 = tmp2;
     if (value) {
       let obj = ref(reduced[3]);
@@ -28,7 +28,7 @@ export const useRouteCache = function useRouteCache(routes) {
         tmp3 = value;
       }
     }
-    if (tmp3[outer1_5] !== state) {
+    if (tmp3[closure_1_5] !== state) {
       const _Object = Object;
       obj = { enumerable: false, configurable: true, value: null };
       obj[2] = state;

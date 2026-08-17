@@ -1,12 +1,12 @@
 // _runtime/00132_dispatch.js
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import setPlatformObject from "setPlatformObject";
-import { Event } from "00133_Event.js";
-import { SymbolResult1 } from "00134_SymbolResult1.js";
+import EventDefault from "Event" /* 133 */;
+import SymbolResult1 from "SymbolResult1" /* 134 */;
+import closure_5 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import setPlatformObject from "setPlatformObject" /* 126 */;
 
 const EventTarget = global;
-const require = arg1;
+require = arg1;
 function dispatch(self, bubbles) {
   setEventDispatchFlag(bubbles, true);
   let arr = (function getEventPath(self) {
@@ -43,12 +43,12 @@ function dispatch(self, bubbles) {
           let tmp18 = importDefault;
           let tmp16 = importDefault;
           let tmp19 = tmp12;
-          let CAPTURING_PHASE = Event.AT_TARGET;
+          let CAPTURING_PHASE = EventDefault.AT_TARGET;
         } else {
           let tmp15 = importDefault;
           tmp16 = importDefault;
           let tmp17 = tmp12;
-          CAPTURING_PHASE = Event.CAPTURING_PHASE;
+          CAPTURING_PHASE = EventDefault.CAPTURING_PHASE;
         }
         let setEventPhaseResult = obj3.setEventPhase(bubbles, CAPTURING_PHASE);
         let tmp21 = invoke;
@@ -69,7 +69,7 @@ function dispatch(self, bubbles) {
         }
       }
     }
-    tmp3Result = tmp3(134);
+    tmp3Result = SymbolResult1;
   }
   for (const item10062 of arr) {
     let tmp28 = item10062;
@@ -100,12 +100,12 @@ function dispatch(self, bubbles) {
         let tmp41 = importDefault;
         let tmp39 = importDefault;
         let tmp42 = tmp31;
-        let BUBBLING_PHASE = Event.AT_TARGET;
+        let BUBBLING_PHASE = EventDefault.AT_TARGET;
       } else {
         let tmp38 = importDefault;
         tmp39 = importDefault;
         let tmp40 = tmp31;
-        BUBBLING_PHASE = Event.BUBBLING_PHASE;
+        BUBBLING_PHASE = EventDefault.BUBBLING_PHASE;
       }
       let setEventPhaseResult1 = tmp30Result.setEventPhase(arg1, BUBBLING_PHASE);
       let tmp44 = invoke;
@@ -122,7 +122,7 @@ function dispatch(self, bubbles) {
     let obj8 = SymbolResult1;
     let tmp54 = importDefault;
     let tmp55 = importDefault;
-    let setEventPhaseResult2 = obj8.setEventPhase(arg1, Event.NONE);
+    let setEventPhaseResult2 = obj8.setEventPhase(arg1, EventDefault.NONE);
     let obj9 = SymbolResult1;
     let tmp57 = null;
     let setCurrentTargetResult = obj9.setCurrentTarget(arg1, null);
@@ -138,7 +138,7 @@ function dispatch(self, bubbles) {
   }
 }
 function invoke(arg0, type) {
-  const tmp3 = arg2 === Event.CAPTURING_PHASE;
+  const tmp3 = arg2 === EventDefault.CAPTURING_PHASE;
   let obj = SymbolResult1;
   obj.setCurrentTarget(type, arg0);
   if (obj2.enableNativeEventTargetEventDispatching()) {
@@ -189,20 +189,20 @@ function setEventDispatchFlag(bubbles, arg1) {
 }
 class EventTarget {
   constructor() {
-    tmp = setEventDispatchFlag(this, EventTarget);
+    tmp = closure_5(this, EventTarget);
     return;
   }
 }
 let obj = {
   key: "addEventListener",
   value: function addEventListener(arg0, fn) {
-    let closure_0 = fn;
+    closure_0 = fn;
     let obj = arg2;
     if (arg2 === undefined) {
       obj = {};
     }
     obj = undefined;
-    let c2;
+    c2 = undefined;
     if (arguments.length < 2) {
       const _TypeError3 = TypeError;
       const _HermesInternal2 = HermesInternal;
@@ -359,10 +359,10 @@ let items = [
   {
     key: "dispatchEvent",
     value: function dispatchEvent(defaultPrevented) {
-      if (defaultPrevented instanceof Event) {
+      if (defaultPrevented instanceof EventDefault) {
         if (defaultPrevented[closure_11]) {
           const _Error = Error;
-          const error = new Error("Failed to execute 'dispatchEvent' on 'EventTarget': The event is already being dispatched.");
+          error = new Error("Failed to execute 'dispatchEvent' on 'EventTarget': The event is already being dispatched.");
           throw error;
         } else {
           const self = this;
@@ -381,10 +381,11 @@ let items = [
 ,
 
 ];
-obj = { key: null, value: null };
-obj[0] = require("SymbolResult2").EVENT_TARGET_GET_DECLARATIVE_LISTENER_KEY;
-obj[1] = function value(arg0, arg1) {
-  return null;
+obj = {
+  key: require("SymbolResult2").EVENT_TARGET_GET_DECLARATIVE_LISTENER_KEY,
+  value(arg0, arg1) {
+    return null;
+  }
 };
 items[3] = obj;
 obj = {

@@ -6,8 +6,8 @@ let dependencyMap = arg6;
 let obj = {
   createGestureHandler(closure_0, handlerTag, config) {
     const _require = closure_0;
-    let closure_1 = handlerTag;
-    const dependencyMap = config;
+    closure_1 = handlerTag;
+    dependencyMap = config;
     const result = _transformIntoHandlerTags.scheduleOperationToBeFlushed(() => {
       let obj = handlerTag(table[1]);
       obj = table;
@@ -20,7 +20,7 @@ let obj = {
   setGestureHandlerConfig(handlerTag, closure_1) {
     const _require = handlerTag;
     let result = _transformIntoHandlerTags.scheduleOperationToBeFlushed(() => {
-      const result = callback(outer1_2[1]).setGestureHandlerConfig(closure_0, callback);
+      const result = callback(closure_1_2[1]).setGestureHandlerConfig(closure_0, callback);
     });
   },
   updateGestureHandlerConfig: null,
@@ -41,14 +41,14 @@ obj[2] = fn;
 obj[3] = function dropGestureHandler(handlerTag) {
   const _require = handlerTag;
   const result = _transformIntoHandlerTags.scheduleOperationToBeFlushed(() => {
-    outer1_1(outer1_2[1]).dropGestureHandler(closure_0);
+    closure_1_1(closure_1_2[1]).dropGestureHandler(closure_0);
   });
 };
 obj[4] = function configureRelations(arg0, arg1) {
   const _require = arg0;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   const result = _transformIntoHandlerTags.scheduleOperationToBeFlushed(() => {
-    callback(outer1_2[1]).configureRelations(closure_0, callback);
+    callback(closure_1_2[1]).configureRelations(closure_0, callback);
   });
 };
 obj[5] = function installUIRuntimeBindings() {

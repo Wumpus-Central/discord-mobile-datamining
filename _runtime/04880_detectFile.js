@@ -1,4 +1,7 @@
 // _runtime/04880_detectFile.js
+import detectFile from "detectFile" /* 4881 */;
+import _mod4885 from "module_4885" /* 4885 */;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -53,8 +56,8 @@ if (self2) {
     }
     const _Object3 = Object;
     const _Object4 = Object;
-    const fnResult = fn(require("detectFile"));
-    module.exports = Object.assign(Object.assign({}, fnResult), fn(require("module_4885")));
+    const fnResult = fn(detectFile);
+    module.exports = Object.assign(Object.assign({}, fnResult), fn(_mod4885));
   } else {
     const _Object2 = Object;
   }

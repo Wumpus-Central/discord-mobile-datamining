@@ -1,10 +1,11 @@
 // _runtime/04422_floor.js
-import { 00566__ } from "metro/00566__.js";
+import _mod566 from "module_566" /* 566 */;
+
 
 export default function floor(arg0) {
   let tmp = arg0;
   if (typeof arg0 !== "bigint") {
-    tmp = 00566__(arg0);
+    tmp = _mod566(arg0);
   }
   return tmp;
 };

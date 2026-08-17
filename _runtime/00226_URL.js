@@ -1,19 +1,20 @@
 // _runtime/00226_URL.js
-import URL from "_classCallCheck";
-import importDefaultResult from "_createClass";
+import BlobModuleDefault from "BlobModule" /* 201 */;
+import URL from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 let closure_1 = null;
-if (require("BlobModule")) {
+if (BlobModuleDefault) {
   if (typeof importDefaultResult1.getConstants().BLOB_URI_SCHEME === "string") {
-    const constants = require("BlobModule").getConstants();
+    const constants = BlobModuleDefault.getConstants();
     closure_1 = `${tmp4.BLOB_URI_SCHEME}:`;
     if (typeof constants.BLOB_URI_HOST === "string") {
       let _HermesInternal = HermesInternal;
       closure_1 = `${tmp4.BLOB_URI_SCHEME}:` + "//" + constants.BLOB_URI_HOST + "/";
     }
-    const importDefaultResult2 = require("BlobModule");
+    const importDefaultResult2 = BlobModuleDefault;
   }
-  importDefaultResult1 = require("BlobModule");
+  importDefaultResult1 = BlobModuleDefault;
 }
 class URL {
   constructor(arg0, arg1) {
@@ -45,7 +46,7 @@ class URL {
         if (str.endsWith("/")) {
           num = 1;
           num2 = 0;
-          substr = require("_classCallCheck");
+          substr = require("module_0");
         }
         combined = global;
         if (!global.startsWith("/")) {
@@ -256,8 +257,6 @@ const items = [
   {
     key: "toString",
     value: function toString() {
-      let _searchParamsInstance;
-      let hash;
       const self = this;
       if (null === this._searchParamsInstance) {
         return self._url;
@@ -292,7 +291,7 @@ obj = {
   value: function createObjectURL(data) {
     if (null === closure_1) {
       const _Error = Error;
-      const error = new Error("Cannot create URL for blob!");
+      error = new Error("Cannot create URL for blob!");
       throw error;
     } else {
       const _HermesInternal = HermesInternal;
@@ -311,4 +310,4 @@ const items1 = [
 ];
 
 export const URLSearchParams = require("URLSearchParams").URLSearchParams;
-export const URL = require("_createClass")(URL, items, items1);
+export const URL = importDefaultResult(URL, items, items1);

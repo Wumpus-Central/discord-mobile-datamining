@@ -1,7 +1,7 @@
 // _runtime/07783_normalize.js
-import _slicedToArray from "_slicedToArray";
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
-import { memoBuilder } from "07784_memoBuilder.js";
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+import memoBuilder from "memoBuilder" /* 7784 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 
 function normalize(arg0) {
   let num = arg1;
@@ -35,7 +35,7 @@ function visit(arg0, num) {
     memoBuilderResult = memoBuilder.memoBuilder();
     let obj = memoBuilder;
   }
-  _slicedToArray(memoBuilderResult, 2);
+  callback(memoBuilderResult, 2);
   if (null != num) {
     const items = ["boolean", "string"];
     if (!items.includes(typeof num)) {

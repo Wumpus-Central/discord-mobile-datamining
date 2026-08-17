@@ -1,10 +1,9 @@
 // _runtime/00212_binaryToBase64.js
-import { byteLength } from "00206_byteLength.js";
-const require = arg1;
+import byteLength from "byteLength" /* 206 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.default = function binaryToBase64(arg0) {
-  let byteLength;
-  let byteOffset;
   let uint8Array = arg0;
   if (arg0 instanceof ArrayBuffer) {
     const _Uint8Array = Uint8Array;
@@ -22,7 +21,7 @@ arg5.default = function binaryToBase64(arg0) {
       return byteLength.fromByteArray(uint8Array1);
     } else {
       const _Error = Error;
-      const error = new Error("data must be ArrayBuffer or typed array");
+      error = new Error("data must be ArrayBuffer or typed array");
       throw error;
     }
   }

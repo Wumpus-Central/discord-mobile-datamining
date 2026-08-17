@@ -1,6 +1,7 @@
 // _runtime/06972_n.js
-import { cancelAnimation } from "01654_cancelAnimation.js";
-const require = arg1;
+import cancelAnimation from "cancelAnimation" /* 1654 */;
+
+require = arg1;
 const dependencyMap = arg6;
 const fn = function n(arg0, arg1) {
   if ("easeIn" === arg0) {
@@ -16,7 +17,7 @@ const fn = function n(arg0, arg1) {
     obj[1] = arg1;
     return obj;
   } else if ("easeInEaseOut" === arg0) {
-    const obj1 = { easing: null, duration: null };
+    obj1 = { easing: null, duration: null };
     const Easing = cancelAnimation.Easing;
     obj1[0] = Easing.inOut(cancelAnimation.Easing.ease);
     obj1[1] = arg1;

@@ -11,7 +11,7 @@ arg5.unstable_hasComponent = function unstable_hasComponent(arg0) {
     } else {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const error = new Error("unstable_hasComponent('" + arg0 + "'): Global function is not registered");
+      error = new Error("unstable_hasComponent('" + arg0 + "'): Global function is not registered");
       throw error;
     }
     obj2 = global;

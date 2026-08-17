@@ -1,10 +1,18 @@
 // _runtime/06969_normalizeSnapPoint.js
+import n from "n" /* 6970 */;
+import n2 from "n" /* 6971 */;
+import n3 from "n" /* 6972 */;
+import print from "print" /* 6973 */;
+import o from "o" /* 6974 */;
+import isFabricInstalled from "isFabricInstalled" /* 6975 */;
+import findNodeHandle from "findNodeHandle" /* 6976 */;
 
-export const normalizeSnapPoint = require("n").normalizeSnapPoint;
-export const animate = require("n").animate;
-export const getKeyboardAnimationConfigs = require("n").getKeyboardAnimationConfigs;
-export const print = require("print").print;
-export const noop = require("o").noop;
-export const workletNoop = require("o").workletNoop;
-export const isFabricInstalled = require("isFabricInstalled").isFabricInstalled;
-export const findNodeHandle = require("findNodeHandle").findNodeHandle;
+
+export const normalizeSnapPoint = n.normalizeSnapPoint;
+export const animate = n2.animate;
+export const getKeyboardAnimationConfigs = n3.getKeyboardAnimationConfigs;
+export const print = print.print;
+export const noop = o.noop;
+export const workletNoop = o.workletNoop;
+export const isFabricInstalled = isFabricInstalled.isFabricInstalled;
+export const findNodeHandle = findNodeHandle.findNodeHandle;

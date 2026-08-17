@@ -1,12 +1,11 @@
 // _runtime/00357_set.js
-import importDefaultResult from "shouldUseTurboAnimatedModule";
-import importAllResult1 from "javaScriptFlagGetter";
-import { NativeEventEmitter } from "00209_NativeEventEmitter.js";
-import { 00038__ } from "metro/00038__.js";
+import shouldUseTurboAnimatedModuleDefault from "shouldUseTurboAnimatedModule" /* 361 */;
+import importDefaultResult from "shouldUseTurboAnimatedModule" /* 358 */;
+import importAllResult1 from "javaScriptFlagGetter" /* 27 */;
 
-let importDefault;
+let closure_0 = importDefault;
 if (importDefaultResult == null) {
-  importDefaultResult = require("shouldUseTurboAnimatedModule");
+  importDefaultResult = shouldUseTurboAnimatedModuleDefault;
 }
 let c4 = importDefaultResult;
 let c5 = 1;
@@ -21,19 +20,19 @@ if (importDefaultResult != null) {
 }
 let result = null != prop;
 if (result) {
-  result = require("javaScriptFlagGetter").animatedShouldUseSingleOp();
-  const importAllResult = require("javaScriptFlagGetter");
+  result = importAllResult1.animatedShouldUseSingleOp();
+  const importAllResult = importAllResult1;
 }
-let c11 = null;
+let closure_11 = null;
 let closure_12 = {};
 let closure_13 = {};
 let c14 = null;
 let c15 = null;
-const result1 = require("javaScriptFlagGetter").cxxNativeAnimatedEnabled();
-let result2 = require("javaScriptFlagGetter").cxxNativeAnimatedEnabled();
+const result1 = importAllResult1.cxxNativeAnimatedEnabled();
+let result2 = importAllResult1.cxxNativeAnimatedEnabled();
 if (result2) {
-  result2 = require("javaScriptFlagGetter").useSharedAnimatedBackend();
-  const importAllResult3 = require("javaScriptFlagGetter");
+  result2 = importAllResult1.useSharedAnimatedBackend();
+  const importAllResult3 = importAllResult1;
 }
 let items = ["createAnimatedNode", "updateAnimatedNodeConfig", "getValue", "startListeningToAnimatedNodeValue", "stopListeningToAnimatedNodeValue", "connectAnimatedNodes", "disconnectAnimatedNodes", "startAnimatingNode", "stopAnimation", "setAnimatedNodeValue", "setAnimatedNodeOffset", "flattenAnimatedNodeOffset", "extractAnimatedNodeOffset", "connectAnimatedNodeToView", "disconnectAnimatedNodeFromView", "restoreDefaultValues", "dropAnimatedNode", "addAnimatedEventToView", "removeAnimatedEventFromView", "addListener", "removeListener"];
 if (result2) {
@@ -45,15 +44,15 @@ if (result) {
   let num4 = 0;
   if (tmp9) {
     do {
-      importDefault = num3 + 1;
+      closure_0 = num3 + 1;
       obj[items[num3]] = () => {
         const items = [closure_0, ...HermesBuiltin.copyRestArgs()];
-        outer1_10.push.apply(items);
-        if (outer1_16) {
+        closure_10.push.apply(items);
+        if (result1) {
           const _clearImmediate = clearImmediate;
-          clearImmediate(outer1_11);
+          clearImmediate(immediate);
           const _setImmediate = setImmediate;
-          outer1_11 = setImmediate(outer1_18.flushQueue);
+          immediate = setImmediate(obj.flushQueue);
         }
       };
       num3 = num4 + 1;
@@ -66,20 +65,20 @@ if (result) {
   if (tmp9) {
     do {
       let tmp10 = items[num];
-      importDefault = tmp10;
+      closure_0 = tmp10;
       obj[tmp10] = () => {
         const items = [...arguments];
-        let c1;
-        const tmp = outer1_0(outer1_2[3])(outer1_4)[items];
-        c1 = tmp;
-        if (!outer1_8) {
-          if (0 === outer1_9.length) {
-            if (outer1_16) {
-              outer1_9.push(() => _undefined(...items));
+        closure_1 = undefined;
+        const tmp = callback(70)(importDefaultResult)[items];
+        closure_1 = tmp;
+        if (!c8) {
+          if (0 === arr.length) {
+            if (result1) {
+              arr = arr.push(() => callback(...items));
               const _clearImmediate = clearImmediate;
-              clearImmediate(outer1_11);
+              clearImmediate(immediate);
               const _setImmediate = setImmediate;
-              outer1_11 = setImmediate(outer1_18.flushQueue);
+              immediate = setImmediate(obj.flushQueue);
             } else {
               const items1 = [];
               HermesBuiltin.arraySpread(items, 0);
@@ -87,7 +86,7 @@ if (result) {
             }
           }
         }
-        outer1_9.push(() => _undefined(...items));
+        arr = arr.push(() => callback(...items));
       };
       num = num2 + 1;
       num2 = num;
@@ -120,8 +119,8 @@ obj = {
     }
   },
   disableQueue() {
-    00038__(closure_4, "Native animated module is not available");
-    const obj = importAll(27);
+    callback(38)(closure_4, "Native animated module is not available");
+    obj = importAllResult1;
     if (obj.animatedShouldDebounceQueueFlush()) {
       const _clearImmediate = clearImmediate;
       clearImmediate(immediate);
@@ -147,9 +146,9 @@ obj = {
     const result = obj.flattenAnimatedNodeOffset(self);
   },
   flushQueue: result ? (() => {
-    00038__(closure_4, "Native animated module is not available");
-    let c11 = null;
-    if (0 !== length.length) {
+    callback(38)(closure_4, "Native animated module is not available");
+    c11 = null;
+    if (0 !== closure_10.length) {
       if (!closure_14) {
         let tmpResult = tmp(92);
         closure_14 = tmpResult.addListener("onNativeAnimatedModuleGetValue", (value) => {
@@ -159,7 +158,7 @@ obj = {
           }
         });
         tmpResult = tmp(92);
-        let closure_15 = tmpResult.addListener("onNativeAnimatedModuleAnimationFinished", (arg0) => {
+        closure_15 = tmpResult.addListener("onNativeAnimatedModuleAnimationFinished", (arg0) => {
           let tmp3 = arg0;
           if (!Array.isArray(arg0)) {
             const items = [arg0];
@@ -190,10 +189,9 @@ obj = {
       tmp5.length = 0;
     }
   }) : (() => {
-    00038__(closure_4, "Native animated module is not available");
-    let c11 = null;
-    let arr = lib;
-    if (0 !== lib.length) {
+    callback(38)(closure_4, "Native animated module is not available");
+    c11 = null;
+    if (0 !== arr.length) {
       if (tmp != null) {
         const startOperationBatch = tmp.startOperationBatch;
         if (startOperationBatch != null) {
@@ -203,10 +201,9 @@ obj = {
       let num2 = 0;
       if (0 < arr.length) {
         do {
-          let tmp4 = lib;
-          let tmp5 = lib[num2]();
+          let tmp4 = arr;
+          let tmp5 = arr[num2]();
           num2 = num2 + 1;
-          arr = lib;
         } while (num2 < length);
       }
       arr.length = 0;
@@ -245,13 +242,13 @@ obj = {
   setWaitingForIdentifier(combined) {
     if (!result1) {
       set.add(combined);
-      let c8 = true;
-      const obj = importAll(27);
+      c8 = true;
+      obj = importAllResult1;
       if (tmp6) {
         const _clearImmediate = clearImmediate;
-        clearImmediate(c11);
+        clearImmediate(closure_11);
       }
-      tmp6 = importAll(27).animatedShouldDebounceQueueFlush() && c11;
+      tmp6 = importAllResult1.animatedShouldDebounceQueueFlush() && closure_11;
     }
   },
   startAnimatingNode: result ? ((arg0, arg1, arg2, arg3) => {
@@ -275,7 +272,7 @@ obj = {
     if (!result1) {
       set.delete(combined);
       if (0 === set.size) {
-        let c8 = false;
+        c8 = false;
         obj.disableQueue();
       }
     }
@@ -291,14 +288,14 @@ let c19 = false;
 const obj1 = {
   API: obj,
   assertNativeAnimatedModule() {
-    00038__(closure_4, "Native animated module is not available");
+    callback(38)(closure_4, "Native animated module is not available");
   },
   generateNewAnimationId() {
-    let closure_6 = tmp + 1;
+    closure_6 = tmp + 1;
     return +closure_6;
   },
   generateNewNodeTag() {
-    let closure_5 = tmp + 1;
+    closure_5 = tmp + 1;
     return +closure_5;
   }
 };
@@ -306,7 +303,7 @@ Object.defineProperty(obj1, "nativeEventEmitter", {
   get: () => {
     let tmp = closure_3;
     if (!closure_3) {
-      const tmp7 = new NativeEventEmitter(null);
+      const tmp7 = new callback(209)(null);
       closure_3 = tmp7;
       tmp = tmp7;
     }

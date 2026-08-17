@@ -28,7 +28,7 @@ DepGraph.prototype = {
   },
   removeNode(arg0) {
     const self = this;
-    let closure_0 = arg0;
+    closure_0 = arg0;
     if (this.hasNode(arg0)) {
       const nodes = self.nodes;
       delete tmp[tmp2];
@@ -39,7 +39,7 @@ DepGraph.prototype = {
       const items = [, ];
       ({ incomingEdges: arr[0], outgoingEdges: arr[1] } = self);
       let item = items.forEach(function(arg0) {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         const keys = Object.keys(arg0);
         const item = keys.forEach((arg0) => {
           const index = table[arg0].indexOf(table);
@@ -60,7 +60,7 @@ DepGraph.prototype = {
       return this.nodes[arg0];
     } else {
       const _Error = Error;
-      const error = new Error("Node does not exist: " + arg0);
+      error = new Error("Node does not exist: " + arg0);
       throw error;
     }
   },
@@ -69,7 +69,7 @@ DepGraph.prototype = {
       this.nodes[arg0] = arg1;
     } else {
       const _Error = Error;
-      const error = new Error("Node does not exist: " + arg0);
+      error = new Error("Node does not exist: " + arg0);
       throw error;
     }
   },
@@ -89,7 +89,7 @@ DepGraph.prototype = {
         return true;
       } else {
         const _Error2 = Error;
-        const error = new Error("Node does not exist: " + arg1);
+        error = new Error("Node does not exist: " + arg1);
         throw error;
       }
     } else {
@@ -142,30 +142,30 @@ DepGraph.prototype = {
     if (this.hasNode(arg0)) {
       const items = [];
       const outgoingEdges = self.outgoingEdges;
-      let closure_1 = arg1;
-      const circular = self.circular;
-      let closure_4 = [];
-      let closure_5 = {};
-      let closure_6 = {};
-      let closure_7 = {};
+      closure_1 = arg1;
+      circular = self.circular;
+      closure_4 = [];
+      closure_5 = {};
+      closure_6 = {};
+      closure_7 = {};
       class DFS {
         constructor(arg0) {
-          circular[arg0] = true;
-          arr = circular.push(arg0);
-          circular[arg0] = true;
+          closure_5[arg0] = true;
+          arr = closure_4.push(arg0);
+          closure_7[arg0] = true;
           tmp4 = outgoingEdges;
           num = 0;
           if (0 < outgoingEdges[arg0].length) {
             while (true) {
               tmp5 = outgoingEdges;
               tmp6 = outgoingEdges[arg0][num];
-              tmp7 = circular;
+              tmp7 = closure_5;
               tmp8 = num;
-              if (circular[tmp6]) {
-                tmp11 = circular;
-                if (circular[tmp6]) {
-                  obj = circular;
-                  arr1 = circular.push(tmp6);
+              if (closure_5[tmp6]) {
+                tmp11 = closure_7;
+                if (closure_7[tmp6]) {
+                  obj = closure_4;
+                  arr1 = closure_4.push(tmp6);
                   tmp13 = circular;
                   if (!circular) {
                     break;
@@ -203,21 +203,21 @@ DepGraph.prototype = {
             }
             throw error;
           }
-          arr2 = circular.pop();
+          arr2 = closure_4.pop();
           delete tmp2[tmp];
           tmp24 = closure_1;
           if (closure_1) {
             tmp24 = 0 !== tmp4[arg0].length;
           }
           if (!tmp24) {
-            tmp25 = circular;
-            tmp24 = circular[arg0];
+            tmp25 = closure_6;
+            tmp24 = closure_6[arg0];
           }
           if (!tmp24) {
             tmp26 = DFS;
             arr3 = DFS.push(arg0);
-            tmp28 = circular;
-            circular[arg0] = true;
+            tmp28 = closure_6;
+            closure_6[arg0] = true;
           }
           return;
         }
@@ -230,7 +230,7 @@ DepGraph.prototype = {
       return items;
     } else {
       const _Error = Error;
-      const error = new Error("Node does not exist: " + arg0);
+      error = new Error("Node does not exist: " + arg0);
       throw error;
     }
   },
@@ -239,30 +239,30 @@ DepGraph.prototype = {
     if (this.hasNode(arg0)) {
       const items = [];
       const incomingEdges = self.incomingEdges;
-      let closure_1 = arg1;
-      const circular = self.circular;
-      let closure_4 = [];
-      let closure_5 = {};
-      let closure_6 = {};
-      let closure_7 = {};
+      closure_1 = arg1;
+      circular = self.circular;
+      closure_4 = [];
+      closure_5 = {};
+      closure_6 = {};
+      closure_7 = {};
       class DFS {
         constructor(arg0) {
-          circular[arg0] = true;
-          arr = circular.push(arg0);
-          circular[arg0] = true;
+          closure_5[arg0] = true;
+          arr = closure_4.push(arg0);
+          closure_7[arg0] = true;
           tmp4 = outgoingEdges;
           num = 0;
           if (0 < outgoingEdges[arg0].length) {
             while (true) {
               tmp5 = outgoingEdges;
               tmp6 = outgoingEdges[arg0][num];
-              tmp7 = circular;
+              tmp7 = closure_5;
               tmp8 = num;
-              if (circular[tmp6]) {
-                tmp11 = circular;
-                if (circular[tmp6]) {
-                  obj = circular;
-                  arr1 = circular.push(tmp6);
+              if (closure_5[tmp6]) {
+                tmp11 = closure_7;
+                if (closure_7[tmp6]) {
+                  obj = closure_4;
+                  arr1 = closure_4.push(tmp6);
                   tmp13 = circular;
                   if (!circular) {
                     break;
@@ -300,21 +300,21 @@ DepGraph.prototype = {
             }
             throw error;
           }
-          arr2 = circular.pop();
+          arr2 = closure_4.pop();
           delete tmp2[tmp];
           tmp24 = closure_1;
           if (closure_1) {
             tmp24 = 0 !== tmp4[arg0].length;
           }
           if (!tmp24) {
-            tmp25 = circular;
-            tmp24 = circular[arg0];
+            tmp25 = closure_6;
+            tmp24 = closure_6[arg0];
           }
           if (!tmp24) {
             tmp26 = DFS;
             arr3 = DFS.push(arg0);
-            tmp28 = circular;
-            circular[arg0] = true;
+            tmp28 = closure_6;
+            closure_6[arg0] = true;
           }
           return;
         }
@@ -327,7 +327,7 @@ DepGraph.prototype = {
       return items;
     } else {
       const _Error = Error;
-      const error = new Error("Node does not exist: " + arg0);
+      error = new Error("Node does not exist: " + arg0);
       throw error;
     }
   },
@@ -340,31 +340,31 @@ DepGraph.prototype = {
       return items;
     } else {
       outgoingEdges = self.outgoingEdges;
-      let closure_1 = false;
+      closure_1 = false;
       let DFS = [];
-      let circular = self.circular;
-      let closure_4 = [];
-      let closure_5 = {};
-      let closure_6 = {};
-      let closure_7 = {};
+      circular = self.circular;
+      closure_4 = [];
+      closure_5 = {};
+      closure_6 = {};
+      closure_7 = {};
       class DFS {
         constructor(arg0) {
-          circular[arg0] = true;
-          arr = circular.push(arg0);
-          circular[arg0] = true;
+          closure_5[arg0] = true;
+          arr = closure_4.push(arg0);
+          closure_7[arg0] = true;
           tmp4 = outgoingEdges;
           num = 0;
           if (0 < outgoingEdges[arg0].length) {
             while (true) {
               tmp5 = outgoingEdges;
               tmp6 = outgoingEdges[arg0][num];
-              tmp7 = circular;
+              tmp7 = closure_5;
               tmp8 = num;
-              if (circular[tmp6]) {
-                tmp11 = circular;
-                if (circular[tmp6]) {
-                  obj = circular;
-                  arr1 = circular.push(tmp6);
+              if (closure_5[tmp6]) {
+                tmp11 = closure_7;
+                if (closure_7[tmp6]) {
+                  obj = closure_4;
+                  arr1 = closure_4.push(tmp6);
                   tmp13 = circular;
                   if (!circular) {
                     break;
@@ -402,21 +402,21 @@ DepGraph.prototype = {
             }
             throw error;
           }
-          arr2 = circular.pop();
+          arr2 = closure_4.pop();
           delete tmp2[tmp];
           tmp24 = closure_1;
           if (closure_1) {
             tmp24 = 0 !== tmp4[arg0].length;
           }
           if (!tmp24) {
-            tmp25 = circular;
-            tmp24 = circular[arg0];
+            tmp25 = closure_6;
+            tmp24 = closure_6[arg0];
           }
           if (!tmp24) {
             tmp26 = DFS;
             arr3 = DFS.push(arg0);
-            tmp28 = circular;
-            circular[arg0] = true;
+            tmp28 = closure_6;
+            closure_6[arg0] = true;
           }
           return;
         }
@@ -435,22 +435,22 @@ DepGraph.prototype = {
       closure_7 = {};
       class DFS {
         constructor(arg0) {
-          circular[arg0] = true;
-          arr = circular.push(arg0);
-          circular[arg0] = true;
+          closure_5[arg0] = true;
+          arr = closure_4.push(arg0);
+          closure_7[arg0] = true;
           tmp4 = outgoingEdges;
           num = 0;
           if (0 < outgoingEdges[arg0].length) {
             while (true) {
               tmp5 = outgoingEdges;
               tmp6 = outgoingEdges[arg0][num];
-              tmp7 = circular;
+              tmp7 = closure_5;
               tmp8 = num;
-              if (circular[tmp6]) {
-                tmp11 = circular;
-                if (circular[tmp6]) {
-                  obj = circular;
-                  arr1 = circular.push(tmp6);
+              if (closure_5[tmp6]) {
+                tmp11 = closure_7;
+                if (closure_7[tmp6]) {
+                  obj = closure_4;
+                  arr1 = closure_4.push(tmp6);
                   tmp13 = circular;
                   if (!circular) {
                     break;
@@ -488,21 +488,21 @@ DepGraph.prototype = {
             }
             throw error;
           }
-          arr2 = circular.pop();
+          arr2 = closure_4.pop();
           delete tmp2[tmp];
           tmp24 = closure_1;
           if (closure_1) {
             tmp24 = 0 !== tmp4[arg0].length;
           }
           if (!tmp24) {
-            tmp25 = circular;
-            tmp24 = circular[arg0];
+            tmp25 = closure_6;
+            tmp24 = closure_6[arg0];
           }
           if (!tmp24) {
             tmp26 = DFS;
             arr3 = DFS.push(arg0);
-            tmp28 = circular;
-            circular[arg0] = true;
+            tmp28 = closure_6;
+            closure_6[arg0] = true;
           }
           return;
         }
@@ -529,6 +529,6 @@ class tmp {
   }
 }
 arg5.DepGraphCycleError = tmp;
-let closure_1 = tmp;
+let circular = tmp;
 tmp.prototype = Object.create(Error.prototype, { constructor: { value: Error, enumerable: false, writable: true, configurable: true } });
 Object.setPrototypeOf(tmp, Error);

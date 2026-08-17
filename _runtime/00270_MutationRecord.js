@@ -1,11 +1,12 @@
 // _runtime/00270_MutationRecord.js
-import _classCallCheck from "_classCallCheck";
-import setPlatformObject from "setPlatformObject";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import setPlatformObject from "setPlatformObject" /* 126 */;
 
 const MutationRecord = arg1;
 class MutationRecord {
   constructor(arg0) {
-    tmp = outer1_2(this, MutationRecord);
+    tmp = closure_2(this, MutationRecord);
     this._target = global.target;
     obj = require("NodeList");
     this._addedNodes = obj.createNodeList(global.addedNodes);
@@ -64,8 +65,8 @@ const items = [
     }
   }
 ];
-const tmp2 = require("_createClass")(MutationRecord, items);
-let c3 = tmp2;
+const tmp2 = _createClassDefault(MutationRecord, items);
+let closure_3 = tmp2;
 setPlatformObject.setPlatformObject(tmp2);
 
 export default tmp2;

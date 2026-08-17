@@ -1,7 +1,7 @@
 // _runtime/03909_subQuarters.js
-import toInteger from "toInteger";
-import addQuarters from "addQuarters";
-import requiredArgs from "requiredArgs";
+import toInteger from "toInteger" /* 3476 */;
+import addQuarters from "addQuarters" /* 3638 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!toInteger) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!toInteger) {
 } else {
   tmp3 = toInteger;
 }
-let c0 = tmp3;
+toInteger = tmp3;
 if (!addQuarters) {
   obj = { default: null };
   obj[0] = addQuarters;
@@ -18,7 +18,7 @@ if (!addQuarters) {
 } else {
   tmp5 = addQuarters;
 }
-let closure_1 = tmp5;
+addQuarters = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,9 +26,10 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function subQuarters(arg0, arg1) {
-  tmp7.default(2, arguments);
-  return tmp5.default(arg0, -tmp3.default(arg1));
+  requiredArgs.default(2, arguments);
+  return addQuarters.default(arg0, -toInteger.default(arg1));
 };
 export default exports.default;

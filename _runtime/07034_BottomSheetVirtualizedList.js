@@ -1,7 +1,8 @@
 // _runtime/07034_BottomSheetVirtualizedList.js
-import createBottomSheetScrollableComponent from "createBottomSheetScrollableComponent";
+import cancelAnimationDefault from "cancelAnimation" /* 1654 */;
+import createBottomSheetScrollableComponent from "createBottomSheetScrollableComponent" /* 7024 */;
 
-const animatedComponent = require("cancelAnimation").createAnimatedComponent(require("get ActivityIndicator").VirtualizedList);
+const animatedComponent = cancelAnimationDefault.createAnimatedComponent(require("get ActivityIndicator").VirtualizedList);
 const memoResult = require("noop").memo(createBottomSheetScrollableComponent.createBottomSheetScrollableComponent(require("GESTURE_SOURCE").SCROLLABLE_TYPE.VIRTUALIZEDLIST, animatedComponent));
 memoResult.displayName = "BottomSheetVirtualizedList";
 

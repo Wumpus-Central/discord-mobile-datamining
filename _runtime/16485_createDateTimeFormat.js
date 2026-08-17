@@ -1,6 +1,5 @@
 // _runtime/16485_createDateTimeFormat.js
 arg5.createDateTimeFormat = function createDateTimeFormat(str) {
-  let pattern;
   if (!regex.test(str)) {
     const obj = {};
     obj.pattern = str.replace(obj, (arg0) => {
@@ -29,14 +28,6 @@ arg5.createDateTimeFormat = function createDateTimeFormat(str) {
   }
 };
 arg5.createDateTimeFormats = function createDateTimeFormats(formats) {
-  let availableFormats;
-  let dateFormats;
-  let medium;
-  let pattern;
-  let pattern2;
-  let pattern3;
-  let pattern4;
-  let timeFormats;
   let tmp2;
   let tmp3;
   ({ availableFormats, timeFormats, dateFormats, medium } = formats);
@@ -261,7 +252,7 @@ arg5.createDateTimeFormats = function createDateTimeFormats(formats) {
         let tmp46 = str15;
         let tmp47;
         if (!regex.test(str15)) {
-          let obj1 = {};
+          obj1 = {};
           obj2 = obj1;
           let tmp48 = obj2;
           obj1.pattern = str15.replace(obj2, (arg0) => {

@@ -1,8 +1,8 @@
 // _runtime/01696_isAffineMatrixFlat.js
-import _slicedToArray from "_slicedToArray";
-import { t } from "01665_t.js";
+import t from "t" /* 1665 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-let require = arg1;
+require = arg1;
 function isAffineMatrixFlat(arr) {
   let isArray = Array.isArray(arr);
   if (isArray) {
@@ -180,7 +180,7 @@ function subtractMatrices(arr, arr2) {
     }
     flatResult = arr.flat();
   }
-  const require = flatResult;
+  require = flatResult;
   if (typeof maybeFlattenMatrix !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -293,7 +293,7 @@ function addMatrices(arr, arr2) {
     }
     flatResult = arr.flat();
   }
-  const require = flatResult;
+  require = flatResult;
   if (typeof maybeFlattenMatrix !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -353,7 +353,7 @@ addMatrices.__closure = { isAffineMatrixFlat, maybeFlattenMatrix, unflatten };
 addMatrices.__workletHash = 17429737879880;
 addMatrices.__initData = { code: "function addMatrices_Pnpm_matrixUtilsTsx8(maybeFlatA,maybeFlatB){const{isAffineMatrixFlat,maybeFlattenMatrix,unflatten}=this.__closure;const isFlatOnStart=isAffineMatrixFlat(maybeFlatA);const a=maybeFlattenMatrix(maybeFlatA);const b=maybeFlattenMatrix(maybeFlatB);const c=a.map(function(_,i){return a[i]+b[i];});return isFlatOnStart?c:unflatten(c);}" };
 function scaleMatrix(arr, arg1) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   if (typeof isAffineMatrixFlat !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -495,8 +495,8 @@ assertVectorsHaveEqualLengths.__closure = { __DEV__: false };
 assertVectorsHaveEqualLengths.__workletHash = 14349158134583;
 assertVectorsHaveEqualLengths.__initData = { code: "function assertVectorsHaveEqualLengths_Pnpm_matrixUtilsTsx13(a,b){const{__DEV__}=this.__closure;if(__DEV__&&a.length!==b.length){throw new ReanimatedError(\"Cannot calculate inner product of two vectors of different lengths. Length of \"+a.toString()+\" is \"+a.length+\" and length of \"+b.toString()+\" is \"+b.length+\".\");}}" };
 function innerProduct(arr) {
-  let closure_0 = arr;
-  let closure_1 = arg1;
+  closure_0 = arr;
+  closure_1 = arg1;
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -512,8 +512,8 @@ function projection(arr, arr) {
   if (typeof innerProduct !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let closure_0 = arr;
-  let closure_1 = arr;
+  closure_0 = arr;
+  closure_1 = arr;
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -533,8 +533,8 @@ projection.__closure = { assertVectorsHaveEqualLengths, innerProduct };
 projection.__workletHash = 12191208971941;
 projection.__initData = { code: "function projection_Pnpm_matrixUtilsTsx15(u,a){const{assertVectorsHaveEqualLengths,innerProduct}=this.__closure;assertVectorsHaveEqualLengths(u,a);const s=innerProduct(u,a)/innerProduct(u,u);return u.map(function(e){return e*s;});}" };
 function subtractVectors(arr) {
-  let closure_0 = arr;
-  let closure_1 = arg1;
+  closure_0 = arr;
+  closure_1 = arg1;
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -544,21 +544,13 @@ subtractVectors.__closure = { assertVectorsHaveEqualLengths };
 subtractVectors.__workletHash = 9047017498478;
 subtractVectors.__initData = { code: "function subtractVectors_Pnpm_matrixUtilsTsx16(a,b){const{assertVectorsHaveEqualLengths}=this.__closure;assertVectorsHaveEqualLengths(a,b);return a.map(function(_,i){return a[i]-b[i];});}" };
 function scaleVector(arr) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   return arr.map((arg0) => arg0 * closure_0);
 }
 scaleVector.__closure = {};
 scaleVector.__workletHash = 11236256734309;
 scaleVector.__initData = { code: "function scaleVector_Pnpm_matrixUtilsTsx17(u,a){return u.map(function(e){return e*a;});}" };
 function gramSchmidtAlgorithm(items7) {
-  let arr;
-  let arr10;
-  let arr11;
-  let arr2;
-  let arr3;
-  let arr8;
-  let arr9;
-  let tmp3;
   [tmp3, arr, arr2, arr3] = callback(items7, 4);
   const tmp = callback;
   const tmp2 = callback(items7, 4);
@@ -627,8 +619,8 @@ function gramSchmidtAlgorithm(items7) {
     if (typeof closure_11 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let closure_0 = arr;
-    let closure_1 = arr;
+    closure_0 = arr;
+    closure_1 = arr;
     if (typeof closure_10 !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -811,7 +803,7 @@ function decomposeMatrix(arr) {
     }
     flatResult = arr.flat();
   }
-  const require = flatResult;
+  require = flatResult;
   if (0 === flatResult[15]) {
     const reanimatedError = new t.ReanimatedError("Invalid transform matrix.");
     throw reanimatedError;
@@ -865,9 +857,6 @@ decomposeMatrix.__closure = { maybeFlattenMatrix, norm3d, gramSchmidtAlgorithm }
 decomposeMatrix.__workletHash = 244684068165;
 decomposeMatrix.__initData = { code: "function decomposeMatrix_Pnpm_matrixUtilsTsx19(unknownTypeMatrix){const{maybeFlattenMatrix,norm3d,gramSchmidtAlgorithm}=this.__closure;const matrix=maybeFlattenMatrix(unknownTypeMatrix);if(matrix[15]===0){throw new ReanimatedError('Invalid transform matrix.');}matrix.forEach(function(_,i){return matrix[i]/=matrix[15];});const translationMatrix=[[1,0,0,0],[0,1,0,0],[0,0,1,0],[matrix[12],matrix[13],matrix[14],1]];const sx=matrix[15]*norm3d(matrix[0],matrix[4],matrix[8]);const sy=matrix[15]*norm3d(matrix[1],matrix[5],matrix[9]);const sz=matrix[15]*norm3d(matrix[2],matrix[6],matrix[10]);const scaleMatrix=[[sx,0,0,0],[0,sy,0,0],[0,0,sz,0],[0,0,0,1]];const rotationAndSkewMatrix=[[matrix[0]/sx,matrix[1]/sx,matrix[2]/sx,0],[matrix[4]/sy,matrix[5]/sy,matrix[6]/sy,0],[matrix[8]/sz,matrix[9]/sz,matrix[10]/sz,0],[0,0,0,1]];const{rotationMatrix:rotationMatrix,skewMatrix:skewMatrix}=gramSchmidtAlgorithm(rotationAndSkewMatrix);return{translationMatrix:translationMatrix,scaleMatrix:scaleMatrix,rotationMatrix:rotationMatrix,skewMatrix:skewMatrix};}" };
 function decomposeMatrixIntoMatricesAndAngles(toValue) {
-  let scaleMatrix;
-  let skewMatrix;
-  let translationMatrix;
   const tmp = decomposeMatrix(toValue);
   const rotationMatrix = tmp.rotationMatrix;
   ({ scaleMatrix, translationMatrix, skewMatrix } = tmp);

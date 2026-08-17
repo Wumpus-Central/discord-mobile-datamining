@@ -1,7 +1,8 @@
 // _runtime/01034_triggerHandlers.js
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1035 */;
 import { observe } from "01046_observe.js";
-import { __SENTRY_DEBUG__ } from "metro/01035___SENTRY_DEBUG__.js";
-const require = arg1;
+
+require = arg1;
 let dependencyMap = arg6;
 function triggerHandlers(arg0, arg1) {
   let length;
@@ -43,7 +44,7 @@ arg5.addClsInstrumentationHandler = function addClsInstrumentationHandler(arg0, 
     tmp5.cls = true;
     const onCLSResult = obj.onCLS((metric) => {
       callback("cls", { metric });
-      let closure_2 = metric;
+      closure_2 = metric;
     }, { reportAllChanges: true });
   }
   if (closure_2) {
@@ -56,13 +57,13 @@ arg5.addClsInstrumentationHandler = function addClsInstrumentationHandler(arg0, 
     tmp10 = onCLSResult;
   }
   cls = "cls";
-  const dependencyMap = arg0;
+  dependencyMap = arg0;
   closure_2 = tmp10;
   return () => {
     if (closure_2) {
       tmp();
     }
-    if (outer1_6[ttfb]) {
+    if (closure_1_6[ttfb]) {
       const index = arr.indexOf(closure_1);
       if (-1 !== index) {
         arr.splice(index, 1);
@@ -78,7 +79,7 @@ arg5.addInpInstrumentationHandler = function addInpInstrumentationHandler(_onInp
     let obj = inp(1055);
     obj.onINP((metric) => {
       callback("inp", { metric });
-      let closure_5 = metric;
+      closure_5 = metric;
     });
     tmp5.inp = true;
   }
@@ -88,12 +89,12 @@ arg5.addInpInstrumentationHandler = function addInpInstrumentationHandler(_onInp
     _onInp(obj);
   }
   inp = "inp";
-  const dependencyMap = _onInp;
+  dependencyMap = _onInp;
   return () => {
     if (closure_2) {
       tmp();
     }
-    if (outer1_6[ttfb]) {
+    if (closure_1_6[ttfb]) {
       const index = arr.indexOf(closure_1);
       if (-1 !== index) {
         arr.splice(index, 1);
@@ -117,7 +118,7 @@ arg5.addLcpInstrumentationHandler = function addLcpInstrumentationHandler(arg0, 
     tmp5.lcp = true;
     const onLCPResult = obj.onLCP((metric) => {
       callback("lcp", { metric });
-      let closure_3 = metric;
+      closure_3 = metric;
     }, { reportAllChanges: true });
   }
   if (closure_3) {
@@ -130,13 +131,13 @@ arg5.addLcpInstrumentationHandler = function addLcpInstrumentationHandler(arg0, 
     tmp10 = onLCPResult;
   }
   lcp = "lcp";
-  const dependencyMap = arg0;
-  let closure_2 = tmp10;
+  dependencyMap = arg0;
+  closure_2 = tmp10;
   return () => {
     if (closure_2) {
       tmp();
     }
-    if (outer1_6[ttfb]) {
+    if (closure_1_6[ttfb]) {
       const index = arr.indexOf(closure_1);
       if (-1 !== index) {
         arr.splice(index, 1);
@@ -155,18 +156,18 @@ arg5.addPerformanceInstrumentationHandler = function addPerformanceInstrumentati
       obj.durationThreshold = 0;
     }
     _observe.observe(event, (entries) => {
-      outer1_8(closure_0, { entries });
+      closure_1_8(closure_0, { entries });
     }, obj);
     tmp4[event] = true;
     const obj2 = _observe;
   }
   _require = event;
-  const dependencyMap = handleEntries;
+  dependencyMap = handleEntries;
   return () => {
     if (closure_2) {
       tmp();
     }
-    if (outer1_6[ttfb]) {
+    if (closure_1_6[ttfb]) {
       const index = arr.indexOf(closure_1);
       if (-1 !== index) {
         arr.splice(index, 1);
@@ -182,7 +183,7 @@ arg5.addTtfbInstrumentationHandler = function addTtfbInstrumentationHandler(arg0
     let obj = ttfb(1054);
     obj.onTTFB((metric) => {
       callback("ttfb", { metric });
-      let closure_4 = metric;
+      closure_4 = metric;
     });
     tmp5.ttfb = true;
   }
@@ -192,12 +193,12 @@ arg5.addTtfbInstrumentationHandler = function addTtfbInstrumentationHandler(arg0
     arg0(obj);
   }
   ttfb = "ttfb";
-  const dependencyMap = arg0;
+  dependencyMap = arg0;
   return () => {
     if (closure_2) {
       tmp();
     }
-    if (outer1_6[ttfb]) {
+    if (closure_1_6[ttfb]) {
       const index = arr.indexOf(closure_1);
       if (-1 !== index) {
         arr.splice(index, 1);

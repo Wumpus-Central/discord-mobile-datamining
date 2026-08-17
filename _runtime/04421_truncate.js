@@ -1,11 +1,12 @@
 // _runtime/04421_truncate.js
-import { floor } from "04422_floor.js";
-import { 00541__ } from "metro/00541__.js";
+import _mod541 from "module_541" /* 541 */;
+import floor from "floor" /* 4422 */;
+
 
 export default function truncate(num) {
   if (typeof num !== "number") {
     if (typeof num !== "bigint") {
-      const tmp10 = new 00541__("argument must be a Number or a BigInt");
+      const tmp10 = new _mod541("argument must be a Number or a BigInt");
       throw tmp10;
     }
   }

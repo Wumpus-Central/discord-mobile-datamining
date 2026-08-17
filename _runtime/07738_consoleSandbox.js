@@ -1,15 +1,15 @@
 // _runtime/07738_consoleSandbox.js
-import getGlobalSingleton from "getGlobalSingleton";
+import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
 
 function consoleSandbox(arg0) {
   if ("console" in console(7739).GLOBAL_OBJ) {
     console = console(7739).GLOBAL_OBJ.console;
-    const dependencyMap = {};
+    dependencyMap = {};
     const _Object = Object;
     const keys = Object.keys(obj);
     const item = keys.forEach((arg0) => {
       closure_1[arg0] = console[arg0];
-      console[arg0] = outer1_3[arg0];
+      console[arg0] = closure_1_3[arg0];
     });
     try {
       const item1 = keys.forEach((arg0) => {
@@ -33,12 +33,12 @@ export const CONSOLE_LEVELS = items;
 export { consoleSandbox };
 export const logger = getGlobalSingleton.getGlobalSingleton("logger", function makeLogger() {
   const _require = false;
-  const obj = {
+  obj = {
     enable() {
-      let c0 = true;
+      c0 = true;
     },
     disable() {
-      let c0 = false;
+      c0 = false;
     },
     isEnabled() {
       return c0;
@@ -47,13 +47,13 @@ export const logger = getGlobalSingleton.getGlobalSingleton("logger", function m
   const forEach = items.forEach;
   if (_require(obj[1]).DEBUG_BUILD) {
     const item = forEach((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       obj[arg0] = () => {
-        let closure_0 = [...arguments];
+        closure_0 = [...arguments];
         if (closure_0) {
-          outer2_4(() => {
+          closure_2_4(() => {
             const _console = args(obj[0]).GLOBAL_OBJ.console;
-            const items = ["Sentry Logger [" + args + "]:", ...closure_0];
+            items = ["Sentry Logger [" + args + "]:", ...closure_0];
             _console[args].apply(items);
           });
         }

@@ -1,7 +1,8 @@
 // _runtime/00845_updateSession.js
-import { addContextToFrame } from "00830_addContextToFrame.js";
-import { dateTimestampInSeconds } from "00838_dateTimestampInSeconds.js";
-const require = arg1;
+import addContextToFrame from "addContextToFrame" /* 830 */;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 838 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function updateSession(ipAddress) {
   let obj = arg1;
@@ -116,24 +117,29 @@ arg5.closeSession = function closeSession(status) {
 arg5.makeSession = function makeSession(arg0) {
   obj = obj(838);
   const timestampInSecondsResult = obj.timestampInSeconds();
-  obj = { sid: null, init: true, timestamp: null, started: null, duration: 0, status: "ok", errors: 0, ignoreDuration: false, toJSON: null };
-  obj[0] = obj(830).uuid4();
-  obj[2] = timestampInSecondsResult;
-  obj[3] = timestampInSecondsResult;
-  obj[8] = function toJSON() {
-    obj = { sid: "" + obj.sid, init: obj.init, started: null, timestamp: null, status: null, errors: null, did: null, duration: null, abnormal_mechanism: null, attrs: null };
-    obj[2] = new Date(1000 * obj.started).toISOString();
-    const date = new Date(1000 * obj.started);
-    obj[3] = new Date(1000 * obj.timestamp).toISOString();
-    ({ status: obj[4], errors: obj[5] } = obj);
-    if (typeof obj.did === "number") {
-      const _HermesInternal = HermesInternal;
-      const combined = "" + tmp.did;
+  obj = {
+    sid: obj(830).uuid4(),
+    init: true,
+    timestamp: timestampInSecondsResult,
+    started: timestampInSecondsResult,
+    duration: 0,
+    status: "ok",
+    errors: 0,
+    ignoreDuration: false,
+    toJSON() {
+      obj = { sid: "" + obj.sid, init: obj.init, started: new Date(1000 * obj.started).toISOString(), timestamp: null, status: null, errors: null, did: null, duration: null, abnormal_mechanism: null, attrs: null };
+      const date = new Date(1000 * obj.started);
+      obj[3] = new Date(1000 * obj.timestamp).toISOString();
+      ({ status: obj[4], errors: obj[5] } = obj);
+      if (typeof obj.did === "number") {
+        const _HermesInternal = HermesInternal;
+        const combined = "" + tmp.did;
+      }
+      obj[6] = combined;
+      ({ duration: obj[7], abnormal_mechanism: obj[8] } = obj);
+      obj[9] = { release: obj.release, environment: obj.environment, ip_address: obj.ipAddress, user_agent: obj.userAgent };
+      return obj;
     }
-    obj[6] = combined;
-    ({ duration: obj[7], abnormal_mechanism: obj[8] } = obj);
-    obj[9] = { release: obj.release, environment: obj.environment, ip_address: obj.ipAddress, user_agent: obj.userAgent };
-    return obj;
   };
   if (arg0) {
     updateSession(obj, arg0);

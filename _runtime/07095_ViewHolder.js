@@ -1,23 +1,12 @@
 // _runtime/07095_ViewHolder.js
-import noop from "noop";
-import jsxProd from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-let obj1;
 ({ useCallback: obj1, useLayoutEffect: c3, useMemo: c4, useRef: c5 } = noop);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 
-export const ViewHolder = require("noop").memo((index) => {
-  let CellRendererComponent;
-  let ItemSeparatorComponent;
-  let hidden;
-  let inverted;
-  let layout;
-  let onSizeChanged;
+export const ViewHolder = noopDefault.memo((index) => {
   const ref = extraData(null);
   index = index.index;
   const refHolder = index.refHolder;

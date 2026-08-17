@@ -1,23 +1,19 @@
 // _runtime/04133_defaultOnError.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import _mod4134 from "module_4134" /* 4134 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { NitroRiveView } from "04111_NitroRiveView.js";
 import { c } from "04135_c.js";
-import { 04134__ } from "metro/04134__.js";
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 let closure_2 = ["onError", "hybridRef"];
 ({ useEffect: c4, useRef: c5 } = noop);
 function defaultOnError(message) {
-  return console.error("[" + 04134__.RiveErrorType[message.type] + "] " + message.message);
+  return console.error("[" + _mod4134.RiveErrorType[message.type] + "] " + message.message);
 }
 
 export const RiveView = function RiveView(arg0) {
-  let hybridRef;
-  let onError;
   let obj = _c;
   const cResult = obj.c(16);
   if (cResult[0] !== arg0) {
@@ -38,14 +34,14 @@ export const RiveView = function RiveView(arg0) {
   if (tmp4 == null) {
     tmp4 = defaultOnError;
   }
-  const dependencyMap = callback3(null);
+  dependencyMap = callback3(null);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function y() {
       return () => {
         if (ref.current) {
-          outer1_0(outer1_1[5]).callDispose(tmp.current);
+          closure_1_0(closure_1_1[5]).callDispose(tmp.current);
           tmp.current = null;
-          const obj = outer1_0(outer1_1[5]);
+          const obj = closure_1_0(closure_1_1[5]);
         }
       };
     };
@@ -102,7 +98,7 @@ export const RiveView = function RiveView(arg0) {
       return tmp16;
     }
   }
-  const obj1 = {};
+  obj1 = {};
   const merged = Object.assign(tmp5);
   obj1.onError = tmp14;
   obj1.hybridRef = tmp15;

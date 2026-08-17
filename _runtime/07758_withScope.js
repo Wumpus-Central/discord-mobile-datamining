@@ -1,6 +1,6 @@
 // _runtime/07758_withScope.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 let AsyncContextStack = require;
 function withScope(arg0) {
@@ -18,8 +18,8 @@ function withScope(arg0) {
   return stack.withScope(arg0);
 }
 function withSetScope(arg0, arg1) {
-  const AsyncContextStack = arg0;
-  const dependencyMap = arg1;
+  AsyncContextStack = arg0;
+  dependencyMap = arg1;
   const mainCarrier = AsyncContextStack(7756).getMainCarrier();
   const obj = AsyncContextStack(7756);
   const sentryCarrier = AsyncContextStack(7756).getSentryCarrier(mainCarrier);
@@ -37,7 +37,7 @@ function withSetScope(arg0, arg1) {
   });
 }
 function withIsolationScope(arg0) {
-  const AsyncContextStack = arg0;
+  AsyncContextStack = arg0;
   const mainCarrier = AsyncContextStack(7756).getMainCarrier();
   const obj = AsyncContextStack(7756);
   const sentryCarrier = AsyncContextStack(7756).getSentryCarrier(mainCarrier);
@@ -50,16 +50,16 @@ function withIsolationScope(arg0) {
   }
   sentryCarrier.stack = stack;
   return stack.withScope(() => {
-    const mainCarrier = callback(outer1_1[4]).getMainCarrier();
-    const obj = callback(outer1_1[4]);
+    const mainCarrier = callback(closure_1_1[4]).getMainCarrier();
+    const obj = callback(closure_1_1[4]);
     const tmp = callback;
-    const sentryCarrier = callback(outer1_1[4]).getSentryCarrier(mainCarrier);
+    const sentryCarrier = callback(closure_1_1[4]).getSentryCarrier(mainCarrier);
     let stack = sentryCarrier.stack;
     if (!stack) {
       let tmp2Result = tmp2(tmp3[5]);
       const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
       tmp2Result = tmp2(tmp3[5]);
-      stack = new outer1_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
+      stack = new closure_1_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
     }
     sentryCarrier.stack = stack;
     return tmp(stack.getIsolationScope());
@@ -69,7 +69,7 @@ class AsyncContextStack {
   constructor(arg0, arg1) {
     self = this;
     scope = global;
-    tmp2 = withIsolationScope(this, AsyncContextStack);
+    tmp2 = closure_2(this, AsyncContextStack);
     if (!global) {
       tmp3 = AsyncContextStack;
       tmp4 = closure_1;
@@ -188,16 +188,16 @@ export function getStackAsyncContextStrategy() {
       }
       sentryCarrier.stack = stack;
       return stack.withScope(() => {
-        const mainCarrier = callback(outer1_1[4]).getMainCarrier();
-        const obj = callback(outer1_1[4]);
+        const mainCarrier = callback(closure_1_1[4]).getMainCarrier();
+        const obj = callback(closure_1_1[4]);
         const tmp = callback;
-        const sentryCarrier = callback(outer1_1[4]).getSentryCarrier(mainCarrier);
+        const sentryCarrier = callback(closure_1_1[4]).getSentryCarrier(mainCarrier);
         let stack = sentryCarrier.stack;
         if (!stack) {
           let tmp2Result = tmp2(tmp3[5]);
           const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
           tmp2Result = tmp2(tmp3[5]);
-          stack = new outer1_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
+          stack = new closure_1_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
         }
         sentryCarrier.stack = stack;
         return tmp(stack.getIsolationScope());

@@ -1,7 +1,8 @@
 // _runtime/06384_t.js
-import { tagMessage } from "06382_tagMessage.js";
+import tagMessage from "tagMessage" /* 6382 */;
 import { 06383__ } from "metro/06383__.js";
-const require = arg1;
+
+require = arg1;
 const dependencyMap = arg6;
 let fn = function t(arg0, arg1) {
   const _globalThis = globalThis;
@@ -12,7 +13,7 @@ let fn = function t(arg0, arg1) {
     const result = globalThis._setGestureStateAsync(arg0, arg1);
   } else {
     const _Error = Error;
-    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+    error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
     throw error;
   }
 };
@@ -28,9 +29,9 @@ obj = { create: null };
 function create(handlerTag) {
   const _require = handlerTag;
   let obj = { handlerTag, begin: null, activate: null, fail: null, end: null };
-  const fn = function p() {
-    const BEGAN = handlerTag(outer1_1[1]).State.BEGAN;
-    if (typeof outer1_2 !== "function") {
+  fn = function p() {
+    const BEGAN = handlerTag(closure_1_1[1]).State.BEGAN;
+    if (typeof closure_1_2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const _globalThis = globalThis;
@@ -41,7 +42,7 @@ function create(handlerTag) {
       const result = globalThis._setGestureStateAsync(tmp, BEGAN);
     } else {
       const _Error = Error;
-      const error = new Error(handlerTag(outer1_1[0]).tagMessage("Failed to set gesture state"));
+      error = new Error(handlerTag(closure_1_1[0]).tagMessage("Failed to set gesture state"));
       throw error;
     }
   };
@@ -51,8 +52,8 @@ function create(handlerTag) {
   fn.__initData = closure_3;
   obj[1] = fn;
   const fn2 = function c() {
-    const ACTIVE = handlerTag(outer1_1[1]).State.ACTIVE;
-    if (typeof outer1_2 !== "function") {
+    const ACTIVE = handlerTag(closure_1_1[1]).State.ACTIVE;
+    if (typeof closure_1_2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const _globalThis = globalThis;
@@ -63,7 +64,7 @@ function create(handlerTag) {
       const result = globalThis._setGestureStateAsync(tmp, ACTIVE);
     } else {
       const _Error = Error;
-      const error = new Error(handlerTag(outer1_1[0]).tagMessage("Failed to set gesture state"));
+      error = new Error(handlerTag(closure_1_1[0]).tagMessage("Failed to set gesture state"));
       throw error;
     }
   };
@@ -76,9 +77,9 @@ function create(handlerTag) {
     constructor() {
       tmp = closure_0;
       tmp2 = closure_0;
-      tmp3 = outer1_1;
-      FAILED = closure_0(outer1_1[1]).State.FAILED;
-      if (typeof outer1_2 !== "function") {
+      tmp3 = closure_1_1;
+      FAILED = closure_0(closure_1_1[1]).State.FAILED;
+      if (typeof closure_1_2 !== "function") {
         str2 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -106,8 +107,8 @@ function create(handlerTag) {
   S.__initData = closure_5;
   obj[3] = S;
   const fn3 = function s() {
-    const END = handlerTag(outer1_1[1]).State.END;
-    if (typeof outer1_2 !== "function") {
+    const END = handlerTag(closure_1_1[1]).State.END;
+    if (typeof closure_1_2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const _globalThis = globalThis;
@@ -118,11 +119,11 @@ function create(handlerTag) {
       const result = globalThis._setGestureStateAsync(tmp, END);
     } else {
       const _Error = Error;
-      const error = new Error(handlerTag(outer1_1[0]).tagMessage("Failed to set gesture state"));
+      error = new Error(handlerTag(closure_1_1[0]).tagMessage("Failed to set gesture state"));
       throw error;
     }
   };
-  const obj1 = { wrappedSetGestureState: fn, handlerTag, State: _06383__.State };
+  obj1 = { wrappedSetGestureState: fn, handlerTag, State: _06383__.State };
   fn3.__closure = { wrappedSetGestureState: fn, handlerTag, State: _06383__.State };
   fn3.__workletHash = 6198601582791;
   fn3.__initData = closure_6;

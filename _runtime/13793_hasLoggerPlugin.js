@@ -3,7 +3,7 @@ arg5.assertHasLoggerPlugin = undefined;
 arg5.default = undefined;
 arg5.hasLoggerPlugin = undefined;
 arg5.default = () => (arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const features = {
     log() {
       const items = [...arguments];
@@ -115,7 +115,7 @@ arg5.assertHasLoggerPlugin = (log) => {
   }
   if (!tmp) {
     const _Error = Error;
-    const error = new Error("This Reactotron client has not had the logger plugin applied to it. Make sure that you add `use(logger())` before adding this plugin.");
+    error = new Error("This Reactotron client has not had the logger plugin applied to it. Make sure that you add `use(logger())` before adding this plugin.");
     throw error;
   }
 };

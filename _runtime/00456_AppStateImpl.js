@@ -1,12 +1,13 @@
 // _runtime/00456_AppStateImpl.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const AppStateImpl = importDefault;
 class AppStateImpl {
   constructor() {
     self = this;
     self = this;
-    tmp = outer1_2(this, c0);
+    tmp = closure_2(this, c0);
     this.currentState = null;
     tmp2 = AppStateImpl;
     tmp3 = closure_1;
@@ -29,7 +30,7 @@ class AppStateImpl {
       c0 = false;
       str = "appStateDidChange";
       addListenerResult = obj.addListener("appStateDidChange", (app_state) => {
-        let c0 = true;
+        c0 = true;
         self.currentState = app_state.app_state;
       });
       tmp2Result1 = require("AppState");
@@ -51,14 +52,14 @@ const items = [
   {
     key: "addEventListener",
     value: function addEventListener(arg0, arg1) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const _emitter = this._emitter;
       if (null == _emitter) {
         const _Error2 = Error;
-        const error = new Error("Cannot use AppState when `isAvailable` is false.");
+        error = new Error("Cannot use AppState when `isAvailable` is false.");
         throw error;
       } else if ("change" === arg0) {
-        let closure_1 = arg1;
+        closure_1 = arg1;
         return _emitter.addListener("appStateDidChange", (app_state) => {
           callback(app_state.app_state);
         });
@@ -72,7 +73,7 @@ const items = [
             throw error1;
           }
         }
-        let _classCallCheck = arg1;
+        closure_2 = arg1;
         return _emitter.addListener("appStateFocusChange", (arg0) => {
           let tmp2 = "blur" !== closure_0;
           if (!tmp2) {
@@ -90,4 +91,4 @@ const items = [
   }
 ];
 
-export default new require("_createClass")(AppStateImpl, items)();
+export default new _createClassDefault(AppStateImpl, items)();

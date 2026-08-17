@@ -1,5 +1,6 @@
 // _runtime/00756_mapCacheDelete.js
-import { getMapData } from "00757_getMapData.js";
+import getMapData from "getMapData" /* 757 */;
+
 
 export default function mapCacheDelete(arg0) {
   const deleteResult = getMapData(this, arg0).delete(arg0);

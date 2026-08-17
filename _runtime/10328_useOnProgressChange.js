@@ -10,7 +10,7 @@ arg5.useOnProgressChange = function useOnProgressChange(autoFillData) {
   const size = autoFillData.size;
   const rawDataLength = autoFillData.rawDataLength;
   const onProgressChange = autoFillData.onProgressChange;
-  let closure_6 = tmp;
+  closure_6 = tmp;
   let obj = autoFillData(loop[0]);
   const fn = function n() {
     return offsetX.value;

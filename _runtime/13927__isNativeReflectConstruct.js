@@ -1,10 +1,11 @@
 // _runtime/13927__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const ReanimatedScreenWrapper = arg1;
 function _isNativeReflectConstruct() {
@@ -18,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -30,12 +31,12 @@ class ReanimatedScreenWrapper {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_3(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_5;
+    obj = closure_5(closure_0);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -44,11 +45,11 @@ class ReanimatedScreenWrapper {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.ref = null;
     tmp3Result.setRef = (ref) => {
-      _undefined.ref = ref;
-      const props = _undefined.props;
+      props.ref = ref;
+      props = props.props;
       const onComponentRef = props.onComponentRef;
       if (onComponentRef != null) {
         onComponentRef(ref);
@@ -57,7 +58,7 @@ class ReanimatedScreenWrapper {
     return tmp3Result;
   }
 }
-importDefaultResult1(ReanimatedScreenWrapper, require("noop").Component);
+importDefaultResult1(ReanimatedScreenWrapper, noopDefault.Component);
 let items = [
   {
     key: "setNativeProps",

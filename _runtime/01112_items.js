@@ -1,20 +1,22 @@
 // _runtime/01112_items.js
+import _mod1113 from "module_1113" /* 1113 */;
+
 let fn = this;
 if (this) {
   fn = this.__awaiter;
 }
 if (!fn) {
   fn = (arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     let _Promise = arg2;
-    let closure_3 = arg3;
+    closure_3 = arg3;
     if (!arg2) {
       _Promise = Promise;
     }
     _Promise = new _Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function fulfilled(arg0) {
         try {
           step(iter.next(arg0));
@@ -67,33 +69,33 @@ if (!fn) {
     return _Promise;
   };
 }
-let obj = { name: require("module_1113").SDK_NAME, packages: null, version: null };
-obj = { name: require("module_1113").SDK_PACKAGE_NAME, version: require("module_1113").SDK_VERSION };
+let obj = { name: _mod1113.SDK_NAME, packages: null, version: null };
+obj = { name: _mod1113.SDK_PACKAGE_NAME, version: _mod1113.SDK_VERSION };
 let items = [obj];
 obj[1] = items;
-obj[2] = require("module_1113").SDK_VERSION;
+obj[2] = _mod1113.SDK_VERSION;
 
 export const defaultSdkInfo = obj;
 export const sdkInfoIntegration = () => {
-  let obj = fn(1002);
+  obj = fn(1002);
   if (obj.notWeb()) {
     if (!tmpResult.isExpoGo()) {
       fn = false;
-      const dependencyMap = null;
-      fn = () => outer1_2(undefined, undefined, undefined, function*() {
-        let closure_1 = tmp3;
-        if (outer1_0) {
-          return outer1_1;
+      dependencyMap = null;
+      fn = () => closure_1_2(undefined, undefined, undefined, function*() {
+        closure_1 = tmp3;
+        if (closure_1_0) {
+          return closure_1_1;
         }
-        let c3 = 1;
-        const NATIVE = outer1_0(outer1_1[2]).NATIVE;
+        c3 = 1;
+        const NATIVE = closure_1_0(closure_1_1[2]).NATIVE;
         yield NATIVE.fetchNativeSdkInfo();
         if (1 === tmp7) {
           c3 = 0;
-          let c0 = closure_2;
-          const debug = outer1_0(outer1_1[3]).debug;
+          c0 = closure_2;
+          const debug = closure_1_0(closure_1_1[3]).debug;
           debug.warn("Could not fetch native sdk info.", c0);
-          let c5 = 3;
+          c5 = 3;
         } else if (arg0 === 1) {
           c5 = 3;
           throw arg1;
@@ -111,12 +113,12 @@ export const sdkInfoIntegration = () => {
 
     };
     obj[2] = function processEvent(arg0) {
-      let closure_0 = arg0;
-      let closure_1 = closure_0;
-      return outer1_2(undefined, undefined, undefined, function*() {
-        let c2 = 0;
-        let closure_1 = tmp2;
-        let closure_0 = yield outer1_1();
+      closure_0 = arg0;
+      closure_1 = closure_0;
+      return closure_1_2(undefined, undefined, undefined, function*() {
+        c2 = 0;
+        closure_1 = tmp2;
+        closure_0 = yield closure_1_1();
         let str = closure_0.platform;
         if (!str) {
           str = "javascript";
@@ -132,30 +134,30 @@ export const sdkInfoIntegration = () => {
           name = c3.name;
         }
         closure_0.sdk.name = name;
-        let version = outer1_0.sdk.version;
+        let version = closure_1_0.sdk.version;
         if (!version) {
           version = c3.version;
         }
-        outer1_0.sdk.version = version;
+        closure_1_0.sdk.version = version;
         closure_0 = 0;
-        let packages = outer1_0.sdk.packages;
+        let packages = closure_1_0.sdk.packages;
         if (!packages) {
           packages = [];
         }
         const items = [];
         const arraySpreadResult = HermesBuiltin.arraySpread(packages, closure_0);
         closure_0 = arraySpreadResult;
-        let items2 = outer1_0;
-        if (outer1_0) {
-          const items1 = [outer1_0];
+        let items2 = closure_1_0;
+        if (closure_1_0) {
+          const items1 = [closure_1_0];
           items2 = items1;
         }
         if (!items2) {
           items2 = [];
         }
         closure_0 = HermesBuiltin.arraySpread(items2, arraySpreadResult);
-        outer1_0.sdk.packages = items;
-        return outer1_0;
+        closure_1_0.sdk.packages = items;
+        return closure_1_0;
       });
     };
     return obj;

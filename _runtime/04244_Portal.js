@@ -1,7 +1,13 @@
 // _runtime/04244_Portal.js
+import Portal from "Portal" /* 4245 */;
+import usePortal from "usePortal" /* 4246 */;
+import PortalHost from "PortalHost" /* 4249 */;
+import memo from "memo" /* 4251 */;
+import print from "print" /* 4253 */;
 
-export const Portal = require("Portal").Portal;
-export const PortalHost = require("PortalHost").PortalHost;
-export const PortalProvider = require("memo").PortalProvider;
-export const usePortal = require("usePortal").usePortal;
-export const enableLogging = require("print").enableLogging;
+
+export const Portal = Portal.Portal;
+export const PortalHost = PortalHost.PortalHost;
+export const PortalProvider = memo.PortalProvider;
+export const usePortal = usePortal.usePortal;
+export const enableLogging = print.enableLogging;

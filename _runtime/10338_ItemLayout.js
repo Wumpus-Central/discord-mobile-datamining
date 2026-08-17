@@ -1,33 +1,24 @@
 // _runtime/10338_ItemLayout.js
-import "noop";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
+noopDefault;
 let closure_4 = { code: "function pnpm_ItemLayoutTsx1(){const{x,size}=this.__closure;return x.value/size;}" };
 let closure_5 = { code: "function pnpm_ItemLayoutTsx2(){const{animationStyle,x,size,index}=this.__closure;return animationStyle(x.value/size,index);}" };
 
 export const ItemLayout = (animationStyle) => {
-  let children;
-  let customConfig;
-  let dataLength;
-  let handlerOffset;
-  let height;
-  let index;
-  let loop;
-  let modeConfig;
-  let visibleRanges;
-  let width;
   ({ handlerOffset, index } = animationStyle);
   animationStyle = animationStyle.animationStyle;
   ({ children, visibleRanges } = animationStyle);
-  let obj = index(10321);
+  let obj = index(height[2]);
   const props = obj.useGlobalState().props;
   ({ loop, dataLength, width, height, customConfig, modeConfig } = props);
   let tmp3 = width;
   if (props.vertical) {
     tmp3 = height;
   }
-  const dependencyMap = tmp3;
+  height = tmp3;
   obj = { handlerOffset, index, size: tmp3, dataLength, loop };
   const merged = Object.assign(typeof customConfig === "function" ? customConfig() : {});
   if ("horizontal-stack" === props.mode) {
@@ -44,11 +35,11 @@ export const ItemLayout = (animationStyle) => {
     obj[5] = str;
     obj[6] = modeConfig.showLength;
   }
-  let tmpResult = tmp(10339);
+  let tmpResult = tmp(tmp2[3]);
   const offsetX = tmpResult.useOffsetX(obj, visibleRanges);
-  tmpResult = tmp(1654);
+  tmpResult = tmp(tmp2[4]);
   const fn = function k() {
-    return offsetX.value / closure_2;
+    return offsetX.value / height;
   };
   fn.__closure = { x: offsetX, size: tmp3 };
   fn.__workletHash = 15967503186804;
@@ -58,24 +49,24 @@ export const ItemLayout = (animationStyle) => {
   const tmp4 = typeof customConfig === "function" ? customConfig() : {};
   class E {
     constructor() {
-      return animationStyle(visibleRanges.value / closure_2, index);
+      return animationStyle(closure_3.value / height, index);
     }
   }
   E.__closure = { animationStyle, x: offsetX, size: tmp3, index };
   E.__workletHash = 4560717846650;
   E.__initData = closure_5;
   const items1 = [animationStyle, index, offsetX, tmp3];
-  const animatedStyle = index(1654).useAnimatedStyle(E, items1);
+  const animatedStyle = index(height[4]).useAnimatedStyle(E, items1);
   if (!width) {
     width = "100%";
   }
-  const obj1 = { width, height: null, position: "absolute", pointerEvents: "box-none" };
+  obj1 = { width, height: null, position: "absolute", pointerEvents: "box-none" };
   if (!height) {
     height = "100%";
   }
   const tmp9 = offsetX;
-  const tmpResult1 = index(1654);
+  const tmpResult1 = index(height[4]);
   obj1[1] = height;
   const items2 = [obj1, animatedStyle];
-  return tmp9(animationStyle(1654).View, { style: items2, testID: "__CAROUSEL_ITEM_" + index + "__", children: children({ animationValue: derivedValue }) });
+  return tmp9(animationStyle(height[4]).View, { style: items2, testID: "__CAROUSEL_ITEM_" + index + "__", children: children({ animationValue: derivedValue }) });
 };

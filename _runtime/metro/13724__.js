@@ -1,8 +1,9 @@
 // _runtime/metro/13724__.js
-import { 13722__ } from "13722__.js";
+import _mod13722 from "module_13722" /* 13722 */;
+
 
 export default (arg0, arg1) => {
-  const tmp = 13722__(arg0);
+  const tmp = _mod13722(arg0);
   if (tmp < 0) {
     let tmp3 = max(tmp + arg1, 0);
   } else {

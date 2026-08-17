@@ -1,7 +1,9 @@
 // _runtime/04608_valueOf.js
+import _mod608 from "module_608" /* 608 */;
+
 let prototype;
-if (require("module_608")) {
-  prototype = require("module_608").prototype;
+if (_mod608) {
+  prototype = _mod608.prototype;
 }
 let valueOf;
 if (prototype) {

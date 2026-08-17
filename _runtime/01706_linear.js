@@ -1,8 +1,8 @@
 // _runtime/01706_linear.js
-import importDefaultResult from "_slicedToArray";
-import { calcBezier } from "01707_calcBezier.js";
+import calcBezier from "calcBezier" /* 1707 */;
+import importDefaultResult from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 let closure_2 = { code: "function linear_Pnpm_EasingTs1(t){return t;}" };
 let closure_3 = { code: "function ease_Pnpm_EasingTs2(t){const{Bezier}=this.__closure;return Bezier(0.42,0,1,1)(t);}" };
 let closure_4 = { code: "function quad_Pnpm_EasingTs3(t){return t*t;}" };
@@ -49,7 +49,7 @@ const tmp6 = (() => {
 let closure_9 = { code: "function circle_Pnpm_EasingTs8(t){return 1-Math.sqrt(1-t*t);}" };
 const tmp7 = (() => {
   function poly(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const fn = function n(sum) {
       return Math.pow(sum, closure_0);
     };
@@ -102,7 +102,7 @@ const tmp11 = (() => {
     if (arg0 === undefined) {
       num = 1;
     }
-    let c0;
+    c0 = undefined;
     const result = num * Math.PI;
     c0 = result;
     const fn = function n(arg0) {
@@ -165,8 +165,8 @@ const tmp14 = (() => {
   function bezier(x1, y1, x2, y2) {
     const callback = x1;
     const table = y1;
-    let closure_2 = x2;
-    let closure_3 = y2;
+    closure_2 = x2;
+    closure_3 = y2;
     let obj = { factory: null };
     const fn = function _() {
       return x1(table[1]).Bezier(x1, table, closure_2, closure_3);
@@ -210,7 +210,7 @@ let closure_25 = { code: "function pnpm_EasingTs24(t){const{n,roundToNextStep}=t
 let obj = { linear: tmp3, ease: tmp4, quad: tmp5, cubic: tmp6, poly: tmp7, sin: tmp8, circle: tmp9, exp: tmp10, elastic: tmp11, back: tmp12, bounce: tmp13, bezier: tmp14, bezierFn: tmp15, steps: null, in: null, out: null, inOut: null };
 const tmp17 = (() => {
   function out(easing) {
-    let closure_0 = easing;
+    closure_0 = easing;
     const fn = function n(arg0) {
       return 1 - easing(1 - arg0);
     };
@@ -258,7 +258,7 @@ obj[14] = tmp16;
 obj[15] = tmp17;
 obj[16] = (() => {
   function inOut(easing) {
-    let closure_0 = easing;
+    closure_0 = easing;
     const fn = function n(arg0) {
       if (arg0 < 0.5) {
         let result = easing(2 * arg0) / 2;

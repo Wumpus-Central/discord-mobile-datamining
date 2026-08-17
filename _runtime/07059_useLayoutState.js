@@ -1,9 +1,7 @@
 // _runtime/07059_useLayoutState.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 7041 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let c4;
 const require = arg1;
 ({ useState: c3, useCallback: c4 } = noop);
 

@@ -1,14 +1,13 @@
 // _runtime/12259__output.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import $ZodRegistry from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-export function $ZodRegistry() {
-  _classCallCheck(this, _classCallCheck);
+$ZodRegistry = function $ZodRegistry(arg0, $ZodRegistry) {
+  $ZodRegistry(this, $ZodRegistry);
   const weakMap = new WeakMap();
   this._map = weakMap;
   this._idmap = new Map();
-}
-_classCallCheck = $ZodRegistry;
+};
 const items = [
   {
     key: "add",
@@ -76,7 +75,7 @@ const items = [
         obj = {};
         const merged = Object.assign(obj);
         delete tmp2[tmp];
-        const obj1 = {};
+        obj1 = {};
         const merged1 = Object.assign(obj);
         const _map2 = self._map;
         const merged2 = Object.assign(_map2.get(_zod));
@@ -111,4 +110,5 @@ export const registry = function registry() {
 };
 export const $output = Symbol("ZodOutput");
 export const $input = Symbol("ZodInput");
+export const $ZodRegistry = _moduleResult;
 export const globalRegistry = globalThis.__zod_globalRegistry;

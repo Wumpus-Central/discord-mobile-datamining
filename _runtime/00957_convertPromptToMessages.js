@@ -1,11 +1,11 @@
 // _runtime/00957_convertPromptToMessages.js
-import { map } from "00959_map.js";
-import { 00958__ } from "metro/00958__.js";
-const require = arg1;
+import _mod956 from "module_956" /* 956 */;
+import _mod958 from "module_958" /* 958 */;
+import map2 from "map" /* 959 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function convertPromptToMessages(data) {
-  let _prompt;
-  let system;
   try {
     const _JSON = JSON;
     const parsed = JSON.parse(data);
@@ -32,18 +32,18 @@ function convertPromptToMessages(data) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5._INTERNAL_cleanupToolCallSpan = function _INTERNAL_cleanupToolCallSpan(arg0) {
-  const toolCallSpanMap = map.toolCallSpanMap;
+  const toolCallSpanMap = map2.toolCallSpanMap;
   toolCallSpanMap.delete(arg0);
 };
 arg5._INTERNAL_getSpanForToolCallId = function _INTERNAL_getSpanForToolCallId(arg0) {
-  const toolCallSpanMap = map.toolCallSpanMap;
+  const toolCallSpanMap = map2.toolCallSpanMap;
   return toolCallSpanMap.get(arg0);
 };
 arg5.accumulateTokensForParent = function accumulateTokensForParent(item10015, map) {
   const parent_span_id = item10015.parent_span_id;
   if (parent_span_id) {
-    const tmp3 = item10015.data[require(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE];
-    const tmp4 = item10015.data[require(undefined, 958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE];
+    const tmp3 = item10015.data[_mod958.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE];
+    const tmp4 = item10015.data[_mod958.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE];
     if (typeof tmp3 === "number") {
       const tmp6 = map.get(parent_span_id) || { inputTokens: 0, outputTokens: 0 };
       if (typeof tmp3 === "number") {
@@ -64,10 +64,10 @@ arg5.applyAccumulatedTokens = function applyAccumulatedTokens(trace, map) {
   }
   if (data) {
     if (value.inputTokens > 0) {
-      trace.data[00958__.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = value.inputTokens;
+      trace.data[_mod958.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = value.inputTokens;
     }
     if (value.outputTokens > 0) {
-      trace.data[00958__.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = value.outputTokens;
+      trace.data[_mod958.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = value.outputTokens;
     }
     if (tmp6) {
       trace.data["gen_ai.usage.total_tokens"] = value.inputTokens + value.outputTokens;
@@ -223,61 +223,61 @@ arg5.getSpanOpFromName = function getSpanOpFromName(description) {
     case "bm":
     break;
     case "body":
-      let tmp17 = 00958__;
+      let tmp17 = _mod958;
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
     case "borderRadius":
     break;
     case "bottom":
-      tmp17 = 00958__;
+      tmp17 = _mod958;
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
     case "call":
     break;
     case "channel":
-      tmp17 = 00958__;
+      tmp17 = _mod958;
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
     case "channelId":
     break;
     case "channel_id":
-      tmp17 = 00958__;
+      tmp17 = _mod958;
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
     case "id":
     break;
     case "children":
-      tmp17 = 00958__;
+      tmp17 = _mod958;
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
     case "cix":
     break;
     case "ix":
-      tmp17 = 00958__;
+      tmp17 = _mod958;
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
     case "unicodeVersion":
     break;
     case "code":
-      return 00958__.GEN_AI_GENERATE_TEXT_DO_GENERATE_OPERATION_ATTRIBUTE;
+      return _mod958.GEN_AI_GENERATE_TEXT_DO_GENERATE_OPERATION_ATTRIBUTE;
     case "color":
     break;
     case "colors":
-      return 00958__.GEN_AI_STREAM_TEXT_DO_STREAM_OPERATION_ATTRIBUTE;
+      return _mod958.GEN_AI_STREAM_TEXT_DO_STREAM_OPERATION_ATTRIBUTE;
     case "concat":
     break;
     case "constructor":
-      return 00958__.GEN_AI_GENERATE_OBJECT_DO_GENERATE_OPERATION_ATTRIBUTE;
+      return _mod958.GEN_AI_GENERATE_OBJECT_DO_GENERATE_OPERATION_ATTRIBUTE;
     case "container":
     break;
     case "content":
-      return 00958__.GEN_AI_STREAM_OBJECT_DO_STREAM_OPERATION_ATTRIBUTE;
+      return _mod958.GEN_AI_STREAM_OBJECT_DO_STREAM_OPERATION_ATTRIBUTE;
     case "context":
     break;
     case "text":
-      return 00958__.GEN_AI_EMBED_DO_EMBED_OPERATION_ATTRIBUTE;
+      return _mod958.GEN_AI_EMBED_DO_EMBED_OPERATION_ATTRIBUTE;
     case "count":
     break;
     case "create":
-      return 00958__.GEN_AI_EMBED_MANY_DO_EMBED_OPERATION_ATTRIBUTE;
+      return _mod958.GEN_AI_EMBED_MANY_DO_EMBED_OPERATION_ATTRIBUTE;
     case "createStyles":
     break;
     case "ty":
-      return 00958__.GEN_AI_EXECUTE_TOOL_OPERATION_ATTRIBUTE;
+      return _mod958.GEN_AI_EXECUTE_TOOL_OPERATION_ATTRIBUTE;
     case "current":
     break;
     case "cursor":
@@ -635,11 +635,11 @@ arg5.getSpanOpFromName = function getSpanOpFromName(description) {
   }
 };
 arg5.requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute, data) {
-  if (data[require(undefined, 956).AI_PROMPT_ATTRIBUTE]) {
+  if (data[_mod956.AI_PROMPT_ATTRIBUTE]) {
     let tmpResult = tmp(960);
     const attr = setAttribute.setAttribute("gen_ai.prompt", tmpResult.getTruncatedJsonString(data[tmp(undefined, 956).AI_PROMPT_ATTRIBUTE]));
   }
-  const tmp4 = data[require(undefined, 956).AI_PROMPT_ATTRIBUTE];
+  const tmp4 = data[_mod956.AI_PROMPT_ATTRIBUTE];
   if (typeof tmp4 === "string") {
     if (!data[tmp(undefined, 958).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE]) {
       if (!data[tmp(undefined, 956).AI_PROMPT_MESSAGES_ATTRIBUTE]) {
@@ -654,7 +654,7 @@ arg5.requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute
       }
     }
   }
-  if (typeof data[require(undefined, 956).AI_PROMPT_MESSAGES_ATTRIBUTE] === "string") {
+  if (typeof data[_mod956.AI_PROMPT_MESSAGES_ATTRIBUTE] === "string") {
     try {
       const _JSON = JSON;
       const parsed = JSON.parse(data[tmp(undefined, 956).AI_PROMPT_MESSAGES_ATTRIBUTE]);

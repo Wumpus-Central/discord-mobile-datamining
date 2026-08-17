@@ -1,7 +1,8 @@
 // _runtime/00136_getInstanceHandle.js
-import { renderElement } from "00114_renderElement.js";
-import { createReactNativeDocumentInstanceHandle } from "00137_createReactNativeDocumentInstanceHandle.js";
-const require = arg1;
+import renderElement from "renderElement" /* 114 */;
+import createReactNativeDocumentInstanceHandle from "createReactNativeDocumentInstanceHandle" /* 137 */;
+
+require = arg1;
 const dependencyMap = arg6;
 let closure_4 = Symbol("internalInstanceHandle");
 let closure_5 = Symbol("ownerDocument");

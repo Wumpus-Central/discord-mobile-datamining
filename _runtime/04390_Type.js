@@ -1,5 +1,6 @@
 // _runtime/04390_Type.js
-import { isObject } from "04391_isObject.js";
+import isObject from "isObject" /* 4391 */;
+
 
 export default function Type(num) {
   let str = "Null";

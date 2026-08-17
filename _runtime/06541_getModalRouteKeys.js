@@ -1,6 +1,6 @@
 // _runtime/06541_getModalRouteKeys.js
 arg5.getModalRouteKeys = (arr) => {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   return arr.reduce((arr, key) => {
     let options;
     if (table[key.key] != null) {

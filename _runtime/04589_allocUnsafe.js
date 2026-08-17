@@ -1,4 +1,6 @@
 // _runtime/04589_allocUnsafe.js
+import _mod609 from "module_609" /* 609 */;
+
 let tmp = typeof exports === "object";
 if (typeof exports === "object") {
   tmp = exports;
@@ -25,7 +27,7 @@ if (tmp2) {
 let _Buffer;
 if (tmp2) {
   if (tmp2.exports === tmp) {
-    _Buffer = require("module_609").Buffer;
+    _Buffer = _mod609.Buffer;
   }
 }
 let allocUnsafe;

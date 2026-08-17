@@ -1,8 +1,8 @@
 // _runtime/01816_useReducedMotion.js
-import isReducedMotionEnabledInSystem from "isReducedMotionEnabledInSystem";
+import isReducedMotionEnabledInSystem from "isReducedMotionEnabledInSystem" /* 1695 */;
 
-isReducedMotionEnabledInSystem = isReducedMotionEnabledInSystem.isReducedMotionEnabledInSystem();
+let closure_0 = isReducedMotionEnabledInSystem.isReducedMotionEnabledInSystem();
 
 export function useReducedMotion() {
-  return isReducedMotionEnabledInSystem;
+  return closure_0;
 }

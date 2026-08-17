@@ -1,10 +1,10 @@
 // _runtime/01574_isNavigationState.js
-import NavigationMetaContext from "NavigationMetaContext";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import useEventEmitter from "useEventEmitter";
-import { jsx } from "useChildListeners";
-import { PrivateValueStore } from "PrivateValueStore";
-import { useEffect } from "01522_useEffect.js";
+import useEffectDefault from "useEffect" /* 1522 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import closure_6 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import { PrivateValueStore } from "PrivateValueStore" /* 1504 */;
 import { useLazyValue } from "01523_useLazyValue.js";
 import { NavigationBuilderContext } from "01530_NavigationBuilderContext.js";
 import { ConsumedParamsContext } from "01532_ConsumedParamsContext.js";
@@ -28,13 +28,13 @@ function isNavigationState(state) {
 function getRouteConfigsFromChildren(arg0) {
   let items;
   items = [];
-  let c1;
-  let c2;
+  c1 = undefined;
+  c2 = undefined;
   const Children = React.Children;
   return Children.toArray(arg0).reduce((arr, type) => {
-    let obj = outer1_6;
-    if (outer1_6.isValidElement(type)) {
-      if (type.type === outer1_0(outer1_2[5]).Screen) {
+    let obj = closure_1_6;
+    if (closure_1_6.isValidElement(type)) {
+      if (type.type === closure_1_0(closure_1_2[5]).Screen) {
         if (typeof type.props === "object") {
           if (null !== type.props) {
             if (typeof type.props.name === "string") {
@@ -99,7 +99,7 @@ function getRouteConfigsFromChildren(arg0) {
           if (typeof type.props.screenLayout === "function") {
             screenLayout = type.props.screenLayout;
           }
-          if (typeof outer1_9 !== "function") {
+          if (typeof closure_1_9 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           if (items4 === undefined) {
@@ -108,9 +108,9 @@ function getRouteConfigsFromChildren(arg0) {
           let Children = obj.Children;
           let items5 = [];
           HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce((arr, type) => {
-            let obj = outer1_6;
-            if (outer1_6.isValidElement(type)) {
-              if (type.type === outer1_0(outer1_2[5]).Screen) {
+            let obj = closure_1_6;
+            if (closure_1_6.isValidElement(type)) {
+              if (type.type === closure_1_0(closure_1_2[5]).Screen) {
                 if (typeof type.props === "object") {
                   if (null !== type.props) {
                     if (typeof type.props.name === "string") {
@@ -175,7 +175,7 @@ function getRouteConfigsFromChildren(arg0) {
                   if (typeof type.props.screenLayout === "function") {
                     screenLayout = type.props.screenLayout;
                   }
-                  if (typeof outer1_9 !== "function") {
+                  if (typeof closure_1_9 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   if (items4 === undefined) {
@@ -184,9 +184,9 @@ function getRouteConfigsFromChildren(arg0) {
                   let Children = obj.Children;
                   let items5 = [];
                   HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce((arr, type) => {
-                    let obj = outer1_6;
-                    if (outer1_6.isValidElement(type)) {
-                      if (type.type === outer1_0(outer1_2[5]).Screen) {
+                    let obj = closure_1_6;
+                    if (closure_1_6.isValidElement(type)) {
+                      if (type.type === closure_1_0(closure_1_2[5]).Screen) {
                         if (typeof type.props === "object") {
                           if (null !== type.props) {
                             if (typeof type.props.name === "string") {
@@ -251,7 +251,7 @@ function getRouteConfigsFromChildren(arg0) {
                           if (typeof type.props.screenLayout === "function") {
                             screenLayout = type.props.screenLayout;
                           }
-                          if (typeof outer1_9 !== "function") {
+                          if (typeof closure_1_9 !== "function") {
                             HermesBuiltin.throwTypeError();
                           }
                           if (items4 === undefined) {
@@ -260,9 +260,9 @@ function getRouteConfigsFromChildren(arg0) {
                           let Children = obj.Children;
                           let items5 = [];
                           HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce((arr, type) => {
-                            let obj = outer1_6;
-                            if (outer1_6.isValidElement(type)) {
-                              if (type.type === outer1_0(outer1_2[5]).Screen) {
+                            let obj = closure_1_6;
+                            if (closure_1_6.isValidElement(type)) {
+                              if (type.type === closure_1_0(closure_1_2[5]).Screen) {
                                 if (typeof type.props === "object") {
                                   if (null !== type.props) {
                                     if (typeof type.props.name === "string") {
@@ -327,7 +327,7 @@ function getRouteConfigsFromChildren(arg0) {
                                   if (typeof type.props.screenLayout === "function") {
                                     screenLayout = type.props.screenLayout;
                                   }
-                                  if (typeof outer1_9 !== "function") {
+                                  if (typeof closure_1_9 !== "function") {
                                     HermesBuiltin.throwTypeError();
                                   }
                                   if (items4 === undefined) {
@@ -562,29 +562,10 @@ function getStateFromParams(state) {
 }
 
 export const useNavigationBuilder = function useNavigationBuilder(StackRouter, UNSTABLE_routeNamesChangeBehavior) {
-  let addKeyedListener;
-  let addListener;
-  let children;
-  let closure_21;
-  let closure_22;
-  let closure_23;
-  let closure_24;
-  let closure_25;
-  let useEventEmitter;
-  let isNavigationState;
-  let jsx;
-  let keyedListeners;
-  let listeners;
-  let screenLayout;
-  let screenOptions;
-  let tmp38;
-  let tmp39;
-  let tmp43;
-  let tmp44;
   const _require = StackRouter;
-  const importDefault = UNSTABLE_routeNamesChangeBehavior;
+  importDefault = UNSTABLE_routeNamesChangeBehavior;
   let obj = _useRegisterNavigator;
-  const dependencyMap = obj.useRegisterNavigator();
+  dependencyMap = obj.useRegisterNavigator();
   const context = React.useContext(_context.NavigationRouteContext);
   const context1 = React.useContext(_ConsumedParamsContext.ConsumedParamsContext);
   let params;
@@ -602,24 +583,24 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
     }
     tmp5 = hasItem;
   }
-  let callback = tmp5;
-  ({ layout: useEventEmitter, screenListeners: jsx, UNSTABLE_router: isNavigationState } = UNSTABLE_routeNamesChangeBehavior);
+  hasItem = tmp5;
+  ({ layout: closure_6, screenListeners: jsx, UNSTABLE_router: isNavigationState } = UNSTABLE_routeNamesChangeBehavior);
   ({ children, screenOptions, screenLayout } = UNSTABLE_routeNamesChangeBehavior);
-  const getRouteConfigsFromChildren = callback(UNSTABLE_routeNamesChangeBehavior, context);
+  getRouteConfigsFromChildren = hasItem(UNSTABLE_routeNamesChangeBehavior, context);
   const arr = getRouteConfigsFromChildren(children);
   const lazyValue = _useLazyValue.useLazyValue(() => {
     if (null != initialRouteName.initialRouteName) {
       if (arr.every((props) => props.props.name !== initialRouteName.initialRouteName)) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const error = new Error("Couldn't find a screen named '" + tmp.initialRouteName + "' to use as 'initialRouteName'.");
+        error = new Error("Couldn't find a screen named '" + tmp.initialRouteName + "' to use as 'initialRouteName'.");
         throw error;
       }
     }
     const tmp3 = StackRouter(initialRouteName);
     if (null != callback) {
       const tmp4 = callback(tmp3);
-      const obj = {};
+      obj = {};
       const merged = Object.assign(tmp3);
       const merged1 = Object.assign(tmp4);
       return obj;
@@ -631,8 +612,8 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
   if (mapped.length) {
     obj = {};
     obj = {};
-    let obj1 = {};
-    let obj2 = {};
+    obj1 = {};
+    const obj2 = {};
     const iter = arr[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -647,7 +628,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
         let str3 = "A navigator cannot contain multiple 'Screen' components with the same name (found duplicate screen named '";
         let tmp23 = new.target;
         let tmp24 = new.target;
-        let error = new Error("A navigator cannot contain multiple 'Screen' components with the same name (found duplicate screen named '" + tmp18 + "')");
+        error = new Error("A navigator cannot contain multiple 'Screen' components with the same name (found duplicate screen named '" + tmp18 + "')");
         let tmp26 = error;
         throw error;
       } else {
@@ -665,7 +646,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
     }
     let obj9 = React;
     let items = [lazyValue.type];
-    callback = React.useCallback((type) => {
+    const callback = React.useCallback((type) => {
       let tmp = undefined === type.type;
       if (!tmp) {
         tmp = type.type === lazyValue.type;
@@ -693,16 +674,16 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
     ({ getState: closure_21, setState: closure_22, setKey: closure_23, getKey: closure_24, getIsInitial: closure_25 } = context2);
     const context3 = React.useContext(_NavigationBuilderContext.NavigationBuilderContext);
     const getIsStateEmitted = context3.getIsStateEmitted;
-    let closure_27 = React.useRef(false);
-    let closure_28 = React.useRef(undefined);
-    const tmp35 = useEffect((current) => {
+    closure_27 = React.useRef(false);
+    closure_28 = React.useRef(undefined);
+    const tmp35 = useEffectDefault((current) => {
       if (ref.current) {
         closure_28.current = current;
       } else {
         callback3(current);
       }
     });
-    let closure_29 = tmp35;
+    closure_29 = tmp35;
     let items3 = [state, lazyValue, callback];
     const tmp37 = context1(React.useMemo(() => {
       if (ref.current) {
@@ -710,9 +691,9 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           if (callback(tmp.current)) {
             const items = [undefined, , , ];
             if (callback1(tmp.current)) {
-              let current = tmp.current;
+              current = tmp.current;
             } else {
-              let obj = { routeNames: null, routeParamList: null, routeGetIdList: null };
+              obj = { routeNames: null, routeParamList: null, routeGetIdList: null };
               obj[0] = mapped;
               obj[1] = obj1;
               obj[2] = obj2;
@@ -727,7 +708,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       }
       const reduced = mapped.reduce((arg0, arg1) => {
         const initialParams = table[arg1].props.initialParams;
-        let state;
+        state = undefined;
         if (closure_3 != null) {
           const params = tmp.params;
           if (params != null) {
@@ -756,7 +737,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           }
         }
         if (undefined !== initialParams) {
-          const obj = {};
+          obj = {};
           const merged = Object.assign(initialParams);
           const merged1 = Object.assign(params2);
           const tmp5 = obj;
@@ -781,7 +762,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
             }
           }
           if (typeof screen !== "string") {
-            if (!_objectWithoutProperties) {
+            if (!hasItem) {
               const items1 = [undefined, , , ];
               obj = { routeNames: null, routeParamList: null, routeGetIdList: null };
               obj[0] = tmp3;
@@ -804,7 +785,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
         }
       }
       let tmp15;
-      if (!_objectWithoutProperties) {
+      if (!hasItem) {
         params = undefined;
         if (context != null) {
           params = context.params;
@@ -850,7 +831,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       items3[3] = tmp29;
     }, items3), 4);
     [tmp38, tmp39] = tmp37;
-    let closure_30 = tmp39;
+    closure_30 = tmp39;
     const ref = React.useRef(obj);
     const insertionEffect = React.useInsertionEffect(() => {
       ref.current = obj;
@@ -861,29 +842,29 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
     let found = keys.filter((arg0) => {
       let tmp3 = null != tmp && null != tmp2;
       if (tmp3) {
-        const obj = StackRouter(1564);
+        obj = StackRouter(1564);
         tmp3 = !obj.isArrayEqual(tmp, tmp2);
       }
       return tmp3;
     });
     [tmp43, tmp44] = context1(React.useState(tmp38), 2);
-    let closure_33 = tmp44;
+    closure_33 = tmp44;
     if (tmp45) {
       tmp44(tmp38);
     }
-    let closure_34 = tmp39;
+    let rehydratedState = tmp39;
     let stateForRouteNamesChange = tmp39;
-    let c36 = false;
+    c36 = false;
     if (null != tmp43) {
       if (!callback(tmp43)) {
         tmp44(undefined);
-        let rehydratedState = tmp39;
+        rehydratedState = tmp39;
       }
       let params1;
       if (context != null) {
         params1 = context.params;
       }
-      let c37 = tmp55;
+      c37 = tmp55;
       let params2;
       if (context != null) {
         params2 = context.params;
@@ -987,21 +968,21 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           const result = context1.set(context.params, true);
         }
       }, items4);
-      let closure_38 = tmp39 !== tmp58;
+      closure_38 = tmp39 !== tmp58;
       let tmp30Result = tmp30(1577);
       const scheduleUpdate = tmp30Result.useScheduleUpdate(() => {
         if (closure_38) {
-          tmp35(stateForRouteNamesChange);
+          callback6(stateForRouteNamesChange);
           if (c36) {
             tmp44(undefined);
           }
         }
       });
-      closure_34 = tmp58;
+      rehydratedState = tmp58;
       const effect1 = obj9.useEffect(() => {
-        closure_28.current = closure_34;
+        closure_28.current = rehydratedState;
       });
-      let closure_39 = obj9.useRef(null);
+      closure_39 = obj9.useRef(null);
       const effect2 = obj9.useEffect(() => {
         closure_27.current = false;
         callback4(closure_2);
@@ -1010,11 +991,11 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           tmp2 = !getIsStateEmitted();
         }
         if (!tmp2) {
-          tmp2 = ref3.current === closure_34;
+          tmp2 = ref3.current === rehydratedState;
         }
         if (!tmp2) {
-          tmp35(closure_34);
-          ref3.current = closure_34;
+          callback6(rehydratedState);
+          ref3.current = rehydratedState;
         }
         return () => {
           let tmp = undefined !== callback();
@@ -1037,12 +1018,12 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       });
       tmp30Result = tmp30(1528);
       const eventEmitter = tmp30Result.useEventEmitter((target) => {
-        let closure_0 = target;
+        closure_0 = target;
         const items = [];
-        const routes = tmp58.routes;
+        const routes = rehydratedState.routes;
         if (target.target) {
           let found = routes.find((key) => key.key === target.target);
-          let closure_1 = found;
+          closure_1 = found;
           let name;
           if (found != null) {
             name = found.name;
@@ -1078,17 +1059,17 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
             HermesBuiltin.arraySpread(items3.map((fn) => {
               let tmp = fn;
               if (typeof fn === "function") {
-                const obj = { route: null, navigation: null };
+                obj = { route: null, navigation: null };
                 obj[0] = closure_1;
                 obj[1] = navigation;
                 tmp = fn(obj);
               }
-              let closure_0 = tmp;
-              let mapped;
+              closure_0 = tmp;
+              mapped = undefined;
               if (tmp) {
                 const _Object = Object;
                 const keys = Object.keys(tmp);
-                const found = keys.filter((arg0) => arg0 === tmp.type);
+                const found = keys.filter((arg0) => arg0 === type.type);
                 mapped = found.map((arg0) => {
                   let tmp2;
                   if (closure_0 != null) {
@@ -1123,7 +1104,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       const focusEvents = tmp30(1579).useFocusEvents(obj8);
       const items5 = [eventEmitter, tmp58];
       const effect3 = obj9.useEffect(() => {
-        eventEmitter.emit({ type: "state", data: { state: closure_34 } });
+        eventEmitter.emit({ type: "state", data: { state: rehydratedState } });
       }, items5);
       const tmp30Result1 = tmp30(1579);
       const childListeners = tmp30(1524).useChildListeners();
@@ -1161,7 +1142,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       obj11[2] = tmp75;
       obj11[3] = tmp35;
       const onRouteFocus = tmp30(1582).useOnRouteFocus(obj11);
-      let closure_41 = obj9.useContext(tmp30(1533).UnhandledActionContext);
+      closure_41 = obj9.useContext(tmp30(1533).UnhandledActionContext);
       const tmp30Result5 = tmp30(1582);
       const tmp85 = tmp34(1522)((type) => {
         if ("lastUnhandled" === UNSTABLE_routeNamesChangeBehavior.UNSTABLE_routeNamesChangeBehavior) {
@@ -1170,7 +1151,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
               if ("name" in type.payload) {
                 if (typeof type.payload.name === "string") {
                   if (!mapped.includes(type.payload.name)) {
-                    let obj = { name: null, params: null, path: null };
+                    obj = { name: null, params: null, path: null };
                     obj[0] = type.payload.name;
                     let params;
                     if ("params" in type.payload) {
@@ -1252,9 +1233,9 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       obj17[3] = descriptors;
       obj17[4] = tmp30(1591).useComponent((arg0) => {
         let tmpResult = arg0;
-        if (null != useEventEmitter) {
-          let obj = { state: null, descriptors: null, navigation: null, children: null };
-          obj[0] = tmp58;
+        if (null != closure_6) {
+          obj = { state: null, descriptors: null, navigation: null, children: null };
+          obj[0] = rehydratedState;
           obj[1] = descriptors;
           obj[2] = navigationHelpers;
           obj[3] = arg0;
@@ -1262,13 +1243,10 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
         }
         obj = { value: "Array", children: 0 };
         obj = { value: navigationHelpers, children: null };
-        const obj1 = { state: tmp58, getState: navigationHelpers.getState, children: null };
-        const obj2 = { value: tmp58.routes[tmp58.index].key, children: null };
-        obj2[1] = outer1_7(StackRouter(1571).PreventRemoveProvider, { children: tmpResult });
-        obj1[2] = outer1_7(StackRouter(1542).FocusedRouteKeyContext.Provider, obj2);
-        obj[1] = outer1_7(StackRouter(1592).NavigationStateListenerProvider, obj1);
-        obj[1] = outer1_7(StackRouter(1566).NavigationHelpersContext.Provider, obj);
-        return outer1_7(StackRouter(1569).NavigationMetaContext.Provider, obj);
+        obj1 = { state: rehydratedState, getState: navigationHelpers.getState, children: closure_1_7(StackRouter(1542).FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: closure_1_7(StackRouter(1571).PreventRemoveProvider, { children: tmpResult }) }) };
+        obj[1] = closure_1_7(StackRouter(1592).NavigationStateListenerProvider, obj1);
+        obj[1] = closure_1_7(StackRouter(1566).NavigationHelpersContext.Provider, obj);
+        return closure_1_7(StackRouter(1569).NavigationMetaContext.Provider, obj);
       });
       return obj17;
     }

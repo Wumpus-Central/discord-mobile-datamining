@@ -1,17 +1,17 @@
 // _runtime/01602_createStaticNavigation.js
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 
 export const createStaticNavigation = function createStaticNavigation(getComponent) {
-  let closure_0 = getComponent;
+  closure_0 = getComponent;
   const component = getComponent.getComponent();
   return React.forwardRef(function Navigation(linking, ref) {
     linking = linking.linking;
     let merged = Object.assign(linking, Object.create(null));
     let memo;
-    let obj = outer1_2;
+    let obj = closure_1_2;
     let enabled;
     if (linking != null) {
       enabled = linking.enabled;
@@ -33,7 +33,7 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
       }
     }
     items[2] = initialRouteName;
-    memo = outer1_2.useMemo(() => {
+    memo = closure_1_2.useMemo(() => {
       let obj = linking(memo[2]);
       let initialRouteName;
       if (linking != null) {
@@ -100,7 +100,7 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
       }
       if (null == screens) {
         const _Error = Error;
-        const error = new Error("Linking is enabled but no linking configuration was found for the screens.\n\nTo solve this:\n- Specify a 'linking' property for the screens you want to link to.\n- Or set 'linking.enabled' to 'auto' to generate paths automatically.\n\nSee usage guide: https://reactnavigation.org/docs/static-configuration#linking");
+        error = new Error("Linking is enabled but no linking configuration was found for the screens.\n\nTo solve this:\n- Specify a 'linking' property for the screens you want to link to.\n- Or set 'linking.enabled' to 'auto' to generate paths automatically.\n\nSee usage guide: https://reactnavigation.org/docs/static-configuration#linking");
         throw error;
       }
     }
@@ -108,7 +108,7 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
     const merged1 = Object.assign(merged);
     obj.ref = ref;
     obj.linking = memo1;
-    obj.children = outer1_3(memo, {});
-    return outer1_3(getComponent(table[3]).NavigationContainer, obj);
+    obj.children = closure_1_3(memo, {});
+    return closure_1_3(getComponent(table[3]).NavigationContainer, obj);
   });
 };

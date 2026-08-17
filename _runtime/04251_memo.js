@@ -1,23 +1,18 @@
 // _runtime/04251_memo.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import "noop";
-import jsxProd from "jsxProd";
-import { createContext } from "04247_createContext.js";
-import { PortalHost } from "04249_PortalHost.js";
-import { registerHost } from "04252_registerHost.js";
-import { 04248__ } from "metro/04248__.js";
+import noopDefault from "noop" /* 19 */;
+import createContext from "createContext" /* 4247 */;
+import _mod4248 from "module_4248" /* 4248 */;
+import PortalHost from "PortalHost" /* 4249 */;
+import registerHost from "registerHost" /* 4252 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let c5;
-let memo;
-const require = arg1;
+require = arg1;
 ({ useReducer: c3, memo } = noop);
+noopDefault;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const memoResult = memo((rootHostName) => {
-  let tmp4;
-  let tmp5;
   let str = rootHostName.rootHostName;
   if (str === undefined) {
     str = "root";
@@ -26,7 +21,7 @@ const memoResult = memo((rootHostName) => {
   if (flag === undefined) {
     flag = true;
   }
-  [tmp4, tmp5] = callback(callback2(registerHost.reducer, 04248__.INITIAL_STATE), 2);
+  [tmp4, tmp5] = callback(callback2(registerHost.reducer, _mod4248.INITIAL_STATE), 2);
   let obj = { value: tmp5, children: null };
   obj = { value: tmp4, children: null };
   const items = [rootHostName.children, ];

@@ -1,5 +1,6 @@
 // _runtime/04143_RiveColor.js
-import RiveColor from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import RiveColor from "_classCallCheck" /* 41 */;
 
 class RiveColor {
   constructor(arg0, arg1, arg2, arg3) {
@@ -86,4 +87,4 @@ const items1 = [
   }
 ];
 
-export const RiveColor = require("_createClass")(RiveColor, items, items1);
+export const RiveColor = _createClassDefault(RiveColor, items, items1);

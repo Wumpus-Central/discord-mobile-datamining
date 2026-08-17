@@ -1,13 +1,8 @@
 // _runtime/06527_forHorizontalIOS.js
-import get_ActivityIndicator from "get ActivityIndicator";
-import { conditional } from "06528_conditional.js";
+import conditional from "conditional" /* 6528 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let c3;
-let c4;
 function forHorizontalIOS(layouts) {
-  let current;
-  let inverted;
-  let next;
   ({ current, next, inverted } = layouts);
   const screen = layouts.layouts.screen;
   let obj = { translateX: callback(progress.interpolate({ inputRange: [0, 1], outputRange: items, extrapolate: "clamp" }), inverted) };
@@ -24,11 +19,10 @@ function forHorizontalIOS(layouts) {
     obj[1] = items2;
     num = tmp(progress2.interpolate(obj), inverted);
   }
-  obj = { cardStyle: { transform: items1 }, overlayStyle: null, shadowStyle: null };
+  obj = { cardStyle: { transform: items1 }, overlayStyle: { opacity: progress3.interpolate({ inputRange: [0, 1], outputRange: [0, 0.07], extrapolate: "clamp" }) }, shadowStyle: null };
   items1[1] = { translateX: num };
-  const progress3 = current.progress;
-  obj[1] = { opacity: progress3.interpolate({ inputRange: [0, 1], outputRange: [0, 0.07], extrapolate: "clamp" }) };
-  const obj1 = { opacity: progress3.interpolate({ inputRange: [0, 1], outputRange: [0, 0.07], extrapolate: "clamp" }) };
+  progress3 = current.progress;
+  obj1 = { opacity: progress3.interpolate({ inputRange: [0, 1], outputRange: [0, 0.07], extrapolate: "clamp" }) };
   tmp = callback;
   const progress4 = current.progress;
   obj[2] = { shadowOpacity: progress4.interpolate({ inputRange: [0, 1], outputRange: [0, 0.3], extrapolate: "clamp" }) };
@@ -56,10 +50,6 @@ export const forVerticalIOS = function forVerticalIOS(inverted) {
   return obj;
 };
 export const forModalPresentationIOS = function forModalPresentationIOS(next) {
-  let current;
-  let index;
-  let insets;
-  let inverted;
   next = next.next;
   const screen = next.layouts.screen;
   let num = 10;
@@ -112,7 +102,7 @@ export const forModalPresentationIOS = function forModalPresentationIOS(next) {
   let num9 = 0;
   if (screen.width <= screen.height) {
     if (tmp5) {
-      const obj1 = { inputRange: null, outputRange: null };
+      obj1 = { inputRange: null, outputRange: null };
       obj1[0] = [0, 1, 1.0001, 2];
       obj1[1] = [0, 0, 0, 10];
       num = tmp3Result.interpolate(obj1);
@@ -135,8 +125,6 @@ export const forModalPresentationIOS = function forModalPresentationIOS(next) {
   return { cardStyle: obj2, overlayStyle: { opacity } };
 };
 export const forFadeFromBottomAndroid = function forFadeFromBottomAndroid(current) {
-  let closing;
-  let inverted;
   current = current.current;
   const progress = current.progress;
   const items = [0.08 * current.layouts.screen.height, 0];
@@ -152,9 +140,6 @@ export const forFadeFromBottomAndroid = function forFadeFromBottomAndroid(curren
   return obj;
 };
 export const forRevealFromBottomAndroid = function forRevealFromBottomAndroid(layouts) {
-  let current;
-  let inverted;
-  let next;
   ({ current, next, inverted } = layouts);
   const screen = layouts.layouts.screen;
   let obj = { containerStyle: null, cardStyle: null, overlayStyle: null };
@@ -180,15 +165,13 @@ export const forRevealFromBottomAndroid = function forRevealFromBottomAndroid(la
   }
   items3[1] = { translateY: num };
   obj[1] = { transform: items3 };
-  const obj1 = { translateY: callback(progress2.interpolate({ inputRange: [0, 1], outputRange: items2, extrapolate: "clamp" }), inverted) };
+  obj1 = { translateY: callback(progress2.interpolate({ inputRange: [0, 1], outputRange: items2, extrapolate: "clamp" }), inverted) };
   tmp = callback;
   const progress4 = current.progress;
   obj[2] = { opacity: progress4.interpolate({ inputRange: [0, 0.36, 1], outputRange: [0, 0.1, 0.1], extrapolate: "clamp" }) };
   return obj;
 };
 export const forScaleFromCenterAndroid = function forScaleFromCenterAndroid(closing) {
-  let current;
-  let next;
   ({ current, next } = closing);
   const progress = current.progress;
   let num = 0;
@@ -202,7 +185,7 @@ export const forScaleFromCenterAndroid = function forScaleFromCenterAndroid(clos
   const tmpResult = closure_3(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
   obj = { cardStyle: null };
   obj = { opacity: tmpResult.interpolate({ inputRange: [0, 0.75, 0.875, 1, 1.0825, 1.2075, 2], outputRange: [0, 0, 1, 1, 1, 1, 0] }), transform: null };
-  const obj1 = { scale: null };
+  obj1 = { scale: null };
   const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
   const tmp = closure_3;
   const progress3 = current.progress;
@@ -214,9 +197,6 @@ export const forScaleFromCenterAndroid = function forScaleFromCenterAndroid(clos
   return obj;
 };
 export const forFadeFromRightAndroid = function forFadeFromRightAndroid(closing) {
-  let current;
-  let inverted;
-  let next;
   ({ current, next, inverted } = closing);
   const progress = current.progress;
   let num = 0;
@@ -239,8 +219,6 @@ export const forFadeFromRightAndroid = function forFadeFromRightAndroid(closing)
   return obj;
 };
 export const forBottomSheetAndroid = function forBottomSheetAndroid(current) {
-  let closing;
-  let inverted;
   current = current.current;
   const progress = current.progress;
   const items = [0.8 * current.layouts.screen.height, 0];

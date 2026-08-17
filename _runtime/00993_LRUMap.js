@@ -1,7 +1,7 @@
 // _runtime/00993_LRUMap.js
-import _readOnlyError from "_readOnlyError";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import _readOnlyError from "_readOnlyError" /* 377 */;
+import LRUMap from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class LRUMap {
@@ -13,7 +13,6 @@ class LRUMap {
     return;
   }
 }
-_classCallCheck = LRUMap;
 let items = [
   {
     key: "size",

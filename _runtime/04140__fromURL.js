@@ -1,18 +1,18 @@
 // _runtime/04140__fromURL.js
-import _fromFileURL from "asyncGeneratorStep";
-import { Image as _fromResource } from "get ActivityIndicator";
-import { NitroModules } from "module_4112";
+import _fromFileURL from "asyncGeneratorStep" /* 5 */;
+import { Image as _fromResource } from "get ActivityIndicator" /* 17 */;
+import { NitroModules } from "module_4112" /* 4112 */;
 
 let _fromBytes = NitroModules.createHybridObject("RiveFileFactory");
 let obj = {};
 function _fromURL() {
   const self = this;
   const tmp = _fromFileURL((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     const iter = (function*(arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
@@ -40,8 +40,8 @@ function _fromURL() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_4 = tmp5;
-              let closure_3 = tmp2;
+              closure_4 = tmp5;
+              closure_3 = tmp2;
               let flag;
               if (flag === undefined) {
                 flag = true;
@@ -55,7 +55,7 @@ function _fromURL() {
             throw arg1;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
@@ -67,7 +67,7 @@ function _fromURL() {
             }
             c6 = 3;
             const obj2 = { value: null, done: true };
-            obj2[0] = outer1_3.fromURL(closure_0, flag, tmp12);
+            obj2[0] = closure_1_3.fromURL(closure_0, flag, tmp12);
             return obj2;
           }
         } catch (tmp17) {
@@ -79,7 +79,7 @@ function _fromURL() {
     iter.next();
     return iter;
   });
-  const _fromURL = tmp;
+  closure_0 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -91,11 +91,11 @@ function _fromURL() {
 _fromFileURL = function _fromFileURL(arg0) {
   const self = this;
   const tmp = _fromFileURL((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     const iter = (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -123,9 +123,9 @@ _fromFileURL = function _fromFileURL(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_4 = tmp5;
-              let closure_3 = tmp2;
-              let c1;
+              closure_4 = tmp5;
+              closure_3 = tmp2;
+              closure_1 = undefined;
               let flag;
               if (flag === undefined) {
                 flag = true;
@@ -139,19 +139,19 @@ _fromFileURL = function _fromFileURL(arg0) {
             throw arg1;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
             let tmp12;
-            if (c1) {
+            if (closure_1) {
               obj = { data: null };
-              obj[0] = c1;
+              obj[0] = closure_1;
               tmp12 = obj;
             }
             c6 = 3;
             const obj2 = { value: null, done: true };
-            obj2[0] = outer1_3.fromFileURL(closure_0, flag, tmp12);
+            obj2[0] = closure_1_3.fromFileURL(closure_0, flag, tmp12);
             return obj2;
           }
         } catch (tmp17) {
@@ -163,7 +163,7 @@ _fromFileURL = function _fromFileURL(arg0) {
     iter.next();
     return iter;
   });
-  _fromFileURL = tmp;
+  closure_1 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -175,11 +175,11 @@ _fromFileURL = function _fromFileURL(arg0) {
 _fromResource = function _fromResource() {
   const self = this;
   const tmp = _fromFileURL((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     const iter = (function*(arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
@@ -207,8 +207,8 @@ _fromResource = function _fromResource() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_4 = tmp5;
-              let closure_3 = tmp2;
+              closure_4 = tmp5;
+              closure_3 = tmp2;
               let flag;
               if (flag === undefined) {
                 flag = true;
@@ -222,7 +222,7 @@ _fromResource = function _fromResource() {
             throw arg1;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
@@ -234,7 +234,7 @@ _fromResource = function _fromResource() {
             }
             c6 = 3;
             const obj2 = { value: null, done: true };
-            obj2[0] = outer1_3.fromResource(closure_0, flag, tmp12);
+            obj2[0] = closure_1_3.fromResource(closure_0, flag, tmp12);
             return obj2;
           }
         } catch (tmp17) {
@@ -246,7 +246,7 @@ _fromResource = function _fromResource() {
     iter.next();
     return iter;
   });
-  const _fromResource = tmp;
+  closure_2 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -258,11 +258,11 @@ _fromResource = function _fromResource() {
 _fromBytes = function _fromBytes() {
   const self = this;
   const tmp = _fromFileURL((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     const iter = (function*(arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
@@ -290,8 +290,8 @@ _fromBytes = function _fromBytes() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_4 = tmp5;
-              let closure_3 = tmp2;
+              closure_4 = tmp5;
+              closure_3 = tmp2;
               let flag;
               if (flag === undefined) {
                 flag = true;
@@ -305,7 +305,7 @@ _fromBytes = function _fromBytes() {
             throw arg1;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
@@ -317,7 +317,7 @@ _fromBytes = function _fromBytes() {
             }
             c6 = 3;
             const obj2 = { value: null, done: true };
-            obj2[0] = outer1_3.fromBytes(closure_0, flag, tmp12);
+            obj2[0] = closure_1_3.fromBytes(closure_0, flag, tmp12);
             return obj2;
           }
         } catch (tmp17) {
@@ -329,7 +329,7 @@ _fromBytes = function _fromBytes() {
     iter.next();
     return iter;
   });
-  const _fromBytes = tmp;
+  closure_3 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -341,12 +341,12 @@ _fromBytes = function _fromBytes() {
 function _fromSource() {
   const self = this;
   const tmp = _fromFileURL((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
@@ -375,14 +375,14 @@ function _fromSource() {
               return obj;
             } else {
               let uri = tmp3;
-              let c3 = tmp7;
+              closure_3 = tmp7;
               let flag;
               if (flag === undefined) {
                 flag = true;
               }
-              c3 = undefined;
+              closure_3 = undefined;
               uri = undefined;
-              let c5;
+              closure_5 = undefined;
               message = undefined;
               message = 1;
               c8 = 1;
@@ -394,7 +394,7 @@ function _fromSource() {
               throw arg1;
             } else if (arg0 === 2) {
               c8 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -402,13 +402,13 @@ function _fromSource() {
               if (typeof closure_0 === "number") {
                 tmp71 = closure_0;
               }
-              c3 = tmp71;
+              closure_3 = tmp71;
               uri = null;
               if (typeof closure_0 === "object") {
                 uri = closure_0.uri;
               }
-              if (c3) {
-                const assetSource = closure_2.resolveAssetSource(c3);
+              if (closure_3) {
+                const assetSource = closure_2.resolveAssetSource(closure_3);
                 let uri1;
                 if (assetSource != null) {
                   uri1 = assetSource.uri;
@@ -417,17 +417,17 @@ function _fromSource() {
               } else {
                 tmp25 = uri;
               }
-              c5 = tmp25;
-              if (c5) {
+              closure_5 = tmp25;
+              if (closure_5) {
                 message = 1;
-                if (c5.match(/https?:\/\//)) {
-                  closure_0.fromURL(c5, closure_1, flag);
+                if (closure_5.match(/https?:\/\//)) {
+                  closure_0.fromURL(closure_5, closure_1, flag);
                 } else {
                   obj = closure_0;
-                  if (c5.match(/file:\/\//)) {
-                    obj.fromFileURL(outer1_5, closure_1, closure_2);
+                  if (closure_5.match(/file:\/\//)) {
+                    obj.fromFileURL(closure_1_5, closure_1, closure_2);
                   } else {
-                    obj.fromResource(outer1_5, closure_1, closure_2);
+                    obj.fromResource(closure_1_5, closure_1, closure_2);
                   }
                 }
                 message = 0;
@@ -435,13 +435,13 @@ function _fromSource() {
               } else {
                 const _Error3 = Error;
                 const _HermesInternal2 = HermesInternal;
-                const error = new Error("Invalid source: could not resolve asset " + closure_0 + ". Ensure 'riv' is in metro.config.js assetExts.");
+                error = new Error("Invalid source: could not resolve asset " + closure_0 + ". Ensure 'riv' is in metro.config.js assetExts.");
                 throw error;
               }
             }
           } else {
             message = 0;
-            message = c5;
+            message = closure_5;
             const _Error = Error;
             if (message instanceof Error) {
               message = message.message;
@@ -455,7 +455,7 @@ function _fromSource() {
             throw error1;
           }
         } catch (tmp59) {
-          c5 = tmp59;
+          closure_5 = tmp59;
           if (tmp4 === message) {
             c8 = tmp2;
             throw tmp59;
@@ -468,7 +468,7 @@ function _fromSource() {
     iter.next();
     return iter;
   });
-  const _fromSource = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -477,7 +477,7 @@ function _fromSource() {
   }
   return applyArgumentsResult;
 }
-obj.fromURL = function fromURL(c5, closure_1, flag) {
+obj.fromURL = function fromURL(closure_5, closure_1, flag) {
   const self = this;
   const apply = _fromURL.apply;
   if (typeof apply === "unknown") {
@@ -487,7 +487,7 @@ obj.fromURL = function fromURL(c5, closure_1, flag) {
   }
   return applyArgumentsResult;
 };
-obj.fromFileURL = function fromFileURL(outer1_5, closure_1, closure_2) {
+obj.fromFileURL = function fromFileURL(closure_1_5, closure_1, closure_2) {
   const self = this;
   const apply = _fromFileURL.apply;
   if (typeof apply === "unknown") {
@@ -497,7 +497,7 @@ obj.fromFileURL = function fromFileURL(outer1_5, closure_1, closure_2) {
   }
   return applyArgumentsResult;
 };
-obj.fromResource = function fromResource(outer1_5, closure_1, closure_2) {
+obj.fromResource = function fromResource(closure_1_5, closure_1, closure_2) {
   const self = this;
   const apply = _fromResource.apply;
   if (typeof apply === "unknown") {

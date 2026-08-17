@@ -1,10 +1,10 @@
 // _runtime/01047_bindReporter.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.bindReporter = (arg0, arg1, arg2, arg3) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
-  let closure_3 = arg3;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  closure_3 = arg3;
   return (arg0) => {
     let tmp = value.value >= 0;
     if (tmp) {
@@ -20,7 +20,7 @@ arg5.bindReporter = (arg0, arg1, arg2, arg3) => {
         num = 0;
       }
       let diff = iter.value - num;
-      let closure_5 = diff;
+      closure_5 = diff;
       if (!diff) {
         diff = undefined === value2;
       }

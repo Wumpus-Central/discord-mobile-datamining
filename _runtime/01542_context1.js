@@ -1,5 +1,5 @@
 // _runtime/01542_context1.js
-import importAllResult from "noop";
+import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
 let context = importAllResult.createContext(undefined);
@@ -10,7 +10,7 @@ export const IsFocusedContext = context1;
 export const useIsFocused = function useIsFocused() {
   let context = importAllResult.useContext(context1);
   navigation = navigation(1543).useNavigation();
-  const dependencyMap = tmp3;
+  dependencyMap = tmp3;
   const items = [undefined !== context, navigation];
   if (context == null) {
     context = importAllResult.useSyncExternalStore(importAllResult.useCallback((arg0) => {

@@ -1,14 +1,15 @@
 // _runtime/01804_checkSharedValueUsage.js
-import noop from "noop";
-import { Platform } from "get ActivityIndicator";
-import isJest from "isJest";
-import { t } from "01665_t.js";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import t from "t" /* 1665 */;
+import updateProps from "updateProps" /* 1754 */;
+import isAnimated from "isAnimated" /* 1800 */;
+import o from "o" /* 1805 */;
+import noop from "noop" /* 19 */;
+import isJest from "isJest" /* 1657 */;
 import { updateProps } from "01754_updateProps.js";
 import { isAnimated } from "01800_isAnimated.js";
 import { o } from "01805_o.js";
 
-let c3;
-let c4;
 let runAnimations = global;
 function checkSharedValueUsage(value, nextResult) {
   if (Array.isArray(value)) {
@@ -51,14 +52,15 @@ function animatedStyleHandleToJSON() {
   return "{}";
 }
 ({ useEffect: c3, useRef: c4 } = noop);
+const Platform = get_ActivityIndicator.Platform;
 isJest = isJest.shouldBeUseWeb();
 function prepareAnimation(arg0, arr, arg2, arg3) {
-  let closure_0 = arg0;
-  let closure_1 = arr;
+  closure_0 = arg0;
+  closure_1 = arr;
   let current = arg2;
-  let closure_2 = arg2;
+  closure_2 = arg2;
   let iter = arg3;
-  let closure_3 = arg3;
+  closure_3 = arg3;
   if (Array.isArray(arr)) {
     const item = arr.forEach((arg0, arg1) => {
       let tmp3 = dependencyMap;
@@ -74,7 +76,7 @@ function prepareAnimation(arg0, arr, arg2, arg3) {
   }
   if (typeof arr === "object") {
     if (arr.onFrame) {
-      let closure_4 = arr;
+      closure_4 = arr;
       current = arr.current;
       if (null == iter) {
         arr.callStart = (arg0) => {
@@ -128,21 +130,21 @@ prepareAnimation.__closure = {};
 prepareAnimation.__workletHash = 14540565048240;
 prepareAnimation.__initData = { code: "function prepareAnimation_Pnpm_useAnimatedStyleTs1(frameTimestamp,animatedProp,lastAnimation,lastValue){const prepareAnimation_Pnpm_useAnimatedStyleTs1=this._recur;if(Array.isArray(animatedProp)){animatedProp.forEach(function(prop,index){prepareAnimation_Pnpm_useAnimatedStyleTs1(frameTimestamp,prop,lastAnimation&&lastAnimation[index],lastValue&&lastValue[index]);});}if(typeof animatedProp==='object'&&animatedProp.onFrame){const animation=animatedProp;let value=animation.current;if(lastValue!==undefined&&lastValue!==null){if(typeof lastValue==='object'){if(lastValue.value!==undefined){value=lastValue.value;}else if(lastValue.onFrame!==undefined){if((lastAnimation===null||lastAnimation===void 0?void 0:lastAnimation.current)!==undefined){value=lastAnimation.current;}else if((lastValue===null||lastValue===void 0?void 0:lastValue.current)!==undefined){value=lastValue.current;}}}else{value=lastValue;}}animation.callStart=function(timestamp){animation.onStart(animation,value,timestamp,lastAnimation);};animation.callStart(frameTimestamp);animation.callStart=null;}else if(typeof animatedProp==='object'){Object.keys(animatedProp).forEach(function(key){return prepareAnimation_Pnpm_useAnimatedStyleTs1(frameTimestamp,animatedProp[key],lastAnimation&&lastAnimation[key],lastValue&&lastValue[key]);});}}" };
 runAnimations = function runAnimations(arr, timestamp, arg2, arg3, value) {
-  let closure_0 = arr;
-  let closure_1 = timestamp;
-  let closure_2 = arg2;
-  let closure_3 = arg3;
-  let closure_4 = value;
-  let closure_5 = arg5;
+  closure_0 = arr;
+  closure_1 = timestamp;
+  closure_2 = arg2;
+  closure_3 = arg3;
+  closure_4 = value;
+  closure_5 = arg5;
   if (value.value) {
     const _Array = Array;
     if (Array.isArray(arr)) {
       arg3[arg2] = [];
-      let c6 = true;
+      c6 = true;
       closure_5 = "boxShadow" === arg2;
       const item = arr.forEach((arg0, arg1) => {
         if (!arr(arg0, closure_1, arg1, dependencyMap[closure_2], closure_4, closure_5)) {
-          let c6 = false;
+          c6 = false;
         }
       });
       return c6;
@@ -181,12 +183,12 @@ runAnimations = function runAnimations(arr, timestamp, arg2, arg3, value) {
       }
       if (typeof arr === "object") {
         arg3[arg2] = {};
-        let c7 = true;
+        c7 = true;
         const _Object = Object;
         const keys = Object.keys(arr);
         const item1 = keys.forEach((arg0) => {
           if (!arr(arr[arg0], closure_1, arg0, dependencyMap[closure_2], closure_4, closure_5)) {
-            let c7 = false;
+            c7 = false;
           }
         });
         return c7;
@@ -206,7 +208,7 @@ function styleUpdater(arg0, arg1, animations) {
   let tmp7;
   const __frameTimestamp = arg0;
   const _require = animations;
-  const dependencyMap = arg3;
+  dependencyMap = arg3;
   let flag = arg4;
   if (arg4 === undefined) {
     flag = false;
@@ -267,9 +269,8 @@ function styleUpdater(arg0, arg1, animations) {
   }
   if (flag5) {
     frame = function frame(arg0) {
-      let animations;
-      let last;
       ({ animations, last } = animations);
+      closure_0 = last;
       if (animations.isAnimationCancelled) {
         tmp4.isAnimationRunning = false;
       } else {
@@ -281,14 +282,14 @@ function styleUpdater(arg0, arg1, animations) {
           flag3 = flag;
           while (keys[tmp] !== undefined) {
             let tmp19 = tmp9;
-            last = tmp9;
-            let tmp20 = outer1_7;
+            closure_0 = tmp9;
+            let tmp20 = closure_1_7;
             let tmp21 = table;
             let tmp22 = arg0;
             let tmp23 = tmp9;
             let tmp24 = obj;
             let flag5 = false;
-            if (!outer1_7(animations[tmp9], arg0, tmp9, obj, table)) {
+            if (!closure_1_7(animations[tmp9], arg0, tmp9, obj, table)) {
               flag = false;
               continue;
             } else {
@@ -298,9 +299,9 @@ function styleUpdater(arg0, arg1, animations) {
                 let item = arr.forEach((obj) => {
                   for (const key10003 in arg0) {
                     let tmp2 = key10003;
-                    let tmp3 = last;
-                    let tmp4 = last;
-                    let tmp = last[last];
+                    let tmp3 = table;
+                    let tmp4 = table;
+                    let tmp = table[table];
                     if (tmp) {
                       tmp = typeof tmp3[tmp4] === "object";
                     }
@@ -319,7 +320,7 @@ function styleUpdater(arg0, arg1, animations) {
             }
           }
         }
-        animations(table[5]).updateProps(last, obj);
+        animations(table[5]).updateProps(closure_0, obj);
         if (flag3) {
           animations.isAnimationRunning = false;
         } else {
@@ -355,15 +356,15 @@ function styleUpdater(arg0, arg1, animations) {
   }
   animations.last = obj;
 }
-let obj = { SHOULD_BE_USE_WEB: isJest, processBoxShadow: require("o").processBoxShadow, isAnimated: require("isAnimated").isAnimated, prepareAnimation, runAnimations, updateProps: require("updateProps").updateProps, shallowEqual: require("isAnimated").shallowEqual };
+let obj = { SHOULD_BE_USE_WEB: isJest, processBoxShadow: o.processBoxShadow, isAnimated: isAnimated.isAnimated, prepareAnimation, runAnimations, updateProps: updateProps.updateProps, shallowEqual: isAnimated.shallowEqual };
 styleUpdater.__closure = obj;
 styleUpdater.__workletHash = 3108907120254;
 styleUpdater.__initData = { code: "function styleUpdater_Pnpm_useAnimatedStyleTs3(viewDescriptors,updater,state,animationsActive,isAnimatedProps=false,forceUpdate){const{SHOULD_BE_USE_WEB,processBoxShadow,isAnimated,prepareAnimation,runAnimations,updateProps,shallowEqual}=this.__closure;var _state$animations,_updater;const animations=(_state$animations=state.animations)!==null&&_state$animations!==void 0?_state$animations:{};const newValues=(_updater=updater())!==null&&_updater!==void 0?_updater:{};const oldValues=state.last;const nonAnimatedNewValues={};let hasAnimations=false;let frameTimestamp;let hasNonAnimatedValues=false;if(!SHOULD_BE_USE_WEB&&newValues.boxShadow){processBoxShadow(newValues);}for(const key in newValues){const value=newValues[key];if(isAnimated(value)){frameTimestamp=global.__frameTimestamp||global._getAnimationTimestamp();prepareAnimation(frameTimestamp,value,animations[key],oldValues[key]);animations[key]=value;hasAnimations=true;}else{hasNonAnimatedValues=true;nonAnimatedNewValues[key]=value;delete animations[key];}}if(hasAnimations){const frame=function(timestamp){const{animations:animations,last:last,isAnimationCancelled:isAnimationCancelled}=state;if(isAnimationCancelled){state.isAnimationRunning=false;return;}const updates={};let allFinished=true;for(const propName in animations){const finished=runAnimations(animations[propName],timestamp,propName,updates,animationsActive);if(finished){if(Array.isArray(updates[propName])){updates[propName].forEach(function(obj){for(const prop in obj){if(!last[propName]||typeof last[propName]!=='object'){last[propName]={};}last[propName][prop]=obj[prop];}});}else{last[propName]=updates[propName];}delete animations[propName];}else{allFinished=false;}}if(updates){updateProps(viewDescriptors,updates);}if(!allFinished){requestAnimationFrame(frame);}else{state.isAnimationRunning=false;}};state.animations=animations;if(!state.isAnimationRunning){state.isAnimationCancelled=false;state.isAnimationRunning=true;frame(frameTimestamp);}if(hasNonAnimatedValues){updateProps(viewDescriptors,nonAnimatedNewValues);}}else{state.isAnimationCancelled=true;state.animations=[];if(!shallowEqual(oldValues,newValues)||forceUpdate){updateProps(viewDescriptors,newValues,isAnimatedProps);}}state.last=newValues;}" };
 function jestStyleUpdater(arg0, arg1, animations) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let last = arg3;
   let obj = arg4;
-  let c4 = arg5;
+  c4 = arg5;
   animations = animations.animations;
   if (animations == null) {
     animations = {};
@@ -373,23 +374,23 @@ function jestStyleUpdater(arg0, arg1, animations) {
     obj = {};
   }
   last = animations.last;
-  let c9 = false;
+  c9 = false;
   let keys = Object.keys(animations);
   let item = keys.forEach((arg0) => {
-    const obj = animations(last[4]);
+    obj = animations(last[4]);
     if (!obj.isAnimated(obj[arg0])) {
       delete tmp[tmp2];
     }
   });
   const keys1 = Object.keys(obj);
   const item1 = keys1.forEach((arg0) => {
-    const obj = animations(last[4]);
+    obj = animations(last[4]);
     if (obj.isAnimated(obj[arg0])) {
       const tmp2 = __frameTimestamp.__frameTimestamp || __frameTimestamp._getAnimationTimestamp();
-      let closure_5 = tmp2;
+      closure_5 = tmp2;
       animations(tmp2, tmp, animations[arg0], last[arg0]);
       animations[arg0] = tmp;
-      let c9 = true;
+      c9 = true;
       const obj2 = __frameTimestamp;
     }
   });
@@ -399,14 +400,14 @@ function jestStyleUpdater(arg0, arg1, animations) {
       animations.isAnimationCancelled = false;
       animations.isAnimationRunning = true;
       function frame(arg0) {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         animations = animations.animations;
-        const last = animations.last;
+        last = animations.last;
         if (animations.isAnimationCancelled) {
           tmp.isAnimationRunning = false;
         } else {
-          const obj = {};
-          let c4 = true;
+          obj = {};
+          c4 = true;
           const _Object = Object;
           const keys = Object.keys(animations);
           const item = keys.forEach((arg0) => {
@@ -414,7 +415,7 @@ function jestStyleUpdater(arg0, arg1, animations) {
               last[arg0] = obj[arg0];
               delete tmp[tmp2];
             } else {
-              let c4 = false;
+              c4 = false;
             }
           });
           const _Object2 = Object;
@@ -449,7 +450,7 @@ function jestStyleUpdater(arg0, arg1, animations) {
             last[arg0] = obj[arg0];
             delete tmp[tmp2];
           } else {
-            let c4 = false;
+            c4 = false;
           }
         });
         let _Object2 = Object;
@@ -479,7 +480,7 @@ function jestStyleUpdater(arg0, arg1, animations) {
     const result1 = tmp15Result.updatePropsJestWrapper(arg0, obj, arg4, arg5);
   }
 }
-obj = { isAnimated: require("isAnimated").isAnimated, prepareAnimation, runAnimations, updatePropsJestWrapper: require("updateProps").updatePropsJestWrapper, shallowEqual: require("isAnimated").shallowEqual };
+obj = { isAnimated: isAnimated.isAnimated, prepareAnimation, runAnimations, updatePropsJestWrapper: updateProps.updatePropsJestWrapper, shallowEqual: isAnimated.shallowEqual };
 jestStyleUpdater.__closure = obj;
 jestStyleUpdater.__workletHash = 12729247822121;
 jestStyleUpdater.__initData = { code: "function jestStyleUpdater_Pnpm_useAnimatedStyleTs4(viewDescriptors,updater,state,animationsActive,animatedValues,adapters,forceUpdate){const{isAnimated,prepareAnimation,runAnimations,updatePropsJestWrapper,shallowEqual}=this.__closure;var _state$animations,_updater;const animations=(_state$animations=state.animations)!==null&&_state$animations!==void 0?_state$animations:{};const newValues=(_updater=updater())!==null&&_updater!==void 0?_updater:{};const oldValues=state.last;let hasAnimations=false;let frameTimestamp;Object.keys(animations).forEach(function(key){const value=newValues[key];if(!isAnimated(value)){delete animations[key];}});Object.keys(newValues).forEach(function(key){const value=newValues[key];if(isAnimated(value)){frameTimestamp=global.__frameTimestamp||global._getAnimationTimestamp();prepareAnimation(frameTimestamp,value,animations[key],oldValues[key]);animations[key]=value;hasAnimations=true;}});function frame(timestamp){const{animations:animations,last:last,isAnimationCancelled:isAnimationCancelled}=state;if(isAnimationCancelled){state.isAnimationRunning=false;return;}const updates={};let allFinished=true;Object.keys(animations).forEach(function(propName){const finished=runAnimations(animations[propName],timestamp,propName,updates,animationsActive);if(finished){last[propName]=updates[propName];delete animations[propName];}else{allFinished=false;}});if(Object.keys(updates).length){updatePropsJestWrapper(viewDescriptors,updates,animatedValues,adapters);}if(!allFinished){requestAnimationFrame(frame);}else{state.isAnimationRunning=false;}}if(hasAnimations){state.animations=animations;if(!state.isAnimationRunning){state.isAnimationCancelled=false;state.isAnimationRunning=true;frame(frameTimestamp);}}else{state.isAnimationCancelled=true;state.animations=[];}state.last=newValues;if(!shallowEqual(oldValues,newValues)||forceUpdate){updatePropsJestWrapper(viewDescriptors,newValues,animatedValues,adapters);}}" };
@@ -490,10 +491,7 @@ let closure_14 = { code: "function pnpm_useAnimatedStyleTs8(){const{styleUpdater
 let closure_15 = { code: "function pnpm_useAnimatedStyleTs9(){const{remoteState}=this.__closure;return remoteState.isFirstRun=true;}" };
 
 export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3) {
-  let c8;
-  let initial;
-  let viewDescriptors;
-  let closure_0 = fn;
+  closure_0 = fn;
   const _require = arg2;
   let flag = arg3;
   if (arg3 === undefined) {
@@ -503,7 +501,7 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
   let callback2;
   let items1;
   let sharedValue;
-  let c7;
+  closure_7 = undefined;
   c8 = undefined;
   let shareableViewDescriptors;
   let tmp2 = callback2(null);
@@ -543,13 +541,13 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
   }
   let workletsHash = null;
   if (arg2) {
-    let obj1 = _require(flag[4]);
+    obj1 = _require(flag[4]);
     workletsHash = obj1.buildWorkletsHash(items1);
   }
   let obj2 = _require(flag[7]);
   sharedValue = obj2.useSharedValue(true);
   let tmpResult = tmp({});
-  c7 = tmpResult;
+  closure_7 = tmpResult;
   if (items) {
     items.push(fn.__workletHash);
     let arr5 = items;
@@ -586,7 +584,8 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
     let tmp2 = fn;
     if (callback) {
       fn = function s() {
-        tmp = tmp();
+        const tmp = callback();
+        callback = tmp;
         const item = closure_5.forEach((arg0) => {
           arg0(closure_0);
         });
@@ -597,84 +596,84 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
       obj[1] = items1;
       fn.__closure = obj;
       fn.__workletHash = 2827602676287;
-      fn.__initData = outer1_11;
+      fn.__initData = closure_1_11;
       tmp2 = fn;
     }
     if (obj2.isJest()) {
       const fn3 = function l(arg0) {
-        outer1_9(closure_9, fn, closure_8, closure_6, closure_7, closure_5, arg0);
+        closure_1_9(closure_9, fn, closure_8, closure_6, closure_7, closure_5, arg0);
       };
       obj = { jestStyleUpdater: null, shareableViewDescriptors: null, updater: null, remoteState: null, areAnimationsActive: null, jestAnimatedValues: null, adaptersArray: null };
       obj[0] = shareableViewDescriptors;
       obj[1] = shareableViewDescriptors;
       obj[2] = tmp;
-      obj[3] = _undefined2;
+      obj[3] = _undefined;
       obj[4] = sharedValue;
-      obj[5] = c7;
+      obj[5] = closure_7;
       obj[6] = items1;
       fn3.__closure = obj;
       fn3.__workletHash = 11745429083106;
-      fn3.__initData = outer1_12;
+      fn3.__initData = closure_1_12;
       let tmp13 = fn3;
     } else {
       const fn2 = function o(arg0) {
-        callback2(outer1_9, fn, outer1_8, outer1_6, outer1_2, arg0);
+        callback3(closure_1_9, fn, closure_1_8, closure_1_6, closure_1_2, arg0);
       };
       obj = { styleUpdater: null, shareableViewDescriptors: null, updaterFn: null, remoteState: null, areAnimationsActive: null, isAnimatedProps: null };
-      obj[0] = _undefined2;
+      obj[0] = _undefined;
       obj[1] = shareableViewDescriptors;
       obj[2] = tmp2;
-      obj[3] = _undefined2;
+      obj[3] = _undefined;
       obj[4] = sharedValue;
       obj[5] = flag;
       fn2.__closure = obj;
       fn2.__workletHash = 6831194621571;
-      fn2.__initData = outer1_13;
+      fn2.__initData = closure_1_13;
       const _globalThis = globalThis;
       let isFirstRun = !_IS_FABRIC;
       if (!_IS_FABRIC) {
-        isFirstRun = _undefined2.isFirstRun;
+        isFirstRun = _undefined.isFirstRun;
       }
       tmp13 = fn2;
       if (isFirstRun) {
         const _requestAnimationFrame = requestAnimationFrame;
         const animationFrame = requestAnimationFrame(() => {
-          let obj = callback(flag[9]);
-          const fn = function t() {
-            outer2_8(outer1_9, closure_0, outer1_8, outer1_6, outer1_2);
-            outer1_8.isFirstRun = false;
+          let obj = callback2(flag[9]);
+          fn = function t() {
+            closure_2_8(closure_1_9, closure_0, closure_1_8, closure_1_6, closure_1_2);
+            closure_1_8.isFirstRun = false;
           };
-          obj = { styleUpdater: c8, shareableViewDescriptors: outer1_9, updaterFn: fn, remoteState: outer1_8, areAnimationsActive: outer1_6, isAnimatedProps: outer1_2 };
+          obj = { styleUpdater: c8, shareableViewDescriptors: closure_1_9, updaterFn: fn, remoteState: closure_1_8, areAnimationsActive: closure_1_6, isAnimatedProps: closure_1_2 };
           fn.__closure = obj;
           fn.__workletHash = 11622360674991;
-          fn.__initData = outer2_14;
+          fn.__initData = closure_2_14;
           obj.runOnUI(fn)();
         });
         tmp13 = fn2;
       }
     }
-    if (_undefined.current) {
-      _undefined.current.styleUpdaterContainer.current = tmp13;
+    if (ref.current) {
+      ref.current.styleUpdaterContainer.current = tmp13;
     }
     obj2 = callback(flag[2]);
     const tmp5 = callback;
     const tmp6 = flag;
     callback = callback(flag[9]).startMapper(tmp13, closure_4);
     return () => {
-      let obj = callback(flag[9]);
-      obj.stopMapper(callback);
+      let obj = callback2(flag[9]);
+      obj.stopMapper(callback2);
       if (!globalThis._IS_FABRIC) {
-        const fn = function t() {
+        fn = function t() {
           closure_8.isFirstRun = true;
           return true;
         };
         obj = { remoteState: null };
-        obj[0] = outer1_8;
+        obj[0] = closure_1_8;
         fn.__closure = obj;
         fn.__workletHash = 6168210089002;
-        fn.__initData = outer2_15;
-        callback(flag[9]).runOnUI(fn)();
-        const tmpResult = callback(flag[9]);
+        fn.__initData = closure_2_15;
+        callback2(flag[9]).runOnUI(fn)();
+        const tmpResult = callback2(flag[9]);
       }
     };
   }, arr5);

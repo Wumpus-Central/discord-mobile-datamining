@@ -1,23 +1,22 @@
 // _runtime/01846_KeyboardController.js
-import importDefaultResult from "asyncGeneratorStep";
-import { KeyboardEvents } from "nativeEventEmitter";
-import { KeyboardEvents as KeyboardEvents2 } from "nativeEventEmitter";
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import { KeyboardEvents, KeyboardEvents as KeyboardEvents2 } from "nativeEventEmitter" /* 1644 */;
 
 let closure_0 = arg1;
 let c2 = true;
 let obj = { height: 0, duration: 0, timestamp: null, target: -1, type: "default", appearance: "light" };
 obj[2] = new Date().getTime();
 KeyboardEvents.addListener("keyboardDidHide", (arg0) => {
-  let c2 = true;
-  let closure_3 = arg0;
+  c2 = true;
+  closure_3 = arg0;
 });
 KeyboardEvents2.addListener("keyboardWillShow", (arg0) => {
-  let c2 = false;
-  let closure_3 = arg0;
+  c2 = false;
+  closure_3 = arg0;
 });
 closure_0 = importDefaultResult((arg0) => {
-  let closure_0 = arg0;
-  let c3 = 0;
+  closure_0 = arg0;
+  c3 = 0;
   return (function*(arg0) {
     if (c3 === 2) {
       c3 = 3;
@@ -26,7 +25,7 @@ closure_0 = importDefaultResult((arg0) => {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = arg1;
         return obj;
       } else {
@@ -48,7 +47,7 @@ closure_0 = importDefaultResult((arg0) => {
           if (closure_0 != null) {
             keepFocus = tmp19.keepFocus;
           }
-          let closure_1 = keepFocus;
+          closure_1 = keepFocus;
           if (keepFocus == null) {
             closure_1 = false;
           }
@@ -57,7 +56,7 @@ closure_0 = importDefaultResult((arg0) => {
           if (closure_0 != null) {
             animated = tmp19.animated;
           }
-          let c2 = animated;
+          c2 = animated;
           if (animated == null) {
             c2 = true;
           }
@@ -68,7 +67,7 @@ closure_0 = importDefaultResult((arg0) => {
               arg0();
             } else {
               const KeyboardEvents = callback(1644).KeyboardEvents;
-              const dependencyMap = KeyboardEvents.addListener("keyboardDidHide", () => {
+              dependencyMap = KeyboardEvents.addListener("keyboardDidHide", () => {
                 callback(undefined);
                 closure_1.remove();
               });

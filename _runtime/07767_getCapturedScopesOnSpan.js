@@ -1,6 +1,7 @@
 // _runtime/07767_getCapturedScopesOnSpan.js
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
-const require = arg1;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+
+require = arg1;
 const dependencyMap = arg6;
 const _sentryScope = "_sentryScope";
 const _sentryIsolationScope = "_sentryIsolationScope";

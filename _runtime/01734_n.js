@@ -12,8 +12,8 @@ let fn = function n(_nextAnimation, arg1, arg2, callback, reduceMotion) {
   if (arg2 === undefined) {
     flag = false;
   }
-  let closure_3 = callback;
-  let closure_4 = reduceMotion;
+  closure_3 = callback;
+  closure_4 = reduceMotion;
   let obj = _require(num[0]);
   const fn = function l() {
     let tmpResult = _nextAnimation;
@@ -24,15 +24,15 @@ let fn = function n(_nextAnimation, arg1, arg2, callback, reduceMotion) {
     const obj = {
       isHigherOrder: true,
       onFrame: function repeat(reps) {
-        reps.current = tmpResult.current;
-        if (tmpResult.onFrame(tmpResult, arg1)) {
+        reps.current = closure_0.current;
+        if (closure_0.onFrame(closure_0, arg1)) {
           reps.reps = reps.reps + 1;
           if (obj.callback) {
             obj.callback(true, reps.current);
           }
           if (!reps.reduceMotion) {
-            const tmp3 = outer1_2 ? obj.current : reps.startValue;
-            if (outer1_2) {
+            const tmp3 = closure_1_2 ? obj.current : reps.startValue;
+            if (closure_1_2) {
               obj.toValue = reps.startValue;
               reps.startValue = tmp3;
             }
@@ -47,35 +47,34 @@ let fn = function n(_nextAnimation, arg1, arg2, callback, reduceMotion) {
       onStart(reduceMotion, startValue) {
         reduceMotion.startValue = startValue;
         reduceMotion.reps = 0;
-        if (undefined === tmpResult.reduceMotion) {
+        if (undefined === closure_0.reduceMotion) {
           obj.reduceMotion = reduceMotion.reduceMotion;
         }
         if (reduceMotion.reduceMotion) {
-          if (outer1_2) {
+          if (closure_1_2) {
             reduceMotion.current = reduceMotion.startValue;
             reduceMotion.onFrame = () => true;
           }
         }
-        tmpResult.onStart(tmpResult, startValue, arg2, arg3);
+        closure_0.onStart(closure_0, startValue, arg2, arg3);
       },
       reps: 0,
       current: tmpResult.current,
       callback(arg0) {
-        if (outer1_3) {
-          const tmpResult = tmp(arg0);
+        if (closure_1_3) {
+          tmp(arg0);
         }
-        let callback = !arg0;
+        callback = !arg0;
         if (!arg0) {
-          callback = tmpResult.callback;
+          callback = closure_0.callback;
         }
         if (callback) {
-          tmpResult.callback(false);
+          closure_0.callback(false);
         }
       },
       startValue: 0,
-      reduceMotion: null
+      reduceMotion: _nextAnimation(num[0]).getReduceMotionForAnimation(closure_4)
     };
-    obj[7] = _nextAnimation(num[0]).getReduceMotionForAnimation(closure_4);
     return obj;
   };
   obj = { _nextAnimation, numberOfReps: num, reverse: flag, callback, getReduceMotionForAnimation: _require(num[0]).getReduceMotionForAnimation, reduceMotion };

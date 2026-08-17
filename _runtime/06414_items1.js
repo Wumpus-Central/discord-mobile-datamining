@@ -1,10 +1,10 @@
 // _runtime/06414_items1.js
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6404 */;
+
 const items = ["minDurationMs", "maxDist", "numberOfPointers"];
-const obj = { name: "LongPressGestureHandler", allowedProps: null, config: null };
-const items1 = [...items];
-obj[1] = items1;
-obj[2] = { shouldCancelWhenOutside: true };
+const obj = { name: "LongPressGestureHandler", allowedProps: items1, config: { shouldCancelWhenOutside: true } };
+items1 = [...items];
 
 export const longPressGestureHandlerProps = items;
 export const longPressHandlerName = "LongPressGestureHandler";
-export const LongPressGestureHandler = require("_isNativeReflectConstruct")(obj);
+export const LongPressGestureHandler = _isNativeReflectConstructDefault(obj);

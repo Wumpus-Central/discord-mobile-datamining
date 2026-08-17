@@ -1,6 +1,6 @@
 // _runtime/03828_isThisHour.js
-import isSameHour from "isSameHour";
-import requiredArgs from "requiredArgs";
+import isSameHour from "isSameHour" /* 3817 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!isSameHour) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!isSameHour) {
 } else {
   tmp3 = isSameHour;
 }
-let c0 = tmp3;
+isSameHour = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,10 +17,10 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function isThisHour(arg0) {
-  tmp5.default(1, arguments);
-  return tmp3.default(Date.now(), arg0);
+  requiredArgs.default(1, arguments);
+  return isSameHour.default(Date.now(), arg0);
 };
 export default exports.default;

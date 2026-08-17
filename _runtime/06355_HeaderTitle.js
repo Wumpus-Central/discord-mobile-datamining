@@ -1,17 +1,13 @@
 // _runtime/06355_HeaderTitle.js
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { createStandardNavigationFactories } from "01501_createStandardNavigationFactories.js";
+import jsxProd from "jsxProd" /* 21 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let Platform;
-let StyleSheet;
-let obj1;
 ({ Animated: obj1, Platform, StyleSheet } = get_ActivityIndicator);
+const jsx = jsxProd.jsx;
 const styles = StyleSheet.create({ title: { fontSize: 20 } });
 
 export const HeaderTitle = function HeaderTitle(tintColor) {
-  let colors;
-  let fonts;
   let text = tintColor.tintColor;
   const merged = Object.assign(tintColor, Object.create(null));
   let obj = createStandardNavigationFactories;

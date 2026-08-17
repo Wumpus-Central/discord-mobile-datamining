@@ -1,8 +1,8 @@
 // _runtime/01592_useNavigationState.js
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
-import { useEffect } from "01522_useEffect.js";
+import useEffectDefault from "useEffect" /* 1522 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c4 = importAllResult;
@@ -13,7 +13,7 @@ export const useNavigationState = function useNavigationState(fn) {
   if (typeof fn !== "function") {
     const _Error2 = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("A selector function must be provided (got " + typeof fn + ").");
+    error = new Error("A selector function must be provided (got " + typeof fn + ").");
     throw error;
   } else {
     let obj = importAllResult;
@@ -30,22 +30,18 @@ export const useNavigationState = function useNavigationState(fn) {
       obj = { select: null, selected: null };
       obj[0] = fn;
       obj[1] = tmp14;
-      let closure_5 = obj.useRef(obj);
+      closure_5 = obj.useRef(obj);
       const clientLayoutEffect = _require(subscribe[3]).useClientLayoutEffect(() => {
         closure_5.current = { select: closure_0, selected: closure_4 };
       });
       const items = [getState, subscribe];
       const effect = obj.useEffect(() => {
-        let select;
-        let selected;
         let current = ref.current;
         ({ selected, select } = current);
         if (!Object.is(selected, select(getState()))) {
           callback();
         }
         return subscribe(function checkForUpdates() {
-          let select;
-          let selected;
           const current = ref.current;
           ({ selected, select } = current);
           if (!Object.is(selected, select(callback()))) {
@@ -58,20 +54,18 @@ export const useNavigationState = function useNavigationState(fn) {
   }
 };
 export const NavigationStateListenerProvider = function NavigationStateListenerProvider(getState) {
-  let children;
-  let state;
   getState = getState.getState;
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   ({ state, children } = getState);
   importDefault = importAllResult.useRef([]);
-  const tmp = useEffect((arg0) => {
-    let closure_0 = arg0;
+  const tmp = useEffectDefault((arg0) => {
+    closure_0 = arg0;
     let current = ref.current;
     current.push(arg0);
     return () => {
-      const current = outer1_1.current;
-      outer1_1.current = current.filter((arg0) => arg0 !== closure_0);
+      const current = closure_1_1.current;
+      closure_1_1.current = current.filter((arg0) => arg0 !== closure_0);
     };
   });
   dependencyMap = tmp;
@@ -82,6 +76,6 @@ export const NavigationStateListenerProvider = function NavigationStateListenerP
     const item = current.forEach((arg0) => arg0());
   }, items);
   const items1 = [getState, tmp];
-  obj = { value: importAllResult.useMemo(() => ({ getState, subscribe: c2 }), items1), children };
-  return <redux.Provider value={importAllResult.useMemo(() => ({ getState, subscribe: c2 }), items1)}>{children}</redux.Provider>;
+  obj = { value: importAllResult.useMemo(() => ({ getState, subscribe: closure_2 }), items1), children };
+  return <redux.Provider value={importAllResult.useMemo(() => ({ getState, subscribe: closure_2 }), items1)}>{children}</redux.Provider>;
 };

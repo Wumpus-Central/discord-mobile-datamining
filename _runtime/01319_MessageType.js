@@ -1,13 +1,13 @@
 // _runtime/01319_MessageType.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const MessageType = require;
 class MessageType {
   constructor(arg0, arg1, arg2) {
     self = this;
     obj = importDefault;
-    tmp = outer1_2(this, MessageType);
+    tmp = closure_2(this, MessageType);
     this.defaultCheckDepth = 16;
     this.typeName = global;
     tmp2 = MessageType;
@@ -156,7 +156,7 @@ const items = [
         }
       }
       obj = MessageType(1308);
-      const error = new Error("Unable to parse message " + self.typeName + " from JSON " + obj.typeofJsonValue(obj) + ".");
+      error = new Error("Unable to parse message " + self.typeName + " from JSON " + obj.typeofJsonValue(obj) + ".");
       throw error;
     }
   },

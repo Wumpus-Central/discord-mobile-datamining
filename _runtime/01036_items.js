@@ -16,7 +16,7 @@ arg5.onCLS = (arg0) => {
     const metric = obj.initMetric("CLS", 0);
     const visibilityWatcher = callback(obj[3]).getVisibilityWatcher();
     const obj2 = callback(obj[3]);
-    let closure_2 = callback(obj[4]).initUnique(metric, callback(obj[5]).LayoutShiftManager);
+    closure_2 = callback(obj[4]).initUnique(metric, callback(obj[5]).LayoutShiftManager);
     function handleEntries(arg0) {
       while (tmp !== undefined) {
         let tmp3 = closure_2;
@@ -32,10 +32,10 @@ arg5.onCLS = (arg0) => {
     const obj4 = callback(obj[4]);
     let tmp4 = metric;
     const observeResult = callback(obj[6]).observe("layout-shift", handleEntries);
-    let closure_4 = observeResult;
+    closure_4 = observeResult;
     if (observeResult) {
       const tmpResult = tmp(tmp2[7]);
-      const bindReporterResult = tmpResult.bindReporter(callback, metric, outer1_2, tmp4.reportAllChanges);
+      const bindReporterResult = tmpResult.bindReporter(callback, metric, closure_1_2, tmp4.reportAllChanges);
       callback = bindReporterResult;
       visibilityWatcher.onHidden(() => {
         handleEntries(observeResult.takeRecords());

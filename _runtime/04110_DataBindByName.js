@@ -1,15 +1,16 @@
 // _runtime/04110_DataBindByName.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_0 from "_classCallCheck" /* 41 */;
 
 class DataBindByName {
   constructor(arg0) {
-    tmp = _classCallCheck(this, DataBindByName);
+    tmp = closure_0(this, DataBindByName);
     this.byName = global;
     return;
   }
 }
 
-export const DataBindByName = require("_createClass")(DataBindByName);
+export const DataBindByName = _createClassDefault(DataBindByName);
 export const NitroRiveView = require("NitroRiveView").NitroRiveView;
 export const RiveView = require("defaultOnError").RiveView;
 export const Fit = require("module_4138").Fit;

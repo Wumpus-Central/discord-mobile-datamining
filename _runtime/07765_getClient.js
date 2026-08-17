@@ -1,9 +1,10 @@
 // _runtime/07765_getClient.js
-import { getGlobalSingleton } from "07739_getGlobalSingleton.js";
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
-import { getMainCarrier } from "07756_getMainCarrier.js";
-import { getAsyncContextStrategy } from "07757_getAsyncContextStrategy.js";
-const require = arg1;
+import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+import getMainCarrier from "getMainCarrier" /* 7756 */;
+import getAsyncContextStrategy from "getAsyncContextStrategy" /* 7757 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.getClient = function getClient() {
   const mainCarrier = getMainCarrier.getMainCarrier();
@@ -31,16 +32,11 @@ arg5.getIsolationScope = function getIsolationScope() {
   return asyncContextStrategy.getIsolationScope();
 };
 arg5.getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
-  let parentSpanId;
-  let spanId;
-  let traceId;
   const propagationContext = getPropagationContext.getPropagationContext();
   ({ traceId, spanId, parentSpanId } = propagationContext);
   return addNonEnumerableProperty.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
 };
 arg5.withIsolationScope = function withIsolationScope() {
-  let tmp2;
-  let tmp3;
   const items = [...arguments];
   const mainCarrier = getMainCarrier.getMainCarrier();
   const obj = getMainCarrier;
@@ -59,8 +55,6 @@ arg5.withIsolationScope = function withIsolationScope() {
   const obj2 = getAsyncContextStrategy;
 };
 arg5.withScope = function withScope() {
-  let tmp2;
-  let tmp3;
   const items = [...arguments];
   const mainCarrier = getMainCarrier.getMainCarrier();
   const obj = getMainCarrier;

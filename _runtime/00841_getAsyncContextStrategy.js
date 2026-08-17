@@ -1,7 +1,8 @@
 // _runtime/00841_getAsyncContextStrategy.js
-import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
-import { withScope } from "00842_withScope.js";
-const require = arg1;
+import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
+import withScope from "withScope" /* 842 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getAsyncContextStrategy = function getAsyncContextStrategy(arg0) {

@@ -1,12 +1,11 @@
 // _runtime/01196_isModalSupported.js
-import { Alert } from "get ActivityIndicator";
-import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
-import { isHermesEnabled } from "01002_isHermesEnabled.js";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import TurboModuleRegistry from "TurboModuleRegistry" /* 997 */;
+import isHermesEnabled from "isHermesEnabled" /* 1002 */;
 
+const Alert = get_ActivityIndicator.Alert;
 
 export const isModalSupported = function isModalSupported() {
-  let major;
-  let minor;
   const ReactNativeVersion = TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion;
   let version;
   if (null !== ReactNativeVersion) {
@@ -31,8 +30,6 @@ export const isModalSupported = function isModalSupported() {
   return !isFabricEnabledResult;
 };
 export const isNativeDriverSupportedForColorAnimations = function isNativeDriverSupportedForColorAnimations() {
-  let major;
-  let minor;
   const ReactNativeVersion = TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion;
   let version;
   if (null !== ReactNativeVersion) {
@@ -73,7 +70,7 @@ export const base64ToUint8Array = (closure_0) => {
     }
     obj = isHermesEnabled;
   }
-  const error = new Error("atob is not available in this environment.");
+  error = new Error("atob is not available in this environment.");
   throw error;
 };
 export const feedbackAlertDialog = (Alert) => {

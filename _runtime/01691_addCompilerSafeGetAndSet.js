@@ -1,11 +1,11 @@
 // _runtime/01691_addCompilerSafeGetAndSet.js
-import isJest from "isJest";
-import isJest from "isJest";
+import valueSetter from "valueSetter" /* 1692 */;
+import isJest from "isJest" /* 1657 */;
 
 isJest = isJest.shouldBeUseWeb();
-isJest = isJest.isJest();
+let closure_2 = isJest.isJest();
 function addCompilerSafeGetAndSet(prototype) {
-  let closure_0 = prototype;
+  closure_0 = prototype;
   let obj = {
     value() {
       return obj.value;
@@ -38,7 +38,7 @@ hideInternalValueProp.__workletHash = 3380393180484;
 hideInternalValueProp.__initData = { code: "function hideInternalValueProp_Pnpm_mutablesTs2(mutable){Object.defineProperty(mutable,'_value',{configurable:false,enumerable:false});}" };
 function makeMutableUI(initialValues) {
   let obj = new Map();
-  let closure_1 = initialValues;
+  closure_1 = initialValues;
   obj = {};
   Object.defineProperty(obj, "value", {
     get: () => closure_1,
@@ -50,7 +50,7 @@ function makeMutableUI(initialValues) {
   Object.defineProperty(obj, "_value", {
     get: () => closure_1,
     set: (arg0) => {
-      let closure_1 = arg0;
+      closure_1 = arg0;
       const item = arg0.forEach((arg0) => {
         arg0(closure_0);
       });
@@ -105,7 +105,7 @@ function makeMutableUI(initialValues) {
   Object.defineProperties(obj, { get: obj, set: obj });
   return obj;
 }
-makeMutableUI.__closure = { valueSetter: require("valueSetter").valueSetter, hideInternalValueProp, addCompilerSafeGetAndSet };
+makeMutableUI.__closure = { valueSetter: valueSetter.valueSetter, hideInternalValueProp, addCompilerSafeGetAndSet };
 makeMutableUI.__workletHash = 8132940328790;
 makeMutableUI.__initData = { code: "function makeMutableUI_Pnpm_mutablesTs3(initial){const{valueSetter,hideInternalValueProp,addCompilerSafeGetAndSet}=this.__closure;const listeners=new Map();let value=initial;const mutable={get value(){return value;},set value(newValue){valueSetter(mutable,newValue);},get _value(){return value;},set _value(newValue){value=newValue;listeners.forEach(function(listener){listener(newValue);});},modify:function(modifier,forceUpdate=true){valueSetter(mutable,modifier!==undefined?modifier(value):value,forceUpdate);},addListener:function(id,listener){listeners.set(id,listener);},removeListener:function(id){listeners.delete(id);},_animation:null,_isReanimatedSharedValue:true};hideInternalValueProp(mutable);addCompilerSafeGetAndSet(mutable);return mutable;}" };
 let closure_6 = { code: "function pnpm_mutablesTs4(){const{makeMutableUI,initial}=this.__closure;return makeMutableUI(initial);}" };
@@ -128,7 +128,7 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
   Object.defineProperty(obj, "_value", {
     get: () => obj,
     set: (arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const item = map.forEach((arg0) => {
         arg0(closure_0);
       });
@@ -188,7 +188,7 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
   let obj = initial;
   obj = obj(obj[3]);
   let fn = function n() {
-    return outer1_5(obj);
+    return closure_1_5(obj);
   };
   obj = { makeMutableUI, initial };
   fn.__closure = obj;
@@ -204,19 +204,19 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
       };
       fn.__closure = {};
       fn.__workletHash = 5375306386445;
-      fn.__initData = outer1_7;
+      fn.__initData = closure_1_7;
       return obj.executeOnUIRuntimeSync(fn)(obj);
     },
     set: (newValue) => {
-      let closure_0 = newValue;
+      closure_0 = newValue;
       obj = obj(obj[4]);
       const fn = function n() {
-        outer1_1.value = closure_0;
+        closure_1_1.value = closure_0;
       };
       obj = { mutable: obj, newValue };
       fn.__closure = obj;
       fn.__workletHash = 11269088169577;
-      fn.__initData = outer1_8;
+      fn.__initData = closure_1_8;
       obj.runOnUI(fn)();
     }
   });
@@ -231,7 +231,7 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
     }
   });
   obj.modify = function modify(modifier) {
-    let closure_0 = modifier;
+    closure_0 = modifier;
     let flag = arg1;
     if (arg1 === undefined) {
       flag = true;
@@ -243,7 +243,7 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
     obj = { mutable: flag, modifier, forceUpdate: flag };
     fn.__closure = obj;
     fn.__workletHash = 15983399508815;
-    fn.__initData = outer1_9;
+    fn.__initData = closure_1_9;
     obj.runOnUI(fn)();
   };
   obj.addListener = function addListener() {

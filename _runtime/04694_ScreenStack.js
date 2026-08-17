@@ -1,20 +1,13 @@
 // _runtime/04694_ScreenStack.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import closure_6 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { context } from "04695_context.js";
 
 const require = arg1;
 let closure_4 = ["goBackGesture", "screensRefs", "currentScreenId", "transitionAnimation", "screenEdgeGesture", "onFinishTransitioning", "children"];
 
 export default function ScreenStack(arg0) {
-  let children;
-  let currentScreenId;
-  let goBackGesture;
-  let onFinishTransitioning;
-  let screenEdgeGesture;
-  let screensRefs;
-  let transitionAnimation;
   ({ goBackGesture, screensRefs, currentScreenId, screenEdgeGesture, children } = arg0);
   ({ transitionAnimation, onFinishTransitioning } = arg0);
   let obj = React;
@@ -61,7 +54,7 @@ export default function ScreenStack(arg0) {
       }
     }
     if (freezeOnBlur == null) {
-      let obj = callback(outer1_3[5]);
+      let obj = callback(closure_1_3[5]);
       freezeOnBlur = obj.freezeEnabled();
     }
     const diff = callback - arg1;
@@ -74,7 +67,7 @@ export default function ScreenStack(arg0) {
       freezeOnBlur = tmp7;
     }
     obj = { freeze: freezeOnBlur, children };
-    return outer1_7(ref2(outer1_3[6]), obj);
+    return closure_1_7(ref2(closure_1_3[6]), obj);
   });
   const effect = obj.useEffect(() => {
     const current = ref2.current;
@@ -83,7 +76,7 @@ export default function ScreenStack(arg0) {
   ref2(4679)("GHWrapper" !== context.name && undefined !== goBackGesture, "Cannot detect GestureDetectorProvider in a screen that uses `goBackGesture`. Make sure your navigator is wrapped in GestureDetectorProvider.");
   ref2(4679)(undefined !== goBackGesture && null === ref && undefined === currentScreenId, "Custom Screen Transition require screensRefs and currentScreenId to be provided.");
   obj = { value: ref, children: null };
-  const obj1 = { gestureDetectorBridge: ref2, goBackGesture, transitionAnimation, screenEdgeGesture: null, screensRefs: null, currentScreenId: null, children: null };
+  obj1 = { gestureDetectorBridge: ref2, goBackGesture, transitionAnimation, screenEdgeGesture: null, screensRefs: null, currentScreenId: null, children: null };
   if (screenEdgeGesture == null) {
     screenEdgeGesture = false;
   }

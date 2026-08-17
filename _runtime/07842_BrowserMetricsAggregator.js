@@ -1,12 +1,12 @@
 // _runtime/07842_BrowserMetricsAggregator.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const BrowserMetricsAggregator = require;
 class BrowserMetricsAggregator {
   constructor(arg0) {
     self = this;
-    tmp = outer1_2(this, self);
+    tmp = closure_2(this, self);
     this._client = global;
     map = new Map();
     this._buckets = map;

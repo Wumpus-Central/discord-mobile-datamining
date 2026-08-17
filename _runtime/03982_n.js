@@ -1,7 +1,7 @@
 // _runtime/03982_n.js
+import t from "t" /* 3975 */;
+
 const fn = function n(moment) {
-  let split;
-  let split2;
   function translate(arg0, arg1, arg2, arg3) {
     while (true) {
       let tmp2 = arg0;
@@ -30,7 +30,7 @@ const fn = function n(moment) {
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      fn(require("t"));
+      fn(t);
     }
   }
 }

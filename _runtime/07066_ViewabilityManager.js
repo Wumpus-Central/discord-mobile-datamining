@@ -1,6 +1,6 @@
 // _runtime/07066_ViewabilityManager.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import _createClassDefault from "_createClass" /* 7051 */;
+import closure_2 from "_classCallCheck" /* 7050 */;
 
 const ViewabilityManager = importDefault;
 class ViewabilityManager {
@@ -8,7 +8,7 @@ class ViewabilityManager {
     self = this;
     self = this;
     closure_0 = global;
-    tmp = outer1_2(this, closure_0);
+    tmp = closure_2(this, closure_0);
     this.viewabilityHelpers = [];
     this.hasInteracted = false;
     this.dispose = () => {
@@ -29,8 +29,8 @@ class ViewabilityManager {
       }
     };
     this.updateViewableItems = (arg0) => {
-      let closure_0 = arg0;
-      let rvManager = windowSize.rvManager;
+      closure_0 = arg0;
+      rvManager = windowSize.rvManager;
       windowSize = rvManager.getWindowSize();
       if (undefined !== windowSize) {
         if (tmp.shouldListenToVisibleIndices) {
@@ -39,7 +39,7 @@ class ViewabilityManager {
           if (num == null) {
             num = 0;
           }
-          let _classCallCheck = num - tmp.rvManager.firstItemOffset;
+          closure_2 = num - tmp.rvManager.firstItemOffset;
           const bottomViewabilityInsetRef = tmp.rvManager.props.bottomViewabilityInsetRef;
           let num2;
           if (bottomViewabilityInsetRef != null) {
@@ -54,7 +54,7 @@ class ViewabilityManager {
             if (flag == null) {
               flag = false;
             }
-            updateViewableItems.updateViewableItems(flag, _classCallCheck, num2, windowSize, (arg0) => {
+            updateViewableItems.updateViewableItems(flag, closure_2, num2, windowSize, (arg0) => {
               rvManager = rvManager.rvManager;
               return rvManager.getLayout(arg0);
             }, closure_0);
@@ -142,7 +142,7 @@ class ViewabilityManager {
       prop = [];
     }
     item = prop.forEach((viewabilityConfig) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const viewabilityHelpers = self.viewabilityHelpers;
       viewabilityHelpers.push(self.createViewabilityHelper(viewabilityConfig.viewabilityConfig, (arg0) => {
         let prop;
@@ -168,4 +168,4 @@ let items = [
   }
 ];
 
-export default _createClass(ViewabilityManager, items);
+export default _createClassDefault(ViewabilityManager, items);

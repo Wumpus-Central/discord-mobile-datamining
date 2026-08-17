@@ -1,13 +1,13 @@
 // _runtime/07841_createMetricEnvelope.js
-import { consoleSandbox } from "07738_consoleSandbox.js";
-import { forEachEnvelopeItem } from "07782_forEachEnvelopeItem.js";
-import { dsnFromString } from "07785_dsnFromString.js";
-import { items } from "07839_items.js";
-const require = arg1;
+import consoleSandbox from "consoleSandbox" /* 7738 */;
+import forEachEnvelopeItem from "forEachEnvelopeItem" /* 7782 */;
+import dsnFromString from "dsnFromString" /* 7785 */;
+import items2 from "items" /* 7839 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function createMetricEnvelope(arg0, arg1, sdk) {
-  let obj = { sent_at: null };
-  obj[0] = new Date().toISOString();
+  let obj = { sent_at: new Date().toISOString() };
   if (sdk) {
     sdk = sdk.sdk;
   }
@@ -26,10 +26,10 @@ function createMetricEnvelope(arg0, arg1, sdk) {
     const obj4 = dsnFromString;
   }
   const date = new Date();
-  const result = items.serializeMetricBuckets(arg0);
+  const result = items2.serializeMetricBuckets(arg0);
   obj = { type: "statsd", length: result.length };
   const items = [obj, result];
-  const obj5 = items;
+  const obj5 = items2;
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(obj, items1);
 }

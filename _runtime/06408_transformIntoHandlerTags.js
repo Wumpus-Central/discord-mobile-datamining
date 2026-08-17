@@ -1,10 +1,8 @@
 // _runtime/06408_transformIntoHandlerTags.js
-import get_ActivityIndicator from "get ActivityIndicator";
-import { tagMessage } from "06382_tagMessage.js";
-import { 06409__ } from "metro/06409__.js";
+import tagMessage from "tagMessage" /* 6382 */;
+import _mod6409 from "module_6409" /* 6409 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let Platform;
-let c3;
 function transformIntoHandlerTags(arg0) {
   const obj = tagMessage;
   const mapped = tagMessage.toArray(arg0).map((current) => {
@@ -29,7 +27,7 @@ let closure_5 = [];
 let c6 = false;
 
 export const selectProperties = (arg0, arr) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const found = arr.filter((arg0) => arg0 in closure_0);
   return Object.fromEntries(found.map((arg0) => {
     const items = [arg0, table[arg0]];
@@ -115,30 +113,30 @@ export const findNodeHandle = function findNodeHandle(current) {
 export const scheduleFlushOperations = function scheduleFlushOperations() {
   if (!c6) {
     c6 = true;
-    06409__.ghQueueMicrotask(() => {
+    _mod6409.ghQueueMicrotask(() => {
       for (const item10005 of closure_5) {
         let item10005Result = item10005();
         continue;
       }
-      let closure_5 = [];
+      closure_5 = [];
       callback(table[4]).flushOperations();
-      let c6 = false;
+      c6 = false;
     });
-    const obj = 06409__;
+    const obj = _mod6409;
   }
 };
 export const scheduleOperationToBeFlushed = function scheduleOperationToBeFlushed(arg0) {
   if (!c6) {
     c6 = true;
-    06409__.ghQueueMicrotask(() => {
+    _mod6409.ghQueueMicrotask(() => {
       for (const item10005 of closure_5) {
         let item10005Result = item10005();
         continue;
       }
-      let closure_5 = [];
+      closure_5 = [];
       callback(table[4]).flushOperations();
-      let c6 = false;
+      c6 = false;
     });
-    const obj = 06409__;
+    const obj = _mod6409;
   }
 };

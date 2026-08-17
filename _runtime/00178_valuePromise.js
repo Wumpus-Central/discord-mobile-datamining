@@ -1,10 +1,5 @@
 // _runtime/00178_valuePromise.js
-import noop from "noop";
-import noop from "noop";
-import noop from "noop";
-import noop from "noop";
-import noop from "noop";
-import noop from "noop";
+import noop from "noop" /* 177 */;
 import { noop } from "00177_noop.js";
 
 function valuePromise(_z) {
@@ -38,25 +33,25 @@ function mapAllSettled(value) {
   }
   return { status: "fulfilled", value };
 }
-noop = new noop(require("noop")._D);
+noop = new noop(noop._D);
 noop._y = 1;
 noop._z = true;
-noop = new noop(require("noop")._D);
+noop = new noop(noop._D);
 noop._y = 1;
 noop._z = false;
-noop = new noop(require("noop")._D);
+noop = new noop(noop._D);
 noop._y = 1;
 noop._z = null;
-noop = new noop(require("noop")._D);
+noop = new noop(noop._D);
 noop._y = 1;
 noop._z = undefined;
-noop = new noop(require("noop")._D);
+noop = new noop(noop._D);
 noop._y = 1;
 noop._z = 0;
-noop = new noop(require("noop")._D);
+noop = new noop(noop._D);
 noop._y = 1;
 noop._z = "";
-require("noop").resolve = (self) => {
+noop.resolve = (self) => {
   if (self instanceof noop) {
     return self;
   } else if (null === self) {
@@ -76,7 +71,7 @@ require("noop").resolve = (self) => {
       try {
         const then = self.then;
         if (typeof then === "function") {
-          let tmp4Result = tmp4(177);
+          let tmp4Result = noop;
           tmp4Result = new tmp4Result(obj.bind(self));
           return tmp4Result;
         }
@@ -91,12 +86,12 @@ require("noop").resolve = (self) => {
     }
     return valuePromise(self);
   }
-  tmp4 = require;
+  const tmp4 = require;
 };
 function iterableToArray(arg0) {
   if (typeof Array.from === "function") {
     const _Array = Array;
-    let iterableToArray = Array.from;
+    iterableToArray = Array.from;
     const _Array2 = Array;
     let arr = Array.from(arg0);
   } else {
@@ -110,17 +105,17 @@ function iterableToArray(arg0) {
   }
   return arr;
 }
-require("noop").all = (arg0) => {
+noop.all = (arg0) => {
   const _require = iterableToArray(arg0);
   return new _noop((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     function res(arg0, self) {
       let _y;
       const callback = arg0;
       if (self) {
         if (typeof self === "object") {
-          if (self instanceof callback(outer2_1[0])) {
+          if (self instanceof callback(closure_2_1[0])) {
             if (self.then === tmp(tmp2[0]).prototype.then) {
               let tmp13 = self;
               let promise2 = self;
@@ -139,7 +134,7 @@ require("noop").all = (arg0) => {
                   callback2(promise2._z);
                 }
                 promise2.then((arg0) => {
-                  outer1_3(closure_0, arg0);
+                  closure_1_3(closure_0, arg0);
                 }, callback2);
               }
               return tmp18;
@@ -150,7 +145,7 @@ require("noop").all = (arg0) => {
             let tmpResult = tmp(tmp2[0]);
             tmpResult = new tmpResult(then.bind(self));
             tmpResult.then((arg0) => {
-              outer1_3(closure_0, arg0);
+              closure_1_3(closure_0, arg0);
             }, callback2);
           }
         }
@@ -177,35 +172,35 @@ require("noop").all = (arg0) => {
     }
   });
 };
-require("noop").allSettled = (arg0) => {
+noop.allSettled = (arg0) => {
   const obj = noop;
   return obj.all(iterableToArray(arg0).map(mapAllSettled));
 };
-require("noop").reject = (arg0) => {
+noop.reject = (arg0) => {
   const _require = arg0;
   return new _noop((arg0, arg1) => {
     arg1(closure_0);
   });
 };
-require("noop").race = (arg0) => {
+noop.race = (arg0) => {
   const _require = arg0;
   return new _noop((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    const item = outer1_9(closure_0).forEach((arg0) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    const item = closure_1_9(closure_0).forEach((arg0) => {
       const obj = callback(table[0]);
       callback(table[0]).resolve(arg0).then(callback, table);
     });
   });
 };
-require("noop").prototype.catch = function(arg0) {
+noop.prototype.catch = function(arg0) {
   return this.then(null, arg0);
 };
-require("noop").any = function promiseAny(arg0) {
+noop.any = function promiseAny(arg0) {
   const _require = arg0;
   return new _noop((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     function resolveOnce(arg0) {
       if (!c3) {
         c3 = true;
@@ -220,7 +215,7 @@ require("noop").any = function promiseAny(arg0) {
           let tmp8 = aggregateError;
         } else {
           const _Error = Error;
-          const error = new Error("All promises were rejected");
+          error = new Error("All promises were rejected");
           tmp8 = error;
           error.name = "AggregateError";
           error.errors = tmp;
@@ -229,8 +224,8 @@ require("noop").any = function promiseAny(arg0) {
         const tmp3 = closure_1;
       }
     }
-    const arr = outer1_9(closure_0);
-    let c3 = false;
+    const arr = closure_1_9(closure_0);
+    c3 = false;
     const items = [];
     if (0 === arr.length) {
       let aggregateError = globalThis;
@@ -239,7 +234,7 @@ require("noop").any = function promiseAny(arg0) {
         let tmp6 = aggregateError;
       } else {
         let _Error = Error;
-        let error = new Error("All promises were rejected");
+        error = new Error("All promises were rejected");
         tmp6 = error;
         error.name = "AggregateError";
         error.errors = items;
@@ -254,4 +249,4 @@ require("noop").any = function promiseAny(arg0) {
   });
 };
 
-export { default } from "noop";
+export default noop;

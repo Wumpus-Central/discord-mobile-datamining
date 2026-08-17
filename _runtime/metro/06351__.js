@@ -1,8 +1,9 @@
 // _runtime/metro/06351__.js
-import "noop";
-import { UIManager } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { UIManager } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
+noopAll;
 try {
   let closure_0 = require("_isNativeReflectConstruct").default;
   let closure_2 = null != UIManager.getViewManagerConfig("RNCMaskedView");

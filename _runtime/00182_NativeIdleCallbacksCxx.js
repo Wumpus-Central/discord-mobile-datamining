@@ -1,3 +1,5 @@
 // _runtime/00182_NativeIdleCallbacksCxx.js
+import getAll from "get" /* 30 */;
 
-export default require("get").getEnforcing("NativeIdleCallbacksCxx");
+
+export default getAll.getEnforcing("NativeIdleCallbacksCxx");

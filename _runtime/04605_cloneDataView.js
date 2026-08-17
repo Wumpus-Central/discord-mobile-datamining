@@ -1,5 +1,6 @@
 // _runtime/04605_cloneDataView.js
-import { cloneArrayBuffer } from "04604_cloneArrayBuffer.js";
+import cloneArrayBuffer from "cloneArrayBuffer" /* 4604 */;
+
 
 export default function cloneDataView(buffer) {
   if (arg1) {

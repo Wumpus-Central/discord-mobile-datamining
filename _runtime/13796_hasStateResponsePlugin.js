@@ -3,7 +3,7 @@ arg5.assertHasStateResponsePlugin = undefined;
 arg5.default = undefined;
 arg5.hasStateResponsePlugin = undefined;
 arg5.default = () => (arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const features = {
     stateActionComplete(name, action) {
       let flag = arg2;
@@ -113,7 +113,7 @@ arg5.assertHasStateResponsePlugin = (stateActionComplete) => {
   }
   if (!tmp) {
     const _Error = Error;
-    const error = new Error("This Reactotron client has not had the state responses plugin applied to it. Make sure that you add `use(stateResponse())` before adding this plugin.");
+    error = new Error("This Reactotron client has not had the state responses plugin applied to it. Make sure that you add `use(stateResponse())` before adding this plugin.");
     throw error;
   }
 };

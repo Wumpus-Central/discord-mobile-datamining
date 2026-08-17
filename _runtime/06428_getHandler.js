@@ -1,8 +1,9 @@
 // _runtime/06428_getHandler.js
-import { tagMessage } from "06382_tagMessage.js";
-import { _isNativeReflectConstruct } from "06398__isNativeReflectConstruct.js";
-import { 06385__ } from "metro/06385__.js";
-const require = arg1;
+import tagMessage from "tagMessage" /* 6382 */;
+import _mod6385 from "module_6385" /* 6385 */;
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 6398 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function getHandler(arg0, onBegin) {
   if (_isNativeReflectConstruct.CALLBACK_TYPE.BEGAN === arg0) {
@@ -32,7 +33,7 @@ getHandler.__closure = obj;
 getHandler.__workletHash = 611602598219;
 getHandler.__initData = { code: "function getHandler_Pnpm_useAnimatedGestureTs1(type,gesture){const{CALLBACK_TYPE}=this.__closure;switch(type){case CALLBACK_TYPE.BEGAN:return gesture.onBegin;case CALLBACK_TYPE.START:return gesture.onStart;case CALLBACK_TYPE.UPDATE:return gesture.onUpdate;case CALLBACK_TYPE.CHANGE:return gesture.onChange;case CALLBACK_TYPE.END:return gesture.onEnd;case CALLBACK_TYPE.FINALIZE:return gesture.onFinalize;case CALLBACK_TYPE.TOUCHES_DOWN:return gesture.onTouchesDown;case CALLBACK_TYPE.TOUCHES_MOVE:return gesture.onTouchesMove;case CALLBACK_TYPE.TOUCHES_UP:return gesture.onTouchesUp;case CALLBACK_TYPE.TOUCHES_CANCEL:return gesture.onTouchesCancelled;}}" };
 function touchEventTypeToCallbackType(arg0) {
-  if (06385__.TouchEventType.TOUCHES_DOWN === arg0) {
+  if (_mod6385.TouchEventType.TOUCHES_DOWN === arg0) {
     return tmp(6398).CALLBACK_TYPE.TOUCHES_DOWN;
   } else if (tmp(6385).TouchEventType.TOUCHES_MOVE === arg0) {
     return tmp(6398).CALLBACK_TYPE.TOUCHES_MOVE;
@@ -94,8 +95,8 @@ arg5.useAnimatedGesture = function useAnimatedGesture(current2, needsToReattachR
           let tmp2 = value[num];
           let tmp3 = num;
           if (handlerTag.handlerTag === tmp2.handlerTag) {
-            let tmp39 = outer1_5;
-            if (typeof outer1_5 !== "function") {
+            let tmp39 = closure_1_5;
+            if (typeof closure_1_5 !== "function") {
               let str = "Trying to call a non-function";
               let throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -104,14 +105,14 @@ arg5.useAnimatedGesture = function useAnimatedGesture(current2, needsToReattachR
               let tmp16 = sharedValue1;
               if (handlerTag.oldState === sharedValue(sharedValue1[4]).State.UNDETERMINED) {
                 if (handlerTag.state === tmp15(tmp16[4]).State.BEGAN) {
-                  let tmp37 = outer1_4;
-                  let tmp38 = outer1_4(tmp15(tmp16[0]).CALLBACK_TYPE.BEGAN, tmp2, handlerTag);
+                  let tmp37 = closure_1_4;
+                  let tmp38 = closure_1_4(tmp15(tmp16[0]).CALLBACK_TYPE.BEGAN, tmp2, handlerTag);
                 }
               }
               if (handlerTag.oldState === tmp15(tmp16[4]).State.BEGAN) {
                 if (handlerTag.state === tmp15(tmp16[4]).State.ACTIVE) {
-                  let tmp17 = outer1_4;
-                  let tmp18 = outer1_4(tmp15(tmp16[0]).CALLBACK_TYPE.START, tmp2, handlerTag);
+                  let tmp17 = closure_1_4;
+                  let tmp18 = closure_1_4(tmp15(tmp16[0]).CALLBACK_TYPE.START, tmp2, handlerTag);
                   let tmp19 = sharedValue1;
                   sharedValue1.value[tmp2.handlerTag] = undefined;
                 }
@@ -119,17 +120,17 @@ arg5.useAnimatedGesture = function useAnimatedGesture(current2, needsToReattachR
               if (handlerTag.oldState !== handlerTag.state) {
                 if (handlerTag.state === tmp15(tmp16[4]).State.END) {
                   if (handlerTag.oldState === tmp15(tmp16[4]).State.ACTIVE) {
-                    let tmp29 = outer1_4;
+                    let tmp29 = closure_1_4;
                     let tmp30 = tmp2;
                     let tmp31 = handlerTag;
                     let flag3 = true;
-                    let tmp32 = outer1_4(tmp15(tmp16[0]).CALLBACK_TYPE.END, tmp2, handlerTag, true);
+                    let tmp32 = closure_1_4(tmp15(tmp16[0]).CALLBACK_TYPE.END, tmp2, handlerTag, true);
                   }
-                  let tmp33 = outer1_4;
+                  let tmp33 = closure_1_4;
                   let tmp34 = tmp2;
                   let tmp35 = handlerTag;
                   let flag4 = true;
-                  let tmp36 = outer1_4(tmp15(tmp16[0]).CALLBACK_TYPE.FINALIZE, tmp2, handlerTag, true);
+                  let tmp36 = closure_1_4(tmp15(tmp16[0]).CALLBACK_TYPE.FINALIZE, tmp2, handlerTag, true);
                 }
               }
               let tmp20 = handlerTag.state !== tmp15(tmp16[4]).State.FAILED;
@@ -141,21 +142,21 @@ arg5.useAnimatedGesture = function useAnimatedGesture(current2, needsToReattachR
               }
               if (!tmp20) {
                 if (handlerTag.oldState === tmp15(tmp16[4]).State.ACTIVE) {
-                  let tmp21 = outer1_4;
+                  let tmp21 = closure_1_4;
                   let tmp22 = tmp2;
                   let tmp23 = handlerTag;
                   let flag = false;
-                  let tmp24 = outer1_4(tmp15(tmp16[0]).CALLBACK_TYPE.END, tmp2, handlerTag, false);
+                  let tmp24 = closure_1_4(tmp15(tmp16[0]).CALLBACK_TYPE.END, tmp2, handlerTag, false);
                 }
-                let tmp25 = outer1_4;
+                let tmp25 = closure_1_4;
                 let tmp26 = tmp2;
                 let tmp27 = handlerTag;
                 let flag2 = false;
-                let tmp28 = outer1_4(tmp15(tmp16[0]).CALLBACK_TYPE.FINALIZE, tmp2, handlerTag, false);
+                let tmp28 = closure_1_4(tmp15(tmp16[0]).CALLBACK_TYPE.FINALIZE, tmp2, handlerTag, false);
               }
             } else {
-              let tmp41 = outer1_6;
-              if (typeof outer1_6 !== "function") {
+              let tmp41 = closure_1_6;
+              if (typeof closure_1_6 !== "function") {
                 let str2 = "Trying to call a non-function";
                 let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
               }
@@ -171,17 +172,17 @@ arg5.useAnimatedGesture = function useAnimatedGesture(current2, needsToReattachR
                 let tmp13 = sharedValue;
                 let tmp14 = sharedValue1;
                 if (handlerTag.eventType !== sharedValue(sharedValue1[1]).TouchEventType.UNDETERMINED) {
-                  let tmp47 = outer1_4;
-                  let tmp48 = outer1_3;
+                  let tmp47 = closure_1_4;
+                  let tmp48 = closure_1_3;
                   let tmp49 = tmp2;
                   let tmp50 = handlerTag;
-                  let tmp51 = outer1_4(outer1_3(handlerTag.eventType), tmp2, handlerTag, tmp9[num]);
+                  let tmp51 = closure_1_4(closure_1_3(handlerTag.eventType), tmp2, handlerTag, tmp9[num]);
                 }
               } else {
-                let tmp43 = outer1_4;
+                let tmp43 = closure_1_4;
                 let tmp44 = sharedValue;
                 let tmp45 = sharedValue1;
-                let tmp46 = outer1_4(sharedValue(sharedValue1[0]).CALLBACK_TYPE.UPDATE, tmp2, handlerTag);
+                let tmp46 = closure_1_4(sharedValue(sharedValue1[0]).CALLBACK_TYPE.UPDATE, tmp2, handlerTag);
                 let tmp4 = tmp2.onChange && tmp2.changeEventCalculator;
                 if (tmp4) {
                   let changeEventCalculator = tmp2.changeEventCalculator;

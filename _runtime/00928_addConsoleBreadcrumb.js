@@ -1,14 +1,14 @@
 // _runtime/00928_addConsoleBreadcrumb.js
-import setupIntegration from "setupIntegration";
-import { isMatchingPattern } from "00832_isMatchingPattern.js";
-import { severityLevelFromString } from "00920_severityLevelFromString.js";
-import { 00821__ } from "metro/00821__.js";
+import _mod821 from "module_821" /* 821 */;
+import isMatchingPattern from "isMatchingPattern" /* 832 */;
+import severityLevelFromString from "severityLevelFromString" /* 920 */;
+import setupIntegration from "setupIntegration" /* 887 */;
 
 function addConsoleBreadcrumb(arg0, arguments) {
   obj = { category: "console", data: obj, level: null, message: null };
   obj = { arguments, logger: "console" };
   obj[2] = severityLevelFromString.severityLevelFromString(arg0);
-  if ("util" in 00821__.GLOBAL_OBJ) {
+  if ("util" in _mod821.GLOBAL_OBJ) {
     if (typeof tmp(821).GLOBAL_OBJ.util.format === "function") {
       const util = tmp(821).GLOBAL_OBJ.util;
       const format = util.format;
@@ -64,15 +64,15 @@ export const consoleIntegration = setupIntegration.defineIntegration(() => {
   obj = {
     name: "Console",
     setup(arg0) {
-      let closure_0 = arg0;
-      const result = set(outer1_1[2]).addConsoleInstrumentationHandler((level) => {
+      closure_0 = arg0;
+      const result = set(closure_1_1[2]).addConsoleInstrumentationHandler((level) => {
         level = level.level;
-        let hasItem = set(outer2_1[3]).getClient() === set;
+        let hasItem = set(closure_2_1[3]).getClient() === set;
         if (hasItem) {
           hasItem = set.has(level);
         }
         if (hasItem) {
-          outer2_2(level, level.args);
+          closure_2_2(level, level.args);
         }
       });
     }

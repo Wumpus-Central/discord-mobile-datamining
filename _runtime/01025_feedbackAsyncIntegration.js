@@ -1,6 +1,7 @@
 // _runtime/01025_feedbackAsyncIntegration.js
-import mergeOptions from "mergeOptions";
+import _lazyLoadIntegration from "_lazyLoadIntegration" /* 1027 */;
+import mergeOptions from "mergeOptions" /* 1026 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const feedbackAsyncIntegration = mergeOptions.buildFeedbackIntegration({ lazyLoadIntegration: require("_lazyLoadIntegration").lazyLoadIntegration });
+export const feedbackAsyncIntegration = mergeOptions.buildFeedbackIntegration({ lazyLoadIntegration: _lazyLoadIntegration.lazyLoadIntegration });

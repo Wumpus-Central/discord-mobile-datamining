@@ -1,8 +1,10 @@
 // _runtime/00207__isNativeReflectConstruct.js
-import ProgressEvent from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import EventDefault from "Event" /* 133 */;
+import ProgressEvent from "_classCallCheck" /* 41 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -15,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -30,9 +32,9 @@ class ProgressEvent {
     items = [, ];
     items[0] = global;
     items[1] = arg1;
-    tmp2 = __esModule;
-    obj = __esModule(ProgressEvent);
-    tmp3 = __esModule;
+    tmp2 = closure_2;
+    obj = closure_2(ProgressEvent);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -61,7 +63,7 @@ class ProgressEvent {
     return tmp3Result;
   }
 }
-require("_inherits")(ProgressEvent, require("Event"));
+_inheritsDefault(ProgressEvent, EventDefault);
 let items = [
   {
     key: "lengthComputable",

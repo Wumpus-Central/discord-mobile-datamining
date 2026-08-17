@@ -1,6 +1,6 @@
 // _runtime/13142_SemVer.js
 
 export default (arr) => {
-  let closure_0 = arg1;
-  return arr.sort((arg0, arg1) => callback(outer1_1[0])(arg1, arg0, callback));
+  closure_0 = arg1;
+  return arr.sort((arg0, arg1) => callback(closure_1_1[0])(arg1, arg0, callback));
 };

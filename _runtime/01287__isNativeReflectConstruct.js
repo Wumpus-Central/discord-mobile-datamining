@@ -1,9 +1,10 @@
 // _runtime/01287__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 1288 */;
+import MarkdownBuilder from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -16,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -50,7 +51,6 @@ let closure_4 = {
     return "`" + join.join("") + "`";
   },
   $link(join) {
-    let tmp;
     [tmp] = arg2;
     return "[" + join.join("") + "](" + tmp + ")";
   },
@@ -62,9 +62,9 @@ class MarkdownBuilder {
   constructor() {
     self = this;
     tmp = MarkdownBuilder(this, MarkdownBuilder);
-    tmp2 = outer1_2;
-    obj = outer1_2(MarkdownBuilder);
-    tmp3 = outer1_1;
+    tmp2 = closure_2;
+    obj = closure_2(MarkdownBuilder);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -80,8 +80,7 @@ class MarkdownBuilder {
     return tmp3Result;
   }
 }
-_classCallCheck = MarkdownBuilder;
-_inherits(MarkdownBuilder, require("_isNativeReflectConstruct").StringBuilder);
+_inherits(MarkdownBuilder, _isNativeReflectConstruct2.StringBuilder);
 const items = [
   {
     key: "pushRichTextTag",

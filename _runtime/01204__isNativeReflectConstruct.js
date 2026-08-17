@@ -1,15 +1,12 @@
 // _runtime/01204__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const ScreenshotButton = arg1;
 function _isNativeReflectConstruct() {
   try {
@@ -22,32 +19,32 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 let c5 = importAllResult;
-({ Appearance: closure_6, Image: error, Text: metroImportAll, TouchableOpacity: c9 } = get_ActivityIndicator);
+({ Appearance: closure_6, Image: error, Text: closure_8, TouchableOpacity: c9 } = get_ActivityIndicator);
 let fn = this;
 if (this) {
   fn = this.__awaiter;
 }
 if (!fn) {
   fn = (arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     let _Promise = arg2;
-    let _possibleConstructorReturn = arg3;
+    closure_3 = arg3;
     if (!arg2) {
       _Promise = Promise;
     }
     _Promise = new _Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function fulfilled(arg0) {
         try {
           step(iter.next(arg0));
@@ -127,7 +124,7 @@ function takeScreenshot() {
           obj[0] = arg1;
           return obj;
         } else {
-          obj = v0(outer1_1[7]);
+          obj = v0(closure_1_1[7]);
           obj.hideScreenshotButton();
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => callback(undefined, undefined, undefined, function*() {
@@ -160,10 +157,10 @@ function takeScreenshot() {
                     const table = tmp2;
                     let lib = tmp3;
                     lib = undefined;
-                    const NATIVE = outer1_0(outer1_1[8]).NATIVE;
+                    const NATIVE = closure_1_0(closure_1_1[8]).NATIVE;
                     c2 = 1;
                     c3 = 1;
-                    const obj1 = { value: null, done: false };
+                    obj1 = { value: null, done: false };
                     obj1[0] = NATIVE.captureScreenshot();
                     return obj1;
                   }
@@ -208,12 +205,12 @@ function takeScreenshot() {
 class ScreenshotButton {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, ScreenshotButton);
+    tmp = closure_2(this, ScreenshotButton);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(ScreenshotButton);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(ScreenshotButton);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -227,7 +224,7 @@ class ScreenshotButton {
     return tmp3Result;
   }
 }
-require("_inherits")(ScreenshotButton, importAllResult.Component);
+_inheritsDefault(ScreenshotButton, importAllResult.Component);
 let items = [
   {
     key: "componentDidMount",
@@ -250,13 +247,11 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let createElement;
-      let createElement2;
       const self = this;
       let obj = ScreenshotButton(1199);
       const theme = obj.getTheme();
       const merged = Object.assign(Object.assign({}, ScreenshotButton(1201).defaultScreenshotButtonConfiguration), this.props);
-      let obj1 = ScreenshotButton(1202);
+      obj1 = ScreenshotButton(1202);
       const styles = this.props.styles;
       let triggerButton;
       const merged1 = Object.assign({}, obj1.defaultScreenshotButtonStyles(theme).triggerButton);
@@ -300,7 +295,7 @@ let items = [
 ];
 
 export () => {
-  let c11;
+  c11 = undefined;
   return c11;
 }
 export const ScreenshotButton = importDefaultResult(ScreenshotButton, items);

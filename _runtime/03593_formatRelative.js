@@ -1,5 +1,5 @@
 // _runtime/03593_formatRelative.js
-import isSameUTCWeek from "isSameUTCWeek";
+import isSameUTCWeek from "isSameUTCWeek" /* 3474 */;
 
 if (!isSameUTCWeek) {
   const obj = { default: null };
@@ -8,13 +8,13 @@ if (!isSameUTCWeek) {
 } else {
   tmp3 = isSameUTCWeek;
 }
-let c0 = tmp3;
+isSameUTCWeek = tmp3;
 let closure_1 = ["\u0432\u043E\u0441\u043A\u0440\u0435\u0441\u0435\u043D\u044C\u0435", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440\u0433", "\u043F\u044F\u0442\u043D\u0438\u0446\u0443", "\u0441\u0443\u0431\u0431\u043E\u0442\u0443"];
 let closure_2 = {
   lastWeek(getUTCDay) {
     const uTCDay = getUTCDay.getUTCDay();
     let text = dependencyMap[uTCDay];
-    if (tmp3.default(getUTCDay, arg1, arg2)) {
+    if (isSameUTCWeek.default(getUTCDay, arg1, arg2)) {
       if (2 === uTCDay) {
         text = `'во ${tmp2}`;
         let text1 = `'во ${tmp2} в' p`;
@@ -43,7 +43,7 @@ let closure_2 = {
   nextWeek(getUTCDay) {
     const uTCDay = getUTCDay.getUTCDay();
     let text = dependencyMap[uTCDay];
-    if (tmp3.default(getUTCDay, arg1, arg2)) {
+    if (isSameUTCWeek.default(getUTCDay, arg1, arg2)) {
       if (2 === uTCDay) {
         text = `'во ${tmp2}`;
         let text1 = `'во ${tmp2} в' p`;

@@ -23,7 +23,7 @@ arg5.default = {
       obj[1] = "" + byteAt1;
       tmp6 = obj;
     }
-    const obj1 = { "Bits Per Sample": tmp6, "Image Height": null, "Image Width": null, "Color Components": null, Subsampling: null };
+    obj1 = { "Bits Per Sample": tmp6, "Image Height": null, "Image Width": null, "Color Components": null, Subsampling: null };
     let tmp8;
     if (5 <= shortAt) {
       const shortAt1 = tmp(4927).getShortAt(dataView, sum + 3);

@@ -1,11 +1,11 @@
 // _runtime/metro/04209__extends.js
-import noop from "noop";
-import emptyFunction from "emptyFunction";
-import warning from "warning";
-import invariant from "invariant";
-import parse from "parse";
-import "num2";
-import getStatics from "getStatics";
+import num2 from "num2" /* 4212 */;
+import noop from "noop" /* 19 */;
+import emptyFunction from "emptyFunction" /* 4205 */;
+import warning from "warning" /* 1229 */;
+import invariant from "invariant" /* 1230 */;
+import parse from "parse" /* 4210 */;
+import getStatics from "getStatics" /* 4214 */;
 
 let Component6 = require;
 let closure_1 = dependencyMap;
@@ -36,6 +36,7 @@ function _extends() {
     return arg0;
   });
   const self = this;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -85,6 +86,7 @@ if (parse) {
     }
   }
 }
+num2;
 if (getStatics) {
   if (typeof getStatics === "object") {
     if ("default" in getStatics) {
@@ -108,14 +110,14 @@ if (typeof globalThis !== "undefined") {
 }
 const tmp9 = noop.createContext || (function createReactContext(arg0, arg1) {
   let Component2 = arg0;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   let num = _globalThis.__global_unique_id__;
   if (!num) {
     num = 0;
   }
   const sum = num + 1;
   _globalThis.__global_unique_id__ = sum;
-  const noop = `${"__create-react-context-" + tmp2}__`;
+  noop = `${"__create-react-context-" + tmp2}__`;
   const Component = noop.Component;
   Component2 = Component;
   class t {
@@ -136,13 +138,13 @@ const tmp9 = noop.createContext || (function createReactContext(arg0, arg1) {
 
             },
         off(arg0) {
-              let closure_0 = arg0;
+              closure_0 = arg0;
             },
         get() {
               return closure_0;
             },
         set(arg0, arg1) {
-              let closure_0 = arg1;
+              closure_0 = arg1;
               closure_0 = arg0;
               const item = arr.forEach(() => { ... });
             }
@@ -175,7 +177,7 @@ const tmp9 = noop.createContext || (function createReactContext(arg0, arg1) {
         if (typeof closure_1 === "function") {
           let tmp3Result = tmp3(value, value);
         } else {
-          tmp3Result = outer1_9;
+          tmp3Result = closure_1_9;
         }
         if (0 !== (tmp3Result | 0)) {
           const emitter = self.emitter;
@@ -197,11 +199,11 @@ const tmp9 = noop.createContext || (function createReactContext(arg0, arg1) {
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];
       }
-      call = concat.call;
+      call = self.call;
       items = [];
       items[0] = this;
-      obj = call.apply(concat, items.concat(array)) || this;
-      concat = obj;
+      obj = call.apply(self, items.concat(array)) || this;
+      self = obj;
       obj.observedBits = undefined;
       obj = { value: obj.getValue() };
       obj.state = obj;
@@ -234,7 +236,7 @@ const tmp9 = noop.createContext || (function createReactContext(arg0, arg1) {
     }
     let observedBits = self.props.observedBits;
     if (null == observedBits) {
-      observedBits = outer1_9;
+      observedBits = closure_1_9;
     }
     self.observedBits = observedBits;
   };
@@ -295,7 +297,7 @@ function generatePath(arg0, arg1) {
   }
 }
 function matchPath(pathname, arg1) {
-  let closure_0 = pathname;
+  closure_0 = pathname;
   let obj = arg1;
   if (undefined === arg1) {
     obj = {};
@@ -311,21 +313,19 @@ function matchPath(pathname, arg1) {
     obj[0] = obj;
     tmp2 = obj;
   }
-  const exact = tmp2.exact;
+  let exact = tmp2.exact;
   let tmp3 = undefined !== exact;
   if (tmp3) {
     tmp3 = exact;
   }
-  let closure_1 = tmp3;
+  exact = tmp3;
   const strict = tmp2.strict;
-  let closure_2 = undefined !== strict && strict;
+  closure_2 = undefined !== strict && strict;
   const sensitive = tmp2.sensitive;
-  let closure_3 = undefined !== sensitive && sensitive;
+  closure_3 = undefined !== sensitive && sensitive;
   const items = [];
   const combined = items.concat(tmp2.path);
   return combined.reduce((arg0, arg1) => {
-    let keys;
-    let regexp;
     if (!arg1) {
       if ("" !== arg1) {
         return null;
@@ -339,7 +339,7 @@ function matchPath(pathname, arg1) {
       obj[1] = match;
       obj[2] = closure_3;
       const sum = "" + obj.end + obj.strict + obj.sensitive;
-      let tmp7 = outer1_17[sum];
+      let tmp7 = closure_1_17[sum];
       if (!tmp7) {
         obj = {};
         tmp6[sum] = obj;
@@ -350,12 +350,12 @@ function matchPath(pathname, arg1) {
       } else {
         const items = [];
         obj = { regexp: null, keys: null };
-        obj[0] = outer1_5(arg1, items, obj);
+        obj[0] = closure_1_5(arg1, items, obj);
         obj[1] = items;
         tmp10 = obj;
-        if (outer1_18 < 10000) {
+        if (closure_18 < 10000) {
           tmp7[arg1] = obj;
-          outer1_18 = outer1_18 + 1;
+          closure_18 = closure_18 + 1;
           tmp10 = obj;
         }
       }
@@ -365,7 +365,7 @@ function matchPath(pathname, arg1) {
         const first = match[0];
         closure_0 = match.slice(1);
         if (!tmp2) {
-          const obj1 = { path: null, url: null, isExact: null, params: null };
+          obj1 = { path: null, url: null, isExact: null, params: null };
           obj1[0] = arg1;
           let str2 = "/";
           if ("/" !== arg1) {
@@ -395,7 +395,7 @@ function useLocation() {
 }
 let tmp9Result = tmp9();
 tmp9Result.displayName = "Router-History";
-const unpackModuleId = tmp9Result;
+let closure_11 = tmp9Result;
 tmp9Result = tmp9();
 tmp9Result.displayName = "Router";
 let closure_12 = tmp9Result;
@@ -404,10 +404,10 @@ Component6 = Component;
 class t {
   constructor(arg0) {
     self = this;
-    tmp = call;
-    call = call.call;
+    tmp = self;
+    call = self.call;
     tmp2 = (typeof call === "unknown" ? tmp(global) : call(self, global)) || self;
-    call = tmp2;
+    self = tmp2;
     tmp2.state = { location: global.history.location };
     tmp2._isMounted = false;
     tmp2._pendingLocation = null;
@@ -470,7 +470,7 @@ prototype.render = function() {
     children = null;
   }
   obj = { children, value: this.props.history };
-  return <tmp9Result2.Provider children={children} value={this.props.history}><tmp9Result.Provider children={children} value={this.props.history} /></tmp9Result2.Provider>;
+  return <redux2.Provider children={children} value={this.props.history}><redux.Provider children={children} value={this.props.history} /></redux2.Provider>;
 };
 let closure_13 = t;
 let Component2 = noop.Component;
@@ -587,12 +587,9 @@ class e {
   }
   render() {
     self = this;
-    return closure_2.createElement(createReactContext.Consumer, null, (location) => {
-      let children;
-      let component;
-      let render;
+    return closure_2.createElement(closure_12.Consumer, null, (location) => {
       if (!location) {
-        outer1_4(false);
+        closure_1_4(false);
       }
       let obj = { location: tmp4, match: null };
       let props = tmp3.props;
@@ -601,9 +598,9 @@ class e {
       } else if (props.path) {
         props = tmp3.props;
         pathname = tmp4.pathname;
-        let c1;
-        let closure_2;
-        let closure_3;
+        let exact;
+        closure_2 = undefined;
+        closure_3 = undefined;
         if (undefined === props) {
           props = {};
         }
@@ -618,12 +615,12 @@ class e {
           obj[0] = props;
           tmp7 = obj;
         }
-        const exact = tmp7.exact;
+        exact = tmp7.exact;
         let tmp8 = undefined !== exact;
         if (tmp8) {
           tmp8 = exact;
         }
-        c1 = tmp8;
+        exact = tmp8;
         const strict = tmp7.strict;
         closure_2 = undefined !== strict && strict;
         const sensitive = tmp7.sensitive;
@@ -631,8 +628,6 @@ class e {
         const items = [];
         const combined = items.concat(tmp7.path);
         match = combined.reduce((arg0, arg1) => {
-          let keys;
-          let regexp;
           if (!arg1) {
             if ("" !== arg1) {
               return null;
@@ -646,7 +641,7 @@ class e {
             obj[1] = match;
             obj[2] = closure_3;
             const sum = "" + obj.end + obj.strict + obj.sensitive;
-            let tmp7 = outer1_17[sum];
+            let tmp7 = closure_1_17[sum];
             if (!tmp7) {
               obj = {};
               tmp6[sum] = obj;
@@ -657,12 +652,12 @@ class e {
             } else {
               const items = [];
               obj = { regexp: null, keys: null };
-              obj[0] = outer1_5(arg1, items, obj);
+              obj[0] = closure_1_5(arg1, items, obj);
               obj[1] = items;
               tmp10 = obj;
-              if (outer1_18 < 10000) {
+              if (closure_18 < 10000) {
                 tmp7[arg1] = obj;
-                outer1_18 = outer1_18 + 1;
+                closure_18 = closure_18 + 1;
                 tmp10 = obj;
               }
             }
@@ -672,7 +667,7 @@ class e {
               const first = match[0];
               closure_0 = match.slice(1);
               if (!tmp2) {
-                const obj1 = { path: null, url: null, isExact: null, params: null };
+                obj1 = { path: null, url: null, isExact: null, params: null };
                 obj1[0] = arg1;
                 let str2 = "/";
                 if ("/" !== arg1) {
@@ -700,11 +695,11 @@ class e {
         match = location.match;
       }
       obj[1] = match;
-      const tmp5Result = outer1_7({}, location, obj);
+      const tmp5Result = closure_1_7({}, location, obj);
       ({ children, component, render } = pathname.props);
       let isArray = Array.isArray(children);
       if (isArray) {
-        const Children = outer1_2.Children;
+        const Children = closure_1_2.Children;
         isArray = 0 === Children.count(children);
       }
       let tmp12 = children;
@@ -748,13 +743,13 @@ class t {
     for (let num = 0; num < length; num = num + 1) {
       array[num] = arguments[num];
     }
-    call = concat.call;
+    call = self.call;
     items = [];
     items[0] = this;
-    tmp2 = call.apply(concat, items.concat(array)) || this;
-    concat = tmp2;
-    tmp2.handlePush = (arg0) => tmp2.navigateTo(arg0, "PUSH");
-    tmp2.handleReplace = (arg0) => tmp2.navigateTo(arg0, "REPLACE");
+    tmp2 = call.apply(self, items.concat(array)) || this;
+    self = tmp2;
+    tmp2.handlePush = (arg0) => closure_0.navigateTo(arg0, "PUSH");
+    tmp2.handleReplace = (arg0) => closure_0.navigateTo(arg0, "REPLACE");
     tmp2.handleListen = () => closure_19;
     tmp2.handleBlock = () => closure_19;
     return tmp2;
@@ -829,12 +824,12 @@ prototype3.render = function() {
       }
     }
   }
-  const obj1 = {
+  obj1 = {
     createHref(_location) {
       let path = _location;
       if (typeof _location !== "string") {
-        path = str(outer1_1[7]).createPath(_location);
-        const obj = str(outer1_1[7]);
+        path = str(closure_1_1[7]).createPath(_location);
+        const obj = str(closure_1_1[7]);
       }
       let text = str;
       if ("/" !== str + path.charAt(0)) {
@@ -904,29 +899,27 @@ class e {
   }
   render() {
     self = this;
-    return closure_2.createElement(createReactContext.Consumer, null, (location) => {
+    return closure_2.createElement(closure_12.Consumer, null, (location) => {
       const _self = location;
       if (!location) {
-        outer1_4(false);
+        closure_1_4(false);
       }
       let _location = _self.props.location;
       if (!_location) {
         _location = location.location;
       }
-      let obj = outer1_2;
-      const Children = outer1_2.Children;
+      let obj = closure_1_2;
+      const Children = closure_1_2.Children;
       const item = Children.forEach(_self.props.children, (icon) => {
-        let exact;
-        let path;
         if (null == match) {
           path = icon;
-          if (outer1_2.isValidElement(icon)) {
-            let closure_1 = path;
+          if (closure_1_2.isValidElement(icon)) {
+            closure_1 = path;
             let reduce = path.props.path || path.props.from;
             if (reduce) {
               let obj = { path: null };
               obj[0] = reduce;
-              obj = outer1_7({}, path.props, obj);
+              obj = closure_1_7({}, path.props, obj);
               pathname = pathname.pathname;
               closure_1 = undefined;
               match = undefined;
@@ -955,8 +948,6 @@ class e {
               const combined = items.concat(path);
               reduce = combined.reduce;
               match = reduce((arg0, arg1) => {
-                let keys;
-                let regexp;
                 if (!arg1) {
                   if ("" !== arg1) {
                     return null;
@@ -970,7 +961,7 @@ class e {
                   obj[1] = match;
                   obj[2] = closure_3;
                   const sum = "" + obj.end + obj.strict + obj.sensitive;
-                  let tmp7 = outer1_17[sum];
+                  let tmp7 = closure_1_17[sum];
                   if (!tmp7) {
                     obj = {};
                     tmp6[sum] = obj;
@@ -981,12 +972,12 @@ class e {
                   } else {
                     const items = [];
                     obj = { regexp: null, keys: null };
-                    obj[0] = outer1_5(arg1, items, obj);
+                    obj[0] = closure_1_5(arg1, items, obj);
                     obj[1] = items;
                     tmp10 = obj;
-                    if (outer1_18 < 10000) {
+                    if (closure_18 < 10000) {
                       tmp7[arg1] = obj;
-                      outer1_18 = outer1_18 + 1;
+                      closure_18 = closure_18 + 1;
                       tmp10 = obj;
                     }
                   }
@@ -996,7 +987,7 @@ class e {
                     const first = match[0];
                     closure_0 = match.slice(1);
                     if (!tmp2) {
-                      const obj1 = { path: null, url: null, isExact: null, params: null };
+                      obj1 = { path: null, url: null, isExact: null, params: null };
                       obj1[0] = arg1;
                       let str2 = "/";
                       if ("/" !== arg1) {
@@ -1044,13 +1035,11 @@ const useContext = noop.useContext;
 
 export const MemoryRouter = t;
 export const Prompt = function Prompt(arg0) {
-  let Component6;
-  let when;
   ({ message: Component6, when } = arg0);
-  let closure_1 = undefined === when || when;
-  return <tmp9Result2.Consumer>{(staticContext) => {
+  closure_1 = undefined === when || when;
+  return <redux2.Consumer>{(staticContext) => {
     if (!staticContext) {
-      outer1_4(false);
+      closure_1_4(false);
     }
     if (closure_1) {
       if (!staticContext.staticContext) {
@@ -1069,26 +1058,23 @@ export const Prompt = function Prompt(arg0) {
           cellKey.release();
         };
         obj[3] = block;
-        return <outer1_14 onMount={null} onUpdate={null} onUnmount={null} message={null} />;
+        return <closure_1_14 onMount={null} onUpdate={null} onUnmount={null} message={null} />;
       }
     }
     return null;
-  }}</tmp9Result2.Consumer>;
+  }}</redux2.Consumer>;
 };
 export const Redirect = function Redirect(arg0) {
-  let Component6;
-  let closure_1;
-  let push;
   ({ computedMatch: Component6, to: closure_1, push } = arg0);
-  const noop = undefined !== push && push;
-  return <tmp9Result2.Consumer>{(history) => {
+  noop = undefined !== push && push;
+  return <redux2.Consumer>{(history) => {
     if (!history) {
-      outer1_4(false);
+      closure_1_4(false);
     }
     history = history.history;
     const tmp3 = React ? history.push : history.replace;
-    let closure_0 = tmp3;
-    outer1_0(outer1_1[7]);
+    closure_0 = tmp3;
+    closure_1_0(closure_1_1[7]);
     let tmp6 = closure_0;
     if (closure_0) {
       if (typeof tmp7 === "string") {
@@ -1104,15 +1090,15 @@ export const Redirect = function Redirect(arg0) {
         if ("/" === str3) {
           let tmp30Result = tmp6;
         } else {
-          let obj = outer1_15;
-          if (outer1_15[str3]) {
+          let obj = closure_1_15;
+          if (closure_1_15[str3]) {
             let tmp20 = obj[str3];
           } else {
-            const compileResult = outer1_5.compile(str3);
+            const compileResult = closure_1_5.compile(str3);
             tmp20 = compileResult;
-            if (outer1_16 < 10000) {
+            if (closure_16 < 10000) {
               obj[str3] = compileResult;
-              outer1_16 = outer1_16 + 1;
+              closure_16 = closure_16 + 1;
               tmp20 = compileResult;
             }
           }
@@ -1133,48 +1119,48 @@ export const Redirect = function Redirect(arg0) {
           obj[0] = str;
           tmp30Result = tmp30({}, tmp7, obj);
         } else {
-          let obj1 = outer1_15;
-          if (outer1_15[str]) {
+          obj1 = closure_1_15;
+          if (closure_1_15[str]) {
             let tmp13 = obj1[str];
           } else {
-            const compileResult1 = outer1_5.compile(str);
+            const compileResult1 = closure_1_5.compile(str);
             tmp13 = compileResult1;
-            if (outer1_16 < 10000) {
+            if (closure_16 < 10000) {
               obj1[str] = compileResult1;
-              outer1_16 = outer1_16 + 1;
+              closure_16 = closure_16 + 1;
               tmp13 = compileResult1;
             }
           }
           obj1 = { pretty: true };
           tmp13(params1, obj1);
         }
-        tmp30 = outer1_7;
+        tmp30 = closure_1_7;
       }
     } else {
       const tmp5Result = tmp5(tmp7);
-      let closure_1 = tmp5Result;
+      closure_1 = tmp5Result;
       if (history.staticContext) {
         tmp3(tmp5Result);
         let element = null;
       } else {
         const obj2 = { onMount: null, onUpdate: null, to: null };
         obj2[0] = function onMount() {
-          tmp3(closure_1);
+          callback(closure_1);
         };
         obj2[1] = function onUpdate(arg0, to) {
-          let obj = tmp3(tmp5Result[7]);
+          let obj = callback(1223);
           const _location = obj.createLocation(to.to);
           obj = { key: _location.key };
-          if (!obj2.locationsAreEqual(_location, outer1_7({}, tmp5Result, obj))) {
-            tmp3(tmp5Result);
+          if (!obj2.locationsAreEqual(_location, closure_1_7({}, dependencyMap, obj))) {
+            callback(dependencyMap);
           }
         };
         obj2[2] = tmp7;
-        element = <outer1_14 onMount={null} onUpdate={null} to={null} />;
+        element = <closure_1_14 onMount={null} onUpdate={null} to={null} />;
       }
       return element;
     }
-  }}</tmp9Result2.Consumer>;
+  }}</redux2.Consumer>;
 };
 export const Route = e;
 export const Router = t;
@@ -1197,9 +1183,9 @@ export const useRouteMatch = function useRouteMatch(Routes) {
   let match = useContext(closure_12).match;
   if (Routes) {
     const pathname = useContext(closure_12).location.pathname;
-    let c1;
-    let closure_2;
-    let closure_3;
+    let exact;
+    closure_2 = undefined;
+    closure_3 = undefined;
     if (undefined === obj) {
       obj = {};
     }
@@ -1214,12 +1200,12 @@ export const useRouteMatch = function useRouteMatch(Routes) {
       obj[0] = obj;
       tmp2 = obj;
     }
-    const exact = tmp2.exact;
+    exact = tmp2.exact;
     let tmp3 = undefined !== exact;
     if (tmp3) {
       tmp3 = exact;
     }
-    c1 = tmp3;
+    exact = tmp3;
     const strict = tmp2.strict;
     closure_2 = undefined !== strict && strict;
     const sensitive = tmp2.sensitive;
@@ -1227,8 +1213,6 @@ export const useRouteMatch = function useRouteMatch(Routes) {
     const items = [];
     const combined = items.concat(tmp2.path);
     match = combined.reduce((arg0, arg1) => {
-      let keys;
-      let regexp;
       if (!arg1) {
         if ("" !== arg1) {
           return null;
@@ -1242,7 +1226,7 @@ export const useRouteMatch = function useRouteMatch(Routes) {
         obj[1] = match;
         obj[2] = closure_3;
         const sum = "" + obj.end + obj.strict + obj.sensitive;
-        let tmp7 = outer1_17[sum];
+        let tmp7 = closure_1_17[sum];
         if (!tmp7) {
           obj = {};
           tmp6[sum] = obj;
@@ -1253,12 +1237,12 @@ export const useRouteMatch = function useRouteMatch(Routes) {
         } else {
           const items = [];
           obj = { regexp: null, keys: null };
-          obj[0] = outer1_5(arg1, items, obj);
+          obj[0] = closure_1_5(arg1, items, obj);
           obj[1] = items;
           tmp10 = obj;
-          if (outer1_18 < 10000) {
+          if (closure_18 < 10000) {
             tmp7[arg1] = obj;
-            outer1_18 = outer1_18 + 1;
+            closure_18 = closure_18 + 1;
             tmp10 = obj;
           }
         }
@@ -1268,7 +1252,7 @@ export const useRouteMatch = function useRouteMatch(Routes) {
           const first = match[0];
           closure_0 = match.slice(1);
           if (!tmp2) {
-            const obj1 = { path: null, url: null, isExact: null, params: null };
+            obj1 = { path: null, url: null, isExact: null, params: null };
             obj1[0] = arg1;
             let str2 = "/";
             if ("/" !== arg1) {
@@ -1296,7 +1280,7 @@ export const useRouteMatch = function useRouteMatch(Routes) {
   return match;
 };
 export const withRouter = function withRouter(displayName) {
-  let closure_0 = displayName;
+  closure_0 = displayName;
   const fn = function t(wrappedComponentRef) {
     wrappedComponentRef = wrappedComponentRef.wrappedComponentRef;
     const items = ["wrappedComponentRef"];
@@ -1314,13 +1298,13 @@ export const withRouter = function withRouter(displayName) {
         }
       }
     }
-    return <outer1_12.Consumer>{(arg0) => {
+    return <closure_1_12.Consumer>{(arg0) => {
       if (!arg0) {
-        outer2_4(false);
+        closure_2_4(false);
       }
-      const obj = { ref: wrappedComponentRef };
-      return <wrappedComponentRef {......outer2_7({}, obj, arg0, obj)} />;
-    }}</outer1_12.Consumer>;
+      obj = { ref: wrappedComponentRef };
+      return <wrappedComponentRef {......closure_2_7({}, obj, arg0, obj)} />;
+    }}</closure_1_12.Consumer>;
   };
   fn.displayName = `withRouter(${displayName.displayName || displayName.name})`;
   fn.WrappedComponent = displayName;

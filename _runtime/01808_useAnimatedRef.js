@@ -1,11 +1,8 @@
 // _runtime/01808_useAnimatedRef.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import isJest from "isJest";
-import isJest from "isJest";
+import closure_2 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import isJest from "isJest" /* 1657 */;
 
-let c3;
-let c4;
 const require = arg1;
 ({ useRef: c3, useState: c4 } = noop);
 isJest = isJest.shouldBeUseWeb();
@@ -29,7 +26,7 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
     return scrollableNode;
   };
   const current = fun(new Map()).current;
-  let _slicedToArray = fun(-1);
+  closure_2 = fun(-1);
   const tmp2 = fun(null);
   if (!tmp2.current) {
     fun = function fun(map) {
@@ -61,7 +58,7 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
       return ref.current;
     };
     fun.observe = (arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       let tag;
       if (fun != null) {
         const getTag = fun.getTag;
@@ -74,11 +71,11 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
       }
       const result = current.set(arg0, arg0(tag));
       return () => {
-        const value = outer1_1.get(closure_0);
+        const value = closure_1_1.get(closure_0);
         if (value != null) {
           value();
         }
-        outer1_1.delete(closure_0);
+        closure_1_1.delete(closure_0);
       };
     };
     fun.current = null;
@@ -168,7 +165,7 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
       return ref.current;
     };
     fun.observe = (arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       let tag;
       if (fun != null) {
         const getTag = fun.getTag;
@@ -181,11 +178,11 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
       }
       const result = current.set(arg0, arg0(tag));
       return () => {
-        const value = outer1_1.get(closure_0);
+        const value = closure_1_1.get(closure_0);
         if (value != null) {
           value();
         }
-        outer1_1.delete(closure_0);
+        closure_1_1.delete(closure_0);
       };
     };
     fun.current = null;

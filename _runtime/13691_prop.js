@@ -1,5 +1,5 @@
 // _runtime/13691_prop.js
-import prop from "prop";
+import prop from "prop" /* 13692 */;
 
 if (prop) {
   const _Symbol = Symbol;

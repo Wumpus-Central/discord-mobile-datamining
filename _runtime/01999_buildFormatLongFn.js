@@ -1,7 +1,7 @@
 // _runtime/01999_buildFormatLongFn.js
 
 export default function buildFormatLongFn(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return () => {
     if (arguments.length > 0) {
       if (undefined !== arguments[0]) {

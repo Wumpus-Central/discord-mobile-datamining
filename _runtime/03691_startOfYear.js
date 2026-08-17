@@ -1,6 +1,6 @@
 // _runtime/03691_startOfYear.js
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,12 +17,12 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function startOfYear(arg0) {
-  tmp5.default(1, arguments);
+  requiredArgs.default(1, arguments);
   const date = new Date(0);
-  date.setFullYear(tmp3.default(arg0).getFullYear(), 0, 1);
+  date.setFullYear(_typeof.default(arg0).getFullYear(), 0, 1);
   date.setHours(0, 0, 0, 0);
   return date;
 };

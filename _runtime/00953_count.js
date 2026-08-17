@@ -1,6 +1,7 @@
 // _runtime/00953_count.js
-import { _INTERNAL_captureSerializedMetric } from "00885__INTERNAL_captureSerializedMetric.js";
-const require = arg1;
+import _INTERNAL_captureSerializedMetric from "_INTERNAL_captureSerializedMetric" /* 885 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.count = function count(name, arg1, unit) {

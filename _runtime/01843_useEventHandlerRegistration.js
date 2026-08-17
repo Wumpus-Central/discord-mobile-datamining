@@ -1,13 +1,15 @@
 // _runtime/01843_useEventHandlerRegistration.js
-import { useRef } from "noop";
-import { Animated } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noop from "noop" /* 19 */;
 
+const useRef = noop.useRef;
+const Animated = get_ActivityIndicator.Animated;
 
 export function useEventHandlerRegistration(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return (workletEventHandler) => {
     if (workletEventHandler.current) {
-      let findNodeHandleResult = ref(outer1_1[2]).findNodeHandle(tmp.current);
+      let findNodeHandleResult = ref(closure_1_1[2]).findNodeHandle(tmp.current);
       if (findNodeHandleResult) {
         if ("workletEventHandler" in workletEventHandler) {
           workletEventHandler.workletEventHandler.registerForEvents(findNodeHandleResult);
@@ -16,11 +18,11 @@ export function useEventHandlerRegistration(arg0) {
           workletEventHandler.registerForEvents(findNodeHandleResult);
         }
       }
-      const obj = ref(outer1_1[2]);
+      const obj = ref(closure_1_1[2]);
     } else {
       const _queueMicrotask = queueMicrotask;
       queueMicrotask(function attachWorkletHandlers() {
-        const findNodeHandleResult = workletEventHandler(outer2_1[2]).findNodeHandle(workletEventHandler.current);
+        const findNodeHandleResult = workletEventHandler(closure_2_1[2]).findNodeHandle(workletEventHandler.current);
         if (findNodeHandleResult) {
           if ("workletEventHandler" in workletEventHandler) {
             obj2.workletEventHandler.registerForEvents(findNodeHandleResult);
@@ -31,7 +33,7 @@ export function useEventHandlerRegistration(arg0) {
       });
     }
     return () => {
-      const findNodeHandleResult = workletEventHandler(outer2_1[2]).findNodeHandle(workletEventHandler.current);
+      const findNodeHandleResult = workletEventHandler(closure_2_1[2]).findNodeHandle(workletEventHandler.current);
       if (findNodeHandleResult) {
         if ("workletEventHandler" in workletEventHandler) {
           obj2.workletEventHandler.unregisterFromEvents(findNodeHandleResult);

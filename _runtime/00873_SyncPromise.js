@@ -1,12 +1,12 @@
 // _runtime/00873_SyncPromise.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const SyncPromise = require;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class SyncPromise {
   constructor(arg0) {
-    tmp = outer1_2(this, SyncPromise);
+    tmp = closure_2(this, SyncPromise);
     this._state = 0;
     this._handlers = [];
     _runExecutorResult = this._runExecutor(global);
@@ -18,14 +18,14 @@ let items = [
     key: "then",
     value: function then(arg0, arg1) {
       const self = this;
-      let closure_1 = arg0;
+      closure_1 = arg0;
       const obj = Object.create(arg1.prototype);
-      _classCallCheck(obj, arg1);
+      callback(obj, arg1);
       obj._state = 0;
       obj._handlers = [];
       obj._runExecutor((arg0, arg1) => {
-        let closure_0 = arg0;
-        let closure_1 = arg1;
+        closure_0 = arg0;
+        closure_1 = arg1;
         const _handlers = self._handlers;
         const items = [
           false,
@@ -69,21 +69,21 @@ let items = [
     value: function _finally(arg0) {
       const self = this;
       const obj = Object.create(arg0.prototype);
-      _classCallCheck(obj, arg0);
+      callback(obj, arg0);
       obj._state = 0;
       obj._handlers = [];
       obj._runExecutor((arg0, arg1) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         const _self = arg1;
         return _self.then((arg0) => {
-          let c3 = false;
-          let closure_2 = arg0;
+          c3 = false;
+          closure_2 = arg0;
           if (closure_0) {
             tmp();
           }
         }, (arg0) => {
-          let c3 = true;
-          let closure_2 = arg0;
+          c3 = true;
+          closure_2 = arg0;
           if (closure_0) {
             tmp();
           }
@@ -162,13 +162,13 @@ let c3 = _moduleResult;
 
 export const SyncPromise = _moduleResult;
 export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return new closure_3((arg0, arg1) => {
     arg1(closure_0);
   });
 };
 export const resolvedSyncPromise = function resolvedSyncPromise(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return new closure_3((arg0) => {
     arg0(closure_0);
   });

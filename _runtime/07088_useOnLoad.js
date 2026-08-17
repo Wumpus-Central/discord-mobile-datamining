@@ -1,17 +1,13 @@
 // _runtime/07088_useOnLoad.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 7041 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
 ({ useEffect: c3, useMemo: c4, useRef: c5, useState: closure_6 } = noop);
 function useOnLoad(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let _slicedToArray = callback3(false);
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = callback3(false);
   callback2(() => {
     let isFirstLayoutComplete = getDataLength.getIsFirstLayoutComplete();
     if (isFirstLayoutComplete) {
@@ -25,8 +21,6 @@ function useOnLoad(arg0, arg1) {
 }
 
 export const useOnListLoad = (getDataLength) => {
-  let closure_3;
-  let tmp3;
   let _require = getDataLength;
   let f79136 = arg1;
   let callback = callback3(Date.now());
@@ -37,22 +31,22 @@ export const useOnListLoad = (getDataLength) => {
   const requestAnimationFrame = _require(f79136[2]).useUnmountAwareAnimationFrame().requestAnimationFrame;
   const items = [dataLength];
   requestAnimationFrame(() => {
-    _slicedToArray.current = Date.now();
+    closure_2.current = Date.now();
   }, items);
   if (typeof useOnLoad !== "function") {
     HermesBuiltin.throwTypeError();
   }
   _require = getDataLength;
   f79136 = () => {
-    let closure_0 = Date.now() - ref.current;
+    closure_0 = Date.now() - ref.current;
     requestAnimationFrame(() => {
       closure_0.isFirstPaintOnUiComplete = true;
-      if (outer1_1 != null) {
+      if (closure_1_1 != null) {
         const obj = { elapsedTimeInMs: null };
         obj[0] = closure_0;
         tmp(obj);
       }
-      outer1_3(true);
+      closure_1_3(true);
     });
   };
   callback = tmp(false);

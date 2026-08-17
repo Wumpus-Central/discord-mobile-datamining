@@ -1,10 +1,12 @@
 // _runtime/01157_SEMANTIC_ATTRIBUTE_SENTRY_SOURCE.js
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 
-export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = require("registerSpanErrorInstrumentation").SEMANTIC_ATTRIBUTE_SENTRY_SOURCE;
-export const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = require("registerSpanErrorInstrumentation").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN;
-export const SEMANTIC_ATTRIBUTE_SENTRY_OP = require("registerSpanErrorInstrumentation").SEMANTIC_ATTRIBUTE_SENTRY_OP;
-export const SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE = require("registerSpanErrorInstrumentation").SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE;
-export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON = require("registerSpanErrorInstrumentation").SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON;
+
+export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE;
+export const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN;
+export const SEMANTIC_ATTRIBUTE_SENTRY_OP = registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_OP;
+export const SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE = registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE;
+export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON = registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON;
 export const SEMANTIC_ATTRIBUTE_ROUTING_INSTRUMENTATION = "routing.instrumentation";
 export const SEMANTIC_ATTRIBUTE_ROUTE_NAME = "route.name";
 export const SEMANTIC_ATTRIBUTE_ROUTE_KEY = "route.key";

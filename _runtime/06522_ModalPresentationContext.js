@@ -1,3 +1,5 @@
 // _runtime/06522_ModalPresentationContext.js
+import noopAll from "noop" /* 19 */;
 
-export const ModalPresentationContext = require("noop").createContext(false);
+
+export const ModalPresentationContext = noopAll.createContext(false);

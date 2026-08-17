@@ -1,11 +1,16 @@
 // _runtime/00538_getSideChannel.js
+import getSideChannelWeakMap from "getSideChannelWeakMap" /* 539 */;
+import _mod577 from "module_577" /* 577 */;
+import getSideChannelList from "getSideChannelList" /* 578 */;
+
+let closure_2 = getSideChannelWeakMap || _mod577 || getSideChannelList;
 
 export default function getSideChannel() {
   let obj = {
     assert(arg0) {
       if (!obj.has(arg0)) {
-        let tmp3 = outer1_0(obj[3]);
-        tmp3 = new tmp3("Side channel does not contain " + outer1_0(obj[4])(arg0));
+        let tmp3 = closure_1_0(obj[3]);
+        tmp3 = new tmp3("Side channel does not contain " + closure_1_0(obj[4])(arg0));
         throw tmp3;
       }
     },
@@ -31,9 +36,9 @@ export default function getSideChannel() {
       return hasItem;
     },
     set(arg0, arg1) {
-      let obj = closure_0;
+      obj = closure_0;
       if (!closure_0) {
-        const tmp2 = outer1_2();
+        const tmp2 = closure_1_2();
         closure_0 = tmp2;
         obj = tmp2;
       }

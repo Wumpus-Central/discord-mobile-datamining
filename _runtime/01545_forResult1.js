@@ -1,3 +1,5 @@
 // _runtime/01545_forResult1.js
+import forResult1 from "forResult1" /* 1546 */;
 
-export { default } from "forResult1";
+
+export default forResult1;

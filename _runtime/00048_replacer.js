@@ -109,7 +109,7 @@ arg5.default = function stringifySafe(fn) {
   }
 };
 arg5.createStringifySafeWithLimits = function createStringifySafeWithLimits(maxDepth) {
-  function replacer(arg0, props) {
+  replacer = function replacer(arg0, props) {
     if (arr.length) {
       arr = tmp;
       if (this !== tmp[0]) {
@@ -172,7 +172,7 @@ arg5.createStringifySafeWithLimits = function createStringifySafeWithLimits(maxD
       }
       return props;
     }
-  }
+  };
   let POSITIVE_INFINITY = maxDepth.maxDepth;
   if (undefined === POSITIVE_INFINITY) {
     const _Number = Number;
@@ -193,7 +193,7 @@ arg5.createStringifySafeWithLimits = function createStringifySafeWithLimits(maxD
     const _Number4 = Number;
     POSITIVE_INFINITY4 = Number.POSITIVE_INFINITY;
   }
-  let closure_4 = [];
+  closure_4 = [];
   return function stringifySafe(fn) {
     if (undefined === fn) {
       return "undefined";

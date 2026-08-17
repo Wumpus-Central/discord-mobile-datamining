@@ -1,4 +1,6 @@
 // _runtime/01406_PseudoMap.js
+import PseudoMap from "PseudoMap" /* 1407 */;
+
 let tmp = "pseudomap" === process.env.npm_package_name;
 if (tmp) {
   const _process = process;
@@ -16,4 +18,4 @@ if (typeof Map === "function") {
   }
 }
 
-export { default } from "PseudoMap";
+export default PseudoMap;

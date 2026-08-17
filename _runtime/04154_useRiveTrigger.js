@@ -1,18 +1,14 @@
 // _runtime/04154_useRiveTrigger.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { useDisposableMemo } from "04149_useDisposableMemo.js";
 
-let c3;
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
 ({ useCallback: c3, useEffect: c4, useRef: c5, useState: closure_6 } = noop);
 
 export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, arg2) {
   const _require = startAnimation;
-  const dependencyMap = instance;
+  dependencyMap = instance;
   let obj = arg2;
   if (arg2 == null) {
     obj = {};
@@ -56,14 +52,14 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
     if (tmp) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const error = new Error("Property \"" + closure_0 + "\" not found in the ViewModel instance");
+      error = new Error("Property \"" + closure_0 + "\" not found in the ViewModel instance");
       callback(error);
     }
   }, items2);
   const items3 = [disposableMemo];
   callback3(() => {
     if (disposableMemo) {
-      let closure_0 = obj.addListener(() => {
+      closure_0 = obj.addListener(() => {
         const current = ref.current;
         if (current != null) {
           current();
@@ -80,13 +76,13 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
   }, items3);
   obj = {
     trigger: callback2(() => {
-      if (tmp.current) {
-        const current = tmp.current;
+      if (ref.current) {
+        const current = ref.current;
         current.trigger();
       } else {
         const _console = console;
         const _HermesInternal = HermesInternal;
-        if (globalThis.current) {
+        if (ref2.current) {
           warn(concat(tmp3, "') called after dispose. The property has been cleaned up \u2014 this is likely a stale closure from an async callback that fired after unmount."));
         } else {
           warn(concat(tmp3, "') called but the property is not available yet. The viewModelInstance may still be loading."));

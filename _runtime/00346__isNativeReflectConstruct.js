@@ -1,13 +1,14 @@
 // _runtime/00346__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { default as _default } from "getConstants";
-import { __INTERNAL_VIEW_CONFIG } from "metro/00347___INTERNAL_VIEW_CONFIG.js";
+import get_VirtualizedListDefault from "get VirtualizedList" /* 312 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 347 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
+import { default as _default } from "getConstants" /* 411 */;
 
 const Modal = arg1;
 function _isNativeReflectConstruct() {
@@ -21,24 +22,24 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
-let c8 = 0;
+let closure_8 = 0;
 class Modal {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Modal);
+    tmp = closure_3(this, Modal);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(Modal);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_5;
+    obj = closure_5(Modal);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -47,15 +48,15 @@ class Modal {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp7 = +c8;
-    c8 = tmp7 + 1;
+    tmp7 = +closure_8;
+    closure_8 = tmp7 + 1;
     tmp3Result._identifier = tmp7;
     obj = { isRendered: true === global.visible };
     tmp3Result.state = obj;
     return tmp3Result;
   }
 }
-importDefaultResult1(Modal, require("noop").Component);
+importDefaultResult1(Modal, importAllResult.Component);
 let items = [
   {
     key: "componentDidMount",
@@ -132,15 +133,15 @@ let items = [
         obj[16] = self.props.allowSwipeDismissal;
         obj[17] = self.props.testID;
         obj = { children: null };
-        const obj1 = { value: null, children: null };
+        obj1 = { value: null, children: null };
         const obj2 = { style: null, collapsable: false, children: null };
         const items = [closure_10.container, self.props.style, obj];
         obj2[0] = items;
         obj2[2] = self.props.children;
         obj1[1] = jsx(Modal(108).default, { style: null, collapsable: false, children: null });
         obj[0] = jsx(Modal(349).default.Context.Provider, { value: null, children: null });
-        obj[18] = jsx(require("00312_get_VirtualizedList.js") /* get VirtualizedList */.VirtualizedListContextResetter, { children: null });
-        return jsx(__INTERNAL_VIEW_CONFIG, { children: null });
+        obj[18] = jsx(get_VirtualizedListDefault.VirtualizedListContextResetter, { children: null });
+        return jsx(__INTERNAL_VIEW_CONFIGDefault, { children: null });
       } else {
         return null;
       }
@@ -172,11 +173,11 @@ class Wrapper {
     obj = {};
     merged = Object.assign(Object.assign(global, Object.create(null)));
     obj.modalRef = global.ref;
-    return jsx(Modal, obj);
+    return jsx(closure_9, obj);
   }
 }
 let closure_10 = require("get hairlineWidth").default.create({ modal: { position: "absolute" }, container: { [str]: 0, top: 0, flex: 1, backgroundColor: "white" } });
 Wrapper.displayName = "Modal";
-Wrapper.Context = require("get VirtualizedList").VirtualizedListContextResetter;
+Wrapper.Context = get_VirtualizedListDefault.VirtualizedListContextResetter;
 
 export default Wrapper;

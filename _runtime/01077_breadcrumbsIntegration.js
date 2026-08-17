@@ -1,5 +1,5 @@
 // _runtime/01077_breadcrumbsIntegration.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let c2 = 1024;
@@ -16,10 +16,10 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
     name: "Breadcrumbs",
     setup(on) {
       if (obj.console) {
-        obj = obj(outer1_1[0]);
+        obj = obj(closure_1_1[0]);
         obj = on;
         const result = obj.addConsoleInstrumentationHandler(function _consoleBreadcrumb(args) {
-          let obj = on(dom[0]);
+          obj = on(dom[0]);
           if (obj.getClient() === on) {
             obj = { category: "console", data: null, level: null, message: null };
             obj = { arguments: null, logger: "console" };
@@ -42,7 +42,7 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             }
             ({ args: obj3[0], level: obj3[1] } = args);
             tmp(tmp2[0]).addBreadcrumb(obj, { input: null, level: null });
-            const obj1 = { input: null, level: null };
+            obj1 = { input: null, level: null };
             const tmpResult2 = tmp(tmp2[0]);
           }
         });
@@ -50,8 +50,8 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
       if (obj.dom) {
         obj = on;
         const dom = tmp.dom;
-        const result1 = obj(outer1_1[1]).addClickKeypressInstrumentationHandler(function _innerDomBreadcrumb(event) {
-          let obj = on(dom[0]);
+        const result1 = obj(closure_1_1[1]).addClickKeypressInstrumentationHandler(function _innerDomBreadcrumb(event) {
+          obj = on(dom[0]);
           if (obj.getClient() === on) {
             let serializeAttribute;
             if (typeof dom === "object") {
@@ -65,7 +65,7 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             }
             let tmp4 = maxStringLength;
             if (maxStringLength) {
-              tmp4 = maxStringLength > outer1_2;
+              tmp4 = maxStringLength > closure_1_2;
             }
             let tmp6 = maxStringLength;
             if (tmp4) {
@@ -74,7 +74,7 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
                 const _HermesInternal = HermesInternal;
                 debug.warn("`dom.maxStringLength` cannot exceed 1024, but a value of " + maxStringLength + " was configured. Sentry will use 1024 instead.");
               }
-              tmp6 = outer1_2;
+              tmp6 = closure_1_2;
             }
             let tmp9 = serializeAttribute;
             if (typeof serializeAttribute === "string") {
@@ -103,7 +103,7 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
                 obj[0] = "ui." + event.name;
                 obj[1] = str3;
                 if (componentName) {
-                  const obj1 = { "ui.component_name": null };
+                  obj1 = { "ui.component_name": null };
                   obj1[0] = componentName;
                   obj.data = obj1;
                 }
@@ -117,15 +117,13 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             }
           }
         });
-        let obj2 = obj(outer1_1[1]);
+        let obj2 = obj(closure_1_1[1]);
       }
       if (obj.xhr) {
         obj = on;
-        const result2 = obj(outer1_1[1]).addXhrInstrumentationHandler(function _xhrBreadcrumb(xhr) {
-          let endTimestamp;
-          let startTimestamp;
-          let obj = on(dom[0]);
-          let obj1 = on;
+        const result2 = obj(closure_1_1[1]).addXhrInstrumentationHandler(function _xhrBreadcrumb(xhr) {
+          obj = on(dom[0]);
+          obj1 = on;
           if (obj.getClient() === on) {
             ({ startTimestamp, endTimestamp, xhr } = xhr);
             const tmp6 = xhr[tmp(undefined, tmp2[1]).SENTRY_XHR_DATA_KEY];
@@ -153,15 +151,13 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             }
           }
         });
-        let obj3 = obj(outer1_1[1]);
+        let obj3 = obj(closure_1_1[1]);
       }
       if (obj.fetch) {
         obj = on;
-        const result3 = obj(outer1_1[0]).addFetchInstrumentationHandler(function _fetchBreadcrumb(fetchData) {
-          let endTimestamp;
-          let startTimestamp;
-          let obj = on(dom[0]);
-          let obj1 = on;
+        const result3 = obj(closure_1_1[0]).addFetchInstrumentationHandler(function _fetchBreadcrumb(fetchData) {
+          obj = on(dom[0]);
+          obj1 = on;
           if (obj.getClient() === on) {
             ({ startTimestamp, endTimestamp } = fetchData);
             if (endTimestamp) {
@@ -207,14 +203,12 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             }
           }
         });
-        const obj4 = obj(outer1_1[0]);
+        const obj4 = obj(closure_1_1[0]);
       }
       if (obj.history) {
         obj = on;
-        const result4 = obj(outer1_1[1]).addHistoryInstrumentationHandler(function _historyBreadcrumb(arg0) {
-          let from;
-          let to;
-          let obj = on(dom[0]);
+        const result4 = obj(closure_1_1[1]).addHistoryInstrumentationHandler(function _historyBreadcrumb(arg0) {
+          obj = on(dom[0]);
           if (obj.getClient() === on) {
             ({ from, to } = arg0);
             let tmpResult = tmp(tmp2[0]);
@@ -251,12 +245,12 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             const tmpResult2 = tmp(tmp2[0]);
           }
         });
-        const obj5 = obj(outer1_1[1]);
+        const obj5 = obj(closure_1_1[1]);
       }
       if (obj.sentry) {
         obj = on;
         on.on("beforeSendEvent", function addSentryBreadcrumb(type) {
-          let obj = on(dom[0]);
+          obj = on(dom[0]);
           if (obj.getClient() === on) {
             let tmpResult = tmp(tmp2[0]);
             let str = "event";

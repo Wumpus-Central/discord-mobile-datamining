@@ -1,9 +1,11 @@
 // _runtime/06427_useViewRefHandler.js
-require("noop").useCallback;
+import noop from "noop" /* 19 */;
+
+noop.useCallback;
 
 export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {
-  let closure_0 = current;
-  let closure_1 = detectorUpdater;
+  closure_0 = current;
+  closure_1 = detectorUpdater;
   const items = [current, detectorUpdater];
   return useCallback((viewRef) => {
     if (null !== viewRef) {

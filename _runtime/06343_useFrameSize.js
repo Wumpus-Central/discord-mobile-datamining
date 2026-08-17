@@ -1,14 +1,12 @@
 // _runtime/06343_useFrameSize.js
-import noop from "noop";
-import { Platform } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import __react_navigation__elements_contexts from "__react_navigation__elements_contexts";
-import { useEffect } from "01522_useEffect.js";
-import { is } from "06345_is.js";
+import useEffectDefault from "useEffect" /* 1522 */;
+import is from "is" /* 6345 */;
+import closure_3 from "noop" /* 19 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import __react_navigation__elements_contexts from "__react_navigation__elements_contexts" /* 6344 */;
 
-let c4;
-let jsx;
-const require = arg1;
+require = arg1;
 ({ jsx, jsxs: c4 } = jsxProd);
 const namedContext = __react_navigation__elements_contexts.getNamedContext("FrameContext", undefined);
 
@@ -16,7 +14,7 @@ export const useFrameSize = function useFrameSize(arg0, arg1) {
   const context = React.useContext(closure_5);
   if (null == context) {
     const _Error = Error;
-    const error = new Error("useFrameSize must be used within a FrameSizeProvider");
+    error = new Error("useFrameSize must be used within a FrameSizeProvider");
     throw error;
   } else {
     const obj = is;
@@ -26,9 +24,9 @@ export const useFrameSize = function useFrameSize(arg0, arg1) {
 };
 export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
   initialFrame = initialFrame.initialFrame;
-  let closure_0;
-  let importDefault;
-  let dependencyMap;
+  closure_0 = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let React;
   let callback;
   let redux;
@@ -36,25 +34,25 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
   let obj = { width: initialFrame.width, height: initialFrame.height };
   closure_0 = React.useRef(obj);
   importDefault = React.useRef(new Set());
-  const tmp2 = useEffect(() => ref.current);
+  const tmp2 = useEffectDefault(() => ref.current);
   dependencyMap = tmp2;
-  const tmp3 = useEffect((arg0) => {
-    let closure_0 = arg0;
+  const tmp3 = useEffectDefault((arg0) => {
+    closure_0 = arg0;
     let current = ref2.current;
     current.add(arg0);
     return () => {
-      const current = outer1_1.current;
+      const current = closure_1_1.current;
       current.delete(closure_0);
     };
   });
   React = tmp3;
-  const tmp4 = useEffect((arg0) => {
-    let closure_0 = arg0;
-    let c2 = false;
-    const _undefined = false;
-    let closure_4 = _undefined(() => {
+  const tmp4 = useEffectDefault((arg0) => {
+    closure_0 = arg0;
+    c2 = false;
+    const callback = false;
+    closure_4 = callback(() => {
       clearTimeout(timeout);
-      let c2 = true;
+      c2 = true;
       if (c3) {
         const _setTimeout2 = setTimeout;
         timeout = setTimeout(() => {
@@ -67,7 +65,7 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
         c3 = true;
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => {
-          let c3 = false;
+          c3 = false;
         }, 100);
         c2 = false;
         callback();
@@ -80,8 +78,8 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
   });
   callback = tmp4;
   const items = [tmp3, tmp4, tmp2];
-  const memo = React.useMemo(() => ({ getCurrent: c2, subscribe: c3, subscribeThrottled: c4 }), items);
-  const tmp6 = useEffect((height) => {
+  const memo = React.useMemo(() => ({ getCurrent: closure_2, subscribe: closure_3, subscribeThrottled: closure_4 }), items);
+  const tmp6 = useEffectDefault((height) => {
     if (!tmp2) {
       const obj = { width: null, height: null };
       ({ width: obj[0], height: obj[1] } = height);
@@ -111,7 +109,7 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
     ref,
     onLayout(nativeEvent) {
       const layout = nativeEvent.nativeEvent.layout;
-      _undefined2({ width: layout.width, height: layout.height });
+      callback2({ width: layout.width, height: layout.height });
     }
   };
   const items2 = [null, initialFrame.render(obj)];

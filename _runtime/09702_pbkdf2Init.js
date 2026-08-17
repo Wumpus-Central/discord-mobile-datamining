@@ -1,12 +1,9 @@
 // _runtime/09702_pbkdf2Init.js
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { _asyncLoop } from "09699__asyncLoop.js";
-import { number } from "09700_number.js";
+import _asyncLoop from "_asyncLoop" /* 9699 */;
+import number from "number" /* 9700 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function pbkdf2Init(sha256, B, B, arg3) {
-  let asyncTick;
-  let c;
-  let dkLen;
   number.hash(sha256);
   ({ c, dkLen, asyncTick } = _asyncLoop.checkOpts({ dkLen: 32, asyncTick: 10 }, arg3));
   number.number(c);
@@ -14,7 +11,7 @@ function pbkdf2Init(sha256, B, B, arg3) {
   number.number(asyncTick);
   if (c < 1) {
     const _Error = Error;
-    const error = new Error("PBKDF2: iterations (c) should be >= 1");
+    error = new Error("PBKDF2: iterations (c) should be >= 1");
     throw error;
   } else {
     const _Uint8Array = Uint8Array;
@@ -45,20 +42,15 @@ function pbkdf2Output(destroy, destroy2, arg2, destroy3, arr) {
 }
 function _pbkdf2Async() {
   const self = this;
-  const tmp = asyncGeneratorStep((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let closure_3 = arg3;
-    let c12 = 0;
-    let c13 = 0;
-    let c10 = 0;
+  const tmp = callback((arg0, arg1, arg2, arg3) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    c12 = 0;
+    c13 = 0;
+    c10 = 0;
     return (function*(arg0, arg1, arg2, arg3) {
-      let PRF;
-      let c1;
-      let c3;
-      let closure_4;
-      let dkLen;
       if (c13 === 2) {
         c13 = 3;
         HermesBuiltin.throwTypeError();
@@ -86,8 +78,8 @@ function _pbkdf2Async() {
               return obj;
             } else {
               let uint8Array1 = tmp3;
-              let closure_8 = tmp7;
-              let c0;
+              closure_8 = tmp7;
+              c0 = undefined;
               c1 = undefined;
               dkLen = undefined;
               c3 = undefined;
@@ -98,7 +90,7 @@ function _pbkdf2Async() {
               closure_8 = undefined;
               uint8Array1 = undefined;
               let v0;
-              let closure_11;
+              closure_11 = undefined;
               c12 = undefined;
               const tmp69 = callback2(c0, c1, dkLen, c3);
               ({ c: c1, dkLen } = tmp69);
@@ -138,26 +130,26 @@ function _pbkdf2Async() {
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        const subarrayResult = outer1_4.subarray(outer1_12, outer1_12 + outer1_5.outputLen);
+                        const subarrayResult = closure_1_4.subarray(closure_1_12, closure_1_12 + closure_1_5.outputLen);
                         v0 = subarrayResult;
-                        outer1_8.setInt32(0, outer1_11, false);
-                        let _cloneIntoResult = outer1_6._cloneInto(v0);
+                        closure_1_8.setInt32(0, closure_1_11, false);
+                        let _cloneIntoResult = closure_1_6._cloneInto(v0);
                         v0 = _cloneIntoResult;
-                        _cloneIntoResult.update(outer1_7).digestInto(outer1_9);
-                        const result = subarrayResult.set(outer1_9.subarray(0, subarrayResult.length));
+                        _cloneIntoResult.update(closure_1_7).digestInto(closure_1_9);
+                        const result = subarrayResult.set(closure_1_9.subarray(0, subarrayResult.length));
                         table = 1;
                         v0 = 1;
-                        const obj1 = { value: null, done: false };
-                        obj1[0] = v0(table[2]).asyncLoop(table - 1, outer1_3, () => {
+                        obj1 = { value: null, done: false };
+                        obj1[0] = v0(table[2]).asyncLoop(table - 1, closure_1_3, () => {
                           let length;
-                          const _cloneIntoResult = outer1_5._cloneInto(c0);
-                          outer1_5._cloneInto(c0).update(outer1_9).digestInto(outer1_9);
+                          const _cloneIntoResult = closure_1_5._cloneInto(c0);
+                          closure_1_5._cloneInto(c0).update(closure_1_9).digestInto(closure_1_9);
                           let num = 0;
                           if (0 < c0.length) {
                             do {
                               let tmp2 = c0;
-                              let tmp3 = outer1_9;
-                              c0[num] = c0[num] ^ outer1_9[num];
+                              let tmp3 = closure_1_9;
+                              c0[num] = c0[num] ^ closure_1_9[num];
                               num = num + 1;
                               length = c0.length;
                             } while (num < length);
@@ -194,7 +186,7 @@ function _pbkdf2Async() {
               }
               callback3(iter4, next, callback3, c0, uint8Array1);
               c13 = 3;
-              let obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = callback3;
               return obj1;
             }
@@ -278,7 +270,7 @@ function _pbkdf2Async() {
       }
     })();
   });
-  const _pbkdf2Async = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -289,11 +281,6 @@ function _pbkdf2Async() {
 }
 
 export const pbkdf2 = function pbkdf2(sha256, B, B, arg3) {
-  let DK;
-  let PRF;
-  let PRFSalt;
-  let c;
-  let dkLen;
   ({ c, dkLen, DK, PRF, PRFSalt } = pbkdf2Init(sha256, B, B, arg3));
   const uint8Array = new Uint8Array(4);
   const view = _asyncLoop.createView(uint8Array);

@@ -1,14 +1,16 @@
 // _runtime/00088_Dimensions.js
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_isNativeReflectConstruct";
+import EventEmitterDefault from "EventEmitter" /* 89 */;
+import getConstantsDefault from "getConstants" /* 100 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_isNativeReflectConstruct" /* 92 */;
 
 const Dimensions = importDefault;
-let c4 = new require("EventEmitter")();
+let closure_4 = new EventEmitterDefault();
 let c5 = false;
 class Dimensions {
   constructor() {
-    tmp = outer1_3(this, Dimensions);
+    tmp = closure_3(this, Dimensions);
     return;
   }
 }
@@ -23,9 +25,6 @@ const items = [
   {
     key: "set",
     value: function set(screenPhysicalPixels) {
-      let _window;
-      let screen;
-      let windowPhysicalPixels;
       ({ screen, window: _window, windowPhysicalPixels } = screenPhysicalPixels);
       if (windowPhysicalPixels) {
         let obj = { width: null, height: null, scale: null, fontScale: null };
@@ -44,9 +43,9 @@ const items = [
       } else if (null == screen) {
         screen = _window;
       }
-      let closure_2 = { window: _window, screen };
+      closure_2 = { window: _window, screen };
       if (c5) {
-        closure_2.emit("change", closure_2);
+        closure_4.emit("change", closure_2);
       } else {
         c5 = true;
       }
@@ -56,7 +55,7 @@ const items = [
     key: "addEventListener",
     value: function addEventListener(arg0, arg1) {
       Dimensions(38)("change" === arg0, "Trying to subscribe to unknown event: \"%s\"", arg0);
-      return tmp3.addListener(arg0, arg1);
+      return closure_4.addListener(arg0, arg1);
     }
   }
 ];
@@ -68,10 +67,10 @@ let obj = {
     return dependencyMap[arg0];
   }
 };
-const tmp3 = new require("EventEmitter")();
-require("_isNativeReflectConstruct").addListener("didUpdateDimensions", (arg0) => {
+const tmp3 = new EventEmitterDefault();
+importDefaultResult1.addListener("didUpdateDimensions", (arg0) => {
   const result = importDefaultResultResult.set(arg0);
 });
-let result = importDefaultResultResult.set(require("getConstants").getConstants().Dimensions);
+let result = importDefaultResultResult.set(getConstantsDefault.getConstants().Dimensions);
 
 export default importDefaultResultResult;

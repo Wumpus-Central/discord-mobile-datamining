@@ -1,11 +1,13 @@
 // _runtime/00492_useAnimatedValueXY.js
-import { useRef } from "noop";
+import noop from "noop" /* 19 */;
+import get_FlatListDefault from "get FlatList" /* 397 */;
 
+const useRef = noop.useRef;
 
 export default function useAnimatedValueXY(arg0, arg1) {
   const tmp = useRef(null);
   if (null == tmp.current) {
-    const valueXY = new require("00397_get_FlatList.js") /* get FlatList */.ValueXY(arg0, arg1);
+    const valueXY = new get_FlatListDefault.ValueXY(arg0, arg1);
     tmp.current = valueXY;
   }
   return tmp.current;

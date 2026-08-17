@@ -1,5 +1,5 @@
 // _runtime/03764_intlFormat.js
-import requiredArgs from "requiredArgs";
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!requiredArgs) {
   const obj = { default: null };
@@ -8,15 +8,15 @@ if (!requiredArgs) {
 } else {
   tmp3 = requiredArgs;
 }
-let c0 = tmp3;
+requiredArgs = tmp3;
 
 export default function intlFormat(arg0, arg1, arg2) {
-  tmp3.default(1, arguments);
+  requiredArgs.default(1, arguments);
   let tmp2 = undefined !== arg1;
   if (tmp2) {
     tmp2 = !("locale" in arg1);
   }
-  tmp3 = undefined;
+  let tmp3;
   let tmp4 = arg1;
   if (tmp2) {
     tmp4 = arg2;

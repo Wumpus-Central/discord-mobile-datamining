@@ -1,11 +1,12 @@
 // _runtime/16483_CanonicalizeLocaleList.js
-import { RegExpResult1 } from "16484_RegExpResult1.js";
-import { createDateTimeFormat } from "16485_createDateTimeFormat.js";
-let require = arg1;
+import RegExpResult1 from "RegExpResult1" /* 16484 */;
+import createDateTimeFormat from "createDateTimeFormat" /* 16485 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function CanonicalizeLocaleList(str) {
   if (undefined === str) {
-    let obj = Object.create(List.prototype);
+    obj = Object.create(List.prototype);
     List();
     return obj;
   } else {
@@ -260,7 +261,7 @@ function LookupMatcher(arg0, arg1) {
     }
     const str2 = String(arg1[num]);
   }
-  let obj = Object.create(Record.prototype);
+  obj = Object.create(Record.prototype);
   const keys = Object.keys();
   if (keys !== undefined) {
     while (keys[-1] !== undefined) {
@@ -317,7 +318,7 @@ function ResolveLocale(arg0, arg1, __localeMatcher__) {
       callResult = call(tmp2, "[[extension]]");
     }
     if (!callResult) {
-      let obj = Object.create(Record.prototype);
+      obj = Object.create(Record.prototype);
       for (const key10033 in undefined) {
         let tmp37 = key10033;
         let tmp38 = Record;
@@ -403,7 +404,7 @@ function ResolveLocale(arg0, arg1, __localeMatcher__) {
   }
 }
 function LookupSupportedLocales(arg0, arg1) {
-  const obj = Object.create(List.prototype);
+  obj = Object.create(List.prototype);
   List();
   let num = 0;
   if (0 < arg1.length) {
@@ -481,7 +482,6 @@ class NumberFormatConstructor {
   }
 }
 function InitializeNumberFormat(__getInternalProperties) {
-  let tmp34;
   let tmp48;
   let typeError = hasOwnProperty;
   const call = hasOwnProperty.call;
@@ -493,9 +493,9 @@ function InitializeNumberFormat(__getInternalProperties) {
   if (typeErrorResult) {
     let result = __getInternalProperties.__getInternalProperties(closure_16);
   } else {
-    result = tmp4(null);
+    result = callback(null);
   }
-  const require = result;
+  require = result;
   const tmp7 = createRegExpRestore();
   if (true === result["[[initializedIntlObject]]"]) {
     typeError = globalThis;
@@ -508,9 +508,9 @@ function InitializeNumberFormat(__getInternalProperties) {
     typeError = arg1;
     typeError = arg2;
     typeError = fn;
-    let obj = { value: null };
+    obj = { value: null };
     obj[0] = function value() {
-      if (arguments[0] === outer1_16) {
+      if (arguments[0] === closure_1_16) {
         return closure_0;
       }
     };
@@ -538,7 +538,7 @@ function InitializeNumberFormat(__getInternalProperties) {
           continue;
         } else {
           let tmp20 = fn;
-          let obj1 = { value: null, enumerable: true, writable: true, configurable: true };
+          obj1 = { value: null, enumerable: true, writable: true, configurable: true };
           obj1[0] = undefined[key10032];
           let tmp21 = fn(obj, key10032, obj1);
           continue;
@@ -573,10 +573,10 @@ function InitializeNumberFormat(__getInternalProperties) {
       tmp27 = closure_7;
     }
     obj["[[localeMatcher]]"] = str5;
-    __localeData__ = tmp4Result.NumberFormat["[[localeData]]"];
+    __localeData__ = closure_15.NumberFormat["[[localeData]]"];
     obj2 = Object.create(List.prototype);
-    ({ [[locale]]: tmp5["[[locale]]"], [[nu]]: tmp5["[[numberingSystem]]"], [[dataLocale]]: tmp5["[[dataLocale]]"], [[dataLocale]]: tmp34 } = ResolveLocale(tmp4Result.NumberFormat["[[availableLocales]]"], typeError, obj, tmp4Result.NumberFormat["[[relevantExtensionKeys]]"], __localeData__));
-    const tmp33 = ResolveLocale(tmp4Result.NumberFormat["[[availableLocales]]"], typeError, obj, tmp4Result.NumberFormat["[[relevantExtensionKeys]]"], __localeData__);
+    ({ [[locale]]: tmp5["[[locale]]"], [[nu]]: tmp5["[[numberingSystem]]"], [[dataLocale]]: tmp5["[[dataLocale]]"], [[dataLocale]]: tmp34 } = ResolveLocale(closure_15.NumberFormat["[[availableLocales]]"], typeError, obj, closure_15.NumberFormat["[[relevantExtensionKeys]]"], __localeData__));
+    const tmp33 = ResolveLocale(closure_15.NumberFormat["[[availableLocales]]"], typeError, obj, closure_15.NumberFormat["[[relevantExtensionKeys]]"], __localeData__);
     List("decimal", "percent", "currency");
     const style = ObjectResult.style;
     let str9 = "decimal";
@@ -846,8 +846,8 @@ class GetFormatNumber {
         tmp2Result = call(self, "__getInternalProperties");
       }
       if (tmp2Result) {
-        tmp6 = random;
-        result = self.__getInternalProperties(random);
+        tmp6 = closure_16;
+        result = self.__getInternalProperties(closure_16);
       } else {
         tmp4 = f64192;
         result = f64192(null);
@@ -858,10 +858,6 @@ class GetFormatNumber {
   }
 }
 function FormatNumber(numberFormat, diff) {
-  let tmp14;
-  let tmp15;
-  let tmp34;
-  let tmp35;
   const tmp = createRegExpRestore();
   const call = hasOwnProperty.call;
   if (typeof call === "unknown") {
@@ -872,10 +868,10 @@ function FormatNumber(numberFormat, diff) {
   if (callResult) {
     let result = numberFormat.__getInternalProperties(closure_16);
   } else {
-    result = tmp4(null);
+    result = callback(null);
   }
   __numberingSystem__ = result["[[numberingSystem]]"];
-  const tmp9 = tmp4Result.NumberFormat["[[localeData]]"][result["[[dataLocale]]"]].symbols[__numberingSystem__] || tmp4Result.NumberFormat["[[localeData]]"][result["[[dataLocale]]"]].symbols.latn;
+  const tmp9 = closure_15.NumberFormat["[[localeData]]"][result["[[dataLocale]]"]].symbols[__numberingSystem__] || closure_15.NumberFormat["[[localeData]]"][result["[[dataLocale]]"]].symbols.latn;
   if (false === isFinite(diff)) {
     const _isNaN = isNaN;
     if (isNaN(diff)) {
@@ -1051,7 +1047,7 @@ function FormatNumber(numberFormat, diff) {
       if (length >= tmp14) {
         const sum1 = str13 + substr2;
         if (table[__numberingSystem__]) {
-          let closure_0 = tmp56[result["[[numberingSystem]]"]];
+          closure_0 = tmp56[result["[[numberingSystem]]"]];
           const _String2 = String;
           let str24 = String(sum1).replace(/\d/g, (arg0) => table[arg0]);
           const str25 = String(sum1);
@@ -1072,7 +1068,7 @@ function FormatNumber(numberFormat, diff) {
             flag3 = flag;
             const tmp70 = join;
           } else {
-            const obj = Object.create(List.prototype);
+            obj = Object.create(List.prototype);
             List();
             const diff4 = first.length - tmp57;
             let result2 = diff4 % tmp58;
@@ -1214,18 +1210,18 @@ function InitializeDateTimeFormat(prototype) {
   if (callResult) {
     let result = prototype.__getInternalProperties(closure_16);
   } else {
-    result = tmp4(null);
+    result = callback(null);
   }
-  const require = result;
+  require = result;
   const tmp7 = createRegExpRestore();
   if (true === result["[[initializedIntlObject]]"]) {
     const _TypeError = TypeError;
     const typeError = new TypeError("`this` object has already been initialized as an Intl object");
     throw typeError;
   } else {
-    let obj = { value: null };
+    obj = { value: null };
     obj[0] = function value() {
-      if (arguments[0] === outer1_16) {
+      if (arguments[0] === closure_1_16) {
         return closure_0;
       }
     };
@@ -1276,7 +1272,7 @@ function InitializeDateTimeFormat(prototype) {
       tmp18 = closure_7;
     }
     obj["[[localeMatcher]]"] = str4;
-    const DateTimeFormat = tmp4Result.DateTimeFormat;
+    const DateTimeFormat = closure_15.DateTimeFormat;
     __localeData__ = DateTimeFormat["[[localeData]]"];
     const tmp24 = ResolveLocale(DateTimeFormat["[[availableLocales]]"], tmp95, obj, DateTimeFormat["[[relevantExtensionKeys]]"], __localeData__);
     ({ [[locale]]: tmp5["[[locale]]"], [[ca]]: tmp5["[[calendar]]"], [[nu]]: tmp5["[[numberingSystem]]"], [[dataLocale]]: tmp5["[[dataLocale]]"] } = tmp24);
@@ -1487,7 +1483,7 @@ function ToDateTimeOptions(arg0, any, date) {
     } else {
       const _Object = Object;
       const ObjectResult = Object(arg0);
-      let obj = Object.create(Record.prototype);
+      obj = Object.create(Record.prototype);
       for (const key10004 in undefined) {
         let tmp29 = key10004;
         let tmp30 = Record;
@@ -1526,7 +1522,7 @@ function ToDateTimeOptions(arg0, any, date) {
       }
     }
   }
-  const tmp16 = tmp4(tmp2);
+  const tmp16 = callback(tmp2);
   let tmp17 = "date" !== any;
   if (tmp17) {
     tmp17 = "any" !== any;
@@ -1733,8 +1729,8 @@ class GetFormatDateTime {
         tmp2Result = call(self, "__getInternalProperties");
       }
       if (tmp2Result) {
-        tmp6 = random;
-        result = self.__getInternalProperties(random);
+        tmp6 = closure_16;
+        result = self.__getInternalProperties(closure_16);
       } else {
         tmp4 = f64192;
         result = f64192(null);
@@ -1761,7 +1757,7 @@ function FormatDateTime(__getInternalProperties, arg1) {
       if (!__timeZone__) {
         str = "";
       }
-      let obj = { "[[weekday]]": date[`get${str}` + "Day"](), "[[era]]": +date[`get${str}` + "FullYear"]() >= 0, "[[year]]": date[`get${str}` + "FullYear"](), "[[month]]": date[`get${str}` + "Month"](), "[[day]]": date[`get${str}` + "Date"](), "[[hour]]": date[`get${str}` + "Hours"](), "[[minute]]": date[`get${str}` + "Minutes"](), "[[second]]": date[`get${str}` + "Seconds"](), "[[inDST]]": false };
+      obj = { "[[weekday]]": date[`get${str}` + "Day"](), "[[era]]": +date[`get${str}` + "FullYear"]() >= 0, "[[year]]": date[`get${str}` + "FullYear"](), "[[month]]": date[`get${str}` + "Month"](), "[[day]]": date[`get${str}` + "Date"](), "[[hour]]": date[`get${str}` + "Hours"](), "[[minute]]": date[`get${str}` + "Minutes"](), "[[second]]": date[`get${str}` + "Seconds"](), "[[inDST]]": false };
       obj = Object.create(ctor.prototype);
       for (const key10051 in obj) {
         let tmp8 = key10051;
@@ -1792,7 +1788,7 @@ function FormatDateTime(__getInternalProperties, arg1) {
       return obj;
     })(arg1, 0, result["[[timeZone]]"]);
     __pattern__ = result["[[pattern]]"];
-    const calendars = tmp4Result.DateTimeFormat["[[localeData]]"][result["[[dataLocale]]"]].calendars;
+    const calendars = closure_15.DateTimeFormat["[[localeData]]"][result["[[dataLocale]]"]].calendars;
     __calendar__2 = result["[[calendar]]"];
     let replaced = __pattern__;
     let str17 = __pattern__;
@@ -1848,7 +1844,7 @@ function FormatDateTime(__getInternalProperties, arg1) {
                       let str20 = "Could not find weekday data for locale ";
                       let tmp44 = new.target;
                       let tmp45 = new.target;
-                      let error = new tmp3.Error("Could not find weekday data for locale " + tmp2);
+                      error = new tmp3.Error("Could not find weekday data for locale " + tmp2);
                       let tmp47 = error;
                       throw error;
                     }
@@ -1916,7 +1912,7 @@ function resolveDateString(calendars, __calendar__2, days, arg3, arg4) {
     if (calendars[__calendar__2][days]) {
       let tmp = calendars[__calendar__2][days];
     }
-    const obj = { narrow: null, short: null, long: null };
+    obj = { narrow: null, short: null, long: null };
     obj[0] = ["short", "long"];
     obj[1] = ["long", "narrow"];
     obj[2] = ["short", "narrow"];
@@ -1999,7 +1995,7 @@ function createRegExpRestore() {
   if (RegExp.multiline) {
     str2 = "m";
   }
-  let obj = { input: RegExp.input };
+  obj = { input: RegExp.input };
   obj = Object.create(List.prototype);
   List();
   obj = {};
@@ -2054,7 +2050,7 @@ function createRegExpRestore() {
 let obj = {};
 let tmp = (() => {
   try {
-    const obj = {};
+    obj = {};
     const _Object = Object;
     Object.defineProperty(obj, "a", {});
     return "a" in obj;
@@ -2067,7 +2063,7 @@ if (!tmp) {
   let _Object = Object;
   tmp2 = !Object.prototype.__defineGetter__;
 }
-let c4 = tmp2;
+let closure_4 = tmp2;
 if (tmp) {
   const _Object2 = Object;
   let fn = Object.defineProperty;
@@ -2139,9 +2135,9 @@ let tmp4 = Object.create || ((arg0, obj) => {
   }
   return obj;
 });
-const metroImportAll = tmp4;
+let closure_8 = tmp4;
 let tmp5 = Function.prototype.bind || (function(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const self = this;
   let call = slice.call;
   if (typeof call === "unknown") {
@@ -2149,25 +2145,25 @@ let tmp5 = Function.prototype.bind || (function(arg0) {
   } else {
     callResult = call(arguments, 1);
   }
-  let closure_2 = callResult;
+  closure_2 = callResult;
   return 1 === this.length ? ((arg0) => {
-    const call = outer1_10.call;
-    const call2 = outer1_9.call;
+    const call = closure_1_10.call;
+    const call2 = closure_1_9.call;
     if (typeof call2 === "unknown") {
-      let call2Result = outer1_9();
+      let call2Result = closure_1_9();
     } else {
       call2Result = call2(arguments);
     }
-    return self.apply(closure_0, typeof call === "unknown" ? outer1_10(call2Result) : call(closure_2, call2Result));
+    return self.apply(closure_0, typeof call === "unknown" ? closure_1_10(call2Result) : call(closure_2, call2Result));
   }) : (() => {
-    const call = outer1_10.call;
-    const call2 = outer1_9.call;
+    const call = closure_1_10.call;
+    const call2 = closure_1_9.call;
     if (typeof call2 === "unknown") {
-      let call2Result = outer1_9();
+      let call2Result = closure_1_9();
     } else {
       call2Result = call2(arguments);
     }
-    return self.apply(closure_0, typeof call === "unknown" ? outer1_10(call2Result) : call(closure_2, call2Result));
+    return self.apply(closure_0, typeof call === "unknown" ? closure_1_10(call2Result) : call(closure_2, call2Result));
   });
 });
 function supportedLocalesOf(arg0) {
@@ -2194,7 +2190,7 @@ function supportedLocalesOf(arg0) {
       } else {
         const _Object = Object;
         const ObjectResult = Object(tmp11);
-        let obj = Object.create(tmp41.prototype);
+        obj = Object.create(tmp41.prototype);
         for (const key10028 in ObjectResult) {
           let tmp47 = key10028;
           let tmp48 = Record;
@@ -2295,8 +2291,7 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
   configurable: true,
   writable: true,
   value() {
-    let tmp4;
-    let obj = Object.create(Record.prototype);
+    obj = Object.create(Record.prototype);
     for (const key10006 in undefined) {
       let tmp23 = key10006;
       let tmp24 = Record;
@@ -2320,7 +2315,7 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
         } else {
           callResult = call(undefined, key10006);
         }
-        tmp4 = callResult;
+        let tmp4 = callResult;
       }
     }
     const self = this;
@@ -2343,7 +2338,7 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
               num = num + 1;
             } while (num < length);
           }
-          return tmp4({}, obj);
+          return callback({}, obj);
         }
       }
       const _TypeError = TypeError;
@@ -2359,7 +2354,7 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
       if (call2Result) {
         let result = self.__getInternalProperties(closure_16);
       } else {
-        result = tmp4(null);
+        result = callback(null);
       }
       tmp8 = hasOwnProperty;
     }
@@ -2377,8 +2372,7 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
   writable: true,
   configurable: true,
   value() {
-    let tmp4;
-    let obj = Object.create(Record.prototype);
+    obj = Object.create(Record.prototype);
     for (const key10006 in undefined) {
       let tmp23 = key10006;
       let tmp24 = Record;
@@ -2402,7 +2396,7 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
         } else {
           callResult = call(undefined, key10006);
         }
-        tmp4 = callResult;
+        let tmp4 = callResult;
       }
     }
     const self = this;
@@ -2425,7 +2419,7 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
               num = num + 1;
             } while (num < length);
           }
-          return tmp4({}, obj);
+          return callback({}, obj);
         }
       }
       const _TypeError = TypeError;
@@ -2441,7 +2435,7 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
       if (call2Result) {
         let result = self.__getInternalProperties(closure_16);
       } else {
-        result = tmp4(null);
+        result = callback(null);
       }
       tmp8 = hasOwnProperty;
     }
@@ -2450,8 +2444,6 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
 const obj7 = { Number: {}, Date: {} };
 obj.__localeSensitiveProtos = obj7;
 obj7.Number.toLocaleString = function() {
-  let tmp3;
-  let tmp4;
   const self = this;
   const call = toString.call;
   if ("[object Number]" !== (typeof call === "unknown" ? toString() : call(self))) {
@@ -2522,7 +2514,7 @@ fn(obj, "__applyLocaleSensitivePrototypes", {
   writable: true,
   configurable: true,
   value() {
-    let obj = { writable: true, configurable: true, value: obj7.Number.toLocaleString };
+    obj = { writable: true, configurable: true, value: obj7.Number.toLocaleString };
     fn(Number.prototype, "toLocaleString", obj);
     obj = { writable: true, configurable: true, value: obj7.Date.toLocaleString };
     fn(Date.prototype, "toLocaleString", obj);
@@ -2592,8 +2584,8 @@ fn(obj, "__addLocaleData", {
           while (true) {
             tmp22 = push;
             let call3 = push.call;
-            let date = tmp4Result;
-            __availableLocales__ = tmp4Result.NumberFormat["[[availableLocales]]"];
+            let date = closure_15;
+            __availableLocales__ = closure_15.NumberFormat["[[availableLocales]]"];
             let tmp23 = tmp21;
             if (typeof call3 === "unknown") {
               let tmp22Result = tmp22(tmp21);
@@ -2636,7 +2628,7 @@ fn(obj, "__addLocaleData", {
         }
       } else {
         const _Error2 = Error;
-        const error = new Error("Object passed doesn't contain locale data for Intl.NumberFormat");
+        error = new Error("Object passed doesn't contain locale data for Intl.NumberFormat");
         throw error;
       }
     } else {

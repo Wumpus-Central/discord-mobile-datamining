@@ -1,5 +1,6 @@
 // _runtime/12378_QRRSBlock.js
-import { 12379__ } from "metro/12379__.js";
+import _mod12379 from "module_12379" /* 12379 */;
+
 class QRRSBlock {
   constructor(arg0, arg1) {
     return;
@@ -11,7 +12,7 @@ QRRSBlock.getRSBlocks = (arg0, arg1) => {
   const rsBlockTable = QRRSBlock.getRsBlockTable(arg0, arg1);
   if (null == rsBlockTable) {
     const _Error = Error;
-    const error = new Error("bad rs block @ typeNumber:" + arg0 + "/errorCorrectLevel:" + arg1);
+    error = new Error("bad rs block @ typeNumber:" + arg0 + "/errorCorrectLevel:" + arg1);
     throw error;
   } else {
     const result = rsBlockTable.length / 3;
@@ -36,7 +37,7 @@ QRRSBlock.getRSBlocks = (arg0, arg1) => {
   }
 };
 QRRSBlock.getRsBlockTable = (arg0, arg1) => {
-  if (12379__.L === arg1) {
+  if (_mod12379.L === arg1) {
     return QRRSBlock.RS_BLOCK_TABLE[4 * (arg0 - 1)];
   } else if (tmp(12379).M === arg1) {
     return QRRSBlock.RS_BLOCK_TABLE[4 * (arg0 - 1) + 1];

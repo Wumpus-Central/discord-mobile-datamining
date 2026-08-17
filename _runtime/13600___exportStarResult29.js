@@ -1,10 +1,11 @@
 // _runtime/13600___exportStarResult29.js
-import e from "e";
-import digitsToString from "digitsToString";
-import { getMultiInternalSlots } from "13582_getMultiInternalSlots.js";
-import { TEN } from "13584_TEN.js";
-import { __exportStarResult11 } from "13594___exportStarResult11.js";
+import digitsToString from "digitsToString" /* 13581 */;
+import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
+import TEN from "TEN" /* 13584 */;
+import __exportStarResult11 from "__exportStarResult11" /* 13594 */;
+import e from "e" /* 1281 */;
 
+let closure_2 = e.__importDefault(digitsToString);
 
 export const ToRawPrecision = function ToRawPrecision(ZERO, minimumSignificantDigits, maximumSignificantDigits, result) {
   let ceilResult1;
@@ -17,17 +18,17 @@ export const ToRawPrecision = function ToRawPrecision(ZERO, minimumSignificantDi
     let roundingMagnitude = 0;
     let tmp16 = require;
   } else {
-    const powResult1 = digitsToString.default.pow(10, maximumSignificantDigits - 1);
-    const _default = digitsToString.default;
-    const _default2 = digitsToString.default;
-    const powResult = digitsToString.default.pow(10, maximumSignificantDigits);
+    const powResult1 = mod.default.pow(10, maximumSignificantDigits - 1);
+    const _default = mod.default;
+    const _default2 = mod.default;
+    const powResult = mod.default.pow(10, maximumSignificantDigits);
     const divResult = ZERO.div(powResult1);
     const logResult = ZERO.div(powResult1).log(10);
     const plusResult = ZERO.div(powResult1).log(10).plus(maximumSignificantDigits);
     let ceilResult = ZERO.div(powResult1).log(10).plus(maximumSignificantDigits).minus(1).ceil();
     while (true) {
-      tmp4 = digitsToString;
-      let _default3 = digitsToString.default;
+      tmp4 = mod;
+      let _default3 = mod.default;
       let minusResult1 = ceilResult.minus(maximumSignificantDigits);
       let divResult1 = ZERO.div(_default3.pow(10, minusResult1.plus(1)));
       floorResult = divResult1.floor();
@@ -55,8 +56,8 @@ export const ToRawPrecision = function ToRawPrecision(ZERO, minimumSignificantDi
     const plusResult1 = ZERO.div(powResult2).log(10).plus(maximumSignificantDigits);
     let floorResult1 = ZERO.div(powResult2).log(10).plus(maximumSignificantDigits).minus(1).floor();
     while (true) {
-      let _default7 = digitsToString.default;
-      let tmp8 = digitsToString;
+      let _default7 = mod.default;
+      let tmp8 = mod;
       let minusResult4 = floorResult1.minus(maximumSignificantDigits);
       let divResult3 = ZERO.div(_default7.pow(10, minusResult4.plus(1)));
       ceilResult1 = divResult3.ceil();

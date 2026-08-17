@@ -1,7 +1,8 @@
 // _runtime/01156_createSpanJSON.js
-import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-const require = arg1;
+import RN_GLOBAL_OBJ2 from "RN_GLOBAL_OBJ" /* 816 */;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function createSpanJSON(span_id) {
   let obj = registerSpanErrorInstrumentation;
@@ -42,8 +43,6 @@ arg5.isNearToNow = function isNearToNow(timestamp2) {
   return tmp;
 };
 arg5.setSpanDurationAsMeasurement = function setSpanDurationAsMeasurement(time_to_full_display, closure_1) {
-  let start_timestamp;
-  let timestamp;
   const obj = registerSpanErrorInstrumentation;
   const tmp = require;
   ({ timestamp, start_timestamp } = registerSpanErrorInstrumentation.spanToJSON(closure_1));
@@ -52,13 +51,11 @@ arg5.setSpanDurationAsMeasurement = function setSpanDurationAsMeasurement(time_t
     tmp4 = start_timestamp;
   }
   if (tmp4) {
-    tmp(817).setMeasurement(time_to_full_display, 1000 * (timestamp - start_timestamp), "millisecond");
-    const tmpResult = tmp(817);
+    registerSpanErrorInstrumentation.setMeasurement(time_to_full_display, 1000 * (timestamp - start_timestamp), "millisecond");
+    const tmpResult = registerSpanErrorInstrumentation;
   }
 };
 arg5.setSpanDurationAsMeasurementOnSpan = function setSpanDurationAsMeasurementOnSpan(time_to_initial_display, arg1, addEvent) {
-  let start_timestamp;
-  let timestamp;
   let obj = registerSpanErrorInstrumentation;
   ({ timestamp, start_timestamp } = obj.spanToJSON(arg1));
   let tmp4 = timestamp;
@@ -91,7 +88,7 @@ arg5.getLatestChildSpanEndTimestamp = function getLatestChildSpanEndTimestamp(ac
   return applyResult;
 };
 arg5.getBundleStartTimestampMs = function getBundleStartTimestampMs() {
-  const __BUNDLE_START_TIME__ = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.__BUNDLE_START_TIME__;
+  const __BUNDLE_START_TIME__ = RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ.__BUNDLE_START_TIME__;
   if (__BUNDLE_START_TIME__) {
     let sum = __BUNDLE_START_TIME__;
     if (tmp(816).RN_GLOBAL_OBJ.nativePerformanceNow) {

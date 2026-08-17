@@ -1,6 +1,7 @@
 // _runtime/00855_hasSpansEnabled.js
-import { getClient } from "00848_getClient.js";
-const require = arg1;
+import getClient from "getClient" /* 848 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.hasSpansEnabled = function hasSpansEnabled(options) {

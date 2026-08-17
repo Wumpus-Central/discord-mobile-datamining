@@ -1,10 +1,10 @@
 // _runtime/01781__isNativeReflectConstruct.js
-import ZoomOutEasyDown from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult1 from "_inherits";
+import ZoomOutEasyDown from "_slicedToArray" /* 32 */;
+import closure_1 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -17,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -30,12 +30,12 @@ class ZoomIn {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -44,19 +44,19 @@ class ZoomIn {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { scale: delayFunction(delay, first(1, _possibleConstructorReturn)) };
+        obj = { scale: delayFunction(delay, first(1, closure_2)) };
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -68,7 +68,7 @@ class ZoomIn {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 1262081960523;
-      fn.__initData = outer1_5;
+      fn.__initData = closure_1_5;
       return fn;
     };
     return tmp3Result;
@@ -90,12 +90,12 @@ class ZoomInRotate {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -104,12 +104,12 @@ class ZoomInRotate {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp3 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp3 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp3[0];
-      let _possibleConstructorReturn = tmp5;
+      closure_2 = tmp5;
       const delay = delayFunction.getDelay();
       let str = "0.3";
       if (delayFunction.rotateV) {
@@ -120,13 +120,13 @@ class ZoomInRotate {
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { scale: delayFunction(delay, first(1, _possibleConstructorReturn)) };
-        const items = [obj, { rotate: delayFunction(delay, first(0, _possibleConstructorReturn)) }];
+        obj = { scale: delayFunction(delay, first(1, closure_2)) };
+        const items = [obj, { rotate: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const obj2 = { transform: null };
         const items1 = [{ scale: 0 }, ];
-        const obj1 = { rotate: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj1 = { rotate: delayFunction(delay, first(0, closure_2)) };
         items1[1] = { rotate: "" + str + "rad" };
         obj2[0] = items1;
         const merged = Object.assign(initialValues);
@@ -136,7 +136,7 @@ class ZoomInRotate {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp3[1], rotate: str, initialValues, callback: callbackV };
       fn.__workletHash = 15519876599894;
-      fn.__initData = outer1_6;
+      fn.__initData = closure_1_6;
       return fn;
     };
     return tmp3Result;
@@ -158,12 +158,12 @@ class ZoomInLeft {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -172,20 +172,20 @@ class ZoomInLeft {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(translateX) {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) };
-        const items = [obj, { scale: delayFunction(delay, first(1, _possibleConstructorReturn)) }];
+        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const items = [obj, { scale: delayFunction(delay, first(1, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const items1 = [{ translateX: -translateX.windowWidth }, { scale: 0 }];
@@ -196,7 +196,7 @@ class ZoomInLeft {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 9623778840206;
-      fn.__initData = outer1_7;
+      fn.__initData = closure_1_7;
       return fn;
     };
     return tmp3Result;
@@ -218,12 +218,12 @@ class ZoomInRight {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -232,20 +232,20 @@ class ZoomInRight {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(translateX) {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) };
-        const items = [obj, { scale: delayFunction(delay, first(1, _possibleConstructorReturn)) }];
+        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const items = [obj, { scale: delayFunction(delay, first(1, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const items1 = [{ translateX: translateX.windowWidth }, { scale: 0 }];
@@ -256,7 +256,7 @@ class ZoomInRight {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 3951441470564;
-      fn.__initData = outer1_8;
+      fn.__initData = closure_1_8;
       return fn;
     };
     return tmp3Result;
@@ -279,12 +279,12 @@ class ZoomInUp {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -293,20 +293,20 @@ class ZoomInUp {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(translateY) {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(0, _possibleConstructorReturn)) };
-        const items = [obj, { scale: delayFunction(delay, first(1, _possibleConstructorReturn)) }];
+        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
+        const items = [obj, { scale: delayFunction(delay, first(1, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const items1 = [{ translateY: -translateY.windowHeight }, { scale: 0 }];
@@ -317,7 +317,7 @@ class ZoomInUp {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 11673124834481;
-      fn.__initData = outer1_9;
+      fn.__initData = closure_1_9;
       return fn;
     };
     return tmp3Result;
@@ -340,12 +340,12 @@ class ZoomInDown {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -354,20 +354,20 @@ class ZoomInDown {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(translateY) {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(0, _possibleConstructorReturn)) };
-        const items = [obj, { scale: delayFunction(delay, first(1, _possibleConstructorReturn)) }];
+        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
+        const items = [obj, { scale: delayFunction(delay, first(1, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const items1 = [{ translateY: translateY.windowHeight }, { scale: 0 }];
@@ -378,7 +378,7 @@ class ZoomInDown {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 16474472853503;
-      fn.__initData = outer1_10;
+      fn.__initData = closure_1_10;
       return fn;
     };
     return tmp3Result;
@@ -401,12 +401,12 @@ class ZoomInEasyUp {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -415,20 +415,20 @@ class ZoomInEasyUp {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(targetHeight) {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(0, _possibleConstructorReturn)) };
-        const items = [obj, { scale: delayFunction(delay, first(1, _possibleConstructorReturn)) }];
+        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
+        const items = [obj, { scale: delayFunction(delay, first(1, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const items1 = [{ translateY: -targetHeight.targetHeight }, { scale: 0 }];
@@ -439,7 +439,7 @@ class ZoomInEasyUp {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 9580191401742;
-      fn.__initData = outer1_11;
+      fn.__initData = closure_1_11;
       return fn;
     };
     return tmp3Result;
@@ -462,12 +462,12 @@ class ZoomInEasyDown {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -476,20 +476,20 @@ class ZoomInEasyDown {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(targetHeight) {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(0, _possibleConstructorReturn)) };
-        const items = [obj, { scale: delayFunction(delay, first(1, _possibleConstructorReturn)) }];
+        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
+        const items = [obj, { scale: delayFunction(delay, first(1, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const items1 = [{ translateY: targetHeight.targetHeight }, { scale: 0 }];
@@ -500,7 +500,7 @@ class ZoomInEasyDown {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 8663849822572;
-      fn.__initData = outer1_12;
+      fn.__initData = closure_1_12;
       return fn;
     };
     return tmp3Result;
@@ -523,12 +523,12 @@ class ZoomOut {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -537,19 +537,19 @@ class ZoomOut {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { scale: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj = { scale: delayFunction(delay, first(0, closure_2)) };
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -561,7 +561,7 @@ class ZoomOut {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 11880899972707;
-      fn.__initData = outer1_13;
+      fn.__initData = closure_1_13;
       return fn;
     };
     return tmp3Result;
@@ -584,12 +584,12 @@ class ZoomOutRotate {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -598,12 +598,12 @@ class ZoomOutRotate {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp3 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp3 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp3[0];
-      let _possibleConstructorReturn = tmp5;
+      closure_2 = tmp5;
       const delay = delayFunction.getDelay();
       let str = "0.3";
       if (delayFunction.rotateV) {
@@ -614,8 +614,8 @@ class ZoomOutRotate {
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { scale: delayFunction(delay, first(0, _possibleConstructorReturn)) };
-        const items = [obj, { rotate: delayFunction(delay, first(str, _possibleConstructorReturn)) }];
+        obj = { scale: delayFunction(delay, first(0, closure_2)) };
+        const items = [obj, { rotate: delayFunction(delay, first(str, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const items1 = [{ scale: 1 }, { rotate: "0rad" }];
@@ -626,7 +626,7 @@ class ZoomOutRotate {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp3[1], rotate: str, initialValues, callback: callbackV };
       fn.__workletHash = 14218456220590;
-      fn.__initData = outer1_14;
+      fn.__initData = closure_1_14;
       return fn;
     };
     return tmp3Result;
@@ -649,12 +649,12 @@ class ZoomOutLeft {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -663,20 +663,20 @@ class ZoomOutLeft {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(windowWidth) {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, _possibleConstructorReturn)) };
-        const items = [obj, { scale: delayFunction(delay, first(0, _possibleConstructorReturn)) }];
+        obj = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
+        const items = [obj, { scale: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const items1 = [{ translateX: 0 }, { scale: 1 }];
@@ -687,7 +687,7 @@ class ZoomOutLeft {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 4016039076957;
-      fn.__initData = outer1_15;
+      fn.__initData = closure_1_15;
       return fn;
     };
     return tmp3Result;
@@ -710,12 +710,12 @@ class ZoomOutRight {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -724,20 +724,20 @@ class ZoomOutRight {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(windowWidth) {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(windowWidth.windowWidth, _possibleConstructorReturn)) };
-        const items = [obj, { scale: delayFunction(delay, first(0, _possibleConstructorReturn)) }];
+        obj = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
+        const items = [obj, { scale: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const items1 = [{ translateX: 0 }, { scale: 1 }];
@@ -748,7 +748,7 @@ class ZoomOutRight {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 13414598349747;
-      fn.__initData = outer1_16;
+      fn.__initData = closure_1_16;
       return fn;
     };
     return tmp3Result;
@@ -771,12 +771,12 @@ class ZoomOutUp {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -785,20 +785,20 @@ class ZoomOutUp {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(windowHeight) {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(-windowHeight.windowHeight, _possibleConstructorReturn)) };
-        const items = [obj, { scale: delayFunction(delay, first(0, _possibleConstructorReturn)) }];
+        obj = { translateY: delayFunction(delay, first(-windowHeight.windowHeight, closure_2)) };
+        const items = [obj, { scale: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const items1 = [{ translateY: 0 }, { scale: 1 }];
@@ -809,7 +809,7 @@ class ZoomOutUp {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 570907039910;
-      fn.__initData = outer1_17;
+      fn.__initData = closure_1_17;
       return fn;
     };
     return tmp3Result;
@@ -832,12 +832,12 @@ class ZoomOutDown {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -846,20 +846,20 @@ class ZoomOutDown {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(windowHeight) {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(windowHeight.windowHeight, _possibleConstructorReturn)) };
-        const items = [obj, { scale: delayFunction(delay, first(0, _possibleConstructorReturn)) }];
+        obj = { translateY: delayFunction(delay, first(windowHeight.windowHeight, closure_2)) };
+        const items = [obj, { scale: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const items1 = [{ translateY: 0 }, { scale: 1 }];
@@ -870,7 +870,7 @@ class ZoomOutDown {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 4332816695692;
-      fn.__initData = outer1_18;
+      fn.__initData = closure_1_18;
       return fn;
     };
     return tmp3Result;
@@ -893,12 +893,12 @@ class ZoomOutEasyUp {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -907,20 +907,20 @@ class ZoomOutEasyUp {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(currentHeight) {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(-currentHeight.currentHeight, _possibleConstructorReturn)) };
-        const items = [obj, { scale: delayFunction(delay, first(0, _possibleConstructorReturn)) }];
+        obj = { translateY: delayFunction(delay, first(-currentHeight.currentHeight, closure_2)) };
+        const items = [obj, { scale: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const items1 = [{ translateY: 0 }, { scale: 1 }];
@@ -931,7 +931,7 @@ class ZoomOutEasyUp {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 1576389803461;
-      fn.__initData = outer1_19;
+      fn.__initData = closure_1_19;
       return fn;
     };
     return tmp3Result;
@@ -954,12 +954,12 @@ class ZoomOutEasyDown {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -968,20 +968,20 @@ class ZoomOutEasyDown {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(currentHeight) {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(currentHeight.currentHeight, _possibleConstructorReturn)) };
-        const items = [obj, { scale: delayFunction(delay, first(0, _possibleConstructorReturn)) }];
+        obj = { translateY: delayFunction(delay, first(currentHeight.currentHeight, closure_2)) };
+        const items = [obj, { scale: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
         const items1 = [{ translateY: 0 }, { scale: 1 }];
@@ -992,7 +992,7 @@ class ZoomOutEasyDown {
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
       fn.__workletHash = 14278999536075;
-      fn.__initData = outer1_20;
+      fn.__initData = closure_1_20;
       return fn;
     };
     return tmp3Result;

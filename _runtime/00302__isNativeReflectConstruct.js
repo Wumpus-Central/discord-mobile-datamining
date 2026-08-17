@@ -1,19 +1,18 @@
 // _runtime/00302__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import { createRef } from "noop";
-import jsxProd from "jsxProd";
-import importAllResult from "noop";
-import importDefaultResult2 from "get hairlineWidth";
-import { nullthrows } from "00070_nullthrows.js";
-import { View } from "00108_View.js";
+import nullthrowsDefault from "nullthrows" /* 70 */;
+import ViewDefault from "View" /* 108 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 304 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_classCallCheck" /* 41 */;
+import closure_6 from "_possibleConstructorReturn" /* 93 */;
+import closure_7 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import { createRef } from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
+import importDefaultResult2 from "get hairlineWidth" /* 254 */;
 
-let c10;
-let c9;
 const DrawerLayoutAndroid = arg1;
 function _isNativeReflectConstruct() {
   try {
@@ -26,10 +25,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -41,12 +40,12 @@ class DrawerLayoutAndroid {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_5(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_7;
+    obj = closure_7(closure_0);
+    tmp3 = closure_6;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -55,48 +54,45 @@ class DrawerLayoutAndroid {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result._nativeRef = createRef();
     tmp3Result.state = { drawerOpened: false };
     tmp3Result._onDrawerSlide = (arg0) => {
-      if (_undefined.props.onDrawerSlide) {
+      if (store.props.onDrawerSlide) {
         const props = tmp.props;
         props.onDrawerSlide(arg0);
       }
-      if ("on-drag" === _undefined.props.keyboardDismissMode) {
-        outer1_1(outer1_2[8])();
+      if ("on-drag" === store.props.keyboardDismissMode) {
+        closure_1_1(closure_1_2[8])();
       }
     };
     tmp3Result._onDrawerOpen = () => {
-      _undefined.setState({ drawerOpened: true });
-      if (_undefined.props.onDrawerOpen) {
-        const props = _undefined.props;
+      store.setState({ drawerOpened: true });
+      if (store.props.onDrawerOpen) {
+        const props = store.props;
         props.onDrawerOpen();
       }
     };
     tmp3Result._onDrawerClose = () => {
-      _undefined.setState({ drawerOpened: false });
-      if (_undefined.props.onDrawerClose) {
-        const props = _undefined.props;
+      store.setState({ drawerOpened: false });
+      if (store.props.onDrawerClose) {
+        const props = store.props;
         props.onDrawerClose();
       }
     };
     tmp3Result._onDrawerStateChanged = (arg0) => {
-      if (_undefined.props.onDrawerStateChanged) {
+      if (store.props.onDrawerStateChanged) {
         const props = tmp.props;
-        props.onDrawerStateChanged(outer1_12[arg0.nativeEvent.drawerState]);
+        props.onDrawerStateChanged(closure_1_12[arg0.nativeEvent.drawerState]);
       }
     };
     return tmp3Result;
   }
 }
-importDefaultResult1(DrawerLayoutAndroid, require("noop").Component);
+importDefaultResult1(DrawerLayoutAndroid, importAllResult.Component);
 let obj = {
   key: "render",
   value: function render() {
-    let onDrawerClose;
-    let onDrawerOpen;
-    let onDrawerStateChanged;
     const self = this;
     const props = this.props;
     const drawerBackgroundColor = props.drawerBackgroundColor;
@@ -123,12 +119,12 @@ let obj = {
     }
     items1[1] = tmp8;
     obj[3] = items1;
-    let tmp3Result = tmp3(View, obj);
+    let tmp3Result = tmp3(ViewDefault, obj);
     obj = { style: tmp7.mainSubview, collapsable: false, children: null };
     let tmp12 = tmp2;
     let tmp4Result = tmp4(108);
     if (tmp2) {
-      const obj1 = { translucent: true, backgroundColor: null };
+      obj1 = { translucent: true, backgroundColor: null };
       obj1[1] = self.props.statusBarBackgroundColor;
       tmp12 = callback4(tmp4(304), obj1);
     }
@@ -168,50 +164,50 @@ let items = [
     key: "openDrawer",
     value: function openDrawer() {
       const Commands = DrawerLayoutAndroid(309).Commands;
-      Commands.openDrawer(nullthrows(this._nativeRef.current));
+      Commands.openDrawer(nullthrowsDefault(this._nativeRef.current));
     }
   },
   {
     key: "closeDrawer",
     value: function closeDrawer() {
       const Commands = DrawerLayoutAndroid(309).Commands;
-      Commands.closeDrawer(nullthrows(this._nativeRef.current));
+      Commands.closeDrawer(nullthrowsDefault(this._nativeRef.current));
     }
   },
   {
     key: "blur",
     value: function blur() {
-      nullthrows(this._nativeRef.current).blur();
+      nullthrowsDefault(this._nativeRef.current).blur();
     }
   },
   {
     key: "focus",
     value: function focus() {
-      nullthrows(this._nativeRef.current).focus();
+      nullthrowsDefault(this._nativeRef.current).focus();
     }
   },
   {
     key: "measure",
     value: function measure(arg0) {
-      nullthrows(this._nativeRef.current).measure(arg0);
+      nullthrowsDefault(this._nativeRef.current).measure(arg0);
     }
   },
   {
     key: "measureInWindow",
     value: function measureInWindow(arg0) {
-      nullthrows(this._nativeRef.current).measureInWindow(arg0);
+      nullthrowsDefault(this._nativeRef.current).measureInWindow(arg0);
     }
   },
   {
     key: "measureLayout",
     value: function measureLayout(arg0, arg1, arg2) {
-      nullthrows(this._nativeRef.current).measureLayout(arg0, arg1, arg2);
+      nullthrowsDefault(this._nativeRef.current).measureLayout(arg0, arg1, arg2);
     }
   },
   {
     key: "setNativeProps",
     value: function setNativeProps(arg0) {
-      nullthrows(this._nativeRef.current).setNativeProps(arg0);
+      nullthrowsDefault(this._nativeRef.current).setNativeProps(arg0);
     }
   }
 ];
@@ -225,9 +221,9 @@ obj = {
 let items1 = [obj];
 const importDefaultResultResult = importDefaultResult(DrawerLayoutAndroid, items, items1);
 obj = { base: { flex: 1, elevation: 16 }, mainSubview: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, drawerSubview: { position: "absolute", top: 0, bottom: 0 }, statusBar: null, drawerStatusBar: null };
-obj[3] = { height: require("_isNativeReflectConstruct").currentHeight };
-let obj1 = { height: require("_isNativeReflectConstruct").currentHeight };
-obj[4] = { position: "absolute", top: 0, left: 0, right: 0, height: require("_isNativeReflectConstruct").currentHeight, backgroundColor: "rgba(0, 0, 0, 0.251)" };
+obj[3] = { height: _isNativeReflectConstructDefault.currentHeight };
+let obj1 = { height: _isNativeReflectConstructDefault.currentHeight };
+obj[4] = { position: "absolute", top: 0, left: 0, right: 0, height: _isNativeReflectConstructDefault.currentHeight, backgroundColor: "rgba(0, 0, 0, 0.251)" };
 let closure_13 = importDefaultResult2.create(obj);
 
 export default importDefaultResultResult;

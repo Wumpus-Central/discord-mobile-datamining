@@ -1,7 +1,5 @@
 // _runtime/13591___exportStarResult8.js
 arg5.IsValidTimeZoneName = function IsValidTimeZoneName(str) {
-  let uppercaseLinks;
-  let zoneNamesFromData;
   ({ zoneNamesFromData, uppercaseLinks } = arg1);
   const formatted = str.toUpperCase();
   const set = new Set();

@@ -17,7 +17,7 @@ arg5.pickScale = function pickScale(scales, _default) {
   return scales[scales.length - 1] || 1;
 };
 arg5.setUrlCacheBreaker = function setUrlCacheBreaker(arg0) {
-  let closure_2 = arg0;
+  closure_2 = arg0;
 };
 arg5.getUrlCacheBreaker = function getUrlCacheBreaker() {
   let str = "";

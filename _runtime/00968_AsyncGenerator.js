@@ -5,10 +5,11 @@ class AsyncGenerator {
     resume = function resume(arg0, arg1) {
       try {
         const iter = applyArgumentsResult[arg0](arg1);
+        let next = iter;
         let value = iter.value;
-        let c2 = value;
+        c2 = value;
         const tmp7 = value instanceof applyArgumentsResult(_undefined[0]);
-        const resume = tmp7;
+        closure_3 = tmp7;
         if (tmp7) {
           let v = value.v;
         } else {
@@ -17,41 +18,41 @@ class AsyncGenerator {
         const resolved = Promise.resolve(v);
         resolved.then((done) => {
           let value = done;
-          if (tmp7) {
+          if (callback) {
             let str = "next";
             if ("return" === dependencyMap) {
               str = "return";
             }
-            if (value.k) {
+            if (_null.k) {
               if (!done.done) {
                 value = dependencyMap[str](done).value;
               }
             }
-            tmp7(str, done);
+            callback(str, done);
           }
           let str3 = "normal";
-          if (iter.done) {
+          if (next.done) {
             str3 = "return";
           }
           if ("return" === str3) {
             let obj = { value: null, done: true };
             obj[0] = value;
-            iter.resolve(obj);
+            next.resolve(obj);
           } else if ("throw" === str3) {
-            iter.reject(value);
+            next.reject(value);
           } else {
             obj = { value: null, done: false };
             obj[0] = value;
-            iter.resolve(obj);
+            next.resolve(obj);
           }
-          const next = iter.next;
+          next = next.next;
           if (next) {
-            tmp7(next.key, iter.arg);
+            callback(next.key, next.arg);
           } else {
-            value = null;
+            _null = null;
           }
         }, (arg0) => {
-          tmp7("throw", arg0);
+          callback("throw", arg0);
         });
       } catch (tmp10) {
         settle("throw", tmp10);
@@ -73,21 +74,17 @@ class AsyncGenerator {
       if (next) {
         resume(next.key, next.arg);
       } else {
-        let c2 = null;
+        c2 = null;
       }
     };
     this._invoke = (arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
       return new Promise((resolve, reject) => {
-        const obj = { key: closure_0, arg: closure_1, resolve, reject, next: null };
-        if (outer1_2) {
-          outer1_2.next = obj;
-          outer1_2 = obj;
+        obj = { key: closure_0, arg: obj, resolve, reject, next: null };
+        if (obj) {
+          obj.next = obj;
         } else {
-          outer1_2 = obj;
-          closure_1 = obj;
-          outer1_3(tmp, tmp2);
+          closure_1_3(tmp, tmp2);
         }
       });
     };
@@ -119,7 +116,7 @@ AsyncGenerator.prototype[str] = function() {
 };
 
 export default function _wrapAsyncGenerator(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return function() {
     const self = this;
     const apply = closure_0.apply;
@@ -128,17 +125,18 @@ export default function _wrapAsyncGenerator(arg0) {
     } else {
       applyArgumentsResult = apply(self, arguments);
     }
-    let obj = Object.create(outer1_2.prototype);
+    let obj = Object.create(closure_1_2.prototype);
     closure_0 = applyArgumentsResult;
-    let c1;
-    let c2;
+    c1 = undefined;
+    c2 = undefined;
     function resume(arg0, arg1) {
       try {
         const iter = applyArgumentsResult[arg0](arg1);
+        let next = iter;
         let value = iter.value;
-        let c2 = value;
+        c2 = value;
         const tmp7 = value instanceof applyArgumentsResult(_undefined[0]);
-        const resume = tmp7;
+        closure_3 = tmp7;
         if (tmp7) {
           let v = value.v;
         } else {
@@ -147,41 +145,41 @@ export default function _wrapAsyncGenerator(arg0) {
         const resolved = Promise.resolve(v);
         resolved.then((done) => {
           let value = done;
-          if (tmp7) {
+          if (callback) {
             let str = "next";
             if ("return" === dependencyMap) {
               str = "return";
             }
-            if (value.k) {
+            if (_null.k) {
               if (!done.done) {
                 value = dependencyMap[str](done).value;
               }
             }
-            tmp7(str, done);
+            callback(str, done);
           }
           let str3 = "normal";
-          if (iter.done) {
+          if (next.done) {
             str3 = "return";
           }
           if ("return" === str3) {
             let obj = { value: null, done: true };
             obj[0] = value;
-            iter.resolve(obj);
+            next.resolve(obj);
           } else if ("throw" === str3) {
-            iter.reject(value);
+            next.reject(value);
           } else {
             obj = { value: null, done: false };
             obj[0] = value;
-            iter.resolve(obj);
+            next.resolve(obj);
           }
-          const next = iter.next;
+          next = next.next;
           if (next) {
-            tmp7(next.key, iter.arg);
+            callback(next.key, next.arg);
           } else {
-            value = null;
+            _null = null;
           }
         }, (arg0) => {
-          tmp7("throw", arg0);
+          callback("throw", arg0);
         });
       } catch (tmp10) {
         settle("throw", tmp10);
@@ -203,21 +201,17 @@ export default function _wrapAsyncGenerator(arg0) {
       if (next) {
         resume(next.key, next.arg);
       } else {
-        let c2 = null;
+        c2 = null;
       }
     }
     obj._invoke = (arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
       return new Promise((resolve, reject) => {
-        const obj = { key: closure_0, arg: closure_1, resolve, reject, next: null };
-        if (outer1_2) {
-          outer1_2.next = obj;
-          outer1_2 = obj;
+        obj = { key: closure_0, arg: obj, resolve, reject, next: null };
+        if (obj) {
+          obj.next = obj;
         } else {
-          outer1_2 = obj;
-          closure_1 = obj;
-          outer1_3(tmp, tmp2);
+          closure_1_3(tmp, tmp2);
         }
       });
     };

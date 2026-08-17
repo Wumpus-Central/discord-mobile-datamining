@@ -33,14 +33,14 @@ function createStoreImpl(arg0) {
       return closure_2;
     },
     subscribe(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       set.add(arg0);
-      return () => outer1_1.delete(closure_0);
+      return () => closure_1_1.delete(closure_0);
     }
   };
   const tmp2 = arg0(setState, getState, obj);
-  const createStoreImpl = tmp2;
-  let closure_2 = tmp2;
+  closure_0 = tmp2;
+  closure_2 = tmp2;
   return obj;
 }
 arg5.createStore = (arg0) => {
@@ -79,16 +79,16 @@ arg5.createStore = (arg0) => {
       return closure_2;
     };
     obj[3] = function subscribe(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       set.add(arg0);
-      return () => outer1_1.delete(closure_0);
+      return () => closure_1_1.delete(closure_0);
     };
     const tmp7 = arg0(setState, getState, obj);
-    const createStoreImpl = tmp7;
-    let closure_2 = tmp7;
+    closure_0 = tmp7;
+    closure_2 = tmp7;
     let tmp = obj;
   } else {
-    tmp = createStoreImpl;
+    tmp = closure_0;
   }
   return tmp;
 };

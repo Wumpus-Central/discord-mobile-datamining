@@ -1,4 +1,7 @@
 // _runtime/01643_KeyboardChatScrollView.js
+import KeyboardAvoidingView from "KeyboardAvoidingView" /* 1859 */;
+import OverKeyboardView from "OverKeyboardView" /* 1888 */;
+
 for (const key10013 in require("nativeEventEmitter")) {
   let tmp2 = key10013;
   arg5[key10013] = require("nativeEventEmitter")[key10013];
@@ -40,11 +43,11 @@ for (const key10041 in require("useAnimatedKeyboard")) {
   continue;
 }
 
-export const KeyboardChatScrollView = require("KeyboardAvoidingView").KeyboardChatScrollView;
-export const KeyboardAvoidingView = require("KeyboardAvoidingView").KeyboardAvoidingView;
-export const KeyboardStickyView = require("KeyboardAvoidingView").KeyboardStickyView;
-export const KeyboardAwareScrollView = require("KeyboardAvoidingView").KeyboardAwareScrollView;
-export const KeyboardToolbar = require("KeyboardAvoidingView").KeyboardToolbar;
-export const DefaultKeyboardToolbarTheme = require("KeyboardAvoidingView").DefaultKeyboardToolbarTheme;
-export const OverKeyboardView = require("OverKeyboardView").OverKeyboardView;
-export const KeyboardExtender = require("OverKeyboardView").KeyboardExtender;
+export const KeyboardChatScrollView = KeyboardAvoidingView.KeyboardChatScrollView;
+export const KeyboardAvoidingView = KeyboardAvoidingView.KeyboardAvoidingView;
+export const KeyboardStickyView = KeyboardAvoidingView.KeyboardStickyView;
+export const KeyboardAwareScrollView = KeyboardAvoidingView.KeyboardAwareScrollView;
+export const KeyboardToolbar = KeyboardAvoidingView.KeyboardToolbar;
+export const DefaultKeyboardToolbarTheme = KeyboardAvoidingView.DefaultKeyboardToolbarTheme;
+export const OverKeyboardView = OverKeyboardView.OverKeyboardView;
+export const KeyboardExtender = OverKeyboardView.KeyboardExtender;

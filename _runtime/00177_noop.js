@@ -49,7 +49,7 @@ class Promise {
       tmp13 = new.target;
       tmp14 = new.target;
       constructor = new self.constructor((arg0, arg1) => {
-        let obj = Object.create(outer1_3.prototype);
+        let obj = Object.create(closure_1_3.prototype);
         if (typeof obj !== "object") {
           const _TypeError = TypeError;
           const typeError = new TypeError("Promises must be constructed via new");
@@ -61,7 +61,7 @@ class Promise {
           obj._A = null;
           // // eliminated: always false
           obj.then(arg0, arg1);
-          obj = Object.create(outer1_6.prototype);
+          obj = Object.create(closure_1_6.prototype);
           obj = {};
           let tmp11 = null;
           if (typeof closure_1 === "function") {
@@ -74,7 +74,7 @@ class Promise {
           }
           obj.onRejected = tmp12;
           obj.promise = obj;
-          outer1_4(self, obj);
+          closure_1_4(self, obj);
         }
       });
       tmp16 = constructor;
@@ -148,15 +148,15 @@ function handle(_y, _A) {
     }
     return tmp7;
   } else {
-    const noop = tmp2;
-    let closure_1 = _A;
+    _z = tmp2;
+    closure_1 = _A;
     const _setImmediate = setImmediate;
     setImmediate(() => {
       let length;
       let length2;
-      if (1 === tmp2._y) {
+      if (1 === _z._y) {
         let onRejected = _A.onFulfilled;
-        tmp2 = _A;
+        let tmp2 = _A;
       } else {
         tmp2 = _A;
         onRejected = _A.onRejected;
@@ -166,64 +166,64 @@ function handle(_y, _A) {
           try {
             return onRejected(_z);
           } catch (tmp3) {
-            let closure_1 = tmp3;
+            closure_1 = tmp3;
             return closure_2;
           }
         })(onRejected, tmp._z);
-        if (tmp11 === outer1_2) {
+        if (tmp11 === closure_1_2) {
           let promise = tmp2.promise;
           promise._y = 2;
           promise._z = _A;
-          if (outer1_3._C) {
+          if (closure_1_3._C) {
             obj._C(promise, tmp15);
           }
           if (1 === promise._x) {
-            outer1_4(promise, promise._A);
+            closure_1_4(promise, promise._A);
             promise._A = null;
           }
           if (2 === promise._x) {
             let num6 = 0;
             if (0 < promise._A.length) {
               do {
-                let tmp19 = outer1_4;
-                let tmp20 = outer1_4(promise, promise._A[num6]);
+                let tmp19 = closure_1_4;
+                let tmp20 = closure_1_4(promise, promise._A[num6]);
                 num6 = num6 + 1;
                 length2 = promise._A.length;
               } while (num6 < length2);
             }
             promise._A = null;
           }
-          obj = outer1_3;
+          obj = closure_1_3;
         } else {
-          outer1_5(tmp2.promise, tmp11);
+          closure_1_5(tmp2.promise, tmp11);
         }
       } else if (1 === tmp._y) {
-        outer1_5(tmp2.promise, tmp._z);
+        closure_1_5(tmp2.promise, tmp._z);
       } else {
         promise = tmp2.promise;
-        const _z = tmp._z;
+        _z = tmp._z;
         promise._y = 2;
         promise._z = _z;
-        if (outer1_3._C) {
+        if (closure_1_3._C) {
           obj2._C(promise, _z);
         }
         if (1 === promise._x) {
-          outer1_4(promise, promise._A);
+          closure_1_4(promise, promise._A);
           promise._A = null;
         }
         if (2 === promise._x) {
           let num2 = 0;
           if (0 < promise._A.length) {
             do {
-              let tmp7 = outer1_4;
-              let tmp8 = outer1_4(promise, promise._A[num2]);
+              let tmp7 = closure_1_4;
+              let tmp8 = closure_1_4(promise, promise._A[num2]);
               num2 = num2 + 1;
               length = promise._A.length;
             } while (num2 < length);
           }
           promise._A = null;
         }
-        obj2 = outer1_3;
+        obj2 = closure_1_3;
       }
     });
   }
@@ -265,7 +265,7 @@ function resolve(_x, self) {
           try {
             return self.then;
           } catch (tmp2) {
-            let closure_1 = tmp2;
+            closure_1 = tmp2;
             return closure_2;
           }
         })(self);
@@ -356,8 +356,8 @@ function Handler(fn, fn2, promise) {
 }
 function doResolve(arg0, _x) {
   let length;
-  let closure_0 = _x;
-  let c1 = false;
+  closure_0 = _x;
+  c1 = false;
   let tmp2 = c1;
   if (!c1) {
     tmp2 = tmp !== closure_2;

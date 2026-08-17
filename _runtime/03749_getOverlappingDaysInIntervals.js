@@ -1,6 +1,6 @@
 // _runtime/03749_getOverlappingDaysInIntervals.js
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,12 +17,12 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 let c2 = 86400000;
 
 export default function getOverlappingDaysInIntervals(arg0, arg1) {
   let obj = arg0;
-  tmp5.default(2, arguments);
+  requiredArgs.default(2, arguments);
   if (!arg0) {
     obj = {};
   }
@@ -30,13 +30,13 @@ export default function getOverlappingDaysInIntervals(arg0, arg1) {
   if (!arg1) {
     obj = {};
   }
-  const time = tmp3.default(obj.start).getTime();
-  const defaultResult1 = tmp3.default(obj.start);
-  const time1 = tmp3.default(obj.end).getTime();
-  const defaultResult2 = tmp3.default(obj.end);
-  let time2 = tmp3.default(obj.start).getTime();
-  const defaultResult3 = tmp3.default(obj.start);
-  let time3 = tmp3.default(obj.end).getTime();
+  const time = _typeof.default(obj.start).getTime();
+  const defaultResult1 = _typeof.default(obj.start);
+  const time1 = _typeof.default(obj.end).getTime();
+  const defaultResult2 = _typeof.default(obj.end);
+  let time2 = _typeof.default(obj.start).getTime();
+  const defaultResult3 = _typeof.default(obj.start);
+  let time3 = _typeof.default(obj.end).getTime();
   if (time <= time1) {
     if (time2 <= time3) {
       if (time < time3) {

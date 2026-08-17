@@ -1,14 +1,17 @@
 // _runtime/00311__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
-import importDefaultResult1 from "_inherits";
+import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
+import get_VirtualizedListDefault from "get VirtualizedList" /* 312 */;
+import areInputsEqualDefault from "areInputsEqual" /* 327 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import closure_6 from "_classCallCheck" /* 41 */;
+import closure_7 from "_possibleConstructorReturn" /* 93 */;
+import closure_8 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
 
-let FlatList = arg1;
+const FlatList = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -20,10 +23,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -33,12 +36,12 @@ let c9 = importAllResult;
 class FlatList {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, apply);
+    tmp = closure_6(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_8;
+    obj = closure_8(closure_0);
+    tmp3 = closure_7;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -47,13 +50,13 @@ class FlatList {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result._virtualizedListPairs = [];
     tmp3Result._captureRef = (_listRef) => {
       closure_0._listRef = _listRef;
     };
     tmp3Result._getItem = (arg0, arg1) => {
-      let num = tmp3Result.props.numColumns;
+      let num = lib.props.numColumns;
       if (num == null) {
         num = 1;
       }
@@ -75,7 +78,7 @@ class FlatList {
       if (null != arg0) {
         const _Object = Object;
         if (typeof Object(arg0).length === "number") {
-          let num = tmp3Result.props.numColumns;
+          let num = lib.props.numColumns;
           if (num == null) {
             num = 1;
           }
@@ -91,29 +94,30 @@ class FlatList {
       return 0;
     };
     tmp3Result._keyExtractor = (arr) => {
-      let num = tmp3Result.props.numColumns;
+      const lib = arg1;
+      let num = lib.props.numColumns;
       if (num == null) {
         num = 1;
       }
-      let keyExtractor = arg1.props.keyExtractor;
+      let keyExtractor = lib.props.keyExtractor;
       if (keyExtractor == null) {
-        keyExtractor = outer1_1(outer1_3[9]).keyExtractor;
+        keyExtractor = closure_1_1(closure_1_3[9]).keyExtractor;
       }
       if (num > 1) {
         const _Array = Array;
-        tmp3Result(outer1_3[10])(Array.isArray(arr), "FlatList: Encountered internal consistency error, expected each item to consist of an array with 1-%s columns; instead, received a single item.", num);
+        lib(closure_1_3[10])(Array.isArray(arr), "FlatList: Encountered internal consistency error, expected each item to consist of an array with 1-%s columns; instead, received a single item.", num);
         const mapped = arr.map((arg0, arg1) => keyExtractor(arg0, closure_0 * num + arg1));
         let joined = mapped.join(":");
-        const tmp7 = tmp3Result(outer1_3[10]);
+        const tmp7 = lib(closure_1_3[10]);
       } else {
         joined = keyExtractor(arr, arg1);
       }
       return joined;
     };
     tmp3Result._renderer = (arg0, arg1, arg2, arg3, arg4) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let closure_2 = arg2;
+      closure_0 = arg0;
+      closure_1 = arg1;
+      closure_2 = arg2;
       let num = arg3;
       if (arg3 == null) {
         num = 1;
@@ -122,8 +126,6 @@ class FlatList {
 
       }
       function renderProp(arg0) {
-        let closure_1;
-        let item;
         const callback = arg0;
         if (num > 1) {
           ({ item, index: closure_1 } = arg0);
@@ -132,19 +134,19 @@ class FlatList {
           let obj = { style: null, children: null };
           const tmp11 = callback(num[10]);
           const tmp16 = callback2(num[11]);
-          obj[0] = callback(num[12]).default.compose(outer1_12.row, closure_2);
+          obj[0] = callback(num[12]).default.compose(closure_1_12.row, closure_2);
           obj[1] = item.map((item) => {
-            let obj = { item, index: closure_1 * outer1_3 + arg1, separators: separators.separators };
-            if (typeof outer1_4 !== "function") {
+            let obj = { item, index: closure_1 * closure_1_3 + arg1, separators: separators.separators };
+            if (typeof closure_1_4 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (separators) {
               obj = {};
               const merged = Object.assign(obj);
-              let tmp2Result = outer1_10(tmp, obj);
+              let tmp2Result = closure_1_10(tmp, obj);
             } else {
               tmp2Result = null;
-              if (outer1_1) {
+              if (closure_1_1) {
                 tmp2Result = tmp2(obj);
               }
             }
@@ -152,11 +154,11 @@ class FlatList {
             if (null != tmp2Result) {
               obj = { children: null };
               obj[0] = tmp2Result;
-              tmp8 = outer2_10(outer2_9.Fragment, obj, arg1);
+              tmp8 = closure_2_10(closure_2_9.Fragment, obj, arg1);
             }
             return tmp8;
           });
-          return outer1_10(tmp16, obj);
+          return closure_1_10(tmp16, obj);
         } else {
           if (typeof render !== "function") {
             HermesBuiltin.throwTypeError();
@@ -164,7 +166,7 @@ class FlatList {
           if (callback) {
             obj = {};
             let merged = Object.assign(arg0);
-            let tmp3Result = outer1_10(tmp2, obj);
+            let tmp3Result = closure_1_10(tmp2, obj);
           } else {
             tmp3Result = null;
             if (callback2) {
@@ -188,15 +190,15 @@ class FlatList {
     props = tmp3Result.props;
     if (tmp3Result.props.viewabilityConfigCallbackPairs) {
       prop = props.viewabilityConfigCallbackPairs;
-      tmp3Result._virtualizedListPairs = prop.map((viewabilityConfig) => ({ viewabilityConfig: viewabilityConfig.viewabilityConfig, onViewableItemsChanged: tmp3Result._createOnViewableItemsChanged(viewabilityConfig.onViewableItemsChanged) }));
+      tmp3Result._virtualizedListPairs = prop.map((viewabilityConfig) => ({ viewabilityConfig: viewabilityConfig.viewabilityConfig, onViewableItemsChanged: lib._createOnViewableItemsChanged(viewabilityConfig.onViewableItemsChanged) }));
     } else if (props.onViewableItemsChanged) {
       prop1 = tmp3Result._virtualizedListPairs;
       obj = { viewabilityConfig: null, onViewableItemsChanged: null };
       obj[0] = tmp3Result.props.viewabilityConfig;
       obj[1] = tmp3Result._createOnViewableItemsChanged(() => {
         const items = [...arguments];
-        tmp3Result(outer1_3[10])(tmp3Result.props.onViewableItemsChanged, "Changing the nullability of onViewableItemsChanged is not supported. Once a function or null is supplied that cannot be changed.");
-        const props = tmp3Result.props;
+        lib(closure_1_3[10])(lib.props.onViewableItemsChanged, "Changing the nullability of onViewableItemsChanged is not supported. Once a function or null is supplied that cannot be changed.");
+        const props = lib.props;
         const items1 = [...items];
         return props.onViewableItemsChanged.apply(items1);
       });
@@ -205,7 +207,7 @@ class FlatList {
     return tmp3Result;
   }
 }
-require("_inherits")(FlatList, importAllResult.PureComponent);
+importDefaultResult1(FlatList, importAllResult.PureComponent);
 let items = [
   {
     key: "scrollToEnd",
@@ -311,12 +313,6 @@ let items = [
   {
     key: "_checkProps",
     value: function _checkProps(arg0) {
-      let columnWrapperStyle;
-      let getItem;
-      let getItemCount;
-      let horizontal;
-      let onViewableItemsChanged;
-      let viewabilityConfigCallbackPairs;
       ({ getItem, onViewableItemsChanged } = arg0);
       let num = this.props.numColumns;
       ({ getItemCount, horizontal, columnWrapperStyle, viewabilityConfigCallbackPairs } = arg0);
@@ -343,8 +339,8 @@ let items = [
   {
     key: "_pushMultiColumnViewable",
     value: function _pushMultiColumnViewable(items, item) {
-      let closure_0 = items;
-      const importDefault = item;
+      closure_0 = items;
+      importDefault = item;
       let num = this.props.numColumns;
       if (num == null) {
         num = 1;
@@ -370,7 +366,7 @@ let items = [
     key: "_createOnViewableItemsChanged",
     value: function _createOnViewableItemsChanged(onViewableItemsChanged) {
       const self = this;
-      let closure_0 = onViewableItemsChanged;
+      closure_0 = onViewableItemsChanged;
       return (viewableItems) => {
         let num = items1.props.numColumns;
         if (num == null) {
@@ -398,10 +394,6 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let columnWrapperStyle;
-      let numColumns;
-      let removeClippedSubviews;
-      let strictMode;
       const self = this;
       const props = this.props;
       ({ numColumns, columnWrapperStyle, removeClippedSubviews, strictMode } = props);
@@ -412,13 +404,13 @@ let items = [
       const tmp2 = callback(props, closure_4);
       const tmp3 = undefined !== strictMode && strictMode ? self._memoizedRenderer : self._renderer;
       const tmp4 = jsx;
-      const result = importAll(27).shouldUseRemoveClippedSubviewsAsDefaultOnIOS();
+      const result = javaScriptFlagGetterAll.shouldUseRemoveClippedSubviewsAsDefaultOnIOS();
       if (removeClippedSubviews == null) {
         removeClippedSubviews = true;
       }
       obj.removeClippedSubviews = removeClippedSubviews;
       const merged1 = Object.assign(tmp3(self.props.ListItemComponent, self.props.renderItem, columnWrapperStyle, numColumns, self.props.extraData));
-      return tmp4(require("00312_get_VirtualizedList.js") /* get VirtualizedList */.VirtualizedList, obj);
+      return tmp4(get_VirtualizedListDefault.VirtualizedList, obj);
     }
   }
 ];

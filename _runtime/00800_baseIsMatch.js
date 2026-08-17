@@ -1,5 +1,6 @@
 // _runtime/00800_baseIsMatch.js
-import { Stack } from "00775_Stack.js";
+import Stack from "Stack" /* 775 */;
+
 
 export default function baseIsMatch(arg0, arg1, arg2, arg3) {
   if (null == arg0) {

@@ -1,7 +1,10 @@
 // _runtime/00537_pushToArray.js
+import _mod534 from "module_534" /* 534 */;
+import items5 from "items" /* 536 */;
+import getSideChannel from "getSideChannel" /* 538 */;
 import { items } from "00536_items.js";
 import { getSideChannel } from "00538_getSideChannel.js";
-import { 00534__ } from "metro/00534__.js";
+
 let obj = {
   brackets(arg0) {
     return arg0 + "[]";
@@ -17,9 +20,9 @@ let obj = {
 function pushToArray(arg0, arg1) {
 
 }
-obj = { addQueryPrefix: false, allowDots: false, allowEmptyArrays: false, arrayFormat: "indices", charset: "utf-8", charsetSentinel: false, commaRoundTrip: false, delimiter: "&", encode: true, encodeDotInKeys: false, encoder: require("items").encode, encodeValuesOnly: false, filter: "r", format: false, formatter: null, indices: false, serializeDate: false, skipNulls: 1, strictNullHandling: 1 };
-obj[13] = require("module_534").default;
-obj[14] = require("module_534").formatters[require("module_534").default];
+obj = { addQueryPrefix: false, allowDots: false, allowEmptyArrays: false, arrayFormat: "indices", charset: "utf-8", charsetSentinel: false, commaRoundTrip: false, delimiter: "&", encode: true, encodeDotInKeys: false, encoder: items5.encode, encodeValuesOnly: false, filter: "r", format: false, formatter: null, indices: false, serializeDate: false, skipNulls: 1, strictNullHandling: 1 };
+obj[13] = _mod534.default;
+obj[14] = _mod534.formatters[_mod534.default];
 obj[16] = function serializeDate(arg0) {
   const call = toISOString.call;
   return typeof call === "unknown" ? toISOString() : call(arg0);
@@ -290,10 +293,6 @@ function stringify(parts1, arg1, fn, arg3, arg4, arg5, arg6, arg7, arg8, fn2, ar
 }
 
 export default (arg0, allowEmptyArrays) => {
-  let allowEmptyArrays2;
-  let encodeDotInKeys;
-  let skipNulls2;
-  let strictNullHandling;
   if (allowEmptyArrays) {
     if (undefined !== allowEmptyArrays.allowEmptyArrays) {
       if (typeof allowEmptyArrays.allowEmptyArrays !== "boolean") {
@@ -331,7 +330,7 @@ export default (arg0, allowEmptyArrays) => {
         }
       }
     }
-    let format = 00534__.default;
+    let format = _mod534.default;
     if (undefined !== allowEmptyArrays.format) {
       const call = hasOwnProperty.call;
       const formatters = tmp3(534).formatters;
@@ -398,7 +397,7 @@ export default (arg0, allowEmptyArrays) => {
     obj[11] = typeof allowEmptyArrays.encodeValuesOnly === "boolean" ? allowEmptyArrays.encodeValuesOnly : obj.encodeValuesOnly;
     obj[12] = filter;
     obj[13] = format;
-    obj[14] = 00534__.formatters[format];
+    obj[14] = _mod534.formatters[format];
     obj[15] = typeof allowEmptyArrays.serializeDate === "function" ? allowEmptyArrays.serializeDate : obj.serializeDate;
     obj[16] = typeof allowEmptyArrays.skipNulls === "boolean" ? allowEmptyArrays.skipNulls : obj.skipNulls;
     let sort = null;

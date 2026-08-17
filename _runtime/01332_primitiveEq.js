@@ -1,6 +1,7 @@
 // _runtime/01332_primitiveEq.js
-import { RepeatType } from "01320_RepeatType.js";
-const require = arg1;
+import RepeatType from "RepeatType" /* 1320 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function primitiveEq(arg0, arg1, arg2) {
   if (arg1 === arg2) {

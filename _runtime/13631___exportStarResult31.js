@@ -1,8 +1,9 @@
 // _runtime/13631___exportStarResult31.js
-import { __exportStarResult32 } from "13580___exportStarResult32.js";
-import { __exportStarResult4 } from "13587___exportStarResult4.js";
-import { match } from "13614_match.js";
-const require = arg1;
+import __exportStarResult32 from "__exportStarResult32" /* 13580 */;
+import __exportStarResult4 from "__exportStarResult4" /* 13587 */;
+import match from "match" /* 13614 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.SupportedLocales = function SupportedLocales(arg0, arg1, arg2) {
   let str = "best fit";

@@ -1,14 +1,12 @@
 // _runtime/13597___exportStarResult14.js
-import e from "e";
-import digitsToString from "digitsToString";
-import { getMultiInternalSlots } from "13582_getMultiInternalSlots.js";
+import digitsToString2 from "digitsToString" /* 13581 */;
+import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
+import e from "e" /* 1281 */;
 
+const digitsToString = e.__importDefault(digitsToString2);
 const result = digitsToString.default.set({ toExpPos: 100 });
 
 export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(style, floorResult) {
-  let dataLocaleData;
-  let notation;
-  let numberingSystem;
   ({ notation, dataLocaleData, numberingSystem } = style);
   if ("standard" === notation) {
     return 0;

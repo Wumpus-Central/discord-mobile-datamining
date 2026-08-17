@@ -1,8 +1,9 @@
 // _runtime/01101_createProfilePayload.js
-import StringResult from "registerSpanErrorInstrumentation";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import ignoreNextOnError from "ignoreNextOnError" /* 1028 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1072 */;
+import StringResult from "module_0" /* 0 */;
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
-import { __SENTRY_DEBUG__ } from "metro/01072___SENTRY_DEBUG__.js";
 
 function createProfilePayload(arg0, arg1, resources, type) {
   if ("transaction" !== type.type) {
@@ -69,7 +70,7 @@ function createProfilePayload(arg0, arg1, resources, type) {
       obj[1] = c6;
       obj[2] = str2;
       obj[7] = obj;
-      const obj1 = { locale: null, model: null, manufacturer: null, architecture: null, is_emulator: false };
+      obj1 = { locale: null, model: null, manufacturer: null, architecture: null, is_emulator: false };
       obj1[0] = str3;
       obj1[1] = c9;
       obj1[2] = str2;
@@ -119,7 +120,7 @@ function createProfilePayload(arg0, arg1, resources, type) {
 }
 function convertJSSelfProfileToSampledFormat(samples) {
   const _require = samples;
-  let c2 = 0;
+  c2 = 0;
   obj = { samples: [], stacks: [], frames: [], thread_metadata: { [closure_3]: obj } };
   obj = { name: timestamp };
   const first = samples.samples[0];
@@ -139,7 +140,7 @@ function convertJSSelfProfileToSampledFormat(samples) {
     if (!result) {
       result = num;
     }
-    let closure_5 = num - result;
+    closure_5 = num - result;
     samples = samples.samples;
     const item = samples.forEach((stackId) => {
       let tmp9;
@@ -245,9 +246,9 @@ function isValidSampleRate(concat) {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let c2 = 1000000;
-let tmp2 = "window" in require("registerSpanErrorInstrumentation").GLOBAL_OBJ;
+let tmp2 = "window" in registerSpanErrorInstrumentation.GLOBAL_OBJ;
 if (tmp2) {
-  tmp2 = require("registerSpanErrorInstrumentation").GLOBAL_OBJ.window === require("registerSpanErrorInstrumentation").GLOBAL_OBJ;
+  tmp2 = registerSpanErrorInstrumentation.GLOBAL_OBJ.window === registerSpanErrorInstrumentation.GLOBAL_OBJ;
 }
 if (tmp2) {
   tmp2 = typeof globalThis.importScripts === "undefined";
@@ -257,7 +258,7 @@ let str = "worker";
 if (tmp2) {
   str = "main";
 }
-const _navigator = require("ignoreNextOnError").WINDOW.navigator;
+const _navigator = ignoreNextOnError.WINDOW.navigator;
 let c5 = "";
 let c6 = "";
 let c7 = "";
@@ -300,10 +301,10 @@ if (tmp6) {
 if (tmp6) {
   const highEntropyValues = userAgentData.getHighEntropyValues(["architecture", "model", "platform", "platformVersion", "fullVersionList"]);
   highEntropyValues.then((platform) => {
-    let closure_5 = platform.platform || "";
-    let closure_7 = platform.architecture || "";
-    let closure_9 = platform.model || "";
-    let closure_6 = platform.platformVersion || "";
+    closure_5 = platform.platform || "";
+    closure_7 = platform.architecture || "";
+    closure_9 = platform.model || "";
+    closure_6 = platform.platformVersion || "";
     const fullVersionList = platform.fullVersionList;
     let length;
     if (fullVersionList != null) {
@@ -311,16 +312,16 @@ if (tmp6) {
     }
     if (length) {
       const _HermesInternal = HermesInternal;
-      let closure_8 = "" + tmp2.brand + " " + tmp2.version;
+      closure_8 = "" + tmp2.brand + " " + tmp2.version;
     }
   }).catch((arg0) => {
 
   });
   const nextPromise = highEntropyValues.then((platform) => {
-    let closure_5 = platform.platform || "";
-    let closure_7 = platform.architecture || "";
-    let closure_9 = platform.model || "";
-    let closure_6 = platform.platformVersion || "";
+    closure_5 = platform.platform || "";
+    closure_7 = platform.architecture || "";
+    closure_9 = platform.model || "";
+    closure_6 = platform.platformVersion || "";
     const fullVersionList = platform.fullVersionList;
     let length;
     if (fullVersionList != null) {
@@ -328,7 +329,7 @@ if (tmp6) {
     }
     if (length) {
       const _HermesInternal = HermesInternal;
-      let closure_8 = "" + tmp2.brand + " " + tmp2.version;
+      closure_8 = "" + tmp2.brand + " " + tmp2.version;
     }
   });
 }
@@ -483,7 +484,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(clos
         items1[num2] = items2;
       }
     }
-    let obj1 = registerSpanErrorInstrumentation;
+    obj1 = registerSpanErrorInstrumentation;
     let result = obj1.browserPerformanceTimeOrigin();
     const _performance = performance;
     if (typeof performance.timeOrigin === "number") {
@@ -545,7 +546,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(clos
     }
     const obj4 = { name: null, version: null };
     obj4[0] = str;
-    let str2;
+    str2 = undefined;
     if (sdk != null) {
       str2 = sdk.version;
     }
@@ -560,7 +561,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(clos
       uuid4Result = tmp24Result.uuid4();
     }
     obj3[2] = uuid4Result;
-    let str3 = options.release;
+    str3 = options.release;
     if (str3 == null) {
       str3 = "";
     }
@@ -791,7 +792,7 @@ export const startJSSelfProfile = function startJSSelfProfile() {
         const debug3 = tmp3(tmp2[0]).debug;
         debug3.log("[Profiling] Disabling profiling for current user session.");
       }
-      let c14 = true;
+      c14 = true;
     }
   } else if (tmp4(1072).DEBUG_BUILD) {
     const debug = tmp4(817).debug;
@@ -852,7 +853,7 @@ export const validateProfileChunk = function validateProfileChunk(closure_1) {
     }
     return { reason: "chunk is not an object" };
   } catch (tmp11) {
-    const obj1 = { reason: null };
+    obj1 = { reason: null };
     const _HermesInternal = HermesInternal;
     obj1[0] = "unknown validation error: " + tmp11;
     return obj1;

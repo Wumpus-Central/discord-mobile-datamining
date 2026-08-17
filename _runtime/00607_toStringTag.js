@@ -1,9 +1,11 @@
 // _runtime/00607_toStringTag.js
-import { toStringTag } from "00611_toStringTag.js";
-import { objectToString } from "00612_objectToString.js";
+import _mod608 from "module_608" /* 608 */;
+import toStringTag2 from "toStringTag" /* 611 */;
+import objectToString from "objectToString" /* 612 */;
+
 let toStringTag;
-if (require("module_608")) {
-  toStringTag = require("module_608").toStringTag;
+if (_mod608) {
+  toStringTag = _mod608.toStringTag;
 }
 
 export default function baseGetTag(arg0) {
@@ -17,7 +19,7 @@ export default function baseGetTag(arg0) {
     if (toStringTag) {
       const _Object = Object;
       if (tmp in Object(arg0)) {
-        tmp5 = toStringTag(arg0);
+        tmp5 = toStringTag2(arg0);
       }
     }
     tmp5 = objectToString(arg0);

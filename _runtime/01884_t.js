@@ -1,6 +1,7 @@
 // _runtime/01884_t.js
-import { cancelAnimation } from "01654_cancelAnimation.js";
-const require = arg1;
+import cancelAnimation from "cancelAnimation" /* 1654 */;
+
+require = arg1;
 const dependencyMap = arg6;
 const fn = function t(arg0, arg1, arg2) {
   let interpolateResult = arg0;

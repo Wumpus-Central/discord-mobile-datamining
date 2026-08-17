@@ -1,17 +1,13 @@
 // _runtime/06539_CardContent.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let StyleSheet;
-let obj1;
 ({ StyleSheet, View: obj1 } = get_ActivityIndicator);
 const styles = StyleSheet.create({ page: { minHeight: "100%" }, card: { flex: 1, overflow: "hidden" } });
 
 export const CardContent = function CardContent(layout) {
-  let enabled;
-  let style;
   layout = layout.layout;
   ({ enabled, style } = layout);
   const merged = Object.assign(layout, Object.create(null));

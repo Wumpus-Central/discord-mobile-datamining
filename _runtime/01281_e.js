@@ -33,7 +33,7 @@ let fn = (arg0) => {
     };
   }
   function e(arg0, fn) {
-    const e = arg0;
+    e = arg0;
     if (typeof fn !== "function") {
       if (null !== fn) {
         const _TypeError = TypeError;
@@ -87,7 +87,7 @@ let fn = (arg0) => {
       return arg0;
     };
   }
-  let closure_1 = fn3;
+  closure_1 = fn3;
   let ownKeys = function r(obj, arr) {
     obj = {};
     for (const key10007 in arg0) {
@@ -132,7 +132,7 @@ let fn = (arg0) => {
     }
     return obj;
   };
-  let closure_3 = function n(arg0, arg1, arg2, arg3) {
+  closure_3 = function n(arg0, arg1, arg2, arg3) {
     const length = arguments.length;
     let tmp = arg3;
     let tmp2 = arg1;
@@ -187,14 +187,14 @@ let fn = (arg0) => {
     }
   };
   function o(arg0, arg1) {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     return (arg0, arg1) => {
       callback(arg0, arg1, closure_0);
     };
   }
   function i(arg0, arg1, arg2, kind, arr) {
-    let closure_0 = arg5;
+    closure_0 = arg5;
     kind = kind.kind;
     let str = "get";
     if ("getter" !== kind) {
@@ -216,7 +216,7 @@ let fn = (arg0) => {
       }
     }
     if (arg1) {
-      let c1 = false;
+      c1 = false;
       let diff = arg2.length - 1;
       if (0 <= diff) {
         while (true) {
@@ -259,7 +259,7 @@ let fn = (arg0) => {
             }
           };
           if (tmp7) {
-            let obj1 = { get: null, set: null };
+            obj1 = { get: null, set: null };
             ({ get: obj4[0], set: obj4[1] } = arg1);
             let tmp10 = obj1;
           } else {
@@ -417,16 +417,16 @@ let fn = (arg0) => {
     }
   }
   function s(arg0, arg1, arg2, arg3) {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     let _Promise = arg2;
-    let closure_3 = arg3;
+    closure_3 = arg3;
     if (!arg2) {
       _Promise = Promise;
     }
     _Promise = new _Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function fulfilled(arg0) {
         try {
           step(iter.next(arg0));
@@ -479,9 +479,9 @@ let fn = (arg0) => {
     return _Promise;
   }
   function l(arg0, arg1) {
-    let c0 = arg0;
-    let closure_1 = arg1;
-    let closure_5 = {
+    c0 = arg0;
+    closure_1 = arg1;
+    closure_5 = {
       label: 0,
       sent() {
         if (1 & dependencyMap[0]) {
@@ -498,7 +498,6 @@ let fn = (arg0) => {
     obj.next = (arg0) => {
       let items = [c0, arg0];
       return (function step(items) {
-        let c3;
         let iter;
         let items1 = items;
         if (c2) {
@@ -509,7 +508,7 @@ let fn = (arg0) => {
           if (c6) {
             c6 = 0;
             if (items1[0]) {
-              let c5 = 0;
+              c5 = 0;
             }
           }
           if (c5) {
@@ -573,7 +572,7 @@ let fn = (arg0) => {
                     if (4 === first) {
                       let tmp72 = c5;
                       c5.label = c5.label + 1;
-                      let obj = { value: null, done: false };
+                      obj = { value: null, done: false };
                       let tmp73 = items1;
                       obj[0] = items1[1];
                       let num16 = 0;
@@ -760,7 +759,6 @@ let fn = (arg0) => {
     obj.throw = (arg0) => {
       let items = [c0, arg0];
       return (function step(items) {
-        let c3;
         let iter;
         let items1 = items;
         if (c2) {
@@ -771,7 +769,7 @@ let fn = (arg0) => {
           if (c6) {
             c6 = 0;
             if (items1[0]) {
-              let c5 = 0;
+              c5 = 0;
             }
           }
           if (c5) {
@@ -835,7 +833,7 @@ let fn = (arg0) => {
                     if (4 === first) {
                       let tmp72 = c5;
                       c5.label = c5.label + 1;
-                      let obj = { value: null, done: false };
+                      obj = { value: null, done: false };
                       let tmp73 = items1;
                       obj[0] = items1[1];
                       let num16 = 0;
@@ -1022,7 +1020,6 @@ let fn = (arg0) => {
     obj.return = (arg0) => {
       let items = [c0, arg0];
       return (function step(items) {
-        let c3;
         let iter;
         let items1 = items;
         if (c2) {
@@ -1033,7 +1030,7 @@ let fn = (arg0) => {
           if (c6) {
             c6 = 0;
             if (items1[0]) {
-              let c5 = 0;
+              c5 = 0;
             }
           }
           if (c5) {
@@ -1097,7 +1094,7 @@ let fn = (arg0) => {
                     if (4 === first) {
                       let tmp72 = c5;
                       c5.label = c5.label + 1;
-                      let obj = { value: null, done: false };
+                      obj = { value: null, done: false };
                       let tmp73 = items1;
                       obj[0] = items1[1];
                       let num16 = 0;
@@ -1313,10 +1310,10 @@ let fn = (arg0) => {
       }
     }
   }
-  let closure_28 = Object.create ? ((arg0, arg1, arg2, arg3) => {
+  closure_28 = Object.create ? ((arg0, arg1, arg2, arg3) => {
     let __esModule = arg1;
-    let closure_0 = arg1;
-    let closure_1 = arg2;
+    closure_0 = arg1;
+    closure_1 = arg2;
     let tmp = arg3;
     if (undefined === arg3) {
       tmp = arg2;
@@ -1346,7 +1343,7 @@ let fn = (arg0) => {
     arg0[tmp] = arg1[arg2];
   });
   function y(arg0) {
-    const e = arg0;
+    e = arg0;
     let iterator = typeof Symbol === "function";
     if (typeof Symbol === "function") {
       const _Symbol = Symbol;
@@ -1356,7 +1353,7 @@ let fn = (arg0) => {
     if (iterator) {
       tmp = e[iterator];
     }
-    let c1 = 0;
+    c1 = 0;
     if (tmp) {
       const call = tmp.call;
       return typeof call === "unknown" ? tmp() : call(e);
@@ -1547,7 +1544,7 @@ let fn = (arg0) => {
     function resume(arg0, arg1) {
       try {
         (function step(value) {
-          if (value.value instanceof outer1_18) {
+          if (value.value instanceof closure_1_18) {
             const resolved = Promise.resolve(value.value.v);
             resolved.then(closure_3, closure_4);
           } else {
@@ -1582,12 +1579,12 @@ let fn = (arg0) => {
       }
       const iter = apply.apply(arg0, items);
       let _return = iter;
-      let closure_1 = [];
+      closure_1 = [];
       const obj = Object.create(typeof globalThis.AsyncIterator === "function" ? globalThis.AsyncIterator : Object.prototype);
       _return = "next";
       if (iter.next) {
         obj.next = (arg0) => {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           return new Promise((arg0, arg1) => {
             const items = [closure_0, closure_0, arg0, arg1];
             if (arr.push(items) <= 1) {
@@ -1599,7 +1596,7 @@ let fn = (arg0) => {
       _return = "throw";
       if (iter.throw) {
         obj.throw = (arg0) => {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           return new Promise((arg0, arg1) => {
             const items = [closure_0, closure_0, arg0, arg1];
             if (arr.push(items) <= 1) {
@@ -1611,7 +1608,7 @@ let fn = (arg0) => {
       _return = "return";
       if (iter.return) {
         obj.return = (arg0) => {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           return new Promise((arg0, arg1) => {
             const items = [closure_0, closure_0, arg0, arg1];
             if (arr.push(items) <= 1) {
@@ -1642,11 +1639,11 @@ let fn = (arg0) => {
     let fn;
     if (next.next) {
       fn = (arg0) => {
-        c1 = !c1;
-        if (c1) {
+        closure_1 = !closure_1;
+        if (closure_1) {
           let obj = arg0;
-          if (c1) {
-            if (typeof c1 !== "function") {
+          if (closure_1) {
+            if (typeof closure_1 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             throw arg0;
@@ -1656,18 +1653,18 @@ let fn = (arg0) => {
           if (typeof _ !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          if (globalThis instanceof outer1_18) {
+          if (globalThis instanceof closure_1_18) {
             globalThis.v = tmp4;
             let tmp12 = globalThis;
           } else {
-            if (typeof outer1_18 !== "function") {
+            if (typeof closure_1_18 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (new.target instanceof outer1_18) {
+            if (new.target instanceof closure_1_18) {
               tmp8.v = tmp4;
               tmp12 = tmp8;
             } else {
-              tmp12 = outer1_18(tmp4);
+              tmp12 = closure_1_18(tmp4);
             }
           }
           obj = { value: null, done: false };
@@ -1681,14 +1678,14 @@ let fn = (arg0) => {
       throw arg0;
     };
     _return = "throw";
-    let c1 = fn2;
+    closure_1 = fn2;
     if (next.throw) {
       fn2 = (arg0) => {
-        c1 = !c1;
-        if (c1) {
+        closure_1 = !closure_1;
+        if (closure_1) {
           let obj = arg0;
-          if (c1) {
-            if (typeof c1 !== "function") {
+          if (closure_1) {
+            if (typeof closure_1 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             throw arg0;
@@ -1698,18 +1695,18 @@ let fn = (arg0) => {
           if (typeof _ !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          if (globalThis instanceof outer1_18) {
+          if (globalThis instanceof closure_1_18) {
             globalThis.v = tmp4;
             let tmp12 = globalThis;
           } else {
-            if (typeof outer1_18 !== "function") {
+            if (typeof closure_1_18 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (new.target instanceof outer1_18) {
+            if (new.target instanceof closure_1_18) {
               tmp8.v = tmp4;
               tmp12 = tmp8;
             } else {
-              tmp12 = outer1_18(tmp4);
+              tmp12 = closure_1_18(tmp4);
             }
           }
           obj = { value: null, done: false };
@@ -1720,15 +1717,15 @@ let fn = (arg0) => {
     }
     obj.throw = fn2;
     _return = "return";
-    c1 = undefined;
+    closure_1 = undefined;
     let fn3;
     if (next.return) {
       fn3 = (arg0) => {
-        c1 = !c1;
-        if (c1) {
+        closure_1 = !closure_1;
+        if (closure_1) {
           let obj = arg0;
-          if (c1) {
-            if (typeof c1 !== "function") {
+          if (closure_1) {
+            if (typeof closure_1 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             throw arg0;
@@ -1738,18 +1735,18 @@ let fn = (arg0) => {
           if (typeof _ !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          if (globalThis instanceof outer1_18) {
+          if (globalThis instanceof closure_1_18) {
             globalThis.v = tmp4;
             let tmp12 = globalThis;
           } else {
-            if (typeof outer1_18 !== "function") {
+            if (typeof closure_1_18 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (new.target instanceof outer1_18) {
+            if (new.target instanceof closure_1_18) {
               tmp8.v = tmp4;
               tmp12 = tmp8;
             } else {
-              tmp12 = outer1_18(tmp4);
+              tmp12 = closure_1_18(tmp4);
             }
           }
           obj = { value: null, done: false };
@@ -1786,7 +1783,7 @@ let fn = (arg0) => {
         if (iterator) {
           tmp7 = _return[iterator];
         }
-        let c1 = 0;
+        c1 = 0;
         if (tmp7) {
           const call = tmp7.call;
           typeof call === "unknown" ? tmp7() : call(_return);
@@ -1814,7 +1811,7 @@ let fn = (arg0) => {
               _return = "next";
               obj = {};
               obj.next = obj.next && ((arg0) => {
-                let closure_0 = arg0;
+                closure_0 = arg0;
                 return new Promise((arg0, arg1) => {
                   const iter = _return[value](value);
                   value = iter;
@@ -1828,7 +1825,7 @@ let fn = (arg0) => {
               });
               _return = "throw";
               obj.throw = obj.throw && ((arg0) => {
-                let closure_0 = arg0;
+                closure_0 = arg0;
                 return new Promise((arg0, arg1) => {
                   const iter = _return[value](value);
                   value = iter;
@@ -1842,7 +1839,7 @@ let fn = (arg0) => {
               });
               _return = "return";
               obj.return = obj.return && ((arg0) => {
-                let closure_0 = arg0;
+                closure_0 = arg0;
                 return new Promise((arg0, arg1) => {
                   const iter = _return[value](value);
                   value = iter;
@@ -2059,7 +2056,7 @@ let fn = (arg0) => {
           const _Symbol4 = Symbol;
           fn = tmp13;
           if (arg2) {
-            const e = tmp13;
+            closure_0 = tmp13;
             fn = tmp13;
             const tmp7 = tmp13;
           }
@@ -2110,7 +2107,7 @@ let fn = (arg0) => {
     return error;
   });
   function k(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     function fail(arg0) {
       let tmp2 = arg0;
       if (closure_0.hasError) {
@@ -2119,7 +2116,7 @@ let fn = (arg0) => {
       closure_0.error = tmp2;
       closure_0.hasError = true;
     }
-    let c3 = 0;
+    c3 = 0;
     function next() {
       let tmp2 = closure_0;
       const stack = closure_0.stack;
@@ -2182,7 +2179,7 @@ let fn = (arg0) => {
     return next();
   }
   function D(str) {
-    let closure_0 = arg1;
+    closure_0 = arg1;
     let replaced = str;
     if (typeof str === "string") {
       replaced = str;
@@ -2249,7 +2246,7 @@ if (typeof obj === "object") {
   if (typeof globalThis.define === "function") {
     if (globalThis.define.amd) {
       globalThis.define("tslib", ["exports"], (arg0) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         if (arg0 !== f103753) {
           const _Object = Object;
           if (typeof Object.create === "function") {

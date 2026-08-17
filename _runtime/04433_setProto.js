@@ -1,23 +1,26 @@
 // _runtime/04433_setProto.js
-import { setPrototypeOf } from "04434_setPrototypeOf.js";
-import { 04436__ } from "metro/04436__.js";
-if (require("setPrototypeOf")) {
+import _mod541 from "module_541" /* 541 */;
+import setPrototypeOf from "setPrototypeOf" /* 4434 */;
+import _mod4435 from "module_4435" /* 4435 */;
+import _mod4436 from "module_4436" /* 4436 */;
+
+if (setPrototypeOf) {
   function setProto(arg0, arg1) {
     if (setPrototypeOf(arg0, arg1)) {
       return arg0;
     } else {
-      const tmp5 = new tmp(541)("Reflect.setPrototypeOf: failed to set [[Prototype]]");
+      const tmp5 = new _mod541("Reflect.setPrototypeOf: failed to set [[Prototype]]");
       throw tmp5;
     }
-    tmp = require;
+    const tmp = require;
   }
 } else {
-  setProto = require("module_4435");
+  setProto = _mod4435;
   if (!setProto) {
     let setProto2 = null;
-    if (require("module_4436")) {
+    if (_mod4436) {
       setProto2 = function setProto(arg0, arg1) {
-        04436__(arg0, arg1);
+        _mod4436(arg0, arg1);
         return arg0;
       };
     }

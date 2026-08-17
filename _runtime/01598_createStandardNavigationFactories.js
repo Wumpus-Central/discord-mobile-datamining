@@ -1,18 +1,15 @@
 // _runtime/01598_createStandardNavigationFactories.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { BaseNavigationContainer } from "01503_BaseNavigationContainer.js";
 
 const require = arg1;
 let closure_2 = ["children", "id", "initialRouteName", "layout", "screenLayout", "screenListeners", "screenOptions", "UNSTABLE_routeNamesChangeBehavior", "UNSTABLE_router"];
 
 export const createStandardNavigationFactories = function createStandardNavigationFactories(arg0, arg1, arg2) {
-  let closure_2;
-  let type;
-  let version;
   const _require = arg1;
-  let dependencyMap = arg2;
+  dependencyMap = arg2;
   ({ type, version, NavigatorContent: closure_2 } = arg0);
   if ("standard" !== type) {
     let str3 = "unknown type.";
@@ -20,7 +17,7 @@ export const createStandardNavigationFactories = function createStandardNavigati
       const _HermesInternal2 = HermesInternal;
       str3 = "type \"" + type + "\".";
     }
-    const error = new Error("createStandardNavigationFactories only works with standard navigator objects, but got navigator of " + str3);
+    error = new Error("createStandardNavigationFactories only works with standard navigator objects, but got navigator of " + str3);
     throw error;
   } else if (1 !== version) {
     const _Error = Error;
@@ -32,7 +29,7 @@ export const createStandardNavigationFactories = function createStandardNavigati
     obj[0] = _BaseNavigationContainer.createNavigatorFactory(function StandardNavigationNavigator(UNSTABLE_routeNamesChangeBehavior) {
       let obj = callback(1503);
       navigationBuilder = obj.useNavigationBuilder(navigationBuilder, UNSTABLE_routeNamesChangeBehavior);
-      const dependencyMap = callback(1599).useBuildHref();
+      dependencyMap = callback(1599).useBuildHref();
       let tmp2 = callback(1601);
       let flag = tmp2.useMemoArray;
       if (!("preloadedRoutes" in navigationBuilder.state)) {
@@ -46,10 +43,10 @@ export const createStandardNavigationFactories = function createStandardNavigati
           items[1] = items1;
           return items;
         }));
-        let closure_2 = flagResult;
+        closure_2 = flagResult;
         let items = [navigationBuilder.state.index, flagResult];
         obj = {};
-        const routes2 = outer1_4.useMemo(() => ({ index: navigationBuilder.state.index, routes: closure_2 }), items).routes;
+        const routes2 = closure_1_4.useMemo(() => ({ index: navigationBuilder.state.index, routes: closure_2 }), items).routes;
         tmp2 = routes2[Symbol.iterator]();
         flag = true;
       } else {

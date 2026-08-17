@@ -1,10 +1,11 @@
 // _runtime/09034_merged1.js
-import emptyFunction from "emptyFunction";
+import colorPropType from "colorPropType" /* 9025 */;
+import emptyFunction from "emptyFunction" /* 4205 */;
 
-let obj = { shadowColor: require("colorPropType"), shadowOffset: null, shadowOpacity: null, shadowRadius: null };
-obj = { width: require("emptyFunction").number, height: require("emptyFunction").number };
+let obj = { shadowColor: colorPropType, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
+obj = { width: emptyFunction.number, height: emptyFunction.number };
 obj[1] = emptyFunction.shape(obj);
-obj[2] = require("emptyFunction").number;
-obj[3] = require("emptyFunction").number;
+obj[2] = emptyFunction.number;
+obj[3] = emptyFunction.number;
 
 export default obj;

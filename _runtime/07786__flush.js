@@ -1,15 +1,17 @@
 // _runtime/07786__flush.js
-import asyncGeneratorStep from "addContextToFrame";
-import { getGlobalSingleton } from "07739_getGlobalSingleton.js";
+import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
+import addContextToFrame from "addContextToFrame" /* 7749 */;
+import getClient from "getClient" /* 7765 */;
+import applyClientOptions from "applyClientOptions" /* 7787 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { addContextToFrame } from "07749_addContextToFrame.js";
 import { getClient } from "07765_getClient.js";
-import { applyClientOptions } from "07787_applyClientOptions.js";
 
 function _flush() {
   const self = this;
-  const tmp = asyncGeneratorStep((arg0) => {
-    let closure_0 = arg0;
-    let c1 = 0;
+  const tmp = callback((arg0) => {
+    closure_0 = arg0;
+    c1 = 0;
     return (function*(arg0) {
       if (table === 2) {
         table = 3;
@@ -57,7 +59,7 @@ function _flush() {
       }
     })();
   });
-  const _flush = tmp;
+  closure_3 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -68,9 +70,9 @@ function _flush() {
 }
 function _close() {
   const self = this;
-  const tmp = asyncGeneratorStep((arg0) => {
-    let closure_0 = arg0;
-    let c1 = 0;
+  const tmp = callback((arg0) => {
+    closure_0 = arg0;
+    c1 = 0;
     return (function*(arg0) {
       if (table === 2) {
         table = 3;
@@ -118,7 +120,7 @@ function _close() {
       }
     })();
   });
-  const _close = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -288,8 +290,6 @@ export const setUser = function setUser(arg0) {
   isolationScope.setUser(arg0);
 };
 export const startSession = function startSession(arg0) {
-  let environment;
-  let release;
   let obj = getClient;
   const client = obj.getClient();
   const isolationScope = getClient.getIsolationScope();
@@ -337,10 +337,9 @@ export const startSession = function startSession(arg0) {
 };
 export const withMonitor = function withMonitor(monitorSlug) {
   const _require = monitorSlug;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   function finishCheckIn(status) {
-    const obj = { monitorSlug, status, checkInId: closure_2, duration: null };
-    obj[3] = monitorSlug(7752).timestampInSeconds() - closure_3;
+    const obj = { monitorSlug, status, checkInId: closure_2, duration: monitorSlug(7752).timestampInSeconds() - closure_3 };
     const obj2 = monitorSlug(7752);
     const currentScope = monitorSlug(7765).getCurrentScope();
     const obj3 = monitorSlug(7765);
@@ -370,9 +369,9 @@ export const withMonitor = function withMonitor(monitorSlug) {
       let logger2 = tmp(7738).logger;
       logger2.warn("Cannot capture check-in. Client does not support sending check-ins.");
     }
-    const asyncGeneratorStep = captureCheckInResult;
+    closure_2 = captureCheckInResult;
     let tmpResult = tmp(7752);
-    let closure_3 = tmpResult.timestampInSeconds();
+    closure_3 = tmpResult.timestampInSeconds();
     tmpResult = tmp(7765);
     return tmpResult.withIsolationScope(() => {
       try {

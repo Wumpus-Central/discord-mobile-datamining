@@ -1,5 +1,7 @@
 // _runtime/00727_baseGet.js
-import { castPath } from "00728_castPath.js";
+import toKey from "toKey" /* 725 */;
+import castPath from "castPath" /* 728 */;
+
 
 export default function baseGet(arg0, arg1) {
   const arr = castPath(arg1, arg0);
@@ -12,7 +14,7 @@ export default function baseGet(arg0, arg1) {
     tmp = arg0;
     if (0 < length) {
       const sum = num3 + 1;
-      const tmp6 = tmp2[require(undefined, 725) /* toKey */(undefined, arr[num3])];
+      const tmp6 = tmp2[toKey(undefined, arr[num3])];
       num = sum;
       tmp = tmp6;
       while (null != tmp6) {

@@ -1,9 +1,7 @@
 // _runtime/07412_useForceUpdate.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_0 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-let closure_1;
-let obj1;
 ({ useCallback: closure_1, useState: obj1 } = noop);
 
 export default function useForceUpdate() {

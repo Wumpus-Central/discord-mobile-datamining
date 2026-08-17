@@ -1,14 +1,10 @@
 // _runtime/06991_useBottomSheetContentContainerStyle.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
+import closure_2 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { cancelAnimation } from "01654_cancelAnimation.js";
 import { useBottomSheetInternal } from "06960_useBottomSheetInternal.js";
 
-let c3;
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
 ({ useMemo: c3, useState: c4 } = noop);
 ({ Platform: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
@@ -17,7 +13,7 @@ let closure_8 = { code: "function pnpm_useBottomSheetContentContainerStyleTs2(re
 
 export const useBottomSheetContentContainerStyle = function useBottomSheetContentContainerStyle(flag, contentContainerStyle) {
   const _require = flag;
-  const dependencyMap = contentContainerStyle;
+  dependencyMap = contentContainerStyle;
   const tmp = first(animatedFooterHeight(0), 2);
   first = tmp[0];
   const callback = tmp3;
@@ -31,10 +27,10 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
       const _Array = Array;
       let applyResult = tmp;
       if (Array.isArray(tmp)) {
-        const compose = outer1_6.compose;
+        const compose = closure_1_6.compose;
         const items = [];
         HermesBuiltin.arraySpread(tmp, 0);
-        applyResult = HermesBuiltin.apply(items, outer1_6);
+        applyResult = HermesBuiltin.apply(items, closure_1_6);
       }
       let obj = applyResult;
     } else {
@@ -42,12 +38,9 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
     }
     return obj;
   }, items);
-  let closure_5 = tmp5;
+  closure_5 = tmp5;
   const items1 = [first, flag, tmp5];
   const tmp6 = callback(() => {
-    let padding;
-    let paddingBottom;
-    let paddingVertical;
     if (closure_0) {
       let num = 0;
       if (tmp) {

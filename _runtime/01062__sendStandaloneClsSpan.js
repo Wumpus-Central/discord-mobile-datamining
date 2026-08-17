@@ -36,7 +36,7 @@ function _sendStandaloneClsSpan(arg0, startTime, sentry_pageload_span_id, sentry
     const sources1 = startTime.sources;
     const item = sources1.forEach((node) => {
       const combined = "cls.source." + arg1 + 1;
-      obj = obj(outer1_1[3]);
+      obj = obj(closure_1_1[3]);
       obj[combined] = obj.htmlTreeAsString(node.node);
     });
   }
@@ -53,14 +53,14 @@ function _sendStandaloneClsSpan(arg0, startTime, sentry_pageload_span_id, sentry
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5._sendStandaloneClsSpan = _sendStandaloneClsSpan;
 arg5.trackClsAsStandaloneSpan = function trackClsAsStandaloneSpan(client) {
-  const dependencyMap = 0;
+  dependencyMap = 0;
   if (obj.supportsWebVital("layout-shift")) {
     let tmpResult = tmp(1034);
-    let closure_2 = tmpResult.addClsInstrumentationHandler((metric) => {
+    closure_2 = tmpResult.addClsInstrumentationHandler((metric) => {
       const tmp = metric.metric.entries[metric.metric.entries.length - 1];
       if (tmp) {
         const value = iter.value;
-        let closure_0 = tmp;
+        closure_0 = tmp;
       }
     }, true);
     tmpResult = tmp(1059);

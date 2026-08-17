@@ -1,12 +1,12 @@
 // _runtime/13805__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import StorybookSwitcher from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "noop" /* 19 */;
+import closure_4 from "get ActivityIndicator" /* 17 */;
+import closure_5 from "jsxProd" /* 21 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -19,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -89,12 +89,12 @@ if (!noop) {
 class StorybookSwitcher {
   constructor(arg0) {
     self = this;
-    tmp = StorybookSwitcher(this, apply);
+    tmp = StorybookSwitcher(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_2;
+    obj = closure_2(closure_0);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -103,16 +103,15 @@ class StorybookSwitcher {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.state = { showStorybook: false };
     emitter = global.emitter;
     onResult = emitter.on("storybook", (showStorybook) => {
-      tmp3Result.setState({ showStorybook });
+      state.setState({ showStorybook });
     });
     return tmp3Result;
   }
 }
-_classCallCheck = StorybookSwitcher;
 _inherits(StorybookSwitcher, value.Component);
 obj = {
   key: "render",
@@ -123,7 +122,7 @@ obj = {
       children = <tmp />;
     }
     obj[1] = children;
-    return <get ActivityIndicator.View style={{ flex: 1 }}>{null}</get ActivityIndicator.View>;
+    return <RN.View style={{ flex: 1 }}>{null}</RN.View>;
   }
 };
 let items = [obj];

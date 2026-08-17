@@ -1,18 +1,14 @@
 // _runtime/07716_NativeModules.js
-import importDefaultResult from "asyncGeneratorStep";
-import get_ActivityIndicator from "get ActivityIndicator";
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let NativeModules;
-let RNIapModule;
-let c3;
-let obj1;
 let closure_0 = arg1;
 ({ Linking: obj1, NativeModules } = get_ActivityIndicator);
 ({ RNIapModule: c3, RNIapModule } = NativeModules);
 closure_0 = importDefaultResult((arg0) => {
-  let closure_0 = arg0;
-  let c5 = 0;
-  let c6 = 0;
+  closure_0 = arg0;
+  c5 = 0;
+  c6 = 0;
   const iter = (function*(arg0) {
     if (c6 === 2) {
       c6 = 3;
@@ -40,8 +36,8 @@ closure_0 = importDefaultResult((arg0) => {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_3 = tmp5;
-            let closure_4 = tmp2;
+            closure_3 = tmp5;
+            closure_4 = tmp2;
             let sku;
             sku = sku.sku;
             c5 = 1;
@@ -54,18 +50,18 @@ closure_0 = importDefaultResult((arg0) => {
             throw arg1;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
-            let obj2 = callback(outer1_1[3]);
+            let obj2 = callback(closure_1_1[3]);
             const result = obj2.checkNativeAndroidAvailable();
-            let closure_2 = outer1_2;
-            const openURL = outer1_2.openURL;
+            closure_2 = closure_1_2;
+            const openURL = closure_1_2.openURL;
             c5 = 2;
             c6 = 1;
             obj2 = { value: null, done: false };
-            obj2[0] = outer1_3.getPackageName();
+            obj2[0] = closure_1_3.getPackageName();
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -93,15 +89,10 @@ closure_0 = importDefaultResult((arg0) => {
   return iter;
 });
 closure_0 = importDefaultResult((arg0) => {
-  let closure_0 = arg0;
-  let c2 = 0;
-  let c3 = 0;
+  closure_0 = arg0;
+  c2 = 0;
+  c3 = 0;
   const iter = (function*(arg0) {
-    let c0;
-    let c1;
-    let c2;
-    let c3;
-    let c4;
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -135,8 +126,8 @@ closure_0 = importDefaultResult((arg0) => {
             c3 = undefined;
             c4 = undefined;
             ({ packageName: c0, productId: c1, productToken: c2, accessToken: c3, isSub: c4 } = c0);
-            let closure_5;
-            let closure_6;
+            closure_5 = undefined;
+            closure_6 = undefined;
             c2 = 1;
             c3 = 1;
             return { value: "ct", done: true };
@@ -147,7 +138,7 @@ closure_0 = importDefaultResult((arg0) => {
             throw arg1;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
@@ -184,7 +175,7 @@ closure_0 = importDefaultResult((arg0) => {
           } else {
             const _Object = Object;
             const _Error = Error;
-            const error = new Error(closure_6.statusText);
+            error = new Error(closure_6.statusText);
             obj = { statusCode: null };
             obj[0] = closure_6.status;
             throw Object.assign(error, obj);
@@ -226,8 +217,6 @@ export const validateReceiptAndroid = function validateReceiptAndroid(arg0) {
   return applyArgumentsResult;
 };
 export const acknowledgePurchaseAndroid = (arg0) => {
-  let developerPayload;
-  let token;
   ({ token, developerPayload } = arg0);
   const androidModule = callback(7709).getAndroidModule();
   return androidModule.acknowledgePurchase(token, developerPayload);

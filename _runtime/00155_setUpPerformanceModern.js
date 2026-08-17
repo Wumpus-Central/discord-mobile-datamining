@@ -1,8 +1,9 @@
 // _runtime/00155_setUpPerformanceModern.js
-import { polyfillObjectProperty } from "00123_polyfillObjectProperty.js";
-import { importDefaultResult2 } from "00156_importDefaultResult2.js";
+import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
+import importDefaultResult2 from "importDefaultResult2" /* 156 */;
+
 const global = arg0;
-const require = arg1;
+require = arg1;
 const dependencyMap = arg6;
 let c3 = false;
 arg5.default = function setUpPerformanceModern() {

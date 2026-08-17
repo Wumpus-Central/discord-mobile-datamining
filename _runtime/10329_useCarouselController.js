@@ -1,6 +1,6 @@
 // _runtime/10329_useCarouselController.js
-import noop from "noop";
-import { useRef } from "noop";
+import closure_2 from "noop" /* 19 */;
+import { useRef } from "noop" /* 19 */;
 
 const require = arg1;
 let closure_4 = { code: "function pnpm_useCarouselControllerTsx1(){const{handlerOffset,round,size,dataInfo,convertToSharedIndex,loop,autoFillData}=this.__closure;const handlerOffsetValue=handlerOffset.value;const toInt=round(handlerOffsetValue/size)%dataInfo.length;const isPositive=handlerOffsetValue<=0;const i=isPositive?Math.abs(toInt):Math.abs(toInt>0?dataInfo.length-toInt:0);const newSharedIndexValue=convertToSharedIndex({loop:loop,rawDataLength:dataInfo.originalLength,autoFillData:autoFillData,index:i});return{i:i,newSharedIndexValue:newSharedIndexValue};}" };
@@ -33,10 +33,10 @@ export const useCarouselController = function useCarouselController(size) {
   const containerSize = globalState.layout.containerSize;
   const items = [dataLength];
   const memo = loop.useMemo(() => ({ length: dataLength, disable: !dataLength, originalLength: dataLength }), items);
-  let obj1 = _require(size[2]);
+  obj1 = _require(size[2]);
   const sharedValue = obj1.useSharedValue(num);
   const tmp3 = dataLength(num);
-  let closure_13 = tmp3;
+  closure_13 = tmp3;
   const items1 = [handlerOffset, memo, size, loop];
   const callback = loop.useCallback(() => {
     if (loop) {
@@ -114,10 +114,10 @@ export const useCarouselController = function useCarouselController(size) {
     }
   }, items6);
   const fn3 = function z(arg0, onFinished) {
-    const size = onFinished;
+    size = onFinished;
     const fn = function i(arg0) {
       if (arg0) {
-        onFinished(size[2]).runOnJS(outer1_18)();
+        onFinished(size[2]).runOnJS(closure_1_18)();
         if (onFinished) {
           tmp(tmp2[2]).runOnJS(tmp5)();
           const tmpResult = tmp(tmp2[2]);
@@ -160,7 +160,7 @@ export const useCarouselController = function useCarouselController(size) {
       animated = obj.animated;
       tmp = undefined === animated || animated;
       onFinished = obj.onFinished;
-      if (useAnimatedReaction()) {
+      if (closure_17()) {
         tmp2 = loop;
         if (loop) {
           tmp5 = closure_11;
@@ -168,17 +168,17 @@ export const useCarouselController = function useCarouselController(size) {
           tmp9 = overscrollEnabled;
           if (overscrollEnabled) {
             tmp11 = null;
-            if (useCallback != null) {
-              tmp12 = useCallback();
+            if (closure_19 != null) {
+              tmp12 = closure_19();
             }
-            tmp13 = f85187;
-            sum = f85187() + num;
+            tmp13 = closure_14;
+            sum = closure_14() + num;
             tmp6.value = sum;
             tmp15 = handlerOffset;
             tmp16 = -sum;
             if (tmp) {
-              tmp18 = f85193;
-              tmp15.value = f85193(tmp16 * tmp7, onFinished);
+              tmp18 = closure_20;
+              tmp15.value = closure_20(tmp16 * tmp7, onFinished);
             } else {
               tmp15.value = tmp16 * tmp7;
               if (onFinished != null) {
@@ -189,7 +189,7 @@ export const useCarouselController = function useCarouselController(size) {
             tmp10 = containerSize;
           }
         } else {
-          tmp3 = useSharedValue;
+          tmp3 = closure_12;
           tmp4 = closure_11;
         }
       }
@@ -234,8 +234,6 @@ export const useCarouselController = function useCarouselController(size) {
   }, items9);
   const items10 = [size, loop, sharedValue, fixedDirection, handlerOffset, memo.length, callback2, callback4, callback5];
   const callback8 = loop.useCallback((onFinished) => {
-    let animated;
-    let i;
     ({ i, animated } = onFinished);
     onFinished = onFinished.onFinished;
     if (i !== sharedValue.value) {
@@ -275,9 +273,6 @@ export const useCarouselController = function useCarouselController(size) {
   }, items10);
   const items11 = [callback7, callback6, callback8];
   const callback9 = loop.useCallback(() => {
-    let animated;
-    let count;
-    let index;
     let obj = arg0;
     if (arg0 === undefined) {
       obj = {};
@@ -304,7 +299,7 @@ export const useCarouselController = function useCarouselController(size) {
         obj[2] = onFinished;
         callback7(obj);
       } else {
-        const obj1 = { count: null, animated: null, onFinished: null };
+        obj1 = { count: null, animated: null, onFinished: null };
         obj1[0] = rounded;
         obj1[1] = tmp;
         obj1[2] = onFinished;
@@ -320,7 +315,7 @@ export const useCarouselController = function useCarouselController(size) {
     scrollTo: callback9,
     getCurrentIndex: callback1,
     getSharedIndex() {
-      return tmp3.current;
+      return ref.current;
     },
     index: sharedValue
   };

@@ -1,10 +1,12 @@
 // _runtime/04417_isArguments.js
+import isArguments from "isArguments" /* 4418 */;
+
 if (Object.keys) {
   module.exports = undefined;
 } else {
   const _Object = Object;
   const _Object2 = Object;
-  let closure_2 = require("isArguments");
+  let closure_2 = isArguments;
   const _Object3 = Object;
   let call = propertyIsEnumerable.call;
   if (typeof call === "unknown") {

@@ -1,6 +1,7 @@
 // _runtime/13644_parseUnicodeLanguageId.js
-import { e } from "01281_e.js";
-const require = arg1;
+import e from "e" /* 1281 */;
+
+require = arg1;
 const exports = arg5;
 const dependencyMap = arg6;
 function parseUnicodeLanguageId(locale) {
@@ -236,7 +237,7 @@ arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(locale) {
                 }
               }
               if (items2.length) {
-                let obj1 = { type: "x", value: null };
+                obj1 = { type: "x", value: null };
                 let tmp35 = exports;
                 obj1[1] = items2.join(exports.SEPARATOR);
                 let arr3 = items.push(obj1);

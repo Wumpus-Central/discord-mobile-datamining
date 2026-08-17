@@ -1,8 +1,9 @@
 // _runtime/01061__sendStandaloneLcpSpan.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { extractNetworkProtocol } from "01059_extractNetworkProtocol.js";
-import { __SENTRY_DEBUG__ } from "metro/01035___SENTRY_DEBUG__.js";
-const require = arg1;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1035 */;
+import extractNetworkProtocol from "extractNetworkProtocol" /* 1059 */;
+
+require = arg1;
 let dependencyMap = arg6;
 function _sendStandaloneLcpSpan(arg0, startTime, sentry_pageload_span_id, sentry_report_event) {
   if (__SENTRY_DEBUG__.DEBUG_BUILD) {
@@ -62,14 +63,14 @@ function _sendStandaloneLcpSpan(arg0, startTime, sentry_pageload_span_id, sentry
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5._sendStandaloneLcpSpan = _sendStandaloneLcpSpan;
 arg5.trackLcpAsStandaloneSpan = function trackLcpAsStandaloneSpan(client) {
-  const dependencyMap = 0;
+  dependencyMap = 0;
   if (obj.supportsWebVital("largest-contentful-paint")) {
     let tmpResult = tmp(1034);
-    let closure_2 = tmpResult.addLcpInstrumentationHandler((metric) => {
+    closure_2 = tmpResult.addLcpInstrumentationHandler((metric) => {
       const tmp = metric.metric.entries[metric.metric.entries.length - 1];
       if (tmp) {
         const value = iter.value;
-        let closure_0 = tmp;
+        closure_0 = tmp;
       }
     }, true);
     tmpResult = tmp(1059);

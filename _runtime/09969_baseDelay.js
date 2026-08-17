@@ -1,8 +1,8 @@
 // _runtime/09969_baseDelay.js
 
 export default function baseDelay(fn) {
-  let closure_0 = fn;
-  let closure_1 = arg2;
+  closure_0 = fn;
+  closure_1 = arg2;
   if (typeof fn !== "function") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a function");

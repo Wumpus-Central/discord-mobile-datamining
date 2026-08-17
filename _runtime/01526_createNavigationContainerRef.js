@@ -14,7 +14,7 @@ arg5.createNavigationContainerRef = function createNavigationContainerRef() {
   const sum6 = sum5 + 1;
   const sum7 = sum6 + 1;
   const _require = {};
-  const dependencyMap = null;
+  dependencyMap = null;
   function removeListener(arg0, arg1) {
 
   }
@@ -22,16 +22,15 @@ arg5.createNavigationContainerRef = function createNavigationContainerRef() {
   Object.defineProperty(obj, "current", {
     get: () => c1,
     set: (arg0) => {
-      let closure_0 = arg0;
-      let closure_1 = arg0;
+      closure_0 = arg0;
+      closure_1 = arg0;
       if (null != arg0) {
         const _Object = Object;
         const entries = Object.entries(closure_0);
         let item = entries.forEach((arg0) => {
-          let arr;
           [, arr] = arg0;
           const item = arr.forEach((arg0) => {
-            outer1_0.addListener(closure_0, arg0);
+            closure_1_0.addListener(closure_0, arg0);
           });
         });
       }
@@ -45,16 +44,14 @@ arg5.createNavigationContainerRef = function createNavigationContainerRef() {
     return isReadyResult;
   };
   const merged = Object.assign(items.reduce((arg0, arg1) => {
-    let closure_0 = arg1;
+    closure_0 = arg1;
     arg0[arg1] = () => {
-      let tmp17;
-      let tmp18;
       const items = [...arguments];
       let first;
-      let c1;
+      closure_1 = undefined;
       if ("removeListener" === first) {
         [tmp17, tmp18] = items;
-        if (typeof outer1_2 !== "function") {
+        if (typeof closure_1_2 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         first = tmp18;
@@ -62,30 +59,30 @@ arg5.createNavigationContainerRef = function createNavigationContainerRef() {
           tmp20[tmp17] = tmp20[tmp17].filter((arg0) => arg0 !== closure_0);
           const arr4 = tmp20[tmp17];
         }
-        if (outer1_1 != null) {
+        if (closure_1_1 != null) {
           obj.removeListener(tmp17, tmp18);
         }
-        obj = outer1_1;
-      } else if (null != outer1_1) {
+        obj = closure_1_1;
+      } else if (null != closure_1_1) {
         const items1 = [];
         HermesBuiltin.arraySpread(items, 0);
-        return HermesBuiltin.apply(items1, outer1_1);
+        return HermesBuiltin.apply(items1, closure_1_1);
       } else if ("addListener" === tmp) {
         first = items[0];
-        c1 = tmp6;
+        closure_1 = tmp6;
         dependencyMap[first] = dependencyMap[first] || [];
         dependencyMap[first].push(items[1]);
         return () => {
-          if (typeof outer1_2 !== "function") {
+          if (typeof closure_1_2 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          const first = tmp2;
-          if (first[first]) {
+          closure_0 = tmp2;
+          if (first[closure_0]) {
             tmp3[tmp] = tmp3[tmp].filter((arg0) => arg0 !== closure_0);
             const arr = tmp3[tmp];
           }
-          if (c1 != null) {
-            c1.removeListener(tmp, tmp2);
+          if (closure_1 != null) {
+            closure_1.removeListener(tmp, tmp2);
           }
         };
       } else {

@@ -1,6 +1,7 @@
 // _runtime/04457_ValidateAndApplyPropertyDescriptor.js
-import { isPropertyKey } from "04438_isPropertyKey.js";
-import { Type } from "04458_Type.js";
+import isPropertyKey from "isPropertyKey" /* 4438 */;
+import Type from "Type" /* 4458 */;
+
 
 export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __Configurable__) {
   const tmp3 = Type(arg0);
@@ -143,7 +144,7 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
             const tmpResult13 = tmp(4446);
             const tmpResult14 = tmp(4447);
             const tmpResult15 = tmp(4448);
-            const obj1 = { "[[Configurable]]": null, "[[Enumerable]]": null, "[[Get]]": null, "[[Set]]": null };
+            obj1 = { "[[Configurable]]": null, "[[Enumerable]]": null, "[[Get]]": null, "[[Set]]": null };
             obj1[0] = tmp50["[[Configurable]]"];
             obj1[1] = tmp51["[[Enumerable]]"];
             let tmp56 = __Set__;

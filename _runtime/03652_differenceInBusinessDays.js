@@ -1,12 +1,12 @@
 // _runtime/03652_differenceInBusinessDays.js
-import addDays from "addDays";
-import differenceInCalendarDays from "differenceInCalendarDays";
-import isSameDay from "isSameDay";
-import isValid from "isValid";
-import isWeekend from "isWeekend";
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
-import toInteger from "toInteger";
+import addDays from "addDays" /* 3620 */;
+import differenceInCalendarDays from "differenceInCalendarDays" /* 3634 */;
+import isSameDay from "isSameDay" /* 3653 */;
+import isValid from "isValid" /* 3654 */;
+import isWeekend from "isWeekend" /* 3623 */;
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "toInteger" /* 3476 */;
 
 if (!addDays) {
   let obj = { default: null };
@@ -15,7 +15,7 @@ if (!addDays) {
 } else {
   tmp3 = addDays;
 }
-let c0 = tmp3;
+addDays = tmp3;
 if (!differenceInCalendarDays) {
   obj = { default: null };
   obj[0] = differenceInCalendarDays;
@@ -23,7 +23,7 @@ if (!differenceInCalendarDays) {
 } else {
   tmp5 = differenceInCalendarDays;
 }
-let closure_1 = tmp5;
+differenceInCalendarDays = tmp5;
 if (!isSameDay) {
   obj = { default: null };
   obj[0] = isSameDay;
@@ -31,15 +31,15 @@ if (!isSameDay) {
 } else {
   tmp7 = isSameDay;
 }
-let obj1 = tmp7;
+isSameDay = tmp7;
 if (!isValid) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = isValid;
   let tmp9 = obj1;
 } else {
   tmp9 = isValid;
 }
-let c3 = tmp9;
+isValid = tmp9;
 if (!isWeekend) {
   const obj2 = { default: null };
   obj2[0] = isWeekend;
@@ -47,7 +47,7 @@ if (!isWeekend) {
 } else {
   tmp11 = isWeekend;
 }
-let c4 = tmp11;
+isWeekend = tmp11;
 if (!_typeof) {
   const obj3 = { default: null };
   obj3[0] = _typeof;
@@ -55,7 +55,7 @@ if (!_typeof) {
 } else {
   tmp13 = _typeof;
 }
-let c5 = tmp13;
+_typeof = tmp13;
 if (!requiredArgs) {
   const obj4 = { default: null };
   obj4[0] = requiredArgs;
@@ -63,7 +63,7 @@ if (!requiredArgs) {
 } else {
   tmp15 = requiredArgs;
 }
-let closure_6 = tmp15;
+requiredArgs = tmp15;
 if (!toInteger) {
   const obj5 = { default: null };
   obj5[0] = toInteger;
@@ -71,43 +71,41 @@ if (!toInteger) {
 } else {
   tmp17 = toInteger;
 }
-const error = tmp17;
+toInteger = tmp17;
 
 export default function differenceInBusinessDays(arg0, arg1) {
   let defaultResult6;
-  let tmp15;
-  let tmp17;
-  tmp15.default(2, arguments);
-  const defaultResult1 = tmp13.default(arg0);
-  const defaultResult2 = tmp13.default(arg1);
-  if (tmp9.default(defaultResult1)) {
-    if (tmp9.default(defaultResult2)) {
-      const defaultResult3 = tmp5.default(defaultResult1, defaultResult2);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = _typeof.default(arg1);
+  if (isValid.default(defaultResult1)) {
+    if (isValid.default(defaultResult2)) {
+      const defaultResult3 = differenceInCalendarDays.default(defaultResult1, defaultResult2);
       let num2 = 1;
       if (defaultResult3 < 0) {
         num2 = -1;
       }
-      const defaultResult4 = tmp17.default(defaultResult3 / 7);
+      const defaultResult4 = toInteger.default(defaultResult3 / 7);
       const result = 5 * defaultResult4;
-      let defaultResult5 = tmp3.default(defaultResult2, 7 * defaultResult4);
+      let defaultResult5 = addDays.default(defaultResult2, 7 * defaultResult4);
       let sum = result;
-      tmp13 = result;
-      if (!tmp7.default(defaultResult1, defaultResult5)) {
+      let tmp13 = result;
+      if (!isSameDay.default(defaultResult1, defaultResult5)) {
         do {
-          let tmp14 = tmp11;
-          tmp15 = sum;
+          let tmp14 = isWeekend;
+          let tmp15 = sum;
           let tmp16 = defaultResult5;
           let num5 = 0;
-          if (!tmp11.default(defaultResult5)) {
+          if (!isWeekend.default(defaultResult5)) {
             num5 = num2;
           }
           sum = sum + num5;
-          tmp17 = tmp3;
-          defaultResult6 = tmp3.default(defaultResult5, num2);
-          let tmp19 = tmp7;
+          let tmp17 = addDays;
+          defaultResult6 = addDays.default(defaultResult5, num2);
+          let tmp19 = isSameDay;
           defaultResult5 = defaultResult6;
           tmp13 = sum;
-        } while (!tmp7.default(defaultResult1, defaultResult6));
+        } while (!isSameDay.default(defaultResult1, defaultResult6));
       }
       let num6 = 0;
       if (0 !== tmp13) {

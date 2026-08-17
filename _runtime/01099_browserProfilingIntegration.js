@@ -1,5 +1,5 @@
 // _runtime/01099_browserProfilingIntegration.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -177,11 +177,11 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
           }
           const WINDOW = tmp2(1028).WINDOW;
           const timerId = WINDOW.setTimeout(() => {
-            const activeSpan = uIProfiler(outer1_1[3]).getActiveSpan();
+            const activeSpan = uIProfiler(closure_1_1[3]).getActiveSpan();
             let rootSpan = activeSpan;
             if (activeSpan) {
-              rootSpan = uIProfiler(outer1_1[3]).getRootSpan(activeSpan);
-              const tmpResult = uIProfiler(outer1_1[3]);
+              rootSpan = uIProfiler(closure_1_1[3]).getRootSpan(activeSpan);
+              const tmpResult = uIProfiler(closure_1_1[3]);
             }
             if (rootSpan) {
               uIProfiler.notifyRootSpanActive(rootSpan);

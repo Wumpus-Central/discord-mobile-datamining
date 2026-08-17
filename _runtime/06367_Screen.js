@@ -1,38 +1,26 @@
 // _runtime/06367_Screen.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let StyleSheet;
-let c4;
-let c5;
-let closure_6;
-let require = arg1;
+const require = arg1;
 ({ StyleSheet, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 const styles = StyleSheet.create({ container: { flex: 1 }, content: { flex: 1 }, header: { zIndex: 1 }, absolute: { position: "absolute", top: 0, start: 0, end: 0 } });
 
 export const Screen = function Screen(aria_hidden) {
-  let children;
-  let noop;
-  let headerStatusBarHeight;
-  let headerTransparent;
-  let navigation;
-  let route;
-  let style;
-  let tmp10;
-  let obj = require(headerStatusBarHeight[4]);
-  let obj1 = React;
+  let obj = modal(headerStatusBarHeight[4]);
+  obj1 = React;
   const safeAreaInsets = obj.useSafeAreaInsets();
-  const context = React.useContext(require(headerStatusBarHeight[5]).HeaderShownContext);
-  let num = React.useContext(require(headerStatusBarHeight[6]).HeaderHeightContext);
-  const modal = aria_hidden.modal;
+  const context = React.useContext(modal(headerStatusBarHeight[5]).HeaderShownContext);
+  let num = React.useContext(modal(headerStatusBarHeight[6]).HeaderHeightContext);
+  modal = aria_hidden.modal;
   let tmp5 = undefined !== modal;
   if (tmp5) {
     tmp5 = modal;
   }
-  require = tmp5;
+  modal = tmp5;
   const headerShown = aria_hidden.headerShown;
   let tmp6 = undefined === headerShown;
   if (!tmp6) {
@@ -47,10 +35,10 @@ export const Screen = function Screen(aria_hidden) {
     headerStatusBarHeight = num2;
   }
   ({ route, navigation, children, style } = aria_hidden);
-  const frameSize = require(headerStatusBarHeight[7]).useFrameSize((layout) => tmp5(headerStatusBarHeight[8]).getDefaultHeaderHeight(layout, tmp5, headerStatusBarHeight));
+  const frameSize = modal(headerStatusBarHeight[7]).useFrameSize((layout) => modal(headerStatusBarHeight[8]).getDefaultHeaderHeight(layout, modal, headerStatusBarHeight));
   const ref = obj1.useRef(null);
-  const tmpResult = require(headerStatusBarHeight[7]);
-  [tmp10, noop] = ref(obj1.useState(frameSize), 2);
+  const tmpResult = modal(headerStatusBarHeight[7]);
+  [tmp10, closure_3] = ref(obj1.useState(frameSize), 2);
   const items = [route.name];
   const layoutEffect = obj1.useLayoutEffect(() => {
     const current = ref.current;
@@ -101,9 +89,9 @@ export const Screen = function Screen(aria_hidden) {
       num = 0;
     }
   }
-  obj5[1] = closure_5(require(headerStatusBarHeight[6]).HeaderHeightContext.Provider, { value: tmp10, children });
-  obj4[1] = closure_5(require(headerStatusBarHeight[5]).HeaderShownContext.Provider, obj5);
+  obj5[1] = closure_5(modal(headerStatusBarHeight[6]).HeaderHeightContext.Provider, { value: tmp10, children });
+  obj4[1] = closure_5(modal(headerStatusBarHeight[5]).HeaderShownContext.Provider, obj5);
   items4[1] = closure_5(closure_4, obj4);
   obj[3] = items4;
-  return closure_6(require(headerStatusBarHeight[9]).Background, obj);
+  return closure_6(modal(headerStatusBarHeight[9]).Background, obj);
 };

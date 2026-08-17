@@ -1,6 +1,6 @@
 // _runtime/07717_fetchJsonOrThrow.js
-import importDefaultResult from "asyncGeneratorStep";
-import get_ActivityIndicator from "get ActivityIndicator";
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 let closure_0 = arg1;
 const Linking = get_ActivityIndicator.Linking;
@@ -31,10 +31,10 @@ closure_0 = importDefaultResult(function*() {
         obj[0] = arg1;
         return obj;
       } else {
-        obj = v0(outer1_1[2]);
+        obj = v0(closure_1_1[2]);
         const iosModule = obj.getIosModule();
         v0 = 3;
-        const obj1 = { value: null, done: true };
+        obj1 = { value: null, done: true };
         obj1[0] = iosModule.getPendingTransactions();
         return obj1;
       }
@@ -45,9 +45,9 @@ closure_0 = importDefaultResult(function*() {
   }
 });
 closure_0 = importDefaultResult((arg0) => {
-  let closure_0 = arg0;
-  let c4 = 0;
-  let c5 = 0;
+  closure_0 = arg0;
+  c4 = 0;
+  c5 = 0;
   const iter = (function*(arg0) {
     if (c5 === 2) {
       c5 = 3;
@@ -75,8 +75,8 @@ closure_0 = importDefaultResult((arg0) => {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_3 = tmp5;
-            let closure_2 = tmp2;
+            closure_3 = tmp5;
+            closure_2 = tmp2;
             let forceRefresh;
             forceRefresh = forceRefresh.forceRefresh;
             c4 = 1;
@@ -95,14 +95,14 @@ closure_0 = importDefaultResult((arg0) => {
           if (obj4.isIosStorekit2()) {
             Promise.reject("Only available on Sk1");
           } else {
-            let c1 = callback;
+            c1 = callback;
             if (callback == null) {
               c1 = false;
             }
-            const receipt = outer1_3.requestReceipt(c1);
+            const receipt = closure_1_3.requestReceipt(c1);
           }
           c5 = 3;
-          obj4 = callback(outer1_1[2]);
+          obj4 = callback(closure_1_1[2]);
         }
       } catch (tmp16) {
         c5 = tmp;
@@ -139,10 +139,10 @@ closure_0 = importDefaultResult(function*() {
         obj[0] = arg1;
         return obj;
       } else {
-        obj = v0(outer1_1[2]);
+        obj = v0(closure_1_1[2]);
         const iosModule = obj.getIosModule();
         v0 = 3;
-        const obj1 = { value: null, done: true };
+        obj1 = { value: null, done: true };
         obj1[0] = iosModule.presentCodeRedemptionSheet();
         return obj1;
       }
@@ -153,10 +153,10 @@ closure_0 = importDefaultResult(function*() {
   }
 });
 closure_0 = importDefaultResult((arg0, arg1) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let c3 = 0;
-  let c4 = 0;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  c3 = 0;
+  c4 = 0;
   return (function*(arg0, arg1) {
     if (c4 === 2) {
       c4 = 3;
@@ -184,10 +184,10 @@ closure_0 = importDefaultResult((arg0, arg1) => {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_2 = tmp4;
-            let closure_0;
+            closure_2 = tmp4;
+            closure_0 = undefined;
             const _fetch = fetch;
-            const obj1 = { method: "POST", headers: null, body: null };
+            obj1 = { method: "POST", headers: null, body: null };
             obj1[1] = { Accept: "application/json", "Content-Type": "application/json" };
             const _JSON = JSON;
             obj1[2] = JSON.stringify(closure_1);
@@ -215,7 +215,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
           } else {
             const _Object = Object;
             const _Error = Error;
-            const error = new Error(closure_0.statusText);
+            error = new Error(closure_0.statusText);
             obj = { statusCode: null };
             obj[0] = closure_0.status;
             throw Object.assign(error, obj);
@@ -239,9 +239,9 @@ function fetchJsonOrThrow(arg0, arg1) {
   return applyArgumentsResult;
 }
 closure_0 = importDefaultResult((arg0) => {
-  let closure_0 = arg0;
-  let c3 = 0;
-  let c4 = 0;
+  closure_0 = arg0;
+  c3 = 0;
+  c4 = 0;
   return (function*(arg0) {
     let status = tmp2;
     yield v0("https://buy.itunes.apple.com/verifyReceipt", closure_0);
@@ -258,7 +258,7 @@ closure_0 = importDefaultResult((arg0) => {
         status = arg1;
         if (status) {
           if (21007 === status.status) {
-            let c3 = 2;
+            c3 = 2;
             v0 = 1;
             const obj3 = { value: null, done: false };
             obj3[0] = v0("https://sandbox.itunes.apple.com/verifyReceipt", closure_0);
@@ -293,12 +293,10 @@ function requestAgnosticReceiptValidationIos(arg0) {
   return applyArgumentsResult;
 }
 closure_0 = importDefaultResult((arg0) => {
-  let closure_0 = arg0;
-  let c3 = 0;
-  let c4 = 0;
+  closure_0 = arg0;
+  c3 = 0;
+  c4 = 0;
   const iter = (function*(arg0) {
-    let c0;
-    let c1;
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -341,14 +339,14 @@ closure_0 = importDefaultResult((arg0) => {
             throw arg1;
           } else if (arg0 === 2) {
             v0 = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else if (null == c1) {
             c3 = 2;
             v0 = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = outer1_5(c0);
+            obj2[0] = closure_1_5(c0);
             return obj2;
           } else {
             str = "https://buy.itunes.apple.com/verifyReceipt";

@@ -1,7 +1,7 @@
 // _runtime/metro/03791__typeof.js
-import setUTCISOWeek from "setUTCISOWeek";
-import startOfUTCISOWeek from "startOfUTCISOWeek";
-import { Parser } from "Parser";
+import Parser2 from "Parser" /* 3778 */;
+import setUTCISOWeek from "setUTCISOWeek" /* 3792 */;
+import startOfUTCISOWeek from "startOfUTCISOWeek" /* 3709 */;
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -9,9 +9,9 @@ function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -31,7 +31,7 @@ function _typeof(arg0) {
   };
 }
 function _setPrototypeOf(ISOWeekParser, Parser) {
-  let _setPrototypeOf = Object.setPrototypeOf;
+  _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
     _setPrototypeOf = function _setPrototypeOf(ISOWeekParser, Parser) {
       ISOWeekParser.__proto__ = Parser;
@@ -43,7 +43,7 @@ function _setPrototypeOf(ISOWeekParser, Parser) {
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;
-    let _getPrototypeOf = Object.getPrototypeOf;
+    _getPrototypeOf = Object.getPrototypeOf;
   } else {
     _getPrototypeOf = function _getPrototypeOf(arg0) {
       let __proto__ = arg0.__proto__;
@@ -63,7 +63,7 @@ if (!setUTCISOWeek) {
 } else {
   tmp3 = setUTCISOWeek;
 }
-let c3 = tmp3;
+setUTCISOWeek = tmp3;
 if (!startOfUTCISOWeek) {
   obj = { default: null };
   obj[0] = startOfUTCISOWeek;
@@ -71,11 +71,12 @@ if (!startOfUTCISOWeek) {
 } else {
   tmp5 = startOfUTCISOWeek;
 }
-let c4 = tmp5;
+startOfUTCISOWeek = tmp5;
+const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
 class ISOWeekParser {
   constructor() {
-    if (this instanceof c1) {
+    if (this instanceof closure_1) {
       length = arguments.length;
       _Array = Array;
       tmp6 = new.target;
@@ -248,7 +249,7 @@ let items = [
   {
     key: "set",
     value: function set(arg0, arg1, arg2) {
-      return tmp5.default(tmp3.default(arg0, arg2));
+      return startOfUTCISOWeek.default(setUTCISOWeek.default(arg0, arg2));
     }
   }
 ];

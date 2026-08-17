@@ -13,12 +13,12 @@ function append(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (tmp) {
     if (c8) {
       c8 = false;
-      let closure_2 = arg0;
-      let closure_3 = arg1;
-      let closure_4 = arg2;
-      let closure_5 = arg3;
-      let closure_6 = arg4;
-      let closure_7 = arg5;
+      closure_2 = arg0;
+      closure_3 = arg1;
+      closure_4 = arg2;
+      closure_5 = arg3;
+      closure_6 = arg4;
+      closure_7 = arg5;
     } else {
       if (tmp) {
         closure_2 = tmp4 * arg0 + tmp6 * arg1;
@@ -45,18 +45,18 @@ let c8 = true;
 arg5.identity = items;
 arg5.reset = function reset() {
   if (!c8) {
-    let c5 = 1;
-    let c2 = 1;
-    let c7 = 0;
-    let c6 = 0;
-    let c4 = 0;
-    let c3 = 0;
+    c5 = 1;
+    c2 = 1;
+    c7 = 0;
+    c6 = 0;
+    c4 = 0;
+    c3 = 0;
     c8 = true;
   }
 };
 arg5.toArray = function toArray() {
   if (!c8) {
-    const items = [c2, c3, c4, c5, c6, c7];
+    items = [c2, c3, c4, c5, c6, c7];
   }
   return items;
 };
@@ -86,7 +86,7 @@ arg5.appendTransform = function appendTransform(arg0, arg1, scaleX, scaleY, rota
     if (tmp19) {
       closure_6 = closure_6 - (originX * c2 + originY * c4);
       closure_7 = closure_7 - (originX * c3 + originY * c5);
-      let c8 = false;
+      c8 = false;
     }
   }
   const tanResult = Math.tan(skewY * closure_0);

@@ -1,5 +1,5 @@
 // _runtime/03716_M.js
-import addLeadingZeros from "addLeadingZeros";
+import addLeadingZeros from "addLeadingZeros" /* 3715 */;
 
 if (!addLeadingZeros) {
   const obj = { default: null };
@@ -8,7 +8,7 @@ if (!addLeadingZeros) {
 } else {
   tmp3 = addLeadingZeros;
 }
-let c0 = tmp3;
+addLeadingZeros = tmp3;
 
 export default {
   y(getUTCFullYear) {
@@ -21,7 +21,7 @@ export default {
     if ("yy" === arg1) {
       result = diff % 100;
     }
-    return tmp3.default(result, arg1.length);
+    return addLeadingZeros.default(result, arg1.length);
   },
   M(getUTCMonth) {
     const uTCMonth = getUTCMonth.getUTCMonth();
@@ -29,12 +29,12 @@ export default {
       const _String = String;
       let StringResult = String(uTCMonth + 1);
     } else {
-      StringResult = tmp3.default(uTCMonth + 1, 2);
+      StringResult = addLeadingZeros.default(uTCMonth + 1, 2);
     }
     return StringResult;
   },
   d(getUTCDate) {
-    return tmp3.default(getUTCDate.getUTCDate(), arg1.length);
+    return addLeadingZeros.default(getUTCDate.getUTCDate(), arg1.length);
   },
   a(getUTCHours) {
     let str = "am";
@@ -59,20 +59,20 @@ export default {
     return str.toUpperCase();
   },
   h(getUTCHours) {
-    return tmp3.default(getUTCHours.getUTCHours() % 12 || 12, arg1.length);
+    return addLeadingZeros.default(getUTCHours.getUTCHours() % 12 || 12, arg1.length);
   },
   H(getUTCHours) {
-    return tmp3.default(getUTCHours.getUTCHours(), arg1.length);
+    return addLeadingZeros.default(getUTCHours.getUTCHours(), arg1.length);
   },
   m(getUTCMinutes) {
-    return tmp3.default(getUTCMinutes.getUTCMinutes(), arg1.length);
+    return addLeadingZeros.default(getUTCMinutes.getUTCMinutes(), arg1.length);
   },
   s(getUTCSeconds) {
-    return tmp3.default(getUTCSeconds.getUTCSeconds(), arg1.length);
+    return addLeadingZeros.default(getUTCSeconds.getUTCSeconds(), arg1.length);
   },
   S(getUTCMilliseconds) {
     const uTCMilliseconds = getUTCMilliseconds.getUTCMilliseconds();
-    return tmp3.default(Math.floor(uTCMilliseconds * Math.pow(10, arg1.length - 3)), arg1.length);
+    return addLeadingZeros.default(Math.floor(uTCMilliseconds * Math.pow(10, arg1.length - 3)), arg1.length);
   }
 };
 export default exports.default;

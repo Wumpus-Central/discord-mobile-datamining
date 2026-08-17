@@ -1,6 +1,6 @@
 // _runtime/00669_format.js
 let self = this;
-let global = arg0;
+const global = arg0;
 const dependencyMap = arg4;
 const exports = arg5;
 const fn = function() {
@@ -105,17 +105,17 @@ const fn = function() {
   }
   let obj = { function: true, object: true };
   let tmp = obj[typeof window] && window || this;
-  let global = tmp;
+  closure_0 = tmp;
   let tmp4 = obj[typeof closure_1] && closure_1 && !closure_1.nodeType && closure_1;
   let tmp5 = tmp2;
   if (obj[typeof re2] && re2) {
     tmp5 = tmp4;
   }
   if (tmp5) {
-    tmp5 = typeof global === "object";
+    tmp5 = typeof closure_0 === "object";
   }
   if (tmp5) {
-    tmp5 = global;
+    tmp5 = closure_0;
   }
   let tmp7 = !tmp5;
   if (tmp5) {
@@ -123,7 +123,7 @@ const fn = function() {
     let tmp8 = tmp5.global !== tmp5 && tmp5.window !== tmp5 && tmp5.self !== tmp5;
   }
   if (!tmp7) {
-    global = tmp5;
+    closure_0 = tmp5;
     tmp = tmp5;
   }
   closure_1 = Math.pow(2, 53) - 1;
@@ -131,11 +131,7 @@ const fn = function() {
   const hasOwnProperty = str.hasOwnProperty;
   const toString = str.toString;
   function parse(global) {
-    let arch;
-    let manufacturer;
-    let platform;
-    let product;
-    let c0 = global;
+    c0 = global;
     let obj = c0;
     let tmp7 = global;
     if (global) {
@@ -159,7 +155,7 @@ const fn = function() {
     if (tmp7) {
       let isMatch = tmp11.likeChrome;
     } else {
-      let obj1 = /\bChrome\b/;
+      obj1 = /\bChrome\b/;
       isMatch = obj1.test(tmp9);
       if (isMatch) {
         let obj2 = /internal|\n/i;
@@ -219,7 +215,7 @@ const fn = function() {
         versionResult = tmp23.version();
       }
       function getProduct(items2) {
-        return outer1_9(items2, (arg0, pattern) => {
+        return closure_1_9(items2, (arg0, pattern) => {
           pattern = pattern.pattern;
           if (!pattern) {
             const _String = String;
@@ -273,7 +269,7 @@ const fn = function() {
             const _RegExp7 = RegExp;
             const _String2 = String;
             const str18 = parts[0].replace(RegExp(pattern, "i"), pattern.label || pattern).replace(RegExp(`; *(?:${pattern.label || pattern}[_-])?`, "i"), " ");
-            const replaced = String(parts[0].replace(RegExp(pattern, "i"), pattern.label || pattern).replace(RegExp(`; *(?:${pattern.label || pattern}[_-])?`, "i"), " ").replace(RegExp(`(${pattern.label || pattern})[-_.]?(\\w)`, "i"), "$1 $2")).replace(/^ +| +$/g, "");
+            replaced = String(parts[0].replace(RegExp(pattern, "i"), pattern.label || pattern).replace(RegExp(`; *(?:${pattern.label || pattern}[_-])?`, "i"), " ").replace(RegExp(`(${pattern.label || pattern})[-_.]?(\\w)`, "i"), "$1 $2")).replace(/^ +| +$/g, "");
             let sum = replaced;
             if (!obj6.test(replaced)) {
               const _String3 = String;
@@ -298,7 +294,7 @@ const fn = function() {
       items[7] = "KHTML";
       items[8] = "Gecko";
       const tmp28 = (function getLayout(items) {
-        return outer1_9(items, (arg0, pattern) => {
+        return closure_1_9(items, (arg0, pattern) => {
           let tmp = arg0;
           if (!arg0) {
             pattern = pattern.pattern;
@@ -320,7 +316,7 @@ const fn = function() {
       })(items);
       const items1 = ["Adobe AIR", "Arora", "Avant Browser", "Breach", "Camino", "Electron", "Epiphany", "Fennec", "Flock", "Galeon", "GreenBrowser", "iCab", "Iceweasel", "K-Meleon", "Konqueror", "Lunascape", "Maxthon", { label: "Microsoft Edge", pattern: "(?:Edge|Edg|EdgA|EdgiOS)" }, "Midori", "Nook Browser", "PaleMoon", "PhantomJS", "Raven", "Rekonq", "RockMelt", { label: "Samsung Internet", pattern: "SamsungBrowser" }, "SeaMonkey", { label: "Silk", pattern: "(?:Cloud9|Silk-Accelerated)" }, "Sleipnir", "SlimBrowser", { label: "SRWare Iron", pattern: "Iron" }, "Sunrise", "Swiftfox", "Vivaldi", "Waterfox", "WebPositive", { label: "Yandex Browser", pattern: "YaBrowser" }, { label: "UC Browser", pattern: "UCBrowser" }, "Opera Mini", { label: "Opera Mini", pattern: "OPiOS" }, "Opera", { label: "Opera", pattern: "OPR" }, "Chromium", "Chrome", { label: "Chrome", pattern: "(?:HeadlessChrome)" }, { label: "Chrome Mobile", pattern: "(?:CriOS|CrMo)" }, { label: "Firefox", pattern: "(?:Firefox|Minefield)" }, { label: "Firefox for iOS", pattern: "FxiOS" }, { label: "IE", pattern: "IEMobile" }, { label: "IE", pattern: "MSIE" }, "Safari"];
       let text1 = (function getName(items1) {
-        return outer1_9(items1, (arg0, pattern) => {
+        return closure_1_9(items1, (arg0, pattern) => {
           let tmp = arg0;
           if (!arg0) {
             pattern = pattern.pattern;
@@ -366,7 +362,7 @@ const fn = function() {
       obj[19] = { PlayStation: 1, "PlayStation Vita": 1 };
       obj[20] = { Mi: 1, Redmi: 1 };
       const tmp31 = (function getManufacturer(global) {
-        return outer1_9(global, (arg0, arg1, arg2) => {
+        return closure_1_9(global, (arg0, arg1, arg2) => {
           let tmp = arg0;
           if (!arg0) {
             let match = arg1[closure_2];
@@ -412,7 +408,7 @@ const fn = function() {
       items3[29] = "Windows 98;";
       items3[30] = "Windows ";
       const tmp32 = (function getOS(items3) {
-        return outer1_9(items3, (arg0, pattern) => {
+        return closure_1_9(items3, (arg0, pattern) => {
           pattern = pattern.pattern;
           if (!pattern) {
             const _String = String;
@@ -474,7 +470,7 @@ const fn = function() {
             const str29 = str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1").replace(/\bMac (OS X)\b/, "$1").replace(/\/(\d)/, " $1").replace(/_/g, ".").replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "").replace(/\bx86\.64\b/gi, "x86_64").replace(/\b(Windows Phone) OS\b/, "$1");
             const _String3 = String;
             const str30 = str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1").replace(/\bMac (OS X)\b/, "$1").replace(/\/(\d)/, " $1").replace(/_/g, ".").replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "").replace(/\bx86\.64\b/gi, "x86_64").replace(/\b(Windows Phone) OS\b/, "$1").replace(/\b(Chrome OS \w+) [\d.]+\b/, "$1");
-            const replaced = String(str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1").replace(/\bMac (OS X)\b/, "$1").replace(/\/(\d)/, " $1").replace(/_/g, ".").replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "").replace(/\bx86\.64\b/gi, "x86_64").replace(/\b(Windows Phone) OS\b/, "$1").replace(/\b(Chrome OS \w+) [\d.]+\b/, "$1").split(" on ")[0]).replace(/^ +| +$/g, "");
+            replaced = String(str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1").replace(/\bMac (OS X)\b/, "$1").replace(/\/(\d)/, " $1").replace(/_/g, ".").replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "").replace(/\bx86\.64\b/gi, "x86_64").replace(/\b(Windows Phone) OS\b/, "$1").replace(/\b(Chrome OS \w+) [\d.]+\b/, "$1").split(" on ")[0]).replace(/^ +| +$/g, "");
             let sum = replaced;
             if (!obj6.test(replaced)) {
               const _String4 = String;
@@ -550,7 +546,7 @@ const fn = function() {
             const tmp82 = parse(tmp9.replace(/like iPhone OS/, ""));
           }
           function getVersion(Chrome) {
-            return outer1_9(Chrome, (arg0, arg1) => {
+            return closure_1_9(Chrome, (arg0, arg1) => {
               let tmp = arg0;
               if (!arg0) {
                 const _RegExp = RegExp;

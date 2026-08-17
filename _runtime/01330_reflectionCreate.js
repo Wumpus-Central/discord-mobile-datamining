@@ -1,12 +1,13 @@
 // _runtime/01330_reflectionCreate.js
-import { reflectionScalarDefault } from "01328_reflectionScalarDefault.js";
-import { 01318__ } from "metro/01318__.js";
-const require = arg1;
+import _mod1318 from "module_1318" /* 1318 */;
+import reflectionScalarDefault from "reflectionScalarDefault" /* 1328 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.reflectionCreate = function reflectionCreate(value) {
   let obj = {};
   obj = { enumerable: false, value };
-  Object.defineProperty(obj, 01318__.MESSAGE_TYPE, obj);
+  Object.defineProperty(obj, _mod1318.MESSAGE_TYPE, obj);
   const iter = value.fields[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {

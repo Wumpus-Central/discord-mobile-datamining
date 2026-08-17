@@ -1,12 +1,14 @@
 // _runtime/06422_useDetectorUpdater.js
+import noop from "noop" /* 19 */;
 import { convertToHandlerTag } from "06401_convertToHandlerTag.js";
-require("noop").useCallback;
+
+noop.useCallback;
 
 export const useDetectorUpdater = function useDetectorUpdater(current, current2, arg2, gesture, webEventHandlers) {
   const _require = current;
-  let closure_1 = current2;
-  const dependencyMap = arg2;
-  let closure_4 = webEventHandlers;
+  closure_1 = current2;
+  dependencyMap = arg2;
+  closure_4 = webEventHandlers;
   const forceRender = _convertToHandlerTag.useForceRender();
   const items = [forceRender, gesture, arg2, current2, current, webEventHandlers];
   return gesture((arg0) => {

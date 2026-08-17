@@ -1,6 +1,7 @@
 // _runtime/01328_reflectionScalarDefault.js
-import { RepeatType } from "01320_RepeatType.js";
-const require = arg1;
+import RepeatType from "RepeatType" /* 1320 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.reflectionScalarDefault = function reflectionScalarDefault(T, L) {
   let STRING = L;

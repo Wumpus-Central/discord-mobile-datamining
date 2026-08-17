@@ -1,14 +1,13 @@
 // _runtime/01832_scrollToFabric.js
-import isJest from "isJest";
-import isJest from "isJest";
-import { addLogBoxLog } from "01658_addLogBoxLog.js";
-import { dispatchCommandFabric } from "01829_dispatchCommandFabric.js";
+import addLogBoxLog from "addLogBoxLog" /* 1658 */;
+import dispatchCommandFabric from "dispatchCommandFabric" /* 1829 */;
+import isJest from "isJest" /* 1657 */;
 
 function scrollToFabric(arg0, arg1, arg2, arg3) {
   const items = [arg1, arg2, arg3];
   dispatchCommandFabric.dispatchCommand(arg0, "scrollTo", items);
 }
-scrollToFabric.__closure = { dispatchCommand: require("dispatchCommandFabric").dispatchCommand };
+scrollToFabric.__closure = { dispatchCommand: dispatchCommandFabric.dispatchCommand };
 scrollToFabric.__workletHash = 5331784934384;
 scrollToFabric.__initData = { code: "function scrollToFabric_Pnpm_scrollToTs1(animatedRef,x,y,animated){const{dispatchCommand}=this.__closure;dispatchCommand(animatedRef,'scrollTo',[x,y,animated]);}" };
 function scrollToPaper(arg0, arg1, arg2, arg3) {
@@ -27,7 +26,7 @@ if (isJest) {
       logger.warn("scrollTo() is not supported with Jest.");
     }
   } else {
-    const _module2 = require("isJest");
+    const _module2 = isJest;
     scrollToJest = _module2.isChromeDebugger() ? (function scrollToChromeDebugger() {
       const logger = addLogBoxLog.logger;
       logger.warn("scrollTo() is not supported with Chrome Debugger.");

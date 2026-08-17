@@ -1,16 +1,17 @@
 // _runtime/01479_get_ActivityIndicator.js
-import { NativeEventEmitter } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 if (require("get ActivityIndicator")) {
   let c3 = null;
   const _Object = Object;
   const obj = {};
   Object.defineProperty(obj, "eventEmitter", {
     get: () => {
-        let tmp = c3;
-        if (!c3) {
+        let tmp = closure_3;
+        if (!closure_3) {
           const tmp7 = new NativeEventEmitter(require("01480_get_ActivityIndicator.js") /* get ActivityIndicator */);
-          c3 = tmp7;
+          closure_3 = tmp7;
           tmp = tmp7;
         }
         return tmp;

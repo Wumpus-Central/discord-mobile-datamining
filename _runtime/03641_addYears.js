@@ -1,7 +1,7 @@
 // _runtime/03641_addYears.js
-import toInteger from "toInteger";
-import addMonths from "addMonths";
-import requiredArgs from "requiredArgs";
+import toInteger from "toInteger" /* 3476 */;
+import addMonths from "addMonths" /* 3621 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!toInteger) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!toInteger) {
 } else {
   tmp3 = toInteger;
 }
-let c0 = tmp3;
+toInteger = tmp3;
 if (!addMonths) {
   obj = { default: null };
   obj[0] = addMonths;
@@ -18,7 +18,7 @@ if (!addMonths) {
 } else {
   tmp5 = addMonths;
 }
-let closure_1 = tmp5;
+addMonths = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,9 +26,10 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function addYears(interval) {
-  tmp7.default(2, arguments);
-  return tmp5.default(interval, 12 * tmp3.default(arg1));
+  requiredArgs.default(2, arguments);
+  return addMonths.default(interval, 12 * toInteger.default(arg1));
 };
 export default exports.default;

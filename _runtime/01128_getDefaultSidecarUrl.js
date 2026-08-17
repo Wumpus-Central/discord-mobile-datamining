@@ -1,6 +1,7 @@
 // _runtime/01128_getDefaultSidecarUrl.js
-import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
-const require = arg1;
+import TurboModuleRegistry from "TurboModuleRegistry" /* 997 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function getDefaultSidecarUrl() {
   try {
@@ -72,12 +73,12 @@ arg5.spotlightIntegration = function spotlightIntegration(arg0) {
             }
             return tmp;
           });
-          const stealthXhr = callback(outer1_1[1]).createStealthXhr();
+          const stealthXhr = callback(closure_1_1[1]).createStealthXhr();
           if (stealthXhr) {
             stealthXhr.open("POST", stealthXhr, true);
             stealthXhr.setRequestHeader("Content-Type", "application/x-sentry-envelope");
             stealthXhr.onreadystatechange = () => {
-              if (stealthXhr.readyState === stealthXhr(outer1_1[1]).XHR_READYSTATE_DONE) {
+              if (stealthXhr.readyState === stealthXhr(closure_1_1[1]).XHR_READYSTATE_DONE) {
                 const status = tmp.status;
                 let tmp4 = 0 === status;
                 if (!tmp4) {
@@ -88,9 +89,9 @@ arg5.spotlightIntegration = function spotlightIntegration(arg0) {
                   tmp4 = tmp5;
                 }
                 if (!tmp4) {
-                  const debug = stealthXhr(outer1_1[0]).debug;
+                  const debug = stealthXhr(closure_1_1[0]).debug;
                   const _Error = Error;
-                  const error = new Error(tmp.statusText);
+                  error = new Error(tmp.statusText);
                   debug.error("[Spotlight] Sentry SDK can't connect to Spotlight is it running? See https://spotlightjs.com to download it.", error);
                 }
               }

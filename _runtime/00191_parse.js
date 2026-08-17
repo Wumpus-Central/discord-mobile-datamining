@@ -122,7 +122,7 @@ arg5.parse = function parse(str) {
       const match5 = regex7.exec(arg1);
       let tmp24 = null;
       if (match5) {
-        const obj1 = { file: null, methodName: null, arguments: null, lineNumber: null, column: null };
+        obj1 = { file: null, methodName: null, arguments: null, lineNumber: null, column: null };
         obj1[0] = match5[2];
         obj1[1] = match5[1] || closure_0;
         obj1[2] = [];

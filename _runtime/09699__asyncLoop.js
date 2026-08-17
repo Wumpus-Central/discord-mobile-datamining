@@ -1,17 +1,17 @@
 // _runtime/09699__asyncLoop.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let Hash = require;
 function _asyncLoop() {
   const self = this;
   const tmp = asyncGeneratorStep((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
@@ -39,8 +39,8 @@ function _asyncLoop() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_4 = 1;
-              let closure_3 = 1;
+              closure_4 = 1;
+              closure_3 = 1;
               closure_3 = undefined;
               closure_4 = undefined;
               c5 = undefined;
@@ -58,7 +58,7 @@ function _asyncLoop() {
                 if (!tmp15) {
                   c5 = 1;
                   c6 = 1;
-                  const obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = closure_1.nextTick();
                   return obj1;
                 }
@@ -85,7 +85,7 @@ function _asyncLoop() {
       }
     })();
   });
-  const _asyncLoop = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -135,7 +135,7 @@ Hash = asyncGeneratorStep(function*() {
 });
 class Hash {
   constructor() {
-    tmp = _asyncLoop(this, Hash);
+    tmp = closure_3(this, Hash);
     return;
   }
 }
@@ -193,7 +193,7 @@ export const hexToBytes = function hexToBytes(str) {
   let sum;
   if (typeof str !== "string") {
     const _Error3 = Error;
-    const error = new Error("hex string expected, got " + typeof str);
+    error = new Error("hex string expected, got " + typeof str);
     throw error;
   } else {
     const result = length / 2;
@@ -275,7 +275,7 @@ export const asyncLoop = function asyncLoop(c1, closure_11, arg2) {
 export const utf8ToBytes = function utf8ToBytes(str) {
   if (typeof str !== "string") {
     const _Error = Error;
-    const error = new Error("utf8ToBytes expected string, got " + typeof str);
+    error = new Error("utf8ToBytes expected string, got " + typeof str);
     throw error;
   } else {
     const _Uint8Array = Uint8Array;
@@ -290,7 +290,7 @@ export const toBytes = function toBytes(B) {
   if (typeof B === "string") {
     if (typeof B !== "string") {
       const _Error = Error;
-      const error = new Error("utf8ToBytes expected string, got " + typeof B);
+      error = new Error("utf8ToBytes expected string, got " + typeof B);
       throw error;
     } else {
       const _Uint8Array = Uint8Array;
@@ -340,7 +340,7 @@ export const checkOpts = function checkOpts(arg0, arg1) {
     const call = toString.call;
     if ("[object Object]" !== (typeof call === "unknown" ? tmp() : call(arg1))) {
       const _Error = Error;
-      const error = new Error("Options should be object or undefined");
+      error = new Error("Options should be object or undefined");
       throw error;
     }
     tmp = toString;
@@ -348,13 +348,13 @@ export const checkOpts = function checkOpts(arg0, arg1) {
   return Object.assign(arg0, arg1);
 };
 export const wrapConstructor = function wrapConstructor(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   function hashC(str) {
     let uint8Array = str;
     if (typeof str === "string") {
       if (typeof str !== "string") {
         const _Error = Error;
-        const error = new Error("utf8ToBytes expected string, got " + typeof str);
+        error = new Error("utf8ToBytes expected string, got " + typeof str);
         throw error;
       } else {
         const _Uint8Array = Uint8Array;
@@ -363,7 +363,7 @@ export const wrapConstructor = function wrapConstructor(arg0) {
         uint8Array = new Uint8Array(textEncoder.encode(str));
       }
     }
-    callback(outer1_2[3]).bytes(uint8Array);
+    callback(closure_1_2[3]).bytes(uint8Array);
     const obj = callback();
     return callback().update(uint8Array).digest();
   }
@@ -372,13 +372,13 @@ export const wrapConstructor = function wrapConstructor(arg0) {
   return hashC;
 };
 export const wrapConstructorWithOpts = function wrapConstructorWithOpts(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   function hashC(str) {
     let uint8Array = str;
     if (typeof str === "string") {
       if (typeof str !== "string") {
         const _Error = Error;
-        const error = new Error("utf8ToBytes expected string, got " + typeof str);
+        error = new Error("utf8ToBytes expected string, got " + typeof str);
         throw error;
       } else {
         const _Uint8Array = Uint8Array;
@@ -387,7 +387,7 @@ export const wrapConstructorWithOpts = function wrapConstructorWithOpts(arg0) {
         uint8Array = new Uint8Array(textEncoder.encode(str));
       }
     }
-    callback(outer1_2[3]).bytes(uint8Array);
+    callback(closure_1_2[3]).bytes(uint8Array);
     const obj = callback(arg1);
     return callback(arg1).update(uint8Array).digest();
   }
@@ -396,13 +396,13 @@ export const wrapConstructorWithOpts = function wrapConstructorWithOpts(arg0) {
   return hashC;
 };
 export const wrapXOFConstructorWithOpts = function wrapXOFConstructorWithOpts(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   function hashC(str) {
     let uint8Array = str;
     if (typeof str === "string") {
       if (typeof str !== "string") {
         const _Error = Error;
-        const error = new Error("utf8ToBytes expected string, got " + typeof str);
+        error = new Error("utf8ToBytes expected string, got " + typeof str);
         throw error;
       } else {
         const _Uint8Array = Uint8Array;
@@ -411,7 +411,7 @@ export const wrapXOFConstructorWithOpts = function wrapXOFConstructorWithOpts(ar
         uint8Array = new Uint8Array(textEncoder.encode(str));
       }
     }
-    callback(outer1_2[3]).bytes(uint8Array);
+    callback(closure_1_2[3]).bytes(uint8Array);
     const obj = callback(arg1);
     return callback(arg1).update(uint8Array).digest();
   }
@@ -438,7 +438,7 @@ export const randomBytes = function randomBytes(result) {
       return _crypto.randomBytes(num);
     }
   }
-  const error = new Error("crypto.getRandomValues must be defined");
+  error = new Error("crypto.getRandomValues must be defined");
   throw error;
 };
 export const u8 = (buffer) => {

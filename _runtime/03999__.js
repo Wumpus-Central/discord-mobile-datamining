@@ -1,4 +1,6 @@
 // _runtime/03999__.js
+import t from "t" /* 3975 */;
+
 let fn = function _(moment) {
   function relativeTimeWithPlural(arg0, arg1, arg2) {
     if ("m" === arg2) {
@@ -112,7 +114,7 @@ let fn = function _(moment) {
         if (3 !== dayResult) {
           if (5 !== dayResult) {
             if (6 !== dayResult) {
-              let c0 = "[\u041C\u0438\u043D\u0443\u043B\u043E\u0433\u043E] dddd [";
+              c0 = "[\u041C\u0438\u043D\u0443\u043B\u043E\u0433\u043E] dddd [";
               const fn = function() {
                 let str = "";
                 if (11 === this.hours()) {
@@ -159,7 +161,7 @@ let fn = function _(moment) {
     },
     sameElse: "L"
   };
-  let c0 = "[\u0421\u044C\u043E\u0433\u043E\u0434\u043D\u0456 ";
+  c0 = "[\u0421\u044C\u043E\u0433\u043E\u0434\u043D\u0456 ";
   c0 = "[\u0417\u0430\u0432\u0442\u0440\u0430 ";
   c0 = "[\u0412\u0447\u043E\u0440\u0430 ";
   c0 = "[\u0423] dddd [";
@@ -209,7 +211,7 @@ let fn = function _(moment) {
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      fn(require("t"));
+      fn(t);
     }
   }
 }

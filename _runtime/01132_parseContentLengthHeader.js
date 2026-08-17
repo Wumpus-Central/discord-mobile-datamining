@@ -1,6 +1,7 @@
 // _runtime/01132_parseContentLengthHeader.js
-import { encodeUTF8 } from "01004_encodeUTF8.js";
-const require = arg1;
+import encodeUTF8 from "encodeUTF8" /* 1004 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.parseContentLengthHeader = function parseContentLengthHeader(responseHeader) {
   if (responseHeader) {

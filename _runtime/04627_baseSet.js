@@ -1,10 +1,12 @@
 // _runtime/04627_baseSet.js
-import { isObject } from "00606_isObject.js";
-import { toKey } from "00725_toKey.js";
+import isObject from "isObject" /* 606 */;
+import toKey from "toKey" /* 725 */;
+import castPath from "castPath" /* 728 */;
+
 
 export default function baseSet(arg0, arg1, arg2, arg3) {
   if (isObject(arg0)) {
-    const arr = tmp(728)(arg1, arg0);
+    const arr = castPath(arg1, arg0);
     if (null != arg0) {
       let num2 = 0;
       let tmp17 = arg0;
@@ -47,5 +49,5 @@ export default function baseSet(arg0, arg1, arg2, arg3) {
   } else {
     return arg0;
   }
-  tmp = require;
+  const tmp = require;
 };

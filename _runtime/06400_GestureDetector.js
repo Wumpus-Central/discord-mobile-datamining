@@ -1,12 +1,10 @@
 // _runtime/06400_GestureDetector.js
-import noop from "noop";
-import closure_6 from "noop";
-import { jsx } from "jsxProd";
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
+import closure_6 from "noop" /* 19 */;
 
-let c3;
-let c4;
-let c5;
 ({ useEffect: c3, useMemo: c4, useRef: c5 } = noop);
+const jsx = jsxProd.jsx;
 
 export const GestureDetector = (gesture) => {
   if (gesture.gesture) {
@@ -32,7 +30,7 @@ export const GestureDetector = (gesture) => {
     let items = [gesture];
     let obj = current2(() => gesture.toGestureArray(), items);
     const someResult = obj.some((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
-    let obj1 = gesture(webEventHandlers[2]);
+    obj1 = gesture(webEventHandlers[2]);
     webEventHandlers = obj1.useWebEventHandlers();
     const current = detectorUpdater({ firstRender: true, viewRef: null, previousViewTag: -1, forceRebuildReanimatedEvent: false }).current;
     obj = { attachedGestures: null, animatedEventHandler: null, animatedHandlers: null, shouldUseReanimated: null, isMounted: false };
@@ -53,12 +51,12 @@ export const GestureDetector = (gesture) => {
     const obj5 = gesture(webEventHandlers[4]);
     const isomorphicLayoutEffect = gesture(webEventHandlers[7]).useIsomorphicLayoutEffect(() => {
       current2.isMounted = true;
-      let obj = gesture(webEventHandlers[9]);
+      obj = gesture(webEventHandlers[9]);
       obj = { preparedGesture: current2, gestureConfig: gesture, gesturesToAttach: obj, webEventHandlersRef: webEventHandlers, viewTag: obj(webEventHandlers[8])(current.viewRef) };
       obj.attachHandlers(obj);
       return () => {
         closure_4.isMounted = false;
-        outer1_0(outer1_2[10]).dropHandlers(closure_4);
+        closure_1_0(closure_1_2[10]).dropHandlers(closure_4);
       };
     }, []);
     const items1 = [gesture];
@@ -87,7 +85,7 @@ export const GestureDetector = (gesture) => {
     return tmp28Result;
   } else {
     const _Error = Error;
-    const error = new Error("GestureDetector must have a gesture prop provided.");
+    error = new Error("GestureDetector must have a gesture prop provided.");
     throw error;
   }
 };

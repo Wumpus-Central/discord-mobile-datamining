@@ -1,10 +1,10 @@
 // _runtime/00611_toStringTag.js
-let c0;
-let closure_1;
+import _mod608 from "module_608" /* 608 */;
+
 ({ hasOwnProperty: c0, toString: closure_1 } = Object.prototype);
 let toStringTag;
-if (require("module_608")) {
-  toStringTag = require("module_608").toStringTag;
+if (_mod608) {
+  toStringTag = _mod608.toStringTag;
 }
 
 export default function getRawTag(arg0) {

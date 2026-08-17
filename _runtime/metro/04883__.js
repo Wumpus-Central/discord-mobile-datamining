@@ -1,4 +1,8 @@
 // _runtime/metro/04883__.js
+import FILE_TYPES_REQUIRED_ADDITIONAL_CHECK from "FILE_TYPES_REQUIRED_ADDITIONAL_CHECK" /* 4884 */;
+import _mod4896 from "module_4896" /* 4896 */;
+import _mod4904 from "module_4904" /* 4904 */;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -37,9 +41,9 @@ if (self2) {
     };
   }
   const _Object2 = Object;
-  fn(require("FILE_TYPES_REQUIRED_ADDITIONAL_CHECK"), exports);
-  fn(require("module_4896"), exports);
-  fn(require("module_4904"), exports);
+  fn(FILE_TYPES_REQUIRED_ADDITIONAL_CHECK, exports);
+  fn(_mod4896, exports);
+  fn(_mod4904, exports);
 } else {
   let _Object = Object;
 }

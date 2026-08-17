@@ -1,11 +1,13 @@
 // _runtime/06675__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/06676___INTERNAL_VIEW_CONFIG.js";
+import noopAll from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6676 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const Use = arg1;
 function _isNativeReflectConstruct() {
@@ -19,21 +21,22 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+noopAll;
 class Use {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Use);
-    tmp2 = __esModule;
-    obj = __esModule(Use);
-    tmp3 = __esModule;
+    tmp = closure_3(this, Use);
+    tmp2 = closure_5;
+    obj = closure_5(Use);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -47,16 +50,11 @@ class Use {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Use, require("_isNativeReflectConstruct"));
+_inheritsDefault(Use, _isNativeReflectConstructDefault);
 const items = [
   {
     key: "render",
     value: function render() {
-      let children;
-      let height;
-      let width;
-      let x;
-      let y;
       const self = this;
       const props = this.props;
       let str = props.href;
@@ -82,7 +80,7 @@ const items = [
           return self.refMethod(arg0);
         }
       };
-      const tmp7 = __INTERNAL_VIEW_CONFIG;
+      const tmp7 = __INTERNAL_VIEW_CONFIGDefault;
       const merged = Object.assign(self(6586).withoutXY(this, props));
       const merged1 = Object.assign(obj);
       obj.children = children;

@@ -4,7 +4,7 @@ import { toNumber } from "00637_toNumber.js";
 
 export default function debounce(fn, arg1, leading) {
   const _require = fn;
-  let dependencyMap = arg1;
+  dependencyMap = arg1;
   function timerExpired() {
     const tmp = callback(641)();
     const diff = tmp - closure_7;
@@ -16,9 +16,9 @@ export default function debounce(fn, arg1, leading) {
       tmp3 = diff < 0;
     }
     if (!tmp3) {
-      let tmp5 = c10;
-      if (c10) {
-        tmp5 = tmp - c8 >= closure_4;
+      let tmp5 = closure_10;
+      if (closure_10) {
+        tmp5 = tmp - closure_8 >= closure_4;
       }
       tmp3 = tmp5;
     }
@@ -26,11 +26,11 @@ export default function debounce(fn, arg1, leading) {
       let timeout;
       if (flag) {
         if (c2) {
-          let c3;
+          c3 = undefined;
           c2 = undefined;
-          c8 = tmp;
+          closure_8 = tmp;
           const applyResult = callback.apply(c3, tmp19);
-          let closure_5 = applyResult;
+          closure_5 = applyResult;
           let tmp20 = applyResult;
         }
         return tmp20;
@@ -41,15 +41,15 @@ export default function debounce(fn, arg1, leading) {
     } else {
       const diff1 = dependencyMap - (tmp - closure_7);
       let tmp14 = diff1;
-      if (c10) {
-        tmp14 = outer1_3(diff1, closure_4 - (tmp - c8));
+      if (closure_10) {
+        tmp14 = closure_1_3(diff1, closure_4 - (tmp - closure_8));
       }
       timeout = setTimeout(timerExpired, tmp14);
     }
   }
-  let c8 = 0;
+  c8 = 0;
   leading = false;
-  let c10 = false;
+  closure_10 = false;
   let flag = true;
   if (typeof fn !== "function") {
     const _TypeError = TypeError;
@@ -60,14 +60,14 @@ export default function debounce(fn, arg1, leading) {
     dependencyMap = tmp;
     if (_isObject(leading)) {
       leading = leading.leading;
-      c10 = tmp3;
+      closure_10 = tmp3;
       let tmp5Result;
       if ("maxWait" in leading) {
         tmp5Result = max(tmp12(637)(leading.maxWait) || 0, tmp);
         let tmp5 = max;
         let tmp6 = tmp12(637)(leading.maxWait) || 0;
       }
-      let closure_4 = tmp5Result;
+      closure_4 = tmp5Result;
       flag = true;
       if ("trailing" in leading) {
         flag = leading.trailing;
@@ -84,14 +84,14 @@ export default function debounce(fn, arg1, leading) {
         tmp3 = diff < 0;
       }
       if (!tmp3) {
-        let tmp5 = c10;
-        if (c10) {
+        let tmp5 = closure_10;
+        if (closure_10) {
           tmp5 = tmp - closure_8 >= closure_4;
         }
         tmp3 = tmp5;
       }
-      let c2 = arguments;
-      let c3 = this;
+      c2 = arguments;
+      c3 = this;
       closure_7 = tmp;
       if (tmp3) {
         if (undefined === timeout) {
@@ -109,7 +109,7 @@ export default function debounce(fn, arg1, leading) {
             tmp26 = applyResult1;
           }
           return tmp26;
-        } else if (c10) {
+        } else if (closure_10) {
           const _clearTimeout = clearTimeout;
           clearTimeout(timeout);
           const _setTimeout2 = setTimeout;
@@ -132,11 +132,11 @@ export default function debounce(fn, arg1, leading) {
         const _clearTimeout = clearTimeout;
         clearTimeout(c6);
       }
-      let c8 = 0;
+      c8 = 0;
       c6 = undefined;
-      let c3;
-      let c7;
-      let c2;
+      c3 = undefined;
+      c7 = undefined;
+      c2 = undefined;
     };
     debounced.flush = function flush() {
       if (undefined === c6) {
@@ -145,9 +145,9 @@ export default function debounce(fn, arg1, leading) {
         c6 = undefined;
         if (flag) {
           if (c2) {
-            let c3;
+            c3 = undefined;
             c2 = undefined;
-            let c8 = tmp3;
+            c8 = tmp3;
             const applyResult = callback.apply(c3, tmp5);
             closure_5 = applyResult;
             tmp6 = applyResult;

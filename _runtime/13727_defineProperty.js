@@ -1,12 +1,15 @@
 // _runtime/13727_defineProperty.js
-import { text } from "13685_text.js";
-import { all } from "13725_all.js";
-import { 13708__ } from "metro/13708__.js";
+import getOwnPropertyDescriptor2 from "getOwnPropertyDescriptor" /* 13676 */;
+import text from "text" /* 13685 */;
+import _mod13708 from "module_13708" /* 13708 */;
+import all from "all" /* 13725 */;
+import getOwnPropertyDescriptor3 from "getOwnPropertyDescriptor" /* 13728 */;
+
 const enumerable = "enumerable";
 const configurable = "configurable";
 const writable = "writable";
-if (require("getOwnPropertyDescriptor")) {
-  if (require("getOwnPropertyDescriptor")) {
+if (getOwnPropertyDescriptor2) {
+  if (getOwnPropertyDescriptor3) {
     defineProperty = function defineProperty(fn, arg1, value) {
       all(fn);
       const tmp2 = text(arg1);
@@ -47,7 +50,7 @@ if (require("getOwnPropertyDescriptor")) {
     all(arg0);
     const tmp2 = text(arg1);
     all(value);
-    if (!13708__) {
+    if (!_mod13708) {
       if (!("get" in value)) {
         if (!("set" in value)) {
           if ("value" in value) {

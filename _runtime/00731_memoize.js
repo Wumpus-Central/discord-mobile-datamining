@@ -1,8 +1,10 @@
 // _runtime/00731_memoize.js
+import MapCache from "MapCache" /* 732 */;
 import { MapCache } from "00732_MapCache.js";
+
 function memoize(fn, fn2) {
   const _require = fn;
-  const dependencyMap = fn2;
+  dependencyMap = fn2;
   if (typeof fn === "function") {
     function memoized() {
       const self = this;
@@ -33,6 +35,6 @@ function memoize(fn, fn2) {
   const typeError = new TypeError("Expected a function");
   throw typeError;
 }
-memoize.Cache = require("MapCache");
+memoize.Cache = MapCache;
 
 export default memoize;

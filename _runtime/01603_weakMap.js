@@ -1,8 +1,8 @@
 // _runtime/01603_weakMap.js
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { I18nManager } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import closure_2 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { I18nManager } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -10,8 +10,6 @@ const weakMap = new WeakMap();
 globalThis.REACT_NAVIGATION_DEVTOOLS = weakMap;
 
 export const NavigationContainer = importAllResult.forwardRef(function NavigationContainerInner(direction, ref) {
-  let initialState;
-  let tmp20;
   direction = direction.direction;
   if (direction === undefined) {
     let str = "ltr";
@@ -30,7 +28,7 @@ export const NavigationContainer = importAllResult.forwardRef(function Navigatio
     fallback = null;
   }
   let merged = Object.assign(direction, Object.create(null));
-  let dependencyMap;
+  dependencyMap = undefined;
   ref = undefined;
   let tmp6 = linking;
   if (tmp6) {
@@ -46,7 +44,7 @@ export const NavigationContainer = importAllResult.forwardRef(function Navigatio
     obj.validatePathConfig(linking.config);
   }
   ref = importAllResult.useRef(null);
-  let obj1 = linking(1606);
+  obj1 = linking(1606);
   const backButton = obj1.useBackButton(ref);
   let obj2 = linking(1607);
   const documentTitle = obj2.useDocumentTitle(ref, direction.documentTitle);
@@ -76,7 +74,7 @@ export const NavigationContainer = importAllResult.forwardRef(function Navigatio
               getStateFromPath = tmp.getStateFromPath;
             }
             if (getStateFromPath == null) {
-              getStateFromPath = outer1_0(outer1_1[5]).getStateFromPath;
+              getStateFromPath = closure_1_0(closure_1_1[5]).getStateFromPath;
             }
             obj.getStateFromPath = getStateFromPath;
             let getPathFromState;
@@ -84,7 +82,7 @@ export const NavigationContainer = importAllResult.forwardRef(function Navigatio
               getPathFromState = tmp.getPathFromState;
             }
             if (getPathFromState == null) {
-              getPathFromState = outer1_0(outer1_1[5]).getPathFromState;
+              getPathFromState = closure_1_0(closure_1_1[5]).getPathFromState;
             }
             obj.getPathFromState = getPathFromState;
             let getActionFromState;
@@ -92,7 +90,7 @@ export const NavigationContainer = importAllResult.forwardRef(function Navigatio
               getActionFromState = tmp.getActionFromState;
             }
             if (getActionFromState == null) {
-              getActionFromState = outer1_0(outer1_1[5]).getActionFromState;
+              getActionFromState = closure_1_0(closure_1_1[5]).getActionFromState;
             }
             obj.getActionFromState = getActionFromState;
             return obj;

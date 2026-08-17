@@ -2,14 +2,13 @@
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 const require = arg1;
 let dependencyMap = arg6;
-function createAsyncHandlerProxy(arg0, item10034, item10008, outer1_18) {
+function createAsyncHandlerProxy(arg0, item10034, item10008, closure_1_18) {
   const _require = item10034;
-  const dependencyMap = item10008;
-  let closure_2 = outer1_18;
+  dependencyMap = item10008;
+  closure_2 = closure_1_18;
   const proxy = new Proxy(arg0, {
     apply(apply) {
       let tmp = (function captureCurrentLocation() {
-        let search;
         let obj = callback(1149);
         const navigationContext = obj.getNavigationContext();
         let targetPath;
@@ -57,7 +56,7 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, outer1_18) {
         span = tmp2Result.getActiveRootSpan();
       }
       const applyResult = apply.apply(arg1, arg2);
-      let closure_3 = tmp;
+      closure_3 = tmp;
       tmp2Result = tmp2(tmp3[3]);
       if (tmp2Result.isThenable(applyResult)) {
         applyResult.then((arg0) => {
@@ -91,7 +90,7 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, outer1_18) {
   return proxy;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-function checkRouteForAsyncHandler(item10034, outer1_18) {
+function checkRouteForAsyncHandler(item10034, closure_1_18) {
   if (item10034.handle) {
     if (typeof item10034.handle === "object") {
       const _Object = Object;
@@ -131,10 +130,10 @@ arg5.checkRouteForAsyncHandler = checkRouteForAsyncHandler;
 arg5.createAsyncHandlerProxy = createAsyncHandlerProxy;
 arg5.handleAsyncHandlerResult = function handleAsyncHandlerResult(promise) {
   const _require = arg1;
-  const dependencyMap = arg2;
-  let closure_2 = arg3;
-  let closure_3 = arg4;
-  let closure_4 = arg5;
+  dependencyMap = arg2;
+  closure_2 = arg3;
+  closure_3 = arg4;
+  closure_4 = arg5;
   if (obj.isThenable(promise)) {
     promise.then((arg0) => {
       if (Array.isArray(arg0)) {

@@ -76,8 +76,6 @@ obj[7] = {
   name: "GPSTimeStamp",
   description(arr) {
     const mapped = arr.map((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       const result = tmp / tmp2;
       let combined = result;

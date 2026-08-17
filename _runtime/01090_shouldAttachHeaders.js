@@ -1,7 +1,8 @@
 // _runtime/01090_shouldAttachHeaders.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { addClsInstrumentationHandler } from "01033_addClsInstrumentationHandler.js";
-const require = arg1;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import addClsInstrumentationHandler from "addClsInstrumentationHandler" /* 1033 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function shouldAttachHeaders(str) {
   const locationHref = registerSpanErrorInstrumentation.getLocationHref();
@@ -44,14 +45,6 @@ const map = new Map();
 let obj = { traceFetch: true, traceXHR: true, enableHTTPTimings: true, trackFetchStreamPerformance: false };
 arg5.defaultRequestInstrumentationOptions = obj;
 arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions, arg1) {
-  let dependencyMap;
-  let map;
-  let require;
-  let shouldCreateSpanForRequest;
-  let traceFetch;
-  let traceXHR;
-  let trackFetchStreamPerformance;
-  let weakMap;
   let merged = Object.assign(shouldCreateSpanForRequest);
   let merged1 = Object.assign(arg1);
   ({ shouldCreateSpanForRequest, enableHTTPTimings: require, tracePropagationTargets: dependencyMap, onRequestSpanStart: weakMap, onRequestSpanEnd: map, traceFetch, traceXHR, trackFetchStreamPerformance } = {});
@@ -61,7 +54,7 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
   function shouldAttachHeadersWithTargets(url, closure_1) {
     return shouldAttachHeadersWithTargets(url, closure_1);
   }
-  let closure_6 = {};
+  closure_6 = {};
   const propagateTraceparent = getOptions.getOptions().propagateTraceparent;
   if (traceFetch) {
     getOptions.addEventProcessor((type) => {
@@ -96,11 +89,11 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
       let obj2 = registerSpanErrorInstrumentation;
     }
     let result1 = registerSpanErrorInstrumentation.addFetchInstrumentationHandler((response) => {
-      let obj = outer1_0(outer1_1[0]);
+      obj = closure_1_0(closure_1_1[0]);
       obj = { propagateTraceparent, onRequestSpanEnd: closure_3 };
       const result = obj.instrumentFetchRequest(response, shouldCreateSpanForRequest, shouldAttachHeadersWithTargets, closure_6, obj);
       if (tmp3) {
-        const result1 = outer1_2.set(response.response, response.fetchData.__span);
+        const result1 = closure_1_2.set(response.response, response.fetchData.__span);
       }
       if (result) {
         let tmpResult = tmp(tmp2[1]);
@@ -124,19 +117,19 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
           const url = tmp(tmp2[0]).spanToJSON(result).data.url;
           if (url) {
             if (typeof url === "string") {
-              let closure_2 = tmp(tmp2[2]).addPerformanceInstrumentationHandler("resource", (arg0) => {
+              closure_2 = tmp(tmp2[2]).addPerformanceInstrumentationHandler("resource", (arg0) => {
                 const entries = arg0.entries;
                 const item = entries.forEach((name) => {
-                  let result = outer1_0(outer1_1[1]).isPerformanceResourceTiming(name);
+                  let result = closure_1_0(closure_1_1[1]).isPerformanceResourceTiming(name);
                   if (result) {
                     name = name.name;
                     result = name.endsWith(closure_1);
                   }
                   if (result) {
-                    attributes.setAttributes(outer1_0(outer1_1[2]).resourceTimingToSpanAttributes(name));
+                    attributes.setAttributes(closure_1_0(closure_1_1[2]).resourceTimingToSpanAttributes(name));
                     const _setTimeout = setTimeout;
                     const timerId = setTimeout(closure_2);
-                    const tmpResult = outer1_0(outer1_1[2]);
+                    const tmpResult = closure_1_0(closure_1_1[2]);
                   }
                 });
               });
@@ -146,7 +139,7 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
           const tmpResult2 = tmp(tmp2[0]);
         }
         if (closure_2 != null) {
-          const obj1 = { headers: null };
+          obj1 = { headers: null };
           obj1[0] = response.headers;
           tmp11(result, obj1);
         }
@@ -156,21 +149,16 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
   }
   if (traceXHR) {
     const result2 = addClsInstrumentationHandler.addXhrInstrumentationHandler((xhr) => {
-      let baggage;
-      let method;
-      let tmp65;
-      let traceparent;
-      let url;
       xhr = xhr.xhr;
       if (xhr != null) {
-        const tmp8 = xhr[outer1_0(undefined, outer1_1[2]).SENTRY_XHR_DATA_KEY];
+        const tmp8 = xhr[closure_1_0(undefined, closure_1_1[2]).SENTRY_XHR_DATA_KEY];
       }
       let tmp11;
       if (xhr) {
         if (!xhr.__sentry_own_request__) {
           if (tmp8) {
             ({ url, method } = tmp8);
-            let obj = outer1_0(outer1_1[0]);
+            obj = closure_1_0(closure_1_1[0]);
             const tmp14 = obj.hasSpansEnabled() && shouldCreateSpanForRequest(url);
             if (xhr.endTimestamp) {
               if (tmp14) {
@@ -181,30 +169,30 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
                     tmp74 = undefined !== tmp8.status_code;
                   }
                   if (tmp74) {
-                    outer1_0(outer1_1[0]).setHttpStatus(obj19, tmp8.status_code);
+                    closure_1_0(closure_1_1[0]).setHttpStatus(obj19, tmp8.status_code);
                     obj19.end();
                     if (tmp7 != null) {
                       obj = { headers: null, error: null };
-                      const obj22 = outer1_0(outer1_1[1]);
-                      obj[0] = obj22.createHeadersSafely(outer1_0(outer1_1[2]).parseXhrResponseHeaders(xhr));
+                      const obj22 = closure_1_0(closure_1_1[1]);
+                      obj[0] = obj22.createHeadersSafely(closure_1_0(closure_1_1[2]).parseXhrResponseHeaders(xhr));
                       obj[1] = xhr.error;
                       tmp7(obj19, obj);
-                      const obj23 = outer1_0(outer1_1[2]);
+                      const obj23 = closure_1_0(closure_1_1[2]);
                     }
                     delete tmp2[tmp];
-                    const obj20 = outer1_0(outer1_1[0]);
+                    const obj20 = closure_1_0(closure_1_1[0]);
                   }
                 }
               }
             }
-            let obj1 = outer1_0(outer1_1[1]);
+            obj1 = closure_1_0(closure_1_1[1]);
             const fullURL = obj1.getFullURL(url);
-            const parseUrl = outer1_0(outer1_1[0]).parseUrl;
+            const parseUrl = closure_1_0(closure_1_1[0]).parseUrl;
             const tmp21 = fullURL ? parseUrl(fullURL) : parseUrl(url);
-            let obj2 = outer1_0(outer1_1[0]);
-            let obj3 = outer1_0(outer1_1[0]);
-            const tmp20 = outer1_0(outer1_1[0]);
-            let obj4 = outer1_0(outer1_1[0]);
+            let obj2 = closure_1_0(closure_1_1[0]);
+            let obj3 = closure_1_0(closure_1_1[0]);
+            const tmp20 = closure_1_0(closure_1_1[0]);
+            let obj4 = closure_1_0(closure_1_1[0]);
             const activeSpan = obj4.getActiveSpan();
             if (tmp14) {
               if (activeSpan) {
@@ -212,13 +200,13 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
                 const _HermesInternal = HermesInternal;
                 obj[0] = "" + method + " " + stripDataUrlContentResult;
                 obj1 = { url: null, type: "xhr", "http.method": null, "http.url": null, "server.address": null };
-                const obj7 = outer1_0(outer1_1[0]);
-                obj1[0] = outer1_0(outer1_1[0]).stripDataUrlContent(url);
+                const obj7 = closure_1_0(closure_1_1[0]);
+                obj1[0] = closure_1_0(closure_1_1[0]).stripDataUrlContent(url);
                 obj1[2] = method;
                 let stripDataUrlContentResult1;
                 if (fullURL) {
-                  stripDataUrlContentResult1 = outer1_0(outer1_1[0]).stripDataUrlContent(fullURL);
-                  const obj11 = outer1_0(outer1_1[0]);
+                  stripDataUrlContentResult1 = closure_1_0(closure_1_1[0]).stripDataUrlContent(fullURL);
+                  const obj11 = closure_1_0(closure_1_1[0]);
                 }
                 obj1[3] = stripDataUrlContentResult1;
                 let host;
@@ -226,8 +214,8 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
                   host = tmp21.host;
                 }
                 obj1[4] = host;
-                obj1[outer1_0(outer1_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.http.browser";
-                obj1[outer1_0(outer1_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
+                obj1[closure_1_0(closure_1_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.http.browser";
+                obj1[closure_1_0(closure_1_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
                 let search;
                 if (tmp21 != null) {
                   search = tmp21.search;
@@ -258,7 +246,7 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
                 const merged1 = Object.assign(hash);
                 obj[1] = obj1;
                 let startInactiveSpanResult = obj7.startInactiveSpan(obj);
-                const obj10 = outer1_0(outer1_1[0]);
+                const obj10 = closure_1_0(closure_1_1[0]);
               }
               xhr.__sentry_xhr_span_id__ = startInactiveSpanResult.spanContext().spanId;
               tmp5[xhr.__sentry_xhr_span_id__] = startInactiveSpanResult;
@@ -272,11 +260,11 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
                     tmp61 = startInactiveSpanResult;
                   }
                 }
-                obj14 = outer1_0(outer1_1[0]);
+                obj14 = closure_1_0(closure_1_1[0]);
                 obj4 = { span: null, propagateTraceparent: null };
                 obj4[0] = tmp61;
                 obj4[1] = propagateTraceparent;
-                const traceData = outer1_0(outer1_1[0]).getTraceData(obj4);
+                const traceData = closure_1_0(closure_1_1[0]).getTraceData(obj4);
                 ({ sentry-trace: tmp65, baggage, traceparent } = traceData);
                 if (tmp65) {
                   (function setHeaderOnXhr(xhr, StringResult, baggage, traceparent) {
@@ -310,8 +298,8 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
                               baggage = request_headers.baggage;
                             }
                             if (baggage) {
-                              baggage = tmp11(url2[1]).baggageHeaderHasSentryValues(baggage);
-                              const obj = tmp11(url2[1]);
+                              baggage = startInactiveSpanResult(url2[1]).baggageHeaderHasSentryValues(baggage);
+                              obj = startInactiveSpanResult(url2[1]);
                             }
                             if (!baggage) {
                               xhr.setRequestHeader("baggage", baggage);
@@ -323,17 +311,17 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
                     }
                   })(xhr, tmp65, baggage, traceparent);
                 }
-                const obj15 = outer1_0(outer1_1[0]);
+                const obj15 = closure_1_0(closure_1_1[0]);
               }
-              const client = outer1_0(outer1_1[0]).getClient();
+              const client = closure_1_0(closure_1_1[0]).getClient();
               tmp11 = startInactiveSpanResult;
               if (client) {
                 client.emit("beforeOutgoingRequestSpan", startInactiveSpanResult, xhr);
                 tmp11 = startInactiveSpanResult;
               }
-              const obj17 = outer1_0(outer1_1[0]);
+              const obj17 = closure_1_0(closure_1_1[0]);
             }
-            startInactiveSpanResult = new outer1_0(outer1_1[0]).SentryNonRecordingSpan();
+            startInactiveSpanResult = new closure_1_0(closure_1_1[0]).SentryNonRecordingSpan();
             stripDataUrlContentResult = obj2.stripDataUrlContent(obj3.stripUrlQueryAndFragment(url));
           }
         }
@@ -341,31 +329,31 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
       if (tmp11) {
         if (closure_0) {
           closure_0 = tmp11;
-          url2 = outer1_0(outer1_1[0]).spanToJSON(tmp11).data.url;
+          url2 = closure_1_0(closure_1_1[0]).spanToJSON(tmp11).data.url;
           if (url2) {
             if (typeof url2 === "string") {
-              let closure_2 = tmp85(tmp86[2]).addPerformanceInstrumentationHandler("resource", (arg0) => {
+              closure_2 = tmp85(tmp86[2]).addPerformanceInstrumentationHandler("resource", (arg0) => {
                 const entries = arg0.entries;
                 const item = entries.forEach((name) => {
-                  let result = outer1_0(outer1_1[1]).isPerformanceResourceTiming(name);
+                  let result = closure_1_0(closure_1_1[1]).isPerformanceResourceTiming(name);
                   if (result) {
                     name = name.name;
                     result = name.endsWith(closure_1);
                   }
                   if (result) {
-                    attributes.setAttributes(outer1_0(outer1_1[2]).resourceTimingToSpanAttributes(name));
+                    attributes.setAttributes(closure_1_0(closure_1_1[2]).resourceTimingToSpanAttributes(name));
                     const _setTimeout = setTimeout;
                     const timerId = setTimeout(closure_2);
-                    const tmpResult = outer1_0(outer1_1[2]);
+                    const tmpResult = closure_1_0(closure_1_1[2]);
                   }
                 });
               });
               const tmp85Result = tmp85(tmp86[2]);
             }
           }
-          const obj24 = outer1_0(outer1_1[0]);
-          tmp85 = outer1_0;
-          tmp86 = outer1_1;
+          const obj24 = closure_1_0(closure_1_1[0]);
+          tmp85 = closure_1_0;
+          tmp86 = closure_1_1;
         }
         if (closure_2 != null) {
           let __sentry_xhr_v3__ = xhr.xhr.__sentry_xhr_v3__;
@@ -374,9 +362,9 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
             request_headers = __sentry_xhr_v3__.request_headers;
           }
           const obj5 = { headers: null };
-          obj5[0] = outer1_0(outer1_1[1]).createHeadersSafely(request_headers);
+          obj5[0] = closure_1_0(closure_1_1[1]).createHeadersSafely(request_headers);
           tmp87(tmp11, obj5);
-          const obj25 = outer1_0(outer1_1[1]);
+          const obj25 = closure_1_0(closure_1_1[1]);
         }
       }
     });

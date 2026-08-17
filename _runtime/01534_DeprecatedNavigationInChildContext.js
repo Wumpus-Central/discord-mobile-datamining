@@ -1,3 +1,5 @@
 // _runtime/01534_DeprecatedNavigationInChildContext.js
+import noopAll from "noop" /* 19 */;
 
-export const DeprecatedNavigationInChildContext = require("noop").createContext(false);
+
+export const DeprecatedNavigationInChildContext = noopAll.createContext(false);

@@ -100,6 +100,6 @@ function deepDiffer(fn, fn2, arg2, arg3) {
   }
 }
 deepDiffer.unstable_setLogListeners = function unstable_setLogListeners(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
 };
 arg5.default = deepDiffer;

@@ -1,16 +1,15 @@
 // _runtime/04692_ScreenContainer.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import get_ActivityIndicator from "get ActivityIndicator";
-import "noop";
-import { jsx } from "jsxProd";
-import { isNativePlatformSupported } from "04673_isNativePlatformSupported.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/04693___INTERNAL_VIEW_CONFIG.js";
+import noopDefault from "noop" /* 19 */;
+import isNativePlatformSupported from "isNativePlatformSupported" /* 4673 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4693 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let c5;
-const require = arg1;
+require = arg1;
 let closure_3 = ["enabled", "hasTwoStates"];
 ({ Platform, View: c5 } = get_ActivityIndicator);
+noopDefault;
 
 export default function ScreenContainer(enabled) {
   enabled = enabled.enabled;
@@ -24,11 +23,11 @@ export default function ScreenContainer(enabled) {
       if (enabled.hasTwoStates) {
         obj = {};
         const merged = Object.assign(tmp3);
-        return jsx(__INTERNAL_VIEW_CONFIG, {});
+        return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
       } else {
         obj = {};
         const merged1 = Object.assign(tmp3);
-        return jsx(__INTERNAL_VIEW_CONFIG, {});
+        return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
       }
     }
   }

@@ -1,9 +1,10 @@
 // _runtime/01787__isNativeReflectConstruct.js
-import LinearTransition from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import LinearTransition from "_slicedToArray" /* 32 */;
+import closure_1 from "_classCallCheck" /* 41 */;
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -16,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,12 +30,12 @@ class LinearTransition {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
     items1 = [...items];
-    tmp2 = __esModule;
-    obj = __esModule(apply);
-    tmp3 = __esModule;
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -43,31 +44,31 @@ class LinearTransition {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      closure_2 = tmp4;
       const callbackV = delayFunction.callbackV;
       const delay = delayFunction.getDelay();
       const fn = function t(currentOriginX) {
         obj = { initialValues: obj, animations: null, callback: null };
         obj = { originX: currentOriginX.currentOriginX, originY: currentOriginX.currentOriginY, width: currentOriginX.currentWidth, height: currentOriginX.currentHeight };
-        obj = { originX: delayFunction(delay, first(currentOriginX.targetOriginX, _possibleConstructorReturn)), originY: delayFunction(delay, first(currentOriginX.targetOriginY, _possibleConstructorReturn)), width: delayFunction(delay, first(currentOriginX.targetWidth, _possibleConstructorReturn)), height: delayFunction(delay, first(currentOriginX.targetHeight, _possibleConstructorReturn)) };
+        obj = { originX: delayFunction(delay, first(currentOriginX.targetOriginX, closure_2)), originY: delayFunction(delay, first(currentOriginX.targetOriginY, closure_2)), width: delayFunction(delay, first(currentOriginX.targetWidth, closure_2)), height: delayFunction(delay, first(currentOriginX.targetHeight, closure_2)) };
         obj[1] = obj;
         obj[2] = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], callback: callbackV };
       fn.__workletHash = 16224579837767;
-      fn.__initData = outer1_5;
+      fn.__initData = closure_1_5;
       return fn;
     };
     return tmp3Result;
   }
 }
-require("_inherits")(LinearTransition, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+_inheritsDefault(LinearTransition, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 let items = [
   {
     key: "createInstance",

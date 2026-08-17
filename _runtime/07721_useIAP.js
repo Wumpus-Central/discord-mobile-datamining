@@ -1,28 +1,17 @@
 // _runtime/07721_useIAP.js
-import asyncGeneratorStep from "asyncGeneratorStep";
-import noop from "noop";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let c4;
 const require = arg1;
 ({ useCallback: c3, useEffect: c4 } = noop);
 
 export const useIAP = () => {
-  let availablePurchases;
-  let asyncGeneratorStep;
-  let connected;
-  let initConnectionError;
-  let products;
-  let promotedProductsIOS;
-  let purchaseHistory;
-  let setProducts;
-  let subscriptions;
   let obj = _require(currentPurchaseError[2]);
   const iAPContext = obj.useIAPContext();
   const currentPurchase = iAPContext.currentPurchase;
   _require = currentPurchase;
   currentPurchaseError = iAPContext.currentPurchaseError;
-  ({ setConnected: asyncGeneratorStep, setProducts } = iAPContext);
+  ({ setConnected: closure_2, setProducts } = iAPContext);
   const setSubscriptions = iAPContext.setSubscriptions;
   const setAvailablePurchases = iAPContext.setAvailablePurchases;
   const setPurchaseHistory = iAPContext.setPurchaseHistory;
@@ -31,9 +20,9 @@ export const useIAP = () => {
   _require = undefined;
   ({ connected, products, promotedProductsIOS, subscriptions, purchaseHistory, availablePurchases, initConnectionError } = iAPContext);
   _require = callback((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
     const iter = (function*(arg0) {
       if (c5 === 2) {
         c5 = 3;
@@ -61,8 +50,8 @@ export const useIAP = () => {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_3 = tmp5;
-              let asyncGeneratorStep = tmp2;
+              closure_3 = tmp5;
+              closure_2 = tmp2;
               let skus;
               skus = skus.skus;
               c4 = 1;
@@ -75,11 +64,11 @@ export const useIAP = () => {
               throw arg1;
             } else if (arg0 === 2) {
               c5 = 3;
-              let obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
-              const callback2 = outer1_3;
+              const callback2 = closure_1_3;
               obj1 = callback(currentPurchaseError[3]);
               const obj2 = { skus: null };
               obj2[0] = skus;
@@ -114,9 +103,9 @@ export const useIAP = () => {
   const items = [setProducts];
   _require = undefined;
   _require = callback((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
     const iter = (function*(arg0) {
       if (c5 === 2) {
         c5 = 3;
@@ -144,8 +133,8 @@ export const useIAP = () => {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_3 = tmp5;
-              let asyncGeneratorStep = tmp2;
+              closure_3 = tmp5;
+              closure_2 = tmp2;
               let skus;
               skus = skus.skus;
               c4 = 1;
@@ -158,7 +147,7 @@ export const useIAP = () => {
               throw arg1;
             } else if (arg0 === 2) {
               c5 = 3;
-              let obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -246,8 +235,8 @@ export const useIAP = () => {
             obj[0] = arg1;
             return obj;
           } else {
-            const callback = outer1_5;
-            let obj1 = outer1_0(table[3]);
+            const callback = closure_1_5;
+            obj1 = closure_1_0(table[3]);
             table = 1;
             c2 = 1;
             obj1 = { value: null, done: false };
@@ -274,14 +263,11 @@ export const useIAP = () => {
     }
   }), items2);
   _require = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -324,11 +310,11 @@ export const useIAP = () => {
               throw arg1;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
-              let c4 = 2;
+              c4 = 2;
               let obj2 = lib(currentPurchaseError[3]);
               obj2 = { purchase: null, isConsumable: null, developerPayloadAndroid: null };
               obj2[0] = lib;
@@ -347,14 +333,14 @@ export const useIAP = () => {
               productId = lib.productId;
             }
             if (lib.productId === productId) {
-              outer1_7(undefined);
+              closure_1_7(undefined);
             }
             let productId1;
-            if (outer1_1 != null) {
-              productId1 = outer1_1.productId;
+            if (closure_1_1 != null) {
+              productId1 = closure_1_1.productId;
             }
             if (lib.productId === productId1) {
-              outer1_8(undefined);
+              closure_1_8(undefined);
             }
             throw closure_3;
           } else if (3 === tmp9) {
@@ -370,14 +356,14 @@ export const useIAP = () => {
               productId2 = lib.productId;
             }
             if (lib.productId === productId2) {
-              outer1_7(undefined);
+              closure_1_7(undefined);
             }
             let productId3;
-            if (outer1_1 != null) {
-              productId3 = outer1_1.productId;
+            if (closure_1_1 != null) {
+              productId3 = closure_1_1.productId;
             }
             if (lib.productId === productId3) {
-              outer1_8(undefined);
+              closure_1_8(undefined);
             }
             c6 = 3;
             const obj4 = { value: null, done: true };
@@ -390,14 +376,14 @@ export const useIAP = () => {
               productId4 = lib.productId;
             }
             if (lib.productId === productId4) {
-              outer1_7(undefined);
+              closure_1_7(undefined);
             }
             let productId5;
-            if (outer1_1 != null) {
-              productId5 = outer1_1.productId;
+            if (closure_1_1 != null) {
+              productId5 = closure_1_1.productId;
             }
             if (lib.productId === productId5) {
-              outer1_8(undefined);
+              closure_1_8(undefined);
             }
             c6 = 3;
             obj = { value: null, done: true };
@@ -459,8 +445,8 @@ export const useIAP = () => {
             obj[0] = arg1;
             return obj;
           } else {
-            const callback = outer1_6;
-            let obj1 = outer1_0(table[3]);
+            const callback = closure_1_6;
+            obj1 = closure_1_0(table[3]);
             table = 1;
             c2 = 1;
             obj1 = { value: null, done: false };

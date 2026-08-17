@@ -1,8 +1,6 @@
 // _runtime/00335_useRefEffect.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 
-let c0;
-let closure_1;
 ({ useCallback: c0, useRef: closure_1 } = noop);
 
 export default function useRefEffect(arg0) {

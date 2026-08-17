@@ -1,5 +1,5 @@
 // _runtime/00954_createConsolaReporter.js
-import _objectWithoutProperties from "_objectWithoutProperties";
+import closure_2 from "_objectWithoutProperties" /* 109 */;
 
 let closure_3 = ["type", "level", "message", "args", "tag", "date"];
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -22,14 +22,8 @@ export const createConsolaReporter = function createConsolaReporter() {
   client = obj.client;
   obj = {
     log(arg0) {
-      let args;
-      let date;
-      let level;
-      let message;
-      let tag;
-      let type;
       ({ type, level, message, args, tag, date } = arg0);
-      const tmp = outer1_2(arg0, outer1_3);
+      const tmp = closure_1_2(arg0, closure_1_3);
       if (!client) {
         client = set(client[1]).getClient();
         const obj2 = set(client[1]);
@@ -43,7 +37,7 @@ export const createConsolaReporter = function createConsolaReporter() {
               str = "info";
               if (typeof level === "number") {
                 str = "info";
-                if (outer1_6[level]) {
+                if (closure_1_6[level]) {
                   str = tmp19;
                 }
               }

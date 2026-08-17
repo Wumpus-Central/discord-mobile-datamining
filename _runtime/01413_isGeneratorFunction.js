@@ -1,9 +1,13 @@
 // _runtime/01413_isGeneratorFunction.js
-import { getProto } from "00546_getProto.js";
-let closure_3 = require("regexTester")(/^\s*(?:function)?\*/);
-let closure_4 = require("hasToStringTagShams")();
-let closure_5 = require("callBoundIntrinsic")("Object.prototype.toString");
-let closure_6 = require("callBoundIntrinsic")("Function.prototype.toString");
+import getProto from "getProto" /* 546 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import hasToStringTagShams from "hasToStringTagShams" /* 1412 */;
+import regexTester from "regexTester" /* 1414 */;
+
+let closure_3 = regexTester(/^\s*(?:function)?\*/);
+let closure_4 = hasToStringTagShams();
+let closure_5 = callBoundIntrinsic("Object.prototype.toString");
+let closure_6 = callBoundIntrinsic("Function.prototype.toString");
 
 export default function isGeneratorFunction(fn) {
   if (typeof fn !== "function") {

@@ -1,9 +1,10 @@
 // _runtime/01562_prepareConfigResources.js
-import _slicedToArray from "_slicedToArray";
-import { findFocusedRoute } from "01527_findFocusedRoute.js";
-import { arrayStartsWith } from "01565_arrayStartsWith.js";
+import findFocusedRoute from "findFocusedRoute" /* 1527 */;
+import validateArrayFormatSeparatorAll from "validateArrayFormatSeparator" /* 1556 */;
+import arrayStartsWith from "arrayStartsWith" /* 1565 */;
+import closure_4 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function prepareConfigResources(screens) {
   const initialRoutes = (function getInitialRoutes(initialRouteName) {
     initialRouteName = undefined;
@@ -24,16 +25,16 @@ function prepareConfigResources(screens) {
     screens = screens.screens;
   }
   const configs = (function getSortedNormalizedConfigs(initialRoutes, screens) {
-    let closure_0 = initialRoutes;
+    closure_0 = initialRoutes;
     let obj = screens;
     if (screens === undefined) {
       obj = {};
     }
     const items = [];
     const keys = Object.keys(obj);
-    const items1 = [...keys.map((arg0) => outer1_13(arg0, obj, closure_0, [], [], []))];
+    const items1 = [...keys.map((arg0) => closure_1_13(arg0, obj, closure_0, [], [], []))];
     const mapped = items.concat.apply(items1).map((arg0, order) => {
-      const obj = {};
+      obj = {};
       const merged = Object.assign(arg0);
       obj.order = order;
       return obj;
@@ -195,7 +196,7 @@ function checkForDuplicatedConfigs(map, routeNames2, joined) {
       const _Error = Error;
       joined = routeNames.join(" > ");
       const _HermesInternal = HermesInternal;
-      const error = new Error("Found conflicting screens with the same pattern. The pattern '" + joined + "' resolves to both '" + joined + "' and '" + routeNames1.join(" > ") + "'. Patterns must be unique and cannot resolve to more than one screen.");
+      error = new Error("Found conflicting screens with the same pattern. The pattern '" + joined + "' resolves to both '" + joined + "' and '" + routeNames1.join(" > ") + "'. Patterns must be unique and cannot resolve to more than one screen.");
       throw error;
     }
   }
@@ -222,7 +223,6 @@ function getExplicitParamNames(parse) {
   const entries = Object.entries(obj);
   let set;
   const mapped = entries.map((arg0) => {
-    let tmp;
     [tmp] = arg0;
     return tmp;
   });
@@ -234,15 +234,14 @@ function getExplicitParamNames(parse) {
 }
 const weakMap = new WeakMap();
 function matchAgainstConfigs(arg0, arg1, first, configs, configsByScreen) {
-  let closure_0 = arg1;
-  let closure_1 = first;
-  let closure_2 = configsByScreen;
-  let closure_5 = arg0;
+  closure_0 = arg1;
+  closure_1 = first;
+  closure_2 = configsByScreen;
+  closure_5 = arg0;
   function _loop(iter) {
-    let closure_5;
-    let closure_0 = iter;
+    closure_0 = iter;
     if (iter.regex) {
-      if (outer1_12(iter.segments[0], closure_0, closure_1)) {
+      if (closure_1_12(iter.segments[0], closure_0, closure_1)) {
         const match = closure_5.match(iter.regex);
         if (match) {
           const items = [];
@@ -342,7 +341,7 @@ function matchAgainstConfigs(arg0, arg1, first, configs, configsByScreen) {
               }
               let num3 = 0;
               if (!flag) {
-                let _slicedToArray = iter;
+                closure_4 = iter;
                 let tmp53 = closure_5;
                 let str2 = "";
                 closure_5 = closure_5.replace(match[0], "");
@@ -392,8 +391,8 @@ function matchAgainstConfigs(arg0, arg1, first, configs, configsByScreen) {
       obj[0] = dependencyMap;
       let tmp6 = closure_5;
       obj[1] = closure_5;
-      let tmp7 = _slicedToArray;
-      obj[2] = _slicedToArray;
+      let tmp7 = closure_4;
+      obj[2] = closure_4;
       return obj;
     }
     continue;
@@ -423,10 +422,10 @@ function canMatchFirstSegment(str) {
   return tmp;
 }
 function createNormalizedConfigs(screen, arg1, arr, arr2, arr3, arr4) {
-  let closure_0 = arr;
-  let closure_1 = arr2;
-  let closure_2 = arr3;
-  let closure_3 = arr4;
+  closure_0 = arr;
+  closure_1 = arr2;
+  closure_2 = arr3;
+  closure_3 = arr4;
   let items = [];
   arr4.push(screen);
   arr3.push(screen);
@@ -447,7 +446,7 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, arr3, arr4) {
         if (null == tmp3.path) {
           const _Error2 = Error;
           const _HermesInternal2 = HermesInternal;
-          const error = new Error("Screen '" + screen + "' doesn't specify a 'path'. A 'path' needs to be specified when specifying 'exact: true'. If you don't want this screen in the URL, specify it as empty string, e.g. `path: ''`.");
+          error = new Error("Screen '" + screen + "' doesn't specify a 'path'. A 'path' needs to be specified when specifying 'exact: true'. If you don't want this screen in the URL, specify it as empty string, e.g. `path: ''`.");
           throw error;
         }
       }
@@ -520,7 +519,7 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, arr3, arr4) {
       if (tmp3.exact) {
         arr2.length = 0;
       }
-      const obj1 = { screen: null, path: null };
+      obj1 = { screen: null, path: null };
       obj1[0] = screen;
       obj1[1] = tmp3.path;
       arr2.push(obj1);
@@ -559,9 +558,9 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, arr3, arr4) {
       const _Object = Object;
       const keys = Object.keys(screens);
       const item = keys.forEach((arg0) => {
-        const items = [...closure_1];
+        items = [...closure_1];
         const items1 = [...closure_2];
-        const items2 = [...outer1_13(arg0, screens, closure_0, items, items1, closure_3)];
+        const items2 = [...closure_1_13(arg0, screens, closure_0, items, items1, closure_3)];
         items.push.apply(items2);
       });
     }
@@ -570,8 +569,6 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, arr3, arr4) {
   return items;
 }
 function createConfigItem(screen, items1, items2, parse, arg4) {
-  let tmp13;
-  let tmp14;
   let flag = arg4;
   if (arg4 === undefined) {
     flag = false;
@@ -579,8 +576,8 @@ function createConfigItem(screen, items1, items2, parse, arg4) {
   let path;
   let items = [];
   function _loop2(screen) {
-    let items = screen;
-    const patternParts = items(outer1_3[4]).getPatternParts(path);
+    items = screen;
+    const patternParts = items(closure_1_3[4]).getPatternParts(path);
     items = [
       ...patternParts.map((arg0) => {
         const obj = {};
@@ -741,7 +738,7 @@ function createNestedStateObject(str, items, initialRoutes, config) {
       obj[0] = items1;
       items1 = [obj, arr];
       obj[1] = items1;
-      let obj1 = obj;
+      obj1 = obj;
     } else {
       obj1 = { routes: null };
       const items2 = [arr];
@@ -872,7 +869,7 @@ function createNestedStateObject(str, items, initialRoutes, config) {
   }
 }
 function parseQueryParams(arr) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   let set = arg2;
   if (arg2 === undefined) {
     const _Set = Set;
@@ -885,8 +882,8 @@ function parseQueryParams(arr) {
     substr = arr.slice(index + 1);
   }
   if (substr) {
-    parsed = importAll(1556).parse(substr);
-    const obj2 = importAll(1556);
+    parsed = validateArrayFormatSeparatorAll.parse(substr);
+    const obj2 = validateArrayFormatSeparatorAll;
   } else {
     parsed = {};
   }
@@ -894,12 +891,6 @@ function parseQueryParams(arr) {
 }
 
 export const getStateFromPath = function getStateFromPath(str, screens) {
-  let config;
-  let configs;
-  let configsByScreen;
-  let initialRoutes;
-  let prefixRegex;
-  let routes;
   ({ initialRoutes, configs, configsByScreen, prefixRegex } = (function getConfigResources(screens) {
     if (screens) {
       const value = closure_8.get(screens);

@@ -1,21 +1,21 @@
 // _runtime/metro/03774__typeof.js
-import code from "code";
-import subMilliseconds from "subMilliseconds";
-import _typeof from "_typeof";
-import assign from "assign";
-import dateLongFormatter from "dateLongFormatter";
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
-import toInteger from "toInteger";
-import requiredArgs from "requiredArgs";
+import code from "code" /* 3718 */;
+import subMilliseconds from "subMilliseconds" /* 3705 */;
+import _typeof from "_typeof" /* 3472 */;
+import assign from "assign" /* 3722 */;
+import dateLongFormatter from "dateLongFormatter" /* 3717 */;
+import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
+import toInteger from "toInteger" /* 3476 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 import { getDefaultOptions } from "../03477_getDefaultOptions.js";
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -35,15 +35,15 @@ function _typeof(arg0) {
   };
 }
 function _createForOfIteratorHelper(str) {
-  let closure_0 = str;
+  closure_0 = str;
   if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
     if (null != str[Symbol.iterator]) {
-      let c4 = true;
-      let c5 = false;
+      c4 = true;
+      c5 = false;
       let obj = { s: null, n: null, e: null, f: null };
       obj[0] = function s() {
-        let closure_1 = lib[Symbol.iterator]();
+        closure_1 = lib[Symbol.iterator]();
       };
       obj[1] = function n() {
         const iter = arr.next();
@@ -51,8 +51,8 @@ function _createForOfIteratorHelper(str) {
         return iter;
       };
       obj[2] = function e(arg0) {
-        let c5 = true;
-        let closure_3 = arg0;
+        c5 = true;
+        closure_3 = arg0;
       };
       obj[3] = function f() {
         try {
@@ -139,7 +139,7 @@ function _createForOfIteratorHelper(str) {
   if (arr) {
     closure_0 = arr;
   }
-  let c2 = 0;
+  c2 = 0;
   class F {
     constructor() {
       return;
@@ -171,7 +171,7 @@ if (!code) {
 } else {
   tmp3 = code;
 }
-let obj1 = tmp3;
+code = tmp3;
 if (!subMilliseconds) {
   obj = { default: null };
   obj[0] = subMilliseconds;
@@ -179,7 +179,7 @@ if (!subMilliseconds) {
 } else {
   tmp5 = subMilliseconds;
 }
-let c3 = tmp5;
+subMilliseconds = tmp5;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -187,15 +187,15 @@ if (!_typeof) {
 } else {
   tmp7 = _typeof;
 }
-let c4 = tmp7;
+_typeof = tmp7;
 if (!assign) {
-  obj1 = { default: null };
+  let obj1 = { default: null };
   obj1[0] = assign;
   let tmp9 = obj1;
 } else {
   tmp9 = assign;
 }
-let c5 = tmp9;
+assign = tmp9;
 if (!dateLongFormatter) {
   let obj2 = { default: null };
   obj2[0] = dateLongFormatter;
@@ -203,7 +203,7 @@ if (!dateLongFormatter) {
 } else {
   tmp11 = dateLongFormatter;
 }
-let closure_6 = tmp11;
+dateLongFormatter = tmp11;
 if (!getTimezoneOffsetInMilliseconds) {
   const obj3 = { default: null };
   obj3[0] = getTimezoneOffsetInMilliseconds;
@@ -211,7 +211,7 @@ if (!getTimezoneOffsetInMilliseconds) {
 } else {
   tmp13 = getTimezoneOffsetInMilliseconds;
 }
-const error = tmp13;
+getTimezoneOffsetInMilliseconds = tmp13;
 if (!toInteger) {
   const obj4 = { default: null };
   obj4[0] = toInteger;
@@ -219,7 +219,7 @@ if (!toInteger) {
 } else {
   tmp15 = toInteger;
 }
-const metroImportAll = tmp15;
+toInteger = tmp15;
 if (!requiredArgs) {
   const obj5 = { default: null };
   obj5[0] = requiredArgs;
@@ -227,7 +227,7 @@ if (!requiredArgs) {
 } else {
   tmp17 = requiredArgs;
 }
-let c9 = tmp17;
+requiredArgs = tmp17;
 const re12 = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g;
 const re13 = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
 const re14 = /^'([^]*?)'?$/;
@@ -237,11 +237,10 @@ const re17 = /[a-zA-Z]/;
 
 export default function parse(arg0, arg1, arg2, locale) {
   const _require = arg0;
-  const dependencyMap = locale;
-  tmp17.default(3, arguments);
-  let tmp3 = String(arg0);
+  dependencyMap = locale;
+  requiredArgs.default(3, arguments);
+  const mod = String(arg0);
   const str = String(arg1);
-  tmp3 = dependencyMap;
   const defaultOptions = _getDefaultOptions.getDefaultOptions();
   locale = undefined;
   if (null != locale) {
@@ -251,7 +250,7 @@ export default function parse(arg0, arg1, arg2, locale) {
     locale = defaultOptions.locale;
   }
   if (null === locale) {
-    locale = tmp3.default;
+    locale = mod.default;
   }
   if (locale.match) {
     let prop;
@@ -300,7 +299,7 @@ export default function parse(arg0, arg1, arg2, locale) {
         num2 = prop;
       }
     }
-    const defaultResult1 = tmp15.default(num2);
+    const defaultResult1 = toInteger.default(num2);
     if (defaultResult1 >= 1) {
       if (defaultResult1 <= 7) {
         let weekStartsOn;
@@ -349,11 +348,11 @@ export default function parse(arg0, arg1, arg2, locale) {
             num5 = weekStartsOn;
           }
         }
-        const defaultResult2 = tmp15.default(num5);
+        const defaultResult2 = toInteger.default(num5);
         if (defaultResult2 >= 0) {
           if (defaultResult2 <= 6) {
             if ("" === str) {
-              if ("" === tmp3) {
+              if ("" === mod) {
                 let defaultResult3 = locale.default(arg2);
               } else {
                 const _Date4 = Date;
@@ -376,7 +375,7 @@ export default function parse(arg0, arg1, arg2, locale) {
                 }
                 return tmp2;
               });
-              tmp15 = [];
+              toInteger = [];
               const obj11 = _createForOfIteratorHelper(mapped.join("").match(closure_12));
               try {
                 function _loop() {
@@ -395,7 +394,7 @@ export default function parse(arg0, arg1, arg2, locale) {
                     callback(locale[10]).throwProtectedError(str, str, str2);
                   }
                   str2 = str[0];
-                  let obj = callback(locale[11]).parsers[str2];
+                  obj = callback(locale[11]).parsers[str2];
                   if (obj) {
                     incompatibleTokens = obj.incompatibleTokens;
                     const _Array = Array;
@@ -437,7 +436,7 @@ export default function parse(arg0, arg1, arg2, locale) {
                       obj[0] = date;
                       return obj;
                     }
-                  } else if (str2.match(outer1_17)) {
+                  } else if (str2.match(closure_1_17)) {
                     const _RangeError = RangeError;
                     const rangeError2 = new RangeError("Format string contains an unescaped latin alphabet character `" + str2 + "`");
                     throw rangeError2;
@@ -446,12 +445,12 @@ export default function parse(arg0, arg1, arg2, locale) {
                     if ("''" !== str) {
                       str5 = str;
                       if ("'" === str2) {
-                        str5 = str.match(outer1_14)[1].replace(outer1_15, "'");
-                        const str6 = str.match(outer1_14)[1];
+                        str5 = str.match(closure_1_14)[1].replace(closure_1_15, "'");
+                        const str6 = str.match(closure_1_14)[1];
                       }
                     }
                     if (0 !== arr.indexOf(str5)) {
-                      const obj1 = { v: null };
+                      obj1 = { v: null };
                       const _Date = Date;
                       const date1 = new Date(NaN);
                       obj1[0] = date1;
@@ -473,8 +472,8 @@ export default function parse(arg0, arg1, arg2, locale) {
                   return _loopResult.v;
                 }
                 obj11.f();
-                if (tmp3.length > 0) {
-                  if (regex.test(tmp3)) {
+                if (mod.length > 0) {
+                  if (regex.test(mod)) {
                     const _Date3 = Date;
                     let date = new Date(NaN);
                     return date;
@@ -484,7 +483,7 @@ export default function parse(arg0, arg1, arg2, locale) {
                 const sorted = mapped1.sort((arg0, arg1) => arg1 - arg0);
                 let found = sorted.filter((arg0, arg1, arr) => arr.indexOf(arg0) === arg1);
                 const mapped2 = found.map((arg0) => {
-                  let closure_0 = arg0;
+                  closure_0 = arg0;
                   const found = items.filter((priority) => priority.priority === closure_0);
                   return found.sort((subPriority, subPriority2) => subPriority2.subPriority - subPriority.subPriority);
                 });
@@ -548,7 +547,6 @@ export default function parse(arg0, arg1, arg2, locale) {
       }
     }
     let _RangeError2 = RangeError;
-    tmp15 = new.target;
     let rangeError1 = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
     throw rangeError1;
   } else {

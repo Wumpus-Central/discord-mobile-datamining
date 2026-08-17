@@ -1,11 +1,12 @@
 // _runtime/00851_instrumentUnhandledRejection.js
-import { addHandler } from "00850_addHandler.js";
-import { 00821__ } from "metro/00821__.js";
-const require = arg1;
+import _mod821 from "module_821" /* 821 */;
+import addHandler from "addHandler" /* 850 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function instrumentUnhandledRejection() {
-  const onunhandledrejection = 00821__.GLOBAL_OBJ.onunhandledrejection;
-  00821__.GLOBAL_OBJ.onunhandledrejection = function(arg0) {
+  const onunhandledrejection = _mod821.GLOBAL_OBJ.onunhandledrejection;
+  _mod821.GLOBAL_OBJ.onunhandledrejection = function(arg0) {
     callback(table[0]).triggerHandlers("unhandledrejection", arg0);
     if (!onunhandledrejection) {
       return !onunhandledrejection;
@@ -20,7 +21,7 @@ function instrumentUnhandledRejection() {
       const tmp2 = onunhandledrejection;
     }
   };
-  00821__.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
+  _mod821.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = null;

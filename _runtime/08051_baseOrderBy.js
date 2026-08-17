@@ -1,8 +1,8 @@
 // _runtime/08051_baseOrderBy.js
 
 export default function baseOrderBy(arg0, arg1, arg2) {
-  let closure_0 = arg1;
-  let closure_1 = arg2;
+  closure_0 = arg1;
+  closure_1 = arg2;
   if (arg1.length) {
     let items = tmp(tmp2[0])(arg1, (arg0) => {
       let fn = arg0;
@@ -13,7 +13,7 @@ export default function baseOrderBy(arg0, arg1, arg2) {
           if (1 === lib.length) {
             first = lib[0];
           }
-          return lib(outer1_1[2])(arg0, first);
+          return lib(closure_1_1[2])(arg0, first);
         };
       }
       return fn;
@@ -26,7 +26,7 @@ export default function baseOrderBy(arg0, arg1, arg2) {
     tmp4 = tmp;
   }
   closure_0 = items;
-  let c2 = -1;
+  c2 = -1;
   let tmp4Result = tmp4(tmp3[0]);
   tmp4Result = tmp4(tmp3[4]);
   closure_0 = tmp4Result(items, tmp4Result(tmp4(tmp3[5])));

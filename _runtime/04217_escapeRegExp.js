@@ -1,6 +1,8 @@
 // _runtime/04217_escapeRegExp.js
-import { toString } from "00762_toString.js";
+import toString from "toString" /* 762 */;
+
 const tmp = /[\\^$.*+?()[\]{}|]/g;
+const re2 = tmp;
 let closure_3 = RegExp(tmp.source);
 
 export default function escapeRegExp(arg0) {

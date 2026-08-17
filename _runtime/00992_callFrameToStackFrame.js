@@ -1,7 +1,8 @@
 // _runtime/00992_callFrameToStackFrame.js
-import { createStackParser } from "00833_createStackParser.js";
-import { filenameIsInApp } from "00991_filenameIsInApp.js";
-const require = arg1;
+import createStackParser from "createStackParser" /* 833 */;
+import filenameIsInApp from "filenameIsInApp" /* 991 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {
@@ -34,12 +35,12 @@ arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {
   return obj;
 };
 arg5.watchdogTimer = function watchdogTimer(arg0, arg1, arg2, arg3) {
-  let closure_0 = arg1;
-  let closure_1 = arg2;
-  let closure_2 = arg3;
-  let closure_3 = arg0();
-  let c4 = false;
-  let c5 = true;
+  closure_0 = arg1;
+  closure_1 = arg2;
+  closure_2 = arg3;
+  closure_3 = arg0();
+  c4 = false;
+  c5 = true;
   const timerId = setInterval(() => {
     const timeMs = navigation.getTimeMs();
     let tmp2 = false === c4;
@@ -61,7 +62,7 @@ arg5.watchdogTimer = function watchdogTimer(arg0, arg1, arg2, arg3) {
       navigation.reset();
     },
     enabled(arg0) {
-      let closure_5 = arg0;
+      closure_5 = arg0;
     }
   };
 };

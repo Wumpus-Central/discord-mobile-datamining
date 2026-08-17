@@ -1,7 +1,7 @@
 // _runtime/03639_addSeconds.js
-import toInteger from "toInteger";
-import addMilliseconds from "addMilliseconds";
-import requiredArgs from "requiredArgs";
+import toInteger from "toInteger" /* 3476 */;
+import addMilliseconds from "addMilliseconds" /* 3627 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!toInteger) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!toInteger) {
 } else {
   tmp3 = toInteger;
 }
-let c0 = tmp3;
+toInteger = tmp3;
 if (!addMilliseconds) {
   obj = { default: null };
   obj[0] = addMilliseconds;
@@ -18,7 +18,7 @@ if (!addMilliseconds) {
 } else {
   tmp5 = addMilliseconds;
 }
-let closure_1 = tmp5;
+addMilliseconds = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,9 +26,10 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function addSeconds(interval, arg1, byhour, byminute, bysecond) {
-  tmp7.default(2, arguments);
-  return tmp5.default(interval, 1000 * tmp3.default(arg1));
+  requiredArgs.default(2, arguments);
+  return addMilliseconds.default(interval, 1000 * toInteger.default(arg1));
 };
 export default exports.default;

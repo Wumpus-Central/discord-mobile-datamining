@@ -1,10 +1,12 @@
 // _runtime/16629__isNativeReflectConstruct.js
-import asyncGeneratorStep from "_inherits";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import c4 from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 16630 */;
+import Events from "Events" /* 16634 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
 const PQueue = require;
 let closure_1 = dependencyMap;
@@ -19,29 +21,30 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+let closure_2 = asyncGeneratorStep;
 function empty() {
 
 }
-const timeoutError = new require("_isNativeReflectConstruct").TimeoutError();
+const timeoutError = new _isNativeReflectConstruct2.TimeoutError();
 closure_1 = undefined;
-asyncGeneratorStep = undefined;
-_classCallCheck = undefined;
-c4 = undefined;
+closure_2 = undefined;
+closure_3 = undefined;
+closure_4 = undefined;
 class PQueue {
   constructor(arg0) {
     self = this;
-    tmp = f100783(this, PQueue);
-    tmp2 = outer1_5;
-    obj = outer1_5(PQueue);
-    tmp3 = f100781;
+    tmp = closure_3(this, PQueue);
+    tmp2 = closure_5;
+    obj = closure_5(PQueue);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -128,7 +131,7 @@ class PQueue {
     throw typeError1;
   }
 }
-_inherits(PQueue, require("Events"));
+_inherits(PQueue, Events);
 let obj = {
   key: "_doesIntervalAllowAnother",
   get() {
@@ -315,12 +318,12 @@ const items = [
 
 ];
 obj = { key: "add", value: null };
-c4 = asyncGeneratorStep(function(arg0) {
+closure_4 = asyncGeneratorStep(function(arg0) {
   let self = this;
-  let closure_1 = arg0;
-  let closure_2 = arg1;
-  let c5 = 0;
-  let c6 = 0;
+  closure_1 = arg0;
+  closure_2 = arg1;
+  c5 = 0;
+  c6 = 0;
   const iter = (function*(arg0) {
     if (c6 === 2) {
       c6 = 3;
@@ -348,10 +351,10 @@ c4 = asyncGeneratorStep(function(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_4 = closure_0;
-            let closure_3 = tmp2;
+            closure_4 = closure_0;
+            closure_3 = tmp2;
             closure_3 = closure_0;
-            let obj1;
+            obj1 = undefined;
             if (obj1 === undefined) {
               obj1 = {};
             }
@@ -371,8 +374,8 @@ c4 = asyncGeneratorStep(function(arg0) {
         } else {
           closure_0 = closure_4;
           const promise = new Promise((arg0, arg1) => {
-            let closure_0 = arg0;
-            let closure_1 = arg1;
+            closure_0 = arg0;
+            closure_1 = arg1;
             closure_0 = obj1(function*() {
               if (c5 === 2) {
                 c5 = 3;
@@ -403,10 +406,10 @@ c4 = asyncGeneratorStep(function(arg0) {
                       const dependencyMap = tmp3;
                       lib._pendingCount = lib._pendingCount + 1;
                       lib._intervalCount = lib._intervalCount + 1;
-                      let c3 = 1;
+                      c3 = 1;
                       if (undefined !== lib._timeout) {
                         const resolved = Promise.resolve(dependencyMap());
-                        if (undefined === outer2_2.timeout) {
+                        if (undefined === closure_2_2.timeout) {
                           let timeout = lib._timeout;
                         } else {
                           timeout = tmp23.timeout;
@@ -418,10 +421,10 @@ c4 = asyncGeneratorStep(function(arg0) {
                             throwOnTimeout = tmp.throwOnTimeout;
                           }
                           if (throwOnTimeout) {
-                            tmp3(outer2_8);
+                            tmp3(closure_2_8);
                           }
                         });
-                        lib = outer1_0;
+                        lib = closure_1_0;
                         c4 = 2;
                         c5 = 1;
                         const obj2 = lib(16630);
@@ -431,7 +434,7 @@ c4 = asyncGeneratorStep(function(arg0) {
                   } else {
                     if (1 === tmp7) {
                       c3 = 0;
-                      outer1_1(closure_2);
+                      closure_1_1(closure_2);
                       lib._next();
                       c5 = 3;
                     } else if (arg0 === 1) {
@@ -460,7 +463,7 @@ c4 = asyncGeneratorStep(function(arg0) {
             });
             const _queue = closure_3._queue;
             _queue.enqueue(function run() {
-              const self = this;
+              self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -498,11 +501,11 @@ obj[1] = function add(arg0) {
 };
 items[11] = obj;
 obj = { key: "addAll", value: null };
-_classCallCheck = asyncGeneratorStep(function(arg0, arg1) {
+closure_3 = asyncGeneratorStep(function(arg0, arg1) {
   let self = this;
-  let closure_1 = arg0;
-  let closure_2 = arg1;
-  let c3 = 0;
+  closure_1 = arg0;
+  closure_2 = arg1;
+  c3 = 0;
   return (function*(arg0, arg1) {
     if (c3 === 2) {
       c3 = 3;
@@ -529,14 +532,14 @@ _classCallCheck = asyncGeneratorStep(function(arg0, arg1) {
           obj[0] = arg1;
           return obj;
         } else {
-          let closure_0 = closure_2;
-          let closure_1 = closure_0;
+          closure_0 = closure_2;
+          closure_1 = closure_0;
           c3 = 3;
           obj = { value: null, done: true };
           obj[0] = Promise.all(closure_1.map((() => {
-            let closure_0 = outer1_2((arg0) => {
-              let closure_0 = arg0;
-              let c1 = 0;
+            closure_0 = closure_1_2((arg0) => {
+              closure_0 = arg0;
+              c1 = 0;
               return (function*(arg0) {
                 if (set === 2) {
                   set = 3;
@@ -576,7 +579,7 @@ _classCallCheck = asyncGeneratorStep(function(arg0, arg1) {
               })();
             });
             return function(arg0) {
-              const self = this;
+              self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -597,7 +600,7 @@ _classCallCheck = asyncGeneratorStep(function(arg0, arg1) {
 });
 obj[1] = function addAll(arg0, arg1) {
   const self = this;
-  const apply = _classCallCheck.apply;
+  const apply = closure_3.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -631,9 +634,9 @@ items[15] = {
   }
 };
 let obj1 = { key: "onEmpty", value: null };
-asyncGeneratorStep = asyncGeneratorStep(function() {
+closure_2 = asyncGeneratorStep(function() {
   const self = this;
-  let c1 = 0;
+  c1 = 0;
   return (function*() {
     if (c1 === 2) {
       c1 = 3;
@@ -685,7 +688,7 @@ asyncGeneratorStep = asyncGeneratorStep(function() {
 });
 obj1[1] = function onEmpty() {
   const self = this;
-  const apply = asyncGeneratorStep.apply;
+  const apply = closure_2.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -697,7 +700,7 @@ items[16] = obj1;
 let obj2 = { key: "onIdle", value: null };
 closure_1 = asyncGeneratorStep(function() {
   const self = this;
-  let c1 = 0;
+  c1 = 0;
   return (function*() {
     if (c1 === 2) {
       c1 = 3;

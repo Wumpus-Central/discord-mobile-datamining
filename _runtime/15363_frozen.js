@@ -1,9 +1,10 @@
 // _runtime/15363_frozen.js
-import _slicedToArray from "_slicedToArray";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import cancelAnimation from "cancelAnimation";
+import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15306 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
+import closure_10 from "get ActivityIndicator" /* 17 */;
+import cancelAnimation from "cancelAnimation" /* 1654 */;
 
 let noop = require;
 let obj = dependencyMap;
@@ -20,12 +21,12 @@ if (!noop) {
     const _Object2 = Object;
     const keys = Object.keys(noop);
     const item = keys.forEach((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       if ("default" !== arg0) {
         const _Object = Object;
         let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(closure_0, arg0);
         if (!ownPropertyDescriptor.get) {
-          const obj = { enumerable: true, get: null };
+          obj = { enumerable: true, get: null };
           obj[1] = function get() {
             return table[table];
           };
@@ -49,42 +50,38 @@ if (!cancelAnimation) {
 } else {
   tmp7 = cancelAnimation;
 }
-let closure_12 = tmp7;
-const POSITION_OUT_OF_VIEW = require("toNativeHorizontalOffset").internal.POSITION_OUT_OF_VIEW;
-const IsNewArchitecture = require("toNativeHorizontalOffset").internal.IsNewArchitecture;
-const getStickyPushLimit = require("toNativeHorizontalOffset").internal.getStickyPushLimit;
-const typedMemo = require("toNativeHorizontalOffset").internal.typedMemo;
-const useArr$ = require("toNativeHorizontalOffset").internal.useArr$;
-const useCombinedRef = require("toNativeHorizontalOffset").internal.useCombinedRef;
-const useLatestRef = require("toNativeHorizontalOffset").internal.useLatestRef;
-const useStableRenderComponent = require("toNativeHorizontalOffset").internal.useStableRenderComponent;
-const getComponent = require("toNativeHorizontalOffset").internal.getComponent;
-const peek$ = require("toNativeHorizontalOffset").internal.peek$;
-const useStateContext = require("toNativeHorizontalOffset").internal.useStateContext;
+cancelAnimation = tmp7;
+const POSITION_OUT_OF_VIEW = toNativeHorizontalOffset.internal.POSITION_OUT_OF_VIEW;
+const IsNewArchitecture = toNativeHorizontalOffset.internal.IsNewArchitecture;
+const getStickyPushLimit = toNativeHorizontalOffset.internal.getStickyPushLimit;
+const typedMemo = toNativeHorizontalOffset.internal.typedMemo;
+const useArr$ = toNativeHorizontalOffset.internal.useArr$;
+const useCombinedRef = toNativeHorizontalOffset.internal.useCombinedRef;
+const useLatestRef = toNativeHorizontalOffset.internal.useLatestRef;
+const useStableRenderComponent = toNativeHorizontalOffset.internal.useStableRenderComponent;
+const getComponent = toNativeHorizontalOffset.internal.getComponent;
+const peek$ = toNativeHorizontalOffset.internal.peek$;
+const useStateContext = toNativeHorizontalOffset.internal.useStateContext;
 function ReanimatedScrollOffsetTracker(arg0) {
-  let animatedScrollRef;
-  let scrollOffset;
   ({ animatedScrollRef, scrollOffset } = arg0);
   obj = noop(obj[4]);
   const scrollViewOffset = obj.useScrollViewOffset(animatedScrollRef, scrollOffset);
   return null;
 }
 let closure_24 = typedMemo(function ReanimatedScrollBridgeComponent(forwardedRef) {
-  let renderScrollComponent;
-  let scrollOffset;
   ({ scrollOffset, renderScrollComponent } = forwardedRef);
   let merged = Object.assign(forwardedRef, Object.create(null));
   obj = noop(obj[4]);
   const animatedRef = obj.useAnimatedRef();
   let ScrollView = useStableRenderComponent(renderScrollComponent, (arg0, ref) => {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(arg0);
     obj.ref = ref;
     obj.scrollEventThrottle = 1;
     return obj;
   });
   if (!renderScrollComponent) {
-    ScrollView = tmp7.default.ScrollView;
+    ScrollView = cancelAnimation.default.ScrollView;
   }
   let element = scrollOffset;
   if (scrollOffset) {
@@ -106,25 +103,21 @@ let closure_25 = typedMemo(function StickyOverlayComponent(stickyHeaderConfig) {
   }
   let element = null;
   if (backdropComponent) {
-    const obj = { style: null };
+    obj = { style: null };
     obj[0] = { inset: 0, pointerEvents: "none", position: "absolute" };
     let backdropComponent1;
     if (null != stickyHeaderConfig) {
       backdropComponent1 = stickyHeaderConfig.backdropComponent;
     }
-    element = <get ActivityIndicator.View style={null}>{getComponent(backdropComponent1)}</get ActivityIndicator.View>;
+    element = <RN.View style={null}>{getComponent(backdropComponent1)}</RN.View>;
     const tmp5 = getComponent;
   }
   return element;
 });
 let closure_26 = { code: "function pnpm_reanimatedJs1(){const{stickyScrollOffset,stickyStart,position,pushLimit,horizontal}=this.__closure;const delta=Math.max(0,stickyScrollOffset.value-stickyStart);const stickyPosition=position+delta;const resolvedPosition=pushLimit!==void 0?Math.min(stickyPosition,pushLimit):stickyPosition;return horizontal?{transform:[{translateX:resolvedPosition}]}:{transform:[{translateY:resolvedPosition}]};}" };
 let closure_27 = typedMemo(function ReanimatedPositionViewStickyComponent(ref) {
-  let children;
-  let horizontal;
-  let id;
-  let stickyHeaderConfig;
   const tmp = useStateContext();
-  const noop = tmp;
+  noop = tmp;
   ({ id, horizontal } = ref);
   const style = ref.style;
   const stickyScrollOffset = ref.stickyScrollOffset;
@@ -143,15 +136,15 @@ let closure_27 = typedMemo(function ReanimatedPositionViewStickyComponent(ref) {
   if (undefined !== tmp3[2]) {
     num2 = tmp6;
   }
-  let closure_5 = tmp7;
-  let closure_6 = tmp8;
+  closure_5 = tmp7;
+  closure_6 = tmp8;
   let num3 = 0;
   if (undefined !== tmp3[5]) {
     num3 = tmp9;
   }
-  let obj = frozen;
+  obj = frozen;
   let items1 = [tmp.state, tmp3[4], tmp3[3], num3];
-  const memo = frozen.useMemo(() => outer1_15(tmp.state, closure_6, closure_5), items1);
+  const memo = frozen.useMemo(() => closure_1_15(state.state, closure_6, closure_5), items1);
   let offset;
   if (null != stickyHeaderConfig) {
     offset = stickyHeaderConfig.offset;
@@ -161,7 +154,6 @@ let closure_27 = typedMemo(function ReanimatedPositionViewStickyComponent(ref) {
     num4 = offset;
   }
   const diff = first + num + num2 - num4;
-  let closure_8 = diff;
   const tmp2 = stickyScrollOffset(ref, first);
   const fn = function l() {
     const sum = first + Math.max(0, stickyScrollOffset.value - closure_8);
@@ -170,7 +162,7 @@ let closure_27 = typedMemo(function ReanimatedPositionViewStickyComponent(ref) {
       const _Math = Math;
       bound = Math.min(sum, tmp2);
     }
-    let obj = { transform: null };
+    obj = { transform: null };
     if (horizontal) {
       obj = { translateX: null };
       obj[0] = bound;
@@ -200,7 +192,7 @@ let closure_27 = typedMemo(function ReanimatedPositionViewStickyComponent(ref) {
     }, items3)
   };
   const merged = Object.assign(tmp2);
-  return obj.createElement(tmp3[3].default.View, {
+  return obj.createElement(cancelAnimation.default.View, {
     ref: ref.refView,
     style: obj.useMemo(() => {
       const items = [style, { zIndex: closure_6 + 1000 }, animatedStyle];
@@ -209,22 +201,17 @@ let closure_27 = typedMemo(function ReanimatedPositionViewStickyComponent(ref) {
   }, <closure_25 stickyHeaderConfig={stickyHeaderConfig} />, children);
 });
 let closure_28 = typedMemo(function ReanimatedPositionViewComponent(style) {
-  let children;
-  let horizontal;
-  let id;
-  let recycleItems;
-  let refView;
   ({ id, horizontal } = style);
   style = style.style;
   const layoutTransition = style.layoutTransition;
   ({ refView, children, recycleItems } = style);
-  const tmp2 = _objectWithoutProperties(style, closure_5);
+  const tmp2 = callback2(style, closure_5);
   let items = ["containerPosition" + id];
   first = first(useArr$(items), 1)[0];
   if (undefined === first) {
     first = POSITION_OUT_OF_VIEW;
   }
-  let obj = frozen;
+  obj = frozen;
   const ref = frozen.useRef(undefined);
   if (recycleItems) {
     if (layoutTransition) {
@@ -248,7 +235,7 @@ let closure_28 = typedMemo(function ReanimatedPositionViewComponent(style) {
     const memo = obj.useMemo(() => {
       const items = [style, ];
       if (horizontal) {
-        let obj = { left: null };
+        obj = { left: null };
         obj[0] = first;
       } else {
         obj = { top: null };
@@ -265,25 +252,23 @@ let closure_28 = typedMemo(function ReanimatedPositionViewComponent(style) {
     obj[1] = refView;
     obj[2] = memo;
     const merged = Object.assign(tmp2);
-    return obj.createElement(tmp7.default.View, { layout: null, ref: null, style: null }, children);
+    return obj.createElement(cancelAnimation.default.View, { layout: null, ref: null, style: null }, children);
   }
   ref.current = undefined;
   flag = false;
 });
 let closure_29 = tmp7.default.createAnimatedComponent(typedMemo(frozen.forwardRef(function LegendListForwardedRef2(refLegendList, refScrollView) {
-  let itemLayoutAnimation;
-  let recycleItems;
   ({ itemLayoutAnimation, recycleItems } = refLegendList);
   refLegendList = refLegendList.refLegendList;
   const renderScrollComponent = refLegendList.renderScrollComponent;
   const sharedValues = refLegendList.sharedValues;
   const tmp = sharedValue(refLegendList, closure_6);
-  let obj = noop;
+  obj = noop;
   const items = [refLegendList];
   const callback = noop.useCallback((arg0) => {
     refLegendList(arg0);
   }, items);
-  let obj1 = recycleItems(refLegendList[4]);
+  obj1 = recycleItems(refLegendList[4]);
   sharedValue = obj1.useSharedValue(0);
   let scrollOffset;
   if (null != sharedValues) {
@@ -303,7 +288,7 @@ let closure_29 = tmp7.default.createAnimatedComponent(typedMemo(frozen.forwardRe
       length = stickyHeaderIndices.length;
     }
   }
-  let closure_4 = tmp9;
+  sharedValue = tmp9;
   let obj2 = frozen;
   const items1 = [renderScrollComponent];
   const memo = frozen.useMemo(() => {
@@ -316,29 +301,29 @@ let closure_29 = tmp7.default.createAnimatedComponent(typedMemo(frozen.forwardRe
   const items2 = [memo, tmp9];
   const items3 = [sharedValue];
   const callback1 = obj.useCallback((ref) => {
-    const obj = {};
-    const merged = Object.assign(sharedValue(ref, closure_7));
+    obj = {};
+    const merged = Object.assign(sharedValue(ref, itemLayoutAnimation));
     obj.forwardedRef = ref.ref;
     obj.renderScrollComponent = memo;
-    obj.scrollOffset = closure_4;
-    return <outer1_24 />;
+    obj.scrollOffset = sharedValue;
+    return <closure_1_24 />;
   }, items2);
   const memo1 = frozen.useMemo(() => function StickyPositionComponent(arg0) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(arg0);
     obj.stickyScrollOffset = closure_3;
-    return <outer1_27 />;
+    return <closure_1_27 />;
   }, items3);
   closure_6 = useLatestRef(itemLayoutAnimation);
-  let closure_7 = tmp13;
+  itemLayoutAnimation = tmp13;
   const items4 = [itemLayoutAnimation, recycleItems];
   obj = {};
-  const memo2 = frozen.useMemo(() => closure_7 ? (function PositionComponent(arg0) {
-    const obj = {};
+  const memo2 = frozen.useMemo(() => itemLayoutAnimation ? (function PositionComponent(arg0) {
+    obj = {};
     const merged = Object.assign(arg0);
     obj.layoutTransition = ref.current;
     obj.recycleItems = closure_0;
-    return <outer1_28 />;
+    return <closure_1_28 />;
   }) : undefined, items4);
   let merged = Object.assign(tmp);
   obj.positionComponentInternal = memo2;
@@ -358,14 +343,12 @@ let closure_29 = tmp7.default.createAnimatedComponent(typedMemo(frozen.forwardRe
 })));
 
 export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedLegendList2(sharedValues, forwardedRef) {
-  let noop;
-  let tmp3;
   sharedValues = sharedValues.sharedValues;
-  let tmp = _objectWithoutProperties(sharedValues, closure_8);
-  [tmp3, noop] = _slicedToArray(frozen.useState(null), 2);
+  let tmp = callback2(sharedValues, closure_8);
+  [tmp3, noop] = callback(frozen.useState(null), 2);
   noop = tmp3;
   let items = [tmp3, sharedValues];
-  const tmp2 = _slicedToArray(frozen.useState(null), 2);
+  const tmp2 = callback(frozen.useState(null), 2);
   const effect = frozen.useEffect(() => {
     if (items) {
       if (sharedValues) {
@@ -531,7 +514,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
       }
     }
   }, items);
-  let obj = {};
+  obj = {};
   const merged = Object.assign(tmp);
   obj.animatedPropsInternal = sharedValues.animatedProps;
   obj.refLegendList = useCombinedRef(frozen.useCallback((arg0) => {

@@ -1,17 +1,14 @@
 // _runtime/metro/07843__addTracingHeadersToFetchRequest.js
-import _toArray from "_toArray";
-import "errorCallback";
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
-import consoleSandbox from "consoleSandbox";
-import dateTimestampInSeconds from "dateTimestampInSeconds";
-import "SyncPromise";
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
-import { hasTracingEnabled } from "../07770_hasTracingEnabled.js";
-import { getTraceData } from "../07809_getTraceData.js";
+import errorCallback from "errorCallback" /* 7734 */;
+import SyncPromise from "SyncPromise" /* 7762 */;
+import hasTracingEnabled from "hasTracingEnabled" /* 7770 */;
+import getTraceData from "getTraceData" /* 7809 */;
+import closure_2 from "_toArray" /* 853 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
+import consoleSandbox from "consoleSandbox" /* 7738 */;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 7752 */;
 
 function _addTracingHeadersToFetchRequest(headers, headers2, span) {
-  let baggage;
-  let tmp4;
   let obj = getTraceData;
   obj = { span };
   const traceData = obj.getTraceData(obj);
@@ -149,19 +146,19 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
         }
       }
     } else {
-      const obj1 = {};
+      obj1 = {};
       const merged1 = Object.assign(traceData);
       return obj1;
     }
   }
 }
+errorCallback;
+SyncPromise;
 
 export const addTracingHeadersToFetchRequest = function addTracingHeadersToFetchRequest(arg0, arg1, arg2, arg3, arg4) {
   return _addTracingHeadersToFetchRequest(arg0, arg3, arg4);
 };
 export const instrumentFetchRequest = function instrumentFetchRequest(fetchData) {
-  let method;
-  let url;
   let str = arg4;
   if (arg4 === undefined) {
     str = "auto.http.browser";
@@ -229,7 +226,7 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData)
         obj = { name: null, attributes: null };
         const _HermesInternal = HermesInternal;
         obj[0] = "" + method + " " + url;
-        const obj1 = { url: null, type: "fetch", "http.method": null, "http.url": null, "server.address": null };
+        obj1 = { url: null, type: "fetch", "http.method": null, "http.url": null, "server.address": null };
         obj1[0] = url;
         obj1[2] = method;
         obj1[3] = tmp7;

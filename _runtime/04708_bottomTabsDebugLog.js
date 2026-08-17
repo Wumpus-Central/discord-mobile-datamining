@@ -11,5 +11,5 @@ arg5.bottomTabsDebugLog = function bottomTabsDebugLog(arg0) {
   }
 };
 arg5.internalEnableDetailedBottomTabsLogging = function internalEnableDetailedBottomTabsLogging() {
-  let c0 = true;
+  c0 = true;
 };

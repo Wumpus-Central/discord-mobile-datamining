@@ -1,9 +1,11 @@
 // _runtime/07710_enhancedFetch.js
-let closure_0 = require("asyncGeneratorStep")((arg0, arg1) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let c4 = 0;
-  let c5 = 0;
+import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
+
+let closure_0 = asyncGeneratorStepDefault((arg0, arg1) => {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  c4 = 0;
+  c5 = 0;
   return (function*(arg0, arg1) {
     if (c5 === 2) {
       c5 = 3;
@@ -31,9 +33,9 @@ let closure_0 = require("asyncGeneratorStep")((arg0, arg1) => {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_3 = tmp4;
+            closure_3 = tmp4;
             let request = closure_1;
-            let closure_0;
+            closure_0 = undefined;
             let stringify = globalThis;
             let method;
             if (closure_1 != null) {
@@ -43,7 +45,7 @@ let closure_0 = require("asyncGeneratorStep")((arg0, arg1) => {
             if (method == null) {
               GET = "GET";
             }
-            let obj1 = { method: null, headers: null };
+            obj1 = { method: null, headers: null };
             obj1[0] = GET;
             obj1[1] = { Accept: "application/json", "Content-Type": "application/json" };
             let body;
@@ -84,7 +86,7 @@ let closure_0 = require("asyncGeneratorStep")((arg0, arg1) => {
           } else {
             const _Object = Object;
             const _Error = Error;
-            const error = new Error(closure_0.statusText);
+            error = new Error(closure_0.statusText);
             obj = { statusCode: null };
             obj[0] = closure_0.status;
             throw Object.assign(error, obj);

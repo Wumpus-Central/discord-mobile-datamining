@@ -3,8 +3,6 @@ const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.showReportDialog = function showReportDialog(arg0) {
-  let onClose;
-  let onLoad;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};

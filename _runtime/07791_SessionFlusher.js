@@ -1,13 +1,13 @@
 // _runtime/07791_SessionFlusher.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const SessionFlusher = require;
 class SessionFlusher {
   constructor(arg0, arg1) {
     self = this;
     self = this;
-    tmp = outer1_2(this, self);
+    tmp = closure_2(this, self);
     this._client = global;
     this.flushTimeout = 60;
     map = new Map();

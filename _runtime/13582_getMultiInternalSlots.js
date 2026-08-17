@@ -1,5 +1,7 @@
 // _runtime/13582_getMultiInternalSlots.js
-import { e } from "01281_e.js";
+import e from "e" /* 1281 */;
+import monadic from "monadic" /* 13583 */;
+
 function getMultiInternalSlots(get) {
   let length;
   const items = [];
@@ -12,7 +14,7 @@ function getMultiInternalSlots(get) {
     } while (num < length);
   }
   const value = get.get(arg1);
-  const require = value;
+  require = value;
   if (value) {
     const _Object = Object;
     return items.reduce((arg0, arg1) => {
@@ -26,16 +28,10 @@ function getMultiInternalSlots(get) {
     throw typeError;
   }
 }
-let obj = { strategy: null };
-obj[0] = require("monadic").strategies.variadic;
-obj = { strategy: null };
-obj[0] = require("monadic").strategies.variadic;
-obj = { strategy: null };
-obj[0] = require("monadic").strategies.variadic;
-const obj1 = { strategy: null };
-obj1[0] = require("monadic").strategies.variadic;
-const obj2 = { strategy: null };
-obj2[0] = require("monadic").strategies.variadic;
+let obj = { strategy: monadic.strategies.variadic };
+obj = { strategy: monadic.strategies.variadic };
+obj = { strategy: monadic.strategies.variadic };
+const obj1 = { strategy: monadic.strategies.variadic };
 
 export const repeat = function repeat(str) {
   let length;
@@ -98,7 +94,7 @@ export const invariant = function invariant(arg0, arg1, arg2) {
   }
 };
 export const UNICODE_EXTENSION_SEQUENCE_REGEX = /-u(?:-[0-9a-z]{2,8})+/gi;
-export const createMemoizedNumberFormat = require("monadic").memoize(() => {
+export const createMemoizedNumberFormat = monadic.memoize(() => {
   let length;
   const items = [];
   let num = 0;
@@ -114,7 +110,7 @@ export const createMemoizedNumberFormat = require("monadic").memoize(() => {
   const obj = e;
   return new bind.apply(NumberFormat, e.__spreadArray(items1, items, false))();
 }, obj);
-export const createMemoizedDateTimeFormat = require("monadic").memoize(() => {
+export const createMemoizedDateTimeFormat = monadic.memoize(() => {
   let length;
   const items = [];
   let num = 0;
@@ -130,7 +126,7 @@ export const createMemoizedDateTimeFormat = require("monadic").memoize(() => {
   const obj = e;
   return new bind.apply(DateTimeFormat, e.__spreadArray(items1, items, false))();
 }, obj);
-export const createMemoizedPluralRules = require("monadic").memoize(() => {
+export const createMemoizedPluralRules = monadic.memoize(() => {
   let length;
   const items = [];
   let num = 0;
@@ -146,7 +142,7 @@ export const createMemoizedPluralRules = require("monadic").memoize(() => {
   const obj = e;
   return new bind.apply(PluralRules, e.__spreadArray(items1, items, false))();
 }, obj);
-export const createMemoizedLocale = require("monadic").memoize(() => {
+export const createMemoizedLocale = monadic.memoize(() => {
   let length;
   const items = [];
   let num = 0;
@@ -161,8 +157,8 @@ export const createMemoizedLocale = require("monadic").memoize(() => {
   const items1 = [undefined];
   const obj = e;
   return new bind.apply(Locale, e.__spreadArray(items1, items, false))();
-}, obj1);
-export const createMemoizedListFormat = require("monadic").memoize(() => {
+}, { strategy: monadic.strategies.variadic });
+export const createMemoizedListFormat = monadic.memoize(() => {
   let length;
   const items = [];
   let num = 0;
@@ -177,4 +173,4 @@ export const createMemoizedListFormat = require("monadic").memoize(() => {
   const items1 = [undefined];
   const obj = e;
   return new bind.apply(ListFormat, e.__spreadArray(items1, items, false))();
-}, obj2);
+}, { strategy: monadic.strategies.variadic });

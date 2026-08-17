@@ -1,6 +1,6 @@
 // _runtime/00054__getFilterAmount.js
-import _slicedToArray from "_slicedToArray";
-import { processColor } from "00050_processColor.js";
+import processColorDefault from "processColor" /* 50 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function _getFilterAmount(arg0, str) {
   if (typeof str === "string") {
@@ -226,7 +226,7 @@ function parseDropShadow(str) {
           } else if ("color" === tmp10) {
             let tmp11 = importDefault;
             let tmp12 = dependencyMap;
-            let tmp13 = processColor(tmp2.color);
+            let tmp13 = processColorDefault(tmp2.color);
             if (null == tmp13) {
               return null;
             } else {
@@ -330,7 +330,7 @@ export default function processFilter(str) {
               obj.return();
               return items1;
             } else {
-              let obj1 = { dropShadow: null };
+              obj1 = { dropShadow: null };
               let tmp27 = tmp25;
               obj1[0] = tmp26;
               let arr1 = items.push(obj1);

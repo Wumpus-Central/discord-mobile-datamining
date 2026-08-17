@@ -1,12 +1,11 @@
 // _runtime/04919_parseBox.js
-import { getDataView } from "04910_getDataView.js";
-import { parseItemLocationBox } from "04920_parseItemLocationBox.js";
-const require = arg1;
+import getDataView from "getDataView" /* 4910 */;
+import parseItemLocationBox from "parseItemLocationBox" /* 4920 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 function parseBox(getUint32, sum) {
-  let contentOffset;
-  let length;
   const uint32 = getUint32.getUint32(sum);
   if (0 === uint32) {
     let obj = { length: null, contentOffset: null };
@@ -28,7 +27,7 @@ function parseBox(getUint32, sum) {
   if (length >= 8) {
     const uint321 = getUint32.getUint32(sum + 4);
     if (1718909296 === uint321) {
-      const obj1 = { type: "ftyp", majorBrand: null, length: null };
+      obj1 = { type: "ftyp", majorBrand: null, length: null };
       obj1[1] = getDataView.getStringFromDataView(getUint32, contentOffset, 4);
       obj1[2] = length;
       return obj1;
@@ -230,7 +229,7 @@ function parseBox(getUint32, sum) {
   }
 }
 function findIlocItem(subBoxes) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   subBoxes = subBoxes.subBoxes;
   const items = subBoxes.find((type) => "iloc" === type.type).items;
   return items.find((itemId) => itemId.itemId === closure_0);

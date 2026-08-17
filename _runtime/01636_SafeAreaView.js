@@ -1,17 +1,18 @@
 // _runtime/01636_SafeAreaView.js
-import { useMemo } from "noop";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { useMemo } from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 let closure_4 = { top: "additive", left: "additive", bottom: "additive", right: "additive" };
 
-export const SafeAreaView = require("noop").forwardRef((edges, ref) => {
+export const SafeAreaView = noopAll.forwardRef((edges, ref) => {
   edges = edges.edges;
   const merged = Object.assign(edges, Object.create(null));
   const items = [edges];
   let obj = {};
   const tmp2 = useMemo(() => {
     if (null == edges) {
-      return outer1_4;
+      return closure_1_4;
     } else {
       const _Array = Array;
       let rect = arr;

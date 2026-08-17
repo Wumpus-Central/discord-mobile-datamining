@@ -1,9 +1,9 @@
 // _runtime/00169__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult1 from "_inherits";
+import closure_2 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
 
 let PerformanceMeasureTemplate = arg1;
 function _isNativeReflectConstruct() {
@@ -17,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,7 +29,7 @@ class PerformanceMarkTemplate {
   constructor(arg0, arg1) {
     self = this;
     tmp = PerformanceMeasureTemplate;
-    tmp2 = _isNativeReflectConstruct(this, PerformanceMeasureTemplate);
+    tmp2 = closure_2(this, PerformanceMeasureTemplate);
     obj = { name: global, startTime: null, duration: 0 };
     startTime = undefined;
     if (arg1 != null) {
@@ -44,9 +44,9 @@ class PerformanceMarkTemplate {
     obj[1] = startTime;
     items = ["mark"];
     items[1] = obj;
-    tmp6 = _isNativeReflectConstruct;
-    obj3 = _isNativeReflectConstruct(tmp);
-    tmp7 = _isNativeReflectConstruct;
+    tmp6 = closure_4;
+    obj3 = closure_4(tmp);
+    tmp7 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp9 = globalThis;
       _Reflect = Reflect;
@@ -105,12 +105,12 @@ PerformanceMark.prototype = importDefaultResult(PerformanceMarkTemplate, items).
 class PerformanceMeasureTemplate {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, PerformanceMeasureTemplate);
+    tmp = closure_2(this, PerformanceMeasureTemplate);
     items = ["measure"];
     items[1] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(PerformanceMeasureTemplate);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(PerformanceMeasureTemplate);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;

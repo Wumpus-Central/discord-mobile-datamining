@@ -1,6 +1,6 @@
 // _runtime/metro/03795__typeof.js
-import setUTCDay from "setUTCDay";
-import { Parser } from "Parser";
+import Parser2 from "Parser" /* 3778 */;
+import setUTCDay from "setUTCDay" /* 3796 */;
 
 let _createSuperInternal = function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -28,7 +28,7 @@ let _createSuperInternal = function _typeof(arg0) {
   };
 };
 function _setPrototypeOf(DayParser, Parser) {
-  let _setPrototypeOf = Object.setPrototypeOf;
+  _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
     _setPrototypeOf = function _setPrototypeOf(DayParser, Parser) {
       DayParser.__proto__ = Parser;
@@ -40,7 +40,7 @@ function _setPrototypeOf(DayParser, Parser) {
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;
-    let _getPrototypeOf = Object.getPrototypeOf;
+    _getPrototypeOf = Object.getPrototypeOf;
   } else {
     _getPrototypeOf = function _getPrototypeOf(arg0) {
       let __proto__ = arg0.__proto__;
@@ -61,10 +61,11 @@ if (!setUTCDay) {
   tmp3 = setUTCDay;
 }
 let closure_1 = tmp3;
+const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
 class DayParser {
   constructor() {
-    if (this instanceof c1) {
+    if (this instanceof closure_1) {
       length = arguments.length;
       _Array = Array;
       tmp6 = new.target;

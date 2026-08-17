@@ -1,47 +1,32 @@
 // _runtime/metro/04697__.js
-import "_objectWithoutProperties";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import { Animated } from "../04674_Animated.js";
-import { warnOnce } from "../04679_warnOnce.js";
-import { style } from "../04698_style.js";
+import _objectWithoutPropertiesDefault from "_objectWithoutProperties" /* 109 */;
+import AnimatedDefault from "Animated" /* 4674 */;
+import warnOnceDefault from "warnOnce" /* 4679 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let StyleSheet;
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
+_objectWithoutPropertiesDefault;
 let c3 = importAllResult;
 ({ Platform: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 const styles = StyleSheet.create({ container: { flex: 1 }, absoluteWithNoBottom: { position: "absolute", top: 0, start: 0, end: 0 } });
 
 export default importAllResult.forwardRef(function ScreenStackItem(unstable_sheetFooter, ref) {
-  let activityState;
-  let children;
-  let contentStyle;
-  let headerConfig;
-  let onHeaderHeightChange;
-  let screenId;
-  let sheetAllowedDetents;
-  let shouldFreeze;
-  let stackPresentation;
-  let style;
   ({ headerConfig, stackPresentation, sheetAllowedDetents, screenId } = unstable_sheetFooter);
   unstable_sheetFooter = unstable_sheetFooter.unstable_sheetFooter;
   ({ children, activityState, shouldFreeze, contentStyle, style, onHeaderHeightChange } = unstable_sheetFooter);
   const merged = Object.assign(unstable_sheetFooter, Object.create(null));
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let flag4;
-  let closure_4;
+  closure_4 = undefined;
   let obj = flag4;
   importDefault = flag4.useRef(null);
   dependencyMap = flag4.useContext(screenId(4695).RNSScreensRefContext);
   const imperativeHandle = flag4.useImperativeHandle(ref, () => ref.current);
-  let obj1 = screenId(4686);
+  obj1 = screenId(4686);
   let flag;
   if (headerConfig != null) {
     flag = headerConfig.disableLeftInsetApplication;
@@ -103,7 +88,7 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   if (flag5) {
     flag5 = false;
   }
-  warnOnce(flag5, "[RNScreens] Using both `blurEffect` and `scrollEdgeEffects` simultaneously may cause overlapping effects.");
+  warnOnceDefault(flag5, "[RNScreens] Using both `blurEffect` and `scrollEdgeEffects` simultaneously may cause overlapping effects.");
   if ("formSheet" !== stackPresentation) {
     let container = closure_8.container;
   } else if ("fitToContents" === sheetAllowedDetents) {
@@ -111,8 +96,7 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   } else {
     container = closure_8.container;
   }
-  obj = { value: obj1.useEdgeInsetApplication(flag, flag2, flag3).nextContextValue, children: null };
-  obj[1] = callback(style, { contentStyle, style: container, stackPresentation, children });
+  obj = { value: obj1.useEdgeInsetApplication(flag, flag2, flag3).nextContextValue, children: callback(tmp10(4698), { contentStyle, style: container, stackPresentation, children }) };
   const items1 = [callback(screenId(4686).EdgeInsetApplicationContext.Provider, obj), , ];
   obj = {};
   const merged1 = Object.assign(headerConfig);
@@ -124,7 +108,7 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
     tmp18Result = tmp18(tmp2(4701).FooterComponent, obj1);
   }
   items1[2] = tmp18Result;
-  const tmp11 = warnOnce;
+  const tmp11 = warnOnceDefault;
   const tmp16 = closure_7;
   const tmp17 = closure_6;
   const obj2 = {
@@ -169,5 +153,5 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   obj2[10] = onHeaderHeightChange;
   const merged2 = Object.assign(merged);
   obj2.children = tmp16Result;
-  return callback(Animated, obj2);
+  return callback(AnimatedDefault, obj2);
 });

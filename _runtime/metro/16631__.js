@@ -9,12 +9,12 @@ export default (promise) => {
     };
   }
   return promise.then((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return new Promise((arg0) => {
       arg0(callback());
     }).then(() => closure_0);
   }, (arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return new Promise((arg0) => {
       arg0(callback());
     }).then(() => {

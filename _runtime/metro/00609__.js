@@ -1,4 +1,6 @@
 // _runtime/metro/00609__.js
+import _mod610 from "module_610" /* 610 */;
+
 let _self = typeof self === "object";
 if (typeof self === "object") {
   _self = self;
@@ -11,7 +13,7 @@ if (_self) {
 if (_self) {
   _self = self;
 }
-let tmp = require("module_610") || _self;
+let tmp = _mod610 || _self;
 if (!tmp) {
   const _Function = Function;
   tmp = Function("return this")();

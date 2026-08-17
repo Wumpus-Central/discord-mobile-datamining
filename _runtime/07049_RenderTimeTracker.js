@@ -1,10 +1,11 @@
 // _runtime/07049_RenderTimeTracker.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 7051 */;
+import closure_2 from "_classCallCheck" /* 7050 */;
 
 const RenderTimeTracker = arg1;
 class RenderTimeTracker {
   constructor() {
-    tmp = outer1_2(this, RenderTimeTracker);
+    tmp = closure_2(this, RenderTimeTracker);
     averageWindow = new require("AverageWindow").AverageWindow(5);
     this.renderTimeAvgWindow = averageWindow;
     this.lastTimerStartedAt = -1;
@@ -77,4 +78,4 @@ const items = [
   }
 ];
 
-export const RenderTimeTracker = require("_createClass")(RenderTimeTracker, items);
+export const RenderTimeTracker = _createClassDefault(RenderTimeTracker, items);

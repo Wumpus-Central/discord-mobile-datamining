@@ -1,9 +1,12 @@
 // _runtime/01694_isValidLayoutAnimationProp.js
-import isJest from "isJest";
+import runWorkletOnJS from "runWorkletOnJS" /* 1661 */;
+import t from "t" /* 1665 */;
+import isWorkletFunction from "isWorkletFunction" /* 1679 */;
+import isReducedMotionEnabledInSystem from "isReducedMotionEnabledInSystem" /* 1695 */;
+import isAffineMatrixFlat from "isAffineMatrixFlat" /* 1696 */;
+import call from "call" /* 1697 */;
+import isJest from "isJest" /* 1657 */;
 import { runWorkletOnJS } from "01661_runWorkletOnJS.js";
-import { t } from "01665_t.js";
-import { isWorkletFunction } from "01679_isWorkletFunction.js";
-import { isAffineMatrixFlat } from "01696_isAffineMatrixFlat.js";
 
 let c2 = false;
 isJest = isJest.shouldBeUseWeb();
@@ -32,7 +35,7 @@ function assertEasingIsWorklet(factory) {
     }
   }
 }
-obj = { SHOULD_BE_USE_WEB: isJest, isWorkletFunction: require("isWorkletFunction").isWorkletFunction };
+obj = { SHOULD_BE_USE_WEB: isJest, isWorkletFunction: isWorkletFunction.isWorkletFunction };
 assertEasingIsWorklet.__closure = obj;
 assertEasingIsWorklet.__workletHash = 8431488219943;
 assertEasingIsWorklet.__initData = { code: "function assertEasingIsWorklet_Pnpm_utilTs2(easing){const{SHOULD_BE_USE_WEB,isWorkletFunction}=this.__closure;if(_WORKLET){return;}if(SHOULD_BE_USE_WEB){return;}if(easing!==null&&easing!==void 0&&easing.factory){return;}if(!isWorkletFunction(easing)){throw new ReanimatedError('The easing function is not a worklet. Please make sure you import `Easing` from react-native-reanimated.');}}" };
@@ -44,7 +47,7 @@ function recognizePrefixSuffix(current) {
       if (str2 == null) {
         str2 = "";
       }
-      let obj = { prefix: null, suffix: null, strippedValue: null };
+      obj = { prefix: null, suffix: null, strippedValue: null };
       obj[0] = match[1];
       obj[1] = match[4];
       const _parseFloat = parseFloat;
@@ -63,7 +66,7 @@ function recognizePrefixSuffix(current) {
 recognizePrefixSuffix.__closure = {};
 recognizePrefixSuffix.__workletHash = 11076682371077;
 recognizePrefixSuffix.__initData = { code: "function recognizePrefixSuffix_Pnpm_utilTs3(value){if(typeof value==='string'){var _match$;const match=value.match(/([A-Za-z]*)(-?\\d*\\.?\\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);if(!match){throw new ReanimatedError(\"Couldn't parse animation value.\");}const prefix=match[1];const suffix=match[4];const number=match[2]+((_match$=match[3])!==null&&_match$!==void 0?_match$:'');return{prefix:prefix,suffix:suffix,strippedValue:parseFloat(number)};}else{return{strippedValue:value};}}" };
-const uiValue = require("isReducedMotionEnabledInSystem").ReducedMotionManager.uiValue;
+const uiValue = isReducedMotionEnabledInSystem.ReducedMotionManager.uiValue;
 function getReduceMotionFromConfig(reduceMotion) {
   if (reduceMotion) {
     if (reduceMotion !== isWorkletFunction.ReduceMotion.System) {
@@ -73,7 +76,7 @@ function getReduceMotionFromConfig(reduceMotion) {
   }
   value = uiValue.value;
 }
-getReduceMotionFromConfig.__closure = { ReduceMotion: require("isWorkletFunction").ReduceMotion, isReduceMotionOnUI: uiValue };
+getReduceMotionFromConfig.__closure = { ReduceMotion: isWorkletFunction.ReduceMotion, isReduceMotionOnUI: uiValue };
 getReduceMotionFromConfig.__workletHash = 7977910521960;
 getReduceMotionFromConfig.__initData = { code: "function getReduceMotionFromConfig_Pnpm_utilTs4(config){const{ReduceMotion,isReduceMotionOnUI}=this.__closure;return!config||config===ReduceMotion.System?isReduceMotionOnUI.value:config===ReduceMotion.Always;}" };
 function getReduceMotionForAnimation(reduceMotion) {
@@ -94,12 +97,12 @@ getReduceMotionForAnimation.__closure = { getReduceMotionFromConfig };
 getReduceMotionForAnimation.__workletHash = 10866808344662;
 getReduceMotionForAnimation.__initData = { code: "function getReduceMotionForAnimation_Pnpm_utilTs5(config){const{getReduceMotionFromConfig}=this.__closure;if(!config){return undefined;}return getReduceMotionFromConfig(config);}" };
 function applyProgressToMatrix(arg0, arr, arr) {
-  const obj = isAffineMatrixFlat;
+  obj = isAffineMatrixFlat;
   const obj2 = isAffineMatrixFlat;
   return obj.addMatrices(arr, obj2.scaleMatrix(isAffineMatrixFlat.subtractMatrices(arr, arr), arg0));
 }
-let obj1 = { ReduceMotion: require("isWorkletFunction").ReduceMotion, isReduceMotionOnUI: uiValue };
-applyProgressToMatrix.__closure = { addMatrices: require("isAffineMatrixFlat").addMatrices, scaleMatrix: require("isAffineMatrixFlat").scaleMatrix, subtractMatrices: require("isAffineMatrixFlat").subtractMatrices };
+let obj1 = { ReduceMotion: isWorkletFunction.ReduceMotion, isReduceMotionOnUI: uiValue };
+applyProgressToMatrix.__closure = { addMatrices: isAffineMatrixFlat.addMatrices, scaleMatrix: isAffineMatrixFlat.scaleMatrix, subtractMatrices: isAffineMatrixFlat.subtractMatrices };
 applyProgressToMatrix.__workletHash = 4822273347900;
 applyProgressToMatrix.__initData = { code: "function applyProgressToMatrix_Pnpm_utilTs6(progress,a,b){const{addMatrices,scaleMatrix,subtractMatrices}=this.__closure;return addMatrices(a,scaleMatrix(subtractMatrices(b,a),progress));}" };
 function applyProgressToNumber(arg0, arg1, arg2) {
@@ -109,8 +112,6 @@ applyProgressToNumber.__closure = {};
 applyProgressToNumber.__workletHash = 954128472665;
 applyProgressToNumber.__initData = { code: "function applyProgressToNumber_Pnpm_utilTs7(progress,a,b){return a+progress*(b-a);}" };
 function decorateAnimation(isHigherOrder) {
-  let dependencyMap;
-  let require;
   ({ onStart: require, onFrame: dependencyMap } = isHigherOrder);
   if (isHigherOrder.isHigherOrder) {
     isHigherOrder.onStart = (reduceMotion) => {
@@ -124,10 +125,9 @@ function decorateAnimation(isHigherOrder) {
     };
   } else {
     const _Object = Object;
-    let closure_2 = Object.assign({}, isHigherOrder);
+    closure_2 = Object.assign({}, isHigherOrder);
     delete tmp2[tmp];
     function prefNumberSuffOnFrame(strippedCurrent) {
-      let __prefix;
       strippedCurrent.current = strippedCurrent.strippedCurrent;
       ({ current: strippedCurrent.strippedCurrent, __prefix } = strippedCurrent);
       if (__prefix == null) {
@@ -141,12 +141,12 @@ function decorateAnimation(isHigherOrder) {
       strippedCurrent.current = sum + str;
       return dependencyMap(strippedCurrent, arg1);
     }
-    let closure_4 = ["R", "G", "B", "A"];
+    closure_4 = ["R", "G", "B", "A"];
     function colorOnFrame(nonscaledCurrent) {
-      let closure_0 = nonscaledCurrent;
-      let closure_1 = arg1;
+      closure_0 = nonscaledCurrent;
+      closure_1 = arg1;
       const items = [];
-      let c3 = true;
+      c3 = true;
       nonscaledCurrent.current = nonscaledCurrent.nonscaledCurrent;
       const item = closure_4.forEach((arg0) => {
         let onFrameResult = c3;
@@ -156,30 +156,24 @@ function decorateAnimation(isHigherOrder) {
         c3 = onFrameResult;
         items.push(nonscaledCurrent[arg0].current);
       });
-      outer1_0(outer1_1[5]).clampRGBA(items);
+      closure_1_0(closure_1_1[5]).clampRGBA(items);
       nonscaledCurrent.nonscaledCurrent = items;
-      const obj = outer1_0(outer1_1[5]);
-      const obj2 = outer1_0(outer1_1[5]);
-      nonscaledCurrent.current = obj2.rgbaArrayToRGBAColor(outer1_0(outer1_1[5]).toGammaSpace(items));
+      obj = closure_1_0(closure_1_1[5]);
+      const obj2 = closure_1_0(closure_1_1[5]);
+      nonscaledCurrent.current = obj2.rgbaArrayToRGBAColor(closure_1_0(closure_1_1[5]).toGammaSpace(items));
       return c3;
     }
     function transformationMatrixOnFrame(arg0, arg1) {
-      let tmp3;
-      let tmp4;
-      let tmp5;
-      let tmp7;
-      let tmp8;
-      let tmp9;
       const callback = arg0;
       const first = arg0[0];
-      const dependencyMap = arg0[0].current / 100;
+      dependencyMap = arg0[0].current / 100;
       const items = [];
       const items1 = ["translationMatrix", "scaleMatrix", "skewMatrix"];
       const item = items1.forEach((arg0, arg1) => {
-        if (typeof outer1_8 !== "function") {
+        if (typeof closure_1_8 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        const obj = lib(1696);
+        obj = lib(1696);
         const tmp2 = dependencyMap;
         const obj2 = lib(1696);
         return items.push(obj.addMatrices(lib.startMatrices[arg0], obj2.scaleMatrix(lib(1696).subtractMatrices(lib.stopMatrices[arg0], lib.startMatrices[arg0]), tmp2)));
@@ -188,7 +182,7 @@ function decorateAnimation(isHigherOrder) {
       const items3 = ["x", "y", "z"];
       [tmp3, tmp4, tmp5] = items;
       const item1 = items3.forEach((arg0, arg1) => {
-        if (typeof outer1_9 !== "function") {
+        if (typeof closure_1_9 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const sum = tmp2 + dependencyMap * (lib.stopMatrices["r" + arg0] - tmp2);
@@ -206,9 +200,9 @@ function decorateAnimation(isHigherOrder) {
       return onFrameResult;
     }
     function arrayOnFrame(current) {
-      let closure_0 = current;
-      let closure_1 = arg1;
-      let c2 = true;
+      closure_0 = current;
+      closure_1 = arg1;
+      c2 = true;
       current = current.current;
       const item = current.forEach((arg0, arg1) => {
         let onFrameResult = c2;
@@ -221,7 +215,7 @@ function decorateAnimation(isHigherOrder) {
       return c2;
     }
     function objectOnFrame(current) {
-      const obj = {};
+      obj = {};
       let flag = true;
       let flag2 = true;
       const keys = Object.keys();
@@ -243,8 +237,6 @@ function decorateAnimation(isHigherOrder) {
       return flag2;
     }
     isHigherOrder.onStart = (reduceMotion, current, arg2, current2) => {
-      let prefix;
-      let strippedValue;
       if (undefined === reduceMotion.reduceMotion) {
         if (typeof arrayOnFrame !== "function") {
           HermesBuiltin.throwTypeError();
@@ -260,22 +252,22 @@ function decorateAnimation(isHigherOrder) {
         reduceMotion.startTime = 0;
         reduceMotion.onFrame = () => true;
       } else {
-        let obj = outer1_0(outer1_1[5]);
+        obj = closure_1_0(closure_1_1[5]);
         if (obj.isColor(current)) {
           callback = reduceMotion;
-          let closure_1 = arg2;
-          let closure_2 = current2;
+          closure_1 = arg2;
+          closure_2 = current2;
           const items = [];
           let tmp3Result = tmp3(tmp4[5]);
           if (tmp3Result.isColor(current)) {
             tmp3Result = tmp3(tmp4[5]);
-            let closure_4 = tmp3Result.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(reduceMotion.current));
+            closure_4 = tmp3Result.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(reduceMotion.current));
             const tmp3Result1 = tmp3(tmp4[5]);
             const tmp3Result2 = tmp3(tmp4[5]);
-            let closure_3 = tmp3Result2.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(current));
+            closure_3 = tmp3Result2.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(current));
             if (reduceMotion.toValue) {
               const tmp3Result4 = tmp3(tmp4[5]);
-              let closure_5 = tmp3Result4.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(reduceMotion.toValue));
+              closure_5 = tmp3Result4.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(reduceMotion.toValue));
               const tmp3Result5 = tmp3(tmp4[5]);
             }
             const tmp3Result3 = tmp3(tmp4[5]);
@@ -378,7 +370,7 @@ function decorateAnimation(isHigherOrder) {
                   if (str5 == null) {
                     str5 = "";
                   }
-                  const obj1 = { prefix: null, suffix: null, strippedValue: null };
+                  obj1 = { prefix: null, suffix: null, strippedValue: null };
                   obj1[0] = match1[1];
                   obj1[1] = match1[4];
                   const _parseFloat2 = parseFloat;
@@ -493,23 +485,19 @@ function decorateAnimation(isHigherOrder) {
     };
   }
 }
-let obj2 = { addMatrices: require("isAffineMatrixFlat").addMatrices, scaleMatrix: require("isAffineMatrixFlat").scaleMatrix, subtractMatrices: require("isAffineMatrixFlat").subtractMatrices };
-decorateAnimation.__closure = { getReduceMotionFromConfig, recognizePrefixSuffix, isColor: require("call").isColor, toLinearSpace: require("call").toLinearSpace, convertToRGBA: require("call").convertToRGBA, clampRGBA: require("call").clampRGBA, rgbaArrayToRGBAColor: require("call").rgbaArrayToRGBAColor, toGammaSpace: require("call").toGammaSpace, decomposeMatrixIntoMatricesAndAngles: require("isAffineMatrixFlat").decomposeMatrixIntoMatricesAndAngles, applyProgressToMatrix, applyProgressToNumber, getRotationMatrix: require("isAffineMatrixFlat").getRotationMatrix, multiplyMatrices: require("isAffineMatrixFlat").multiplyMatrices, flatten: require("isAffineMatrixFlat").flatten, isAffineMatrixFlat: require("isAffineMatrixFlat").isAffineMatrixFlat };
+let obj2 = { addMatrices: isAffineMatrixFlat.addMatrices, scaleMatrix: isAffineMatrixFlat.scaleMatrix, subtractMatrices: isAffineMatrixFlat.subtractMatrices };
+decorateAnimation.__closure = { getReduceMotionFromConfig, recognizePrefixSuffix, isColor: call.isColor, toLinearSpace: call.toLinearSpace, convertToRGBA: call.convertToRGBA, clampRGBA: call.clampRGBA, rgbaArrayToRGBAColor: call.rgbaArrayToRGBAColor, toGammaSpace: call.toGammaSpace, decomposeMatrixIntoMatricesAndAngles: isAffineMatrixFlat.decomposeMatrixIntoMatricesAndAngles, applyProgressToMatrix, applyProgressToNumber, getRotationMatrix: isAffineMatrixFlat.getRotationMatrix, multiplyMatrices: isAffineMatrixFlat.multiplyMatrices, flatten: isAffineMatrixFlat.flatten, isAffineMatrixFlat: isAffineMatrixFlat.isAffineMatrixFlat };
 decorateAnimation.__workletHash = 6240615473022;
 decorateAnimation.__initData = { code: "function decorateAnimation_Pnpm_utilTs8(animation){const{getReduceMotionFromConfig,recognizePrefixSuffix,isColor,toLinearSpace,convertToRGBA,clampRGBA,rgbaArrayToRGBAColor,toGammaSpace,decomposeMatrixIntoMatricesAndAngles,applyProgressToMatrix,applyProgressToNumber,getRotationMatrix,multiplyMatrices,flatten,isAffineMatrixFlat}=this.__closure;const baseOnStart=animation.onStart;const baseOnFrame=animation.onFrame;if(animation.isHigherOrder){animation.onStart=function(animation,value,timestamp,previousAnimation){if(animation.reduceMotion===undefined){animation.reduceMotion=getReduceMotionFromConfig();}return baseOnStart(animation,value,timestamp,previousAnimation);};return;}const animationCopy=Object.assign({},animation);delete animationCopy.callback;const prefNumberSuffOnStart=function(animation,value,timestamp,previousAnimation){var _animation$__prefix,_animation$__suffix;const{prefix:prefix,suffix:suffix,strippedValue:strippedValue}=recognizePrefixSuffix(value);animation.__prefix=prefix;animation.__suffix=suffix;animation.strippedCurrent=strippedValue;const{strippedValue:strippedToValue}=recognizePrefixSuffix(animation.toValue);animation.current=strippedValue;animation.startValue=strippedValue;animation.toValue=strippedToValue;if(previousAnimation&&previousAnimation!==animation){const{prefix:paPrefix,suffix:paSuffix,strippedValue:paStrippedValue}=recognizePrefixSuffix(previousAnimation.current);previousAnimation.current=paStrippedValue;previousAnimation.__prefix=paPrefix;previousAnimation.__suffix=paSuffix;}baseOnStart(animation,strippedValue,timestamp,previousAnimation);animation.current=((_animation$__prefix=animation.__prefix)!==null&&_animation$__prefix!==void 0?_animation$__prefix:'')+animation.current+((_animation$__suffix=animation.__suffix)!==null&&_animation$__suffix!==void 0?_animation$__suffix:'');if(previousAnimation&&previousAnimation!==animation){var _previousAnimation$__,_previousAnimation$__2;previousAnimation.current=((_previousAnimation$__=previousAnimation.__prefix)!==null&&_previousAnimation$__!==void 0?_previousAnimation$__:'')+previousAnimation.current+((_previousAnimation$__2=previousAnimation.__suffix)!==null&&_previousAnimation$__2!==void 0?_previousAnimation$__2:'');}};const prefNumberSuffOnFrame=function(animation,timestamp){var _animation$__prefix2,_animation$__suffix2;animation.current=animation.strippedCurrent;const res=baseOnFrame(animation,timestamp);animation.strippedCurrent=animation.current;animation.current=((_animation$__prefix2=animation.__prefix)!==null&&_animation$__prefix2!==void 0?_animation$__prefix2:'')+animation.current+((_animation$__suffix2=animation.__suffix)!==null&&_animation$__suffix2!==void 0?_animation$__suffix2:'');return res;};const tab=['R','G','B','A'];const colorOnStart=function(animation,value,timestamp,previousAnimation){let RGBAValue;let RGBACurrent;let RGBAToValue;const res=[];if(isColor(value)){RGBACurrent=toLinearSpace(convertToRGBA(animation.current));RGBAValue=toLinearSpace(convertToRGBA(value));if(animation.toValue){RGBAToValue=toLinearSpace(convertToRGBA(animation.toValue));}}tab.forEach(function(i,index){animation[i]=Object.assign({},animationCopy);animation[i].current=RGBACurrent[index];animation[i].toValue=RGBAToValue?RGBAToValue[index]:undefined;animation[i].onStart(animation[i],RGBAValue[index],timestamp,previousAnimation?previousAnimation[i]:undefined);res.push(animation[i].current);});animation.unroundedCurrent=res;clampRGBA(res);animation.current=rgbaArrayToRGBAColor(toGammaSpace(res));};const colorOnFrame=function(animation,timestamp){const res=[];let finished=true;animation.current=animation.nonscaledCurrent;tab.forEach(function(i){const result=animation[i].onFrame(animation[i],timestamp);finished=finished&&result;res.push(animation[i].current);});clampRGBA(res);animation.nonscaledCurrent=res;animation.current=rgbaArrayToRGBAColor(toGammaSpace(res));return finished;};const transformationMatrixOnStart=function(animation,value,timestamp,previousAnimation){const toValue=animation.toValue;animation.startMatrices=decomposeMatrixIntoMatricesAndAngles(value);animation.stopMatrices=decomposeMatrixIntoMatricesAndAngles(toValue);animation[0]=Object.assign({},animationCopy);animation[0].current=0;animation[0].toValue=100;animation[0].onStart(animation[0],0,timestamp,previousAnimation?previousAnimation[0]:undefined);animation.current=value;};const transformationMatrixOnFrame=function(animation,timestamp){let finished=true;const result=animation[0].onFrame(animation[0],timestamp);finished=finished&&result;const progress=animation[0].current/100;const transforms=['translationMatrix','scaleMatrix','skewMatrix'];const mappedTransforms=[];transforms.forEach(function(key,_){return mappedTransforms.push(applyProgressToMatrix(progress,animation.startMatrices[key],animation.stopMatrices[key]));});const[currentTranslation,currentScale,skewMatrix]=mappedTransforms;const rotations=['x','y','z'];const mappedRotations=[];rotations.forEach(function(key,_){const angle=applyProgressToNumber(progress,animation.startMatrices['r'+key],animation.stopMatrices['r'+key]);mappedRotations.push(getRotationMatrix(angle,key));});const[rotationMatrixX,rotationMatrixY,rotationMatrixZ]=mappedRotations;const rotationMatrix=multiplyMatrices(rotationMatrixX,multiplyMatrices(rotationMatrixY,rotationMatrixZ));const updated=flatten(multiplyMatrices(multiplyMatrices(currentScale,multiplyMatrices(skewMatrix,rotationMatrix)),currentTranslation));animation.current=updated;return finished;};const arrayOnStart=function(animation,value,timestamp,previousAnimation){value.forEach(function(v,i){animation[i]=Object.assign({},animationCopy);animation[i].current=v;animation[i].toValue=animation.toValue[i];animation[i].onStart(animation[i],v,timestamp,previousAnimation?previousAnimation[i]:undefined);});animation.current=[...value];};const arrayOnFrame=function(animation,timestamp){let finished=true;animation.current.forEach(function(_,i){const result=animation[i].onFrame(animation[i],timestamp);finished=finished&&result;animation.current[i]=animation[i].current;});return finished;};const objectOnStart=function(animation,value,timestamp,previousAnimation){for(const key in value){animation[key]=Object.assign({},animationCopy);animation[key].onStart=animation.onStart;animation[key].current=value[key];animation[key].toValue=animation.toValue[key];animation[key].onStart(animation[key],value[key],timestamp,previousAnimation?previousAnimation[key]:undefined);}animation.current=value;};const objectOnFrame=function(animation,timestamp){let finished=true;const newObject={};for(const key in animation.current){const result=animation[key].onFrame(animation[key],timestamp);finished=finished&&result;newObject[key]=animation[key].current;}animation.current=newObject;return finished;};animation.onStart=function(animation,value,timestamp,previousAnimation){if(animation.reduceMotion===undefined){animation.reduceMotion=getReduceMotionFromConfig();}if(animation.reduceMotion){if(animation.toValue!==undefined){animation.current=animation.toValue;}else{baseOnStart(animation,value,timestamp,previousAnimation);}animation.startTime=0;animation.onFrame=function(){return true;};return;}if(isColor(value)){colorOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=colorOnFrame;return;}else if(isAffineMatrixFlat(value)){transformationMatrixOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=transformationMatrixOnFrame;return;}else if(Array.isArray(value)){arrayOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=arrayOnFrame;return;}else if(typeof value==='string'){prefNumberSuffOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=prefNumberSuffOnFrame;return;}else if(typeof value==='object'&&value!==null){objectOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=objectOnFrame;return;}baseOnStart(animation,value,timestamp,previousAnimation);};}" };
 let closure_11 = { code: "function pnpm_utilTs10(){const{factory,decorateAnimation}=this.__closure;const animation=factory();decorateAnimation(animation);return animation;}" };
 function defineAnimation(toValue, fn) {
-  let closure_0;
-  let dependencyMap;
   closure_0 = fn;
   if (closure_2) {
     return toValue;
   } else {
     fn = function o() {
-      let closure_0;
-      let closure_1;
       const tmp3 = callback();
-      if (typeof outer1_10 !== "function") {
+      if (typeof closure_1_10 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       ({ onStart: closure_0, onFrame: closure_1 } = tmp3);
@@ -525,10 +513,9 @@ function defineAnimation(toValue, fn) {
         };
       } else {
         let _Object = Object;
-        let closure_2 = Object.assign({}, tmp3);
+        closure_2 = Object.assign({}, tmp3);
         delete tmp2[tmp];
-        function prefNumberSuffOnFrame(strippedCurrent) {
-          let __prefix;
+        prefNumberSuffOnFrame = function prefNumberSuffOnFrame(strippedCurrent) {
           strippedCurrent.current = strippedCurrent.strippedCurrent;
           ({ current: strippedCurrent.strippedCurrent, __prefix } = strippedCurrent);
           if (__prefix == null) {
@@ -541,13 +528,13 @@ function defineAnimation(toValue, fn) {
           }
           strippedCurrent.current = sum + str;
           return dependencyMap(strippedCurrent, arg1);
-        }
-        let closure_4 = ["R", "G", "B", "A"];
-        function colorOnFrame(nonscaledCurrent) {
-          let closure_0 = nonscaledCurrent;
-          let closure_1 = arg1;
+        };
+        closure_4 = ["R", "G", "B", "A"];
+        colorOnFrame = function colorOnFrame(nonscaledCurrent) {
+          closure_0 = nonscaledCurrent;
+          closure_1 = arg1;
           const items = [];
-          let c3 = true;
+          c3 = true;
           nonscaledCurrent.current = nonscaledCurrent.nonscaledCurrent;
           const item = closure_4.forEach((arg0) => {
             let onFrameResult = c3;
@@ -557,30 +544,24 @@ function defineAnimation(toValue, fn) {
             c3 = onFrameResult;
             items.push(nonscaledCurrent[arg0].current);
           });
-          outer1_0(outer1_1[5]).clampRGBA(items);
+          closure_1_0(closure_1_1[5]).clampRGBA(items);
           nonscaledCurrent.nonscaledCurrent = items;
-          const obj = outer1_0(outer1_1[5]);
-          const obj2 = outer1_0(outer1_1[5]);
-          nonscaledCurrent.current = obj2.rgbaArrayToRGBAColor(outer1_0(outer1_1[5]).toGammaSpace(items));
+          obj = closure_1_0(closure_1_1[5]);
+          const obj2 = closure_1_0(closure_1_1[5]);
+          nonscaledCurrent.current = obj2.rgbaArrayToRGBAColor(closure_1_0(closure_1_1[5]).toGammaSpace(items));
           return c3;
-        }
-        function transformationMatrixOnFrame(arg0, arg1) {
-          let tmp3;
-          let tmp4;
-          let tmp5;
-          let tmp7;
-          let tmp8;
-          let tmp9;
+        };
+        transformationMatrixOnFrame = function transformationMatrixOnFrame(arg0, arg1) {
           const callback = arg0;
           const first = arg0[0];
-          const dependencyMap = arg0[0].current / 100;
+          dependencyMap = arg0[0].current / 100;
           const items = [];
           const items1 = ["translationMatrix", "scaleMatrix", "skewMatrix"];
           const item = items1.forEach((arg0, arg1) => {
-            if (typeof outer1_8 !== "function") {
+            if (typeof closure_1_8 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            const obj = lib(1696);
+            obj = lib(1696);
             const tmp2 = dependencyMap;
             const obj2 = lib(1696);
             return items.push(obj.addMatrices(lib.startMatrices[arg0], obj2.scaleMatrix(lib(1696).subtractMatrices(lib.stopMatrices[arg0], lib.startMatrices[arg0]), tmp2)));
@@ -589,7 +570,7 @@ function defineAnimation(toValue, fn) {
           const items3 = ["x", "y", "z"];
           [tmp3, tmp4, tmp5] = items;
           const item1 = items3.forEach((arg0, arg1) => {
-            if (typeof outer1_9 !== "function") {
+            if (typeof closure_1_9 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             const sum = tmp2 + dependencyMap * (lib.stopMatrices["r" + arg0] - tmp2);
@@ -605,11 +586,11 @@ function defineAnimation(toValue, fn) {
           const obj6 = callback(1696);
           arg0.current = obj4.flatten(obj5.multiplyMatrices(obj6.multiplyMatrices(tmp4, callback(1696).multiplyMatrices(tmp5, multiplyMatricesResult)), tmp3));
           return onFrameResult;
-        }
-        function arrayOnFrame(current) {
-          let closure_0 = current;
-          let closure_1 = arg1;
-          let c2 = true;
+        };
+        arrayOnFrame = function arrayOnFrame(current) {
+          closure_0 = current;
+          closure_1 = arg1;
+          c2 = true;
           current = current.current;
           const item = current.forEach((arg0, arg1) => {
             let onFrameResult = c2;
@@ -620,9 +601,9 @@ function defineAnimation(toValue, fn) {
             dependencyMap.current[arg1] = dependencyMap[arg1].current;
           });
           return c2;
-        }
-        function objectOnFrame(current) {
-          const obj = {};
+        };
+        objectOnFrame = function objectOnFrame(current) {
+          obj = {};
           let flag = true;
           let flag2 = true;
           const keys = Object.keys();
@@ -642,10 +623,8 @@ function defineAnimation(toValue, fn) {
           }
           current.current = obj;
           return flag2;
-        }
+        };
         tmp3.onStart = (reduceMotion, current, arg2, current2) => {
-          let prefix;
-          let strippedValue;
           if (undefined === reduceMotion.reduceMotion) {
             if (typeof arrayOnFrame !== "function") {
               HermesBuiltin.throwTypeError();
@@ -661,22 +640,22 @@ function defineAnimation(toValue, fn) {
             reduceMotion.startTime = 0;
             reduceMotion.onFrame = () => true;
           } else {
-            let obj = outer1_0(outer1_1[5]);
+            obj = closure_1_0(closure_1_1[5]);
             if (obj.isColor(current)) {
               callback = reduceMotion;
-              let closure_1 = arg2;
-              let closure_2 = current2;
+              closure_1 = arg2;
+              closure_2 = current2;
               const items = [];
               let tmp3Result = tmp3(tmp4[5]);
               if (tmp3Result.isColor(current)) {
                 tmp3Result = tmp3(tmp4[5]);
-                let closure_4 = tmp3Result.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(reduceMotion.current));
+                closure_4 = tmp3Result.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(reduceMotion.current));
                 const tmp3Result1 = tmp3(tmp4[5]);
                 const tmp3Result2 = tmp3(tmp4[5]);
-                let closure_3 = tmp3Result2.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(current));
+                closure_3 = tmp3Result2.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(current));
                 if (reduceMotion.toValue) {
                   const tmp3Result4 = tmp3(tmp4[5]);
-                  let closure_5 = tmp3Result4.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(reduceMotion.toValue));
+                  closure_5 = tmp3Result4.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(reduceMotion.toValue));
                   const tmp3Result5 = tmp3(tmp4[5]);
                 }
                 const tmp3Result3 = tmp3(tmp4[5]);
@@ -779,7 +758,7 @@ function defineAnimation(toValue, fn) {
                       if (str5 == null) {
                         str5 = "";
                       }
-                      const obj1 = { prefix: null, suffix: null, strippedValue: null };
+                      obj1 = { prefix: null, suffix: null, strippedValue: null };
                       obj1[0] = match1[1];
                       obj1[1] = match1[4];
                       const _parseFloat2 = parseFloat;
@@ -895,7 +874,7 @@ function defineAnimation(toValue, fn) {
       }
       return tmp3;
     };
-    let obj = { factory: null, decorateAnimation: null };
+    obj = { factory: null, decorateAnimation: null };
     obj[0] = fn;
     obj[1] = decorateAnimation;
     fn.__closure = obj;
@@ -928,7 +907,6 @@ function defineAnimation(toValue, fn) {
       closure_2 = Object.assign({}, tmp7);
       delete tmp2[tmp];
       prefNumberSuffOnFrame = function prefNumberSuffOnFrame(strippedCurrent) {
-        let __prefix;
         strippedCurrent.current = strippedCurrent.strippedCurrent;
         ({ current: strippedCurrent.strippedCurrent, __prefix } = strippedCurrent);
         if (__prefix == null) {
@@ -942,12 +920,12 @@ function defineAnimation(toValue, fn) {
         strippedCurrent.current = sum + str;
         return dependencyMap(strippedCurrent, arg1);
       };
-      let closure_4 = ["R", "G", "B", "A"];
+      closure_4 = ["R", "G", "B", "A"];
       function colorOnFrame(nonscaledCurrent) {
-        let closure_0 = nonscaledCurrent;
-        let closure_1 = arg1;
+        closure_0 = nonscaledCurrent;
+        closure_1 = arg1;
         const items = [];
-        let c3 = true;
+        c3 = true;
         nonscaledCurrent.current = nonscaledCurrent.nonscaledCurrent;
         const item = closure_4.forEach((arg0) => {
           let onFrameResult = c3;
@@ -957,30 +935,24 @@ function defineAnimation(toValue, fn) {
           c3 = onFrameResult;
           items.push(nonscaledCurrent[arg0].current);
         });
-        outer1_0(outer1_1[5]).clampRGBA(items);
+        closure_1_0(closure_1_1[5]).clampRGBA(items);
         nonscaledCurrent.nonscaledCurrent = items;
-        const obj = outer1_0(outer1_1[5]);
-        const obj2 = outer1_0(outer1_1[5]);
-        nonscaledCurrent.current = obj2.rgbaArrayToRGBAColor(outer1_0(outer1_1[5]).toGammaSpace(items));
+        obj = closure_1_0(closure_1_1[5]);
+        const obj2 = closure_1_0(closure_1_1[5]);
+        nonscaledCurrent.current = obj2.rgbaArrayToRGBAColor(closure_1_0(closure_1_1[5]).toGammaSpace(items));
         return c3;
       }
       function transformationMatrixOnFrame(arg0, arg1) {
-        let tmp3;
-        let tmp4;
-        let tmp5;
-        let tmp7;
-        let tmp8;
-        let tmp9;
         const callback = arg0;
         const first = arg0[0];
-        const dependencyMap = arg0[0].current / 100;
+        dependencyMap = arg0[0].current / 100;
         const items = [];
         const items1 = ["translationMatrix", "scaleMatrix", "skewMatrix"];
         const item = items1.forEach((arg0, arg1) => {
-          if (typeof outer1_8 !== "function") {
+          if (typeof closure_1_8 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          const obj = lib(1696);
+          obj = lib(1696);
           const tmp2 = dependencyMap;
           const obj2 = lib(1696);
           return items.push(obj.addMatrices(lib.startMatrices[arg0], obj2.scaleMatrix(lib(1696).subtractMatrices(lib.stopMatrices[arg0], lib.startMatrices[arg0]), tmp2)));
@@ -989,7 +961,7 @@ function defineAnimation(toValue, fn) {
         const items3 = ["x", "y", "z"];
         [tmp3, tmp4, tmp5] = items;
         const item1 = items3.forEach((arg0, arg1) => {
-          if (typeof outer1_9 !== "function") {
+          if (typeof closure_1_9 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const sum = tmp2 + dependencyMap * (lib.stopMatrices["r" + arg0] - tmp2);
@@ -1007,9 +979,9 @@ function defineAnimation(toValue, fn) {
         return onFrameResult;
       }
       function arrayOnFrame(current) {
-        let closure_0 = current;
-        let closure_1 = arg1;
-        let c2 = true;
+        closure_0 = current;
+        closure_1 = arg1;
+        c2 = true;
         current = current.current;
         const item = current.forEach((arg0, arg1) => {
           let onFrameResult = c2;
@@ -1022,7 +994,7 @@ function defineAnimation(toValue, fn) {
         return c2;
       }
       function objectOnFrame(current) {
-        const obj = {};
+        obj = {};
         let flag = true;
         let flag2 = true;
         const keys = Object.keys();
@@ -1044,8 +1016,6 @@ function defineAnimation(toValue, fn) {
         return flag2;
       }
       tmp7.onStart = (reduceMotion, current, arg2, current2) => {
-        let prefix;
-        let strippedValue;
         if (undefined === reduceMotion.reduceMotion) {
           if (typeof arrayOnFrame !== "function") {
             HermesBuiltin.throwTypeError();
@@ -1061,22 +1031,22 @@ function defineAnimation(toValue, fn) {
           reduceMotion.startTime = 0;
           reduceMotion.onFrame = () => true;
         } else {
-          let obj = outer1_0(outer1_1[5]);
+          obj = closure_1_0(closure_1_1[5]);
           if (obj.isColor(current)) {
             callback = reduceMotion;
-            let closure_1 = arg2;
-            let closure_2 = current2;
+            closure_1 = arg2;
+            closure_2 = current2;
             const items = [];
             let tmp3Result = tmp3(tmp4[5]);
             if (tmp3Result.isColor(current)) {
               tmp3Result = tmp3(tmp4[5]);
-              let closure_4 = tmp3Result.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(reduceMotion.current));
+              closure_4 = tmp3Result.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(reduceMotion.current));
               const tmp3Result1 = tmp3(tmp4[5]);
               const tmp3Result2 = tmp3(tmp4[5]);
-              let closure_3 = tmp3Result2.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(current));
+              closure_3 = tmp3Result2.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(current));
               if (reduceMotion.toValue) {
                 const tmp3Result4 = tmp3(tmp4[5]);
-                let closure_5 = tmp3Result4.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(reduceMotion.toValue));
+                closure_5 = tmp3Result4.toLinearSpace(tmp3(tmp4[5]).convertToRGBA(reduceMotion.toValue));
                 const tmp3Result5 = tmp3(tmp4[5]);
               }
               const tmp3Result3 = tmp3(tmp4[5]);
@@ -1179,7 +1149,7 @@ function defineAnimation(toValue, fn) {
                     if (str5 == null) {
                       str5 = "";
                     }
-                    const obj1 = { prefix: null, suffix: null, strippedValue: null };
+                    obj1 = { prefix: null, suffix: null, strippedValue: null };
                     obj1[0] = match1[1];
                     obj1[1] = match1[4];
                     const _parseFloat2 = parseFloat;
@@ -1306,7 +1276,7 @@ let cancelAnimationWeb = function cancelAnimationNative(value) {
   if (globalThis._WORKLET) {
     value.value = value.value;
   } else {
-    let obj = _runWorkletOnJS;
+    obj = _runWorkletOnJS;
     const fn = function n() {
       value.value = value.value;
     };
@@ -1318,9 +1288,9 @@ let cancelAnimationWeb = function cancelAnimationNative(value) {
     obj.runOnUI(fn)();
   }
 };
-let obj3 = { getReduceMotionFromConfig, recognizePrefixSuffix, isColor: require("call").isColor, toLinearSpace: require("call").toLinearSpace, convertToRGBA: require("call").convertToRGBA, clampRGBA: require("call").clampRGBA, rgbaArrayToRGBAColor: require("call").rgbaArrayToRGBAColor, toGammaSpace: require("call").toGammaSpace, decomposeMatrixIntoMatricesAndAngles: require("isAffineMatrixFlat").decomposeMatrixIntoMatricesAndAngles, applyProgressToMatrix, applyProgressToNumber, getRotationMatrix: require("isAffineMatrixFlat").getRotationMatrix, multiplyMatrices: require("isAffineMatrixFlat").multiplyMatrices, flatten: require("isAffineMatrixFlat").flatten, isAffineMatrixFlat: require("isAffineMatrixFlat").isAffineMatrixFlat };
+let obj3 = { getReduceMotionFromConfig, recognizePrefixSuffix, isColor: call.isColor, toLinearSpace: call.toLinearSpace, convertToRGBA: call.convertToRGBA, clampRGBA: call.clampRGBA, rgbaArrayToRGBAColor: call.rgbaArrayToRGBAColor, toGammaSpace: call.toGammaSpace, decomposeMatrixIntoMatricesAndAngles: isAffineMatrixFlat.decomposeMatrixIntoMatricesAndAngles, applyProgressToMatrix, applyProgressToNumber, getRotationMatrix: isAffineMatrixFlat.getRotationMatrix, multiplyMatrices: isAffineMatrixFlat.multiplyMatrices, flatten: isAffineMatrixFlat.flatten, isAffineMatrixFlat: isAffineMatrixFlat.isAffineMatrixFlat };
 let obj4 = { IN_STYLE_UPDATER: c2, decorateAnimation, SHOULD_BE_USE_WEB: isJest };
-cancelAnimationWeb.__closure = { runOnUI: require("runWorkletOnJS").runOnUI };
+cancelAnimationWeb.__closure = { runOnUI: runWorkletOnJS.runOnUI };
 cancelAnimationWeb.__workletHash = 796831326214;
 cancelAnimationWeb.__initData = { code: "function cancelAnimationNative_Pnpm_utilTs11(sharedValue){const{runOnUI}=this.__closure;if(_WORKLET){sharedValue.value=sharedValue.value;}else{runOnUI(function(){'worklet';sharedValue.value=sharedValue.value;})();}}" };
 if (isJest) {
@@ -1332,7 +1302,7 @@ if (isJest) {
 export { isValidLayoutAnimationProp };
 export { assertEasingIsWorklet };
 export const initialUpdaterRun = function initialUpdaterRun(updater) {
-  let c2 = true;
+  c2 = true;
   c2 = false;
   return updater();
 };

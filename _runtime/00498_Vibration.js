@@ -1,3 +1,5 @@
 // _runtime/00498_Vibration.js
+import getAll from "get" /* 30 */;
 
-export default require("get").getEnforcing("Vibration");
+
+export default getAll.getEnforcing("Vibration");

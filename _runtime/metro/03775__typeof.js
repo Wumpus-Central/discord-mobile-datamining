@@ -37,7 +37,7 @@ let store = function _setPrototypeOf(DateToSystemTimezoneSetter, Setter) {
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;
-    let _getPrototypeOf = Object.getPrototypeOf;
+    _getPrototypeOf = Object.getPrototypeOf;
   } else {
     _getPrototypeOf = function _getPrototypeOf(arg0) {
       let __proto__ = arg0.__proto__;
@@ -111,7 +111,7 @@ _createSuperInternal = undefined;
 class ValueSetter {
   constructor(arg0, arg1, arg2, arg3, arg4) {
     self = this;
-    if (this instanceof c1) {
+    if (this instanceof closure_1) {
       tmp6 = _createSuperInternal;
       call = _createSuperInternal.call;
       tmp7 = typeof call === "unknown" ? tmp6() : call(self);
@@ -221,7 +221,7 @@ arg5.ValueSetter = ValueSetter;
 _createSuperInternal = undefined;
 class DateToSystemTimezoneSetter {
   constructor() {
-    if (this instanceof c1) {
+    if (this instanceof closure_1) {
       length = arguments.length;
       _Array = Array;
       tmp6 = new.target;

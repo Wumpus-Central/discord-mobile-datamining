@@ -12,10 +12,9 @@ function getFilenameToDebugIdMap(arg0) {
     }
     reduced = keys.reduce((arg0, arg1) => {
       let filename;
-      let tmp = outer1_2;
-      if (!outer1_2) {
-        const obj = {};
-        outer1_2 = obj;
+      let tmp = obj;
+      if (!obj) {
+        obj = {};
         tmp = obj;
       }
       if (tmp[arg1]) {
@@ -41,7 +40,7 @@ function getFilenameToDebugIdMap(arg0) {
           }
           arg0[filename] = tmp8;
           const items = [filename, tmp8];
-          outer1_2[arg1] = items;
+          obj[arg1] = items;
         }
       }
       return arg0;

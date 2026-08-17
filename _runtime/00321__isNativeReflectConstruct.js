@@ -1,19 +1,15 @@
 // _runtime/00321__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import { isValidElement } from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import importAllResult from "noop";
-import { 00038__ } from "metro/00038__.js";
+import _modDef38 from "module_38" /* 38 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import { isValidElement } from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-let StyleSheet;
-let c9;
-let error;
-let metroImportAll;
 const CellRenderer = arg1;
 function _isNativeReflectConstruct() {
   try {
@@ -26,26 +22,26 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 ({ StyleSheet, View: error } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 class CellRenderer {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_3(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_5;
+    obj = closure_5(closure_0);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -54,30 +50,26 @@ class CellRenderer {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     obj = { highlighted: false, leadingItem: tmp3Result.props.item };
     tmp3Result.state = { separatorProps: obj };
     tmp3Result._separators = {
       highlight() {
-            let props;
-            let props2;
-            ({ props, props: props2 } = c0);
+            ({ props, props: props2 } = closure_0);
             const items = [, ];
             ({ cellKey: arr[0], prevCellKey: arr[1] } = props);
             props2.onUpdateSeparators(items, { highlighted: true });
           },
       unhighlight() {
-            let props;
-            let props2;
-            ({ props, props: props2 } = c0);
+            ({ props, props: props2 } = closure_0);
             const items = [, ];
             ({ cellKey: arr[0], prevCellKey: arr[1] } = props);
             props2.onUpdateSeparators(items, { highlighted: false });
           },
       updateProps(arg0, arg1) {
-            const props = _undefined.props;
+            const props = closure_0.props;
             let prevCellKey = props.cellKey;
-            const props2 = _undefined.props;
+            const props2 = closure_0.props;
             if ("leading" === arg0) {
               prevCellKey = props.prevCellKey;
             }
@@ -86,23 +78,23 @@ class CellRenderer {
           }
     };
     tmp3Result._onLayout = (arg0) => {
-      const props = _undefined.props;
+      const props = closure_0.props;
       const onCellLayout = props.onCellLayout;
       if (onCellLayout != null) {
         onCellLayout(arg0, tmp.props.cellKey, tmp.props.index);
       }
     };
     tmp3Result._onCellFocusCapture = (arg0) => {
-      const props = _undefined.props;
+      const props = closure_0.props;
       const onCellFocusCapture = props.onCellFocusCapture;
       if (onCellFocusCapture != null) {
-        onCellFocusCapture(_undefined.props.cellKey);
+        onCellFocusCapture(closure_0.props.cellKey);
       }
     };
     return tmp3Result;
   }
 }
-importDefaultResult1(CellRenderer, require("noop").PureComponent);
+importDefaultResult1(CellRenderer, importAllResult.PureComponent);
 let obj = {
   key: "updateSeparatorProps",
   value: function updateSeparatorProps(closure_0) {
@@ -150,7 +142,7 @@ let items = [
         obj[2] = self._separators;
         tmp7 = renderItem(obj);
       } else {
-        00038__(false, "VirtualizedList: Either ListItemComponent or renderItem props are required but none were found.");
+        _modDef38(false, "VirtualizedList: Either ListItemComponent or renderItem props are required but none were found.");
       }
       return tmp7;
     }
@@ -158,13 +150,6 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let CellRendererComponent;
-      let ItemSeparatorComponent;
-      let horizontal;
-      let index;
-      let inversionStyle;
-      let item;
-      let onCellLayout;
       const self = this;
       const props = this.props;
       ({ CellRendererComponent, ItemSeparatorComponent, horizontal, item, index, inversionStyle, onCellLayout } = props);
@@ -212,7 +197,7 @@ let items = [
           obj.children = items3;
           let tmp10Result = tmp10(CellRendererComponent, obj);
         } else {
-          const obj1 = { style: null, onFocusCapture: null };
+          obj1 = { style: null, onFocusCapture: null };
           obj1[0] = tmp7;
           obj1[1] = self._onCellFocusCapture;
           let tmp12 = onCellLayout;

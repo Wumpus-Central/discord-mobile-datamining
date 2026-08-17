@@ -1,7 +1,9 @@
 // _runtime/14859_PLAYER_FUNCTIONS.js
-import 08106__ from "metro/08106__.js";
-import _defineProperty from "_defineProperty";
+import _mod14855 from "module_14855" /* 14855 */;
+import _defineProperty2 from "_defineProperty" /* 14860 */;
+import 08106__ from "metro/08106__.js" /* 8106 */;
 
+const _defineProperty = module_8106(_defineProperty2);
 let obj = {
   muteVideo: "player.mute(); true;",
   unMuteVideo: "player.unMute(); true;",
@@ -23,13 +25,13 @@ let obj = {
   setPlaybackRate(arg0) {
     return "player.setPlaybackRate(" + arg0 + "); true;";
   },
-  loadPlaylist(playList, arg1, closure_2) {
+  loadPlaylist(playList, arg1, play) {
     let num = arg1;
     if (!arg1) {
       num = 0;
     }
     let str = "cuePlaylist";
-    if (closure_2) {
+    if (play) {
       str = "loadPlaylist";
     }
     let str2 = "undefined";
@@ -46,9 +48,9 @@ let obj = {
     }
     return "player." + str + "({listType: " + str4 + ", list: " + str3 + ", playlist: " + str2 + ", index: " + num + "}); true;";
   },
-  loadVideoById(videoId, closure_2) {
+  loadVideoById(videoId, play) {
     let str = "cueVideoById";
-    if (closure_2) {
+    if (play) {
       str = "loadVideoById";
     }
     const combined = "player." + str + "({videoId: ";
@@ -56,24 +58,16 @@ let obj = {
   }
 };
 obj = {};
-_defineProperty.default(obj, require("module_14855").PLAY_MODE, obj.playVideo);
-_defineProperty.default(obj, require("module_14855").PAUSE_MODE, obj.pauseVideo);
+_defineProperty.default(obj, _mod14855.PLAY_MODE, obj.playVideo);
+_defineProperty.default(obj, _mod14855.PAUSE_MODE, obj.pauseVideo);
 const obj1 = {};
-_defineProperty.default(obj1, require("module_14855").MUTE_MODE, obj.muteVideo);
-_defineProperty.default(obj1, require("module_14855").UNMUTE_MODE, obj.unMuteVideo);
+_defineProperty.default(obj1, _mod14855.MUTE_MODE, obj.muteVideo);
+_defineProperty.default(obj1, _mod14855.UNMUTE_MODE, obj.unMuteVideo);
 
 export const PLAYER_FUNCTIONS = obj;
 export const playMode = obj;
 export const soundMode = obj1;
 export const MAIN_SCRIPT = function MAIN_SCRIPT(current, current2, current3, closure_12, num) {
-  let cc_lang_pref;
-  let color;
-  let controls;
-  let end;
-  let iv_load_policy;
-  let loop;
-  let playerLang;
-  let start;
   ({ end, color, start, playerLang, loop } = current3);
   let tmp = undefined !== loop;
   if (tmp) {

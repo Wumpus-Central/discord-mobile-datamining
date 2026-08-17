@@ -1,4 +1,6 @@
 // _runtime/07495_Node.js
+import Iterator from "Iterator" /* 7494 */;
+
 class Node {
   constructor(arg0) {
     return;
@@ -119,6 +121,6 @@ class BinTree {
     }
   }
 }
-BinTree.prototype = new require("Iterator")();
+BinTree.prototype = new Iterator();
 
 export default BinTree;

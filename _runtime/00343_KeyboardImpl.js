@@ -1,11 +1,12 @@
 // _runtime/00343_KeyboardImpl.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const KeyboardImpl = importDefault;
 class KeyboardImpl {
   constructor() {
     self = this;
-    tmp = outer1_2(this, self);
+    tmp = closure_2(this, self);
     tmp2 = new require("NativeEventEmitter")(null);
     this._emitter = tmp2;
     addListenerResult = this.addListener("keyboardDidShow", (_currentlyShowing) => {
@@ -58,8 +59,6 @@ const items = [
   {
     key: "scheduleLayoutAnimation",
     value: function scheduleLayoutAnimation(arg0) {
-      let duration;
-      let easing;
       ({ duration, easing } = arg0);
       let tmp = null != duration;
       if (tmp) {
@@ -87,4 +86,4 @@ const items = [
   }
 ];
 
-export default new require("_createClass")(KeyboardImpl, items)();
+export default new _createClassDefault(KeyboardImpl, items)();

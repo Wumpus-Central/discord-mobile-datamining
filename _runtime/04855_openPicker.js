@@ -1,8 +1,10 @@
 // _runtime/04855_openPicker.js
+import RNCImageCropPickerDefault from "RNCImageCropPicker" /* 4856 */;
 
-export { default } from "RNCImageCropPicker";
-export const openPicker = require("RNCImageCropPicker").openPicker;
-export const openCamera = require("RNCImageCropPicker").openCamera;
-export const openCropper = require("RNCImageCropPicker").openCropper;
-export const clean = require("RNCImageCropPicker").clean;
-export const cleanSingle = require("RNCImageCropPicker").cleanSingle;
+
+export default RNCImageCropPickerDefault;
+export const openPicker = RNCImageCropPickerDefault.openPicker;
+export const openCamera = RNCImageCropPickerDefault.openCamera;
+export const openCropper = RNCImageCropPickerDefault.openCropper;
+export const clean = RNCImageCropPickerDefault.clean;
+export const cleanSingle = RNCImageCropPickerDefault.cleanSingle;

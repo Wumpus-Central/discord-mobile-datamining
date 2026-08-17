@@ -1,6 +1,7 @@
 // _runtime/00838_dateTimestampInSeconds.js
-import { safeDateNow } from "00831_safeDateNow.js";
-const require = arg1;
+import safeDateNow from "safeDateNow" /* 831 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function dateTimestampInSeconds() {
   return safeDateNow.safeDateNow() / 1000;
@@ -8,8 +9,8 @@ function dateTimestampInSeconds() {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c4 = null;
 arg5.browserPerformanceTimeOrigin = function browserPerformanceTimeOrigin() {
-  let tmp = c4;
-  if (null === c4) {
+  let tmp = timeOrigin;
+  if (null === timeOrigin) {
     _performance = _performance(821).GLOBAL_OBJ.performance;
     let now;
     if (_performance != null) {
@@ -21,7 +22,7 @@ arg5.browserPerformanceTimeOrigin = function browserPerformanceTimeOrigin() {
       const result = tmp7Result.withRandomSafeContext(() => _performance.now());
       tmp7Result = tmp7(831);
       const safeDateNowResult = tmp7Result.safeDateNow();
-      const timeOrigin = _performance.timeOrigin;
+      timeOrigin = _performance.timeOrigin;
       if (typeof timeOrigin !== "number") {
         const timing = _performance.timing;
         let navigationStart;
@@ -39,7 +40,7 @@ arg5.browserPerformanceTimeOrigin = function browserPerformanceTimeOrigin() {
         tmp3 = timeOrigin;
       }
     }
-    c4 = tmp3;
+    timeOrigin = tmp3;
     tmp = tmp3;
   }
   return tmp;

@@ -1,11 +1,12 @@
 // _runtime/metro/13733__.js
-import getOwnPropertyDescriptor from "getOwnPropertyDescriptor";
+import call from "call" /* 13696 */;
+import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 13676 */;
 
 if (getOwnPropertyDescriptor) {
   const _Object = Object;
   getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 }
-const tmp = require("call")(prototype, "name");
+const tmp = call(prototype, "name");
 let tmp2 = tmp;
 if (tmp) {
   tmp2 = "something" === function something() {
@@ -14,11 +15,11 @@ if (tmp) {
 }
 let tmp3 = tmp;
 if (tmp) {
-  const _module = require("getOwnPropertyDescriptor");
+  const _module = getOwnPropertyDescriptor;
   let tmp5 = !_module;
   if (_module) {
-    tmp5 = require("getOwnPropertyDescriptor") && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = require("getOwnPropertyDescriptor") && getOwnPropertyDescriptor(prototype, "name").configurable;
+    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
   }
   tmp3 = tmp5;
 }

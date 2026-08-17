@@ -1,3 +1,5 @@
 // _runtime/00455_Appearance.js
+import getAll from "get" /* 30 */;
 
-export default require("get").get("Appearance");
+
+export default getAll.get("Appearance");

@@ -1,5 +1,8 @@
 // _runtime/01489_Url.js
-const require = arg1;
+import _mod533 from "module_533" /* 533 */;
+import decode from "decode" /* 1490 */;
+
+require = arg1;
 const dependencyMap = arg6;
 class Url {
   constructor() {
@@ -53,10 +56,10 @@ class Url {
                 tmp5 = closure_1;
                 obj2 = require("module_533");
                 str8 = self.search;
-                parsed = obj2.parse(require("decode"));
+                parsed = obj2.parse(require("module_1"));
               } else {
                 str7 = self.search;
-                parsed = require("decode");
+                parsed = require("module_1");
               }
               self.query = parsed;
             } else {
@@ -90,15 +93,15 @@ class Url {
         tmp17 = substr7;
         if (!closure_12[tmp9]) {
           if (tmp11) {
-            tmp19 = concat;
+            tmp19 = closure_8;
             num4 = 1;
             num5 = 0;
             num6 = -1;
             num7 = -1;
-            if (0 < concat.length) {
+            if (0 < closure_8.length) {
               do {
-                arr2 = concat;
-                index1 = substr7.indexOf(concat[num5]);
+                arr2 = closure_8;
+                index1 = substr7.indexOf(closure_8[num5]);
                 tmp21 = -1 !== index1;
                 tmp22 = num5;
                 tmp23 = num6;
@@ -123,20 +126,20 @@ class Url {
             }
             substr1 = substr7;
             if (-1 !== lastIndexOfResult) {
-              substr = require("module_533");
+              substr = require("module_0");
               substr1 = substr7.slice(lastIndexOfResult + 1);
               tmp27 = globalThis;
               _decodeURIComponent = decodeURIComponent;
               self.auth = decodeURIComponent(substr);
             }
-            tmp28 = concat;
+            tmp28 = closure_7;
             num8 = 0;
             num9 = -1;
             num10 = -1;
-            if (0 < concat.length) {
+            if (0 < closure_7.length) {
               do {
-                arr4 = concat;
-                index2 = substr1.indexOf(concat[num8]);
+                arr4 = closure_7;
+                index2 = substr1.indexOf(closure_7[num8]);
                 tmp30 = -1 !== index2;
                 tmp31 = num8;
                 tmp32 = num9;
@@ -155,7 +158,7 @@ class Url {
             if (-1 === num10) {
               num10 = substr1.length;
             }
-            self.host = require("module_533");
+            self.host = require("module_0");
             substr2 = substr1.slice(num10);
             parseHostResult = self.parseHost();
             self.hostname = self.hostname || "";
@@ -209,7 +212,7 @@ class Url {
                   num12 = num12 + 1;
                   tmp37 = substr2;
                 }
-                substr3 = require("module_533");
+                substr3 = require("module_0");
                 substr4 = parts1.slice(num12 + 1);
                 tmp44 = closure_10;
                 match2 = str19.match(closure_10);
@@ -254,7 +257,7 @@ class Url {
             if (tmp36) {
               str29 = self.hostname;
               num15 = 2;
-              self.hostname = require("decode");
+              self.hostname = require("module_1");
               text2 = tmp37;
               if ("/" !== tmp37[0]) {
                 text2 = `/${tmp37}`;
@@ -307,7 +310,7 @@ class Url {
         substr5 = arr8;
         if (-1 !== index3) {
           self.hash = arr8.substr(index3);
-          substr5 = require("module_533");
+          substr5 = require("module_0");
         }
         index4 = substr5.indexOf("?");
         tmp65 = substr5;
@@ -321,7 +324,7 @@ class Url {
             obj5 = require("module_533");
             self.query = obj5.parse(self.query);
           }
-          substr6 = require("module_533");
+          substr6 = require("module_0");
         } else {
           substr6 = substr5;
           if (arg1) {
@@ -349,7 +352,7 @@ class Url {
       }
       num3 = 2;
       str11 = "//";
-      tmp12 = "//" === require("module_533");
+      tmp12 = "//" === require("module_0");
       tmp13 = !tmp12;
       if (tmp12) {
         tmp14 = tmp9;
@@ -451,7 +454,7 @@ class Url {
         if (str6) {
           num4 = 0;
           str20 = "#";
-          tmp15 = "#" !== require("module_533");
+          tmp15 = "#" !== require("module_0");
         }
         text4 = str6;
         if (tmp15) {
@@ -462,7 +465,7 @@ class Url {
         if (str11) {
           num5 = 0;
           str22 = "?";
-          tmp17 = "?" !== require("module_533");
+          tmp17 = "?" !== require("module_0");
         }
         str23 = str11;
         if (tmp17) {
@@ -492,7 +495,7 @@ class Url {
     if (str5) {
       num3 = 0;
       str18 = "/";
-      tmp13 = "/" !== require("module_533");
+      tmp13 = "/" !== require("module_0");
     }
     text5 = `//${str17}`;
     str16 = text5;
@@ -658,7 +661,7 @@ class Url {
       if (pathname) {
         str3 = url2.pathname;
         str4 = "/";
-        pathname = "/" === require("module_533");
+        pathname = "/" === require("module_0");
       }
       host = url.host;
       if (!host) {
@@ -666,7 +669,7 @@ class Url {
         if (pathname2) {
           str5 = url.pathname;
           str6 = "/";
-          pathname2 = "/" === require("module_533");
+          pathname2 = "/" === require("module_0");
         }
         host = pathname2;
       }
@@ -860,7 +863,7 @@ class Url {
             if (first1) {
               str21 = combined[0];
               str22 = "/";
-              first1 = "/" === require("module_533");
+              first1 = "/" === require("module_0");
             }
             tmp31 = first1;
           }
@@ -881,7 +884,7 @@ class Url {
             if (first2) {
               str25 = combined[0];
               str26 = "/";
-              first2 = "/" === require("module_533");
+              first2 = "/" === require("module_0");
             }
             tmp35 = first2;
           }
@@ -971,10 +974,10 @@ class Url {
       str3 = ":";
       if (":" !== str2) {
         num = 1;
-        self.port = require("decode");
+        self.port = require("module_1");
       }
       num2 = 0;
-      substr = require("module_533");
+      substr = require("module_0");
     }
     if (substr) {
       self.hostname = substr;

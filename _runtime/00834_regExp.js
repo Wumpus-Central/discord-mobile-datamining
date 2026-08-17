@@ -1,8 +1,9 @@
 // _runtime/00834_regExp.js
-import { generateSpanId } from "00829_generateSpanId.js";
-import { baggageHeaderToDynamicSamplingContext } from "00835_baggageHeaderToDynamicSamplingContext.js";
-import { dsnFromString } from "00837_dsnFromString.js";
-const require = arg1;
+import generateSpanId from "generateSpanId" /* 829 */;
+import baggageHeaderToDynamicSamplingContext from "baggageHeaderToDynamicSamplingContext" /* 835 */;
+import dsnFromString from "dsnFromString" /* 837 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");

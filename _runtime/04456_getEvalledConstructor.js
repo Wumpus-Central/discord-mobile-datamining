@@ -1,8 +1,10 @@
 // _runtime/04456_getEvalledConstructor.js
-import { isPrimitive } from "04404_isPrimitive.js";
-let closure_2 = require("getEvalledConstructor")("%Object.isExtensible%", true);
+import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
+import isPrimitive from "isPrimitive" /* 4404 */;
 
-export default require("getEvalledConstructor")("%Object.preventExtensions%", true) ? (function IsExtensible(arg0) {
+let closure_2 = getEvalledConstructor("%Object.isExtensible%", true);
+
+export default getEvalledConstructor("%Object.preventExtensions%", true) ? (function IsExtensible(arg0) {
   const tmp = isPrimitive(arg0);
   let tmp2 = !tmp;
   if (!tmp) {

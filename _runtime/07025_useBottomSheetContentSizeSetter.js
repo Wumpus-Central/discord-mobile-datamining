@@ -1,5 +1,7 @@
 // _runtime/07025_useBottomSheetContentSizeSetter.js
-require("noop").useCallback;
+import noop from "noop" /* 19 */;
+
+noop.useCallback;
 
 export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
   let obj = enableDynamicSizing(animatedContentHeight[1]);

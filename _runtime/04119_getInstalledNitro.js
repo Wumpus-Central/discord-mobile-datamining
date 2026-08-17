@@ -1,17 +1,20 @@
 // _runtime/04119_getInstalledNitro.js
-import { TurboModuleRegistry } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import items from "items" /* 4120 */;
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 4121 */;
 
 function getInstalledNitro() {
   return global.NitroModulesProxy;
 }
+const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
 const installedNitro = getInstalledNitro();
 if (null != installedNitro) {
   let installedNitro1 = installedNitro;
-  if (installedNitro.version !== require("items").version) {
+  if (installedNitro.version !== items.version) {
     const _Error2 = Error;
     const version = installedNitro.version;
     const _HermesInternal2 = HermesInternal;
-    const error = new Error("Nitro was installed twice: once with native version " + version + " and once with JS version " + require("items").version + ". This usually means react-native-nitro-modules exists multiple times in node_modules (e.g. in monorepos or double-linked setups).");
+    const error = new Error("Nitro was installed twice: once with native version " + version + " and once with JS version " + items.version + ". This usually means react-native-nitro-modules exists multiple times in node_modules (e.g. in monorepos or double-linked setups).");
     throw error;
   }
 } else {
@@ -28,7 +31,7 @@ if (null != installedNitro) {
       if (null == installedNitro1) {
         const _Error3 = Error;
         const error2 = new Error("NitroModules was installed, but `global.NitroModulesProxy` was null!");
-        const moduleNotFoundError = new require("_isNativeReflectConstruct").ModuleNotFoundError(error2);
+        const moduleNotFoundError = new _isNativeReflectConstruct.ModuleNotFoundError(error2);
         throw moduleNotFoundError;
       }
     }

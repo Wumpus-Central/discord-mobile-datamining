@@ -1,13 +1,11 @@
 // _runtime/01601_useMemoArray.js
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 
 export const useMemoArray = function useMemoArray(arr) {
   const ref = current.useRef(undefined);
   current = ref.current;
   const mapped = arr.map((arg0, arg1) => {
-    let arr;
-    let tmp;
     [tmp, arr] = arg0;
     let tmp3;
     if (current != null) {

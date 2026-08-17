@@ -1,6 +1,7 @@
 // _runtime/01114_processEvent.js
-import { isHermesEnabled } from "01002_isHermesEnabled.js";
-const require = arg1;
+import isHermesEnabled from "isHermesEnabled" /* 1002 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function processEvent(tags, originalException) {
   originalException = undefined;
@@ -15,8 +16,7 @@ function processEvent(tags, originalException) {
     }
     tmp2 = originalException1;
   }
-  const obj = { turbo_module: null, fabric: null, react_native_version: null, expo: null };
-  obj[0] = isHermesEnabled.isTurboModuleEnabled();
+  const obj = { turbo_module: isHermesEnabled.isTurboModuleEnabled(), fabric: null, react_native_version: null, expo: null };
   const obj2 = isHermesEnabled;
   obj[1] = isHermesEnabled.isFabricEnabled();
   const obj3 = isHermesEnabled;

@@ -1,6 +1,6 @@
 // _runtime/00921__shouldDropEvent.js
-import setupIntegration from "setupIntegration";
-import { createStackParser } from "00833_createStackParser.js";
+import createStackParser from "createStackParser" /* 833 */;
+import setupIntegration from "setupIntegration" /* 887 */;
 
 function _shouldDropEvent(message, message2) {
   let tmp = message2;
@@ -190,9 +190,9 @@ export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
       return type;
     } else {
       try {
-        if (outer1_2(type, closure_0)) {
-          if (outer1_0(outer1_1[0]).DEBUG_BUILD) {
-            const debug = outer1_0(outer1_1[1]).debug;
+        if (closure_1_2(type, closure_0)) {
+          if (closure_1_0(closure_1_1[0]).DEBUG_BUILD) {
+            const debug = closure_1_0(closure_1_1[1]).debug;
             debug.warn("Event dropped due to being a duplicate of previously captured event.");
           }
           return null;

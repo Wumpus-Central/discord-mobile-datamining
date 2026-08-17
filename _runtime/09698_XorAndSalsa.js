@@ -1,8 +1,8 @@
 // _runtime/09698_XorAndSalsa.js
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { _asyncLoop } from "09699__asyncLoop.js";
-import { pbkdf2Init } from "09702_pbkdf2Init.js";
-import { _isNativeReflectConstruct } from "09704__isNativeReflectConstruct.js";
+import _asyncLoop from "_asyncLoop" /* 9699 */;
+import pbkdf2Init from "pbkdf2Init" /* 9702 */;
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 9704 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function XorAndSalsa(B32, sum, V, result1, B322, sum13) {
   let tmp81;
@@ -188,13 +188,6 @@ function BlockMix(V, result1, B32, sum13) {
   }
 }
 function scryptInit(B, B, arg2) {
-  let N;
-  let asyncTick;
-  let dkLen;
-  let maxmem;
-  let onProgress;
-  let p;
-  let r;
   ({ N, r, p, dkLen, asyncTick, maxmem, onProgress } = onProgress(result2[1]).checkOpts({ dkLen: 32, asyncTick: 10, maxmem: 1073742848 }, arg2));
   onProgress(result2[2]).number(N);
   onProgress(result2[2]).number(r);
@@ -205,7 +198,7 @@ function scryptInit(B, B, arg2) {
   if (undefined !== onProgress) {
     if (typeof onProgress !== "function") {
       const _Error4 = Error;
-      const error = new Error("progressCb should be function");
+      error = new Error("progressCb should be function");
       throw error;
     }
   }
@@ -240,8 +233,8 @@ function scryptInit(B, B, arg2) {
                     result2 = 2 * N * p;
                     const _Math = Math;
                     const _Math2 = Math;
-                    let closure_2 = Math.max(Math.floor(result2 / 10000), 1);
-                    let c3 = 0;
+                    closure_2 = Math.max(Math.floor(result2 / 10000), 1);
+                    c3 = 0;
                     blockMixCb = function blockMixCb() {
                       closure_3 = closure_3 + 1;
                       let tmp2 = !onProgress;
@@ -295,25 +288,14 @@ function scryptOutput(B, dkLen, arr, arr2, arr3) {
 }
 function _scryptAsync() {
   const self = this;
-  let tmp = asyncGeneratorStep((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c11 = 0;
-    let c12 = 0;
-    let c9 = 0;
+  let tmp = callback((arg0, arg1, arg2) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c11 = 0;
+    c12 = 0;
+    c9 = 0;
     return (function*(arg0, arg1, arg2) {
-      let B32;
-      let c1;
-      let c10;
-      let c11;
-      let c2;
-      let c8;
-      let c9;
-      let iter3;
-      let iter4;
-      let next;
-      let p;
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -342,9 +324,9 @@ function _scryptAsync() {
             } else {
               c8 = tmp3;
               B32 = tmp7;
-              let dependencyMap;
+              dependencyMap = undefined;
               c2 = undefined;
-              let closure_3;
+              closure_3 = undefined;
               iter4 = undefined;
               next = undefined;
               iter3 = undefined;
@@ -354,8 +336,8 @@ function _scryptAsync() {
               c10 = undefined;
               c11 = undefined;
               v0 = undefined;
-              let closure_13;
-              const tmp75 = outer1_5(callback, dependencyMap, c2);
+              closure_13 = undefined;
+              const tmp75 = closure_1_5(callback, dependencyMap, c2);
               ({ N: c1, r: c2, p } = tmp75);
               closure_3 = p;
               ({ dkLen: iter4, blockSize32: next, V: iter3, B32 } = tmp75);
@@ -390,29 +372,29 @@ function _scryptAsync() {
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        let c1 = tmp2;
-                        let c0 = tmp5;
+                        c1 = tmp2;
+                        c0 = tmp5;
                         c0 = undefined;
                         c1 = undefined;
-                        const result = outer1_5 * outer1_13;
+                        const result = closure_1_5 * closure_1_13;
                         c0 = result;
                         let num9 = 0;
-                        if (0 < outer1_5) {
+                        if (0 < closure_1_5) {
                           do {
-                            let tmp6 = outer1_6;
-                            let tmp7 = outer1_7;
-                            outer1_6[num9] = outer1_7[result + num9];
+                            let tmp6 = closure_1_6;
+                            let tmp7 = closure_1_7;
+                            closure_1_6[num9] = closure_1_7[result + num9];
                             num9 = num9 + 1;
-                            let tmp8 = outer1_5;
-                          } while (num9 < outer1_5);
+                            let tmp8 = closure_1_5;
+                          } while (num9 < closure_1_5);
                         }
                         c1 = 0;
                         c2 = 1;
                         c3 = 1;
-                        const obj1 = { value: null, done: false };
-                        obj1[0] = outer1_0(outer1_1[1]).asyncLoop(outer1_1 - 1, outer1_11, () => {
+                        obj1 = { value: null, done: false };
+                        obj1[0] = closure_1_0(closure_1_1[1]).asyncLoop(closure_1_1 - 1, closure_1_11, () => {
                           let sum5 = c1;
-                          const sum = c1 + outer1_5;
+                          const sum = c1 + closure_1_5;
                           c1 = sum;
                           let sum1 = sum + 16 * c2;
                           let num = 0;
@@ -456,7 +438,7 @@ function _scryptAsync() {
                               sum1 = sum2;
                             } while (num2 < tmp4);
                           }
-                          outer1_10();
+                          closure_1_10();
                         });
                         return obj1;
                       }
@@ -470,27 +452,27 @@ function _scryptAsync() {
                         obj2[0] = arg1;
                         return obj2;
                       } else {
-                        outer1_4(closure_6, (c1 - 1) * closure_5, closure_7, c0, c2);
+                        closure_1_4(closure_6, (c1 - 1) * closure_5, closure_7, c0, c2);
                         callback();
                         c2 = 2;
                         c3 = 1;
                         const obj3 = { value: null, done: false };
-                        obj3[0] = outer1_0(outer1_1[1]).asyncLoop(c1, closure_11, () => {
-                          let tmp = outer1_7;
+                        obj3[0] = closure_1_0(closure_1_1[1]).asyncLoop(c1, closure_11, () => {
+                          let tmp = closure_1_7;
                           let tmp2 = c0;
                           let num = 0;
-                          if (0 < outer1_5) {
+                          if (0 < closure_1_5) {
                             do {
-                              let tmp4 = outer1_9;
-                              let tmp5 = outer1_7;
+                              let tmp4 = closure_1_9;
+                              let tmp5 = closure_1_7;
                               let tmp6 = c0;
-                              let tmp7 = outer1_6;
-                              let tmp8 = outer1_5;
-                              outer1_9[num] = outer1_7[c0 + num] ^ outer1_6[tmp3 * outer1_5 + num];
+                              let tmp7 = closure_1_6;
+                              let tmp8 = closure_1_5;
+                              closure_1_9[num] = closure_1_7[c0 + num] ^ closure_1_6[tmp3 * closure_1_5 + num];
                               num = num + 1;
-                              tmp = outer1_7;
+                              tmp = closure_1_7;
                               tmp2 = c0;
-                            } while (num < outer1_5);
+                            } while (num < closure_1_5);
                           }
                           let sum = tmp2 + 16 * c2;
                           let num2 = 0;
@@ -535,7 +517,7 @@ function _scryptAsync() {
                               sum = sum1;
                             } while (num3 < tmp10);
                           }
-                          outer1_10();
+                          closure_1_10();
                         });
                         return obj3;
                       }
@@ -569,7 +551,7 @@ function _scryptAsync() {
                 callback(9699).byteSwap32(B32);
               }
               v0 = 3;
-              let obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = iter3(callback, iter4, c8, iter3, c9);
               return obj1;
             }
@@ -652,7 +634,7 @@ function _scryptAsync() {
       }
     })();
   });
-  const _scryptAsync = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -663,14 +645,6 @@ function _scryptAsync() {
 }
 
 export const scrypt = function scrypt(B, B) {
-  let B32;
-  let N;
-  let V;
-  let blockMixCb;
-  let blockSize32;
-  let p;
-  let r;
-  let tmp2;
   const tmp = scryptInit(B, B, arg2);
   ({ N, r, p, blockSize32, V, B32, B, tmp: tmp2, blockMixCb } = tmp);
   if (!_asyncLoop.isLE) {

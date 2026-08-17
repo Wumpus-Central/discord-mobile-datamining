@@ -1,5 +1,5 @@
 // _runtime/07803_parseRetryAfterHeader.js
-import _slicedToArray from "_slicedToArray";
+import closure_0 from "_slicedToArray" /* 32 */;
 
 function parseRetryAfterHeader(arg0) {
   let timestamp = arg1;
@@ -58,8 +58,8 @@ export const updateRateLimits = function updateRateLimits(arg0, headers) {
     const iter = parts[Symbol.iterator]();
     const str2 = str.trim();
     while (iter !== undefined) {
-      let tmp10 = _slicedToArray;
-      let tmp11 = _slicedToArray(str8.split(":", 5), 5);
+      let tmp10 = callback;
+      let tmp11 = callback(str8.split(":", 5), 5);
       let str9 = tmp11[1];
       let str10 = tmp11[4];
       let _parseInt = parseInt;

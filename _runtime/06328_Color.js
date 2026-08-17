@@ -1,9 +1,7 @@
 // _runtime/06328_Color.js
-import _slicedToArray from "_slicedToArray";
-import keys from "keys";
-import keys from "keys";
-import { keys } from "06329_keys.js";
-import { hasOwnProperty } from "06333_hasOwnProperty.js";
+import keys2 from "keys" /* 6329 */;
+import hasOwnProperty from "hasOwnProperty" /* 6333 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 class Color {
   constructor(arg0, arg1) {
@@ -67,7 +65,7 @@ class Color {
           channels2 = require("keys")[self.model].channels;
           value = iter.value;
           num10 = 0;
-          self.color = require("_slicedToArray");
+          self.color = require("module_0");
           num11 = 1;
           if (typeof iter.value[channels2] === "number") {
             num11 = iter.value[channels2];
@@ -88,7 +86,7 @@ class Color {
           _Array = Array;
           slice = Array.prototype.slice;
           call = slice.call;
-          tmp27 = typeof call === "unknown" ? require("_slicedToArray") : call(global, 0, channels);
+          tmp27 = typeof call === "unknown" ? require("module_0") : call(global, 0, channels);
           num8 = 1;
           for (let num9 = 0; num9 < channels; num9 = num9 + num8) {
             tmp28 = num9;
@@ -169,8 +167,8 @@ class Color {
           }
         }
       }
-      tmp38 = c5;
-      if (c5[self.model]) {
+      tmp38 = closure_5;
+      if (closure_5[self.model]) {
         tmp39 = closure_0;
         tmp40 = closure_1;
         channels3 = require("keys")[self.model].channels;
@@ -178,8 +176,8 @@ class Color {
         num15 = 1;
         if (0 < channels3) {
           do {
-            tmp41 = c5;
-            tmp42 = c5[self.model][num14];
+            tmp41 = closure_5;
+            tmp42 = closure_5[self.model][num14];
             tmp43 = num14;
             if (tmp42) {
               self.color[num14] = tmp42(self.color[num14]);
@@ -193,7 +191,7 @@ class Color {
       _Math2 = Math;
       num16 = 1;
       num17 = 0;
-      self.valpha = require("_slicedToArray");
+      self.valpha = require("module_0");
       _Object = Object;
       if (Object.freeze) {
         _Object2 = Object;
@@ -209,13 +207,14 @@ class Color {
 }
 let closure_3 = ["keyword", "gray", "hex"];
 let obj = {};
+let keys = Object.keys(keys2);
 let iter = keys[Symbol.iterator]();
 const nextResult = iter.next();
 while (iter !== undefined) {
   let items = [];
   let tmp3 = items;
   let num = 0;
-  let arraySpreadResult = HermesBuiltin.arraySpread(require("keys")[nextResult].labels, 0);
+  let arraySpreadResult = HermesBuiltin.arraySpread(keys2[nextResult].labels, 0);
   class Color {
     constructor(arg0, arg1) {
       self = this;
@@ -278,7 +277,7 @@ while (iter !== undefined) {
             channels2 = require("keys")[self.model].channels;
             value = iter.value;
             num10 = 0;
-            self.color = require("_slicedToArray");
+            self.color = require("module_0");
             num11 = 1;
             if (typeof iter.value[channels2] === "number") {
               num11 = iter.value[channels2];
@@ -299,7 +298,7 @@ while (iter !== undefined) {
             _Array = Array;
             slice = Array.prototype.slice;
             call = slice.call;
-            tmp27 = typeof call === "unknown" ? require("_slicedToArray") : call(global, 0, channels);
+            tmp27 = typeof call === "unknown" ? require("module_0") : call(global, 0, channels);
             num8 = 1;
             for (let num9 = 0; num9 < channels; num9 = num9 + num8) {
               tmp28 = num9;
@@ -380,8 +379,8 @@ while (iter !== undefined) {
             }
           }
         }
-        tmp38 = c5;
-        if (c5[self.model]) {
+        tmp38 = closure_5;
+        if (closure_5[self.model]) {
           tmp39 = closure_0;
           tmp40 = closure_1;
           channels3 = require("keys")[self.model].channels;
@@ -389,8 +388,8 @@ while (iter !== undefined) {
           num15 = 1;
           if (0 < channels3) {
             do {
-              tmp41 = c5;
-              tmp42 = c5[self.model][num14];
+              tmp41 = closure_5;
+              tmp42 = closure_5[self.model][num14];
               tmp43 = num14;
               if (tmp42) {
                 self.color[num14] = tmp42(self.color[num14]);
@@ -404,7 +403,7 @@ while (iter !== undefined) {
         _Math2 = Math;
         num16 = 1;
         num17 = 0;
-        self.valpha = require("_slicedToArray");
+        self.valpha = require("module_0");
         _Object = Object;
         if (Object.freeze) {
           _Object2 = Object;
@@ -422,9 +421,9 @@ while (iter !== undefined) {
   continue;
 }
 function getset(cmyk, arg1, arg2) {
-  let closure_0 = cmyk;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
+  closure_0 = cmyk;
+  closure_1 = arg1;
+  closure_2 = arg2;
   let tmp = cmyk;
   if (!Array.isArray(cmyk)) {
     const items = [cmyk];
@@ -464,7 +463,7 @@ function getset(cmyk, arg1, arg2) {
   };
 }
 function maxfn(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return (arg0) => Math.max(0, Math.min(closure_0, arg0));
 }
 let closure_5 = {};
@@ -519,10 +518,10 @@ obj = {
   },
   object() {
     const self = this;
-    const obj = {};
-    const channels = keys[this.model].channels;
+    obj = {};
+    const channels = keys2[this.model].channels;
     for (let num = 0; num < channels; num = num + 1) {
-      obj[keys[this.model].labels[num]] = self.color[num];
+      obj[keys2[this.model].labels[num]] = self.color[num];
     }
     if (1 !== self.valpha) {
       obj.alpha = self.valpha;
@@ -550,13 +549,12 @@ obj = {
     return objectResult;
   },
   round(arg0) {
-    let model;
     let num = arg0;
     if (!arg0) {
       num = 0;
     }
     const color = this.color;
-    let closure_0 = Math.max(num, 0);
+    closure_0 = Math.max(num, 0);
     const items = [];
     ({ valpha: arr2[HermesBuiltin.arraySpread(arr2, arr.map(arr, (toFixed) => Number(toFixed.toFixed(closure_0))), 0)], model } = this);
     return Color(items, model);
@@ -602,8 +600,8 @@ obj = {
       let keywordResult = Color(color);
     } else {
       const self = this;
-      keywordResult = keys[this.model].keyword(this.color);
-      const obj = keys[this.model];
+      keywordResult = keys2[this.model].keyword(this.color);
+      obj = keys2[this.model];
     }
     return keywordResult;
   },
@@ -645,8 +643,8 @@ obj = {
     const items = [];
     const entries = color.entries();
     while (tmp2 !== undefined) {
-      let tmp4 = _slicedToArray;
-      let tmp5 = _slicedToArray(tmp3, 2);
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
       let result = tmp5[1] / 255;
       let tmp7 = result;
       if (result <= 0.04045) {
@@ -785,7 +783,7 @@ obj = {
         return Color.rgb(result2 + result3, result4 + result5, result6 + result7, result8 + rgbResult1.alpha() * (1 - num));
       }
     }
-    const error = new Error("Argument to \"mix\" was not a Color instance, but rather an instance of " + typeof gradientSecondaryBackground);
+    error = new Error("Argument to \"mix\" was not a Color instance, but rather an instance of " + typeof gradientSecondaryBackground);
     throw error;
   }
 };
@@ -800,9 +798,9 @@ function _loop(item10136) {
       const self = this;
       const items = [...arguments];
       if (this.model === item10136) {
-        let tmp8Result = outer1_6(self);
+        let tmp8Result = closure_1_6(self);
       } else if (items.length > 0) {
-        tmp8Result = outer1_6(items, tmp);
+        tmp8Result = closure_1_6(items, tmp);
       } else {
         const rawResult = item10136(channels[1])[self.model][tmp].raw(self.color);
         const _Array = Array;
@@ -813,9 +811,9 @@ function _loop(item10136) {
         }
         const items2 = [];
         items2[HermesBuiltin.arraySpread(tmp2, 0)] = self.valpha;
-        tmp8Result = outer1_6(items2, tmp);
-        const obj = item10136(channels[1])[self.model][tmp];
-        const tmp8 = outer1_6;
+        tmp8Result = closure_1_6(items2, tmp);
+        obj = item10136(channels[1])[self.model][tmp];
+        const tmp8 = closure_1_6;
       }
       return tmp8Result;
     };
@@ -836,10 +834,11 @@ function _loop(item10136) {
           } while (num < tmp4);
         }
       }
-      return outer1_6(first, closure_0);
+      return closure_1_6(first, closure_0);
     };
   }
 }
+keys = Object.keys(keys2);
 for (const item10136 of keys1) {
   let _loopResult = _loop(item10136);
   continue;

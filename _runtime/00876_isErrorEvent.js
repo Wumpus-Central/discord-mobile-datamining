@@ -1,8 +1,8 @@
 // _runtime/00876_isErrorEvent.js
-import _slicedToArray from "_slicedToArray";
-import asyncGeneratorStep from "createTransport";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 let closure_0 = require;
 let closure_1 = dependencyMap;
@@ -18,7 +18,7 @@ function estimateMetricSizeInBytes(name) {
     num = 2 * name.name.length;
   }
   const attributes = name.attributes;
-  let c0;
+  c0 = undefined;
   let num3 = 0;
   if (attributes) {
     c0 = 0;
@@ -70,7 +70,7 @@ function estimateLogSizeInBytes(message) {
     num = 2 * message.message.length;
   }
   const attributes = message.attributes;
-  let c0;
+  c0 = undefined;
   let num3 = 0;
   if (attributes) {
     c0 = 0;
@@ -123,20 +123,20 @@ let closure_6 = Symbol.for("SentryInternalError");
 let closure_7 = Symbol.for("SentryDoNotSendEventError");
 closure_0 = undefined;
 closure_1 = undefined;
-_slicedToArray = undefined;
-_classCallCheck = undefined;
+closure_2 = undefined;
+closure_3 = undefined;
 class Client {
   constructor(arg0) {
     self = this;
-    tmp = f68341(this, c4);
+    tmp = closure_3(this, c4);
     this._options = global;
     this._integrations = {};
     this._numProcessing = 0;
     this._outcomes = {};
     this._hooks = {};
     this._eventProcessors = [];
-    tmp2 = f68359;
-    tmp3 = f68355;
+    tmp2 = closure_0;
+    tmp3 = closure_1;
     obj = require("makePromiseBuffer");
     transportOptions = global.transportOptions;
     bufferSize = undefined;
@@ -183,16 +183,16 @@ class Client {
     if (self._options.enableLogs) {
       tmp11 = estimateLogSizeInBytes;
       closure_1 = estimateLogSizeInBytes;
-      _INTERNAL_flushLogsBuffer = require("_INTERNAL_captureSerializedLog")._INTERNAL_flushLogsBuffer;
+      closure_2 = require("_INTERNAL_captureSerializedLog")._INTERNAL_flushLogsBuffer;
       c3 = undefined;
       c4 = 0;
       flag = false;
       c5 = false;
       str2 = "flushLogs";
       onResult = self.on("flushLogs", () => {
-        let c4 = 0;
+        c4 = 0;
         clearTimeout(c3);
-        let c5 = false;
+        c5 = false;
       });
       str3 = "afterCaptureLog";
       onResult1 = self.on("afterCaptureLog", (arg0) => {
@@ -228,16 +228,16 @@ class Client {
     if (flag2) {
       tmp16 = estimateMetricSizeInBytes;
       closure_1 = estimateMetricSizeInBytes;
-      _INTERNAL_flushLogsBuffer = require("_INTERNAL_captureSerializedMetric")._INTERNAL_flushMetricsBuffer;
+      closure_2 = require("_INTERNAL_captureSerializedMetric")._INTERNAL_flushMetricsBuffer;
       c3 = undefined;
       c4 = 0;
       flag3 = false;
       c5 = false;
       str5 = "flushMetrics";
       onResult3 = self.on("flushMetrics", () => {
-        let c4 = 0;
+        c4 = 0;
         clearTimeout(c3);
-        let c5 = false;
+        c5 = false;
       });
       str6 = "afterCaptureMetric";
       onResult4 = self.on("afterCaptureMetric", (arg0) => {
@@ -267,7 +267,7 @@ let obj = {
     let self = this;
     self = this;
     const dependencyMap = arg0;
-    let closure_2 = arg2;
+    closure_2 = arg2;
     obj = obj(830);
     const uuid4Result = obj.uuid4();
     if (obj2.checkOrSetAlreadyCaught(arg0)) {
@@ -297,8 +297,7 @@ let items = [
       let self = this;
       self = this;
       const dependencyMap = arg3;
-      const obj = { event_id: null };
-      obj[0] = callback(830).uuid4();
+      const obj = { event_id: callback(830).uuid4() };
       const merged = Object.assign(arg2);
       const obj2 = callback(830);
       const tmp = callback;
@@ -326,12 +325,10 @@ let items = [
   {
     key: "captureEvent",
     value: function captureEvent(sdkProcessingMetadata, originalException) {
-      let Client;
-      let closure_0;
       let self = this;
       self = this;
       const dependencyMap = sdkProcessingMetadata;
-      let closure_2 = arg2;
+      closure_2 = arg2;
       let obj = callback(830);
       const uuid4Result = obj.uuid4();
       originalException = undefined;
@@ -425,13 +422,13 @@ let items = [
 
 ];
 obj = { key: "flush", value: null };
-_classCallCheck = asyncGeneratorStep(function(arg0) {
+closure_3 = asyncGeneratorStep(function(arg0) {
   const self = this;
-  let closure_1 = arg0;
-  let c3 = 0;
-  let c4 = 0;
+  closure_1 = arg0;
+  c3 = 0;
+  c4 = 0;
   return (function*(arg0) {
-    let closure_2 = tmp2;
+    closure_2 = tmp2;
     const _self = _transport;
     _transport = _self._transport;
     if (!_transport) {
@@ -439,7 +436,7 @@ _classCallCheck = asyncGeneratorStep(function(arg0) {
     }
     obj8.emit("flush");
     closure_2 = yield obj8._isClientDoneProcessing(tmp18);
-    let closure_3 = yield _transport.flush(_self);
+    closure_3 = yield _transport.flush(_self);
     let tmp7 = closure_2;
     if (closure_2) {
       tmp7 = closure_3;
@@ -449,7 +446,7 @@ _classCallCheck = asyncGeneratorStep(function(arg0) {
 });
 obj[1] = function flush(arg0) {
   const self = this;
-  const apply = _classCallCheck.apply;
+  const apply = closure_3.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -459,14 +456,14 @@ obj[1] = function flush(arg0) {
 };
 items[8] = obj;
 obj = { key: "close", value: null };
-_slicedToArray = asyncGeneratorStep(function(arg0) {
+closure_2 = asyncGeneratorStep(function(arg0) {
   const self = this;
-  let closure_1 = arg0;
-  let c4 = 0;
-  let c5 = 0;
+  closure_1 = arg0;
+  c4 = 0;
+  c5 = 0;
   return (function*(arg0) {
-    let closure_3 = _self;
-    let closure_2 = tmp2;
+    closure_3 = _self;
+    closure_2 = tmp2;
     _self = yield _self.flush(closure_1);
     closure_3.getOptions().enabled = false;
     closure_3.emit("close");
@@ -475,7 +472,7 @@ _slicedToArray = asyncGeneratorStep(function(arg0) {
 });
 obj[1] = function close(arg0) {
   const self = this;
-  const apply = _slicedToArray.apply;
+  const apply = closure_2.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -560,8 +557,6 @@ items[15] = {
 items[16] = {
   key: "sendSession",
   value: function sendSession(attrs) {
-    let environment;
-    let release;
     const self = this;
     ({ release, environment } = this._options);
     if (undefined === environment) {
@@ -629,7 +624,7 @@ items[17] = {
 items[18] = {
   key: "on",
   value: function on(arg0, arg1) {
-    let closure_0 = arg1;
+    closure_0 = arg1;
     let set = this._hooks[arg0];
     if (!set) {
       const _Set = Set;
@@ -648,7 +643,7 @@ items[18] = {
 items[19] = {
   key: "emit",
   value: function emit(arg0) {
-    let closure_0 = [...arguments].slice();
+    closure_0 = [...arguments].slice();
     if (this._hooks[arg0]) {
       const item = arr.forEach((arg0) => arg0(...closure_0));
     }
@@ -657,10 +652,10 @@ items[19] = {
 let obj1 = { key: "sendEnvelope", value: null };
 closure_1 = asyncGeneratorStep(function(arg0) {
   const self = this;
-  let closure_1 = arg0;
-  let c6 = 0;
-  let c7 = 0;
-  let c5 = 0;
+  closure_1 = arg0;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
   return (function*(arg0) {
     if (c7 === 2) {
       c7 = 3;
@@ -688,16 +683,16 @@ closure_1 = asyncGeneratorStep(function(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_3 = tmp3;
-            let closure_2 = tmp5;
+            closure_3 = tmp3;
+            closure_2 = tmp5;
             _self.emit("beforeEnvelope", dependencyMap);
             if (_self._isEnabled()) {
               if (tmp34._transport) {
-                let c5 = 1;
+                c5 = 1;
                 const _transport = tmp34._transport;
                 c6 = 2;
                 c7 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = _transport.send(dependencyMap);
                 return obj1;
               }
@@ -836,9 +831,9 @@ items[22] = {
 let obj2 = { key: "_isClientDoneProcessing", value: null };
 closure_0 = asyncGeneratorStep(function(arg0) {
   const self = this;
-  let closure_1 = arg0;
-  let c4 = 0;
-  let c5 = 0;
+  closure_1 = arg0;
+  c4 = 0;
+  c5 = 0;
   return (function*(arg0) {
     if (c5 === 2) {
       c5 = 3;
@@ -867,7 +862,7 @@ closure_0 = asyncGeneratorStep(function(arg0) {
             return obj;
           } else {
             const _numProcessing = closure_0;
-            let closure_2 = closure_0;
+            closure_2 = closure_0;
             closure_0 = closure_1;
             closure_1 = 0;
             if (closure_1) {
@@ -878,7 +873,7 @@ closure_0 = asyncGeneratorStep(function(arg0) {
             const promise = new Promise((arg0) => setTimeout(arg0, 1));
             c4 = 1;
             c5 = 1;
-            const obj1 = { value: null, done: false };
+            obj1 = { value: null, done: false };
             obj1[0] = promise;
             return obj1;
           }
@@ -1031,14 +1026,14 @@ items[27] = {
     let self = this;
     self = this;
     const dependencyMap = type;
-    let closure_2 = arg1;
-    let closure_3 = arg2;
-    let closure_4 = arg3;
+    closure_2 = arg1;
+    closure_3 = arg2;
+    closure_4 = arg3;
     const options = this.getOptions();
     const sampleRate = options.sampleRate;
-    let closure_6 = "transaction" === type.type;
-    let closure_7 = tmp2;
-    let closure_8 = "before send for type `" + type.type || "error" + "`";
+    closure_6 = "transaction" === type.type;
+    closure_7 = tmp2;
+    closure_8 = "before send for type `" + type.type || "error" + "`";
     if (undefined !== sampleRate) {
       let obj = str2(836);
       const parseSampleRateResult = obj.parseSampleRate(sampleRate);
@@ -1080,10 +1075,6 @@ items[27] = {
           }
         }
         const promise = (function processBeforeSend(self, options, sdkProcessingMetadata, arg3) {
-          let beforeSend;
-          let beforeSendSpan;
-          let beforeSendTransaction;
-          let ignoreSpans;
           ({ beforeSend, beforeSendTransaction, beforeSendSpan, ignoreSpans } = options);
           if (callback2(sdkProcessingMetadata)) {
             if (beforeSend) {
@@ -1200,14 +1191,14 @@ items[27] = {
               if (null !== arg0) {
                 obj = { message: null };
                 obj[0] = combined;
-                obj[outer1_6] = true;
+                obj[closure_1_6] = true;
                 throw obj;
               }
             }
             return arg0;
           }, (arg0) => {
             const obj = { message: "" + closure_0 + " rejected with " + arg0 };
-            obj[outer1_6] = true;
+            obj[closure_1_6] = true;
             throw obj;
           });
         } else {
@@ -1239,10 +1230,6 @@ items[27] = {
           }
         }
         const promise = (function processBeforeSend(self, options, sdkProcessingMetadata, arg3) {
-          let beforeSend;
-          let beforeSendSpan;
-          let beforeSendTransaction;
-          let ignoreSpans;
           ({ beforeSend, beforeSendTransaction, beforeSendSpan, ignoreSpans } = options);
           if (callback2(sdkProcessingMetadata)) {
             if (beforeSend) {
@@ -1359,14 +1346,14 @@ items[27] = {
               if (null !== arg0) {
                 obj = { message: null };
                 obj[0] = combined;
-                obj[outer1_6] = true;
+                obj[closure_1_6] = true;
                 throw obj;
               }
             }
             return arg0;
           }, (arg0) => {
             const obj = { message: "" + closure_0 + " rejected with " + arg0 };
-            obj[outer1_6] = true;
+            obj[closure_1_6] = true;
             throw obj;
           });
         } else {
@@ -1471,7 +1458,7 @@ items[28] = {
   key: "_process",
   value: function _process(arg0, arg1) {
     const self = this;
-    let closure_0 = arg1;
+    closure_0 = arg1;
     this._numProcessing = this._numProcessing + 1;
     const _promiseBuffer = this._promiseBuffer;
     _promiseBuffer.add(arg0).then((arg0) => {
@@ -1492,8 +1479,6 @@ items[29] = {
     this._outcomes = {};
     const entries = Object.entries(this._outcomes);
     return entries.map((arg0) => {
-      let str;
-      let tmp;
       [str, tmp] = arg0;
       const tmp2 = callback(str.split(":"), 2);
       return { reason: tmp2[0], category: tmp2[1], quantity: tmp };

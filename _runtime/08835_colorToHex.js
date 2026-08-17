@@ -1,11 +1,8 @@
 // _runtime/08835_colorToHex.js
-import _slicedToArray from "_slicedToArray";
+import closure_0 from "_slicedToArray" /* 32 */;
 
 
 export const colorToHex = function colorToHex(arr) {
-  let tmp30;
-  let tmp31;
-  let tmp32;
   if (undefined === arr) {
     return arr;
   } else if ("none" === arr) {

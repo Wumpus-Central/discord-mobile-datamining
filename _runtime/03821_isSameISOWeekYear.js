@@ -1,6 +1,6 @@
 // _runtime/03821_isSameISOWeekYear.js
-import startOfISOWeekYear from "startOfISOWeekYear";
-import requiredArgs from "requiredArgs";
+import startOfISOWeekYear from "startOfISOWeekYear" /* 3633 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!startOfISOWeekYear) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!startOfISOWeekYear) {
 } else {
   tmp3 = startOfISOWeekYear;
 }
-let c0 = tmp3;
+startOfISOWeekYear = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,12 +17,12 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function isSameISOWeekYear(arg0, arg1) {
-  tmp5.default(2, arguments);
-  const defaultResult1 = tmp3.default(arg0);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
   const time = defaultResult1.getTime();
-  return time === tmp3.default(arg1).getTime();
+  return time === startOfISOWeekYear.default(arg1).getTime();
 };
 export default exports.default;

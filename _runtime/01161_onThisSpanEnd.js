@@ -1,11 +1,12 @@
 // _runtime/01161_onThisSpanEnd.js
-import { AppState } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 
+const AppState = get_ActivityIndicator.AppState;
 
 export const onThisSpanEnd = function onThisSpanEnd(on) {
-  let closure_0 = arg1;
-  let closure_1 = arg2;
+  closure_0 = arg1;
+  closure_1 = arg2;
   on.on("spanEnd", (arg0) => {
     if (closure_0 === arg0) {
       callback(arg0);
@@ -14,7 +15,7 @@ export const onThisSpanEnd = function onThisSpanEnd(on) {
 };
 export const adjustTransactionDuration = (on, activeSpan) => {
   const _require = activeSpan;
-  const dependencyMap = arg2;
+  dependencyMap = arg2;
   if (obj.isRootSpan(activeSpan)) {
     on.on("spanEnd", (arg0) => {
       let obj = activeSpan;
@@ -50,7 +51,7 @@ export const adjustTransactionDuration = (on, activeSpan) => {
   }
 };
 export const ignoreEmptyBackNavigation = (on, c4) => {
-  let closure_0 = c4;
+  closure_0 = c4;
   const f69347 = (arg0) => {
     const data = c4(f69347[2]).spanToJSON(arg0).data;
     let prop;
@@ -77,14 +78,14 @@ export const ignoreEmptyBackNavigation = (on, c4) => {
                 c4 = tmp;
                 const spanDescendants = c4(f69349[2]).getSpanDescendants(tmp);
                 if (spanDescendants.filter((spanContext) => {
-                  tmp = spanContext.spanContext().spanId !== tmp.spanContext().spanId;
+                  let tmp = spanContext.spanContext().spanId !== lib.spanContext().spanId;
                   if (tmp) {
-                    tmp = "ui.load.initial_display" !== tmp(outer1_1[2]).spanToJSON(spanContext).op;
-                    const obj = tmp(outer1_1[2]);
+                    tmp = "ui.load.initial_display" !== lib(closure_1_1[2]).spanToJSON(spanContext).op;
+                    const obj = lib(closure_1_1[2]);
                   }
                   if (tmp) {
-                    tmp = "navigation.processing" !== tmp(outer1_1[2]).spanToJSON(spanContext).op;
-                    const obj2 = tmp(outer1_1[2]);
+                    tmp = "navigation.processing" !== lib(closure_1_1[2]).spanToJSON(spanContext).op;
+                    const obj2 = lib(closure_1_1[2]);
                   }
                   return tmp;
                 }).length <= 0) {
@@ -109,7 +110,7 @@ export const ignoreEmptyBackNavigation = (on, c4) => {
   }
 };
 export const ignoreEmptyRouteChangeTransactions = (on, c4) => {
-  let closure_0 = on;
+  closure_0 = on;
   let f69349 = arg2;
   let f69350 = arg3;
   closure_0 = c4;
@@ -150,14 +151,14 @@ export const ignoreEmptyRouteChangeTransactions = (on, c4) => {
                 c4 = tmp;
                 const spanDescendants = c4(f69349[2]).getSpanDescendants(tmp);
                 if (spanDescendants.filter((spanContext) => {
-                  tmp = spanContext.spanContext().spanId !== tmp.spanContext().spanId;
+                  let tmp = spanContext.spanContext().spanId !== lib.spanContext().spanId;
                   if (tmp) {
-                    tmp = "ui.load.initial_display" !== tmp(outer1_1[2]).spanToJSON(spanContext).op;
-                    const obj = tmp(outer1_1[2]);
+                    tmp = "ui.load.initial_display" !== lib(closure_1_1[2]).spanToJSON(spanContext).op;
+                    const obj = lib(closure_1_1[2]);
                   }
                   if (tmp) {
-                    tmp = "navigation.processing" !== tmp(outer1_1[2]).spanToJSON(spanContext).op;
-                    const obj2 = tmp(outer1_1[2]);
+                    tmp = "navigation.processing" !== lib(closure_1_1[2]).spanToJSON(spanContext).op;
+                    const obj2 = lib(closure_1_1[2]);
                   }
                   return tmp;
                 }).length <= 0) {
@@ -194,7 +195,7 @@ export const onlySampleIfChildSpans = (on, c4) => {
             tmp._sampled = false;
             const tmp4Result = tmp4(tmp5[2]);
           }
-          obj2 = c4(outer1_1[2]);
+          obj2 = c4(closure_1_1[2]);
         }
       });
     }
@@ -203,7 +204,7 @@ export const onlySampleIfChildSpans = (on, c4) => {
   debug.warn("Not sampling childless spans only works for Sentry Transactions (Root Spans).");
 };
 export const cancelInBackground = (on) => {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   const listener = AppState.addEventListener("change", (arg0) => {
     if ("background" === arg0) {
       const debug = lib(listener[2]).debug;

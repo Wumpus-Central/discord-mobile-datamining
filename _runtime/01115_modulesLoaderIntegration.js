@@ -7,16 +7,16 @@ if (this) {
 }
 if (!fn) {
   fn = (arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     let _Promise = arg2;
-    let closure_3 = arg3;
+    closure_3 = arg3;
     if (!arg2) {
       _Promise = Promise;
     }
     _Promise = new _Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function fulfilled(arg0) {
         try {
           step(iter.next(arg0));
@@ -70,16 +70,16 @@ if (!fn) {
   };
 }
 arg5.modulesLoaderIntegration = () => {
-  let c0 = false;
-  let c1 = null;
+  c0 = false;
+  c1 = null;
   return {
     name: "ModulesLoader",
     setupOnce() {
 
     },
     processEvent: (arg0) => {
-      let closure_0 = arg0;
-      return outer1_2(undefined, undefined, undefined, function*() {
+      closure_0 = arg0;
+      return closure_1_2(undefined, undefined, undefined, function*() {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -106,14 +106,14 @@ arg5.modulesLoaderIntegration = () => {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_1 = tmp3;
-                const callback = tmp5;
-                if (!outer1_0) {
-                  let c3 = 1;
-                  const NATIVE = callback(outer2_1[0]).NATIVE;
+                closure_1 = tmp3;
+                let _true = tmp5;
+                if (!_true) {
+                  c3 = 1;
+                  const NATIVE = _true(closure_2_1[0]).NATIVE;
                   c4 = 2;
                   c5 = 1;
-                  const obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = NATIVE.fetchModules();
                   return obj1;
                 }
@@ -121,10 +121,10 @@ arg5.modulesLoaderIntegration = () => {
             } else {
               if (1 === tmp8) {
                 c3 = 0;
-                outer1_0 = closure_2;
-                const debug = callback(outer2_1[1]).debug;
+                _true = closure_2;
+                const debug = _true(closure_2_1[1]).debug;
                 const _HermesInternal = HermesInternal;
-                debug.log("Failed to get modules from native: " + outer1_0);
+                debug.log("Failed to get modules from native: " + _true);
               } else if (arg0 === 1) {
                 c5 = 3;
                 throw arg1;
@@ -135,19 +135,19 @@ arg5.modulesLoaderIntegration = () => {
                 obj[0] = arg1;
                 return obj;
               } else {
-                const outer1_1 = arg1;
+                closure_1 = arg1;
                 c3 = 0;
               }
-              outer1_0 = true;
+              _true = true;
             }
-            if (outer1_1) {
+            if (closure_1) {
               const _Object = Object;
               const _Object2 = Object;
-              outer1_0.modules = Object.assign(Object.assign({}, outer1_1), outer1_0.modules);
+              _true.modules = Object.assign(Object.assign({}, closure_1), _true.modules);
             }
             c5 = 3;
             const obj2 = { value: null, done: true };
-            obj2[0] = outer1_0;
+            obj2[0] = _true;
             return obj2;
           } catch (tmp26) {
             closure_2 = tmp26;

@@ -1,12 +1,8 @@
 // _runtime/04155__temp2.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { c } from "04135_c.js";
 
-let c3;
-let c4;
-let useCallback;
-let useMemo;
 const require = arg1;
 function _temp2(arg0) {
   return arg0 + 1;
@@ -21,14 +17,11 @@ function _temp(dispose) {
 ({ useCallback, useEffect: c3, useState: c4, useMemo } = noop);
 
 export const useRiveList = function useRiveList(arg0, arg1) {
-  let _slicedToArray;
-  let closure_3;
-  let tmp5;
   const _require = arg0;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   let obj = _c;
   const cResult = obj.c(39);
-  [tmp5, _slicedToArray] = callback(disposableMemo(null), 2);
+  [tmp5, closure_2] = callback(disposableMemo(null), 2);
   let tmp = _require;
   const tmp4 = callback(disposableMemo(null), 2);
   [r10021, closure_3] = callback(disposableMemo(0), 2);
@@ -67,13 +60,13 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                 constructor() {
                   obj = closure_4;
                   if (closure_4) {
-                    f105152 = obj.addListener(() => {
-                      callback2(outer1_5);
+                    closure_0 = obj.addListener(() => {
+                      callback2(closure_1_5);
                     });
                     return () => {
                       try {
                         callback();
-                        outer1_4.removeListeners();
+                        closure_1_4.removeListeners();
                       } catch (err) {
                       }
                     };
@@ -93,13 +86,13 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                 constructor() {
                   obj = closure_4;
                   if (closure_4) {
-                    f105152 = obj.addListener(() => {
-                      callback2(outer1_5);
+                    closure_0 = obj.addListener(() => {
+                      callback2(closure_1_5);
                     });
                     return () => {
                       try {
                         callback();
-                        outer1_4.removeListeners();
+                        closure_1_4.removeListeners();
                       } catch (err) {
                       }
                     };
@@ -116,13 +109,13 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                 constructor() {
                   obj = closure_4;
                   if (closure_4) {
-                    f105152 = obj.addListener(() => {
-                      callback2(outer1_5);
+                    closure_0 = obj.addListener(() => {
+                      callback2(closure_1_5);
                     });
                     return () => {
                       try {
                         callback();
-                        outer1_4.removeListeners();
+                        closure_1_4.removeListeners();
                       } catch (err) {
                       }
                     };
@@ -137,13 +130,13 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                 constructor() {
                   obj = closure_4;
                   if (closure_4) {
-                    f105152 = obj.addListener(() => {
-                      callback2(outer1_5);
+                    closure_0 = obj.addListener(() => {
+                      callback2(closure_1_5);
                     });
                     return () => {
                       try {
                         callback();
-                        outer1_4.removeListeners();
+                        closure_1_4.removeListeners();
                       } catch (err) {
                       }
                     };
@@ -357,7 +350,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
           if (tmp) {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            const error = new Error("List property \"" + closure_0 + "\" not found in the ViewModel instance");
+            error = new Error("List property \"" + closure_0 + "\" not found in the ViewModel instance");
             callback(error);
           }
         };

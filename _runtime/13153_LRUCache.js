@@ -1,6 +1,6 @@
 // _runtime/13153_LRUCache.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import _createClass from "_createClass" /* 42 */;
+import LRUCache from "_classCallCheck" /* 41 */;
 
 class LRUCache {
   constructor() {
@@ -11,7 +11,6 @@ class LRUCache {
     return;
   }
 }
-_classCallCheck = LRUCache;
 const items = [
   {
     key: "get",

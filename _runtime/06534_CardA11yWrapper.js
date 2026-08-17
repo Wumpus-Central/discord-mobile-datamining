@@ -1,22 +1,11 @@
 // _runtime/06534_CardA11yWrapper.js
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import closure_0 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let c3;
-let obj1;
 ({ Platform, StyleSheet: obj1, View: c3 } = get_ActivityIndicator);
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  let active;
-  let animated;
-  let c0;
-  let children;
-  let detachCurrentScreen;
-  let focused;
-  let isNextScreenTransparent;
-  let tmp2;
   ({ focused, animated } = arg0);
   let callback;
   ({ active, isNextScreenTransparent, detachCurrentScreen, children } = arg0);

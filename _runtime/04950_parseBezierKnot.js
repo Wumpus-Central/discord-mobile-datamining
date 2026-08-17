@@ -1,9 +1,9 @@
 // _runtime/04950_parseBezierKnot.js
-import _slicedToArray from "_slicedToArray";
-import { getDataView } from "04910_getDataView.js";
-import { 04927__ } from "metro/04927__.js";
+import getDataView from "getDataView" /* 4910 */;
+import _modDef4927 from "module_4927" /* 4927 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function parseBezierKnot(dataView) {
   const items = [];
   let num = 0;
@@ -11,7 +11,7 @@ function parseBezierKnot(dataView) {
     let sum = arg1 + num;
     let tmp3 = dependencyMap;
     let tmp2 = importDefault;
-    let obj = 04927__;
+    let obj = _modDef4927;
     let longAt = obj.getLongAt(dataView, sum);
     let tmp5 = num;
     let num2 = -1;
@@ -56,7 +56,7 @@ obj[2000] = {
     for (let num = 0; num < byteLength.byteLength; num = num + 26) {
       let tmp = importDefault;
       let tmp2 = dependencyMap;
-      let obj2 = 04927__;
+      let obj2 = _modDef4927;
       let shortAt = obj2.getShortAt(byteLength, num);
       let tmp4 = table;
       let tmp5 = num;
@@ -83,7 +83,7 @@ obj[2999] = {
 obj = {
   description: "Closed subpath length",
   path(dataView, sum) {
-    const items = [04927__.getShortAt(dataView, sum)];
+    const items = [_modDef4927.getShortAt(dataView, sum)];
     return items;
   }
 };
@@ -94,7 +94,7 @@ let closure_4 = {
   [obj.OPEN_SUBPATH_LENGTH]: {
     description: "Open subpath length",
     path(dataView, sum) {
-      const items = [04927__.getShortAt(dataView, sum)];
+      const items = [_modDef4927.getShortAt(dataView, sum)];
       return items;
     }
   },
@@ -109,20 +109,20 @@ let closure_4 = {
   [obj.INITIAL_FILL_RULE]: {
     description: "Initial fill rule",
     path(dataView, sum) {
-      const items = [04927__.getShortAt(dataView, sum)];
+      const items = [_modDef4927.getShortAt(dataView, sum)];
       return items;
     }
   },
   [obj.CLIPBOARD]: {
     description: "Clipboard",
     path: function parseClipboard(dataView, sum) {
-      const longAt = 04927__.getLongAt(dataView, sum);
+      const longAt = _modDef4927.getLongAt(dataView, sum);
       let num = -1;
       let num2 = -1;
       if (longAt >>> 31 === 0) {
         num2 = 1;
       }
-      const obj = 04927__;
+      const obj = _modDef4927;
       const obj2 = getDataView;
       const str2 = longAt & parseInt(getDataView.strRepeat("1", 24), 2);
       const text = `${str.toString(2)}.`;
@@ -156,12 +156,12 @@ let closure_4 = {
       items[2] = num4 * tmp4Result3.parseFloatRadix(`${(2130706432 & longAt2) >>> 24.toString(2)}.` + getDataView.padStart(str6.toString(2), 24, "0"), 2);
       const sum2 = sum + 12;
       const tmp4Result4 = getDataView;
-      const longAt3 = 04927__.getLongAt(dataView, sum2);
+      const longAt3 = _modDef4927.getLongAt(dataView, sum2);
       let num5 = num;
       if (longAt3 >>> 31 === 0) {
         num5 = 1;
       }
-      const tmpResult1 = 04927__;
+      const tmpResult1 = _modDef4927;
       const tmp4Result5 = getDataView;
       const str8 = longAt3 & parseInt(getDataView.strRepeat("1", 24), 2);
       const text3 = `${str7.toString(2)}.`;
@@ -170,11 +170,11 @@ let closure_4 = {
       const items1 = [items, ];
       const sum3 = sum + 16;
       const tmp4Result7 = getDataView;
-      const longAt4 = 04927__.getLongAt(dataView, sum3);
+      const longAt4 = _modDef4927.getLongAt(dataView, sum3);
       if (longAt4 >>> 31 === 0) {
         num = 1;
       }
-      const tmpResult2 = 04927__;
+      const tmpResult2 = _modDef4927;
       const tmp4Result8 = getDataView;
       const str10 = longAt4 & parseInt(getDataView.strRepeat("1", 24), 2);
       const text4 = `${str9.toString(2)}.`;

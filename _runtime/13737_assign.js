@@ -1,17 +1,20 @@
 // _runtime/13737_assign.js
-import { getOwnPropertyDescriptor } from "13676_getOwnPropertyDescriptor.js";
-import { 13679__ } from "metro/13679__.js";
-import { 13697__ } from "metro/13697__.js";
-import { 13726__ } from "metro/13726__.js";
-let closure_4 = require("call")([].concat);
+import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 13676 */;
+import _mod13677 from "module_13677" /* 13677 */;
+import _mod13679 from "module_13679" /* 13679 */;
+import call from "call" /* 13680 */;
+import _mod13697 from "module_13697" /* 13697 */;
+import _mod13726 from "module_13726" /* 13726 */;
+
+let closure_4 = call([].concat);
 if (!assign) {
   assign = function assign(arg0, arg1) {
-    const tmp = 13697__(arg0);
-    const f = 13726__.f;
+    const tmp = _mod13697(arg0);
+    const f = _mod13726.f;
     for (let num = 1; length > num; num = num + 1) {
       let tmp3 = require;
       let tmp4 = dependencyMap;
-      let tmp5 = 13679__(arguments[num]);
+      let tmp5 = _mod13679(arguments[num]);
       let tmp6 = num;
       if (f) {
         let tmp7 = callback;

@@ -17,7 +17,7 @@ arg5.onLCP = (arg0) => {
     let obj2 = callback(obj[2]);
     const tmp = callback;
     let tmp3 = obj;
-    let closure_3 = callback(obj[3]).initUnique(visibilityWatcher, callback(obj[4]).LCPEntryManager);
+    closure_3 = callback(obj[3]).initUnique(visibilityWatcher, callback(obj[4]).LCPEntryManager);
     function handleEntries(arr) {
       let substr = arr;
       if (!closure_1.reportAllChanges) {
@@ -38,7 +38,7 @@ arg5.onLCP = (arg0) => {
           let tmp10 = obj;
           obj = callback(obj[5]);
           metric.value = Math.max(tmp3.startTime - obj.getActivationStart(), 0);
-          let items = [tmp3];
+          items = [tmp3];
           metric.entries = items;
           let tmp11 = callback;
           let tmp12 = callback();
@@ -49,12 +49,12 @@ arg5.onLCP = (arg0) => {
     const obj3 = callback(obj[3]);
     let tmp6 = visibilityWatcher;
     const observeResult = callback(obj[6]).observe("largest-contentful-paint", handleEntries);
-    let closure_5 = observeResult;
+    closure_5 = observeResult;
     if (observeResult) {
       let tmp2Result = tmp2(tmp4[7]);
-      callback = tmp2Result.bindReporter(callback, metric, outer1_2, tmp6.reportAllChanges);
+      callback = tmp2Result.bindReporter(callback, metric, closure_1_2, tmp6.reportAllChanges);
       tmp2Result = tmp2(tmp4[8]);
-      let closure_6 = tmp2Result.runOnce(() => {
+      closure_6 = tmp2Result.runOnce(() => {
         handleEntries(observeResult.takeRecords());
         observeResult.disconnect();
         callback(true);
@@ -67,7 +67,7 @@ arg5.onLCP = (arg0) => {
           const obj2 = callback(obj[10]);
         }
       }
-      let items = ["keydown", "click", "visibilitychange"];
+      items = ["keydown", "click", "visibilitychange"];
       for (const item10048 of items) {
         let tmp15 = callback;
         let tmp16 = callback;

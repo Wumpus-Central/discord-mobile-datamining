@@ -1,9 +1,10 @@
 // _runtime/09025_colorPropType.js
-import { hslToRgb } from "09026_hslToRgb.js";
+import hslToRgb from "hslToRgb" /* 9026 */;
+
 function colorPropType(arg0, arg1, arg2, arg3, arg4, arg5) {
   let tmp = arg5;
   if (null == arg1[arg2]) {
-    let error;
+    error = undefined;
     if (arg0) {
       const text = `Required ${arg4}`;
       if (!tmp) {

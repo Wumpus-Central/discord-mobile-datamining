@@ -1,5 +1,6 @@
 // _runtime/00768_baseIsEqual.js
-import { isObjectLike } from "00620_isObjectLike.js";
+import isObjectLike from "isObjectLike" /* 620 */;
+
 function baseIsEqual(arg0, arg1, arg2, arg3, arg4) {
   if (arg0 === arg1) {
     return tmp;

@@ -1,5 +1,6 @@
 // _runtime/00751_assocIndexOf.js
-import { eq } from "00752_eq.js";
+import eq from "eq" /* 752 */;
+
 
 export default function assocIndexOf(arg0, arg1) {
   let diff = tmp - 1;

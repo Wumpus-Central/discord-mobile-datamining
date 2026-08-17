@@ -1,11 +1,9 @@
 // _runtime/10313_useInitProps.js
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 
 export const useInitProps = function useInitProps(defaultIndex) {
-  let height;
-  let width;
   defaultIndex = defaultIndex.defaultIndex;
   let num = 0;
   if (undefined !== defaultIndex) {
@@ -16,7 +14,7 @@ export const useInitProps = function useInitProps(defaultIndex) {
     data = [];
   }
   const loop = defaultIndex.loop;
-  const dependencyMap = tmp;
+  closure_1 = tmp;
   const autoPlayInterval = defaultIndex.autoPlayInterval;
   let num2 = 1000;
   if (undefined !== autoPlayInterval) {
@@ -56,8 +54,8 @@ export const useInitProps = function useInitProps(defaultIndex) {
   const items = [data, undefined === loop || loop, undefined === autoFillData || autoFillData];
   const bound = Math.max(num2, 0);
   const memo = React.useMemo(() => {
-    let obj = data(tmp[1]);
-    obj = { loop: tmp, autoFillData: noop, data, dataLength: data.length };
+    let obj = data(table[1]);
+    obj = { loop: table, autoFillData: closure_2, data, dataLength: data.length };
     return obj.computedFillDataWithAutoFillData(obj);
   }, items);
   let tmp10 = "vertical-stack" !== defaultIndex.mode;

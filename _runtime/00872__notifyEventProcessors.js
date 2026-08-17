@@ -1,12 +1,13 @@
 // _runtime/00872__notifyEventProcessors.js
-import { SyncPromise } from "00873_SyncPromise.js";
+import SyncPromise from "SyncPromise" /* 873 */;
 import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
-const require = arg1;
+
+require = arg1;
 let dependencyMap = arg6;
 function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
   const _require = arg1;
-  const dependencyMap = arg2;
-  const _notifyEventProcessors = arg3;
+  dependencyMap = arg2;
+  _notifyEventProcessors = arg3;
   if (arg0) {
     if (tmp) {
       const obj = {};
@@ -36,7 +37,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
               let obj = {};
               let merged = Object.assign(arg0);
               let tmp4Result = tmp4(obj, tmp);
-              let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+              let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
               if (DEBUG_BUILD) {
                 DEBUG_BUILD = null === tmp4Result;
               }
@@ -61,7 +62,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                       let obj = {};
                       let merged = Object.assign(arg0);
                       let tmp4Result = tmp4(obj, tmp);
-                      let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                      let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                       if (DEBUG_BUILD) {
                         DEBUG_BUILD = null === tmp4Result;
                       }
@@ -86,7 +87,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                               let obj = {};
                               let merged = Object.assign(arg0);
                               let tmp4Result = tmp4(obj, tmp);
-                              let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                              let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                               if (DEBUG_BUILD) {
                                 DEBUG_BUILD = null === tmp4Result;
                               }
@@ -111,7 +112,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                       let obj = {};
                                       let merged = Object.assign(arg0);
                                       let tmp4Result = tmp4(obj, tmp);
-                                      let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                                      let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                                       if (DEBUG_BUILD) {
                                         DEBUG_BUILD = null === tmp4Result;
                                       }
@@ -129,7 +130,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                         let nextPromise = tmp4Result.then(() => { ... });
                                       } else {
                                         sum1 = sum + 1;
-                                        let closure_0 = tmp;
+                                        closure_0 = tmp;
+                                        let table = tmp2;
                                         nextPromise = tmp4Result;
                                         if (tmp4Result) {
                                           nextPromise = tmp4Result;
@@ -154,7 +156,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                             if (tmp9Result.isThenable(tmp15Result)) {
                                               let nextPromise1 = tmp15Result.then(() => { ... });
                                             } else {
-                                              nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                              nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                                             }
                                           }
                                         }
@@ -165,7 +167,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                 });
                               } else {
                                 sum1 = sum + 1;
-                                let closure_0 = tmp;
+                                closure_0 = tmp;
+                                let table = tmp2;
                                 nextPromise = tmp4Result;
                                 if (tmp4Result) {
                                   nextPromise = tmp4Result;
@@ -198,7 +201,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                             let obj = {};
                                             let merged = Object.assign(arg0);
                                             let tmp4Result = tmp4(obj, tmp);
-                                            let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                                            let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                                             if (DEBUG_BUILD) {
                                               DEBUG_BUILD = null === tmp4Result;
                                             }
@@ -216,7 +219,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                               let nextPromise = tmp4Result.then(() => { ... });
                                             } else {
                                               sum1 = sum + 1;
-                                              let closure_0 = tmp;
+                                              closure_0 = tmp;
+                                              let table = tmp2;
                                               nextPromise = tmp4Result;
                                               if (tmp4Result) {
                                                 nextPromise = tmp4Result;
@@ -241,7 +245,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                   if (tmp9Result.isThenable(tmp15Result)) {
                                                     let nextPromise1 = tmp15Result.then(() => { ... });
                                                   } else {
-                                                    nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                    nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                                                   }
                                                 }
                                               }
@@ -251,7 +255,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                         return tmp5;
                                       });
                                     } else {
-                                      nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                      nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                                     }
                                   }
                                 }
@@ -262,7 +266,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                         });
                       } else {
                         sum1 = sum + 1;
-                        let closure_0 = tmp;
+                        closure_0 = tmp;
+                        let table = tmp2;
                         nextPromise = tmp4Result;
                         if (tmp4Result) {
                           nextPromise = tmp4Result;
@@ -295,7 +300,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                     let obj = {};
                                     let merged = Object.assign(arg0);
                                     let tmp4Result = tmp4(obj, tmp);
-                                    let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                                    let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                                     if (DEBUG_BUILD) {
                                       DEBUG_BUILD = null === tmp4Result;
                                     }
@@ -320,7 +325,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                             let obj = {};
                                             let merged = Object.assign(arg0);
                                             let tmp4Result = tmp4(obj, tmp);
-                                            let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                                            let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                                             if (DEBUG_BUILD) {
                                               DEBUG_BUILD = null === tmp4Result;
                                             }
@@ -338,7 +343,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                               let nextPromise = tmp4Result.then(() => { ... });
                                             } else {
                                               sum1 = sum + 1;
-                                              let closure_0 = tmp;
+                                              closure_0 = tmp;
+                                              let table = tmp2;
                                               nextPromise = tmp4Result;
                                               if (tmp4Result) {
                                                 nextPromise = tmp4Result;
@@ -363,7 +369,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                   if (tmp9Result.isThenable(tmp15Result)) {
                                                     let nextPromise1 = tmp15Result.then(() => { ... });
                                                   } else {
-                                                    nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                    nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                                                   }
                                                 }
                                               }
@@ -374,7 +380,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                       });
                                     } else {
                                       sum1 = sum + 1;
-                                      let closure_0 = tmp;
+                                      closure_0 = tmp;
+                                      let table = tmp2;
                                       nextPromise = tmp4Result;
                                       if (tmp4Result) {
                                         nextPromise = tmp4Result;
@@ -407,7 +414,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                   let obj = {};
                                                   let merged = Object.assign(arg0);
                                                   let tmp4Result = tmp4(obj, tmp);
-                                                  let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                                                  let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                                                   if (DEBUG_BUILD) {
                                                     DEBUG_BUILD = null === tmp4Result;
                                                   }
@@ -425,7 +432,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                     let nextPromise = tmp4Result.then(() => { ... });
                                                   } else {
                                                     sum1 = sum + 1;
-                                                    let closure_0 = tmp;
+                                                    closure_0 = tmp;
+                                                    let table = tmp2;
                                                     nextPromise = tmp4Result;
                                                     if (tmp4Result) {
                                                       nextPromise = tmp4Result;
@@ -450,7 +458,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                         if (tmp9Result.isThenable(tmp15Result)) {
                                                           let nextPromise1 = tmp15Result.then(() => { ... });
                                                         } else {
-                                                          nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                          nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                                                         }
                                                       }
                                                     }
@@ -460,7 +468,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                               return tmp5;
                                             });
                                           } else {
-                                            nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                            nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                                           }
                                         }
                                       }
@@ -470,7 +478,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                 return tmp5;
                               });
                             } else {
-                              nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                              nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                             }
                           }
                         }
@@ -481,7 +489,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                 });
               } else {
                 sum1 = sum + 1;
-                let closure_0 = tmp;
+                closure_0 = tmp;
+                let table = tmp2;
                 nextPromise = tmp4Result;
                 if (tmp4Result) {
                   nextPromise = tmp4Result;
@@ -514,7 +523,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                             let obj = {};
                             let merged = Object.assign(arg0);
                             let tmp4Result = tmp4(obj, tmp);
-                            let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                            let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                             if (DEBUG_BUILD) {
                               DEBUG_BUILD = null === tmp4Result;
                             }
@@ -539,7 +548,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                     let obj = {};
                                     let merged = Object.assign(arg0);
                                     let tmp4Result = tmp4(obj, tmp);
-                                    let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                                    let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                                     if (DEBUG_BUILD) {
                                       DEBUG_BUILD = null === tmp4Result;
                                     }
@@ -564,7 +573,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                             let obj = {};
                                             let merged = Object.assign(arg0);
                                             let tmp4Result = tmp4(obj, tmp);
-                                            let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                                            let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                                             if (DEBUG_BUILD) {
                                               DEBUG_BUILD = null === tmp4Result;
                                             }
@@ -582,7 +591,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                               let nextPromise = tmp4Result.then(() => { ... });
                                             } else {
                                               sum1 = sum + 1;
-                                              let closure_0 = tmp;
+                                              closure_0 = tmp;
+                                              let table = tmp2;
                                               nextPromise = tmp4Result;
                                               if (tmp4Result) {
                                                 nextPromise = tmp4Result;
@@ -607,7 +617,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                   if (tmp9Result.isThenable(tmp15Result)) {
                                                     let nextPromise1 = tmp15Result.then(() => { ... });
                                                   } else {
-                                                    nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                    nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                                                   }
                                                 }
                                               }
@@ -618,7 +628,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                       });
                                     } else {
                                       sum1 = sum + 1;
-                                      let closure_0 = tmp;
+                                      closure_0 = tmp;
+                                      let table = tmp2;
                                       nextPromise = tmp4Result;
                                       if (tmp4Result) {
                                         nextPromise = tmp4Result;
@@ -651,7 +662,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                   let obj = {};
                                                   let merged = Object.assign(arg0);
                                                   let tmp4Result = tmp4(obj, tmp);
-                                                  let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                                                  let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                                                   if (DEBUG_BUILD) {
                                                     DEBUG_BUILD = null === tmp4Result;
                                                   }
@@ -669,7 +680,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                     let nextPromise = tmp4Result.then(() => { ... });
                                                   } else {
                                                     sum1 = sum + 1;
-                                                    let closure_0 = tmp;
+                                                    closure_0 = tmp;
+                                                    let table = tmp2;
                                                     nextPromise = tmp4Result;
                                                     if (tmp4Result) {
                                                       nextPromise = tmp4Result;
@@ -694,7 +706,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                         if (tmp9Result.isThenable(tmp15Result)) {
                                                           let nextPromise1 = tmp15Result.then(() => { ... });
                                                         } else {
-                                                          nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                          nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                                                         }
                                                       }
                                                     }
@@ -704,7 +716,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                               return tmp5;
                                             });
                                           } else {
-                                            nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                            nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                                           }
                                         }
                                       }
@@ -715,7 +727,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                               });
                             } else {
                               sum1 = sum + 1;
-                              let closure_0 = tmp;
+                              closure_0 = tmp;
+                              let table = tmp2;
                               nextPromise = tmp4Result;
                               if (tmp4Result) {
                                 nextPromise = tmp4Result;
@@ -748,7 +761,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                           let obj = {};
                                           let merged = Object.assign(arg0);
                                           let tmp4Result = tmp4(obj, tmp);
-                                          let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                                          let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                                           if (DEBUG_BUILD) {
                                             DEBUG_BUILD = null === tmp4Result;
                                           }
@@ -773,7 +786,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                   let obj = {};
                                                   let merged = Object.assign(arg0);
                                                   let tmp4Result = tmp4(obj, tmp);
-                                                  let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                                                  let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                                                   if (DEBUG_BUILD) {
                                                     DEBUG_BUILD = null === tmp4Result;
                                                   }
@@ -791,7 +804,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                     let nextPromise = tmp4Result.then(() => { ... });
                                                   } else {
                                                     sum1 = sum + 1;
-                                                    let closure_0 = tmp;
+                                                    closure_0 = tmp;
+                                                    let table = tmp2;
                                                     nextPromise = tmp4Result;
                                                     if (tmp4Result) {
                                                       nextPromise = tmp4Result;
@@ -816,7 +830,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                         if (tmp9Result.isThenable(tmp15Result)) {
                                                           let nextPromise1 = tmp15Result.then(() => { ... });
                                                         } else {
-                                                          nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                          nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                                                         }
                                                       }
                                                     }
@@ -827,7 +841,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                             });
                                           } else {
                                             sum1 = sum + 1;
-                                            let closure_0 = tmp;
+                                            closure_0 = tmp;
+                                            let table = tmp2;
                                             nextPromise = tmp4Result;
                                             if (tmp4Result) {
                                               nextPromise = tmp4Result;
@@ -860,7 +875,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                         let obj = {};
                                                         let merged = Object.assign(arg0);
                                                         let tmp4Result = tmp4(obj, tmp);
-                                                        let DEBUG_BUILD = outer1_0(outer1_1[2]).DEBUG_BUILD;
+                                                        let DEBUG_BUILD = closure_1_0(closure_1_1[2]).DEBUG_BUILD;
                                                         if (DEBUG_BUILD) {
                                                           DEBUG_BUILD = null === tmp4Result;
                                                         }
@@ -878,7 +893,8 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                           let nextPromise = tmp4Result.then(() => { ... });
                                                         } else {
                                                           sum1 = sum + 1;
-                                                          let closure_0 = tmp;
+                                                          closure_0 = tmp;
+                                                          let table = tmp2;
                                                           nextPromise = tmp4Result;
                                                           if (tmp4Result) {
                                                             nextPromise = tmp4Result;
@@ -903,7 +919,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                               if (tmp9Result.isThenable(tmp15Result)) {
                                                                 let nextPromise1 = tmp15Result.then(() => { ... });
                                                               } else {
-                                                                nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                                nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                                                               }
                                                             }
                                                           }
@@ -913,7 +929,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                     return tmp5;
                                                   });
                                                 } else {
-                                                  nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                  nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                                                 }
                                               }
                                             }
@@ -923,7 +939,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                       return tmp5;
                                     });
                                   } else {
-                                    nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                    nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                                   }
                                 }
                               }
@@ -933,7 +949,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                         return tmp5;
                       });
                     } else {
-                      nextPromise1 = outer1_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                      nextPromise1 = closure_1_2(tmp15Result, tmp, tmp2, sum1 + 1);
                     }
                   }
                 }

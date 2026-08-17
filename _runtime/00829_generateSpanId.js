@@ -1,6 +1,7 @@
 // _runtime/00829_generateSpanId.js
-import { addContextToFrame } from "00830_addContextToFrame.js";
-const require = arg1;
+import addContextToFrame from "addContextToFrame" /* 830 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.generateSpanId = function generateSpanId() {

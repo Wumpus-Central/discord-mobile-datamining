@@ -1,12 +1,12 @@
 // _runtime/07861__asyncNullishCoalesce2.js
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function _asyncNullishCoalesce2() {
   const self = this;
-  const tmp = asyncGeneratorStep((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c2 = 0;
+  const tmp = callback((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c2 = 0;
     return (function*(arg0, arg1) {
       if (c2 === 2) {
         c2 = 3;
@@ -35,7 +35,7 @@ function _asyncNullishCoalesce2() {
           } else {
             obj = callback(table[1]);
             c2 = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = obj._nullishCoalesce(callback, table);
             return obj1;
           }
@@ -46,7 +46,7 @@ function _asyncNullishCoalesce2() {
       }
     })();
   });
-  const _asyncNullishCoalesce2 = tmp;
+  closure_3 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

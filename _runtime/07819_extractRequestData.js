@@ -1,26 +1,27 @@
 // _runtime/07819_extractRequestData.js
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
-import { getNumberOfUrlSegments } from "07820_getNumberOfUrlSegments.js";
-const require = arg1;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+import getNumberOfUrlSegments from "getNumberOfUrlSegments" /* 7820 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function extractRequestData(headers, arg1) {
-  let closure_0 = headers;
+  closure_0 = headers;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
   let include;
   obj = undefined;
-  let c3;
+  closure_3 = undefined;
   let method;
   let combined;
   include = obj.include;
   if (undefined === include) {
-    include = c3;
+    include = closure_3;
   }
   obj = {};
   const tmp = headers.headers || {};
-  c3 = tmp;
+  closure_3 = tmp;
   method = headers.method;
   if ("https" === headers.protocol) {
     let str2 = "https";
@@ -37,9 +38,9 @@ function extractRequestData(headers, arg1) {
   }
   let item = include.forEach((key10009) => {
     if ("headers" === key10009) {
-      obj.headers = _undefined;
+      obj.headers = cookie;
       if (!include.includes("cookies")) {
-        const headers = tmp28.headers;
+        headers = tmp28.headers;
         delete tmp2[tmp];
       }
       if (!obj6.includes("ip")) {
@@ -57,7 +58,7 @@ function extractRequestData(headers, arg1) {
     } else if ("cookies" === key10009) {
       let cookies = headers.cookies;
       if (!cookies) {
-        let cookie = _undefined.cookie;
+        cookie = cookie.cookie;
         if (cookie) {
           cookie = headers(include[2]).parseCookie(tmp21.cookie);
           const obj5 = headers(include[2]);
@@ -72,7 +73,7 @@ function extractRequestData(headers, arg1) {
     } else if ("query_string" === key10009) {
       obj.query_string = (function extractQueryParams(closure_0) {
         if (closure_0.originalUrl || closure_0.url || "") {
-          let combined = obj;
+          combined = obj;
           if (obj.startsWith("/")) {
             const _HermesInternal = HermesInternal;
             combined = "http://dogs.are.great" + obj;
@@ -153,8 +154,6 @@ function headersToDict(arg0) {
     const _Object = Object;
     const entries = Object.entries(arg0);
     const item = entries.forEach((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       if (typeof tmp2 === "string") {
         obj[tmp] = tmp2;
@@ -200,7 +199,7 @@ arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
   if (obj.request) {
     const _Array = Array;
     if (Array.isArray(obj.request)) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(obj.request, 0);
       let arr2 = items;
     } else {
@@ -212,7 +211,7 @@ arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
       arr2.push("ip");
     }
     const _Array2 = Array;
-    let obj1 = arr2;
+    obj1 = arr2;
     if (!Array.isArray(arr2)) {
       obj1 = closure_3;
     }
@@ -323,7 +322,7 @@ arg5.addRequestDataToEvent = function addRequestDataToEvent(request, request, in
   if (obj.request) {
     const _Array = Array;
     if (Array.isArray(obj.request)) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(obj.request, 0);
       let arr2 = items;
     } else {
@@ -436,7 +435,7 @@ arg5.extractPathForTransaction = function extractPathForTransaction(method) {
     if (tmp10) {
       sum = text + str5;
     }
-    const items = [sum, str4];
+    items = [sum, str4];
     return items;
   }
   let customRoute = obj.customRoute;
@@ -472,8 +471,6 @@ arg5.httpRequestToRequestData = function httpRequestToRequestData(headers) {
 };
 arg5.winterCGHeadersToDict = winterCGHeadersToDict;
 arg5.winterCGRequestToRequestData = function winterCGRequestToRequestData(method) {
-  const obj = { method: method.method, url: method.url, query_string: null, headers: null };
-  obj[2] = extractQueryParamsFromUrl(method.url);
-  obj[3] = winterCGHeadersToDict(method.headers);
+  const obj = { method: method.method, url: method.url, query_string: extractQueryParamsFromUrl(method.url), headers: winterCGHeadersToDict(method.headers) };
   return obj;
 };

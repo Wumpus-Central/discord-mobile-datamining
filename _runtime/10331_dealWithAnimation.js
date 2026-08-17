@@ -4,29 +4,29 @@ const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_dealWithAnimationTs2(isFinished){const{cb}=this.__closure;return cb(isFinished);}" };
 let closure_3 = { code: "function pnpm_dealWithAnimationTs3(isFinished){const{cb}=this.__closure;return cb(isFinished);}" };
 function dealWithAnimation(type) {
-  let closure_0 = type;
+  closure_0 = type;
   type = type.type;
   if ("spring" === type) {
     return (value, cb) => {
-      const type = cb;
+      type = cb;
       const fn = function o(arg0) {
         return cb(arg0);
       };
       fn.__closure = { cb };
       fn.__workletHash = 5381689684735;
-      fn.__initData = outer1_2;
-      return type(outer1_1[0]).withSpring(value, type.config, fn);
+      fn.__initData = closure_1_2;
+      return type(closure_1_1[0]).withSpring(value, type.config, fn);
     };
   } else {
     return "timing" === type ? ((value, cb) => {
-      const type = cb;
+      type = cb;
       const fn = function o(arg0) {
         return cb(arg0);
       };
       fn.__closure = { cb };
       fn.__workletHash = 457847741022;
-      fn.__initData = outer1_3;
-      return type(outer1_1[0]).withTiming(value, type.config, fn);
+      fn.__initData = closure_1_3;
+      return type(closure_1_1[0]).withTiming(value, type.config, fn);
     }) : undefined;
   }
 }

@@ -31,8 +31,8 @@ class tinycolor {
           num8 = 1;
           tmp23 = obj;
           if (typeof str === "object") {
-            tmp79 = tetrad;
-            CSS_UNIT9 = tetrad.CSS_UNIT;
+            tmp79 = closure_28;
+            CSS_UNIT9 = closure_28.CSS_UNIT;
             if (CSS_UNIT9.exec(str.r)) {
               CSS_UNIT = tmp79.CSS_UNIT;
               if (CSS_UNIT.exec(str.g)) {
@@ -309,9 +309,9 @@ class tinycolor {
             self._b = tmp75(self._b);
           }
           self._ok = flag4;
-          tmp76 = c3;
-          c3 = c3 + 1;
-          self._tc_id = c3;
+          tmp76 = closure_3;
+          closure_3 = closure_3 + 1;
+          self._tc_id = closure_3;
           return;
         } else {
           tmp77 = closure_1;
@@ -320,8 +320,8 @@ class tinycolor {
           tmp78 = closure_2;
           str18 = str17.replace(closure_2, "");
           formatted = str18.toLowerCase();
-          obj4 = c25;
-          if (c25[formatted]) {
+          obj4 = closure_25;
+          if (closure_25[formatted]) {
             tmp5 = obj4[formatted];
             flag = true;
           } else {
@@ -333,8 +333,8 @@ class tinycolor {
             }
             tmp22 = flag2;
           }
-          tmp6 = tetrad;
-          rgb = tetrad.rgb;
+          tmp6 = closure_28;
+          rgb = closure_28.rgb;
           formatted = rgb.exec(tmp5);
           tmp8 = tmp5;
           if (formatted) {
@@ -672,7 +672,7 @@ function rgbToHsl(_r, _r, _r) {
   const tmp5 = min(result2, tmp2, tmp3);
   const result = (tmp4 + tmp5) / 2;
   if (tmp4 == tmp5) {
-    const obj = { h: null, s: null, l: null };
+    obj = { h: null, s: null, l: null };
     obj[0] = 0;
     obj[1] = 0;
     obj[2] = result;
@@ -702,8 +702,6 @@ function rgbToHsl(_r, _r, _r) {
   }
 }
 function rgbToHex(arg0, arg1, arg2, arg3) {
-  let str13;
-  let str14;
   let str = round(arg0);
   str = str.toString(16);
   if (1 == str.length) {
@@ -875,7 +873,7 @@ function complement(toHslResult) {
   return tinycolor(toHslResult);
 }
 function triad(toHslResult) {
-  let obj = tinycolor(toHslResult);
+  obj = tinycolor(toHslResult);
   toHslResult = obj.toHsl();
   const h = toHslResult.h;
   const items = [tinycolor(toHslResult), , ];
@@ -886,7 +884,7 @@ function triad(toHslResult) {
   return items;
 }
 function tetrad(toHslResult) {
-  let obj = tinycolor(toHslResult);
+  obj = tinycolor(toHslResult);
   toHslResult = obj.toHsl();
   const h = toHslResult.h;
   const items = [tinycolor(toHslResult), , , ];
@@ -898,7 +896,7 @@ function tetrad(toHslResult) {
   return items;
 }
 function splitcomplement(toHslResult) {
-  let obj = tinycolor(toHslResult);
+  obj = tinycolor(toHslResult);
   toHslResult = obj.toHsl();
   const h = toHslResult.h;
   const items = [tinycolor(toHslResult), , ];
@@ -936,7 +934,7 @@ function monochromatic(toHslResult) {
   if (!arg1) {
     num = 6;
   }
-  let obj = tinycolor(toHslResult);
+  obj = tinycolor(toHslResult);
   let v = obj.toHsv().v;
   const items = [];
   let diff = tmp5 - 1;
@@ -1058,8 +1056,6 @@ tinycolor.prototype = {
     return this;
   },
   toHsv() {
-    let _b;
-    let _g;
     ({ _g, _b } = this);
     let result = bound01(this._r, 255);
     const tmp2 = bound01(_g, 255);
@@ -1072,7 +1068,7 @@ tinycolor.prototype = {
       num = diff / tmp4;
     }
     if (tmp4 == tmp5) {
-      const obj = { h: null, s: null, v: null, a: null };
+      obj = { h: null, s: null, v: null, a: null };
       obj[0] = 0;
       obj[1] = num;
       obj[2] = tmp4;
@@ -1097,8 +1093,6 @@ tinycolor.prototype = {
     }
   },
   toHsvString() {
-    let _b;
-    let _g;
     const self = this;
     ({ _g, _b } = this);
     let result = bound01(this._r, 255);
@@ -1162,11 +1156,6 @@ tinycolor.prototype = {
     return "#" + this.toHex(arg0);
   },
   toHex8(arg0) {
-    let _a;
-    let _b;
-    let _g;
-    let str17;
-    let str18;
     ({ _g, _b, _a } = this);
     let str = round(this._r);
     str = str.toString(16);

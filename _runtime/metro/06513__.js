@@ -1,8 +1,9 @@
 // _runtime/metro/06513__.js
-import "noop";
-import { jsx } from "jsxProd";
-import { _isNativeReflectConstruct } from "../06510__isNativeReflectConstruct.js";
+import noopAll from "noop" /* 19 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6510 */;
+import { jsx } from "jsxProd" /* 21 */;
 
+noopAll;
 
 export default function _default(delayLongPress) {
   let num = delayLongPress.delayLongPress;
@@ -15,5 +16,5 @@ export default function _default(delayLongPress) {
   }
   const merged = Object.assign(delayLongPress, Object.create(null));
   const merged1 = Object.assign(merged);
-  return jsx(_isNativeReflectConstruct, { delayLongPress: num, extraButtonProps });
+  return jsx(_isNativeReflectConstructDefault, { delayLongPress: num, extraButtonProps });
 };

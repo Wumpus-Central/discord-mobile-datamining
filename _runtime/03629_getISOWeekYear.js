@@ -1,7 +1,7 @@
 // _runtime/03629_getISOWeekYear.js
-import _typeof from "_typeof";
-import startOfISOWeek from "startOfISOWeek";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import startOfISOWeek from "startOfISOWeek" /* 3630 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!startOfISOWeek) {
   obj = { default: null };
   obj[0] = startOfISOWeek;
@@ -18,7 +18,7 @@ if (!startOfISOWeek) {
 } else {
   tmp5 = startOfISOWeek;
 }
-let closure_1 = tmp5;
+startOfISOWeek = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,10 +26,11 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function getISOWeekYear(arg0) {
-  tmp7.default(1, arguments);
-  const defaultResult1 = tmp3.default(arg0);
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
   const fullYear = defaultResult1.getFullYear();
   const date = new Date(0);
   date.setFullYear(fullYear + 1, 0, 4);
@@ -37,7 +38,7 @@ export default function getISOWeekYear(arg0) {
   const date1 = new Date(0);
   date1.setFullYear(fullYear, 0, 4);
   date1.setHours(0, 0, 0, 0);
-  const defaultResult2 = tmp5.default(date);
+  const defaultResult2 = startOfISOWeek.default(date);
   const time = defaultResult1.getTime();
   if (time >= defaultResult2.getTime()) {
     let sum = fullYear + 1;

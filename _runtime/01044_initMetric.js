@@ -1,6 +1,7 @@
 // _runtime/01044_initMetric.js
-import { getNavigationEntry } from "01043_getNavigationEntry.js";
-const require = arg1;
+import getNavigationEntry from "getNavigationEntry" /* 1043 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.initMetric = (name) => {

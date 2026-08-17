@@ -1,12 +1,12 @@
 // _runtime/01137_captureReactException.js
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 function captureReactException(closure_1, closure_2, arg2) {
   let weakSet = closure_1;
   const componentStack = closure_2.componentStack;
   let recurse = componentStack;
-  const noop = arg2;
-  const match = noop.version.match(/^([^.]+)/);
+  const version = arg2;
+  const match = version.version.match(/^([^.]+)/);
   let tmp2 = null !== match;
   if (tmp2) {
     const _parseInt = parseInt;
@@ -16,7 +16,7 @@ function captureReactException(closure_1, closure_2, arg2) {
     if (obj.isError(closure_1)) {
       if (componentStack) {
         const _Error = Error;
-        const error = new Error(closure_1.message);
+        error = new Error(closure_1.message);
         const _HermesInternal = HermesInternal;
         error.name = "React ErrorBoundary " + closure_1.name;
         error.stack = componentStack;
@@ -73,10 +73,10 @@ export const isAtLeastReact17 = function isAtLeastReact17(str) {
   return tmp2;
 };
 export function reactErrorHandler(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return (arg0, arg1) => {
     if (closure_0) {
-      closure_0(arg0, arg1, outer1_3(arg0, arg1, { mechanism: { handled: tmp2, type: "auto.function.react.error_handler" } }));
+      closure_0(arg0, arg1, closure_1_3(arg0, arg1, { mechanism: { handled: tmp2, type: "auto.function.react.error_handler" } }));
     }
   };
 }

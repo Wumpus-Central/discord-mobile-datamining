@@ -1,7 +1,7 @@
 // _runtime/09031_deprecatedCreateStrictShapeTypeChecker.js
 
 export default function deprecatedCreateStrictShapeTypeChecker(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   function checkType(arg0, arg1, arg2, arg3, arg4) {
     const substr = [...arguments].slice();
     if (arg1[arg2]) {

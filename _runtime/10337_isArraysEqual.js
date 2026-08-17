@@ -1,9 +1,10 @@
 // _runtime/10337_isArraysEqual.js
-import { useRef } from "noop";
+import noop from "noop" /* 19 */;
 
+const useRef = noop.useRef;
 let closure_3 = { code: "function pnpm_useVisibleRangesTsx1(){const{windowSize,translation,viewSize,total,loop,isArraysEqual,cachedRanges}=this.__closure;var _cachedRanges$current,_cachedRanges$current2,_cachedRanges$current3,_cachedRanges$current4;const positiveCount=Math.round(windowSize/2);const negativeCount=windowSize-positiveCount;let currentIndex=Math.round(-translation.value/viewSize);currentIndex=currentIndex<0?currentIndex%total+total:currentIndex;let newRanges;if(!loop){newRanges={negativeRange:[0+currentIndex-(windowSize-1),0+currentIndex],positiveRange:[0+currentIndex,currentIndex+(windowSize-1)]};}else{const negativeRange=[(currentIndex-negativeCount+total)%total,(currentIndex-1+total)%total];const positiveRange=[(currentIndex+total)%total,(currentIndex+positiveCount+total)%total];if(negativeRange[0]<total&&negativeRange[0]>negativeRange[1]){negativeRange[1]=total-1;positiveRange[0]=0;}if(positiveRange[0]>positiveRange[1]){negativeRange[1]=total-1;positiveRange[0]=0;}newRanges={negativeRange:negativeRange,positiveRange:positiveRange};}if(isArraysEqual((_cachedRanges$current=(_cachedRanges$current2=cachedRanges.current)===null||_cachedRanges$current2===void 0?void 0:_cachedRanges$current2.negativeRange)!==null&&_cachedRanges$current!==void 0?_cachedRanges$current:[],newRanges.negativeRange)&&isArraysEqual((_cachedRanges$current3=(_cachedRanges$current4=cachedRanges.current)===null||_cachedRanges$current4===void 0?void 0:_cachedRanges$current4.positiveRange)!==null&&_cachedRanges$current3!==void 0?_cachedRanges$current3:[],newRanges.positiveRange))return cachedRanges.current;cachedRanges.current=newRanges;return cachedRanges.current;}" };
 function isArraysEqual(arr) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   return arr.length === arg1.length && arr.every((arg0, arg1) => arg0 === positiveRange1[arg1]);
 }
 isArraysEqual.__closure = {};
@@ -11,8 +12,6 @@ isArraysEqual.__workletHash = 6222082561981;
 isArraysEqual.__initData = { code: "function isArraysEqual_Pnpm_useVisibleRangesTsx2(a,b){if(a.length!==b.length)return false;return a.every(function(value,index){return value===b[index];});}" };
 
 export const useVisibleRanges = function useVisibleRanges(total) {
-  let loop;
-  let windowSize;
   total = total.total;
   let num = 0;
   if (undefined !== total) {
@@ -25,7 +24,7 @@ export const useVisibleRanges = function useVisibleRanges(total) {
     windowSize = num;
   }
   const tmp = translation(null);
-  let closure_5 = tmp;
+  closure_5 = tmp;
   let obj = num(viewSize[1]);
   const fn = function s() {
     const rounded = Math.round(windowSize / 2);
@@ -57,7 +56,7 @@ export const useVisibleRanges = function useVisibleRanges(total) {
       const items3 = [sum, sum + (tmp - 1)];
       obj[1] = items3;
     }
-    const current = tmp.current;
+    const current = ref.current;
     let negativeRange;
     if (current != null) {
       negativeRange = current.negativeRange;
@@ -90,7 +89,7 @@ export const useVisibleRanges = function useVisibleRanges(total) {
     if (!tmp11) {
       tmp10.current = obj;
     }
-    return windowSize.current;
+    return ref.current;
   };
   obj = { windowSize, translation, viewSize, total: num, loop, isArraysEqual: windowSize, cachedRanges: tmp };
   fn.__closure = obj;

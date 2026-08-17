@@ -1,13 +1,13 @@
 // _runtime/03732_formatRelative.js
-import differenceInCalendarDays from "differenceInCalendarDays";
-import format from "format";
-import code from "code";
-import subMilliseconds from "subMilliseconds";
-import _typeof from "_typeof";
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
-import requiredArgs from "requiredArgs";
-import toInteger from "toInteger";
-import { getDefaultOptions } from "03477_getDefaultOptions.js";
+import getDefaultOptions from "getDefaultOptions" /* 3477 */;
+import differenceInCalendarDays from "differenceInCalendarDays" /* 3634 */;
+import format from "format" /* 3704 */;
+import code from "code" /* 3718 */;
+import subMilliseconds from "subMilliseconds" /* 3705 */;
+import _typeof from "_typeof" /* 3472 */;
+import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "toInteger" /* 3476 */;
 
 if (!differenceInCalendarDays) {
   let obj = { default: null };
@@ -16,7 +16,7 @@ if (!differenceInCalendarDays) {
 } else {
   tmp3 = differenceInCalendarDays;
 }
-let obj1 = tmp3;
+differenceInCalendarDays = tmp3;
 if (!format) {
   obj = { default: null };
   obj[0] = format;
@@ -24,7 +24,7 @@ if (!format) {
 } else {
   tmp5 = format;
 }
-let c3 = tmp5;
+format = tmp5;
 if (!code) {
   obj = { default: null };
   obj[0] = code;
@@ -32,15 +32,15 @@ if (!code) {
 } else {
   tmp7 = code;
 }
-let c4 = tmp7;
+code = tmp7;
 if (!subMilliseconds) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = subMilliseconds;
   let tmp9 = obj1;
 } else {
   tmp9 = subMilliseconds;
 }
-let c5 = tmp9;
+subMilliseconds = tmp9;
 if (!_typeof) {
   const obj2 = { default: null };
   obj2[0] = _typeof;
@@ -48,7 +48,7 @@ if (!_typeof) {
 } else {
   tmp11 = _typeof;
 }
-let closure_6 = tmp11;
+_typeof = tmp11;
 if (!getTimezoneOffsetInMilliseconds) {
   const obj3 = { default: null };
   obj3[0] = getTimezoneOffsetInMilliseconds;
@@ -56,7 +56,7 @@ if (!getTimezoneOffsetInMilliseconds) {
 } else {
   tmp13 = getTimezoneOffsetInMilliseconds;
 }
-const error = tmp13;
+getTimezoneOffsetInMilliseconds = tmp13;
 if (!requiredArgs) {
   const obj4 = { default: null };
   obj4[0] = requiredArgs;
@@ -64,7 +64,7 @@ if (!requiredArgs) {
 } else {
   tmp15 = requiredArgs;
 }
-const metroImportAll = tmp15;
+requiredArgs = tmp15;
 if (!toInteger) {
   const obj5 = { default: null };
   obj5[0] = toInteger;
@@ -72,12 +72,12 @@ if (!toInteger) {
 } else {
   tmp17 = toInteger;
 }
-let c9 = tmp17;
+toInteger = tmp17;
 
 export default function formatRelative(arg0, arg1, locale) {
-  tmp15.default(2, arguments);
-  const defaultResult1 = tmp11.default(arg0);
-  const defaultResult2 = tmp11.default(arg1);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = _typeof.default(arg1);
   const defaultOptions = getDefaultOptions.getDefaultOptions();
   locale = undefined;
   if (null != locale) {
@@ -87,7 +87,7 @@ export default function formatRelative(arg0, arg1, locale) {
     locale = defaultOptions.locale;
   }
   if (null === locale) {
-    locale = tmp7.default;
+    locale = code.default;
   }
   let weekStartsOn;
   if (null != locale) {
@@ -135,11 +135,11 @@ export default function formatRelative(arg0, arg1, locale) {
       num = weekStartsOn;
     }
   }
-  const defaultResult3 = tmp17.default(num);
+  const defaultResult3 = toInteger.default(num);
   if (locale.localize) {
     if (locale.formatLong) {
       if (locale.formatRelative) {
-        const defaultResult4 = tmp3.default(defaultResult1, defaultResult2);
+        const defaultResult4 = differenceInCalendarDays.default(defaultResult1, defaultResult2);
         const _isNaN = isNaN;
         if (isNaN(defaultResult4)) {
           const _RangeError4 = RangeError;
@@ -170,14 +170,14 @@ export default function formatRelative(arg0, arg1, locale) {
             }
             str5 = str6;
           }
-          const defaultResult5 = tmp9.default(defaultResult1, tmp13.default(defaultResult1));
+          const defaultResult5 = subMilliseconds.default(defaultResult1, getTimezoneOffsetInMilliseconds.default(defaultResult1));
           let obj = { locale: null, weekStartsOn: null };
           obj[0] = locale;
           obj[1] = defaultResult3;
           obj = { locale: null, weekStartsOn: null };
           obj[0] = locale;
           obj[1] = defaultResult3;
-          return tmp5.default(defaultResult1, locale.formatRelative(str5, defaultResult5, tmp9.default(defaultResult2, tmp13.default(defaultResult2)), obj), obj);
+          return format.default(defaultResult1, locale.formatRelative(str5, defaultResult5, subMilliseconds.default(defaultResult2, getTimezoneOffsetInMilliseconds.default(defaultResult2)), obj), obj);
         }
       } else {
         const _RangeError3 = RangeError;

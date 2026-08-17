@@ -20,9 +20,9 @@ arg5.whenIdleOrHidden = (arg0) => {
     tmp(1041).addPageListener("pagehide", runOnceResult, { once: true, capture: true });
     tmp3(() => {
       callback();
-      callback(outer1_1[2]).removePageListener("visibilitychange", callback, { capture: true });
-      const obj = callback(outer1_1[2]);
-      callback(outer1_1[2]).removePageListener("pagehide", callback, { capture: true });
+      callback(closure_1_1[2]).removePageListener("visibilitychange", callback, { capture: true });
+      const obj = callback(closure_1_1[2]);
+      callback(closure_1_1[2]).removePageListener("pagehide", callback, { capture: true });
     });
     const tmpResult1 = tmp(1041);
   }

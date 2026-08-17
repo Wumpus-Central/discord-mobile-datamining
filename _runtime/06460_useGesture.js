@@ -1,20 +1,18 @@
 // _runtime/06460_useGesture.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 import { tagMessage } from "06382_tagMessage.js";
 import { useGestureCallbacks } from "06461_useGestureCallbacks.js";
 
-let c3;
-let obj1;
 ({ useEffect: obj1, useMemo: c3 } = noop);
 
 export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
   const _require = Fling;
-  const dependencyMap = clonedAndRemappedConfig;
+  dependencyMap = clonedAndRemappedConfig;
   const tmp2 = jsEventHandler(() => Fling(clonedAndRemappedConfig[1]).getNextHandlerTag(), []);
   const callback = tmp2;
   if (clonedAndRemappedConfig.disableReanimated !== jsEventHandler(() => clonedAndRemappedConfig.disableReanimated, [])) {
     const _Error2 = Error;
-    const error = new Error(_tagMessage.tagMessage("The \"disableReanimated\" property must not be changed after the handler is created."));
+    error = new Error(_tagMessage.tagMessage("The \"disableReanimated\" property must not be changed after the handler is created."));
     throw error;
   } else {
     const gestureCallbacks = _useGestureCallbacks.useGestureCallbacks(tmp2, clonedAndRemappedConfig);
@@ -35,23 +33,23 @@ export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
       obj = { simultaneousWith: clonedAndRemappedConfig.simultaneousWith, requireToFail: clonedAndRemappedConfig.requireToFail, block: clonedAndRemappedConfig.block };
       return obj.prepareRelations(obj, closure_2);
     }, items);
-    let closure_6 = tmpResult;
+    closure_6 = tmpResult;
     const items1 = [tmp2, Fling, clonedAndRemappedConfig, jsEventHandler, reanimatedEventHandler, animatedEventHandler, tmpResult];
     tmpResult = tmp(() => {
       obj = { handlerTag: closure_2, type: closure_0, config: closure_1, detectorCallbacks: obj, gestureRelations: closure_6 };
       obj = { jsEventHandler, animatedEventHandler, reanimatedEventHandler };
       return obj;
     }, items1);
-    let closure_7 = tmpResult;
+    closure_7 = tmpResult;
     const items2 = [Fling, tmp2];
     callback(() => {
       let NativeProxy = Fling(clonedAndRemappedConfig[5]).NativeProxy;
       NativeProxy.createGestureHandler(Fling, closure_2, {});
       let result = Fling(clonedAndRemappedConfig[6]).scheduleFlushOperations();
       return () => {
-        const NativeProxy = outer1_0(outer1_1[5]).NativeProxy;
+        const NativeProxy = closure_1_0(closure_1_1[5]).NativeProxy;
         NativeProxy.dropGestureHandler(closure_2);
-        const result = outer1_0(outer1_1[6]).scheduleFlushOperations();
+        const result = closure_1_0(closure_1_1[6]).scheduleFlushOperations();
       };
     }, items2);
     const items3 = [tmp2, clonedAndRemappedConfig, Fling, tmpResult];
@@ -66,9 +64,9 @@ export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
       const obj3 = Fling(clonedAndRemappedConfig[4]);
       Fling(clonedAndRemappedConfig[7]).registerGesture(closure_2, closure_7);
       return () => {
-        outer1_0(outer1_1[4]).unbindSharedValues(closure_1, closure_2);
-        const obj = outer1_0(outer1_1[4]);
-        outer1_0(outer1_1[7]).unregisterGesture(closure_2);
+        closure_1_0(closure_1_1[4]).unbindSharedValues(closure_1, closure_2);
+        const obj = closure_1_0(closure_1_1[4]);
+        closure_1_0(closure_1_1[7]).unregisterGesture(closure_2);
       };
     }, items3);
     return tmpResult;

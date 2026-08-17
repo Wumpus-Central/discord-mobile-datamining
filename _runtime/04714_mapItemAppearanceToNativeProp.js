@@ -1,33 +1,12 @@
 // _runtime/04714_mapItemAppearanceToNativeProp.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 function mapItemAppearanceToNativeProp(compactInline) {
-  let disabled;
-  let focused;
-  let normal;
-  let selected;
-  let tabBarItemBadgeBackgroundColor;
-  let tabBarItemBadgeBackgroundColor2;
-  let tabBarItemBadgeBackgroundColor3;
-  let tabBarItemBadgeBackgroundColor4;
-  let tabBarItemIconColor;
-  let tabBarItemIconColor2;
-  let tabBarItemIconColor3;
-  let tabBarItemIconColor4;
-  let tabBarItemTitleFontColor;
-  let tabBarItemTitleFontColor2;
-  let tabBarItemTitleFontColor3;
-  let tabBarItemTitleFontColor4;
   if (compactInline) {
     ({ normal, selected, focused, disabled } = compactInline);
     let obj = {};
@@ -71,7 +50,7 @@ function mapItemAppearanceToNativeProp(compactInline) {
     let tmp18;
     if (focused) {
       const tabBarItemTitleFontWeight3 = focused.tabBarItemTitleFontWeight;
-      const obj1 = {};
+      obj1 = {};
       ({ tabBarItemTitleFontColor: tabBarItemTitleFontColor3, tabBarItemIconColor: tabBarItemIconColor3, tabBarItemBadgeBackgroundColor: tabBarItemBadgeBackgroundColor3 } = focused);
       const merged3 = Object.assign(focused);
       obj1.tabBarItemTitleFontColor = callback(tabBarItemTitleFontColor3);
@@ -108,36 +87,16 @@ function mapItemAppearanceToNativeProp(compactInline) {
   }
 }
 let closure_3 = ["onWillAppear", "onDidAppear", "onWillDisappear", "onDidDisappear", "isFocused", "freezeContents", "icon", "selectedIcon", "standardAppearance", "scrollEdgeAppearance", "scrollEdgeEffects", "experimental_userInterfaceStyle", "style"];
-({ Image: error, Platform, StyleSheet, findNodeHandle: metroImportAll, processColor: c9 } = get_ActivityIndicator);
+({ Image: error, Platform, StyleSheet, findNodeHandle: closure_8, processColor: c9 } = get_ActivityIndicator);
 const styles = StyleSheet.create({ fillParent: { position: "absolute", flex: 1, width: "100%", height: "100%" } });
 
 export default function TabsScreen(onWillAppear) {
-  let compactInline;
-  let compactInline2;
-  let dependencyMap;
-  let experimental_userInterfaceStyle;
-  let freezeContents;
-  let icon;
-  let inline;
-  let inline2;
-  let scrollEdgeAppearance;
-  let scrollEdgeEffects;
-  let selectedIcon;
-  let stacked;
-  let stacked2;
-  let standardAppearance;
-  let style;
-  let tabBarBackgroundColor;
-  let tabBarBackgroundColor2;
-  let tabBarShadowColor;
-  let tabBarShadowColor2;
-  let tmp5;
   let obj = onDidDisappear;
   const ref = onDidDisappear.useRef(null);
   const ref1 = onDidDisappear.useRef(-1);
   const effect = onDidDisappear.useEffect(() => {
     if (null != ref.current) {
-      let num2 = outer1_8(tmp.current);
+      let num2 = closure_1_8(tmp.current);
       if (num2 == null) {
         num2 = -1;
       }
@@ -156,7 +115,7 @@ export default function TabsScreen(onWillAppear) {
   ({ freezeContents, icon, selectedIcon, standardAppearance, scrollEdgeAppearance, scrollEdgeEffects } = onWillAppear);
   ({ experimental_userInterfaceStyle, style } = onWillAppear);
   const tmp7 = onDidAppear(onWillAppear, onWillAppear);
-  let obj1 = ref(4673);
+  obj1 = ref(4673);
   let flag = false;
   if (obj1.freezeEnabled()) {
     flag = freezeContents;
@@ -175,7 +134,7 @@ export default function TabsScreen(onWillAppear) {
   const items = [onWillAppear];
   const items1 = [onDidAppear];
   const callback = obj.useCallback((arg0) => {
-    ref(outer1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onWillAppear received");
+    ref(closure_1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onWillAppear received");
     callback(true);
     if (onWillAppear != null) {
       tmp3(arg0);
@@ -183,20 +142,20 @@ export default function TabsScreen(onWillAppear) {
   }, items);
   const items2 = [onWillDisappear];
   const callback1 = obj.useCallback((arg0) => {
-    ref(outer1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onDidAppear received");
+    ref(closure_1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onDidAppear received");
     if (onDidAppear != null) {
       tmp2(arg0);
     }
   }, items1);
   const items3 = [onDidDisappear];
   const callback2 = obj.useCallback((arg0) => {
-    ref(outer1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onWillDisappear received");
+    ref(closure_1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onWillDisappear received");
     if (onWillDisappear != null) {
       tmp2(arg0);
     }
   }, items2);
   const callback3 = obj.useCallback((arg0) => {
-    ref(outer1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onDidDisappear received");
+    ref(closure_1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onDidDisappear received");
     callback(false);
     if (onDidDisappear != null) {
       tmp3(arg0);
@@ -236,7 +195,7 @@ export default function TabsScreen(onWillAppear) {
       obj1 = obj;
     } else {
       const _Error = Error;
-      const error = new Error("[RNScreens] Incorrect icon format for Android. You must provide `imageSource` or `drawableResource`.");
+      error = new Error("[RNScreens] Incorrect icon format for Android. You must provide `imageSource` or `drawableResource`.");
       throw error;
     }
   } else {

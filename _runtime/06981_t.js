@@ -1,11 +1,12 @@
 // _runtime/06981_t.js
-import get_ActivityIndicator from "get ActivityIndicator";
+import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6953 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const Platform = get_ActivityIndicator.Platform;
-let obj = { initialPosition: 0, initialKeyboardState: require("GESTURE_SOURCE").KEYBOARD_STATE.UNDETERMINED, isScrollablePositionLocked: false };
+let obj = { initialPosition: 0, initialKeyboardState: GESTURE_SOURCE.KEYBOARD_STATE.UNDETERMINED, isScrollablePositionLocked: false };
 const dismiss = get_ActivityIndicator.Keyboard.dismiss;
 const fn = function t(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const keys = Object.keys(arg0);
   const mapped = keys.map((arg0) => {
     closure_0[arg0] = undefined;
@@ -20,9 +21,7 @@ let closure_8 = { code: "function handleOnEnd_Pnpm_useGestureEventsHandlersDefau
 let closure_9 = { code: "function handleOnFinalize_Pnpm_useGestureEventsHandlersDefaultTsx5(){const{resetContext,context}=this.__closure;resetContext(context);}" };
 
 export const useGestureEventsHandlersDefault = () => {
-  let animatedContainerHeight;
-  let animatedKeyboardHeight;
-  let obj = animatedPosition(animatedSnapPoints[2]);
+  obj = animatedPosition(animatedSnapPoints[2]);
   const bottomSheetInternal = obj.useBottomSheetInternal();
   animatedPosition = bottomSheetInternal.animatedPosition;
   animatedSnapPoints = bottomSheetInternal.animatedSnapPoints;
@@ -40,7 +39,7 @@ export const useGestureEventsHandlersDefault = () => {
   const enableBlurKeyboardOnGesture = bottomSheetInternal.enableBlurKeyboardOnGesture;
   const animateToPosition = bottomSheetInternal.animateToPosition;
   const stopAnimation = bottomSheetInternal.stopAnimation;
-  let obj1 = animatedPosition(animatedSnapPoints[3]);
+  obj1 = animatedPosition(animatedSnapPoints[3]);
   obj = {};
   let merged = Object.assign(animatedContainerHeight);
   const sharedValue = obj1.useSharedValue(obj);
@@ -54,7 +53,7 @@ export const useGestureEventsHandlersDefault = () => {
     }
     if (tmp3) {
       const HIDDEN = animatedPosition(animatedSnapPoints[1]).KEYBOARD_STATE.HIDDEN;
-      let obj = animatedPosition(animatedSnapPoints[3]);
+      obj = animatedPosition(animatedSnapPoints[3]);
       obj.runOnJS(animatedScrollableType)();
     }
     obj = {};
@@ -100,7 +99,7 @@ export const useGestureEventsHandlersDefault = () => {
       let num = 0;
       const sum = iter2.value.initialPosition + translationY.translationY;
       const sum1 = sum + num;
-      let obj = animatedPosition(animatedSnapPoints[4]);
+      obj = animatedPosition(animatedSnapPoints[4]);
       let isScrollablePositionLocked = iter2.value.isScrollablePositionLocked;
       if (isScrollablePositionLocked) {
         isScrollablePositionLocked = arg0 === animatedPosition(animatedSnapPoints[1]).GESTURE_SOURCE.CONTENT;
@@ -147,8 +146,6 @@ export const useGestureEventsHandlersDefault = () => {
   obj[1] = obj7.useWorkletCallback(handleOnChange, items1);
   const obj2 = { animatedHighestSnapPoint, isInTemporaryPosition, context: sharedValue, KEYBOARD_STATE: animatedPosition(animatedSnapPoints[1]).KEYBOARD_STATE, enablePanDownToClose, animatedContainerHeight, animatedSnapPoints, GESTURE_SOURCE: animatedPosition(animatedSnapPoints[1]).GESTURE_SOURCE, isScrollableRefreshable, animatedPosition, animatedScrollableContentOffsetY, clamp: animatedPosition(animatedSnapPoints[4]).clamp, enableOverDrag, animatedScrollableType, SCROLLABLE_TYPE: animatedPosition(animatedSnapPoints[1]).SCROLLABLE_TYPE, overDragResistanceFactor };
   function handleOnEnd(arg0, translationY) {
-    let absoluteY;
-    let velocityY;
     ({ absoluteY, velocityY } = translationY);
     if (isInTemporaryPosition.value) {
       if (sharedValue.value.initialPosition >= iter.value) {
@@ -199,7 +196,7 @@ export const useGestureEventsHandlersDefault = () => {
     if (typeof animatedHighestSnapPoint !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const animatedPosition = tmp;
+    closure_0 = tmp;
     const keys = Object.keys(tmp);
     const mapped = keys.map((arg0) => {
       closure_0[arg0] = undefined;

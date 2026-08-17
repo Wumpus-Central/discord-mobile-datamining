@@ -1,13 +1,14 @@
 // _runtime/01758_dummyListener.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
-let PropsFilter = arg1;
+const PropsFilter = arg1;
 function dummyListener() {
 
 }
 class PropsFilter {
   constructor() {
-    tmp = dummyListener(this, PropsFilter);
+    tmp = closure_2(this, PropsFilter);
     map = new Map();
     this._initialPropsMap = map;
     return;
@@ -17,19 +18,18 @@ const items = [
   {
     key: "filterNonAnimatedProps",
     value: function filterNonAnimatedProps(props) {
-      let PropsFilter = props;
-      let self = this;
+      let iter = props;
+      let animatedProps = this;
       props = props.props;
       let obj = {};
       for (const key10014 in props) {
         let tmp6 = key10014;
-        let iter = props[key10014];
-        PropsFilter = iter;
+        iter = props[key10014];
         if ("style" === key10014) {
           let style = props.style;
-          let tmp4 = PropsFilter;
-          let tmp5 = self;
-          let obj4 = PropsFilter(self[2]);
+          let tmp4 = iter;
+          let tmp5 = animatedProps;
+          let obj4 = iter(animatedProps[2]);
           if (style == null) {
             style = [];
           }
@@ -37,15 +37,15 @@ const items = [
           obj[key10014] = flattenArrayResult.map((viewDescriptors) => {
             if (viewDescriptors) {
               if (viewDescriptors.viewDescriptors) {
-                if (props._isFirstRender) {
-                  const _initialPropsMap = self._initialPropsMap;
-                  let obj = {};
+                if (iter._isFirstRender) {
+                  const _initialPropsMap = animatedProps._initialPropsMap;
+                  obj = {};
                   const merged = Object.assign(viewDescriptors.initial.value);
-                  const merged1 = Object.assign(props(self[3]).initialUpdaterRun(viewDescriptors.initial.updater));
+                  const merged1 = Object.assign(iter(animatedProps[3]).initialUpdaterRun(viewDescriptors.initial.updater));
                   const result = _initialPropsMap.set(viewDescriptors, obj);
-                  const obj4 = props(self[3]);
+                  const obj4 = iter(animatedProps[3]);
                 }
-                const _initialPropsMap2 = self._initialPropsMap;
+                const _initialPropsMap2 = animatedProps._initialPropsMap;
                 obj = _initialPropsMap2.get(viewDescriptors);
                 if (obj == null) {
                   obj = {};
@@ -53,19 +53,18 @@ const items = [
                 return obj;
               }
             }
-            obj = props(self[4]);
+            obj = iter(animatedProps[4]);
             let inlineStyle = viewDescriptors;
             if (obj.hasInlineStyles(viewDescriptors)) {
-              inlineStyle = props(self[4]).getInlineStyle(viewDescriptors, props._isFirstRender);
-              const obj2 = props(self[4]);
+              inlineStyle = iter(animatedProps[4]).getInlineStyle(viewDescriptors, iter._isFirstRender);
+              const obj2 = iter(animatedProps[4]);
             }
             return inlineStyle;
           });
           continue;
         } else {
           if ("animatedProps" === key10014) {
-            let animatedProps = props.animatedProps;
-            self = animatedProps;
+            animatedProps = props.animatedProps;
             if (undefined === animatedProps.initial) {
               continue;
             } else {
@@ -73,7 +72,7 @@ const items = [
               let keys = Object.keys(animatedProps.initial.value);
               let item = keys.forEach((arg0) => {
                 let tmp2;
-                if (self.initial != null) {
+                if (animatedProps.initial != null) {
                   tmp2 = iter.value[arg0];
                 }
                 obj[arg0] = tmp2;
@@ -82,17 +81,17 @@ const items = [
             }
             continue;
           } else {
-            let tmp7 = PropsFilter;
-            let tmp8 = self;
-            let obj5 = PropsFilter(self[2]);
+            let tmp7 = iter;
+            let tmp8 = animatedProps;
+            let obj5 = iter(animatedProps[2]);
             if (obj5.has("workletEventHandler", iter)) {
               if (iter.workletEventHandler instanceof tmp7(tmp8[5]).WorkletEventHandler) {
                 if (iter.workletEventHandler.eventNames.length > 0) {
                   let eventNames = iter.workletEventHandler.eventNames;
                   let item1 = eventNames.forEach((arg0) => {
-                    const obj = PropsFilter(1751);
-                    if (obj.has("listeners", props.workletEventHandler)) {
-                      let tmp3 = props.workletEventHandler.listeners[arg0];
+                    obj = PropsFilter(1751);
+                    if (obj.has("listeners", iter.workletEventHandler)) {
+                      let tmp3 = iter.workletEventHandler.listeners[arg0];
                     } else {
                       tmp3 = dummyListener;
                     }
@@ -141,4 +140,4 @@ const items = [
   }
 ];
 
-export const PropsFilter = require("_createClass")(PropsFilter, items);
+export const PropsFilter = _createClassDefault(PropsFilter, items);

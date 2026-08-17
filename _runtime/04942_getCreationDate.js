@@ -1,6 +1,7 @@
 // _runtime/04942_getCreationDate.js
-import { getStringValue } from "04935_getStringValue.js";
-const require = arg1;
+import getStringValue from "getStringValue" /* 4935 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function getCreationDate(value) {
   const stringValue = getStringValue.getStringValue(value);

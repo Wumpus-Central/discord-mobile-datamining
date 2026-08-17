@@ -1,11 +1,12 @@
 // _runtime/00485_Share.js
-import _classCallCheck from "_classCallCheck";
-import { ShareModule } from "00486_ShareModule.js";
+import _createClassDefault from "_createClass" /* 42 */;
+import ShareModuleDefault from "ShareModule" /* 486 */;
+import closure_3 from "_classCallCheck" /* 41 */;
 
 const Share = arg1;
 class Share {
   constructor() {
-    tmp = outer1_3(this, Share);
+    tmp = closure_3(this, Share);
     return;
   }
 }
@@ -36,7 +37,7 @@ const items = [
       }
       tmpResult(tmp10, "Options must be a valid object");
       const tmp3 = Share(38);
-      Share(38)(ShareModule, "ShareModule should be registered on Android.");
+      Share(38)(ShareModuleDefault, "ShareModule should be registered on Android.");
       let tmp16 = null == message.title;
       const tmp13 = importDefault;
       const tmpResult1 = Share(38);
@@ -51,15 +52,15 @@ const items = [
       }
       obj[1] = message;
       const tmpResult2 = Share(38);
-      const tmp13Result = tmp13(486);
-      return tmp13(486).share(obj, obj.dialogTitle).then((arg0) => {
+      const tmp13Result = ShareModuleDefault;
+      return ShareModuleDefault.share(obj, obj.dialogTitle).then((arg0) => {
         const merged = Object.assign(arg0);
         return { activityType: null };
       });
     }
   }
 ];
-const tmp2 = require("_createClass")(Share, null, items);
+const tmp2 = _createClassDefault(Share, null, items);
 tmp2.sharedAction = "sharedAction";
 tmp2.dismissedAction = "dismissedAction";
 

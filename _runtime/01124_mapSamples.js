@@ -1,6 +1,8 @@
 // _runtime/01124_mapSamples.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { DEFAULT_BUNDLE_NAME } from "01120_DEFAULT_BUNDLE_NAME.js";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import DEFAULT_BUNDLE_NAME from "DEFAULT_BUNDLE_NAME" /* 1120 */;
+import _mod1123 from "module_1123" /* 1123 */;
+
 function mapSamples(samples) {
   let tmp = arg1;
   if (arg1 === undefined) {
@@ -54,7 +56,7 @@ function mapSamples(samples) {
   } else {
     const debug = registerSpanErrorInstrumentation.debug;
     debug.warn("[Profiling] No samples found in profile.");
-    const obj1 = { samples: null, hermesStacks: null, jsThreads: null };
+    obj1 = { samples: null, hermesStacks: null, jsThreads: null };
     obj1[0] = items;
     obj1[1] = set1;
     obj1[2] = set;
@@ -74,7 +76,7 @@ function parseHermesJSStackFrame(category) {
   } else {
     if (undefined !== category.funcVirtAddr) {
       if (undefined !== category.offset) {
-        const obj1 = { function: null, abs_path: null, lineno: 1, colno: null };
+        obj1 = { function: null, abs_path: null, lineno: 1, colno: null };
         obj1[0] = category.name;
         obj1[1] = DEFAULT_BUNDLE_NAME.DEFAULT_BUNDLE_NAME;
         const _Number3 = Number;
@@ -110,12 +112,9 @@ function parseHermesJSStackFrame(category) {
     return obj;
   }
 }
-let closure_2 = 1000000 * require("module_1123").MAX_PROFILE_DURATION_MS;
+let closure_2 = 1000000 * _mod1123.MAX_PROFILE_DURATION_MS;
 
 export const convertToSentryProfile = function convertToSentryProfile(hermesProfile) {
-  let hermesStacks;
-  let jsThreads;
-  let samples;
   if (0 === hermesProfile.samples.length) {
     const debug2 = registerSpanErrorInstrumentation.debug;
     debug2.warn("[Profiling] No samples found in profile.");

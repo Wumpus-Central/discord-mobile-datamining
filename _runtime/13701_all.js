@@ -1,17 +1,18 @@
 // _runtime/13701_all.js
-import { all } from "13699_all.js";
-import { 13673__ } from "metro/13673__.js";
+import _mod13673 from "module_13673" /* 13673 */;
+import all from "all" /* 13699 */;
+
 
 export default (arg0, arg1) => {
   if (arguments.length < 2) {
-    const tmp7 = 13673__[arg0];
+    const tmp7 = _mod13673[arg0];
     let tmp8;
     if (all(tmp7)) {
       tmp8 = tmp7;
     }
     let tmp3 = tmp8;
   } else {
-    tmp3 = 13673__[arg0];
+    tmp3 = _mod13673[arg0];
     if (tmp3) {
       tmp3 = tmp(13673)[arg0][arg1];
     }

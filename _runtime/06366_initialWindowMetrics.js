@@ -1,13 +1,11 @@
 // _runtime/06366_initialWindowMetrics.js
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import _mod1632 from "module_1632" /* 1632 */;
+import useFrameSize from "useFrameSize" /* 6343 */;
+import closure_2 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Dimensions;
-let Platform;
-let StyleSheet;
-let c3;
-const require = arg1;
+require = arg1;
 ({ Dimensions, Platform, StyleSheet, View: c3 } = get_ActivityIndicator);
 const size = Dimensions.get("window");
 const width = size.width;
@@ -34,27 +32,27 @@ if (null == require("module_1632").initialWindowMetrics) {
 class SafeAreaProviderCompat {
   constructor(arg0) {
     ({ children, style } = global);
-    SafeAreaInsetsContext = undefined;
-    SafeAreaInsetsContext = SafeAreaInsetsContext.useContext(require("module_1632").SafeAreaInsetsContext);
+    closure_2 = undefined;
+    closure_2 = closure_2.useContext(require("module_1632").SafeAreaInsetsContext);
     obj = {
       initialFrame: initialWindowMetrics.frame,
       render(onLayout) {
             onLayout = onLayout.onLayout;
-            if (noop) {
+            if (closure_2) {
               let obj = { ref: null, onLayout: null, style: null, children: null };
               obj[0] = tmp;
               obj[1] = onLayout;
-              const items = [outer1_6.container, closure_1];
+              const items = [closure_1_6.container, closure_1];
               obj[2] = items;
               obj[3] = closure_0;
-              let tmp2Result = tmp2(outer1_3, obj);
+              let tmp2Result = tmp2(closure_1_3, obj);
             } else {
               obj = { initialMetrics: null, style: null, onLayout: null, children: null };
-              obj[0] = outer1_5;
+              obj[0] = closure_1_5;
               obj[1] = closure_1;
               obj[2] = onLayout;
               obj[3] = closure_0;
-              tmp2Result = tmp2(outer1_0(outer1_1[3]).SafeAreaProvider, obj);
+              tmp2Result = tmp2(closure_1_0(closure_1_1[3]).SafeAreaProvider, obj);
             }
             return tmp2Result;
           }

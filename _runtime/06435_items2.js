@@ -1,4 +1,12 @@
 // _runtime/06435_items2.js
+import ComposedGestureName from "ComposedGestureName" /* 6436 */;
+import set6 from "set" /* 6438 */;
+import set7 from "set" /* 6439 */;
+import set8 from "set" /* 6440 */;
+import set9 from "set" /* 6441 */;
+import set10 from "set" /* 6442 */;
+import set11 from "set" /* 6443 */;
+
 const set = new Set(["enabled", "shouldCancelWhenOutside", "hitSlop", "activeCursor", "mouseButton", "testID", "cancelsTouchesInView", "cancelsJSResponder", "manualActivation"]);
 const items = [...set, "userSelect", "enableContextMenu", "touchAction", "dispatchesAnimatedEvents", "needsPointerData"];
 const sum = tmp4 + 1;
@@ -16,17 +24,17 @@ const sum8 = sum7 + 1;
 const set4 = new Set(items1);
 set2.delete("testID");
 set4.add("testID");
-const items2 = [require("ComposedGestureName").SingleGestureName.Pan, require("set").PanNativeProperties];
+const items2 = [ComposedGestureName.SingleGestureName.Pan, set6.PanNativeProperties];
 const items3 = [items2, , , , , ];
-const items4 = [require("ComposedGestureName").SingleGestureName.Tap, require("set").TapNativeProperties];
+const items4 = [ComposedGestureName.SingleGestureName.Tap, set7.TapNativeProperties];
 items3[1] = items4;
-const items5 = [require("ComposedGestureName").SingleGestureName.Native, require("set").NativeHandlerNativeProperties];
+const items5 = [ComposedGestureName.SingleGestureName.Native, set8.NativeHandlerNativeProperties];
 items3[2] = items5;
-const items6 = [require("ComposedGestureName").SingleGestureName.Fling, require("set").FlingNativeProperties];
+const items6 = [ComposedGestureName.SingleGestureName.Fling, set9.FlingNativeProperties];
 items3[3] = items6;
-const items7 = [require("ComposedGestureName").SingleGestureName.Hover, require("set").HoverNativeProperties];
+const items7 = [ComposedGestureName.SingleGestureName.Hover, set10.HoverNativeProperties];
 items3[4] = items7;
-const items8 = [require("ComposedGestureName").SingleGestureName.LongPress, require("set").LongPressNativeProperties];
+const items8 = [ComposedGestureName.SingleGestureName.LongPress, set11.LongPressNativeProperties];
 items3[5] = items8;
 const set1 = new Set(["simultaneousWith", "requireToFail", "block"]);
 const map = new Map(items3);

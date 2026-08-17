@@ -1,7 +1,9 @@
 // _runtime/04431_ArrayCreate.js
-import { isInteger } from "04428_isInteger.js";
-import { 00541__ } from "metro/00541__.js";
-let closure_2 = require("getEvalledConstructor")("%Array.prototype%");
+import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
+import _mod541 from "module_541" /* 541 */;
+import isInteger from "isInteger" /* 4428 */;
+
+let closure_2 = getEvalledConstructor("%Array.prototype%");
 
 export default function ArrayCreate(arg0) {
   if (isInteger(arg0)) {
@@ -27,5 +29,5 @@ export default function ArrayCreate(arg0) {
       }
     }
   }
-  throw new 00541__("Assertion failed: `length` must be an integer Number >= 0");
+  throw new _mod541("Assertion failed: `length` must be an integer Number >= 0");
 };

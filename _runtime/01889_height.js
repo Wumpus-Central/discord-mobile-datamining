@@ -1,13 +1,11 @@
 // _runtime/01889_height.js
-import "noop";
-import { useMemo } from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import { useMemo } from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-let c3;
 const require = arg1;
+noopDefault;
 ({ Platform, StyleSheet, View: c3 } = get_ActivityIndicator);
 const styles = StyleSheet.create({ absolute: { position: "absolute" }, stretch: { top: 0, bottom: 0, left: 0, right: 0 } });
 

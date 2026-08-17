@@ -1,11 +1,11 @@
 // _runtime/08105__getRequireWildcardCache.js
-import 08106__ from "metro/08106__.js";
-import _slicedToArray from "_slicedToArray";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG";
-import jsxProd from "jsxProd";
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 8107 */;
+import 08106__ from "metro/08106__.js" /* 8106 */;
+import noop from "noop" /* 19 */;
+import closure_5 from "get ActivityIndicator" /* 17 */;
+import closure_7 from "jsxProd" /* 21 */;
 
 function _getRequireWildcardCache(arg0) {
   if (typeof WeakMap !== "function") {
@@ -16,15 +16,17 @@ function _getRequireWildcardCache(arg0) {
     let tmp = weakMap;
     const _WeakMap2 = WeakMap;
     const weakMap1 = new WeakMap();
-    function _getRequireWildcardCache(arg0) {
+    _getRequireWildcardCache = function _getRequireWildcardCache(arg0) {
       return arg0 ? weakMap1 : weakMap;
-    }
+    };
     if (arg0) {
       tmp = weakMap1;
     }
     return tmp;
   }
 }
+let closure_2 = module_8106(_slicedToArray);
+let closure_3 = module_8106(_objectWithoutProperties);
 if (!noop) {
   if (null !== noop) {
     let obj = _getRequireWildcardCache(undefined);
@@ -88,15 +90,10 @@ if (!noop) {
   value = noop;
 }
 let c4 = value;
+let closure_6 = module_8106(__INTERNAL_VIEW_CONFIG);
 let closure_8 = ["onValueChange", "onSlidingStart", "onSlidingComplete", "onAccessibilityAction", "value", "minimumValue", "maximumValue", "step", "inverted", "tapToSeek", "lowerLimit", "upperLimit"];
 
 export default value.default.forwardRef(function SliderComponent(onSlidingComplete) {
-  let closure_8;
-  let jsxProd;
-  let onSlidingStart;
-  let require;
-  let tmp15;
-  let tmp17;
   ({ onValueChange: require, onSlidingStart } = onSlidingComplete);
   onSlidingComplete = onSlidingComplete.onSlidingComplete;
   const onAccessibilityAction = onSlidingComplete.onAccessibilityAction;
@@ -146,7 +143,7 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
   if (null == SLIDER_DEFAULT_INITIAL_VALUE2) {
     SLIDER_DEFAULT_INITIAL_VALUE2 = require(onSlidingStart[7]).constants.SLIDER_DEFAULT_INITIAL_VALUE;
   }
-  [tmp15, jsxProd] = onSlidingComplete.default(num.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
+  [tmp15, closure_7] = onSlidingComplete.default(num.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
   const defaultResult1 = onSlidingComplete.default(num.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
   const tmp4 = undefined !== tapToSeek && tapToSeek;
   [tmp17, closure_8] = onSlidingComplete.default(obj2.useState(0), 2);
@@ -159,7 +156,7 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
   if (!num3) {
     tmp21 = result;
   }
-  const _getRequireWildcardCache = tmp21;
+  _getRequireWildcardCache = tmp21;
   if (num3) {
     DEFAULT_STEP_RESOLUTION = result;
   }
@@ -187,7 +184,7 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
   }
   if (typeof defaultResult.disabled === "boolean") {
     const _Object = Object;
-    const obj1 = { disabled: null };
+    obj1 = { disabled: null };
     obj1[0] = defaultResult.disabled;
     let accessibilityState = Object.assign({}, defaultResult.accessibilityState, obj1);
   } else {

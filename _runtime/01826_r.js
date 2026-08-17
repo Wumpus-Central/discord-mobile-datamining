@@ -19,9 +19,6 @@ fn.__closure = {};
 fn.__workletHash = 9046778946531;
 fn.__initData = { code: "function pnpm_lrgbTs1(c=0){const abs=Math.abs(c);if(abs>0.0031308){return(Math.sign(c)||1)*(1.055*Math.pow(abs,1/2.4)-0.055);}return c*12.92;}" };
 const fn2 = function n(alpha) {
-  let b;
-  let g;
-  let r;
   ({ r, g, b } = alpha);
   if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
@@ -97,9 +94,6 @@ fn3.__closure = {};
 fn3.__workletHash = 7878321042954;
 fn3.__initData = { code: "function pnpm_lrgbTs3(c=0){const abs=Math.abs(c);if(abs<=0.04045){return c/12.92;}return(Math.sign(c)||1)*Math.pow((abs+0.055)/1.055,2.4);}" };
 const fn4 = function o(alpha) {
-  let b;
-  let g;
-  let r;
   ({ r, g, b } = alpha);
   if (typeof fn3 !== "function") {
     HermesBuiltin.throwTypeError();

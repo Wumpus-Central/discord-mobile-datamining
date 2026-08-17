@@ -1,4 +1,6 @@
 // _runtime/13216_assign.js
+import assign from "assign" /* 13208 */;
+
 let c2 = true;
 let c3 = true;
 try {
@@ -9,7 +11,7 @@ try {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(1);
     fromCharCode2.apply(null, uint8Array);
-    const buf8 = new require("assign").Buf8(256);
+    const buf8 = new assign.Buf8(256);
     require = 252;
   } catch (err) {
     c3 = false;

@@ -1,39 +1,36 @@
 // _runtime/00173__createNativeObserver2.js
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import _classPrivateFieldBase from "_classPrivateFieldBase";
-import importDefaultResult1 from "_classPrivateFieldKey";
-import importDefaultResult2Result from "NativePerformanceCxx";
-import { nullthrows } from "00070_nullthrows.js";
+import nullthrowsDefault from "nullthrows" /* 70 */;
+import NativePerformanceCxxDefault from "NativePerformanceCxx" /* 154 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_4 from "_classPrivateFieldBase" /* 90 */;
+import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
 
 let PerformanceObserver = arg1;
 function _createNativeObserver2() {
   const self = this;
   callback2(this, closure_11)[closure_11] = false;
   const observer = importDefaultResult2Result.createObserver(() => {
-    let obj = outer1_5;
-    const takeRecordsResult = outer1_5.takeRecords(observer, true);
+    let obj = closure_1_5;
+    const takeRecordsResult = closure_1_5.takeRecords(observer, true);
     if (takeRecordsResult) {
       if (0 !== takeRecordsResult.length) {
-        const tmp11 = new outer1_7(takeRecordsResult.map(observer(outer1_2[6]).rawToPerformanceEntry));
+        const tmp11 = new closure_1_7(takeRecordsResult.map(observer(closure_1_2[6]).rawToPerformanceEntry));
         let num2 = 0;
-        if (!outer1_4(self, outer1_11)[outer1_11]) {
+        if (!closure_1_4(self, closure_1_11)[closure_1_11]) {
           num2 = obj.getDroppedEntriesCount(observer);
           tmp12(tmp13, tmp14)[tmp14] = true;
         }
         obj = { droppedEntriesCount: null };
         obj[0] = num2;
-        outer1_4(self, outer1_9)[outer1_9](tmp11, self, obj);
-        const tmp12Result = outer1_4(self, outer1_9);
+        closure_1_4(self, closure_1_9)[closure_1_9](tmp11, self, obj);
+        const tmp12Result = closure_1_4(self, closure_1_9);
       }
     }
   });
   return observer;
 }
 function _validateObserveOptions2(arg0) {
-  let durationThreshold;
-  let entryTypes;
-  let type;
   ({ type, entryTypes, durationThreshold } = arg0);
   if (!type) {
     if (!entryTypes) {
@@ -52,7 +49,7 @@ function _validateObserveOptions2(arg0) {
   if ("multiple" === callback2(this, closure_10)[closure_10]) {
     if (type) {
       const _Error2 = Error;
-      const error = new Error("Failed to execute 'observe' on 'PerformanceObserver': This observer has performed observe({entryTypes:...}, therefore it cannot perform observe({type:...})");
+      error = new Error("Failed to execute 'observe' on 'PerformanceObserver': This observer has performed observe({entryTypes:...}, therefore it cannot perform observe({type:...})");
       throw error;
     }
   }
@@ -71,13 +68,14 @@ function _validateObserveOptions2(arg0) {
     }
   }
 }
+const importDefaultResult2Result = nullthrowsDefault(NativePerformanceCxxDefault);
 let c5 = importDefaultResult2Result;
 let closure_6 = importDefaultResult1("entries");
 class PerformanceObserverEntryList {
   constructor(arg0) {
-    tmp = _validateObserveOptions2(this, PerformanceObserver);
-    definePropertyResult = Object.defineProperty(this, entries, { writable: true, value: "a" });
-    _validateObserveOptions2(this, entries)[entries] = global;
+    tmp = closure_3(this, PerformanceObserver);
+    definePropertyResult = Object.defineProperty(this, closure_6, { writable: true, value: "a" });
+    closure_4(this, closure_6)[closure_6] = global;
     return;
   }
 }
@@ -93,7 +91,7 @@ let items = [
   {
     key: "getEntriesByType",
     value: function getEntriesByType(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       return callback2(this, closure_6)[closure_6].filter((entryType) => entryType.entryType === closure_0);
     }
   },
@@ -101,8 +99,8 @@ let items = [
     key: "getEntriesByName",
     value: function getEntriesByName(arg0, arg1) {
       const self = this;
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       if (undefined === arg1) {
         let found = callback2(self, closure_6)[closure_6].filter((name) => name.name === closure_0);
         const arr2 = callback2(self, closure_6)[closure_6];
@@ -137,16 +135,16 @@ let closure_12 = importDefaultResult1("createNativeObserver");
 let closure_13 = importDefaultResult1("validateObserveOptions");
 class PerformanceObserver {
   constructor(arg0) {
-    tmp = _validateObserveOptions2(this, PerformanceObserver);
+    tmp = closure_3(this, PerformanceObserver);
     obj = { value: _validateObserveOptions2 };
-    definePropertyResult = Object.defineProperty(this, validateObserveOptions, obj);
+    definePropertyResult = Object.defineProperty(this, closure_13, obj);
     obj = { value: _createNativeObserver2 };
-    definePropertyResult1 = Object.defineProperty(this, createNativeObserver, obj);
-    definePropertyResult2 = Object.defineProperty(this, nativeObserverHandle, { writable: true, value: null });
-    definePropertyResult3 = Object.defineProperty(this, callback, { writable: true, value: "a" });
-    definePropertyResult4 = Object.defineProperty(this, type, { writable: true, value: "a" });
-    definePropertyResult5 = Object.defineProperty(this, calledAtLeastOnce, { writable: true, value: false });
-    _validateObserveOptions2(this, callback)[callback] = global;
+    definePropertyResult1 = Object.defineProperty(this, closure_12, obj);
+    definePropertyResult2 = Object.defineProperty(this, closure_8, { writable: true, value: null });
+    definePropertyResult3 = Object.defineProperty(this, closure_9, { writable: true, value: "a" });
+    definePropertyResult4 = Object.defineProperty(this, closure_10, { writable: true, value: "a" });
+    definePropertyResult5 = Object.defineProperty(this, closure_11, { writable: true, value: false });
+    closure_4(this, closure_9)[closure_9] = global;
     return;
   }
 }
@@ -161,7 +159,7 @@ obj = {
       tmpResult[tmp4] = tmpResult[closure_12]();
     }
     const tmp2 = callback2(this, closure_13);
-    const tmp9Result = nullthrows(callback2(self, closure_8)[closure_8]);
+    const tmp9Result = nullthrowsDefault(callback2(self, closure_8)[closure_8]);
     if (entryTypes.entryTypes) {
       tmp(self, closure_10)[closure_10] = "multiple";
       let obj = { entryTypes: null };

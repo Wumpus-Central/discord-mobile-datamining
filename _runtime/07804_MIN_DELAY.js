@@ -1,5 +1,5 @@
 // _runtime/07804_MIN_DELAY.js
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 let c3 = 100;
 let c4 = 5000;
@@ -7,7 +7,7 @@ let c4 = 5000;
 export const MIN_DELAY = 100;
 export const START_DELAY = 5000;
 export function makeOfflineTransport(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   function log() {
     const items = [...arguments];
     if (callback(log[1]).DEBUG_BUILD) {
@@ -25,7 +25,7 @@ export function makeOfflineTransport(arg0) {
         const _clearTimeout = clearTimeout;
         clearTimeout(timerId);
       }
-      timerId = setTimeout(outer2_2(function*() {
+      timerId = setTimeout(closure_2_2(function*() {
         if (arr === 2) {
           arr = 3;
           HermesBuiltin.throwTypeError();
@@ -52,13 +52,13 @@ export function makeOfflineTransport(arg0) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_1 = tmp5;
+                closure_1 = tmp5;
                 let table = tmp2;
                 table = undefined;
                 c2 = undefined;
                 c2 = 1;
                 arr = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = arr.shift();
                 return obj1;
               }
@@ -73,7 +73,7 @@ export function makeOfflineTransport(arg0) {
             } else {
               table = arg1;
               if (table) {
-                outer1_1("Attempting to send previously queued event");
+                closure_1_1("Attempting to send previously queued event");
                 const _Date = Date;
                 const date = new Date();
                 table[0].sent_at = date.toISOString();
@@ -106,7 +106,7 @@ export function makeOfflineTransport(arg0) {
           clearTimeout(timerId);
         }
         const _setTimeout = setTimeout;
-        timerId = setTimeout(outer2_2(function*() {
+        timerId = setTimeout(closure_2_2(function*() {
           if (arr === 2) {
             arr = 3;
             HermesBuiltin.throwTypeError();
@@ -133,13 +133,13 @@ export function makeOfflineTransport(arg0) {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  let closure_1 = tmp5;
+                  closure_1 = tmp5;
                   let table = tmp2;
                   table = undefined;
                   c2 = undefined;
                   c2 = 1;
                   arr = 1;
-                  const obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = arr.shift();
                   return obj1;
                 }
@@ -154,7 +154,7 @@ export function makeOfflineTransport(arg0) {
               } else {
                 table = arg1;
                 if (table) {
-                  outer1_1("Attempting to send previously queued event");
+                  closure_1_1("Attempting to send previously queued event");
                   const _Date = Date;
                   const date = new Date();
                   table[0].sent_at = date.toISOString();
@@ -196,12 +196,12 @@ export function makeOfflineTransport(arg0) {
     }
     function _send() {
       const self = this;
-      const tmp = outer2_2((arg0) => {
-        let closure_0 = arg0;
-        let closure_1 = arg1;
-        let c6 = 0;
-        let c7 = 0;
-        let c5 = 0;
+      const tmp = closure_2_2((arg0) => {
+        closure_0 = arg0;
+        closure_1 = arg1;
+        c6 = 0;
+        c7 = 0;
+        c5 = 0;
         const iter = (function*(arg0) {
           if (c7 === 2) {
             c7 = 3;
@@ -229,7 +229,7 @@ export function makeOfflineTransport(arg0) {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  let c3 = tmp2;
+                  c3 = tmp2;
                   let config = tmp6;
                   let flag;
                   if (flag === undefined) {
@@ -247,17 +247,17 @@ export function makeOfflineTransport(arg0) {
                   throw arg1;
                 } else if (arg0 === 2) {
                   c7 = 3;
-                  const obj1 = { value: null, done: true };
+                  obj1 = { value: null, done: true };
                   obj1[0] = arg1;
                   return obj1;
                 } else {
-                  if (!outer2_1) {
-                    let obj12 = outer2_0(outer2_1[3]);
-                    if (obj12.envelopeContainsItemType(outer2_0, ["replay_event", "replay_recording"])) {
+                  if (!closure_2_1) {
+                    let obj12 = closure_2_0(closure_2_1[3]);
+                    if (obj12.envelopeContainsItemType(closure_2_0, ["replay_event", "replay_recording"])) {
                       v02 = 2;
                       c7 = 1;
                       let obj2 = { value: null, done: false };
-                      obj2[0] = outer2_3.push(outer2_0);
+                      obj2[0] = arr.push(closure_2_0);
                       return obj2;
                     }
                   }
@@ -265,7 +265,7 @@ export function makeOfflineTransport(arg0) {
                   v02 = 5;
                   c7 = 1;
                   const obj3 = { value: null, done: false };
-                  obj3[0] = outer2_1.send(outer2_0);
+                  obj3[0] = closure_2_1.send(closure_2_0);
                   return obj3;
                 }
               } else if (2 === tmp6) {
@@ -278,7 +278,7 @@ export function makeOfflineTransport(arg0) {
                   obj4[0] = arg1;
                   return obj4;
                 } else {
-                  v0(outer2_3);
+                  v0(arr);
                   c7 = 3;
                   const obj5 = { value: null, done: true };
                   obj5[0] = {};
@@ -286,11 +286,10 @@ export function makeOfflineTransport(arg0) {
                 }
               } else if (3 === tmp6) {
                 v0 = 0;
-                const outer2_4 = closure_4;
                 v02 = 4;
                 c7 = 1;
                 const obj6 = { value: null, done: false };
-                obj6[0] = (function shouldQueue() { ... })(outer2_0, outer2_4, outer2_4);
+                obj6[0] = (function shouldQueue() { ... })(closure_2_0, closure_4, closure_4);
                 return obj6;
               } else if (4 === tmp6) {
                 if (arg0 === 1) {
@@ -302,21 +301,22 @@ export function makeOfflineTransport(arg0) {
                   obj7[0] = arg1;
                   return obj7;
                 } else if (arg1) {
-                  if (outer2_1) {
+                  arr = c3;
+                  if (closure_2_1) {
                     v02 = 7;
                     c7 = 1;
                     const obj8 = { value: null, done: false };
-                    obj8[0] = arr.unshift(outer2_0);
+                    obj8[0] = arr.unshift(closure_2_0);
                     return obj8;
                   } else {
                     v02 = 6;
                     c7 = 1;
                     const obj9 = { value: null, done: false };
-                    obj9[0] = arr.push(outer2_0);
+                    obj9[0] = arr.push(closure_2_0);
                     return obj9;
                   }
                 } else {
-                  throw outer2_4;
+                  throw closure_4;
                 }
               } else if (5 === tmp6) {
                 if (arg0 === 1) {
@@ -330,10 +330,9 @@ export function makeOfflineTransport(arg0) {
                   return obj10;
                 } else {
                   config = arg1;
-                  c3 = outer2_3;
+                  c3 = arr;
                   if (!config) {
-                    v0(outer2_3);
-                    closure_4 = outer2_4;
+                    v0(arr);
                     v0 = 0;
                     c7 = 3;
                   } else if (!config.headers) {
@@ -354,8 +353,8 @@ export function makeOfflineTransport(arg0) {
                       return obj11;
                     }
                   }
-                  obj4 = outer2_0(outer2_1[4]);
-                  outer2_3 = obj4.parseRetryAfterHeader(outer2_2.headers["retry-after"]);
+                  obj4 = closure_2_0(closure_2_1[4]);
+                  arr = obj4.parseRetryAfterHeader(closure_2_2.headers["retry-after"]);
                 }
               } else {
                 if (6 === tmp6) {
@@ -398,7 +397,7 @@ export function makeOfflineTransport(arg0) {
         iter.next();
         return iter;
       });
-      const _send = tmp;
+      closure_8 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -407,10 +406,10 @@ export function makeOfflineTransport(arg0) {
       }
       return applyArgumentsResult;
     }
-    let closure_1 = callback(createStore);
+    closure_1 = callback(createStore);
     if (createStore.createStore) {
-      let closure_3 = createStore.createStore(createStore);
-      let closure_4 = outer1_4;
+      closure_3 = createStore.createStore(createStore);
+      closure_4 = closure_1_4;
       if (createStore.flushAtStartup) {
         if (!timerId) {
           if (tmp7) {
@@ -418,7 +417,7 @@ export function makeOfflineTransport(arg0) {
             clearTimeout(timerId);
           }
           let _setTimeout = setTimeout;
-          timerId = setTimeout(outer1_2(function*() {
+          timerId = setTimeout(closure_1_2(function*() {
             if (arr === 2) {
               arr = 3;
               HermesBuiltin.throwTypeError();
@@ -445,13 +444,13 @@ export function makeOfflineTransport(arg0) {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    let closure_1 = tmp5;
+                    closure_1 = tmp5;
                     let table = tmp2;
                     table = undefined;
                     c2 = undefined;
                     c2 = 1;
                     arr = 1;
-                    const obj1 = { value: null, done: false };
+                    obj1 = { value: null, done: false };
                     obj1[0] = arr.shift();
                     return obj1;
                   }
@@ -466,7 +465,7 @@ export function makeOfflineTransport(arg0) {
                 } else {
                   table = arg1;
                   if (table) {
-                    outer1_1("Attempting to send previously queued event");
+                    closure_1_1("Attempting to send previously queued event");
                     const _Date = Date;
                     const date = new Date();
                     table[0].sent_at = date.toISOString();
@@ -500,13 +499,13 @@ export function makeOfflineTransport(arg0) {
       obj[0] = send;
       obj[1] = function flush(arg0) {
         if (undefined === arg0) {
-          let closure_4 = outer2_4;
+          closure_4 = closure_2_4;
           if (timerId) {
             const _clearTimeout = clearTimeout;
             clearTimeout(timerId);
           }
           const _setTimeout = setTimeout;
-          timerId = setTimeout(outer2_2(function*() {
+          timerId = setTimeout(closure_2_2(function*() {
             if (arr === 2) {
               arr = 3;
               HermesBuiltin.throwTypeError();
@@ -533,13 +532,13 @@ export function makeOfflineTransport(arg0) {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    let closure_1 = tmp5;
+                    closure_1 = tmp5;
                     let table = tmp2;
                     table = undefined;
                     c2 = undefined;
                     c2 = 1;
                     arr = 1;
-                    const obj1 = { value: null, done: false };
+                    obj1 = { value: null, done: false };
                     obj1[0] = arr.shift();
                     return obj1;
                   }
@@ -554,7 +553,7 @@ export function makeOfflineTransport(arg0) {
                 } else {
                   table = arg1;
                   if (table) {
-                    outer1_1("Attempting to send previously queued event");
+                    closure_1_1("Attempting to send previously queued event");
                     const _Date = Date;
                     const date = new Date();
                     table[0].sent_at = date.toISOString();
@@ -571,7 +570,7 @@ export function makeOfflineTransport(arg0) {
                 throw tmp18;
               }
             }
-          }), outer2_3);
+          }), closure_2_3);
           let unref = typeof timerId !== "number";
           if (typeof timerId !== "number") {
             unref = timerId.unref;
@@ -579,14 +578,14 @@ export function makeOfflineTransport(arg0) {
           if (unref) {
             timerId.unref();
           }
-          const tmp2 = outer2_3;
+          const tmp2 = closure_2_3;
         }
         return closure_1.flush(arg0);
       };
       return obj;
     } else {
       const _Error = Error;
-      const error = new Error("No `createStore` function was provided");
+      error = new Error("No `createStore` function was provided");
       throw error;
     }
   };

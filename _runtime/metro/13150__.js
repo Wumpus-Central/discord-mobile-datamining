@@ -1,9 +1,10 @@
 // _runtime/metro/13150__.js
-import { SemVer } from "../13122_SemVer.js";
-import { SemVer } from "../13123_SemVer.js";
+import SemVer from "SemVer" /* 13122 */;
+import SemVer2 from "SemVer" /* 13123 */;
+
 
 export default (num) => {
-  if (num instanceof SemVer) {
+  if (num instanceof SemVer2) {
     return num;
   } else {
     let StringResult = num;

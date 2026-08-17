@@ -1,22 +1,25 @@
 // _runtime/13731_text.js
-import __core_js_shared__ from "__core-js_shared__";
-import { call } from "13696_call.js";
-import { all } from "13699_all.js";
-import { state } from "13734_state.js";
+import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 13676 */;
+import _mod13677 from "module_13677" /* 13677 */;
+import call from "call" /* 13680 */;
+import call2 from "call" /* 13696 */;
+import all from "all" /* 13699 */;
+import state from "state" /* 13734 */;
+import closure_2 from "__core-js_shared__" /* 13732 */;
 
-let closure_5 = require("call")("".slice);
-let closure_6 = require("call")("".replace);
-let closure_7 = require("call")([].join);
-const metroImportAll = require("getOwnPropertyDescriptor") && !require("module_13677")(() => 8 !== defineProperty(() => {
+let closure_5 = call("".slice);
+let closure_6 = call("".replace);
+let closure_7 = call([].join);
+let closure_8 = getOwnPropertyDescriptor && !_mod13677(() => 8 !== defineProperty(() => {
 
 }, "length", { value: 8 }).length);
-const tmp = require("getOwnPropertyDescriptor") && !require("module_13677")(() => 8 !== defineProperty(() => {
+const tmp = getOwnPropertyDescriptor && !_mod13677(() => 8 !== defineProperty(() => {
 
 }, "length", { value: 8 }).length);
 let closure_9 = String(String).split("String");
 const fn = (toString, toString2) => {
   let text = toString2;
-  if ("Symbol(" === callback(String(toString2), 0, 7)) {
+  if ("Symbol(" === callback2(String(toString2), 0, 7)) {
     text = `${"[" + closure_6(tmp(toString2), /^Symbol\(([^)]*)\).*$/, "$1")}]`;
   }
   let getter = arg2;
@@ -35,7 +38,7 @@ const fn = (toString, toString2) => {
   if (setter) {
     text2 = `set ${tmp4}`;
   }
-  const tmp8 = call(toString, "name");
+  const tmp8 = call2(toString, "name");
   let tmp9 = !tmp8;
   if (tmp8) {
     tmp9 = tmp6(13733).CONFIGURABLE && toString.name !== text2;
@@ -100,7 +103,7 @@ function toString() {
     const tmpResult = state;
   }
   if (!source) {
-    source = __core_js_shared__(self);
+    source = callback(self);
   }
   return source;
 }

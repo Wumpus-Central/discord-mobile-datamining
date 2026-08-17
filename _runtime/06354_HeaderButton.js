@@ -1,21 +1,12 @@
 // _runtime/06354_HeaderButton.js
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { Animated } from "06337_Animated.js";
+import noopAll from "noop" /* 19 */;
+import Animated from "Animated" /* 6337 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-const require = arg1;
+require = arg1;
 ({ StyleSheet, Platform } = get_ActivityIndicator);
-const forwardRefResult = require("noop").forwardRef(function HeaderButtonInternal(disabled, ref) {
-  let accessibilityLabel;
-  let children;
-  let href;
-  let onPress;
-  let pressColor;
-  let pressOpacity;
-  let style;
-  let testID;
+const forwardRefResult = noopAll.forwardRef(function HeaderButtonInternal(disabled, ref) {
   disabled = disabled.disabled;
   ({ onPress, pressColor, pressOpacity, accessibilityLabel, testID, style, href, children } = disabled);
   obj = { ref, disabled, href, "aria-label": accessibilityLabel, testID, onPress, pressColor, pressOpacity, android_ripple: obj, style: null, hitSlop: null, children: null };

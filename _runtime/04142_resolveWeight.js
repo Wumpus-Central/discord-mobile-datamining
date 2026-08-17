@@ -1,8 +1,8 @@
 // _runtime/04142_resolveWeight.js
-import _loadFont from "_slicedToArray";
-import _setFallbackFonts from "asyncGeneratorStep";
-import { Image as _clearFallbackFonts } from "get ActivityIndicator";
-import { NitroModules } from "module_4112";
+import _loadFont from "_slicedToArray" /* 32 */;
+import _setFallbackFonts from "asyncGeneratorStep" /* 5 */;
+import { Image as _clearFallbackFonts } from "get ActivityIndicator" /* 17 */;
+import { NitroModules } from "module_4112" /* 4112 */;
 
 function resolveWeight(arg0) {
   let num = 0;
@@ -25,8 +25,8 @@ let closure_3 = NitroModules.createHybridObject("RiveFontConfig");
 _loadFont = function _loadFont() {
   const self = this;
   const tmp = _setFallbackFonts((arg0) => {
-    let closure_0 = arg0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c1 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -56,11 +56,11 @@ _loadFont = function _loadFont() {
             const _ArrayBuffer = ArrayBuffer;
             if (closure_0 instanceof ArrayBuffer) {
               c1 = 3;
-              let obj1 = { value: null, done: true };
-              obj1[0] = outer1_3.loadFontFromBytes(tmp26);
+              obj1 = { value: null, done: true };
+              obj1[0] = closure_1_3.loadFontFromBytes(tmp26);
               return obj1;
             } else if (typeof tmp26 === "number") {
-              const assetSource = outer1_2.resolveAssetSource(tmp26);
+              const assetSource = closure_1_2.resolveAssetSource(tmp26);
               let uri;
               if (assetSource != null) {
                 uri = assetSource.uri;
@@ -68,12 +68,12 @@ _loadFont = function _loadFont() {
               if (uri) {
                 c1 = 3;
                 const obj2 = { value: null, done: true };
-                obj2[0] = outer1_5(assetSource.uri);
+                obj2[0] = closure_1_5(assetSource.uri);
                 return obj2;
               } else {
                 const _Error = Error;
                 const _HermesInternal = HermesInternal;
-                const error = new Error("Invalid font asset: could not resolve require() ID " + tmp26 + ". Ensure 'ttf' is in metro.config.js assetExts.");
+                error = new Error("Invalid font asset: could not resolve require() ID " + tmp26 + ". Ensure 'ttf' is in metro.config.js assetExts.");
                 throw error;
               }
             } else {
@@ -81,7 +81,7 @@ _loadFont = function _loadFont() {
                 if ("name" in tmp26) {
                   c1 = 3;
                   const obj3 = { value: null, done: true };
-                  obj3[0] = outer1_3.loadFontByName(tmp26.name);
+                  obj3[0] = closure_1_3.loadFontByName(tmp26.name);
                   return obj3;
                 }
               }
@@ -89,7 +89,7 @@ _loadFont = function _loadFont() {
                 if ("uri" in tmp26) {
                   c1 = 3;
                   const obj4 = { value: null, done: true };
-                  obj4[0] = outer1_5(tmp26.uri);
+                  obj4[0] = closure_1_5(tmp26.uri);
                   return obj4;
                 }
               }
@@ -98,11 +98,11 @@ _loadFont = function _loadFont() {
                 if (!obj.test(tmp26)) {
                   obj1 = /^file:\/\//;
                   if (!obj1.test(tmp26)) {
-                    const fontFromResource = outer1_3.loadFontFromResource(tmp26);
+                    const fontFromResource = closure_1_3.loadFontFromResource(tmp26);
                   }
                   c1 = 3;
                 }
-                const fontFromURL = outer1_3.loadFontFromURL(tmp26);
+                const fontFromURL = closure_1_3.loadFontFromURL(tmp26);
               } else {
                 const _Error2 = Error;
                 const _String = String;
@@ -119,7 +119,7 @@ _loadFont = function _loadFont() {
       }
     })();
   });
-  const _loadFont = tmp;
+  closure_0 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -131,10 +131,10 @@ _loadFont = function _loadFont() {
 _setFallbackFonts = function _setFallbackFonts(arg0) {
   const self = this;
   const tmp = _setFallbackFonts((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c3 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c3 = 0;
+    c6 = 0;
     return (function*(arg0) {
       if (c3 === 2) {
         c3 = 3;
@@ -169,11 +169,11 @@ _setFallbackFonts = function _setFallbackFonts(arg0) {
               let _Object = Object;
               let entries = Object.entries(callback);
               let tmp25 = entries;
-              let closure_1 = entries[Symbol.iterator]();
+              closure_1 = entries[Symbol.iterator]();
               let tmp7 = entries;
               let tmp8 = closure_1;
               while (closure_1 !== undefined) {
-                let c6 = 1;
+                c6 = 1;
                 let tmp10 = callback;
                 let tmp11 = callback(tmp9, 2);
                 let tmp13 = tmp11[1];
@@ -189,7 +189,7 @@ _setFallbackFonts = function _setFallbackFonts(arg0) {
               v0 = 2;
               let num5 = 1;
               c3 = 1;
-              let obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = c3.applyFallbackFonts();
               return obj1;
             }
@@ -219,7 +219,7 @@ _setFallbackFonts = function _setFallbackFonts(arg0) {
       }
     })();
   });
-  _setFallbackFonts = tmp;
+  closure_1 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -258,7 +258,7 @@ _clearFallbackFonts = function _clearFallbackFonts() {
         } else {
           c0 = 3;
           obj = { value: null, done: true };
-          obj[0] = outer1_3.clearFallbackFonts();
+          obj[0] = closure_1_3.clearFallbackFonts();
           return obj;
         }
       } catch (tmp5) {
@@ -267,7 +267,7 @@ _clearFallbackFonts = function _clearFallbackFonts() {
       }
     }
   });
-  const _clearFallbackFonts = tmp;
+  closure_2 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

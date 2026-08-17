@@ -1,6 +1,6 @@
 // _runtime/03889_setDefaultOptions.js
-import requiredArgs from "requiredArgs";
-import { getDefaultOptions } from "03477_getDefaultOptions.js";
+import getDefaultOptions from "getDefaultOptions" /* 3477 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!requiredArgs) {
   let obj = { default: null };
@@ -9,9 +9,10 @@ if (!requiredArgs) {
 } else {
   tmp3 = requiredArgs;
 }
+requiredArgs = tmp3;
 
 export default function setDefaultOptions(obj) {
-  tmp3.default(1, arguments);
+  requiredArgs.default(1, arguments);
   obj = {};
   const defaultOptions = getDefaultOptions.getDefaultOptions();
   for (const key10017 in defaultOptions) {

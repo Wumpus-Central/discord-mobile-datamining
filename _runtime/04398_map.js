@@ -1,15 +1,18 @@
 // _runtime/04398_map.js
-import { ToObject } from "04399_ToObject.js";
-import { ToUint32 } from "04402_ToUint32.js";
-import { ToString } from "04414_ToString.js";
-import { apply } from "04426_apply.js";
-import { HasProperty } from "04450_HasProperty.js";
+import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import ToObject from "ToObject" /* 4399 */;
+import ToUint32 from "ToUint32" /* 4402 */;
+import ToString from "ToString" /* 4414 */;
+import apply from "apply" /* 4426 */;
+import HasProperty from "HasProperty" /* 4450 */;
+
 const ObjectResult = Object("a");
 let tmp2 = "a" !== ObjectResult[0];
 if (!tmp2) {
   tmp2 = !(0 in ObjectResult);
 }
-let closure_3 = require("callBoundIntrinsic")("String.prototype.split");
+let closure_2 = tmp2;
+let closure_3 = callBoundIntrinsic("String.prototype.split");
 
 export default function map(arg0) {
   const tmp3 = ToObject(this);

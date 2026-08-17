@@ -28,6 +28,6 @@ if (nativePerformanceNow.nativePerformanceNow) {
   };
 }
 arg5.start = () => {
-  let closure_0 = performanceNow();
-  return () => outer1_1() - closure_0;
+  closure_0 = performanceNow();
+  return () => closure_1_1() - closure_0;
 };

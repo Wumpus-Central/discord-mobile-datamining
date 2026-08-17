@@ -1,14 +1,9 @@
 // _runtime/00438_defaultItemToKey.js
-import _slicedToArray from "_slicedToArray";
-import closure_4 from "noop";
-import noop from "noop";
-import jsxProd from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 function defaultItemToKey(key) {
   if (typeof key.key !== "string") {
@@ -20,7 +15,7 @@ function defaultItemToKey(key) {
   }
 }
 ({ useCallback: c5, useMemo: closure_6, useState: error } = noop);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 
 export const createVirtualCollectionView = function createVirtualCollectionView(arg0, initial) {
   let spacerStyle = arg0;
@@ -30,8 +25,8 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
   function VirtualCollectionSpacer(nativeID) {
     const virtualItemCount = nativeID.virtualItemCount;
     const onRenderMoreItems = nativeID.onRenderMoreItems;
-    let closure_2;
-    const tmp = obj(outer1_7(obj), 2);
+    closure_2 = undefined;
+    const tmp = obj(closure_1_7(obj), 2);
     closure_2 = tmp[1];
     obj = {
       itemCount: virtualItemCount,
@@ -39,14 +34,14 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
       onModeChange(mode) {
         if (mode.mode !== spacerStyle(next[3]).VirtualViewMode.Hidden) {
           const tmp2 = callback(mode);
-          const obj = { SpacerView: null };
+          obj = { SpacerView: null };
           spacerStyle = tmp2.spacerStyle;
-          obj[0] = outer1_4.forwardRef(function SpacerView_withRef(itemCount, ref) {
+          obj[0] = closure_1_4.forwardRef(function SpacerView_withRef(itemCount, ref) {
             itemCount = itemCount.itemCount;
             const merged = Object.assign(itemCount, Object.create(null));
             const items = [itemCount];
             const merged1 = Object.assign(merged);
-            return outer1_8(outer1_6(() => spacerStyle(outer2_2[3]).createHiddenVirtualView(itemCount(itemCount)), items), { ref });
+            return closure_1_8(closure_1_6(() => spacerStyle(closure_2_2[3]).createHiddenVirtualView(itemCount(itemCount)), items), { ref });
           });
           callback(obj);
           const _Math = Math;
@@ -55,7 +50,7 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
         }
       }
     };
-    return outer1_8(tmp[0].SpacerView, obj);
+    return closure_1_8(tmp[0].SpacerView, obj);
   }
   obj = {
     SpacerView: VirtualCollectionSpacer.forwardRef(function SpacerView_withRef(itemCount, ref) {
@@ -63,16 +58,17 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
       const merged = Object.assign(itemCount, Object.create(null));
       const items = [itemCount];
       const merged1 = Object.assign(merged);
-      return outer1_8(outer1_6(() => spacerStyle(outer2_2[3]).createHiddenVirtualView(itemCount(itemCount)), items), { ref });
+      return closure_1_8(closure_1_6(() => spacerStyle(closure_2_2[3]).createHiddenVirtualView(itemCount(itemCount)), items), { ref });
     })
   };
   spacerStyle = initial.spacerStyle;
   return function VirtualCollectionView(children) {
     children = children.children;
+    closure_0 = children;
     let items = children.items;
     let itemToKey = children.itemToKey;
     if (itemToKey === undefined) {
-      itemToKey = outer1_10;
+      itemToKey = closure_1_10;
     }
     let flag = children.removeClippedSubviews;
     if (flag === undefined) {
@@ -80,28 +76,28 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
     }
     const testID = children.testID;
     const merged = Object.assign(children, Object.create(null));
-    let closure_5;
-    let closure_6;
-    let c7;
-    const tmp2 = obj(outer1_7(Math.ceil(items.itemCount)), 2);
+    closure_5 = undefined;
+    closure_6 = undefined;
+    c7 = undefined;
+    const tmp2 = obj(closure_1_7(Math.ceil(items.itemCount)), 2);
     closure_5 = tmp2[1];
     items = [children, itemToKey, flag];
-    let tmp3 = outer1_5((arg0) => {
+    let tmp3 = closure_1_5((arg0) => {
       const tmp = itemToKey(arg0);
-      let obj = { nativeID: tmp, removeClippedSubviews: flag, children: null };
+      obj = { nativeID: tmp, removeClippedSubviews: flag, children: null };
       let tmp6 = null;
       if (null != initial(next[4])) {
         obj = { nativeID: null };
         obj[0] = tmp;
-        tmp6 = outer2_8(initial(next[4]), obj);
+        tmp6 = closure_2_8(initial(next[4]), obj);
       }
-      const items = [tmp6, children(arg0, tmp)];
+      items = [tmp6, callback(arg0, tmp)];
       obj[2] = items;
-      return outer2_9(initial(next[3]), obj, tmp);
+      return closure_2_9(initial(next[3]), obj, tmp);
     }, items);
-    children = tmp3;
+    closure_0 = tmp3;
     const items1 = [tmp3];
-    closure_6 = outer1_6(() => {
+    closure_6 = closure_1_6(() => {
       const weakMap = new WeakMap();
       return (arg0) => {
         let value = weakMap.get(arg0);
@@ -118,30 +114,30 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
     c7 = diff;
     const items2 = [diff, testID];
     obj = {};
-    const arr = Array.from({ length: bound }, (arg0, arg1) => callback(items.at(arg1)));
+    const arr = Array.from({ length: bound }, (arg0, arg1) => callback2(items.at(arg1)));
     const merged1 = Object.assign(merged);
-    obj.spacer = outer1_6(() => {
+    obj.spacer = closure_1_6(() => {
       let tmp3Result = null;
       if (0 !== c7) {
         let str = testID;
         if (testID == null) {
           str = "";
         }
-        const obj = { nativeID: null, virtualItemCount: null, onRenderMoreItems: null };
+        obj = { nativeID: null, virtualItemCount: null, onRenderMoreItems: null };
         const _HermesInternal = HermesInternal;
         obj[0] = "" + str + ":Spacer";
         obj[1] = tmp;
         obj[2] = function onRenderMoreItems(arg0) {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           callback((arg0) => arg0 + closure_0);
         };
-        tmp3Result = outer2_8(testID, obj);
-        const tmp3 = outer2_8;
+        tmp3Result = closure_2_8(testID, obj);
+        const tmp3 = closure_2_8;
         const tmp4 = testID;
       }
       return tmp3Result;
     }, items2);
     obj.children = arr;
-    return outer1_8(children, obj);
+    return closure_1_8(closure_0, obj);
   };
 };

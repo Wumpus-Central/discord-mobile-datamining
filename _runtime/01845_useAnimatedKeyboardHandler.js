@@ -9,10 +9,6 @@ arg5.useAnimatedKeyboardHandler = (handlers, items10) => {
   context = handler.context;
   const obj = _require(context[0]);
   const fn = function v(eventName) {
-    let onKeyboardMove;
-    let onKeyboardMoveEnd;
-    let onKeyboardMoveInteractive;
-    let onKeyboardMoveStart;
     ({ onKeyboardMoveStart, onKeyboardMove, onKeyboardMoveEnd, onKeyboardMoveInteractive } = closure_0);
     let endsWithResult = onKeyboardMoveStart;
     if (onKeyboardMoveStart) {

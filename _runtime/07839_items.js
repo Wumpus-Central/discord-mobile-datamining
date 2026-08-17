@@ -1,6 +1,6 @@
 // _runtime/07839_items.js
-import _slicedToArray from "_slicedToArray";
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
 
@@ -30,7 +30,7 @@ export const sanitizeTags = function sanitizeTags(obj) {
     } else {
       let _String = String;
       let replaced = key10007.replace(/[^\w\-./]+/gi, "");
-      let items = [];
+      items = [];
       let tmp3 = items;
       let num = 0;
       let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
@@ -69,8 +69,6 @@ export const serializeMetricBuckets = function serializeMetricBuckets(arg0) {
     if (entries.length > 0) {
       let tmp3 = entries;
       let mapped = arr2.map((arg0) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg0;
         return "" + tmp + ":" + tmp2;
       });

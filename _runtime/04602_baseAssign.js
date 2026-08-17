@@ -1,6 +1,7 @@
 // _runtime/04602_baseAssign.js
-import { keys } from "00616_keys.js";
-import { copyObject } from "04594_copyObject.js";
+import keys from "keys" /* 616 */;
+import copyObject from "copyObject" /* 4594 */;
+
 
 export default function baseAssign(arg0, arg1) {
   let tmp = arg0;

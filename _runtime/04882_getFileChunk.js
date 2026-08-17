@@ -118,7 +118,7 @@ arg5.isAvifStringIncluded = function isAvifStringIncluded(fileChunk) {
 };
 arg5.isHeicSignatureIncluded = function isHeicSignatureIncluded(fileChunk) {
   const mapped = fileChunk.map((arg0) => String.fromCharCode(arg0));
-  let closure_0 = mapped.join("");
+  closure_0 = mapped.join("");
   const items = ["ftypheic", "ftyphevc", "ftypmif1", "ftypmsf1"];
   return items.some((arg0) => closure_0.includes(arg0));
 };

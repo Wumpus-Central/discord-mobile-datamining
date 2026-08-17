@@ -1,5 +1,5 @@
 // _runtime/01355_keys1.js
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 function identity(arg0) {
   return arg0;
@@ -9,11 +9,11 @@ function createImpl(arg0) {
   function useBoundStore(arg0) {
     let tmp = arg0;
     if (arg0 === undefined) {
-      tmp = outer1_3;
+      tmp = closure_1_3;
     }
-    let closure_1 = tmp;
-    const syncExternalStore = outer1_2.useSyncExternalStore(closure_0.subscribe, () => tmp(store.getState()), () => tmp(store.getInitialState()));
-    const debugValue = outer1_2.useDebugValue(syncExternalStore);
+    closure_1 = tmp;
+    const syncExternalStore = closure_1_2.useSyncExternalStore(closure_0.subscribe, () => callback(store.getState()), () => callback(store.getInitialState()));
+    const debugValue = closure_1_2.useDebugValue(syncExternalStore);
     return syncExternalStore;
   }
   const merged = Object.assign(useBoundStore, store);
@@ -29,11 +29,11 @@ export const create = (arg0) => {
     function useBoundStore(arg0) {
       let tmp = arg0;
       if (arg0 === undefined) {
-        tmp = outer1_3;
+        tmp = closure_1_3;
       }
-      let closure_1 = tmp;
-      const syncExternalStore = outer1_2.useSyncExternalStore(closure_0.subscribe, () => tmp(store.getState()), () => tmp(store.getInitialState()));
-      const debugValue = outer1_2.useDebugValue(syncExternalStore);
+      closure_1 = tmp;
+      const syncExternalStore = closure_1_2.useSyncExternalStore(closure_0.subscribe, () => callback(store.getState()), () => callback(store.getInitialState()));
+      const debugValue = closure_1_2.useDebugValue(syncExternalStore);
       return syncExternalStore;
     }
     const _Object = Object;
@@ -46,13 +46,13 @@ export const create = (arg0) => {
   return tmp2;
 };
 export const useStore = function useStore(subscribe) {
-  let closure_0 = subscribe;
+  closure_0 = subscribe;
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = identity;
   }
-  const dependencyMap = tmp;
-  const syncExternalStore = noop.useSyncExternalStore(subscribe.subscribe, () => tmp(store.getState()), () => tmp(store.getInitialState()));
-  const debugValue = noop.useDebugValue(syncExternalStore);
+  closure_1 = tmp;
+  const syncExternalStore = closure_2.useSyncExternalStore(subscribe.subscribe, () => callback(store.getState()), () => callback(store.getInitialState()));
+  const debugValue = closure_2.useDebugValue(syncExternalStore);
   return syncExternalStore;
 };

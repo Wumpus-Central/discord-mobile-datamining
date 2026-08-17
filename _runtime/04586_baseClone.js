@@ -28,16 +28,16 @@ obj["[object Function]"] = false;
 obj["[object Error]"] = false;
 function baseClone(arr) {
   const _require = arr;
-  const dependencyMap = arg1;
-  let obj = arg2;
-  let closure_3 = arg5;
+  dependencyMap = arg1;
+  obj = arg2;
+  closure_3 = arg5;
   if (!arg2) {
     {
       if (_isObject(arr)) {
         const tmp10 = tmp32(599)(arr);
         if (tmp10) {
           const tmp18 = tmp32(4587)(arr);
-          obj = tmp18;
+          closure_4 = tmp18;
           let tmp14 = tmp18;
           if (!tmp) {
             return tmp32(4588)(arr, tmp18);
@@ -55,7 +55,7 @@ function baseClone(arr) {
               if (tmp11 != "[object Arguments]") {
                 if (obj[tmp11]) {
                   tmp14 = tmp32(4603)(arr, tmp11, tmp);
-                  obj = tmp14;
+                  closure_4 = tmp14;
                 } else {
                   obj = arr;
                   if (!arg4) {
@@ -69,6 +69,7 @@ function baseClone(arr) {
               if (!tmp12) {
                 obj = tmp32(4590)(arr);
               }
+              closure_4 = obj;
               tmp14 = obj;
               if (!tmp) {
                 if (tmp2) {
@@ -97,11 +98,11 @@ function baseClone(arr) {
           let result = obj3.set(arr, tmp14);
           if (tmp32(4609)(arr)) {
             const item = arr.forEach((arg0) => {
-              obj.add(callback(arg0, closure_1, closure_2, arg0, closure_0, callback));
+              closure_4.add(callback(arg0, closure_1, closure_2, arg0, closure_0, callback));
             });
           } else if (tmp32(4611)(arr)) {
             const item1 = arr.forEach((arg0, arg1) => {
-              const result = obj.set(arg1, callback(arg0, closure_1, closure_2, arg1, closure_0, callback));
+              const result = closure_4.set(arg1, callback(arg0, closure_1, closure_2, arg1, closure_0, callback));
             });
           }
           if (!tmp3) {
@@ -109,7 +110,7 @@ function baseClone(arr) {
             if (!tmp10) {
               tmp29 = tmp32(tmp2 ? 4598 : 616)(arr);
             }
-            let closure_5 = tmp29;
+            closure_5 = tmp29;
             if (!tmp29) {
               tmp29 = arr;
             }
@@ -120,7 +121,7 @@ function baseClone(arr) {
                 tmp2 = arr[arg0];
                 tmp = arg0;
               }
-              arr(table[21])(obj, tmp, callback(tmp2, table, closure_2, tmp, arr, callback));
+              arr(table[21])(closure_4, tmp, callback(tmp2, table, closure_2, tmp, arr, callback));
             });
             return tmp14;
           }
@@ -135,7 +136,7 @@ function baseClone(arr) {
     } else {
       tmp4 = arg2(arr);
     }
-    obj = tmp4;
+    closure_4 = tmp4;
   }
 }
 

@@ -43,7 +43,7 @@ function getMetadataForUrl(arg0, arg1) {
 const map = new Map();
 const set = new Set();
 arg5.addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exception) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   try {
     const values = exception.exception.values;
     const item = values.forEach((stacktrace) => {
@@ -54,10 +54,10 @@ arg5.addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exceptio
           if (item10010.filename) {
             let tmp5 = item10010;
             if (!tmp4.module_metadata) {
-              let tmp6 = outer1_4;
+              let tmp6 = closure_1_4;
               let tmp7 = closure_0;
               let tmp8 = item10010;
-              let tmp9 = outer1_4(closure_0, tmp4.filename);
+              let tmp9 = closure_1_4(closure_0, tmp4.filename);
               if (tmp9) {
                 let tmp11 = item10010;
                 let tmp12 = tmp9;

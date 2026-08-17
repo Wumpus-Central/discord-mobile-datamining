@@ -1,8 +1,8 @@
 // _runtime/00945_weakMap.js
-import _slicedToArray from "_slicedToArray";
-import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
-import { extractClientInfo } from "00938_extractClientInfo.js";
-import { extractPromptResultAttributes } from "00946_extractPromptResultAttributes.js";
+import getSpanStatusFromHttpCode from "getSpanStatusFromHttpCode" /* 840 */;
+import extractClientInfo from "extractClientInfo" /* 938 */;
+import extractPromptResultAttributes from "extractPromptResultAttributes" /* 946 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const weakMap = new WeakMap();
@@ -12,8 +12,8 @@ export const cleanupPendingSpansForTransport = function cleanupPendingSpansForTr
   if (value) {
     const tmp2 = value[Symbol.iterator]();
     while (tmp2 !== undefined) {
-      let tmp6 = _slicedToArray;
-      let tmp7 = _slicedToArray(tmp4, 2)[1];
+      let tmp6 = callback;
+      let tmp7 = callback(tmp4, 2)[1];
       let span = tmp7.span;
       let obj = { code: null, message: "cancelled" };
       let tmp8 = require;
@@ -28,8 +28,6 @@ export const cleanupPendingSpansForTransport = function cleanupPendingSpansForTr
   }
 };
 export const completeSpanWithResults = function completeSpanWithResults(closure_4, id, result, self) {
-  let method;
-  let span;
   let setAttributesResult = weakMap;
   let value = weakMap.get(closure_4);
   if (!value) {

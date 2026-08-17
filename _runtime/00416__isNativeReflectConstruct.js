@@ -1,12 +1,13 @@
 // _runtime/00416__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/00417___INTERNAL_VIEW_CONFIG.js";
+import noopAll from "noop" /* 19 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 417 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_classCallCheck" /* 41 */;
+import closure_6 from "_possibleConstructorReturn" /* 93 */;
+import closure_7 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const RefreshControl = arg1;
 function _isNativeReflectConstruct() {
@@ -20,10 +21,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -33,12 +34,12 @@ class RefreshControl {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_5(this, closure_0);
     items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_7;
+    obj = closure_7(closure_0);
+    tmp3 = closure_6;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -47,23 +48,23 @@ class RefreshControl {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result._lastNativeRefreshing = false;
     tmp3Result._onRefresh = () => {
-      _undefined._lastNativeRefreshing = true;
-      if (_undefined.props.onRefresh) {
-        const props = obj.props;
+      props._lastNativeRefreshing = true;
+      if (props.props.onRefresh) {
+        props = obj.props;
         props.onRefresh();
       }
-      _undefined.forceUpdate();
+      props.forceUpdate();
     };
     tmp3Result._setNativeRef = (_nativeRef) => {
-      c0._nativeRef = _nativeRef;
+      closure_0._nativeRef = _nativeRef;
     };
     return tmp3Result;
   }
 }
-importDefaultResult1(RefreshControl, require("noop").Component);
+importDefaultResult1(RefreshControl, noopAll.Component);
 let items = [
   {
     key: "componentDidMount",
@@ -90,16 +91,13 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let tintColor;
-      let title;
-      let titleColor;
       const props = this.props;
       ({ tintColor, titleColor, title } = props);
       const obj = {};
       const tmp = callback(props, closure_3);
       const merged = Object.assign(tmp);
       ({ _setNativeRef: obj.ref, _onRefresh: obj.onRefresh } = this);
-      return jsx(__INTERNAL_VIEW_CONFIG, {});
+      return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
     }
   }
 ];

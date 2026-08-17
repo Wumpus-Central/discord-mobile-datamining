@@ -1,10 +1,10 @@
 // _runtime/13808_getReactNativePlatformConstants.js
-import get_ActivityIndicator from "get ActivityIndicator";
+import closure_0 from "get ActivityIndicator" /* 17 */;
 
 
 export default function getReactNativePlatformConstants() {
   let obj = { osRelease: "", model: "", serverHost: "", uiMode: "", serial: "", forceTouch: false, interfaceIdiom: "", systemName: "" };
-  if ("android" === get_ActivityIndicator.Platform.OS) {
+  if ("android" === Platform.Platform.OS) {
     obj = {};
     const merged = Object.assign(obj);
     ({ Release: obj3.osRelease, Model: obj3.model, ServerHost: obj3.serverHost, uiMode: obj3.uiMode, Serial: obj3.serial } = tmp.Platform.constants);

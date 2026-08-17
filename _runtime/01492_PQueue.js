@@ -1,11 +1,11 @@
 // _runtime/01492_PQueue.js
 function PQueue(arg0) {
-  let closure_0 = arg0;
-  let closure_1 = [];
-  let c2 = false;
+  closure_0 = arg0;
+  closure_1 = [];
+  c2 = false;
   return {
     push(arg0) {
-      let c2 = false;
+      c2 = false;
     },
     peek(arg0) {
       if (!c2) {
@@ -63,11 +63,11 @@ class CMap {
       const countResult = vbox.count();
       return f103874.naturalOrder(result, vbox3.count() * vbox4.volume());
     };
-    f103874 = [];
+    closure_1 = [];
     c2 = false;
     obj = {
       push(arg0) {
-            let c2 = false;
+            c2 = false;
           },
       peek(arg0) {
             if (!c2) {
@@ -162,13 +162,6 @@ VBox.prototype = {
     return self._count;
   },
   copy() {
-    let b1;
-    let b2;
-    let g1;
-    let g2;
-    let histo;
-    let r1;
-    let r2;
     ({ r1, r2, g1, g2, b1, b2, histo } = this);
     const obj = Object.create(VBox.prototype);
     obj.r1 = r1;
@@ -376,8 +369,6 @@ export default function quantize(arr) {
     if (arg1 >= 2) {
       if (arg1 <= 256) {
         function iter(BottomSheetDraggableContext, arg1, closure_0, closure_1) {
-          let tmp56;
-          let tmp57;
           let num = 0;
           let num2 = 1;
           while (true) {
@@ -609,10 +600,10 @@ export default function quantize(arr) {
         }
         const _Array = Array;
         const array = new Array(32768);
-        let CMap = array;
+        CMap = array;
         let item = arr.forEach((arg0) => {
-          let closure_0 = arg0[0] >> 3;
-          let closure_1 = arg0[1] >> 3;
+          closure_0 = arg0[0] >> 3;
+          closure_1 = arg0[1] >> 3;
           const sum = (closure_0 << 10) + (closure_1 << 5) + (arg0[2] >> 3);
           let num = table[sum];
           if (!num) {
@@ -625,32 +616,32 @@ export default function quantize(arr) {
 
         });
         f103874 = undefined;
-        let VBox;
+        VBox = undefined;
         CMap = undefined;
-        let c3 = 1000000;
-        let c4 = 0;
-        let c5 = 1000000;
-        let c6 = 0;
-        let c7 = 1000000;
-        let c8 = 0;
+        c3 = 1000000;
+        c4 = 0;
+        c5 = 1000000;
+        c6 = 0;
+        c7 = 1000000;
+        c8 = 0;
         const item2 = arr.forEach((arg0) => {
-          let closure_0 = arg0[0] >> 3;
-          let closure_1 = arg0[1] >> 3;
-          let c2 = tmp;
-          if (closure_0 < c3) {
-            c3 = tmp2;
-          } else if (tmp2 > c4) {
-            c4 = tmp2;
+          closure_0 = arg0[0] >> 3;
+          closure_1 = arg0[1] >> 3;
+          closure_2 = tmp;
+          if (closure_0 < closure_3) {
+            closure_3 = tmp2;
+          } else if (tmp2 > closure_4) {
+            closure_4 = tmp2;
           }
-          if (closure_1 < c5) {
-            c5 = tmp4;
-          } else if (tmp4 > c6) {
-            c6 = tmp4;
+          if (closure_1 < closure_5) {
+            closure_5 = tmp4;
+          } else if (tmp4 > closure_6) {
+            closure_6 = tmp4;
           }
-          if (arg0[2] >> 3 < c7) {
-            c7 = tmp;
-          } else if (c8 < tmp) {
-            c8 = tmp;
+          if (arg0[2] >> 3 < closure_7) {
+            closure_7 = tmp;
+          } else if (closure_8 < tmp) {
+            closure_8 = tmp;
           }
         });
         let obj = Object.create(VBox.prototype);
@@ -667,7 +658,7 @@ export default function quantize(arr) {
         CMap = false;
         obj = { push: null, peek: null, pop: null, size: null, map: null, debug: null };
         obj[0] = function push(arg0) {
-          let c2 = false;
+          c2 = false;
         };
         obj[1] = function peek(arg0) {
           if (!c2) {
@@ -710,9 +701,9 @@ export default function quantize(arr) {
         };
         VBox = [];
         CMap = false;
-        const obj1 = { push: null, peek: null, pop: null, size: null, map: null, debug: null };
+        obj1 = { push: null, peek: null, pop: null, size: null, map: null, debug: null };
         obj1[0] = function push(arg0) {
-          let c2 = false;
+          c2 = false;
         };
         obj1[1] = function peek(arg0) {
           if (!c2) {
@@ -767,7 +758,7 @@ export default function quantize(arr) {
         CMap = false;
         obj = { push: null, peek: null, pop: null, size: null, map: null, debug: null };
         obj[0] = function push(arg0) {
-          let c2 = false;
+          c2 = false;
         };
         obj[1] = function peek(arg0) {
           if (!c2) {

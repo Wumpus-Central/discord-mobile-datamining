@@ -1,54 +1,52 @@
 // _runtime/metro/00770__.js
-import toSource from "toSource";
-import getNative from "getNative";
-import toSource from "toSource";
-import getNative from "getNative";
-import toSource from "toSource";
-import getNative from "getNative";
-import toSource from "toSource";
-import getNative from "getNative";
-import toSource from "toSource";
-import getNative from "getNative";
-import toStringTag from "toStringTag";
-import getNative from "getNative";
-import { toStringTag } from "../00607_toStringTag.js";
-import { toSource } from "../00742_toSource.js";
+import getNative2 from "getNative" /* 747 */;
+import getNative3 from "getNative" /* 772 */;
+import getNative4 from "getNative" /* 773 */;
+import getNative5 from "getNative" /* 774 */;
+import toSource from "toSource" /* 742 */;
+import toStringTag from "toStringTag" /* 607 */;
+import getNative from "getNative" /* 771 */;
 
+let closure_2 = toSource(getNative);
+let closure_3 = toSource(getNative2);
+let closure_4 = toSource(getNative3);
+let closure_5 = toSource(getNative4);
+let closure_6 = toSource(getNative5);
 if (getNative) {
   const _ArrayBuffer = ArrayBuffer;
-  let _module6 = require("getNative");
+  let _module6 = getNative;
   const arrayBuffer = new ArrayBuffer(1);
   _module6 = new _module6(arrayBuffer);
   getNative = toStringTag(_module6) != "[object DataView]";
 }
 if (!getNative) {
-  let _module7 = require("getNative");
+  let _module7 = getNative2;
   if (_module7) {
-    const tmp20 = new require("getNative")();
+    const tmp20 = new getNative2();
     _module7 = toStringTag(tmp20) != "[object Map]";
   }
   getNative = _module7;
 }
 if (!getNative) {
-  let _module8 = require("getNative");
+  let _module8 = getNative3;
   if (_module8) {
-    const _module9 = require("getNative");
+    const _module9 = getNative3;
     _module8 = toStringTag(_module9.resolve()) != "[object Promise]";
   }
   getNative = _module8;
 }
 if (!getNative) {
-  let _module10 = require("getNative");
+  let _module10 = getNative4;
   if (_module10) {
-    const tmp26 = new require("getNative")();
+    const tmp26 = new getNative4();
     _module10 = toStringTag(tmp26) != "[object Set]";
   }
   getNative = _module10;
 }
 if (!getNative) {
-  let _module11 = require("getNative");
+  let _module11 = getNative5;
   if (_module11) {
-    const tmp31 = new require("getNative")();
+    const tmp31 = new getNative5();
     _module11 = toStringTag(tmp31) != "[object WeakMap]";
   }
   getNative = _module11;
@@ -65,15 +63,15 @@ if (getNative) {
       str = toSource(constructor);
     }
     if (str) {
-      if (getNative === str) {
+      if (closure_2 === str) {
         return "[object DataView]";
-      } else if (getNative === str) {
+      } else if (closure_3 === str) {
         return "[object Map]";
-      } else if (getNative === str) {
+      } else if (closure_4 === str) {
         return "[object Promise]";
-      } else if (getNative === str) {
+      } else if (closure_5 === str) {
         return "[object Set]";
-      } else if (getNative === str) {
+      } else if (closure_6 === str) {
         return "[object WeakMap]";
       }
     }

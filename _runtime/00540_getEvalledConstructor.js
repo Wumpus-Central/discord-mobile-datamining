@@ -1,17 +1,28 @@
 // _runtime/00540_getEvalledConstructor.js
-import bind from "bind";
-import 00556__ from "metro/00556__.js";
-import bind from "bind";
-import 00557__ from "metro/00557__.js";
-import bind from "bind";
-import 00556__ from "metro/00556__.js";
-import bind from "bind";
-import 00556__ from "metro/00556__.js";
-import bind from "bind";
-import 00556__ from "metro/00556__.js";
-import { getProto } from "00546_getProto.js";
-import { 00541__ } from "metro/00541__.js";
-import { 00542__ } from "metro/00542__.js";
+import _mod541 from "module_541" /* 541 */;
+import _mod542 from "module_542" /* 542 */;
+import _Symbol6 from "_Symbol" /* 544 */;
+import getProto from "getProto" /* 546 */;
+import getPrototypeOf from "getPrototypeOf" /* 547 */;
+import _mod548 from "module_548" /* 548 */;
+import _mod549 from "module_549" /* 549 */;
+import _mod558 from "module_558" /* 558 */;
+import _mod559 from "module_559" /* 559 */;
+import _mod560 from "module_560" /* 560 */;
+import _mod561 from "module_561" /* 561 */;
+import _mod562 from "module_562" /* 562 */;
+import _mod563 from "module_563" /* 563 */;
+import flag4 from "flag" /* 564 */;
+import _mod565 from "module_565" /* 565 */;
+import _mod566 from "module_566" /* 566 */;
+import _mod567 from "module_567" /* 567 */;
+import _mod568 from "module_568" /* 568 */;
+import _mod569 from "module_569" /* 569 */;
+import _mod570 from "module_570" /* 570 */;
+import sign from "sign" /* 571 */;
+import bind from "bind" /* 554 */;
+import 00556__ from "metro/00556__.js" /* 556 */;
+import 00557__ from "metro/00557__.js" /* 557 */;
 
 function getEvalledConstructor(arg0) {
   try {
@@ -21,28 +32,28 @@ function getEvalledConstructor(arg0) {
   }
 }
 function throwTypeError() {
-  throw new 00541__();
+  throw new _mod541();
 }
-if (require("module_542")) {
+if (_mod542) {
   throwTypeError = (() => {
     try {
       return throwTypeError;
     } catch (err) {
       try {
-        return 00542__(arguments, "callee").get;
+        return _mod542(arguments, "callee").get;
       } catch (err) {
         return throwTypeError;
       }
     }
   })();
 }
-const tmp5 = require("_Symbol")();
+const tmp5 = _Symbol6();
 let obj = {};
 let tmp6;
 if (typeof Uint8Array !== "undefined") {
-  if (require("getProto")) {
+  if (getProto) {
     let _Uint8Array = Uint8Array;
-    tmp6 = require("getProto")(Uint8Array);
+    tmp6 = getProto(Uint8Array);
   }
 }
 let AggregateError;
@@ -59,10 +70,10 @@ if (typeof ArrayBuffer !== "undefined") {
 obj[2] = _ArrayBuffer;
 let _moduleResult;
 if (tmp5) {
-  if (require("getProto")) {
+  if (getProto) {
     let items = [];
     let _Symbol = Symbol;
-    const _module = require("getProto");
+    const _module = getProto;
     _moduleResult = _module(items[Symbol.iterator]());
   }
 }
@@ -102,9 +113,9 @@ obj[16] = decodeURI;
 obj[17] = decodeURIComponent;
 obj[18] = encodeURI;
 obj[19] = encodeURIComponent;
-obj[20] = require("module_558");
+obj[20] = _mod558;
 obj[21] = globalThis.eval;
-obj[22] = require("module_559");
+obj[22] = _mod559;
 let Float16Array;
 if (typeof globalThis.Float16Array !== "undefined") {
   Float16Array = globalThis.Float16Array;
@@ -146,11 +157,11 @@ obj[32] = isFinite;
 obj[33] = isNaN;
 let _module1Result;
 if (tmp5) {
-  if (require("getProto")) {
-    const _module1 = require("getProto");
+  if (getProto) {
+    const _module1 = getProto;
     const items1 = [];
     const _Symbol2 = Symbol;
-    const _module2 = require("getProto");
+    const _module2 = getProto;
     _module1Result = _module1(_module2(items1[Symbol.iterator]()));
   }
 }
@@ -168,9 +179,9 @@ obj[36] = _Map;
 let _module3Result;
 if (typeof Map !== "undefined") {
   if (tmp5) {
-    if (require("getProto")) {
+    if (getProto) {
       _Map = Map;
-      const _module3 = require("getProto");
+      const _module3 = getProto;
       const map = new Map();
       const _Symbol3 = Symbol;
       _module3Result = _module3(map[Symbol.iterator]());
@@ -180,8 +191,8 @@ if (typeof Map !== "undefined") {
 obj[37] = _module3Result;
 obj[38] = Math;
 obj[39] = Number;
-obj[40] = require("module_549");
-obj[41] = require("module_542");
+obj[40] = _mod549;
+obj[41] = _mod542;
 obj[42] = parseFloat;
 obj[43] = parseInt;
 let _Promise;
@@ -194,8 +205,8 @@ if (typeof Proxy !== "undefined") {
   _Proxy = Proxy;
 }
 obj[45] = _Proxy;
-obj[46] = require("module_560");
-obj[47] = require("module_561");
+obj[46] = _mod560;
+obj[47] = _mod561;
 let _Reflect;
 if (typeof Reflect !== "undefined") {
   _Reflect = Reflect;
@@ -210,9 +221,9 @@ obj[50] = _Set;
 let _module4Result;
 if (typeof Set !== "undefined") {
   if (tmp5) {
-    if (require("getProto")) {
+    if (getProto) {
       _Set = Set;
-      const _module4 = require("getProto");
+      const _module4 = getProto;
       const set = new Set();
       const _Symbol4 = Symbol;
       _module4Result = _module4(set[Symbol.iterator]());
@@ -228,9 +239,9 @@ obj[52] = _SharedArrayBuffer;
 obj[53] = String;
 let _module5Result;
 if (tmp5) {
-  if (require("getProto")) {
+  if (getProto) {
     const _Symbol5 = Symbol;
-    const _module5 = require("getProto");
+    const _module5 = getProto;
     _module5Result = _module5(""[Symbol.iterator]());
   }
 }
@@ -240,10 +251,10 @@ if (tmp5) {
   _Symbol = Symbol;
 }
 obj[55] = _Symbol;
-obj[56] = require("module_562");
+obj[56] = _mod562;
 obj[57] = throwTypeError;
 obj[58] = tmp6;
-obj[59] = require("module_541");
+obj[59] = _mod541;
 _Uint8Array = undefined;
 if (typeof Uint8Array !== "undefined") {
   _Uint8Array = Uint8Array;
@@ -264,7 +275,7 @@ if (typeof Uint32Array !== "undefined") {
   _Uint32Array = Uint32Array;
 }
 obj[63] = _Uint32Array;
-obj[64] = require("module_563");
+obj[64] = _mod563;
 let _WeakMap;
 if (typeof WeakMap !== "undefined") {
   _WeakMap = WeakMap;
@@ -280,19 +291,19 @@ if (typeof WeakSet !== "undefined") {
   _WeakSet = WeakSet;
 }
 obj[67] = _WeakSet;
-obj[68] = require("module_556");
-obj[69] = require("module_557");
-obj[70] = require("flag");
-obj[71] = require("module_548");
-obj[72] = require("module_565");
-obj[73] = require("module_566");
-obj[74] = require("module_567");
-obj[75] = require("module_568");
-obj[76] = require("module_569");
-obj[77] = require("module_570");
-obj[78] = require("sign");
-obj[79] = require("getPrototypeOf");
-if (require("getProto")) {
+obj[68] = module_556;
+obj[69] = module_557;
+obj[70] = flag4;
+obj[71] = _mod548;
+obj[72] = _mod565;
+obj[73] = _mod566;
+obj[74] = _mod567;
+obj[75] = _mod568;
+obj[76] = _mod569;
+obj[77] = _mod570;
+obj[78] = sign;
+obj[79] = getPrototypeOf;
+if (getProto) {
   try {
     const error = null.error;
   } catch (tmp56) {
@@ -428,7 +439,7 @@ export default function GetIntrinsic(str, flag) {
         items = [];
         callback3(str, closure_14, (arg0, arg1, arg2, arg3) => {
           if (arg2) {
-            let tmp2 = outer1_11(arg3, outer1_15, "$1");
+            let tmp2 = closure_1_11(arg3, closure_1_15, "$1");
           } else {
             tmp2 = arg1;
             if (!arg1) {

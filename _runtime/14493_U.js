@@ -1,6 +1,5 @@
 // _runtime/14493_U.js
 import "module_0";
-import "module_0";
 
 let f94619 = global;
 function U(arg0, arg1) {
@@ -123,6 +122,7 @@ function De(arg0, key10009) {
     return fn(arg0, key10009, tmp2);
   }
   fn = (arg0, key10009, arg2) => {
+    hasOwnProperty = Object.prototype.hasOwnProperty;
     const call = hasOwnProperty.call;
     let tmp = arg0;
     if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
@@ -214,11 +214,11 @@ function qt(stateData, arr) {
   }
 }
 function ue(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   for (let num = 1; num < arguments.length; num = num + 1) {
     let tmp = num;
     let tmp2 = null != arguments[num] ? arguments[num] : {};
-    let closure_1 = tmp2;
+    closure_1 = tmp2;
     let _Object = Object;
     let keys = Object.keys(tmp2);
     let _Object2 = Object;
@@ -251,7 +251,7 @@ f94619 = () => {
   }
   if (c0) {
     c0 = 0;
-    let closure_1 = tmp(0);
+    closure_1 = tmp(0);
   }
 };
 create = undefined;
@@ -269,7 +269,7 @@ f94619 = (arg0, arg1) => {
   arg1.exports = function Ca(arg0, arg1) {
     let tmp = arg0;
     if (!("length" in arg0)) {
-      const items = [arg0];
+      items = [arg0];
       tmp = items;
     }
     const call = slice.call;
@@ -334,14 +334,14 @@ f94619 = (arg0, arg1) => {
           tmp2 = tmp[Symbol.hasInstance](self);
         }
       }
-      tmp2 = outer1_8(self, tmp);
+      tmp2 = closure_1_8(self, tmp);
       return;
     }
     toString() {
       return "[object Comment]";
     }
   }
-  let c0 = ve;
+  c0 = ve;
   if (typeof f94626 !== "function") {
     class ve {
       constructor(arg0, arg1) {
@@ -377,7 +377,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       toString() {
@@ -421,7 +421,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       toString() {
@@ -429,7 +429,7 @@ f94619 = (arg0, arg1) => {
       }
     }
     c0 = 0;
-    let closure_1 = tmp(0);
+    closure_1 = tmp(0);
   }
   arg1.exports = ve;
   ve.prototype.nodeType = 8;
@@ -477,7 +477,7 @@ f94619 = (arg0, arg1) => {
           tmp2 = tmp[Symbol.hasInstance](self);
         }
       }
-      tmp2 = outer1_8(self, tmp);
+      tmp2 = closure_1_8(self, tmp);
       return;
     }
     toString() {
@@ -491,7 +491,7 @@ f94619 = (arg0, arg1) => {
       return;
     }
   }
-  let c0 = ae;
+  c0 = ae;
   if (typeof f94626 !== "function") {
     class ae {
       constructor(arg0, arg1) {
@@ -530,7 +530,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       toString() {
@@ -584,7 +584,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       toString() {
@@ -599,7 +599,7 @@ f94619 = (arg0, arg1) => {
       }
     }
     c0 = 0;
-    let closure_1 = tmp(0);
+    closure_1 = tmp(0);
   }
   arg1.exports = ae;
   ae.prototype.type = "DOMTextNode";
@@ -613,7 +613,7 @@ f94627 = () => {
 f94619 = (arg0, arg1) => {
   arg1.exports = function Ma(target) {
     let self = this;
-    let closure_0 = target;
+    closure_0 = target;
     self = this;
     if (!target.target) {
       target.target = self;
@@ -697,7 +697,7 @@ f94619 = (arg0, arg1) => {
       if ("http://www.w3.org/1999/xhtml" === nodeType.namespaceURI) {
         formatted = str43.toLowerCase();
       }
-      const items = [];
+      items = [];
       const items1 = [];
       let text = `<${tmp2}`;
       for (const key10026 in arg0) {
@@ -795,15 +795,13 @@ f94619 = (arg0, arg1) => {
         const items2 = [];
         let items4 = items2;
         let item = items1.forEach((arg0) => {
-          let name;
-          let value;
           ({ name, value } = arg0);
           let str = value;
           if ("style" === name) {
-            const items4 = value;
+            items4 = value;
             let tmp = value;
             if (typeof value !== "string") {
-              let c1 = "";
+              c1 = "";
               const _Object = Object;
               const keys = Object.keys(value);
               const item = keys.forEach((arg0) => {
@@ -835,7 +833,7 @@ f94619 = (arg0, arg1) => {
       const items3 = [];
       for (const key10076 in dataset) {
         let tmp29 = key10076;
-        let obj1 = { name: null, value: null };
+        obj1 = { name: null, value: null };
         obj1[0] = "data-" + key10076;
         obj1[1] = dataset[key10076];
         let arr2 = items3.push(obj1);
@@ -845,15 +843,13 @@ f94619 = (arg0, arg1) => {
       if (items3.length) {
         items4 = [];
         const item1 = items3.forEach((arg0) => {
-          let name;
-          let value;
           ({ name, value } = arg0);
           let str = value;
           if ("style" === name) {
-            const items4 = value;
+            items4 = value;
             let tmp = value;
             if (typeof value !== "string") {
-              let c1 = "";
+              c1 = "";
               const _Object = Object;
               const keys = Object.keys(value);
               const item = keys.forEach((arg0) => {
@@ -918,7 +914,7 @@ f94619 = (arg0, arg1) => {
       return items.join("");
     }
   }
-  let closure_1 = br;
+  closure_1 = br;
   if (typeof f94626 !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -994,7 +990,7 @@ f94619 = (arg0, arg1) => {
           tmp2 = tmp[Symbol.hasInstance](self);
         }
       }
-      tmp2 = outer1_8(self, tmp);
+      tmp2 = closure_1_8(self, tmp);
       return;
     }
     appendChild(arg0) {
@@ -1131,17 +1127,17 @@ f94619 = (arg0, arg1) => {
       return closure_1(this);
     }
     getElementsByClassName(arg0) {
-      c0 = arg0.split(" ");
+      closure_0 = arg0.split(" ");
       items = [];
-      c1 = items;
-      tmp = c0(this, () => { ... });
+      closure_1 = items;
+      tmp = closure_0(this, () => { ... });
       return items;
     }
     getElementsByTagName(arg0) {
-      toLowerCase = arg0.toLowerCase();
+      closure_0 = arg0.toLowerCase();
       items = [];
-      toLowerCase = items;
-      tmp = toLowerCase(this.childNodes, () => { ... });
+      closure_1 = items;
+      tmp = closure_0(this.childNodes, () => { ... });
       return items;
     }
     contains(arg0) {
@@ -1150,7 +1146,7 @@ f94619 = (arg0, arg1) => {
       return tmp;
     }
   }
-  let closure_3 = I;
+  closure_3 = I;
   if (typeof f94626 !== "function") {
     class I {
       constructor(arg0, arg1, arg2) {
@@ -1212,7 +1208,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       appendChild(arg0) {
@@ -1349,17 +1345,17 @@ f94619 = (arg0, arg1) => {
         return closure_1(this);
       }
       getElementsByClassName(arg0) {
-        c0 = arg0.split(" ");
+        closure_0 = arg0.split(" ");
         items = [];
-        c1 = items;
-        tmp = c0(this, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
-        toLowerCase = arg0.toLowerCase();
+        closure_0 = arg0.toLowerCase();
         items = [];
-        toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
@@ -1431,7 +1427,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       appendChild(arg0) {
@@ -1568,17 +1564,17 @@ f94619 = (arg0, arg1) => {
         return closure_1(this);
       }
       getElementsByClassName(arg0) {
-        c0 = arg0.split(" ");
+        closure_0 = arg0.split(" ");
         items = [];
-        c1 = items;
-        tmp = c0(this, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
-        toLowerCase = arg0.toLowerCase();
+        closure_0 = arg0.toLowerCase();
         items = [];
-        toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
@@ -1651,7 +1647,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       appendChild(arg0) {
@@ -1788,17 +1784,17 @@ f94619 = (arg0, arg1) => {
         return closure_1(this);
       }
       getElementsByClassName(arg0) {
-        c0 = arg0.split(" ");
+        closure_0 = arg0.split(" ");
         items = [];
-        c1 = items;
-        tmp = c0(this, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
-        toLowerCase = arg0.toLowerCase();
+        closure_0 = arg0.toLowerCase();
         items = [];
-        toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
@@ -1870,7 +1866,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       appendChild(arg0) {
@@ -2007,17 +2003,17 @@ f94619 = (arg0, arg1) => {
         return closure_1(this);
       }
       getElementsByClassName(arg0) {
-        c0 = arg0.split(" ");
+        closure_0 = arg0.split(" ");
         items = [];
-        c1 = items;
-        tmp = c0(this, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
-        toLowerCase = arg0.toLowerCase();
+        closure_0 = arg0.toLowerCase();
         items = [];
-        toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
@@ -2093,7 +2089,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       appendChild(arg0) {
@@ -2230,17 +2226,17 @@ f94619 = (arg0, arg1) => {
         return closure_1(this);
       }
       getElementsByClassName(arg0) {
-        c0 = arg0.split(" ");
+        closure_0 = arg0.split(" ");
         items = [];
-        c1 = items;
-        tmp = c0(this, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
-        toLowerCase = arg0.toLowerCase();
+        closure_0 = arg0.toLowerCase();
         items = [];
-        toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
@@ -2312,7 +2308,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       appendChild(arg0) {
@@ -2449,17 +2445,17 @@ f94619 = (arg0, arg1) => {
         return closure_1(this);
       }
       getElementsByClassName(arg0) {
-        c0 = arg0.split(" ");
+        closure_0 = arg0.split(" ");
         items = [];
-        c1 = items;
-        tmp = c0(this, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
-        toLowerCase = arg0.toLowerCase();
+        closure_0 = arg0.toLowerCase();
         items = [];
-        toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
@@ -2534,7 +2530,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       appendChild(arg0) {
@@ -2671,17 +2667,17 @@ f94619 = (arg0, arg1) => {
         return closure_1(this);
       }
       getElementsByClassName(arg0) {
-        c0 = arg0.split(" ");
+        closure_0 = arg0.split(" ");
         items = [];
-        c1 = items;
-        tmp = c0(this, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
-        toLowerCase = arg0.toLowerCase();
+        closure_0 = arg0.toLowerCase();
         items = [];
-        toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
@@ -2753,7 +2749,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       appendChild(arg0) {
@@ -2890,17 +2886,17 @@ f94619 = (arg0, arg1) => {
         return closure_1(this);
       }
       getElementsByClassName(arg0) {
-        c0 = arg0.split(" ");
+        closure_0 = arg0.split(" ");
         items = [];
-        c1 = items;
-        tmp = c0(this, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
-        toLowerCase = arg0.toLowerCase();
+        closure_0 = arg0.toLowerCase();
         items = [];
-        toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
@@ -2975,7 +2971,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       appendChild(arg0) {
@@ -3112,17 +3108,17 @@ f94619 = (arg0, arg1) => {
         return closure_1(this);
       }
       getElementsByClassName(arg0) {
-        c0 = arg0.split(" ");
+        closure_0 = arg0.split(" ");
         items = [];
-        c1 = items;
-        tmp = c0(this, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
-        toLowerCase = arg0.toLowerCase();
+        closure_0 = arg0.toLowerCase();
         items = [];
-        toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
@@ -3194,7 +3190,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       appendChild(arg0) {
@@ -3331,17 +3327,17 @@ f94619 = (arg0, arg1) => {
         return closure_1(this);
       }
       getElementsByClassName(arg0) {
-        c0 = arg0.split(" ");
+        closure_0 = arg0.split(" ");
         items = [];
-        c1 = items;
-        tmp = c0(this, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
-        toLowerCase = arg0.toLowerCase();
+        closure_0 = arg0.toLowerCase();
         items = [];
-        toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
@@ -3350,7 +3346,7 @@ f94619 = (arg0, arg1) => {
         return tmp;
       }
     }
-    const obj1 = { exports: null };
+    obj1 = { exports: null };
     obj1[0] = {};
     lib = obj1;
     callback(obj1.exports, lib);
@@ -3416,7 +3412,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       appendChild(arg0) {
@@ -3553,17 +3549,17 @@ f94619 = (arg0, arg1) => {
         return closure_1(this);
       }
       getElementsByClassName(arg0) {
-        c0 = arg0.split(" ");
+        closure_0 = arg0.split(" ");
         items = [];
-        c1 = items;
-        tmp = c0(this, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
-        toLowerCase = arg0.toLowerCase();
+        closure_0 = arg0.toLowerCase();
         items = [];
-        toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
@@ -3635,7 +3631,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       appendChild(arg0) {
@@ -3772,17 +3768,17 @@ f94619 = (arg0, arg1) => {
         return closure_1(this);
       }
       getElementsByClassName(arg0) {
-        c0 = arg0.split(" ");
+        closure_0 = arg0.split(" ");
         items = [];
-        c1 = items;
-        tmp = c0(this, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
-        toLowerCase = arg0.toLowerCase();
+        closure_0 = arg0.toLowerCase();
         items = [];
-        toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, () => { ... });
+        closure_1 = items;
+        tmp = closure_0(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
@@ -3797,7 +3793,7 @@ f94619 = (arg0, arg1) => {
     callback(obj2.exports, lib);
   }
   lib = lib.exports;
-  let c2 = "http://www.w3.org/1999/xhtml";
+  c2 = "http://www.w3.org/1999/xhtml";
   arg1.exports = I;
   I.prototype.type = "DOMElement";
   I.prototype.nodeType = 1;
@@ -3843,7 +3839,7 @@ f94619 = (arg0, arg1) => {
           tmp2 = tmp[Symbol.hasInstance](self);
         }
       }
-      tmp2 = outer1_8(self, tmp);
+      tmp2 = closure_1_8(self, tmp);
       return;
     }
     toString() {
@@ -3887,7 +3883,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       toString() {
@@ -3932,7 +3928,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       toString() {
@@ -3978,7 +3974,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       toString() {
@@ -4023,7 +4019,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
       toString() {
@@ -4108,7 +4104,7 @@ f94619 = (arg0, arg1) => {
           tmp2 = tmp[Symbol.hasInstance](self);
         }
       }
-      tmp2 = outer1_8(self, tmp);
+      tmp2 = closure_1_8(self, tmp);
       return;
     }
   }
@@ -4153,7 +4149,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4200,7 +4196,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4248,7 +4244,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4295,7 +4291,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4346,7 +4342,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4393,7 +4389,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4444,7 +4440,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4491,7 +4487,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4500,7 +4496,7 @@ f94619 = (arg0, arg1) => {
     obj6 = obj;
     callback(obj.exports, obj6);
   }
-  let closure_2 = obj6.exports;
+  closure_2 = obj6.exports;
   if (typeof f94627 !== "function") {
     class Ue {
       constructor() {
@@ -4542,7 +4538,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4589,11 +4585,11 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
-    const obj1 = { exports: null };
+    obj1 = { exports: null };
     obj1[0] = {};
     obj6 = obj1;
     callback(obj1.exports, obj6);
@@ -4640,7 +4636,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4687,7 +4683,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4696,7 +4692,7 @@ f94619 = (arg0, arg1) => {
     obj6 = obj2;
     callback(obj2.exports, obj6);
   }
-  let closure_4 = obj6.exports;
+  closure_4 = obj6.exports;
   if (typeof f94627 !== "function") {
     class Ue {
       constructor() {
@@ -4738,7 +4734,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4785,16 +4781,16 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
-    const obj3 = { exports: null };
+    obj3 = { exports: null };
     obj3[0] = {};
     obj6 = obj3;
     callback(obj3.exports, obj6);
   }
-  let closure_5 = obj6.exports;
+  closure_5 = obj6.exports;
   if (typeof f94627 !== "function") {
     class Ue {
       constructor() {
@@ -4836,7 +4832,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4883,7 +4879,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4933,7 +4929,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -4980,7 +4976,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -5030,7 +5026,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -5077,7 +5073,7 @@ f94619 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = outer1_8(self, tmp);
+        tmp2 = closure_1_8(self, tmp);
         return;
       }
     }
@@ -5190,9 +5186,9 @@ if (typeof obj === "object") {
 class G {
   constructor(arg0, arg1, arg2) {
     if (null != global) {
-      tmp = c1;
+      tmp = closure_1;
       tmp2 = getPrototypeOf;
-      obj = c1(getPrototypeOf(global));
+      obj = closure_1(getPrototypeOf(global));
     } else {
       obj = {};
     }
@@ -5280,7 +5276,7 @@ function ee() {
   if (typeof getRandomValues === "function") {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(32);
-    let items = uint8Array;
+    items = uint8Array;
     const _crypto2 = mod.default.crypto;
     const randomValues = _crypto2.getRandomValues(uint8Array);
     let num6 = 0;
@@ -5297,7 +5293,7 @@ function ee() {
       num = num + 1;
     } while (num < 32);
   }
-  let c1 = 0;
+  c1 = 0;
   let str = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (arg0) => {
     if ("x" === arg0) {
       let str = items[closure_1];
@@ -5371,7 +5367,7 @@ function se(nodeName) {
         const str3 = element.nodeName;
       }
     }
-    const items = [element, tmp2, str2];
+    items = [element, tmp2, str2];
     return items;
   }
   element = document.querySelector(nodeName);
@@ -5392,21 +5388,22 @@ let tmp11 = ((arg0) => {
   }
   const _console = console;
   if (arg0) {
-    const items = [_console, arg0];
+    items = [_console, arg0];
     let items1 = items;
   } else {
     items1 = [_console];
   }
   const bind = trace.bind;
-  let closure_1 = bind.apply(trace, V(items1));
+  closure_1 = bind.apply(trace, V(items1));
   const bind2 = info.bind;
-  let closure_2 = bind2.apply(info, V(items1));
+  closure_2 = bind2.apply(info, V(items1));
   const bind3 = debug.bind;
-  let closure_3 = bind3.apply(debug, V(items1));
+  closure_3 = bind3.apply(debug, V(items1));
   const bind4 = warn.bind;
-  let closure_4 = bind4.apply(warn, V(items1));
+  closure_4 = bind4.apply(warn, V(items1));
+  error = console.error;
   const bind5 = error.bind;
-  let closure_5 = bind5.apply(error, V(items1));
+  closure_5 = bind5.apply(error, V(items1));
   const obj = {
     trace() {
       const length = arguments.length;
@@ -5414,8 +5411,8 @@ let tmp11 = ((arg0) => {
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];
       }
-      if (num <= outer1_33) {
-        return callback.apply(undefined, outer1_32(array));
+      if (num <= closure_1_33) {
+        return callback.apply(undefined, closure_1_32(array));
       }
     },
     debug() {
@@ -5424,8 +5421,8 @@ let tmp11 = ((arg0) => {
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];
       }
-      if (num <= outer1_34) {
-        return callback3.apply(undefined, outer1_32(array));
+      if (num <= closure_1_34) {
+        return callback3.apply(undefined, closure_1_32(array));
       }
     },
     info() {
@@ -5434,8 +5431,8 @@ let tmp11 = ((arg0) => {
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];
       }
-      if (num <= outer1_35) {
-        return callback2.apply(undefined, outer1_32(array));
+      if (num <= closure_1_35) {
+        return callback2.apply(undefined, closure_1_32(array));
       }
     },
     warn() {
@@ -5444,8 +5441,8 @@ let tmp11 = ((arg0) => {
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];
       }
-      if (num <= outer1_36) {
-        return callback4.apply(undefined, outer1_32(array));
+      if (num <= closure_1_36) {
+        return callback4.apply(undefined, closure_1_32(array));
       }
     },
     error() {
@@ -5454,8 +5451,8 @@ let tmp11 = ((arg0) => {
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];
       }
-      if (num <= outer1_37) {
-        return callback5.apply(undefined, outer1_32(array));
+      if (num <= closure_1_37) {
+        return callback5.apply(undefined, closure_1_32(array));
       }
     }
   };
@@ -5467,7 +5464,7 @@ let tmp11 = ((arg0) => {
         if (null == tmp) {
           tmp = num;
         }
-        num = tmp;
+        closure_6 = tmp;
       }
     }
   });
@@ -5539,7 +5536,7 @@ function re(str) {
         first = str.match(/[^\.]+\.[^\.]+$/) || [][0];
         const tmp3 = str.match(/[^\.]+\.[^\.]+$/) || [];
       }
-      const items = [str, first];
+      items = [str, first];
       return items;
     }
   }
@@ -5593,8 +5590,6 @@ function Se(arg0) {
 
 }
 function Nt(requestEndDate, getMetricsFor) {
-  let bytesLoaded;
-  let url;
   if (requestEndDate) {
     if (requestEndDate.requestEndDate) {
       if (typeof closure_44 !== "function") {
@@ -5611,7 +5606,7 @@ function Nt(requestEndDate, getMetricsFor) {
             first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
             const tmp5 = str2.match(/[^\.]+\.[^\.]+$/) || [];
           }
-          let items = [str2, first];
+          items = [str2, first];
           const tmp3 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
         }
         const _Date = Date;
@@ -5649,7 +5644,7 @@ function Nt(requestEndDate, getMetricsFor) {
               const str2 = parts.shift();
               let tmp = str2;
               if (str2) {
-                let tmp3 = outer1_50.indexOf(str2.toLowerCase()) >= 0;
+                let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
                 if (!tmp3) {
                   const formatted = str2.toLowerCase();
                   tmp3 = 0 === formatted.indexOf("x-litix-");
@@ -5746,7 +5741,7 @@ let items2 = [
       self = this;
       _eventEmitterGuid._eventEmitterGuid = _eventEmitterGuid;
       self._listeners = this._listeners || {};
-      let items = self._listeners[arg0];
+      items = self._listeners[arg0];
       if (!items) {
         items = [];
       }
@@ -5762,7 +5757,7 @@ let items2 = [
   {
     key: "off",
     value(arg0, arg1) {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       let _listeners = this._listeners;
       if (_listeners) {
         _listeners = tmp._listeners[arg0];
@@ -5780,9 +5775,9 @@ let items2 = [
     key: "one",
     value(arg0, _eventEmitterGuid) {
       let self = this;
-      let closure_0 = arg0;
-      let closure_1 = _eventEmitterGuid;
-      let closure_2 = arg2;
+      closure_0 = arg0;
+      closure_1 = _eventEmitterGuid;
+      closure_2 = arg2;
       self = this;
       _eventEmitterGuid = _eventEmitterGuid._eventEmitterGuid;
       if (!_eventEmitterGuid) {
@@ -5871,7 +5866,7 @@ N(fn2, items2);
 let closure_58 = G(obj2.exports);
 let fn3 = function r(pm) {
   let self = this;
-  let closure_0 = pm;
+  closure_0 = pm;
   self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
@@ -5950,12 +5945,12 @@ let fn3 = function r(pm) {
       });
       pm.on("devicesleep", (arg0, viewer_time) => {
         if (null !== self._playbackHeartbeatInterval) {
-          outer1_58.default.clearInterval(tmp._playbackHeartbeatInterval);
+          closure_1_58.default.clearInterval(tmp._playbackHeartbeatInterval);
           const obj = { viewer_time: null };
           obj[0] = viewer_time.viewer_time;
           pm.emit("playbackheartbeatend", obj);
           tmp._playbackHeartbeatInterval = null;
-          const _default = outer1_58.default;
+          const _default = closure_1_58.default;
         }
       });
     } else {
@@ -6009,7 +6004,7 @@ let items3 = [
 N(fn3, items3);
 let fn4 = function r(on) {
   let self = this;
-  let closure_0 = on;
+  closure_0 = on;
   self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
@@ -6273,7 +6268,7 @@ let fn6 = function r(pm) {
       });
       pm.on("viewinit", () => {
         self._playbackTimeTrackerLastPlayheadPosition = -1;
-        self._lastTime = outer1_27.now();
+        self._lastTime = closure_1_27.now();
         self._isAdPlaying = false;
         self._callbackUpdatePlaybackTime = null;
       });
@@ -6367,7 +6362,7 @@ const items5 = [
 N(fn6, items5);
 let fn7 = function r(pm) {
   const self = this;
-  let closure_0 = pm;
+  closure_0 = pm;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -6453,7 +6448,7 @@ N(fn7, items6);
 let c64 = 300000;
 let fn8 = function r(disableRebufferTracking) {
   const self = this;
-  let closure_0 = disableRebufferTracking;
+  closure_0 = disableRebufferTracking;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -6464,7 +6459,7 @@ let fn8 = function r(disableRebufferTracking) {
       if (!disableRebufferTracking.disableRebufferTracking) {
         function i(arg0, arg1) {
           a(arg1);
-          let c1;
+          c1 = undefined;
         }
         function a(viewer_time) {
           if (viewer_time) {
@@ -6477,7 +6472,7 @@ let fn8 = function r(disableRebufferTracking) {
             data.view_rebuffer_duration = num;
             data.view_rebuffer_duration = data.view_rebuffer_duration + diff;
             viewer_time = viewer_time.viewer_time;
-            if (disableRebufferTracking.data.view_rebuffer_duration > outer1_64) {
+            if (disableRebufferTracking.data.view_rebuffer_duration > closure_1_64) {
               obj.emit("viewend");
               obj.send("viewend");
               const log = obj.mux.log;
@@ -6505,7 +6500,7 @@ let fn8 = function r(disableRebufferTracking) {
           }
         });
         disableRebufferTracking.on("viewinit", () => {
-          let c1;
+          c1 = undefined;
           disableRebufferTracking.off("rebufferend", i);
         });
       }
@@ -6579,7 +6574,7 @@ const fn9 = function r(pm) {
         const _cleanupRebufferTracker = self._cleanupRebufferTracker;
         pm.on("playbackheartbeatend", _cleanupRebufferTracker.bind(self));
         pm.on("seeking", () => {
-          const result = self._cleanupRebufferTracker(null, { viewer_time: outer1_27.now() });
+          const result = self._cleanupRebufferTracker(null, { viewer_time: closure_1_27.now() });
         });
       }
     } else {
@@ -6693,7 +6688,7 @@ const items7 = [
 N(fn9, items7);
 const fn10 = function r(pm) {
   let self = this;
-  let closure_0 = pm;
+  closure_0 = pm;
   self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
@@ -6732,7 +6727,7 @@ const fn10 = function r(pm) {
             }
             if (tmp) {
               if (!viewer_time) {
-                viewer_time = outer2_27.now();
+                viewer_time = closure_2_27.now();
               }
               const result = fn.calculateTimeToFirstFrame(viewer_time, view_id);
             }
@@ -6793,7 +6788,7 @@ const items8 = [
 N(fn10, items8);
 const fn11 = function r(on) {
   let self = this;
-  let closure_0 = on;
+  closure_0 = on;
   self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
@@ -6835,7 +6830,7 @@ const fn11 = function r(on) {
       on.on("viewinit", () => {
         self._lastPlayheadPosition = -1;
       });
-      const items = ["pause", "rebufferstart", "seeking", "error", "adbreakstart", "hb", "renditionchange", "orientationchange", "viewend", "playbackmodechange"];
+      items = ["pause", "rebufferstart", "seeking", "error", "adbreakstart", "hb", "renditionchange", "orientationchange", "viewend", "playbackmodechange"];
       const item = items.forEach((arg0) => {
         on.on(arg0, () => {
           if (obj._lastPlayheadPosition >= 0) {
@@ -6920,7 +6915,7 @@ const fn11 = function r(on) {
 };
 const fn12 = function r(on) {
   let self = this;
-  let closure_0 = on;
+  closure_0 = on;
   self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
@@ -6936,7 +6931,7 @@ const fn12 = function r(on) {
         self.isSeeking = undefined;
       }
       self.isSeeking = false;
-      let c2 = -1;
+      c2 = -1;
       function a() {
 
       }
@@ -6951,7 +6946,7 @@ const fn12 = function r(on) {
           if (typeof a !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          const nowResult = outer1_27.now();
+          const nowResult = closure_1_27.now();
           let tmp8 = viewer_time;
           if (!viewer_time) {
             tmp8 = nowResult;
@@ -6980,7 +6975,7 @@ const fn12 = function r(on) {
         if (typeof a !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        const nowResult = outer1_27.now();
+        const nowResult = closure_1_27.now();
         let tmp4 = c2;
         if (!c2) {
           tmp4 = nowResult;
@@ -7001,7 +6996,7 @@ const fn12 = function r(on) {
           if (typeof a !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          const nowResult = outer1_27.now();
+          const nowResult = closure_1_27.now();
           let tmp6 = c2;
           if (!c2) {
             tmp6 = nowResult;
@@ -7044,7 +7039,7 @@ function Xt(arg0, arg1) {
 let closure_71 = ["adbreakstart", "adrequest", "adresponse", "adplay", "adplaying", "adpause", "adended", "adbreakend", "aderror", "adclicked", "adskipped"];
 const fn13 = function r(pm) {
   let self = this;
-  let closure_0 = pm;
+  closure_0 = pm;
   self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
@@ -7135,7 +7130,7 @@ const fn13 = function r(pm) {
         self._currentAdRequestNumber = +self._currentAdRequestNumber + 1;
         const _adRequests = self._adRequests;
         const merged = Object.assign({ ad_request_id: `generatedAdRequestId${tmp}` }, arg1);
-        if (typeof outer1_70 !== "function") {
+        if (typeof closure_1_70 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         _adRequests.push(merged);
@@ -7156,7 +7151,7 @@ const fn13 = function r(pm) {
         self._currentAdResponseNumber = +self._currentAdResponseNumber + 1;
         const merged = Object.assign({ ad_request_id: `generatedAdRequestId${tmp}` }, arg1);
         const _adResponses = self._adResponses;
-        if (typeof outer1_70 !== "function") {
+        if (typeof closure_1_70 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         _adResponses.push(merged);
@@ -7290,7 +7285,7 @@ const items9 = [
                   first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
                   const tmp4 = str2.match(/[^\.]+\.[^\.]+$/) || [];
                 }
-                let items = [str2, first];
+                items = [str2, first];
                 const tmp2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
               }
               const _Array = Array;
@@ -7577,7 +7572,7 @@ const items9 = [
 N(fn13, items9);
 const fn14 = function r(one) {
   let self = this;
-  let closure_0 = one;
+  closure_0 = one;
   self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
@@ -7593,11 +7588,11 @@ const fn14 = function r(one) {
         self.lastWallClockTime = undefined;
       }
       const fn = function i() {
-        self.lastWallClockTime = outer1_27.now();
+        self.lastWallClockTime = closure_1_27.now();
         one.on("before*", a);
       };
       function a(arg0) {
-        const nowResult = outer1_27.now();
+        const nowResult = closure_1_27.now();
         const lastWallClockTime = self.lastWallClockTime;
         self.lastWallClockTime = nowResult;
         if (nowResult - lastWallClockTime > 30000) {
@@ -7613,7 +7608,7 @@ const fn14 = function r(one) {
           obj[0] = nowResult;
           one.emit("devicewake", obj);
           const _Object2 = Object;
-          const obj1 = { viewer_time: null };
+          obj1 = { viewer_time: null };
           obj1[0] = nowResult;
           const merged1 = Object.assign(one.data, obj1);
           one.send("devicewake");
@@ -7641,7 +7636,7 @@ const fn14 = function r(one) {
 };
 let closure_74 = G(obj2.exports);
 const fn15 = function e(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const fn = function i(arg0, arg1, arg2) {
     let tmp2 = arg1;
     if (typeof document !== "undefined") {
@@ -7675,7 +7670,7 @@ const fn15 = function e(arg0) {
           obj5 = lib;
           const str9 = encodeURIComponent(String(arg0));
           const _escape = escape;
-          const items = [encodeURIComponent(String(arg0)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape), "=", writeResult, , , , ];
+          items = [encodeURIComponent(String(arg0)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape), "=", writeResult, , , , ];
           let str13 = "";
           if (tmp26.expires) {
             const expires = tmp26.expires;
@@ -7820,7 +7815,7 @@ const fn16 = function i(arg0, arg1, arg2) {
         obj5 = lib;
         const str9 = encodeURIComponent(String(arg0));
         const _escape = escape;
-        const items = [encodeURIComponent(String(arg0)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape), "=", writeResult, , , , ];
+        items = [encodeURIComponent(String(arg0)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape), "=", writeResult, , , , ];
         let str13 = "";
         if (tmp26.expires) {
           const expires = tmp26.expires;
@@ -8302,8 +8297,8 @@ class $ {
       obj._sendTimeout = false;
       tmp2 = globalThis;
       _Object = Object;
-      tmp3 = f59646;
-      obj._options = Object.assign({}, f59646, {});
+      tmp3 = closure_85;
+      obj._options = Object.assign({}, closure_85, {});
       return;
     }
     return;
@@ -8356,7 +8351,7 @@ class $ {
     } else {
       flushEventsResult = self.flushEvents();
     }
-    _default = or.default;
+    _default = closure_84.default;
     clearTimeoutResult = _default.clearTimeout(self._sendTimeout);
     return;
   }
@@ -8373,29 +8368,29 @@ class $ {
       _Object = Object;
       num2 = 1;
       obj = { mux_view_message: "event queue truncated" };
-      f94619 = obj;
+      closure_0 = obj;
       obj = {};
-      c1 = obj;
+      closure_1 = obj;
       obj1 = {};
-      defineProperty = obj1;
+      closure_2 = obj1;
       _Object2 = Object;
       keys = Object.keys(obj);
       item = keys.forEach((key10009) => {
-        let c1 = false;
+        c1 = false;
         if (key10009.hasOwnProperty(key10009)) {
           if (undefined !== tmp[key10009]) {
             const parts = key10009.split("_");
             const first = parts[0];
-            let closure_2 = tmp12;
-            if (!outer1_82[first]) {
-              outer1_38.info(`Data key word \`${arr2[0]}\` not expected in ${key10009}`);
+            closure_2 = tmp12;
+            if (!closure_1_82[first]) {
+              closure_1_38.info(`Data key word \`${arr2[0]}\` not expected in ${key10009}`);
               closure_2 = `${tmp10}_`;
             }
             const item = parts.splice(1).forEach((arg0) => {
               if ("url" === arg0) {
-                let c1 = true;
+                c1 = true;
               }
-              if (outer1_83[arg0]) {
+              if (closure_1_83[arg0]) {
                 closure_2 = closure_2 + tmp[arg0];
               } else {
                 const _Number = Number;
@@ -8403,7 +8398,7 @@ class $ {
                 if (Number.isInteger(Number(arg0))) {
                   closure_2 = closure_2 + arg0;
                 } else {
-                  outer1_38.info(`Data key word \`${arg0}\` not expected in ${closure_0}`);
+                  closure_1_38.info(`Data key word \`${arg0}\` not expected in ${closure_0}`);
                   closure_2 = `${closure_2}_${arg0}_`;
                 }
               }
@@ -8435,14 +8430,14 @@ class $ {
       _eventQueue = self._eventQueue;
       num = 0;
       substr = require("module_0");
-      slice = substr;
+      closure_1 = substr;
       _eventQueue1 = self._eventQueue;
       self._eventQueue = _eventQueue1.slice(self._options.maxBeaconSize);
       flag = true;
       self._postInFlight = true;
-      tmp3 = defineProperty;
+      tmp3 = closure_27;
       _createPayloadResult = self._createPayload(substr);
-      now = defineProperty.now();
+      closure_2 = closure_27.now();
       tmp4 = Mr;
       flag2 = false;
       num2 = 0;
@@ -8450,13 +8445,13 @@ class $ {
         if (arg1) {
           tmp._eventQueue = substr.concat(tmp._eventQueue);
           tmp._failureCount = tmp._failureCount + 1;
-          outer1_38.info(`Error sending beacon: ${arg1}`);
+          closure_1_38.info(`Error sending beacon: ${arg1}`);
           let obj = tmp;
         } else {
           tmp._failureCount = 0;
           obj = tmp;
         }
-        obj._roundTripTime = outer1_27.now() - closure_2;
+        obj._roundTripTime = closure_1_27.now() - closure_2;
         obj._postInFlight = false;
         if (obj._resendAfterPost) {
           obj._resendAfterPost = false;
@@ -8485,8 +8480,8 @@ class $ {
   _startBeaconSending() {
     self = this;
     self = this;
-    _default = or.default;
-    tmp = or;
+    _default = closure_84.default;
+    tmp = closure_84;
     clearTimeoutResult = _default.clearTimeout(this._sendTimeout);
     if (!this.destroyed) {
       _default2 = tmp.default;
@@ -8501,7 +8496,7 @@ class $ {
   }
   _createPayload(arg0) {
     self = this;
-    obj = { transmission_timestamp: Math.round(defineProperty.now()) };
+    obj = { transmission_timestamp: Math.round(closure_27.now()) };
     if (this._roundTripTime) {
       _Math = Math;
       obj.rtt_ms = Math.round(self._roundTripTime);
@@ -8511,10 +8506,10 @@ class $ {
     result = json.length / 1024;
     result1 = result;
     if (result > self._options.maxPayloadKBSize) {
-      tmp4 = f59653;
+      tmp4 = closure_38;
       str = " kb). Removing unnecessary events.";
       str2 = "Payload size is too big (";
-      infoResult = f59653.info(`Payload size is too big (${tmp} kb). Removing unnecessary events.`);
+      infoResult = closure_38.info(`Payload size is too big (${tmp} kb). Removing unnecessary events.`);
       found = global.filter((arg0) => -1 === closure_86.indexOf(arg0.e));
       obj1 = { metadata: null, events: null };
       obj1[0] = obj;
@@ -8530,10 +8525,10 @@ class $ {
       arr2 = found;
     }
     if (result1 > self._options.maxPayloadKBSize) {
-      tmp8 = f59653;
+      tmp8 = closure_38;
       str3 = " kb). Cropping fields..";
       str4 = "Payload size still too big (";
-      infoResult1 = f59653.info(`Payload size still too big (${tmp2} kb). Cropping fields..`);
+      infoResult1 = closure_38.info(`Payload size still too big (${tmp2} kb). Cropping fields..`);
       item = arr2.forEach((obj) => {
         for (const key10005 in arg0) {
           let tmp = key10005;
@@ -8566,7 +8561,7 @@ class $ {
 }
 let closure_87 = typeof G(obj16.exports).default.exitPictureInPicture === "function" ? ((arg0) => arg0.length <= 57344) : ((arg0) => false);
 function Mr(_beaconUrl, _createPayloadResult, arg2, arg3) {
-  let closure_0 = arg3;
+  closure_0 = arg3;
   if (arg2) {
     const _navigator = navigator;
     if (navigator) {
@@ -8623,9 +8618,6 @@ let closure_91 = ["adplay", "adplaying", "adpause", "adfirstquartile", "admidpoi
 let closure_92 = ["ad_id", "ad_creative_id", "ad_universal_id"];
 let closure_93 = ["viewstart", "error", "ended", "viewend"];
 const fn18 = function r(mux, envKey) {
-  let beaconCollectionDomain;
-  let beaconDomain;
-  let options;
   if (arguments.length > 2) {
     const self = this;
     const _Symbol = Symbol;
@@ -8927,7 +8919,7 @@ const items10 = [
                 const tmp7 = tmp6.default.navigator && tmp6.default.navigator.doNotTrack;
               }
               if ("1" === doNotTrack) {
-                return tmp11.info("Not sending `" + arg0 + "` because Do Not Track is enabled");
+                return logger.info("Not sending `" + arg0 + "` because Do Not Track is enabled");
               }
             }
             if (view_id) {
@@ -9003,28 +8995,28 @@ const items10 = [
                 }
                 const result = self._deduplicateBeaconData(arg0, obj);
                 obj = result;
-                const obj1 = {};
+                obj1 = {};
                 obj3 = obj1;
                 const obj2 = {};
                 let obj4 = obj2;
                 const _Object7 = Object;
                 const keys1 = Object.keys(result);
                 const item1 = keys1.forEach((key10009) => {
-                  let c1 = false;
+                  c1 = false;
                   if (key10009.hasOwnProperty(key10009)) {
                     if (undefined !== tmp[key10009]) {
                       const parts = key10009.split("_");
                       const first = parts[0];
-                      let closure_2 = tmp12;
-                      if (!outer1_82[first]) {
-                        outer1_38.info(`Data key word \`${arr2[0]}\` not expected in ${key10009}`);
+                      closure_2 = tmp12;
+                      if (!closure_1_82[first]) {
+                        closure_1_38.info(`Data key word \`${arr2[0]}\` not expected in ${key10009}`);
                         closure_2 = `${tmp10}_`;
                       }
                       const item = parts.splice(1).forEach((arg0) => {
                         if ("url" === arg0) {
-                          let c1 = true;
+                          c1 = true;
                         }
-                        if (outer1_83[arg0]) {
+                        if (closure_1_83[arg0]) {
                           closure_2 = closure_2 + tmp[arg0];
                         } else {
                           const _Number = Number;
@@ -9032,7 +9024,7 @@ const items10 = [
                           if (Number.isInteger(Number(arg0))) {
                             closure_2 = closure_2 + arg0;
                           } else {
-                            outer1_38.info(`Data key word \`${arg0}\` not expected in ${closure_0}`);
+                            closure_1_38.info(`Data key word \`${arg0}\` not expected in ${closure_0}`);
                             closure_2 = `${closure_2}_${arg0}_`;
                           }
                         }
@@ -9051,13 +9043,13 @@ const items10 = [
                 const utils = self.mux.utils;
                 self.lastEventTime = utils.now();
                 if (tmp26) {
-                  return tmp11.info("Not sending event due to sample rate restriction", arg0, obj, merged);
+                  return logger.info("Not sending event due to sample rate restriction", arg0, obj, merged);
                 } else {
                   if (!self.envKey) {
-                    tmp11.info("Missing environment key (envKey) - beacons will be dropped if the video source is not a valid mux video URL", arg0, obj, merged);
+                    logger.info("Missing environment key (envKey) - beacons will be dropped if the video source is not a valid mux video URL", arg0, obj, merged);
                   }
                   if (!self.rateLimited) {
-                    tmp11.info("Sending event", arg0, obj, merged);
+                    logger.info("Sending event", arg0, obj, merged);
                     const eventQueue = self.eventQueue;
                     self.rateLimited = !eventQueue.queueEvent(arg0, merged);
                     if (self.mux.WINDOW_UNLOADING) {
@@ -9078,21 +9070,21 @@ const items10 = [
                         const _Object9 = Object;
                         const keys2 = Object.keys(obj);
                         const item2 = keys2.forEach((key10009) => {
-                          let c1 = false;
+                          c1 = false;
                           if (key10009.hasOwnProperty(key10009)) {
                             if (undefined !== tmp[key10009]) {
                               const parts = key10009.split("_");
                               const first = parts[0];
-                              let closure_2 = tmp12;
-                              if (!outer1_82[first]) {
-                                outer1_38.info(`Data key word \`${arr2[0]}\` not expected in ${key10009}`);
+                              closure_2 = tmp12;
+                              if (!closure_1_82[first]) {
+                                closure_1_38.info(`Data key word \`${arr2[0]}\` not expected in ${key10009}`);
                                 closure_2 = `${tmp10}_`;
                               }
                               const item = parts.splice(1).forEach((arg0) => {
                                 if ("url" === arg0) {
-                                  let c1 = true;
+                                  c1 = true;
                                 }
-                                if (outer1_83[arg0]) {
+                                if (closure_1_83[arg0]) {
                                   closure_2 = closure_2 + tmp[arg0];
                                 } else {
                                   const _Number = Number;
@@ -9100,7 +9092,7 @@ const items10 = [
                                   if (Number.isInteger(Number(arg0))) {
                                     closure_2 = closure_2 + arg0;
                                   } else {
-                                    outer1_38.info(`Data key word \`${arg0}\` not expected in ${closure_0}`);
+                                    closure_1_38.info(`Data key word \`${arg0}\` not expected in ${closure_0}`);
                                     closure_2 = `${closure_2}_${arg0}_`;
                                   }
                                 }
@@ -9124,13 +9116,13 @@ const items10 = [
                       const eventQueue2 = self.eventQueue;
                       eventQueue2.flushEvents();
                     }
-                    obj6 = tmp11;
+                    obj6 = logger;
                   }
                 }
                 tmp26 = num4 >= self.sampleRate;
               }
             }
-            return tmp11.error("A data object was expected in send() but was not provided");
+            return logger.error("A data object was expected in send() but was not provided");
           }
         }
       }
@@ -9147,7 +9139,7 @@ const items10 = [
     key: "_deduplicateBeaconData",
     value(arr, view_id) {
       let self = this;
-      let closure_0 = arr;
+      closure_0 = arr;
       self = this;
       let obj = {};
       view_id = view_id.view_id;
@@ -9157,12 +9149,10 @@ const items10 = [
             if (self.previousBeaconData) {
               const utils = self.mux.utils;
               if (utils.now() - self.lastEventTime < 600000) {
-                let closure_3 = 0 === arr.indexOf("request");
+                closure_3 = 0 === arr.indexOf("request");
                 const _Object = Object;
                 const entries = Object.entries(view_id);
                 const item = entries.forEach((items) => {
-                  let tmp7;
-                  let tmp8;
                   let tmp;
                   if (Array.isArray(items)) {
                     tmp = items;
@@ -9263,7 +9253,7 @@ const items10 = [
                     })(items, 2);
                   }
                   if (!tmp) {
-                    tmp = outer1_23(items, 2);
+                    tmp = closure_1_23(items, 2);
                   }
                   if (tmp) {
                     [tmp7, tmp8] = tmp;
@@ -9271,7 +9261,7 @@ const items10 = [
                     if (previousBeaconData) {
                       let eventRequiresKeyResult = tmp8 !== obj.previousBeaconData[tmp7];
                       if (!eventRequiresKeyResult) {
-                        eventRequiresKeyResult = outer1_90.indexOf(tmp7) > -1;
+                        eventRequiresKeyResult = closure_1_90.indexOf(tmp7) > -1;
                       }
                       if (!eventRequiresKeyResult) {
                         eventRequiresKeyResult = obj.objectHasChanged(closure_3, tmp7, tmp8, obj.previousBeaconData[tmp7]);
@@ -9360,7 +9350,7 @@ const items10 = [
 N(fn18, items10);
 const fn19 = function r(on) {
   const self = this;
-  let closure_0 = on;
+  closure_0 = on;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -9368,18 +9358,14 @@ const fn19 = function r(on) {
       let tmp2 = tmp[Symbol.hasInstance](self);
     }
     if (tmp2) {
-      let c1 = 0;
-      let c2 = 0;
-      let c3 = 0;
-      let c4 = 0;
-      let c5 = 0;
-      let c6 = 0;
-      let c7 = 0;
+      c1 = 0;
+      c2 = 0;
+      c3 = 0;
+      c4 = 0;
+      c5 = 0;
+      c6 = 0;
+      c7 = 0;
       on.on("requestcompleted", (arg0, arg1) => {
-        let request_bytes_loaded;
-        let request_response_end;
-        let request_response_start;
-        let request_start;
         ({ request_start, request_response_start, request_response_end, request_bytes_loaded } = arg1);
         closure_4 = closure_4 + 1;
         if (request_response_start) {
@@ -9460,7 +9446,7 @@ const fn19 = function r(on) {
 };
 const fn20 = function r(on) {
   let self = this;
-  let closure_0 = on;
+  closure_0 = on;
   self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
@@ -9477,7 +9463,7 @@ const fn20 = function r(on) {
       }
       on.on("before*", (type, viewer_time) => {
         viewer_time = viewer_time.viewer_time;
-        const nowResult = outer1_27.now();
+        const nowResult = closure_1_27.now();
         const _lastEventTime = self._lastEventTime;
         self._lastEventTime = nowResult;
         if (_lastEventTime) {
@@ -9545,7 +9531,7 @@ const fn20 = function r(on) {
 };
 const fn21 = function r(on) {
   const self = this;
-  let closure_0 = on;
+  closure_0 = on;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -9556,15 +9542,15 @@ const fn21 = function r(on) {
       function t(arg0) {
 
       }
-      let c2 = null;
-      let c3 = null;
-      let c4 = null;
-      let c5 = 0;
+      c2 = null;
+      c3 = null;
+      c4 = null;
+      c5 = 0;
       on.on("viewinit", () => {
-        let c2 = null;
-        let c3 = null;
-        let c4 = null;
-        let c5 = 0;
+        c2 = null;
+        c3 = null;
+        c4 = null;
+        c5 = 0;
       });
       on.on("beforecdnchange", (arg0, video_cdn) => {
         video_cdn = undefined;
@@ -9673,7 +9659,7 @@ const fn21 = function r(on) {
 };
 const fn22 = function r(on) {
   let self = this;
-  let closure_0 = on;
+  closure_0 = on;
   self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
@@ -9706,7 +9692,6 @@ const fn22 = function r(on) {
         self._hasInitialized = false;
       });
       on.on("playbackmodechange", (arg0, player_playback_mode_data) => {
-        let player_playback_mode;
         if (!self._emittingAutomaticEvent) {
           player_playback_mode = player_playback_mode_data;
           if (player_playback_mode_data.player_playback_mode_data) {
@@ -9751,7 +9736,7 @@ f94619 = undefined;
 class t {
   constructor(arg0, arg1, arg2) {
     self = this;
-    tmp3 = bind;
+    tmp3 = closure_1;
     if (typeof Symbol !== "undefined") {
       _Symbol3 = Symbol;
       if (tmp3[Symbol.hasInstance]) {
@@ -9759,10 +9744,10 @@ class t {
         tmp4 = tmp3[Symbol.hasInstance](self);
       }
       if (tmp4) {
-        tmp9 = call;
-        call = call.call;
+        tmp9 = closure_0;
+        call = closure_0.call;
         obj = typeof call === "unknown" ? tmp9() : call(self);
-        call = obj;
+        closure_0 = obj;
         tmp10 = undefined === obj;
         if (tmp10) {
           _ReferenceError47 = ReferenceError;
@@ -10217,9 +10202,9 @@ class t {
                                                                     tmp41 = global;
                                                                     tmp42 = require;
                                                                     tmp43 = importDefault;
-                                                                    tmp44 = c47;
-                                                                    obj.pageLoadInitTime = c47.navigationStart();
-                                                                    obj.pageLoadEndTime = c47.domContentLoadedEventEnd();
+                                                                    tmp44 = closure_47;
+                                                                    obj.pageLoadInitTime = closure_47.navigationStart();
+                                                                    obj.pageLoadEndTime = closure_47.domContentLoadedEventEnd();
                                                                     obj = { debug: false, minimumRebufferDuration: 250, sustainedRebufferThreshold: 1000, playbackHeartbeatTime: 25, beaconDomain: "litix.io", sampleRate: 1, disableCookies: false, respectDoNotTrack: false, disableRebufferTracking: false, disablePlayheadRebufferTracking: false, errorTranslator: null, emitTranslator: null, stateDataTranslator: null };
                                                                     obj[10] = function errorTranslator(arg0) {
                                                                       return arg0;
@@ -10253,7 +10238,7 @@ class t {
                                                                       str33 = "property_key";
                                                                       delete tmp2[tmp];
                                                                     }
-                                                                    f59653.level = merged.debug ? c34 : c36;
+                                                                    closure_38.level = merged.debug ? c34 : c36;
                                                                     obj.getPlayheadTime = merged.getPlayheadTime;
                                                                     obj.getStateData = merged.getStateData || (() => ({}));
                                                                     obj.getAdData = merged.getAdData || (() => {
@@ -10295,7 +10280,7 @@ class t {
                                                                       referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
                                                                       throw referenceError;
                                                                     } else {
-                                                                      bind = tmp54(obj);
+                                                                      closure_1 = tmp54(obj);
                                                                       str35 = "viewinit";
                                                                       onResult = obj.on("viewinit", function(arg0, arg1) {
                                                                         this._resetVideoData();
@@ -10372,8 +10357,8 @@ class t {
                                                                       onResult5 = obj.on("playerready", function(arg0, arg1) {
                                                                         const merged = Object.assign(this.data, arg1);
                                                                       });
-                                                                      tmp61 = r;
-                                                                      item = r.forEach((arg0) => {
+                                                                      tmp61 = closure_99;
+                                                                      item = closure_99.forEach((arg0) => {
                                                                         arg0.on(arg0, function(arg0, arg1) {
                                                                           const self = this;
                                                                           if (0 !== closure_0.indexOf("ad")) {
@@ -10741,7 +10726,7 @@ const items11 = [
       const self = this;
       const utils = this.mux.utils;
       const merged = Object.assign({ viewer_time: utils.now() }, arg1);
-      const items = [arg0, merged];
+      items = [arg0, merged];
       let emitTranslatorResult = items;
       if (this.emitTranslator) {
         try {
@@ -10801,7 +10786,7 @@ const items11 = [
           merged.video_source_is_live = true;
         }
         if (!merged.video_source_is_live) {
-          const items = ["player_program_time", "player_manifest_newest_program_time", "player_live_edge_program_time", "player_program_time", "video_holdback", "video_part_holdback", "video_target_duration", "video_part_target_duration"];
+          items = ["player_program_time", "player_manifest_newest_program_time", "player_live_edge_program_time", "player_program_time", "video_holdback", "video_part_holdback", "video_target_duration", "video_part_target_duration"];
           const item = items.forEach((arg0) => {
             merged[arg0] = undefined;
           });
@@ -10996,7 +10981,7 @@ const items11 = [
     key: "_sanitizeData",
     value() {
       const self = this;
-      const items = ["player_width", "player_height", "video_source_width", "video_source_height", "player_playhead_time", "video_source_bitrate"];
+      items = ["player_width", "player_height", "video_source_width", "video_source_height", "player_playhead_time", "video_source_bitrate"];
       const item = items.forEach((arg0) => {
         const parsed = parseInt(self.data[arg0], 10);
         let tmp2;
@@ -11065,7 +11050,7 @@ const items11 = [
       self = this;
       const tmp = ee();
       this.data.view_id = tmp;
-      let closure_1 = tmp;
+      closure_1 = tmp;
       if (this.data.player_is_paused) {
         self.one("play", function o() {
           if (closure_1 === self.data.view_id) {
@@ -11096,9 +11081,6 @@ const items11 = [
   {
     key: "addHLSJS",
     value(hlsjs) {
-      let Hls;
-      let id;
-      let mux;
       const self = this;
       if (hlsjs.hlsjs) {
         if (self.hlsjs) {
@@ -11113,14 +11095,14 @@ const items11 = [
             Hls = window.Hls;
           }
           ((mux, id, hlsjs, arg3, Hls) => {
-            let closure_0 = mux;
-            let closure_1 = id;
-            let closure_2 = hlsjs;
+            closure_0 = mux;
+            closure_1 = id;
+            closure_2 = hlsjs;
             let tmp;
             if (arguments.length > 4) {
               tmp = arguments[4];
             }
-            let closure_3 = tmp;
+            closure_3 = tmp;
             const log = mux.log;
             const secondsToMs = mux.utils.secondsToMs;
             function s(arg0) {
@@ -11131,33 +11113,22 @@ const items11 = [
 
               }
               const fn = function f(arg0, arg1) {
-                let audioTracks;
-                let bytesLoaded;
-                let levels;
-                let networkDetails;
-                let requestStart;
-                let responseEnd;
-                let responseStart;
-                let sessionData;
-                let stats;
-                let str3;
-                let url;
                 ({ levels, audioTracks, url, stats, networkDetails, sessionData } = arg1);
                 let obj = {};
                 let obj2 = obj;
                 obj = {};
-                let obj3 = obj;
+                obj3 = obj;
                 const item = levels.forEach((width) => {
                   obj2[arg1] = { width: width.width, height: width.height, bitrate: width.bitrate, attrs: width.attrs };
                 });
                 const item1 = audioTracks.forEach((name) => {
                   obj3[arg1] = { name: name.name, language: name.lang, bitrate: name.bitrate };
                 });
-                if (typeof outer1_52 !== "function") {
+                if (typeof closure_1_52 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (stats) {
-                  const navigationStartResult = outer1_47.navigationStart();
+                  const navigationStartResult = closure_1_47.navigationStart();
                   let loading = stats.loading;
                   let round = loading ? loading.start : stats.trequest;
                   let _Math = loading ? loading.first : stats.tfirst;
@@ -11175,7 +11146,7 @@ const items11 = [
                 } else {
                   obj = {};
                   ({ bytesLoaded, requestStart, responseStart, responseEnd } = obj);
-                  if (typeof outer1_51 !== "function") {
+                  if (typeof closure_1_51 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   for (const key10049 in sessionData) {
@@ -11191,17 +11162,17 @@ const items11 = [
                     continue;
                   }
                   obj2 = {};
-                  outer1_48(obj2, {});
+                  closure_1_48(obj2, {});
                   obj3 = { request_event_type: null, request_bytes_loaded: null, request_start: null, request_response_start: null, request_response_end: null, request_type: "manifest", request_hostname: null, request_response_headers: null, request_rendition_lists: null };
                   obj3[0] = arg0;
                   obj3[1] = bytesLoaded;
                   obj3[2] = requestStart;
                   obj3[3] = responseStart;
                   obj3[4] = responseEnd;
-                  if (typeof outer1_44 !== "function") {
+                  if (typeof closure_1_44 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof outer1_45 !== "function") {
+                  if (typeof closure_1_45 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   if (typeof url === "string") {
@@ -11212,11 +11183,11 @@ const items11 = [
                         first = str4.match(/[^\.]+\.[^\.]+$/) || [][0];
                         const tmp18 = str4.match(/[^\.]+\.[^\.]+$/) || [];
                       }
-                      let items = [str4, first];
+                      items = [str4, first];
                       const tmp16 = url.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                     }
                     obj3[6] = items[0];
-                    if (typeof outer1_53 !== "function") {
+                    if (typeof closure_1_53 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     let tmp20;
@@ -11235,7 +11206,7 @@ const items11 = [
                             const str2 = parts.shift();
                             let tmp = str2;
                             if (str2) {
-                              let tmp3 = outer1_50.indexOf(str2.toLowerCase()) >= 0;
+                              let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
                               if (!tmp3) {
                                 const formatted = str2.toLowerCase();
                                 tmp3 = 0 === formatted.indexOf("x-litix-");
@@ -11283,26 +11254,19 @@ const items11 = [
                     obj2.emit(obj3, "requestcompleted", obj2);
                   }
                   items = ["localhost"];
-                  const obj1 = {};
+                  obj1 = {};
                   tmp8 = u;
-                  const tmp9 = outer1_48;
+                  const tmp9 = closure_1_48;
                 }
               };
               hlsjs.on(tmp.Events.MANIFEST_LOADED, fn);
               const fn2 = function g(arg0, level) {
-                let bytesLoaded;
-                let details;
-                let networkDetails;
-                let requestStart;
-                let responseEnd;
-                let responseStart;
-                let stats;
                 ({ details, networkDetails, stats } = level);
-                if (typeof outer1_52 !== "function") {
+                if (typeof closure_1_52 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (stats) {
-                  const navigationStartResult = outer1_47.navigationStart();
+                  const navigationStartResult = closure_1_47.navigationStart();
                   let loading = stats.loading;
                   let round = loading ? loading.start : stats.trequest;
                   let _Math = loading ? loading.first : stats.tfirst;
@@ -11324,7 +11288,7 @@ const items11 = [
                     HermesBuiltin.throwTypeError();
                   }
                   const _parseInt = parseInt;
-                  const parsed = parseInt(tmp.version);
+                  const parsed = parseInt(closure_3.version);
                   let tmp11 = 1 === parsed;
                   if (tmp11) {
                     tmp11 = null !== tmp6.programDateTime;
@@ -11348,10 +11312,10 @@ const items11 = [
                   obj[3] = responseStart;
                   obj[4] = responseEnd;
                   obj[5] = level.level;
-                  if (typeof outer1_44 !== "function") {
+                  if (typeof closure_1_44 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof outer1_45 !== "function") {
+                  if (typeof closure_1_45 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   if (typeof details.url === "string") {
@@ -11362,11 +11326,11 @@ const items11 = [
                         first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
                         const tmp24 = str2.match(/[^\.]+\.[^\.]+$/) || [];
                       }
-                      let items = [str2, first];
+                      items = [str2, first];
                       const tmp22 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                     }
                     obj[7] = items[0];
-                    if (typeof outer1_53 !== "function") {
+                    if (typeof closure_1_53 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     let tmp26;
@@ -11384,7 +11348,7 @@ const items11 = [
                             const str2 = parts.shift();
                             let tmp = str2;
                             if (str2) {
-                              let tmp3 = outer1_50.indexOf(str2.toLowerCase()) >= 0;
+                              let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
                               if (!tmp3) {
                                 const formatted = str2.toLowerCase();
                                 tmp3 = 0 === formatted.indexOf("x-litix-");
@@ -11425,15 +11389,13 @@ const items11 = [
                 }
               };
               hlsjs.on(tmp.Events.LEVEL_LOADED, fn2);
-              const fn3 = function k(arg0, details) {
-                let networkDetails;
-                let stats;
+              fn3 = function k(arg0, details) {
                 ({ networkDetails, stats } = details);
-                if (typeof outer1_52 !== "function") {
+                if (typeof closure_1_52 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (stats) {
-                  const navigationStartResult = outer1_47.navigationStart();
+                  const navigationStartResult = closure_1_47.navigationStart();
                   let loading = stats.loading;
                   let round = loading ? loading.start : stats.trequest;
                   let _Math = loading ? loading.first : stats.tfirst;
@@ -11453,10 +11415,10 @@ const items11 = [
                   obj = { request_event_type: null, request_bytes_loaded: null, request_start: null, request_response_start: null, request_response_end: null, request_type: "manifest", request_hostname: null, request_response_headers: null };
                   obj[0] = arg0;
                   ({ bytesLoaded: obj3[1], requestStart: obj3[2], responseStart: obj3[3], responseEnd: obj3[4] } = obj);
-                  if (typeof outer1_44 !== "function") {
+                  if (typeof closure_1_44 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof outer1_45 !== "function") {
+                  if (typeof closure_1_45 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   if (typeof details.details.url === "string") {
@@ -11467,11 +11429,11 @@ const items11 = [
                         first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
                         const tmp12 = str2.match(/[^\.]+\.[^\.]+$/) || [];
                       }
-                      let items = [str2, first];
+                      items = [str2, first];
                       const tmp10 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                     }
                     obj[6] = items[0];
-                    if (typeof outer1_53 !== "function") {
+                    if (typeof closure_1_53 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     let tmp14;
@@ -11489,7 +11451,7 @@ const items11 = [
                             const str2 = parts.shift();
                             let tmp = str2;
                             if (str2) {
-                              let tmp3 = outer1_50.indexOf(str2.toLowerCase()) >= 0;
+                              let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
                               if (!tmp3) {
                                 const formatted = str2.toLowerCase();
                                 tmp3 = 0 === formatted.indexOf("x-litix-");
@@ -11516,23 +11478,16 @@ const items11 = [
                 }
               };
               hlsjs.on(tmp.Events.AUDIO_TRACK_LOADED, fn3);
-              const fn4 = function h(arg0, arg1) {
-                let bytesLoaded;
-                let frag;
-                let networkDetails;
-                let requestStart;
-                let responseEnd;
-                let responseStart;
-                let stats;
+              fn4 = function h(arg0, arg1) {
                 ({ stats, networkDetails, frag } = arg1);
                 if (!stats) {
                   stats = frag.stats;
                 }
-                if (typeof outer1_52 !== "function") {
+                if (typeof closure_1_52 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (stats) {
-                  const navigationStartResult = outer1_47.navigationStart();
+                  const navigationStartResult = closure_1_47.navigationStart();
                   let loading = stats.loading;
                   let round = loading ? loading.start : stats.trequest;
                   let _Math = loading ? loading.first : stats.tfirst;
@@ -11551,7 +11506,7 @@ const items11 = [
                   let obj = {};
                   ({ bytesLoaded, requestStart, responseStart, responseEnd } = obj);
                   if (networkDetails) {
-                    if (typeof outer1_53 !== "function") {
+                    if (typeof closure_1_53 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     let tmp8;
@@ -11569,7 +11524,7 @@ const items11 = [
                             const str2 = parts.shift();
                             let tmp = str2;
                             if (str2) {
-                              let tmp3 = outer1_50.indexOf(str2.toLowerCase()) >= 0;
+                              let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
                               if (!tmp3) {
                                 const formatted = str2.toLowerCase();
                                 tmp3 = 0 === formatted.indexOf("x-litix-");
@@ -11599,7 +11554,7 @@ const items11 = [
                       obj = tmp6;
                       let tmp18;
                       if (tmp6) {
-                        const found = outer1_49.find((arg0) => undefined !== obj[arg0]);
+                        const found = closure_1_49.find((arg0) => undefined !== obj[arg0]);
                         let tmp21;
                         if (found) {
                           tmp21 = tmp6[found];
@@ -11633,10 +11588,10 @@ const items11 = [
                     }
                     obj.emit(closure_1, "requestcompleted", obj);
                   } else {
-                    if (typeof outer1_44 !== "function") {
+                    if (typeof closure_1_44 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    if (typeof outer1_45 !== "function") {
+                    if (typeof closure_1_45 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     if (typeof networkDetails.responseURL === "string") {
@@ -11647,7 +11602,7 @@ const items11 = [
                           first = str4.match(/[^\.]+\.[^\.]+$/) || [][0];
                           const tmp15 = str4.match(/[^\.]+\.[^\.]+$/) || [];
                         }
-                        let items = [str4, first];
+                        items = [str4, first];
                         const tmp13 = str3.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                       }
                       const first1 = items[0];
@@ -11657,12 +11612,12 @@ const items11 = [
                 }
               };
               hlsjs.on(tmp.Events.FRAG_LOADED, fn4);
-              const fn5 = function c(arg0, frag) {
+              fn5 = function c(arg0, frag) {
                 frag = frag.frag;
                 if (typeof s !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                const parsed = parseInt(tmp.version);
+                const parsed = parseInt(closure_3.version);
                 let tmp2 = 1 === parsed;
                 if (tmp2) {
                   tmp2 = null !== frag.programDateTime;
@@ -11684,13 +11639,7 @@ const items11 = [
                 mux.emit(closure_1, "fragmentchange", { currentFragmentPDT: programDateTime, currentFragmentStart: secondsToMs(frag.start) });
               };
               hlsjs.on(tmp.Events.FRAG_CHANGED, fn5);
-              const fn6 = function m(arg0, url) {
-                let details;
-                let fatal;
-                let frag;
-                let networkDetails;
-                let response;
-                let type;
+              fn6 = function m(arg0, url) {
                 ({ details, response, frag, networkDetails } = url);
                 let str;
                 ({ type, fatal } = url);
@@ -11704,7 +11653,7 @@ const items11 = [
                   str = "";
                 }
                 if (networkDetails) {
-                  if (typeof outer1_53 !== "function") {
+                  if (typeof closure_1_53 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   let tmp3;
@@ -11722,7 +11671,7 @@ const items11 = [
                           const str2 = parts.shift();
                           let tmp = str2;
                           if (str2) {
-                            let tmp3 = outer1_50.indexOf(str2.toLowerCase()) >= 0;
+                            let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
                             if (!tmp3) {
                               const formatted = str2.toLowerCase();
                               tmp3 = 0 === formatted.indexOf("x-litix-");
@@ -11743,10 +11692,10 @@ const items11 = [
                   obj = { request_error: null, request_url: null, request_hostname: null, request_id: null, request_type: null, request_error_code: null, request_error_text: null };
                   obj[0] = details;
                   obj[1] = str;
-                  if (typeof outer1_44 !== "function") {
+                  if (typeof closure_1_44 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof outer1_45 !== "function") {
+                  if (typeof closure_1_45 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   if (typeof str === "string") {
@@ -11757,7 +11706,7 @@ const items11 = [
                         first = str4.match(/[^\.]+\.[^\.]+$/) || [][0];
                         const tmp12 = str4.match(/[^\.]+\.[^\.]+$/) || [];
                       }
-                      let items = [str4, first];
+                      items = [str4, first];
                       const tmp10 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                     }
                     obj[2] = items[0];
@@ -11766,7 +11715,7 @@ const items11 = [
                       obj = tmp;
                       let tmp14;
                       if (tmp) {
-                        const found = outer1_49.find((arg0) => undefined !== obj[arg0]);
+                        const found = closure_1_49.find((arg0) => undefined !== obj[arg0]);
                         let tmp17;
                         if (found) {
                           tmp17 = tmp[found];
@@ -11896,7 +11845,7 @@ const items11 = [
                 }
               };
               hlsjs.on(tmp.Events.ERROR, fn6);
-              const fn7 = function w(request_event_type, frag) {
+              fn7 = function w(request_event_type, frag) {
                 frag = frag.frag;
                 let str = frag;
                 if (frag) {
@@ -11906,10 +11855,10 @@ const items11 = [
                   str = "";
                 }
                 const obj = { request_event_type, request_url: str, request_type: "media", request_hostname: null };
-                if (typeof outer1_44 !== "function") {
+                if (typeof closure_1_44 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof outer1_45 !== "function") {
+                if (typeof closure_1_45 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (typeof str === "string") {
@@ -11920,7 +11869,7 @@ const items11 = [
                       first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
                       const tmp4 = str2.match(/[^\.]+\.[^\.]+$/) || [];
                     }
-                    let items = [str2, first];
+                    items = [str2, first];
                     const tmp2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                   }
                   obj[3] = items[0];
@@ -11932,7 +11881,7 @@ const items11 = [
                 items = ["localhost"];
               };
               hlsjs.on(tmp.Events.FRAG_LOAD_EMERGENCY_ABORTED, fn7);
-              const fn8 = function x(arg0, arg1) {
+              fn8 = function x(arg0, arg1) {
                 if (hlsjs.levels[arg1.level]) {
                   if (tmp.attrs) {
                     if (tmp.attrs.BANDWIDTH) {
@@ -11967,15 +11916,15 @@ const items11 = [
               };
               hlsjs.on(tmp.Events.LEVEL_SWITCHED, fn8);
               hlsjs._stopMuxMonitor = () => {
-                hlsjs.off(tmp.Events.MANIFEST_LOADED, fn);
-                hlsjs.off(tmp.Events.LEVEL_LOADED, fn2);
-                hlsjs.off(tmp.Events.AUDIO_TRACK_LOADED, fn3);
-                hlsjs.off(tmp.Events.FRAG_LOADED, fn4);
-                hlsjs.off(tmp.Events.FRAG_CHANGED, fn5);
-                hlsjs.off(tmp.Events.ERROR, fn6);
-                hlsjs.off(tmp.Events.FRAG_LOAD_EMERGENCY_ABORTED, fn7);
-                hlsjs.off(tmp.Events.LEVEL_SWITCHED, fn8);
-                hlsjs.off(tmp.Events.DESTROYING, hlsjs._stopMuxMonitor);
+                hlsjs.off(closure_3.Events.MANIFEST_LOADED, fn);
+                hlsjs.off(closure_3.Events.LEVEL_LOADED, fn2);
+                hlsjs.off(closure_3.Events.AUDIO_TRACK_LOADED, fn3);
+                hlsjs.off(closure_3.Events.FRAG_LOADED, fn4);
+                hlsjs.off(closure_3.Events.FRAG_CHANGED, fn5);
+                hlsjs.off(closure_3.Events.ERROR, fn6);
+                hlsjs.off(closure_3.Events.FRAG_LOAD_EMERGENCY_ABORTED, fn7);
+                hlsjs.off(closure_3.Events.LEVEL_SWITCHED, fn8);
+                hlsjs.off(closure_3.Events.DESTROYING, hlsjs._stopMuxMonitor);
                 delete tmp2[tmp];
               };
               hlsjs.on(tmp.Events.DESTROYING, hlsjs._stopMuxMonitor);
@@ -12055,17 +12004,15 @@ const items11 = [
 
               }
               const fn = function s(arg0) {
-                let data;
-                let type;
                 ({ data, type } = arg0);
                 if (!data) {
                   data = {};
                 }
                 const obj = { request_event_type: type, request_start: 0, request_response_start: 0, request_response_end: 0, request_bytes_loaded: -1, request_type: "manifest", request_hostname: null, request_url: null };
-                if (typeof outer1_44 !== "function") {
+                if (typeof closure_1_44 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof outer1_45 !== "function") {
+                if (typeof closure_1_45 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (typeof data.url === "string") {
@@ -12076,7 +12023,7 @@ const items11 = [
                       first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
                       const tmp4 = str2.match(/[^\.]+\.[^\.]+$/) || [];
                     }
-                    let items = [str2, first];
+                    items = [str2, first];
                     const tmp2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                   }
                   obj[6] = items[0];
@@ -12089,16 +12036,11 @@ const items11 = [
                 items = ["localhost"];
               };
               dashjs.on("manifestLoaded", fn);
-              let closure_6 = {};
+              closure_6 = {};
               function f(arg0) {
 
               }
               const fn2 = function k(arg0) {
-                let bitrateList;
-                let chunk;
-                let request;
-                let type;
-                let type2;
                 ({ chunk, type, request } = arg0);
                 if (!chunk) {
                   chunk = {};
@@ -12123,7 +12065,7 @@ const items11 = [
                   tmp2 = closure_6;
                   closure_6.media = obj;
                 }
-                const tmp5 = outer1_54(request, dashjs);
+                const tmp5 = closure_1_54(request, dashjs);
                 obj = { request_event_type: type, request_start: tmp5.requestStart, request_response_start: tmp5.requestResponseStart, request_response_end: tmp5.requestResponseEnd, request_bytes_loaded: -1, request_type: `${type2}_init`, request_response_headers: tmp5.requestResponseHeaders, request_hostname: tmp5.requestHostname, request_id: tmp5.requestId, request_url: tmp5.requestUrl, request_media_duration: tmp5.requestMediaDuration, request_rendition_lists: tmp2 };
                 if (typeof o !== "function") {
                   HermesBuiltin.throwTypeError();
@@ -12134,8 +12076,6 @@ const items11 = [
                 dashjs.on("initFragmentLoaded", fn2);
               } else {
                 dashjs.on("initFragmentLoaded", (fragmentModel) => {
-                  let chunk;
-                  let type;
                   fragmentModel = fragmentModel.fragmentModel;
                   ({ type, chunk } = fragmentModel);
                   if (typeof f !== "function") {
@@ -12153,21 +12093,7 @@ const items11 = [
                   fn2({ type, request: tmp, chunk });
                 });
               }
-              const fn3 = function c(arg0) {
-                let chunk;
-                let mediaInfo;
-                let request;
-                let requestBytesLoaded;
-                let requestHostname;
-                let requestId;
-                let requestMediaDuration;
-                let requestResponseEnd;
-                let requestResponseHeaders;
-                let requestResponseStart;
-                let requestStart;
-                let requestUrl;
-                let start;
-                let type;
+              fn3 = function c(arg0) {
                 ({ chunk, type, request } = arg0);
                 if (!chunk) {
                   chunk = {};
@@ -12177,7 +12103,7 @@ const items11 = [
                   mediaInfo = {};
                 }
                 const type2 = mediaInfo.type;
-                ({ requestStart, requestResponseStart, requestResponseEnd, requestBytesLoaded, requestResponseHeaders, requestMediaDuration, requestHostname, requestUrl, requestId } = outer1_54(request, dashjs));
+                ({ requestStart, requestResponseStart, requestResponseEnd, requestBytesLoaded, requestResponseHeaders, requestMediaDuration, requestHostname, requestUrl, requestId } = closure_1_54(request, dashjs));
                 const qualityFor = dashjs.getQualityFor(type2);
                 const bitrateList = dashjs.getCurrentTrackFor(type2).bitrateList;
                 if (bitrateList) {
@@ -12199,8 +12125,6 @@ const items11 = [
                 dashjs.on("mediaFragmentLoaded", fn3);
               } else {
                 dashjs.on("mediaFragmentLoaded", (fragmentModel) => {
-                  let chunk;
-                  let type;
                   fragmentModel = fragmentModel.fragmentModel;
                   ({ type, chunk } = fragmentModel);
                   if (typeof f !== "function") {
@@ -12218,8 +12142,8 @@ const items11 = [
                   fn3({ type, request: tmp, chunk });
                 });
               }
-              let closure_10 = { video: "Array", audio: "HermesInternal", totalBitrate: "r" };
-              const fn4 = function x(newQuality) {
+              closure_10 = { video: "Array", audio: "HermesInternal", totalBitrate: "r" };
+              fn4 = function x(newQuality) {
                 let obj = newQuality;
                 if (typeof newQuality.newQuality === "number") {
                   const mediaType = newQuality.mediaType;
@@ -12230,7 +12154,7 @@ const items11 = [
                     if (found) {
                       if (typeof found.bitrate === "number") {
                         obj = {};
-                        outer1_48(obj, found);
+                        closure_1_48(obj, found);
                         obj = { codec: null };
                         obj[0] = obj.getCurrentTrackFor(mediaType).codec;
                         const _Object5 = Object;
@@ -12266,11 +12190,11 @@ const items11 = [
                                 }
                                 if (sum !== tmp22.totalBitrate) {
                                   tmp22.totalBitrate = sum;
-                                  const obj1 = { video_source_bitrate: null, video_source_height: null, video_source_width: null, video_source_codec: null };
+                                  obj1 = { video_source_bitrate: null, video_source_height: null, video_source_width: null, video_source_codec: null };
                                   obj1[0] = sum;
                                   obj1[1] = tmp22.video.height;
                                   obj1[2] = tmp22.video.width;
-                                  if (typeof outer1_55 !== "function") {
+                                  if (typeof closure_1_55 !== "function") {
                                     HermesBuiltin.throwTypeError();
                                   }
                                   const match = tmp22.video.codec.match(/.*codecs\*?="(.*)"/);
@@ -12306,18 +12230,16 @@ const items11 = [
                 }
               };
               dashjs.on("qualityChangeRendered", fn4);
-              const fn5 = function v(arg0) {
-                let mediaType;
-                let request;
+              fn5 = function v(arg0) {
                 ({ request, mediaType } = arg0);
                 if (!request) {
                   request = {};
                 }
                 const obj = { request_event_type: `${request.type}_${request.action}`, request_url: request.url, request_type: mediaType, request_hostname: null };
-                if (typeof outer1_44 !== "function") {
+                if (typeof closure_1_44 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof outer1_45 !== "function") {
+                if (typeof closure_1_45 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (typeof request.url === "string") {
@@ -12328,7 +12250,7 @@ const items11 = [
                       first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
                       const tmp4 = str2.match(/[^\.]+\.[^\.]+$/) || [];
                     }
-                    let items = [str2, first];
+                    items = [str2, first];
                     const tmp2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                   }
                   obj[3] = items[0];
@@ -12340,7 +12262,7 @@ const items11 = [
                 items = ["localhost"];
               };
               dashjs.on("fragmentLoadingAbandoned", fn5);
-              const fn6 = function p(error) {
+              fn6 = function p(error) {
                 error = error.error;
                 let request;
                 if (null != error) {
@@ -12374,10 +12296,10 @@ const items11 = [
                   let obj = { request_error: null, request_url: null, request_hostname: null, request_type: null, request_error_code: null, request_error_text: null };
                   obj[0] = `${obj.type}_${obj.action}`;
                   obj[1] = request.url;
-                  if (typeof outer1_44 !== "function") {
+                  if (typeof closure_1_44 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof outer1_45 !== "function") {
+                  if (typeof closure_1_45 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   if (typeof request.url === "string") {
@@ -12388,7 +12310,7 @@ const items11 = [
                         first = str.match(/[^\.]+\.[^\.]+$/) || [][0];
                         const tmp5 = str.match(/[^\.]+\.[^\.]+$/) || [];
                       }
-                      let items = [str, first];
+                      items = [str, first];
                       const tmp3 = str9.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                     }
                     obj[2] = items[0];
@@ -12625,7 +12547,7 @@ class Ve {
                         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
                       }
                       obj = {};
-                      f94619 = obj;
+                      closure_0 = obj;
                       tmp7 = undefined;
                       if (arr5) {
                         str4 = ",";
@@ -12872,8 +12794,8 @@ function Li(arg0) {
 }
 let closure_122 = {};
 function ne(key10009) {
-  let closure_0 = key10009;
-  let closure_1 = arguments;
+  closure_0 = key10009;
+  closure_1 = arguments;
   if (typeof key10009 === "string") {
     if (ne.hasOwnProperty(key10009)) {
       const timerId = GResult.default.setTimeout(() => {
@@ -12883,19 +12805,19 @@ function ne(key10009) {
         } else {
           spliceResult = call(spliceResult, 1);
         }
-        outer1_123[closure_0].apply(null, spliceResult);
+        closure_1_123[closure_0].apply(null, spliceResult);
       }, 0);
       const _default2 = GResult.default;
     } else {
-      tmp11.warn(`\`${key10009}\` is an unknown task`);
+      logger.warn(`\`${key10009}\` is an unknown task`);
     }
   } else if (typeof key10009 === "function") {
     const timerId1 = GResult.default.setTimeout(() => {
-      key10009(outer1_123);
+      key10009(closure_1_123);
     }, 0);
     const _default = GResult.default;
   } else {
-    tmp11.warn(`\`${key10009}\` is invalid.`);
+    logger.warn(`\`${key10009}\` is invalid.`);
   }
 }
 function ce() {
@@ -12913,10 +12835,8 @@ let merged = Object.assign(ne, {
   API_VERSION: "2.1",
   PLAYER_TRACKED: false,
   monitor(videoElement, arg1) {
-    let defineProperty;
-    let tmp13;
     let obj = ne;
-    let closure_0 = ne;
+    closure_0 = ne;
     let merged = arg1;
     if (typeof se !== "function") {
       HermesBuiltin.throwTypeError();
@@ -12934,7 +12854,7 @@ let merged = Object.assign(ne, {
           let str3 = element.nodeName;
         }
       }
-      let items = [element, tmp4, str2];
+      items = [element, tmp4, str2];
       let _Array = Array;
       let tmp7;
       if (Array.isArray(items)) {
@@ -13040,7 +12960,7 @@ let merged = Object.assign(ne, {
       }
       if (tmp7) {
         [defineProperty, tmp13] = tmp7;
-        const getOwnPropertyDescriptor = tmp13;
+        getOwnPropertyDescriptor = tmp13;
         let log = obj.log;
         const getComputedStyle = obj.utils.getComputedStyle;
         const secondsToMs = obj.utils.secondsToMs;
@@ -13080,7 +13000,7 @@ let merged = Object.assign(ne, {
               source = dashjs.getSource();
             }
             const obj = { player_is_paused: closure_2.paused, player_width: parseInt(getComputedStyle(closure_2, "width")), player_height: parseInt(getComputedStyle(closure_2, "height")), player_autoplay_on: closure_2.autoplay, player_preload_on: closure_2.preload, player_language_code: closure_2.lang, player_is_fullscreen: null, video_poster_url: null, video_source_url: null, video_source_duration: null, video_source_height: null, video_source_width: null, view_dropped_frame_count: null };
-            let _default = outer1_102.default;
+            let _default = closure_1_102.default;
             if (_default) {
               _default = tmp6.default.fullscreenElement || tmp6.default.webkitFullscreenElement || tmp6.default.mozFullScreenElement || tmp6.default.msFullscreenElement;
               const tmp7 = tmp6.default.fullscreenElement || tmp6.default.webkitFullscreenElement || tmp6.default.mozFullScreenElement || tmp6.default.msFullscreenElement;
@@ -13170,12 +13090,12 @@ let merged = Object.assign(ne, {
             store.emit(closure_3, "destroy");
           };
           defineProperty.mux.swapElement = (nodeName) => {
-            if (typeof outer1_31 !== "function") {
+            if (typeof closure_1_31 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (nodeName) {
               if (undefined !== nodeName.nodeName) {
-                let tmp6 = outer1_30(nodeName);
+                let tmp6 = closure_1_30(nodeName);
                 let element = nodeName;
               }
               let str2 = "";
@@ -13186,7 +13106,7 @@ let merged = Object.assign(ne, {
                   const str3 = element.nodeName;
                 }
               }
-              let items = [element, tmp6, str2];
+              items = [element, tmp6, str2];
               const _Array = Array;
               let tmp9;
               if (Array.isArray(items)) {
@@ -13288,7 +13208,7 @@ let merged = Object.assign(ne, {
                 })(items, 3);
               }
               if (!tmp9) {
-                tmp9 = outer1_23(items, 3);
+                tmp9 = closure_1_23(items, 3);
               }
               if (tmp9) {
                 const first = tmp9[0];
@@ -13317,7 +13237,7 @@ let merged = Object.assign(ne, {
                   text = `The element of \`${tmp16}`;
                   errorResult = log2.error(`${`The element of \`${tmp16}`}\` was not a media element.`);
                 } else {
-                  const log = first.log;
+                  log = first.log;
                   return log.error("No element was found with the `" + `The element of \`${tmp16}` + "` query selector.");
                 }
               } else {
@@ -13363,7 +13283,7 @@ let merged = Object.assign(ne, {
           }
           defineProperty.mux.listeners = {};
           let item = closure_103.forEach((arg0) => {
-            let closure_0 = arg0;
+            closure_0 = arg0;
             let tmp = "error" === arg0;
             if (tmp) {
               tmp = !merged.automaticErrorTracking;
@@ -13372,18 +13292,18 @@ let merged = Object.assign(ne, {
               closure_2.mux.listeners[arg0] = () => {
                 const obj = {};
                 if ("error" === closure_0) {
-                  if (outer1_2.error) {
-                    if (1 !== outer1_2.error.code) {
-                      obj.player_error_code = outer1_2.error.code;
-                      let message = outer2_104[outer1_2.error.code];
+                  if (closure_1_2.error) {
+                    if (1 !== closure_1_2.error.code) {
+                      obj.player_error_code = closure_1_2.error.code;
+                      let message = closure_2_104[closure_1_2.error.code];
                       if (!message) {
-                        message = outer1_2.error.message;
+                        message = closure_1_2.error.message;
                       }
                       obj.player_error_message = message;
                     }
                   }
                 }
-                closure_0.emit(outer1_3, closure_0, obj);
+                closure_0.emit(closure_1_3, closure_0, obj);
               };
               const listener = closure_2.addEventListener(arg0, closure_2.mux.listeners[arg0], false);
             }
@@ -13419,7 +13339,7 @@ let merged = Object.assign(ne, {
           const str3 = element.nodeName;
         }
       }
-      const items = [element, tmp2, str2];
+      items = [element, tmp2, str2];
       const _Array = Array;
       let tmp5;
       if (Array.isArray(items)) {
@@ -13533,7 +13453,7 @@ let merged = Object.assign(ne, {
             }
           }
         }
-        tmp11.error(`A video element monitor for \`${videoElement}\` has not been initialized via \`mux.monitor\`.`);
+        logger.error(`A video element monitor for \`${videoElement}\` has not been initialized via \`mux.monitor\`.`);
       } else {
         const _TypeError = TypeError;
         const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
@@ -13549,7 +13469,7 @@ let merged = Object.assign(ne, {
       tmp2[tmp].addHLSJS(closure_3);
       const obj = tmp2[tmp];
     } else {
-      tmp11.error(`A monitor for \`${tmp}\` has not been initialized.`);
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
   addDashJS(closure_3, closure_3) {
@@ -13558,7 +13478,7 @@ let merged = Object.assign(ne, {
       tmp2[tmp].addDashJS(closure_3);
       const obj = tmp2[tmp];
     } else {
-      tmp11.error(`A monitor for \`${tmp}\` has not been initialized.`);
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
   removeHLSJS(closure_3) {
@@ -13567,7 +13487,7 @@ let merged = Object.assign(ne, {
       dependencyMap[tmp].removeHLSJS();
       const obj = dependencyMap[tmp];
     } else {
-      tmp11.error(`A monitor for \`${tmp}\` has not been initialized.`);
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
   removeDashJS(closure_3) {
@@ -13576,7 +13496,7 @@ let merged = Object.assign(ne, {
       dependencyMap[tmp].removeDashJS();
       const obj = dependencyMap[tmp];
     } else {
-      tmp11.error(`A monitor for \`${tmp}\` has not been initialized.`);
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
   init(arg0, respectDoNotTrack) {
@@ -13586,7 +13506,7 @@ let merged = Object.assign(ne, {
       const tmp2 = tmp.default.navigator && tmp.default.navigator.doNotTrack;
     }
     if (tmp3) {
-      tmp11.info("The browser's Do Not Track flag is enabled - Mux beaconing is disabled.");
+      logger.info("The browser's Do Not Track flag is enabled - Mux beaconing is disabled.");
     }
     const tmp6 = J(arg0);
     closure_122[tmp6] = t(ne, tmp6, respectDoNotTrack);
@@ -13600,7 +13520,7 @@ let merged = Object.assign(ne, {
       }
       const obj = tmp4[tmp3];
     } else {
-      tmp11.error(`A monitor for \`${tmp3}\` has not been initialized.`);
+      logger.error(`A monitor for \`${tmp3}\` has not been initialized.`);
     }
   },
   updateData(arg0, arg1) {
@@ -13609,7 +13529,7 @@ let merged = Object.assign(ne, {
       tmp2[tmp].emit("hb", arg1);
       const obj = tmp2[tmp];
     } else {
-      tmp11.error(`A monitor for \`${tmp}\` has not been initialized.`);
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
   setEmitTranslator(closure_3, emitTranslator) {
@@ -13617,7 +13537,7 @@ let merged = Object.assign(ne, {
     if (dependencyMap[tmp]) {
       tmp2[tmp].emitTranslator = emitTranslator;
     } else {
-      tmp11.error(`A monitor for \`${tmp}\` has not been initialized.`);
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
   setStateDataTranslator(closure_3, stateDataTranslator) {
@@ -13625,7 +13545,7 @@ let merged = Object.assign(ne, {
     if (dependencyMap[tmp]) {
       tmp2[tmp].stateDataTranslator = stateDataTranslator;
     } else {
-      tmp11.error(`A monitor for \`${tmp}\` has not been initialized.`);
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
   setGetPlayheadTime(closure_3, getPlayheadTime) {
@@ -13633,7 +13553,7 @@ let merged = Object.assign(ne, {
     if (dependencyMap[tmp]) {
       tmp2[tmp].getPlayheadTime = getPlayheadTime;
     } else {
-      tmp11.error(`A monitor for \`${tmp}\` has not been initialized.`);
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
   checkDoNotTrack: ce,
@@ -13647,7 +13567,7 @@ let merged = Object.assign(ne, {
             applyResult = arg0[arg1].apply(arg0, arg2);
             const obj = arg0[arg1];
           } catch (tmp4) {
-            tmp11.info("safeCall error", tmp4);
+            logger.info("safeCall error", tmp4);
           }
         }
       }
@@ -13710,7 +13630,7 @@ let merged = Object.assign(ne, {
           const str2 = parts.shift();
           let tmp = str2;
           if (str2) {
-            let tmp3 = outer1_50.indexOf(str2.toLowerCase()) >= 0;
+            let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
             if (!tmp3) {
               const formatted = str2.toLowerCase();
               tmp3 = 0 === formatted.indexOf("x-litix-");
@@ -13725,7 +13645,7 @@ let merged = Object.assign(ne, {
       return obj;
     },
     cdnHeadersToRequestId: function de(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       if (arg0) {
         const found = items.find((arg0) => undefined !== obj[arg0]);
         let tmp3;

@@ -1,4 +1,10 @@
 // _runtime/00748_ListCache.js
+import listCacheClear from "listCacheClear" /* 749 */;
+import listCacheDelete from "listCacheDelete" /* 750 */;
+import listCacheGet from "listCacheGet" /* 753 */;
+import listCacheHas from "listCacheHas" /* 754 */;
+import listCacheSet from "listCacheSet" /* 755 */;
+
 class ListCache {
   constructor(arg0) {
     num = 0;
@@ -14,10 +20,10 @@ class ListCache {
     return;
   }
 }
-ListCache.prototype.clear = require("listCacheClear");
-ListCache.prototype.delete = require("listCacheDelete");
-ListCache.prototype.get = require("listCacheGet");
-ListCache.prototype.has = require("listCacheHas");
-ListCache.prototype.set = require("listCacheSet");
+ListCache.prototype.clear = listCacheClear;
+ListCache.prototype.delete = listCacheDelete;
+ListCache.prototype.get = listCacheGet;
+ListCache.prototype.has = listCacheHas;
+ListCache.prototype.set = listCacheSet;
 
 export default ListCache;

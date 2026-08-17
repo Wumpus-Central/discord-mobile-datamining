@@ -1,17 +1,13 @@
 // _runtime/06365_ResourceSavingView.js
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-let c0;
+noopAll;
 ({ Platform, StyleSheet, View: c0 } = get_ActivityIndicator);
 const styles = StyleSheet.create({ container: { flex: 1, overflow: "hidden" }, attached: { flex: 1 }, detached: { flex: 1, top: 30000 } });
 
 export const ResourceSavingView = function ResourceSavingView(visible) {
-  let children;
-  let style;
   visible = visible.visible;
   ({ children, style } = visible);
   const merged = Object.assign(visible, Object.create(null));

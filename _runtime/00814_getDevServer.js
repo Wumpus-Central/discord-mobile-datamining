@@ -1,6 +1,7 @@
 // _runtime/00814_getDevServer.js
-import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
-const require = arg1;
+import TurboModuleRegistry from "TurboModuleRegistry" /* 997 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function getDevServer() {
   try {
@@ -22,16 +23,16 @@ if (this) {
 }
 if (!fn) {
   fn = (arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     let _Promise = arg2;
-    let closure_3 = arg3;
+    closure_3 = arg3;
     if (!arg2) {
       _Promise = Promise;
     }
     _Promise = new _Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function fulfilled(arg0) {
         try {
           step(iter.next(arg0));
@@ -85,7 +86,7 @@ if (!fn) {
   };
 }
 arg5.fetchSourceContext = function fetchSourceContext(c4) {
-  let closure_0 = c4;
+  closure_0 = c4;
   return fn(this, undefined, undefined, function*() {
     if (c0 === 2) {
       c0 = 3;
@@ -113,9 +114,9 @@ arg5.fetchSourceContext = function fetchSourceContext(c4) {
           return obj;
         } else {
           const promise = new Promise((arg0) => {
-            let closure_0 = arg0;
+            closure_0 = arg0;
             try {
-              let obj = v3(outer1_1[0]);
+              let obj = v3(closure_1_1[0]);
               const stealthXhr = obj.createStealthXhr();
               if (stealthXhr) {
                 const tmp8 = (function getSentryMetroSourceContextUrl() {
@@ -133,7 +134,7 @@ arg5.fetchSourceContext = function fetchSourceContext(c4) {
                   obj[0] = closure_0;
                   stealthXhr.send(JSON.stringify(obj));
                   stealthXhr.onreadystatechange = () => {
-                    if (stealthXhr.readyState === callback(outer2_1[0]).XHR_READYSTATE_DONE) {
+                    if (stealthXhr.readyState === callback(closure_2_1[0]).XHR_READYSTATE_DONE) {
                       if (200 !== tmp2.status) {
                         callback(callback);
                       }
@@ -155,7 +156,7 @@ arg5.fetchSourceContext = function fetchSourceContext(c4) {
                     callback(callback);
                   };
                 } else {
-                  const debug = v3(outer1_1[1]).debug;
+                  const debug = v3(closure_1_1[1]).debug;
                   debug.error("Could not fetch source context. No dev server URL found.");
                   arg0(closure_0);
                 }
@@ -163,7 +164,7 @@ arg5.fetchSourceContext = function fetchSourceContext(c4) {
                 arg0(closure_0);
               }
             } catch (tmp21) {
-              const debug2 = v3(outer1_1[1]).debug;
+              const debug2 = v3(closure_1_1[1]).debug;
               debug2.error("Could not fetch source context.", tmp21);
               tmp2(closure_0);
             }
@@ -182,24 +183,24 @@ arg5.fetchSourceContext = function fetchSourceContext(c4) {
 };
 arg5.parseErrorStack = function parseErrorStack(arg0) {
   if (TurboModuleRegistry.ReactNativeLibraries.Devtools) {
-    const Devtools = tmp(997).ReactNativeLibraries.Devtools;
+    const Devtools = TurboModuleRegistry.ReactNativeLibraries.Devtools;
     return Devtools.parseErrorStack(arg0);
   } else {
     const _Error = Error;
-    const error = new Error("React Native Devtools not available.");
+    error = new Error("React Native Devtools not available.");
     throw error;
   }
-  tmp = require;
+  const tmp = require;
 };
 arg5.symbolicateStackTrace = function symbolicateStackTrace(arg0, arg1) {
   if (TurboModuleRegistry.ReactNativeLibraries.Devtools) {
-    const Devtools = tmp(997).ReactNativeLibraries.Devtools;
+    const Devtools = TurboModuleRegistry.ReactNativeLibraries.Devtools;
     return Devtools.symbolicateStackTrace(arg0, arg1);
   } else {
     const _Error = Error;
-    const error = new Error("React Native Devtools not available.");
+    error = new Error("React Native Devtools not available.");
     throw error;
   }
-  tmp = require;
+  const tmp = require;
 };
 arg5.getDevServer = getDevServer;

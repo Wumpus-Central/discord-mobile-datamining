@@ -1,37 +1,39 @@
 // _runtime/01680_importDefaultResult1.js
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import _classPrivateFieldBase from "_classPrivateFieldBase";
-import importDefaultResult1 from "_classPrivateFieldKey";
-import { getShadowNodeWrapperFromRef } from "01682_getShadowNodeWrapperFromRef.js";
+import WorkletsModule from "WorkletsModule" /* 1670 */;
+import _mod1681 from "module_1681" /* 1681 */;
+import getShadowNodeWrapperFromRef from "getShadowNodeWrapperFromRef" /* 1682 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_4 from "_classPrivateFieldBase" /* 90 */;
+import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
 
 let DummyReanimatedModuleProxy = global;
-const require = arg1;
+require = arg1;
 let closure_5 = importDefaultResult1("workletsModule");
 let closure_6 = importDefaultResult1("reanimatedModuleProxy");
 class NativeReanimatedModule {
   constructor() {
     self = this;
-    tmp = outer1_3(this, DummyReanimatedModuleProxy);
-    definePropertyResult = Object.defineProperty(this, workletsModule, { writable: true, value: "a" });
-    tmp3 = reanimatedModuleProxy;
-    definePropertyResult1 = Object.defineProperty(this, reanimatedModuleProxy, { writable: true, value: "a" });
-    tmp5 = __esModule;
+    tmp = closure_3(this, DummyReanimatedModuleProxy);
+    definePropertyResult = Object.defineProperty(this, closure_5, { writable: true, value: "a" });
+    tmp3 = closure_6;
+    definePropertyResult1 = Object.defineProperty(this, closure_6, { writable: true, value: "a" });
+    tmp5 = closure_4;
     tmp7 = closure_1;
     tmp8 = closure_2;
-    tmp6 = __esModule(this, workletsModule);
-    tmp6[workletsModule] = require("WorkletsModule").WorkletsModule;
+    tmp6 = closure_4(this, closure_5);
+    tmp6[closure_5] = require("WorkletsModule").WorkletsModule;
     tmp9 = DummyReanimatedModuleProxy;
     DummyReanimatedModuleProxy._REANIMATED_VERSION_JS = require("module_1681").jsVersion;
     if (undefined === DummyReanimatedModuleProxy.__reanimatedModuleProxy) {
       if (require("ReanimatedTurboModule").ReanimatedTurboModule) {
         ReanimatedTurboModule = require("ReanimatedTurboModule").ReanimatedTurboModule;
         if (!ReanimatedTurboModule.installTurboModule()) {
-          tmp11 = scheduleOnUI;
+          tmp11 = closure_8;
           tmp12 = new.target;
           tmp13 = new.target;
           tmp5Result = tmp5(self, tmp3);
-          tmp14 = new scheduleOnUI();
+          tmp14 = new closure_8();
           tmp15 = tmp14;
           tmp5Result[tmp3] = tmp14;
         }
@@ -176,7 +178,7 @@ const items = [
 let closure_7 = importDefaultResult(NativeReanimatedModule, items);
 class DummyReanimatedModuleProxy {
   constructor() {
-    tmp = outer1_3(this, DummyReanimatedModuleProxy);
+    tmp = closure_3(this, DummyReanimatedModuleProxy);
     return;
   }
 }

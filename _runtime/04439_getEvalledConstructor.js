@@ -1,8 +1,9 @@
 // _runtime/04439_getEvalledConstructor.js
-import DefinePropertyOrThrow from "DefinePropertyOrThrow";
+import getEvalledConstructor from "getEvalledConstructor" /* 4440 */;
+import DefinePropertyOrThrow from "DefinePropertyOrThrow" /* 4441 */;
 
-const tmp = require("getEvalledConstructor")("%Reflect.construct%", true);
-let c0 = tmp;
+const tmp = getEvalledConstructor("%Reflect.construct%", true);
+let closure_0 = tmp;
 try {
   let obj = { "[[Get]]": null };
   obj[0] = () => {
@@ -21,7 +22,7 @@ try {
       tmp4(obj, "length", obj);
       module.exports = function IsConstructor(arg0) {
         try {
-          arg0(arg0, obj);
+          callback(arg0, obj);
         } catch (tmp5) {
           return tmp5 === closure_1;
         }

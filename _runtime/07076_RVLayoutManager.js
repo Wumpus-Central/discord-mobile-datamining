@@ -1,11 +1,12 @@
 // _runtime/07076_RVLayoutManager.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 7051 */;
+import closure_2 from "_classCallCheck" /* 7050 */;
 
 const RVLayoutManager = arg1;
 class RVLayoutManager {
   constructor(arg0, arg1) {
     self = this;
-    tmp = outer1_2(this, RVLayoutManager);
+    tmp = closure_2(this, RVLayoutManager);
     this.requiresRepaint = false;
     this.maxItemsToProcess = 250;
     this.spanSizeInfo = {};
@@ -101,7 +102,7 @@ let items = [
     key: "modifyLayout",
     value: function modifyLayout(arr, arg1) {
       const self = this;
-      let closure_0 = arg1;
+      closure_0 = arg1;
       this.maxItemsToProcess = Math.max(this.maxItemsToProcess, 10 * arr.length);
       let found = arr;
       if (this.layouts.length > arg1) {
@@ -146,7 +147,7 @@ let items = [
       const self = this;
       if (arg0 >= this.layouts.length) {
         const _Error = Error;
-        const error = new Error(RVLayoutManager(7038).ErrorMessages.indexOutOfBounds);
+        error = new Error(RVLayoutManager(7038).ErrorMessages.indexOutOfBounds);
         throw error;
       } else {
         let tmp = self.layouts[arg0];
@@ -165,7 +166,6 @@ let items = [
   {
     key: "updateLayoutParams",
     value: function updateLayoutParams(maxColumns) {
-      let horizontal;
       const self = this;
       ({ windowSize: this.windowSize, horizontal } = maxColumns);
       if (horizontal == null) {
@@ -340,4 +340,4 @@ let items = [
   }
 ];
 
-export const RVLayoutManager = require("_createClass")(RVLayoutManager, items);
+export const RVLayoutManager = _createClassDefault(RVLayoutManager, items);

@@ -1,9 +1,11 @@
 // _runtime/07711_fillProductsWithAdditionalData.js
+import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
+
 let RNIapAmazonModule = require("get ActivityIndicator").NativeModules.RNIapAmazonModule;
-RNIapAmazonModule = require("asyncGeneratorStep")((arg0) => {
-  let closure_0 = arg0;
-  let c3 = 0;
-  let c4 = 0;
+RNIapAmazonModule = asyncGeneratorStepDefault((arg0) => {
+  closure_0 = arg0;
+  c3 = 0;
+  c4 = 0;
   return (function*(arg0) {
     if (c4 === 2) {
       c4 = 3;
@@ -31,10 +33,10 @@ RNIapAmazonModule = require("asyncGeneratorStep")((arg0) => {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_2 = tmp2;
+            closure_2 = tmp2;
             let table;
             if (closure_0) {
-              const obj1 = {};
+              obj1 = {};
               table = obj1;
               obj1.CA = "CAD";
               obj1.ES = "EUR";
@@ -90,7 +92,7 @@ RNIapAmazonModule = require("asyncGeneratorStep")((arg0) => {
   })();
 });
 
-export const fillProductsWithAdditionalData = function fillProductsWithAdditionalData(c2) {
+export const fillProductsWithAdditionalData = function fillProductsWithAdditionalData(closure_0) {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

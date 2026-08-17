@@ -1,18 +1,16 @@
 // _runtime/06533_useKeyboardManager.js
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
+import closure_0 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let closure_1;
-let obj1;
 ({ Keyboard: closure_1, TextInput: obj1 } = get_ActivityIndicator);
 
 export const useKeyboardManager = function useKeyboardManager(enabled) {
   enabled = enabled.enabled;
   const focused = enabled.focused;
-  let closure_2;
-  let closure_3;
-  let closure_4;
-  let closure_5;
+  closure_2 = undefined;
+  closure_3 = undefined;
+  closure_4 = undefined;
+  closure_5 = undefined;
   let callback;
   let onPageChangeCancel;
   closure_2 = enabled.useRef(undefined);
@@ -53,7 +51,7 @@ export const useKeyboardManager = function useKeyboardManager(enabled) {
             if (current != null) {
               current.focus();
             }
-            outer1_2.current = undefined;
+            closure_1_2.current = undefined;
           }, 100);
         } else {
           if (current != null) {

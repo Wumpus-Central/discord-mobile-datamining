@@ -3,9 +3,6 @@ arg5.goBack = function goBack() {
   return { type: "GO_BACK" };
 };
 arg5.navigate = function navigate() {
-  let arr2;
-  let tmp8;
-  let tmp9;
   const items = [...arguments];
   if (typeof items[0] === "string") {
     [tmp8, tmp9, arr2] = items;
@@ -43,7 +40,7 @@ arg5.navigate = function navigate() {
       return obj;
     } else {
       const _Error = Error;
-      const error = new Error("You need to specify a name when calling navigate with an object as the argument. See https://reactnavigation.org/docs/navigation-actions#navigate for usage.");
+      error = new Error("You need to specify a name when calling navigate with an object as the argument. See https://reactnavigation.org/docs/navigation-actions#navigate for usage.");
       throw error;
     }
   }
@@ -64,7 +61,7 @@ arg5.navigateDeprecated = function navigateDeprecated() {
       return obj;
     } else {
       const _Error = Error;
-      const error = new Error("You need to specify a name when calling navigateDeprecated with an object as the argument. See https://reactnavigation.org/docs/navigation-actions#navigatelegacy for usage.");
+      error = new Error("You need to specify a name when calling navigateDeprecated with an object as the argument. See https://reactnavigation.org/docs/navigation-actions#navigatelegacy for usage.");
       throw error;
     }
   }

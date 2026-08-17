@@ -1,7 +1,8 @@
 // _runtime/00818_registerSpanErrorInstrumentation.js
-import { instrumentError } from "00849_instrumentError.js";
-import { instrumentUnhandledRejection } from "00851_instrumentUnhandledRejection.js";
-const require = arg1;
+import instrumentError from "instrumentError" /* 849 */;
+import instrumentUnhandledRejection from "instrumentUnhandledRejection" /* 851 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = false;

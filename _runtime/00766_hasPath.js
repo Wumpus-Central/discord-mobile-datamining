@@ -1,6 +1,11 @@
 // _runtime/00766_hasPath.js
-import { toKey } from "00725_toKey.js";
-import { castPath } from "00728_castPath.js";
+import _mod599 from "module_599" /* 599 */;
+import isLength from "isLength" /* 604 */;
+import baseIsArguments from "baseIsArguments" /* 618 */;
+import isIndex from "isIndex" /* 628 */;
+import toKey from "toKey" /* 725 */;
+import castPath from "castPath" /* 728 */;
+
 
 export default function hasPath(arg0, arg1, arg2) {
   let tmp4;
@@ -53,10 +58,10 @@ export default function hasPath(arg0, arg1, arg2) {
       if (null != arr2) {
         num3 = arr2.length;
       }
-      let tmp12 = num3 && tmp(604)(num3) && tmp(628)(tmp4, num3);
+      let tmp12 = num3 && isLength(num3) && isIndex(tmp4, num3);
       if (tmp12) {
-        tmp12 = tmp(599)(arr2) || tmp(618)(arr2);
-        const tmp13 = tmp(599)(arr2) || tmp(618)(arr2);
+        tmp12 = _mod599(arr2) || baseIsArguments(arr2);
+        const tmp13 = _mod599(arr2) || baseIsArguments(arr2);
       }
       tmp11 = tmp12;
     }

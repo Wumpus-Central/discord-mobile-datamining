@@ -1,8 +1,9 @@
 // _runtime/00289_getExtendedError.js
-import "noop";
-import { _isNativeReflectConstruct } from "00189__isNativeReflectConstruct.js";
+import noopAll from "noop" /* 19 */;
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 189 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 189 */;
 
-const require = arg1;
+require = arg1;
 function getExtendedError(value, componentStack) {
   if (value instanceof Error) {
     try {
@@ -17,14 +18,15 @@ function getExtendedError(value, componentStack) {
     syntheticError = new _isNativeReflectConstruct.SyntheticError("Unspecified error");
   }
 }
+noopAll;
 
 export const onUncaughtError = function onUncaughtError(value, componentStack) {
   const tmp = getExtendedError(value, componentStack);
-  _isNativeReflectConstruct.handleException(tmp, true);
+  _isNativeReflectConstructDefault.handleException(tmp, true);
 };
 export const onCaughtError = function onCaughtError(value, componentStack) {
   const tmp = getExtendedError(value, componentStack);
-  _isNativeReflectConstruct.handleException(tmp, false);
+  _isNativeReflectConstructDefault.handleException(tmp, false);
 };
 export const onRecoverableError = function onRecoverableError(value, componentStack) {
   console.warn(getExtendedError(value, componentStack));

@@ -1,5 +1,5 @@
 // _runtime/metro/13164__.js
-import _slicedToArray from "_slicedToArray";
+import closure_2 from "_slicedToArray" /* 32 */;
 import { Range } from "../13154_Range.js";
 
 
@@ -9,7 +9,7 @@ export default (arr) => {
   const items = [];
   let tmp2 = null;
   let tmp3 = null;
-  const sorted = arr.sort((arg0, arg1) => callback(outer1_1[1])(arg0, arg1, callback));
+  const sorted = arr.sort((arg0, arg1) => callback(closure_1_1[1])(arg0, arg1, callback));
   for (const item10017 of sorted) {
     let tmp5 = item10017;
     let tmp6 = _require;
@@ -40,8 +40,8 @@ export default (arr) => {
   }
   const items3 = [];
   while (tmp15 !== undefined) {
-    let tmp17 = _slicedToArray;
-    let tmp18 = _slicedToArray(tmp16, 2);
+    let tmp17 = callback;
+    let tmp18 = callback(tmp16, 2);
     let first = tmp18[0];
     let tmp20 = first;
     let tmp21 = tmp18[1];

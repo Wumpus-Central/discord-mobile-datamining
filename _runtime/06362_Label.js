@@ -1,8 +1,10 @@
 // _runtime/06362_Label.js
-import { StyleSheet } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { Text } from "06338_Text.js";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import Text from "Text" /* 6338 */;
 
+const StyleSheet = get_ActivityIndicator.StyleSheet;
+const jsx = jsxProd.jsx;
 const styles = StyleSheet.create({ label: { textAlign: "center", backgroundColor: "transparent" } });
 
 export const Label = function Label(tintColor) {

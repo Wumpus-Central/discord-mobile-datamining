@@ -1,14 +1,12 @@
 // _runtime/07096_ScrollAnchor.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import "noop";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 7041 */;
+import noop from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let c5;
 const require = arg1;
 ({ useImperativeHandle: c3, useMemo: c4, useState: c5 } = noop);
+noopDefault;
 
 export const ScrollAnchor = function ScrollAnchor(horizontal) {
   horizontal = horizontal.horizontal;
@@ -19,7 +17,7 @@ export const ScrollAnchor = function ScrollAnchor(horizontal) {
   callback = tmp[1];
   callback2(horizontal.scrollAnchorRef, () => ({
     scrollBy(diff) {
-      let closure_0 = diff;
+      closure_0 = diff;
       callback((arg0) => arg0 + closure_0);
     }
   }), []);
@@ -35,6 +33,6 @@ export const ScrollAnchor = function ScrollAnchor(horizontal) {
       num2 = first;
     }
     style[3] = num2;
-    return outer1_6(horizontal(first[3]).CompatView, { style });
+    return closure_1_6(horizontal(first[3]).CompatView, { style });
   }, items);
 };

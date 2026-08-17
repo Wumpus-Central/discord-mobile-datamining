@@ -1,7 +1,7 @@
 // _runtime/03621_addMonths.js
-import toInteger from "toInteger";
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import toInteger from "toInteger" /* 3476 */;
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!toInteger) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!toInteger) {
 } else {
   tmp3 = toInteger;
 }
-let c0 = tmp3;
+toInteger = tmp3;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -18,7 +18,7 @@ if (!_typeof) {
 } else {
   tmp5 = _typeof;
 }
-let closure_1 = tmp5;
+_typeof = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,11 +26,12 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function addMonths(interval) {
-  tmp7.default(2, arguments);
-  const defaultResult1 = tmp5.default(interval);
-  const defaultResult2 = tmp3.default(arg1);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(interval);
+  const defaultResult2 = toInteger.default(arg1);
   if (isNaN(defaultResult2)) {
     const _Date2 = Date;
     const date = new Date(NaN);

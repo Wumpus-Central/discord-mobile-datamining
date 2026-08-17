@@ -1,14 +1,16 @@
 // _runtime/00298_useTextPressability.js
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import noop from "noop";
-import { jsx } from "jsxProd";
-import { NativeText } from "00299_NativeText.js";
+import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
+import processColorDefault from "processColor" /* 50 */;
+import noopDefault from "noop" /* 111 */;
+import flattenStyleDefault from "flattenStyle" /* 148 */;
+import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
+import NativeText2 from "NativeText" /* 299 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function useTextPressability(textPressabilityProps) {
   const onLongPress = textPressabilityProps.onLongPress;
   const onPress = textPressabilityProps.onPress;
@@ -22,21 +24,21 @@ function useTextPressability(textPressabilityProps) {
   let onStartShouldSetResponder = textPressabilityProps.onStartShouldSetResponder;
   const pressRetentionOffset = textPressabilityProps.pressRetentionOffset;
   let first;
-  let c12;
-  let c13;
+  closure_12 = undefined;
+  closure_13 = undefined;
   first = onResponderGrant(onResponderTerminate(false), 2)[0];
   let items = [pressRetentionOffset, onLongPress, onPress, onPressIn, onPressOut, textPressabilityProps.suppressHighlighting];
   const tmp = onResponderGrant(onResponderTerminate(false), 2);
   const tmp4 = onPress(onPressOut[8])(onResponderRelease(() => ({ disabled: false, pressRectOffset: pressRetentionOffset, onLongPress, onPress, onPressIn, onPressOut }), items));
-  c12 = tmp4;
+  closure_12 = tmp4;
   const items1 = [tmp4, onResponderGrant, onResponderMove, onResponderRelease, onResponderTerminate, onResponderTerminationRequest, onStartShouldSetResponder];
   const tmp5 = onResponderRelease(() => {
     let tmp2 = null;
-    if (null != c12) {
+    if (null != closure_12) {
       const obj = { onResponderGrant: null, onResponderMove: null, onResponderRelease: null, onResponderTerminate: null, onClick: null, onResponderTerminationRequest: null, onStartShouldSetResponder: null };
       obj[0] = function onResponderGrant(arg0) {
         closure_12.onResponderGrant(arg0);
-        if (null != _slicedToArray) {
+        if (null != closure_4) {
           tmp2(arg0);
         }
       };
@@ -71,10 +73,10 @@ function useTextPressability(textPressabilityProps) {
     }
     return tmp2;
   }, items1);
-  c13 = tmp5;
+  closure_13 = tmp5;
   const items2 = [first, tmp5];
   return onResponderRelease(() => {
-    const items = [first, c13];
+    const items = [first, closure_13];
     return items;
   }, items2);
 }
@@ -182,14 +184,14 @@ class TextImpl {
           }
           tmp27 = tmp58;
           if (null != tmp24.userSelect) {
-            tmp28 = PressableText_withRef;
+            tmp28 = closure_12;
             obj1 = tmp58;
             if (!tmp58) {
               obj1 = {};
             }
             obj1.userSelect = undefined;
             tmp27 = obj1;
-            selectable = PressableText_withRef[tmp24.userSelect];
+            selectable = closure_12[tmp24.userSelect];
           }
           tmp29 = tmp27;
           if (null != tmp24.verticalAlign) {
@@ -197,8 +199,8 @@ class TextImpl {
             if (!tmp27) {
               obj2 = {};
             }
-            tmp30 = PressableText_withRef;
-            obj2.textAlignVertical = PressableText_withRef[tmp24.verticalAlign];
+            tmp30 = closure_13;
+            obj2.textAlignVertical = closure_13[tmp24.verticalAlign];
             obj2.verticalAlign = undefined;
             tmp29 = obj2;
           }
@@ -277,7 +279,7 @@ class TextImpl {
             obj4 = { ref: null, textProps: null, textPressabilityProps: null };
             obj4[0] = ref;
             obj4[1] = merged;
-            tmp57 = PressableVirtualText_withRef;
+            tmp57 = closure_10;
             if (obj5 == null) {
               obj5 = {};
             }
@@ -310,7 +312,7 @@ class TextImpl {
             obj7[1] = tmp25;
             obj7[2] = merged;
             obj8 = obj5;
-            tmp42 = PressableText_withRef;
+            tmp42 = closure_11;
             if (obj5 == null) {
               obj8 = {};
             }
@@ -429,14 +431,14 @@ let closure_10 = importAllResult.forwardRef(function PressableVirtualText_withRe
   obj.isHighlighted = tmp[0];
   obj.isPressable = true;
   obj.ref = ref;
-  return jsx(NativeText.NativeVirtualText, {});
+  return jsx(NativeText2.NativeVirtualText, {});
 });
 let closure_11 = importAllResult.forwardRef(function PressableText_withRef(textPressabilityProps, ref) {
   const tmp = callback(useTextPressability(textPressabilityProps.textPressabilityProps), 2);
   if (true === textPressabilityProps.selectable) {
-    let NativeText = NativeText.NativeSelectableText;
+    let NativeText = NativeText2.NativeSelectableText;
   } else {
-    NativeText = NativeText.NativeText;
+    NativeText = NativeText2.NativeText;
   }
   const obj = {};
   const merged = Object.assign(textPressabilityProps.textProps);
@@ -448,6 +450,6 @@ let closure_11 = importAllResult.forwardRef(function PressableText_withRef(textP
 });
 let closure_12 = { auto: true, text: true, none: false, contain: true, all: true };
 let closure_13 = { auto: "auto", top: "top", bottom: "bottom", middle: "center" };
-let closure_14 = require("get hairlineWidth").create({ default: { overflow: "hidden" } });
+let closure_14 = get_hairlineWidthDefault.create({ default: { overflow: "hidden" } });
 
 export default TextImpl;

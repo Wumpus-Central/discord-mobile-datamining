@@ -1,6 +1,9 @@
 // _runtime/01411_isArguments.js
-let closure_0 = require("hasToStringTagShams")();
-let closure_1 = require("callBoundIntrinsic")("Object.prototype.toString");
+import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import hasToStringTagShams from "hasToStringTagShams" /* 1412 */;
+
+let closure_0 = hasToStringTagShams();
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
 function isArguments(obj) {
   let tmp = closure_0;
   if (closure_0) {

@@ -1,8 +1,9 @@
 // _runtime/00895_initAndBind.js
-import { consoleSandbox } from "00824_consoleSandbox.js";
-import { getClient } from "00848_getClient.js";
-import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
-const require = arg1;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
+import consoleSandbox from "consoleSandbox" /* 824 */;
+import getClient from "getClient" /* 848 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.initAndBind = function initAndBind(arg0, debug) {

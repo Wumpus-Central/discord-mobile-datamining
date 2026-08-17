@@ -1,7 +1,6 @@
 // _runtime/00910__mergeOptions.js
-import setupIntegration from "setupIntegration";
-import setupIntegration from "setupIntegration";
-import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
+import setupIntegration from "setupIntegration" /* 887 */;
 
 function _mergeOptions() {
   let obj = arg0;
@@ -12,21 +11,17 @@ function _mergeOptions() {
   if (arg1 === undefined) {
     obj = {};
   }
-  const items = [...obj.allowUrls || [], ...tmp2];
-  obj = { allowUrls: null, denyUrls: null, ignoreErrors: null, ignoreTransactions: null };
-  obj[0] = items;
-  const items1 = [...obj.denyUrls || [], ...tmp4];
-  obj[1] = items1;
-  const items2 = [...obj.ignoreErrors || [], ...tmp6, ...tmp7];
-  obj[2] = items2;
-  const items3 = [...obj.ignoreTransactions || [], ...tmp9];
-  obj[3] = items3;
+  items = [...obj.allowUrls || [], ...tmp2];
+  obj = { allowUrls: items, denyUrls: items1, ignoreErrors: items2, ignoreTransactions: items3 };
+  items1 = [...obj.denyUrls || [], ...tmp4];
+  items2 = [...obj.ignoreErrors || [], ...tmp6, ...tmp7];
+  items3 = [...obj.ignoreTransactions || [], ...tmp9];
   return obj;
 }
 function _getEventFilterUrl(exception) {
   try {
     exception = exception.exception;
-    let items;
+    items = undefined;
     if (exception != null) {
       items = exception.values;
     }
@@ -67,7 +62,7 @@ function _getEventFilterUrl(exception) {
     if (frames) {
       tmp10 = (function _getLastValidUrl(arg0) {
         let tmp2;
-        let items = arg0;
+        items = arg0;
         if (arg0 === undefined) {
           items = [];
         }
@@ -108,17 +103,17 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
   if (arg0 === undefined) {
     obj = {};
   }
-  let c1;
+  c1 = undefined;
   obj = {
     name: "EventFilters",
     setup(getOptions) {
-      let closure_1 = outer1_4(obj, getOptions.getOptions());
+      closure_1 = closure_1_4(obj, getOptions.getOptions());
     },
     processEvent(type, arg1, getOptions) {
-      let tmp = _undefined;
-      if (!_undefined) {
-        const tmp5 = outer1_4(ignoreErrors, getOptions.getOptions());
-        _undefined = tmp5;
+      let tmp = closure_1;
+      if (!closure_1) {
+        const tmp5 = closure_1_4(ignoreErrors, getOptions.getOptions());
+        closure_1 = tmp5;
         tmp = tmp5;
       }
       if (type.type) {
@@ -161,7 +156,7 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
         if (length1) {
           obj = obj(_undefined[4]);
           const possibleEventMessages = obj.getPossibleEventMessages(type);
-          flag = possibleEventMessages.some((arg0) => ignoreErrors(tmp5[5]).stringMatchesSomePattern(arg0, ignoreErrors));
+          flag = possibleEventMessages.some((arg0) => ignoreErrors(table[5]).stringMatchesSomePattern(arg0, ignoreErrors));
         }
         if (flag) {
           flag5 = true;
@@ -221,7 +216,7 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
             }
             let flag3 = false;
             if (length3) {
-              const tmp14 = outer1_5(type);
+              const tmp14 = closure_1_5(type);
               let result1 = tmp14;
               if (result1) {
                 result1 = obj(_undefined[5]).stringMatchesSomePattern(tmp14, denyUrls);
@@ -235,7 +230,7 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
                 const debug2 = obj(_undefined[2]).debug;
                 const eventDescription = obj(_undefined[3]).getEventDescription(type);
                 const _HermesInternal2 = HermesInternal;
-                debug2.warn("Event dropped due to being matched by `denyUrls` option.\nEvent: " + eventDescription + ".\nUrl: " + outer1_5(type));
+                debug2.warn("Event dropped due to being matched by `denyUrls` option.\nEvent: " + eventDescription + ".\nUrl: " + closure_1_5(type));
                 flag5 = true;
                 const obj6 = obj(_undefined[3]);
               }
@@ -247,7 +242,7 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
               }
               let flag4 = true;
               if (length4) {
-                const tmp20 = outer1_5(type);
+                const tmp20 = closure_1_5(type);
                 let result2 = !tmp20;
                 if (tmp20) {
                   result2 = obj(_undefined[5]).stringMatchesSomePattern(tmp20, allowUrls);
@@ -262,7 +257,7 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
                   const debug = obj(_undefined[2]).debug;
                   const eventDescription1 = obj(_undefined[3]).getEventDescription(type);
                   const _HermesInternal = HermesInternal;
-                  debug.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + eventDescription1 + ".\nUrl: " + outer1_5(type));
+                  debug.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + eventDescription1 + ".\nUrl: " + closure_1_5(type));
                   flag5 = true;
                   const obj5 = obj(_undefined[3]);
                 }

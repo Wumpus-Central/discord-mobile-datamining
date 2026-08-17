@@ -1,9 +1,7 @@
 // _runtime/01608_useLinking.js
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
+import closure_2 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let Platform;
-let c3;
 const require = arg1;
 ({ Linking: c3, Platform } = get_ActivityIndicator);
 
@@ -31,11 +29,11 @@ export const useLinking = function useLinking(ref, enabled) {
   let fn2 = enabled.subscribe;
   if (fn2 === undefined) {
     fn2 = function l(arg0) {
-      let closure_0 = arg0;
-      function callback(url) {
+      closure_0 = arg0;
+      callback = function callback(url) {
         return callback(url.url);
-      }
-      let noop = filter.addEventListener("url", callback);
+      };
+      closure_2 = filter.addEventListener("url", callback);
       const removeEventListener = filter.removeEventListener;
       let bindResult;
       if (removeEventListener != null) {
@@ -44,7 +42,7 @@ export const useLinking = function useLinking(ref, enabled) {
       filter = bindResult;
       return () => {
         let remove;
-        if (noop != null) {
+        if (closure_2 != null) {
           remove = obj.remove;
         }
         if (remove) {
@@ -63,13 +61,13 @@ export const useLinking = function useLinking(ref, enabled) {
   if (getActionFromState === undefined) {
     getActionFromState = _require(flag[2]).getActionFromState;
   }
-  let closure_9;
-  let closure_10;
-  let closure_11;
-  let closure_12;
-  let closure_13;
-  let closure_14;
-  let closure_15;
+  closure_9 = undefined;
+  closure_10 = undefined;
+  closure_11 = undefined;
+  closure_12 = undefined;
+  closure_13 = undefined;
+  closure_14 = undefined;
+  closure_15 = undefined;
   let callback;
   let items = [flag, _require(flag[2]).useNavigationIndependentTree()];
   const effect = prefixes.useEffect(() => {
@@ -118,7 +116,7 @@ export const useLinking = function useLinking(ref, enabled) {
           return currentResult.then((arg0) => callback(arg0));
         }
       }
-      let closure_0 = callback(currentResult);
+      closure_0 = callback(currentResult);
     }
     const obj = {
       then(arg0) {

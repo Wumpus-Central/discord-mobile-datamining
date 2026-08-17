@@ -1,7 +1,8 @@
 // _runtime/01291_textEncoder.js
-import XXH64 from "_classCallCheck";
-import _classPrivateFieldBase from "_classPrivateFieldBase";
-import importDefaultResult1 from "_classPrivateFieldKey";
+import _createClassDefault from "_createClass" /* 42 */;
+import XXH64 from "_classCallCheck" /* 41 */;
+import closure_1 from "_classPrivateFieldBase" /* 90 */;
+import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
 
 let c2 = 0x009e3779b185ebca87n;
 let c3 = 0x00c2b2ae3d27d4eb4fn;
@@ -25,14 +26,14 @@ class XXH64 {
       num = 0;
     }
     tmp = XXH64(this, XXH64);
-    definePropertyResult = Object.defineProperty(this, seed, { writable: true, value: "a" });
-    definePropertyResult1 = Object.defineProperty(this, v1, { writable: true, value: "a" });
-    definePropertyResult2 = Object.defineProperty(this, v2, { writable: true, value: "a" });
-    definePropertyResult3 = Object.defineProperty(this, v3, { writable: true, value: "a" });
-    definePropertyResult4 = Object.defineProperty(this, v4, { writable: true, value: "a" });
-    definePropertyResult5 = Object.defineProperty(this, memory, { writable: true, value: "a" });
-    definePropertyResult6 = Object.defineProperty(this, len, { writable: true, value: "a" });
-    definePropertyResult7 = Object.defineProperty(this, memsize, { writable: true, value: "a" });
+    definePropertyResult = Object.defineProperty(this, closure_9, { writable: true, value: "a" });
+    definePropertyResult1 = Object.defineProperty(this, closure_10, { writable: true, value: "a" });
+    definePropertyResult2 = Object.defineProperty(this, closure_11, { writable: true, value: "a" });
+    definePropertyResult3 = Object.defineProperty(this, closure_12, { writable: true, value: "a" });
+    definePropertyResult4 = Object.defineProperty(this, closure_13, { writable: true, value: "a" });
+    definePropertyResult5 = Object.defineProperty(this, closure_14, { writable: true, value: "a" });
+    definePropertyResult6 = Object.defineProperty(this, closure_15, { writable: true, value: "a" });
+    definePropertyResult7 = Object.defineProperty(this, closure_16, { writable: true, value: "a" });
     resetResult = this.reset(num);
     return;
   }
@@ -461,7 +462,7 @@ const items = [
     }
   }
 ];
-const importDefaultResultResult = require("_createClass")(XXH64, items);
+const importDefaultResultResult = _createClassDefault(XXH64, items);
 
 export const XXH64 = importDefaultResultResult;
 export const hash = function hash(arg0) {

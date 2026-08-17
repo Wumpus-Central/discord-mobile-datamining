@@ -1,5 +1,7 @@
 // _runtime/14853__regeneratorRuntime.js
-const tmp3 = require("_regeneratorRuntime")();
+import _regeneratorRuntime from "_regeneratorRuntime" /* 14854 */;
+
+const tmp3 = _regeneratorRuntime();
 try {
   globalThis.regeneratorRuntime = tmp3;
 } catch (err) {

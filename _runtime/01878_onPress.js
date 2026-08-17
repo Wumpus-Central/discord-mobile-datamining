@@ -1,23 +1,16 @@
 // _runtime/01878_onPress.js
-import "noop";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let c5;
 const require = arg1;
+noopDefault;
 ({ useCallback: c3, useMemo: c4 } = noop);
 ({ StyleSheet, Text: c5 } = get_ActivityIndicator);
 const styles = StyleSheet.create({ doneButton: { fontWeight: "600", fontSize: 15 }, doneButtonContainer: { marginRight: 16, marginLeft: 8 } });
 
 export default function _default(rippleRadius) {
-  let button;
-  let children;
-  let onPress;
-  let text;
   ({ children, onPress } = rippleRadius);
   let num = rippleRadius.rippleRadius;
   if (num === undefined) {
@@ -37,7 +30,7 @@ export default function _default(rippleRadius) {
   const obj2 = onPress(theme[5]);
   obj = { accessibilityHint: "Closes the keyboard", accessibilityLabel: "Done", rippleRadius: num, style: doneButtonContainer.doneButtonContainer, testID: null, theme: null, onPress: null, children: null };
   const tmp4 = callback2(() => {
-    const items = [outer1_7.doneButton, { color: theme[keyboardState].primary }];
+    const items = [closure_1_7.doneButton, { color: theme[keyboardState].primary }];
     return items;
   }, items);
   obj[4] = onPress(theme[7]).TEST_ID_KEYBOARD_TOOLBAR_DONE;

@@ -1,15 +1,14 @@
 // _runtime/01160_startIdleSpan.js
-import { AppState } from "get ActivityIndicator";
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { 01158__ } from "metro/01158__.js";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import _mod1158 from "module_1158" /* 1158 */;
 
+const AppState = get_ActivityIndicator.AppState;
 let c3 = "Route Change";
 let obj = { idleTimeout: 1000, finalTimeout: 600000 };
 function startIdleSpan(name) {
-  let finalTimeout;
-  let idleTimeout;
   ({ finalTimeout, idleTimeout } = arg1);
-  let obj = registerSpanErrorInstrumentation;
+  obj = registerSpanErrorInstrumentation;
   const client = obj.getClient();
   if (client) {
     if ("background" === AppState.currentState) {
@@ -50,7 +49,7 @@ const javascript = "javascript";
 export const DEFAULT_NAVIGATION_SPAN_NAME = "Route Change";
 export const defaultIdleOptions = obj;
 export const startIdleNavigationSpan = (arg0) => {
-  let obj = arg1;
+  obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
@@ -66,7 +65,7 @@ export const startIdleNavigationSpan = (arg0) => {
   if (flag === undefined) {
     flag = false;
   }
-  let obj1 = registerSpanErrorInstrumentation;
+  obj1 = registerSpanErrorInstrumentation;
   const client = obj1.getClient();
   const obj3 = registerSpanErrorInstrumentation;
   if (client) {
@@ -131,13 +130,12 @@ export const startIdleNavigationSpan = (arg0) => {
 };
 export { startIdleSpan };
 export const getDefaultIdleNavigationSpanOptions = function getDefaultIdleNavigationSpanOptions() {
-  const obj = { name: c3, op: "navigation", forceTransaction: true, scope: null };
-  obj[3] = registerSpanErrorInstrumentation.getCurrentScope();
+  obj = { name: c3, op: "navigation", forceTransaction: true, scope: registerSpanErrorInstrumentation.getCurrentScope() };
   return obj;
 };
 export const isSentryInteractionSpan = function isSentryInteractionSpan(activeSpan) {
-  const items = [01158__.SPAN_ORIGIN_AUTO_INTERACTION, 01158__.SPAN_ORIGIN_MANUAL_INTERACTION];
-  const obj = registerSpanErrorInstrumentation;
+  const items = [_mod1158.SPAN_ORIGIN_AUTO_INTERACTION, _mod1158.SPAN_ORIGIN_MANUAL_INTERACTION];
+  obj = registerSpanErrorInstrumentation;
   return items.includes(registerSpanErrorInstrumentation.spanToJSON(activeSpan).origin || "");
 };
 export const SCOPE_SPAN_FIELD = "_sentrySpan";

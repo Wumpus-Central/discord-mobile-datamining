@@ -1,5 +1,5 @@
 // _runtime/00927_thirdPartyErrorFilterIntegration.js
-import setupIntegration from "setupIntegration";
+import setupIntegration from "setupIntegration" /* 887 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let c2 = "_sentryBundlerPluginAppKey:";
@@ -7,11 +7,11 @@ let c3 = "Attempt to invoke user-land function";
 let c4 = "fn.apply(this, wrappedArguments)";
 
 export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegration((arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return {
     name: "ThirdPartyErrorsFilter",
     setup(on) {
-      let closure_0 = on;
+      closure_0 = on;
       on.on("beforeEnvelope", (arg0) => {
         options(table[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
           if ("event" === arg1) {
@@ -30,14 +30,14 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
       });
       on.on("applyFrameMetadata", (type) => {
         if (!type.type) {
-          const result = options(outer1_1[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
-          const obj = options(outer1_1[2]);
+          const result = options(closure_1_1[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
+          const obj = options(closure_1_1[2]);
         }
       });
     },
     processEvent(tags) {
       lib = lib.ignoreSentryInternalFrames;
-      let obj = lib(outer1_1[3]);
+      let obj = lib(closure_1_1[3]);
       const framesFromEvent = obj.getFramesFromEvent(tags);
       let mapped;
       if (framesFromEvent) {
@@ -62,7 +62,7 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
                         if (filename2.includes("helpers")) {
                           const context_line = filename.context_line;
                           flag = false;
-                          if (context_line.includes(outer1_4)) {
+                          if (context_line.includes(closure_1_4)) {
                             flag = false;
                             if (filename.pre_context) {
                               let num3 = 0;
@@ -73,8 +73,8 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
                                   let tmp8 = num3;
                                   let hasItem;
                                   if (obj != null) {
-                                    let tmp10 = outer1_3;
-                                    hasItem = obj.includes(outer1_3);
+                                    let tmp10 = closure_1_3;
+                                    hasItem = obj.includes(closure_1_3);
                                   }
                                   flag = true;
                                   if (hasItem) {

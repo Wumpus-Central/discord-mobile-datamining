@@ -1,18 +1,18 @@
 // _runtime/04551_createFind.js
 
 export default function createFind(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return (arg0, arg1, arg2) => {
     const ObjectResult = Object(arg0);
     const callback = ObjectResult;
     let fn = arg1;
     let tmp5 = arg0;
-    if (!callback(outer1_1[0])(arg0)) {
+    if (!callback(closure_1_1[0])(arg0)) {
       const tmp6 = tmp2(tmp3[1])(arg1, 3);
-      let closure_1 = tmp6;
+      closure_1 = tmp6;
       tmp5 = tmp2(tmp3[2])(arg0);
       fn = function u(arg0) {
-        return tmp6(ObjectResult[arg0], arg0, ObjectResult);
+        return callback(ObjectResult[arg0], arg0, ObjectResult);
       };
       const tmp4 = tmp6;
     }

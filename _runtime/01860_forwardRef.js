@@ -1,13 +1,12 @@
 // _runtime/01860_forwardRef.js
-import noop from "noop";
-import closure_5 from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
+import closure_5 from "noop" /* 19 */;
 
-let c3;
-let c4;
-let forwardRef;
 ({ useCallback: c3, useMemo: c4, forwardRef } = noop);
+const View = get_ActivityIndicator.View;
+const jsx = jsxProd.jsx;
 let closure_8 = { x: 0, y: 0, width: 0, height: 0 };
 let closure_9 = { code: "function pnpm_indexTsx1(){const{initialFrame,defaultLayout}=this.__closure;return initialFrame.value||defaultLayout;}" };
 let closure_10 = { code: "function pnpm_indexTsx2(){const{screenHeight,keyboard,keyboardVerticalOffset,frame}=this.__closure;const keyboardY=screenHeight-keyboard.heightWhenOpened.value-keyboardVerticalOffset;return Math.max(frame.value.y+frame.value.height-keyboardY,0);}" };
@@ -16,10 +15,6 @@ let closure_12 = { code: "function pnpm_indexTsx4(layout){const{keyboard,initial
 let closure_13 = { code: "function pnpm_indexTsx5(){const{enabled,interpolateToRelativeKeyboardHeight,keyboard,translate,padding,frame,behavior}=this.__closure;if(!enabled){return{};}const bottom=interpolateToRelativeKeyboardHeight(keyboard.progress.value);const translateY=interpolateToRelativeKeyboardHeight(translate.value);const paddingBottom=interpolateToRelativeKeyboardHeight(padding.value);const height=frame.value.height-bottom;switch(behavior){case\"height\":if(!keyboard.isClosed.value&&height>0){return{height:height,flex:0};}return{};case\"position\":return{bottom:bottom};case\"padding\":return{paddingBottom:bottom};case\"translate-with-padding\":return{paddingTop:paddingBottom,transform:[{translateY:-translateY}]};default:return{};}}" };
 
 export default forwardRef((behavior) => {
-  let children;
-  let enabled;
-  let onLayout;
-  let style;
   behavior = behavior.behavior;
   ({ children, enabled } = behavior);
   if (enabled === undefined) {
@@ -42,18 +37,18 @@ export default forwardRef((behavior) => {
   let padding;
   let keyboardAnimation;
   let height;
-  let c12;
-  let c13;
-  let closure_14;
+  closure_12 = undefined;
+  closure_13 = undefined;
+  closure_14 = undefined;
   let animatedStyle;
   let contentContainerStyle;
   let obj = behavior(num[3]);
   sharedValue = obj.useSharedValue(null);
   ref = sharedValue.useRef(null);
-  let obj1 = behavior(num[3]);
+  obj1 = behavior(num[3]);
   class K {
     constructor() {
-      tmp = c5.value || translate;
+      tmp = closure_5.value || translate;
       return tmp;
     }
   }
@@ -71,7 +66,7 @@ export default forwardRef((behavior) => {
   height = behavior(num[5]).useWindowDimensions().height;
   class V {
     constructor() {
-      return Math.max(c7.value.y + c7.value.height - (height - c10.heightWhenOpened.value - c2), 0);
+      return Math.max(closure_7.value.y + closure_7.value.height - (height - closure_10.heightWhenOpened.value - c2), 0);
     }
   }
   V.__closure = { screenHeight: height, keyboard: keyboardAnimation, keyboardVerticalOffset: num, frame: derivedValue };
@@ -79,12 +74,12 @@ export default forwardRef((behavior) => {
   V.__initData = keyboardAnimation;
   let items = [height, num];
   const tmp8 = flag(V, items);
-  c12 = tmp8;
+  closure_12 = tmp8;
   class C {
     constructor(arg0) {
       obj = behavior(c2[3]);
       items = [0];
-      items[1] = c12();
+      items[1] = closure_12();
       return obj.interpolate(behavior, [0, 1], items);
     }
   }
@@ -94,14 +89,14 @@ export default forwardRef((behavior) => {
   C.__initData = height;
   const items1 = [tmp8];
   const tmp9 = flag(C, items1);
-  c13 = tmp9;
+  closure_13 = tmp9;
   class D {
     constructor(arg0) {
-      value = c10.isClosed.value;
+      value = closure_10.isClosed.value;
       if (!value) {
-        tmp = c5;
+        tmp = closure_5;
         tmp2 = null;
-        value = null === c5.value;
+        value = null === closure_5.value;
       }
       if (!value) {
         tmp3 = behavior;
@@ -110,15 +105,15 @@ export default forwardRef((behavior) => {
       }
       if (value) {
         tmp4 = behavior;
-        tmp5 = c5;
-        c5.value = behavior;
+        tmp5 = closure_5;
+        closure_5.value = behavior;
       }
       return;
     }
   }
   D.__closure = { keyboard: keyboardAnimation, initialFrame: sharedValue, behavior };
   D.__workletHash = 12256944793057;
-  D.__initData = c12;
+  D.__initData = closure_12;
   const items2 = [behavior];
   closure_14 = flag(D, items2);
   const items3 = [onLayout, flag];
@@ -137,9 +132,9 @@ export default forwardRef((behavior) => {
           obj = {};
           const merged = Object.assign(layout);
           ({ x: obj2.x, y: obj2.y } = arg0);
-          obj.runOnUI(outer1_14)(obj);
+          obj.runOnUI(closure_1_14)(obj);
         }).catch(() => {
-          behavior(num[3]).runOnUI(outer1_14)(layout);
+          behavior(num[3]).runOnUI(closure_1_14)(layout);
         });
       }
       let obj = behavior(num[6]);
@@ -150,14 +145,14 @@ export default forwardRef((behavior) => {
   class F {
     constructor() {
       if (c1) {
-        tmp = C;
-        tmp2 = c10;
-        tmp3 = C(c10.progress.value);
+        tmp = closure_13;
+        tmp2 = closure_10;
+        tmp3 = closure_13(closure_10.progress.value);
         tmp4 = translate;
         tmp6 = padding;
-        tmp5 = C(translate.value);
-        tmp8 = c7;
-        diff = c7.value.height - tmp3;
+        tmp5 = closure_13(translate.value);
+        tmp8 = closure_7;
+        diff = closure_7.value.height - tmp3;
         tmp10 = behavior;
         str = "height";
         if ("height" === behavior) {
@@ -207,7 +202,7 @@ export default forwardRef((behavior) => {
   }
   F.__closure = { enabled, interpolateToRelativeKeyboardHeight: tmp9, keyboard: keyboardAnimation, translate, padding, frame: derivedValue, behavior };
   F.__workletHash = 6440002265153;
-  F.__initData = c13;
+  F.__initData = closure_13;
   const items4 = [behavior, enabled, tmp9];
   animatedStyle = behavior(num[3]).useAnimatedStyle(F, items4);
   const tmp13 = enabled(num[8])(ref, arg1);

@@ -1,10 +1,9 @@
 // _runtime/01731_rubberBandDecay.js
-import { isValidRubberBandConfig } from "01730_isValidRubberBandConfig.js";
-const require = arg1;
+import isValidRubberBandConfig from "isValidRubberBandConfig" /* 1730 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function rubberBandDecay(current, lastTimestamp, deceleration) {
-  let startTimestamp;
-  let velocity;
   current = current.current;
   ({ startTimestamp, velocity } = current);
   const bound = Math.min(Math.max(lastTimestamp - current.lastTimestamp, 0), 64);

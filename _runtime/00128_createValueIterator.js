@@ -1,8 +1,8 @@
 // _runtime/00128_createValueIterator.js
 arg5.createValueIterator = function createValueIterator(arg0) {
-  let closure_0 = arg0;
-  let c2 = 0;
-  let c3 = 0;
+  closure_0 = arg0;
+  c2 = 0;
+  c3 = 0;
   return (function* createValueIterator(arg0) {
     if (c3 === 2) {
       c3 = 3;
@@ -30,12 +30,12 @@ arg5.createValueIterator = function createValueIterator(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp2;
+            closure_1 = tmp2;
             closure_1 = 0;
             if (closure_1 < closure_0.length) {
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = closure_0[closure_1];
               return obj1;
             } else {
@@ -60,9 +60,9 @@ arg5.createValueIterator = function createValueIterator(arg0) {
   })();
 };
 arg5.createKeyIterator = function createKeyIterator(arg0) {
-  let closure_0 = arg0;
-  let c2 = 0;
-  let c3 = 0;
+  closure_0 = arg0;
+  c2 = 0;
+  c3 = 0;
   return (function* createKeyIterator(arg0) {
     if (c3 === 2) {
       c3 = 3;
@@ -90,12 +90,12 @@ arg5.createKeyIterator = function createKeyIterator(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp2;
+            closure_1 = tmp2;
             closure_1 = 0;
             if (closure_1 < closure_0.length) {
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = closure_1;
               return obj1;
             } else {
@@ -120,9 +120,9 @@ arg5.createKeyIterator = function createKeyIterator(arg0) {
   })();
 };
 arg5.createEntriesIterator = function createEntriesIterator(arg0) {
-  let closure_0 = arg0;
-  let c2 = 0;
-  let c3 = 0;
+  closure_0 = arg0;
+  c2 = 0;
+  c3 = 0;
   return (function* createEntriesIterator(arg0) {
     if (c3 === 2) {
       c3 = 3;
@@ -150,13 +150,13 @@ arg5.createEntriesIterator = function createEntriesIterator(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp2;
+            closure_1 = tmp2;
             closure_1 = 0;
             if (closure_1 < closure_0.length) {
               const items = [closure_1, closure_0[closure_1]];
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = items;
               return obj1;
             } else {

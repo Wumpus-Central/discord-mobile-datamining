@@ -1,5 +1,6 @@
 // _runtime/04425_mod.js
-import { 00566__ } from "metro/00566__.js";
+import _mod566 from "module_566" /* 566 */;
+
 
 export default function mod(arg0, arg1) {
   const result = arg0 % arg1;
@@ -7,5 +8,5 @@ export default function mod(arg0, arg1) {
   if (result < 0) {
     sum = result + arg1;
   }
-  return 00566__(sum);
+  return _mod566(sum);
 };

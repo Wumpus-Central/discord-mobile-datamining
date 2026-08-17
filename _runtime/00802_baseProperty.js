@@ -1,7 +1,7 @@
 // _runtime/00802_baseProperty.js
 
 export default function baseProperty(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return (arg0) => {
     let tmp;
     if (null != arg0) {

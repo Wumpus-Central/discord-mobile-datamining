@@ -1,5 +1,6 @@
 // _runtime/00762_toString.js
-import { toString } from "00763_toString.js";
+import toString from "toString" /* 763 */;
+
 
 export default function toString(arg0) {
   let str = "";

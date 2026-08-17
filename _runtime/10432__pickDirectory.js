@@ -1,13 +1,13 @@
 // _runtime/10432__pickDirectory.js
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Platform } from "get ActivityIndicator";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
 
 const require = arg1;
 function _pickDirectory() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c1 = 0;
     return (function*(arg0) {
       if (table === 2) {
         table = 3;
@@ -38,7 +38,7 @@ function _pickDirectory() {
             const merged = Object.assign(callback);
             const NativeDocumentPicker = callback(table[2]).NativeDocumentPicker;
             table = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = NativeDocumentPicker.pickDirectory(obj);
             return obj1;
           }
@@ -49,7 +49,7 @@ function _pickDirectory() {
       }
     })();
   });
-  const _pickDirectory = tmp;
+  closure_3 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

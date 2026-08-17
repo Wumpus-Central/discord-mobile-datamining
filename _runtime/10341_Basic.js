@@ -1,20 +1,16 @@
 // _runtime/10341_Basic.js
-import { View } from "get ActivityIndicator";
-import "noop";
-import { jsx } from "jsxProd";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
+const View = get_ActivityIndicator.View;
+noopDefault;
+const jsx = jsxProd.jsx;
 
 export const Basic = (data) => {
-  let View;
-  let closure_6;
-  let closure_7;
-  let closure_8;
-  let dotStyle;
-  let horizontal;
-  let require;
   ({ activeDotStyle: require, dotStyle } = data);
   ({ progress: View, horizontal } = data);
-  const jsx = tmp;
+  closure_3 = tmp;
   data = data.data;
   const size = data.size;
   ({ renderItem: closure_6, onPress: closure_7, carouselName: closure_8 } = data);
@@ -35,7 +31,7 @@ export const Basic = (data) => {
         items[2] = tmp2;
         obj[0] = items;
         obj[1] = data.map((arg0, index) => {
-          let closure_0 = index;
+          closure_0 = index;
           const obj = {
             index,
             size,
@@ -46,26 +42,25 @@ export const Basic = (data) => {
             activeDotStyle: closure_0,
             onPress() {
               let tmpResult;
-              if (outer1_7 != null) {
+              if (closure_1_7 != null) {
                 tmpResult = tmp(closure_0);
               }
               return tmpResult;
             },
-            accessibilityLabel: null,
+            accessibilityLabel: "Slide " + index + 1 + " of " + data.length + " - " + closure_8,
             children: null
           };
-          obj[8] = "Slide " + index + 1 + " of " + data.length + " - " + closure_8;
           let tmp2Result;
           if (closure_6 != null) {
             tmp2Result = tmp2(arg0, index);
           }
           obj[9] = tmp2Result;
-          return closure_3(outer1_0(dotStyle[3]).PaginationItem, obj, index);
+          return closure_3(closure_1_0(dotStyle[3]).PaginationItem, obj, index);
         });
-        return <View style={null}>{null}</View>;
+        return closure_3(View, obj);
       }
     }
   }
-  const error = new Error("size/width/height must be a number");
+  error = new Error("size/width/height must be a number");
   throw error;
 };

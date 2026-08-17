@@ -1,4 +1,6 @@
 // _runtime/metro/12197__.js
+import _mod12198 from "module_12198" /* 12198 */;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -84,9 +86,9 @@ if (self2) {
     }
     const _Object3 = Object;
     exports.z = undefined;
-    const fnResult = fn(require("module_12198"));
+    const fnResult = fn(_mod12198);
     exports.z = fnResult;
-    fn2(require("module_12198"), exports);
+    fn2(_mod12198, exports);
     exports.default = fnResult;
   } else {
     const _Object2 = Object;

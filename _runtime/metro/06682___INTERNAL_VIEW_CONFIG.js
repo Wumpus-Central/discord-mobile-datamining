@@ -1,8 +1,9 @@
 // _runtime/metro/06682___INTERNAL_VIEW_CONFIG.js
-import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import result from "result" /* 26 */;
+import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
 let obj = { uiViewClassName: "RNSVGSvgView", validAttributes: null };
-obj = { bbWidth: true, bbHeight: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true, color: require("result").colorAttribute, pointerEvents: true, hitSlop: true };
+obj = { bbWidth: true, bbHeight: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true, color: result.colorAttribute, pointerEvents: true, hitSlop: true };
 obj[1] = obj;
 
 export default setRuntimeConfigProvider.get("RNSVGSvgView", () => obj);

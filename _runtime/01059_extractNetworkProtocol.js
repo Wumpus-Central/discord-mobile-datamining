@@ -1,14 +1,13 @@
 // _runtime/01059_extractNetworkProtocol.js
-import _slicedToArray from "_slicedToArray";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import WINDOW from "WINDOW" /* 1039 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { WINDOW } from "01039_WINDOW.js";
 import { onHidden } from "01060_onHidden.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const extractNetworkProtocol = function extractNetworkProtocol(nextHopProtocol) {
-  let str;
-  let str2;
   str = "unknown";
   str2 = "unknown";
   let str3 = "";
@@ -17,9 +16,9 @@ export const extractNetworkProtocol = function extractNetworkProtocol(nextHopPro
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if ("/" === nextResult) {
-      let tmp8 = _slicedToArray;
+      let tmp8 = callback;
       let num = 2;
-      let tmp9 = _slicedToArray(nextHopProtocol.split("/"), 2);
+      let tmp9 = callback(nextHopProtocol.split("/"), 2);
       [str, str2] = tmp9;
       let tmp10 = iter;
       iter.return();
@@ -71,7 +70,7 @@ export const isMeasurementValue = function isMeasurementValue(deviceMemory) {
 };
 export const listenForWebVitalReportEvents = function listenForWebVitalReportEvents(on, arg1) {
   const _require = arg1;
-  let c2 = false;
+  c2 = false;
   _onHidden.onHidden(() => {
     let tmp = !c2;
     if (!c2) {
@@ -82,7 +81,7 @@ export const listenForWebVitalReportEvents = function listenForWebVitalReportEve
     }
     c2 = true;
   });
-  let closure_3 = on.on("beforeStartNavigationSpan", (arg0, isRedirect) => {
+  closure_3 = on.on("beforeStartNavigationSpan", (arg0, isRedirect) => {
     isRedirect = undefined;
     if (isRedirect != null) {
       isRedirect = isRedirect.isRedirect;
@@ -100,7 +99,7 @@ export const listenForWebVitalReportEvents = function listenForWebVitalReportEve
       callback3();
     }
   });
-  let closure_4 = on.on("afterStartPageLoadSpan", (spanContext) => {
+  closure_4 = on.on("afterStartPageLoadSpan", (spanContext) => {
     const spanId = spanContext.spanContext().spanId;
     callback3();
   });
@@ -110,11 +109,11 @@ export const msToSec = function msToSec(duration) {
 };
 export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, arg3) {
   const _require = sum;
-  const dependencyMap = sum1;
+  dependencyMap = sum1;
   if (arg3 == null) {
     HermesBuiltin.throwTypeError();
   } else {
-    let closure_2 = Object.assign(arg3, undefined);
+    closure_2 = Object.assign(arg3, undefined);
     const start_timestamp = _registerSpanErrorInstrumentation.spanToJSON(activeSpan).start_timestamp;
     let tmp = start_timestamp;
     if (start_timestamp) {
@@ -141,13 +140,6 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
   }
 };
 export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(arg0) {
-  let attributes;
-  let environment;
-  let name;
-  let release;
-  let sendDefaultPii;
-  let startTime;
-  let transaction;
   let obj = registerSpanErrorInstrumentation;
   const client = obj.getClient();
   if (client) {

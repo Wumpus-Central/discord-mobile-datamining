@@ -1,6 +1,8 @@
 // _runtime/metro/00408__.js
-import "noop";
-import createAnimatedComponent from "createAnimatedComponent";
+import noopAll from "noop" /* 19 */;
+import ViewDefault from "View" /* 108 */;
+import createAnimatedComponentDefault from "createAnimatedComponent" /* 387 */;
 
+noopAll;
 
-export default createAnimatedComponent(require("View"));
+export default createAnimatedComponentDefault(ViewDefault);

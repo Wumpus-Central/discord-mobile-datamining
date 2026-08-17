@@ -1,11 +1,6 @@
 // _runtime/06346_is.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 
-let c3;
-let c4;
-let c5;
-let closure_1;
-let obj1;
 if (typeof Object.is === "function") {
   const _Object = Object;
 } else {
@@ -28,7 +23,7 @@ if (typeof Object.is === "function") {
 ({ useSyncExternalStore: closure_1, useRef: obj1, useEffect: c3, useMemo: c4, useDebugValue: c5 } = noop);
 
 export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) => {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   let callback = arg2;
   let callback2 = arg3;
   const callback3 = arg4;
@@ -42,15 +37,15 @@ export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) =
   }
   let items = [arg1, arg2, arg3, arg4];
   const tmp2 = current(() => {
-    let c2 = false;
+    c2 = false;
     let tmp = null;
     if (undefined !== closure_1) {
       tmp = closure_1;
     }
-    let closure_3 = tmp;
+    closure_3 = tmp;
     const items = [
       () => {
-        const tmp = outer1_0();
+        const tmp = closure_1_0();
         if (callback2) {
           let tmp3 = closure_1;
           if (!callback(callback, tmp)) {
@@ -67,8 +62,8 @@ export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) =
           callback = tmp;
           tmp3 = callback2(tmp);
           if (undefined !== closure_3) {
-            if (outer1_4.hasValue) {
-              const value = outer1_4.value;
+            if (closure_1_4.hasValue) {
+              const value = closure_1_4.value;
               if (tmp4(value, tmp3)) {
                 closure_1 = value;
                 tmp3 = value;
@@ -84,12 +79,12 @@ export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) =
     let fn;
     if (null !== tmp) {
       fn = () => {
-        tmp = tmp();
+        const tmp = callback3();
         if (callback2) {
           let tmp3 = closure_1;
           if (!callback(callback, tmp)) {
             let tmp10 = callback2(tmp);
-            if (undefined === tmp) {
+            if (undefined === callback3) {
               callback = tmp;
               closure_1 = tmp10;
             }
@@ -100,10 +95,10 @@ export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) =
           callback2 = true;
           callback = tmp;
           tmp3 = callback2(tmp);
-          if (undefined !== tmp) {
-            if (outer1_4.hasValue) {
-              const value = outer1_4.value;
-              if (tmp(value, tmp3)) {
+          if (undefined !== callback3) {
+            if (closure_1_4.hasValue) {
+              const value = closure_1_4.value;
+              if (callback3(value, tmp3)) {
                 closure_1 = value;
                 tmp3 = value;
               }

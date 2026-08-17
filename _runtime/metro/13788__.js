@@ -14,7 +14,7 @@ arg5.default = () => {
           const payload = type.payload;
           let num = payload.lineNumber;
           const _HermesInternal = HermesInternal;
-          let obj = { file: null, lineNumber: null };
+          obj = { file: null, lineNumber: null };
           obj[0] = payload.file;
           const combined = "" + url.url + "/open-stack-frame";
           if (!num) {

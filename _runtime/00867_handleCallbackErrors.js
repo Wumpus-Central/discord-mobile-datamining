@@ -20,7 +20,7 @@ arg5.handleCallbackErrors = function handleCallbackErrors(arg0, arg1) {
     return (function maybeHandlePromiseRejection(promise, arg1, fn, fn2) {
       const callback = arg1;
       const table = fn;
-      let closure_2 = fn2;
+      closure_2 = fn2;
       if (obj.isThenable(promise)) {
         return promise.then((arg0) => {
           callback2();

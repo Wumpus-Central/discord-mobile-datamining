@@ -1,14 +1,16 @@
 // _runtime/07743_spanTimeInputToSeconds.js
-import { consoleSandbox } from "07738_consoleSandbox.js";
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
-import { generatePropagationContext } from "07748_generatePropagationContext.js";
-import { regExp } from "07750_regExp.js";
-import { dateTimestampInSeconds } from "07752_dateTimestampInSeconds.js";
-import { getMetricSummaryJsonForSpan } from "07754_getMetricSummaryJsonForSpan.js";
-import { getSpanStatusFromHttpCode } from "07755_getSpanStatusFromHttpCode.js";
-import { getMainCarrier } from "07756_getMainCarrier.js";
-import { getAsyncContextStrategy } from "07757_getAsyncContextStrategy.js";
-const require = arg1;
+import consoleSandbox from "consoleSandbox" /* 7738 */;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+import generatePropagationContext from "generatePropagationContext" /* 7748 */;
+import regExp from "regExp" /* 7750 */;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 7752 */;
+import _mod7753 from "module_7753" /* 7753 */;
+import getMetricSummaryJsonForSpan from "getMetricSummaryJsonForSpan" /* 7754 */;
+import getSpanStatusFromHttpCode from "getSpanStatusFromHttpCode" /* 7755 */;
+import getMainCarrier from "getMainCarrier" /* 7756 */;
+import getAsyncContextStrategy from "getAsyncContextStrategy" /* 7757 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function spanTimeInputToSeconds(num) {
   if (typeof num === "number") {
@@ -39,13 +41,6 @@ function spanTimeInputToSeconds(num) {
   return sum;
 }
 function spanToJSON(getSpanJSON) {
-  let endTime;
-  let name;
-  let parentSpanId;
-  let spanId;
-  let startTime;
-  let status;
-  let traceId;
   if ((function spanIsSentrySpan(getSpanJSON) {
     return typeof getSpanJSON.getSpanJSON === "function";
   })(getSpanJSON)) {
@@ -68,8 +63,8 @@ function spanToJSON(getSpanJSON) {
         const tmp8 = spanTimeInputToSeconds(endTime);
         obj[6] = tmp8;
         obj[7] = getStatusMessage(status);
-        obj[8] = attributes[require(undefined, 7753).SEMANTIC_ATTRIBUTE_SENTRY_OP];
-        obj[9] = attributes[require(undefined, 7753).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
+        obj[8] = attributes[_mod7753.SEMANTIC_ATTRIBUTE_SENTRY_OP];
+        obj[9] = attributes[_mod7753.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
         const obj2 = addNonEnumerableProperty;
         obj[10] = getMetricSummaryJsonForSpan.getMetricSummaryJsonForSpan(getSpanJSON);
         return obj2.dropUndefinedKeys(obj);
@@ -143,10 +138,10 @@ arg5.getSpanDescendants = function getSpanDescendants(arg0) {
   const set = new Set();
   function addSpanChildren(arg0) {
     if (!set.has(arg0)) {
-      if (outer1_5(arg0)) {
+      if (closure_1_5(arg0)) {
         set.add(arg0);
-        let tmp3 = outer1_7;
-        if (arg0[outer1_7]) {
+        let tmp3 = closure_1_7;
+        if (arg0[closure_1_7]) {
           const _Array = Array;
           let items = Array.from(arg0[tmp3]);
         } else {
@@ -180,8 +175,6 @@ arg5.spanIsSampled = spanIsSampled;
 arg5.spanTimeInputToSeconds = spanTimeInputToSeconds;
 arg5.spanToJSON = spanToJSON;
 arg5.spanToTraceContext = function spanToTraceContext(spanContext) {
-  let isRemote;
-  let spanId;
   const trace_id = spanContext.spanContext();
   ({ spanId, isRemote } = trace_id);
   let parent_span_id = span_id;
@@ -195,20 +188,11 @@ arg5.spanToTraceContext = function spanToTraceContext(spanContext) {
   return addNonEnumerableProperty.dropUndefinedKeys({ parent_span_id, span_id, trace_id: trace_id.traceId });
 };
 arg5.spanToTraceHeader = function spanToTraceHeader(spanContext) {
-  let spanId;
-  let traceId;
   ({ traceId, spanId } = spanContext.spanContext());
   const spanContextResult = spanContext.spanContext();
   return regExp.generateSentryTraceHeader(traceId, spanId, 1 === spanContext.spanContext().traceFlags);
 };
 arg5.spanToTransactionTraceContext = function spanToTransactionTraceContext(spanContext) {
-  let data;
-  let op;
-  let origin;
-  let parent_span_id;
-  let spanId;
-  let status;
-  let traceId;
   ({ spanId, traceId } = spanContext.spanContext());
   const spanContextResult = spanContext.spanContext();
   ({ data, op, parent_span_id, status, origin } = spanToJSON(spanContext));

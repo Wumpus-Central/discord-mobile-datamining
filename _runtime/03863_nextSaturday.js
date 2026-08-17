@@ -1,6 +1,6 @@
 // _runtime/03863_nextSaturday.js
-import nextDay from "nextDay";
-import requiredArgs from "requiredArgs";
+import nextDay from "nextDay" /* 3860 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!nextDay) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!nextDay) {
 } else {
   tmp3 = nextDay;
 }
-let c0 = tmp3;
+nextDay = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,10 +17,10 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function nextSaturday(arg0) {
-  tmp5.default(1, arguments);
-  return tmp3.default(arg0, 6);
+  requiredArgs.default(1, arguments);
+  return nextDay.default(arg0, 6);
 };
 export default exports.default;

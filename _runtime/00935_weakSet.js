@@ -1,5 +1,5 @@
 // _runtime/00935_weakSet.js
-import asyncGeneratorStep from "createErrorCapturingHandler";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const weakSet = new WeakSet();
@@ -36,13 +36,13 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
       obj[1] = recordOutputs;
       tmpResult = tmp(822);
       tmpResult.fill(arg0, "connect", (arg0) => {
-        let closure_0 = arg0;
-        closure_0 = outer1_2(function(arg0) {
+        closure_0 = arg0;
+        closure_0 = closure_1_2(function(arg0) {
           const self = this;
-          let closure_1 = arg0;
-          let closure_2 = [...arguments].slice();
-          let c6 = 0;
-          let c7 = 0;
+          closure_1 = arg0;
+          closure_2 = [...arguments].slice();
+          c6 = 0;
+          c7 = 0;
           const iter = (function*(arg0) {
             if (c7 === 2) {
               c7 = 3;
@@ -51,7 +51,7 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
               if (arg0 === 1) {
                 throw arg1;
               } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
+                obj = { value: null, done: true };
                 obj[0] = arg1;
                 return obj;
               } else {
@@ -70,9 +70,9 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    let closure_5 = closure_0;
-                    let closure_4 = closure_0;
-                    let closure_3 = tmp2;
+                    closure_5 = closure_0;
+                    closure_4 = closure_0;
+                    closure_3 = tmp2;
                     closure_0 = closure_1;
                     closure_1 = closure_2;
                     closure_2 = undefined;
@@ -86,7 +86,7 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
                     throw arg1;
                   } else if (arg0 === 2) {
                     c7 = 3;
-                    const obj1 = { value: null, done: true };
+                    obj1 = { value: null, done: true };
                     obj1[0] = arg1;
                     return obj1;
                   } else {
@@ -109,13 +109,13 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
                   return obj3;
                 } else {
                   closure_2 = arg1;
-                  const result = obj(outer3_1[4]).wrapTransportOnMessage(closure_0, closure_0);
-                  const obj7 = obj(outer3_1[4]);
-                  obj(outer3_1[4]).wrapTransportSend(closure_0, closure_0);
-                  const obj8 = obj(outer3_1[4]);
-                  obj(outer3_1[4]).wrapTransportOnClose(closure_0);
-                  const obj9 = obj(outer3_1[4]);
-                  obj(outer3_1[4]).wrapTransportError(closure_0);
+                  const result = obj(closure_3_1[4]).wrapTransportOnMessage(closure_0, closure_0);
+                  const obj7 = obj(closure_3_1[4]);
+                  obj(closure_3_1[4]).wrapTransportSend(closure_0, closure_0);
+                  const obj8 = obj(closure_3_1[4]);
+                  obj(closure_3_1[4]).wrapTransportOnClose(closure_0);
+                  const obj9 = obj(closure_3_1[4]);
+                  obj(closure_3_1[4]).wrapTransportError(closure_0);
                   c7 = 3;
                   obj = { value: null, done: true };
                   obj[0] = closure_2;

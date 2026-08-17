@@ -1,9 +1,11 @@
 // _runtime/12638_NativeRouter.js
-import "noop";
-import { Alert } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import emptyFunctionDefault from "emptyFunction" /* 4205 */;
+import _extends from "_extends" /* 4208 */;
+import { Alert } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 class NativeRouter {
   constructor(arg0) {
     obj = {};
@@ -11,9 +13,10 @@ class NativeRouter {
     return jsx(require("_extends").MemoryRouter, obj);
   }
 }
+noopDefault;
 NativeRouter.defaultProps = {
   getUserConfirmation(arg0, arg1) {
-    let closure_0 = arg1;
+    closure_0 = arg1;
     const items = [
       {
         text: "Cancel",
@@ -31,6 +34,6 @@ NativeRouter.defaultProps = {
     Alert.alert("Confirm", arg0, items);
   }
 };
-NativeRouter.propTypes = { initialEntries: require("emptyFunction").array, initialIndex: require("emptyFunction").number, getUserConfirmation: require("emptyFunction").func, keyLength: require("emptyFunction").number, children: require("emptyFunction").node };
+NativeRouter.propTypes = { initialEntries: emptyFunctionDefault.array, initialIndex: emptyFunctionDefault.number, getUserConfirmation: emptyFunctionDefault.func, keyLength: emptyFunctionDefault.number, children: emptyFunctionDefault.node };
 
 export default NativeRouter;

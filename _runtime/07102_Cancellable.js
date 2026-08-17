@@ -1,5 +1,6 @@
 // _runtime/07102_Cancellable.js
-import Cancellable from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 7051 */;
+import Cancellable from "_classCallCheck" /* 7050 */;
 
 class Cancellable {
   constructor() {
@@ -22,15 +23,15 @@ const items = [
     }
   }
 ];
-const tmp2 = require("_createClass")(Cancellable, items);
+const tmp2 = _createClassDefault(Cancellable, items);
 let closure_1 = tmp2;
 
 export const autoScroll = function autoScroll(c6, c4, c5, diff, diff1, closure_2, closure_1) {
-  let closure_0 = c6;
+  closure_0 = c6;
   closure_1 = c4;
   closure_2 = c5;
-  let closure_3 = diff;
-  let closure_4 = diff1;
+  closure_3 = diff;
+  closure_4 = diff1;
   let num = closure_2;
   if (closure_2 === undefined) {
     num = 1;
@@ -39,12 +40,12 @@ export const autoScroll = function autoScroll(c6, c4, c5, diff, diff1, closure_2
   if (closure_1 === undefined) {
     tmp = new closure_1();
   }
-  let closure_6 = tmp;
+  closure_6 = tmp;
   return new Promise((arg0) => {
-    let c6 = arg0;
+    c6 = arg0;
     c6(closure_1, num2, false);
     closure_1 = 7 * max2;
-    let num = -1;
+    num = -1;
     num2 = -1;
     if (num > closure_1) {
       num2 = 1;
@@ -66,23 +67,23 @@ export const autoScroll = function autoScroll(c6, c4, c5, diff, diff1, closure_2
       const _Math3 = Math;
       max2 = Math.max;
     }
-    let closure_6 = Date.now();
-    let closure_7 = tmp;
-    let closure_8 = tmp2;
+    closure_6 = Date.now();
+    closure_7 = tmp;
+    closure_8 = tmp2;
     function animationLoop() {
 
     }
     const animationFrame = requestAnimationFrame(() => {
-      if (outer1_6.isCancelled()) {
+      if (closure_1_6.isCancelled()) {
         callback(false);
       } else {
         let _Date = Date;
-        let timestamp = Date.now();
+        timestamp = Date.now();
         let result = closure_1 * (timestamp - timestamp);
         closure_8 = closure_8 + result * closure_3;
         sum = sum + result * closure_2;
-        outer1_0(callback2(outer1_3, sum), callback3(outer1_4, closure_8), false);
-        if (callback2(outer1_3, sum) === outer1_3) {
+        closure_1_0(callback2(closure_1_3, sum), callback3(closure_1_4, closure_8), false);
+        if (callback2(closure_1_3, sum) === closure_1_3) {
           if (callback3(tmp16, closure_8) === tmp16) {
             callback(true);
           }
@@ -92,16 +93,16 @@ export const autoScroll = function autoScroll(c6, c4, c5, diff, diff1, closure_2
         }
         let _requestAnimationFrame = requestAnimationFrame;
         let animationFrame = requestAnimationFrame(() => {
-          if (outer1_6.isCancelled()) {
+          if (closure_1_6.isCancelled()) {
             callback(false);
           } else {
             let _Date = Date;
-            let timestamp = Date.now();
+            timestamp = Date.now();
             let result = closure_1 * (timestamp - timestamp);
             closure_8 = closure_8 + result * closure_3;
             sum = sum + result * closure_2;
-            outer1_0(callback2(outer1_3, sum), callback3(outer1_4, closure_8), false);
-            if (callback2(outer1_3, sum) === outer1_3) {
+            closure_1_0(callback2(closure_1_3, sum), callback3(closure_1_4, closure_8), false);
+            if (callback2(closure_1_3, sum) === closure_1_3) {
               if (callback3(tmp16, closure_8) === tmp16) {
                 callback(true);
               }
@@ -111,16 +112,16 @@ export const autoScroll = function autoScroll(c6, c4, c5, diff, diff1, closure_2
             }
             let _requestAnimationFrame = requestAnimationFrame;
             let animationFrame = requestAnimationFrame(() => {
-              if (outer1_6.isCancelled()) {
+              if (closure_1_6.isCancelled()) {
                 callback(false);
               } else {
                 let _Date = Date;
-                let timestamp = Date.now();
+                timestamp = Date.now();
                 let result = closure_1 * (timestamp - timestamp);
                 closure_8 = closure_8 + result * closure_3;
                 sum = sum + result * closure_2;
-                outer1_0(callback2(outer1_3, sum), callback3(outer1_4, closure_8), false);
-                if (callback2(outer1_3, sum) === outer1_3) {
+                closure_1_0(callback2(closure_1_3, sum), callback3(closure_1_4, closure_8), false);
+                if (callback2(closure_1_3, sum) === closure_1_3) {
                   if (callback3(tmp16, closure_8) === tmp16) {
                     callback(true);
                   }

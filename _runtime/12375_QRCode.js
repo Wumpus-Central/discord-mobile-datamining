@@ -1,9 +1,10 @@
 // _runtime/12375_QRCode.js
-import { QR8bitByte } from "12376_QR8bitByte.js";
-import { QRRSBlock } from "12378_QRRSBlock.js";
-import { QRBitBuffer } from "12380_QRBitBuffer.js";
-import { QRPolynomial } from "12382_QRPolynomial.js";
-import { 12381__ } from "metro/12381__.js";
+import QR8bitByte from "QR8bitByte" /* 12376 */;
+import QRRSBlock from "QRRSBlock" /* 12378 */;
+import QRBitBuffer from "QRBitBuffer" /* 12380 */;
+import _mod12381 from "module_12381" /* 12381 */;
+import QRPolynomial from "QRPolynomial" /* 12382 */;
+
 class QRCode {
   constructor(arg0, arg1) {
     return;
@@ -26,7 +27,7 @@ prototype.isDark = function(arg0, arg1) {
       }
     }
   }
-  const error = new Error(arg0 + "," + arg1);
+  error = new Error(arg0 + "," + arg1);
   throw error;
 };
 prototype.getModuleCount = function() {
@@ -66,7 +67,7 @@ prototype.make = function() {
           let tmp9 = require;
           let tmp10 = dependencyMap;
           length = obj3.getLength();
-          let obj4 = 12381__;
+          let obj4 = _mod12381;
           let putResult1 = obj2.put(length, obj4.getLengthInBits(obj3.mode, num));
           let writeResult = obj3.write(obj2);
           num5 = num5 + 1;
@@ -201,7 +202,7 @@ prototype.getBestMaskPattern = function() {
     let impl = self.makeImpl(true, num);
     let tmp2 = require;
     let tmp3 = dependencyMap;
-    let obj = 12381__;
+    let obj = _mod12381;
     let lostPoint = obj.getLostPoint(self);
     let tmp5 = 0 === num;
     let tmp6 = num;
@@ -273,7 +274,7 @@ prototype.setupTimingPattern = function() {
 };
 prototype.setupPositionAdjustPattern = function() {
   const self = this;
-  const patternPosition = 12381__.getPatternPosition(this.typeNumber);
+  const patternPosition = _mod12381.getPatternPosition(this.typeNumber);
   for (let num = 0; num < patternPosition.length; num = num + 1) {
     let tmp = num;
     for (let num2 = 0; num2 < patternPosition.length; num2 = num2 + 1) {
@@ -317,7 +318,7 @@ prototype.setupPositionAdjustPattern = function() {
 prototype.setupTypeNumber = function(arg0) {
   let num2;
   const self = this;
-  const bCHTypeNumber = 12381__.getBCHTypeNumber(this.typeNumber);
+  const bCHTypeNumber = _mod12381.getBCHTypeNumber(this.typeNumber);
   let num = 0;
   do {
     let tmp2 = !arg0;
@@ -344,7 +345,7 @@ prototype.setupTypeNumber = function(arg0) {
 prototype.setupTypeInfo = function(arg0, arg1) {
   let num2;
   const self = this;
-  const bCHTypeInfo = 12381__.getBCHTypeInfo(this.errorCorrectLevel << 3 | arg1);
+  const bCHTypeInfo = _mod12381.getBCHTypeInfo(this.errorCorrectLevel << 3 | arg1);
   let num = 0;
   do {
     let tmp3 = !arg0;
@@ -420,7 +421,7 @@ prototype.mapData = function(arg0, arg1) {
             }
             let tmp21 = require;
             let tmp22 = dependencyMap;
-            let obj = 12381__;
+            let obj = _mod12381;
             let tmp23 = flag;
             if (obj.getMask(arg1, tmp10, diff3)) {
               tmp23 = !flag;
@@ -468,7 +469,7 @@ QRCode.createData = (arg0, arg1, arg2) => {
       let tmp3 = require;
       let tmp4 = dependencyMap;
       length = obj3.getLength();
-      let obj4 = 12381__;
+      let obj4 = _mod12381;
       let putResult1 = obj2.put(length, obj4.getLengthInBits(obj3.mode, arg0));
       let writeResult = obj3.write(obj2);
       num = num + 1;
@@ -489,7 +490,7 @@ QRCode.createData = (arg0, arg1, arg2) => {
   const result = 8 * num4;
   if (obj2.getLengthInBits() > result) {
     const _Error = Error;
-    const error = new Error("code length overflow. (" + obj2.getLengthInBits() + ">" + result + ")");
+    error = new Error("code length overflow. (" + obj2.getLengthInBits() + ">" + result + ")");
     throw error;
   } else {
     if (obj2.getLengthInBits() + 4 <= result) {
@@ -556,7 +557,7 @@ QRCode.createBytes = (arg0, arg1) => {
       let tmp14 = require;
       let tmp15 = dependencyMap;
       let sum = num4 + dataCount;
-      let obj = 12381__;
+      let obj = _mod12381;
       let errorCorrectPolynomial = obj.getErrorCorrectPolynomial(diff);
       let tmp16 = QRPolynomial;
       let tmp17 = new.target;

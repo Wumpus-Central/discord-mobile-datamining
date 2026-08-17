@@ -1,14 +1,11 @@
 // _runtime/00389_createCompositeKeyForProps.js
-import noop from "noop";
-import { nullthrows } from "00070_nullthrows.js";
-import { flattenStyle } from "00148_flattenStyle.js";
-import { _assertNativeAnimatedModule } from "00367__assertNativeAnimatedModule.js";
-import { _isNativeReflectConstruct } from "00382__isNativeReflectConstruct.js";
-import { AnimatedEvent } from "00384_AnimatedEvent.js";
+import nullthrowsDefault from "nullthrows" /* 70 */;
+import flattenStyleDefault from "flattenStyle" /* 148 */;
+import _assertNativeAnimatedModuleDefault from "_assertNativeAnimatedModule" /* 367 */;
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 382 */;
+import AnimatedEvent from "AnimatedEvent" /* 384 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let c4;
-let c5;
 function createCompositeKeyForProps(arg0, style) {
   const keys = Object.keys(arg0);
   let num = 0;
@@ -24,7 +21,7 @@ function createCompositeKeyForProps(arg0, style) {
         if ("style" === tmp3) {
           let tmp43 = importDefault;
           let tmp44 = dependencyMap;
-          let tmp45 = flattenStyle(arr2);
+          let tmp45 = flattenStyleDefault(arr2);
           if (null != tmp45) {
             style = undefined;
             let tmp46 = createCompositeKeyForObject;
@@ -37,7 +34,7 @@ function createCompositeKeyForProps(arg0, style) {
           let tmp48 = importDefault;
           let tmp49 = dependencyMap;
           tmp46Result = arr2;
-          if (!(arr2 instanceof _assertNativeAnimatedModule)) {
+          if (!(arr2 instanceof _assertNativeAnimatedModuleDefault)) {
             let tmp8 = require;
             tmp46Result = arr2;
             if (!(arr2 instanceof AnimatedEvent.AnimatedEvent)) {
@@ -57,7 +54,7 @@ function createCompositeKeyForProps(arg0, style) {
                       let tmp15 = num3;
                       let tmp16 = tmp41;
                       let tmp17 = arr3;
-                      if (!(arr3 instanceof _assertNativeAnimatedModule)) {
+                      if (!(arr3 instanceof _assertNativeAnimatedModuleDefault)) {
                         let _Array2 = Array;
                         if (Array.isArray(arr3)) {
                           let length2 = arr3.length;
@@ -72,7 +69,7 @@ function createCompositeKeyForProps(arg0, style) {
                               let tmp25 = num2;
                               let tmp26 = tmp20;
                               let tmp27 = tmp22;
-                              if (!(tmp22 instanceof _assertNativeAnimatedModule)) {
+                              if (!(tmp22 instanceof _assertNativeAnimatedModuleDefault)) {
                                 let _Array3 = Array;
                                 if (Array.isArray(tmp22)) {
                                   let tmp30 = createCompositeKeyForArray;
@@ -183,7 +180,7 @@ function createCompositeKeyForArray(arg0) {
       let tmp6 = num;
       let tmp7 = tmp;
       let tmp8 = tmp3;
-      if (!(tmp3 instanceof _assertNativeAnimatedModule)) {
+      if (!(tmp3 instanceof _assertNativeAnimatedModuleDefault)) {
         let _Array = Array;
         if (Array.isArray(tmp3)) {
           let tmp11 = createCompositeKeyForArray;
@@ -233,7 +230,7 @@ function createCompositeKeyForObject(arr2, D) {
         let tmp8 = importDefault;
         let tmp9 = dependencyMap;
         let tmp10 = arr2;
-        if (!(arr2 instanceof _assertNativeAnimatedModule)) {
+        if (!(arr2 instanceof _assertNativeAnimatedModuleDefault)) {
           let _Array = Array;
           if (Array.isArray(arr2)) {
             let length2 = arr2.length;
@@ -248,7 +245,7 @@ function createCompositeKeyForObject(arr2, D) {
                 let tmp17 = num2;
                 let tmp18 = tmp13;
                 let tmp19 = arr3;
-                if (!(arr3 instanceof _assertNativeAnimatedModule)) {
+                if (!(arr3 instanceof _assertNativeAnimatedModuleDefault)) {
                   let _Array2 = Array;
                   if (Array.isArray(arr3)) {
                     let length3 = arr3.length;
@@ -263,7 +260,7 @@ function createCompositeKeyForObject(arr2, D) {
                         let tmp27 = num3;
                         let tmp28 = tmp22;
                         let tmp29 = tmp24;
-                        if (!(tmp24 instanceof _assertNativeAnimatedModule)) {
+                        if (!(tmp24 instanceof _assertNativeAnimatedModuleDefault)) {
                           let _Array3 = Array;
                           if (Array.isArray(tmp24)) {
                             let tmp32 = createCompositeKeyForArray;
@@ -381,7 +378,7 @@ function areCompositeKeysEqual(arg0, D) {
               } else {
                 let tmp6 = importDefault;
                 let tmp7 = dependencyMap;
-                if (!(tmp4 instanceof _assertNativeAnimatedModule)) {
+                if (!(tmp4 instanceof _assertNativeAnimatedModuleDefault)) {
                   let tmp8 = require;
                   if (!(tmp4 instanceof AnimatedEvent.AnimatedEvent)) {
                     if (null == arg2) {
@@ -417,7 +414,7 @@ function areCompositeKeysEqual(arg0, D) {
 function areCompositeKeyComponentsEqual(arg0, arg1) {
   if (arg0 === arg1) {
     return true;
-  } else if (arg0 instanceof _assertNativeAnimatedModule) {
+  } else if (arg0 instanceof _assertNativeAnimatedModuleDefault) {
     return tmp;
   } else {
     const _Array = Array;
@@ -450,7 +447,7 @@ function areCompositeKeyComponentsEqual(arg0, arg1) {
           } else {
             let num3 = 0;
             if (0 < length) {
-              while (fn(nullthrows(arg1), keys[num3])) {
+              while (fn(nullthrowsDefault(arg1), keys[num3])) {
                 let tmp11 = areCompositeKeyComponentsEqual;
                 if (!areCompositeKeyComponentsEqual(arg0[tmp6], arg1[tmp6])) {
                   break;
@@ -484,13 +481,13 @@ if (fn == null) {
 }
 
 export function createAnimatedPropsMemoHook(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return function useAnimatedPropsMemo(arg0, arg1) {
-    let closure_0 = arg1;
+    closure_0 = arg1;
     const items = [arg1];
-    const tmp = outer1_4(() => outer2_6(closure_0, closure_0), items);
-    const tmp2 = outer1_5();
-    let closure_1 = tmp2;
+    const tmp = closure_1_4(() => closure_2_6(closure_0, closure_0), items);
+    const tmp2 = closure_1_5();
+    closure_1 = tmp2;
     let current = tmp2.current;
     if (null == current) {
       const obj = { compositeKey: null, node: null };
@@ -499,7 +496,7 @@ export function createAnimatedPropsMemoHook(arg0) {
       current = obj;
     }
     const items1 = [current];
-    outer1_3(() => {
+    closure_1_3(() => {
       closure_1.current = current;
     }, items1);
     return current.node;

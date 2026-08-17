@@ -2,12 +2,12 @@
 const require = arg1;
 const dependencyMap = arg6;
 function processEvent(arg0, arg1, arg2) {
-  let closure_0 = arg0;
-  let closure_1 = arg2;
+  closure_0 = arg0;
+  closure_1 = arg2;
   return fn(this, undefined, undefined, function*() {
-    let closure_1 = tmp3;
-    const options = outer1_1.getOptions();
-    const extra2 = outer1_0.extra;
+    closure_1 = tmp3;
+    const options = closure_1_1.getOptions();
+    const extra2 = closure_1_0.extra;
     if (null !== extra2) {
       if (undefined !== extra2) {
         const __sentry_release = extra2.__sentry_release;
@@ -15,17 +15,17 @@ function processEvent(arg0, arg1, arg2) {
     }
     if (typeof __sentry_release === "string") {
       const _HermesInternal3 = HermesInternal;
-      outer1_0.release = "" + outer1_0.extra.__sentry_release;
+      closure_1_0.release = "" + closure_1_0.extra.__sentry_release;
     } else {
       let release;
       if (null != options) {
         release = options.release;
       }
       if (typeof release === "string") {
-        outer1_0.release = options.release;
+        closure_1_0.release = options.release;
       }
     }
-    const extra = outer1_0.extra;
+    const extra = closure_1_0.extra;
     if (null !== extra) {
       if (undefined !== extra) {
         const __sentry_dist = extra.__sentry_dist;
@@ -33,26 +33,26 @@ function processEvent(arg0, arg1, arg2) {
     }
     if (typeof __sentry_dist === "string") {
       const _HermesInternal4 = HermesInternal;
-      outer1_0.dist = "" + outer1_0.extra.__sentry_dist;
+      closure_1_0.dist = "" + closure_1_0.extra.__sentry_dist;
     } else {
       let dist;
       if (null != options) {
         dist = options.dist;
       }
       if (typeof dist === "string") {
-        outer1_0.dist = options.dist;
+        closure_1_0.dist = options.dist;
       }
     }
-    if (outer1_0.release) {
-      if (outer1_0.dist) {
-        let c5 = 3;
-        const obj1 = { value: null, done: true };
-        obj1[0] = outer1_0;
+    if (closure_1_0.release) {
+      if (closure_1_0.dist) {
+        c5 = 3;
+        obj1 = { value: null, done: true };
+        obj1[0] = closure_1_0;
         return obj1;
       }
     }
-    let c3 = 1;
-    const NATIVE = outer1_0(outer1_1[0]).NATIVE;
+    c3 = 1;
+    const NATIVE = closure_1_0(closure_1_1[0]).NATIVE;
     yield NATIVE.fetchNativeRelease();
     if (1 === tmp7) {
       c3 = 0;
@@ -61,7 +61,7 @@ function processEvent(arg0, arg1, arg2) {
       c5 = 3;
       throw arg1;
     } else if (arg0 !== 2) {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       if (closure_0) {
         if (!closure_0.release) {
           const _HermesInternal = HermesInternal;
@@ -84,16 +84,16 @@ if (this) {
 }
 if (!fn) {
   fn = (arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     let _Promise = arg2;
-    let closure_3 = arg3;
+    closure_3 = arg3;
     if (!arg2) {
       _Promise = Promise;
     }
     _Promise = new _Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function fulfilled(arg0) {
         try {
           step(iter.next(arg0));

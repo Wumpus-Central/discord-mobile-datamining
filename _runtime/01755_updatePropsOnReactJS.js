@@ -1,12 +1,11 @@
 // _runtime/01755_updatePropsOnReactJS.js
-import isJest from "isJest";
-import isJest from "isJest";
-import isJest from "isJest";
-import { isJest } from "01657_isJest.js";
-import { runWorkletOnJS } from "01661_runWorkletOnJS.js";
-import { call } from "01697_call.js";
-import { validateTransformOrigin } from "01756_validateTransformOrigin.js";
-import { map } from "01757_map.js";
+import runWorkletOnJS from "runWorkletOnJS" /* 1661 */;
+import _makeShareableClone from "_makeShareableClone" /* 1664 */;
+import t from "t" /* 1665 */;
+import call from "call" /* 1697 */;
+import validateTransformOrigin from "validateTransformOrigin" /* 1756 */;
+import map from "map" /* 1757 */;
+import isJest from "isJest" /* 1657 */;
 
 function updatePropsOnReactJS(arg0, arg1) {
   const ComponentRegistry = map.ComponentRegistry;
@@ -17,18 +16,18 @@ function updatePropsOnReactJS(arg0, arg1) {
 }
 if (isJest.shouldBeUseWeb()) {
   const fn2 = function o(value) {
-    let closure_0 = arg1;
-    let closure_1 = arg2;
+    closure_0 = arg1;
+    closure_1 = arg2;
     value = value.value;
     if (value != null) {
       const item = value.forEach((tag) => {
-        callback(outer1_2[1])._updatePropsJS(closure_0, tag.tag, callback);
+        callback(closure_1_2[1])._updatePropsJS(closure_0, tag.tag, callback);
       });
     }
   };
   let obj = { _updatePropsJS: null };
   obj = { code: "function pnpm_updatePropsTs1(viewDescriptors,updates,isAnimatedProps){const{_updatePropsJS}=this.__closure;var _viewDescriptors$valu;(_viewDescriptors$valu=viewDescriptors.value)===null||_viewDescriptors$valu===void 0||_viewDescriptors$valu.forEach(function(viewDescriptor){const component=viewDescriptor.tag;_updatePropsJS(updates,component,isAnimatedProps);});}" };
-  obj[0] = require("_makeShareableClone")._updatePropsJS;
+  obj[0] = _makeShareableClone._updatePropsJS;
   fn2.__closure = obj;
   fn2.__workletHash = 17381979125683;
   fn2.__initData = obj;
@@ -58,8 +57,8 @@ if (isJest.shouldBeUseWeb()) {
     UpdatePropsManager.update(value, transformOrigin);
   };
   const obj1 = { processColorsInProps: null, processTransformOrigin: null };
-  obj1[0] = require("call").processColorsInProps;
-  obj1[1] = require("validateTransformOrigin").processTransformOrigin;
+  obj1[0] = call.processColorsInProps;
+  obj1[1] = validateTransformOrigin.processTransformOrigin;
   fn.__closure = obj1;
   fn.__workletHash = 9641647469033;
   fn.__initData = { code: "function pnpm_updatePropsTs2(viewDescriptors,updates){const{processColorsInProps,processTransformOrigin}=this.__closure;viewDescriptors.value.forEach(function(viewDescriptor){var _global$lastUpdateByT;const prevState=(_global$lastUpdateByT=global.lastUpdateByTag[viewDescriptor.tag])!==null&&_global$lastUpdateByT!==void 0?_global$lastUpdateByT:{};global.lastUpdateByTag[viewDescriptor.tag]={...prevState,...updates};global.lastUpdateFrameTimeByTag[viewDescriptor.tag]=global.__frameTimestamp;});processColorsInProps(updates);if('transformOrigin'in updates){updates.transformOrigin=processTransformOrigin(updates.transformOrigin);}global.UpdatePropsManager.update(viewDescriptors,updates);}" };
@@ -72,7 +71,7 @@ if (isJest.isFabric()) {
     let checkUpdate = [];
     let obj = {};
     checkUpdate = function checkUpdate(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const __frameTimestamp = global.__frameTimestamp;
       if (__frameTimestamp) {
         if (tmp2) {
@@ -81,7 +80,7 @@ if (isJest.isFabric()) {
             tmp.lastUpdateByTag[arg0] = undefined;
           } else if (!obj[arg0]) {
             const _requestAnimationFrame = requestAnimationFrame;
-            const fn = function p() {
+            fn = function p() {
               obj[callback] = undefined;
               callback(callback);
             };
@@ -104,7 +103,7 @@ if (isJest.isFabric()) {
     obj = {
       update(value) {
         const self = this;
-        let closure_0 = arg1;
+        closure_0 = arg1;
         value = value.value;
         const item = value.forEach((shadowNodeWrapper) => {
           arr = arr.push({ shadowNodeWrapper: shadowNodeWrapper.shadowNodeWrapper, updates: arr, tag: shadowNodeWrapper.tag });
@@ -125,7 +124,7 @@ if (isJest.isFabric()) {
     return obj;
   };
   const obj3 = { runOnJS: null, updatePropsOnReactJS: null };
-  obj3[0] = require("runWorkletOnJS").runOnJS;
+  obj3[0] = runWorkletOnJS.runOnJS;
   obj3[1] = updatePropsOnReactJS;
   fn4.__closure = obj3;
   fn4.__workletHash = 7650186665575;
@@ -134,11 +133,11 @@ if (isJest.isFabric()) {
   const obj4 = { code: "function pnpm_updatePropsTs3(){const{runOnJS,updatePropsOnReactJS}=this.__closure;const operations=[];const scheduledFrameIds={};function checkUpdate(tag){'worklet';const currentFrameTime=global.__frameTimestamp;const lastUpdateFrameTime=global.lastUpdateFrameTimeByTag[tag];if(!currentFrameTime||!lastUpdateFrameTime){return;}if(currentFrameTime-lastUpdateFrameTime>=20){runOnJS(updatePropsOnReactJS)(tag,global.lastUpdateByTag[tag]);global.lastUpdateByTag[tag]=undefined;return;}if(scheduledFrameIds[tag]){return;}scheduledFrameIds[tag]=requestAnimationFrame(function(){'worklet';scheduledFrameIds[tag]=undefined;checkUpdate(tag);});}return{update:function(viewDescriptors,updates){var _this=this;viewDescriptors.value.forEach(function(viewDescriptor){const tag=viewDescriptor.tag;operations.push({shadowNodeWrapper:viewDescriptor.shadowNodeWrapper,updates:updates,tag:tag});if(operations.length===1){queueMicrotask(_this.flush);}});},flush:function(){global._updatePropsFabric(operations);operations.forEach(function({tag:tag}){checkUpdate(tag);});operations.length=0;}};}" };
 } else {
   fn3 = function c() {
-    let closure_0 = [];
+    closure_0 = [];
     return {
       update(value) {
         const self = this;
-        let closure_0 = arg1;
+        closure_0 = arg1;
         value = value.value;
         const item = value.forEach((tag) => {
           const obj = { tag: tag.tag, name: null, updates: null };
@@ -168,11 +167,11 @@ if (isJest.isFabric()) {
 if (isJest.shouldBeUseWeb()) {
   function maybeThrowError() {
     if (!obj.isJest()) {
-      const reanimatedError = new tmp(1665).ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
+      const reanimatedError = new t.ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
       throw reanimatedError;
     }
     obj = isJest;
-    tmp = require;
+    const tmp = require;
   }
   const _Proxy = Proxy;
   const obj5 = { get: null, set: null };
@@ -184,16 +183,16 @@ if (isJest.shouldBeUseWeb()) {
     if (obj.isJest()) {
       return false;
     } else {
-      const reanimatedError = new tmp(1665).ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
+      const reanimatedError = new t.ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
       throw reanimatedError;
     }
     obj = isJest;
-    tmp = require;
+    const tmp = require;
   };
   const proxy = new Proxy({}, obj5);
   global.UpdatePropsManager = proxy;
 } else {
-  const _module3 = require("runWorkletOnJS");
+  const _module3 = runWorkletOnJS;
   const fn5 = function _() {
     global.UpdatePropsManager = fn3();
   };
@@ -208,7 +207,7 @@ if (isJest.shouldBeUseWeb()) {
 
 export default fn;
 export const updatePropsJestWrapper = (D, __getInternalProperties, current, arr) => {
-  let closure_0 = __getInternalProperties;
+  closure_0 = __getInternalProperties;
   const item = arr.forEach((arg0) => {
     arg0(closure_0);
   });

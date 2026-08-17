@@ -1,15 +1,11 @@
 // _runtime/01874_items.js
-import "noop";
-import { useMemo } from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import { useMemo } from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
+noopDefault;
 ({ Animated: c3, StyleSheet, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { width: 13, height: 2, borderRadius: 1 };
@@ -48,7 +44,7 @@ export default function _default(disabled) {
   const items1 = [tmp2];
   const items2 = [tmp2];
   const tmp3 = keyboardState(() => {
-    const items = [outer1_7.arrowLeftLine, c3];
+    const items = [closure_1_7.arrowLeftLine, closure_3];
     return items;
   }, items1);
   if ("next" === disabled.type) {
@@ -64,7 +60,7 @@ export default function _default(disabled) {
     closure_5(RN.View, { style: tmp3 }),
     closure_5(RN.View, {
       style: keyboardState(() => {
-        const items = [outer1_7.arrowRightLine, c3];
+        const items = [closure_1_7.arrowRightLine, closure_3];
         return items;
       }, items2)
     })

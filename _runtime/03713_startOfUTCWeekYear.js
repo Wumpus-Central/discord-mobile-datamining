@@ -1,9 +1,9 @@
 // _runtime/03713_startOfUTCWeekYear.js
-import getUTCWeekYear from "getUTCWeekYear";
-import requiredArgs from "requiredArgs";
-import startOfUTCWeek from "startOfUTCWeek";
-import toInteger from "toInteger";
-import { getDefaultOptions } from "03477_getDefaultOptions.js";
+import getDefaultOptions from "getDefaultOptions" /* 3477 */;
+import getUTCWeekYear from "getUTCWeekYear" /* 3714 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+import startOfUTCWeek from "startOfUTCWeek" /* 3475 */;
+import toInteger from "toInteger" /* 3476 */;
 
 if (!getUTCWeekYear) {
   let obj = { default: null };
@@ -12,7 +12,7 @@ if (!getUTCWeekYear) {
 } else {
   tmp3 = getUTCWeekYear;
 }
-let obj1 = tmp3;
+getUTCWeekYear = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -20,7 +20,7 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let c3 = tmp5;
+requiredArgs = tmp5;
 if (!startOfUTCWeek) {
   obj = { default: null };
   obj[0] = startOfUTCWeek;
@@ -28,18 +28,18 @@ if (!startOfUTCWeek) {
 } else {
   tmp7 = startOfUTCWeek;
 }
-let c4 = tmp7;
+startOfUTCWeek = tmp7;
 if (!toInteger) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = toInteger;
   let tmp9 = obj1;
 } else {
   tmp9 = toInteger;
 }
-let c5 = tmp9;
+toInteger = tmp9;
 
 export default function startOfUTCWeekYear(arg0, firstWeekContainsDate) {
-  tmp5.default(1, arguments);
+  requiredArgs.default(1, arguments);
   const defaultOptions = getDefaultOptions.getDefaultOptions();
   let prop;
   if (null != firstWeekContainsDate) {
@@ -87,10 +87,10 @@ export default function startOfUTCWeekYear(arg0, firstWeekContainsDate) {
       num = prop;
     }
   }
-  const defaultResult1 = tmp9.default(num);
+  const defaultResult1 = toInteger.default(num);
   const date = new Date(0);
-  date.setUTCFullYear(tmp3.default(arg0, firstWeekContainsDate), 0, defaultResult1);
+  date.setUTCFullYear(getUTCWeekYear.default(arg0, firstWeekContainsDate), 0, defaultResult1);
   date.setUTCHours(0, 0, 0, 0);
-  return tmp7.default(date, firstWeekContainsDate);
+  return startOfUTCWeek.default(date, firstWeekContainsDate);
 };
 export default exports.default;

@@ -1,6 +1,8 @@
 // _runtime/00384_AnimatedEvent.js
-import _classCallCheck from "_classCallCheck";
-import { 00038__ } from "metro/00038__.js";
+import _modDef38 from "module_38" /* 38 */;
+import _createClassDefault from "_createClass" /* 42 */;
+import setDefault from "set" /* 357 */;
+import closure_3 from "_classCallCheck" /* 41 */;
 
 let AnimatedEvent = arg1;
 class AnimatedEvent {
@@ -8,7 +10,7 @@ class AnimatedEvent {
     self = this;
     self = this;
     obj = arg1;
-    tmp = outer1_3(this, self);
+    tmp = closure_3(this, self);
     this._listeners = [];
     this._callListeners = () => {
       const _self = [...arguments];
@@ -44,7 +46,7 @@ let items = [
   {
     key: "__removeListener",
     value: function __removeListener(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const _listeners = this._listeners;
       this._listeners = _listeners.filter((arg0) => arg0 !== closure_0);
     }
@@ -54,9 +56,9 @@ let items = [
     value: function __attach(current) {
       __platformConfig(items[4])(this.__isNative, "Only native driven events need to be attached.");
       const _argMapping = this._argMapping;
-      const AnimatedEvent = arg1;
+      AnimatedEvent = arg1;
       __platformConfig = this.__platformConfig;
-      let c4;
+      c4 = undefined;
       items = [];
       function traverse(nativeEvent, arr) {
         if (nativeEvent instanceof __platformConfig(items[2])) {
@@ -97,7 +99,7 @@ let items = [
         detach() {
           if (null != c4) {
             const item = items.forEach((animatedValueTag) => {
-              const API = outer1_1(outer1_2[6]).API;
+              const API = closure_1_1(closure_1_2[6]).API;
               const result = API.removeAnimatedEventFromView(closure_4, closure_0, animatedValueTag.animatedValueTag);
             });
           }
@@ -108,7 +110,7 @@ let items = [
   {
     key: "__detach",
     value: function __detach(arg0, arg1) {
-      00038__(this.__isNative, "Only native driven events need to be detached.");
+      _modDef38(this.__isNative, "Only native driven events need to be detached.");
       if (this._attachedEvent) {
         const _attachedEvent = this._attachedEvent;
         _attachedEvent.detach();
@@ -122,11 +124,11 @@ let items = [
       return this.__isNative ? this._callListeners : (() => {
         const items = [...arguments];
         function traverse(setValue, num) {
-          if (setValue instanceof traverse(outer1_2[2])) {
+          if (setValue instanceof traverse(closure_1_2[2])) {
             if (typeof num === "number") {
               setValue.setValue(num);
             }
-          } else if (setValue instanceof traverse(outer1_2[3])) {
+          } else if (setValue instanceof traverse(closure_1_2[3])) {
             if (typeof num === "object") {
               traverse(setValue.x, num.x);
               traverse(setValue.y, num.y);
@@ -143,7 +145,7 @@ let items = [
         const _argMapping = items._argMapping;
         const item = _argMapping.forEach((setValue) => {
           const point = items[arg1];
-          if (setValue instanceof traverse(outer1_2[2])) {
+          if (setValue instanceof traverse(closure_1_2[2])) {
             if (typeof point === "number") {
               setValue.setValue(point);
             }
@@ -170,7 +172,7 @@ let items = [
               }
               const y = setValue.y;
               const y2 = point.y;
-              if (y instanceof traverse(outer1_2[2])) {
+              if (y instanceof traverse(closure_1_2[2])) {
                 if (typeof y2 === "number") {
                   y.setValue(y2);
                 }
@@ -188,7 +190,7 @@ let items = [
                 }
               }
               tmp5 = traverse;
-              tmp6 = outer1_2;
+              tmp6 = closure_1_2;
             }
           } else if (typeof setValue === "object") {
             for (const key10013 in arg0) {
@@ -196,8 +198,8 @@ let items = [
               let point2 = arg0[key10013];
               let point3 = point[key10013];
               let tmp9 = traverse;
-              let tmp10 = outer1_2;
-              if (point2 instanceof traverse(outer1_2[2])) {
+              let tmp10 = closure_1_2;
+              if (point2 instanceof traverse(closure_1_2[2])) {
                 if (typeof point3 !== "number") {
                   continue;
                 } else {
@@ -251,8 +253,8 @@ let items = [
 ];
 
 export const attachNativeEventImpl = function attachNativeEventImpl(current) {
-  const AnimatedEvent = arg1;
-  const importDefault = arg3;
+  AnimatedEvent = arg1;
+  importDefault = arg3;
   const items = [];
   function traverse(nativeEvent, arr) {
     if (nativeEvent instanceof __platformConfig(items[2])) {
@@ -281,7 +283,7 @@ export const attachNativeEventImpl = function attachNativeEventImpl(current) {
   traverse(arg2[0].nativeEvent, []);
   let obj = AnimatedEvent(items[5]);
   const findNodeHandleResult = obj.findNodeHandle(current);
-  let closure_4 = findNodeHandleResult;
+  closure_4 = findNodeHandleResult;
   if (null != findNodeHandleResult) {
     const item = items.forEach((arg0) => {
       const API = __platformConfig(items[6]).API;
@@ -292,7 +294,7 @@ export const attachNativeEventImpl = function attachNativeEventImpl(current) {
     detach() {
       if (null != c4) {
         const item = items.forEach((animatedValueTag) => {
-          const API = outer1_1(outer1_2[6]).API;
+          const API = closure_1_1(closure_1_2[6]).API;
           const result = API.removeAnimatedEventFromView(closure_4, closure_0, animatedValueTag.animatedValueTag);
         });
       }
@@ -300,4 +302,4 @@ export const attachNativeEventImpl = function attachNativeEventImpl(current) {
   };
   return obj;
 };
-export const AnimatedEvent = require("_createClass")(AnimatedEvent, items);
+export const AnimatedEvent = _createClassDefault(AnimatedEvent, items);

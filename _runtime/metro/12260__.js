@@ -1,4 +1,9 @@
 // _runtime/metro/12260__.js
+import mergeDefs from "mergeDefs" /* 12203 */;
+import isValidBase64 from "isValidBase64" /* 12204 */;
+import _mod12205 from "module_12205" /* 12205 */;
+import $output from "$output" /* 12259 */;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -442,7 +447,7 @@ if (self2) {
     };
     exports._overwrite = _overwrite;
     exports._normalize = function _normalize(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const ZodCheckOverwrite = new closure_2.$ZodCheckOverwrite({ check: "overwrite", tx: (str) => str.normalize(closure_0) });
       return ZodCheckOverwrite;
     };
@@ -532,8 +537,8 @@ if (self2) {
       const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "literal", values: tmp });
     };
-    exports._file = function _file(ZodFile, enc) {
-      const merged = Object.assign(closure_5.normalizeParams(enc));
+    exports._file = function _file(ZodFile, arr2) {
+      const merged = Object.assign(closure_5.normalizeParams(arr2));
       return new ZodFile({ type: "file" });
     };
     exports._transform = function _transform(arg0, transform) {
@@ -546,14 +551,14 @@ if (self2) {
       return new arg0({ type: "nullable", innerType });
     };
     exports._default = function _default(arg0, innerType) {
-      let closure_0 = arg2;
+      closure_0 = arg2;
       const obj = { type: "default", innerType };
       Object.defineProperty(obj, "defaultValue", {
         get: () => {
           if (typeof closure_0 === "function") {
             let shallowCloneResult = tmp();
           } else {
-            shallowCloneResult = outer1_5.shallowClone(tmp);
+            shallowCloneResult = closure_1_5.shallowClone(tmp);
           }
           return shallowCloneResult;
         },
@@ -569,7 +574,7 @@ if (self2) {
       return new arg0({ type: "success", innerType });
     };
     exports._catch = function _catch(arg0, innerType, fn) {
-      let closure_0 = fn;
+      closure_0 = fn;
       const obj = { type: "catch", innerType, catchValue: null };
       if (typeof fn !== "function") {
         fn = () => closure_0;
@@ -606,7 +611,7 @@ if (self2) {
       return new ZodCustom({ type: "custom", check: "custom", fn });
     };
     exports._superRefine = function _superRefine(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const merged = Object.assign(closure_5.normalizeParams(undefined));
       const ZodCheck = new closure_2.$ZodCheck({ check: "custom" });
       ZodCheck._zod.check = (value) => {
@@ -614,7 +619,7 @@ if (self2) {
         value.addIssue = (str) => {
           if (typeof str === "string") {
             const issues = value.issues;
-            issues.push(outer2_5.issue(str, value.value, outer1_1._zod.def));
+            issues.push(closure_2_5.issue(str, value.value, closure_1_1._zod.def));
           } else {
             if (str.fatal) {
               str.continue = false;
@@ -626,13 +631,13 @@ if (self2) {
               str.input = value.value;
             }
             if (str.inst == null) {
-              str.inst = outer1_1;
+              str.inst = closure_1_1;
             }
             if (str.continue == null) {
-              str.continue = !outer1_1._zod.def.abort;
+              str.continue = !closure_1_1._zod.def.abort;
             }
             const issues1 = value.issues;
-            issues1.push(outer2_5.issue(str));
+            issues1.push(closure_2_5.issue(str));
           }
         };
         return callback(value.value, value);
@@ -641,16 +646,16 @@ if (self2) {
     };
     exports._check = _check;
     exports.describe = function describe(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const ZodCheck = new closure_2.$ZodCheck({ check: "describe" });
       const items = [
         (arg0) => {
-          const globalRegistry = outer1_3.globalRegistry;
+          const globalRegistry = closure_1_3.globalRegistry;
           let obj = globalRegistry.get(arg0);
           if (obj == null) {
             obj = {};
           }
-          const globalRegistry2 = outer1_3.globalRegistry;
+          const globalRegistry2 = closure_1_3.globalRegistry;
           obj = {};
           const merged = Object.assign(obj);
           obj.description = closure_0;
@@ -664,16 +669,16 @@ if (self2) {
       return ZodCheck;
     };
     exports.meta = function meta(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const ZodCheck = new closure_2.$ZodCheck({ check: "meta" });
       const items = [
         (arg0) => {
-          const globalRegistry = outer1_3.globalRegistry;
+          const globalRegistry = closure_1_3.globalRegistry;
           let obj = globalRegistry.get(arg0);
           if (obj == null) {
             obj = {};
           }
-          const globalRegistry2 = outer1_3.globalRegistry;
+          const globalRegistry2 = closure_1_3.globalRegistry;
           obj = {};
           const merged = Object.assign(obj);
           const merged1 = Object.assign(closure_0);
@@ -688,7 +693,7 @@ if (self2) {
     };
     exports._stringbool = function _stringbool(Codec, enc) {
       const normalizeParamsResult = ZodCodec.normalizeParams(enc);
-      const self2 = normalizeParamsResult;
+      self2 = normalizeParamsResult;
       let truthy = normalizeParamsResult.truthy;
       if (truthy == null) {
         truthy = ["true", "1", "yes", "on", "y", "enabled"];
@@ -780,7 +785,7 @@ if (self2) {
       return ZodCodec;
     };
     exports._stringFormat = function _stringFormat(ZodCustomStringFormat, combined, hex, enc) {
-      let closure_0 = hex;
+      closure_0 = hex;
       let obj = enc;
       if (enc === undefined) {
         obj = {};
@@ -802,10 +807,10 @@ if (self2) {
       const normalizeParamsResult = closure_5.normalizeParams(obj);
       return new ZodCustomStringFormat(obj);
     };
-    let closure_2 = fn(require("module_12205"));
-    let closure_3 = fn(require("$output"));
-    let closure_4 = fn(require("isValidBase64"));
-    let closure_5 = fn(require("mergeDefs"));
+    let closure_2 = fn(_mod12205);
+    let closure_3 = fn($output);
+    let closure_4 = fn(isValidBase64);
+    let closure_5 = fn(mergeDefs);
     exports.TimePrecision = { Any: null, Minute: -1, Second: 0, Millisecond: 3, Microsecond: 6 };
   } else {
     const _Object2 = Object;

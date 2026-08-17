@@ -1,13 +1,13 @@
 // _runtime/13211_flush_block_only.js
-import { assign } from "13208_assign.js";
-import { StaticTreeDesc } from "13213_StaticTreeDesc.js";
-import { adler32 } from "13214_adler32.js";
-import { 13212__ } from "metro/13212__.js";
-import { 13215__ } from "metro/13215__.js";
-const require = arg1;
+import assign from "assign" /* 13208 */;
+import _mod13212 from "module_13212" /* 13212 */;
+import StaticTreeDesc from "StaticTreeDesc" /* 13213 */;
+import adler32 from "adler32" /* 13214 */;
+import _mod13215 from "module_13215" /* 13215 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function flush_block_only(state8, arg1) {
-  let strm;
   let num = -1;
   if (state8.block_start >= 0) {
     num = state8.block_start;
@@ -33,11 +33,6 @@ function flush_block_only(state8, arg1) {
   }
 }
 function longest_match(strstart, arg1) {
-  let max_chain_length;
-  let nice_match;
-  let prev;
-  let prev_length;
-  let w_mask;
   ({ max_chain_length, strstart, prev_length, nice_match } = strstart);
   let num = 0;
   if (strstart.strstart > strstart.w_size - 262) {
@@ -202,8 +197,6 @@ function longest_match(strstart, arg1) {
   }
 }
 function fill_window(state) {
-  let _window;
-  let strm;
   const w_size = state.w_size;
   while (true) {
     let diff = state.window_size - state.lookahead - state.strstart;
@@ -688,7 +681,7 @@ function deflateReset(state) {
     return num;
   }
   num = -2;
-  state.msg = 13212__[-2];
+  state.msg = _mod13212[-2];
 }
 function deflateInit2(strm, level, method, windowBits, memLevel, strategy) {
   if (strm) {
@@ -757,7 +750,7 @@ function deflateInit2(strm, level, method, windowBits, memLevel, strategy) {
         }
       }
     }
-    strm.msg = 13212__[-2];
+    strm.msg = _mod13212[-2];
     return -2;
   } else {
     return -2;
@@ -890,7 +883,7 @@ arg5.deflateResetKeep = function deflateResetKeep(state) {
     return num;
   }
   num = -2;
-  state.msg = 13212__[-2];
+  state.msg = _mod13212[-2];
 };
 arg5.deflateSetHeader = function deflateSetHeader(strm, header) {
   let num = -2;
@@ -979,7 +972,7 @@ arg5.deflate = function deflate(state, last_flush) {
                       state8.pending_buf[+state8.pending] = state8.gzhead.extra.length >> 8 & 255;
                     }
                     if (state8.gzhead.hcrc) {
-                      state.adler = 13215__(state.adler, state8.pending_buf, state8.pending, 0);
+                      state.adler = _mod13215(state.adler, state8.pending_buf, state8.pending, 0);
                     }
                     state8.gzindex = 0;
                     state8.status = 69;
@@ -1075,7 +1068,7 @@ arg5.deflate = function deflate(state, last_flush) {
                             let tmp37 = require;
                             let tmp38 = dependencyMap;
                             let tmp39 = tmp35;
-                            state.adler = 13215__(state.adler, state8.pending_buf, state8.pending - tmp35, tmp35);
+                            state.adler = _mod13215(state.adler, state8.pending_buf, state8.pending - tmp35, tmp35);
                           }
                           let state2 = state.state;
                           let avail_out2 = state2.pending;
@@ -1107,7 +1100,7 @@ arg5.deflate = function deflate(state, last_flush) {
                       }
                     } else {
                       if (tmp29) {
-                        state.adler = 13215__(state.adler, state8.pending_buf, state8.pending - pending, pending);
+                        state.adler = _mod13215(state.adler, state8.pending_buf, state8.pending - pending, pending);
                       }
                       state = state.state;
                       let avail_out = state.pending;
@@ -1135,7 +1128,7 @@ arg5.deflate = function deflate(state, last_flush) {
                     }
                   }
                   if (tmp40) {
-                    state.adler = 13215__(state.adler, state8.pending_buf, state8.pending - pending2, pending2);
+                    state.adler = _mod13215(state.adler, state8.pending_buf, state8.pending - pending2, pending2);
                   }
                   if (state8.gzindex === state8.gzhead.extra.length) {
                     state8.gzindex = 0;
@@ -1174,7 +1167,7 @@ arg5.deflate = function deflate(state, last_flush) {
                         let tmp47 = require;
                         let tmp48 = dependencyMap;
                         let tmp49 = pending3;
-                        state.adler = 13215__(state.adler, state8.pending_buf, state8.pending - pending3, tmp44);
+                        state.adler = _mod13215(state.adler, state8.pending_buf, state8.pending - pending3, tmp44);
                       }
                       let state3 = state.state;
                       let avail_out3 = state3.pending;
@@ -1208,7 +1201,7 @@ arg5.deflate = function deflate(state, last_flush) {
                       let tmp53 = require;
                       let tmp54 = dependencyMap;
                       let tmp55 = pending4;
-                      state.adler = 13215__(state.adler, state8.pending_buf, state8.pending - pending4, pending4);
+                      state.adler = _mod13215(state.adler, state8.pending_buf, state8.pending - pending4, pending4);
                     }
                     if (0 === num46) {
                       state8.gzindex = 0;
@@ -1248,7 +1241,7 @@ arg5.deflate = function deflate(state, last_flush) {
                         let tmp59 = require;
                         let tmp60 = dependencyMap;
                         let tmp61 = pending5;
-                        state.adler = 13215__(state.adler, state8.pending_buf, state8.pending - pending5, tmp56);
+                        state.adler = _mod13215(state.adler, state8.pending_buf, state8.pending - pending5, tmp56);
                       }
                       let state4 = state.state;
                       let avail_out4 = state4.pending;
@@ -1282,7 +1275,7 @@ arg5.deflate = function deflate(state, last_flush) {
                       let tmp65 = require;
                       let tmp66 = dependencyMap;
                       let tmp67 = pending6;
-                      state.adler = 13215__(state.adler, state8.pending_buf, state8.pending - pending6, pending6);
+                      state.adler = _mod13215(state.adler, state8.pending_buf, state8.pending - pending6, pending6);
                     }
                     if (0 === num53) {
                       let num55 = 103;
@@ -1370,7 +1363,7 @@ arg5.deflate = function deflate(state, last_flush) {
                   if (4 !== last_flush) {
                     diff = require;
                     diff = dependencyMap;
-                    state.msg = 13212__[-5];
+                    state.msg = _mod13212[-5];
                     return -5;
                   }
                 }
@@ -1380,7 +1373,7 @@ arg5.deflate = function deflate(state, last_flush) {
                 if (0 !== state.avail_in) {
                   diff = require;
                   diff = dependencyMap;
-                  state.msg = 13212__[-5];
+                  state.msg = _mod13212[-5];
                   return -5;
                 }
               }
@@ -1733,7 +1726,7 @@ arg5.deflate = function deflate(state, last_flush) {
           }
           diff = require;
           diff = dependencyMap;
-          state.msg = 13212__[num88];
+          state.msg = _mod13212[num88];
           return num88;
         }
       }
@@ -1742,7 +1735,7 @@ arg5.deflate = function deflate(state, last_flush) {
   if (state) {
     diff = require;
     diff = dependencyMap;
-    state.msg = 13212__[-2];
+    state.msg = _mod13212[-2];
   }
   return -2;
 };
@@ -1757,7 +1750,7 @@ arg5.deflateEnd = function deflateEnd(state) {
           if (73 !== status) {
             if (91 !== status) {
               if (status !== 103) {
-                state.msg = 13212__[-2];
+                state.msg = _mod13212[-2];
                 let num10 = -2;
               }
             }
@@ -1767,7 +1760,7 @@ arg5.deflateEnd = function deflateEnd(state) {
       state.state = null;
       num10 = 0;
       if (status === 113) {
-        state.msg = 13212__[-3];
+        state.msg = _mod13212[-3];
         num10 = -3;
       }
     }
@@ -1775,9 +1768,6 @@ arg5.deflateEnd = function deflateEnd(state) {
   return num;
 };
 arg5.deflateSetDictionary = function deflateSetDictionary(strm, dictionary) {
-  let avail_in;
-  let input;
-  let next_in;
   if (strm) {
     if (strm.state) {
       const state = strm.state;

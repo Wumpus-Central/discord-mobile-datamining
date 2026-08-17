@@ -2045,7 +2045,7 @@ let obj = {
 };
 
 export default function formatDistance(arg0, arg1, arg2) {
-  let obj = arg2;
+  obj = arg2;
   if (!arg2) {
     obj = {};
   }

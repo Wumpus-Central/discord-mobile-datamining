@@ -1,20 +1,19 @@
 // _runtime/06575__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { extractOpacity } from "06577_extractOpacity.js";
-import { keys } from "06578_keys.js";
-import { _isNativeReflectConstruct } from "06585__isNativeReflectConstruct.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/06583___INTERNAL_VIEW_CONFIG.js";
+import noopAll from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import extractOpacityDefault from "extractOpacity" /* 6577 */;
+import keysDefault from "keys" /* 6578 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6583 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6585 */;
+import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 6595 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_classCallCheck" /* 41 */;
+import closure_6 from "_possibleConstructorReturn" /* 93 */;
+import closure_7 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-let metroImportAll;
 const Svg = arg1;
 function _isNativeReflectConstruct() {
   try {
@@ -27,27 +26,28 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 let closure_3 = ["style", "opacity", "viewBox", "children", "onLayout", "preserveAspectRatio"];
-({ findNodeHandle: metroImportAll, Platform, StyleSheet } = get_ActivityIndicator);
+noopAll;
+({ findNodeHandle: closure_8, Platform, StyleSheet } = get_ActivityIndicator);
 const svg = StyleSheet.create({ svg: { backgroundColor: "transparent", borderWidth: 0 } }).svg;
 class Svg {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_5(this, closure_0);
     items1 = [...items];
-    tmp2 = __esModule;
-    obj = __esModule(apply);
-    tmp3 = __esModule;
+    tmp2 = closure_7;
+    obj = closure_7(closure_0);
+    tmp3 = closure_6;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -56,69 +56,46 @@ class Svg {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.measureInWindow = (arg0) => {
-      const root = _undefined.root;
+      const root = lib.root;
       if (root) {
         root.measureInWindow(arg0);
       }
     };
     tmp3Result.measure = (arg0) => {
-      const root = _undefined.root;
+      const root = lib.root;
       if (root) {
         root.measure(arg0);
       }
     };
     tmp3Result.measureLayout = (arg0, arg1, arg2) => {
-      const root = _undefined.root;
+      const root = lib.root;
       if (root) {
         root.measureLayout(arg0, arg1, arg2);
       }
     };
     tmp3Result.setNativeProps = (arg0) => {
-      const root = _undefined.root;
+      const root = lib.root;
       if (root) {
         root.setNativeProps(arg0);
       }
     };
     tmp3Result.toDataURL = (arg0, arg1) => {
       if (arg0) {
-        const tmp4 = outer1_8(_undefined.root);
-        _undefined(outer1_2[9]).default.toDataURL(tmp4, arg1, arg0);
-        const _default = _undefined(outer1_2[9]).default;
+        const tmp4 = closure_1_8(lib.root);
+        lib(closure_1_2[9]).default.toDataURL(tmp4, arg1, arg0);
+        const _default = lib(closure_1_2[9]).default;
       }
     };
     return tmp3Result;
   }
 }
-require("_inherits")(Svg, require("_isNativeReflectConstruct"));
+_inheritsDefault(Svg, _isNativeReflectConstructDefault2);
 let items = [
   {
     key: "render",
     value: function render() {
-      let children;
-      let fill;
-      let fillOpacity;
-      let fillRule;
-      let focusable;
-      let font;
-      let height;
-      let onLayout;
-      let opacity;
-      let position;
-      let preserveAspectRatio;
-      let stroke;
-      let strokeDasharray;
-      let strokeDashoffset;
-      let strokeLinecap;
-      let strokeLinejoin;
-      let strokeMiterlimit;
-      let strokeOpacity;
-      let strokeWidth;
-      let style;
-      let transform;
-      let viewBox;
-      let width;
       const self = this;
       const props = this.props;
       ({ style, opacity } = props);
@@ -159,7 +136,7 @@ let items = [
       }
       let num2 = NaN;
       if (null != opacity) {
-        num2 = extractOpacity(opacity);
+        num2 = extractOpacityDefault(opacity);
       }
       obj = {};
       let flag = false;
@@ -210,7 +187,7 @@ let items = [
       if (null != height) {
         tmp.bbHeight = height;
       }
-      keys(tmp, tmp, this);
+      keysDefault(tmp, tmp, this);
       const merged2 = Object.assign({}, StyleSheet.flatten(style));
       if (transform) {
         if (merged2.transform) {
@@ -226,8 +203,8 @@ let items = [
         return self.refMethod(arg0);
       };
       const merged4 = Object.assign(tmp21(6584)({ viewBox, preserveAspectRatio }));
-      obj.children = jsx(_isNativeReflectConstruct, { children, style: merged2, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, onLayout });
-      return jsx(__INTERNAL_VIEW_CONFIG, {});
+      obj.children = jsx(_isNativeReflectConstructDefault, { children, style: merged2, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, onLayout });
+      return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
     }
   }
 ];

@@ -1,6 +1,6 @@
 // _runtime/04614_flatRest.js
-import flatRest from "flatRest";
-import { basePick } from "04625_basePick.js";
+import flatRest from "flatRest" /* 4615 */;
+import basePick from "basePick" /* 4625 */;
 
 
 export default flatRest((arg0, arg1) => {

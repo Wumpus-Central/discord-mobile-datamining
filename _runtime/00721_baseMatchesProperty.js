@@ -3,7 +3,7 @@ import { isKey } from "00722_isKey.js";
 
 export default function baseMatchesProperty(arg0, arg1) {
   const _require = arg0;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   if (_isKey(arg0)) {
     if (tmp(723)(arg1)) {
       let fn = tmp(724)(tmp(725)(arg0), arg1);

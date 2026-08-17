@@ -1,5 +1,5 @@
 // _runtime/07831_sessionTimingIntegration.js
-import setupIntegration from "setupIntegration";
+import setupIntegration from "setupIntegration" /* 7794 */;
 import { dateTimestampInSeconds } from "07752_dateTimestampInSeconds.js";
 
 
@@ -9,7 +9,7 @@ export const sessionTimingIntegration = setupIntegration.defineIntegration(() =>
   obj = {
     name: "SessionTiming",
     processEvent(extra) {
-      let obj = callback(outer1_1[0]);
+      let obj = callback(closure_1_1[0]);
       const result = 1000 * obj.timestampInSeconds();
       obj = {};
       const merged = Object.assign(extra);

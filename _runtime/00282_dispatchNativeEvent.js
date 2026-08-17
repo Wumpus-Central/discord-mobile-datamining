@@ -1,7 +1,8 @@
 // _runtime/00282_dispatchNativeEvent.js
-import { map } from "00066_map.js";
-import { getHandler } from "00283_getHandler.js";
-const require = arg1;
+import map from "map" /* 66 */;
+import getHandler from "getHandler" /* 283 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function dispatchNativeEvent(self, arg1, timeStamp) {

@@ -1,17 +1,14 @@
 // _runtime/04147_getNumberProperty.js
-import _slicedToArray from "_slicedToArray";
-import { c } from "04135_c.js";
-import { useRiveProperty } from "04148_useRiveProperty.js";
+import c from "c" /* 4135 */;
+import useRiveProperty from "useRiveProperty" /* 4148 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function getNumberProperty(numberProperty) {
   return numberProperty.numberProperty(arg1);
 }
 
 export const useRiveNumber = function useRiveNumber(AnimationState, instance) {
-  let tmp3;
-  let tmp4;
-  let tmp5;
   let obj = c;
   const cResult = obj.c(4);
   const obj2 = useRiveProperty;

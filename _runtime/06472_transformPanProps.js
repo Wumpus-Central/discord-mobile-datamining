@@ -1,8 +1,9 @@
 // _runtime/06472_transformPanProps.js
-import { ComposedGestureName } from "06436_ComposedGestureName.js";
-import { isGestureEnabled } from "06445_isGestureEnabled.js";
-import { useGesture } from "06460_useGesture.js";
-const require = arg1;
+import ComposedGestureName from "ComposedGestureName" /* 6436 */;
+import isGestureEnabled from "isGestureEnabled" /* 6445 */;
+import useGesture from "useGesture" /* 6460 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function transformPanProps(activeOffsetY) {
   let str = activeOffsetY.activeOffsetY;

@@ -1,9 +1,5 @@
 // _runtime/01527_findFocusedRoute.js
 arg5.findFocusedRoute = function findFocusedRoute(stateForPath) {
-  let index;
-  let index3;
-  let routes;
-  let routes2;
   let state2;
   let state;
   if (stateForPath != null) {

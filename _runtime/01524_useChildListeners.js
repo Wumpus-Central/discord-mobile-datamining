@@ -1,5 +1,5 @@
 // _runtime/01524_useChildListeners.js
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 
 export const useChildListeners = function useChildListeners() {
@@ -9,10 +9,10 @@ export const useChildListeners = function useChildListeners() {
     listeners: current,
     addListener: current.useCallback((arg0, arg1) => {
       const table = arg0;
-      let closure_1 = arg1;
+      closure_1 = arg1;
       let arr = table[arg0];
       arr = arr.push(arg1);
-      let c2 = false;
+      c2 = false;
       return () => {
         const index = table[table].indexOf(closure_1);
         let tmp4 = !c2;

@@ -1,7 +1,8 @@
 // _runtime/00886_createMetricContainerEnvelopeItem.js
-import { dsnFromString } from "00837_dsnFromString.js";
-import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
-const require = arg1;
+import dsnFromString from "dsnFromString" /* 837 */;
+import forEachEnvelopeItem from "forEachEnvelopeItem" /* 864 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.createMetricContainerEnvelopeItem = function createMetricContainerEnvelopeItem(item_count) {

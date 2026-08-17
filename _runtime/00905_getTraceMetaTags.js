@@ -1,6 +1,7 @@
 // _runtime/00905_getTraceMetaTags.js
-import { getTraceData } from "00904_getTraceData.js";
-const require = arg1;
+import getTraceData from "getTraceData" /* 904 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getTraceMetaTags = function getTraceMetaTags(arg0) {
@@ -11,8 +12,6 @@ arg5.getTraceMetaTags = function getTraceMetaTags(arg0) {
   }
   const entries = Object.entries(traceData);
   const mapped = entries.map((arg0) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
     return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
   });

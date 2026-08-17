@@ -1,6 +1,7 @@
 // _runtime/00799_getMatchData.js
-import { keys } from "00616_keys.js";
-import { isStrictComparable } from "00723_isStrictComparable.js";
+import keys from "keys" /* 616 */;
+import isStrictComparable from "isStrictComparable" /* 723 */;
+
 
 export default function getMatchData(arg0) {
   let tmp7;

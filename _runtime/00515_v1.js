@@ -1,6 +1,7 @@
 // _runtime/00515_v1.js
-import { unsafeStringify } from "00517_unsafeStringify.js";
-const require = arg1;
+import unsafeStringify from "unsafeStringify" /* 517 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 let c5 = 0;
@@ -81,7 +82,7 @@ arg5.default = function v1(arg0, arg1, arg2) {
   }
   if (num7 >= 10000) {
     const _Error = Error;
-    const error = new Error("uuid.v1(): Can't create more than 10M uuids/sec");
+    error = new Error("uuid.v1(): Can't create more than 10M uuids/sec");
     throw error;
   } else {
     closure_4 = tmp19;

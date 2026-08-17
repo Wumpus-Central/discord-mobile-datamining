@@ -1,6 +1,11 @@
 // _runtime/13217_Inflate.js
-import { 13212__ } from "metro/13212__.js";
-const require = arg1;
+import assign from "assign" /* 13208 */;
+import ZStream from "ZStream" /* 13210 */;
+import _mod13212 from "module_13212" /* 13212 */;
+import assign2 from "assign" /* 13216 */;
+import _mod13221 from "module_13221" /* 13221 */;
+
+require = arg1;
 const dependencyMap = arg6;
 class Inflate {
   constructor(arg0) {
@@ -188,7 +193,7 @@ function inflate(arg0, windowBits) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = 13212__[arr.err];
+      msg = _mod13212[arr.err];
     }
     throw msg;
   } else {
@@ -208,7 +213,7 @@ arg5.inflateRaw = function inflateRaw(arg0, windowBits) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = 13212__[arr.err];
+      msg = _mod13212[arr.err];
     }
     throw msg;
   } else {

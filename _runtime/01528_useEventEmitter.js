@@ -1,41 +1,41 @@
 // _runtime/01528_useEventEmitter.js
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 
 export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitEvent) {
   const React = stateFromStores;
-  let closure_1 = onEmitEvent;
-  let closure_2 = React.useRef(stateFromStores);
-  let closure_3 = React.useRef(onEmitEvent);
+  closure_1 = onEmitEvent;
+  closure_2 = React.useRef(stateFromStores);
+  closure_3 = React.useRef(onEmitEvent);
   const insertionEffect = React.useInsertionEffect(() => {
-    closure_2.current = noop;
+    closure_2.current = closure_0;
     closure_3.current = closure_1;
   });
-  let closure_4 = React.useRef(Object.create(null));
+  closure_4 = React.useRef(Object.create(null));
   const callback = React.useCallback((arg0) => {
-    let noop = arg0;
+    closure_0 = arg0;
     return {
       addListener(arg0, arg1) {
-        let noop = arg0;
-        let closure_1 = arg1;
-        let obj = outer1_4.current[arg0];
+        closure_0 = arg0;
+        closure_1 = arg1;
+        let obj = closure_1_4.current[arg0];
         if (!obj) {
           obj = {};
         }
-        outer1_4.current[arg0] = obj;
-        let items = tmp.current[arg0][noop];
+        closure_1_4.current[arg0] = obj;
+        let items = tmp.current[arg0][closure_0];
         if (!items) {
           items = [];
         }
-        outer1_4.current[arg0][noop] = items;
-        outer1_4.current[arg0][noop].push(arg1);
-        let c2 = false;
+        closure_1_4.current[arg0][closure_0] = items;
+        closure_1_4.current[arg0][closure_0].push(arg1);
+        c2 = false;
         return () => {
           if (!c2) {
             c2 = true;
             let tmp3;
-            if (outer1_4.current[noop]) {
-              tmp3 = outer1_4.current[tmp][noop];
+            if (closure_1_4.current[closure_0]) {
+              tmp3 = closure_1_4.current[tmp][closure_0];
             }
             if (tmp3) {
               const index = tmp3.indexOf(tmp2);
@@ -49,8 +49,8 @@ export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitE
       },
       removeListener(arg0, arg1) {
         let tmp;
-        if (outer1_4.current[arg0]) {
-          tmp = outer1_4.current[arg0][noop];
+        if (closure_1_4.current[arg0]) {
+          tmp = closure_1_4.current[arg0][closure_0];
         }
         if (tmp) {
           const index = tmp.indexOf(arg1);
@@ -62,12 +62,9 @@ export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitE
     };
   }, []);
   const callback1 = React.useCallback((arg0) => {
-    let data;
-    let target;
-    let type;
     ({ type, data, target } = arg0);
     let substr;
-    let c1;
+    c1 = undefined;
     let ref;
     substr = ref3.current[type];
     if (undefined === substr) {
@@ -81,7 +78,7 @@ export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitE
         obj.target = obj;
       }
       if (undefined !== data) {
-        const obj1 = { enumerable: true, value: null };
+        obj1 = { enumerable: true, value: null };
         obj1[1] = data;
         obj.data = obj1;
       }
@@ -94,7 +91,7 @@ export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitE
         obj.defaultPrevented = obj2;
         const obj3 = { enumerable: true, value: null };
         obj3[1] = function value() {
-          let c1 = true;
+          c1 = true;
         };
         obj.preventDefault = obj3;
       }

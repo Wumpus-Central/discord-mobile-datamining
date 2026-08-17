@@ -1,7 +1,10 @@
 // _runtime/12204_isValidBase64.js
-import _slicedToArray from "_slicedToArray";
-import asyncGeneratorStep from "mergeDefs";
-import { mergeDefs } from "12203_mergeDefs.js";
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 12200 */;
+import mergeDefs from "mergeDefs" /* 12203 */;
+import _mod12205 from "module_12205" /* 12205 */;
+import mergeDefs2 from "mergeDefs" /* 12206 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
 
 let self = this;
 function isValidBase64(replaced) {
@@ -29,7 +32,7 @@ function isValidJWT(str) {
     if (3 !== parts.length) {
       return false;
     } else {
-      const first = _slicedToArray(tmp3, 1)[0];
+      const first = callback(tmp3, 1)[0];
       if (first) {
         const _JSON = JSON;
         const _atob = atob;
@@ -97,7 +100,7 @@ function normalizeDef(shape) {
       let str2 = "Invalid element at key \"";
       let tmp7 = new.target;
       let tmp8 = new.target;
-      let error = new Error("Invalid element at key \"" + tmp2 + "\": expected a Zod schema");
+      error = new Error("Invalid element at key \"" + tmp2 + "\": expected a Zod schema");
       let tmp10 = error;
       throw error;
     }
@@ -112,17 +115,16 @@ function normalizeDef(shape) {
   obj.optionalKeys = new Set(optionalKeysResult);
   return obj;
 }
-function handleCatchall(arr, obj, arg2, arg3, keySet) {
-  let closure_0 = obj;
+function handleCatchall(arr, closure_0, arg2, arg3, keySet) {
+  const key10019 = closure_0;
   let iter = arg2;
-  let closure_1 = arg2;
+  closure_1 = arg2;
   let items = [];
   keySet = keySet.keySet;
   const _zod = keySet.catchall._zod;
-  const dependencyMap = tmp2;
+  closure_2 = tmp2;
   for (const key10019 in arg1) {
     let tmp14 = key10019;
-    closure_0 = key10019;
     if (keySet.has(key10019)) {
       continue;
     } else {
@@ -130,7 +132,7 @@ function handleCatchall(arr, obj, arg2, arg3, keySet) {
         arr = items.push(key10019);
         continue;
       } else {
-        obj = { value: null, issues: null };
+        let obj = { value: null, issues: null };
         obj[0] = arg1[key10019];
         obj[1] = [];
         let runResult = _zod.run(obj, arg3);
@@ -196,7 +198,7 @@ function handleCatchall(arr, obj, arg2, arg3, keySet) {
     const issues1 = iter.issues;
     obj = { code: "unrecognized_keys", keys: null, input: null, inst: null };
     obj[1] = items;
-    obj[2] = obj;
+    obj[2] = closure_0;
     obj[3] = arg5;
     issues1.push(obj);
   }
@@ -207,7 +209,7 @@ function handleCatchall(arr, obj, arg2, arg3, keySet) {
   return iter;
 }
 function handleUnionResults(arr, issues) {
-  let closure_0 = arg3;
+  closure_0 = arg3;
   const iter = arr[Symbol.iterator]();
   const iter2 = iter.next();
   while (iter !== undefined) {
@@ -219,7 +221,7 @@ function handleUnionResults(arr, issues) {
       return issues;
     }
   }
-  const found = arr.filter((outer1_0) => !closure_10.aborted(outer1_0));
+  const found = arr.filter((closure_1_0) => !closure_10.aborted(closure_1_0));
   if (1 === found.length) {
     issues.value = found[0].value;
     let first = found[0];
@@ -230,7 +232,7 @@ function handleUnionResults(arr, issues) {
     obj[2] = arg2;
     obj[3] = arr.map((issues) => {
       issues = issues.issues;
-      return issues.map((path) => outer1_10.finalizeIssue(path, closure_0, outer1_8.config()));
+      return issues.map((path) => closure_1_10.finalizeIssue(path, closure_0, closure_1_8.config()));
     });
     issues.push(obj);
     first = issues;
@@ -238,7 +240,7 @@ function handleUnionResults(arr, issues) {
   return first;
 }
 function handleExclusiveUnionResults(arr, issues) {
-  let closure_0 = arg3;
+  closure_0 = arg3;
   const found = arr.filter((issues) => 0 === issues.issues.length);
   if (1 === found.length) {
     issues.value = found[0].value;
@@ -249,7 +251,7 @@ function handleExclusiveUnionResults(arr, issues) {
     obj[2] = arg2;
     obj[3] = arr.map((issues) => {
       issues = issues.issues;
-      return issues.map((path) => outer1_10.finalizeIssue(path, closure_0, outer1_8.config()));
+      return issues.map((path) => closure_1_10.finalizeIssue(path, closure_0, closure_1_8.config()));
     });
     issues.push(obj);
   } else {
@@ -283,11 +285,11 @@ function mergeValues(value, value2) {
     if (closure_10.isPlainObject(value)) {
       if (obj.isPlainObject(value2)) {
         const _Object = Object;
-        let closure_0 = Object.keys(value2);
+        closure_0 = Object.keys(value2);
         const _Object2 = Object;
         const keys = Object.keys(value);
         const found = keys.filter((arg0) => -1 !== closure_0.indexOf(arg0));
-        const obj1 = {};
+        obj1 = {};
         const merged = Object.assign(value);
         const merged1 = Object.assign(value2);
         const iter = found[Symbol.iterator]();
@@ -413,12 +415,10 @@ function handleIntersectionResults(issues, value, value2) {
   }
   const items = [...map];
   const found = items.filter((arg0) => {
-    let tmp;
     [, tmp] = arg0;
     return tmp.l && tmp.r;
   });
   const mapped = found.map((arg0) => {
-    let tmp;
     [tmp] = arg0;
     return tmp;
   });
@@ -440,7 +440,7 @@ function handleIntersectionResults(issues, value, value2) {
       const _Error = Error;
       const _JSON = JSON;
       const _HermesInternal = HermesInternal;
-      const error = new Error("Unmergable intersection. Error path: " + JSON.stringify(tmp31.mergeErrorPath));
+      error = new Error("Unmergable intersection. Error path: " + JSON.stringify(tmp31.mergeErrorPath));
       throw error;
     }
   }
@@ -472,7 +472,7 @@ function handleMapResult(issues, issues2, issues3, closure_0) {
       obj[2] = arg4;
       obj[3] = arg5;
       const issues1 = issues.issues;
-      obj[4] = issues1.map((path) => outer1_10.finalizeIssue(path, closure_0, outer1_8.config()));
+      obj[4] = issues1.map((path) => closure_1_10.finalizeIssue(path, closure_0, closure_1_8.config()));
       push(obj);
     }
   }
@@ -490,7 +490,7 @@ function handleMapResult(issues, issues2, issues3, closure_0) {
       obj[3] = arg5;
       obj[4] = closure_0;
       issues3 = issues2.issues;
-      obj[5] = issues3.map((path) => outer1_10.finalizeIssue(path, closure_0, outer1_8.config()));
+      obj[5] = issues3.map((path) => closure_1_10.finalizeIssue(path, closure_0, closure_1_8.config()));
       push2(obj);
     }
     obj3 = closure_10;
@@ -510,9 +510,9 @@ function handleSetResult(issues, issues2) {
   value.add(issues.value);
 }
 function handleCodecAResult(issues, transform, direction) {
-  let closure_0 = issues;
-  let closure_1 = transform;
-  let closure_2 = direction;
+  closure_0 = issues;
+  closure_1 = transform;
+  closure_2 = direction;
   if (issues.issues.length) {
     issues.aborted = true;
     return issues;
@@ -724,11 +724,10 @@ if (self2) {
     exports.isValidBase64 = isValidBase64;
     exports.isValidBase64URL = isValidBase64URL;
     exports.isValidJWT = isValidJWT;
-    let closure_7 = fn(require("module_12205"));
-    let fnResult = fn(require("_isNativeReflectConstruct"));
-    const metroImportAll = fnResult;
-    let closure_9 = fn(require("mergeDefs"));
-    let closure_10 = fn(require("mergeDefs"));
+    let closure_7 = fn(_mod12205);
+    let fnResult = fn(_isNativeReflectConstruct);
+    let closure_9 = fn(mergeDefs2);
+    let closure_10 = fn(mergeDefs);
     exports.$ZodType = fnResult.$constructor("$ZodType", (props, def) => {
       let tmp = props;
       let obj = props;
@@ -776,9 +775,9 @@ if (self2) {
       } else {
         runChecks = function runChecks(parsed1, closure_1, skipChecks) {
           let nextPromise = parsed1;
-          let closure_0 = parsed1;
+          closure_0 = parsed1;
           closure_1 = skipChecks;
-          let closure_3 = closure_10.aborted(parsed1);
+          closure_3 = closure_10.aborted(parsed1);
           function _loop() {
             if (lib._zod.def.when) {
               const def = tmp._zod.def;
@@ -791,14 +790,14 @@ if (self2) {
             length = length.issues.length;
             const _zod = tmp._zod;
             const checkResult = _zod.check(length);
-            const skipChecks = checkResult;
+            skipChecks = checkResult;
             if (checkResult instanceof Promise) {
               let async;
               if (skipChecks != null) {
                 async = skipChecks.async;
               }
               if (false === async) {
-                const ZodAsyncError = new outer1_8.$ZodAsyncError();
+                const ZodAsyncError = new closure_1_8.$ZodAsyncError();
                 throw ZodAsyncError;
               }
             }
@@ -807,7 +806,7 @@ if (self2) {
                 if (tmp4.issues.length === length) {
                   return 0;
                 } else if (!closure_3) {
-                  closure_3 = outer1_10.aborted(tmp4, length);
+                  closure_3 = closure_1_10.aborted(tmp4, length);
                 }
               }
             }
@@ -823,7 +822,7 @@ if (self2) {
                 if (arg0 === 1) {
                   throw arg1;
                 } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
+                  obj = { value: null, done: true };
                   obj[0] = arg1;
                   return obj;
                 } else {
@@ -842,10 +841,10 @@ if (self2) {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      let closure_0 = tmp4;
+                      closure_0 = tmp4;
                       c1 = 1;
                       c2 = 1;
-                      const obj1 = { value: null, done: false };
+                      obj1 = { value: null, done: false };
                       obj1[0] = c1;
                       return obj1;
                     }
@@ -858,9 +857,9 @@ if (self2) {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    if (outer1_0.issues.length !== closure_0) {
-                      if (!outer1_3) {
-                        outer1_3 = outer2_10.aborted(outer1_0, closure_0);
+                    if (closure_1_0.issues.length !== closure_0) {
+                      if (!closure_3) {
+                        closure_3 = closure_2_10.aborted(closure_1_0, closure_0);
                       }
                     }
                     c2 = 3;
@@ -875,7 +874,7 @@ if (self2) {
           }
           const iter = closure_1[Symbol.iterator]();
           while (iter !== undefined) {
-            let closure_4 = iter.next();
+            closure_4 = iter.next();
             let _loopResult = _loop();
             continue;
           }
@@ -888,8 +887,8 @@ if (self2) {
 
         }
         tmp._zod.run = (value, skipChecks) => {
-          let obj = value;
-          let closure_1 = skipChecks;
+          obj = value;
+          closure_1 = skipChecks;
           if (skipChecks.skipChecks) {
             const _zod4 = obj._zod;
             return _zod4.parse(value, skipChecks);
@@ -903,24 +902,24 @@ if (self2) {
             obj.skipChecks = true;
             const parsed = _zod2.parse(obj, obj);
             if (parsed instanceof Promise) {
-              let nextPromise = parsed.then((outer1_0) => {
-                if (typeof outer1_3 !== "function") {
+              let nextPromise = parsed.then((closure_1_0) => {
+                if (typeof closure_1_3 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                const skipChecks = tmp2;
-                if (outer1_10.aborted(outer1_0)) {
-                  outer1_0.aborted = true;
-                  let nextPromise = outer1_0;
+                skipChecks = tmp2;
+                if (closure_1_10.aborted(closure_1_0)) {
+                  closure_1_0.aborted = true;
+                  let nextPromise = closure_1_0;
                 } else {
-                  const promise = outer1_2(skipChecks, closure_1, tmp2);
+                  const promise = closure_1_2(skipChecks, closure_1, tmp2);
                   if (promise instanceof Promise) {
                     if (false === tmp2.async) {
-                      const ZodAsyncError = new outer1_8.$ZodAsyncError();
+                      const ZodAsyncError = new closure_1_8.$ZodAsyncError();
                       throw ZodAsyncError;
                     } else {
                       nextPromise = promise.then((arg0) => {
-                        const _zod = tmp2._zod;
-                        return _zod.parse(arg0, tmp2);
+                        _zod = _zod._zod;
+                        return _zod.parse(arg0, _zod);
                       });
                     }
                   } else {
@@ -935,19 +934,19 @@ if (self2) {
                 HermesBuiltin.throwTypeError();
               }
               obj = skipChecks;
-              if (outer1_10.aborted(parsed)) {
+              if (closure_1_10.aborted(parsed)) {
                 parsed.aborted = true;
                 nextPromise = parsed;
               } else {
                 const promise3 = runChecks(value, closure_1, skipChecks);
                 if (promise3 instanceof Promise) {
                   if (false === skipChecks.async) {
-                    let ZodAsyncError = new outer1_8.$ZodAsyncError();
+                    let ZodAsyncError = new closure_1_8.$ZodAsyncError();
                     throw ZodAsyncError;
                   } else {
                     nextPromise = promise3.then((arg0) => {
-                      const _zod = tmp2._zod;
-                      return _zod.parse(arg0, tmp2);
+                      _zod = _zod._zod;
+                      return _zod.parse(arg0, _zod);
                     });
                   }
                 } else {
@@ -962,10 +961,10 @@ if (self2) {
             const parsed1 = _zod.parse(value, skipChecks);
             if (parsed1 instanceof Promise) {
               if (false === skipChecks.async) {
-                const ZodAsyncError1 = new outer1_8.$ZodAsyncError();
+                const ZodAsyncError1 = new closure_1_8.$ZodAsyncError();
                 throw ZodAsyncError1;
               } else {
-                return parsed1.then((arg0) => outer1_2(arg0, closure_1, closure_1));
+                return parsed1.then((arg0) => closure_1_2(arg0, closure_1, closure_1));
               }
             } else {
               return runChecks(parsed1, closure_1, skipChecks);
@@ -976,12 +975,12 @@ if (self2) {
       closure_10.defineLazy(tmp, "~standard", () => ({
         validate(arg0) {
           try {
-            const safeParseResult = outer1_0(outer1_2[7]).safeParse(closure_0, arg0);
+            const safeParseResult = closure_1_0(closure_1_2[7]).safeParse(closure_0, arg0);
             if (safeParseResult.success) {
-              let obj = { value: null };
+              obj = { value: null };
               obj[0] = safeParseResult.data;
             } else {
-              let error = tmp7.error;
+              error = tmp7.error;
               let issues;
               if (error != null) {
                 issues = error.issues;
@@ -991,12 +990,12 @@ if (self2) {
             }
             return obj;
           } catch (err) {
-            return outer1_0(outer1_2[7]).safeParseAsync(closure_0, tmp2).then((success) => {
+            return closure_1_0(closure_1_2[7]).safeParseAsync(closure_0, tmp2).then((success) => {
               if (success.success) {
-                let obj = { value: null };
+                obj = { value: null };
                 obj[0] = success.data;
               } else {
-                const error = success.error;
+                error = success.error;
                 let issues;
                 if (error != null) {
                   issues = error.issues;
@@ -1019,7 +1018,7 @@ if (self2) {
     };
     Object.defineProperty(exports, "clone", obj);
     exports.$ZodString = fnResult.$constructor("$ZodString", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
@@ -1076,7 +1075,7 @@ if (self2) {
         if (undefined === tmp3) {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          const error = new Error("Invalid UUID version: \"" + version.version + "\"");
+          error = new Error("Invalid UUID version: \"" + version.version + "\"");
           throw error;
         } else if (version.pattern == null) {
           version.pattern = closure_9.uuid(tmp3);
@@ -1095,7 +1094,7 @@ if (self2) {
       $ZodStringFormat.init(arg0, pattern);
     });
     exports.$ZodURL = fnResult.$constructor("$ZodURL", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodStringFormat = _exports.$ZodStringFormat;
       $ZodStringFormat.init(_zod, arg1);
@@ -1242,7 +1241,7 @@ if (self2) {
       _zod._zod.bag.format = "ipv4";
     });
     exports.$ZodIPv6 = fnResult.$constructor("$ZodIPv6", (_zod, pattern) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = pattern;
       if (pattern.pattern == null) {
         pattern.pattern = closure_9.ipv6;
@@ -1281,7 +1280,7 @@ if (self2) {
       $ZodStringFormat.init(arg0, pattern);
     });
     exports.$ZodCIDRv6 = fnResult.$constructor("$ZodCIDRv6", (_zod, pattern) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = pattern;
       if (pattern.pattern == null) {
         pattern.pattern = closure_9.cidrv6;
@@ -1289,16 +1288,14 @@ if (self2) {
       const $ZodStringFormat = _exports.$ZodStringFormat;
       $ZodStringFormat.init(_zod, pattern);
       _zod._zod.check = (value) => {
-        let tmp30;
-        let tmp31;
         const parts = value.value.split("/");
         try {
           if (2 !== parts.length) {
             const _Error4 = Error;
-            const error = new Error();
+            error = new Error();
             throw error;
           } else {
-            [tmp30, tmp31] = outer1_3(parts, 2);
+            [tmp30, tmp31] = closure_1_3(parts, 2);
             if (tmp31) {
               const _Number = Number;
               const NumberResult = Number(tmp31);
@@ -1324,7 +1321,7 @@ if (self2) {
               const error3 = new Error();
               throw error3;
             }
-            const tmp29 = outer1_3(parts, 2);
+            const tmp29 = closure_1_3(parts, 2);
           }
         } catch (err) {
           const issues = iter.issues;
@@ -1337,7 +1334,7 @@ if (self2) {
       };
     });
     exports.$ZodBase64 = fnResult.$constructor("$ZodBase64", (_zod, pattern) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = pattern;
       if (pattern.pattern == null) {
         pattern.pattern = closure_9.base64;
@@ -1346,7 +1343,7 @@ if (self2) {
       $ZodStringFormat.init(_zod, pattern);
       _zod._zod.bag.contentEncoding = "base64";
       _zod._zod.check = (value) => {
-        if (!outer1_11(value.value)) {
+        if (!closure_1_11(value.value)) {
           const issues = value.issues;
           const obj = { code: "invalid_format", format: "base64", input: null, inst: null, continue: null };
           obj[2] = value.value;
@@ -1357,7 +1354,7 @@ if (self2) {
       };
     });
     exports.$ZodBase64URL = fnResult.$constructor("$ZodBase64URL", (_zod, pattern) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = pattern;
       if (pattern.pattern == null) {
         pattern.pattern = closure_9.base64url;
@@ -1366,7 +1363,7 @@ if (self2) {
       $ZodStringFormat.init(_zod, pattern);
       _zod._zod.bag.contentEncoding = "base64url";
       _zod._zod.check = (value) => {
-        const base64url = outer1_9.base64url;
+        const base64url = closure_1_9.base64url;
         let flag = false;
         if (base64url.test(value.value)) {
           const replaced = str.replace(/[-_]/g, (arg0) => {
@@ -1377,7 +1374,7 @@ if (self2) {
             return str;
           });
           const _Math = Math;
-          flag = outer1_11(replaced.padEnd(4 * Math.ceil(replaced.length / 4), "="));
+          flag = closure_1_11(replaced.padEnd(4 * Math.ceil(replaced.length / 4), "="));
         }
         if (!flag) {
           const issues = value.issues;
@@ -1397,12 +1394,12 @@ if (self2) {
       $ZodStringFormat.init(arg0, pattern);
     });
     exports.$ZodJWT = fnResult.$constructor("$ZodJWT", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodStringFormat = _exports.$ZodStringFormat;
       $ZodStringFormat.init(_zod, arg1);
       _zod._zod.check = (value) => {
-        if (!outer1_12(value.value, alg.alg)) {
+        if (!closure_1_12(value.value, alg.alg)) {
           const issues = value.issues;
           const obj = { code: "invalid_format", format: "jwt", input: null, inst: null, continue: null };
           obj[2] = value.value;
@@ -1413,7 +1410,7 @@ if (self2) {
       };
     });
     exports.$ZodCustomStringFormat = fnResult.$constructor("$ZodCustomStringFormat", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodStringFormat = _exports.$ZodStringFormat;
       $ZodStringFormat.init(_zod, arg1);
@@ -1430,7 +1427,7 @@ if (self2) {
       };
     });
     exports.$ZodNumber = fnResult.$constructor("$ZodNumber", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
@@ -1487,7 +1484,7 @@ if (self2) {
       $ZodNumber.init(arg0, arg1);
     });
     exports.$ZodBoolean = fnResult.$constructor("$ZodBoolean", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
@@ -1512,7 +1509,7 @@ if (self2) {
       };
     });
     exports.$ZodBigInt = fnResult.$constructor("$ZodBigInt", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
@@ -1542,7 +1539,7 @@ if (self2) {
       $ZodBigInt.init(arg0, arg1);
     });
     exports.$ZodSymbol = fnResult.$constructor("$ZodSymbol", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (value) => {
@@ -1558,7 +1555,7 @@ if (self2) {
       };
     });
     exports.$ZodUndefined = fnResult.$constructor("$ZodUndefined", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.pattern = closure_9.undefined;
@@ -1579,7 +1576,7 @@ if (self2) {
       };
     });
     exports.$ZodNull = fnResult.$constructor("$ZodNull", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.pattern = closure_9.null;
@@ -1607,7 +1604,7 @@ if (self2) {
       _zod._zod.parse = (arg0) => arg0;
     });
     exports.$ZodNever = fnResult.$constructor("$ZodNever", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (input) => {
@@ -1617,7 +1614,7 @@ if (self2) {
       };
     });
     exports.$ZodVoid = fnResult.$constructor("$ZodVoid", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (value) => {
@@ -1633,7 +1630,7 @@ if (self2) {
       };
     });
     exports.$ZodDate = fnResult.$constructor("$ZodDate", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
@@ -1666,7 +1663,7 @@ if (self2) {
       };
     });
     exports.$ZodArray = fnResult.$constructor("$ZodArray", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
@@ -1680,7 +1677,7 @@ if (self2) {
           let items = [];
           for (let num3 = 0; num3 < value.length; num3 = num3 + 1) {
             let tmp3 = element;
-            let _zod = element.element._zod;
+            _zod = element.element._zod;
             let obj = { value: null, issues: null };
             obj[0] = value[num3];
             obj[1] = [];
@@ -1693,7 +1690,7 @@ if (self2) {
                   issues = iter.issues;
                   const push = issues.push;
                   const items = [];
-                  HermesBuiltin.arraySpread(outer2_10.prefixIssues(tmp, issues.issues), 0);
+                  HermesBuiltin.arraySpread(closure_2_10.prefixIssues(tmp, issues.issues), 0);
                   HermesBuiltin.apply(items, issues);
                 }
                 num3.value[num3] = issues.value;
@@ -1702,11 +1699,11 @@ if (self2) {
               if (runResult.issues.length) {
                 let issues = iter.issues;
                 let push = issues.push;
-                let tmp5 = outer1_10;
+                let tmp5 = closure_1_10;
                 let items1 = [];
                 let tmp6 = items1;
                 let num4 = 0;
-                let arraySpreadResult = HermesBuiltin.arraySpread(outer1_10.prefixIssues(num3, runResult.issues), 0);
+                let arraySpreadResult = HermesBuiltin.arraySpread(closure_1_10.prefixIssues(num3, runResult.issues), 0);
                 let tmp8 = push;
                 let tmp9 = items1;
                 let tmp10 = issues;
@@ -1731,7 +1728,7 @@ if (self2) {
       };
     });
     exports.$ZodObject = fnResult.$constructor("$ZodObject", (_zod, shape) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = shape;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, shape);
@@ -1752,13 +1749,13 @@ if (self2) {
         };
         Object.defineProperty(shape, "shape", obj);
       }
-      let closure_3 = closure_10.cached(() => outer1_13(closure_1));
+      closure_3 = closure_10.cached(() => closure_1_13(closure_1));
       closure_10.defineLazy(_zod._zod, "propValues", () => {
         shape = shape.shape;
         const obj = {};
         for (const key10008 in shape) {
           let tmp8 = key10008;
-          let _zod = shape[key10008]._zod;
+          _zod = shape[key10008]._zod;
           if (!_zod.values) {
             continue;
           } else {
@@ -1786,8 +1783,8 @@ if (self2) {
       const isObject = closure_10.isObject;
       const catchall = shape.catchall;
       _zod._zod.parse = (value) => {
-        let closure_0 = value;
-        let closure_1 = arg1;
+        closure_0 = value;
+        closure_1 = arg1;
         if (shape == null) {
           shape = items.value;
         }
@@ -1799,9 +1796,9 @@ if (self2) {
           shape = shape.shape;
           const keys = shape.keys;
           function _loop4(iter) {
-            let closure_0 = iter;
-            let closure_1 = tmp2;
-            const _zod = tmp._zod;
+            closure_0 = iter;
+            closure_1 = tmp2;
+            _zod = tmp._zod;
             const runResult = _zod.run({ value: value[iter], issues: [] }, closure_1);
             if (runResult instanceof Promise) {
               items.push(runResult.then((issues) => {
@@ -1809,8 +1806,8 @@ if (self2) {
                   if (!closure_1) {
                     issues = iter.issues;
                     const push = issues.push;
-                    const items = [];
-                    HermesBuiltin.arraySpread(outer2_10.prefixIssues(tmp, issues.issues), 0);
+                    items = [];
+                    HermesBuiltin.arraySpread(closure_2_10.prefixIssues(tmp, issues.issues), 0);
                     HermesBuiltin.apply(items, issues);
                   }
                 }
@@ -1828,7 +1825,7 @@ if (self2) {
                   let issues = iter.issues;
                   let push = issues.push;
                   items = [];
-                  HermesBuiltin.arraySpread(outer1_10.prefixIssues(iter, runResult.issues), 0);
+                  HermesBuiltin.arraySpread(closure_1_10.prefixIssues(iter, runResult.issues), 0);
                   HermesBuiltin.apply(items, issues);
                 }
               }
@@ -1847,7 +1844,7 @@ if (self2) {
             continue;
           }
           if (catchall) {
-            let nextPromise = outer1_14(items, value, value, arg1, items.value, closure_0);
+            let nextPromise = closure_1_14(items, value, value, arg1, items.value, closure_0);
           } else {
             nextPromise = value;
             if (items.length) {
@@ -1867,20 +1864,19 @@ if (self2) {
       };
     });
     exports.$ZodObjectJIT = fnResult.$constructor("$ZodObjectJIT", (_zod, catchall) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = catchall;
       const $ZodObject = _exports.$ZodObject;
       $ZodObject.init(_zod, catchall);
       const parse = _zod._zod.parse;
-      let closure_5 = closure_10.cached(() => outer1_13(closure_1));
+      closure_5 = closure_10.cached(() => closure_1_13(closure_1));
       const isObject = closure_10.isObject;
-      const jitless = globalConfig.globalConfig.jitless;
-      let value = !jitless;
-      let closure_7 = value;
+      const jitless = value.globalConfig.jitless;
+      value = !jitless;
+      closure_7 = value;
       if (!jitless) {
         value = closure_10.allowsEval.value;
       }
-      globalConfig = value;
       catchall = catchall.catchall;
       _zod._zod.parse = (value, arg1) => {
         if (value2 == null) {
@@ -1898,8 +1894,8 @@ if (self2) {
               let tmp12 = closure_2;
               if (!closure_2) {
                 const tmp14 = ((shape) => {
-                  let closure_0 = shape;
-                  const doc = new outer1_0(tmp14[8]).Doc(["shape", "payload", "ctx"]);
+                  closure_0 = shape;
+                  const doc = new closure_1_0(table[8]).Doc(["shape", "payload", "ctx"]);
                   value = value.value;
                   function parseStr(nextResult) {
                     const escResult = closure_10.esc(nextResult);
@@ -1920,13 +1916,13 @@ if (self2) {
                   const nextResult = iter.next();
                   while (iter !== undefined) {
                     let tmp10 = obj[nextResult];
-                    let tmp11 = outer1_10;
+                    let tmp11 = closure_1_10;
                     let tmp9 = nextResult;
-                    let escResult = outer1_10.esc(nextResult);
+                    let escResult = closure_1_10.esc(nextResult);
                     let tmp13 = shape[nextResult];
                     let optout;
                     if (tmp13 != null) {
-                      let _zod = tmp13._zod;
+                      _zod = tmp13._zod;
                       if (_zod != null) {
                         optout = _zod.optout;
                       }
@@ -1994,7 +1990,7 @@ if (self2) {
                   }
                   doc.write("payload.value = newResult;");
                   doc.write("return payload;");
-                  let closure_1 = doc.compile();
+                  closure_1 = doc.compile();
                   return (arg0, arg1) => callback(closure_0, arg0, arg1);
                 })(shape.shape);
                 closure_2 = tmp14;
@@ -2004,7 +2000,7 @@ if (self2) {
               tmp2 = catchall;
               let tmp16 = tmp12Result;
               if (catchall) {
-                tmp16 = outer1_14([], value, tmp12Result, arg1, value2, closure_0);
+                tmp16 = closure_1_14([], value, tmp12Result, arg1, value2, closure_0);
               }
               let tmp11 = tmp16;
             }
@@ -2021,7 +2017,7 @@ if (self2) {
       };
     });
     exports.$ZodUnion = fnResult.$constructor("$ZodUnion", (_zod, options) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = options;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, options);
@@ -2064,11 +2060,11 @@ if (self2) {
         }
         tmp = options;
       });
-      let closure_2 = 1 === options.options.length;
+      closure_2 = 1 === options.options.length;
       const run = options.options[0]._zod.run;
       _zod._zod.parse = (value) => {
-        let closure_0 = value;
-        let options = arg1;
+        closure_0 = value;
+        options = arg1;
         if (closure_2) {
           return run(value, arg1);
         } else {
@@ -2077,7 +2073,7 @@ if (self2) {
           options = options.options;
           const iter = options[Symbol.iterator]();
           while (iter !== undefined) {
-            let _zod = iter.next()._zod;
+            _zod = iter.next()._zod;
             let obj = { value: null, issues: null };
             obj[0] = value.value;
             obj[1] = [];
@@ -2103,26 +2099,26 @@ if (self2) {
             continue;
           }
           if (flag) {
-            let nextPromise = Promise.all(items).then((arg0) => outer2_15(arg0, closure_0, closure_0, closure_1));
+            let nextPromise = Promise.all(items).then((arg0) => closure_2_15(arg0, closure_0, closure_0, closure_1));
             const allPromises = Promise.all(items);
           } else {
-            nextPromise = outer1_15(items, value, closure_0, arg1);
+            nextPromise = closure_1_15(items, value, closure_0, arg1);
           }
           return nextPromise;
         }
       };
     });
     exports.$ZodXor = fnResult.$constructor("$ZodXor", (_zod, options) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = options;
       const $ZodUnion = _exports.$ZodUnion;
       $ZodUnion.init(_zod, options);
       options.inclusive = false;
-      let closure_2 = 1 === options.options.length;
+      closure_2 = 1 === options.options.length;
       const run = options.options[0]._zod.run;
       _zod._zod.parse = (value) => {
-        let closure_0 = value;
-        let options = arg1;
+        closure_0 = value;
+        options = arg1;
         if (closure_2) {
           return run(value, arg1);
         } else {
@@ -2131,7 +2127,7 @@ if (self2) {
           options = options.options;
           const iter = options[Symbol.iterator]();
           while (iter !== undefined) {
-            let _zod = iter.next()._zod;
+            _zod = iter.next()._zod;
             let obj = { value: null, issues: null };
             obj[0] = value.value;
             obj[1] = [];
@@ -2148,7 +2144,7 @@ if (self2) {
           }
           if (flag) {
             let nextPromise = Promise.all(items).then((arr) => {
-              let closure_0 = closure_1;
+              closure_0 = closure_1;
               const found = arr.filter((issues) => 0 === issues.issues.length);
               if (1 === found.length) {
                 iter.value = found[0].value;
@@ -2159,7 +2155,7 @@ if (self2) {
                 obj[2] = tmp;
                 obj[3] = arr.map((issues) => {
                   issues = issues.issues;
-                  return issues.map((path) => outer1_10.finalizeIssue(path, closure_0, outer1_8.config()));
+                  return issues.map((path) => closure_1_10.finalizeIssue(path, closure_0, closure_1_8.config()));
                 });
                 issues.push(obj);
               } else {
@@ -2174,7 +2170,7 @@ if (self2) {
             });
             const allPromises = Promise.all(items);
           } else {
-            outer1_16(items, value, closure_0, arg1);
+            closure_1_16(items, value, closure_0, arg1);
             nextPromise = value;
           }
           return nextPromise;
@@ -2182,7 +2178,7 @@ if (self2) {
       };
     });
     exports.$ZodDiscriminatedUnion = fnResult.$constructor("$ZodDiscriminatedUnion", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       arg1.inclusive = false;
       const $ZodUnion = _exports.$ZodUnion;
@@ -2241,13 +2237,13 @@ if (self2) {
           let str2 = "Invalid discriminated union option at index \"";
           let tmp21 = new.target;
           let tmp22 = new.target;
-          let error = new Error("Invalid discriminated union option at index \"" + options.indexOf(nextResult) + "\"");
+          error = new Error("Invalid discriminated union option at index \"" + options.indexOf(nextResult) + "\"");
           let tmp24 = error;
           throw error;
         }
         return obj;
       });
-      let closure_3 = closure_10.cached(() => {
+      closure_3 = closure_10.cached(() => {
         const map = new Map();
         const iter = closure_1.options[Symbol.iterator]();
         const nextResult = iter.next();
@@ -2276,7 +2272,7 @@ if (self2) {
                   let str2 = "Duplicate discriminator value \"";
                   let tmp13 = new.target;
                   let tmp14 = new.target;
-                  let error = new Error("Duplicate discriminator value \"" + String(tmp8) + "\"");
+                  error = new Error("Duplicate discriminator value \"" + String(tmp8) + "\"");
                   let tmp16 = error;
                   throw error;
                 } else {
@@ -2305,7 +2301,7 @@ if (self2) {
       });
       _zod._zod.parse = (value) => {
         value = value.value;
-        if (outer1_10.isObject(value)) {
+        if (closure_1_10.isObject(value)) {
           value = lib.value;
           let tmp5;
           if (value != null) {
@@ -2313,7 +2309,7 @@ if (self2) {
           }
           value = value.get(tmp5);
           if (value) {
-            const _zod = value._zod;
+            _zod = value._zod;
             let runResult = _zod.run(value, arg1);
           } else if (closure_1.unionFallback) {
             runResult = parse(value, arg1);
@@ -2341,12 +2337,12 @@ if (self2) {
       };
     });
     exports.$ZodIntersection = fnResult.$constructor("$ZodIntersection", (_zod) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (value) => {
         let nextPromise = value;
-        let closure_0 = value;
+        closure_0 = value;
         value = value.value;
         const _zod = closure_0.left._zod;
         const runResult = _zod.run({ value, issues: [] }, arg1);
@@ -2354,33 +2350,31 @@ if (self2) {
         const runResult1 = _zod2.run({ value, issues: [] }, arg1);
         if (!(runResult instanceof Promise)) {
           if (!(runResult1 instanceof Promise)) {
-            outer1_18(nextPromise, runResult, runResult1);
+            closure_1_18(nextPromise, runResult, runResult1);
           }
           return nextPromise;
         }
         const items = [runResult, runResult1];
         nextPromise = Promise.all(items).then((arg0) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg0;
-          outer1_18(closure_0, tmp, tmp2);
+          closure_1_18(closure_0, tmp, tmp2);
           return closure_0;
         });
       };
     });
     exports.$ZodTuple = fnResult.$constructor("$ZodTuple", (_zod, items) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = items;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, items);
       items = items.items;
       _zod._zod.parse = (value) => {
         let nextPromise = value;
-        let closure_0 = value;
+        closure_0 = value;
         value = value.value;
         if (Array.isArray(value)) {
           nextPromise.value = [];
-          let items = [];
+          items = [];
           const items1 = [];
           HermesBuiltin.arraySpread(items, 0);
           const reversed = items1.reverse();
@@ -2389,7 +2383,7 @@ if (self2) {
           if (-1 !== findIndexResult) {
             num4 = arr4.length - findIndexResult;
           }
-          if (!items.rest) {
+          if (!sum1.rest) {
             let issues = nextPromise.issues;
             if (value.length > arr4.length) {
               let obj = { code: "too_big", maximum: null, inclusive: true };
@@ -2398,7 +2392,7 @@ if (self2) {
               obj = { code: "too_small", minimum: null };
               obj[1] = arr4.length;
             }
-            const obj1 = {};
+            obj1 = {};
             const merged = Object.assign(obj);
             obj1.input = value;
             obj1.inst = closure_0;
@@ -2407,15 +2401,15 @@ if (self2) {
             return nextPromise;
           }
           let num6 = -1;
-          items = -1;
+          sum1 = -1;
           for (const item10060 of arr4) {
             let tmp18 = num6;
             let sum = num6 + 1;
             num6 = sum;
-            items = sum;
+            sum1 = sum;
             if (sum < value.length) {
               let tmp21 = item10060;
-              let _zod = tmp17._zod;
+              _zod = tmp17._zod;
               let obj2 = { value: null, issues: null };
               let tmp22 = num6;
               obj2[0] = value[num6];
@@ -2429,32 +2423,31 @@ if (self2) {
                   if (issues.issues.length) {
                     issues = iter.issues;
                     const push = issues.push;
-                    const items = [];
-                    HermesBuiltin.arraySpread(outer1_10.prefixIssues(tmp, issues.issues), 0);
+                    items = [];
+                    HermesBuiltin.arraySpread(closure_1_10.prefixIssues(tmp, issues.issues), 0);
                     HermesBuiltin.apply(items, issues);
                   }
-                  closure_0.value[c1] = issues.value;
+                  closure_0.value[sum1] = issues.value;
                 }));
               } else {
-                let tmp24 = outer1_19;
+                let tmp24 = closure_1_19;
                 let tmp25 = runResult;
                 let tmp26 = num6;
-                let tmp27 = outer1_19(promise, nextPromise, num6);
+                let tmp27 = closure_1_19(promise, nextPromise, num6);
               }
             } else {
               let tmp20 = num6;
             }
             continue;
           }
-          if (items.rest) {
+          if (sum1.rest) {
             const substr = value.slice(items.length);
             for (const item10098 of substr) {
               let tmp35 = num6;
-              let sum1 = num6 + 1;
+              sum1 = num6 + 1;
               num6 = sum1;
-              items = sum1;
-              let tmp37 = items;
-              let _zod2 = items.rest._zod;
+              let tmp37 = sum1;
+              let _zod2 = sum1.rest._zod;
               let obj3 = { value: null, issues: null };
               obj3[0] = item10098;
               obj3[1] = [];
@@ -2467,17 +2460,17 @@ if (self2) {
                   if (issues.issues.length) {
                     issues = iter.issues;
                     const push = issues.push;
-                    const items = [];
-                    HermesBuiltin.arraySpread(outer1_10.prefixIssues(tmp, issues.issues), 0);
+                    items = [];
+                    HermesBuiltin.arraySpread(closure_1_10.prefixIssues(tmp, issues.issues), 0);
                     HermesBuiltin.apply(items, issues);
                   }
-                  closure_0.value[c1] = issues.value;
+                  closure_0.value[sum1] = issues.value;
                 }));
               } else {
-                let tmp39 = outer1_19;
+                let tmp39 = closure_1_19;
                 let tmp40 = runResult1;
                 let tmp41 = num6;
-                let tmp42 = outer1_19(promise2, nextPromise, num6);
+                let tmp42 = closure_1_19(promise2, nextPromise, num6);
               }
               continue;
             }
@@ -2498,18 +2491,18 @@ if (self2) {
       };
     });
     exports.$ZodRecord = fnResult.$constructor("$ZodRecord", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (value) => {
         let tmp20;
         let nextPromise = value;
-        let closure_0 = value;
+        closure_0 = value;
         const keyType = arg1;
         value = value.value;
-        let closure_2 = value;
-        if (outer1_10.isPlainObject(value)) {
+        closure_2 = value;
+        if (closure_1_10.isPlainObject(value)) {
           let items = [];
           const values = keyType.keyType._zod.values;
           nextPromise.value = {};
@@ -2517,21 +2510,21 @@ if (self2) {
             const _Set = Set;
             const set = new Set();
             function _loop5(iter2) {
-              const value = iter2;
+              value = iter2;
               let str = iter2;
               if (typeof iter2 === "number") {
                 str = iter2.toString();
               }
               set.add(str);
-              const _zod = closure_1.valueType._zod;
+              _zod = closure_1.valueType._zod;
               const runResult = _zod.run({ value: value2[iter2], issues: [] }, closure_1);
               if (runResult instanceof Promise) {
                 items.push(runResult.then((issues) => {
                   if (issues.issues.length) {
                     issues = iter2.issues;
                     const push = issues.push;
-                    const items = [];
-                    HermesBuiltin.arraySpread(outer3_10.prefixIssues(iter2, issues.issues), 0);
+                    items = [];
+                    HermesBuiltin.arraySpread(closure_3_10.prefixIssues(iter2, issues.issues), 0);
                     HermesBuiltin.apply(items, issues);
                   }
                   iter2.value[iter2] = issues.value;
@@ -2541,7 +2534,7 @@ if (self2) {
                   let issues = value.issues;
                   let push = issues.push;
                   items = [];
-                  HermesBuiltin.arraySpread(outer2_10.prefixIssues(iter2, runResult.issues), 0);
+                  HermesBuiltin.arraySpread(closure_2_10.prefixIssues(iter2, runResult.issues), 0);
                   HermesBuiltin.apply(items, issues);
                 }
                 value.value[iter2] = runResult.value;
@@ -2587,7 +2580,7 @@ if (self2) {
           } else {
             const _Reflect = Reflect;
             function _loop6(iter) {
-              const value = iter;
+              value = iter;
               if ("__proto__" === iter) {
                 return 0;
               } else {
@@ -2599,17 +2592,17 @@ if (self2) {
                 runResult1 = runResult;
                 if (runResult instanceof Promise) {
                   const _Error2 = Error;
-                  const error = new Error("Async schemas not supported in object keys currently");
+                  error = new Error("Async schemas not supported in object keys currently");
                   throw error;
                 } else {
                   iter = runResult;
                   if (typeof iter === "string") {
-                    const number = outer2_9.number;
+                    const number = closure_2_9.number;
                     iter = runResult;
                     if (number.test(iter)) {
                       iter = runResult;
                       if (runResult.issues.length) {
-                        const _zod = tmp27.keyType._zod;
+                        _zod = tmp27.keyType._zod;
                         obj = { value: null, issues: null };
                         const _Number = Number;
                         obj[0] = Number(iter);
@@ -2635,9 +2628,9 @@ if (self2) {
                       let issues = value.issues;
                       obj = { code: "invalid_key", origin: "record", issues: null, input: null, path: null, inst: null };
                       const issues1 = iter.issues;
-                      obj[2] = issues1.map((path) => outer2_10.finalizeIssue(path, runResult1, outer2_8.config()));
+                      obj[2] = issues1.map((path) => closure_2_10.finalizeIssue(path, runResult1, closure_2_8.config()));
                       obj[3] = iter;
-                      let items = [iter];
+                      items = [iter];
                       obj[4] = items;
                       obj[5] = value;
                       issues.push(obj);
@@ -2645,7 +2638,7 @@ if (self2) {
                     return 0;
                   } else {
                     const _zod2 = tmp27.valueType._zod;
-                    const obj1 = { value: null, issues: null };
+                    obj1 = { value: null, issues: null };
                     obj1[0] = value2[iter];
                     obj1[1] = [];
                     const runResult2 = _zod2.run(obj1, tmp28);
@@ -2654,8 +2647,8 @@ if (self2) {
                         if (issues.issues.length) {
                           issues = iter.issues;
                           const push = issues.push;
-                          const items = [];
-                          HermesBuiltin.arraySpread(outer3_10.prefixIssues(iter, issues.issues), 0);
+                          items = [];
+                          HermesBuiltin.arraySpread(closure_3_10.prefixIssues(iter, issues.issues), 0);
                           HermesBuiltin.apply(items, issues);
                         }
                         iter.value[runResult1.value] = issues.value;
@@ -2665,7 +2658,7 @@ if (self2) {
                         const issues2 = value.issues;
                         let push = issues2.push;
                         const items1 = [];
-                        HermesBuiltin.arraySpread(outer2_10.prefixIssues(iter, runResult2.issues), 0);
+                        HermesBuiltin.arraySpread(closure_2_10.prefixIssues(iter, runResult2.issues), 0);
                         HermesBuiltin.apply(items1, issues2);
                       }
                       value.value[iter.value] = runResult2.value;
@@ -2697,24 +2690,24 @@ if (self2) {
       };
     });
     exports.$ZodMap = fnResult.$constructor("$ZodMap", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (value) => {
         let nextPromise = value;
-        let closure_0 = value;
-        let closure_1 = arg1;
+        closure_0 = value;
+        closure_1 = arg1;
         value = value.value;
-        let closure_2 = value;
+        closure_2 = value;
         if (value instanceof Map) {
           let items = [];
           const _Map = Map;
           const map = new Map();
           nextPromise.value = map;
           function _loop7(value) {
-            let closure_0 = value;
-            const _zod = closure_1.keyType._zod;
+            closure_0 = value;
+            _zod = closure_1.keyType._zod;
             let obj = { value, issues: [] };
             const runResult = _zod.run(obj, closure_1);
             const _zod2 = closure_1.valueType._zod;
@@ -2722,22 +2715,20 @@ if (self2) {
             const runResult1 = _zod2.run(obj, closure_1);
             if (!(runResult instanceof Promise)) {
               if (!(runResult1 instanceof Promise)) {
-                outer2_20(runResult, runResult1, closure_0, value, closure_2, closure_0, tmp);
+                closure_2_20(runResult, runResult1, closure_0, value, closure_2, closure_0, tmp);
               }
             }
-            const items = [runResult, runResult1];
+            items = [runResult, runResult1];
             items.push(Promise.all(items).then((arg0) => {
-              let tmp;
-              let tmp2;
               [tmp, tmp2] = arg0;
-              outer3_20(tmp, tmp2, closure_0, closure_0, outer1_2, closure_0, outer1_1);
+              closure_3_20(tmp, tmp2, closure_0, closure_0, closure_1_2, closure_0, closure_1_1);
             }));
           }
           const tmp9 = value[Symbol.iterator]();
           while (tmp9 !== undefined) {
-            let tmp13 = outer1_3;
-            let tmp14 = outer1_3(tmp11, 2);
-            let closure_4 = tmp14[1];
+            let tmp13 = closure_1_3;
+            let tmp14 = closure_1_3(tmp11, 2);
+            closure_4 = tmp14[1];
             let _loop7Result = _loop7(tmp14[0]);
             continue;
           }
@@ -2757,13 +2748,13 @@ if (self2) {
       };
     });
     exports.$ZodSet = fnResult.$constructor("$ZodSet", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (value) => {
         let nextPromise = value;
-        let closure_0 = value;
+        closure_0 = value;
         value = value.value;
         if (value instanceof Set) {
           let items = [];
@@ -2773,7 +2764,7 @@ if (self2) {
           const tmp9 = value[Symbol.iterator]();
           while (tmp9 !== undefined) {
             let tmp13 = valueType;
-            let _zod = valueType.valueType._zod;
+            _zod = valueType.valueType._zod;
             let obj = { value: null, issues: null };
             obj[0] = tmp11;
             obj[1] = [];
@@ -2790,13 +2781,13 @@ if (self2) {
                   HermesBuiltin.arraySpread(issues.issues, 0);
                   HermesBuiltin.apply(items, issues);
                 }
-                const value = iter.value;
+                value = iter.value;
                 value.add(issues.value);
               }));
             } else {
-              let tmp15 = outer1_21;
+              let tmp15 = closure_1_21;
               let tmp16 = runResult;
-              let tmp17 = outer1_21(promise, nextPromise);
+              let tmp17 = closure_1_21(promise, nextPromise);
             }
             continue;
           }
@@ -2816,7 +2807,7 @@ if (self2) {
       };
     });
     exports.$ZodEnum = fnResult.$constructor("$ZodEnum", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const $ZodType = enumValues.$ZodType;
       $ZodType.init(_zod, arg1);
       enumValues = closure_10.getEnumValues(arg1.entries);
@@ -2850,13 +2841,13 @@ if (self2) {
       };
     });
     exports.$ZodLiteral = fnResult.$constructor("$ZodLiteral", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
       if (0 === arg1.values.length) {
         const _Error = Error;
-        const error = new Error("Cannot create literal schema with no valid values");
+        error = new Error("Cannot create literal schema with no valid values");
         throw error;
       } else {
         const _Set = Set;
@@ -2893,7 +2884,7 @@ if (self2) {
       }
     });
     exports.$ZodFile = fnResult.$constructor("$ZodFile", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (value) => {
@@ -2909,14 +2900,14 @@ if (self2) {
       };
     });
     exports.$ZodTransform = fnResult.$constructor("$ZodTransform", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (value, direction) => {
         const constructor = value;
         if ("backward" === direction.direction) {
-          const ZodEncodeError = new outer1_8.$ZodEncodeError(constructor.constructor.name);
+          const ZodEncodeError = new closure_1_8.$ZodEncodeError(constructor.constructor.name);
           throw ZodEncodeError;
         } else {
           const transformResult = closure_1.transform(value.value, value);
@@ -2930,7 +2921,7 @@ if (self2) {
               return closure_0;
             });
           } else if (tmp15) {
-            const ZodAsyncError = new outer1_8.$ZodAsyncError();
+            const ZodAsyncError = new closure_1_8.$ZodAsyncError();
             throw ZodAsyncError;
           } else {
             value.value = transformResult;
@@ -2940,7 +2931,7 @@ if (self2) {
       };
     });
     exports.$ZodOptional = fnResult.$constructor("$ZodOptional", (_zod) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.optin = "optional";
@@ -2961,12 +2952,12 @@ if (self2) {
         if (pattern) {
           const _RegExp = RegExp;
           const _HermesInternal = HermesInternal;
-          regExp = new RegExp("^(" + outer1_10.cleanRegex(pattern.source) + ")?$");
+          regExp = new RegExp("^(" + closure_1_10.cleanRegex(pattern.source) + ")?$");
         }
         return regExp;
       });
       _zod._zod.parse = (value) => {
-        let closure_0 = value;
+        closure_0 = value;
         if ("optional" === closure_0.innerType._zod.optin) {
           const _zod2 = tmp.innerType._zod;
           const runResult = _zod2.run(value, arg1);
@@ -3006,7 +2997,7 @@ if (self2) {
       };
     });
     exports.$ZodExactOptional = fnResult.$constructor("$ZodExactOptional", (_zod) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const $ZodOptional = exports.$ZodOptional;
       $ZodOptional.init(_zod, arg1);
       closure_10.defineLazy(_zod._zod, "values", () => closure_0.innerType._zod.values);
@@ -3017,7 +3008,7 @@ if (self2) {
       };
     });
     exports.$ZodNullable = fnResult.$constructor("$ZodNullable", (_zod) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       closure_10.defineLazy(_zod._zod, "optin", () => closure_0.innerType._zod.optin);
@@ -3028,7 +3019,7 @@ if (self2) {
         if (pattern) {
           const _RegExp = RegExp;
           const _HermesInternal = HermesInternal;
-          regExp = new RegExp("^(" + outer1_10.cleanRegex(pattern.source) + "|null)$");
+          regExp = new RegExp("^(" + closure_1_10.cleanRegex(pattern.source) + "|null)$");
         }
         return regExp;
       });
@@ -3052,7 +3043,7 @@ if (self2) {
       };
     });
     exports.$ZodDefault = fnResult.$constructor("$ZodDefault", (_zod) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.optin = "optional";
@@ -3086,7 +3077,7 @@ if (self2) {
       };
     });
     exports.$ZodPrefault = fnResult.$constructor("$ZodPrefault", (_zod) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.optin = "optional";
@@ -3102,7 +3093,7 @@ if (self2) {
       };
     });
     exports.$ZodNonOptional = fnResult.$constructor("$ZodNonOptional", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
@@ -3118,7 +3109,7 @@ if (self2) {
         return set;
       });
       _zod._zod.parse = (arg0, arg1) => {
-        const _zod = closure_1.innerType._zod;
+        _zod = closure_1.innerType._zod;
         const runResult = _zod.run(arg0, arg1);
         if (runResult instanceof Promise) {
           let nextPromise = runResult.then((issues) => {
@@ -3155,14 +3146,14 @@ if (self2) {
       };
     });
     exports.$ZodSuccess = fnResult.$constructor("$ZodSuccess", (_zod) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (arg0, direction) => {
         let nextPromise = arg0;
         const innerType = arg0;
         if ("backward" === direction.direction) {
-          const ZodEncodeError = new outer1_8.$ZodEncodeError("ZodSuccess");
+          const ZodEncodeError = new closure_1_8.$ZodEncodeError("ZodSuccess");
           throw ZodEncodeError;
         } else {
           const _zod = innerType.innerType._zod;
@@ -3180,15 +3171,15 @@ if (self2) {
       };
     });
     exports.$ZodCatch = fnResult.$constructor("$ZodCatch", (_zod) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       closure_10.defineLazy(_zod._zod, "optin", () => closure_0.innerType._zod.optin);
       closure_10.defineLazy(_zod._zod, "optout", () => closure_0.innerType._zod.optout);
       closure_10.defineLazy(_zod._zod, "values", () => closure_0.innerType._zod.values);
       _zod._zod.parse = (value, direction) => {
-        let closure_0 = value;
-        let closure_1 = direction;
+        closure_0 = value;
+        closure_1 = direction;
         if ("backward" === direction.direction) {
           const _zod = closure_0.innerType._zod;
           return _zod.run(value, direction);
@@ -3203,7 +3194,7 @@ if (self2) {
                 const merged = Object.assign(iter);
                 obj = { issues: null };
                 const issues = value.issues;
-                obj[0] = issues.map((path) => outer2_10.finalizeIssue(path, closure_1, outer2_8.config()));
+                obj[0] = issues.map((path) => closure_2_10.finalizeIssue(path, closure_1, closure_2_8.config()));
                 obj.error = obj;
                 obj.input = iter.value;
                 iter.value = value.catchValue(obj);
@@ -3219,7 +3210,7 @@ if (self2) {
               let merged = Object.assign(value);
               obj = { issues: null };
               let issues = runResult.issues;
-              obj[0] = issues.map((path) => outer2_10.finalizeIssue(path, closure_1, outer2_8.config()));
+              obj[0] = issues.map((path) => closure_2_10.finalizeIssue(path, closure_1, closure_2_8.config()));
               obj.error = obj;
               obj.input = value.value;
               value.value = closure_0.catchValue(obj);
@@ -3232,7 +3223,7 @@ if (self2) {
       };
     });
     exports.$ZodNaN = fnResult.$constructor("$ZodNaN", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (value) => {
@@ -3253,7 +3244,7 @@ if (self2) {
       };
     });
     exports.$ZodPipe = fnResult.$constructor("$ZodPipe", (_zod) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       closure_10.defineLazy(_zod._zod, "values", () => closure_0.in._zod.values);
@@ -3261,7 +3252,7 @@ if (self2) {
       closure_10.defineLazy(_zod._zod, "optout", () => closure_0.out._zod.optout);
       closure_10.defineLazy(_zod._zod, "propValues", () => closure_0.in._zod.propValues);
       _zod._zod.parse = (arg0, direction) => {
-        let closure_0 = direction;
+        closure_0 = direction;
         if ("backward" === direction.direction) {
           const _zod2 = closure_0.out._zod;
           let runResult = _zod2.run(arg0, direction);
@@ -3318,7 +3309,7 @@ if (self2) {
       };
     });
     exports.$ZodCodec = fnResult.$constructor("$ZodCodec", (_zod) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       closure_10.defineLazy(_zod._zod, "values", () => closure_0.in._zod.values);
@@ -3326,23 +3317,23 @@ if (self2) {
       closure_10.defineLazy(_zod._zod, "optout", () => closure_0.out._zod.optout);
       closure_10.defineLazy(_zod._zod, "propValues", () => closure_0.in._zod.propValues);
       _zod._zod.parse = (arg0, direction) => {
-        let closure_0 = direction;
+        closure_0 = direction;
         if ("forward" === tmp) {
           const _zod2 = closure_0.in._zod;
           const runResult = _zod2.run(arg0, direction);
           if (runResult instanceof Promise) {
-            let nextPromise = runResult.then((arg0) => outer2_22(arg0, closure_0, closure_0));
+            let nextPromise = runResult.then((arg0) => closure_2_22(arg0, closure_0, closure_0));
           } else {
-            nextPromise = outer1_22(runResult, closure_0, direction);
+            nextPromise = closure_1_22(runResult, closure_0, direction);
           }
           return nextPromise;
         } else {
           const _zod = closure_0.out._zod;
           const runResult1 = _zod.run(arg0, direction);
           if (runResult1 instanceof Promise) {
-            let nextPromise1 = runResult1.then((arg0) => outer2_22(arg0, closure_0, closure_0));
+            let nextPromise1 = runResult1.then((arg0) => closure_2_22(arg0, closure_0, closure_0));
           } else {
-            nextPromise1 = outer1_22(runResult1, closure_0, direction);
+            nextPromise1 = closure_1_22(runResult1, closure_0, direction);
           }
           return nextPromise1;
         }
@@ -3350,7 +3341,7 @@ if (self2) {
       };
     });
     exports.$ZodReadonly = fnResult.$constructor("$ZodReadonly", (_zod) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       closure_10.defineLazy(_zod._zod, "propValues", () => closure_0.innerType._zod.propValues);
@@ -3385,7 +3376,7 @@ if (self2) {
           const _zod = closure_0.innerType._zod;
           const runResult = _zod.run(arg0, direction);
           if (runResult instanceof Promise) {
-            let nextPromise = runResult.then(outer1_23);
+            let nextPromise = runResult.then(closure_1_23);
           } else {
             const _Object = Object;
             runResult.value = Object.freeze(runResult.value);
@@ -3396,7 +3387,7 @@ if (self2) {
       };
     });
     exports.$ZodTemplateLiteral = fnResult.$constructor("$ZodTemplateLiteral", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
@@ -3436,7 +3427,7 @@ if (self2) {
                 let str3 = "Invalid template literal part: ";
                 let tmp27 = new.target;
                 let tmp28 = new.target;
-                let error = new Error("Invalid template literal part: " + tmp3._zod.traits);
+                error = new Error("Invalid template literal part: " + tmp3._zod.traits);
                 let tmp30 = error;
                 throw error;
               }
@@ -3510,45 +3501,45 @@ if (self2) {
       };
     });
     exports.$ZodFunction = fnResult.$constructor("$ZodFunction", (_zod, _def) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, _def);
       _zod._def = _def;
       _zod._zod.def = _def;
       _zod.implement = (fn) => {
-        let closure_0 = fn;
+        closure_0 = fn;
         if (typeof fn !== "function") {
           const _Error = Error;
-          const error = new Error("implement() must be called with a function");
+          error = new Error("implement() must be called with a function");
           throw error;
         } else {
           return function() {
             const items = [...arguments];
             let parsed = items;
             if (lib._def.input) {
-              parsed = lib(outer2_2[7]).parse(tmp._def.input, items);
+              parsed = lib(closure_2_2[7]).parse(tmp._def.input, items);
             }
             const applyResult = Reflect.apply(lib, this, parsed);
             let parsed1 = applyResult;
             if (lib._def.output) {
-              parsed1 = lib(outer2_2[7]).parse(tmp._def.output, applyResult);
+              parsed1 = lib(closure_2_2[7]).parse(tmp._def.output, applyResult);
             }
             return parsed1;
           };
         }
       };
       _zod.implementAsync = (fn) => {
-        let closure_0 = fn;
+        closure_0 = fn;
         if (typeof fn !== "function") {
           const _Error = Error;
-          const error = new Error("implementAsync() must be called with a function");
+          error = new Error("implementAsync() must be called with a function");
           throw error;
         } else {
-          return outer1_4(function() {
+          return closure_1_4(function() {
             const self = this;
-            let closure_1 = [...arguments];
-            let c5 = 0;
-            let c6 = 0;
+            closure_1 = [...arguments];
+            c5 = 0;
+            c6 = 0;
             const iter = (function*() {
               if (c6 === 2) {
                 c6 = 3;
@@ -3576,9 +3567,9 @@ if (self2) {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      let closure_4 = _self;
-                      let closure_3 = _self;
-                      let closure_2 = tmp2;
+                      closure_4 = _self;
+                      closure_3 = _self;
+                      closure_2 = tmp2;
                       _self = c1;
                       c1 = undefined;
                       closure_2 = undefined;
@@ -3593,14 +3584,14 @@ if (self2) {
                         throw arg1;
                       } else if (arg0 === 2) {
                         c6 = 3;
-                        const obj1 = { value: null, done: true };
+                        obj1 = { value: null, done: true };
                         obj1[0] = arg1;
                         return obj1;
                       } else if (self._def.input) {
                         c5 = 2;
                         c6 = 1;
                         const obj2 = { value: null, done: false };
-                        obj2[0] = _self(outer2_2[7]).parseAsync(self._def.input, self);
+                        obj2[0] = _self(closure_2_2[7]).parseAsync(self._def.input, self);
                         return obj2;
                       } else {
                         let tmp12 = self;
@@ -3634,10 +3625,10 @@ if (self2) {
                             c5 = 4;
                             c6 = 1;
                             const obj5 = { value: null, done: false };
-                            obj5[0] = _self(outer2_2[7]).parseAsync(self._def.output, outer1_2);
+                            obj5[0] = _self(closure_2_2[7]).parseAsync(self._def.output, closure_1_2);
                             return obj5;
                           } else {
-                            let tmp6 = outer1_2;
+                            let tmp6 = closure_1_2;
                           }
                         }
                       } else if (arg0 === 1) {
@@ -3657,7 +3648,7 @@ if (self2) {
                       obj6[0] = tmp6;
                       return obj6;
                     }
-                    let closure_1 = tmp12;
+                    closure_1 = tmp12;
                     const _Reflect = Reflect;
                     c5 = 3;
                     c6 = 1;
@@ -3705,7 +3696,7 @@ if (self2) {
         if (Array.isArray(items[0])) {
           obj = { type: "tuple", items: null, rest: null };
           [obj2[1], obj2[2]] = items;
-          const ZodTuple = new outer1_1.$ZodTuple(obj);
+          const ZodTuple = new closure_1_1.$ZodTuple(obj);
           obj[1] = ZodTuple;
           obj[2] = tmp._def.output;
           constructor = new constructor(obj);
@@ -3723,11 +3714,11 @@ if (self2) {
       return _zod;
     });
     exports.$ZodPromise = fnResult.$constructor("$ZodPromise", (_zod) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (value) => {
-        let closure_0 = arg1;
+        closure_0 = arg1;
         const resolved = Promise.resolve(value.value);
         return resolved.then((value) => {
           const _zod = innerType.innerType._zod;
@@ -3736,7 +3727,7 @@ if (self2) {
       };
     });
     exports.$ZodLazy = fnResult.$constructor("$ZodLazy", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodType = _exports.$ZodType;
       $ZodType.init(_zod, arg1);
@@ -3791,7 +3782,7 @@ if (self2) {
       };
     });
     exports.$ZodCustom = fnResult.$constructor("$ZodCustom", (_zod) => {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       const _exports = arg1;
       const $ZodCheck = closure_7.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
@@ -3799,10 +3790,10 @@ if (self2) {
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (arg0, arg1) => arg0;
       _zod._zod.check = (value) => {
-        let closure_0 = value;
+        closure_0 = value;
         value = value.value;
-        let closure_1 = value;
-        const fnResult = closure_1.fn(value);
+        closure_1 = value;
+        fnResult = closure_1.fn(value);
         if (fnResult instanceof Promise) {
           return fnResult.then((arg0) => {
             if (!arg0) {
@@ -3821,7 +3812,7 @@ if (self2) {
                 obj.params = tmp3._zod.def.params;
               }
               const issues = tmp.issues;
-              issues.push(outer2_10.issue(obj));
+              issues.push(closure_2_10.issue(obj));
             }
           });
         } else if (!fnResult) {
@@ -3840,7 +3831,7 @@ if (self2) {
             obj.params = tmp._zod.def.params;
           }
           let issues = value.issues;
-          issues.push(outer1_10.issue(obj));
+          issues.push(closure_1_10.issue(obj));
         }
       };
     });

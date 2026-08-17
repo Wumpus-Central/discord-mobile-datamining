@@ -1,5 +1,7 @@
 // _runtime/00535_interpretNumericEntities.js
-let obj = { allowDots: false, allowEmptyArrays: false, allowPrototypes: false, allowSparse: false, arrayLimit: 20, charset: "utf-8", charsetSentinel: false, comma: false, decodeDotInKeys: false, decoder: require("items").decode, delimiter: "&", depth: 5, duplicates: "combine", ignoreQueryPrefix: false, interpretNumericEntities: false, parameterLimit: 1000, parseArrays: true, plainObjects: false, strictDepth: false, strictNullHandling: false, throwOnLimitExceeded: false };
+import items3 from "items" /* 536 */;
+
+let obj = { allowDots: false, allowEmptyArrays: false, allowPrototypes: false, allowSparse: false, arrayLimit: 20, charset: "utf-8", charsetSentinel: false, comma: false, decodeDotInKeys: false, decoder: items3.decode, delimiter: "&", depth: 5, duplicates: "combine", ignoreQueryPrefix: false, interpretNumericEntities: false, parameterLimit: 1000, parseArrays: true, plainObjects: false, strictDepth: false, strictNullHandling: false, throwOnLimitExceeded: false };
 function interpretNumericEntities(arg0) {
 
 }
@@ -171,7 +173,7 @@ export default (str, allowEmptyArrays) => {
         obj[12] = duplicates;
         obj[13] = true === allowEmptyArrays.ignoreQueryPrefix;
         if (typeof allowEmptyArrays.interpretNumericEntities === "boolean") {
-          let interpretNumericEntities = allowEmptyArrays.interpretNumericEntities;
+          interpretNumericEntities = allowEmptyArrays.interpretNumericEntities;
         } else {
           typeError = obj;
           interpretNumericEntities = obj.interpretNumericEntities;
@@ -328,7 +330,7 @@ export default (str, allowEmptyArrays) => {
                     if (obj.comma) {
                       if (substr.indexOf(",") > -1) {
                         let parts1 = substr.split(",");
-                        maybeMapResult = obj12.maybeMap(parts1, (arg0) => obj.decoder(arg0, outer1_4.decoder, c1, "value"));
+                        maybeMapResult = obj12.maybeMap(parts1, (arg0) => obj.decoder(arg0, closure_1_4.decoder, c1, "value"));
                         tmp30 = typeError;
                       }
                     }
@@ -575,7 +577,7 @@ export default (str, allowEmptyArrays) => {
                 let parsed = parseInt(replaced2, 10);
                 if (!obj.parseArrays) {
                   if ("" === replaced2) {
-                    let obj1 = { 0: null };
+                    obj1 = { 0: null };
                     obj1[0] = tmp74;
                   }
                   diff = diff - 1;

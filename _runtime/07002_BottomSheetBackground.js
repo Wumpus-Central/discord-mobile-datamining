@@ -1,10 +1,11 @@
 // _runtime/07002_BottomSheetBackground.js
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { styles } from "07001_styles.js";
+import noopDefault from "noop" /* 19 */;
+import styles from "styles" /* 7001 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
+noopDefault;
 const memoResult = require("noop").memo((pointerEvents) => {
   const obj = { pointerEvents: pointerEvents.pointerEvents, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: "Bottom Sheet", style: null };
   const items = [styles.styles.background, pointerEvents.style];

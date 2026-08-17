@@ -1,20 +1,15 @@
 // _runtime/06995_BottomSheetHostingContainer.js
-import noop from "noop";
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { useBottomSheet } from "06957_useBottomSheet.js";
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import useBottomSheet from "useBottomSheet" /* 6957 */;
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let c3;
-let c4;
-let c5;
-let obj1;
 ({ useMemo: obj1, useRef: c3 } = noop);
+noopDefault;
 ({ StatusBar: c4, View: c5 } = get_ActivityIndicator);
+const jsx = jsxProd.jsx;
 const memoResult = noop.memo(function BottomSheetHostingContainerComponent(bottomInset) {
-  let dependencyMap;
-  let require;
-  let topInset;
   ({ containerHeight: require, containerOffset: dependencyMap, topInset } = bottomInset);
   if (topInset === undefined) {
     topInset = 0;
@@ -29,9 +24,9 @@ const memoResult = noop.memo(function BottomSheetHostingContainerComponent(botto
   }
   const detached = bottomInset.detached;
   const style = bottomInset.style;
-  let c6;
+  closure_6 = undefined;
   const tmp = num(null);
-  c6 = tmp;
+  closure_6 = tmp;
   let items = [style, detached, topInset, num];
   let obj = useBottomSheet;
   obj = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
@@ -40,11 +35,11 @@ const memoResult = noop.memo(function BottomSheetHostingContainerComponent(botto
     stableCallback = obj.useStableCallback(function handleLayoutEvent(nativeEvent) {
       const height = nativeEvent.nativeEvent.layout.height;
       height.value = height;
-      const current = _undefined.current;
+      const current = ref.current;
       if (current != null) {
         current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-          if (outer1_1.value) {
-            let num = arg5;
+          if (closure_1_1.value) {
+            num = arg5;
             let num2 = arg5;
             if (arg5 == null) {
               num2 = 0;
@@ -59,7 +54,7 @@ const memoResult = noop.memo(function BottomSheetHostingContainerComponent(botto
             if (num3 == null) {
               num3 = 0;
             }
-            obj[3] = Math.max(0, outer2_0(outer2_1[5]).WINDOW_HEIGHT - (sum + num3));
+            obj[3] = Math.max(0, closure_2_0(closure_2_1[5]).WINDOW_HEIGHT - (sum + num3));
             tmp.value = obj;
           }
         });
@@ -68,7 +63,7 @@ const memoResult = noop.memo(function BottomSheetHostingContainerComponent(botto
   }
   obj[2] = stableCallback;
   obj[3] = topInset(() => {
-    const items = [style, outer1_0(outer1_1[3]).styles.container, ];
+    const items = [style, closure_1_0(closure_1_1[3]).styles.container, ];
     const obj = { top: topInset, bottom: num, overflow: null };
     let str = "hidden";
     if (detached) {
@@ -79,7 +74,7 @@ const memoResult = noop.memo(function BottomSheetHostingContainerComponent(botto
     return items;
   }, items);
   obj[5] = bottomInset.children;
-  return c6(style, obj);
+  return closure_6(style, obj);
 });
 memoResult.displayName = "BottomSheetHostingContainer";
 

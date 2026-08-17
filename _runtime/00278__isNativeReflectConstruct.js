@@ -1,6 +1,7 @@
 // _runtime/00278__isNativeReflectConstruct.js
-import { _isNativeReflectConstruct } from "00189__isNativeReflectConstruct.js";
-const require = arg1;
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 189 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {

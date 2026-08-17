@@ -1,8 +1,9 @@
 // _runtime/00125_importDefaultResult1.js
-import DOMRectReadOnly from "_classCallCheck";
-import _classPrivateFieldBase from "_classPrivateFieldBase";
-import importDefaultResult1 from "_classPrivateFieldKey";
-import setPlatformObject from "setPlatformObject";
+import _createClassDefault from "_createClass" /* 42 */;
+import DOMRectReadOnly from "_classCallCheck" /* 41 */;
+import closure_1 from "_classPrivateFieldBase" /* 90 */;
+import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
+import setPlatformObject from "setPlatformObject" /* 126 */;
 
 let closure_2 = importDefaultResult1("x");
 let closure_3 = importDefaultResult1("y");
@@ -11,10 +12,10 @@ let closure_5 = importDefaultResult1("height");
 class DOMRectReadOnly {
   constructor(arg0, arg1, arg2, arg3) {
     tmp = DOMRectReadOnly(this, DOMRectReadOnly);
-    definePropertyResult = Object.defineProperty(this, x, { writable: true, value: "a" });
-    definePropertyResult1 = Object.defineProperty(this, y, { writable: true, value: "a" });
-    definePropertyResult2 = Object.defineProperty(this, width, { writable: true, value: "a" });
-    definePropertyResult3 = Object.defineProperty(this, height, { writable: true, value: "a" });
+    definePropertyResult = Object.defineProperty(this, closure_2, { writable: true, value: "a" });
+    definePropertyResult1 = Object.defineProperty(this, closure_3, { writable: true, value: "a" });
+    definePropertyResult2 = Object.defineProperty(this, closure_4, { writable: true, value: "a" });
+    definePropertyResult3 = Object.defineProperty(this, closure_5, { writable: true, value: "a" });
     __setInternalXResult = this.__setInternalX(global);
     __setInternalYResult = this.__setInternalY(arg1);
     __setInternalWidthResult = this.__setInternalWidth(importDefault);
@@ -174,10 +175,6 @@ const items = [
 obj = {
   key: "fromRect",
   value: function fromRect(arg0) {
-    let height;
-    let width;
-    let x;
-    let y;
     if (arg0) {
       ({ x, y, width, height } = arg0);
       let obj = Object.create(tmp.prototype);
@@ -214,7 +211,7 @@ obj = {
   }
 };
 const items1 = [obj];
-const importDefaultResultResult = require("_createClass")(DOMRectReadOnly, items, items1);
+const importDefaultResultResult = _createClassDefault(DOMRectReadOnly, items, items1);
 obj = {
   clone(arg0) {
     return new closure_6(arg0.x, arg0.y, arg0.width, arg0.height);

@@ -1,6 +1,9 @@
 // _runtime/13209_Deflate.js
-import { 13212__ } from "metro/13212__.js";
-const require = arg1;
+import assign from "assign" /* 13208 */;
+import _mod13212 from "module_13212" /* 13212 */;
+import assign2 from "assign" /* 13216 */;
+
+require = arg1;
 const dependencyMap = arg6;
 class Deflate {
   constructor(arg0) {
@@ -190,7 +193,7 @@ arg5.deflate = function deflate(arg0, arg1) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = 13212__[arr.err];
+      msg = _mod13212[arr.err];
     }
     throw msg;
   } else {
@@ -208,7 +211,7 @@ arg5.deflateRaw = function deflateRaw(arg0, arg1) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = 13212__[arr.err];
+      msg = _mod13212[arr.err];
     }
     throw msg;
   } else {
@@ -226,7 +229,7 @@ arg5.gzip = function gzip(arg0, arg1) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = 13212__[arr.err];
+      msg = _mod13212[arr.err];
     }
     throw msg;
   } else {

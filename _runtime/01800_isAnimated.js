@@ -140,10 +140,9 @@ arg5.areDependenciesEqual = function areDependenciesEqual(dependencies, savedDep
                     let keys = Object.keys(tmp2.__closure);
                     let _Object3 = Object;
                     let tmp7 = keys.length === Object.keys(tmp3.__closure).length && keys.every((arg0) => {
-                      let tmp2 = arg0 in tmp3.__closure;
+                      let tmp2 = arg0 in __closure2.__closure;
                       if (tmp2) {
-                        tmp2 = tmp2.__closure[arg0] === tmp.__closure[arg0];
-                        tmp3 = tmp2;
+                        tmp2 = __closure.__closure[arg0] === tmp.__closure[arg0];
                       }
                       return tmp2;
                     });

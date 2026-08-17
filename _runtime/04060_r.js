@@ -1,15 +1,14 @@
 // _runtime/04060_r.js
 let fn = () => {
   let fn = function r(arg0, _exports2, firstResult2) {
-    let fn;
     let _exports = arg0;
-    let closure_1 = _exports2;
-    let closure_2 = firstResult2;
+    closure_1 = _exports2;
+    closure_2 = firstResult2;
     let tmp = typeof fn === "function";
     if (typeof fn === "function") {
       tmp = fn;
     }
-    let closure_3 = tmp;
+    closure_3 = tmp;
     let num = 0;
     if (0 < firstResult2.length) {
       _exports = firstResult2[num];
@@ -23,9 +22,9 @@ let fn = () => {
           let call = first.call;
           let _exports3 = obj.exports;
           fn = (arg0) => {
-            let closure_0 = tmp2;
-            let tmp3 = outer1_1;
-            if (outer1_1[outer1_0[closure_0][1][arg0] || arg0]) {
+            closure_0 = tmp2;
+            let tmp3 = closure_1_1;
+            if (closure_1_1[closure_1_0[closure_0][1][arg0] || arg0]) {
               tmp3 = tmp3[tmp2];
               let _exports3 = tmp3.exports;
             } else if (tmp[tmp2]) {
@@ -36,9 +35,9 @@ let fn = () => {
               let call = first.call;
               let _exports = obj.exports;
               let fn = (arg0) => {
-                let closure_0 = tmp2;
-                let tmp3 = outer1_1;
-                if (outer1_1[outer1_0[closure_0][1][arg0] || arg0]) {
+                closure_0 = tmp2;
+                let tmp3 = closure_1_1;
+                if (closure_1_1[closure_1_0[closure_0][1][arg0] || arg0]) {
                   tmp3 = tmp3[tmp2];
                   let _exports3 = tmp3.exports;
                 } else if (tmp[tmp2]) {
@@ -49,9 +48,9 @@ let fn = () => {
                   let call = first.call;
                   let _exports = obj.exports;
                   let fn = (arg0) => {
-                    let closure_0 = tmp2;
-                    let tmp3 = outer1_1;
-                    if (outer1_1[outer1_0[closure_0][1][arg0] || arg0]) {
+                    closure_0 = tmp2;
+                    let tmp3 = closure_1_1;
+                    if (closure_1_1[closure_1_0[closure_0][1][arg0] || arg0]) {
                       tmp3 = tmp3[tmp2];
                       let _exports3 = tmp3.exports;
                     } else if (tmp[tmp2]) {
@@ -63,18 +62,18 @@ let fn = () => {
                       let _exports = obj.exports;
                       let fn = () => { ... };
                       let _exports2 = obj.exports;
-                      let firstResult = outer1_2;
+                      let firstResult = closure_1_2;
                       if (typeof call !== "unknown") {
                         call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
                       }
                     } else {
-                      let tmp4 = typeof outer2_0 === "function";
-                      if (typeof outer2_0 === "function") {
-                        tmp4 = outer2_0;
+                      let tmp4 = typeof closure_2_0 === "function";
+                      if (typeof closure_2_0 === "function") {
+                        tmp4 = closure_2_0;
                       }
                       if (tmp4) {
                         let tmp5Result = tmp4(tmp2, true);
-                      } else if (outer1_3) {
+                      } else if (closure_1_3) {
                         tmp5Result = tmp5(tmp2, true);
                       } else {
                         let _Error = Error;
@@ -87,18 +86,18 @@ let fn = () => {
                     firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
                   };
                   let _exports2 = obj.exports;
-                  let firstResult = outer1_2;
+                  let firstResult = closure_1_2;
                   if (typeof call !== "unknown") {
                     call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
                   }
                 } else {
-                  let tmp4 = typeof outer2_0 === "function";
-                  if (typeof outer2_0 === "function") {
-                    tmp4 = outer2_0;
+                  let tmp4 = typeof closure_2_0 === "function";
+                  if (typeof closure_2_0 === "function") {
+                    tmp4 = closure_2_0;
                   }
                   if (tmp4) {
                     let tmp5Result = tmp4(tmp2, true);
-                  } else if (outer1_3) {
+                  } else if (closure_1_3) {
                     tmp5Result = tmp5(tmp2, true);
                   } else {
                     let _Error = Error;
@@ -111,18 +110,18 @@ let fn = () => {
                 firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
               };
               let _exports2 = obj.exports;
-              let firstResult = outer1_2;
+              let firstResult = closure_1_2;
               if (typeof call !== "unknown") {
                 call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
               }
             } else {
-              let tmp4 = typeof outer2_0 === "function";
-              if (typeof outer2_0 === "function") {
-                tmp4 = outer2_0;
+              let tmp4 = typeof closure_2_0 === "function";
+              if (typeof closure_2_0 === "function") {
+                tmp4 = closure_2_0;
               }
               if (tmp4) {
                 let tmp5Result = tmp4(tmp2, true);
-              } else if (outer1_3) {
+              } else if (closure_1_3) {
                 tmp5Result = tmp5(tmp2, true);
               } else {
                 let _Error = Error;
@@ -177,7 +176,7 @@ let fn = () => {
             let tmp5 = new.target;
             let str2 = "'";
             let tmp6 = new.target;
-            let error = new Error("Cannot find module '" + _exports + "'");
+            error = new Error("Cannot find module '" + _exports + "'");
             let tmp8 = error;
             let str3 = "MODULE_NOT_FOUND";
             error.code = "MODULE_NOT_FOUND";
@@ -197,11 +196,11 @@ let fn = () => {
           tmp[arg0] = obj;
           const first = tmp2[arg0][0];
           const call = first.call;
-          const _exports = obj.exports;
-          const fn = (arg0) => {
-            let closure_0 = tmp2;
-            let tmp3 = outer1_1;
-            if (outer1_1[outer1_0[closure_0][1][arg0] || arg0]) {
+          _exports = obj.exports;
+          fn = (arg0) => {
+            closure_0 = tmp2;
+            let tmp3 = closure_1_1;
+            if (closure_1_1[closure_1_0[closure_0][1][arg0] || arg0]) {
               tmp3 = tmp3[tmp2];
               let _exports3 = tmp3.exports;
             } else if (tmp[tmp2]) {
@@ -212,9 +211,9 @@ let fn = () => {
               let call = first.call;
               let _exports = obj.exports;
               let fn = (arg0) => {
-                let closure_0 = tmp2;
-                let tmp3 = outer1_1;
-                if (outer1_1[outer1_0[closure_0][1][arg0] || arg0]) {
+                closure_0 = tmp2;
+                let tmp3 = closure_1_1;
+                if (closure_1_1[closure_1_0[closure_0][1][arg0] || arg0]) {
                   tmp3 = tmp3[tmp2];
                   let _exports3 = tmp3.exports;
                 } else if (tmp[tmp2]) {
@@ -226,18 +225,18 @@ let fn = () => {
                   let _exports = obj.exports;
                   let fn = () => { ... };
                   let _exports2 = obj.exports;
-                  let firstResult = outer1_2;
+                  let firstResult = closure_1_2;
                   if (typeof call !== "unknown") {
                     call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
                   }
                 } else {
-                  let tmp4 = typeof outer2_0 === "function";
-                  if (typeof outer2_0 === "function") {
-                    tmp4 = outer2_0;
+                  let tmp4 = typeof closure_2_0 === "function";
+                  if (typeof closure_2_0 === "function") {
+                    tmp4 = closure_2_0;
                   }
                   if (tmp4) {
                     let tmp5Result = tmp4(tmp2, true);
-                  } else if (outer1_3) {
+                  } else if (closure_1_3) {
                     tmp5Result = tmp5(tmp2, true);
                   } else {
                     let _Error = Error;
@@ -250,18 +249,18 @@ let fn = () => {
                 firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
               };
               let _exports2 = obj.exports;
-              let firstResult = outer1_2;
+              let firstResult = closure_1_2;
               if (typeof call !== "unknown") {
                 call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
               }
             } else {
-              let tmp4 = typeof outer2_0 === "function";
-              if (typeof outer2_0 === "function") {
-                tmp4 = outer2_0;
+              let tmp4 = typeof closure_2_0 === "function";
+              if (typeof closure_2_0 === "function") {
+                tmp4 = closure_2_0;
               }
               if (tmp4) {
                 let tmp5Result = tmp4(tmp2, true);
-              } else if (outer1_3) {
+              } else if (closure_1_3) {
                 tmp5Result = tmp5(tmp2, true);
               } else {
                 let _Error = Error;
@@ -273,7 +272,7 @@ let fn = () => {
             }
             firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
           };
-          const _exports2 = obj.exports;
+          _exports2 = obj.exports;
           if (typeof call === "unknown") {
             first(fn, obj, _exports2, tmp12, tmp2, tmp, tmp13);
           } else {
@@ -293,7 +292,7 @@ let fn = () => {
             return tmp5(arg0, true);
           } else {
             const _Error = Error;
-            const error = new Error("Cannot find module '" + arg0 + "'");
+            error = new Error("Cannot find module '" + arg0 + "'");
             error.code = "MODULE_NOT_FOUND";
             throw error;
           }
@@ -315,7 +314,7 @@ let fn = () => {
         }
         let element = <script />;
         const tmp4 = forceScriptReload.dataAttributes || {};
-        let closure_2 = tmp4;
+        closure_2 = tmp4;
         let head = forceScriptReload.container;
         if (!head) {
           const _document = document;
@@ -335,20 +334,20 @@ let fn = () => {
         const keys = Object.keys(tmp4);
         const item = keys.forEach((arg0) => {
           const combined = "data-".concat(arg0);
-          const attr = element.setAttribute(combined, "".concat(tmp4[arg0]));
+          const attr = element.setAttribute(combined, "".concat(table[arg0]));
         });
         const promise = new Promise((arg0, arg1) => {
-          let closure_0 = arg0;
-          const element = arg1;
+          closure_0 = arg0;
+          element = arg1;
           const listener = element.addEventListener("load", () => {
             lib(closure_1);
           });
           const listener1 = element.addEventListener("error", () => {
-            const error = new Error("".concat(lib.src, " failed to load."));
+            error = new Error("".concat(lib.src, " failed to load."));
             callback(error);
           });
           const listener2 = element.addEventListener("abort", () => {
-            const error = new Error("".concat(lib.src, " has aborted."));
+            error = new Error("".concat(lib.src, " has aborted."));
             callback(error);
           });
           head.appendChild(element);
@@ -356,9 +355,9 @@ let fn = () => {
         table[json] = promise;
         return promise;
       }
-      let closure_0 = {};
+      closure_0 = {};
       loadScript.clearCache = () => {
-        let closure_0 = {};
+        closure_0 = {};
       };
       module.exports = loadScript;
     },
@@ -398,11 +397,11 @@ let fn = () => {
   ];
   items4 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./is-edge");
-      let closure_1 = global("./is-samsung");
-      let closure_2 = global("./is-duckduckgo");
-      let closure_3 = global("./is-opera");
-      let closure_4 = global("./is-silk");
+      closure_0 = global("./is-edge");
+      closure_1 = global("./is-samsung");
+      closure_2 = global("./is-duckduckgo");
+      closure_3 = global("./is-opera");
+      closure_4 = global("./is-silk");
       module.exports = function isChrome(arg0) {
         let userAgent = arg0;
         if (!arg0) {
@@ -491,7 +490,7 @@ let fn = () => {
   ];
   items9 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./is-ios");
+      closure_0 = global("./is-ios");
       module.exports = function isIosGoogleSearchApp(arg0) {
         let userAgent = arg0;
         if (!arg0) {
@@ -510,8 +509,8 @@ let fn = () => {
   ];
   items10 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./is-ios");
-      let closure_1 = global("./is-ios-firefox");
+      closure_0 = global("./is-ios");
+      closure_1 = global("./is-ios-firefox");
       const re2 = /webkit/i;
       module.exports = function isIosSafari(arg0) {
         let userAgent = arg0;
@@ -539,8 +538,8 @@ let fn = () => {
   ];
   items11 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./is-ios");
-      let closure_1 = global("./is-ios-google-search-app");
+      closure_0 = global("./is-ios");
+      closure_1 = global("./is-ios-google-search-app");
       module.exports = function isIosWebview(arg0) {
         let userAgent = arg0;
         if (!arg0) {
@@ -563,7 +562,7 @@ let fn = () => {
   ];
   items12 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./is-ios-webview");
+      closure_0 = global("./is-ios-webview");
       module.exports = function isIosWKWebview(arg0, arg1) {
         let visible = arg1;
         if (undefined === arg1) {
@@ -577,7 +576,7 @@ let fn = () => {
   ];
   items13 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./is-ipados");
+      closure_0 = global("./is-ipados");
       module.exports = function isIos(arg0, arg1, arg2) {
         let flag = arg1;
         if (undefined === arg1) {
@@ -672,12 +671,12 @@ let fn = () => {
   ];
   items18 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./is-android");
-      let closure_1 = global("./is-ios-firefox");
-      let closure_2 = global("./is-ios-webview");
-      let closure_3 = global("./is-chrome");
-      let closure_4 = global("./is-samsung");
-      let closure_5 = global("./is-duckduckgo");
+      closure_0 = global("./is-android");
+      closure_1 = global("./is-ios-firefox");
+      closure_2 = global("./is-ios-webview");
+      closure_3 = global("./is-chrome");
+      closure_4 = global("./is-samsung");
+      closure_5 = global("./is-duckduckgo");
       module.exports = function supportsPopups(arg0) {
         let userAgent = arg0;
         if (!arg0) {
@@ -841,7 +840,7 @@ let fn = () => {
         }
         _emit(arg0) {
           items = [];
-          EventEmitter = items;
+          closure_0 = items;
           num = 1;
           if (1 < arguments.length) {
             do {
@@ -1031,9 +1030,9 @@ let fn = () => {
   ];
   items31 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./lib/set-attributes");
-      let closure_1 = global("./lib/default-attributes");
-      let closure_2 = global("./lib/assign");
+      closure_0 = global("./lib/set-attributes");
+      closure_1 = global("./lib/default-attributes");
+      closure_2 = global("./lib/assign");
       module.exports = function createFrame(arg0) {
         let obj = arg0;
         if (undefined === arg0) {
@@ -1058,7 +1057,7 @@ let fn = () => {
     (arg0, arg1, arg2) => {
       arg2.assign = function assign(arg0) {
         let length;
-        let closure_0 = arg0;
+        closure_0 = arg0;
         const items = [];
         let num = 1;
         if (1 < arguments.length) {
@@ -1069,7 +1068,7 @@ let fn = () => {
           } while (num < length);
         }
         let item = items.forEach((obj) => {
-          let closure_0 = obj;
+          closure_0 = obj;
           if (typeof obj === "object") {
             const _Object = Object;
             const keys = Object.keys(obj);
@@ -1131,10 +1130,10 @@ let fn = () => {
   items36 = [
     (arg0, arg1, arg2) => {
       arg2.deferred = function deferred(items) {
-        let closure_0 = items;
+        closure_0 = items;
         return () => {
           let length;
-          const items = [];
+          items = [];
           let num = 0;
           if (0 < arguments.length) {
             do {
@@ -1161,8 +1160,8 @@ let fn = () => {
   items37 = [
     (arg0, arg1, arg2) => {
       arg2.once = function once(arg0) {
-        let closure_0 = arg0;
-        let c1 = false;
+        closure_0 = arg0;
+        c1 = false;
         return () => {
           let length;
           const items = [];
@@ -1199,7 +1198,7 @@ let fn = () => {
   items39 = [
     (arg0, arg1, arg2) => {
       function wrapPromise(arg0) {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         return function() {
           let length;
           const items = [];
@@ -1213,22 +1212,22 @@ let fn = () => {
           }
           let onceResult;
           if (typeof items[items.length - 1] === "function") {
-            onceResult = outer1_1.once(lib.deferred(items.pop()));
+            onceResult = closure_1_1.once(lib.deferred(items.pop()));
           }
-          return outer1_2.promiseOrCallback(lib.apply(this, items), onceResult);
+          return closure_1_2.promiseOrCallback(lib.apply(this, items), onceResult);
         };
       }
-      let closure_0 = global("./lib/deferred");
-      let closure_1 = global("./lib/once");
-      let closure_2 = global("./lib/promise-or-callback");
+      closure_0 = global("./lib/deferred");
+      closure_1 = global("./lib/once");
+      closure_2 = global("./lib/promise-or-callback");
       wrapPromise.wrapPrototype = (arg0, arg1) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         let obj = arg1;
         if (undefined === arg1) {
           obj = {};
         }
-        let closure_1 = obj.ignoreMethods || [];
-        let closure_2 = true === obj.transformPrivateMethods;
+        closure_1 = obj.ignoreMethods || [];
+        closure_2 = true === obj.transformPrivateMethods;
         const ownPropertyNames = Object.getOwnPropertyNames(arg0.prototype);
         const found = ownPropertyNames.filter((str) => {
           let tmp = "constructor" !== str;
@@ -1263,9 +1262,9 @@ let fn = () => {
             }
             let onceResult;
             if (typeof items[items.length - 1] === "function") {
-              onceResult = outer1_1.once(lib.deferred(items.pop()));
+              onceResult = closure_1_1.once(lib.deferred(items.pop()));
             }
-            return outer1_2.promiseOrCallback(lib.apply(this, items), onceResult);
+            return closure_1_2.promiseOrCallback(lib.apply(this, items), onceResult);
           };
         });
         return arg0;
@@ -1276,9 +1275,7 @@ let fn = () => {
   ];
   items40 = [
     function(arg0, arg1, obj) {
-      const fn = (arg0) => {
-        let concat;
-        let concat2;
+      fn = (arg0) => {
         function loadScript$1(forceScriptReload) {
           const table = forceScriptReload;
           const json = JSON.stringify(forceScriptReload);
@@ -1289,7 +1286,7 @@ let fn = () => {
           }
           let element = <script />;
           const tmp4 = forceScriptReload.dataAttributes || {};
-          const fastlane = tmp4;
+          closure_2 = tmp4;
           let head = forceScriptReload.container;
           if (!head) {
             const _document = document;
@@ -1309,11 +1306,11 @@ let fn = () => {
           const keys = Object.keys(tmp4);
           const item = keys.forEach((arg0) => {
             const combined = "data-".concat(arg0);
-            const attr = element.setAttribute(combined, "".concat(tmp4[arg0]));
+            const attr = element.setAttribute(combined, "".concat(table[arg0]));
           });
           const promise = new Promise((arg0, arg1) => {
-            let closure_0 = arg0;
-            const element = arg1;
+            closure_0 = arg0;
+            element = arg1;
             const listener = element.addEventListener("load", () => { ... });
             const listener1 = element.addEventListener("error", () => { ... });
             const listener2 = element.addEventListener("abort", () => { ... });
@@ -1348,7 +1345,7 @@ let fn = () => {
               amd1 = typeof window.requirejs.config === "function";
             }
             if (amd1) {
-              let obj = { paths: null };
+              obj = { paths: null };
               obj = {};
               obj[fastlane] = arg0;
               obj[0] = obj;
@@ -1357,7 +1354,7 @@ let fn = () => {
             const concat = "".concat;
             const combined = "".concat(fastlane, "/");
             const AXO_ASSET_NAME = obj.AXO_ASSET_NAME;
-            let closure_0 = combined.concat(flag ? AXO_ASSET_NAME.minified : AXO_ASSET_NAME.unminified);
+            closure_0 = combined.concat(flag ? AXO_ASSET_NAME.minified : AXO_ASSET_NAME.unminified);
             const promise = new Promise((arg0, arg1) => {
               const items = [closure_0];
               const _module = window.require(items, arg0, arg1);
@@ -1370,9 +1367,9 @@ let fn = () => {
           }
         }
         let obj = {};
-        let closure_0 = {};
+        closure_0 = {};
         loadScript$1.clearCache = () => {
-          let closure_0 = {};
+          closure_0 = {};
         };
         obj.loadScript = undefined;
         loadScript$1 = undefined;
@@ -1402,12 +1399,12 @@ let fn = () => {
             return Promise.resolve(element1);
           }
         };
-        let fastlane = "fastlane";
+        const fastlane = "fastlane";
         obj = { AXO_ASSET_NAME: { minified: "axo.min", unminified: "axo" }, AXO_ASSET_PATH: "connect-boba", LOCALE_PATH: "".concat("connect-boba", "/locales/"), CDNX_PROD: "https://www.paypalobjects.com" };
         const BT = "BT";
         const PPCP = "PPCP";
         obj = { client: "client", hostedFields: "hosted-fields" };
-        const obj1 = {};
+        obj1 = {};
         const obj2 = { id: "client", module: "client", amdModule: null, script: null };
         const obj3 = { unminified: null, minified: null };
         let combined = "".concat("braintree", "/");
@@ -1433,10 +1430,10 @@ let fn = () => {
           let self = arg0;
           self = this;
           const f119587 = function() {
-            let c0 = this;
+            c0 = this;
             const f120553 = () => { ... };
-            let closure_5 = { label: 0, sent() { ... }, trys: [], ops: [] };
-            let obj = { next: () => { ... }, throw: () => { ... }, return: () => { ... } };
+            closure_5 = { label: 0, sent() { ... }, trys: [], ops: [] };
+            obj = { next: () => { ... }, throw: () => { ... }, return: () => { ... } };
             c0 = 0;
             c0 = 1;
             c0 = 2;
@@ -1447,8 +1444,8 @@ let fn = () => {
             return obj;
           };
           return new Promise((arg0, arg1) => {
-            let closure_0 = arg0;
-            let closure_1 = arg1;
+            closure_0 = arg0;
+            closure_1 = arg1;
             function fulfilled() { ... }
             let iter = fulfilled;
             function rejected() { ... }
@@ -1486,7 +1483,7 @@ let fn = () => {
   ];
   items41 = [
     function(arg0, arg1, arg2) {
-      let fn = this;
+      fn = this;
       if (this) {
         fn = this.__assign;
       }
@@ -1518,6 +1515,7 @@ let fn = () => {
             return arg0;
           });
           const self = this;
+          closure_0 = tmp;
           const apply = tmp.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1528,8 +1526,8 @@ let fn = () => {
         };
       }
       function creditCardType(arg0) {
-        let closure_0 = arg0;
-        let items = [];
+        closure_0 = arg0;
+        items = [];
         if (validInputType.isValidInputType(arg0)) {
           if (0 === arg0.length) {
             return arr.map((arg0) => {
@@ -1541,11 +1539,11 @@ let fn = () => {
             });
           } else {
             const item = arr.forEach((arg0) => {
-              let tmp = outer1_6[arg0];
+              let tmp = closure_1_6[arg0];
               if (!tmp) {
                 tmp = items[arg0];
               }
-              const result = outer1_2.addMatchingCardsToResults(closure_0, tmp, items);
+              const result = closure_1_2.addMatchingCardsToResults(closure_0, tmp, items);
             });
             const findBestMatchResult = closure_4.findBestMatch(items);
             if (findBestMatchResult) {
@@ -1558,17 +1556,17 @@ let fn = () => {
           return items;
         }
       }
-      let closure_1 = global("./lib/card-types");
-      let closure_2 = global("./lib/add-matching-cards-to-results");
-      let closure_3 = global("./lib/is-valid-input-type");
-      let closure_4 = global("./lib/find-best-match");
+      closure_1 = global("./lib/card-types");
+      closure_2 = global("./lib/add-matching-cards-to-results");
+      closure_3 = global("./lib/is-valid-input-type");
+      closure_4 = global("./lib/find-best-match");
       const globalResult = global("./lib/clone");
-      let closure_5 = globalResult;
-      let closure_6 = {};
+      closure_5 = globalResult;
+      closure_6 = {};
       const obj = { VISA: "visa", MASTERCARD: "mastercard", AMERICAN_EXPRESS: "american-express", DINERS_CLUB: "diners-club", DISCOVER: "discover", JCB: "jcb", UNIONPAY: "unionpay", MAESTRO: "maestro", ELO: "elo", MIR: "mir", HIPER: "hiper", HIPERCARD: "hipercard" };
       let items = [, , , , , , , , , , , ];
       ({ VISA: arr[0], MASTERCARD: arr[1], AMERICAN_EXPRESS: arr[2], DINERS_CLUB: arr[3], DISCOVER: arr[4], JCB: arr[5], UNIONPAY: arr[6], MAESTRO: arr[7], ELO: arr[8], MIR: arr[9], HIPER: arr[10], HIPERCARD: arr[11] } = obj);
-      let closure_8 = globalResult.clone(items);
+      closure_8 = globalResult.clone(items);
       creditCardType.getTypeInfo = (arg0) => {
         let tmp = dependencyMap2[arg0];
         if (!tmp) {
@@ -1580,7 +1578,7 @@ let fn = () => {
         const index = arr.indexOf(arg0);
         if (-1 === index) {
           const _Error = Error;
-          const error = new Error("\"" + arg0 + "\" is not a supported card type.");
+          error = new Error("\"" + arg0 + "\" is not a supported card type.");
           throw error;
         } else {
           arr.splice(index, 1);
@@ -1601,7 +1599,7 @@ let fn = () => {
           if (type.type) {
             if (tmp.type !== type.type) {
               const _Error2 = Error;
-              const error = new Error("Cannot overwrite type parameter.");
+              error = new Error("Cannot overwrite type parameter.");
               throw error;
             }
           }
@@ -1618,7 +1616,7 @@ let fn = () => {
         const index = arr.indexOf(arg0);
         if (-1 === index) {
           const _Error = Error;
-          const error = new Error("\"" + arg0 + "\" is not a supported card type.");
+          error = new Error("\"" + arg0 + "\" is not a supported card type.");
           throw error;
         } else {
           arr.splice(index, 1);
@@ -1626,8 +1624,8 @@ let fn = () => {
         }
       };
       creditCardType.resetModifications = () => {
-        let closure_8 = globalResult.clone(items);
-        let closure_6 = {};
+        closure_8 = globalResult.clone(items);
+        closure_6 = {};
       };
       creditCardType.types = obj;
       module.exports = creditCardType;
@@ -1637,8 +1635,8 @@ let fn = () => {
   items42 = [
     (arg0, arg1, arg2) => {
       arg2.addMatchingCardsToResults = undefined;
-      let closure_0 = arg0("./clone");
-      let closure_1 = arg0("./matches");
+      closure_0 = arg0("./clone");
+      closure_1 = arg0("./matches");
       arg2.addMatchingCardsToResults = function addMatchingCardsToResults(closure_0, patterns, items) {
         let num = 0;
         if (0 < patterns.patterns.length) {
@@ -1870,7 +1868,7 @@ let fn = () => {
               tmp8 = tmp5;
               tmp9 = tmp4;
               packagePayloadResult = obj.packagePayload(namespaceEventResult, origin, tmp5, tmp4);
-              c1 = packagePayloadResult;
+              closure_1 = packagePayloadResult;
               flag = packagePayloadResult;
               if (flag) {
                 if (self.limitBroadcastToFramesArray) {
@@ -2112,8 +2110,8 @@ let fn = () => {
     (arg0, arg1, arg2) => {
       arg2.attach = undefined;
       arg2.detach = undefined;
-      let closure_0 = arg0("./");
-      let c1 = false;
+      closure_0 = arg0("./");
+      c1 = false;
       arg2.attach = function attach() {
         let tmp = c1;
         if (!c1) {
@@ -2127,7 +2125,7 @@ let fn = () => {
         }
       };
       arg2.detach = function detach() {
-        let c1 = false;
+        c1 = false;
         const removed = window.removeEventListener("message", closure_0.onMessage, false);
       };
     },
@@ -2136,7 +2134,7 @@ let fn = () => {
   items51 = [
     (arg0, arg1, arg2) => {
       arg2.broadcastToChildWindows = undefined;
-      let closure_0 = arg0("./");
+      closure_0 = arg0("./");
       arg2.broadcastToChildWindows = function broadcastToChildWindows(data, origin, source) {
         let diff = closure_0.childWindows.length - 1;
         if (0 <= diff) {
@@ -2163,10 +2161,8 @@ let fn = () => {
   items52 = [
     (arg0, arg1, arg2) => {
       arg2.broadcast = undefined;
-      let closure_0 = arg0("./");
+      closure_0 = arg0("./");
       function broadcast(packagePayloadResult, arg1) {
-        let frame;
-        let origin;
         let num = 0;
         ({ origin, frame } = arg1);
         try {
@@ -2218,7 +2214,7 @@ let fn = () => {
   items54 = [
     (arg0, arg1, arg2) => {
       arg2.dispatch = undefined;
-      let closure_0 = arg0("./");
+      closure_0 = arg0("./");
       arg2.dispatch = function dispatch(arg0, arg1, arg2, arg3, arg4) {
         let length;
         if (closure_0.subscribers[arg0]) {
@@ -2274,7 +2270,7 @@ let fn = () => {
         self2 = self.__createBinding;
       }
       if (self2) {
-        let fn = self;
+        fn = self;
         if (self) {
           fn = self.__exportStar;
         }
@@ -2337,10 +2333,8 @@ let fn = () => {
   items58 = [
     (arg0, arg1, arg2) => {
       arg2.onMessage = undefined;
-      let closure_0 = arg0("./");
+      closure_0 = arg0("./");
       arg2.onMessage = function onMessage(data) {
-        let eventData;
-        let reply;
         if (!closure_0.isntString(data.data)) {
           const unpackPayloadResult = obj.unpackPayload(data);
           if (unpackPayloadResult) {
@@ -2357,7 +2351,7 @@ let fn = () => {
   items59 = [
     (arg0, arg1, arg2) => {
       arg2.packagePayload = undefined;
-      let closure_0 = arg0("./");
+      closure_0 = arg0("./");
       arg2.packagePayload = function packagePayload(namespaceEventResult, closure_0, eventData, fn) {
         const obj = { event: namespaceEventResult, origin: closure_0 };
         if (typeof fn === "function") {
@@ -2370,7 +2364,7 @@ let fn = () => {
         } catch (tmp3) {
           const _Error = Error;
           const concat = "Could not stringify event: ".concat;
-          const error = new Error("Could not stringify event: ".concat(tmp3.message));
+          error = new Error("Could not stringify event: ".concat(tmp3.message));
           throw error;
         }
       };
@@ -2390,7 +2384,7 @@ let fn = () => {
   ];
   items61 = [
     function(arg0, arg1, arg2) {
-      let fn = this;
+      fn = this;
       if (this) {
         fn = this.__importDefault;
       }
@@ -2407,13 +2401,13 @@ let fn = () => {
         };
       }
       arg2.subscribeReplier = undefined;
-      let closure_0 = arg0("../framebus");
-      let closure_1 = fn(arg0("@braintree/uuid"));
+      closure_0 = arg0("../framebus");
+      closure_1 = fn(arg0("@braintree/uuid"));
       arg2.subscribeReplier = function subscribeReplier(fn, origin) {
         let Framebus = fn;
-        let closure_1 = origin;
+        closure_1 = origin;
         const defaultResult = closure_1.default();
-        let closure_2 = defaultResult;
+        closure_2 = defaultResult;
         Framebus = Framebus.Framebus;
         function replier(arg0, arg1) {
           lib(arg0, arg1);
@@ -2429,7 +2423,7 @@ let fn = () => {
   items62 = [
     (arg0, arg1, arg2) => {
       arg2.subscriptionArgsInvalid = undefined;
-      let closure_0 = arg0("./");
+      closure_0 = arg0("./");
       arg2.subscriptionArgsInvalid = function subscriptionArgsInvalid(namespaceEventResult, fn, origin) {
         let isntStringResult = closure_0.isntString(namespaceEventResult);
         if (!isntStringResult) {
@@ -2452,10 +2446,8 @@ let fn = () => {
   items64 = [
     (arg0, arg1, arg2) => {
       arg2.unpackPayload = undefined;
-      let closure_0 = arg0("./");
+      closure_0 = arg0("./");
       arg2.unpackPayload = function unpackPayload(data) {
-        let closure_0;
-        let closure_1;
         data = data.data;
         if (data.slice(0, closure_0.prefix.length) !== closure_0.prefix) {
           return false;
@@ -2469,7 +2461,7 @@ let fn = () => {
               const reply = parsed.reply;
               parsed.reply = function reply(eventData) {
                 if (closure_1) {
-                  const packagePayloadResult = outer1_0.packagePayload(reply, closure_0, eventData);
+                  const packagePayloadResult = closure_1_0.packagePayload(reply, closure_0, eventData);
                   if (packagePayloadResult) {
                     closure_1.postMessage(packagePayloadResult, tmp4);
                   }
@@ -2517,9 +2509,9 @@ let fn = () => {
         const _window = window;
         userAgent = window.navigator.userAgent;
       }
-      let closure_1 = arg0("@braintree/browser-detection/is-android");
-      let closure_2 = arg0("@braintree/browser-detection/is-chrome-os");
-      let closure_3 = arg0("@braintree/browser-detection/is-chrome");
+      closure_1 = arg0("@braintree/browser-detection/is-android");
+      closure_2 = arg0("@braintree/browser-detection/is-chrome-os");
+      closure_3 = arg0("@braintree/browser-detection/is-chrome");
       arg2.isIos = arg0("@braintree/browser-detection/is-ios");
       arg2.isIE9 = arg0("@braintree/browser-detection/is-ie9");
       const re4 = /Version\/\d\.\d* Chrome\/\d*\.0\.0\.0/;
@@ -2569,7 +2561,7 @@ let fn = () => {
   ];
   items67 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./lib/device");
+      closure_0 = global("./lib/device");
       module.exports = function supportsInputFormatting() {
         return !samsungBrowser.isSamsungBrowser();
       };
@@ -2725,15 +2717,15 @@ let fn = () => {
           } else {
             tmp3 = globalThis;
             _Promise = Promise;
-            tmp4 = c0;
+            tmp4 = closure_0;
             obj = { type: null, code: null, message: "getRewardsBalance must be called with a nonce." };
-            tmp5 = c1;
-            obj[0] = c1.AMEX_NONCE_REQUIRED.type;
-            obj[1] = c1.AMEX_NONCE_REQUIRED.code;
+            tmp5 = closure_1;
+            obj[0] = closure_1.AMEX_NONCE_REQUIRED.type;
+            obj[1] = closure_1.AMEX_NONCE_REQUIRED.code;
             tmp6 = new.target;
             tmp7 = new.target;
             tmp8 = obj;
-            tmp9 = new c0(obj);
+            tmp9 = new closure_0(obj);
             tmp10 = tmp9;
             catchPromise = Promise.reject(tmp9);
           }
@@ -2755,30 +2747,30 @@ let fn = () => {
           } else {
             tmp = globalThis;
             _Promise = Promise;
-            tmp2 = c0;
+            tmp2 = closure_0;
             obj = { type: null, code: null, message: "getExpressCheckoutProfile must be called with a nonce." };
-            tmp3 = c1;
-            obj[0] = c1.AMEX_NONCE_REQUIRED.type;
-            obj[1] = c1.AMEX_NONCE_REQUIRED.code;
+            tmp3 = closure_1;
+            obj[0] = closure_1.AMEX_NONCE_REQUIRED.type;
+            obj[1] = closure_1.AMEX_NONCE_REQUIRED.code;
             tmp4 = new.target;
             tmp5 = new.target;
             tmp6 = obj;
-            tmp7 = new c0(obj);
+            tmp7 = new closure_0(obj);
             tmp8 = tmp7;
             catchPromise = Promise.reject(tmp7);
           }
           return catchPromise;
         }
         teardown() {
-          tmp = c4(this, c3(AmericanExpress.prototype));
+          tmp = closure_4(this, closure_3(AmericanExpress.prototype));
           return Promise.resolve();
         }
       }
-      let closure_0 = global("../lib/braintree-error");
-      let closure_1 = global("./errors");
+      closure_0 = global("../lib/braintree-error");
+      closure_1 = global("./errors");
       const assign = global("../lib/assign").assign;
-      let closure_3 = global("../lib/methods");
-      let closure_4 = global("../lib/convert-methods-to-error");
+      closure_3 = global("../lib/methods");
+      closure_4 = global("../lib/convert-methods-to-error");
       module.exports = global("@braintree/wrap-promise").wrapPrototype(AmericanExpress);
     },
     { "../lib/assign": 140, "../lib/braintree-error": 143, "../lib/convert-methods-to-error": 146, "../lib/methods": 175, "./errors": 87, "@braintree/wrap-promise": 40 }
@@ -2794,16 +2786,16 @@ let fn = () => {
   ];
   items87 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./american-express");
-      let closure_1 = global("../lib/basic-component-verification");
-      let closure_2 = global("../lib/create-deferred-client");
-      let closure_3 = global("../lib/create-assets-url");
+      closure_0 = global("./american-express");
+      closure_1 = global("../lib/basic-component-verification");
+      closure_2 = global("../lib/create-deferred-client");
+      closure_3 = global("../lib/create-assets-url");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
+          closure_0 = client;
           const obj = { name: "American Express", client: client.client, authorization: client.authorization };
           const verifyResult = closure_1.verify({ name: "American Express", client: client.client, authorization: client.authorization });
-          return closure_1.verify({ name: "American Express", client: client.client, authorization: client.authorization }).then(() => outer1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: outer1_3.create(client.authorization), name: "American Express" })).then((client) => {
+          return closure_1.verify({ name: "American Express", client: client.client, authorization: client.authorization }).then(() => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "American Express" })).then((client) => {
             closure_0.client = client;
             return new closure_0(closure_0);
           });
@@ -2882,7 +2874,7 @@ let fn = () => {
             }
             return catchPromise;
           }
-          tmp = new closure_0(c2.APPLE_PAY_VALIDATION_URL_REQUIRED);
+          tmp = new closure_0(closure_2.APPLE_PAY_VALIDATION_URL_REQUIRED);
           catchPromise = Promise.reject(tmp);
           return;
         }
@@ -2899,25 +2891,25 @@ let fn = () => {
             tmp = globalThis;
             _Promise = Promise;
             tmp2 = closure_0;
-            tmp3 = c2;
+            tmp3 = closure_2;
             tmp4 = new.target;
             tmp5 = new.target;
-            tmp6 = new closure_0(c2.APPLE_PAY_PAYMENT_TOKEN_REQUIRED);
+            tmp6 = new closure_0(closure_2.APPLE_PAY_PAYMENT_TOKEN_REQUIRED);
             tmp7 = tmp6;
             catchPromise = Promise.reject(tmp6);
           }
           return catchPromise;
         }
         teardown() {
-          tmp = c4(this, c3(ApplePay.prototype));
+          tmp = closure_4(this, closure_3(ApplePay.prototype));
           return Promise.resolve();
         }
       }
-      let closure_0 = global("../lib/braintree-error");
-      let closure_1 = global("../lib/analytics");
-      let closure_2 = global("./errors");
-      let closure_3 = global("../lib/methods");
-      let closure_4 = global("../lib/convert-methods-to-error");
+      closure_0 = global("../lib/braintree-error");
+      closure_1 = global("../lib/analytics");
+      closure_2 = global("./errors");
+      closure_3 = global("../lib/methods");
+      closure_4 = global("../lib/convert-methods-to-error");
       module.exports = global("@braintree/wrap-promise").wrapPrototype(ApplePay);
     },
     { "../lib/analytics": 138, "../lib/braintree-error": 143, "../lib/convert-methods-to-error": 146, "../lib/methods": 175, "./errors": 90, "@braintree/wrap-promise": 40 }
@@ -2934,19 +2926,19 @@ let fn = () => {
   ];
   items90 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./apple-pay");
-      let closure_1 = global("../lib/analytics");
-      let closure_2 = global("../lib/braintree-error");
-      let closure_3 = global("../lib/basic-component-verification");
-      let closure_4 = global("../lib/create-assets-url");
-      let closure_5 = global("../lib/create-deferred-client");
-      let closure_6 = global("./errors");
+      closure_0 = global("./apple-pay");
+      closure_1 = global("../lib/analytics");
+      closure_2 = global("../lib/braintree-error");
+      closure_3 = global("../lib/basic-component-verification");
+      closure_4 = global("../lib/create-assets-url");
+      closure_5 = global("../lib/create-deferred-client");
+      closure_6 = global("./errors");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
+          closure_0 = client;
           return closure_3.verify({ name: "Apple Pay", client: client.client, authorization: client.authorization }).then(() => {
-            let obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: outer1_4.create(client.authorization), name: "Apple Pay" };
-            obj = outer1_5.create(obj);
+            let obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_4.create(client.authorization), name: "Apple Pay" };
+            obj = closure_1_5.create(obj);
             const nextPromise = obj.then((getConfiguration) => {
               if (getConfiguration.getConfiguration().gatewayConfiguration.applePayWeb) {
                 closure_1.sendEvent(getConfiguration, "applepay.initialized");
@@ -2984,31 +2976,31 @@ let fn = () => {
           if (!global) {
             obj = {};
           }
-          stringify = JSON.stringify(obj);
+          closure_0 = JSON.stringify(obj);
           gatewayConfiguration = obj.gatewayConfiguration;
           if (gatewayConfiguration) {
             items = ["assetsUrl", "clientApiUrl", "configUrl"];
             item = items.forEach((arg0) => {
               if (arg0 in gatewayConfiguration) {
-                if (!outer1_3(tmp[arg0])) {
+                if (!closure_1_3(tmp[arg0])) {
                   const obj = { type: null, code: null, message: null };
-                  obj[0] = outer1_13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.type;
-                  obj[1] = outer1_13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.code;
+                  obj[0] = closure_1_13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.type;
+                  obj[1] = closure_1_13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.code;
                   obj[2] = `${arg0} property is on an invalid domain.`;
-                  const tmp8 = new outer1_4(obj);
+                  const tmp8 = new closure_1_4(obj);
                   throw tmp8;
                 }
               }
             });
             obj.getConfiguration = () => JSON.parse(closure_0);
-            tmp8 = c2;
-            obj._request = c2;
+            tmp8 = closure_2;
+            obj._request = closure_2;
             obj._configuration = obj.getConfiguration();
             str = "/v1/";
             obj._clientApiBaseUrl = `${gatewayConfiguration.clientApiUrl}/v1/`;
             if (gatewayConfiguration.graphQL) {
-              tmp9 = c3;
-              if (c3(gatewayConfiguration.graphQL.url)) {
+              tmp9 = closure_3;
+              if (closure_3(gatewayConfiguration.graphQL.url)) {
                 tmp17 = gatewayConfiguration;
                 obj1 = { graphQL: null };
                 obj1[0] = gatewayConfiguration.graphQL;
@@ -3019,42 +3011,42 @@ let fn = () => {
                 tmp22 = tmp21;
                 obj._graphQL = tmp21;
               } else {
-                tmp10 = c4;
+                tmp10 = closure_4;
                 obj2 = { type: null, code: null, message: "graphQL.url property is on an invalid domain." };
-                tmp11 = c13;
-                obj2[0] = c13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.type;
-                obj2[1] = c13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.code;
+                tmp11 = closure_13;
+                obj2[0] = closure_13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.type;
+                obj2[1] = closure_13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.code;
                 tmp12 = new.target;
                 tmp13 = new.target;
                 tmp14 = obj2;
-                tmp15 = new c4(obj2);
+                tmp15 = new closure_4(obj2);
                 tmp16 = tmp15;
                 throw tmp15;
               }
             }
             return;
           } else {
-            tmp = c4;
-            tmp2 = c13;
+            tmp = closure_4;
+            tmp2 = closure_13;
             tmp3 = new.target;
             tmp4 = new.target;
-            tmp5 = new c4(c13.CLIENT_MISSING_GATEWAY_CONFIGURATION);
+            tmp5 = new closure_4(closure_13.CLIENT_MISSING_GATEWAY_CONFIGURATION);
             tmp6 = tmp5;
             throw tmp5;
           }
         }
         static initialize(arg0) {
           closure_0 = global;
-          tmp = FRAUDNET_URL[global.authorization];
+          tmp = closure_22[global.authorization];
           if (tmp) {
-            tmp16 = c12;
+            tmp16 = closure_12;
             str2 = "custom.client.load.cached";
-            sendEventResult = c12.sendEvent(tmp, "custom.client.load.cached");
+            sendEventResult = closure_12.sendEvent(tmp, "custom.client.load.cached");
             return tmp;
           } else {
             try {
-              tmp2 = c7;
-              tmp3 = c7(global.authorization);
+              tmp2 = closure_7;
+              tmp3 = closure_7(global.authorization);
               tmp4 = getConfiguration;
               tmp5 = tmp3;
               promise = getConfiguration(tmp3, global.sessionId);
@@ -3063,17 +3055,17 @@ let fn = () => {
                   arg0.isDebug = true;
                 }
                 arg0.authorization = authorization.authorization;
-                const obj = Object.create(outer1_23.prototype);
-                new outer1_23(arg0);
+                const obj = Object.create(closure_1_23.prototype);
+                new closure_1_23(arg0);
                 return obj;
               });
-              tmp6 = FRAUDNET_URL;
-              FRAUDNET_URL[global.authorization] = nextPromise;
-              tmp7 = c12;
+              tmp6 = closure_22;
+              closure_22[global.authorization] = nextPromise;
+              tmp7 = closure_12;
               str = "custom.client.load.initialized";
-              sendEventResult1 = c12.sendEvent(nextPromise, "custom.client.load.initialized");
+              sendEventResult1 = closure_12.sendEvent(nextPromise, "custom.client.load.initialized");
               nextPromise1 = nextPromise.then((arg0) => {
-                outer1_12.sendEvent(closure_1, "custom.client.load.succeeded");
+                closure_1_12.sendEvent(closure_1, "custom.client.load.succeeded");
                 return arg0;
               });
               return nextPromise1.catch((arg0) => {
@@ -3083,11 +3075,11 @@ let fn = () => {
             } catch (err) {
               tmp9 = globalThis;
               _Promise = Promise;
-              tmp10 = c4;
-              tmp11 = c13;
+              tmp10 = closure_4;
+              tmp11 = closure_13;
               tmp12 = new.target;
               tmp13 = new.target;
-              tmp14 = new c4(c13.CLIENT_INVALID_AUTHORIZATION);
+              tmp14 = new closure_4(closure_13.CLIENT_INVALID_AUTHORIZATION);
               tmp15 = tmp14;
               return Promise.reject(tmp14);
             }
@@ -3095,7 +3087,7 @@ let fn = () => {
           return;
         }
         static clearCache() {
-          FRAUDNET_URL = {};
+          closure_22 = {};
           return;
         }
         _findOrCreateFraudnetJSON(arg0) {
@@ -3115,7 +3107,7 @@ let fn = () => {
           }
           configuration = this.getConfiguration();
           obj = { rda_tenant: "bt_card", mid: configuration.gatewayConfiguration.merchantId };
-          getConfiguration = obj;
+          closure_0 = obj;
           str4 = configuration.authorizationFingerprint;
           if (str4) {
             str5 = "&";
@@ -3141,12 +3133,12 @@ let fn = () => {
           self = this;
           promise = new Promise((arg0, arg1) => {
             const endpoint = arg0;
-            let closure_1 = arg1;
+            closure_1 = arg1;
             let collectDeviceData = "payment_methods/credit_cards" === endpoint.endpoint;
             if (collectDeviceData) {
               collectDeviceData = str5.getConfiguration().gatewayConfiguration.creditCards.collectDeviceData;
             }
-            let closure_3 = Boolean(collectDeviceData);
+            closure_3 = Boolean(collectDeviceData);
             let tmp3;
             if ("graphQLApi" !== endpoint.api) {
               let str = "options.method";
@@ -3161,10 +3153,10 @@ let fn = () => {
             }
             if (tmp3) {
               let obj = { type: null, code: null, message: null };
-              obj[0] = outer1_13.CLIENT_OPTION_REQUIRED.type;
-              obj[1] = outer1_13.CLIENT_OPTION_REQUIRED.code;
+              obj[0] = closure_1_13.CLIENT_OPTION_REQUIRED.type;
+              obj[1] = closure_1_13.CLIENT_OPTION_REQUIRED.code;
               obj[2] = `${tmp3} is required when making a request.`;
-              const tmp22 = new outer1_4(obj);
+              const tmp22 = new closure_1_4(obj);
               throw tmp22;
             } else {
               str5 = "clientApi";
@@ -3173,21 +3165,21 @@ let fn = () => {
               }
               obj = { method: null, graphQL: null, timeout: null, metadata: null };
               obj[0] = tmp.method;
-              let obj1 = str5;
+              obj1 = str5;
               obj[1] = str5._graphQL;
               obj[2] = tmp.timeout;
               obj[3] = str5._configuration.analyticsMetadata;
               if ("clientApi" === str5) {
                 let _clientApiBaseUrl = obj1._clientApiBaseUrl;
-                obj.data = outer1_8.addMetadata(obj1._configuration, tmp.data);
+                obj.data = closure_1_8.addMetadata(obj1._configuration, tmp.data);
               } else if ("graphQLApi" !== str5) {
                 obj = { type: null, code: null, message: "options.api is invalid." };
-                obj[0] = outer1_13.CLIENT_OPTION_INVALID.type;
-                obj[1] = outer1_13.CLIENT_OPTION_INVALID.code;
-                const tmp12 = new outer1_4(obj);
+                obj[0] = closure_1_13.CLIENT_OPTION_INVALID.type;
+                obj[1] = closure_1_13.CLIENT_OPTION_INVALID.code;
+                const tmp12 = new closure_1_4(obj);
                 throw tmp12;
               } else {
-                _clientApiBaseUrl = outer1_15[obj1._configuration.gatewayConfiguration.environment];
+                _clientApiBaseUrl = closure_1_15[obj1._configuration.gatewayConfiguration.environment];
                 tmp.endpoint = "";
                 obj.method = "post";
                 obj1 = { clientSdkMetadata: null };
@@ -3196,9 +3188,9 @@ let fn = () => {
                 obj2[1] = obj1._configuration.analyticsMetadata.source;
                 obj2[2] = obj1._configuration.analyticsMetadata.integration;
                 obj2[3] = obj1._configuration.analyticsMetadata.sessionId;
-                obj2[4] = outer1_14;
+                obj2[4] = closure_1_14;
                 obj1[0] = obj2;
-                obj.data = outer1_11(obj1, tmp.data);
+                obj.data = closure_1_11(obj1, tmp.data);
                 const _configuration = obj1._configuration;
                 const obj3 = { Authorization: null, "Braintree-Version": null };
                 obj3[0] = `Bearer ${_configuration.authorizationFingerprint || _configuration.authorization}`;
@@ -3213,9 +3205,9 @@ let fn = () => {
           });
           tmp = promise;
           if (typeof module === "function") {
-            tmp2 = c9;
-            tmp3 = c10;
-            closure_1 = c9(c10(module));
+            tmp2 = closure_9;
+            tmp3 = closure_10;
+            closure_1 = closure_9(closure_10(module));
             nextPromise = promise.then((_httpStatus) => {
               callback(null, _httpStatus, _httpStatus._httpStatus);
             });
@@ -3240,28 +3232,28 @@ let fn = () => {
         }
       }
       const BRAINTREE_VERSION = global("./constants").BRAINTREE_VERSION;
-      let closure_1 = global("./request/graphql");
-      let closure_2 = global("./request");
-      let closure_3 = global("../lib/is-verified-domain");
-      let closure_4 = global("../lib/braintree-error");
-      let closure_5 = global("../lib/convert-to-braintree-error");
+      closure_1 = global("./request/graphql");
+      closure_2 = global("./request");
+      closure_3 = global("../lib/is-verified-domain");
+      closure_4 = global("../lib/braintree-error");
+      closure_5 = global("../lib/convert-to-braintree-error");
       const getConfiguration = global("./get-configuration").getConfiguration;
-      let closure_7 = global("../lib/create-authorization-data");
-      let closure_8 = global("../lib/add-metadata");
-      let closure_9 = global("../lib/once");
-      let closure_10 = global("../lib/deferred");
+      closure_7 = global("../lib/create-authorization-data");
+      closure_8 = global("../lib/add-metadata");
+      closure_9 = global("../lib/once");
+      closure_10 = global("../lib/deferred");
       const assign = global("../lib/assign").assign;
-      let closure_12 = global("../lib/analytics");
-      let closure_13 = global("./errors");
+      closure_12 = global("../lib/analytics");
+      closure_13 = global("./errors");
       const VERSION = global("../lib/constants").VERSION;
       const GRAPHQL_URLS = global("../lib/constants").GRAPHQL_URLS;
-      let closure_16 = global("../lib/methods");
-      let closure_17 = global("../lib/convert-methods-to-error");
-      let closure_18 = global("../lib/assets");
+      closure_16 = global("../lib/methods");
+      closure_17 = global("../lib/convert-methods-to-error");
+      closure_18 = global("../lib/assets");
       const FRAUDNET_FNCLS = global("../lib/constants").FRAUDNET_FNCLS;
       const FRAUDNET_SOURCE = global("../lib/constants").FRAUDNET_SOURCE;
       const FRAUDNET_URL = global("../lib/constants").FRAUDNET_URL;
-      let closure_22 = {};
+      closure_22 = {};
       Client.prototype.teardown = global("@braintree/wrap-promise")(function() {
         const authorization = this.getConfiguration().authorization;
         delete tmp2[tmp];
@@ -3290,42 +3282,42 @@ let fn = () => {
   ];
   items94 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/braintree-error");
-      let closure_1 = global("./request");
-      let closure_2 = global("@braintree/uuid");
-      let closure_3 = global("../lib/constants");
-      let closure_4 = global("./errors");
-      let closure_5 = global("./request/graphql");
+      closure_0 = global("../lib/braintree-error");
+      closure_1 = global("./request");
+      closure_2 = global("@braintree/uuid");
+      closure_3 = global("../lib/constants");
+      closure_4 = global("./errors");
+      closure_5 = global("./request/graphql");
       const GRAPHQL_URLS = global("../lib/constants").GRAPHQL_URLS;
-      let closure_7 = global("../lib/is-date-string-before-or-on");
+      closure_7 = global("../lib/is-date-string-before-or-on");
       const BRAINTREE_VERSION = global("./constants").BRAINTREE_VERSION;
       const globalResult = global("@braintree/wrap-promise");
       module.exports = {
         getConfiguration: global("@braintree/wrap-promise")(function getConfiguration(arg0, sessionId) {
-          let closure_0 = arg0;
-          let closure_1 = sessionId;
+          closure_0 = arg0;
+          closure_1 = sessionId;
           return new Promise((arg0, arg1) => {
-            let closure_0 = arg0;
-            const sessionId = arg1;
+            closure_0 = arg0;
+            sessionId = arg1;
             let tmp = sessionId;
             if (!sessionId) {
-              tmp = outer1_2();
+              tmp = closure_1_2();
             }
-            let obj = { merchantAppId: window.location.host, platform: outer1_3.PLATFORM, sdkVersion: outer1_3.VERSION, source: outer1_3.SOURCE, integration: outer1_3.INTEGRATION, integrationType: outer1_3.INTEGRATION, sessionId: tmp };
+            let obj = { merchantAppId: window.location.host, platform: closure_1_3.PLATFORM, sdkVersion: closure_1_3.VERSION, source: closure_1_3.SOURCE, integration: closure_1_3.INTEGRATION, integrationType: closure_1_3.INTEGRATION, sessionId: tmp };
             const attrs = closure_0.attrs;
             attrs._meta = obj;
-            attrs.braintreeLibraryVersion = outer1_3.BRAINTREE_LIBRARY_VERSION;
+            attrs.braintreeLibraryVersion = closure_1_3.BRAINTREE_LIBRARY_VERSION;
             attrs.configVersion = "3";
             obj = { url: closure_0.configUrl, method: "GET", data: attrs };
             if (attrs.authorizationFingerprint) {
               if (tmp3.graphQL) {
-                if (outer1_7(tmp3.graphQL.date, outer1_8)) {
+                if (closure_1_7(tmp3.graphQL.date, closure_1_8)) {
                   obj = { graphQL: null };
-                  const obj1 = { url: null, features: null };
+                  obj1 = { url: null, features: null };
                   obj1[0] = tmp3.graphQL.url;
                   obj1[1] = ["configuration"];
                   obj[0] = obj1;
-                  const tmp17 = new outer1_5(obj);
+                  const tmp17 = new closure_1_5(obj);
                   obj.graphQL = tmp17;
                 }
                 obj.metadata = obj;
@@ -3333,13 +3325,13 @@ let fn = () => {
               sessionId(obj, (arg0, arg1, arg2) => {
                 if (arg0) {
                   if (403 === arg2) {
-                    let CLIENT_GATEWAY_NETWORK = outer1_4.CLIENT_AUTHORIZATION_INSUFFICIENT;
+                    let CLIENT_GATEWAY_NETWORK = closure_1_4.CLIENT_AUTHORIZATION_INSUFFICIENT;
                   } else if (401 === arg2) {
-                    CLIENT_GATEWAY_NETWORK = outer1_4.CLIENT_AUTHORIZATION_INVALID;
+                    CLIENT_GATEWAY_NETWORK = closure_1_4.CLIENT_AUTHORIZATION_INVALID;
                   } else {
-                    CLIENT_GATEWAY_NETWORK = outer1_4.CLIENT_GATEWAY_NETWORK;
+                    CLIENT_GATEWAY_NETWORK = closure_1_4.CLIENT_GATEWAY_NETWORK;
                   }
-                  let obj = { type: null, code: null, message: null, details: null };
+                  obj = { type: null, code: null, message: null, details: null };
                   ({ type: obj2[0], code: obj2[1], message: obj2[2] } = CLIENT_GATEWAY_NETWORK);
                   obj = { originalError: null };
                   obj[0] = arg0;
@@ -3363,10 +3355,10 @@ let fn = () => {
             if (attrs.tokenizationKey) {
               const obj2 = { graphQL: null };
               const obj3 = { url: null, features: null };
-              obj3[0] = outer1_6[tmp3.environment];
+              obj3[0] = closure_1_6[tmp3.environment];
               obj3[1] = ["configuration"];
               obj2[0] = obj3;
-              const tmp9 = new outer1_5(obj2);
+              const tmp9 = new closure_1_5(obj2);
               obj.graphQL = tmp9;
               obj.metadata = obj;
             }
@@ -3378,9 +3370,9 @@ let fn = () => {
   ];
   items95 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/braintree-error");
-      let closure_1 = global("./client");
-      let closure_2 = global("../lib/errors");
+      closure_0 = global("../lib/braintree-error");
+      closure_1 = global("./client");
+      closure_2 = global("../lib/errors");
       const globalResult = global("@braintree/wrap-promise");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(authorization) {
@@ -3403,20 +3395,18 @@ let fn = () => {
   items96 = [
     (arg0, arg1, arg2) => {
       function _requestWithRetry(url, arg1, arg2) {
-        let graphQL;
-        let timeout;
-        let closure_0 = url;
-        const assign = arg1;
-        let closure_2 = arg2;
+        closure_0 = url;
+        assign = arg1;
+        closure_2 = arg2;
         ({ graphQL, timeout } = url);
         const requestObject = globalResult.getRequestObject();
-        let closure_9 = arg2;
+        closure_9 = arg2;
         let isGraphQLRequestResult = graphQL;
         if (graphQL) {
           isGraphQLRequestResult = graphQL.isGraphQLRequest(url.url, url.data);
         }
         const BooleanResult = Boolean(isGraphQLRequestResult);
-        let closure_10 = BooleanResult;
+        closure_10 = BooleanResult;
         url.headers = assign({ "Content-Type": "application/json" }, url.headers);
         if (BooleanResult) {
           let obj2 = new headers(url);
@@ -3440,10 +3430,10 @@ let fn = () => {
                   requestObject(closure_0, closure_1, closure_2);
                 }
               }
-              let data = outer1_3(tmp4.responseText);
-              let closure_4 = obj2.adaptResponseBody(data);
+              let data = closure_1_3(tmp4.responseText);
+              closure_4 = obj2.adaptResponseBody(data);
               const determineStatusResult = obj2.determineStatus(tmp4.status, data);
-              let closure_3 = determineStatusResult;
+              closure_3 = determineStatusResult;
               if (determineStatusResult < 400) {
                 if (closure_3 >= 200) {
                   callback(null, closure_4, closure_3);
@@ -3503,7 +3493,7 @@ let fn = () => {
             queryifyResult1 = closure_0.queryify(queryifyResult, headers);
           }
           requestObject.onload = () => {
-            callback(null, outer1_3(requestObject.responseText), requestObject.status);
+            callback(null, closure_1_3(requestObject.responseText), requestObject.status);
           };
           requestObject.onerror = () => {
             callback("error", null, 500);
@@ -3526,15 +3516,15 @@ let fn = () => {
           }
         }
       }
-      let closure_0 = global("../../lib/querystring");
+      closure_0 = global("../../lib/querystring");
       let assign = global("../../lib/assign").assign;
-      let closure_2 = global("./prep-body");
-      let closure_3 = global("./parse-body");
+      closure_2 = global("./prep-body");
+      closure_3 = global("./parse-body");
       const globalResult = global("./xhr");
-      let closure_4 = globalResult;
+      closure_4 = globalResult;
       const isAvailable = globalResult.isAvailable;
-      let closure_6 = global("./graphql/request");
-      let closure_7 = global("./default-request");
+      closure_6 = global("./graphql/request");
+      closure_7 = global("./default-request");
       module.exports = {
         request(url) {
           _requestWithRetry(url, 0, arg1);
@@ -3574,13 +3564,13 @@ let fn = () => {
   ];
   items98 = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./error");
+      closure_0 = global("./error");
       const assign = global("../../../../lib/assign").assign;
-      let closure_2 = { AMERICAN_EXPRESS: "American Express", DISCOVER: "Discover", INTERNATIONAL_MAESTRO: "Maestro", JCB: "JCB", MASTERCARD: "MasterCard", SOLO: "Solo", UK_MAESTRO: "UK Maestro", UNION_PAY: "UnionPay", VISA: "Visa", ELO: "Elo", HIPER: "Hiper", HIPERCARD: "Hipercard" };
-      let closure_3 = { VISA: "visa", MASTERCARD: "mastercard", DISCOVER: "discover", AMERICAN_EXPRESS: "amex", INTERNATIONAL_MAESTRO: "maestro", ELO: "elo" };
-      let closure_4 = { VISA: "Visa", MASTERCARD: "MasterCard", DISCOVER: "Discover", AMERICAN_EXPRESS: "American Express" };
-      let closure_5 = { VISA: "visa", MASTERCARD: "mastercard", DISCOVER: "discover", AMERICAN_EXPRESS: "amex", INTERNATIONAL_MAESTRO: "maestro", ELO: "elo" };
-      let closure_6 = { VISA: "visa", MASTERCARD: "master", DISCOVER: "discover", AMERICAN_EXPRESS: "amex", DINERS: "diners", INTERNATIONAL_MAESTRO: "maestro", JCB: "jcb" };
+      closure_2 = { AMERICAN_EXPRESS: "American Express", DISCOVER: "Discover", INTERNATIONAL_MAESTRO: "Maestro", JCB: "JCB", MASTERCARD: "MasterCard", SOLO: "Solo", UK_MAESTRO: "UK Maestro", UNION_PAY: "UnionPay", VISA: "Visa", ELO: "Elo", HIPER: "Hiper", HIPERCARD: "Hipercard" };
+      closure_3 = { VISA: "visa", MASTERCARD: "mastercard", DISCOVER: "discover", AMERICAN_EXPRESS: "amex", INTERNATIONAL_MAESTRO: "maestro", ELO: "elo" };
+      closure_4 = { VISA: "Visa", MASTERCARD: "MasterCard", DISCOVER: "Discover", AMERICAN_EXPRESS: "American Express" };
+      closure_5 = { VISA: "visa", MASTERCARD: "mastercard", DISCOVER: "discover", AMERICAN_EXPRESS: "amex", INTERNATIONAL_MAESTRO: "maestro", ELO: "elo" };
+      closure_6 = { VISA: "visa", MASTERCARD: "master", DISCOVER: "discover", AMERICAN_EXPRESS: "amex", DINERS: "diners", INTERNATIONAL_MAESTRO: "maestro", JCB: "jcb" };
       module.exports = function configurationResponseAdapter(data, _graphQL) {
         if (data.data) {
           if (!data.errors) {
@@ -3623,7 +3613,7 @@ let fn = () => {
               obj.ideal = clientConfiguration.ideal;
             }
             if (clientConfiguration.kount) {
-              const obj1 = { kountMerchantId: null };
+              obj1 = { kountMerchantId: null };
               obj1[0] = clientConfiguration.kount.merchantId;
               obj.kount = obj1;
             }
@@ -3744,10 +3734,10 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./error");
-      let closure_1 = { AMERICAN_EXPRESS: "American Express", DINERS: "Discover", DISCOVER: "Discover", ELO: "Elo", HIPER: "Hiper", HIPERCARD: "Hipercard", INTERNATIONAL_MAESTRO: "Maestro", JCB: "JCB", MASTERCARD: "MasterCard", UK_MAESTRO: "Maestro", UNION_PAY: "UnionPay", VISA: "Visa" };
-      let closure_2 = { YES: "Yes", NO: "No", UNKNOWN: "Unknown" };
-      let closure_3 = { PSDTWO: "psd2" };
+      closure_0 = global("./error");
+      closure_1 = { AMERICAN_EXPRESS: "American Express", DINERS: "Discover", DISCOVER: "Discover", ELO: "Elo", HIPER: "Hiper", HIPERCARD: "Hipercard", INTERNATIONAL_MAESTRO: "Maestro", JCB: "JCB", MASTERCARD: "MasterCard", UK_MAESTRO: "Maestro", UNION_PAY: "UnionPay", VISA: "Visa" };
+      closure_2 = { YES: "Yes", NO: "No", UNKNOWN: "Unknown" };
+      closure_3 = { PSDTWO: "psd2" };
       module.exports = function creditCardTokenizationFastlaneResponseAdapter(data) {
         if (data.data) {
           if (!data.errors) {
@@ -3763,7 +3753,7 @@ let fn = () => {
               const items = ["commercial", "debit", "durbinRegulated", "healthcare", "payroll", "prepaid"];
               const item = items.forEach((arg0) => {
                 if (binData[arg0]) {
-                  tmp[arg0] = outer1_2[tmp[arg0]];
+                  tmp[arg0] = closure_1_2[tmp[arg0]];
                 } else {
                   tmp[arg0] = "Unknown";
                 }
@@ -3799,7 +3789,7 @@ let fn = () => {
               if (!formatted) {
                 formatted = str6.toLowerCase();
               }
-              const obj1 = { regulationEnvironment: null };
+              obj1 = { regulationEnvironment: null };
               obj1[0] = formatted;
               obj.creditCards[0].authenticationInsight = obj1;
               tmp5 = obj;
@@ -3815,10 +3805,10 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./error");
-      let closure_1 = { AMERICAN_EXPRESS: "American Express", DINERS: "Discover", DISCOVER: "Discover", ELO: "Elo", HIPER: "Hiper", HIPERCARD: "Hipercard", INTERNATIONAL_MAESTRO: "Maestro", JCB: "JCB", MASTERCARD: "MasterCard", UK_MAESTRO: "Maestro", UNION_PAY: "UnionPay", VISA: "Visa" };
-      let closure_2 = { YES: "Yes", NO: "No", UNKNOWN: "Unknown" };
-      let closure_3 = { PSDTWO: "psd2" };
+      closure_0 = global("./error");
+      closure_1 = { AMERICAN_EXPRESS: "American Express", DINERS: "Discover", DISCOVER: "Discover", ELO: "Elo", HIPER: "Hiper", HIPERCARD: "Hipercard", INTERNATIONAL_MAESTRO: "Maestro", JCB: "JCB", MASTERCARD: "MasterCard", UK_MAESTRO: "Maestro", UNION_PAY: "UnionPay", VISA: "Visa" };
+      closure_2 = { YES: "Yes", NO: "No", UNKNOWN: "Unknown" };
+      closure_3 = { PSDTWO: "psd2" };
       module.exports = function creditCardTokenizationResponseAdapter(data) {
         if (data.data) {
           if (!data.errors) {
@@ -3834,7 +3824,7 @@ let fn = () => {
               const items = ["commercial", "debit", "durbinRegulated", "healthcare", "payroll", "prepaid"];
               const item = items.forEach((arg0) => {
                 if (binData[arg0]) {
-                  tmp[arg0] = outer1_2[tmp[arg0]];
+                  tmp[arg0] = closure_1_2[tmp[arg0]];
                 } else {
                   tmp[arg0] = "Unknown";
                 }
@@ -3870,7 +3860,7 @@ let fn = () => {
               if (!formatted) {
                 formatted = str6.toLowerCase();
               }
-              const obj1 = { regulationEnvironment: null };
+              obj1 = { regulationEnvironment: null };
               obj1[0] = formatted;
               obj.creditCards[0].authenticationInsight = obj1;
               tmp5 = obj;
@@ -3891,7 +3881,7 @@ let fn = () => {
         if (1 !== arr.length) {
           const item = arr2.forEach((field) => {
             if (field.field === first1) {
-              let closure_0 = field;
+              closure_0 = field;
             }
           });
           if (!obj) {
@@ -3927,7 +3917,7 @@ let fn = () => {
               if (1 !== substr.length) {
                 const item = arr2.forEach((field) => {
                   if (field.field === first1) {
-                    let closure_0 = field;
+                    closure_0 = field;
                   }
                 });
                 if (!obj) {
@@ -3944,7 +3934,7 @@ let fn = () => {
                 if (1 !== substr1.length) {
                   const item1 = fieldErrors.forEach((field) => {
                     if (field.field === first1) {
-                      let closure_0 = field;
+                      closure_0 = field;
                     }
                   });
                   if (!obj) {
@@ -3955,7 +3945,7 @@ let fn = () => {
                   }
                   items(substr1.slice(1), extensions, obj.fieldErrors);
                 } else {
-                  const obj1 = { code: null, field: null, message: null };
+                  obj1 = { code: null, field: null, message: null };
                   obj1[0] = tmp10;
                   obj1[1] = first1;
                   obj1[2] = extensions.message;
@@ -3976,7 +3966,7 @@ let fn = () => {
             message = message.errors[0].message;
             obj[0] = message;
             obj[0] = obj;
-            let obj1 = obj;
+            obj1 = obj;
           } else {
             obj1 = { error: null, fieldErrors: null };
             const obj2 = { message: null };
@@ -4096,7 +4086,7 @@ let fn = () => {
         obj = { input: { creditCard: obj, options: {} } };
         obj[4] = cardholderName;
         if (BooleanResult) {
-          const obj1 = { merchantAccountId: null };
+          obj1 = { merchantAccountId: null };
           obj1[0] = authenticationInsight.merchantAccountId;
           obj.authenticationInsightInput = obj1;
         }
@@ -4218,7 +4208,7 @@ let fn = () => {
         obj = { input: { creditCard: obj, options: {} } };
         obj[4] = cardholderName;
         if (BooleanResult) {
-          const obj1 = { merchantAccountId: null };
+          obj1 = { merchantAccountId: null };
           obj1[0] = authenticationInsight.merchantAccountId;
           obj.authenticationInsightInput = obj1;
         }
@@ -4303,8 +4293,8 @@ let fn = () => {
           return Boolean(this._config);
         }
       }
-      let closure_0 = { tokenize_credit_cards: "payment_methods/credit_cards", configuration: "configuration" };
-      let closure_1 = ["creditCard.options.unionPayEnrollment"];
+      closure_0 = { tokenize_credit_cards: "payment_methods/credit_cards", configuration: "configuration" };
+      closure_1 = ["creditCard.options.unionPayEnrollment"];
       module.exports = GraphQL;
     },
     {}
@@ -4325,8 +4315,8 @@ let fn = () => {
             prototype = Function.prototype;
           }
           obj._sendAnalyticsEvent = prototype;
-          obj._generator = c8[clientApiPath];
-          obj._adapter = c9[clientApiPath];
+          obj._generator = closure_8[clientApiPath];
+          obj._adapter = closure_9[clientApiPath];
           _sendAnalyticsEventResult = obj._sendAnalyticsEvent("graphql.init");
           return;
         }
@@ -4337,13 +4327,13 @@ let fn = () => {
         getBody() {
           _data = this._data;
           obj = {};
-          assign = obj;
+          closure_1 = obj;
           keys = Object.keys(_data);
           item = keys.forEach((arg0) => {
-            let tmp = outer1_2(arg0);
-            if (typeof tmp6[arg0] === "object") {
-              tmp6 = tmp2[arg0];
-              let obj = {};
+            let tmp = closure_1_2(arg0);
+            if (typeof table[arg0] === "object") {
+              table = tmp6;
+              obj = {};
               let _Object = Object;
               let keys = Object.keys(tmp6);
               let item = keys.forEach(() => { ... });
@@ -4356,7 +4346,7 @@ let fn = () => {
             }
           });
           obj = { clientSdkMetadata: this._clientSdkMetadata };
-          return JSON.stringify(assign(obj, this._generator(obj, c3(this._data.creditCard))));
+          return JSON.stringify(closure_1(obj, this._generator(obj, closure_3(this._data.creditCard))));
         }
         getMethod() {
           return "POST";
@@ -4380,8 +4370,8 @@ let fn = () => {
           self = this;
           tmp = "creditCard" in this._data;
           if (tmp) {
-            tmp2 = c3;
-            tmp = c3(self._data.creditCard);
+            tmp2 = closure_3;
+            tmp = closure_3(self._data.creditCard);
           }
           return this._adapter(global, self, tmp);
         }
@@ -4431,13 +4421,13 @@ let fn = () => {
       }
       const BRAINTREE_VERSION = global("../../constants").BRAINTREE_VERSION;
       const assign = global("../../../lib/assign").assign;
-      let closure_2 = global("../../../lib/snake-case-to-camel-case");
-      let closure_3 = global("../../../lib/is-fastlane-checkout");
-      let closure_4 = global("./generators/credit-card-tokenization");
-      let closure_5 = global("./adapters/credit-card-tokenization");
-      let closure_6 = global("./adapters/credit-card-tokenization-fastlane");
-      let closure_7 = global("./generators/credit-card-for-fastlane-tokenization");
-      let closure_8 = {
+      closure_2 = global("../../../lib/snake-case-to-camel-case");
+      closure_3 = global("../../../lib/is-fastlane-checkout");
+      closure_4 = global("./generators/credit-card-tokenization");
+      closure_5 = global("./adapters/credit-card-tokenization");
+      closure_6 = global("./adapters/credit-card-tokenization-fastlane");
+      closure_7 = global("./generators/credit-card-for-fastlane-tokenization");
+      closure_8 = {
         (arg0, arg1) => {
           if (arg1) {
             let tmp2 = callback5(arg0);
@@ -4465,8 +4455,8 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../../lib/once");
-      let closure_1 = global("./ajax-driver");
+      closure_0 = global("../../lib/once");
+      closure_1 = global("./ajax-driver");
       module.exports = (method) => {
         let prototype = arg1;
         if (!arg1) {
@@ -4506,7 +4496,7 @@ let fn = () => {
       module.exports = (str, str2) => {
         if (typeof str !== "string") {
           const _Error = Error;
-          const error = new Error("Method must be a string");
+          error = new Error("Method must be a string");
           throw error;
         } else {
           let tmp2 = "get" !== str.toLowerCase();
@@ -4671,7 +4661,7 @@ let fn = () => {
           resolved = obj.initialize(obj);
         },
         clearSessionIdCache() {
-          let c0 = null;
+          c0 = null;
         }
       };
     },
@@ -4679,25 +4669,24 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./kount");
-      let closure_1 = global("./fraudnet");
-      let closure_2 = global("../lib/braintree-error");
-      let closure_3 = global("../lib/basic-component-verification");
-      let closure_4 = global("../lib/create-deferred-client");
-      let closure_5 = global("../lib/create-assets-url");
-      let closure_6 = global("../lib/methods");
-      let closure_7 = global("../lib/convert-methods-to-error");
+      closure_0 = global("./kount");
+      closure_1 = global("./fraudnet");
+      closure_2 = global("../lib/braintree-error");
+      closure_3 = global("../lib/basic-component-verification");
+      closure_4 = global("../lib/create-deferred-client");
+      closure_5 = global("../lib/create-assets-url");
+      closure_6 = global("../lib/methods");
+      closure_7 = global("../lib/convert-methods-to-error");
       const globalResult = global("@braintree/wrap-promise");
-      let closure_8 = globalResult;
-      let closure_9 = global("./errors");
+      closure_9 = global("./errors");
       module.exports = {
         create: globalResult(function create(client) {
-          let closure_0 = client;
-          let closure_2 = { _instances: [] };
+          closure_0 = client;
+          closure_2 = { _instances: [] };
           return closure_3.verify({ name: "Data Collector", client: client.client, authorization: client.authorization }).then(() => {
             obj._instantiatedWithAClient = !client.useDeferredClient;
-            obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: outer1_5.create(client.authorization), name: "Data Collector" };
-            obj = outer1_4.create(obj);
+            obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_5.create(client.authorization), name: "Data Collector" };
+            obj = closure_1_4.create(obj);
             const nextPromise = obj.then((getConfiguration) => {
               const configuration = getConfiguration.getConfiguration();
               if (true === closure_0.kount) {
@@ -4712,10 +4701,10 @@ let fn = () => {
                     _instances.push(setupResult);
                   } catch (tmp8) {
                     obj = { type: null, code: null, message: null };
-                    obj[0] = outer1_9.DATA_COLLECTOR_KOUNT_ERROR.type;
-                    obj[1] = outer1_9.DATA_COLLECTOR_KOUNT_ERROR.code;
+                    obj[0] = closure_1_9.DATA_COLLECTOR_KOUNT_ERROR.type;
+                    obj[1] = closure_1_9.DATA_COLLECTOR_KOUNT_ERROR.code;
                     obj[2] = tmp8.message;
-                    const tmp15 = new outer1_2(obj);
+                    const tmp15 = new closure_1_2(obj);
                     return Promise.reject(tmp15);
                   }
                 }
@@ -4738,10 +4727,10 @@ let fn = () => {
                     _instances.push(setupResult);
                   } catch (tmp8) {
                     obj = { type: null, code: null, message: null };
-                    obj[0] = outer1_9.DATA_COLLECTOR_KOUNT_ERROR.type;
-                    obj[1] = outer1_9.DATA_COLLECTOR_KOUNT_ERROR.code;
+                    obj[0] = closure_1_9.DATA_COLLECTOR_KOUNT_ERROR.type;
+                    obj[1] = closure_1_9.DATA_COLLECTOR_KOUNT_ERROR.code;
                     obj[2] = tmp8.message;
-                    const tmp15 = new outer1_2(obj);
+                    const tmp15 = new closure_1_2(obj);
                     return Promise.reject(tmp15);
                   }
                 }
@@ -4757,11 +4746,11 @@ let fn = () => {
               if (!correlationId) {
                 correlationId = tmp3.correlationId;
               }
-              return outer1_1.setup({ sessionId: correlationId, clientSessionId: configuration.analyticsMetadata.sessionId, environment: configuration.gatewayConfiguration.environment }).then(() => { ... });
+              return closure_1_1.setup({ sessionId: correlationId, clientSessionId: configuration.analyticsMetadata.sessionId, environment: configuration.gatewayConfiguration.environment }).then(() => { ... });
             }).then(() => {
               let rejectResult = closure_2;
               if (0 === closure_2._instances.length) {
-                const tmp10 = new outer1_2(outer1_9.DATA_COLLECTOR_REQUIRES_CREATE_OPTIONS);
+                const tmp10 = new closure_1_2(closure_1_9.DATA_COLLECTOR_REQUIRES_CREATE_OPTIONS);
                 rejectResult = Promise.reject(tmp10);
               } else {
                 const _JSON = JSON;
@@ -4771,11 +4760,11 @@ let fn = () => {
               return rejectResult;
             });
             client = obj;
-            obj.teardown = outer1_8(function teardown() {
+            obj.teardown = closure_1_8(function teardown() {
               return closure_0._createPromise.then(() => { ... });
             });
             client = obj;
-            obj.getDeviceData = outer1_8(function getDeviceData(arg0) {
+            obj.getDeviceData = closure_1_8(function getDeviceData(arg0) {
               let obj = arg0;
               obj = arg0;
               if (!arg0) {
@@ -4809,8 +4798,8 @@ let fn = () => {
             return;
           } else {
             self._currentEnvironment = self._initializeEnvironment(global);
-            tmp2 = c0;
-            random = c0.random;
+            tmp2 = closure_0;
+            random = closure_0.random;
             startCollectorsResult = random.startCollectors();
             self._deviceSessionId = self._generateDeviceSessionId();
             self.deviceData = self._getDeviceData();
@@ -4829,8 +4818,8 @@ let fn = () => {
         teardown() {
           self = this;
           if (!this._isCached) {
-            tmp = c0;
-            random = c0.random;
+            tmp = closure_0;
+            random = closure_0.random;
             stopCollectorsResult = random.stopCollectors();
             _removeIframeResult = self._removeIframe();
           }
@@ -4843,18 +4832,18 @@ let fn = () => {
         }
         _getDeviceData() {
           obj = { deviceSessionId: this._deviceSessionId, fraudMerchantId: this._currentEnvironment.id };
-          return c1(obj);
+          return closure_1(obj);
         }
         _generateDeviceSessionId() {
-          random = c0.random;
-          hex = c0.codec.hex;
+          random = closure_0.random;
+          hex = closure_0.codec.hex;
           return hex.fromBits(random.randomWords(4, 0));
         }
         _setupIFrame() {
           self = this;
-          c0 = `?m=${this._currentEnvironment.id}&s=${this._deviceSessionId}`;
+          closure_0 = `?m=${this._currentEnvironment.id}&s=${this._deviceSessionId}`;
           element = document.createElement("iframe");
-          iframe = element;
+          closure_1 = element;
           element.width = 1;
           element.id = `braintreeDataFrame-${this._deviceSessionId}`;
           element.height = 1;
@@ -4874,7 +4863,7 @@ let fn = () => {
           return element;
         }
         _initializeEnvironment(arg0) {
-          tmp = c2[global.environment];
+          tmp = closure_2[global.environment];
           if (null == tmp) {
             tmp2 = globalThis;
             _Error = Error;
@@ -4892,13 +4881,13 @@ let fn = () => {
           }
         }
       }
-      let closure_0 = global("./vendor/sjcl");
-      let closure_1 = global("../lib/camel-case-to-snake-case");
+      closure_0 = global("./vendor/sjcl");
+      closure_1 = global("../lib/camel-case-to-snake-case");
       let obj = { development: "https://assets.qa.braintreepayments.com/data", qa: "https://assets.qa.braintreepayments.com/data", sandbox: "https://assets.braintreegateway.com/sandbox/data", production: "https://assets.braintreegateway.com/data" };
-      let closure_3 = {};
+      closure_3 = {};
       obj = {
         setup(arg0) {
-          let obj = arg0;
+          obj = arg0;
           if (null == arg0) {
             obj = {};
           }
@@ -4928,11 +4917,6 @@ let fn = () => {
   items = [
     (arg0, arg1, arg2) => {
       function t(arg0, arg1, arg2) {
-        let tmp5;
-        let tmp6;
-        let tmp7;
-        let tmp8;
-        let tmp9;
         if (4 !== arg1.length) {
           const invalid = new obj.exception.invalid("invalid aes block size");
           throw invalid;
@@ -5007,16 +4991,8 @@ let fn = () => {
         let tmp15;
         let tmp16;
         let tmp17;
-        let tmp2;
         let tmp21;
         let tmp22;
-        let tmp3;
-        let tmp4;
-        let tmp5;
-        let tmp6;
-        let tmp7;
-        let tmp8;
-        let tmp9;
         u = u.u;
         [tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9] = u;
         let num = 0;
@@ -5088,7 +5064,7 @@ let fn = () => {
             }
           }
         }
-        const C = g.C;
+        C = g.C;
         g.g[0] = g.g[0] + 1 | 0;
         let num2 = 0;
         if (!g.g[0]) {
@@ -5337,8 +5313,6 @@ let fn = () => {
           return Math.round(arr / 1099511627776) || 32;
         },
         equal(toBitsResult, toBitsResult) {
-          let bitArray;
-          let bitArray2;
           let length;
           ({ bitArray, bitArray: bitArray2 } = obj);
           if (bitLengthResult !== bitArray2.bitLength(toBitsResult)) {
@@ -5592,12 +5566,8 @@ let fn = () => {
           tmp2 = obj;
         },
         finalize() {
-          let bitArray;
-          let bitArray2;
           let length;
-          let o;
           let tmp4;
-          let u;
           const self = this;
           ({ bitArray, bitArray: bitArray2 } = obj);
           ({ o, u } = this);
@@ -5668,7 +5638,7 @@ let fn = () => {
         }
       };
       obj.prng = (D) => {
-        const obj = {};
+        obj = {};
         const sha256 = new obj.hash.sha256();
         const items = [sha256];
         obj.c = items;
@@ -5811,7 +5781,7 @@ let fn = () => {
                   }
                 }
               }
-              let C = self.C;
+              C = self.C;
               let encryptResult = C.encrypt(self.g);
               let tmp38 = items1;
               let arr2 = items1.push(encryptResult[0], encryptResult[1], encryptResult[2], encryptResult[3]);
@@ -6047,8 +6017,6 @@ let fn = () => {
           isReadyResult = this.isReady();
         },
         isReady(arg0) {
-          let A;
-          let w;
           w = this;
           let D = arg0;
           if (undefined === arg0) {
@@ -6090,7 +6058,7 @@ let fn = () => {
         startCollectors() {
           const self = this;
           if (!this.s) {
-            const obj = { loadTimeCollector: null, mouseCollector: null, keyboardCollector: null, accelerometerCollector: null, touchCollector: null };
+            obj = { loadTimeCollector: null, mouseCollector: null, keyboardCollector: null, accelerometerCollector: null, touchCollector: null };
             let V = self.V;
             obj[0] = () => {
               const apply = closure_1.apply;
@@ -6430,14 +6398,12 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/braintree-error");
-      let closure_1 = global("./errors");
+      closure_0 = global("../lib/braintree-error");
+      closure_1 = global("./errors");
       const loadFastlane = global("../lib/assets").loadFastlane;
       const assign = global("../lib/assign").assign;
       module.exports = global("@braintree/wrap-promise")(function fastlane(arg0) {
-        let client;
-        let client2;
-        let closure_0 = arg0;
+        closure_0 = arg0;
         ({ client, client: client2 } = arg0);
         const configuration = client.getConfiguration();
         let flag = true;
@@ -6453,7 +6419,7 @@ let fn = () => {
           delete tmp2[tmp];
           delete tmp2[tmp];
           delete tmp2[tmp];
-          return fastlane.create(outer1_3({ platformOptions }, closure_0, metadata.metadata));
+          return fastlane.create(closure_1_3({ platformOptions }, closure_0, metadata.metadata));
         }).catch((message) => Promise.reject(new closure_0({ type: constants.FASTLANE_SDK_LOAD_ERROR.type, code: constants.FASTLANE_SDK_LOAD_ERROR.code, message: message.message })));
       });
     },
@@ -6461,18 +6427,18 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/basic-component-verification");
-      let closure_1 = global("./fastlane");
-      let closure_2 = global("../lib/create-assets-url");
-      let closure_3 = global("../lib/create-deferred-client");
+      closure_0 = global("../lib/basic-component-verification");
+      closure_1 = global("./fastlane");
+      closure_2 = global("../lib/create-assets-url");
+      closure_3 = global("../lib/create-deferred-client");
       const assign = global("../lib/assign").assign;
       const globalResult = global("@braintree/wrap-promise");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
+          closure_0 = client;
           const obj = { name: "fastlane", client: client.client, authorization: client.authorization };
           const verifyResult = closure_0.verify({ name: "fastlane", client: client.client, authorization: client.authorization });
-          return closure_0.verify({ name: "fastlane", client: client.client, authorization: client.authorization }).then(() => outer1_3.create({ authorization: client.authorization, client: client.client, assetsUrl: outer1_2.create(client.authorization), name: "fastlane" })).then((client) => outer1_1(outer1_4({ client, deviceData: client.deviceData }, client)));
+          return closure_0.verify({ name: "fastlane", client: client.client, authorization: client.authorization }).then(() => closure_1_3.create({ authorization: client.authorization, client: client.client, assetsUrl: closure_1_2.create(client.authorization), name: "fastlane" })).then((client) => closure_1_1(closure_1_4({ client, deviceData: client.deviceData }, client)));
         }),
         VERSION: "3.112.1"
       };
@@ -6496,18 +6462,18 @@ let fn = () => {
           obj = { _createPromise: global.createPromise, _client: global.client, _useDeferredClient: global.useDeferredClient, _googlePayVersion: tmp, _googleMerchantId: global.googleMerchantId };
           tmp = global.googlePayVersion || 1;
           if (obj._isUnsupportedGooglePayAPIVersion()) {
-            tmp2 = c5;
+            tmp2 = closure_5;
             obj = { code: null, message: null, type: null };
-            tmp3 = c6;
-            obj[0] = c6.GOOGLE_PAYMENT_UNSUPPORTED_VERSION.code;
+            tmp3 = closure_6;
+            obj[0] = closure_6.GOOGLE_PAYMENT_UNSUPPORTED_VERSION.code;
             str = "The Braintree SDK does not support Google Pay version ";
             str2 = ". Please upgrade the version of your Braintree SDK and contact support if this error persists.";
             obj[1] = `The Braintree SDK does not support Google Pay version ${obj._googlePayVersion}. Please upgrade the version of your Braintree SDK and contact support if this error persists.`;
-            obj[2] = c6.GOOGLE_PAYMENT_UNSUPPORTED_VERSION.type;
+            obj[2] = closure_6.GOOGLE_PAYMENT_UNSUPPORTED_VERSION.type;
             tmp4 = new.target;
             tmp5 = new.target;
             tmp6 = obj;
-            tmp7 = new c5(obj);
+            tmp7 = new closure_5(obj);
             tmp8 = tmp7;
             throw tmp7;
           } else {
@@ -6533,9 +6499,9 @@ let fn = () => {
         _getDefaultConfig() {
           self = this;
           if (!this._defaultConfig) {
-            tmp = c4;
+            tmp = closure_4;
             _client = self._client;
-            self._defaultConfig = c4(_client.getConfiguration(), self._googlePayVersion, self._googleMerchantId);
+            self._defaultConfig = closure_4(_client.getConfiguration(), self._googlePayVersion, self._googleMerchantId);
           }
           return self._defaultConfig;
         }
@@ -6548,7 +6514,7 @@ let fn = () => {
         }
         _createV2PaymentDataRequest(arg0) {
           _getDefaultConfigResult = this._getDefaultConfig();
-          self = _getDefaultConfigResult;
+          closure_0 = _getDefaultConfigResult;
           if (global.allowedPaymentMethods) {
             prop = global.allowedPaymentMethods;
             item = prop.forEach(() => { ... });
@@ -6579,7 +6545,7 @@ let fn = () => {
             str = tmp.transactionInfo.totalPrice;
             tmp.transactionInfo.totalPrice = str.toString();
           }
-          sendEventResult = c0.sendEvent(self._createPromise, `google-payment.v${_googlePayVersion}.createPaymentDataRequest`);
+          sendEventResult = closure_0.sendEvent(self._createPromise, `google-payment.v${_googlePayVersion}.createPaymentDataRequest`);
           return self[closure_8[_googlePayVersion]](tmp);
         }
         parseResponse(arg0) {
@@ -6590,43 +6556,43 @@ let fn = () => {
           return nextPromise.catch(() => { ... });
         }
         teardown() {
-          tmp = c2(this, c7(GooglePayment.prototype));
+          tmp = closure_2(this, closure_7(GooglePayment.prototype));
           return Promise.resolve();
         }
       }
-      let closure_0 = global("../lib/analytics");
+      closure_0 = global("../lib/analytics");
       const assign = global("../lib/assign").assign;
-      let closure_2 = global("../lib/convert-methods-to-error");
-      let closure_3 = global("../lib/find");
-      let closure_4 = global("../lib/generate-google-pay-configuration");
-      let closure_5 = global("../lib/braintree-error");
-      let closure_6 = global("./errors");
-      let closure_7 = global("../lib/methods");
-      let closure_8 = { 1: "_createV1PaymentDataRequest", 2: "_createV2PaymentDataRequest" };
+      closure_2 = global("../lib/convert-methods-to-error");
+      closure_3 = global("../lib/find");
+      closure_4 = global("../lib/generate-google-pay-configuration");
+      closure_5 = global("../lib/braintree-error");
+      closure_6 = global("./errors");
+      closure_7 = global("../lib/methods");
+      closure_8 = { 1: "_createV1PaymentDataRequest", 2: "_createV2PaymentDataRequest" };
       module.exports = global("@braintree/wrap-promise").wrapPrototype(GooglePayment);
     },
     { "../lib/analytics": 138, "../lib/assign": 140, "../lib/braintree-error": 143, "../lib/convert-methods-to-error": 146, "../lib/find": 156, "../lib/generate-google-pay-configuration": 168, "../lib/methods": 175, "./errors": 120, "@braintree/wrap-promise": 40 }
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./google-payment");
-      let closure_1 = global("../lib/braintree-error");
-      let closure_2 = global("../lib/create-assets-url");
-      let closure_3 = global("../lib/create-deferred-client");
-      let closure_4 = global("../lib/basic-component-verification");
-      let closure_5 = global("./errors");
+      closure_0 = global("./google-payment");
+      closure_1 = global("../lib/braintree-error");
+      closure_2 = global("../lib/create-assets-url");
+      closure_3 = global("../lib/create-deferred-client");
+      closure_4 = global("../lib/basic-component-verification");
+      closure_5 = global("./errors");
       const globalResult = global("@braintree/wrap-promise");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
+          closure_0 = client;
           return closure_4.verify({ name: "Google Pay", client: client.client, authorization: client.authorization }).then(() => {
-            let obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: outer1_2.create(client.authorization), name: "Google Pay" };
-            obj = outer1_3.create(obj);
+            let obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_2.create(client.authorization), name: "Google Pay" };
+            obj = closure_1_3.create(obj);
             const nextPromise = obj.then((client) => {
               let rejectResult = client;
               closure_0.client = client;
               if (!client.getConfiguration().gatewayConfiguration.androidPay) {
-                const tmp7 = new outer1_1(outer1_5.GOOGLE_PAYMENT_NOT_ENABLED);
+                const tmp7 = new closure_1_1(closure_1_5.GOOGLE_PAYMENT_NOT_ENABLED);
                 rejectResult = Promise.reject(tmp7);
               }
               return rejectResult;
@@ -6651,8 +6617,8 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../../lib/braintree-error");
-      let closure_1 = global("../shared/errors");
+      closure_0 = global("../../lib/braintree-error");
+      closure_1 = global("../shared/errors");
       const allowedAttributes = global("../shared/constants").allowedAttributes;
       module.exports = function attributeValidationError(key10009, str) {
         if (allowedAttributes.hasOwnProperty(key10009)) {
@@ -6696,8 +6662,8 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../shared/constants");
-      let closure_1 = global("../../lib/use-min");
+      closure_0 = global("../shared/constants");
+      closure_1 = global("../../lib/use-min");
       module.exports = function composeUrl(arg0, arg1, arg2) {
         const text = `${arg0}/web/${closure_0.VERSION}`;
         return text + "/html/hosted-fields-frame" + callback(arg2) + ".html#" + arg1;
@@ -6708,14 +6674,14 @@ let fn = () => {
   items = [
     (arg0, arg1, arg2) => {
       const navigationDirections = global("../shared/constants").navigationDirections;
-      let closure_1 = global("../shared/browser-detection");
-      let closure_2 = global("../shared/focus-intercept");
-      let closure_3 = global("../shared/find-parent-tags");
-      let closure_4 = ["INPUT", "SELECT", "TEXTAREA"];
-      let closure_5 = ["hidden", "button", "reset", "submit", "checkbox", "radio", "file"];
+      closure_1 = global("../shared/browser-detection");
+      closure_2 = global("../shared/focus-intercept");
+      closure_3 = global("../shared/find-parent-tags");
+      closure_4 = ["INPUT", "SELECT", "TEXTAREA"];
+      closure_5 = ["hidden", "button", "reset", "submit", "checkbox", "radio", "file"];
       module.exports = {
         removeExtraFocusElements(first, fn) {
-          let closure_0 = fn;
+          closure_0 = fn;
           const call = slice.call;
           const elements = first.elements;
           const arr = typeof call === "unknown" ? slice() : call(elements);
@@ -6787,7 +6753,7 @@ let fn = () => {
           const item = items.forEach((getAttribute) => {
             let matchFocusElementResult = getAttribute;
             if (getAttribute) {
-              matchFocusElementResult = outer1_2.matchFocusElement(getAttribute.getAttribute("id"));
+              matchFocusElementResult = closure_1_2.matchFocusElement(getAttribute.getAttribute("id"));
             }
             if (matchFocusElementResult) {
               callback(getAttribute.getAttribute("id"));
@@ -6795,12 +6761,12 @@ let fn = () => {
           });
         },
         createFocusChangeHandler(arg0, arg1) {
-          let closure_0 = arg0;
-          let closure_1 = arg1;
+          closure_0 = arg0;
+          closure_1 = arg1;
           return (direction) => {
             const element = document.getElementById(`bt-${direction.field}-${direction.direction}-${length}`);
             if (element) {
-              const first = outer1_3(element, "form")[0];
+              const first = closure_1_3(element, "form")[0];
               const _document = document;
               if (document.forms.length >= 1) {
                 if (first) {
@@ -6849,7 +6815,7 @@ let fn = () => {
         element.style.left = "-99999px !important";
         element.style.top = "-99999px !important";
         body.appendChild(element);
-        const allowedStyles = window.getComputedStyle(element);
+        allowedStyles = window.getComputedStyle(element);
         const item = allowedStyles.forEach((arg0) => {
           if (table[arg0]) {
             obj[arg0] = tmp;
@@ -6869,12 +6835,12 @@ let fn = () => {
           closure_0 = global;
           self = this;
           obj = {};
-          c4 = obj;
-          framebus = {};
+          closure_4 = obj;
+          closure_5 = {};
           items = [];
-          c6 = items;
-          tmp = c13();
-          c7 = tmp;
+          closure_6 = items;
+          tmp = closure_13();
+          closure_7 = tmp;
           sessionId = global.sessionId;
           this._merchantConfigurationOptions = closure_0({}, global);
           if (global.client) {
@@ -6883,16 +6849,16 @@ let fn = () => {
             assetsUrl = configuration.gatewayConfiguration.assetsUrl;
             isDebug = configuration.isDebug;
           } else {
-            tmp2 = f115969;
+            tmp2 = closure_1;
             tmp4 = globalThis;
             _Boolean = Boolean;
-            obj = f115969.create(global.authorization);
+            obj = closure_1.create(global.authorization);
             isDebug = Boolean(global.isDebug);
             assetsUrl = obj;
           }
           obj1 = { client: global.client, authorization: global.authorization, debug: isDebug, assetsUrl, name: "Hosted Fields", sessionId };
-          self._clientPromise = c6.create(obj1);
-          authorization = c8(assetsUrl, tmp, isDebug);
+          self._clientPromise = closure_6.create(obj1);
+          closure_2 = closure_8(assetsUrl, tmp, isDebug);
           if (global.fields) {
             tmp6 = globalThis;
             _Object = Object;
@@ -6915,15 +6881,15 @@ let fn = () => {
               self._fields = obj;
               obj2 = { fields: null, cards: null };
               obj2[0] = {};
-              tmp13 = c26;
+              tmp13 = closure_26;
               str = "";
-              obj2[1] = c26("");
+              obj2[1] = closure_26("");
               self._state = obj2;
-              tmp14 = framebus;
+              tmp14 = closure_5;
               obj3 = { channel: null, verifyDomain: null, targetFrames: null };
               obj3[0] = tmp;
-              tmp15 = authorization;
-              obj3[1] = authorization;
+              tmp15 = closure_2;
+              obj3[1] = closure_2;
               _window = window;
               items1 = [];
               items1[0] = window;
@@ -6931,13 +6897,13 @@ let fn = () => {
               tmp16 = new.target;
               tmp17 = new.target;
               tmp18 = obj3;
-              tmp19 = new framebus(obj3);
+              tmp19 = new closure_5(obj3);
               tmp20 = tmp19;
               self._bus = tmp19;
               _destructor = self._destructor;
               result = _destructor.registerFunctionForTeardown(() => { ... });
-              tmp22 = c19;
-              sendEvent = c19.sendEvent;
+              tmp22 = closure_19;
+              sendEvent = closure_19.sendEvent;
               _clientPromise = self._clientPromise;
               if (global.client) {
                 str3 = "custom.hosted-fields.initialized";
@@ -6959,11 +6925,11 @@ let fn = () => {
               tmp27 = events;
               onResult = _bus.on(events.REMOVE_FOCUS_INTERCEPTS, () => { ... });
               _bus2 = self._bus;
-              tmp29 = c28;
+              tmp29 = closure_28;
               obj4 = { onRemoveFocusIntercepts: null, onTriggerInputFocus: null };
               obj4[0] = function onRemoveFocusIntercepts() { ... };
               obj4[1] = function onTriggerInputFocus() { ... };
-              onResult1 = _bus2.on(events.TRIGGER_FOCUS_CHANGE, c28.createFocusChangeHandler(tmp, obj4));
+              onResult1 = _bus2.on(events.TRIGGER_FOCUS_CHANGE, closure_28.createFocusChangeHandler(tmp, obj4));
               _bus3 = self._bus;
               onResult2 = _bus3.on(events.READY_FOR_CLIENT, () => { ... });
               _bus4 = self._bus;
@@ -6972,7 +6938,7 @@ let fn = () => {
               onResult4 = _bus5.on(events.BIN_AVAILABLE, () => { ... });
               _setTimeout = setTimeout;
               tmp34 = INTEGRATION_TIMEOUT_MS;
-              f115969 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
+              closure_1 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
               _Promise = Promise;
               allPromises = Promise.all(items);
               nextPromise = allPromises.then(() => { ... });
@@ -6991,15 +6957,15 @@ let fn = () => {
               return;
             }
           }
-          obj5 = { type: c25.INSTANTIATION_OPTION_REQUIRED.type, code: c25.INSTANTIATION_OPTION_REQUIRED.code, message: "options.fields is required when instantiating Hosted Fields." };
-          tmp41 = new c7(obj5);
+          obj5 = { type: closure_25.INSTANTIATION_OPTION_REQUIRED.type, code: closure_25.INSTANTIATION_OPTION_REQUIRED.code, message: "options.fields is required when instantiating Hosted Fields." };
+          tmp41 = new closure_7(obj5);
           throw tmp41;
         }
         _setupLabelFocus(arg0, arg1) {
           closure_0 = global;
           triggerFocus = function triggerFocus() { ... };
           self = this;
-          obj = c23(module);
+          obj = closure_23(module);
           if (null != module.id) {
             tmp11 = globalThis;
             _Array2 = Array;
@@ -7010,28 +6976,28 @@ let fn = () => {
             str4 = "\"]";
             elements = document.querySelectorAll(`label[for="${module.id}"]`);
             obj2 = typeof call2 === "unknown" ? slice2() : call2(elements);
-            call = obj2;
+            closure_1 = obj2;
             _document = document;
             tmp = obj2;
             if (obj === document) {
-              tmp5 = c14;
+              tmp5 = closure_14;
               str = "label";
-              combined = obj2.concat(c14(module, "label"));
-              call = combined;
+              combined = obj2.concat(closure_14(module, "label"));
+              closure_1 = combined;
               found = combined.filter(() => { ... });
-              call = found;
+              closure_1 = found;
               num = 0;
-              c2 = 0;
+              closure_2 = 0;
               flag = false;
               str2 = "click";
               if (0 < found.length) {
                 do {
-                  tmp6 = c2;
-                  obj3 = found[c2];
+                  tmp6 = closure_2;
+                  obj3 = found[closure_2];
                   listener = obj3.addEventListener("click", triggerFocus, false);
-                  tmp8 = c2;
-                  sum = c2 + 1;
-                  c2 = sum;
+                  tmp8 = closure_2;
+                  sum = closure_2 + 1;
+                  closure_2 = sum;
                   length = found.length;
                 } while (sum < length);
               }
@@ -7043,7 +7009,7 @@ let fn = () => {
               call = slice.call;
               elements1 = obj.querySelectorAll(`label[for="${module.id}"]`);
               combined1 = obj2.concat(typeof call === "unknown" ? slice() : call(elements1));
-              call = combined1;
+              closure_1 = combined1;
               tmp4 = combined1;
             }
           }
@@ -7061,13 +7027,13 @@ let fn = () => {
             tmp7 = events;
             emitResult = _bus2.emit(events.REMOVE_FOCUS_INTERCEPTS);
           } else {
-            tmp = c14;
+            tmp = closure_14;
             str = "form";
-            first = c14(self._getAnyFieldContainer(), "form")[0];
+            first = closure_14(self._getAnyFieldContainer(), "form")[0];
             if (first) {
-              tmp5 = c28;
+              tmp5 = closure_28;
               fn = () => { ... };
-              result = c28.removeExtraFocusElements(first, fn.bind(self));
+              result = closure_28.removeExtraFocusElements(first, fn.bind(self));
             } else {
               _bus = self._bus;
               tmp3 = events;
@@ -7127,32 +7093,32 @@ let fn = () => {
               obj[1] = module;
               emitResult = _bus.emit(events.ADD_CLASS, obj);
             } else {
-              tmp7 = c7;
+              tmp7 = closure_7;
               obj1 = { type: null, code: null, message: null };
-              tmp8 = c11;
-              obj1[0] = c11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
-              obj1[1] = c11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
+              tmp8 = closure_11;
+              obj1[0] = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
+              obj1[1] = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
               str3 = "Cannot add class to \"";
               str4 = "\" field because it is not part of the current Hosted Fields options.";
               obj1[2] = `Cannot add class to "${global}" field because it is not part of the current Hosted Fields options.`;
               tmp9 = new.target;
               tmp10 = new.target;
               tmp11 = obj1;
-              tmp6 = new c7(obj1);
+              tmp6 = new closure_7(obj1);
             }
           } else {
-            tmp = c7;
+            tmp = closure_7;
             obj = { type: null, code: null, message: null };
-            tmp2 = c11;
-            obj[0] = c11.HOSTED_FIELDS_FIELD_INVALID.type;
-            obj[1] = c11.HOSTED_FIELDS_FIELD_INVALID.code;
+            tmp2 = closure_11;
+            obj[0] = closure_11.HOSTED_FIELDS_FIELD_INVALID.type;
+            obj[1] = closure_11.HOSTED_FIELDS_FIELD_INVALID.code;
             str = "\"";
             str2 = "\" is not a valid field. You must use a valid field option when adding a class.";
             obj[2] = `"${global}" is not a valid field. You must use a valid field option when adding a class.`;
             tmp3 = new.target;
             tmp4 = new.target;
             tmp5 = obj;
-            tmp6 = new c7(obj);
+            tmp6 = new closure_7(obj);
           }
           _Promise = Promise;
           if (tmp6) {
@@ -7175,32 +7141,32 @@ let fn = () => {
               obj[1] = module;
               emitResult = _bus.emit(events.REMOVE_CLASS, obj);
             } else {
-              tmp7 = c7;
+              tmp7 = closure_7;
               obj1 = { type: null, code: null, message: null };
-              tmp8 = c11;
-              obj1[0] = c11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
-              obj1[1] = c11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
+              tmp8 = closure_11;
+              obj1[0] = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
+              obj1[1] = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
               str3 = "Cannot remove class from \"";
               str4 = "\" field because it is not part of the current Hosted Fields options.";
               obj1[2] = `Cannot remove class from "${global}" field because it is not part of the current Hosted Fields options.`;
               tmp9 = new.target;
               tmp10 = new.target;
               tmp11 = obj1;
-              tmp6 = new c7(obj1);
+              tmp6 = new closure_7(obj1);
             }
           } else {
-            tmp = c7;
+            tmp = closure_7;
             obj = { type: null, code: null, message: null };
-            tmp2 = c11;
-            obj[0] = c11.HOSTED_FIELDS_FIELD_INVALID.type;
-            obj[1] = c11.HOSTED_FIELDS_FIELD_INVALID.code;
+            tmp2 = closure_11;
+            obj[0] = closure_11.HOSTED_FIELDS_FIELD_INVALID.type;
+            obj[1] = closure_11.HOSTED_FIELDS_FIELD_INVALID.code;
             str = "\"";
             str2 = "\" is not a valid field. You must use a valid field option when removing a class.";
             obj[2] = `"${global}" is not a valid field. You must use a valid field option when removing a class.`;
             tmp3 = new.target;
             tmp4 = new.target;
             tmp5 = obj;
-            tmp6 = new c7(obj);
+            tmp6 = new closure_7(obj);
           }
           _Promise = Promise;
           if (tmp6) {
@@ -7215,8 +7181,8 @@ let fn = () => {
             _fields = this._fields;
             self = this;
             if (_fields.hasOwnProperty(global.field)) {
-              tmp12 = c27;
-              tmp6 = c27(global.attribute, global.value);
+              tmp12 = closure_27;
+              tmp6 = closure_27(global.attribute, global.value);
               if (!tmp6) {
                 _bus = self._bus;
                 tmp13 = events;
@@ -7225,32 +7191,32 @@ let fn = () => {
                 emitResult = _bus.emit(events.SET_ATTRIBUTE, obj);
               }
             } else {
-              tmp7 = c7;
+              tmp7 = closure_7;
               obj1 = { type: null, code: null, message: null };
-              tmp8 = c11;
-              obj1[0] = c11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
-              obj1[1] = c11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
+              tmp8 = closure_11;
+              obj1[0] = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
+              obj1[1] = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
               str3 = "Cannot set attribute for \"";
               str4 = "\" field because it is not part of the current Hosted Fields options.";
               obj1[2] = `Cannot set attribute for "${global.field}" field because it is not part of the current Hosted Fields options.`;
               tmp9 = new.target;
               tmp10 = new.target;
               tmp11 = obj1;
-              tmp6 = new c7(obj1);
+              tmp6 = new closure_7(obj1);
             }
           } else {
-            tmp = c7;
+            tmp = closure_7;
             obj = { type: null, code: null, message: null };
-            tmp2 = c11;
-            obj[0] = c11.HOSTED_FIELDS_FIELD_INVALID.type;
-            obj[1] = c11.HOSTED_FIELDS_FIELD_INVALID.code;
+            tmp2 = closure_11;
+            obj[0] = closure_11.HOSTED_FIELDS_FIELD_INVALID.type;
+            obj[1] = closure_11.HOSTED_FIELDS_FIELD_INVALID.code;
             str = "\"";
             str2 = "\" is not a valid field. You must use a valid field option when setting an attribute.";
             obj[2] = `"${global.field}" is not a valid field. You must use a valid field option when setting an attribute.`;
             tmp3 = new.target;
             tmp4 = new.target;
             tmp5 = obj;
-            tmp6 = new c7(obj);
+            tmp6 = new closure_7(obj);
           }
           _Promise = Promise;
           if (tmp6) {
@@ -7272,16 +7238,16 @@ let fn = () => {
           }
           _Promise = Promise;
           if (str) {
-            tmp4 = c7;
+            tmp4 = closure_7;
             obj = { type: null, code: null, message: null };
-            tmp5 = c11;
-            obj[0] = c11.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.type;
-            obj[1] = c11.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.code;
+            tmp5 = closure_11;
+            obj[0] = closure_11.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.type;
+            obj[1] = closure_11.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.code;
             obj[2] = str;
             tmp6 = new.target;
             tmp7 = new.target;
             tmp8 = obj;
-            tmp9 = new c7(obj);
+            tmp9 = new closure_7(obj);
             tmp10 = tmp9;
             rejectResult = _Promise.reject(tmp9);
           } else {
@@ -7302,8 +7268,8 @@ let fn = () => {
             _fields = this._fields;
             self = this;
             if (_fields.hasOwnProperty(global.field)) {
-              tmp12 = c27;
-              tmp6 = c27(global.attribute);
+              tmp12 = closure_27;
+              tmp6 = closure_27(global.attribute);
               if (!tmp6) {
                 _bus = self._bus;
                 tmp13 = events;
@@ -7312,32 +7278,32 @@ let fn = () => {
                 emitResult = _bus.emit(events.REMOVE_ATTRIBUTE, obj);
               }
             } else {
-              tmp7 = c7;
+              tmp7 = closure_7;
               obj1 = { type: null, code: null, message: null };
-              tmp8 = c11;
-              obj1[0] = c11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
-              obj1[1] = c11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
+              tmp8 = closure_11;
+              obj1[0] = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
+              obj1[1] = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
               str3 = "Cannot remove attribute for \"";
               str4 = "\" field because it is not part of the current Hosted Fields options.";
               obj1[2] = `Cannot remove attribute for "${global.field}" field because it is not part of the current Hosted Fields options.`;
               tmp9 = new.target;
               tmp10 = new.target;
               tmp11 = obj1;
-              tmp6 = new c7(obj1);
+              tmp6 = new closure_7(obj1);
             }
           } else {
-            tmp = c7;
+            tmp = closure_7;
             obj = { type: null, code: null, message: null };
-            tmp2 = c11;
-            obj[0] = c11.HOSTED_FIELDS_FIELD_INVALID.type;
-            obj[1] = c11.HOSTED_FIELDS_FIELD_INVALID.code;
+            tmp2 = closure_11;
+            obj[0] = closure_11.HOSTED_FIELDS_FIELD_INVALID.type;
+            obj[1] = closure_11.HOSTED_FIELDS_FIELD_INVALID.code;
             str = "\"";
             str2 = "\" is not a valid field. You must use a valid field option when removing an attribute.";
             obj[2] = `"${global.field}" is not a valid field. You must use a valid field option when removing an attribute.`;
             tmp3 = new.target;
             tmp4 = new.target;
             tmp5 = obj;
-            tmp6 = new c7(obj);
+            tmp6 = new closure_7(obj);
           }
           _Promise = Promise;
           if (tmp6) {
@@ -7362,32 +7328,32 @@ let fn = () => {
               obj[0] = global;
               emitResult = _bus.emit(events.CLEAR_FIELD, obj);
             } else {
-              tmp7 = c7;
+              tmp7 = closure_7;
               obj1 = { type: null, code: null, message: null };
-              tmp8 = c11;
-              obj1[0] = c11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
-              obj1[1] = c11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
+              tmp8 = closure_11;
+              obj1[0] = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
+              obj1[1] = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
               str3 = "Cannot clear \"";
               str4 = "\" field because it is not part of the current Hosted Fields options.";
               obj1[2] = `Cannot clear "${global}" field because it is not part of the current Hosted Fields options.`;
               tmp9 = new.target;
               tmp10 = new.target;
               tmp11 = obj1;
-              tmp6 = new c7(obj1);
+              tmp6 = new closure_7(obj1);
             }
           } else {
-            tmp = c7;
+            tmp = closure_7;
             obj = { type: null, code: null, message: null };
-            tmp2 = c11;
-            obj[0] = c11.HOSTED_FIELDS_FIELD_INVALID.type;
-            obj[1] = c11.HOSTED_FIELDS_FIELD_INVALID.code;
+            tmp2 = closure_11;
+            obj[0] = closure_11.HOSTED_FIELDS_FIELD_INVALID.type;
+            obj[1] = closure_11.HOSTED_FIELDS_FIELD_INVALID.code;
             str = "\"";
             str2 = "\" is not a valid field. You must use a valid field option when clearing a field.";
             obj[2] = `"${global}" is not a valid field. You must use a valid field option when clearing a field.`;
             tmp3 = new.target;
             tmp4 = new.target;
             tmp5 = obj;
-            tmp6 = new c7(obj);
+            tmp6 = new closure_7(obj);
           }
           _Promise = Promise;
           if (tmp6) {
@@ -7400,7 +7366,7 @@ let fn = () => {
         focus(arg0) {
           self = this;
           tmp = this._fields[global];
-          assign = tmp;
+          closure_0 = tmp;
           if (allowedFields.hasOwnProperty(global)) {
             _fields = self._fields;
             if (_fields.hasOwnProperty(global)) {
@@ -7411,40 +7377,40 @@ let fn = () => {
               obj = { field: null };
               obj[0] = global;
               emitResult = _bus.emit(events.TRIGGER_INPUT_FOCUS, obj);
-              tmp16 = c15;
-              if (c15.isIos()) {
+              tmp16 = closure_15;
+              if (closure_15.isIos()) {
                 tmp17 = globalThis;
                 _setTimeout = setTimeout;
                 num = 5;
                 timerId = setTimeout(() => { ... }, 5);
               }
             } else {
-              tmp8 = c7;
+              tmp8 = closure_7;
               obj1 = { type: null, code: null, message: null };
-              tmp9 = c11;
-              obj1[0] = c11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
-              obj1[1] = c11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
+              tmp9 = closure_11;
+              obj1[0] = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
+              obj1[1] = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
               str3 = "Cannot focus \"";
               str4 = "\" field because it is not part of the current Hosted Fields options.";
               obj1[2] = `Cannot focus "${global}" field because it is not part of the current Hosted Fields options.`;
               tmp10 = new.target;
               tmp11 = new.target;
               tmp12 = obj1;
-              tmp7 = new c7(obj1);
+              tmp7 = new closure_7(obj1);
             }
           } else {
-            tmp2 = c7;
+            tmp2 = closure_7;
             obj = { type: null, code: null, message: null };
-            tmp3 = c11;
-            obj[0] = c11.HOSTED_FIELDS_FIELD_INVALID.type;
-            obj[1] = c11.HOSTED_FIELDS_FIELD_INVALID.code;
+            tmp3 = closure_11;
+            obj[0] = closure_11.HOSTED_FIELDS_FIELD_INVALID.type;
+            obj[1] = closure_11.HOSTED_FIELDS_FIELD_INVALID.code;
             str = "\"";
             str2 = "\" is not a valid field. You must use a valid field option when focusing a field.";
             obj[2] = `"${global}" is not a valid field. You must use a valid field option when focusing a field.`;
             tmp4 = new.target;
             tmp5 = new.target;
             tmp6 = obj;
-            tmp7 = new c7(obj);
+            tmp7 = new closure_7(obj);
           }
           _Promise = Promise;
           if (tmp7) {
@@ -7458,36 +7424,36 @@ let fn = () => {
           return this._state;
         }
       }
-      let assign = global("../../lib/assign").assign;
-      let closure_1 = global("../../lib/create-assets-url");
-      let closure_2 = global("../../lib/is-verified-domain");
-      let closure_3 = global("../../lib/destructor");
-      let closure_4 = global("@braintree/iframer");
-      let closure_5 = global("framebus");
-      let closure_6 = global("../../lib/create-deferred-client");
-      let closure_7 = global("../../lib/braintree-error");
-      let closure_8 = global("./compose-url");
-      let closure_9 = global("./get-styles-from-class");
+      const assign = global("../../lib/assign").assign;
+      closure_1 = global("../../lib/create-assets-url");
+      closure_2 = global("../../lib/is-verified-domain");
+      closure_3 = global("../../lib/destructor");
+      closure_4 = global("@braintree/iframer");
+      closure_5 = global("framebus");
+      closure_6 = global("../../lib/create-deferred-client");
+      closure_7 = global("../../lib/braintree-error");
+      closure_8 = global("./compose-url");
+      closure_9 = global("./get-styles-from-class");
       const globalResult = global("../shared/constants");
-      let closure_10 = globalResult;
-      let closure_11 = global("../shared/errors");
+      closure_10 = globalResult;
+      closure_11 = global("../shared/errors");
       const INTEGRATION_TIMEOUT_MS = global("../../lib/constants").INTEGRATION_TIMEOUT_MS;
-      let closure_13 = global("@braintree/uuid");
-      let closure_14 = global("../shared/find-parent-tags");
-      let closure_15 = global("../shared/browser-detection");
+      closure_13 = global("@braintree/uuid");
+      closure_14 = global("../shared/find-parent-tags");
+      closure_15 = global("../shared/browser-detection");
       const events = globalResult.events;
       const globalResult1 = global("@braintree/event-emitter");
-      let closure_18 = global("./inject-frame");
-      let closure_19 = global("../../lib/analytics");
+      closure_18 = global("./inject-frame");
+      closure_19 = global("../../lib/analytics");
       let allowedFields = globalResult.allowedFields;
-      let closure_21 = global("../../lib/methods");
-      let closure_22 = global("../../lib/shadow");
-      let closure_23 = global("../../lib/find-root-node");
-      let closure_24 = global("../../lib/convert-methods-to-error");
-      let closure_25 = global("../../lib/errors");
-      let closure_26 = global("../shared/get-card-types");
-      let closure_27 = global("./attribute-validation-error");
-      let closure_28 = global("./focus-change");
+      closure_21 = global("../../lib/methods");
+      closure_22 = global("../../lib/shadow");
+      closure_23 = global("../../lib/find-root-node");
+      closure_24 = global("../../lib/convert-methods-to-error");
+      closure_25 = global("../../lib/errors");
+      closure_26 = global("../shared/get-card-types");
+      closure_27 = global("./attribute-validation-error");
+      closure_28 = global("./focus-change");
       const destroy = global("../shared/focus-intercept").destroy;
       const child = globalResult1.createChild(HostedFields);
       module.exports = global("@braintree/wrap-promise").wrapPrototype(HostedFields);
@@ -7496,7 +7462,7 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../shared/focus-intercept");
+      closure_0 = global("../shared/focus-intercept");
       const navigationDirections = global("../shared/constants").navigationDirections;
       module.exports = function injectFrame(arg0, getAttribute, appendChild) {
         const attr = getAttribute.getAttribute("type");
@@ -7517,23 +7483,24 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./external/hosted-fields");
-      let closure_1 = global("../lib/basic-component-verification");
-      let closure_2 = global("./shared/errors");
+      closure_0 = global("./external/hosted-fields");
+      closure_1 = global("../lib/basic-component-verification");
+      closure_2 = global("./shared/errors");
       const globalResult = global("restricted-input/supports-input-formatting");
-      let closure_3 = global("../lib/braintree-error");
+      closure_3 = global("../lib/braintree-error");
       const globalResult1 = global("@braintree/wrap-promise");
       module.exports = {
         supportsInputFormatting: globalResult,
         create: global("@braintree/wrap-promise")(function create(authorization) {
-          let closure_0 = authorization;
+          closure_0 = authorization;
           return closure_1.verify({ name: "Hosted Fields", authorization: authorization.authorization, client: authorization.client }).then(() => {
             closure_0 = new closure_0(closure_0);
             const tmp = new closure_0(closure_0);
             return new Promise((arg0, arg1) => {
-              let closure_1 = arg1;
-              arg0.on("ready", () => { ... });
-              arg0.on("timeout", () => { ... });
+              closure_0 = arg0;
+              closure_1 = arg1;
+              closure_0.on("ready", () => { ... });
+              closure_0.on("timeout", () => { ... });
             });
           });
         }),
@@ -7547,7 +7514,7 @@ let fn = () => {
       const globalResult = global("@braintree/browser-detection/is-android");
       const globalResult1 = global("@braintree/browser-detection/is-chrome-os");
       const globalResult2 = global("@braintree/browser-detection/is-ios");
-      let closure_3 = global("@braintree/browser-detection/is-chrome");
+      closure_3 = global("@braintree/browser-detection/is-chrome");
       module.exports = {
         isAndroid: globalResult,
         isChromeOS: globalResult1,
@@ -7622,13 +7589,13 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./browser-detection");
+      closure_0 = global("./browser-detection");
       const globalResult = global("./constants");
-      let closure_1 = Object.keys(globalResult.allowedFields);
+      closure_1 = Object.keys(globalResult.allowedFields);
       const navigationDirections = globalResult.navigationDirections;
       const obj = {
         generate(arg0, arg1, arg2, arg3) {
-          let closure_0 = arg3;
+          closure_0 = arg3;
           const element = <input />;
           if (!closure_0.hasSoftwareKeyboard()) {
             if (!obj2.isFirefox()) {
@@ -7711,7 +7678,7 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("credit-card-type");
+      closure_0 = global("credit-card-type");
       module.exports = (arg0) => {
         const arr = callback(arg0);
         const item = arr.forEach((type) => {
@@ -7751,9 +7718,9 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./create-authorization-data");
-      let closure_1 = global("./json-clone");
-      let closure_2 = global("./constants");
+      closure_0 = global("./create-authorization-data");
+      closure_1 = global("./json-clone");
+      closure_2 = global("./constants");
       module.exports = {
         addMetadata(_configuration, data) {
           if (data) {
@@ -7810,13 +7777,13 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./constants");
-      let closure_1 = global("./add-metadata");
+      closure_0 = global("./constants");
+      closure_1 = global("./add-metadata");
       module.exports = {
         sendEvent: function sendPaypalEvent(arg0, arg1, arg2) {
-          let closure_0 = arg1;
-          let closure_1 = arg2;
-          let closure_2 = Date.now();
+          closure_0 = arg1;
+          closure_1 = arg2;
+          closure_2 = Date.now();
           const resolved = Promise.resolve(arg0);
           return resolved.then((getConfiguration) => {
             const sum = constants.ANALYTICS_PREFIX + constants;
@@ -7884,14 +7851,11 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./braintree-error");
-      let closure_1 = global("./errors");
-      let c2 = "3.112.1";
+      closure_0 = global("./braintree-error");
+      closure_1 = global("./errors");
+      c2 = "3.112.1";
       module.exports = {
         verify: function basicComponentVerification(arg0) {
-          let authorization;
-          let client;
-          let name;
           if (arg0) {
             ({ name, client, authorization } = arg0);
             if (!client) {
@@ -7929,21 +7893,21 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./once");
+      closure_0 = global("./once");
       module.exports = (arg0, arg1) => {
         let length = arg0.length;
         function finish(arg0) {
           if (arg0) {
-            tmp(arg0);
+            callback(arg0);
           } else {
             const diff = length - 1;
             if (0 === diff) {
-              tmp(null);
+              callback(null);
             }
           }
         }
         const tmp = length(arg1);
-        let closure_1 = tmp;
+        closure_1 = tmp;
         if (0 !== length) {
           for (let num2 = 0; num2 < length; num2 = num2 + 1) {
             let arr = arg0[num2];
@@ -8036,7 +8000,7 @@ let fn = () => {
   items = [
     (arg0, arg1, arg2) => {
       module.exports = function camelCaseToSnakeCase(arr) {
-        let closure_0 = arr;
+        closure_0 = arr;
         if (null === arr) {
           let reduced = null;
           reduced = null;
@@ -8046,7 +8010,7 @@ let fn = () => {
             const items = [];
             reduced = items;
             const item = arr.forEach((arr) => {
-              let closure_0 = arr;
+              closure_0 = arr;
               let reduced;
               if (null === arr) {
                 reduced = null;
@@ -8054,10 +8018,10 @@ let fn = () => {
               } else {
                 const _Array = Array;
                 if (Array.isArray(arr)) {
-                  const items = [];
+                  items = [];
                   reduced = items;
                   const item = arr.forEach((arr) => {
-                    let closure_0 = arr;
+                    closure_0 = arr;
                     let reduced;
                     if (null === arr) {
                       reduced = null;
@@ -8065,7 +8029,7 @@ let fn = () => {
                     } else {
                       const _Array = Array;
                       if (Array.isArray(arr)) {
-                        const items = [];
+                        items = [];
                         reduced = items;
                         const item = arr.forEach(() => { ... });
                         reduced = items;
@@ -8091,7 +8055,7 @@ let fn = () => {
                       let formatted = str.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
                       if (typeof arr[str] === "object") {
                         arr = tmp2[str];
-                        let items;
+                        items = undefined;
                         if (null === arr) {
                           items = null;
                           let reduced = null;
@@ -8132,7 +8096,7 @@ let fn = () => {
                 let formatted = str.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
                 if (typeof arr[str] === "object") {
                   arr = tmp2[str];
-                  let items;
+                  items = undefined;
                   if (null === arr) {
                     items = null;
                     let reduced = null;
@@ -8149,7 +8113,7 @@ let fn = () => {
                           let formatted = str.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
                           if (typeof arr[str] === "object") {
                             arr = tmp2[str];
-                            let items;
+                            items = undefined;
                             if (null === arr) {
                               items = null;
                               let reduced = null;
@@ -8180,7 +8144,7 @@ let fn = () => {
                   }
                   items = [];
                   let item = arr.forEach((arr) => {
-                    let closure_0 = arr;
+                    closure_0 = arr;
                     let reduced;
                     if (null === arr) {
                       reduced = null;
@@ -8188,7 +8152,7 @@ let fn = () => {
                     } else {
                       const _Array = Array;
                       if (Array.isArray(arr)) {
-                        const items = [];
+                        items = [];
                         reduced = items;
                         const item = arr.forEach(() => { ... });
                         reduced = items;
@@ -8225,14 +8189,14 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./braintree-error");
-      let closure_1 = global("./errors");
+      closure_0 = global("./braintree-error");
+      closure_1 = global("./errors");
       module.exports = (arg0, arr) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         const item = arr.forEach((arg0) => {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           closure_0[arg0] = () => {
-            throw new closure_0({ type: outer1_1.METHOD_CALLED_AFTER_TEARDOWN.type, code: outer1_1.METHOD_CALLED_AFTER_TEARDOWN.code, message: `${closure_0} cannot be called after teardown.` });
+            throw new closure_0({ type: closure_1_1.METHOD_CALLED_AFTER_TEARDOWN.type, code: closure_1_1.METHOD_CALLED_AFTER_TEARDOWN.code, message: `${closure_0} cannot be called after teardown.` });
           };
         });
       };
@@ -8241,7 +8205,7 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./braintree-error");
+      closure_0 = global("./braintree-error");
       module.exports = function convertToBraintreeError(arg0, arg1) {
         let tmp = arg0;
         if (!(arg0 instanceof closure_0)) {
@@ -8293,13 +8257,13 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./braintree-error");
-      let closure_1 = global("./assets");
-      let closure_2 = global("./errors");
-      let c3 = "3.112.1";
+      closure_0 = global("./braintree-error");
+      closure_1 = global("./assets");
+      closure_2 = global("./errors");
+      c3 = "3.112.1";
       module.exports = {
         create: function createDeferredClient(client) {
-          let closure_0 = client;
+          closure_0 = client;
           let resolved = Promise.resolve();
           if (client.client) {
             let resolved1 = Promise.resolve(client.client);
@@ -8321,16 +8285,17 @@ let fn = () => {
               });
             }
             resolved1 = resolved.then(() => {
-              if (window.braintree.client.VERSION !== outer1_3) {
+              if (window.braintree.client.VERSION !== closure_1_3) {
                 let obj = { type: null, code: null, message: null };
-                obj[0] = outer1_2.INCOMPATIBLE_VERSIONS.type;
-                obj[1] = outer1_2.INCOMPATIBLE_VERSIONS.code;
+                obj[0] = closure_1_2.INCOMPATIBLE_VERSIONS.type;
+                obj[1] = closure_1_2.INCOMPATIBLE_VERSIONS.code;
                 const _window2 = window;
                 obj[2] = `Client (version ${window.braintree.client.VERSION}) and ${closure_0.name} (version ${tmp}) components must be from the same SDK version.`;
                 const tmp10 = new name(obj);
                 let rejectResult = Promise.reject(tmp10);
               } else {
                 const _window = window;
+                client = window.braintree.client;
                 obj = { authorization: null, debug: null };
                 ({ authorization: obj[0], debug: obj[1] } = name);
                 rejectResult = client.create(obj);
@@ -8347,9 +8312,9 @@ let fn = () => {
   items = [
     (arg0, arg1, arg2) => {
       module.exports = (arg0) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         return () => {
-          let closure_0 = arguments;
+          closure_0 = arguments;
           const timerId = setTimeout(() => {
             callback.apply(null, callback);
           }, 1);
@@ -8394,7 +8359,7 @@ let fn = () => {
           return;
         }
       }
-      let closure_0 = global("./batch-execute-functions");
+      closure_0 = global("./batch-execute-functions");
       module.exports = Destructor;
     },
     { "./batch-execute-functions": 142 }
@@ -8475,19 +8440,19 @@ let fn = () => {
         constructor(arg0) {
           closure_0 = global;
           if (global) {
-            tmp6 = c13;
-            item = c13.forEach((key10009) => {
+            tmp6 = closure_13;
+            item = closure_13.forEach((key10009) => {
               if (!name.hasOwnProperty(key10009)) {
                 const _Error = Error;
-                const error = new Error("A valid frame " + key10009 + " must be provided");
+                error = new Error("A valid frame " + key10009 + " must be provided");
                 throw error;
               }
             });
             obj = /^[\w_]+$/;
             if (obj.test(global.name)) {
               self = this;
-              tmp13 = c7;
-              str3 = c7();
+              tmp13 = closure_7;
+              str3 = closure_7();
               str4 = "";
               this._serviceId = str3.replace(/-/g, "");
               obj = { name: null, dispatchFrameUrl: null, openFrameUrl: null, height: null, width: null, top: null, left: null };
@@ -8496,13 +8461,13 @@ let fn = () => {
               ({ dispatchFrameUrl: obj2[1], openFrameUrl: obj2[2], height: obj2[3], width: obj2[4], top: obj2[5], left: obj2[6] } = global);
               this._options = obj;
               self.state = global.state || {};
-              tmp14 = framebus;
+              tmp14 = closure_3;
               obj1 = { channel: null };
               obj1[0] = self._serviceId;
               tmp15 = new.target;
               tmp16 = new.target;
               tmp17 = obj1;
-              tmp18 = new framebus(obj1);
+              tmp18 = new closure_3(obj1);
               tmp19 = tmp18;
               self._bus = tmp18;
               _setBusEventsResult = self._setBusEvents();
@@ -8533,19 +8498,19 @@ let fn = () => {
           fn = function() {
             callback();
             const _bus = this._bus;
-            _bus.off(outer1_4.DISPATCH_FRAME_READY, closure_1);
+            _bus.off(closure_1_4.DISPATCH_FRAME_READY, closure_1);
           };
           bindResult = fn.bind(this);
-          c1 = bindResult;
+          closure_1 = bindResult;
           _bus = this._bus;
-          onResult = _bus.on(c4.DISPATCH_FRAME_READY, bindResult);
+          onResult = _bus.on(closure_4.DISPATCH_FRAME_READY, bindResult);
           _writeDispatchFrameResult = this._writeDispatchFrame();
           return;
         }
         _writeDispatchFrame() {
-          text = `${c6.DISPATCH_FRAME_NAME}_${this._serviceId}`;
-          obj = { "aria-hidden": true, name: text, title: text, src: this._options.dispatchFrameUrl, class: c6.DISPATCH_FRAME_CLASS, height: 0, width: 0, style: { position: "absolute", left: "-9999px" } };
-          this._dispatchFrame = c8(obj);
+          text = `${closure_6.DISPATCH_FRAME_NAME}_${this._serviceId}`;
+          obj = { "aria-hidden": true, name: text, title: text, src: this._options.dispatchFrameUrl, class: closure_6.DISPATCH_FRAME_CLASS, height: 0, width: 0, style: { position: "absolute", left: "-9999px" } };
+          this._dispatchFrame = closure_8(obj);
           body = document.body;
           appendChildResult = body.appendChild(this._dispatchFrame);
           return;
@@ -8553,8 +8518,6 @@ let fn = () => {
         _setBusEvents() {
           _bus = this._bus;
           fn = function(arg0, arg1) {
-            let err;
-            let payload;
             const self = this;
             if (this._onCompleteCallback) {
               const call = _onCompleteCallback.call;
@@ -8572,12 +8535,12 @@ let fn = () => {
               arg1();
             }
           };
-          onResult = _bus.on(c4.DISPATCH_FRAME_REPORT, fn.bind(this));
+          onResult = _bus.on(closure_4.DISPATCH_FRAME_REPORT, fn.bind(this));
           _bus2 = this._bus;
           fn2 = function(arg0) {
             arg0(this.state);
           };
-          onResult1 = _bus2.on(c12, fn2.bind(this));
+          onResult1 = _bus2.on(closure_12, fn2.bind(this));
           return;
         }
         open(arg0, arg1) {
@@ -8589,7 +8552,7 @@ let fn = () => {
           this._frame = this._getFrameForEnvironment(obj);
           _frame = this._frame;
           initializeResult = _frame.initialize(module);
-          if (!(this._frame instanceof c1)) {
+          if (!(this._frame instanceof closure_1)) {
             tmp2 = assign;
             tmp3 = assign(self.state, obj.state);
             self._onCompleteCallback = module;
@@ -8599,11 +8562,11 @@ let fn = () => {
               _cleanupFrameResult = self._cleanupFrame();
               tmp7 = module;
               if (module) {
-                tmp8 = c9;
-                tmp9 = c5;
+                tmp8 = closure_9;
+                tmp9 = closure_5;
                 tmp10 = new.target;
                 tmp11 = new.target;
-                tmp12 = new c9(c5.FRAME_SERVICE_FRAME_OPEN_FAILED);
+                tmp12 = new closure_9(closure_5.FRAME_SERVICE_FRAME_OPEN_FAILED);
                 tmp13 = tmp12;
                 tmp14 = module(tmp12);
               }
@@ -8697,59 +8660,59 @@ let fn = () => {
               }
             }
           };
-          this._popupInterval = setInterval(fn.bind(this), c6.POPUP_POLL_INTERVAL);
+          this._popupInterval = setInterval(fn.bind(this), closure_6.POPUP_POLL_INTERVAL);
           return this._popupInterval;
         }
         _getFrameForEnvironment(arg0) {
-          supportsPopupsResult = c10.supportsPopups();
+          supportsPopupsResult = closure_10.supportsPopups();
           BooleanResult = Boolean(window.popupBridge);
           tmp3 = assign({}, this._options, global);
           if (BooleanResult) {
-            tmp13 = c1;
+            tmp13 = closure_1;
             tmp14 = new.target;
             tmp15 = new.target;
             tmp16 = tmp3;
-            tmp8 = new c1(tmp3);
+            tmp8 = new closure_1(tmp3);
           } else if (supportsPopupsResult) {
-            tmp9 = c0;
+            tmp9 = closure_0;
             tmp10 = new.target;
             tmp11 = new.target;
             tmp12 = tmp3;
-            tmp8 = new c0(tmp3);
+            tmp8 = new closure_0(tmp3);
           } else {
-            tmp4 = c2;
+            tmp4 = closure_2;
             tmp5 = new.target;
             tmp6 = new.target;
             tmp7 = tmp3;
-            tmp8 = new c2(tmp3);
+            tmp8 = new closure_2(tmp3);
           }
           return tmp8;
         }
       }
-      let closure_0 = global("./strategies/popup");
-      let closure_1 = global("./strategies/popup-bridge");
-      let closure_2 = global("./strategies/modal");
-      let closure_3 = global("framebus");
-      let closure_4 = global("../shared/events");
-      let closure_5 = global("../shared/errors");
-      let closure_6 = global("../shared/constants");
-      let closure_7 = global("@braintree/uuid");
-      let closure_8 = global("@braintree/iframer");
-      let closure_9 = global("../../braintree-error");
-      let closure_10 = global("../shared/browser-detection");
+      closure_0 = global("./strategies/popup");
+      closure_1 = global("./strategies/popup-bridge");
+      closure_2 = global("./strategies/modal");
+      closure_3 = global("framebus");
+      closure_4 = global("../shared/events");
+      closure_5 = global("../shared/errors");
+      closure_6 = global("../shared/constants");
+      closure_7 = global("@braintree/uuid");
+      closure_8 = global("@braintree/iframer");
+      closure_9 = global("../../braintree-error");
+      closure_10 = global("../shared/browser-detection");
       const assign = global("./../../assign").assign;
-      let closure_12 = global("../../constants").BUS_CONFIGURATION_REQUEST_EVENT;
-      let closure_13 = ["name", "dispatchFrameUrl", "openFrameUrl"];
+      closure_12 = global("../../constants").BUS_CONFIGURATION_REQUEST_EVENT;
+      closure_13 = ["name", "dispatchFrameUrl", "openFrameUrl"];
       module.exports = FrameService;
     },
     { "../../braintree-error": 143, "../../constants": 145, "../shared/browser-detection": 164, "../shared/constants": 165, "../shared/errors": 166, "../shared/events": 167, "./../../assign": 140, "./strategies/modal": 159, "./strategies/popup": 162, "./strategies/popup-bridge": 160, "@braintree/iframer": 32, "@braintree/uuid": 36, framebus: 50 }
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./frame-service");
+      closure_0 = global("./frame-service");
       module.exports = {
         create: function createFrameService(arg0, arg1) {
-          let closure_0 = arg1;
+          closure_0 = arg1;
           const obj = new closure_0(arg0);
           obj.initialize(() => {
             callback(obj);
@@ -8783,11 +8746,11 @@ let fn = () => {
         }
         open() {
           self = this;
-          obj = { src: this._options.openFrameUrl, name: this._options.name, scrolling: "yes", height: "100%", width: "100%", style: assign({}, c3), title: "Lightbox Frame" };
+          obj = { src: this._options.openFrameUrl, name: this._options.name, scrolling: "yes", height: "100%", width: "100%", style: assign({}, closure_3), title: "Lightbox Frame" };
           tmp = assign;
-          tmp2 = c3;
-          obj2 = c2;
-          if (c2.isIos()) {
+          tmp2 = closure_3;
+          obj2 = closure_2;
+          if (closure_2.isIos()) {
             if (obj2.isIosWKWebview()) {
               _lockScrollingResult = self._lockScrolling();
               obj.style = {};
@@ -8797,13 +8760,13 @@ let fn = () => {
             str = "div";
             self._el = document.createElement("div");
             tmpResult = tmp(self._el.style, tmp2, { height: "100%", width: "100%", overflow: "auto", "-webkit-overflow-scrolling": "touch" });
-            tmp8 = c0;
-            self._frame = c0(obj);
+            tmp8 = closure_0;
+            self._frame = closure_0(obj);
             _el = self._el;
             appendChildResult = _el.appendChild(self._frame);
           } else {
-            tmp3 = c0;
-            tmp4 = c0(obj);
+            tmp3 = closure_0;
+            tmp4 = closure_0(obj);
             self._frame = tmp4;
             self._el = tmp4;
           }
@@ -8818,7 +8781,7 @@ let fn = () => {
           removeChildResult = _container.removeChild(this._el);
           this._frame = null;
           this._closed = true;
-          if (c2.isIosWKWebview()) {
+          if (closure_2.isIosWKWebview()) {
             _unlockScrollingResult = self._unlockScrolling();
           }
           return;
@@ -8851,10 +8814,10 @@ let fn = () => {
           return;
         }
       }
-      let closure_0 = global("@braintree/iframer");
+      closure_0 = global("@braintree/iframer");
       const assign = global("../../../assign").assign;
-      let closure_2 = global("../../shared/browser-detection");
-      let closure_3 = { position: "fixed", top: 0, left: 0, bottom: 0, padding: 0, margin: 0, border: 0, outline: "none", zIndex: 20001, background: "#FFFFFF" };
+      closure_2 = global("../../shared/browser-detection");
+      closure_3 = { position: "fixed", top: 0, left: 0, bottom: 0, padding: 0, margin: 0, border: 0, outline: "none", zIndex: 20001, background: "#FFFFFF" };
       Modal.prototype.initialize = noop;
       Modal.prototype.focus = noop;
       module.exports = Modal;
@@ -8909,8 +8872,8 @@ let fn = () => {
           return;
         }
       }
-      let closure_0 = global("../../../braintree-error");
-      let closure_1 = global("../../shared/errors");
+      closure_0 = global("../../../braintree-error");
+      closure_1 = global("../../shared/errors");
       PopupBridge.prototype.focus = noop;
       PopupBridge.prototype.close = noop;
       module.exports = PopupBridge;
@@ -8919,8 +8882,8 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../../../shared/constants");
-      let closure_1 = global("./position");
+      closure_0 = global("../../../shared/constants");
+      closure_1 = global("./position");
       module.exports = function composePopupOptions(height) {
         let DEFAULT_POPUP_HEIGHT = height.height;
         if (!DEFAULT_POPUP_HEIGHT) {
@@ -8989,7 +8952,7 @@ let fn = () => {
           return;
         }
       }
-      let closure_0 = global("./compose-options");
+      closure_0 = global("./compose-options");
       module.exports = Popup;
     },
     { "./compose-options": 161 }
@@ -9079,7 +9042,7 @@ let fn = () => {
           const supportedNetworks = androidPay.supportedNetworks;
           obj[1] = supportedNetworks.map((str) => str.toUpperCase());
           obj[1] = obj;
-          const obj1 = { type: "PAYMENT_GATEWAY", parameters: null };
+          obj1 = { type: "PAYMENT_GATEWAY", parameters: null };
           const obj2 = { "braintree:authorizationFingerprint": null };
           obj2[0] = androidPay.googleAuthorizationFingerprint;
           const obj3 = { gateway: "braintree", "braintree:merchantId": null, "braintree:apiVersion": "v1", "braintree:sdkVersion": "3.112.1", "braintree:metadata": null };
@@ -9220,7 +9183,7 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_1 = { "paypal.com": 1, "braintreepayments.com": 1, "braintreegateway.com": 1, "braintree-api.com": 1 };
+      closure_1 = { "paypal.com": 1, "braintreepayments.com": 1, "braintreegateway.com": 1, "braintree-api.com": 1 };
       module.exports = function isVerifiedDomain(str) {
         const formatted = str.toLowerCase();
         let hasOwnPropertyResult = /^https:/.test(formatted);
@@ -9249,7 +9212,7 @@ let fn = () => {
   items = [
     (arg0, arg1, arg2) => {
       module.exports = (arg0) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         const keys = Object.keys(arg0);
         return keys.filter((arg0) => typeof table[arg0] === "function");
       };
@@ -9259,8 +9222,8 @@ let fn = () => {
   items = [
     (arg0, arg1, arg2) => {
       module.exports = function once(arg0) {
-        let closure_0 = arg0;
-        let c1 = false;
+        closure_0 = arg0;
+        c1 = false;
         return () => {
           if (!c1) {
             c1 = true;
@@ -9401,8 +9364,8 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("@braintree/uuid");
-      let closure_1 = global("./find-root-node");
+      closure_0 = global("@braintree/uuid");
+      closure_1 = global("./find-root-node");
       function transformToSlot(element, arg1) {
         element = callback2(element).querySelector("style");
         const tmp3 = callback2(element);
@@ -9469,7 +9432,7 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./querystring");
+      closure_0 = global("./querystring");
       module.exports = {
         getUrlParams() {
           return closure_0.parse(window.location.href);
@@ -9536,7 +9499,7 @@ let fn = () => {
           return sum4;
         } else {
           const _Error = Error;
-          const error = new Error("Non base64 encoded input passed to window.atob polyfill");
+          error = new Error("Non base64 encoded input passed to window.atob polyfill");
           throw error;
         }
       }
@@ -9565,7 +9528,7 @@ let fn = () => {
     (arg0, arg1, arg2) => {
       class LocalPayment {
         constructor(arg0) {
-          obj = { _client: global.client, _assetsUrl: `${client.getConfiguration().gatewayConfiguration.assetsUrl}/web/3.112.1`, _isDebug: client2.getConfiguration().isDebug, _loadingFrameUrl: `${`${obj._assetsUrl}/html/local-payment-landing-frame`}${c2(obj._isDebug)}.html`, _authorizationInProgress: false, _paymentType: "unknown", _merchantAccountId: global.merchantAccountId };
+          obj = { _client: global.client, _assetsUrl: `${client.getConfiguration().gatewayConfiguration.assetsUrl}/web/3.112.1`, _isDebug: client2.getConfiguration().isDebug, _loadingFrameUrl: `${`${obj._assetsUrl}/html/local-payment-landing-frame`}${closure_2(obj._isDebug)}.html`, _authorizationInProgress: false, _paymentType: "unknown", _merchantAccountId: global.merchantAccountId };
           client = global.client;
           client2 = global.client;
           if (global.redirectUrl) {
@@ -9578,7 +9541,7 @@ let fn = () => {
         _initialize() {
           self = this;
           _client = this._client;
-          f116016 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
+          closure_2 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
           promise = new Promise(() => { ... });
           return promise;
         }
@@ -9617,7 +9580,7 @@ let fn = () => {
               str7 = global.paymentType || "";
               str8 = "pay_upon_invoice";
               if ("pay_upon_invoice" === str7.toLowerCase()) {
-                tmp26 = c10;
+                tmp26 = closure_10;
                 num9 = 0;
                 num10 = 1;
                 str16 = "lineItems";
@@ -9625,9 +9588,9 @@ let fn = () => {
                 str18 = "address";
                 num11 = 0;
                 str = false;
-                if (0 < c10.REQUIRED_OPTIONS_FOR_PAY_UPON_INVOICE_PAYMENT_TYPE.length) {
-                  tmp27 = c10;
-                  tmp28 = c10.REQUIRED_OPTIONS_FOR_PAY_UPON_INVOICE_PAYMENT_TYPE[num11];
+                if (0 < closure_10.REQUIRED_OPTIONS_FOR_PAY_UPON_INVOICE_PAYMENT_TYPE.length) {
+                  tmp27 = closure_10;
+                  tmp28 = closure_10.REQUIRED_OPTIONS_FOR_PAY_UPON_INVOICE_PAYMENT_TYPE[num11];
                   tmp29 = num11;
                   str = tmp28;
                   while (global.hasOwnProperty(tmp28)) {
@@ -9641,16 +9604,16 @@ let fn = () => {
                           if (0 < arr5.length) {
                             while (true) {
                               obj4 = arr5[num13];
-                              tmp30 = c10;
+                              tmp30 = closure_10;
                               tmp31 = num13;
                               num12 = 0;
-                              if (0 >= c10.REQUIRED_OPTIONS_FOR_LINE_ITEMS.length) {
+                              if (0 >= closure_10.REQUIRED_OPTIONS_FOR_LINE_ITEMS.length) {
                                 num13 = num13 + 1;
                                 tmp35 = tmp30;
                               } else {
-                                tmp32 = c10;
+                                tmp32 = closure_10;
                                 tmp33 = num12;
-                                tmp34 = c10;
+                                tmp34 = closure_10;
                                 while (obj4.hasOwnProperty(flag2)) {
                                   num12 = num12 + 1;
                                   tmp30 = tmp32;
@@ -9685,9 +9648,9 @@ let fn = () => {
                       tmp39 = tmp27;
                       flag3 = false;
                     } else {
-                      tmp37 = c10;
+                      tmp37 = closure_10;
                       tmp38 = num14;
-                      tmp39 = c10;
+                      tmp39 = closure_10;
                       while (obj5.hasOwnProperty(flag3)) {
                         num14 = num14 + 1;
                         tmp27 = tmp37;
@@ -9707,24 +9670,24 @@ let fn = () => {
                 if ("blik" === str7.toLowerCase()) {
                   obj2 = global.blikOptions || {};
                   if (!global.redirectUrl) {
-                    tmp9 = c10;
-                    prop = c10.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE;
+                    tmp9 = closure_10;
+                    prop = closure_10.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE;
                     str9 = "onPaymentStart";
                     arr = prop.push("onPaymentStart");
                   }
-                  tmp11 = c10;
+                  tmp11 = closure_10;
                   num3 = 0;
                   num4 = 1;
                   num5 = 0;
-                  if (0 >= c10.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE.length) {
+                  if (0 >= closure_10.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE.length) {
                     str10 = "level_0";
                     if (obj2.hasOwnProperty("level_0")) {
                       num8 = 0;
                       flag = false;
                       if (0 < tmp11.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_LEVEL_0.length) {
-                        tmp23 = c10.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_LEVEL_0[num8];
+                        tmp23 = closure_10.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_LEVEL_0[num8];
                         level_0 = obj2.level_0;
-                        tmp22 = c10;
+                        tmp22 = closure_10;
                         tmp24 = num8;
                         while (level_0.hasOwnProperty(tmp23)) {
                           sum1 = num8 + 1;
@@ -9744,8 +9707,8 @@ let fn = () => {
                           num7 = 0;
                           flag = false;
                           if (0 < tmp11.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_SUBSEQUENT.length) {
-                            tmp19 = c10.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_SUBSEQUENT[num7];
-                            tmp18 = c10;
+                            tmp19 = closure_10.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_SUBSEQUENT[num7];
+                            tmp18 = closure_10;
                             tmp20 = num7;
                             while (obj3.hasOwnProperty(tmp19)) {
                               sum2 = num7 + 1;
@@ -9759,8 +9722,8 @@ let fn = () => {
                           num6 = 0;
                           flag = false;
                           if (0 < tmp11.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_FIRST.length) {
-                            tmp15 = c10.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_FIRST[num6];
-                            tmp14 = c10;
+                            tmp15 = closure_10.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_FIRST[num6];
+                            tmp14 = closure_10;
                             tmp16 = num6;
                             while (obj3.hasOwnProperty(tmp15)) {
                               sum3 = num6 + 1;
@@ -9774,7 +9737,7 @@ let fn = () => {
                       }
                     }
                   } else {
-                    tmp12 = c10;
+                    tmp12 = closure_10;
                     tmp13 = num5;
                     while (global.hasOwnProperty(flag)) {
                       num5 = num5 + 1;
@@ -9787,15 +9750,15 @@ let fn = () => {
               }
             } else {
               if (!global.redirectUrl) {
-                tmp3 = c10;
-                prop1 = c10.REQUIRED_OPTIONS_FOR_START_PAYMENT;
+                tmp3 = closure_10;
+                prop1 = closure_10.REQUIRED_OPTIONS_FOR_START_PAYMENT;
                 str6 = "onPaymentStart";
                 arr1 = prop1.push("onPaymentStart");
               }
-              tmp5 = c10;
+              tmp5 = closure_10;
               num = 0;
               num2 = 1;
-              if (0 >= c10.REQUIRED_OPTIONS_FOR_START_PAYMENT.length) {
+              if (0 >= closure_10.REQUIRED_OPTIONS_FOR_START_PAYMENT.length) {
                 str = "fallback.url";
                 if (global.fallback.url) {
                   str = "fallback.buttonText";
@@ -9810,8 +9773,8 @@ let fn = () => {
                   }
                 }
               } else {
-                tmp7 = c10.REQUIRED_OPTIONS_FOR_START_PAYMENT[num];
-                tmp6 = c10;
+                tmp7 = closure_10.REQUIRED_OPTIONS_FOR_START_PAYMENT[num];
+                tmp6 = closure_10;
                 tmp8 = num;
                 str = tmp7;
                 while (global.hasOwnProperty(tmp7)) {
@@ -9822,11 +9785,11 @@ let fn = () => {
             }
           }
           if (str) {
-            tmp71 = reject;
-            tmp72 = c11;
+            tmp71 = closure_1;
+            tmp72 = closure_11;
             tmp73 = new.target;
             tmp74 = new.target;
-            tmp75 = new reject(c11.LOCAL_PAYMENT_START_PAYMENT_MISSING_REQUIRED_OPTION);
+            tmp75 = new closure_1(closure_11.LOCAL_PAYMENT_START_PAYMENT_MISSING_REQUIRED_OPTION);
             tmp76 = tmp75;
             if (typeof str === "string") {
               str29 = "Missing required '";
@@ -9863,19 +9826,19 @@ let fn = () => {
             obj[23] = tmp41.postalCode;
             ({ recurrent: obj6[24], shippingAmount: obj6[25] } = global);
             obj[26] = tmp41.region;
-            obj9 = c9;
-            queryify = c9.queryify;
+            obj9 = closure_9;
+            queryify = closure_9.queryify;
             if (self._isRedirectFlow) {
               queryifyResult = queryify(self._redirectUrl, { wasCanceled: true });
               _redirectUrl = self._redirectUrl;
             } else {
               str21 = "/html/local-payment-redirect-frame";
               text = `${self._assetsUrl}/html/local-payment-redirect-frame`;
-              tmp45 = c2;
+              tmp45 = closure_2;
               obj3 = { channel: null, r: null, t: null, c: 1 };
               obj3[0] = _serviceId;
               url = tmp42.cancelUrl;
-              text1 = `${self._assetsUrl}/html/local-payment-redirect-frame${c2(self._isDebug)}`;
+              text1 = `${self._assetsUrl}/html/local-payment-redirect-frame${closure_2(self._isDebug)}`;
               if (!url) {
                 url = tmp42.url;
               }
@@ -9900,16 +9863,16 @@ let fn = () => {
             self._paymentType = str23.toLowerCase();
             if (self._authorizationInProgress) {
               if (!self._isRedirectFlow) {
-                tmp53 = c4;
+                tmp53 = closure_4;
                 str24 = ".local-payment.start-payment.error.already-opened";
-                sendEventResult = c4.sendEvent(self._client, `${self._paymentType}.local-payment.start-payment.error.already-opened`);
+                sendEventResult = closure_4.sendEvent(self._client, `${self._paymentType}.local-payment.start-payment.error.already-opened`);
                 tmp55 = globalThis;
                 _Promise = Promise;
-                tmp56 = reject;
-                tmp57 = c11;
+                tmp56 = closure_1;
+                tmp57 = closure_11;
                 tmp58 = new.target;
                 tmp59 = new.target;
-                tmp60 = new reject(c11.LOCAL_PAYMENT_ALREADY_IN_PROGRESS);
+                tmp60 = new closure_1(closure_11.LOCAL_PAYMENT_ALREADY_IN_PROGRESS);
                 tmp61 = tmp60;
                 rejectResult = Promise.reject(tmp60);
               }
@@ -9920,7 +9883,7 @@ let fn = () => {
             tmp65 = new.target;
             tmp66 = new closure_8();
             tmp67 = tmp66;
-            reject = tmp66;
+            closure_1 = tmp66;
             obj13 = global.blikOptions || {};
             if (typeof global.paymentType === "string") {
               str25 = global.paymentType;
@@ -9972,8 +9935,8 @@ let fn = () => {
           self = this;
           _client = this._client;
           if (!global) {
-            tmp2 = c9;
-            parsed = c9.parse();
+            tmp2 = closure_9;
+            parsed = closure_9.parse();
           }
           queryItems = parsed;
           if (parsed.queryItems) {
@@ -9986,10 +9949,10 @@ let fn = () => {
                 _Promise = Promise;
                 tmp5 = _client;
                 obj = { type: null, code: null, message: null, details: null };
-                tmp6 = c11;
-                obj[0] = c11.LOCAL_PAYMENT_START_PAYMENT_FAILED.type;
-                obj[1] = c11.LOCAL_PAYMENT_START_PAYMENT_FAILED.code;
-                obj[2] = c11.LOCAL_PAYMENT_START_PAYMENT_FAILED.message;
+                tmp6 = closure_11;
+                obj[0] = closure_11.LOCAL_PAYMENT_START_PAYMENT_FAILED.type;
+                obj[1] = closure_11.LOCAL_PAYMENT_START_PAYMENT_FAILED.code;
+                obj[2] = closure_11.LOCAL_PAYMENT_START_PAYMENT_FAILED.message;
                 obj1 = { originalError: null };
                 obj2 = { errorcode: null, token: null };
                 ({ errorcode: obj4[0], btLpToken: obj4[1] } = queryItems);
@@ -10011,7 +9974,7 @@ let fn = () => {
             }
             return rejectResult;
           }
-          obj3 = { type: c11.LOCAL_PAYMENT_CANCELED.type, code: c11.LOCAL_PAYMENT_CANCELED.code, message: c11.LOCAL_PAYMENT_CANCELED.message, details: { originalError: obj4 } };
+          obj3 = { type: closure_11.LOCAL_PAYMENT_CANCELED.type, code: closure_11.LOCAL_PAYMENT_CANCELED.code, message: closure_11.LOCAL_PAYMENT_CANCELED.message, details: { originalError: obj4 } };
           obj4 = { errorcode: queryItems.errorcode, token: queryItems.btLpToken };
           tmp12 = new _client(obj3);
           rejectResult = Promise.reject(tmp12);
@@ -10020,9 +9983,9 @@ let fn = () => {
         closeWindow() {
           self = this;
           if (this._authoriztionInProgress) {
-            tmp = c4;
+            tmp = closure_4;
             str = ".local-payment.start-payment.closed.by-merchant";
-            sendEventResult = c4.sendEvent(self._client, `${self._paymentType}.local-payment.start-payment.closed.by-merchant`);
+            sendEventResult = closure_4.sendEvent(self._client, `${self._paymentType}.local-payment.start-payment.closed.by-merchant`);
           }
           _frameService = self._frameService;
           closeResult = _frameService.close();
@@ -10057,7 +10020,7 @@ let fn = () => {
           return obj;
         }
         hasTokenizationParams() {
-          parsed = c9.parse();
+          parsed = closure_9.parse();
           BooleanResult = parsed.errorcode;
           if (!BooleanResult) {
             tmp3 = globalThis;
@@ -10091,24 +10054,23 @@ let fn = () => {
             _frameService = self._frameService;
             teardownResult = _frameService.teardown();
           }
-          tmp2 = c6(self, c5(LocalPayment.prototype));
-          sendEventResult = c4.sendEvent(self._client, "local-payment.teardown-completed");
+          tmp2 = closure_6(self, closure_5(LocalPayment.prototype));
+          sendEventResult = closure_4.sendEvent(self._client, "local-payment.teardown-completed");
           return Promise.resolve();
         }
       }
-      let closure_0 = global("../../lib/frame-service/external");
-      let closure_1 = global("../../lib/braintree-error");
-      let closure_2 = global("../../lib/use-min");
+      closure_0 = global("../../lib/frame-service/external");
+      closure_1 = global("../../lib/braintree-error");
+      closure_2 = global("../../lib/use-min");
       const INTEGRATION_TIMEOUT_MS = global("../../lib/constants").INTEGRATION_TIMEOUT_MS;
-      let closure_4 = global("../../lib/analytics");
-      let closure_5 = global("../../lib/methods");
-      let closure_6 = global("../../lib/convert-methods-to-error");
-      let closure_7 = global("../../lib/convert-to-braintree-error");
+      closure_4 = global("../../lib/analytics");
+      closure_5 = global("../../lib/methods");
+      closure_6 = global("../../lib/convert-methods-to-error");
+      closure_7 = global("../../lib/convert-to-braintree-error");
       const globalResult = global("@braintree/extended-promise");
-      let closure_8 = globalResult;
-      let closure_9 = global("../../lib/querystring");
-      let closure_10 = global("./constants");
-      let closure_11 = global("../shared/errors");
+      closure_9 = global("../../lib/querystring");
+      closure_10 = global("./constants");
+      closure_11 = global("../shared/errors");
       const assign = global("../../lib/assign").assign;
       globalResult.suppressUnhandledPromiseMessage = true;
       module.exports = global("@braintree/wrap-promise").wrapPrototype(LocalPayment);
@@ -10117,31 +10079,31 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/analytics");
-      let closure_1 = global("../lib/basic-component-verification");
-      let closure_2 = global("../lib/create-deferred-client");
-      let closure_3 = global("../lib/create-assets-url");
-      let closure_4 = global("./external/local-payment");
-      let closure_5 = global("../lib/braintree-error");
-      let closure_6 = global("./shared/errors");
+      closure_0 = global("../lib/analytics");
+      closure_1 = global("../lib/basic-component-verification");
+      closure_2 = global("../lib/create-deferred-client");
+      closure_3 = global("../lib/create-assets-url");
+      closure_4 = global("./external/local-payment");
+      closure_5 = global("../lib/braintree-error");
+      closure_6 = global("./shared/errors");
       const parse = global("../lib/querystring").parse;
       const globalResult = global("@braintree/wrap-promise");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
+          closure_0 = client;
           let obj = { name: "Local Payment", client: client.client, authorization: client.authorization };
           const verifyResult = closure_1.verify({ name: "Local Payment", client: client.client, authorization: client.authorization });
-          return closure_1.verify({ name: "Local Payment", client: client.client, authorization: client.authorization }).then(() => outer1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: outer1_3.create(client.authorization), name: "Local Payment" })).then((client) => {
+          return closure_1.verify({ name: "Local Payment", client: client.client, authorization: client.authorization }).then(() => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "Local Payment" })).then((client) => {
             obj.client = client;
             if (true !== client.getConfiguration().gatewayConfiguration.paypalEnabled) {
-              const tmp12 = new outer1_5(outer1_6.LOCAL_PAYMENT_NOT_ENABLED);
+              const tmp12 = new closure_1_5(closure_1_6.LOCAL_PAYMENT_NOT_ENABLED);
               let rejectResult = Promise.reject(tmp12);
             } else {
               client.sendEvent(client, "local-payment.initialized");
-              obj = new outer1_4(tmp);
+              obj = new closure_1_4(tmp);
               if (tmp.redirectUrl) {
                 const _window = window;
-                const tmp5 = outer1_7(window.location.href);
+                const tmp5 = closure_1_7(window.location.href);
                 if (tmp5.token) {
                   const tokenizeResult = obj.tokenize(tmp5);
                   let catchPromise = obj.tokenize(tmp5).then((tokenizePayload) => {
@@ -10219,15 +10181,15 @@ let fn = () => {
           closure_0 = global;
           self = this;
           if (global) {
-            tmp2 = c7;
+            tmp2 = closure_7;
             num = 0;
             num2 = 1;
             flag = false;
-            if (0 < c7.REQUIRED_OPTIONS_FOR_TOKENIZE.length) {
-              tmp3 = c7;
+            if (0 < closure_7.REQUIRED_OPTIONS_FOR_TOKENIZE.length) {
+              tmp3 = closure_7;
               tmp4 = num;
               flag = true;
-              while (global.hasOwnProperty(c7.REQUIRED_OPTIONS_FOR_TOKENIZE[num])) {
+              while (global.hasOwnProperty(closure_7.REQUIRED_OPTIONS_FOR_TOKENIZE[num])) {
                 sum = num + 1;
                 num = sum;
                 flag = false;
@@ -10241,10 +10203,10 @@ let fn = () => {
               _Promise = Promise;
               if (tmp._authInProgress) {
                 tmp10 = self;
-                tmp11 = c2;
+                tmp11 = closure_2;
                 tmp12 = new.target;
                 tmp13 = new.target;
-                tmp14 = new self(c2.MASTERPASS_TOKENIZATION_ALREADY_IN_PROGRESS);
+                tmp14 = new self(closure_2.MASTERPASS_TOKENIZATION_ALREADY_IN_PROGRESS);
                 tmp15 = tmp14;
                 rejectResult = _Promise.reject(tmp14);
               } else {
@@ -10255,7 +10217,7 @@ let fn = () => {
             }
             return rejectResult;
           }
-          tmp16 = new self(c2.MASTERPASS_TOKENIZE_MISSING_REQUIRED_OPTION);
+          tmp16 = new self(closure_2.MASTERPASS_TOKENIZE_MISSING_REQUIRED_OPTION);
           rejectResult = Promise.reject(tmp16);
           return;
         }
@@ -10279,34 +10241,34 @@ let fn = () => {
           self = this;
           self = this;
           if ("success" !== global.mpstatus) {
-            tmp12 = c4;
+            tmp12 = closure_4;
             str2 = "masterpass.tokenization.closed.by-user";
-            sendEventResult = c4.sendEvent(self._client, "masterpass.tokenization.closed.by-user");
+            sendEventResult = closure_4.sendEvent(self._client, "masterpass.tokenization.closed.by-user");
             _closeWindowResult = self._closeWindow();
             tmp15 = globalThis;
             _Promise2 = Promise;
-            tmp16 = c1;
-            tmp17 = c2;
+            tmp16 = closure_1;
+            tmp17 = closure_2;
             tmp18 = new.target;
             tmp19 = new.target;
-            tmp20 = new c1(c2.MASTERPASS_POPUP_CLOSED);
+            tmp20 = new closure_1(closure_2.MASTERPASS_POPUP_CLOSED);
             tmp21 = tmp20;
             rejectResult = Promise.reject(tmp20);
           } else {
             items = [, , ];
             ({ oauth_verifier: arr[0], oauth_token: arr[1], checkout_resource_url: arr[2] } = global);
             if (items.some(() => { ... })) {
-              tmp2 = c4;
+              tmp2 = closure_4;
               str = "masterpass.tokenization.closed.missing-payload";
-              sendEventResult1 = c4.sendEvent(self._client, "masterpass.tokenization.closed.missing-payload");
+              sendEventResult1 = closure_4.sendEvent(self._client, "masterpass.tokenization.closed.missing-payload");
               _closeWindowResult1 = self._closeWindow();
               tmp5 = globalThis;
               _Promise = Promise;
-              tmp6 = c1;
-              tmp7 = c2;
+              tmp6 = closure_1;
+              tmp7 = closure_2;
               tmp8 = new.target;
               tmp9 = new.target;
-              tmp10 = new c1(c2.MASTERPASS_POPUP_MISSING_REQUIRED_PARAMETERS);
+              tmp10 = new closure_1(closure_2.MASTERPASS_POPUP_MISSING_REQUIRED_PARAMETERS);
               tmp11 = tmp10;
               rejectResult = Promise.reject(tmp10);
             } else {
@@ -10336,14 +10298,14 @@ let fn = () => {
           return promise;
         }
       }
-      let closure_0 = global("../../lib/frame-service/external");
-      let closure_1 = global("../../lib/braintree-error");
-      let closure_2 = global("../shared/errors");
-      let closure_3 = global("../../lib/methods");
-      let closure_4 = global("../../lib/analytics");
-      let closure_5 = global("../../lib/convert-methods-to-error");
-      let closure_6 = global("../../lib/convert-to-braintree-error");
-      let closure_7 = global("../shared/constants");
+      closure_0 = global("../../lib/frame-service/external");
+      closure_1 = global("../../lib/braintree-error");
+      closure_2 = global("../shared/errors");
+      closure_3 = global("../../lib/methods");
+      closure_4 = global("../../lib/analytics");
+      closure_5 = global("../../lib/convert-methods-to-error");
+      closure_6 = global("../../lib/convert-to-braintree-error");
+      closure_7 = global("../shared/constants");
       const INTEGRATION_TIMEOUT_MS = global("../../lib/constants").INTEGRATION_TIMEOUT_MS;
       module.exports = global("@braintree/wrap-promise").wrapPrototype(Masterpass);
     },
@@ -10351,16 +10313,16 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/braintree-error");
-      let closure_1 = global("../lib/basic-component-verification");
-      let closure_2 = global("./shared/browser-detection");
-      let closure_3 = global("./external/masterpass");
-      let closure_4 = global("../lib/create-deferred-client");
-      let closure_5 = global("../lib/create-assets-url");
-      let closure_6 = global("./shared/errors");
+      closure_0 = global("../lib/braintree-error");
+      closure_1 = global("../lib/basic-component-verification");
+      closure_2 = global("./shared/browser-detection");
+      closure_3 = global("./external/masterpass");
+      closure_4 = global("../lib/create-deferred-client");
+      closure_5 = global("../lib/create-assets-url");
+      closure_6 = global("./shared/errors");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
+          closure_0 = client;
           let obj = { name: "Masterpass", client: client.client, authorization: client.authorization };
           const verifyResult = closure_1.verify({ name: "Masterpass", client: client.client, authorization: client.authorization });
           const nextPromise = closure_1.verify({ name: "Masterpass", client: client.client, authorization: client.authorization }).then(() => {
@@ -10386,14 +10348,14 @@ let fn = () => {
               resolveResult = _Promise.reject(tmp6);
             }
             return resolveResult;
-          }).then(() => outer1_4.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: outer1_5.create(client.authorization), name: "Masterpass" })).then((client) => {
+          }).then(() => closure_1_4.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_5.create(client.authorization), name: "Masterpass" })).then((client) => {
             client.client = client;
             client = client.client;
             if (client.getConfiguration().gatewayConfiguration.masterpass) {
-              const obj = new outer1_3(tmp);
+              const obj = new closure_1_3(tmp);
               let _initializeResult = obj._initialize();
             } else {
-              const tmp7 = new client(outer1_6.MASTERPASS_NOT_ENABLED);
+              const tmp7 = new client(closure_1_6.MASTERPASS_NOT_ENABLED);
               _initializeResult = Promise.reject(tmp7);
             }
             return _initializeResult;
@@ -10434,8 +10396,6 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_12;
-      let closure_13;
       class PaymentRequestComponent {
         constructor(arg0) {
           tmp = global.enabledPaymentMethods || {};
@@ -10447,7 +10407,7 @@ let fn = () => {
           } else {
             callResult = call(self);
           }
-          self._componentId = c6();
+          self._componentId = closure_6();
           self._client = global.client;
           obj = { basicCard: false !== tmp.basicCard, googlePay: false !== tmp.googlePay };
           self._enabledPaymentMethods = obj;
@@ -10462,7 +10422,7 @@ let fn = () => {
           fn = () => { ... };
           self._defaultSupportedPaymentMethods = keys.map(fn.bind(self));
           obj = { channel: self._componentId };
-          tmp4 = new framebus(obj);
+          tmp4 = new closure_2(obj);
           self._bus = tmp4;
           return;
         }
@@ -10489,25 +10449,25 @@ let fn = () => {
           tmp3 = self._enabledPaymentMethods.googlePay && androidPay && androidPay.enabled;
           if (tmp3) {
             obj2 = { supportedMethods: "https://google.com/pay", data: null };
-            tmp4 = c4;
-            obj2[1] = c4(configuration, self._googlePayVersion, self._googleMerchantId);
+            tmp4 = closure_4;
+            obj2[1] = closure_4(configuration, self._googlePayVersion, self._googleMerchantId);
             obj.googlePay = obj2;
           }
           return obj;
         }
         initialize() {
           _client = this._client;
-          getConfiguration = _client.getConfiguration();
+          closure_0 = _client.getConfiguration();
           self = this;
-          this._frame = c5({ allowPaymentRequest: true, name: "braintree-payment-request-frame", class: "braintree-payment-request-frame", height: 0, width: 0, style: { position: "absolute", left: "-9999px" }, title: "Secure Payment Frame" });
+          this._frame = closure_5({ allowPaymentRequest: true, name: "braintree-payment-request-frame", class: "braintree-payment-request-frame", height: 0, width: 0, style: { position: "absolute", left: "-9999px" }, title: "Secure Payment Frame" });
           if (0 === this._defaultSupportedPaymentMethods.length) {
             tmp5 = globalThis;
             _Promise2 = Promise;
-            tmp6 = c10;
+            tmp6 = closure_10;
             tmp7 = errors;
             tmp8 = new.target;
             tmp9 = new.target;
-            tmp10 = new c10(errors.PAYMENT_REQUEST_NO_VALID_SUPPORTED_PAYMENT_METHODS);
+            tmp10 = new closure_10(errors.PAYMENT_REQUEST_NO_VALID_SUPPORTED_PAYMENT_METHODS);
             tmp11 = tmp10;
             rejectResult = Promise.reject(tmp10);
           } else {
@@ -10528,20 +10488,20 @@ let fn = () => {
               tmp16.data = assign({}, tmp16.data, module);
               return tmp16;
             } else {
-              tmp8 = c10;
+              tmp8 = closure_10;
               tmp9 = errors;
               tmp10 = new.target;
               tmp11 = new.target;
-              tmp12 = new c10(errors.PAYMENT_REQUEST_CREATE_SUPPORTED_PAYMENT_METHODS_CONFIGURATION_TYPE_NOT_ENABLED);
+              tmp12 = new closure_10(errors.PAYMENT_REQUEST_CREATE_SUPPORTED_PAYMENT_METHODS_CONFIGURATION_TYPE_NOT_ENABLED);
               tmp13 = tmp12;
               throw tmp12;
             }
           } else {
-            tmp = c10;
+            tmp = closure_10;
             tmp2 = errors;
             tmp3 = new.target;
             tmp4 = new.target;
-            tmp5 = new c10(errors.PAYMENT_REQUEST_CREATE_SUPPORTED_PAYMENT_METHODS_CONFIGURATION_MUST_INCLUDE_TYPE);
+            tmp5 = new closure_10(errors.PAYMENT_REQUEST_CREATE_SUPPORTED_PAYMENT_METHODS_CONFIGURATION_MUST_INCLUDE_TYPE);
             tmp6 = tmp5;
             throw tmp5;
           }
@@ -10569,7 +10529,7 @@ let fn = () => {
               tmp6 = assign;
             }
             _Promise3 = tmp2.Promise;
-            tmp10 = c10;
+            tmp10 = closure_10;
             obj = { type: null, code: null, message: null };
             tmp11 = errors;
             obj[0] = errors.PAYMENT_REQUEST_UNSUPPORTED_PAYMENT_METHOD.type;
@@ -10580,7 +10540,7 @@ let fn = () => {
             tmp13 = new.target;
             tmp14 = new.target;
             tmp15 = obj;
-            tmp16 = new c10(obj);
+            tmp16 = new closure_10(obj);
             tmp2 = tmp16;
             promise = _Promise3.reject(tmp16);
           } else {
@@ -10598,15 +10558,15 @@ let fn = () => {
           teardownResult = _bus.teardown();
           parentNode = this._frame.parentNode;
           removeChildResult = parentNode.removeChild(this._frame);
-          tmp3 = c3(this, c8(PaymentRequestComponent.prototype));
-          sendEventResult = c0.sendEvent(this._client, "payment-request.teardown-completed");
+          tmp3 = closure_3(this, closure_8(PaymentRequestComponent.prototype));
+          sendEventResult = closure_0.sendEvent(this._client, "payment-request.teardown-completed");
           return Promise.resolve();
         }
         _formatTokenizationError(arg0) {
           name = global.name;
           self = this;
           if ("AbortError" === name) {
-            tmp24 = c10;
+            tmp24 = closure_10;
             obj = { type: null, code: null, message: null, details: null };
             tmp25 = errors;
             obj[0] = errors.PAYMENT_REQUEST_CANCELED.type;
@@ -10618,16 +10578,16 @@ let fn = () => {
             tmp26 = new.target;
             tmp27 = new.target;
             tmp28 = obj;
-            tmp29 = new c10(obj);
-            tmp30 = c0;
+            tmp29 = new closure_10(obj);
+            tmp30 = closure_0;
             str2 = "payment-request.tokenize.canceled";
-            sendEventResult = c0.sendEvent(self._client, "payment-request.tokenize.canceled");
+            sendEventResult = closure_0.sendEvent(self._client, "payment-request.tokenize.canceled");
             tmp32 = tmp29;
             return tmp29;
           } else {
             str3 = "PAYMENT_REQUEST_INITIALIZATION_FAILED";
             if ("PAYMENT_REQUEST_INITIALIZATION_FAILED" === name) {
-              tmp17 = c10;
+              tmp17 = closure_10;
               obj2 = { type: null, code: null, message: null, details: null };
               tmp18 = errors;
               obj2[0] = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.type;
@@ -10639,11 +10599,11 @@ let fn = () => {
               tmp19 = new.target;
               tmp20 = new.target;
               tmp21 = obj2;
-              tmp = new c10(obj2);
+              tmp = new closure_10(obj2);
             } else {
               str4 = "BRAINTREE_GATEWAY_GOOGLE_PAYMENT_TOKENIZATION_ERROR";
               if ("BRAINTREE_GATEWAY_GOOGLE_PAYMENT_TOKENIZATION_ERROR" === name) {
-                tmp12 = c10;
+                tmp12 = closure_10;
                 obj4 = { type: null, code: null, message: null, details: null };
                 tmp13 = errors;
                 obj4[0] = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE.type;
@@ -10655,11 +10615,11 @@ let fn = () => {
                 tmp14 = new.target;
                 tmp15 = new.target;
                 tmp16 = obj4;
-                tmp = new c10(obj4);
+                tmp = new closure_10(obj4);
               } else {
                 str5 = "BRAINTREE_GATEWAY_GOOGLE_PAYMENT_PARSING_ERROR";
                 if ("BRAINTREE_GATEWAY_GOOGLE_PAYMENT_PARSING_ERROR" === name) {
-                  tmp7 = c10;
+                  tmp7 = closure_10;
                   obj6 = { type: null, code: null, message: null, details: null };
                   tmp8 = errors;
                   obj6[0] = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR.type;
@@ -10671,9 +10631,9 @@ let fn = () => {
                   tmp9 = new.target;
                   tmp10 = new.target;
                   tmp11 = obj6;
-                  tmp = new c10(obj6);
+                  tmp = new closure_10(obj6);
                 } else {
-                  tmp = c10;
+                  tmp = closure_10;
                   obj = { code: null, type: null, message: null, details: null };
                   obj[0] = errors.PAYMENT_REQUEST_NOT_COMPLETED.code;
                   CUSTOMER = global.type;
@@ -10693,16 +10653,16 @@ let fn = () => {
                 }
               }
             }
-            tmp22 = c0;
+            tmp22 = closure_0;
             str = "payment-request.tokenize.failed";
-            sendEventResult1 = c0.sendEvent(self._client, "payment-request.tokenize.failed");
+            sendEventResult1 = closure_0.sendEvent(self._client, "payment-request.tokenize.failed");
             return tmp;
           }
         }
         _formatCanMakePaymentError(arg0) {
           name = global.name;
           if ("PAYMENT_REQUEST_INITIALIZATION_FAILED" === name) {
-            tmp12 = c10;
+            tmp12 = closure_10;
             obj = { type: null, code: null, message: null, details: null };
             tmp13 = errors;
             obj[0] = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.type;
@@ -10714,11 +10674,11 @@ let fn = () => {
             tmp14 = new.target;
             tmp15 = new.target;
             tmp16 = obj;
-            tmp6 = new c10(obj);
+            tmp6 = new closure_10(obj);
           } else {
             str = "NotAllowedError";
             if ("NotAllowedError" === name) {
-              tmp7 = c10;
+              tmp7 = closure_10;
               obj2 = { type: null, code: null, message: null, details: null };
               tmp8 = errors;
               obj2[0] = errors.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED.type;
@@ -10730,9 +10690,9 @@ let fn = () => {
               tmp9 = new.target;
               tmp10 = new.target;
               tmp11 = obj2;
-              tmp6 = new c10(obj2);
+              tmp6 = new closure_10(obj2);
             } else {
-              tmp = c10;
+              tmp = closure_10;
               obj = { code: null, type: null, message: null, details: null };
               tmp2 = errors;
               obj[0] = errors.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_FAILED.code;
@@ -10744,28 +10704,28 @@ let fn = () => {
               tmp3 = new.target;
               tmp4 = new.target;
               tmp5 = obj;
-              tmp6 = new c10(obj);
+              tmp6 = new closure_10(obj);
             }
           }
-          sendEventResult = c0.sendEvent(this._client, "payment-request.can-make-payment.failed");
+          sendEventResult = closure_0.sendEvent(this._client, "payment-request.can-make-payment.failed");
           return tmp6;
         }
       }
-      let closure_0 = global("../../lib/analytics");
+      closure_0 = global("../../lib/analytics");
       const assign = global("../../lib/assign").assign;
-      let closure_2 = global("framebus");
-      let closure_3 = global("../../lib/convert-methods-to-error");
-      let closure_4 = global("../../lib/generate-google-pay-configuration");
-      let closure_5 = global("@braintree/iframer");
-      let closure_6 = global("@braintree/uuid");
-      let closure_7 = global("../../lib/use-min");
-      let closure_8 = global("../../lib/methods");
+      closure_2 = global("framebus");
+      closure_3 = global("../../lib/convert-methods-to-error");
+      closure_4 = global("../../lib/generate-google-pay-configuration");
+      closure_5 = global("@braintree/iframer");
+      closure_6 = global("@braintree/uuid");
+      closure_7 = global("../../lib/use-min");
+      closure_8 = global("../../lib/methods");
       const globalResult = global("@braintree/event-emitter");
-      let closure_9 = globalResult;
-      let closure_10 = global("../../lib/braintree-error");
+      closure_9 = globalResult;
+      closure_10 = global("../../lib/braintree-error");
       const globalResult1 = global("../shared/constants");
       ({ events: closure_12, errors: closure_13 } = globalResult1);
-      let closure_14 = { Visa: "visa", MasterCard: "mastercard", "American Express": "amex", "Diners Club": "diners", Discover: "discover", JCB: "jcb", UnionPay: "unionpay", Maestro: "maestro" };
+      closure_14 = { Visa: "visa", MasterCard: "mastercard", "American Express": "amex", "Diners Club": "diners", Discover: "discover", JCB: "jcb", UnionPay: "unionpay", Maestro: "maestro" };
       const child = globalResult.createChild(PaymentRequestComponent);
       module.exports = global("@braintree/wrap-promise").wrapPrototype(PaymentRequestComponent);
     },
@@ -10773,16 +10733,16 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./external/payment-request");
-      let closure_1 = global("../lib/basic-component-verification");
-      let closure_2 = global("../lib/create-deferred-client");
-      let closure_3 = global("../lib/create-assets-url");
+      closure_0 = global("./external/payment-request");
+      closure_1 = global("../lib/basic-component-verification");
+      closure_2 = global("../lib/create-deferred-client");
+      closure_3 = global("../lib/create-assets-url");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
+          closure_0 = client;
           const obj = { name: "Payment Request", client: client.client, authorization: client.authorization };
           const verifyResult = closure_1.verify({ name: "Payment Request", client: client.client, authorization: client.authorization });
-          return closure_1.verify({ name: "Payment Request", client: client.client, authorization: client.authorization }).then(() => outer1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: outer1_3.create(client.authorization), name: "Payment Request" })).then((client) => {
+          return closure_1.verify({ name: "Payment Request", client: client.client, authorization: client.authorization }).then(() => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "Payment Request" })).then((client) => {
             closure_0.client = client;
             return new closure_0(closure_0).initialize();
           });
@@ -10825,13 +10785,13 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/basic-component-verification");
-      let closure_1 = global("./paypal-checkout");
+      closure_0 = global("../lib/basic-component-verification");
+      closure_1 = global("./paypal-checkout");
       const globalResult = global("@braintree/wrap-promise");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
-          return closure_0.verify({ name: "PayPal Checkout", client: client.client, authorization: client.authorization }).then(() => new outer1_1(closure_0)._initialize(closure_0));
+          closure_0 = client;
+          return closure_0.verify({ name: "PayPal Checkout", client: client.client, authorization: client.authorization }).then(() => new closure_1_1(closure_0)._initialize(closure_0));
         }),
         isSupported() {
           return true;
@@ -10858,15 +10818,15 @@ let fn = () => {
             obj[1] = configuration.gatewayConfiguration.environment;
             self._authorizationInformation = obj;
           } else {
-            tmp = c10;
-            tmp2 = c10(global.authorization);
+            tmp = closure_10;
+            tmp2 = closure_10(global.authorization);
             obj = { fingerprint: null, environment: null };
             obj[0] = tmp2.attrs.authorizationFingerprint;
             obj[1] = tmp2.environment;
             self._authorizationInformation = obj;
           }
-          obj1 = { authorization: global.authorization, client: global.client, debug: global.debug, assetsUrl: c3.create(global.authorization), name: "PayPal Checkout" };
-          obj2 = c2.create(obj1);
+          obj1 = { authorization: global.authorization, client: global.client, debug: global.debug, assetsUrl: closure_3.create(global.authorization), name: "PayPal Checkout" };
+          obj2 = closure_2.create(obj1);
           fn = () => { ... };
           self._clientPromise = obj2.then(fn.bind(self));
           if (global.client) {
@@ -10884,22 +10844,22 @@ let fn = () => {
           obj = {};
           closure_0 = global;
           tmp = new closure_4();
-          assign = tmp;
+          closure_1 = tmp;
           configuration = global.getConfiguration();
-          f116050 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
+          closure_2 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
           obj._assetsUrl = `${tmp2.gatewayConfiguration.paypal.assetsUrl}/web/3.112.1`;
           obj._isDebug = configuration.isDebug;
-          obj._loadingFrameUrl = `${`${obj._assetsUrl}/html/paypal-landing-frame`}${c12(obj._isDebug)}.html`;
-          obj = { name: "braintreepaypallanding", dispatchFrameUrl: `${`${obj._assetsUrl}/html/dispatch-frame`}${c12(obj._isDebug)}.html`, openFrameUrl: obj._loadingFrameUrl };
+          obj._loadingFrameUrl = `${`${obj._assetsUrl}/html/paypal-landing-frame`}${closure_12(obj._isDebug)}.html`;
+          obj = { name: "braintreepaypallanding", dispatchFrameUrl: `${`${obj._assetsUrl}/html/dispatch-frame`}${closure_12(obj._isDebug)}.html`, openFrameUrl: obj._loadingFrameUrl };
           fn = () => { ... };
-          obj1 = c9.create(obj, fn.bind(obj));
+          obj1 = closure_9.create(obj, fn.bind(obj));
           return tmp;
         }
         createPayment(arg0) {
           closure_0 = global;
           if (global) {
-            tmp = c8;
-            FLOW_ENDPOINTS = c8.FLOW_ENDPOINTS;
+            tmp = closure_8;
+            FLOW_ENDPOINTS = closure_8.FLOW_ENDPOINTS;
             if (FLOW_ENDPOINTS.hasOwnProperty(global.flow)) {
               self = this;
               tmp4 = closure_0;
@@ -10910,7 +10870,7 @@ let fn = () => {
             }
             return nextPromise;
           }
-          tmp2 = new c5(c7.PAYPAL_FLOW_OPTION_REQUIRED);
+          tmp2 = new closure_5(closure_7.PAYPAL_FLOW_OPTION_REQUIRED);
           nextPromise = Promise.reject(tmp2);
           return;
         }
@@ -10920,7 +10880,7 @@ let fn = () => {
           obj = module;
           closure_1 = module;
           self = this;
-          c3 = `paypal_hermes/${c8.FLOW_ENDPOINTS[global.flow]}`;
+          closure_3 = `paypal_hermes/${closure_8.FLOW_ENDPOINTS[global.flow]}`;
           this._flow = global.flow;
           delete tmp[tmp2];
           if (!module) {
@@ -10941,8 +10901,8 @@ let fn = () => {
           closure_0 = global;
           self = this;
           if (global) {
-            tmp = c8;
-            if (!self._hasMissingOption(global, c8.REQUIRED_OPTIONS)) {
+            tmp = closure_8;
+            if (!self._hasMissingOption(global, closure_8.REQUIRED_OPTIONS)) {
               tmp2 = closure_0;
               sendEvent = closure_0.sendEvent;
               _clientPromise = self._clientPromise;
@@ -10957,12 +10917,12 @@ let fn = () => {
                 sendEventResult1 = sendEvent(_clientPromise, "paypal-checkout.updatePayment.inconsistent-currencies");
                 tmp4 = globalThis;
                 _Promise = Promise;
-                tmp5 = c5;
+                tmp5 = closure_5;
                 obj = { type: null, code: null, message: null, details: null };
-                tmp6 = c7;
-                obj[0] = c7.PAYPAL_INVALID_PAYMENT_OPTION.type;
-                obj[1] = c7.PAYPAL_INVALID_PAYMENT_OPTION.code;
-                obj[2] = c7.PAYPAL_INVALID_PAYMENT_OPTION.message;
+                tmp6 = closure_7;
+                obj[0] = closure_7.PAYPAL_INVALID_PAYMENT_OPTION.type;
+                obj[1] = closure_7.PAYPAL_INVALID_PAYMENT_OPTION.code;
+                obj[2] = closure_7.PAYPAL_INVALID_PAYMENT_OPTION.message;
                 obj = { originalError: null };
                 _Error = Error;
                 tmp7 = new.target;
@@ -10975,7 +10935,7 @@ let fn = () => {
                 tmp11 = new.target;
                 tmp12 = new.target;
                 tmp13 = obj;
-                tmp14 = new c5(obj);
+                tmp14 = new closure_5(obj);
                 tmp15 = tmp14;
                 catchPromise = Promise.reject(tmp14);
               }
@@ -10983,39 +10943,39 @@ let fn = () => {
             return catchPromise;
           }
           sendEventResult2 = closure_0.sendEvent(self._clientPromise, "paypal-checkout.updatePayment.missing-options");
-          tmp19 = new c5(c7.PAYPAL_MISSING_REQUIRED_OPTION);
+          tmp19 = new closure_5(closure_7.PAYPAL_MISSING_REQUIRED_OPTION);
           catchPromise = Promise.reject(tmp19);
           return;
         }
         startVaultInitiatedCheckout(arg0) {
           self = this;
-          _addModalBackdrop = global;
+          closure_0 = global;
           self = this;
           if (this._vaultInitiatedCheckoutInProgress) {
-            tmp18 = _addModalBackdrop;
+            tmp18 = closure_0;
             str4 = "paypal-checkout.startVaultInitiatedCheckout.error.already-in-progress";
-            sendEventResult = _addModalBackdrop.sendEvent(self._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.error.already-in-progress");
+            sendEventResult = closure_0.sendEvent(self._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.error.already-in-progress");
             tmp20 = globalThis;
             _Promise2 = Promise;
-            tmp21 = c5;
-            tmp22 = c7;
+            tmp21 = closure_5;
+            tmp22 = closure_7;
             tmp23 = new.target;
             tmp24 = new.target;
-            tmp25 = new c5(c7.PAYPAL_START_VAULT_INITIATED_CHECKOUT_IN_PROGRESS);
+            tmp25 = new closure_5(closure_7.PAYPAL_START_VAULT_INITIATED_CHECKOUT_IN_PROGRESS);
             tmp26 = tmp25;
             rejectResult = Promise.reject(tmp25);
           } else {
-            tmp = INTEGRATION_TIMEOUT_MS;
-            item = INTEGRATION_TIMEOUT_MS.forEach(() => { ... });
+            tmp = closure_17;
+            item = closure_17.forEach(() => { ... });
             tmp3 = assign;
             if (assign) {
               tmp9 = globalThis;
               _Promise = Promise;
-              tmp10 = c5;
+              tmp10 = closure_5;
               obj = { type: null, code: null, message: null };
-              tmp11 = c7;
-              obj[0] = c7.PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED.type;
-              obj[1] = c7.PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED.code;
+              tmp11 = closure_7;
+              obj[0] = closure_7.PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED.type;
+              obj[1] = closure_7.PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED.code;
               tmp12 = assign;
               str2 = "Required param ";
               str3 = " is missing.";
@@ -11023,7 +10983,7 @@ let fn = () => {
               tmp13 = new.target;
               tmp14 = new.target;
               tmp15 = obj;
-              tmp16 = new c5(obj);
+              tmp16 = new closure_5(obj);
               tmp17 = tmp16;
               rejectResult = Promise.reject(tmp16);
             } else {
@@ -11031,10 +10991,10 @@ let fn = () => {
               self._vaultInitiatedCheckoutInProgress = true;
               _addModalBackdropResult = self._addModalBackdrop(global);
               tmp5 = assign;
-              _addModalBackdrop = assign({}, global, { flow: "checkout" });
-              tmp6 = _addModalBackdrop;
+              closure_0 = assign({}, global, { flow: "checkout" });
+              tmp6 = closure_0;
               str = "paypal-checkout.startVaultInitiatedCheckout.started";
-              sendEventResult1 = _addModalBackdrop.sendEvent(self._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.started");
+              sendEventResult1 = closure_0.sendEvent(self._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.started");
               result = self._waitForVaultInitiatedCheckoutDependencies();
               nextPromise = result.then(() => { ... });
               catchPromise = nextPromise.catch(() => { ... });
@@ -11092,9 +11052,9 @@ let fn = () => {
         closeVaultInitiatedCheckoutWindow() {
           self = this;
           if (this._vaultInitiatedCheckoutInProgress) {
-            tmp = c0;
+            tmp = closure_0;
             str = "paypal-checkout.startVaultInitiatedCheckout.canceled.by-merchant";
-            sendEventResult = c0.sendEvent(self._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.canceled.by-merchant");
+            sendEventResult = closure_0.sendEvent(self._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.canceled.by-merchant");
           }
           result = self._waitForVaultInitiatedCheckoutDependencies();
           fn = () => { ... };
@@ -11117,21 +11077,21 @@ let fn = () => {
         }
         _constructVaultCheckutUrl(arg0) {
           text = `${this._assetsUrl}/html/${global}`;
-          return text + c12(this._isDebug) + ".html?channel=" + this._frameService._serviceId;
+          return text + closure_12(this._isDebug) + ".html?channel=" + this._frameService._serviceId;
         }
         tokenizePayment(arg0) {
           self = this;
           self = this;
           obj = { flow: this._flow, intent: tmp };
           tmp = global.intent || self.intentFromCreatePayment;
-          c2 = obj;
-          intentFromCreatePayment = { ecToken: global.paymentToken, billingToken: global.billingToken, payerId: global.payerID, paymentId: global.paymentID, orderId: global.orderID, shippingOptionsId: global.shippingOptionsId };
+          closure_2 = obj;
+          closure_3 = { ecToken: global.paymentToken, billingToken: global.billingToken, payerId: global.payerID, paymentId: global.paymentID, orderId: global.orderID, shippingOptionsId: global.shippingOptionsId };
           flag = true;
           if (global.hasOwnProperty("vault")) {
             flag = global.vault;
           }
           obj.vault = flag;
-          sendEventResult = c0.sendEvent(self._clientPromise, "paypal-checkout.tokenization.started");
+          sendEventResult = closure_0.sendEvent(self._clientPromise, "paypal-checkout.tokenization.started");
           _clientPromise = self._clientPromise;
           nextPromise = _clientPromise.then(() => { ... });
           nextPromise1 = nextPromise.then(() => { ... });
@@ -11144,7 +11104,7 @@ let fn = () => {
         loadPayPalSDK(arg0) {
           closure_0 = global;
           promise = new closure_4();
-          assign = promise;
+          closure_1 = promise;
           dataAttributes = global;
           if (global) {
             dataAttributes = global.dataAttributes;
@@ -11152,9 +11112,10 @@ let fn = () => {
           if (!dataAttributes) {
             dataAttributes = {};
           }
+          closure_2 = dataAttributes;
           tmp3 = dataAttributes["user-id-token"] || dataAttributes["data-user-id-token"];
           self = this;
-          fingerprint = tmp3;
+          closure_3 = tmp3;
           if (!this._configuration) {
             if (!tmp3) {
               fingerprint = self._authorizationInformation.fingerprint;
@@ -11163,13 +11124,14 @@ let fn = () => {
                 str2 = "?";
                 fingerprint = str.split("?")[0];
               }
+              closure_3 = fingerprint;
             }
             tmp4 = globalThis;
             _document = document;
             str3 = "script";
             self._paypalScript = document.createElement("script");
-            tmp5 = assign;
-            tmp6 = assign({}, { components: "buttons" }, global);
+            tmp5 = closure_1;
+            tmp6 = closure_1({}, { components: "buttons" }, global);
             closure_0 = tmp6;
             str4 = "dataAttributes";
             delete tmp[tmp2];
@@ -11230,7 +11192,7 @@ let fn = () => {
             obj["merchant-id"] = global.merchantId;
           }
           xMLHttpRequest = new XMLHttpRequest();
-          openResult = xMLHttpRequest.open("GET", c14.queryify(replaced, obj));
+          openResult = xMLHttpRequest.open("GET", closure_14.queryify(replaced, obj));
           sendResult = xMLHttpRequest.send();
           return;
         }
@@ -11292,8 +11254,8 @@ let fn = () => {
             if (global.planType) {
               obj.plan_type = global.planType;
               if (global.planMetadata) {
-                tmp3 = c15;
-                obj.plan_metadata = c15(global.planMetadata);
+                tmp3 = closure_15;
+                obj.plan_metadata = closure_15(global.planMetadata);
               }
             }
           }
@@ -11366,9 +11328,9 @@ let fn = () => {
             obj.amountBreakdown = global.amountBreakdown;
           }
           if (global.hasOwnProperty("shippingAddress")) {
-            tmp = c0;
+            tmp = closure_0;
             str = "paypal-checkout.updatePayment.shippingAddress.provided.by-the-merchant";
-            sendEventResult = c0.sendEvent(this._clientPromise, "paypal-checkout.updatePayment.shippingAddress.provided.by-the-merchant");
+            sendEventResult = closure_0.sendEvent(this._clientPromise, "paypal-checkout.updatePayment.shippingAddress.provided.by-the-merchant");
             obj.line1 = global.shippingAddress.line1;
             shippingAddress = global.shippingAddress;
             str2 = "line2";
@@ -11457,7 +11419,7 @@ let fn = () => {
         teardown() {
           self = this;
           self = this;
-          tmp = c13(this, c11(PayPalCheckout.prototype));
+          tmp = closure_13(this, closure_11(PayPalCheckout.prototype));
           tmp2 = this._paypalScript && self._paypalScript.parentNode;
           if (tmp2) {
             parentNode = self._paypalScript.parentNode;
@@ -11468,25 +11430,25 @@ let fn = () => {
           return catchPromise.then(() => { ... });
         }
       }
-      let closure_0 = global("../lib/analytics");
-      let assign = global("../lib/assign").assign;
-      let closure_2 = global("../lib/create-deferred-client");
-      let closure_3 = global("../lib/create-assets-url");
+      closure_0 = global("../lib/analytics");
+      const assign = global("../lib/assign").assign;
+      closure_2 = global("../lib/create-deferred-client");
+      closure_3 = global("../lib/create-assets-url");
       const globalResult = global("@braintree/extended-promise");
-      let closure_4 = globalResult;
-      let closure_5 = global("../lib/braintree-error");
-      let closure_6 = global("../lib/convert-to-braintree-error");
-      let closure_7 = global("./errors");
-      let closure_8 = global("../paypal/shared/constants");
-      let closure_9 = global("../lib/frame-service/external");
-      let closure_10 = global("../lib/create-authorization-data");
-      let closure_11 = global("../lib/methods");
-      let closure_12 = global("../lib/use-min");
-      let closure_13 = global("../lib/convert-methods-to-error");
-      let closure_14 = global("../lib/querystring");
-      let closure_15 = global("../lib/camel-case-to-snake-case");
+      closure_4 = globalResult;
+      closure_5 = global("../lib/braintree-error");
+      closure_6 = global("../lib/convert-to-braintree-error");
+      closure_7 = global("./errors");
+      closure_8 = global("../paypal/shared/constants");
+      closure_9 = global("../lib/frame-service/external");
+      closure_10 = global("../lib/create-authorization-data");
+      closure_11 = global("../lib/methods");
+      closure_12 = global("../lib/use-min");
+      closure_13 = global("../lib/convert-methods-to-error");
+      closure_14 = global("../lib/querystring");
+      closure_15 = global("../lib/camel-case-to-snake-case");
       const INTEGRATION_TIMEOUT_MS = global("../lib/constants").INTEGRATION_TIMEOUT_MS;
-      let closure_17 = ["amount", "currency", "vaultInitiatedCheckoutPaymentMethodToken"];
+      closure_17 = ["amount", "currency", "vaultInitiatedCheckoutPaymentMethodToken"];
       globalResult.suppressUnhandledPromiseMessage = true;
       module.exports = global("@braintree/wrap-promise").wrapPrototype(PayPalCheckout);
     },
@@ -11496,7 +11458,7 @@ let fn = () => {
     (arg0, arg1, arg2) => {
       class PayPal {
         constructor(arg0) {
-          obj = { _client: global.client, _assetsUrl: `${client.getConfiguration().gatewayConfiguration.paypal.assetsUrl}/web/${c5}`, _isDebug: client2.getConfiguration().isDebug, _loadingFrameUrl: `${`${obj._assetsUrl}/html/paypal-landing-frame`}${c3(obj._isDebug)}.html`, _authorizationInProgress: false };
+          obj = { _client: global.client, _assetsUrl: `${client.getConfiguration().gatewayConfiguration.paypal.assetsUrl}/web/${c5}`, _isDebug: client2.getConfiguration().isDebug, _loadingFrameUrl: `${`${obj._assetsUrl}/html/paypal-landing-frame`}${closure_3(obj._isDebug)}.html`, _authorizationInProgress: false };
           client = global.client;
           client2 = global.client;
           return;
@@ -11504,12 +11466,12 @@ let fn = () => {
         _initialize() {
           self = this;
           _client = this._client;
-          f116077 = setTimeout(() => {
-            outer1_8.sendEvent(_client, "paypal.load.timed-out");
+          closure_2 = setTimeout(() => {
+            closure_1_8.sendEvent(_client, "paypal.load.timed-out");
           }, INTEGRATION_TIMEOUT_MS);
           promise = new Promise((arg0) => {
             const _self = arg0;
-            let obj = { name: outer1_6.LANDING_FRAME_NAME, dispatchFrameUrl: `${`${closure_0._assetsUrl}/html/dispatch-frame`}${outer1_3(closure_0._isDebug)}.html`, openFrameUrl: _self._loadingFrameUrl };
+            let obj = { name: closure_1_6.LANDING_FRAME_NAME, dispatchFrameUrl: `${`${closure_0._assetsUrl}/html/dispatch-frame`}${closure_1_3(closure_0._isDebug)}.html`, openFrameUrl: _self._loadingFrameUrl };
             obj = self.create(obj, () => { ... });
           });
           return promise;
@@ -11517,20 +11479,20 @@ let fn = () => {
         tokenize(arg0, arg1) {
           self = this;
           closure_0 = global;
-          _client = module;
+          closure_1 = module;
           self = this;
           _client = this._client;
           tmp = module;
           if (module) {
-            tmp2 = c4;
-            tmp3 = c10;
-            tmp4 = c4(c10(module));
-            _client = tmp4;
+            tmp2 = closure_4;
+            tmp3 = closure_10;
+            tmp4 = closure_4(closure_10(module));
+            closure_1 = tmp4;
             tmp = tmp4;
           }
           if (global) {
-            tmp5 = c6;
-            FLOW_ENDPOINTS = c6.FLOW_ENDPOINTS;
+            tmp5 = closure_6;
+            FLOW_ENDPOINTS = closure_6.FLOW_ENDPOINTS;
             if (FLOW_ENDPOINTS.hasOwnProperty(global.flow)) {
               tmp10 = globalThis;
               _Promise2 = Promise;
@@ -11538,20 +11500,20 @@ let fn = () => {
               tmp12 = new.target;
               promise = new Promise((arg0, arg1) => {
                 if (self._authorizationInProgress) {
-                  outer1_8.sendEvent(_client, "paypal.tokenization.error.already-opened");
-                  const tmp22 = new closure_1(outer1_11.PAYPAL_TOKENIZATION_REQUEST_ACTIVE);
+                  closure_1_8.sendEvent(_client, "paypal.tokenization.error.already-opened");
+                  const tmp22 = new closure_1(closure_1_11.PAYPAL_TOKENIZATION_REQUEST_ACTIVE);
                   arg1(tmp22);
                 } else {
                   obj._authorizationInProgress = true;
                   const _window = window;
                   if (!window.popupBridge) {
-                    outer1_8.sendEvent(_client, "paypal.tokenization.opened");
+                    closure_1_8.sendEvent(_client, "paypal.tokenization.opened");
                   }
                   if (true === offerCredit.offerCredit) {
-                    outer1_8.sendEvent(_client, "paypal.credit.offered");
+                    closure_1_8.sendEvent(_client, "paypal.credit.offered");
                   }
                   if (true === offerCredit.offerPayLater) {
-                    outer1_8.sendEvent(_client, "paypal.paylater.offered");
+                    closure_1_8.sendEvent(_client, "paypal.paylater.offered");
                   }
                   obj._navigateFrameToAuth(offerCredit).catch(arg1);
                   const _frameService = obj._frameService;
@@ -11569,7 +11531,7 @@ let fn = () => {
                 _frameService2 = self._frameService;
                 obj = { beforeClose: null };
                 obj[0] = function beforeClose() {
-                  outer1_8.sendEvent(_client, "paypal.tokenization.closed.by-merchant");
+                  closure_1_8.sendEvent(_client, "paypal.tokenization.closed.by-merchant");
                 };
                 handler = _frameService2.createHandler(obj);
               }
@@ -11577,7 +11539,7 @@ let fn = () => {
             }
             return noopHandler;
           }
-          tmp6 = new _client(c11.PAYPAL_FLOW_OPTION_REQUIRED);
+          tmp6 = new closure_1(closure_11.PAYPAL_FLOW_OPTION_REQUIRED);
           if (tmp) {
             tmpResult = tmp(tmp6);
             _frameService = self._frameService;
@@ -11613,15 +11575,15 @@ let fn = () => {
                 }
               }
             }
-            outer1_8.sendEvent(_client, "paypal.tokenization.closed-popupbridge.by-user");
-            callback(new closure_1(outer1_11.PAYPAL_POPUP_CLOSED));
+            closure_1_8.sendEvent(_client, "paypal.tokenization.closed-popupbridge.by-user");
+            callback(new closure_1(closure_1_11.PAYPAL_POPUP_CLOSED));
           }) : ((code) => {
             let obj = self;
             self._authorizationInProgress = false;
             if (code) {
               if ("FRAME_SERVICE_FRAME_CLOSED" === code.code) {
-                outer1_8.sendEvent(_client, "paypal.tokenization.closed.by-user");
-                const tmp25 = new closure_1(outer1_11.PAYPAL_POPUP_CLOSED);
+                closure_1_8.sendEvent(_client, "paypal.tokenization.closed.by-user");
+                const tmp25 = new closure_1(closure_1_11.PAYPAL_POPUP_CLOSED);
                 callback(tmp25);
               } else {
                 code = code.code;
@@ -11631,9 +11593,9 @@ let fn = () => {
                 }
                 if (code) {
                   obj = { code: null, type: null, message: null, details: null };
-                  obj[0] = outer1_11.PAYPAL_POPUP_OPEN_FAILED.code;
-                  obj[1] = outer1_11.PAYPAL_POPUP_OPEN_FAILED.type;
-                  obj[2] = outer1_11.PAYPAL_POPUP_OPEN_FAILED.message;
+                  obj[0] = closure_1_11.PAYPAL_POPUP_OPEN_FAILED.code;
+                  obj[1] = closure_1_11.PAYPAL_POPUP_OPEN_FAILED.type;
+                  obj[2] = closure_1_11.PAYPAL_POPUP_OPEN_FAILED.message;
                   obj = { originalError: null };
                   obj[0] = code;
                   obj[3] = obj;
@@ -11660,7 +11622,7 @@ let fn = () => {
           requestResult = _client.request(obj);
           nextPromise = requestResult.then((arg0) => {
             const result = self._formatTokenizePayload(arg0);
-            const sendEvent = outer1_8.sendEvent;
+            const sendEvent = closure_1_8.sendEvent;
             if (window.popupBridge) {
               sendEvent(tmp4, "paypal.tokenization.success-popupbridge");
               let tmp6 = tmp4;
@@ -11669,14 +11631,14 @@ let fn = () => {
               tmp6 = tmp4;
             }
             if (result.creditFinancingOffered) {
-              outer1_8.sendEvent(tmp6, "paypal.credit.accepted");
+              closure_1_8.sendEvent(tmp6, "paypal.credit.accepted");
             }
             const _frameService = self._frameService;
             _frameService.close();
             return result;
           });
           return nextPromise.catch((arg0) => {
-            const sendEvent = outer1_8.sendEvent;
+            const sendEvent = closure_1_8.sendEvent;
             if (window.popupBridge) {
               sendEvent(tmp2, "paypal.tokenization.failed-popupbridge");
             } else {
@@ -11684,7 +11646,7 @@ let fn = () => {
             }
             const _frameService = self._frameService;
             _frameService.close();
-            return Promise.reject(outer1_2(arg0, { type: outer1_11.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.type, code: outer1_11.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.code, message: outer1_11.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.message }));
+            return Promise.reject(closure_1_2(arg0, { type: closure_1_11.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.type, code: closure_1_11.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.code, message: closure_1_11.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.message }));
           });
         }
         _formatTokenizePayload(arg0) {
@@ -11736,7 +11698,7 @@ let fn = () => {
           closure_0 = global;
           self = this;
           _client = this._client;
-          obj = { endpoint: `paypal_hermes/${c6.FLOW_ENDPOINTS[global.flow]}`, method: "post", data: this._formatPaymentResourceData(global) };
+          obj = { endpoint: `paypal_hermes/${closure_6.FLOW_ENDPOINTS[global.flow]}`, method: "post", data: this._formatPaymentResourceData(global) };
           requestResult = _client.request(obj);
           nextPromise = requestResult.then((paymentResource) => {
             if ("checkout" === flow.flow) {
@@ -11746,10 +11708,10 @@ let fn = () => {
             }
             let queryifyResult = approvalUrl;
             if ("commit" === flow.useraction) {
-              queryifyResult = outer1_13.queryify(approvalUrl, { useraction: "commit" });
+              queryifyResult = closure_1_13.queryify(approvalUrl, { useraction: "commit" });
             }
             if (window.popupBridge) {
-              outer1_8.sendEvent(_client, "paypal.tokenization.opened-popupbridge");
+              closure_1_8.sendEvent(_client, "paypal.tokenization.opened-popupbridge");
             }
             const _frameService = self._frameService;
             _frameService.redirect(queryifyResult);
@@ -11760,9 +11722,9 @@ let fn = () => {
             self._authorizationInProgress = false;
             if (422 === tmp) {
               let obj = { type: null, code: null, message: null, details: null };
-              obj[0] = outer1_11.PAYPAL_INVALID_PAYMENT_OPTION.type;
-              obj[1] = outer1_11.PAYPAL_INVALID_PAYMENT_OPTION.code;
-              obj[2] = outer1_11.PAYPAL_INVALID_PAYMENT_OPTION.message;
+              obj[0] = closure_1_11.PAYPAL_INVALID_PAYMENT_OPTION.type;
+              obj[1] = closure_1_11.PAYPAL_INVALID_PAYMENT_OPTION.code;
+              obj[2] = closure_1_11.PAYPAL_INVALID_PAYMENT_OPTION.message;
               obj = { originalError: null };
               obj[0] = details;
               obj[3] = obj;
@@ -11770,9 +11732,9 @@ let fn = () => {
               let rejectResult = Promise.reject(tmp17);
             } else {
               obj = { type: null, code: null, message: null };
-              obj[0] = outer1_11.PAYPAL_FLOW_FAILED.type;
-              obj[1] = outer1_11.PAYPAL_FLOW_FAILED.code;
-              obj[2] = outer1_11.PAYPAL_FLOW_FAILED.message;
+              obj[0] = closure_1_11.PAYPAL_FLOW_FAILED.type;
+              obj[1] = closure_1_11.PAYPAL_FLOW_FAILED.code;
+              obj[2] = closure_1_11.PAYPAL_FLOW_FAILED.message;
               rejectResult = Promise.reject(_client(details, obj));
             }
             return rejectResult;
@@ -11782,7 +11744,7 @@ let fn = () => {
           _client = this._client;
           gatewayConfiguration = _client.getConfiguration().gatewayConfiguration;
           _serviceId = this._frameService._serviceId;
-          obj = { returnUrl: `${`${gatewayConfiguration.paypal.assetsUrl}/web/`}${c5}/html/redirect-frame${c3(this._isDebug)}.html?channel=${_serviceId}`, cancelUrl: `${`${gatewayConfiguration.paypal.assetsUrl}/web/`}${c5}/html/cancel-frame${c3(this._isDebug)}.html?channel=${_serviceId}`, offerPaypalCredit: true === global.offerCredit, offerPayLater: true === global.offerPayLater, experienceProfile: null };
+          obj = { returnUrl: `${`${gatewayConfiguration.paypal.assetsUrl}/web/`}${c5}/html/redirect-frame${closure_3(this._isDebug)}.html?channel=${_serviceId}`, cancelUrl: `${`${gatewayConfiguration.paypal.assetsUrl}/web/`}${c5}/html/cancel-frame${closure_3(this._isDebug)}.html?channel=${_serviceId}`, offerPaypalCredit: true === global.offerCredit, offerPayLater: true === global.offerPayLater, experienceProfile: null };
           tmp = global.displayName || gatewayConfiguration.paypal.displayName;
           obj = { brandName: tmp, localeCode: global.locale, noShipping: str.toString(), addressOverride: false === global.shippingAddressEditable, landingPageType: global.landingPageType };
           str = !global.enableShippingAddress;
@@ -11830,9 +11792,9 @@ let fn = () => {
         closeWindow() {
           self = this;
           if (this._authorizationInProgress) {
-            tmp = c8;
+            tmp = closure_8;
             str = "paypal.tokenize.closed.by-merchant";
-            sendEventResult = c8.sendEvent(self._client, "paypal.tokenize.closed.by-merchant");
+            sendEventResult = closure_8.sendEvent(self._client, "paypal.tokenize.closed.by-merchant");
           }
           _frameService = self._frameService;
           closeResult = _frameService.close();
@@ -11844,20 +11806,20 @@ let fn = () => {
           return;
         }
       }
-      let closure_0 = global("../../lib/frame-service/external");
-      let closure_1 = global("../../lib/braintree-error");
-      let closure_2 = global("../../lib/convert-to-braintree-error");
-      let closure_3 = global("../../lib/use-min");
-      let closure_4 = global("../../lib/once");
-      let c5 = "3.112.1";
-      let closure_6 = global("../shared/constants");
+      closure_0 = global("../../lib/frame-service/external");
+      closure_1 = global("../../lib/braintree-error");
+      closure_2 = global("../../lib/convert-to-braintree-error");
+      closure_3 = global("../../lib/use-min");
+      closure_4 = global("../../lib/once");
+      c5 = "3.112.1";
+      closure_6 = global("../shared/constants");
       const INTEGRATION_TIMEOUT_MS = global("../../lib/constants").INTEGRATION_TIMEOUT_MS;
-      let closure_8 = global("../../lib/analytics");
-      let closure_9 = global("../../lib/methods");
-      let closure_10 = global("../../lib/deferred");
-      let closure_11 = global("../shared/errors");
-      let closure_12 = global("../../lib/convert-methods-to-error");
-      let closure_13 = global("../../lib/querystring");
+      closure_8 = global("../../lib/analytics");
+      closure_9 = global("../../lib/methods");
+      closure_10 = global("../../lib/deferred");
+      closure_11 = global("../shared/errors");
+      closure_12 = global("../../lib/convert-methods-to-error");
+      closure_13 = global("../../lib/querystring");
       PayPal.prototype.teardown = global("@braintree/wrap-promise")(function() {
         const _frameService = this._frameService;
         _frameService.teardown();
@@ -11871,26 +11833,26 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/analytics");
-      let closure_1 = global("../lib/basic-component-verification");
-      let closure_2 = global("../lib/create-deferred-client");
-      let closure_3 = global("../lib/create-assets-url");
-      let closure_4 = global("../lib/braintree-error");
-      let closure_5 = global("./shared/errors");
-      let closure_6 = global("./external/paypal");
+      closure_0 = global("../lib/analytics");
+      closure_1 = global("../lib/basic-component-verification");
+      closure_2 = global("../lib/create-deferred-client");
+      closure_3 = global("../lib/create-assets-url");
+      closure_4 = global("../lib/braintree-error");
+      closure_5 = global("./shared/errors");
+      closure_6 = global("./external/paypal");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
+          closure_0 = client;
           let obj = { name: "PayPal", client: client.client, authorization: client.authorization };
           const verifyResult = closure_1.verify({ name: "PayPal", client: client.client, authorization: client.authorization });
-          return closure_1.verify({ name: "PayPal", client: client.client, authorization: client.authorization }).then(() => outer1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: outer1_3.create(client.authorization), name: "PayPal" })).then((client) => {
+          return closure_1.verify({ name: "PayPal", client: client.client, authorization: client.authorization }).then(() => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "PayPal" })).then((client) => {
             client.client = client;
             if (true !== client.getConfiguration().gatewayConfiguration.paypalEnabled) {
-              const tmp15 = new outer1_4(outer1_5.PAYPAL_NOT_ENABLED);
+              const tmp15 = new closure_1_4(closure_1_5.PAYPAL_NOT_ENABLED);
               let rejectResult = Promise.reject(tmp15);
             } else {
               client.sendEvent(tmp.client, "paypal.initialized");
-              const obj = new outer1_6(tmp);
+              const obj = new closure_1_6(tmp);
               rejectResult = obj._initialize();
             }
             return rejectResult;
@@ -11922,13 +11884,13 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/basic-component-verification");
-      let closure_1 = global("./preferred-payment-methods");
+      closure_0 = global("../lib/basic-component-verification");
+      closure_1 = global("./preferred-payment-methods");
       const globalResult = global("@braintree/wrap-promise");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
-          return closure_0.verify({ name: "PreferredPaymentMethods", client: client.client, authorization: client.authorization }).then(() => new outer1_1().initialize(closure_0));
+          closure_0 = client;
+          return closure_0.verify({ name: "PreferredPaymentMethods", client: client.client, authorization: client.authorization }).then(() => new closure_1_1().initialize(closure_0));
         }),
         VERSION: "3.112.1"
       };
@@ -11943,8 +11905,8 @@ let fn = () => {
         }
         initialize(arg0) {
           self = this;
-          obj = { authorization: global.authorization, client: global.client, debug: global.debug, assetsUrl: c1.create(global.authorization), name: "PreferredPaymentMethods" };
-          obj = c2.create(obj);
+          obj = { authorization: global.authorization, client: global.client, debug: global.debug, assetsUrl: closure_1.create(global.authorization), name: "PreferredPaymentMethods" };
+          obj = closure_2.create(obj);
           this._clientPromise = obj.catch(() => { ... });
           sendEventResult = self.sendEvent(this._clientPromise, "preferred-payment-methods.initialized");
           return Promise.resolve(this);
@@ -11957,34 +11919,34 @@ let fn = () => {
           return nextPromise1.catch(() => { ... });
         }
       }
-      let closure_0 = global("../lib/analytics");
-      let closure_1 = global("../lib/create-assets-url");
-      let closure_2 = global("../lib/create-deferred-client");
+      closure_0 = global("../lib/analytics");
+      closure_1 = global("../lib/create-assets-url");
+      closure_2 = global("../lib/create-deferred-client");
       module.exports = global("@braintree/wrap-promise").wrapPrototype(PreferredPaymentMethods);
     },
     { "../lib/analytics": 138, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "@braintree/wrap-promise": 40 }
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../../lib/braintree-error");
-      let closure_1 = global("../shared/errors");
-      let closure_2 = global("../../lib/frame-service/external");
-      let closure_3 = global("../../lib/analytics");
-      let closure_4 = global("../../lib/use-min");
+      closure_0 = global("../../lib/braintree-error");
+      closure_1 = global("../shared/errors");
+      closure_2 = global("../../lib/frame-service/external");
+      closure_3 = global("../../lib/analytics");
+      closure_4 = global("../../lib/use-min");
       const BILLING_ADDRESS_OPTIONS = global("../shared/constants").BILLING_ADDRESS_OPTIONS;
-      let closure_6 = global("../../lib/snake-case-to-camel-case");
+      closure_6 = global("../../lib/snake-case-to-camel-case");
       const assign = global("../../lib/assign").assign;
-      let c8 = 400;
-      let c9 = 570;
+      c8 = 400;
+      c9 = 570;
       module.exports = {
         createMandate(_client, locale) {
-          let closure_0 = locale;
+          closure_0 = locale;
           obj = { sepa_debit: obj, locale: locale.locale, cancel_url: locale.cancelUrl, return_url: locale.returnUrl, merchant_account_id: locale.merchantAccountId };
           obj = { account_holder_name: locale.accountHolderName, billing_address: obj, iban: locale.iban, merchant_or_partner_customer_id: locale.customerId, mandate_type: locale.mandateType };
           obj = { country_code: locale.countryCode };
           if (locale.billingAddress) {
             const item = BILLING_ADDRESS_OPTIONS.forEach((arg0) => {
-              const tmp = outer1_6(arg0);
+              const tmp = closure_1_6(arg0);
               if (tmp in locale.billingAddress) {
                 obj.sepa_debit.billing_address[arg0] = tmp2.billingAddress[tmp];
               }
@@ -11994,7 +11956,7 @@ let fn = () => {
           return _client.request({ api: "clientApi", method: "post", endpoint: "sepa_debit", data: obj }).then((message) => {
             const sepaDebitAccount = message.message.body.sepaDebitAccount;
             if (sepaDebitAccount) {
-              const obj = { approvalUrl: null, last4: null, bankReferenceToken: null };
+              obj = { approvalUrl: null, last4: null, bankReferenceToken: null };
               ({ approvalUrl: obj[0], last4: obj[1], bankReferenceToken: obj[2] } = sepaDebitAccount);
               return obj;
             } else {
@@ -12006,24 +11968,24 @@ let fn = () => {
           });
         },
         openPopup(arg0, debug) {
-          let closure_0 = arg0;
-          let closure_1 = debug;
-          let closure_2 = `${debug.assetsUrl}/html`;
-          let closure_3 = debug.debug || false;
+          closure_0 = arg0;
+          closure_1 = debug;
+          closure_2 = `${debug.assetsUrl}/html`;
+          closure_3 = debug.debug || false;
           return new Promise((arg0, arg1) => {
-            let closure_0 = arg0;
-            let closure_1 = arg1;
-            const sum = Math.round((window.outerHeight - outer1_9) / 2) + window.screenTop;
+            closure_0 = arg0;
+            closure_1 = arg1;
+            const sum = Math.round((window.outerHeight - closure_1_9) / 2) + window.screenTop;
             let obj = { name: "sepadirectdebit", dispatchFrameUrl: null, openFrameUrl: null, top: null, left: null, height: null, width: null };
-            const sum1 = Math.round((window.outerWidth - outer1_8) / 2) + window.screenLeft;
-            obj[1] = `${closure_2}/dispatch-frame${outer1_4(closure_3)}.html`;
-            obj[2] = `${closure_2}/sepa-landing-frame${outer1_4(closure_3)}.html`;
+            const sum1 = Math.round((window.outerWidth - closure_1_8) / 2) + window.screenLeft;
+            obj[1] = `${closure_2}/dispatch-frame${closure_1_4(closure_3)}.html`;
+            obj[2] = `${closure_2}/sepa-landing-frame${closure_1_4(closure_3)}.html`;
             obj[3] = sum;
             obj[4] = sum1;
-            obj[5] = outer1_9;
-            obj[6] = outer1_8;
+            obj[5] = closure_1_9;
+            obj[6] = closure_1_8;
             obj = closure_2.create(obj, (open) => {
-              let closure_0 = open;
+              closure_0 = open;
               closure_3.sendEvent(closure_0, "sepa.popup.initialized");
               open.open({}, () => { ... });
               open.redirect(approvalUrl.approvalUrl);
@@ -12031,7 +11993,7 @@ let fn = () => {
           });
         },
         handleApproval(_client, last_4) {
-          let closure_0 = last_4;
+          closure_0 = last_4;
           obj = { sepa_debit_account: obj, merchant_account_id: last_4.merchantAccountId };
           obj = { last_4: last_4.last4, merchant_or_partner_customer_id: last_4.customerId, bank_reference_token: last_4.bankReferenceToken, mandate_type: last_4.mandateType };
           const requestResult = _client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj });
@@ -12042,7 +12004,7 @@ let fn = () => {
               ({ last4: obj[1], customerId: obj[2], mandateType: obj[3] } = closure_0);
               return obj;
             } else {
-              const tmp5 = new closure_0(outer1_1.SEPA_TRANSACTION_FAILED);
+              const tmp5 = new closure_0(closure_1_1.SEPA_TRANSACTION_FAILED);
               throw tmp5;
             }
           }).catch(() => {
@@ -12056,14 +12018,14 @@ let fn = () => {
         },
         handleApprovalForFullPageRedirect(client, closure_0) {
           closure_0 = client;
-          let closure_1 = closure_0;
+          closure_1 = closure_0;
           let obj = { api: "clientApi", method: "get", endpoint: `sepa_debit/${closure_0.cart_id}` };
           let requestResult = client.request({ api: "clientApi", method: "get", endpoint: `sepa_debit/${closure_0.cart_id}` });
           const nextPromise = client.request({ api: "clientApi", method: "get", endpoint: `sepa_debit/${closure_0.cart_id}` }).then((sepaDebitMandateDetail) => {
             sepaDebitMandateDetail = sepaDebitMandateDetail.sepaDebitMandateDetail;
-            outer1_3.sendEvent(client, "sepa.redirect.mandate.approved");
+            closure_1_3.sendEvent(client, "sepa.redirect.mandate.approved");
             let obj = { last4: sepaDebitMandateDetail.last4, customerId: sepaDebitMandateDetail.merchantOrPartnerCustomerId, mandateType: sepaDebitMandateDetail.mandateType, bankReferenceToken: sepaDebitMandateDetail.bankReferenceToken };
-            outer1_7(closure_1, obj);
+            closure_1_7(closure_1, obj);
             client = closure_1;
             obj = { sepa_debit_account: obj, merchant_account_id: closure_1.merchantAccountId };
             obj = { last_4: closure_1.last4, merchant_or_partner_customer_id: closure_1.customerId, bank_reference_token: closure_1.bankReferenceToken, mandate_type: closure_1.mandateType };
@@ -12075,7 +12037,7 @@ let fn = () => {
                 ({ last4: obj[1], customerId: obj[2], mandateType: obj[3] } = closure_0);
                 return obj;
               } else {
-                const tmp5 = new closure_0(outer1_1.SEPA_TRANSACTION_FAILED);
+                const tmp5 = new closure_0(closure_1_1.SEPA_TRANSACTION_FAILED);
                 throw tmp5;
               }
             }).catch(() => {
@@ -12084,9 +12046,9 @@ let fn = () => {
           });
           return client.request({ api: "clientApi", method: "get", endpoint: `sepa_debit/${closure_0.cart_id}` }).then((sepaDebitMandateDetail) => {
             sepaDebitMandateDetail = sepaDebitMandateDetail.sepaDebitMandateDetail;
-            outer1_3.sendEvent(client, "sepa.redirect.mandate.approved");
+            closure_1_3.sendEvent(client, "sepa.redirect.mandate.approved");
             let obj = { last4: sepaDebitMandateDetail.last4, customerId: sepaDebitMandateDetail.merchantOrPartnerCustomerId, mandateType: sepaDebitMandateDetail.mandateType, bankReferenceToken: sepaDebitMandateDetail.bankReferenceToken };
-            outer1_7(closure_1, obj);
+            closure_1_7(closure_1, obj);
             client = closure_1;
             obj = { sepa_debit_account: obj, merchant_account_id: closure_1.merchantAccountId };
             obj = { last_4: closure_1.last4, merchant_or_partner_customer_id: closure_1.customerId, bank_reference_token: closure_1.bankReferenceToken, mandate_type: closure_1.mandateType };
@@ -12098,17 +12060,17 @@ let fn = () => {
                 ({ last4: obj[1], customerId: obj[2], mandateType: obj[3] } = closure_0);
                 return obj;
               } else {
-                const tmp5 = new closure_0(outer1_1.SEPA_TRANSACTION_FAILED);
+                const tmp5 = new closure_0(closure_1_1.SEPA_TRANSACTION_FAILED);
                 throw tmp5;
               }
             }).catch(() => {
               throw new closure_0(constants.SEPA_TRANSACTION_FAILED);
             });
           }).then((arg0) => {
-            outer1_3.sendEvent(closure_0, "sepa.redirect.tokenization.success");
+            closure_1_3.sendEvent(closure_0, "sepa.redirect.tokenization.success");
             return arg0;
           }).catch(() => {
-            outer1_3.sendEvent(closure_0, "sepa.redirect.handle-approval.failed");
+            closure_1_3.sendEvent(closure_0, "sepa.redirect.handle-approval.failed");
             throw new closure_0(closure_1.SEPA_TRANSACTION_FAILED);
           });
         }
@@ -12141,7 +12103,7 @@ let fn = () => {
           if (global.tokenizePayload) {
             obj.tokenizePayload = global.tokenizePayload;
           }
-          sendEventResult = c5.sendEvent(obj._client, "sepa.component.initialized");
+          sendEventResult = closure_5.sendEvent(obj._client, "sepa.component.initialized");
           return;
         }
         tokenize(arg0) {
@@ -12149,13 +12111,13 @@ let fn = () => {
           closure_0 = global;
           self = this;
           if (global) {
-            tmp2 = c4;
-            tmp3 = c2;
-            if (!c4(global, c2.REQUIRED_OPTIONS)) {
+            tmp2 = closure_4;
+            tmp3 = closure_2;
+            if (!closure_4(global, closure_2.REQUIRED_OPTIONS)) {
               MANDATE_TYPE_ENUM = tmp3.MANDATE_TYPE_ENUM;
               if (MANDATE_TYPE_ENUM.includes(global.mandateType)) {
-                tmp14 = c3;
-                mandate = c3.createMandate(self._client, tmp);
+                tmp14 = closure_3;
+                mandate = closure_3.createMandate(self._client, tmp);
                 nextPromise = mandate.then(() => { ... });
                 if (self._isRedirectFlow) {
                   tmp16 = globalThis;
@@ -12168,9 +12130,9 @@ let fn = () => {
                 }
                 tmp17 = resolved;
               } else {
-                tmp4 = c5;
+                tmp4 = closure_5;
                 str = "sepa.input-validation.invalid-mandate";
-                sendEventResult = c5.sendEvent(self._client, "sepa.input-validation.invalid-mandate");
+                sendEventResult = closure_5.sendEvent(self._client, "sepa.input-validation.invalid-mandate");
                 tmp6 = globalThis;
                 _Promise = Promise;
                 tmp7 = closure_0;
@@ -12184,18 +12146,18 @@ let fn = () => {
             }
             return rejectResult;
           }
-          sendEventResult1 = c5.sendEvent(self._client, "sepa.input-validation.missing-options");
+          sendEventResult1 = closure_5.sendEvent(self._client, "sepa.input-validation.missing-options");
           tmp19 = new closure_0(self.SEPA_TOKENIZE_MISSING_REQUIRED_OPTION);
           rejectResult = Promise.reject(tmp19);
           return;
         }
       }
-      let closure_0 = global("../../lib/braintree-error");
-      let closure_1 = global("../shared/errors");
-      let closure_2 = global("../shared/constants");
-      let closure_3 = global("./mandate");
-      let closure_4 = global("../shared/has-missing-option");
-      let closure_5 = global("../../lib/analytics");
+      closure_0 = global("../../lib/braintree-error");
+      closure_1 = global("../shared/errors");
+      closure_2 = global("../shared/constants");
+      closure_3 = global("./mandate");
+      closure_4 = global("../shared/has-missing-option");
+      closure_5 = global("../../lib/analytics");
       const assign = global("../../lib/assign").assign;
       module.exports = global("@braintree/wrap-promise").wrapPrototype(SEPA);
     },
@@ -12203,23 +12165,23 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/analytics");
-      let closure_1 = global("./external/sepa");
-      let closure_2 = global("../lib/create-assets-url");
-      let closure_3 = global("../lib/create-deferred-client");
-      let closure_4 = global("../lib/basic-component-verification");
+      closure_0 = global("../lib/analytics");
+      closure_1 = global("./external/sepa");
+      closure_2 = global("../lib/create-assets-url");
+      closure_3 = global("../lib/create-deferred-client");
+      closure_4 = global("../lib/basic-component-verification");
       const parse = global("../lib/querystring").parse;
       const assign = global("../lib/assign").assign;
-      let closure_7 = global("./external/mandate");
+      closure_7 = global("./external/mandate");
       const globalResult = global("@braintree/wrap-promise");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(arg0) {
-          let closure_0 = arg0;
-          let closure_1 = parse(window.location.href);
+          closure_0 = arg0;
+          closure_1 = parse(window.location.href);
           const obj = { name: "SEPA", client: closure_0.client, authorization: closure_0.authorization };
           const verifyResult = closure_4.verify({ name: "SEPA", client: closure_0.client, authorization: closure_0.authorization });
-          let nextPromise = closure_4.verify({ name: "SEPA", client: closure_0.client, authorization: closure_0.authorization }).then(() => outer1_3.create({ authorization: closure_0.authorization, client: closure_0.client, debug: closure_0.debug, assetsUrl: outer1_2.create(closure_0.authorization), name: "SEPA" }));
-          return closure_4.verify({ name: "SEPA", client: closure_0.client, authorization: closure_0.authorization }).then(() => outer1_3.create({ authorization: closure_0.authorization, client: closure_0.client, debug: closure_0.debug, assetsUrl: outer1_2.create(closure_0.authorization), name: "SEPA" })).then((client) => {
+          let nextPromise = closure_4.verify({ name: "SEPA", client: closure_0.client, authorization: closure_0.authorization }).then(() => closure_1_3.create({ authorization: closure_0.authorization, client: closure_0.client, debug: closure_0.debug, assetsUrl: closure_1_2.create(closure_0.authorization), name: "SEPA" }));
+          return closure_4.verify({ name: "SEPA", client: closure_0.client, authorization: closure_0.authorization }).then(() => closure_1_3.create({ authorization: closure_0.authorization, client: closure_0.client, debug: closure_0.debug, assetsUrl: closure_1_2.create(closure_0.authorization), name: "SEPA" })).then((client) => {
             closure_0.client = client;
             closure_0.sendEvent(client, "sepa.client.initialized");
             return new closure_1(closure_0);
@@ -12227,8 +12189,8 @@ let fn = () => {
             if (success.success) {
               if ("true" === tmp.success) {
                 if (tmp.cart_id) {
-                  closure_0 = outer1_6(closure_0, tmp);
-                  const result = outer1_7.handleApprovalForFullPageRedirect(closure_0.client, closure_0);
+                  closure_0 = closure_1_6(closure_0, tmp);
+                  const result = closure_1_7.handleApprovalForFullPageRedirect(closure_0.client, closure_0);
                   let catchPromise = result.then((tokenizePayload) => {
                     closure_0.tokenizePayload = tokenizePayload;
                     return closure_0;
@@ -12295,8 +12257,8 @@ let fn = () => {
       class BaseFramework {
         constructor(arg0) {
           self = this;
-          tmp = c5;
-          call = c5.call;
+          tmp = closure_5;
+          call = closure_5.call;
           if (typeof call === "unknown") {
             tmpResult = tmp();
           } else {
@@ -12332,7 +12294,7 @@ let fn = () => {
           return resolved;
         }
         setUpEventListeners() {
-          tmp = new c2(c6.THREEDS_FRAMEWORK_METHOD_NOT_IMPLEMENTED);
+          tmp = new closure_2(closure_6.THREEDS_FRAMEWORK_METHOD_NOT_IMPLEMENTED);
           throw tmp;
         }
         verifyCard(arg0, arg1) {
@@ -12351,7 +12313,7 @@ let fn = () => {
             flag = true;
             self._verifyCardInProgress = true;
             result1 = self._formatVerifyCardOptions(global);
-            Promise = result1;
+            closure_0 = result1;
             _formatLookupDataResult = self._formatLookupData(result1);
             nextPromise = _formatLookupDataResult.then(() => { ... });
             nextPromise1 = nextPromise.then(() => { ... });
@@ -12362,15 +12324,15 @@ let fn = () => {
           return rejectResult;
         }
         _checkForFrameworkSpecificVerifyCardErrors() {
-          tmp = new c2(c6.THREEDS_FRAMEWORK_METHOD_NOT_IMPLEMENTED);
+          tmp = new closure_2(closure_6.THREEDS_FRAMEWORK_METHOD_NOT_IMPLEMENTED);
           throw tmp;
         }
         _presentChallenge() {
-          tmp = new c2(c6.THREEDS_FRAMEWORK_METHOD_NOT_IMPLEMENTED);
+          tmp = new closure_2(closure_6.THREEDS_FRAMEWORK_METHOD_NOT_IMPLEMENTED);
           throw tmp;
         }
         prepareLookup() {
-          tmp = new c2(c6.THREEDS_FRAMEWORK_METHOD_NOT_IMPLEMENTED);
+          tmp = new closure_2(closure_6.THREEDS_FRAMEWORK_METHOD_NOT_IMPLEMENTED);
           throw tmp;
         }
         _resetVerificationState() {
@@ -12383,7 +12345,7 @@ let fn = () => {
         _performLookup(arg0, arg1) {
           closure_0 = module;
           self = this;
-          c2 = `payment_methods/${global}/three_d_secure/lookup`;
+          closure_2 = `payment_methods/${global}/three_d_secure/lookup`;
           _waitForClientResult = this._waitForClient();
           return _waitForClientResult.then(() => { ... });
         }
@@ -12416,11 +12378,11 @@ let fn = () => {
         _checkForVerifyCardError(arg0, arg1) {
           self = this;
           if (true === this._verifyCardInProgress) {
-            tmp8 = c2;
-            tmp9 = c6;
+            tmp8 = closure_2;
+            tmp9 = closure_6;
             tmp10 = new.target;
             tmp11 = new.target;
-            tmp2 = new c2(c6.THREEDS_AUTHENTICATION_IN_PROGRESS);
+            tmp2 = new closure_2(closure_6.THREEDS_AUTHENTICATION_IN_PROGRESS);
           } else {
             tmp12 = global;
             str = "a nonce";
@@ -12435,18 +12397,18 @@ let fn = () => {
             }
             tmp2 = null;
             if (str) {
-              tmp3 = c2;
+              tmp3 = closure_2;
               obj = { type: null, code: null, message: null };
-              tmp4 = c6;
-              obj[0] = c6.THREEDS_MISSING_VERIFY_CARD_OPTION.type;
-              obj[1] = c6.THREEDS_MISSING_VERIFY_CARD_OPTION.code;
+              tmp4 = closure_6;
+              obj[0] = closure_6.THREEDS_MISSING_VERIFY_CARD_OPTION.type;
+              obj[1] = closure_6.THREEDS_MISSING_VERIFY_CARD_OPTION.code;
               str2 = "verifyCard options must include ";
               str3 = ".";
               obj[2] = `verifyCard options must include ${str}.`;
               tmp5 = new.target;
               tmp6 = new.target;
               tmp7 = obj;
-              tmp2 = new c2(obj);
+              tmp2 = new closure_2(obj);
             }
           }
           return tmp2;
@@ -12461,10 +12423,10 @@ let fn = () => {
           self._lookupPaymentMethod = global.paymentMethod;
           _verifyCardPromisePlus = self._verifyCardPromisePlus;
           if (!_verifyCardPromisePlus) {
-            tmp = c4;
+            tmp = closure_4;
             tmp2 = new.target;
             tmp3 = new.target;
-            _verifyCardPromisePlus = new c4();
+            _verifyCardPromisePlus = new closure_4();
           }
           self._verifyCardPromisePlus = _verifyCardPromisePlus;
           result = self._handleLookupResponse(global, obj);
@@ -12478,7 +12440,7 @@ let fn = () => {
           }
           self = this;
           BooleanResult = Boolean(acsUrl);
-          sendEventResult = c1.sendEvent(this._createPromise, `three-d-secure.verification-flow.challenge-presented.${String(tmp)}`);
+          sendEventResult = closure_1.sendEvent(this._createPromise, `three-d-secure.verification-flow.challenge-presented.${String(tmp)}`);
           if (BooleanResult) {
             tmp5 = module;
             _presentChallengeResult = self._presentChallenge(global, module);
@@ -12492,7 +12454,7 @@ let fn = () => {
         }
         _onLookupComplete(arg0) {
           obj = { _lookupPaymentMethod: global.paymentMethod };
-          tmp = new c4();
+          tmp = new closure_4();
           obj._verifyCardPromisePlus = tmp;
           return Promise.resolve(global);
         }
@@ -12562,14 +12524,14 @@ let fn = () => {
               }
             }
             _verifyCardPromisePlus = self._verifyCardPromisePlus;
-            tmp2 = c2;
+            tmp2 = closure_2;
             obj = { type: null, code: "UNKNOWN_AUTH_RESPONSE", message: null };
-            obj[0] = c2.types.UNKNOWN;
+            obj[0] = closure_2.types.UNKNOWN;
             obj[2] = parsed.error.message;
             tmp3 = new.target;
             tmp4 = new.target;
             tmp5 = obj;
-            tmp6 = new c2(obj);
+            tmp6 = new closure_2(obj);
             tmp7 = tmp6;
             rejectResult = _verifyCardPromisePlus.reject(tmp6);
           }
@@ -12603,11 +12565,11 @@ let fn = () => {
           } else {
             tmp = globalThis;
             _Promise = Promise;
-            tmp2 = c2;
-            tmp3 = c6;
+            tmp2 = closure_2;
+            tmp3 = closure_6;
             tmp4 = new.target;
             tmp5 = new.target;
-            tmp6 = new c2(c6.THREEDS_NO_VERIFICATION_PAYLOAD);
+            tmp6 = new closure_2(closure_6.THREEDS_NO_VERIFICATION_PAYLOAD);
             tmp7 = tmp6;
             resolved = Promise.reject(tmp6);
           }
@@ -12616,21 +12578,21 @@ let fn = () => {
         _setupV1Bus(arg0) {
           closure_0 = global;
           _client = this._client;
-          getConfiguration = _client.getConfiguration();
+          closure_1 = _client.getConfiguration();
           str = window.location.href;
-          c2 = str.split("#")[0];
+          closure_2 = str.split("#")[0];
           lookupResponse = global.lookupResponse;
-          tmp = c10();
+          tmp = closure_10();
           obj = { channel: tmp, verifyDomain: lookupResponse };
-          obj2 = new framebus(obj);
-          c4 = `${`${this._assetsUrl}/html/three-d-secure-authentication-complete-frame.html?channel=`}${encodeURIComponent(tmp)}&`;
-          onResult = obj2.on(c13, () => { ... });
-          onResult1 = obj2.on(c11.AUTHENTICATION_COMPLETE, global.handleAuthResponse);
+          obj2 = new closure_8(obj);
+          closure_4 = `${`${this._assetsUrl}/html/three-d-secure-authentication-complete-frame.html?channel=`}${encodeURIComponent(tmp)}&`;
+          onResult = obj2.on(closure_13, () => { ... });
+          onResult1 = obj2.on(closure_11.AUTHENTICATION_COMPLETE, global.handleAuthResponse);
           return obj2;
         }
         _setupV1Iframe(arg0) {
-          obj = { src: `${`${this._assetsUrl}/html/three-d-secure-bank-frame`}${c12(this._isDebug)}.html?showLoader=${global.showLoader}`, height: 400, width: 400, name: `${c9.LANDING_FRAME_NAME}_${this._v1Bus.channel}`, title: "3D Secure Authorization Frame" };
-          return c7(obj);
+          obj = { src: `${`${this._assetsUrl}/html/three-d-secure-bank-frame`}${closure_12(this._isDebug)}.html?showLoader=${global.showLoader}`, height: 400, width: 400, name: `${closure_9.LANDING_FRAME_NAME}_${this._v1Bus.channel}`, title: "3D Secure Authorization Frame" };
+          return closure_7(obj);
         }
         _setupV1Elements(arg0) {
           this._v1Bus = this._setupV1Bus(global);
@@ -12663,27 +12625,27 @@ let fn = () => {
           return;
         }
         teardown() {
-          sendEventResult = c1.sendEvent(this._createPromise, "three-d-secure.teardown-completed");
+          sendEventResult = closure_1.sendEvent(this._createPromise, "three-d-secure.teardown-completed");
           _teardownV1ElementsResult = this._teardownV1Elements();
           return Promise.resolve();
         }
       }
       const assign = global("../../../lib/assign").assign;
-      let closure_1 = global("../../../lib/analytics");
-      let closure_2 = global("../../../lib/braintree-error");
-      let closure_3 = global("../../../lib/is-verified-domain");
+      closure_1 = global("../../../lib/analytics");
+      closure_2 = global("../../../lib/braintree-error");
+      closure_3 = global("../../../lib/is-verified-domain");
       const globalResult = global("@braintree/extended-promise");
-      let closure_4 = globalResult;
+      closure_4 = globalResult;
       const globalResult1 = global("@braintree/event-emitter");
-      let closure_6 = global("../../shared/errors");
-      let closure_7 = global("@braintree/iframer");
-      let closure_8 = global("framebus");
-      let closure_9 = global("../../shared/constants");
-      let closure_10 = global("@braintree/uuid");
-      let closure_11 = global("../../shared/events");
-      let closure_12 = global("../../../lib/use-min");
-      let closure_13 = global("../../../lib/constants").BUS_CONFIGURATION_REQUEST_EVENT;
-      let c14 = "3.112.1";
+      closure_6 = global("../../shared/errors");
+      closure_7 = global("@braintree/iframer");
+      closure_8 = global("framebus");
+      closure_9 = global("../../shared/constants");
+      closure_10 = global("@braintree/uuid");
+      closure_11 = global("../../shared/events");
+      closure_12 = global("../../../lib/use-min");
+      closure_13 = global("../../../lib/constants").BUS_CONFIGURATION_REQUEST_EVENT;
+      c14 = "3.112.1";
       globalResult.suppressUnhandledPromiseMessage = true;
       const child = globalResult1.createChild(BaseFramework);
       module.exports = BaseFramework;
@@ -12848,11 +12810,11 @@ let fn = () => {
           }
           if (flag) {
             tmp7 = arg3;
-            tmp8 = c1;
-            tmp9 = c2;
+            tmp8 = closure_1;
+            tmp9 = closure_2;
             tmp10 = new.target;
             tmp11 = new.target;
-            tmp12 = new c1(c2.THREEDS_INLINE_IFRAME_DETAILS_INCORRECT);
+            tmp12 = new closure_1(closure_2.THREEDS_INLINE_IFRAME_DETAILS_INCORRECT);
             tmp13 = tmp12;
             tmp14 = arg3(tmp12);
           } else {
@@ -12884,8 +12846,8 @@ let fn = () => {
         }
       }
       const globalResult = global("./songbird");
-      let closure_1 = global("../../../lib/braintree-error");
-      let closure_2 = global("../../shared/errors");
+      closure_1 = global("../../../lib/braintree-error");
+      closure_2 = global("../../shared/errors");
       InlineIframeFramework.prototype = Object.create(globalResult.prototype, { constructor: globalResult });
       InlineIframeFramework.events = global("../../../lib/enumerate")(["AUTHENTICATION_IFRAME_AVAILABLE"], "inline-iframe-framework:");
       module.exports = InlineIframeFramework;
@@ -12897,8 +12859,8 @@ let fn = () => {
       class LegacyFramework {
         constructor(arg0) {
           self = this;
-          tmp = c0;
-          call = c0.call;
+          tmp = closure_0;
+          call = closure_0.call;
           if (typeof call === "unknown") {
             tmpResult = tmp(global);
           } else {
@@ -12935,7 +12897,7 @@ let fn = () => {
           teardownResult = _v1Bus.teardown();
           removeFrameResult = module.removeFrame();
           fn = () => { ... };
-          tmp3 = c1(fn.bind(this))();
+          tmp3 = closure_1(fn.bind(this))();
           return;
         }
         _checkForFrameworkSpecificVerifyCardErrors(arg0) {
@@ -12949,11 +12911,11 @@ let fn = () => {
         }
         _formatVerifyCardOptions(arg0) {
           self = this;
-          _formatVerifyCardOptions = c0.prototype._formatVerifyCardOptions;
+          _formatVerifyCardOptions = closure_0.prototype._formatVerifyCardOptions;
           call = _formatVerifyCardOptions.call;
           tmp = typeof call === "unknown" ? _formatVerifyCardOptions(global) : call(self, global);
-          tmp.addFrame = c1(global.addFrame);
-          tmp.removeFrame = c1(global.removeFrame);
+          tmp.addFrame = closure_1(global.addFrame);
+          tmp.removeFrame = closure_1(global.removeFrame);
           tmp.showLoader = false !== global.showLoader;
           return tmp;
         }
@@ -12973,7 +12935,7 @@ let fn = () => {
         }
       }
       const globalResult = global("./base");
-      let closure_1 = global("../../../lib/deferred");
+      closure_1 = global("../../../lib/deferred");
       LegacyFramework.prototype = Object.create(globalResult.prototype, { constructor: LegacyFramework });
       module.exports = LegacyFramework;
     },
@@ -12984,8 +12946,8 @@ let fn = () => {
       class SongbirdFramework {
         constructor(arg0) {
           self = this;
-          tmp = c0;
-          call = c0.call;
+          tmp = closure_0;
+          call = closure_0.call;
           if (typeof call === "unknown") {
             tmpResult = tmp(global);
           } else {
@@ -12995,7 +12957,7 @@ let fn = () => {
           obj = { requestedThreeDSecureVersion: "2", sdkVersion: `${PLATFORM}/3.112.1` };
           self._clientMetadata = obj;
           self.originalSetupOptions = global;
-          tmp3 = new c9();
+          tmp3 = new closure_9();
           self._getDfReferenceIdPromisePlus = tmp3;
           setupSongbirdResult = self.setupSongbird(global);
           self._cardinalEvents = [];
@@ -13014,7 +12976,7 @@ let fn = () => {
         }
         prepareLookup(arg0) {
           closure_0 = global;
-          assign = assign({}, global);
+          closure_1 = closure_1({}, global);
           self = this;
           dfReferenceId = this.getDfReferenceId();
           nextPromise = dfReferenceId.then(() => { ... });
@@ -13033,7 +12995,7 @@ let fn = () => {
         handleSongbirdError(arg0) {
           this._songbirdInitFailed = true;
           result = this._removeSongbirdListeners();
-          sendEventResult = c5.sendEvent(this._createPromise, `three-d-secure.cardinal-sdk.songbird-error.${global}`);
+          sendEventResult = closure_5.sendEvent(this._createPromise, `three-d-secure.cardinal-sdk.songbird-error.${global}`);
           if (this._songbirdPromise) {
             _songbirdPromise = this._songbirdPromise;
             resolveResult = _songbirdPromise.resolve();
@@ -13042,7 +13004,7 @@ let fn = () => {
         }
         _triggerCardinalBinProcess(arg0) {
           self = this;
-          now = Date.now();
+          closure_1 = Date.now();
           Cardinal = window.Cardinal;
           triggerResult = Cardinal.trigger("bin.process", global);
           return triggerResult.then(() => { ... });
@@ -13098,16 +13060,16 @@ let fn = () => {
           obj = global;
           closure_0 = global;
           self = this;
-          now = Date.now();
+          closure_2 = Date.now();
           if (!this._songbirdPromise) {
             if (!obj) {
               obj = {};
             }
             closure_0 = obj;
-            tmp = c9;
+            tmp = closure_9;
             tmp2 = new.target;
             tmp3 = new.target;
-            tmp4 = new c9();
+            tmp4 = new closure_9();
             tmp5 = tmp4;
             self._songbirdPromise = tmp4;
             str = "reason-unknown";
@@ -13169,12 +13131,12 @@ let fn = () => {
           if (gatewayConfiguration) {
             str = "production";
             if ("production" === gatewayConfiguration.environment) {
-              tmp = c8;
-              sandbox = c8.CARDINAL_SCRIPT_SOURCE.production;
+              tmp = closure_8;
+              sandbox = closure_8.CARDINAL_SCRIPT_SOURCE.production;
             }
             return sandbox;
           }
-          sandbox = c8.CARDINAL_SCRIPT_SOURCE.sandbox;
+          sandbox = closure_8.CARDINAL_SCRIPT_SOURCE.sandbox;
           return;
         }
         _createPaymentsSetupCompleteCallback() {
@@ -13190,7 +13152,7 @@ let fn = () => {
           closure_1 = module;
           self = this;
           nonce = this._lookupPaymentMethod.nonce;
-          c4 = `payment_methods/${nonce}/three_d_secure/authenticate_from_jwt`;
+          closure_4 = `payment_methods/${nonce}/three_d_secure/authenticate_from_jwt`;
           ChallengeCancel = global;
           if (global) {
             ChallengeCancel = global.Payment;
@@ -13202,16 +13164,16 @@ let fn = () => {
             ChallengeCancel = global.Payment.ExtendedData.ChallengeCancel;
           }
           if (ChallengeCancel) {
-            tmp = c5;
+            tmp = closure_5;
             str = "three-d-secure.verification-flow.cardinal-sdk.cancel-code.";
-            sendEventResult = c5.sendEvent(self._createPromise, `three-d-secure.verification-flow.cardinal-sdk.cancel-code.${ChallengeCancel}`);
+            sendEventResult = closure_5.sendEvent(self._createPromise, `three-d-secure.verification-flow.cardinal-sdk.cancel-code.${ChallengeCancel}`);
             str2 = "01";
             if ("01" === ChallengeCancel) {
               tmp3 = SongbirdFramework;
               _emitResult = self._emit(SongbirdFramework.events.CUSTOMER_CANCELED);
             }
           }
-          sendEventResult1 = c5.sendEvent(self._createPromise, "three-d-secure.verification-flow.upgrade-payment-method.started");
+          sendEventResult1 = closure_5.sendEvent(self._createPromise, "three-d-secure.verification-flow.upgrade-payment-method.started");
           _waitForClientResult = self._waitForClient();
           nextPromise = _waitForClientResult.then(() => { ... });
           nextPromise1 = nextPromise.then(() => { ... });
@@ -13225,20 +13187,20 @@ let fn = () => {
           if (global.bin) {
             self = this;
             tmp8 = module;
-            tmp9 = c0;
-            _checkForVerifyCardError = c0.prototype._checkForVerifyCardError;
+            tmp9 = closure_0;
+            _checkForVerifyCardError = closure_0.prototype._checkForVerifyCardError;
             call = _checkForVerifyCardError.call;
             tmp10 = typeof call === "unknown" ? _checkForVerifyCardError(global, module) : call(self, global, module);
           } else {
-            tmp = c3;
+            tmp = closure_3;
             obj = { type: null, code: null, message: "verifyCard options must include a BIN." };
-            tmp2 = c7;
-            obj[0] = c7.THREEDS_MISSING_VERIFY_CARD_OPTION.type;
-            obj[1] = c7.THREEDS_MISSING_VERIFY_CARD_OPTION.code;
+            tmp2 = closure_7;
+            obj[0] = closure_7.THREEDS_MISSING_VERIFY_CARD_OPTION.type;
+            obj[1] = closure_7.THREEDS_MISSING_VERIFY_CARD_OPTION.code;
             tmp3 = new.target;
             tmp4 = new.target;
             tmp5 = obj;
-            tmp6 = new c3(obj);
+            tmp6 = new closure_3(obj);
             tmp7 = tmp6;
             return tmp6;
           }
@@ -13259,14 +13221,14 @@ let fn = () => {
         }
         _formatVerifyCardOptions(arg0) {
           self = this;
-          _formatVerifyCardOptions = c0.prototype._formatVerifyCardOptions;
+          _formatVerifyCardOptions = closure_0.prototype._formatVerifyCardOptions;
           call = _formatVerifyCardOptions.call;
           tmp = typeof call === "unknown" ? _formatVerifyCardOptions(global) : call(self, global);
           tmp2 = tmp.additionalInformation || {};
           result = self.transformShippingAddress(self.transformBillingAddress(tmp2, global.billingAddress));
           if (global.onLookupComplete) {
-            tmp4 = c2;
-            tmp.onLookupComplete = c2(global.onLookupComplete);
+            tmp4 = closure_2;
+            tmp.onLookupComplete = closure_2(global.onLookupComplete);
           }
           if (global.email) {
             result.email = global.email;
@@ -13337,31 +13299,31 @@ let fn = () => {
           if (window.Cardinal) {
             result = self._removeSongbirdListeners();
           }
-          teardown = c0.prototype.teardown;
+          teardown = closure_0.prototype.teardown;
           call = teardown.call;
           return typeof call === "unknown" ? teardown() : call(self);
         }
         _reloadThreeDSecure() {
           self = this;
-          now = Date.now();
+          closure_1 = Date.now();
           teardownResult = this.teardown();
           return teardownResult.then(() => { ... });
         }
       }
       const globalResult = global("./base");
       let assign = global("../../../lib/assign").assign;
-      let closure_2 = global("../../../lib/deferred");
-      let closure_3 = global("../../../lib/braintree-error");
-      let closure_4 = global("../../../lib/convert-to-braintree-error");
-      let closure_5 = global("../../../lib/analytics");
-      let closure_6 = global("../../../lib/assets");
-      let closure_7 = global("../../shared/errors");
-      let closure_8 = global("../../shared/constants");
+      closure_2 = global("../../../lib/deferred");
+      closure_3 = global("../../../lib/braintree-error");
+      closure_4 = global("../../../lib/convert-to-braintree-error");
+      closure_5 = global("../../../lib/analytics");
+      closure_6 = global("../../../lib/assets");
+      closure_7 = global("../../shared/errors");
+      closure_8 = global("../../shared/constants");
       const globalResult2 = global("@braintree/extended-promise");
       const INTEGRATION_TIMEOUT_MS = global("../../../lib/constants").INTEGRATION_TIMEOUT_MS;
       const PLATFORM = global("../../../lib/constants").PLATFORM;
-      let closure_12 = ["ui.close", "ui.render", "ui.renderHidden", "ui.loading.close", "ui.loading.render"];
-      let closure_13 = ["low_value", "transaction_risk_analysis"];
+      closure_12 = ["ui.close", "ui.render", "ui.renderHidden", "ui.loading.close", "ui.loading.render"];
+      closure_13 = ["low_value", "transaction_risk_analysis"];
       globalResult2.suppressUnhandledPromiseMessage = true;
       SongbirdFramework.prototype = Object.create(globalResult.prototype, { constructor: SongbirdFramework });
       SongbirdFramework.events = global("../../../lib/enumerate")(["LOOKUP_COMPLETE", "CUSTOMER_CANCELED", "UI.CLOSE", "UI.RENDER", "UI.RENDERHIDDEN", "UI.LOADING.CLOSE", "UI.LOADING.RENDER"], "songbird-framework:");
@@ -13382,7 +13344,7 @@ let fn = () => {
           } else {
             callResult = call(self);
           }
-          tmp3 = new c3[global.framework](global);
+          tmp3 = new closure_3[global.framework](global);
           self._framework = tmp3;
           _framework = self._framework;
           setUpEventListenersResult = _framework.setUpEventListeners(() => { ... });
@@ -13416,16 +13378,16 @@ let fn = () => {
           return _framework.cancelVerifyCard();
         }
         teardown() {
-          obj = c0(ThreeDSecure.prototype);
-          tmp = c1(this, obj.concat(c0(closure_2.prototype)));
+          obj = closure_0(ThreeDSecure.prototype);
+          tmp = closure_1(this, obj.concat(closure_0(closure_2.prototype)));
           _framework = this._framework;
           return _framework.teardown();
         }
       }
-      let closure_0 = global("../../lib/methods");
-      let closure_1 = global("../../lib/convert-methods-to-error");
+      closure_0 = global("../../lib/methods");
+      closure_1 = global("../../lib/convert-methods-to-error");
       const globalResult1 = global("@braintree/event-emitter");
-      let closure_3 = global("./frameworks");
+      closure_3 = global("./frameworks");
       const child = globalResult1.createChild(ThreeDSecure);
       module.exports = global("@braintree/wrap-promise").wrapPrototype(ThreeDSecure);
     },
@@ -13433,17 +13395,17 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./external/three-d-secure");
+      closure_0 = global("./external/three-d-secure");
       const isHTTPS = global("../lib/is-https").isHTTPS;
-      let closure_2 = global("../lib/basic-component-verification");
-      let closure_3 = global("../lib/create-deferred-client");
-      let closure_4 = global("../lib/create-assets-url");
-      let closure_5 = global("../lib/braintree-error");
-      let closure_6 = global("../lib/analytics");
-      let closure_7 = global("./shared/errors");
+      closure_2 = global("../lib/basic-component-verification");
+      closure_3 = global("../lib/create-deferred-client");
+      closure_4 = global("../lib/create-assets-url");
+      closure_5 = global("../lib/braintree-error");
+      closure_6 = global("../lib/analytics");
+      closure_7 = global("./shared/errors");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(version) {
-          let closure_0 = version;
+          closure_0 = version;
           let str = version.version;
           if (!str) {
             str = "";
@@ -13470,9 +13432,9 @@ let fn = () => {
                 obj = { name: "3D Secure", client: null, authorization: null };
                 ({ client: obj2[1], authorization: obj2[2] } = version);
                 return closure_2.verify(obj).then(() => {
-                  let obj = outer1_4.create(version.authorization);
+                  let obj = closure_1_4.create(version.authorization);
                   obj = { authorization: version.authorization, client: version.client, debug: version.debug, assetsUrl: obj, name: "3D Secure" };
-                  obj = outer1_3.create(obj);
+                  obj = closure_1_3.create(obj);
                   const nextPromise = obj.then((getConfiguration) => {
                     let rejectResult = getConfiguration;
                     const configuration = getConfiguration.getConfiguration();
@@ -13480,17 +13442,17 @@ let fn = () => {
                     closure_0.client = getConfiguration;
                     let THREEDS_NOT_ENABLED;
                     if (!gatewayConfiguration.threeDSecureEnabled) {
-                      THREEDS_NOT_ENABLED = outer1_7.THREEDS_NOT_ENABLED;
+                      THREEDS_NOT_ENABLED = closure_1_7.THREEDS_NOT_ENABLED;
                     }
                     if ("TOKENIZATION_KEY" === configuration.authorizationType) {
-                      THREEDS_NOT_ENABLED = outer1_7.THREEDS_CAN_NOT_USE_TOKENIZATION_KEY;
+                      THREEDS_NOT_ENABLED = closure_1_7.THREEDS_CAN_NOT_USE_TOKENIZATION_KEY;
                     }
                     let tmp7 = "production" === gatewayConfiguration.environment;
                     if (tmp7) {
-                      tmp7 = !outer1_1();
+                      tmp7 = !closure_1_1();
                     }
                     if (tmp7) {
-                      THREEDS_NOT_ENABLED = outer1_7.THREEDS_HTTPS_REQUIRED;
+                      THREEDS_NOT_ENABLED = closure_1_7.THREEDS_HTTPS_REQUIRED;
                     }
                     let tmp10 = "legacy" === closure_1;
                     if (!tmp10) {
@@ -13498,14 +13460,14 @@ let fn = () => {
                       const tmp11 = gatewayConfiguration.threeDSecure && gatewayConfiguration.threeDSecure.cardinalAuthenticationJWT;
                     }
                     if (!tmp10) {
-                      outer1_6.sendEvent(tmp3.client, "three-d-secure.initialization.failed.missing-cardinalAuthenticationJWT");
-                      THREEDS_NOT_ENABLED = outer1_7.THREEDS_NOT_ENABLED_FOR_V2;
+                      closure_1_6.sendEvent(tmp3.client, "three-d-secure.initialization.failed.missing-cardinalAuthenticationJWT");
+                      THREEDS_NOT_ENABLED = closure_1_7.THREEDS_NOT_ENABLED_FOR_V2;
                     }
                     if (THREEDS_NOT_ENABLED) {
-                      const tmp22 = new outer1_5(THREEDS_NOT_ENABLED);
+                      const tmp22 = new closure_1_5(THREEDS_NOT_ENABLED);
                       rejectResult = Promise.reject(tmp22);
                     } else {
-                      outer1_6.sendEvent(tmp3.client, "three-d-secure.initialized");
+                      closure_1_6.sendEvent(tmp3.client, "three-d-secure.initialized");
                     }
                     return rejectResult;
                   });
@@ -13553,29 +13515,29 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./shared/unionpay");
-      let closure_1 = global("../lib/basic-component-verification");
-      let closure_2 = global("../lib/braintree-error");
-      let closure_3 = global("../lib/create-deferred-client");
-      let closure_4 = global("../lib/create-assets-url");
-      let closure_5 = global("../lib/analytics");
-      let closure_6 = global("./shared/errors");
+      closure_0 = global("./shared/unionpay");
+      closure_1 = global("../lib/basic-component-verification");
+      closure_2 = global("../lib/braintree-error");
+      closure_3 = global("../lib/create-deferred-client");
+      closure_4 = global("../lib/create-assets-url");
+      closure_5 = global("../lib/analytics");
+      closure_6 = global("./shared/errors");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
+          closure_0 = client;
           const obj = { name: "UnionPay", client: client.client, authorization: client.authorization };
           const verifyResult = closure_1.verify({ name: "UnionPay", client: client.client, authorization: client.authorization });
-          return closure_1.verify({ name: "UnionPay", client: client.client, authorization: client.authorization }).then(() => outer1_3.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: outer1_4.create(client.authorization), name: "UnionPay" })).then((getConfiguration) => {
+          return closure_1.verify({ name: "UnionPay", client: client.client, authorization: client.authorization }).then(() => closure_1_3.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_4.create(client.authorization), name: "UnionPay" })).then((getConfiguration) => {
             const configuration = getConfiguration.getConfiguration();
             closure_0.client = getConfiguration;
             if (configuration.gatewayConfiguration.unionPay) {
               if (true === configuration.gatewayConfiguration.unionPay.enabled) {
-                outer1_5.sendEvent(tmp2.client, "unionpay.initialized");
+                closure_1_5.sendEvent(tmp2.client, "unionpay.initialized");
                 let rejectResult = new closure_0(tmp2);
               }
               return rejectResult;
             }
-            rejectResult = Promise.reject(new outer1_2(outer1_6.UNIONPAY_NOT_ENABLED));
+            rejectResult = Promise.reject(new closure_1_2(closure_1_6.UNIONPAY_NOT_ENABLED));
           });
         }),
         VERSION: "3.112.1"
@@ -13620,10 +13582,10 @@ let fn = () => {
               tmp19 = globalThis;
               _Promise3 = Promise;
               tmp20 = client;
-              tmp21 = c7;
+              tmp21 = closure_7;
               tmp22 = new.target;
               tmp23 = new.target;
-              tmp24 = new client(c7.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES);
+              tmp24 = new client(closure_7.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES);
               tmp25 = tmp24;
               rejectResult = Promise.reject(tmp24);
             }
@@ -13649,10 +13611,10 @@ let fn = () => {
               tmp10 = globalThis;
               _Promise2 = Promise;
               tmp11 = client;
-              tmp12 = c7;
+              tmp12 = closure_7;
               tmp13 = new.target;
               tmp14 = new.target;
-              tmp15 = new client(c7.UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID);
+              tmp15 = new client(closure_7.UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID);
               tmp16 = tmp15;
               selfResult = Promise.reject(tmp15);
             }
@@ -13661,10 +13623,10 @@ let fn = () => {
             tmp2 = globalThis;
             _Promise = Promise;
             tmp3 = client;
-            tmp4 = c7;
+            tmp4 = closure_7;
             tmp5 = new.target;
             tmp6 = new.target;
-            tmp7 = new client(c7.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED);
+            tmp7 = new client(closure_7.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED);
             tmp8 = tmp7;
             rejectResult = Promise.reject(tmp7);
           }
@@ -13682,10 +13644,10 @@ let fn = () => {
               if (hostedFields._bus) {
                 if (card) {
                   tmp32 = client;
-                  tmp33 = c7;
+                  tmp33 = closure_7;
                   tmp34 = new.target;
                   tmp35 = new.target;
-                  tmp36 = new client(c7.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES);
+                  tmp36 = new client(closure_7.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES);
                   tmp37 = tmp36;
                   rejectResult = _Promise4.reject(tmp36);
                 } else {
@@ -13696,10 +13658,10 @@ let fn = () => {
                 tmp38 = rejectResult;
               } else {
                 tmp23 = client;
-                tmp24 = c7;
+                tmp24 = closure_7;
                 tmp25 = new.target;
                 tmp26 = new.target;
-                tmp27 = new client(c7.UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID);
+                tmp27 = new client(closure_7.UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID);
                 tmp28 = tmp27;
                 return _Promise4.reject(tmp27);
               }
@@ -13723,10 +13685,10 @@ let fn = () => {
                     tmp15 = globalThis;
                     _Promise3 = Promise;
                     tmp16 = client;
-                    tmp17 = c7;
+                    tmp17 = closure_7;
                     tmp18 = new.target;
                     tmp19 = new.target;
-                    tmp20 = new client(c7.UNIONPAY_EXPIRATION_DATE_INCOMPLETE);
+                    tmp20 = new client(closure_7.UNIONPAY_EXPIRATION_DATE_INCOMPLETE);
                     tmp21 = tmp20;
                     return Promise.reject(tmp20);
                   }
@@ -13740,10 +13702,10 @@ let fn = () => {
               tmp8 = globalThis;
               _Promise2 = Promise;
               tmp9 = client;
-              tmp10 = c7;
+              tmp10 = closure_7;
               tmp11 = new.target;
               tmp12 = new.target;
-              tmp13 = new client(c7.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED);
+              tmp13 = new client(closure_7.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED);
               tmp14 = tmp13;
               return Promise.reject(tmp13);
             }
@@ -13751,10 +13713,10 @@ let fn = () => {
             tmp = globalThis;
             _Promise = Promise;
             tmp2 = client;
-            tmp3 = c7;
+            tmp3 = closure_7;
             tmp4 = new.target;
             tmp5 = new.target;
-            tmp6 = new client(c7.UNIONPAY_MISSING_MOBILE_PHONE_DATA);
+            tmp6 = new client(closure_7.UNIONPAY_MISSING_MOBILE_PHONE_DATA);
             tmp7 = tmp6;
             return Promise.reject(tmp6);
           }
@@ -13770,10 +13732,10 @@ let fn = () => {
               tmp20 = globalThis;
               _Promise3 = Promise;
               tmp21 = self;
-              tmp22 = c7;
+              tmp22 = closure_7;
               tmp23 = new.target;
               tmp24 = new.target;
-              tmp25 = new self(c7.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES);
+              tmp25 = new self(closure_7.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES);
               tmp26 = tmp25;
               rejectResult = Promise.reject(tmp25);
             }
@@ -13819,10 +13781,10 @@ let fn = () => {
                 _Promise2 = new _Promise2(() => { ... });
               } else {
                 tmp9 = self;
-                tmp10 = c7;
+                tmp10 = closure_7;
                 tmp11 = new.target;
                 tmp12 = new.target;
-                tmp13 = new self(c7.UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID);
+                tmp13 = new self(closure_7.UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID);
                 tmp14 = tmp13;
                 _Promise2 = _Promise2.reject(tmp13);
               }
@@ -13830,10 +13792,10 @@ let fn = () => {
             } else {
               _Promise = Promise;
               tmp2 = self;
-              tmp3 = c7;
+              tmp3 = closure_7;
               tmp4 = new.target;
               tmp5 = new.target;
-              tmp6 = new self(c7.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED);
+              tmp6 = new self(closure_7.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED);
               tmp7 = tmp6;
               rejectResult = Promise.reject(tmp6);
             }
@@ -13848,12 +13810,12 @@ let fn = () => {
             _bus = self._bus;
             teardownResult = _bus.teardown();
           }
-          tmp3 = c6(self, c10(UnionPay.prototype));
+          tmp3 = closure_6(self, closure_10(UnionPay.prototype));
           return Promise.resolve();
         }
         _initializeHostedFields() {
           self = this;
-          framebus = c11();
+          closure_2 = closure_11();
           self = this;
           if (!this._hostedFieldsInitializePromise) {
             tmp = globalThis;
@@ -13867,20 +13829,20 @@ let fn = () => {
           return self._hostedFieldsInitializePromise;
         }
       }
-      let closure_0 = global("../../lib/analytics");
-      let closure_1 = global("../../lib/braintree-error");
-      let closure_2 = global("framebus");
+      closure_0 = global("../../lib/analytics");
+      closure_1 = global("../../lib/braintree-error");
+      closure_2 = global("framebus");
       const globalResult = global("./constants");
-      let closure_3 = globalResult;
-      let closure_4 = global("../../lib/is-verified-domain");
-      let closure_5 = global("../../lib/use-min");
-      let closure_6 = global("../../lib/convert-methods-to-error");
-      let closure_7 = global("./errors");
+      closure_3 = globalResult;
+      closure_4 = global("../../lib/is-verified-domain");
+      closure_5 = global("../../lib/use-min");
+      closure_6 = global("../../lib/convert-methods-to-error");
+      closure_7 = global("./errors");
       const events = globalResult.events;
-      let closure_9 = global("@braintree/iframer");
-      let closure_10 = global("../../lib/methods");
-      let closure_11 = global("@braintree/uuid");
-      let closure_12 = global("../../lib/constants").BUS_CONFIGURATION_REQUEST_EVENT;
+      closure_9 = global("@braintree/iframer");
+      closure_10 = global("../../lib/methods");
+      closure_11 = global("@braintree/uuid");
+      closure_12 = global("../../lib/constants").BUS_CONFIGURATION_REQUEST_EVENT;
       module.exports = global("@braintree/wrap-promise").wrapPrototype(UnionPay);
     },
     { "../../lib/analytics": 138, "../../lib/braintree-error": 143, "../../lib/constants": 145, "../../lib/convert-methods-to-error": 146, "../../lib/is-verified-domain": 173, "../../lib/methods": 175, "../../lib/use-min": 181, "./constants": 224, "./errors": 225, "@braintree/iframer": 32, "@braintree/uuid": 36, "@braintree/wrap-promise": 40, framebus: 50 }
@@ -13903,24 +13865,24 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/basic-component-verification");
-      let closure_1 = global("../lib/braintree-error");
-      let closure_2 = global("../lib/create-deferred-client");
-      let closure_3 = global("../lib/create-assets-url");
-      let closure_4 = global("./errors");
-      let closure_5 = global("./us-bank-account");
+      closure_0 = global("../lib/basic-component-verification");
+      closure_1 = global("../lib/braintree-error");
+      closure_2 = global("../lib/create-deferred-client");
+      closure_3 = global("../lib/create-assets-url");
+      closure_4 = global("./errors");
+      closure_5 = global("./us-bank-account");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
+          closure_0 = client;
           const obj = { name: "US Bank Account", client: client.client, authorization: client.authorization };
           const verifyResult = closure_0.verify({ name: "US Bank Account", client: client.client, authorization: client.authorization });
-          return closure_0.verify({ name: "US Bank Account", client: client.client, authorization: client.authorization }).then(() => outer1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: outer1_3.create(client.authorization), name: "US Bank Account" })).then((client) => {
+          return closure_0.verify({ name: "US Bank Account", client: client.client, authorization: client.authorization }).then(() => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "US Bank Account" })).then((client) => {
             client.client = client;
             client = client.client;
             if (client.getConfiguration().gatewayConfiguration.usBankAccount) {
-              let rejectResult = new outer1_5(tmp);
+              let rejectResult = new closure_1_5(tmp);
             } else {
-              const tmp7 = new outer1_1(outer1_4.US_BANK_ACCOUNT_NOT_ENABLED);
+              const tmp7 = new closure_1_1(closure_1_4.US_BANK_ACCOUNT_NOT_ENABLED);
               rejectResult = Promise.reject(tmp7);
             }
             return rejectResult;
@@ -13936,7 +13898,7 @@ let fn = () => {
       class USBankAccount {
         constructor(arg0) {
           obj = { _client: global.client, _isTokenizingBankLogin: false };
-          sendEventResult = c4.sendEvent(obj._client, "usbankaccount.initialized");
+          sendEventResult = closure_4.sendEvent(obj._client, "usbankaccount.initialized");
           return;
         }
         tokenize(arg0) {
@@ -13954,15 +13916,15 @@ let fn = () => {
               } else {
                 tmp9 = globalThis;
                 _Promise2 = Promise;
-                tmp10 = c0;
+                tmp10 = closure_0;
                 obj = { type: null, code: null, message: "tokenize must be called with bankDetails or bankLogin." };
-                tmp11 = c2;
-                obj[0] = c2.US_BANK_ACCOUNT_OPTION_REQUIRED.type;
-                obj[1] = c2.US_BANK_ACCOUNT_OPTION_REQUIRED.code;
+                tmp11 = closure_2;
+                obj[0] = closure_2.US_BANK_ACCOUNT_OPTION_REQUIRED.type;
+                obj[1] = closure_2.US_BANK_ACCOUNT_OPTION_REQUIRED.code;
                 tmp12 = new.target;
                 tmp13 = new.target;
                 tmp14 = obj;
-                tmp15 = new c0(obj);
+                tmp15 = new closure_0(obj);
                 tmp16 = tmp15;
                 _tokenizeBankDetailsResult = Promise.reject(tmp15);
               }
@@ -13970,29 +13932,29 @@ let fn = () => {
             }
             tmp18 = globalThis;
             _Promise3 = Promise;
-            tmp19 = c0;
+            tmp19 = closure_0;
             obj1 = { type: null, code: null, message: "tokenize must be called with bankDetails or bankLogin, not both." };
-            tmp20 = c2;
-            obj1[0] = c2.US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS.type;
-            obj1[1] = c2.US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS.code;
+            tmp20 = closure_2;
+            obj1[0] = closure_2.US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS.type;
+            obj1[1] = closure_2.US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS.code;
             tmp21 = new.target;
             tmp22 = new.target;
             tmp23 = obj1;
-            tmp24 = new c0(obj1);
+            tmp24 = new closure_0(obj1);
             tmp25 = tmp24;
             _tokenizeBankDetailsResult = Promise.reject(tmp24);
           } else {
             tmp = globalThis;
             _Promise = Promise;
-            tmp2 = c0;
+            tmp2 = closure_0;
             obj2 = { type: null, code: null, message: "mandateText property is required." };
-            tmp3 = c2;
-            obj2[0] = c2.US_BANK_ACCOUNT_OPTION_REQUIRED.type;
-            obj2[1] = c2.US_BANK_ACCOUNT_OPTION_REQUIRED.code;
+            tmp3 = closure_2;
+            obj2[0] = closure_2.US_BANK_ACCOUNT_OPTION_REQUIRED.type;
+            obj2[1] = closure_2.US_BANK_ACCOUNT_OPTION_REQUIRED.code;
             tmp4 = new.target;
             tmp5 = new.target;
             tmp6 = obj2;
-            tmp7 = new c0(obj2);
+            tmp7 = new closure_0(obj2);
             tmp8 = tmp7;
             return Promise.reject(tmp7);
           }
@@ -14028,7 +13990,7 @@ let fn = () => {
           self = this;
           _client = this._client;
           gatewayConfiguration = _client.getConfiguration().gatewayConfiguration;
-          c3 = "production" === gatewayConfiguration.environment;
+          closure_3 = "production" === gatewayConfiguration.environment;
           plaid = gatewayConfiguration.usBankAccount.plaid;
           reject = globalThis;
           if (global.bankLogin.displayName) {
@@ -14078,7 +14040,7 @@ let fn = () => {
           return;
         }
         _loadPlaid(arg0) {
-          tmp = c5(global);
+          tmp = closure_5(global);
           if (window.Plaid) {
             _window = window;
             tmp10 = null;
@@ -14087,11 +14049,11 @@ let fn = () => {
             _document = document;
             str = "script[src=\"";
             str2 = "\"]";
-            tmp2 = c1;
-            element = document.querySelector(`script[src="${c1.PLAID_LINK_JS}"]`);
+            tmp2 = closure_1;
+            element = document.querySelector(`script[src="${closure_1.PLAID_LINK_JS}"]`);
             if (element) {
-              script = element;
-              c1 = tmp;
+              closure_0 = element;
+              closure_1 = tmp;
               loadHandler2 = function loadHandler() { ... };
               loadHandler = loadHandler2;
               errorHandler2 = function errorHandler() { ... };
@@ -14110,8 +14072,8 @@ let fn = () => {
               element1.src = tmp2.PLAID_LINK_JS;
               flag = true;
               element1.async = true;
-              script = element1;
-              c1 = tmp;
+              closure_0 = element1;
+              closure_1 = tmp;
               loadHandler = function loadHandler() { ... };
               errorHandler = function errorHandler() { ... };
               str4 = "error";
@@ -14136,20 +14098,20 @@ let fn = () => {
             body = document.body;
             removeChildResult = body.removeChild(self._plaidScript);
           }
-          tmp3 = c6(self, c7(USBankAccount.prototype));
+          tmp3 = closure_6(self, closure_7(USBankAccount.prototype));
           return Promise.resolve();
         }
       }
-      let closure_0 = global("../lib/braintree-error");
-      let closure_1 = global("./constants");
-      let closure_2 = global("./errors");
-      let closure_3 = global("../lib/errors");
-      let closure_4 = global("../lib/analytics");
-      let closure_5 = global("../lib/once");
-      let closure_6 = global("../lib/convert-methods-to-error");
-      let closure_7 = global("../lib/methods");
-      let c8 = "mutation TokenizeUsBankAccount($input: TokenizeUsBankAccountInput!) {  tokenizeUsBankAccount(input: $input) {    paymentMethod {      id      details {        ... on UsBankAccountDetails {          last4        }      }    }  }}";
-      let c9 = "mutation TokenizeUsBankLogin($input: TokenizeUsBankLoginInput!) {  tokenizeUsBankLogin(input: $input) {    paymentMethod {      id      details {        ... on UsBankAccountDetails {          last4        }      }    }  }}";
+      closure_0 = global("../lib/braintree-error");
+      closure_1 = global("./constants");
+      closure_2 = global("./errors");
+      closure_3 = global("../lib/errors");
+      closure_4 = global("../lib/analytics");
+      closure_5 = global("../lib/once");
+      closure_6 = global("../lib/convert-methods-to-error");
+      closure_7 = global("../lib/methods");
+      c8 = "mutation TokenizeUsBankAccount($input: TokenizeUsBankAccountInput!) {  tokenizeUsBankAccount(input: $input) {    paymentMethod {      id      details {        ... on UsBankAccountDetails {          last4        }      }    }  }}";
+      c9 = "mutation TokenizeUsBankLogin($input: TokenizeUsBankLoginInput!) {  tokenizeUsBankLogin(input: $input) {    paymentMethod {      id      details {        ... on UsBankAccountDetails {          last4        }      }    }  }}";
       module.exports = global("@braintree/wrap-promise").wrapPrototype(USBankAccount);
     },
     { "../lib/analytics": 138, "../lib/braintree-error": 143, "../lib/convert-methods-to-error": 146, "../lib/errors": 154, "../lib/methods": 175, "../lib/once": 176, "./constants": 227, "./errors": 228, "@braintree/wrap-promise": 40 }
@@ -14166,18 +14128,18 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/basic-component-verification");
-      let closure_1 = global("../lib/create-deferred-client");
-      let closure_2 = global("../lib/create-assets-url");
-      let closure_3 = global("./vault-manager");
+      closure_0 = global("../lib/basic-component-verification");
+      closure_1 = global("../lib/create-deferred-client");
+      closure_2 = global("../lib/create-assets-url");
+      closure_3 = global("./vault-manager");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
+          closure_0 = client;
           return closure_0.verify({ name: "Vault Manager", client: client.client, authorization: client.authorization }).then(() => {
             let obj = { createPromise: null };
-            obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: outer1_2.create(client.authorization), name: "Vault Manager" };
-            obj[0] = outer1_1.create(obj);
-            return new outer1_3(obj);
+            obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_2.create(client.authorization), name: "Vault Manager" };
+            obj[0] = closure_1_1.create(obj);
+            return new closure_1_3(obj);
           });
         }),
         VERSION: "3.112.1"
@@ -14218,12 +14180,12 @@ let fn = () => {
           closure_0 = global;
           _createPromise = this._createPromise;
           return _createPromise.then((getConfiguration) => {
-            let closure_0 = getConfiguration;
+            closure_0 = getConfiguration;
             if ("CLIENT_TOKEN" === getConfiguration.getConfiguration().authorizationType) {
               let obj = { api: "graphQLApi", data: null };
               obj = { query: "mutation DeletePaymentMethodFromSingleUseToken($input: DeletePaymentMethodFromSingleUseTokenInput!) {  deletePaymentMethodFromSingleUseToken(input: $input) {    clientMutationId  }}", variables: null, operationName: "DeletePaymentMethodFromSingleUseToken" };
               obj = { input: null };
-              let obj1 = { singleUseTokenId: null };
+              obj1 = { singleUseTokenId: null };
               obj1[0] = closure_0;
               obj[0] = obj1;
               obj[1] = obj;
@@ -14232,14 +14194,14 @@ let fn = () => {
               let catchPromise = getConfiguration.request(obj).then(() => { ... }).catch(() => { ... });
               const nextPromise = getConfiguration.request(obj).then(() => { ... });
             } else {
-              const tmp6 = new outer1_1(outer1_2.VAULT_MANAGER_DELETE_PAYMENT_METHOD_NONCE_REQUIRES_CLIENT_TOKEN);
+              const tmp6 = new closure_1_1(closure_1_2.VAULT_MANAGER_DELETE_PAYMENT_METHOD_NONCE_REQUIRES_CLIENT_TOKEN);
               catchPromise = Promise.reject(tmp6);
             }
             return catchPromise;
           });
         }
         teardown() {
-          tmp = c3(this, c4(VaultManager.prototype));
+          tmp = closure_3(this, closure_4(VaultManager.prototype));
           return Promise.resolve();
         }
       }
@@ -14253,18 +14215,18 @@ let fn = () => {
         }
         return obj;
       }
-      let closure_0 = global("../lib/analytics");
-      let closure_1 = global("../lib/braintree-error");
-      let closure_2 = global("./errors");
-      let closure_3 = global("../lib/convert-methods-to-error");
-      let closure_4 = global("../lib/methods");
+      closure_0 = global("../lib/analytics");
+      closure_1 = global("../lib/braintree-error");
+      closure_2 = global("./errors");
+      closure_3 = global("../lib/convert-methods-to-error");
+      closure_4 = global("../lib/methods");
       module.exports = global("@braintree/wrap-promise").wrapPrototype(VaultManager);
     },
     { "../lib/analytics": 138, "../lib/braintree-error": 143, "../lib/convert-methods-to-error": 146, "../lib/methods": 175, "./errors": 231, "@braintree/wrap-promise": 40 }
   ];
   items = [
     function(arg0, arg1, arg2) {
-      let fn = this;
+      fn = this;
       if (this) {
         fn = this.__importDefault;
       }
@@ -14280,7 +14242,7 @@ let fn = () => {
           return tmp;
         };
       }
-      let closure_0 = fn(global("./venmo-desktop"));
+      closure_0 = fn(global("./venmo-desktop"));
       module.exports = function createVenmoDesktop(arg0) {
         return new mod.default(arg0).initialize();
       };
@@ -14307,7 +14269,7 @@ let fn = () => {
   items = [
     function(arg0, arg1, arg2) {
       let self = this;
-      let fn = this;
+      fn = this;
       if (this) {
         fn = self.__assign;
       }
@@ -14339,6 +14301,7 @@ let fn = () => {
             return arg0;
           });
           const self = this;
+          closure_0 = tmp;
           const apply = tmp.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -14364,17 +14327,17 @@ let fn = () => {
           return tmp;
         };
       }
-      let closure_1 = fn2(arg0("framebus"));
-      let closure_2 = fn2(arg0("@braintree/iframer"));
-      let closure_3 = fn2(arg0("@braintree/uuid"));
-      let closure_4 = arg0("../shared/events");
-      let closure_5 = arg0("./queries");
+      closure_1 = fn2(arg0("framebus"));
+      closure_2 = fn2(arg0("@braintree/iframer"));
+      closure_3 = fn2(arg0("@braintree/uuid"));
+      closure_4 = arg0("../shared/events");
+      closure_5 = arg0("./queries");
       class VenmoDesktop {
         constructor(arg0) {
-          obj = { isHidden: true, env: arg0.environment, id: c3.default(), profileId: arg0.profileId, displayName: arg0.displayName, paymentMethodUsage: arg0.paymentMethodUsage, shouldUseLegacyQRCodeMutation: !obj.paymentMethodUsage };
+          obj = { isHidden: true, env: arg0.environment, id: closure_3.default(), profileId: arg0.profileId, displayName: arg0.displayName, paymentMethodUsage: arg0.paymentMethodUsage, shouldUseLegacyQRCodeMutation: !obj.paymentMethodUsage };
           obj = { channel: obj.id, verifyDomain: arg0.verifyDomain, targetFrames: [] };
           text = `${arg0.url}#${obj.env}_${obj.id}`;
-          _default = new framebus.default(obj);
+          _default = new closure_1.default(obj);
           obj.bus = _default;
           ({ apiRequest: obj.apiRequest, sendEvent: obj.sendEvent, Promise: obj.Promise } = arg0);
           obj.alertBox = document.createElement("div");
@@ -14388,7 +14351,7 @@ let fn = () => {
           obj.alertBox.style.width = "1px";
           obj.alertBox.style.overflow = "hidden";
           obj.alertBox.style.zIndex = "0";
-          obj.iframe = c2.default({ src: text, name: "venmo-desktop-iframe", style: { display: "none", position: "fixed", top: "0", bottom: "0", right: "0", left: "0", height: "100%", width: "100%", zIndex: "9999999" }, title: "Venmo Desktop" });
+          obj.iframe = closure_2.default({ src: text, name: "venmo-desktop-iframe", style: { display: "none", position: "fixed", top: "0", bottom: "0", right: "0", left: "0", height: "100%", width: "100%", zIndex: "9999999" }, title: "Venmo Desktop" });
           bus = obj.bus;
           addTargetFrameResult = bus.addTargetFrame(obj.iframe);
           return;
@@ -14398,11 +14361,11 @@ let fn = () => {
           promise = new this.Promise((arg0) => {
             const _self = arg0;
             const bus = _self.bus;
-            bus.on(outer1_4.VENMO_DESKTOP_IFRAME_READY, () => {
+            bus.on(closure_1_4.VENMO_DESKTOP_IFRAME_READY, () => {
               lib(lib);
             });
             const bus2 = _self.bus;
-            bus2.on(outer1_4.VENMO_DESKTOP_REQUEST_NEW_QR_CODE, () => {
+            bus2.on(closure_1_4.VENMO_DESKTOP_REQUEST_NEW_QR_CODE, () => {
               lib.sendEvent("venmo.tokenize.desktop.restarted-from-error-view");
               lib.startPolling();
             });
@@ -14416,7 +14379,7 @@ let fn = () => {
           this.isHidden = false;
           promise = new this.Promise((arg0, launchDesktopPromiseRejectFunction) => {
             const _self = arg0;
-            let closure_1 = launchDesktopPromiseRejectFunction;
+            closure_1 = launchDesktopPromiseRejectFunction;
             _self.launchDesktopPromiseRejectFunction = launchDesktopPromiseRejectFunction;
             function removeListeners() {
 
@@ -14426,9 +14389,9 @@ let fn = () => {
                 HermesBuiltin.throwTypeError();
               }
               const bus = lib.bus;
-              bus.off(outer2_4.VENMO_DESKTOP_CUSTOMER_CANCELED, customerCancelledHandler);
+              bus.off(closure_2_4.VENMO_DESKTOP_CUSTOMER_CANCELED, customerCancelledHandler);
               const bus2 = lib.bus;
-              bus2.off(outer2_4.VENMO_DESKTOP_UNKNOWN_ERROR, unknownErrorHandler);
+              bus2.off(closure_2_4.VENMO_DESKTOP_UNKNOWN_ERROR, unknownErrorHandler);
               lib.sendEvent("venmo.tokenize.desktop.unknown-error");
               launchDesktopPromiseRejectFunction({ allowUIToHandleError: false, reason: "UNKNOWN_ERROR", err });
             }
@@ -14437,9 +14400,9 @@ let fn = () => {
                 HermesBuiltin.throwTypeError();
               }
               const bus = lib.bus;
-              bus.off(outer2_4.VENMO_DESKTOP_CUSTOMER_CANCELED, customerCancelledHandler);
+              bus.off(closure_2_4.VENMO_DESKTOP_CUSTOMER_CANCELED, customerCancelledHandler);
               const bus2 = lib.bus;
-              bus2.off(outer2_4.VENMO_DESKTOP_UNKNOWN_ERROR, unknownErrorHandler);
+              bus2.off(closure_2_4.VENMO_DESKTOP_UNKNOWN_ERROR, unknownErrorHandler);
               const result = lib.updateVenmoDesktopPaymentContext("CANCELED");
               lib.sendEvent("venmo.tokenize.desktop.status-change.canceled-from-modal");
               launchDesktopPromiseRejectFunction({ allowUIToHandleError: false, reason: "CUSTOMER_CANCELED" });
@@ -14449,15 +14412,15 @@ let fn = () => {
                 HermesBuiltin.throwTypeError();
               }
               const bus = lib.bus;
-              bus.off(outer2_4.VENMO_DESKTOP_CUSTOMER_CANCELED, customerCancelledHandler);
+              bus.off(closure_2_4.VENMO_DESKTOP_CUSTOMER_CANCELED, customerCancelledHandler);
               const bus2 = lib.bus;
-              bus2.off(outer2_4.VENMO_DESKTOP_UNKNOWN_ERROR, unknownErrorHandler);
+              bus2.off(closure_2_4.VENMO_DESKTOP_UNKNOWN_ERROR, unknownErrorHandler);
               lib(arg0);
             };
             let bus = _self.bus;
-            bus.on(outer1_4.VENMO_DESKTOP_CUSTOMER_CANCELED, customerCancelledHandler);
+            bus.on(closure_1_4.VENMO_DESKTOP_CUSTOMER_CANCELED, customerCancelledHandler);
             let bus2 = _self.bus;
-            bus2.on(outer1_4.VENMO_DESKTOP_UNKNOWN_ERROR, unknownErrorHandler);
+            bus2.on(closure_1_4.VENMO_DESKTOP_UNKNOWN_ERROR, unknownErrorHandler);
           });
           this.iframe.style.display = "block";
           setAlertResult = this.setAlert("Generating a QR code, get your Venmo app ready");
@@ -14503,7 +14466,7 @@ let fn = () => {
           setAlertResult = this.setAlert("");
           this.iframe.style.display = "none";
           bus = this.bus;
-          emitResult = bus.emit(c4.VENMO_DESKTOP_CLOSED_FROM_PARENT);
+          emitResult = bus.emit(closure_4.VENMO_DESKTOP_CLOSED_FROM_PARENT);
           this.isHidden = true;
           return;
         }
@@ -14512,10 +14475,10 @@ let fn = () => {
           if (!this.isHidden) {
             tmp = arg0;
             bus = self.bus;
-            tmp2 = c4;
+            tmp2 = closure_4;
             obj = { message: null };
             obj[0] = arg0;
-            emitResult = bus.emit(c4.VENMO_DESKTOP_DISPLAY_ERROR, obj);
+            emitResult = bus.emit(closure_4.VENMO_DESKTOP_DISPLAY_ERROR, obj);
             setAlertResult = self.setAlert(arg0);
           }
           return;
@@ -14526,11 +14489,11 @@ let fn = () => {
             tmp = arg0;
             tmp2 = arg1;
             bus = self.bus;
-            tmp3 = c4;
+            tmp3 = closure_4;
             obj = { id: null, merchantId: null };
             obj[0] = arg0;
             obj[1] = arg1;
-            emitResult = bus.emit(c4.VENMO_DESKTOP_DISPLAY_QR_CODE, obj);
+            emitResult = bus.emit(closure_4.VENMO_DESKTOP_DISPLAY_QR_CODE, obj);
             str = "To scan the QR code, open your Venmo app";
             setAlertResult = self.setAlert("To scan the QR code, open your Venmo app");
           }
@@ -14540,8 +14503,8 @@ let fn = () => {
           self = this;
           if (!this.isHidden) {
             bus = self.bus;
-            tmp = c4;
-            emitResult = bus.emit(c4.VENMO_DESKTOP_AUTHORIZE);
+            tmp = closure_4;
+            emitResult = bus.emit(closure_4.VENMO_DESKTOP_AUTHORIZE);
             str = "Venmo account authorized";
             setAlertResult = self.setAlert("Venmo account authorized");
           }
@@ -14551,8 +14514,8 @@ let fn = () => {
           self = this;
           if (!this.isHidden) {
             bus = self.bus;
-            tmp = c4;
-            emitResult = bus.emit(c4.VENMO_DESKTOP_AUTHORIZING);
+            tmp = closure_4;
+            emitResult = bus.emit(closure_4.VENMO_DESKTOP_AUTHORIZING);
             str = "Authorize on your Venmo app";
             setAlertResult = self.setAlert("Authorize on your Venmo app");
           }
@@ -14640,8 +14603,8 @@ let fn = () => {
                       }
                     }
                     const promise = new obj.Promise((arg0, arg1) => {
-                      let closure_0 = arg0;
-                      let closure_1 = arg1;
+                      closure_0 = arg0;
+                      closure_1 = arg1;
                       const timerId = setTimeout(() => { ... }, 1000);
                     });
                     return promise;
@@ -14682,7 +14645,7 @@ let fn = () => {
         }
         createPaymentContextFromGraphqlLegacyQRCodeMutation(arg0) {
           obj = { environment: this.env, intent: arg0 };
-          apiRequestResult = this.apiRequest(c5.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY, { input: obj });
+          apiRequestResult = this.apiRequest(closure_5.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY, { input: obj });
           return apiRequestResult.then((createVenmoQRCodePaymentContext) => createVenmoQRCodePaymentContext.createVenmoQRCodePaymentContext.venmoQRCodePaymentContext);
         }
         createPaymentContextFromGraphQL(arg0) {
@@ -14694,7 +14657,7 @@ let fn = () => {
           if (self.displayName) {
             obj.displayName = self.displayName;
           }
-          apiRequestResult = self.apiRequest(c5.CREATE_PAYMENT_CONTEXT_QUERY, { input: obj });
+          apiRequestResult = self.apiRequest(closure_5.CREATE_PAYMENT_CONTEXT_QUERY, { input: obj });
           return apiRequestResult.then((createVenmoPaymentContext) => createVenmoPaymentContext.createVenmoPaymentContext.venmoPaymentContext);
         }
         createVenmoDesktopPaymentContext() {
@@ -14726,7 +14689,7 @@ let fn = () => {
             obj1[0] = self.venmoContextId;
             obj1[1] = arg0;
             obj[0] = f105050(obj1, obj);
-            tmp3 = c5;
+            tmp3 = closure_5;
             apiRequestResult = self.apiRequest(self.shouldUseLegacyQRCodeMutation ? tmp3.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY : tmp3.UPDATE_PAYMENT_CONTEXT_QUERY, obj);
             return apiRequestResult.then(() => {
 
@@ -14739,7 +14702,7 @@ let fn = () => {
         lookupVenmoDesktopPaymentContext() {
           self = this;
           if (this.venmoContextId) {
-            tmp = c5;
+            tmp = closure_5;
             obj = { id: null };
             obj[0] = self.venmoContextId;
             apiRequestResult = self.apiRequest(self.shouldUseLegacyQRCodeMutation ? tmp.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY : tmp.VENMO_PAYMENT_CONTEXT_STATUS_QUERY, obj);
@@ -14756,45 +14719,45 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/analytics");
-      let closure_1 = global("../lib/basic-component-verification");
-      let closure_2 = global("../lib/create-deferred-client");
-      let closure_3 = global("../lib/create-assets-url");
-      let closure_4 = global("./shared/errors");
-      let closure_5 = global("../lib/braintree-error");
-      let closure_6 = global("./venmo");
-      let closure_7 = global("./shared/supports-venmo");
+      closure_0 = global("../lib/analytics");
+      closure_1 = global("../lib/basic-component-verification");
+      closure_2 = global("../lib/create-deferred-client");
+      closure_3 = global("../lib/create-assets-url");
+      closure_4 = global("./shared/errors");
+      closure_5 = global("../lib/braintree-error");
+      closure_6 = global("./venmo");
+      closure_7 = global("./shared/supports-venmo");
       const globalResult = global("@braintree/wrap-promise");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
+          closure_0 = client;
           return closure_1.verify({ name: "Venmo", client: client.client, authorization: client.authorization }).then(() => {
             if (client.profileId) {
               if (typeof tmp.profileId !== "string") {
-                const tmp17 = new outer1_5(outer1_4.VENMO_INVALID_PROFILE_ID);
+                const tmp17 = new closure_1_5(closure_1_4.VENMO_INVALID_PROFILE_ID);
                 let rejectResult = Promise.reject(tmp17);
               }
               return rejectResult;
             }
             if (client.deepLinkReturnUrl) {
               if (typeof tmp.deepLinkReturnUrl !== "string") {
-                const tmp10 = new outer1_5(outer1_4.VENMO_INVALID_DEEP_LINK_RETURN_URL);
+                const tmp10 = new closure_1_5(closure_1_4.VENMO_INVALID_DEEP_LINK_RETURN_URL);
                 rejectResult = Promise.reject(tmp10);
               }
             }
-            let obj = { authorization: tmp.authorization, client: tmp.client, debug: tmp.debug, assetsUrl: outer1_3.create(tmp.authorization), name: "Venmo" };
-            obj = outer1_2.create(obj);
+            let obj = { authorization: tmp.authorization, client: tmp.client, debug: tmp.debug, assetsUrl: closure_1_3.create(tmp.authorization), name: "Venmo" };
+            obj = closure_1_2.create(obj);
             const nextPromise = obj.then((client) => {
               let rejectResult = client;
               closure_0.client = client;
               if (!client.getConfiguration().gatewayConfiguration.payWithVenmo) {
-                const tmp7 = new outer1_5(outer1_4.VENMO_NOT_ENABLED);
+                const tmp7 = new closure_1_5(closure_1_4.VENMO_NOT_ENABLED);
                 rejectResult = Promise.reject(tmp7);
               }
               return rejectResult;
             });
             client.createPromise = nextPromise;
-            client = new outer1_6(client);
+            client = new closure_1_6(client);
             client.sendEvent(nextPromise, "venmo.initialized");
             rejectResult = nextPromise.then(() => closure_0);
           });
@@ -14915,7 +14878,7 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./constants");
+      closure_0 = global("./constants");
       module.exports = function getVenmoUrl(useAllowDesktopWebLogin) {
         if (useAllowDesktopWebLogin.useAllowDesktopWebLogin) {
           let VENMO_WEB_LOGIN_URL = constants.VENMO_WEB_LOGIN_URL;
@@ -14929,8 +14892,8 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("./browser-detection");
-      let closure_1 = global("../../lib/in-iframe");
+      closure_0 = global("./browser-detection");
+      closure_1 = global("../../lib/in-iframe");
       module.exports = {
         isBrowserSupported(arg0) {
           let obj = android;
@@ -14999,26 +14962,23 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../../lib/frame-service/external");
-      let closure_1 = global("../../lib/use-min");
+      closure_0 = global("../../lib/frame-service/external");
+      closure_1 = global("../../lib/use-min");
       const globalResult = global("@braintree/extended-promise");
-      let closure_2 = globalResult;
-      let closure_3 = global("../shared/errors");
-      let closure_4 = global("../../lib/braintree-error");
-      let c5 = "venmo-desktop-web-backdrop";
-      let c6 = "venmo-desktop-web-backdrop.hidden";
-      let c7 = "venmo-backdrop-container";
-      let c8 = "venmo-popup-cancel-button";
-      let c9 = "venmo-popup-continue-button";
-      let c10 = "venmo-message";
-      let c11 = "venmo-instructions";
-      let c12 = "venmo-full-logo";
+      closure_2 = globalResult;
+      closure_3 = global("../shared/errors");
+      closure_4 = global("../../lib/braintree-error");
+      c5 = "venmo-desktop-web-backdrop";
+      c6 = "venmo-desktop-web-backdrop.hidden";
+      c7 = "venmo-backdrop-container";
+      c8 = "venmo-popup-cancel-button";
+      c9 = "venmo-popup-continue-button";
+      c10 = "venmo-message";
+      c11 = "venmo-instructions";
+      c12 = "venmo-full-logo";
       globalResult.suppressUnhandledPromiseMessage = true;
       module.exports = {
         runWebLogin(frameServiceInstance) {
-          let closure_1;
-          let closure_2;
-          let closure_3;
           const element = document.getElementById(c5);
           if (element) {
             let classList = element.classList;
@@ -15078,7 +15038,7 @@ let fn = () => {
           frameServiceInstance = frameServiceInstance.frameServiceInstance;
           ({ checkForStatusChange: closure_1, cancelTokenization: closure_2, checkPaymentContextStatus: closure_3 } = frameServiceInstance);
           const tmp32 = new closure_2();
-          let closure_4 = tmp32;
+          closure_4 = tmp32;
           const element9 = document.getElementById(c9);
           const listener1 = element9.addEventListener("click", () => {
             frameServiceInstance.focus();
@@ -15092,13 +15052,13 @@ let fn = () => {
           });
           frameServiceInstance.open({}, (arg0) => {
             if (arg0) {
-              tmp32.reject(arg0);
+              closure_4.reject(arg0);
             } else {
               const promise = callback(1);
               callback(1).then((arg0) => {
                 closure_4.resolve(arg0);
               }).catch((arg0) => {
-                let closure_0 = arg0;
+                closure_0 = arg0;
                 callback().then(() => { ... });
               });
               const nextPromise = callback(1).then((arg0) => {
@@ -15113,13 +15073,10 @@ let fn = () => {
           return tmp32;
         },
         openPopup(frameServiceInstance) {
-          let closure_1;
-          let closure_2;
-          let closure_3;
           frameServiceInstance = frameServiceInstance.frameServiceInstance;
           ({ checkForStatusChange: closure_1, cancelTokenization: closure_2, checkPaymentContextStatus: closure_3 } = frameServiceInstance);
           const tmp = new closure_2();
-          let closure_4 = tmp;
+          closure_4 = tmp;
           const element = document.getElementById(c9);
           const listener = element.addEventListener("click", () => {
             frameServiceInstance.focus();
@@ -15133,13 +15090,13 @@ let fn = () => {
           });
           frameServiceInstance.open({}, (arg0) => {
             if (arg0) {
-              tmp32.reject(arg0);
+              closure_4.reject(arg0);
             } else {
               const promise = callback(1);
               callback(1).then((arg0) => {
                 closure_4.resolve(arg0);
               }).catch((arg0) => {
-                let closure_0 = arg0;
+                closure_0 = arg0;
                 callback().then(() => { ... });
               });
               const nextPromise = callback(1).then((arg0) => {
@@ -15154,10 +15111,8 @@ let fn = () => {
           return tmp;
         },
         setupDesktopWebLogin(arg0) {
-          let assetsUrl;
-          let debug;
           const tmp = new closure_2();
-          let closure_0 = tmp;
+          closure_0 = tmp;
           ({ debug, assetsUrl } = arg0);
           if (!debug) {
             debug = false;
@@ -15170,7 +15125,7 @@ let fn = () => {
           obj[3] = sum;
           obj[4] = sum1;
           obj = closure_0.create(obj, (arg0) => {
-            tmp.resolve(arg0);
+            closure_0.resolve(arg0);
           });
           return tmp;
         },
@@ -15202,7 +15157,7 @@ let fn = () => {
           self._useDesktopQRFlow = tmp;
           tmp2 = self._allowDesktopWebLogin && self._isDesktop();
           self._useAllowDesktopWebLogin = tmp2;
-          tmp3 = c10() || self._requireManualReturn;
+          tmp3 = closure_10() || self._requireManualReturn;
           self._cannotHaveReturnUrls = tmp3;
           self._allowAndroidRecreation = false !== global.allowAndroidRecreation;
           self._maxRetryCount = 3;
@@ -15242,8 +15197,8 @@ let fn = () => {
             if (self._shouldUseLegacyFlow) {
               obj = { api: "graphQLApi", data: null };
               obj1 = { query: null, variables: null };
-              tmp13 = c17;
-              obj1[0] = c17.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY;
+              tmp13 = closure_17;
+              obj1[0] = closure_17.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY;
               obj2 = { input: null };
               obj3 = { environment: null, intent: "PAY_FROM_APP" };
               obj3[0] = self._mobilePollingContextEnvironment;
@@ -15257,11 +15212,11 @@ let fn = () => {
                 if (!global.getConfiguration().gatewayConfiguration.payWithVenmo.enrichedCustomerDataEnabled) {
                   tmp2 = globalThis;
                   _Promise2 = Promise;
-                  tmp3 = c9;
-                  tmp4 = c4;
+                  tmp3 = closure_9;
+                  tmp4 = closure_4;
                   tmp5 = new.target;
                   tmp6 = new.target;
-                  tmp7 = new c9(c4.VENMO_ECD_DISABLED);
+                  tmp7 = new closure_9(closure_4.VENMO_ECD_DISABLED);
                   tmp8 = tmp7;
                   return Promise.reject(tmp7);
                 }
@@ -15272,13 +15227,13 @@ let fn = () => {
               }
               obj = { subTotalAmount: null, discountAmount: null, taxAmount: null, shippingAmount: null, totalAmount: null, lineItems: null };
               ({ _subTotalAmount: obj[0], _discountAmount: obj[1], _taxAmount: obj[2], _shippingAmount: obj[3], _totalAmount: obj[4], _lineItems: obj[5] } = self);
-              f116215 = obj;
+              closure_2 = obj;
               tmp10 = globalThis;
               _Object = Object;
               keys = Object.keys(obj);
               obj4 = { query: null, variables: null };
-              tmp11 = c17;
-              obj4[0] = c17.CREATE_PAYMENT_CONTEXT_QUERY;
+              tmp11 = closure_17;
+              obj4[0] = closure_17.CREATE_PAYMENT_CONTEXT_QUERY;
               obj5 = { paymentMethodUsage: null, intent: "CONTINUE", customerClient: null, isFinalAmount: null, displayName: null, paysheetDetails: null };
               obj5[0] = self._paymentMethodUsage;
               obj5[2] = str;
@@ -15318,9 +15273,9 @@ let fn = () => {
               platform = obj.test(window.navigator.platform);
             }
             if (platform) {
-              tmp14 = c0;
+              tmp14 = closure_0;
               str4 = "venmo.appswitch.start.ios-webview";
-              sendEventResult = c0.sendEvent(self._createPromise, "venmo.appswitch.start.ios-webview");
+              sendEventResult = closure_0.sendEvent(self._createPromise, "venmo.appswitch.start.ios-webview");
               _window9 = window;
               window.location.href = global;
             } else {
@@ -15328,26 +15283,26 @@ let fn = () => {
               if (window.popupBridge) {
                 _window6 = window;
                 if (typeof window.popupBridge.open === "function") {
-                  tmp11 = c0;
+                  tmp11 = closure_0;
                   str3 = "venmo.appswitch.start.popup-bridge";
-                  sendEventResult1 = c0.sendEvent(self._createPromise, "venmo.appswitch.start.popup-bridge");
+                  sendEventResult1 = closure_0.sendEvent(self._createPromise, "venmo.appswitch.start.popup-bridge");
                   _window8 = window;
                   popupBridge = window.popupBridge;
                   openResult = popupBridge.open(global);
                 }
               }
-              tmp8 = c0;
+              tmp8 = closure_0;
               str2 = "venmo.appswitch.start.webview";
-              sendEventResult2 = c0.sendEvent(self._createPromise, "venmo.appswitch.start.webview");
+              sendEventResult2 = closure_0.sendEvent(self._createPromise, "venmo.appswitch.start.webview");
               _window7 = window;
               openResult1 = window.open(global);
             }
           } else {
-            tmp = c0;
+            tmp = closure_0;
             str = "venmo.appswitch.start.browser";
-            sendEventResult3 = c0.sendEvent(self._createPromise, "venmo.appswitch.start.browser");
-            tmp3 = c2;
-            if (!c2.doesNotSupportWindowOpenInIos()) {
+            sendEventResult3 = closure_0.sendEvent(self._createPromise, "venmo.appswitch.start.browser");
+            tmp3 = closure_2;
+            if (!closure_2.doesNotSupportWindowOpenInIos()) {
               if (!self._shouldUseRedirectStrategy()) {
                 tmp4 = globalThis;
                 _window = window;
@@ -15367,7 +15322,7 @@ let fn = () => {
         }
         isBrowserSupported() {
           obj = { allowNewBrowserTab: this._allowNewBrowserTab, allowWebviews: this._allowWebviews, allowDesktop: this._allowDesktop, allowDesktopWebLogin: this._allowDesktopWebLogin };
-          return c1.isBrowserSupported(obj);
+          return closure_1.isBrowserSupported(obj);
         }
         hasTokenizationResult() {
           return this._hasTokenizationResult();
@@ -15386,7 +15341,7 @@ let fn = () => {
           if (reduced.resourceId) {
             reduced.id = reduced.resourceId;
           }
-          urlParams = c15.getUrlParams();
+          urlParams = closure_15.getUrlParams();
           if (urlParams.resource_id) {
             self = this;
             this._venmoPaymentContextId = urlParams.resource_id;
@@ -15399,8 +15354,8 @@ let fn = () => {
           return tmp;
         }
         _isDesktop() {
-          obj = c2;
-          tmp = c2.isIos() || obj.isAndroid();
+          obj = closure_2;
+          tmp = closure_2.isIos() || obj.isAndroid();
           return !tmp;
         }
         tokenize(arg0) {
@@ -15413,11 +15368,11 @@ let fn = () => {
           if (true === self._tokenizationInProgress) {
             tmp2 = globalThis;
             _Promise = Promise;
-            tmp3 = c9;
-            tmp4 = c4;
+            tmp3 = closure_9;
+            tmp4 = closure_4;
             tmp5 = new.target;
             tmp6 = new.target;
-            tmp7 = new c9(c4.VENMO_TOKENIZATION_REQUEST_ACTIVE);
+            tmp7 = new closure_9(closure_4.VENMO_TOKENIZATION_REQUEST_ACTIVE);
             tmp8 = tmp7;
             rejectResult = Promise.reject(tmp7);
           } else {
@@ -15442,11 +15397,11 @@ let fn = () => {
             result = self._removeVisibilityEventListener();
             if (self._tokenizePromise) {
               _tokenizePromise = self._tokenizePromise;
-              tmp10 = c9;
-              tmp11 = c4;
+              tmp10 = closure_9;
+              tmp11 = closure_4;
               tmp12 = new.target;
               tmp13 = new.target;
-              tmp14 = new c9(c4.VENMO_TOKENIZATION_CANCELED_BY_MERCHANT);
+              tmp14 = new closure_9(closure_4.VENMO_TOKENIZATION_CANCELED_BY_MERCHANT);
               tmp15 = tmp14;
               rejectResult = _tokenizePromise.reject(tmp14);
             }
@@ -15459,11 +15414,11 @@ let fn = () => {
           } else {
             tmp = globalThis;
             _Promise = Promise;
-            tmp2 = c9;
-            tmp3 = c4;
+            tmp2 = closure_9;
+            tmp3 = closure_4;
             tmp4 = new.target;
             tmp5 = new.target;
-            tmp6 = new c9(c4.VENMO_TOKENIZATION_REQUEST_NOT_ACTIVE);
+            tmp6 = new closure_9(closure_4.VENMO_TOKENIZATION_REQUEST_NOT_ACTIVE);
             tmp7 = tmp6;
             allPromises = Promise.reject(tmp6);
           }
@@ -15472,7 +15427,7 @@ let fn = () => {
         _tokenizeWebLoginWithRedirect() {
           self = this;
           sendEventResult = self.sendEvent(this._createPromise, "venmo.tokenize.web-login.start");
-          tmp2 = new c11();
+          tmp2 = new closure_11();
           this._tokenizePromise = tmp2;
           url = this.getUrl();
           return url.then(() => { ... });
@@ -15500,11 +15455,11 @@ let fn = () => {
           self = this;
           if (Date.now() > this._mobilePollingContextExpiresIn) {
             _Promise = Promise;
-            tmp2 = c9;
-            tmp3 = c4;
+            tmp2 = closure_9;
+            tmp3 = closure_4;
             tmp4 = new.target;
             tmp5 = new.target;
-            tmp6 = new c9(c4.VENMO_MOBILE_POLLING_TOKENIZATION_TIMEOUT);
+            tmp6 = new closure_9(closure_4.VENMO_MOBILE_POLLING_TOKENIZATION_TIMEOUT);
             tmp7 = tmp6;
             rejectResult = Promise.reject(tmp6);
           } else {
@@ -15518,7 +15473,7 @@ let fn = () => {
           self = this;
           sendEventResult = self.sendEvent(this._createPromise, "venmo.tokenize.manual-return.start");
           this._mobilePollingContextExpiresIn = Date.now() + this._mobilePollingExpiresThreshold;
-          tmp2 = new c11();
+          tmp2 = new closure_11();
           this._tokenizePromise = tmp2;
           _pollForStatusChangeResult = this._pollForStatusChange();
           nextPromise = _pollForStatusChangeResult.then(() => { ... });
@@ -15527,7 +15482,7 @@ let fn = () => {
           return url.then(() => { ... });
         }
         _shouldUseRedirectStrategy() {
-          tmp = c2.isIos();
+          tmp = closure_2.isIos();
           if (tmp) {
             flag = true;
             tmp2 = true === this._mobileWebFallBack || this._useRedirectForIOS;
@@ -15546,10 +15501,10 @@ let fn = () => {
             tmp = closure_0;
             str = "venmo.tokenize.mobile.start";
             sendEventResult = closure_0.sendEvent(self._createPromise, "venmo.tokenize.mobile.start");
-            tmp3 = c11;
+            tmp3 = closure_11;
             tmp4 = new.target;
             tmp5 = new.target;
-            tmp6 = new c11();
+            tmp6 = new closure_11();
             tmp7 = tmp6;
             self._tokenizePromise = tmp6;
             tmp8 = globalThis;
@@ -15568,7 +15523,7 @@ let fn = () => {
         _tokenizeForDesktopQRFlow() {
           self = this;
           sendEventResult = self.sendEvent(this._createPromise, "venmo.tokenize.desktop.start");
-          tmp2 = new c11();
+          tmp2 = new closure_11();
           this._tokenizePromise = tmp2;
           _createPromise = this._createPromise;
           nextPromise = _createPromise.then(() => { ... });
@@ -15627,7 +15582,7 @@ let fn = () => {
           if (reduced.resourceId) {
             reduced.id = reduced.resourceId;
           }
-          f116213 = reduced;
+          closure_1 = reduced;
           promise = new Promise(() => { ... });
           return promise;
         }
@@ -15656,25 +15611,25 @@ let fn = () => {
           return;
         }
       }
-      let closure_0 = global("../lib/analytics");
-      let closure_1 = global("./shared/supports-venmo");
-      let closure_2 = global("./shared/browser-detection");
-      let closure_3 = global("./shared/constants");
-      let closure_4 = global("./shared/errors");
-      let closure_5 = global("../lib/querystring");
-      let closure_6 = global("../lib/is-verified-domain");
-      let closure_7 = global("../lib/methods");
-      let closure_8 = global("../lib/convert-methods-to-error");
-      let closure_9 = global("../lib/braintree-error");
-      let closure_10 = global("../lib/in-iframe");
+      closure_0 = global("../lib/analytics");
+      closure_1 = global("./shared/supports-venmo");
+      closure_2 = global("./shared/browser-detection");
+      closure_3 = global("./shared/constants");
+      closure_4 = global("./shared/errors");
+      closure_5 = global("../lib/querystring");
+      closure_6 = global("../lib/is-verified-domain");
+      closure_7 = global("../lib/methods");
+      closure_8 = global("../lib/convert-methods-to-error");
+      closure_9 = global("../lib/braintree-error");
+      closure_10 = global("../lib/in-iframe");
       const globalResult1 = global("@braintree/extended-promise");
-      let closure_12 = global("./shared/get-venmo-url");
-      let closure_13 = global("./shared/web-login-backdrop");
-      let closure_14 = global("../lib/snake-case-to-camel-case");
-      let closure_15 = global("../lib/url-params");
-      let closure_16 = global("./external/");
-      let closure_17 = global("./external/queries");
-      let c18 = "3.112.1";
+      closure_12 = global("./shared/get-venmo-url");
+      closure_13 = global("./shared/web-login-backdrop");
+      closure_14 = global("../lib/snake-case-to-camel-case");
+      closure_15 = global("../lib/url-params");
+      closure_16 = global("./external/");
+      closure_17 = global("./external/queries");
+      c18 = "3.112.1";
       globalResult1.suppressUnhandledPromiseMessage = true;
       module.exports = global("@braintree/wrap-promise").wrapPrototype(Venmo);
     },
@@ -15692,26 +15647,26 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let closure_0 = global("../lib/basic-component-verification");
-      let closure_1 = global("../lib/braintree-error");
-      let closure_2 = global("../lib/create-deferred-client");
-      let closure_3 = global("../lib/create-assets-url");
-      let closure_4 = global("./visa-checkout");
-      let closure_5 = global("../lib/analytics");
-      let closure_6 = global("./errors");
+      closure_0 = global("../lib/basic-component-verification");
+      closure_1 = global("../lib/braintree-error");
+      closure_2 = global("../lib/create-deferred-client");
+      closure_3 = global("../lib/create-assets-url");
+      closure_4 = global("./visa-checkout");
+      closure_5 = global("../lib/analytics");
+      closure_6 = global("./errors");
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
-          let closure_0 = client;
+          closure_0 = client;
           const obj = { name: "Visa Checkout", client: client.client, authorization: client.authorization };
           const verifyResult = closure_0.verify({ name: "Visa Checkout", client: client.client, authorization: client.authorization });
-          return closure_0.verify({ name: "Visa Checkout", client: client.client, authorization: client.authorization }).then(() => outer1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: outer1_3.create(client.authorization), name: "Visa Checkout" })).then((client) => {
+          return closure_0.verify({ name: "Visa Checkout", client: client.client, authorization: client.authorization }).then(() => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "Visa Checkout" })).then((client) => {
             client.client = client;
             client = client.client;
             if (client.getConfiguration().gatewayConfiguration.visaCheckout) {
-              outer1_5.sendEvent(tmp.client, "visacheckout.initialized");
-              let rejectResult = new outer1_4(tmp);
+              closure_1_5.sendEvent(tmp.client, "visacheckout.initialized");
+              let rejectResult = new closure_1_4(tmp);
             } else {
-              const tmp7 = new outer1_1(outer1_6.VISA_CHECKOUT_NOT_ENABLED);
+              const tmp7 = new closure_1_1(closure_1_6.VISA_CHECKOUT_NOT_ENABLED);
               rejectResult = Promise.reject(tmp7);
             }
             return rejectResult;
@@ -15734,8 +15689,8 @@ let fn = () => {
           gatewayConfiguration = _client.getConfiguration().gatewayConfiguration;
           visaCheckout = gatewayConfiguration.visaCheckout;
           if (global) {
-            tmp7 = c3;
-            tmp8 = c3(global);
+            tmp7 = closure_3;
+            tmp8 = closure_3(global);
             tmp8.apikey = tmp8.apikey || visaCheckout.apikey;
             tmp8.encryptionKey = visaCheckout.encryptionKey;
             tmp8.externalClientId = tmp8.externalClientId || visaCheckout.externalClientId;
@@ -15753,11 +15708,11 @@ let fn = () => {
             }
             return tmp8;
           } else {
-            tmp = c0;
-            tmp2 = c2;
+            tmp = closure_0;
+            tmp2 = closure_2;
             tmp3 = new.target;
             tmp4 = new.target;
-            tmp5 = new c0(c2.VISA_CHECKOUT_INIT_OPTIONS_REQUIRED);
+            tmp5 = new closure_0(closure_2.VISA_CHECKOUT_INIT_OPTIONS_REQUIRED);
             tmp6 = tmp5;
             throw tmp5;
           }
@@ -15782,22 +15737,22 @@ let fn = () => {
               return catchPromise;
             }
           }
-          tmp2 = new self(c2.VISA_CHECKOUT_PAYMENT_REQUIRED);
+          tmp2 = new self(closure_2.VISA_CHECKOUT_PAYMENT_REQUIRED);
           catchPromise = Promise.reject(tmp2);
           return;
         }
         teardown() {
-          tmp = c5(this, c4(VisaCheckout.prototype));
+          tmp = closure_5(this, closure_4(VisaCheckout.prototype));
           return Promise.resolve();
         }
       }
-      let closure_0 = global("../lib/braintree-error");
-      let closure_1 = global("../lib/analytics");
-      let closure_2 = global("./errors");
-      let closure_3 = global("../lib/json-clone");
-      let closure_4 = global("../lib/methods");
-      let closure_5 = global("../lib/convert-methods-to-error");
-      let closure_6 = { Visa: "VISA", MasterCard: "MASTERCARD", Discover: "DISCOVER", "American Express": "AMEX" };
+      closure_0 = global("../lib/braintree-error");
+      closure_1 = global("../lib/analytics");
+      closure_2 = global("./errors");
+      closure_3 = global("../lib/json-clone");
+      closure_4 = global("../lib/methods");
+      closure_5 = global("../lib/convert-methods-to-error");
+      closure_6 = { Visa: "VISA", MasterCard: "MASTERCARD", Discover: "DISCOVER", "American Express": "AMEX" };
       module.exports = global("@braintree/wrap-promise").wrapPrototype(VisaCheckout);
     },
     { "../lib/analytics": 138, "../lib/braintree-error": 143, "../lib/convert-methods-to-error": 146, "../lib/json-clone": 174, "../lib/methods": 175, "./errors": 246, "@braintree/wrap-promise": 40 }

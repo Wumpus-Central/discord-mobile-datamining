@@ -7,7 +7,7 @@ export default function bind(self, c165, cache, serializer, bindResult, closure_
   let length;
   let sum;
   self = this;
-  const toString = self;
+  toString = self;
   self = this;
   if (typeof this === "function") {
     if ("[object Function]" === toString.apply(self)) {
@@ -47,13 +47,13 @@ export default function bind(self, c165, cache, serializer, bindResult, closure_
         let length2;
         let length3;
         let length4;
-        let self = this;
+        self = this;
         const apply = self.apply;
         if (this instanceof closure_2) {
           if (typeof closure_2 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          const items = [];
+          items = [];
           let num7 = 0;
           if (0 < items.length) {
             do {
@@ -100,7 +100,7 @@ export default function bind(self, c165, cache, serializer, bindResult, closure_
           return apply(closure_0, items1);
         }
       });
-      const concatty = tmp7;
+      closure_2 = tmp7;
       if (self.prototype) {
         class Empty {
           constructor() {

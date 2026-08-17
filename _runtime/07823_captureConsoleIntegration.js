@@ -1,5 +1,5 @@
 // _runtime/07823_captureConsoleIntegration.js
-import setupIntegration from "setupIntegration";
+import setupIntegration from "setupIntegration" /* 7794 */;
 
 
 export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
@@ -17,11 +17,9 @@ export const captureConsoleIntegration = setupIntegration.defineIntegration(() =
   obj = {
     name: "CaptureConsole",
     setup(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
         let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
-          let args;
-          let level;
           ({ args, level } = arg0);
           let obj = CONSOLE_LEVELS(handled[3]);
           let hasItem = obj.getClient() === args;
@@ -29,7 +27,7 @@ export const captureConsoleIntegration = setupIntegration.defineIntegration(() =
             hasItem = closure_0.includes(level);
           }
           if (hasItem) {
-            let closure_2 = outer1_1;
+            closure_2 = closure_1_1;
             obj = { level: null, extra: null };
             let tmpResult = tmp(tmp2[5]);
             obj[0] = tmpResult.severityLevelFromString(level);
@@ -40,7 +38,7 @@ export const captureConsoleIntegration = setupIntegration.defineIntegration(() =
             tmpResult.withScope((addEventProcessor) => {
               addEventProcessor.addEventProcessor((arg0) => {
                 arg0.logger = "console";
-                let obj = outer1_0(outer1_1[6]);
+                obj = closure_1_0(closure_1_1[6]);
                 obj = { handled: closure_2, type: "console" };
                 const result = obj.addExceptionMechanism(arg0, obj);
                 return arg0;

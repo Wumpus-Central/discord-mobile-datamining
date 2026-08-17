@@ -1,13 +1,11 @@
 // _runtime/07787_applyClientOptions.js
-import { isMatchingPattern } from "07747_isMatchingPattern.js";
+import isMatchingPattern from "isMatchingPattern" /* 7747 */;
+import _mod7775 from "module_7775" /* 7775 */;
 import { getFilenameToDebugIdMap } from "07790_getFilenameToDebugIdMap.js";
-import { 07775__ } from "metro/07775__.js";
-const require = arg1;
+
+require = arg1;
 const dependencyMap = arg6;
 function applyClientOptions(environment, environment2) {
-  let dist;
-  let maxValueLength;
-  let release;
   ({ release, dist, maxValueLength } = environment2);
   let num = 250;
   if (undefined !== maxValueLength) {
@@ -15,7 +13,7 @@ function applyClientOptions(environment, environment2) {
   }
   let DEFAULT_ENVIRONMENT = environment.environment || environment2.environment;
   if (!DEFAULT_ENVIRONMENT) {
-    DEFAULT_ENVIRONMENT = 07775__.DEFAULT_ENVIRONMENT;
+    DEFAULT_ENVIRONMENT = _mod7775.DEFAULT_ENVIRONMENT;
   }
   environment.environment = DEFAULT_ENVIRONMENT;
   const release2 = environment.release;
@@ -108,8 +106,6 @@ function applyDebugMeta(exception) {
       const _Object2 = Object;
       const entries = Object.entries(obj);
       const item1 = entries.forEach((arg0) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg0;
         images.push({ type: "sourcemap", code_file: tmp, debug_id: tmp2 });
       });
@@ -219,13 +215,13 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, g
     const result2 = num(num2[4]).notifyEventProcessors(items2, obj, event_id2);
     return result2.then((breadcrumbs) => {
       if (breadcrumbs) {
-        outer1_4(breadcrumbs);
+        closure_1_4(breadcrumbs);
       }
       let tmp4 = breadcrumbs;
-      if (typeof num === "number") {
+      if (typeof closure_0 === "number") {
         tmp4 = breadcrumbs;
         if (tmp3 > 0) {
-          num = tmp3;
+          closure_0 = tmp3;
           let tmp30 = null;
           if (breadcrumbs) {
             let obj = {};
@@ -240,9 +236,9 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, g
                 data = data.data;
                 if (data) {
                   obj = { data: null };
-                  obj[0] = dependencyMap(7783).normalize(data.data, dependencyMap, dependencyMap);
+                  obj[0] = callback(7783).normalize(data.data, callback, dependencyMap);
                   data = obj;
-                  const obj3 = dependencyMap(7783);
+                  const obj3 = callback(7783);
                 }
                 const merged1 = Object.assign(data);
                 return obj;
@@ -260,7 +256,7 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, g
             const merged2 = Object.assign(user);
             let contexts = breadcrumbs.contexts;
             if (contexts) {
-              const obj1 = { contexts: null };
+              obj1 = { contexts: null };
               obj1[0] = num(num2[8]).normalize(breadcrumbs.contexts, tmp3, tmp33);
               contexts = obj1;
               const obj6 = num(num2[8]);
@@ -289,9 +285,9 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, g
                 data = data.data;
                 if (data) {
                   obj = { data: null };
-                  obj[0] = dependencyMap(7783).normalize(data.data, dependencyMap, dependencyMap);
+                  obj[0] = callback(7783).normalize(data.data, callback, dependencyMap);
                   data = obj;
-                  const obj3 = dependencyMap(7783);
+                  const obj3 = callback(7783);
                 }
                 const merged1 = Object.assign(data);
                 return obj;
@@ -299,8 +295,7 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, g
             }
             tmp30 = obj;
             if (tmp29) {
-              num = 3;
-              obj.contexts.flags = num(num2[8]).normalize(breadcrumbs.contexts.flags, 3, tmp33);
+              obj.contexts.flags = 3(num2[8]).normalize(breadcrumbs.contexts.flags, 3, tmp33);
               tmp30 = obj;
               const obj10 = num(num2[8]);
             }

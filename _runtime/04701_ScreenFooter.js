@@ -1,6 +1,7 @@
 // _runtime/04701_ScreenFooter.js
-import "noop";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4702 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 class ScreenFooter {
   constructor(arg0) {
@@ -10,6 +11,7 @@ class ScreenFooter {
     return jsx(tmp, obj);
   }
 }
+noopDefault;
 
 export default ScreenFooter;
 export const FooterComponent = function FooterComponent(children) {

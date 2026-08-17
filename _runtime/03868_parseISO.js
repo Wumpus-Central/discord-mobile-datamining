@@ -1,7 +1,7 @@
 // _runtime/03868_parseISO.js
-import requiredArgs from "requiredArgs";
-import toInteger from "toInteger";
-import { keys } from "03651_keys.js";
+import keys from "keys" /* 3651 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "toInteger" /* 3476 */;
 
 if (!requiredArgs) {
   let obj = { default: null };
@@ -10,6 +10,7 @@ if (!requiredArgs) {
 } else {
   tmp3 = requiredArgs;
 }
+requiredArgs = tmp3;
 if (!toInteger) {
   obj = { default: null };
   obj[0] = toInteger;
@@ -17,7 +18,7 @@ if (!toInteger) {
 } else {
   tmp5 = toInteger;
 }
-let c3 = tmp5;
+toInteger = tmp5;
 let closure_4 = { dateTimeDelimiter: /[T ]/, timeZoneDelimiter: /[Z ]/i, timezone: /([Z+-].*)$/ };
 const re5 = /^-?(?:(\d{3})|(\d{2})(?:-?(\d{2}))?|W(\d{2})(?:-?(\d{1}))?|)$/;
 const re6 = /^(\d{2}(?:[.,]\d*)?)(?::?(\d{2}(?:[.,]\d*)?))?(?::?(\d{2}(?:[.,]\d*)?))?$/;
@@ -25,10 +26,8 @@ const re7 = /^([+-])(\d{2})(?::?(\d{2}))?$/;
 let closure_8 = [31, null, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 export default function parseISO(claimedAt) {
-  let restDateString;
-  let year;
   let num = 1;
-  let defaultResult = tmp3.default(1, arguments);
+  let defaultResult = requiredArgs.default(1, arguments);
   let additionalDigits;
   if (null != arg1) {
     additionalDigits = arg1.additionalDigits;
@@ -40,7 +39,7 @@ export default function parseISO(claimedAt) {
       num2 = additionalDigits;
     }
   }
-  const defaultResult1 = tmp5.default(num2);
+  const defaultResult1 = toInteger.default(num2);
   if (2 !== defaultResult1) {
     if (num !== defaultResult1) {
       if (0 !== defaultResult1) {

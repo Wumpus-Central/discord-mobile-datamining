@@ -1,20 +1,17 @@
 // _runtime/10344_PaginationItem.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import "noop";
-import { Pressable } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import { Pressable } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let closure_3 = ["width", "height", "borderRadius", "backgroundColor"];
 let closure_4 = ["width", "height", "borderRadius", "backgroundColor"];
+noopDefault;
 let closure_8 = { code: "function pnpm_PaginationItemTsx1(){const{runOnJS,handleCustomAnimation,animValue}=this.__closure;var _animValue;runOnJS(handleCustomAnimation)((_animValue=animValue)===null||_animValue===void 0?void 0:_animValue.value);}" };
 let closure_9 = { code: "function pnpm_PaginationItemTsx2(){const{size,defaultDotSize,dotStyle,activeDotStyle,animValue,index,count,interpolate,Extrapolation,interpolateColor,customReanimatedStyleRef}=this.__closure;var _dotStyle,_activeDotStyle,_animValue,_animValue2,_animValue3,_ref,_ref2,_customReanimatedStyl,_restStyle$transform,_customReanimatedStyl2,_customReanimatedStyl3;const{width=size||defaultDotSize,height=size||defaultDotSize,borderRadius:borderRadius,backgroundColor=\"#FFF\",...restDotStyle}=(_dotStyle=dotStyle)!==null&&_dotStyle!==void 0?_dotStyle:{};const{width:activeWidth=width,height:activeHeight=height,borderRadius:activeBorderRadius,backgroundColor:activeBackgroundColor=\"#000\",...restActiveDotStyle}=(_activeDotStyle=activeDotStyle)!==null&&_activeDotStyle!==void 0?_activeDotStyle:{};let val=Math.abs(((_animValue=animValue)===null||_animValue===void 0?void 0:_animValue.value)-index);if(index===0&&((_animValue2=animValue)===null||_animValue2===void 0?void 0:_animValue2.value)>count-1)val=Math.abs(((_animValue3=animValue)===null||_animValue3===void 0?void 0:_animValue3.value)-count);const inputRange=[0,1,2];const restStyle=(_ref=val===0?restActiveDotStyle:restDotStyle)!==null&&_ref!==void 0?_ref:{};return{width:interpolate(val,inputRange,[activeWidth,width,width],Extrapolation.CLAMP),height:interpolate(val,inputRange,[activeHeight,height,height],Extrapolation.CLAMP),borderRadius:interpolate(val,inputRange,[(_ref2=activeBorderRadius!==null&&activeBorderRadius!==void 0?activeBorderRadius:borderRadius)!==null&&_ref2!==void 0?_ref2:0,borderRadius!==null&&borderRadius!==void 0?borderRadius:0,borderRadius!==null&&borderRadius!==void 0?borderRadius:0],Extrapolation.CLAMP),backgroundColor:interpolateColor(val,inputRange,[activeBackgroundColor,backgroundColor,backgroundColor]),...restStyle,...((_customReanimatedStyl=customReanimatedStyleRef.value)!==null&&_customReanimatedStyl!==void 0?_customReanimatedStyl:{}),transform:[...((_restStyle$transform=restStyle===null||restStyle===void 0?void 0:restStyle.transform)!==null&&_restStyle$transform!==void 0?_restStyle$transform:[]),...((_customReanimatedStyl2=(_customReanimatedStyl3=customReanimatedStyleRef.value)===null||_customReanimatedStyl3===void 0?void 0:_customReanimatedStyl3.transform)!==null&&_customReanimatedStyl2!==void 0?_customReanimatedStyl2:[])]};}" };
 
 export const PaginationItem = (animValue) => {
-  let children;
-  let customReanimatedStyle;
-  let horizontal;
-  let onPress;
   const iter = animValue.animValue;
   const dotStyle = animValue.dotStyle;
   const activeDotStyle = animValue.activeDotStyle;
@@ -36,7 +33,7 @@ export const PaginationItem = (animValue) => {
     }
     sharedValue.value = obj;
   }
-  let obj1 = iter(activeDotStyle[4]);
+  obj1 = iter(activeDotStyle[4]);
   const fn = function _() {
     let value;
     const obj = iter(activeDotStyle[4]);
@@ -51,11 +48,7 @@ export const PaginationItem = (animValue) => {
   fn.__initData = handleCustomAnimation;
   const derivedValue = obj1.useDerivedValue(fn);
   const fn2 = function k() {
-    let backgroundColor;
-    let backgroundColor2;
-    let borderRadius;
-    let borderRadius2;
-    let size = dotStyle;
+    size = dotStyle;
     if (dotStyle == null) {
       size = {};
     }

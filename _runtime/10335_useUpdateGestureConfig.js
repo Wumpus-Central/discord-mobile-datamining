@@ -1,9 +1,10 @@
 // _runtime/10335_useUpdateGestureConfig.js
-import { useEffect } from "noop";
+import noop from "noop" /* 19 */;
 
+let useEffect = noop.useEffect;
 
 export const useUpdateGestureConfig = (arg0, enabled) => {
-  const useEffect = arg0;
+  useEffect = arg0;
   enabled = enabled.enabled;
   const items = [enabled, arg0];
   useEffect(() => {

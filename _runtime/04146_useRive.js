@@ -1,35 +1,30 @@
 // _runtime/04146_useRive.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { c } from "04135_c.js";
 
-let c3;
-let c4;
-let useCallback;
-let require = arg1;
+const require = arg1;
 ({ useRef: c3, useCallback, useState: c4 } = noop);
 
 export const useRive = function useRive() {
-  let dependencyMap;
-  let tmp4;
-  let obj = c;
+  let obj = _c;
   const cResult = obj.c(4);
   const tmp2 = callback2(null);
-  require = tmp2;
+  _require = tmp2;
   [tmp4, dependencyMap] = callback(callback3(null), 2);
   callback = callback2(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(current) {
       if (current.current !== current) {
-        tmp2.current = current;
-        if (ref.current) {
+        ref.current = current;
+        if (ref2.current) {
           let _clearTimeout = clearTimeout;
           clearTimeout(tmp11.current);
         }
         const promise = new Promise((arg0, arg1) => {
-          let closure_0 = arg1;
-          _slicedToArray.current = setTimeout(() => {
-            const error = new Error("Rive view ready timeout");
+          closure_0 = arg1;
+          closure_2.current = setTimeout(() => {
+            error = new Error("Rive view ready timeout");
             callback(error);
           }, 5000);
         });
@@ -41,20 +36,20 @@ export const useRive = function useRive() {
         const racePromise = Promise.race(items);
         const nextPromise = Promise.race(items).then((arg0) => {
           if (true === arg0) {
-            outer1_1(closure_0);
+            closure_1_1(closure_0);
           } else {
             const _console = console;
             console.warn("Rive view ready check returned false");
-            outer1_1(null);
+            closure_1_1(null);
           }
         });
         Promise.race(items).then((arg0) => {
           if (true === arg0) {
-            outer1_1(closure_0);
+            closure_1_1(closure_0);
           } else {
             const _console = console;
             console.warn("Rive view ready check returned false");
-            outer1_1(null);
+            closure_1_1(null);
           }
         }).catch((arg0) => {
           console.warn("Failed to initialize Rive view:", arg0);
@@ -68,11 +63,11 @@ export const useRive = function useRive() {
         });
         const catchPromise = Promise.race(items).then((arg0) => {
           if (true === arg0) {
-            outer1_1(closure_0);
+            closure_1_1(closure_0);
           } else {
             const _console = console;
             console.warn("Rive view ready check returned false");
-            outer1_1(null);
+            closure_1_1(null);
           }
         }).catch((arg0) => {
           console.warn("Failed to initialize Rive view:", arg0);

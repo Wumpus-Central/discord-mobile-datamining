@@ -1,17 +1,17 @@
 // _runtime/04698_style.js
-import "_objectWithoutProperties";
-import "noop";
-import { Platform } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { ScreenContentWrapper } from "04699_ScreenContentWrapper.js";
+import noopAll from "noop" /* 19 */;
+import _objectWithoutPropertiesDefault from "_objectWithoutProperties" /* 109 */;
+import ScreenContentWrapperDefault from "ScreenContentWrapper" /* 4699 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
+_objectWithoutPropertiesDefault;
+noopAll;
 
 export default function _default(arg0) {
-  let contentStyle;
-  let style;
   ({ contentStyle, style } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   const items = [style, contentStyle];
   const merged1 = Object.assign(merged);
-  return jsx(ScreenContentWrapper, { style: items });
+  return jsx(ScreenContentWrapperDefault, { style: items });
 };

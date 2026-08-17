@@ -1,6 +1,6 @@
 // _runtime/06430_shouldUpdateDetector.js
-import { useEffect } from "noop";
-import { transformIntoHandlerTags } from "06408_transformIntoHandlerTags.js";
+import noop from "noop" /* 19 */;
+import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6408 */;
 
 function shouldUpdateDetector(arg0, handlerTag) {
   if (undefined === arg0) {
@@ -18,10 +18,11 @@ function shouldUpdateDetector(arg0, handlerTag) {
     return false;
   }
 }
+const useEffect = noop.useEffect;
 
 export const useMountReactions = function useMountReactions(detectorUpdater, current2) {
-  let closure_0 = detectorUpdater;
-  let closure_1 = current2;
+  closure_0 = detectorUpdater;
+  closure_1 = current2;
   const items = [detectorUpdater, current2];
   useEffect(() => {
     const MountRegistry = detectorUpdater(table[2]).MountRegistry;
@@ -33,8 +34,8 @@ export const useMountReactions = function useMountReactions(detectorUpdater, cur
         while (iter !== undefined) {
           let requireToFail = nextResult.config.requireToFail;
           let simultaneousWith = nextResult.config.simultaneousWith;
-          let tmp5 = outer1_3;
-          if (!outer1_3(nextResult.config.blocksHandlers, arg0)) {
+          let tmp5 = closure_1_3;
+          if (!closure_1_3(nextResult.config.blocksHandlers, arg0)) {
             let tmp6 = requireToFail;
             if (!tmp5(requireToFail, arg0)) {
               let tmp7 = simultaneousWith;

@@ -1,8 +1,9 @@
 // _runtime/metro/04696___INTERNAL_VIEW_CONFIG.js
-import { codegenNativeComponent } from "get ActivityIndicator";
-import weakSet from "weakSet";
-import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import weakSet from "weakSet" /* 106 */;
+import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
+const codegenNativeComponent = get_ActivityIndicator.codegenNativeComponent;
 let obj = { uiViewClassName: "RNSScreenStack", directEventTypes: { topFinishTransitioning: { registrationName: "onFinishTransitioning" } }, validAttributes: null };
 obj = { iosPreventReattachmentOfDismissedScreens: true };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onFinishTransitioning: true }));

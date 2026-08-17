@@ -1,13 +1,16 @@
 // _runtime/01422_callBind.js
-import { callBindBasic } from "00551_callBindBasic.js";
-import { setFunctionLength } from "01423_setFunctionLength.js";
-if (require("flag")) {
+import callBindBasic from "callBindBasic" /* 551 */;
+import flag from "flag" /* 564 */;
+import setFunctionLength from "setFunctionLength" /* 1423 */;
+import applyBind from "applyBind" /* 1426 */;
+
+if (flag) {
   const obj = { value: null };
-  const _module = require("flag");
-  obj[0] = require("applyBind");
+  const _module = flag;
+  obj[0] = applyBind;
   _module(module.exports, "apply", obj);
 } else {
-  module.exports.apply = require("applyBind");
+  module.exports.apply = applyBind;
 }
 
 export default function callBind(arg0) {

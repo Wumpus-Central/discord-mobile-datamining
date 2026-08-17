@@ -33,7 +33,7 @@ arg5.onFCP = (arg0) => {
             let tmp4 = nextResult;
             let tmp5 = callback;
             let tmp6 = firstHiddenTime;
-            let obj = callback(firstHiddenTime[3]);
+            obj = callback(firstHiddenTime[3]);
             metric.value = Math.max(tmp2.startTime - obj.getActivationStart(), 0);
             let entries = metric.entries;
             let arr = entries.push(tmp2);
@@ -44,10 +44,10 @@ arg5.onFCP = (arg0) => {
         continue;
       }
     });
-    let closure_3 = observeResult;
+    closure_3 = observeResult;
     if (observeResult) {
       const tmpResult = tmp(tmp2[5]);
-      callback = tmpResult.bindReporter(callback, metric, outer1_2, obj.reportAllChanges);
+      callback = tmpResult.bindReporter(callback, metric, closure_1_2, obj.reportAllChanges);
     }
   });
 };

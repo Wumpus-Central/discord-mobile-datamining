@@ -1,7 +1,8 @@
 // _runtime/04957_constructTag.js
-import { getDataView } from "04910_getDataView.js";
-import { 04917__ } from "metro/04917__.js";
-const require = arg1;
+import getDataView from "getDataView" /* 4910 */;
+import _mod4917 from "module_4917" /* 4917 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 function constructTag(decompressResult, type, items2, items1) {
@@ -12,7 +13,7 @@ function constructTag(decompressResult, type, items2, items1) {
   }
   const stringValueFromArray = getDataView.getStringValueFromArray(items1);
   let combined = stringValueFromArray;
-  if (type !== 04917__.TYPE_TEXT) {
+  if (type !== _mod4917.TYPE_TEXT) {
     combined = stringValueFromArray;
     if (0 !== items2.length) {
       const _HermesInternal = HermesInternal;
@@ -21,7 +22,7 @@ function constructTag(decompressResult, type, items2, items1) {
     }
   }
   obj = { name: combined, value: stringFromDataView, description: null };
-  if (type === 04917__.TYPE_ITXT) {
+  if (type === _mod4917.TYPE_ITXT) {
     stringFromDataView = module(4943).decode("UTF-8", decompressResult);
     const obj5 = module(4943);
   }
@@ -70,8 +71,6 @@ let c9 = 1;
 let c10 = 6;
 arg5.default = {
   read(byteLength, arg1, arg2, type) {
-    let length;
-    let offset;
     let obj = {};
     const items = [];
     let num = 0;
@@ -220,31 +219,29 @@ arg5.default = {
             let _Promise2 = Promise;
             if (obj instanceof Promise) {
               let arr2 = items.push(obj.then((arg0) => {
-                let name;
-                let value;
                 ({ name, value } = arg0);
                 try {
                   if (items1(items2[0]).USE_EXIF) {
-                    if (outer1_12(name, value)) {
+                    if (closure_1_12(name, value)) {
                       let obj = { __exif: null };
                       let tmp2Result = tmp2(tmp3[1]);
-                      obj[0] = tmp2Result.read(outer1_14(value), outer1_10, type).tags;
+                      obj[0] = tmp2Result.read(closure_1_14(value), closure_1_10, type).tags;
                       return obj;
                     }
                   }
                   if (items1(items2[0]).USE_IPTC) {
-                    if (outer1_13(name, value)) {
+                    if (closure_1_13(name, value)) {
                       obj = { __iptc: null };
                       tmp2Result = tmp2(tmp3[2]);
-                      obj[0] = tmp2Result.read(outer1_14(value), 0, type);
+                      obj[0] = tmp2Result.read(closure_1_14(value), 0, type);
                       return obj;
                     }
                   }
                   if (name) {
-                    if (!outer1_12(name, value)) {
-                      if (!outer1_13(name, value)) {
+                    if (!closure_1_12(name, value)) {
+                      if (!closure_1_13(name, value)) {
                         obj = {};
-                        const obj1 = { value: null, description: null };
+                        obj1 = { value: null, description: null };
                         obj1[0] = value;
                         obj1[1] = tmp;
                         obj[name] = obj1;
@@ -277,8 +274,8 @@ arg5.default = {
         let decompressResult = tmp38Result.decompress(dataView, tmp5, str);
         let _Promise = Promise;
         if (decompressResult instanceof Promise) {
-          let nextPromise = decompressResult.then((arg0) => outer1_11(arg0, type, items2, items1));
-          let catchPromise = nextPromise.catch(() => outer1_11("<text using unknown compression>".split(""), type, items2, items1));
+          let nextPromise = decompressResult.then((arg0) => closure_1_11(arg0, type, items2, items1));
+          let catchPromise = nextPromise.catch(() => closure_1_11("<text using unknown compression>".split(""), type, items2, items1));
         } else {
           let tmp40 = constructTag;
           let num3 = 0;
@@ -291,7 +288,7 @@ arg5.default = {
         let tmp46 = catchPromise;
       }
     }
-    let obj1 = { readTags: obj, readTagsPromise: null };
+    obj1 = { readTags: obj, readTagsPromise: null };
     let allPromises;
     if (items.length > 0) {
       allPromises = Promise.all(items);

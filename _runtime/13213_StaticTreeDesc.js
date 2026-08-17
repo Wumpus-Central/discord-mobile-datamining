@@ -1,6 +1,7 @@
 // _runtime/13213_StaticTreeDesc.js
-import { assign } from "13208_assign.js";
-const require = arg1;
+import assign from "assign" /* 13208 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function StaticTreeDesc(static_tree, extra_bits, extra_base, elems, max_length) {
   let length = static_tree;
@@ -173,8 +174,6 @@ function compress_block(last_lit, arr, array) {
   send_code(last_lit, 256, arr);
 }
 function build_tree(heap_len, bl_desc) {
-  let dyn_tree2;
-  let max_code;
   const dyn_tree = bl_desc.dyn_tree;
   const elems = bl_desc.stat_desc.elems;
   heap_len.heap_len = 0;
@@ -365,7 +364,7 @@ function build_tree(heap_len, bl_desc) {
       } while (0 !== max_length);
     }
   }
-  const array = new Array(16);
+  array = new Array(16);
   let num9 = 0;
   let num10 = 1;
   do {
@@ -700,7 +699,7 @@ arg5._tr_init = function _tr_init(state) {
   let tmp21;
   if (!c23) {
     const _Array = Array;
-    let array = new Array(16);
+    array = new Array(16);
     let num6 = 0;
     let num7 = 0;
     do {

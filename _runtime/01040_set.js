@@ -1,7 +1,8 @@
 // _runtime/01040_set.js
+import addPageListener from "addPageListener" /* 1041 */;
 import { WINDOW } from "01039_WINDOW.js";
-import { addPageListener } from "01041_addPageListener.js";
-const require = arg1;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = -1;
@@ -40,7 +41,7 @@ function onVisibilityUpdate(type) {
 }
 arg5.getVisibilityWatcher = () => {
   if (_WINDOW.WINDOW.document) {
-    if (c2 < 0) {
+    if (num2 < 0) {
       let tmpResult = tmp(1042);
       _require = tmpResult.getActivationStart();
       let tmp8;
@@ -68,7 +69,7 @@ arg5.getVisibilityWatcher = () => {
           visibilityState = _document.visibilityState;
         }
         if ("hidden" !== visibilityState) {
-          let num2 = Infinity;
+          num2 = Infinity;
         } else {
           const _document2 = tmp(1039).WINDOW.document;
           let prerendering;
@@ -79,7 +80,7 @@ arg5.getVisibilityWatcher = () => {
         }
         tmp8 = num2;
       }
-      c2 = tmp8;
+      num2 = tmp8;
       tmpResult = tmp(1041);
       tmpResult.addPageListener("visibilitychange", onVisibilityUpdate, true);
       tmp(1041).addPageListener("pagehide", onVisibilityUpdate, true);
@@ -89,7 +90,7 @@ arg5.getVisibilityWatcher = () => {
     }
   }
   const obj = {};
-  Object.defineProperty(obj, "firstHiddenTime", { get: () => closure_2, set: undefined });
+  Object.defineProperty(obj, "firstHiddenTime", { get: () => num2, set: undefined });
   obj.onHidden = function onHidden(arg0) {
     set.add(arg0);
   };

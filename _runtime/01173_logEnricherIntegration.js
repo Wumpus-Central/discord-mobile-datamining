@@ -7,16 +7,16 @@ if (this) {
 }
 if (!fn) {
   fn = (arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     let _Promise = arg2;
-    let closure_3 = arg3;
+    closure_3 = arg3;
     if (!arg2) {
       _Promise = Promise;
     }
     _Promise = new _Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function fulfilled(arg0) {
         try {
           step(iter.next(arg0));
@@ -73,9 +73,9 @@ let c3;
 arg5.logEnricherIntegration = () => ({
   name: "LogEnricher",
   setup(on) {
-    let closure_0 = on;
+    closure_0 = on;
     on.on("afterInit", () => {
-      outer1_2(undefined, undefined, undefined, function*() {
+      closure_1_2(undefined, undefined, undefined, function*() {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -106,20 +106,20 @@ arg5.logEnricherIntegration = () => ({
                 let contexts = tmp7;
                 contexts = undefined;
                 let family = 1;
-                const NATIVE = outer1_0(outer1_1[1]).NATIVE;
+                const NATIVE = closure_1_0(table[1]).NATIVE;
                 contexts1 = 2;
                 c5 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = NATIVE.fetchNativeLogAttributes();
                 return obj1;
               }
             } else if (1 === tmp7) {
               family = 0;
-              outer1_1 = device2;
+              table = device2;
               const _HermesInternal = HermesInternal;
               c5 = 3;
               const obj2 = { value: null, done: true };
-              obj2[0] = Promise.reject("[LOGS]: Failed to prepare attributes from Native Layer: " + outer1_1);
+              obj2[0] = Promise.reject("[LOGS]: Failed to prepare attributes from Native Layer: " + table);
               return obj2;
             } else if (arg0 === 1) {
               c5 = 3;
@@ -205,7 +205,7 @@ arg5.logEnricherIntegration = () => ({
                 obj5[0] = contexts.contexts.release;
                 release = obj5;
               }
-              family = Object.assign(merged1, release);
+              closure_3 = Object.assign(merged1, release);
               family = 0;
               c5 = 3;
               const obj6 = { value: null, done: true };
@@ -224,12 +224,12 @@ arg5.logEnricherIntegration = () => ({
         }
       }).then(() => {
         lib.on("beforeCaptureLog", (attributes) => {
-          if (undefined !== outer1_3) {
+          if (undefined !== closure_1_3) {
             attributes = attributes.attributes;
             if (null === attributes) {
               attributes = {};
             }
-            const brand = outer1_3.brand;
+            const brand = closure_1_3.brand;
             let tmp2 = !brand;
             if (brand) {
               tmp2 = attributes["device.brand"] && false;
@@ -238,7 +238,7 @@ arg5.logEnricherIntegration = () => ({
             if (!tmp2) {
               attributes["device.brand"] = brand;
             }
-            const model = outer1_3.model;
+            const model = closure_1_3.model;
             let tmp5 = !model;
             if (model) {
               tmp5 = attributes["device.model"] && false;
@@ -247,7 +247,7 @@ arg5.logEnricherIntegration = () => ({
             if (!tmp5) {
               attributes["device.model"] = model;
             }
-            const family = outer1_3.family;
+            const family = closure_1_3.family;
             let tmp8 = !family;
             if (family) {
               tmp8 = attributes["device.family"] && false;
@@ -256,7 +256,7 @@ arg5.logEnricherIntegration = () => ({
             if (!tmp8) {
               attributes["device.family"] = family;
             }
-            const os = outer1_3.os;
+            const os = closure_1_3.os;
             let tmp11 = !os;
             if (os) {
               tmp11 = attributes["os.name"] && false;
@@ -265,7 +265,7 @@ arg5.logEnricherIntegration = () => ({
             if (!tmp11) {
               attributes["os.name"] = os;
             }
-            const version = outer1_3.version;
+            const version = closure_1_3.version;
             let tmp14 = !version;
             if (version) {
               tmp14 = attributes["os.version"] && false;
@@ -274,7 +274,7 @@ arg5.logEnricherIntegration = () => ({
             if (!tmp14) {
               attributes["os.version"] = version;
             }
-            const release = outer1_3.release;
+            const release = closure_1_3.release;
             let tmp17 = !release;
             if (release) {
               tmp17 = attributes["sentry.release"] && false;

@@ -1,7 +1,7 @@
 // _runtime/12387_QRCodeSvg.js
-import emptyFunction from "emptyFunction";
-import noop from "noop";
-import { inlineStyles } from "06571_inlineStyles.js";
+import inlineStyles from "inlineStyles" /* 6571 */;
+import emptyFunction from "emptyFunction" /* 12384 */;
+import noop from "noop" /* 19 */;
 
 let fn = Object.assign;
 if (!fn) {
@@ -45,24 +45,17 @@ if (!noop) {
 } else {
   tmp4 = noop;
 }
-let c3 = tmp4;
+noop = tmp4;
 obj = { bgColor: _default.oneOfType(items).isRequired, bgD: tmp3.default.string.isRequired, fgColor: _default2.oneOfType(items1).isRequired, fgD: tmp3.default.string.isRequired, size: tmp3.default.number.isRequired, viewBoxSize: tmp3.default.number.isRequired };
 items = [tmp3.default.object, tmp3.default.string];
 items1 = [tmp3.default.object, tmp3.default.string];
 const forwardRefResult = noop.forwardRef((obj, ref) => {
-  let bgColor;
-  let bgD;
-  let fgColor;
-  let fgD;
-  let size;
-  let tmp4;
-  let viewBoxSize;
   ({ size, viewBoxSize } = obj);
   const items = ["bgColor", "bgD", "fgD", "fgColor", "size", "viewBoxSize"];
   obj = {};
   ({ bgColor, bgD, fgD, fgColor } = obj);
   for (const key10013 in arg0) {
-    tmp4 = key10013;
+    let tmp4 = key10013;
     if (items.indexOf(key10013) >= 0) {
       continue;
     } else {
@@ -84,8 +77,8 @@ const forwardRefResult = noop.forwardRef((obj, ref) => {
     continue;
   }
   obj = { height: size, ref, style: { height: size, width: size }, viewBox: `0 0 ${viewBoxSize} ${viewBoxSize}`, width: size };
-  const element = tmp4.default.createElement(inlineStyles.Path, { d: bgD, fill: bgColor });
-  return tmp4.default.createElement(inlineStyles.Svg, fn({}, obj, obj), element, tmp4.default.createElement(inlineStyles.Path, { d, fill }));
+  const element = noop.default.createElement(inlineStyles.Path, { d: bgD, fill: bgColor });
+  return noop.default.createElement(inlineStyles.Svg, fn({}, obj, obj), element, noop.default.createElement(inlineStyles.Path, { d, fill }));
 });
 forwardRefResult.displayName = "QRCodeSvg";
 forwardRefResult.propTypes = obj;

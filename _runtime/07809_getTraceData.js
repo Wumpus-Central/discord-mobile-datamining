@@ -1,15 +1,12 @@
 // _runtime/07809_getTraceData.js
-import "errorCallback";
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
-import dateTimestampInSeconds from "dateTimestampInSeconds";
-import { getClient } from "07765_getClient.js";
+import errorCallback from "errorCallback" /* 7734 */;
+import getClient from "getClient" /* 7765 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 7752 */;
 
+errorCallback;
 
 export const getTraceData = function getTraceData() {
-  let sampled;
-  let spanId;
-  let traceId;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};

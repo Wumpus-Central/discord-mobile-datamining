@@ -1,9 +1,10 @@
 // _runtime/01288__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 1278 */;
+import StringBuilder from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -16,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -36,9 +37,9 @@ class StringBuilder {
   constructor() {
     self = this;
     tmp = StringBuilder(this, StringBuilder);
-    tmp2 = outer1_2;
-    obj = outer1_2(StringBuilder);
-    tmp3 = outer1_1;
+    tmp2 = closure_2;
+    obj = closure_2(StringBuilder);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -54,8 +55,7 @@ class StringBuilder {
     return tmp3Result;
   }
 }
-_classCallCheck = StringBuilder;
-_inherits(StringBuilder, require("_isNativeReflectConstruct").FormatBuilder);
+_inherits(StringBuilder, _isNativeReflectConstruct2.FormatBuilder);
 let items = [
   {
     key: "pushRichTextTag",

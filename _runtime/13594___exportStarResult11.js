@@ -1,6 +1,7 @@
 // _runtime/13594___exportStarResult11.js
-import { getMultiInternalSlots } from "13582_getMultiInternalSlots.js";
-const require = arg1;
+import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.ApplyUnsignedRoundingMode = function ApplyUnsignedRoundingMode(eq, timesResult, roundedNumber, result) {
   if (eq.eq(timesResult)) {

@@ -1,5 +1,5 @@
 // _runtime/01730_isValidRubberBandConfig.js
-import isJest from "isJest";
+import isJest from "isJest" /* 1657 */;
 
 let num = 1;
 if (isJest.isWeb()) {

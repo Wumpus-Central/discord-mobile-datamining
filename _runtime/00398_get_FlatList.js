@@ -1,15 +1,19 @@
 // _runtime/00398_get_FlatList.js
+import get_VersionDefault from "get Version" /* 273 */;
+import _combineCallbacksDefault from "_combineCallbacks" /* 354 */;
+import mockCompositeAnimationDefault from "mockCompositeAnimation" /* 399 */;
 import { AnimatedScrollViewWithInvertedRefreshControl } from "00402_AnimatedScrollViewWithInvertedRefreshControl.js";
 import { 00400__ } from "metro/00400__.js";
 import { 00401__ } from "metro/00401__.js";
 import { 00405__ } from "metro/00405__.js";
 import { 00407__ } from "metro/00407__.js";
 import { 00408__ } from "metro/00408__.js";
+
 const require = arg1;
-if (require("get Version").isDisableAnimations) {
-  let importDefaultResult = require("mockCompositeAnimation");
+if (get_VersionDefault.isDisableAnimations) {
+  let importDefaultResult = mockCompositeAnimationDefault;
 } else {
-  importDefaultResult = require("_combineCallbacks");
+  importDefaultResult = _combineCallbacksDefault;
 }
 const obj = {};
 Object.defineProperty(obj, "FlatList", { get: () => 00400__.default, set: undefined });

@@ -1,10 +1,10 @@
 // _runtime/10436_releaseLongTermAccess.js
-import importDefaultResult from "asyncGeneratorStep";
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
 let closure_0 = arg1;
 closure_0 = importDefaultResult((arg0) => {
-  let closure_0 = arg0;
-  let c1 = 0;
+  closure_0 = arg0;
+  c1 = 0;
   return (function*(arg0) {
     if (table === 2) {
       table = 3;
@@ -45,8 +45,8 @@ closure_0 = importDefaultResult((arg0) => {
   })();
 });
 closure_0 = importDefaultResult((arg0) => {
-  let closure_0 = arg0;
-  let c1 = 0;
+  closure_0 = arg0;
+  c1 = 0;
   return (function*(arg0) {
     if (table === 2) {
       table = 3;

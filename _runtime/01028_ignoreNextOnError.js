@@ -1,5 +1,6 @@
 // _runtime/01028_ignoreNextOnError.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+
 function ignoreNextOnError() {
   closure_2 = closure_2 + 1;
   const timerId = setTimeout(() => {
@@ -34,15 +35,15 @@ function wrap(__sentry_wrapped__) {
             const items = [...arguments];
             try {
               const self = this;
-              return items.apply(this, items.map((arg0) => outer1_4(arg0, closure_1)));
+              return items.apply(this, items.map((arg0) => closure_1_4(arg0, closure_1)));
             } catch (tmp2) {
-              let obj = tmp2;
-              outer1_3();
+              obj = tmp2;
+              closure_1_3();
               obj = __sentry_wrapped__(obj[0]);
               obj.withScope((addEventProcessor) => {
                 addEventProcessor.addEventProcessor((extra) => {
-                  if (outer1_1.mechanism) {
-                    let obj = items(817);
+                  if (closure_1_1.mechanism) {
+                    obj = items(817);
                     const result = obj.addExceptionTypeValue(extra, undefined, undefined);
                     const result1 = items(817).addExceptionMechanism(extra, tmp.mechanism);
                     const obj2 = items(817);
@@ -96,7 +97,7 @@ function wrap(__sentry_wrapped__) {
   }
 }
 
-export const WINDOW = require("registerSpanErrorInstrumentation").GLOBAL_OBJ;
+export const WINDOW = registerSpanErrorInstrumentation.GLOBAL_OBJ;
 export const getHttpRequestData = function getHttpRequestData() {
   let obj = registerSpanErrorInstrumentation;
   const locationHref = obj.getLocationHref();

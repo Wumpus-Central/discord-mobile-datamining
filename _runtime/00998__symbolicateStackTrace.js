@@ -1,14 +1,14 @@
 // _runtime/00998__symbolicateStackTrace.js
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 function _symbolicateStackTrace() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
@@ -36,20 +36,20 @@ function _symbolicateStackTrace() {
               obj[0] = arg1;
               return obj;
             } else {
-              let asyncGeneratorStep = tmp4;
-              let closure_0;
-              const obj10 = callback(outer1_2[1]);
+              closure_3 = tmp4;
+              closure_0 = undefined;
+              const obj10 = callback(closure_1_2[1]);
               const tmp23 = closure_0;
               const tmp24 = callback;
               const tmp25 = callback;
-              const tmp26 = outer1_2;
+              const tmp26 = closure_1_2;
               if (defaultResult.bundleLoadedFromServer) {
                 const _fetch = closure_0.fetch;
                 let fetch = _fetch;
                 if (_fetch == null) {
                   fetch = tmp25(tmp26[2]).fetch;
                 }
-                const obj1 = { method: "POST", headers: null, body: null };
+                obj1 = { method: "POST", headers: null, body: null };
                 obj1[1] = { "Content-Type": "application/json" };
                 const _JSON = JSON;
                 const obj2 = { stack: null, extraData: null };
@@ -64,10 +64,10 @@ function _symbolicateStackTrace() {
                 return obj3;
               } else {
                 const _Error = Error;
-                const error = new Error("Bundle was not loaded from Metro.");
+                error = new Error("Bundle was not loaded from Metro.");
                 throw error;
               }
-              defaultResult = callback(outer1_2[1]).default();
+              defaultResult = callback(closure_1_2[1]).default();
             }
           } else if (1 === tmp4) {
             if (arg0 === 1) {
@@ -107,7 +107,7 @@ function _symbolicateStackTrace() {
       }
     })();
   });
-  const _symbolicateStackTrace = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

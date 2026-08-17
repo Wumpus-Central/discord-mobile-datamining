@@ -1,12 +1,13 @@
 // _runtime/00133_Event.js
-import _classCallCheck from "_classCallCheck";
-import setPlatformObject from "setPlatformObject";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import setPlatformObject from "setPlatformObject" /* 126 */;
 
 const Event = arg1;
 class Event {
   constructor(arg0, arg1) {
     self = this;
-    tmp = outer1_2(this, Event);
+    tmp = closure_2(this, Event);
     this._defaultPrevented = false;
     tmp2 = Event;
     tmp3 = closure_1;
@@ -151,7 +152,7 @@ const items = [
         if (obj.getInPassiveListenerFlag(self)) {
           const _console = console;
           const _Error = Error;
-          const error = new Error("Unable to preventDefault inside passive event listener invocation.");
+          error = new Error("Unable to preventDefault inside passive event listener invocation.");
           console.error(error);
         } else {
           self._defaultPrevented = true;
@@ -175,7 +176,7 @@ const items = [
     }
   }
 ];
-let tmp2 = require("_createClass")(Event, items);
+let tmp2 = _createClassDefault(Event, items);
 Object.defineProperty(tmp2, "NONE", { enumerable: true, value: 0 });
 Object.defineProperty(tmp2.prototype, "NONE", { enumerable: true, value: 0 });
 Object.defineProperty(tmp2, "CAPTURING_PHASE", { enumerable: true, value: 1 });

@@ -1,9 +1,10 @@
 // _runtime/01741_findDescendantWithExitingAnimation.js
-import { isJest } from "01657_isJest.js";
-import { addLogBoxLog } from "01658_addLogBoxLog.js";
-import { t } from "01665_t.js";
+import isJest from "isJest" /* 1657 */;
+import addLogBoxLog from "addLogBoxLog" /* 1658 */;
+import t from "t" /* 1665 */;
 import { weakMap } from "01740_weakMap.js";
-const require = arg1;
+
+require = arg1;
 let dependencyMap = arg6;
 function findDescendantWithExitingAnimation(isDummy, appendChild) {
   let length;
@@ -14,7 +15,7 @@ function findDescendantWithExitingAnimation(isDummy, appendChild) {
     }
     if (isDummy) {
       const _require = isDummy;
-      const dependencyMap = appendChild;
+      dependencyMap = appendChild;
       const snapshots = _weakMap.snapshots;
       const value = snapshots.get(isDummy);
       if (value) {
@@ -72,8 +73,8 @@ arg5.configureWebLayoutAnimations = function configureWebLayoutAnimations() {
             let tmp5 = element;
             let sheet = element.sheet;
             let tmp6 = element;
-            let tmp7 = outer1_1;
-            let insertRuleResult = sheet.insertRule(element(outer1_1[2]).Animations[key10016].style);
+            let tmp7 = closure_1_1;
+            let insertRuleResult = sheet.insertRule(element(closure_1_1[2]).Animations[key10016].style);
             continue;
           }
         } else {
@@ -118,13 +119,13 @@ arg5.insertWebAnimation = function insertWebAnimation(name, result) {
   }
 };
 arg5.scheduleAnimationCleanup = function scheduleAnimationCleanup(animationName, arg1, arg2) {
-  let closure_0 = animationName;
-  let closure_1 = arg2;
+  closure_0 = animationName;
+  closure_1 = arg2;
   const timerId = setTimeout(() => {
     if (obj.isWindowAvailable()) {
       const _document = document;
-      const element = document.getElementById(outer1_3);
-      let sum = outer1_4.get(tmp);
+      const element = document.getElementById(closure_1_3);
+      let sum = closure_1_4.get(tmp);
       if (undefined === sum) {
         const reanimatedError = new animationName(1665).ReanimatedError("Failed to obtain animation index.");
         throw reanimatedError;
@@ -134,19 +135,19 @@ arg5.scheduleAnimationCleanup = function scheduleAnimationCleanup(animationName,
         if (sheet != null) {
           sheet.deleteRule(sum);
         }
-        outer1_5.splice(sum, 1);
+        closure_1_5.splice(sum, 1);
         obj2.delete(tmp);
-        if (sum < outer1_5.length) {
-          const value = outer1_4.get(outer1_5[sum]);
+        if (sum < closure_1_5.length) {
+          const value = closure_1_4.get(closure_1_5[sum]);
           while (undefined !== value) {
-            let result = outer1_4.set(arr[sum], value - 1);
+            let result = closure_1_4.set(arr[sum], value - 1);
             sum = sum + 1;
           }
           const reanimatedError1 = new animationName(1665).ReanimatedError("Failed to obtain animation index.");
           throw reanimatedError1;
         }
       }
-      obj2 = outer1_4;
+      obj2 = closure_1_4;
     }
   }, Math.max(5 * arg1 * 1000, arg1 + 160));
 };

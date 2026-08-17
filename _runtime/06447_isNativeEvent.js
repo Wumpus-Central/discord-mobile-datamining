@@ -1,6 +1,7 @@
 // _runtime/06447_isNativeEvent.js
-import { tagMessage } from "06382_tagMessage.js";
-const require = arg1;
+import tagMessage from "tagMessage" /* 6382 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function isNativeEvent(arg0) {
   return "nativeEvent" in arg0;
@@ -45,7 +46,7 @@ isNativeAnimatedEvent.__workletHash = 3439774750008;
 isNativeAnimatedEvent.__initData = { code: "function isNativeAnimatedEvent_Pnpm_eventUtilsTs5(callback){return!!callback&&'_argMapping'in callback;}" };
 let closure_3 = { code: "function pnpm_eventUtilsTs7(current,previous){const{diffCalculator}=this.__closure;const currentEventData=current.handlerData;const previousEventData=previous?previous.handlerData:null;const changePayload=diffCalculator(currentEventData,previousEventData);current.handlerData={...currentEventData,...changePayload};return current;}" };
 function getChangeEventCalculator(diffCalculator) {
-  let closure_0 = diffCalculator;
+  closure_0 = diffCalculator;
   const fn = function t(handlerData, handlerData2) {
     handlerData = handlerData.handlerData;
     handlerData = null;
@@ -113,7 +114,7 @@ arg5.checkMappingForChangeProperties = function checkMappingForChangeProperties(
               let str2 = "";
               let tmp10 = new.target;
               let tmp11 = new.target;
-              let error = new Error(obj.tagMessage("" + tmp15 + " is not available when using Animated.Event."));
+              error = new Error(obj.tagMessage("" + tmp15 + " is not available when using Animated.Event."));
               let tmp13 = error;
               throw error;
             }

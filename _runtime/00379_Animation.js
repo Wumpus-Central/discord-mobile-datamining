@@ -1,13 +1,13 @@
 // _runtime/00379_Animation.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_3 from "_classCallCheck" /* 41 */;
 
 let Animation = importDefault;
 let c4 = 1;
 class Animation {
   constructor(arg0) {
     self = this;
-    tmp = outer1_3(this, Animation);
+    tmp = closure_3(this, Animation);
     obj = require("set");
     this._useNativeDriver = obj.shouldUseNativeDriver(global);
     this.__active = false;
@@ -32,7 +32,7 @@ let items = [
       if (!this._useNativeDriver) {
         if (true === __isNative.__isNative) {
           const _Error = Error;
-          const error = new Error("Attempting to run JS driven animation on animated node that has been moved to \"native\" earlier by starting an animation with `useNativeDriver: true`");
+          error = new Error("Attempting to run JS driven animation on animated node that has been moved to \"native\" earlier by starting an animation with `useNativeDriver: true`");
           throw error;
         }
       }
@@ -70,7 +70,7 @@ let items = [
   {
     key: "__getNativeAnimationConfig",
     value: function __getNativeAnimationConfig() {
-      const error = new Error("This animation type cannot be offloaded to native");
+      error = new Error("This animation type cannot be offloaded to native");
       throw error;
     }
   },
@@ -105,7 +105,7 @@ let items = [
     value: function __startAnimationIfNative(self) {
       self = this;
       self = this;
-      const Animation = self;
+      Animation = self;
       if (this._useNativeDriver) {
         const _HermesInternal = HermesInternal;
         const combined = "" + closure_4 + ":startAnimation";
@@ -124,7 +124,7 @@ let items = [
               const result = _self.__onAnimatedValueUpdateReceived(value, tmp2);
               const result1 = obj.__findAnimatedPropsNodes(_self);
               const item = result1.forEach((update) => update.update());
-              const obj2 = self(outer1_2[4]);
+              const obj2 = self(closure_1_2[4]);
               const tmp3 = _self;
             }
           });
@@ -159,4 +159,4 @@ let items = [
   }
 ];
 
-export default _createClass(Animation, items);
+export default _createClassDefault(Animation, items);

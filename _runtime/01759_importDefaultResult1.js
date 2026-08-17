@@ -1,9 +1,9 @@
 // _runtime/01759_importDefaultResult1.js
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import _classPrivateFieldBase from "_classPrivateFieldBase";
-import importDefaultResult1 from "_classPrivateFieldKey";
-import isJest from "isJest";
+import closure_2 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_3 from "_classPrivateFieldBase" /* 90 */;
+import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
+import isJest from "isJest" /* 1657 */;
 
 let WorkletEventHandlerWeb = arg1;
 isJest = isJest.shouldBeUseWeb();
@@ -11,17 +11,17 @@ let closure_4 = importDefaultResult1("viewTags");
 let closure_5 = importDefaultResult1("registrations");
 class WorkletEventHandlerNative {
   constructor(arg0, arg1) {
-    tmp = outer1_2(this, WorkletEventHandlerWeb);
-    definePropertyResult = Object.defineProperty(this, viewTags, { writable: true, value: "a" });
-    definePropertyResult1 = Object.defineProperty(this, registrations, { writable: true, value: "a" });
+    tmp = closure_2(this, WorkletEventHandlerWeb);
+    definePropertyResult = Object.defineProperty(this, closure_4, { writable: true, value: "a" });
+    definePropertyResult1 = Object.defineProperty(this, closure_5, { writable: true, value: "a" });
     this.worklet = global;
     this.eventNames = arg1;
-    tmp4 = __esModule(this, viewTags);
+    tmp4 = closure_3(this, closure_4);
     set = new Set();
-    tmp4[viewTags] = set;
-    tmp6 = __esModule(this, registrations);
+    tmp4[closure_4] = set;
+    tmp6 = closure_3(this, closure_5);
     map = new Map();
-    tmp6[registrations] = map;
+    tmp6[closure_5] = map;
     return;
   }
 }
@@ -40,8 +40,8 @@ isJest = {
     const item1 = arr.forEach((arg0) => {
       const _self = arg0;
       const eventNames = _self.eventNames;
-      const mapped = eventNames.map((arg0) => self(outer2_1[5]).registerEventHandler(worklet.worklet, arg0, worklet));
-      const result = outer1_3(_self, outer1_5)[outer1_5].set(arg0, mapped);
+      const mapped = eventNames.map((arg0) => self(closure_2_1[5]).registerEventHandler(worklet.worklet, arg0, worklet));
+      const result = closure_1_3(_self, closure_1_5)[closure_1_5].set(arg0, mapped);
     });
   }
 };
@@ -94,7 +94,7 @@ if (isJest) {
       if (arg1 === undefined) {
         items = [];
       }
-      tmp = outer1_2(this, WorkletEventHandlerWeb);
+      tmp = closure_2(this, WorkletEventHandlerWeb);
       this.worklet = global;
       this.eventNames = items;
       this.listeners = {};

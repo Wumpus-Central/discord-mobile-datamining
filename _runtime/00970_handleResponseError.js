@@ -1,10 +1,11 @@
 // _runtime/00970_handleResponseError.js
-import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
-import { captureCheckIn } from "00869_captureCheckIn.js";
-import { buildMethodPath } from "00960_buildMethodPath.js";
-import { 00958__ } from "metro/00958__.js";
-import { 00971__ } from "metro/00971__.js";
-const require = arg1;
+import getSpanStatusFromHttpCode from "getSpanStatusFromHttpCode" /* 840 */;
+import captureCheckIn from "captureCheckIn" /* 869 */;
+import _mod958 from "module_958" /* 958 */;
+import buildMethodPath from "buildMethodPath" /* 960 */;
+import _mod971 from "module_971" /* 971 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.handleResponseError = function handleResponseError(setStatus, error) {
@@ -21,8 +22,6 @@ arg5.handleResponseError = function handleResponseError(setStatus, error) {
   }
 };
 arg5.messagesFromParams = function messagesFromParams(closure_2) {
-  let input;
-  let messages;
   ({ messages, input } = closure_2);
   if (typeof closure_2.system === "string") {
     const obj = { role: "system", content: null };
@@ -63,13 +62,13 @@ arg5.setMessagesAttribute = function setMessagesAttribute(setAttributes, message
   }
   if (0 !== length) {
     const obj = {};
-    obj[00958__.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = buildMethodPath.getTruncatedJsonString(messagesFromParamsResult);
-    obj[00958__.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
+    obj[_mod958.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = buildMethodPath.getTruncatedJsonString(messagesFromParamsResult);
+    obj[_mod958.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
     setAttributes.setAttributes(obj);
     const obj2 = buildMethodPath;
   }
 };
 arg5.shouldInstrument = function shouldInstrument(arg0) {
-  const ANTHROPIC_AI_INSTRUMENTED_METHODS = 00971__.ANTHROPIC_AI_INSTRUMENTED_METHODS;
+  const ANTHROPIC_AI_INSTRUMENTED_METHODS = _mod971.ANTHROPIC_AI_INSTRUMENTED_METHODS;
   return ANTHROPIC_AI_INSTRUMENTED_METHODS.includes(arg0);
 };

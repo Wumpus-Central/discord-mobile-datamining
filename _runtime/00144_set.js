@@ -1,7 +1,8 @@
 // _runtime/00144_set.js
-import { renderElement } from "00114_renderElement.js";
-import { Commands } from "00145_Commands.js";
-const require = arg1;
+import renderElement from "renderElement" /* 114 */;
+import Commands2 from "Commands" /* 145 */;
+
+require = arg1;
 const dependencyMap = arg6;
 let c2 = null;
 const set = new Set();
@@ -49,7 +50,7 @@ arg5.default = {
             if (tmp4) {
               closure_2 = self;
             }
-            const Commands = Commands.Commands;
+            const Commands = Commands2.Commands;
             Commands.focus(self);
             tmp4 = closure_2 !== self && null != self;
           }
@@ -73,7 +74,7 @@ arg5.default = {
       if (tmp4) {
         c2 = null;
       }
-      const Commands = Commands.Commands;
+      const Commands = Commands2.Commands;
       Commands.blur(result);
     }
   },

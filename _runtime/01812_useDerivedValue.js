@@ -1,8 +1,6 @@
 // _runtime/01812_useDerivedValue.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 
-let c3;
-let obj1;
 ({ useEffect: obj1, useRef: c3 } = noop);
 let closure_4 = { code: "function pnpm_useDerivedValueTs1(){const{sharedValue,updater}=this.__closure;sharedValue.value=updater();}" };
 
@@ -41,12 +39,12 @@ export const useDerivedValue = function useDerivedValue(fn, items) {
   }
   const current = tmp.current;
   current(() => {
-    const fn = function t() {
+    fn = function t() {
       closure_2.value = callback();
     };
     fn.__closure = { sharedValue: current, updater: callback };
     fn.__workletHash = 1316501239615;
-    fn.__initData = outer1_4;
+    fn.__initData = closure_1_4;
     const items = [current];
     callback = callback(arr2[2]).startMapper(fn, arr2, items);
     return () => {

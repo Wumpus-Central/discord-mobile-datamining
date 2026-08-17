@@ -1,3 +1,5 @@
 // _runtime/00225_FileReaderModule.js
+import getAll from "get" /* 30 */;
 
-export default require("get").getEnforcing("FileReaderModule");
+
+export default getAll.getEnforcing("FileReaderModule");

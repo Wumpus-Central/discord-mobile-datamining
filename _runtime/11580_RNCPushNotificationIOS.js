@@ -1,6 +1,7 @@
 // _runtime/11580_RNCPushNotificationIOS.js
-import _classCallCheck from "_classCallCheck";
-import get_ActivityIndicator from "get ActivityIndicator";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const PushNotificationIOS = importDefault;
 const RNCPushNotificationIOS = get_ActivityIndicator.NativeModules.RNCPushNotificationIOS;
@@ -11,7 +12,7 @@ class PushNotificationIOS {
     self = this;
     self = this;
     closure_0 = global;
-    tmp = outer1_2(this, closure_0);
+    tmp = closure_2(this, closure_0);
     this._data = {};
     this._remoteNotificationCompleteCallbackCalled = false;
     this._isRemote = global.remote;
@@ -161,7 +162,7 @@ const items1 = [
   {
     key: "addEventListener",
     value: function addEventListener(arg0, arg1) {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       let tmp3 = tmp2;
       if ("notification" !== arg0) {
         tmp3 = "register" === arg0;
@@ -177,7 +178,7 @@ const items1 = [
         let addListenerResult = nativeEventEmitter.addListener("remoteNotificationReceived", (remote) => {
           const obj = Object.create(lib.prototype);
           lib = remote;
-          outer1_2(obj, lib);
+          closure_1_2(obj, lib);
           obj._data = {};
           obj._remoteNotificationCompleteCallbackCalled = false;
           obj._isRemote = remote.remote;
@@ -203,7 +204,7 @@ const items1 = [
         addListenerResult = nativeEventEmitter.addListener("localNotificationReceived", (remote) => {
           const obj = Object.create(lib.prototype);
           lib = remote;
-          outer1_2(obj, lib);
+          closure_1_2(obj, lib);
           obj._data = {};
           obj._remoteNotificationCompleteCallbackCalled = false;
           obj._isRemote = remote.remote;
@@ -294,7 +295,7 @@ const items1 = [
         if (remote) {
           const obj = Object.create(ctor.prototype);
           ctor = remote;
-          outer1_2(obj, ctor);
+          closure_1_2(obj, ctor);
           obj._data = {};
           obj._remoteNotificationCompleteCallbackCalled = false;
           obj._isRemote = remote.remote;
@@ -322,7 +323,7 @@ const items1 = [
     }
   }
 ];
-const importDefaultResultResult = require("_createClass")(PushNotificationIOS, items, items1);
+const importDefaultResultResult = _createClassDefault(PushNotificationIOS, items, items1);
 importDefaultResultResult.FetchResult = { NewData: "UIBackgroundFetchResultNewData", NoData: "UIBackgroundFetchResultNoData", ResultFailed: "UIBackgroundFetchResultFailed" };
 
 export default importDefaultResultResult;

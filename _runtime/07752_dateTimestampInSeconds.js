@@ -1,10 +1,12 @@
 // _runtime/07752_dateTimestampInSeconds.js
+import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
+
 function dateTimestampInSeconds() {
   return Date.now() / 1000;
 }
 let _performance;
 let timeOrigin;
-_performance = require("getGlobalSingleton").GLOBAL_OBJ.performance;
+_performance = getGlobalSingleton.GLOBAL_OBJ.performance;
 let fn = dateTimestampInSeconds;
 if (_performance) {
   fn = dateTimestampInSeconds;
@@ -18,7 +20,7 @@ if (_performance) {
     fn = () => (timeOrigin + _performance.now()) / 1000;
   }
 }
-const _performance2 = require("getGlobalSingleton").GLOBAL_OBJ.performance;
+const _performance2 = getGlobalSingleton.GLOBAL_OBJ.performance;
 if (_performance2) {
   if (_performance2.now) {
     const nowResult = _performance2.now();

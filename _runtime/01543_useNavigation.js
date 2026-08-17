@@ -1,9 +1,9 @@
 // _runtime/01543_useNavigation.js
-import noop from "noop";
-import { NavigationContainerRefContext } from "01531_NavigationContainerRefContext.js";
-import { NavigationContext } from "01544_NavigationContext.js";
+import NavigationContainerRefContext from "NavigationContainerRefContext" /* 1531 */;
+import NavigationContext from "NavigationContext" /* 1544 */;
+import closure_2 from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 
 export const useNavigation = function useNavigation() {
   const context = React.useContext(NavigationContainerRefContext.NavigationContainerRefContext);
@@ -11,7 +11,7 @@ export const useNavigation = function useNavigation() {
   if (undefined === context1) {
     if (undefined === context) {
       const _Error = Error;
-      const error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
+      error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
       throw error;
     }
   }

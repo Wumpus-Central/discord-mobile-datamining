@@ -1,16 +1,14 @@
 // _runtime/06977_useScrollableSetter.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 import { useBottomSheetInternal } from "06960_useBottomSheetInternal.js";
 
-let c3;
-let obj1;
 ({ useCallback: obj1, useEffect: c3 } = noop);
 
 export const useScrollableSetter = (arg0, arg1, arg2, arg3) => {
   const _require = arg0;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   const callback = arg2;
-  let closure_3 = arg3;
+  closure_3 = arg3;
   let tmp = arg4;
   if (arg4 === undefined) {
     tmp = closure_3;

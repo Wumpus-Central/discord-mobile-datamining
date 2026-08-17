@@ -1,14 +1,9 @@
 // _runtime/06363_Lazy.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 
 
 export const Lazy = function Lazy(arg0) {
-  let children;
-  let enabled;
-  let tmp3;
-  let tmp4;
-  let visible;
   ({ enabled, visible, children } = arg0);
   let callback;
   let React;
@@ -27,11 +22,11 @@ export const Lazy = function Lazy(arg0) {
   React = tmp5;
   const items = [!enabled];
   const effect = React.useEffect(() => {
-    if (false !== c1) {
-      let _slicedToArray = requestIdleCallback(() => {
+    if (false !== closure_1) {
+      closure_0 = requestIdleCallback(() => {
         callback(true);
       });
-      return () => cancelIdleCallback(_slicedToArray);
+      return () => cancelIdleCallback(closure_0);
     }
   }, items);
   if (visible) {

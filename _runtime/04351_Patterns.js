@@ -1,10 +1,5 @@
 // _runtime/04351_Patterns.js
-import set from "set";
-import set from "set";
-import set from "set";
-import set from "set";
-import set from "set";
-import set from "set";
+import set from "set" /* 4352 */;
 
 const obj = { success: null, error: null, warning: null, heartbeat: null, tripleClick: null, notification: null };
 obj[0] = set.pattern("oO.O");

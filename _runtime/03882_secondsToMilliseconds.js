@@ -1,6 +1,6 @@
 // _runtime/03882_secondsToMilliseconds.js
-import requiredArgs from "requiredArgs";
-import { keys } from "03651_keys.js";
+import keys from "keys" /* 3651 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!requiredArgs) {
   const obj = { default: null };
@@ -9,9 +9,10 @@ if (!requiredArgs) {
 } else {
   tmp3 = requiredArgs;
 }
+requiredArgs = tmp3;
 
 export default function secondsToMilliseconds(arg0) {
-  tmp3.default(1, arguments);
+  requiredArgs.default(1, arguments);
   return arg0 * keys.millisecondsInSecond;
 };
 export default exports.default;

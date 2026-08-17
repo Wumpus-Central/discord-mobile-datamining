@@ -1,11 +1,12 @@
 // _runtime/metro/05036__.js
-import noop from "noop";
-import { getNative } from "../00773_getNative.js";
+import getNative from "getNative" /* 773 */;
+import setToArray from "setToArray" /* 790 */;
+import noop from "noop" /* 5037 */;
 
-if (require("getNative")) {
-  const _module = require("setToArray");
+if (getNative) {
+  const _module = setToArray;
   const items = [, -0];
-  const tmp5 = new require("getNative")(items);
+  const tmp5 = new getNative(items);
   if (1 / _module(tmp5)[1] === Infinity) {
     let noop = (arg0) => new getNative(arg0);
   }

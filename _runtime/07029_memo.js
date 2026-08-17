@@ -1,20 +1,19 @@
 // _runtime/07029_memo.js
-import noop from "noop";
-import "noop";
-import { jsx } from "jsxProd";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import cancelAnimationDefault from "cancelAnimation" /* 1654 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let memo;
-let obj1;
 ({ useContext: obj1, useMemo: c3, memo } = noop);
-let closure_5 = require("cancelAnimation").createAnimatedComponent(require("get ActivityIndicator").RefreshControl);
+noopDefault;
+const jsx = jsxProd.jsx;
+let closure_5 = cancelAnimationDefault.createAnimatedComponent(get_ActivityIndicator.RefreshControl);
 let closure_6 = { code: "function pnpm_BottomSheetRefreshControlAndroidTsx1(){const{animatedScrollableState,SCROLLABLE_STATE}=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};}" };
 const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
-  let onRefresh;
-  let scrollableGesture;
   ({ onRefresh, scrollableGesture } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let dependencyMap;
+  dependencyMap = undefined;
   let iter;
   const tmp4 = iter(scrollableGesture(6964).BottomSheetDraggableContext);
   dependencyMap = tmp4;
@@ -27,7 +26,7 @@ const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
     }
   }
   const fn = function f() {
-    return { enabled: iter.value === scrollableGesture(_undefined[6]).SCROLLABLE_STATE.UNLOCKED };
+    return { enabled: iter.value === scrollableGesture(6953).SCROLLABLE_STATE.UNLOCKED };
   };
   obj = { animatedScrollableState: iter, SCROLLABLE_STATE: tmp2(6953).SCROLLABLE_STATE };
   fn.__closure = obj;
@@ -38,12 +37,12 @@ const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
   const items1 = [tmp4, scrollableGesture];
   const tmp7 = callback(() => {
     let result;
-    if (_undefined) {
-      const Gesture = scrollableGesture(_undefined[7]).Gesture;
+    if (dependencyMap) {
+      const Gesture = scrollableGesture(6377).Gesture;
       const NativeResult = Gesture.Native();
       const simultaneousWithExternalGesture = NativeResult.simultaneousWithExternalGesture;
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(_undefined.toGestureArray(), 0);
+      let arraySpreadResult = HermesBuiltin.arraySpread(dependencyMap.toGestureArray(), 0);
       arraySpreadResult = HermesBuiltin.arraySpread(scrollableGesture.toGestureArray(), arraySpreadResult);
       result = HermesBuiltin.apply(items, NativeResult).shouldCancelWhenOutside(true);
       const applyResult = HermesBuiltin.apply(items, NativeResult);
@@ -53,7 +52,7 @@ const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
   if (tmp7) {
     obj = { gesture: null, children: null };
     obj[0] = tmp7;
-    const obj1 = {};
+    obj1 = {};
     const merged1 = Object.assign(merged);
     obj1.onRefresh = onRefresh;
     obj1.animatedProps = animatedProps;

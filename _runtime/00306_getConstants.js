@@ -1,5 +1,7 @@
 // _runtime/00306_getConstants.js
-const enforcing = require("get").getEnforcing("StatusBarManager");
+import getAll from "get" /* 30 */;
+
+const enforcing = getAll.getEnforcing("StatusBarManager");
 let c1 = null;
 
 export default {

@@ -4,7 +4,7 @@ arg5.isComposedGesture = function isComposedGesture(gesture) {
 };
 arg5.prepareRelations = function prepareRelations(config, closure_2) {
   let simultaneousWith = config.simultaneousWith;
-  let closure_0 = closure_2;
+  closure_0 = closure_2;
   if (simultaneousWith) {
     const _Array = Array;
     if (Array.isArray(simultaneousWith)) {

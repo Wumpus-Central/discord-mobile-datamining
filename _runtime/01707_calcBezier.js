@@ -238,8 +238,8 @@ class Bezier {
                 str = "Trying to call a non-function";
                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
-              tmp10 = Array;
-              if (typeof Array !== "function") {
+              tmp10 = closure_4;
+              if (typeof closure_4 !== "function") {
                 str2 = "Trying to call a non-function";
                 throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
               }
@@ -285,10 +285,10 @@ class Bezier {
               }
               const diff = num3 - 1;
               const result = (arg0 - dependencyMap[diff]) / (dependencyMap[diff + 1] - dependencyMap[diff]) * closure_3;
-              if (typeof outer1_8 !== "function") {
+              if (typeof closure_1_8 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof outer1_4 !== "function") {
+              if (typeof closure_1_4 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const result1 = 3 * tmp8;
@@ -298,17 +298,17 @@ class Bezier {
               }
               const result3 = 3 * tmp8;
               const result4 = 6 * tmp7;
-              if (typeof outer1_6 !== "function") {
+              if (typeof closure_1_6 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const sum2 = num4 + result;
               const sum3 = 3 * (1 - result1 + result2) * sum2 * sum2 + 2 * (result3 - result4) * sum2 + 3 * tmp7;
               if (sum3 >= closure_2) {
-                let tmp15 = outer1_10(arg0, sum2, tmp7, tmp8);
+                let tmp15 = closure_1_10(arg0, sum2, tmp7, tmp8);
               } else {
                 tmp15 = sum2;
                 if (0 !== sum3) {
-                  tmp15 = outer1_9(arg0, num4, num4 + closure_3, tmp7, tmp8);
+                  tmp15 = closure_1_9(arg0, num4, num4 + closure_3, tmp7, tmp8);
                 }
               }
               return tmp15;
@@ -338,10 +338,10 @@ class Bezier {
                   let num4 = 1;
                   if (1 !== arg0) {
                     const tmp12 = getTForX(arg0);
-                    if (typeof outer1_7 !== "function") {
+                    if (typeof closure_1_7 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    if (typeof outer1_4 !== "function") {
+                    if (typeof closure_1_4 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     const result = (1 - 3 * tmp13 + 3 * tmp) * tmp12;
@@ -349,7 +349,7 @@ class Bezier {
                       HermesBuiltin.throwTypeError();
                     }
                     const result1 = (result + (3 * tmp13 - 6 * tmp)) * tmp12;
-                    if (typeof outer1_6 !== "function") {
+                    if (typeof closure_1_6 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     num4 = (result1 + 3 * tmp) * tmp12;

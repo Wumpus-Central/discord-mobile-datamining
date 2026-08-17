@@ -1,3 +1,5 @@
 // _runtime/06352__isNativeReflectConstruct.js
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6353 */;
 
-export { default } from "_isNativeReflectConstruct";
+
+export default _isNativeReflectConstructDefault;

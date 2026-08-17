@@ -1,5 +1,6 @@
 // _runtime/06479_PressableStateMachine.js
-import PressableStateMachine from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import PressableStateMachine from "_classCallCheck" /* 41 */;
 
 class PressableStateMachine {
   constructor() {
@@ -67,4 +68,4 @@ const items = [
   }
 ];
 
-export const PressableStateMachine = require("_createClass")(PressableStateMachine, items);
+export const PressableStateMachine = _createClassDefault(PressableStateMachine, items);

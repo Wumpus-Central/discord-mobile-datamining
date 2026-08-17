@@ -1,6 +1,7 @@
 // _runtime/01887_useEndVisible.js
-import { useMemo } from "noop";
+import noop from "noop" /* 19 */;
 
+const useMemo = noop.useMemo;
 let closure_3 = { code: "function pnpm_useEndVisibleTs1(){const{layout,size,isScrollAtEnd,scroll,inverted}=this.__closure;if(layout.value.height===0||size.value.height===0){return null;}return isScrollAtEnd(scroll.value,layout.value.height,size.value.height,inverted);}" };
 let closure_4 = { code: "function pnpm_useEndVisibleTs2(){const{isAtEnd}=this.__closure;return isAtEnd.value;}" };
 let closure_5 = { code: "function pnpm_useEndVisibleTs3(current,previous){const{onEndVisible,isWorklet,runOnJS}=this.__closure;if(current===null||current===previous||!onEndVisible){return;}if(isWorklet){onEndVisible(current);}else{runOnJS(onEndVisible)(current);}}" };
@@ -11,7 +12,7 @@ export const useEndVisible = (scroll) => {
   const size = scroll.size;
   const inverted = scroll.inverted;
   const onEndVisible = scroll.onEndVisible;
-  let c5;
+  closure_5 = undefined;
   let derivedValue;
   const items = [onEndVisible];
   let tmp = size(() => {
@@ -21,7 +22,7 @@ export const useEndVisible = (scroll) => {
     }
     return __workletHash;
   }, items);
-  c5 = tmp;
+  closure_5 = tmp;
   let obj = scroll(layout[1]);
   const fn = function v() {
     let isScrollAtEndResult = null;
@@ -56,8 +57,8 @@ export const useEndVisible = (scroll) => {
         tmp = onEndVisible;
       }
       if (tmp) {
-        tmp3 = c5;
-        if (c5) {
+        tmp3 = closure_5;
+        if (closure_5) {
           tmp8 = onEndVisible;
           tmp9 = onEndVisible(scroll);
         } else {
@@ -74,7 +75,7 @@ export const useEndVisible = (scroll) => {
   obj = { onEndVisible, isWorklet: tmp, runOnJS: scroll(layout[1]).runOnJS };
   E.__closure = obj;
   E.__workletHash = 2507987378306;
-  E.__initData = c5;
+  E.__initData = closure_5;
   const items1 = [onEndVisible, tmp, inverted];
   const animatedReaction = scroll(layout[1]).useAnimatedReaction(fn2, E, items1);
 };

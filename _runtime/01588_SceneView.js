@@ -1,26 +1,22 @@
 // _runtime/01588_SceneView.js
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 
 export const SceneView = function SceneView(getState) {
-  let navigation;
-  let route;
-  let routeState;
-  let screen;
   ({ screen, route } = getState);
   ({ navigation, routeState } = getState);
   getState = getState.getState;
   const setState = getState.setState;
   const clearOptions = getState.clearOptions;
-  let closure_5;
+  closure_5 = undefined;
   let callback;
   let addOptionsGetter;
   let callback1;
   let callback2;
   let callback3;
-  let closure_11;
+  closure_11 = undefined;
   let callback4;
   let context;
   closure_5 = getState.useRef(undefined);
@@ -43,7 +39,7 @@ export const SceneView = function SceneView(getState) {
   }, items);
   let items1 = [getState, route.key, setState];
   callback3 = getState.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     let tmp = getState();
     const routes = tmp.routes;
     const mapped = routes.map((key) => {
@@ -87,7 +83,7 @@ export const SceneView = function SceneView(getState) {
         first = state.routes[0];
       }
       if (first) {
-        let obj = { routes: null };
+        obj = { routes: null };
         obj = {};
         const merged = Object.assign(first);
         obj.state = addState(first.state);
@@ -113,7 +109,7 @@ export const SceneView = function SceneView(getState) {
         first1 = state.routes[0];
       }
       if (first1) {
-        const obj1 = { routes: null };
+        obj1 = { routes: null };
         const obj2 = {};
         const merged1 = Object.assign(first1);
         obj2.state = addState(first1.state);
@@ -136,7 +132,7 @@ export const SceneView = function SceneView(getState) {
     component = screen.component;
   }
   obj = { value: memo1, children: null };
-  let obj1 = { value: memo, children: null };
+  obj1 = { value: memo, children: null };
   let obj2 = { name: screen.name, render: null, navigation: null, route: null, children: null };
   let children = component;
   if (!component) {

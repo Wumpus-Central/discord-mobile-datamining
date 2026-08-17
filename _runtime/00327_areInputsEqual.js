@@ -36,10 +36,10 @@ if (!ponyfill) {
 }
 
 export default function memoizeOne(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let closure_4 = [];
-  let c5 = false;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_4 = [];
+  c5 = false;
   return function memoized() {
     let length;
     const items = [];
@@ -60,7 +60,7 @@ export default function memoizeOne(arg0, arg1) {
       tmp = callback2(items, items);
     }
     if (!tmp) {
-      let closure_3 = callback.apply(self, items);
+      closure_3 = callback.apply(self, items);
       c5 = true;
     }
     return closure_3;

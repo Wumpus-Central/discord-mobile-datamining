@@ -1,6 +1,6 @@
 // _runtime/00164_warnNoNativePerformance.js
-import importDefaultResult from "NativePerformanceCxx";
-import { warnOnce } from "00165_warnOnce.js";
+import warnOnceDefault from "warnOnce" /* 165 */;
+import importDefaultResult from "NativePerformanceCxx" /* 154 */;
 
 let fn;
 if (importDefaultResult != null) {
@@ -14,6 +14,6 @@ if (fn == null) {
 }
 
 export const warnNoNativePerformance = function warnNoNativePerformance() {
-  warnOnce("missing-native-performance", "Missing native implementation of Performance");
+  warnOnceDefault("missing-native-performance", "Missing native implementation of Performance");
 };
 export const getCurrentTimeStamp = fn;

@@ -1,7 +1,7 @@
 // _runtime/01866_t.js
 let closure_0 = { code: "function pnpm_utilsTs2(...args){const{value,wait,worklet}=this.__closure;const t=Date.now();const now=t-value.time;if(now<wait){value.time=t;return;}value.time=t;return worklet(...args);}" };
 let fn = function t(worklet) {
-  let closure_0 = worklet;
+  closure_0 = worklet;
   let num = arg1;
   if (arg1 === undefined) {
     num = 0;
@@ -28,7 +28,7 @@ fn.__closure = {};
 fn.__workletHash = 1678132827161;
 fn.__initData = { code: "function pnpm_utilsTs1(worklet,wait=0){const value={time:0};return function(...args){\"worklet\";const t=Date.now();const now=t-value.time;if(now<wait){value.time=t;return;}value.time=t;return worklet(...args);};}" };
 const fn2 = function n(arg0, arr) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let found;
   if (arr) {
     found = arr.find((arg0) => arg0 >= closure_0);

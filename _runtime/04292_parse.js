@@ -11,7 +11,7 @@ arg5.parse = function parse(str) {
       obj = {};
     }
     const parts = str.split(closure_2);
-    let closure_1 = obj.decode || obj;
+    closure_1 = obj.decode || obj;
     const item = parts.forEach((arr) => {
       const index = arr.indexOf("=");
       if (index >= 0) {
@@ -57,7 +57,7 @@ arg5.serialize = function serialize(arg0, arg1, arg2) {
       const _isNaN = isNaN;
       if (isNaN(maxAge)) {
         const _Error = Error;
-        const error = new Error("maxAge should be a Number");
+        error = new Error("maxAge should be a Number");
         throw error;
       } else {
         const _Math = Math;

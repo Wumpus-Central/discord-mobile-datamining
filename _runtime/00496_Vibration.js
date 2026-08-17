@@ -25,7 +25,7 @@ arg5.default = {
         const obj = module(497);
       } else {
         const _Error = Error;
-        const error = new Error("Vibration pattern should be a number or array");
+        error = new Error("Vibration pattern should be a number or array");
         throw error;
       }
     }

@@ -1,8 +1,13 @@
 // _runtime/00290_Button.js
-import "noop";
-import { jsx } from "jsxProd";
-import _isNativeReflectConstruct from "_isNativeReflectConstruct";
+import noopAll from "noop" /* 19 */;
+import _modDef38 from "module_38" /* 38 */;
+import ViewDefault from "View" /* 108 */;
+import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
+import useTextPressabilityDefault from "useTextPressability" /* 298 */;
+import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "_isNativeReflectConstruct" /* 291 */;
 
+noopAll;
 class Button {
   constructor(arg0) {
     merged = Object.assign(global, Object.create(null));
@@ -78,7 +83,7 @@ class Button {
     tmp26 = jsx;
     obj2 = { accessible, accessibilityActions, onAccessibilityAction, accessibilityLabel: null, accessibilityHint: null, accessibilityLanguage: null, accessibilityRole: "button", accessibilityState: null, importantForAccessibility: null, hasTVPreferredFocus: null, nextFocusDown: null, nextFocusForward: null, nextFocusLeft: null, nextFocusRight: null, nextFocusUp: null, testID: null, disabled: null, onPress: null, touchSoundDisabled: null, ref: null, children: null };
     formatted = title.toUpperCase();
-    tmp27 = jsx;
+    tmp27 = closure_3;
     if (!tmp6) {
       tmp6 = accessibilityLabel;
     }
@@ -110,6 +115,6 @@ class Button {
   }
 }
 Button.displayName = "Button";
-let closure_4 = require("get hairlineWidth").create({ button: { elevation: 4, backgroundColor: "#2196F3", borderRadius: 2 }, text: { textAlign: "center", margin: 8, color: "white", fontWeight: "500" }, buttonDisabled: { elevation: 0, backgroundColor: "#dfdfdf" }, textDisabled: { color: "#a1a1a1" } });
+let closure_4 = get_hairlineWidthDefault.create({ button: { elevation: 4, backgroundColor: "#2196F3", borderRadius: 2 }, text: { textAlign: "center", margin: 8, color: "white", fontWeight: "500" }, buttonDisabled: { elevation: 0, backgroundColor: "#dfdfdf" }, textDisabled: { color: "#a1a1a1" } });
 
 export default Button;

@@ -1,27 +1,20 @@
 // _runtime/06507_LegacyText.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 let closure_2 = ["onPress", "onLongPress", "ref"];
 ({ useEffect: c4, useMemo: c5, useRef: closure_6 } = noop);
+noopDefault;
 ({ Platform, Text: error } = get_ActivityIndicator);
 
 export const LegacyText = (arg0) => {
-  let onLongPress;
-  let onPress;
-  let ref;
   ({ onPress, onLongPress, ref } = arg0);
   const tmp = callback(arg0, closure_2);
-  const dependencyMap = callback4(null);
+  dependencyMap = callback4(null);
   const items = [ref];
   const tmp3 = callback3(() => {
     function handler(current) {

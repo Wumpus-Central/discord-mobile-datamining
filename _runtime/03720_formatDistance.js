@@ -1,14 +1,14 @@
 // _runtime/03720_formatDistance.js
-import compareAsc from "compareAsc";
-import differenceInMonths from "differenceInMonths";
-import differenceInSeconds from "differenceInSeconds";
-import code from "code";
-import _typeof from "_typeof";
-import cloneObject from "cloneObject";
-import assign from "assign";
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
-import requiredArgs from "requiredArgs";
-import { getDefaultOptions } from "03477_getDefaultOptions.js";
+import getDefaultOptions from "getDefaultOptions" /* 3477 */;
+import compareAsc from "compareAsc" /* 3648 */;
+import differenceInMonths from "differenceInMonths" /* 3670 */;
+import differenceInSeconds from "differenceInSeconds" /* 3675 */;
+import code from "code" /* 3718 */;
+import _typeof from "_typeof" /* 3472 */;
+import cloneObject from "cloneObject" /* 3721 */;
+import assign from "assign" /* 3722 */;
+import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!compareAsc) {
   let obj = { default: null };
@@ -17,7 +17,7 @@ if (!compareAsc) {
 } else {
   tmp3 = compareAsc;
 }
-let obj1 = tmp3;
+compareAsc = tmp3;
 if (!differenceInMonths) {
   obj = { default: null };
   obj[0] = differenceInMonths;
@@ -25,7 +25,7 @@ if (!differenceInMonths) {
 } else {
   tmp5 = differenceInMonths;
 }
-let c3 = tmp5;
+differenceInMonths = tmp5;
 if (!differenceInSeconds) {
   obj = { default: null };
   obj[0] = differenceInSeconds;
@@ -33,15 +33,15 @@ if (!differenceInSeconds) {
 } else {
   tmp7 = differenceInSeconds;
 }
-let c4 = tmp7;
+differenceInSeconds = tmp7;
 if (!code) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = code;
   let tmp9 = obj1;
 } else {
   tmp9 = code;
 }
-let c5 = tmp9;
+code = tmp9;
 if (!_typeof) {
   const obj2 = { default: null };
   obj2[0] = _typeof;
@@ -49,7 +49,7 @@ if (!_typeof) {
 } else {
   tmp11 = _typeof;
 }
-let closure_6 = tmp11;
+_typeof = tmp11;
 if (!cloneObject) {
   const obj3 = { default: null };
   obj3[0] = cloneObject;
@@ -57,7 +57,7 @@ if (!cloneObject) {
 } else {
   tmp13 = cloneObject;
 }
-const error = tmp13;
+cloneObject = tmp13;
 if (!assign) {
   const obj4 = { default: null };
   obj4[0] = assign;
@@ -65,7 +65,7 @@ if (!assign) {
 } else {
   tmp15 = assign;
 }
-const metroImportAll = tmp15;
+assign = tmp15;
 if (!getTimezoneOffsetInMilliseconds) {
   const obj5 = { default: null };
   obj5[0] = getTimezoneOffsetInMilliseconds;
@@ -73,7 +73,7 @@ if (!getTimezoneOffsetInMilliseconds) {
 } else {
   tmp17 = getTimezoneOffsetInMilliseconds;
 }
-let c9 = tmp17;
+getTimezoneOffsetInMilliseconds = tmp17;
 if (!requiredArgs) {
   const obj6 = { default: null };
   obj6[0] = requiredArgs;
@@ -81,14 +81,14 @@ if (!requiredArgs) {
 } else {
   tmp19 = requiredArgs;
 }
-let c10 = tmp19;
+requiredArgs = tmp19;
 let c11 = 1440;
 let c12 = 2520;
 let c13 = 43200;
 let c14 = 86400;
 
 export default function formatDistance(arg0, arg1, locale) {
-  tmp19.default(2, arguments);
+  requiredArgs.default(2, arguments);
   locale = undefined;
   const defaultOptions = getDefaultOptions.getDefaultOptions();
   if (null != locale) {
@@ -98,10 +98,10 @@ export default function formatDistance(arg0, arg1, locale) {
     locale = defaultOptions.locale;
   }
   if (null === locale) {
-    locale = tmp9.default;
+    locale = code.default;
   }
   if (locale.formatDistance) {
-    const defaultResult1 = tmp3.default(arg0, arg1);
+    const defaultResult1 = compareAsc.default(arg0, arg1);
     const _isNaN = isNaN;
     if (isNaN(defaultResult1)) {
       const _RangeError2 = RangeError;
@@ -115,18 +115,18 @@ export default function formatDistance(arg0, arg1, locale) {
       const obj = { addSuffix: null, comparison: null };
       obj[0] = Boolean(addSuffix);
       obj[1] = defaultResult1;
-      const defaultResult3 = tmp15.default(tmp15.default(locale), obj);
+      const defaultResult3 = assign.default(cloneObject.default(locale), obj);
       if (defaultResult1 > 0) {
-        let defaultResult4 = tmp11.default(arg1);
-        let defaultResult5 = tmp11.default(arg0);
+        let defaultResult4 = _typeof.default(arg1);
+        let defaultResult5 = _typeof.default(arg0);
       } else {
-        defaultResult4 = tmp11.default(arg0);
-        defaultResult5 = tmp11.default(arg1);
+        defaultResult4 = _typeof.default(arg0);
+        defaultResult5 = _typeof.default(arg1);
       }
-      const defaultResult6 = tmp7.default(defaultResult5, defaultResult4);
-      const defaultResult2 = tmp15.default(locale);
+      const defaultResult6 = differenceInSeconds.default(defaultResult5, defaultResult4);
+      const defaultResult2 = cloneObject.default(locale);
       const _Math = Math;
-      const rounded = Math.round((defaultResult6 - (tmp17.default(defaultResult5) - tmp17.default(defaultResult4)) / 1000) / 60);
+      const rounded = Math.round((defaultResult6 - (getTimezoneOffsetInMilliseconds.default(defaultResult5) - getTimezoneOffsetInMilliseconds.default(defaultResult4)) / 1000) / 60);
       if (rounded < 2) {
         if (null != locale) {
           if (locale.includeSeconds) {
@@ -167,7 +167,7 @@ export default function formatDistance(arg0, arg1, locale) {
         const _Math4 = Math;
         return locale.formatDistance("aboutXMonths", Math.round(rounded / tmp39), defaultResult3);
       } else {
-        const defaultResult8 = tmp5.default(defaultResult5, defaultResult4);
+        const defaultResult8 = differenceInMonths.default(defaultResult5, defaultResult4);
         if (defaultResult8 < 12) {
           const _Math3 = Math;
           return locale.formatDistance("xMonths", Math.round(rounded / tmp39), defaultResult3);
@@ -185,7 +185,7 @@ export default function formatDistance(arg0, arg1, locale) {
           return formatDistanceResult2;
         }
       }
-      const defaultResult7 = tmp17.default(defaultResult5);
+      const defaultResult7 = getTimezoneOffsetInMilliseconds.default(defaultResult5);
     }
   } else {
     const _RangeError = RangeError;

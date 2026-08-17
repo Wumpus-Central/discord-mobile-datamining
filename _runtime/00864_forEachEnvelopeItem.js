@@ -1,7 +1,9 @@
 // _runtime/00864_forEachEnvelopeItem.js
-import _slicedToArray from "_slicedToArray";
+import _mod821 from "module_821" /* 821 */;
+import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
+import dsnFromString from "dsnFromString" /* 837 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
-import { dsnFromString } from "00837_dsnFromString.js";
 import { normalize } from "00865_normalize.js";
 import { 00821__ } from "metro/00821__.js";
 
@@ -20,7 +22,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_4 = { session: "session", sessions: "session", attachment: "attachment", transaction: "transaction", event: "error", client_report: "internal", user_report: "default", profile: "profile", profile_chunk: "profile", replay_event: "replay", replay_recording: "replay", check_in: "monitor", feedback: "feedback", span: "span", raw_security: "security", log: "log_item", metric: "metric", trace_metric: "metric" };
 
 export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
-  const tmp = _slicedToArray(arg0, 2);
+  const tmp = callback(arg0, 2);
   const items = [tmp[0], ];
   const items1 = [];
   items1[HermesBuiltin.arraySpread(tmp[1], 0)] = arg1;
@@ -31,7 +33,7 @@ export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeIte
   if (typeof data.data === "string") {
     data = data.data;
     let obj = getGlobalSingleton;
-    const sentryCarrier = obj.getSentryCarrier(00821__.GLOBAL_OBJ);
+    const sentryCarrier = obj.getSentryCarrier(_mod821.GLOBAL_OBJ);
     if (sentryCarrier.encodePolyfill) {
       let encodePolyfillResult = sentryCarrier.encodePolyfill(data);
     } else {
@@ -62,8 +64,7 @@ export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(ev
   if (sdkProcessingMetadata != null) {
     prop = sdkProcessingMetadata.dynamicSamplingContext;
   }
-  let obj = { event_id: event_id.event_id, sent_at: null };
-  obj[1] = new Date().toISOString();
+  let obj = { event_id: event_id.event_id, sent_at: new Date().toISOString() };
   let tmp2 = arg1;
   if (arg1) {
     obj = { sdk: null };
@@ -81,7 +82,7 @@ export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(ev
   const merged1 = Object.assign(tmp4);
   let tmp8 = prop;
   if (prop) {
-    const obj1 = { trace: null };
+    obj1 = { trace: null };
     obj1[0] = prop;
     tmp8 = obj1;
   }
@@ -93,7 +94,7 @@ export function createSpanEnvelopeItem(arg0) {
   return items;
 }
 export const envelopeContainsItemType = function envelopeContainsItemType(arg0, arg1) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   return forEachEnvelopeItem(arg0, (arg0, arg1) => closure_0.includes(arg1));
 };
 export const envelopeItemTypeToDataCategory = function envelopeItemTypeToDataCategory(arg0) {
@@ -120,7 +121,7 @@ export const parseEnvelope = function parseEnvelope(arr) {
       }
       const subarrayResult = lib.subarray(0, length);
       lib = lib.subarray(length + 1);
-      const sentryCarrier = lib(outer1_1[1]).getSentryCarrier(lib(outer1_1[2]).GLOBAL_OBJ);
+      const sentryCarrier = lib(closure_1_1[1]).getSentryCarrier(lib(closure_1_1[2]).GLOBAL_OBJ);
       if (sentryCarrier.decodePolyfill) {
         let decodePolyfillResult = sentryCarrier.decodePolyfill(subarrayResult);
       } else {
@@ -173,7 +174,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
       if (typeof json === "string") {
         let sum = arr + json;
       } else {
-        const sentryCarrier = callback(outer1_1[1]).getSentryCarrier(callback(outer1_1[2]).GLOBAL_OBJ);
+        const sentryCarrier = callback(closure_1_1[1]).getSentryCarrier(callback(closure_1_1[2]).GLOBAL_OBJ);
         if (sentryCarrier.encodePolyfill) {
           let encodePolyfillResult = sentryCarrier.encodePolyfill(arr);
         } else {
@@ -182,13 +183,13 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
           encodePolyfillResult = textEncoder.encode(arr);
         }
         sum = [encodePolyfillResult, json];
-        const obj5 = callback(outer1_1[1]);
+        const obj5 = callback(closure_1_1[1]);
       }
       callback = sum;
     } else if (typeof json !== "string") {
       arr = arr.push(json);
     } else {
-      const sentryCarrier1 = callback(outer1_1[1]).getSentryCarrier(callback(outer1_1[2]).GLOBAL_OBJ);
+      const sentryCarrier1 = callback(closure_1_1[1]).getSentryCarrier(callback(closure_1_1[2]).GLOBAL_OBJ);
       if (sentryCarrier1.encodePolyfill) {
         let encodePolyfillResult1 = sentryCarrier1.encodePolyfill(json);
       } else {
@@ -196,10 +197,10 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
         const textEncoder1 = new TextEncoder();
         encodePolyfillResult1 = textEncoder1.encode(json);
       }
-      const obj3 = callback(outer1_1[1]);
+      const obj3 = callback(closure_1_1[1]);
     }
   }
-  const tmp4 = _slicedToArray(arg0, 2);
+  const tmp4 = callback(arg0, 2);
   const _require = JSON.stringify(tmp4[0]);
   if (tmp5 === undefined) {
     let tmp22 = _require;
@@ -220,7 +221,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
     }
     return tmp22;
   } else {
-    const tmp8 = _slicedToArray(tmp6, 2);
+    const tmp8 = callback(tmp6, 2);
     const _JSON = JSON;
     const _HermesInternal = HermesInternal;
     append("\n" + JSON.stringify(tmp8[0]) + "\n");

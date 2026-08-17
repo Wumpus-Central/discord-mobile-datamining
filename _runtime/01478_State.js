@@ -1,13 +1,15 @@
 // _runtime/01478_State.js
-import 01482__ from "metro/01482__.js";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import _createClassDefault from "_createClass" /* 42 */;
+import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 1479 */;
+import InternetReachabilityDefault from "InternetReachability" /* 1481 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_classCallCheck" /* 41 */;
 
 class State {
   constructor(arg0) {
     self = this;
-    f103851 = this;
-    tmp = _classCallCheck(this, State);
+    closure_0 = this;
+    tmp = closure_4(this, State);
     this._nativeEventSubscription = null;
     set = new Set();
     this._subscriptions = set;
@@ -16,7 +18,7 @@ class State {
       const _internetReachability = self._internetReachability;
       _internetReachability.update(arg0);
       const _convertStateResult = self._convertState(arg0);
-      let closure_0 = _convertStateResult;
+      closure_0 = _convertStateResult;
       self._latestState = _convertStateResult;
       const _subscriptions = self._subscriptions;
       const item = _subscriptions.forEach((arg0) => arg0(closure_0));
@@ -31,15 +33,15 @@ class State {
         const item = _subscriptions.forEach((arg0) => arg0(obj));
       }
     };
-    f103851 = undefined;
-    f103851 = module_1482((arg0) => {
-      let closure_0 = arg0;
-      let c3 = 0;
-      let c4 = 0;
+    closure_0 = undefined;
+    closure_0 = closure_3((arg0) => {
+      closure_0 = arg0;
+      c3 = 0;
+      c4 = 0;
       return (function*(arg0) {
-        let closure_2 = tmp5;
-        let closure_1 = tmp2;
-        const obj2 = lib(outer2_2[3]);
+        closure_2 = tmp5;
+        closure_1 = tmp2;
+        const obj2 = lib(closure_2_2[3]);
         closure_1 = yield obj2.getCurrentState(lib);
         const _internetReachability = lib._internetReachability;
         _internetReachability.update(closure_1);
@@ -53,7 +55,7 @@ class State {
       })();
     });
     this._fetchCurrentState = function(arg0) {
-      const self = this;
+      self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -118,4 +120,4 @@ class State {
   }
 }
 
-export default _createClass(State);
+export default _createClassDefault(State);

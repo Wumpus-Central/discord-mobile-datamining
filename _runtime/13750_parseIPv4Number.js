@@ -1,9 +1,10 @@
 // _runtime/13750_parseIPv4Number.js
-import { Buffer } from "00511_Buffer.js";
-import { error } from "13751_error.js";
-import { replaceByteInByteSequence } from "13753_replaceByteInByteSequence.js";
-import { 13752__ } from "metro/13752__.js";
-const require = arg1;
+import Buffer from "Buffer" /* 511 */;
+import error from "error" /* 13751 */;
+import _mod13752 from "module_13752" /* 13752 */;
+import replaceByteInByteSequence from "replaceByteInByteSequence" /* 13753 */;
+
+require = arg1;
 let dependencyMap = exports;
 dependencyMap = arg6;
 function parseIPv4Number(joined) {
@@ -106,7 +107,7 @@ function parseHost(buffer, arg1) {
           if (58 !== decodeResult[num7]) {
             let tmp28 = require;
             let tmp29 = dependencyMap;
-            let obj4 = 13752__;
+            let obj4 = _mod13752;
             let num14 = 0;
             let num15 = 0;
             let tmp30 = num7;
@@ -137,7 +138,7 @@ function parseHost(buffer, arg1) {
                 } else {
                   let tmp41 = require;
                   let tmp42 = dependencyMap;
-                  let obj5 = 13752__;
+                  let obj5 = _mod13752;
                   num14 = sum2;
                   num15 = sum;
                   tmp30 = sum1;
@@ -182,7 +183,7 @@ function parseHost(buffer, arg1) {
                       if (0 >= num18) {
                         let tmp49 = require;
                         let tmp50 = dependencyMap;
-                        let obj6 = 13752__;
+                        let obj6 = _mod13752;
                         if (obj6.isASCIIDigit(decodeResult[sum7])) {
                           let tmp49Result = tmp49(13752);
                           let tmp51 = null;
@@ -225,7 +226,7 @@ function parseHost(buffer, arg1) {
                                   let sum5 = tmp52 + 1;
                                   let tmp80 = require;
                                   let tmp81 = dependencyMap;
-                                  let obj8 = 13752__;
+                                  let obj8 = _mod13752;
                                   tmp51 = sum6;
                                   tmp52 = sum5;
                                   tmp53 = sum6;
@@ -604,8 +605,8 @@ class URLStateMachine {
         if (!tmp6) {
           break;
         } else {
-          tmp7 = failure;
-          if (tmp6 === failure) {
+          tmp7 = closure_4;
+          if (tmp6 === closure_4) {
             flag3 = true;
             obj.failure = true;
             break;
@@ -635,8 +636,8 @@ class URLStateMachine {
     } else if (self.stateOverride) {
       flag = true;
       self.parseError = true;
-      tmp = failure;
-      return failure;
+      tmp = closure_4;
+      return closure_4;
     } else {
       str = "no scheme";
       self.state = "no scheme";
@@ -752,8 +753,8 @@ class URLStateMachine {
             } else if (self.stateOverride) {
               flag = true;
               self.parseError = true;
-              tmp = failure;
-              return failure;
+              tmp = closure_4;
+              return closure_4;
             } else {
               str = "";
               self.buffer = "";
@@ -807,7 +808,7 @@ class URLStateMachine {
         flag = true;
       }
     }
-    flag = failure;
+    flag = closure_4;
     return;
   }
   parse special relative or authority(arg0) {
@@ -900,7 +901,7 @@ class URLStateMachine {
             path3 = self.base.path;
             num3 = 1;
             num4 = 0;
-            self.url.path = require("error");
+            self.url.path = require("module_0");
             str = "path";
             self.state = "path";
             self.pointer = self.pointer - 1;
@@ -1013,16 +1014,16 @@ class URLStateMachine {
           fromCodePointResult = String.fromCodePoint(codePointAtResult);
           hasItem = codePointAtResult <= 31 || codePointAtResult > 126;
           if (!hasItem) {
-            tmp13 = failure;
-            hasItem = failure.has(codePointAtResult);
+            tmp13 = closure_6;
+            hasItem = closure_6.has(codePointAtResult);
           }
           if (!hasItem) {
-            tmp14 = failure;
-            hasItem = failure.has(codePointAtResult);
+            tmp14 = closure_7;
+            hasItem = closure_7.has(codePointAtResult);
           }
           if (!hasItem) {
-            tmp15 = failure;
-            hasItem = failure.has(codePointAtResult);
+            tmp15 = closure_5;
+            hasItem = closure_5.has(codePointAtResult);
           }
           tmp16 = fromCodePointResult;
           if (hasItem) {
@@ -1080,8 +1081,8 @@ class URLStateMachine {
         if ("" === self.buffer) {
           flag = true;
           self.parseError = true;
-          tmp5 = failure;
-          return failure;
+          tmp5 = closure_4;
+          return closure_4;
         }
       }
       tmp3 = closure_0;
@@ -1118,8 +1119,8 @@ class URLStateMachine {
                 if (!self.stateOverride) {
                   flag = true;
                   self.parseError = true;
-                  tmp3 = failure;
-                  return failure;
+                  tmp3 = closure_4;
+                  return closure_4;
                 }
               } else {
                 num4 = 92;
@@ -1136,11 +1137,11 @@ class URLStateMachine {
         num5 = 16;
         num6 = 2;
         num7 = 1;
-        if (parsed > require("Buffer") - 1) {
+        if (parsed > require("module_2") - 1) {
           flag3 = true;
           self.parseError = true;
-          tmp7 = failure;
-          return failure;
+          tmp7 = closure_4;
+          return closure_4;
         } else {
           tmp5 = closure_3;
           tmp6 = null;
@@ -1330,7 +1331,7 @@ class URLStateMachine {
             tmp13 = closure_2;
             obj2 = require("module_13752");
             num6 = 0;
-            isASCIIAlphaResult1 = obj2.isASCIIAlpha(require("error"));
+            isASCIIAlphaResult1 = obj2.isASCIIAlpha(require("module_0"));
           }
           if (isASCIIAlphaResult1) {
             str2 = ":";
@@ -1388,7 +1389,7 @@ class URLStateMachine {
         tmp4 = closure_2;
         obj = require("module_13752");
         num6 = 0;
-        isASCIIAlphaResult = obj.isASCIIAlpha(require("error"));
+        isASCIIAlphaResult = obj.isASCIIAlpha(require("module_0"));
       }
       if (isASCIIAlphaResult) {
         str = ":";
@@ -1420,8 +1421,8 @@ class URLStateMachine {
       tmp7 = closure_3;
       num7 = 0;
       str4 = parseHost(self.buffer, undefined === closure_3[self.url.scheme]);
-      if (str4 === failure) {
-        return failure;
+      if (str4 === closure_4) {
+        return closure_4;
       } else {
         str5 = "localhost";
         if ("localhost" === str4) {
@@ -1528,12 +1529,12 @@ class URLStateMachine {
             hasItem = arg0 > 126;
           }
           if (!hasItem) {
-            tmp7 = failure;
-            hasItem = failure.has(arg0);
+            tmp7 = closure_6;
+            hasItem = closure_6.has(arg0);
           }
           if (!hasItem) {
-            tmp8 = failure;
-            hasItem = failure.has(arg0);
+            tmp8 = closure_7;
+            hasItem = closure_7.has(arg0);
           }
           tmp9 = fromCodePointResult;
           if (hasItem) {
@@ -1664,7 +1665,7 @@ class URLStateMachine {
             tmp24 = closure_2;
             obj4 = require("module_13752");
             num16 = 0;
-            isASCIIAlphaResult = obj4.isASCIIAlpha(require("error"));
+            isASCIIAlphaResult = obj4.isASCIIAlpha(require("module_0"));
           }
           if (isASCIIAlphaResult) {
             str14 = ":";
@@ -1941,8 +1942,8 @@ class URLStateMachine {
           hasItem = arg0 > 126;
         }
         if (!hasItem) {
-          tmp7 = failure;
-          hasItem = failure.has(arg0);
+          tmp7 = closure_6;
+          hasItem = closure_6.has(arg0);
         }
         tmp8 = fromCodePointResult;
         if (hasItem) {
@@ -2099,8 +2100,6 @@ exports.exports.serializeURL = function serializeURL(_url) {
   return text;
 };
 exports.exports.serializeURLOrigin = (scheme) => {
-  let _exports;
-  let _exports2;
   scheme = scheme.scheme;
   if ("blob" === scheme) {
     try {
@@ -2134,10 +2133,6 @@ exports.exports.serializeURLOrigin = (scheme) => {
   }
 };
 exports.exports.basicURLParse = (input) => {
-  let baseURL;
-  let encodingOverride;
-  let stateOverride;
-  let url;
   let obj = arg1;
   if (undefined === arg1) {
     obj = {};

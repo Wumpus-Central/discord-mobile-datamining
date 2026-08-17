@@ -1,14 +1,14 @@
 // _runtime/00040_MessageQueue.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import { isEnabled } from "00046_isEnabled.js";
-import { 00047__ } from "metro/00047__.js";
+import _createClassDefault from "_createClass" /* 42 */;
+import isEnabled from "isEnabled" /* 46 */;
+import _mod47 from "module_47" /* 47 */;
+import closure_3 from "_classCallCheck" /* 41 */;
 
 const MessageQueue = global;
-const require = arg1;
+require = arg1;
 class MessageQueue {
   constructor() {
-    tmp = outer1_3(this, MessageQueue);
+    tmp = closure_3(this, MessageQueue);
     this._lazyCallableModules = {};
     items = [, , , ];
     items[0] = [];
@@ -37,9 +37,9 @@ let obj = {
   key: "callFunctionReturnFlushedQueue",
   value: function callFunctionReturnFlushedQueue(arg0, arg1, arg2) {
     const self = this;
-    let closure_1 = arg0;
-    let closure_2 = arg1;
-    let closure_0 = arg2;
+    closure_1 = arg0;
+    closure_2 = arg1;
+    closure_0 = arg2;
     this.__guard(() => {
       self.__callFunction(closure_1, closure_2, closure_0);
     });
@@ -52,8 +52,8 @@ let items = [
     key: "invokeCallbackAndReturnFlushedQueue",
     value: function invokeCallbackAndReturnFlushedQueue(arg0, arg1) {
       const self = this;
-      let closure_1 = arg0;
-      let closure_0 = arg1;
+      closure_1 = arg0;
+      closure_0 = arg1;
       this.__guard(() => {
         self.__invokeCallback(closure_1, closure_0);
       });
@@ -86,17 +86,17 @@ let items = [
   {
     key: "registerCallableModule",
     value: function registerCallableModule(ReactFabric, closure_5) {
-      let closure_0 = closure_5;
+      closure_0 = closure_5;
       this._lazyCallableModules[ReactFabric] = () => closure_0;
     }
   },
   {
     key: "registerLazyCallableModule",
     value: function registerLazyCallableModule(ReactFabric, fn) {
-      let closure_1 = fn;
+      closure_1 = fn;
       this._lazyCallableModules[ReactFabric] = () => {
         if (c1) {
-          let closure_0 = tmp();
+          closure_0 = tmp();
           c1 = null;
         }
         return closure_0;
@@ -194,8 +194,8 @@ let items = [
         try {
           arg0();
         } catch (tmp2) {
-          00047__.default.reportFatalError(tmp2);
-          const _default = 00047__.default;
+          _mod47.default.reportFatalError(tmp2);
+          const _default = _mod47.default;
         }
       }
     }
@@ -327,4 +327,4 @@ obj = {
 };
 const items1 = [obj];
 
-export default _createClass(MessageQueue, items, items1);
+export default _createClassDefault(MessageQueue, items, items1);

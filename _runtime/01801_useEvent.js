@@ -1,7 +1,8 @@
 // _runtime/01801_useEvent.js
-import { useRef } from "noop";
-import { importDefaultResult1 } from "01759_importDefaultResult1.js";
+import noop from "noop" /* 19 */;
+import importDefaultResult1 from "importDefaultResult1" /* 1759 */;
 
+const useRef = noop.useRef;
 
 export const useEvent = function useEvent(fn, closure_4, doDependenciesDiffer) {
   let items = closure_4;

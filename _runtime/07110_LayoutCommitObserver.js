@@ -1,15 +1,12 @@
 // _runtime/07110_LayoutCommitObserver.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 7041 */;
+import noop from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let c5;
 const require = arg1;
 ({ useLayoutEffect: c3, useMemo: c4, useRef: c5 } = noop);
-const memoResult = require("noop").memo((children) => {
-  let tmp3;
+const memoResult = noopDefault.memo((children) => {
   const onCommitLayoutEffect = children.onCommitLayoutEffect;
   recyclerViewContext = onCommitLayoutEffect(recyclerViewContext[3]).useRecyclerViewContext();
   const obj = onCommitLayoutEffect(recyclerViewContext[3]);

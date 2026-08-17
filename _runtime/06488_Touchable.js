@@ -1,23 +1,18 @@
 // _runtime/06488_Touchable.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import "noop";
-import { Platform } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 let closure_3 = ["underlayColor", "defaultUnderlayOpacity", "activeUnderlayOpacity", "defaultOpacity", "animationDuration", "androidRipple", "delayLongPress", "onLongPress", "onPress", "onPressIn", "onPressOut", "children", "disabled", "cancelOnLeave", "ref"];
 ({ use: c5, useCallback: closure_6, useRef: error } = noop);
+noopDefault;
 let closure_9 = { rippleColor: "transparent" };
 let closure_10 = { UNKNOWN: 0, [0]: "UNKNOWN", INSIDE: 1, [1]: "INSIDE", OUTSIDE: 2, [2]: "OUTSIDE" };
 
 export const Touchable = (hitSlop) => {
-  let androidRipple;
-  let animationDuration;
-  let delayLongPress;
   const underlayColor = hitSlop.underlayColor;
   let str = "transparent";
   if (undefined !== underlayColor) {
@@ -179,8 +174,8 @@ export const Touchable = (hitSlop) => {
   const callback2 = callback3(false);
   callback3 = callback3(undefined);
   const tmp19 = callback(onLongPress(onPressIn[4]).JSResponderContext);
-  const jsx = tmp19;
-  let closure_9 = callback3(null);
+  closure_8 = tmp19;
+  closure_9 = callback3(null);
   const items = [tmp19];
   const tmp20 = callback2(() => {
     if (closure_9.current == null) {
@@ -192,7 +187,7 @@ export const Touchable = (hitSlop) => {
   const tmp21 = callback2(() => {
     closure_9.current = null;
   }, []);
-  let closure_11 = tmp21;
+  closure_11 = tmp21;
   const items1 = [onLongPress];
   const tmp22 = callback2(() => {
     closure_6.current = true;
@@ -200,7 +195,7 @@ export const Touchable = (hitSlop) => {
       tmp();
     }
   }, items1);
-  let closure_12 = tmp22;
+  closure_12 = tmp22;
   const items2 = [onLongPress, num13, tmp22];
   const tmp23 = callback2(() => {
     closure_6.current = false;
@@ -213,22 +208,22 @@ export const Touchable = (hitSlop) => {
       closure_7.current = setTimeout(closure_12, num13);
     }
   }, items2);
-  let closure_13 = tmp23;
+  closure_13 = tmp23;
   const items3 = [tmp20, tmp23, onPressIn];
   const items4 = [tmp21, onPressOut, onPress];
   const tmp2 = undefined === cancelOnLeave || cancelOnLeave;
   const tmp24 = callback2((pointerInside) => {
-    tmp20();
+    lib();
     if (pointerInside.pointerInside) {
       if (!closure_9.current) {
         if (onPressIn != null) {
           onPressIn(pointerInside);
         }
-        tmp23();
-        closure_5.current = tmp20.INSIDE;
+        callback2();
+        closure_5.current = lib.INSIDE;
       }
     }
-    closure_5.current = tmp20.OUTSIDE;
+    closure_5.current = lib.OUTSIDE;
   }, items3);
   const items5 = [onPressIn, onPressOut];
   const tmp25 = callback2((pointerInside) => {
@@ -245,7 +240,7 @@ export const Touchable = (hitSlop) => {
   const tmp26 = callback2((canceled) => {
     let current = closure_9.current;
     if (!current) {
-      current = ref.current !== tmp20.INSIDE;
+      current = ref.current !== lib.INSIDE;
     }
     if (!current) {
       if (onPressOut != null) {
@@ -264,13 +259,13 @@ export const Touchable = (hitSlop) => {
         tmp8(canceled);
       }
     }
-    ref.current = tmp20.UNKNOWN;
+    ref.current = lib.UNKNOWN;
     if (undefined !== closure_7.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp11.current);
       tmp11.current = undefined;
     }
-    tmp21();
+    callback();
   }, items4);
   let obj2 = onLongPress(onPressIn[5]);
   obj = {
@@ -279,7 +274,7 @@ export const Touchable = (hitSlop) => {
     onFinalize: tmp26,
     onUpdate: callback2((pointerInside) => {
       if (!closure_9.current) {
-        if (ref.current !== tmp20.UNKNOWN) {
+        if (ref.current !== lib.UNKNOWN) {
           const current = tmp.current;
           if (pointerInside.pointerInside) {
             if (current === tmp2.OUTSIDE) {
@@ -319,7 +314,7 @@ export const Touchable = (hitSlop) => {
     if (androidRipple != null) {
       color = androidRipple.color;
     }
-    const obj1 = { rippleColor: null, rippleRadius: null, borderless: null, foreground: null };
+    obj1 = { rippleColor: null, rippleRadius: null, borderless: null, foreground: null };
     obj1[0] = color;
     let radius;
     if (androidRipple != null) {
@@ -342,7 +337,7 @@ export const Touchable = (hitSlop) => {
   }
   const tmp27 = callback2((pointerInside) => {
     if (!closure_9.current) {
-      if (ref.current !== tmp20.UNKNOWN) {
+      if (ref.current !== lib.UNKNOWN) {
         const current = tmp.current;
         if (pointerInside.pointerInside) {
           if (current === tmp2.OUTSIDE) {
@@ -386,6 +381,6 @@ export const Touchable = (hitSlop) => {
   obj3.underlayColor = str;
   obj3.longPressDuration = num13;
   obj3.children = hitSlop.children;
-  obj2[1] = jsx(onPress(onPressIn[8]), {});
-  return jsx(onLongPress(onPressIn[7]).NativeDetector, { gesture: nativeGesture, children: null });
+  obj2[1] = closure_8(onPress(onPressIn[8]), obj3);
+  return closure_8(onLongPress(onPressIn[7]).NativeDetector, obj2);
 };

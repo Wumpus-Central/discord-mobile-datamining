@@ -1,18 +1,15 @@
 // _runtime/06678__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult1 from "_createClass";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult2 from "_inherits";
-import _slicedToArray from "_slicedToArray";
-import "noop";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
+import noopAll from "noop" /* 19 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import importDefaultResult1 from "_createClass" /* 42 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult2 from "_inherits" /* 98 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Component;
-let closure_6;
-let error;
-let metroImportAll;
 let SvgFromUri = arg1;
 let closure_1 = dependencyMap;
 function _isNativeReflectConstruct() {
@@ -26,10 +23,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -42,7 +39,7 @@ class SvgAst {
     ({ ast, override } = global);
     if (ast) {
       tmp2 = SvgFromUri;
-      tmp3 = f78350;
+      tmp3 = closure_1;
       ({ props, children } = ast);
       tmp4 = jsx;
       obj = {};
@@ -62,7 +59,7 @@ class SvgAst {
 class SvgXml {
   constructor(arg0) {
     if (undefined === global.onError) {
-      tmp4 = console;
+      tmp4 = closure_13;
     }
     xml = global.xml;
     ({ override, fallback } = global);
@@ -74,7 +71,7 @@ class SvgXml {
       obj[0] = useMemo(() => {
         let tmp2 = null;
         if (null !== xml) {
-          tmp2 = outer1_24(tmp);
+          tmp2 = closure_1_24(tmp);
         }
         return tmp2;
       }, items);
@@ -99,8 +96,6 @@ class SvgXml {
   }
 }
 function astToReact(obj) {
-  let children;
-  let props;
   if (typeof obj === "object") {
     ({ props, children } = obj);
     let _class;
@@ -121,7 +116,7 @@ function astToReact(obj) {
 }
 function _parse(closure_0) {
   let sum;
-  function error(arg0) {
+  error = function error(arg0) {
     let tmp11;
     const parts = lib.split("\n");
     let num = 0;
@@ -141,7 +136,7 @@ function _parse(closure_0) {
         }
       }
     }
-    const match = /(^|\n).*$/.exec(lib.slice(0, c12).replace(/^\t+/, outer1_19));
+    const match = /(^|\n).*$/.exec(lib.slice(0, c12).replace(/^\t+/, closure_1_19));
     let str2 = match;
     if (match) {
       str2 = match[0];
@@ -165,9 +160,9 @@ function _parse(closure_0) {
         str4 = str3;
       } while (tmp11);
     }
-    const error = new Error("" + arg0 + " (" + num2 + ":" + tmp3 + "). If this is valid SVG, it's probably a bug. Please raise an issue\n\n" + "" + str2 + first + "\n" + str4 + "^");
+    error = new Error("" + arg0 + " (" + num2 + ":" + tmp3 + "). If this is valid SVG, it's probably a bug. Please raise an issue\n\n" + "" + str2 + first + "\n" + str4 + "^");
     throw error;
-  }
+  };
   function neutral() {
     let str = "";
     if (c12 < length) {
@@ -194,8 +189,6 @@ function _parse(closure_0) {
     return "<" === lib[c12] ? openingTag : neutral;
   }
   function openingTag() {
-    let str16;
-    let str17;
     let arr = lib;
     let sum = lib[closure_12];
     if ("?" === sum) {
@@ -232,14 +225,14 @@ function _parse(closure_0) {
           let tmp4 = arr[closure_12];
           tmp5 = sum;
           str3 = "";
-          if (outer1_20.test(tmp4)) {
+          if (closure_1_20.test(tmp4)) {
             const text = `${tmp4}`;
             const sum1 = closure_12 + 1;
             closure_12 = sum1;
             tmp5 = length;
             str3 = text;
             while (sum1 < length) {
-              let tmp10 = outer1_20;
+              let tmp10 = closure_1_20;
               let tmp11 = lib;
               let tmp12 = closure_12;
               let tmp13 = lib[closure_12];
@@ -247,7 +240,7 @@ function _parse(closure_0) {
               tmp4 = tmp13;
               tmp5 = tmp9;
               str3 = text;
-              if (!outer1_20.test(tmp13)) {
+              if (!closure_1_20.test(tmp13)) {
                 break;
               }
             }
@@ -259,12 +252,12 @@ function _parse(closure_0) {
         obj[1] = obj;
         obj[2] = [];
         obj[3] = obj;
-        obj[4] = lib(outer1_1[9]).tags[str3] || closingTag;
+        obj[4] = lib(closure_1_1[9]).tags[str3] || closingTag;
         if (obj) {
           arr = children.push(obj);
         }
         if (closure_12 < tmp5) {
-          while (outer1_22.test(lib[closure_12])) {
+          while (closure_1_22.test(lib[closure_12])) {
             let tmp25 = closure_12;
             let tmp27 = length;
             if (closure_12 < length) {
@@ -276,11 +269,11 @@ function _parse(closure_0) {
                 closure_12 = sum2;
                 tmp27 = length;
                 while (sum2 < length) {
-                  let tmp32 = outer1_22;
+                  let tmp32 = closure_1_22;
                   let tmp33 = lib;
                   let tmp34 = closure_12;
                   tmp27 = tmp31;
-                  if (!outer1_22.test(lib[closure_12])) {
+                  if (!closure_1_22.test(lib[closure_12])) {
                     break;
                   }
                 }
@@ -290,14 +283,14 @@ function _parse(closure_0) {
             let tmp36 = tmp27;
             let str9 = "";
             if (closure_12 < tmp27) {
-              let tmp37 = outer1_20;
+              let tmp37 = closure_1_20;
               let tmp38 = lib;
               let tmp39 = closure_12;
               let tmp40 = lib[closure_12];
               let str10 = "";
               tmp36 = tmp27;
               str9 = "";
-              if (outer1_20.test(tmp40)) {
+              if (closure_1_20.test(tmp40)) {
                 let text1 = `${tmp40}`;
                 let tmp42 = closure_12;
                 let sum3 = closure_12 + 1;
@@ -305,7 +298,7 @@ function _parse(closure_0) {
                 tmp36 = length;
                 str9 = text1;
                 while (sum3 < length) {
-                  let tmp45 = outer1_20;
+                  let tmp45 = closure_1_20;
                   let tmp46 = lib;
                   let tmp47 = closure_12;
                   let tmp48 = lib[closure_12];
@@ -313,7 +306,7 @@ function _parse(closure_0) {
                   tmp40 = tmp48;
                   tmp36 = tmp44;
                   str9 = text1;
-                  if (!outer1_20.test(tmp48)) {
+                  if (!closure_1_20.test(tmp48)) {
                     break;
                   }
                 }
@@ -325,21 +318,21 @@ function _parse(closure_0) {
               let tmp49 = closure_12;
               let tmp50 = tmp36;
               if (closure_12 < tmp36) {
-                let tmp51 = outer1_22;
+                let tmp51 = closure_1_22;
                 let tmp52 = lib;
                 let tmp53 = closure_12;
                 tmp50 = tmp36;
-                if (outer1_22.test(lib[closure_12])) {
+                if (closure_1_22.test(lib[closure_12])) {
                   let tmp54 = closure_12;
                   let sum4 = closure_12 + 1;
                   closure_12 = sum4;
                   tmp50 = length;
                   while (sum4 < length) {
-                    let tmp57 = outer1_22;
+                    let tmp57 = closure_1_22;
                     let tmp58 = lib;
                     let tmp59 = closure_12;
                     tmp50 = tmp56;
-                    if (!outer1_22.test(lib[closure_12])) {
+                    if (!closure_1_22.test(lib[closure_12])) {
                       break;
                     }
                   }
@@ -353,30 +346,30 @@ function _parse(closure_0) {
                 closure_12 = sum;
                 let tmp64 = tmp50;
                 if (sum < tmp50) {
-                  let tmp62 = outer1_22;
+                  let tmp62 = closure_1_22;
                   let tmp63 = closure_12;
                   tmp64 = tmp50;
-                  if (outer1_22.test(tmp60[closure_12])) {
+                  if (closure_1_22.test(tmp60[closure_12])) {
                     let tmp65 = closure_12;
                     let sum5 = closure_12 + 1;
                     closure_12 = sum5;
                     tmp64 = length;
                     while (sum5 < length) {
-                      let tmp68 = outer1_22;
+                      let tmp68 = closure_1_22;
                       let tmp69 = lib;
                       let tmp70 = closure_12;
                       tmp64 = tmp67;
-                      if (!outer1_22.test(lib[closure_12])) {
+                      if (!closure_1_22.test(lib[closure_12])) {
                         break;
                       }
                     }
                   }
                 }
-                let tmp71 = outer1_23;
+                let tmp71 = closure_1_23;
                 let tmp73 = closure_12;
                 let tmp72 = lib;
                 let str11 = "";
-                if (outer1_23.test(lib[closure_12])) {
+                if (closure_1_23.test(lib[closure_12])) {
                   let tmp81 = closure_12;
                   let tmp82 = +closure_12;
                   closure_12 = tmp82 + 1;
@@ -453,13 +446,13 @@ function _parse(closure_0) {
                 }
                 flag = tmp96;
               }
-              let tmp97 = outer1_17;
-              if (typeof outer1_17 !== "function") {
+              let tmp97 = closure_1_17;
+              if (typeof closure_1_17 !== "function") {
                 let str24 = "Trying to call a non-function";
                 sum = HermesBuiltin.throwTypeError();
               }
-              let tmp98 = outer1_16;
-              obj[str9.replace(/[:-]([a-z])/g, outer1_16)] = flag;
+              let tmp98 = closure_1_16;
+              obj[str9.replace(/[:-]([a-z])/g, closure_1_16)] = flag;
               let tmp99 = closure_12;
               sum = length;
               if (closure_12 >= length) {
@@ -467,7 +460,7 @@ function _parse(closure_0) {
               }
             }
           }
-          obj3 = outer1_22;
+          obj3 = closure_1_22;
           tmp23 = lib;
         }
         if (typeof obj.style === "string") {
@@ -481,14 +474,14 @@ function _parse(closure_0) {
             if (0 !== arr2.length) {
               sum = arr2.split(":");
               [str16, str17] = sum;
-              sum = outer1_17;
+              sum = closure_1_17;
               let str18 = str16.trim();
-              if (typeof outer1_17 !== "function") {
+              if (typeof closure_1_17 !== "function") {
                 let str27 = "Trying to call a non-function";
                 sum = HermesBuiltin.throwTypeError();
               }
-              sum = outer1_16;
-              sum = str18.replace(/[:-]([a-z])/g, outer1_16);
+              sum = closure_1_16;
+              sum = str18.replace(/[:-]([a-z])/g, closure_1_16);
               obj[sum] = str17.trim();
             }
           }
@@ -514,7 +507,7 @@ function _parse(closure_0) {
           sum = neutral;
           return neutral;
         }
-        const tmp17 = lib(outer1_1[9]).tags[str3] || closingTag;
+        const tmp17 = lib(closure_1_1[9]).tags[str3] || closingTag;
       }
       sum = closingTag;
       return closingTag;
@@ -545,14 +538,14 @@ function _parse(closure_0) {
       let tmp6 = lib[sum1];
       tmp2 = tmp;
       str = "";
-      if (outer1_20.test(tmp6)) {
+      if (closure_1_20.test(tmp6)) {
         const text = `${tmp6}`;
         const sum = sum1 + 1;
         sum1 = sum;
         tmp2 = length;
         str = text;
         while (sum < length) {
-          let tmp11 = outer1_20;
+          let tmp11 = closure_1_20;
           let tmp12 = lib;
           let tmp13 = sum1;
           let tmp14 = lib[sum1];
@@ -560,7 +553,7 @@ function _parse(closure_0) {
           tmp6 = tmp14;
           tmp2 = tmp10;
           str = text;
-          if (!outer1_20.test(tmp14)) {
+          if (!closure_1_20.test(tmp14)) {
             break;
           }
         }
@@ -575,13 +568,13 @@ function _parse(closure_0) {
     }
     if (!tmp17) {
       if (sum1 < tmp2) {
-        if (outer1_22.test(lib[sum1])) {
+        if (closure_1_22.test(lib[sum1])) {
           sum1 = sum1 + 1;
           while (sum1 < length) {
-            let tmp25 = outer1_22;
+            let tmp25 = closure_1_22;
             let tmp26 = lib;
             let tmp27 = sum1;
-            if (!outer1_22.test(lib[sum1])) {
+            if (!closure_1_22.test(lib[sum1])) {
               break;
             }
           }
@@ -601,7 +594,7 @@ function _parse(closure_0) {
     error("Expected closing tag </" + str + "> to match opening tag <" + _null.tag + ">");
   }
   const length = closure_0.length;
-  let c3 = null;
+  c3 = null;
   function metadata(arg0, arg1) {
     let tmp2 = length;
     if (sum1 + 1 < length) {
@@ -615,17 +608,17 @@ function _parse(closure_0) {
           if ("<" !== lib[sum1]) {
             continue;
           } else {
-            let tmp11 = outer1_20;
+            let tmp11 = closure_1_20;
             let tmp12 = sum1;
             tmp2 = tmp9;
-            if (outer1_20.test(arr[sum1 + 1])) {
+            if (closure_1_20.test(arr[sum1 + 1])) {
               break;
             } else {
-              let tmp13 = outer1_21;
+              let tmp13 = closure_1_21;
               let tmp14 = sum1;
               let num2 = 4;
               tmp2 = tmp9;
-              if (outer1_21.test(arr.slice(sum1, sum1 + 4))) {
+              if (closure_1_21.test(arr.slice(sum1, sum1 + 4))) {
                 break;
               }
             }
@@ -634,7 +627,7 @@ function _parse(closure_0) {
         }
       } else {
         tmp2 = tmp;
-        if (!outer1_20.test(arr2[sum1 + 1])) {
+        if (!closure_1_20.test(arr2[sum1 + 1])) {
           tmp2 = tmp;
         }
       }
@@ -662,9 +655,9 @@ function _parse(closure_0) {
     }
     return "<" === lib[sum1] ? openingTag : neutral;
   }
-  let c4 = null;
-  let _slicedToArray = [];
-  let c12 = 0;
+  c4 = null;
+  closure_5 = [];
+  c12 = 0;
   let tmp = metadata;
   if (0 < length) {
     do {
@@ -697,18 +690,19 @@ function _parse(closure_0) {
     return null;
   }
 }
-({ Component, useEffect: closure_6, useMemo: error, useState: metroImportAll } = noop);
+noopAll;
+({ Component, useEffect: closure_6, useMemo: error, useState: closure_8 } = noop);
 error = console.error;
 let closure_13 = error.bind(console);
 class SvgFromXml {
   constructor() {
     self = this;
     items = [...arguments];
-    tmp = outer1_2(this, SvgFromUri);
+    tmp = closure_2(this, SvgFromUri);
     items1 = [...items];
-    tmp2 = outer1_4;
-    obj = outer1_4(SvgFromUri);
-    tmp3 = outer1_3;
+    tmp2 = closure_4;
+    obj = closure_4(SvgFromUri);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -782,11 +776,11 @@ class SvgFromUri {
   constructor() {
     self = this;
     items = [...arguments];
-    tmp = outer1_2(this, SvgFromUri);
+    tmp = closure_2(this, SvgFromUri);
     items1 = [...items];
-    tmp2 = outer1_4;
-    obj = outer1_4(SvgFromUri);
-    tmp3 = outer1_3;
+    tmp2 = closure_4;
+    obj = closure_4(SvgFromUri);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -822,12 +816,12 @@ let items1 = [
 
 ];
 obj = { key: "fetch", value: null };
-closure_1 = require("_inherits")(function(arg0) {
+closure_1 = asyncGeneratorStepDefault(function(arg0) {
   const self = this;
-  let closure_1 = arg0;
-  let c8 = 0;
-  let c9 = 0;
-  let c6 = 0;
+  closure_1 = arg0;
+  c8 = 0;
+  c9 = 0;
+  c6 = 0;
   return (function*(arg0) {
     if (c9 === 2) {
       c9 = 3;
@@ -855,22 +849,22 @@ closure_1 = require("_inherits")(function(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            let _slicedToArray = _self;
-            let _getPrototypeOf = tmp11;
-            let c6 = 1;
+            closure_5 = _self;
+            closure_4 = tmp11;
+            c6 = 1;
             const setState = _self.setState;
-            let _classCallCheck = {};
+            closure_2 = {};
             let tmp7 = null;
             if (table) {
-              let obj1 = self(table[10]);
+              obj1 = self(table[10]);
               c8 = 2;
               c9 = 1;
               obj1 = { value: null, done: false };
               obj1[0] = obj1.fetchText(tmp29);
               return obj1;
             } else {
-              _classCallCheck.xml = tmp7;
-              setState(_classCallCheck);
+              closure_2.xml = tmp7;
+              setState(closure_2);
               c6 = 0;
               tmp11 = setState;
             }
@@ -961,7 +955,7 @@ export const SvgUri = function SvgUri(onError) {
   const onLoad = onError.onLoad;
   let fallback = onError.fallback;
   const tmp2 = callback3(callback6(null), 2);
-  let _possibleConstructorReturn = tmp2[1];
+  closure_3 = tmp2[1];
   const tmp3 = callback3(callback6(false), 2);
   const first = tmp3[0];
   callback3 = tmp3[1];
@@ -972,7 +966,7 @@ export const SvgUri = function SvgUri(onError) {
       const obj = onError(uri[10]);
       text.then((arg0) => {
         callback3(arg0);
-        if (_getPrototypeOf) {
+        if (closure_4) {
           callback4(false);
         }
         if (callback2 != null) {
@@ -984,7 +978,7 @@ export const SvgUri = function SvgUri(onError) {
       });
       const nextPromise = text.then((arg0) => {
         callback3(arg0);
-        if (_getPrototypeOf) {
+        if (closure_4) {
           callback4(false);
         }
         if (callback2 != null) {
@@ -1013,7 +1007,6 @@ export const SvgFromXml = importDefaultResult1Result;
 export const SvgFromUri = importDefaultResult1(SvgFromUri, items1);
 export { camelCase };
 export const getStyle = function getStyle(str) {
-  let str2;
   const obj = {};
   const parts = str.split(";");
   const found = parts.filter((str) => str.trim());

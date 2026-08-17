@@ -1,13 +1,13 @@
 // _runtime/metro/03472__typeof.js
-import requiredArgs from "requiredArgs";
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -33,10 +33,10 @@ if (!requiredArgs) {
 } else {
   tmp3 = requiredArgs;
 }
-let c0 = tmp3;
+requiredArgs = tmp3;
 
 export default function toDate(num) {
-  tmp3.default(1, arguments);
+  requiredArgs.default(1, arguments);
   const call = toString.call;
   const tmp2 = typeof call === "unknown" ? toString() : call(num);
   if (!(num instanceof Date)) {
@@ -58,7 +58,7 @@ export default function toDate(num) {
           console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments");
           const _console3 = console;
           const _Error = Error;
-          const error = new Error();
+          error = new Error();
           console.warn(error.stack);
         }
         const _Date = Date;
@@ -67,7 +67,6 @@ export default function toDate(num) {
     }
     const _Date2 = Date;
     date = new Date(num);
-    tmp3 = _typeof;
   }
   date = new Date(num.getTime());
 };

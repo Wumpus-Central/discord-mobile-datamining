@@ -1,11 +1,11 @@
 // _runtime/16632_PriorityQueue.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const PriorityQueue = require;
 class PriorityQueue {
   constructor() {
-    tmp = outer1_2(this, PriorityQueue);
+    tmp = closure_2(this, PriorityQueue);
     this._queue = [];
     return;
   }
@@ -44,7 +44,7 @@ const items = [
   {
     key: "filter",
     value: function filter(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const _queue = this._queue;
       const found = _queue.filter((priority) => priority.priority === priority.priority);
       return found.map((run) => run.run);

@@ -1,6 +1,7 @@
 // _runtime/00320_horizontalOrDefault.js
-import "noop";
+import noopAll from "noop" /* 19 */;
 
+noopAll;
 
 export const horizontalOrDefault = function horizontalOrDefault(horizontal) {
   let flag = horizontal;

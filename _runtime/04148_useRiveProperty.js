@@ -1,18 +1,14 @@
 // _runtime/04148_useRiveProperty.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { useDisposableMemo } from "04149_useDisposableMemo.js";
 
-let c3;
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
 ({ useCallback: c3, useEffect: c4, useRef: c5, useState: closure_6 } = noop);
 
 export const useRiveProperty = function useRiveProperty(instance, FillColor, f29193) {
   const _require = instance;
-  const dependencyMap = FillColor;
+  dependencyMap = FillColor;
   const callback = f29193;
   let tmp = first(undefined);
   const callback2 = tmp;
@@ -32,7 +28,7 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f29
   first = tmp3[0];
   callback3 = tmp3[1];
   const tmp5 = callback(callback3(null), 2);
-  let closure_7 = tmp5[1];
+  closure_7 = tmp5[1];
   const items1 = [FillColor, instance];
   disposableMemo(() => {
     callback3(null);
@@ -46,7 +42,7 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f29
     if (tmp) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const error = new Error("Property \"" + closure_1 + "\" not found in the ViewModel instance");
+      error = new Error("Property \"" + closure_1 + "\" not found in the ViewModel instance");
       callback3(error);
     }
   }, items2);
@@ -54,7 +50,7 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f29
   disposableMemo(() => {
     if (disposableMemo) {
       callback2(iter.value);
-      let closure_0 = iter.addListener((arg0) => {
+      closure_0 = iter.addListener((arg0) => {
         callback2(arg0);
       });
       return () => {
@@ -69,14 +65,13 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f29
   const items5 = [
     first,
     callback2((fn) => {
-      const current = tmp.current;
+      const current = ref.current;
       if (current) {
         let tmp2 = fn;
         if (typeof fn === "function") {
           tmp2 = fn(first);
         }
         current.value = tmp2;
-        tmp = fn;
       }
     }, items4),
     tmp5[0],

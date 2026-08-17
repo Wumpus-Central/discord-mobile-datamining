@@ -1,5 +1,6 @@
 // _runtime/04412_getPolyfill.js
-import { trim } from "04413_trim.js";
+import trim6 from "trim" /* 4413 */;
+
 
 export default function getPolyfill() {
   if (String.prototype.trim) {
@@ -18,5 +19,5 @@ export default function getPolyfill() {
       }
     }
   }
-  trim5 = trim;
+  trim5 = trim6;
 };

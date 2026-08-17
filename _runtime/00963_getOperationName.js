@@ -1,32 +1,31 @@
 // _runtime/00963_getOperationName.js
-import { items } from "00964_items.js";
-import { 00958__ } from "metro/00958__.js";
-const require = arg1;
+import _mod958 from "module_958" /* 958 */;
+import items2 from "items" /* 964 */;
+
+require = arg1;
 const dependencyMap = arg6;
-function getOperationName(outer1_1) {
-  if (outer1_1.includes("chat.completions")) {
-    let CONVERSATIONS = 00958__.OPENAI_OPERATIONS.CHAT;
-  } else if (outer1_1.includes("responses")) {
-    CONVERSATIONS = 00958__.OPENAI_OPERATIONS.RESPONSES;
-  } else if (outer1_1.includes("embeddings")) {
-    CONVERSATIONS = 00958__.OPENAI_OPERATIONS.EMBEDDINGS;
-  } else if (outer1_1.includes("conversations")) {
-    CONVERSATIONS = 00958__.OPENAI_OPERATIONS.CONVERSATIONS;
+function getOperationName(closure_1_1) {
+  if (closure_1_1.includes("chat.completions")) {
+    let CONVERSATIONS = _mod958.OPENAI_OPERATIONS.CHAT;
+  } else if (closure_1_1.includes("responses")) {
+    CONVERSATIONS = _mod958.OPENAI_OPERATIONS.RESPONSES;
+  } else if (closure_1_1.includes("embeddings")) {
+    CONVERSATIONS = _mod958.OPENAI_OPERATIONS.EMBEDDINGS;
+  } else if (closure_1_1.includes("conversations")) {
+    CONVERSATIONS = _mod958.OPENAI_OPERATIONS.CONVERSATIONS;
   } else {
-    const parts = outer1_1.split(".");
+    const parts = closure_1_1.split(".");
     CONVERSATIONS = parts.pop() || "unknown";
   }
   return CONVERSATIONS;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addChatCompletionAttributes = function addChatCompletionAttributes(setAttributes, created, recordOutputs) {
-  let id;
-  let model;
   ({ id, model } = created);
   setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_0(closure_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id });
   setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model, [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model });
   let obj = {};
-  obj[00958__.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created.created).toISOString();
+  obj[_mod958.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created.created).toISOString();
   setAttributes.setAttributes(obj);
   if (created.usage) {
     const prompt_tokens = created.usage.prompt_tokens;
@@ -45,7 +44,7 @@ arg5.addChatCompletionAttributes = function addChatCompletionAttributes(setAttri
       setAttributes.setAttributes(obj);
     }
     if (undefined !== total_tokens) {
-      const obj1 = {};
+      obj1 = {};
       obj1[tmp(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = total_tokens;
       setAttributes.setAttributes(obj1);
     }
@@ -88,15 +87,13 @@ arg5.addChatCompletionAttributes = function addChatCompletionAttributes(setAttri
   }
 };
 arg5.addConversationAttributes = function addConversationAttributes(setAttributes, closure_1) {
-  let created_at;
-  let id;
   ({ id, created_at } = closure_1);
   setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_0(closure_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id, [closure_0(closure_1[0]).GEN_AI_CONVERSATION_ID_ATTRIBUTE]: id });
   if (created_at) {
     const obj = {};
     const _Date = Date;
     const date = new Date(1000 * created_at);
-    obj[00958__.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date.toISOString();
+    obj[_mod958.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date.toISOString();
     setAttributes.setAttributes(obj);
   }
 };
@@ -120,13 +117,11 @@ arg5.addEmbeddingsAttributes = function addEmbeddingsAttributes(setAttributes, m
   }
 };
 arg5.addResponsesApiAttributes = function addResponsesApiAttributes(setAttributes, created_at, recordOutputs) {
-  let id;
-  let model;
   ({ id, model } = created_at);
   setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_0(closure_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id });
   setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model, [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model });
   let obj = {};
-  obj[00958__.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created_at.created_at).toISOString();
+  obj[_mod958.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created_at.created_at).toISOString();
   setAttributes.setAttributes(obj);
   if (created_at.status) {
     obj = {};
@@ -146,7 +141,7 @@ arg5.addResponsesApiAttributes = function addResponsesApiAttributes(setAttribute
       setAttributes.setAttributes(obj);
     }
     if (undefined !== output_tokens) {
-      const obj1 = {};
+      obj1 = {};
       obj1[tmp(958).OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = output_tokens;
       obj1[tmp(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = output_tokens;
       setAttributes.setAttributes(obj1);
@@ -196,7 +191,7 @@ arg5.extractRequestParameters = function extractRequestParameters(first) {
     str = "unknown";
   }
   const obj = {};
-  obj[00958__.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str;
+  obj[_mod958.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str;
   if ("temperature" in first) {
     obj[tmp(958).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = first.temperature;
   }
@@ -234,8 +229,8 @@ arg5.extractRequestParameters = function extractRequestParameters(first) {
   }
 };
 arg5.getOperationName = getOperationName;
-arg5.getSpanOperation = function getSpanOperation(outer1_1) {
-  return "gen_ai." + getOperationName(outer1_1);
+arg5.getSpanOperation = function getSpanOperation(closure_1_1) {
+  return "gen_ai." + getOperationName(closure_1_1);
 };
 arg5.isChatCompletionChunk = function isChatCompletionChunk(obj) {
   let tmp = null !== obj && typeof obj === "object";
@@ -313,29 +308,29 @@ arg5.setCommonResponseAttributes = function setCommonResponseAttributes(closure_
   obj = { [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: responseModel, [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: responseModel };
   closure_0.setAttributes(obj);
   obj = {};
-  obj[00958__.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * responseTimestamp).toISOString();
+  obj[_mod958.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * responseTimestamp).toISOString();
   closure_0.setAttributes(obj);
 };
 arg5.setTokenUsageAttributes = function setTokenUsageAttributes(setAttributes) {
   if (undefined !== arg1) {
     let obj = {};
-    obj[00958__.OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = arg1;
-    obj[00958__.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = arg1;
+    obj[_mod958.OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = arg1;
+    obj[_mod958.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = arg1;
     setAttributes.setAttributes(obj);
   }
   if (undefined !== arg2) {
     obj = {};
-    obj[00958__.OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = arg2;
-    obj[00958__.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = arg2;
+    obj[_mod958.OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = arg2;
+    obj[_mod958.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = arg2;
     setAttributes.setAttributes(obj);
   }
   if (undefined !== arg3) {
     obj = {};
-    obj[00958__.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = arg3;
+    obj[_mod958.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = arg3;
     setAttributes.setAttributes(obj);
   }
 };
 arg5.shouldInstrument = function shouldInstrument(arg0) {
-  const INSTRUMENTED_METHODS = items.INSTRUMENTED_METHODS;
+  const INSTRUMENTED_METHODS = items2.INSTRUMENTED_METHODS;
   return INSTRUMENTED_METHODS.includes(arg0);
 };

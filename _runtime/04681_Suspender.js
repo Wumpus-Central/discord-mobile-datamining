@@ -1,11 +1,8 @@
 // _runtime/04681_Suspender.js
-import noop from "noop";
-import closure_3 from "noop";
-import { jsx } from "jsxProd";
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 
-let c0;
-let closure_1;
-let obj1;
 function Suspender(children) {
   const freeze = children.freeze;
   let ref1;
@@ -34,10 +31,9 @@ function Suspender(children) {
   return <closure_1>{arg0.children}</closure_1>;
 }
 ({ Suspense: c0, Fragment: closure_1, use: obj1 } = noop);
+const jsx = jsxProd.jsx;
 
 export const Freeze = function Freeze(placeholder) {
-  let children;
-  let freeze;
   placeholder = placeholder.placeholder;
   ({ freeze, children } = placeholder);
   if (placeholder === undefined) {

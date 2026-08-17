@@ -1,6 +1,7 @@
 // _runtime/01119_getDebugMetadata.js
-import { DEFAULT_BUNDLE_NAME } from "01120_DEFAULT_BUNDLE_NAME.js";
-const require = arg1;
+import DEFAULT_BUNDLE_NAME from "DEFAULT_BUNDLE_NAME" /* 1120 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.getDebugMetadata = function getDebugMetadata() {
   if (DEFAULT_BUNDLE_NAME.DEFAULT_BUNDLE_NAME) {

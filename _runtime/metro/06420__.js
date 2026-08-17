@@ -1,10 +1,14 @@
 // _runtime/metro/06420__.js
-import { tagMessage } from "../06382_tagMessage.js";
-import { n } from "../06421_n.js";
+import cancelAnimation from "cancelAnimation" /* 1654 */;
+import _mod4114 from "module_4114" /* 4114 */;
+import tagMessage from "tagMessage" /* 6382 */;
+import _mod6409 from "module_6409" /* 6409 */;
+import n from "n" /* 6421 */;
+
 try {
-  const _module = require("cancelAnimation");
+  const _module = cancelAnimation;
   try {
-    const _module1 = require("module_4114");
+    const _module1 = _mod4114;
     if (_module1 != null) {
       const fn = function t() {
 
@@ -14,7 +18,7 @@ try {
       fn.__initData = { code: "function pnpm_reanimatedWrapperTs1(){}" };
       _module1.scheduleOnUI(fn);
     }
-    const _module2 = require("module_6409");
+    const _module2 = _mod6409;
     _module2.ghQueueMicrotask(() => {
       const NativeProxy = n.NativeProxy;
       if (!NativeProxy.installUIRuntimeBindings()) {
@@ -37,7 +41,7 @@ try {
       };
       let obj = { tagMessage: null };
       obj = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
-      obj[0] = require("tagMessage").tagMessage;
+      obj[0] = tagMessage.tagMessage;
       fn2.__closure = obj;
       fn2.__workletHash = 3596069664305;
       fn2.__initData = obj;

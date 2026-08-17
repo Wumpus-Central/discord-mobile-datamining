@@ -1,10 +1,12 @@
 // _runtime/metro/13700__.js
-import { all } from "../13699_all.js";
-import { all } from "../13701_all.js";
-import { call } from "../13702_call.js";
+import prop from "prop" /* 13691 */;
+import all from "all" /* 13699 */;
+import all2 from "all" /* 13701 */;
+import call from "call" /* 13702 */;
 
-export default require("prop") ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
-  const tmp3 = all("Symbol");
+
+export default prop ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
+  const tmp3 = all2("Symbol");
   let tmpResultResult = all(tmp3);
   if (tmpResultResult) {
     tmpResultResult = call(tmp3.prototype, Object(arg0));

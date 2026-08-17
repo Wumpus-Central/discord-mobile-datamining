@@ -1,15 +1,13 @@
 // _runtime/06989_useReactiveSharedValue.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 import { cancelAnimation } from "01654_cancelAnimation.js";
 
-let c3;
-let obj1;
 ({ useEffect: obj1, useRef: c3 } = noop);
 
 export const useReactiveSharedValue = (obj) => {
   const tmp = callback2(null);
   const tmp2 = callback2(null);
-  const require = tmp2;
+  const _require = tmp2;
   let tmp3 = obj;
   if (obj) {
     tmp3 = typeof obj === "object";
@@ -21,13 +19,13 @@ export const useReactiveSharedValue = (obj) => {
     if (null === tmp2.current) {
       tmp.current = obj;
       if (typeof obj === "object") {
-        obj = cancelAnimation;
+        obj = _cancelAnimation;
         obj = {};
         const merged = Object.assign(obj);
         let mutable = obj.makeMutable(obj);
       } else {
-        mutable = cancelAnimation.makeMutable(obj);
-        const obj3 = cancelAnimation;
+        mutable = _cancelAnimation.makeMutable(obj);
+        const obj3 = _cancelAnimation;
       }
       tmp2.current = mutable;
     } else if (tmp.current !== obj) {
@@ -36,8 +34,8 @@ export const useReactiveSharedValue = (obj) => {
   }
   callback(() => () => {
     if (ref.current) {
-      outer1_0(outer1_1[1]).cancelAnimation(tmp.current);
-      const obj = outer1_0(outer1_1[1]);
+      closure_1_0(closure_1_1[1]).cancelAnimation(tmp.current);
+      const obj = closure_1_0(closure_1_1[1]);
     }
   }, []);
   let current = tmp2.current;

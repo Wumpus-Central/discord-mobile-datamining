@@ -1,6 +1,7 @@
 // _runtime/07078_areDimensionsNotEqual.js
-import { PixelRatio } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const PixelRatio = get_ActivityIndicator.PixelRatio;
 
 export const areDimensionsNotEqual = function areDimensionsNotEqual(height, height2) {
   const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(height);

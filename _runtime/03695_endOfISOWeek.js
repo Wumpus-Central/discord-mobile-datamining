@@ -1,6 +1,6 @@
 // _runtime/03695_endOfISOWeek.js
-import endOfWeek from "endOfWeek";
-import requiredArgs from "requiredArgs";
+import endOfWeek from "endOfWeek" /* 3696 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!endOfWeek) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!endOfWeek) {
 } else {
   tmp3 = endOfWeek;
 }
-let c0 = tmp3;
+endOfWeek = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,10 +17,10 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function endOfISOWeek(arg0) {
-  tmp5.default(1, arguments);
-  return tmp3.default(arg0, { weekStartsOn: 1 });
+  requiredArgs.default(1, arguments);
+  return endOfWeek.default(arg0, { weekStartsOn: 1 });
 };
 export default exports.default;

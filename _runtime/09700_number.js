@@ -1,13 +1,13 @@
 // _runtime/09700_number.js
 function number(NumberResult) {
-  const error = new Error("positive integer expected, not " + NumberResult);
+  error = new Error("positive integer expected, not " + NumberResult);
   throw error;
 }
 function bool(flag) {
   if (typeof flag !== "boolean") {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("boolean expected, not " + flag);
+    error = new Error("boolean expected, not " + flag);
     throw error;
   }
 }
@@ -26,7 +26,7 @@ function bytes(obj) {
       if (!substr.includes(obj.length)) {
         const _Error2 = Error;
         const _HermesInternal = HermesInternal;
-        const error = new Error("Uint8Array expected of length " + substr + ", not of length=" + obj.length);
+        error = new Error("Uint8Array expected of length " + substr + ", not of length=" + obj.length);
         throw error;
       }
     }
@@ -47,7 +47,7 @@ function hash(fn) {
           const _Number = Number;
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          const error = new Error("positive integer expected, not " + blockLen);
+          error = new Error("positive integer expected, not " + blockLen);
           throw error;
         }
       }
@@ -67,7 +67,7 @@ function exists(destroyed) {
   }
   if (destroyed.destroyed) {
     const _Error2 = Error;
-    const error = new Error("Hash instance has been destroyed");
+    error = new Error("Hash instance has been destroyed");
     throw error;
   } else if (flag) {
     if (destroyed.finished) {
@@ -83,7 +83,7 @@ function output(content, state) {
   if (content.length < outputLen) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("digestInto() expects output buffer of length at least " + outputLen);
+    error = new Error("digestInto() expects output buffer of length at least " + outputLen);
     throw error;
   }
 }

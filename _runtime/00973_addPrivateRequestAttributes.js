@@ -1,8 +1,8 @@
 // _runtime/00973_addPrivateRequestAttributes.js
-import asyncGeneratorStep from "contentUnionToMessages";
-import { truncateTextByBytes } from "00961_truncateTextByBytes.js";
-import { contentUnionToMessages } from "00975_contentUnionToMessages.js";
-import { 00958__ } from "metro/00958__.js";
+import _mod958 from "module_958" /* 958 */;
+import truncateTextByBytes from "truncateTextByBytes" /* 961 */;
+import contentUnionToMessages from "contentUnionToMessages" /* 975 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function addPrivateRequestAttributes(setAttributes, config) {
   let systemInstruction = "config" in config && config.config && typeof config.config === "object";
@@ -43,9 +43,9 @@ function addPrivateRequestAttributes(setAttributes, config) {
   }
   if (tmp33) {
     obj = {};
-    obj[00958__.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = items.length;
+    obj[_mod958.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = items.length;
     const _JSON = JSON;
-    obj[00958__.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = JSON.stringify(truncateTextByBytes.truncateGenAiMessages(items));
+    obj[_mod958.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = JSON.stringify(truncateTextByBytes.truncateGenAiMessages(items));
     setAttributes.setAttributes(obj);
     const obj6 = truncateTextByBytes;
   }
@@ -88,26 +88,27 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
   obj = {
     get(self) {
       let value = Reflect.get(self, arg1, arg2);
-      let obj1 = str(_undefined[3]);
+      let obj1 = str(table[3]);
       let methodPath = obj1.buildMethodPath(str, String(arg1));
       if (typeof value === "function") {
         if (tmpResult.shouldInstrument(methodPath)) {
           if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
             str = methodPath;
-            let closure_1 = self;
-            let closure_2 = closure_1;
-            let closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
+            table = self;
+            closure_2 = table;
+            closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
             let _Proxy3 = Proxy;
             let obj = { apply: null };
             obj[0] = function apply(closure_0) {
-              const _self = arg2;
-              let first = arg2[0];
+              let dependencyMap = arg2;
+              const first = arg2[0];
+              let callback = first;
               let obj = {};
-              obj[str(_self[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(_self[2]).GOOGLE_GENAI_SYSTEM_NAME;
-              let obj1 = str(_self[3]);
-              obj[str(_self[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
-              obj[str(_self[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-              const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
+              obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
+              let obj1 = str(dependencyMap[3]);
+              obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+              obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
+              const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
               if (first) {
                 if ("model" in first) {
                   if (typeof first.model === "string") {
@@ -212,7 +213,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
               let tmp4Result = tmp4(tmp5[3]);
               const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
               tmp4Result = tmp4(tmp5[5]);
-              const tmp4Result1 = str(_self[7]);
+              const tmp4Result1 = str(dependencyMap[7]);
               if (isStreamingMethodResult) {
                 obj1 = { name: null, op: null, attributes: null };
                 const _HermesInternal2 = HermesInternal;
@@ -221,10 +222,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                 obj1[2] = obj;
                 closure_0 = undefined;
                 closure_0 = callback((arg0) => {
-                  let closure_0 = arg0;
-                  let c5 = 0;
-                  let c6 = 0;
-                  let c4 = 0;
+                  closure_0 = arg0;
+                  c5 = 0;
+                  c6 = 0;
+                  c4 = 0;
                   return (function*(arg0) {
                     if (c6 === 2) {
                       c6 = 3;
@@ -252,26 +253,26 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             obj[0] = arg1;
                             return obj;
                           } else {
-                            let closure_2 = tmp3;
+                            closure_2 = tmp3;
                             let dependencyMap = tmp7;
                             dependencyMap = undefined;
-                            let c4 = 1;
-                            let recordInputs = first.recordInputs;
+                            c4 = 1;
+                            let recordInputs = closure_2.recordInputs;
                             if (recordInputs) {
-                              recordInputs = outer1_2;
+                              recordInputs = closure_1_2;
                             }
                             if (recordInputs) {
-                              callback(lib, outer1_2);
+                              callback(lib, closure_1_2);
                             }
                             c5 = 2;
                             c6 = 1;
                             const obj1 = { value: null, done: false };
-                            obj1[0] = lib.apply(dependencyMap, outer1_1);
+                            obj1[0] = lib.apply(dependencyMap, closure_1_1);
                             return obj1;
                           }
                         } else if (1 === tmp7) {
                           c4 = 0;
-                          first = callback;
+                          closure_2 = callback;
                           const obj2 = { code: null, message: "internal_error" };
                           obj2[0] = str(dependencyMap[9]).SPAN_STATUS_ERROR;
                           lib.setStatus(obj2);
@@ -282,9 +283,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           obj5[0] = lib;
                           obj4[2] = obj5;
                           obj3[0] = obj4;
-                          obj4.captureException(first, obj3);
+                          obj4.captureException(closure_2, obj3);
                           lib.end();
-                          throw first;
+                          throw closure_2;
                         } else if (arg0 === 1) {
                           c6 = 3;
                           throw arg1;
@@ -301,7 +302,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           c4 = 0;
                           c6 = 3;
                           const obj7 = { value: null, done: true };
-                          obj7[0] = obj.instrumentStream(dependencyMap, lib, Boolean(first.recordOutputs));
+                          obj7[0] = obj.instrumentStream(dependencyMap, lib, Boolean(closure_2.recordOutputs));
                           return obj7;
                         }
                       } catch (tmp37) {
@@ -339,20 +340,20 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                 obj2[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                 obj2[2] = obj;
                 startSpanManualResult = tmp4Result1.startSpan(obj2, (arg0) => {
-                  let closure_0 = arg0;
+                  closure_0 = arg0;
                   if (tmp) {
-                    callback(arg0, first);
+                    callback(arg0, recordInputs);
                   }
-                  return str(table[11]).handleCallbackErrors(() => callback.apply(outer1_1, closure_1), (arg0) => {
-                    let obj = callback(outer1_1[10]);
+                  return str(table[11]).handleCallbackErrors(() => callback.apply(closure_1_1, closure_1), (arg0) => {
+                    let obj = callback(closure_1_1[10]);
                     obj = { function: callback };
                     obj.captureException(arg0, { mechanism: { handled: false, type: "auto.ai.google_genai", data: obj } });
                   }, () => {
 
                   }, (obj) => {
-                    if (!outer2_3) {
+                    if (!closure_2_3) {
                       obj = closure_0;
-                      const recordOutputs = first.recordOutputs;
+                      recordOutputs = recordOutputs.recordOutputs;
                       if (obj) {
                         if (typeof obj === "object") {
                           if (obj.modelVersion) {
@@ -426,37 +427,37 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
               if (tmp) {
                 proxy = tmp;
                 if (typeof tmp === "object") {
-                  str = outer2_0(outer2_1[2]).CHAT_PATH;
+                  str = closure_2_0(closure_2_1[2]).CHAT_PATH;
                   str = undefined;
-                  let c1;
+                  closure_1 = undefined;
                   if (str === undefined) {
                     str = "";
                   }
-                  c1 = closure_1;
                   let _Proxy = Proxy;
                   let obj = { get: null };
                   obj[0] = function get(self) {
                     let value = Reflect.get(self, arg1, arg2);
-                    let obj1 = str(_undefined[3]);
+                    let obj1 = str(table[3]);
                     let methodPath = obj1.buildMethodPath(str, String(arg1));
                     if (typeof value === "function") {
                       if (tmpResult.shouldInstrument(methodPath)) {
                         if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
                           str = methodPath;
-                          let closure_1 = self;
-                          let closure_2 = closure_1;
-                          let closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
+                          table = self;
+                          closure_2 = table;
+                          closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                           let _Proxy3 = Proxy;
                           let obj = { apply: null };
                           obj[0] = function apply(closure_0) {
-                            const _self = arg2;
-                            let first = arg2[0];
+                            let dependencyMap = arg2;
+                            const first = arg2[0];
+                            let callback = first;
                             let obj = {};
-                            obj[str(_self[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(_self[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                            let obj1 = str(_self[3]);
-                            obj[str(_self[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
-                            obj[str(_self[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                            const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
+                            obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
+                            let obj1 = str(dependencyMap[3]);
+                            obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                            obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
+                            const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                             if (first) {
                               if ("model" in first) {
                                 if (typeof first.model === "string") {
@@ -561,7 +562,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             let tmp4Result = tmp4(tmp5[3]);
                             const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
                             tmp4Result = tmp4(tmp5[5]);
-                            const tmp4Result1 = str(_self[7]);
+                            const tmp4Result1 = str(dependencyMap[7]);
                             if (isStreamingMethodResult) {
                               obj1 = { name: null, op: null, attributes: null };
                               const _HermesInternal2 = HermesInternal;
@@ -596,13 +597,12 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             if (tmp) {
                               proxy = tmp;
                               if (typeof tmp === "object") {
-                                str = outer2_0(outer2_1[2]).CHAT_PATH;
+                                str = closure_2_0(closure_2_1[2]).CHAT_PATH;
                                 str = undefined;
-                                let c1;
+                                closure_1 = undefined;
                                 if (str === undefined) {
                                   str = "";
                                 }
-                                c1 = closure_1;
                                 let _Proxy = Proxy;
                                 let obj = { get: null };
                                 obj[0] = function get() { ... };
@@ -614,20 +614,21 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           };
                         } else {
                           str = methodPath;
-                          closure_1 = self;
-                          closure_2 = closure_1;
+                          table = self;
+                          closure_2 = table;
                           closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                           let _Proxy2 = Proxy;
                           obj = { apply: null };
                           obj[0] = function apply(closure_0) {
-                            const _self = arg2;
-                            let first = arg2[0];
+                            let dependencyMap = arg2;
+                            const first = arg2[0];
+                            let callback = first;
                             let obj = {};
-                            obj[str(_self[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(_self[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                            let obj1 = str(_self[3]);
-                            obj[str(_self[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
-                            obj[str(_self[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                            const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
+                            obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
+                            let obj1 = str(dependencyMap[3]);
+                            obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                            obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
+                            const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                             if (first) {
                               if ("model" in first) {
                                 if (typeof first.model === "string") {
@@ -732,7 +733,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             let tmp4Result = tmp4(tmp5[3]);
                             const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
                             tmp4Result = tmp4(tmp5[5]);
-                            const tmp4Result1 = str(_self[7]);
+                            const tmp4Result1 = str(dependencyMap[7]);
                             if (isStreamingMethodResult) {
                               obj1 = { name: null, op: null, attributes: null };
                               const _HermesInternal2 = HermesInternal;
@@ -780,15 +781,15 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           obj1 = { get: null };
                           obj1[0] = function get(self) {
                             let value = Reflect.get(self, arg1, arg2);
-                            let obj1 = str(_undefined[3]);
+                            let obj1 = str(table[3]);
                             let methodPath = obj1.buildMethodPath(str, String(arg1));
                             if (typeof value === "function") {
                               if (tmpResult.shouldInstrument(methodPath)) {
                                 if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
                                   str = methodPath;
-                                  let closure_1 = self;
-                                  let closure_2 = closure_1;
-                                  let closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
+                                  table = self;
+                                  closure_2 = table;
+                                  closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                                   let _Proxy3 = Proxy;
                                   let obj = { apply: null };
                                   obj[0] = function apply() { ... };
@@ -797,8 +798,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                   return function instrumentedAndProxiedCreate() { ... };
                                 } else {
                                   str = methodPath;
-                                  closure_1 = self;
-                                  closure_2 = closure_1;
+                                  table = self;
+                                  closure_2 = table;
                                   closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                                   let _Proxy2 = Proxy;
                                   obj = { apply: null };
@@ -824,14 +825,14 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                   obj1 = { get: null };
                                   obj1[0] = function get() { ... };
                                   bindResult = new Proxy(value, obj1);
-                                  let tmp23 = closure_1;
+                                  let tmp23 = table;
                                 }
                               }
                             }
                             return bindResult;
                           };
                           bindResult = new Proxy(value, obj1);
-                          let tmp23 = closure_1;
+                          let tmp23 = table;
                         }
                       }
                     }
@@ -845,20 +846,21 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
             };
           } else {
             str = methodPath;
-            closure_1 = self;
-            closure_2 = closure_1;
+            table = self;
+            closure_2 = table;
             closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
             let _Proxy2 = Proxy;
             obj = { apply: null };
             obj[0] = function apply(closure_0) {
-              const _self = arg2;
-              let first = arg2[0];
+              let dependencyMap = arg2;
+              const first = arg2[0];
+              let callback = first;
               let obj = {};
-              obj[str(_self[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(_self[2]).GOOGLE_GENAI_SYSTEM_NAME;
-              let obj1 = str(_self[3]);
-              obj[str(_self[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
-              obj[str(_self[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-              const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
+              obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
+              let obj1 = str(dependencyMap[3]);
+              obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+              obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
+              const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
               if (first) {
                 if ("model" in first) {
                   if (typeof first.model === "string") {
@@ -963,7 +965,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
               let tmp4Result = tmp4(tmp5[3]);
               const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
               tmp4Result = tmp4(tmp5[5]);
-              const tmp4Result1 = str(_self[7]);
+              const tmp4Result1 = str(dependencyMap[7]);
               if (isStreamingMethodResult) {
                 obj1 = { name: null, op: null, attributes: null };
                 const _HermesInternal2 = HermesInternal;
@@ -972,10 +974,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                 obj1[2] = obj;
                 closure_0 = undefined;
                 closure_0 = callback((arg0) => {
-                  let closure_0 = arg0;
-                  let c5 = 0;
-                  let c6 = 0;
-                  let c4 = 0;
+                  closure_0 = arg0;
+                  c5 = 0;
+                  c6 = 0;
+                  c4 = 0;
                   return (function*(arg0) {
                     if (c6 === 2) {
                       c6 = 3;
@@ -1003,26 +1005,26 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             obj[0] = arg1;
                             return obj;
                           } else {
-                            let closure_2 = tmp3;
+                            closure_2 = tmp3;
                             let dependencyMap = tmp7;
                             dependencyMap = undefined;
-                            let c4 = 1;
-                            let recordInputs = first.recordInputs;
+                            c4 = 1;
+                            let recordInputs = closure_2.recordInputs;
                             if (recordInputs) {
-                              recordInputs = outer1_2;
+                              recordInputs = closure_1_2;
                             }
                             if (recordInputs) {
-                              callback(lib, outer1_2);
+                              callback(lib, closure_1_2);
                             }
                             c5 = 2;
                             c6 = 1;
                             const obj1 = { value: null, done: false };
-                            obj1[0] = lib.apply(dependencyMap, outer1_1);
+                            obj1[0] = lib.apply(dependencyMap, closure_1_1);
                             return obj1;
                           }
                         } else if (1 === tmp7) {
                           c4 = 0;
-                          first = callback;
+                          closure_2 = callback;
                           const obj2 = { code: null, message: "internal_error" };
                           obj2[0] = str(dependencyMap[9]).SPAN_STATUS_ERROR;
                           lib.setStatus(obj2);
@@ -1033,9 +1035,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           obj5[0] = lib;
                           obj4[2] = obj5;
                           obj3[0] = obj4;
-                          obj4.captureException(first, obj3);
+                          obj4.captureException(closure_2, obj3);
                           lib.end();
-                          throw first;
+                          throw closure_2;
                         } else if (arg0 === 1) {
                           c6 = 3;
                           throw arg1;
@@ -1052,7 +1054,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           c4 = 0;
                           c6 = 3;
                           const obj7 = { value: null, done: true };
-                          obj7[0] = obj.instrumentStream(dependencyMap, lib, Boolean(first.recordOutputs));
+                          obj7[0] = obj.instrumentStream(dependencyMap, lib, Boolean(closure_2.recordOutputs));
                           return obj7;
                         }
                       } catch (tmp37) {
@@ -1090,20 +1092,20 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                 obj2[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                 obj2[2] = obj;
                 startSpanManualResult = tmp4Result1.startSpan(obj2, (arg0) => {
-                  let closure_0 = arg0;
+                  closure_0 = arg0;
                   if (tmp) {
-                    callback(arg0, first);
+                    callback(arg0, recordInputs);
                   }
-                  return str(table[11]).handleCallbackErrors(() => callback.apply(outer1_1, closure_1), (arg0) => {
-                    let obj = callback(outer1_1[10]);
+                  return str(table[11]).handleCallbackErrors(() => callback.apply(closure_1_1, closure_1), (arg0) => {
+                    let obj = callback(closure_1_1[10]);
                     obj = { function: callback };
                     obj.captureException(arg0, { mechanism: { handled: false, type: "auto.ai.google_genai", data: obj } });
                   }, () => {
 
                   }, (obj) => {
-                    if (!outer2_3) {
+                    if (!closure_2_3) {
                       obj = closure_0;
-                      const recordOutputs = first.recordOutputs;
+                      recordOutputs = recordOutputs.recordOutputs;
                       if (obj) {
                         if (typeof obj === "object") {
                           if (obj.modelVersion) {
@@ -1190,26 +1192,27 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
             obj1 = { get: null };
             obj1[0] = function get(self) {
               let value = Reflect.get(self, arg1, arg2);
-              let obj1 = str(_undefined[3]);
+              let obj1 = str(table[3]);
               let methodPath = obj1.buildMethodPath(str, String(arg1));
               if (typeof value === "function") {
                 if (tmpResult.shouldInstrument(methodPath)) {
                   if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
                     str = methodPath;
-                    let closure_1 = self;
-                    let closure_2 = closure_1;
-                    let closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
+                    table = self;
+                    closure_2 = table;
+                    closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                     let _Proxy3 = Proxy;
                     let obj = { apply: null };
                     obj[0] = function apply(closure_0) {
-                      const _self = arg2;
-                      let first = arg2[0];
+                      let dependencyMap = arg2;
+                      const first = arg2[0];
+                      let callback = first;
                       let obj = {};
-                      obj[str(_self[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(_self[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                      let obj1 = str(_self[3]);
-                      obj[str(_self[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
-                      obj[str(_self[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                      const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
+                      obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
+                      let obj1 = str(dependencyMap[3]);
+                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                      obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
+                      const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                       if (first) {
                         if ("model" in first) {
                           if (typeof first.model === "string") {
@@ -1314,7 +1317,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       let tmp4Result = tmp4(tmp5[3]);
                       const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
                       tmp4Result = tmp4(tmp5[5]);
-                      const tmp4Result1 = str(_self[7]);
+                      const tmp4Result1 = str(dependencyMap[7]);
                       if (isStreamingMethodResult) {
                         obj1 = { name: null, op: null, attributes: null };
                         const _HermesInternal2 = HermesInternal;
@@ -1323,10 +1326,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                         obj1[2] = obj;
                         closure_0 = undefined;
                         closure_0 = callback((arg0) => {
-                          let closure_0 = arg0;
-                          let c5 = 0;
-                          let c6 = 0;
-                          let c4 = 0;
+                          closure_0 = arg0;
+                          c5 = 0;
+                          c6 = 0;
+                          c4 = 0;
                           return (/* F119434 */ function*() { ... })();
                         });
                         let startSpanManualResult = tmp4Result1.startSpanManual(obj1, function(arg0) {
@@ -1352,9 +1355,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                         obj2[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                         obj2[2] = obj;
                         startSpanManualResult = tmp4Result1.startSpan(obj2, (arg0) => {
-                          let closure_0 = arg0;
+                          closure_0 = arg0;
                           if (tmp) {
-                            callback(arg0, first);
+                            callback(arg0, recordInputs);
                           }
                           return str(table[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F115367 */ function() { ... }, () => { ... });
                         });
@@ -1370,26 +1373,25 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       if (tmp) {
                         proxy = tmp;
                         if (typeof tmp === "object") {
-                          str = outer2_0(outer2_1[2]).CHAT_PATH;
+                          str = closure_2_0(closure_2_1[2]).CHAT_PATH;
                           str = undefined;
-                          let c1;
+                          closure_1 = undefined;
                           if (str === undefined) {
                             str = "";
                           }
-                          c1 = closure_1;
                           let _Proxy = Proxy;
                           let obj = { get: null };
                           obj[0] = function get(self) {
                             let value = Reflect.get(self, arg1, arg2);
-                            let obj1 = str(_undefined[3]);
+                            let obj1 = str(table[3]);
                             let methodPath = obj1.buildMethodPath(str, String(arg1));
                             if (typeof value === "function") {
                               if (tmpResult.shouldInstrument(methodPath)) {
                                 if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
                                   str = methodPath;
-                                  let closure_1 = self;
-                                  let closure_2 = closure_1;
-                                  let closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
+                                  table = self;
+                                  closure_2 = table;
+                                  closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                                   let _Proxy3 = Proxy;
                                   let obj = { apply: null };
                                   obj[0] = function apply() { ... };
@@ -1398,8 +1400,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                   return function instrumentedAndProxiedCreate() { ... };
                                 } else {
                                   str = methodPath;
-                                  closure_1 = self;
-                                  closure_2 = closure_1;
+                                  table = self;
+                                  closure_2 = table;
                                   closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                                   let _Proxy2 = Proxy;
                                   obj = { apply: null };
@@ -1425,7 +1427,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                   obj1 = { get: null };
                                   obj1[0] = function get() { ... };
                                   bindResult = new Proxy(value, obj1);
-                                  let tmp23 = closure_1;
+                                  let tmp23 = table;
                                 }
                               }
                             }
@@ -1439,20 +1441,21 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                     };
                   } else {
                     str = methodPath;
-                    closure_1 = self;
-                    closure_2 = closure_1;
+                    table = self;
+                    closure_2 = table;
                     closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                     let _Proxy2 = Proxy;
                     obj = { apply: null };
                     obj[0] = function apply(closure_0) {
-                      const _self = arg2;
-                      let first = arg2[0];
+                      let dependencyMap = arg2;
+                      const first = arg2[0];
+                      let callback = first;
                       let obj = {};
-                      obj[str(_self[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(_self[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                      let obj1 = str(_self[3]);
-                      obj[str(_self[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
-                      obj[str(_self[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                      const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
+                      obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
+                      let obj1 = str(dependencyMap[3]);
+                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                      obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
+                      const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                       if (first) {
                         if ("model" in first) {
                           if (typeof first.model === "string") {
@@ -1557,7 +1560,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       let tmp4Result = tmp4(tmp5[3]);
                       const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
                       tmp4Result = tmp4(tmp5[5]);
-                      const tmp4Result1 = str(_self[7]);
+                      const tmp4Result1 = str(dependencyMap[7]);
                       if (isStreamingMethodResult) {
                         obj1 = { name: null, op: null, attributes: null };
                         const _HermesInternal2 = HermesInternal;
@@ -1566,10 +1569,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                         obj1[2] = obj;
                         closure_0 = undefined;
                         closure_0 = callback((arg0) => {
-                          let closure_0 = arg0;
-                          let c5 = 0;
-                          let c6 = 0;
-                          let c4 = 0;
+                          closure_0 = arg0;
+                          c5 = 0;
+                          c6 = 0;
+                          c4 = 0;
                           return (/* F119434 */ function*() { ... })();
                         });
                         let startSpanManualResult = tmp4Result1.startSpanManual(obj1, function(arg0) {
@@ -1595,9 +1598,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                         obj2[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                         obj2[2] = obj;
                         startSpanManualResult = tmp4Result1.startSpan(obj2, (arg0) => {
-                          let closure_0 = arg0;
+                          closure_0 = arg0;
                           if (tmp) {
-                            callback(arg0, first);
+                            callback(arg0, recordInputs);
                           }
                           return str(table[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F115367 */ function() { ... }, () => { ... });
                         });
@@ -1626,26 +1629,27 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                     obj1 = { get: null };
                     obj1[0] = function get(self) {
                       let value = Reflect.get(self, arg1, arg2);
-                      let obj1 = str(_undefined[3]);
+                      let obj1 = str(table[3]);
                       let methodPath = obj1.buildMethodPath(str, String(arg1));
                       if (typeof value === "function") {
                         if (tmpResult.shouldInstrument(methodPath)) {
                           if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
                             str = methodPath;
-                            let closure_1 = self;
-                            let closure_2 = closure_1;
-                            let closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
+                            table = self;
+                            closure_2 = table;
+                            closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                             let _Proxy3 = Proxy;
                             let obj = { apply: null };
                             obj[0] = function apply(closure_0) {
-                              const _self = arg2;
-                              let first = arg2[0];
+                              let dependencyMap = arg2;
+                              const first = arg2[0];
+                              let callback = first;
                               let obj = {};
-                              obj[str(_self[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(_self[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                              let obj1 = str(_self[3]);
-                              obj[str(_self[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
-                              obj[str(_self[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                              const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
+                              obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
+                              let obj1 = str(dependencyMap[3]);
+                              obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                              obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
+                              const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                               if (first) {
                                 if ("model" in first) {
                                   if (typeof first.model === "string") {
@@ -1750,7 +1754,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               let tmp4Result = tmp4(tmp5[3]);
                               const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
                               tmp4Result = tmp4(tmp5[5]);
-                              const tmp4Result1 = str(_self[7]);
+                              const tmp4Result1 = str(dependencyMap[7]);
                               if (isStreamingMethodResult) {
                                 obj1 = { name: null, op: null, attributes: null };
                                 const _HermesInternal2 = HermesInternal;
@@ -1785,13 +1789,12 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               if (tmp) {
                                 proxy = tmp;
                                 if (typeof tmp === "object") {
-                                  str = outer2_0(outer2_1[2]).CHAT_PATH;
+                                  str = closure_2_0(closure_2_1[2]).CHAT_PATH;
                                   str = undefined;
-                                  let c1;
+                                  closure_1 = undefined;
                                   if (str === undefined) {
                                     str = "";
                                   }
-                                  c1 = closure_1;
                                   let _Proxy = Proxy;
                                   let obj = { get: null };
                                   obj[0] = function get() { ... };
@@ -1803,20 +1806,21 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             };
                           } else {
                             str = methodPath;
-                            closure_1 = self;
-                            closure_2 = closure_1;
+                            table = self;
+                            closure_2 = table;
                             closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                             let _Proxy2 = Proxy;
                             obj = { apply: null };
                             obj[0] = function apply(closure_0) {
-                              const _self = arg2;
-                              let first = arg2[0];
+                              let dependencyMap = arg2;
+                              const first = arg2[0];
+                              let callback = first;
                               let obj = {};
-                              obj[str(_self[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(_self[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                              let obj1 = str(_self[3]);
-                              obj[str(_self[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
-                              obj[str(_self[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                              const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
+                              obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
+                              let obj1 = str(dependencyMap[3]);
+                              obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                              obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
+                              const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                               if (first) {
                                 if ("model" in first) {
                                   if (typeof first.model === "string") {
@@ -1921,7 +1925,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               let tmp4Result = tmp4(tmp5[3]);
                               const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
                               tmp4Result = tmp4(tmp5[5]);
-                              const tmp4Result1 = str(_self[7]);
+                              const tmp4Result1 = str(dependencyMap[7]);
                               if (isStreamingMethodResult) {
                                 obj1 = { name: null, op: null, attributes: null };
                                 const _HermesInternal2 = HermesInternal;
@@ -1969,15 +1973,15 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             obj1 = { get: null };
                             obj1[0] = function get(self) {
                               let value = Reflect.get(self, arg1, arg2);
-                              let obj1 = str(_undefined[3]);
+                              let obj1 = str(table[3]);
                               let methodPath = obj1.buildMethodPath(str, String(arg1));
                               if (typeof value === "function") {
                                 if (tmpResult.shouldInstrument(methodPath)) {
                                   if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
                                     str = methodPath;
-                                    let closure_1 = self;
-                                    let closure_2 = closure_1;
-                                    let closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
+                                    table = self;
+                                    closure_2 = table;
+                                    closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                                     let _Proxy3 = Proxy;
                                     let obj = { apply: null };
                                     obj[0] = function apply() { ... };
@@ -1986,8 +1990,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                     return function instrumentedAndProxiedCreate() { ... };
                                   } else {
                                     str = methodPath;
-                                    closure_1 = self;
-                                    closure_2 = closure_1;
+                                    table = self;
+                                    closure_2 = table;
                                     closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                                     let _Proxy2 = Proxy;
                                     obj = { apply: null };
@@ -2013,28 +2017,28 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                     obj1 = { get: null };
                                     obj1[0] = function get() { ... };
                                     bindResult = new Proxy(value, obj1);
-                                    let tmp23 = closure_1;
+                                    let tmp23 = table;
                                   }
                                 }
                               }
                               return bindResult;
                             };
                             bindResult = new Proxy(value, obj1);
-                            let tmp23 = closure_1;
+                            let tmp23 = table;
                           }
                         }
                       }
                       return bindResult;
                     };
                     bindResult = new Proxy(value, obj1);
-                    let tmp23 = closure_1;
+                    let tmp23 = table;
                   }
                 }
               }
               return bindResult;
             };
             bindResult = new Proxy(value, obj1);
-            let tmp23 = closure_1;
+            let tmp23 = table;
           }
         }
       }

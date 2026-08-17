@@ -1,22 +1,15 @@
 // _runtime/metro/04690__.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import importDefaultResult from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "04691___INTERNAL_VIEW_CONFIG.js";
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4691 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import importDefaultResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let closure_3 = ["obscureBackground", "hideNavigationBar", "onFocus", "onBlur", "onSearchButtonPress", "onCancelButtonPress", "onChangeText"];
 let c5 = importDefaultResult;
 
 export default importDefaultResult.forwardRef(function SearchBar(autoCapitalize, ref) {
-  let hideNavigationBar;
-  let obscureBackground;
-  let onBlur;
-  let onCancelButtonPress;
-  let onChangeText;
-  let onFocus;
-  let onSearchButtonPress;
   ref = importDefaultResult.useRef(null);
   const imperativeHandle = importDefaultResult.useImperativeHandle(ref, () => ({
     blur() {
@@ -32,9 +25,9 @@ export default importDefaultResult.forwardRef(function SearchBar(autoCapitalize,
       });
     },
     toggleCancelButton(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       callback((arg0) => {
-        const Commands = callback(outer1_2[4]).Commands;
+        const Commands = callback(closure_1_2[4]).Commands;
         return Commands.toggleCancelButton(arg0, callback);
       });
     },
@@ -45,9 +38,9 @@ export default importDefaultResult.forwardRef(function SearchBar(autoCapitalize,
       });
     },
     setText(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       callback((arg0) => {
-        const Commands = callback(outer1_2[4]).Commands;
+        const Commands = callback(closure_1_2[4]).Commands;
         return Commands.setText(arg0, callback);
       });
     },
@@ -59,7 +52,7 @@ export default importDefaultResult.forwardRef(function SearchBar(autoCapitalize,
     }
   }));
   const items = [ref];
-  const importDefault = importDefaultResult.useCallback((arg0) => {
+  importDefault = importDefaultResult.useCallback((arg0) => {
     const current = ref.current;
     if (current) {
       arg0(current);
@@ -90,7 +83,7 @@ export default importDefaultResult.forwardRef(function SearchBar(autoCapitalize,
     obj.onSearchButtonPress = onSearchButtonPress;
     obj.onCancelButtonPress = onCancelButtonPress;
     obj.onChangeText = onChangeText;
-    return jsx(__INTERNAL_VIEW_CONFIG, { ref: null });
+    return jsx(__INTERNAL_VIEW_CONFIGDefault, { ref: null });
   } else {
     let _console = console;
     console.warn("Importing SearchBar is only valid on iOS and Android devices.");

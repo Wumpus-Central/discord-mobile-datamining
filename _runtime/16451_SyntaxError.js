@@ -17,14 +17,12 @@ SyntaxError.prototype = obj;
 obj = {
   SyntaxError,
   parse(str) {
-    let column;
     let length;
-    let line;
     let sum;
-    let closure_0 = str;
+    closure_0 = str;
     function peg$parsemessageFormatElement() {
       let num = 0;
-      let throwTypeErrorResult = num;
+      let throwTypeErrorResult = c70;
       const tmp2 = peg$parse_();
       let tmp4 = obj;
       if (tmp2 !== obj) {
@@ -74,7 +72,7 @@ obj = {
               while (true) {
                 arr = items2.push(tmp14);
                 let tmp19 = peg$parse_;
-                let tmp18 = num;
+                let tmp18 = c70;
                 let tmp20 = peg$parse_();
                 let tmp21 = obj;
                 let tmp22 = obj;
@@ -85,7 +83,7 @@ obj = {
                   if (throwTypeErrorResult) {
                     let items3 = [];
                     let tmp23 = tmp21;
-                    let obj1 = items3;
+                    obj1 = items3;
                     let tmp24 = tmp21;
                     if (throwTypeErrorResult) {
                       do {
@@ -129,7 +127,7 @@ obj = {
                     }
                   }
                 }
-                num = tmp18;
+                c70 = tmp18;
                 tmp32 = obj;
               }
             }
@@ -171,10 +169,10 @@ obj = {
           if (tmp33 === obj) {
             let substr = peg$parsews();
             if (substr !== tmp80Result) {
-              substr = str.substring(tmp39, num);
+              substr = str.substring(tmp39, c70);
             }
             tmp33 = substr;
-            tmp39 = num;
+            tmp39 = c70;
           }
           let tmp44 = tmp33;
           if (tmp33 !== tmp80Result) {
@@ -188,19 +186,19 @@ obj = {
           if (tmp44 !== tmp80Result) {
             return tmp44;
           } else {
-            throwTypeErrorResult = num;
+            throwTypeErrorResult = c70;
             let str8 = str;
-            throwTypeErrorResult = num;
-            if (123 === str.charCodeAt(num)) {
+            throwTypeErrorResult = c70;
+            if (123 === str.charCodeAt(c70)) {
               let tmp47 = c8;
-              num = num + 1;
+              c70 = c70 + 1;
             } else {
               tmp47 = tmp80Result;
               if (num === c73) {
                 tmp47 = tmp80Result;
-                if (num >= c71) {
-                  if (tmp49 > c71) {
-                    c71 = tmp49;
+                if (c70 >= throwTypeErrorResult) {
+                  if (tmp49 > throwTypeErrorResult) {
+                    throwTypeErrorResult = tmp49;
                     arr = [];
                   }
                   arr2 = arr.push(tmp48);
@@ -209,7 +207,7 @@ obj = {
               }
             }
             if (tmp47 === tmp80Result) {
-              num = throwTypeErrorResult;
+              c70 = throwTypeErrorResult;
               let tmp54 = obj;
               throwTypeErrorResult = tmp54;
             }
@@ -218,18 +216,18 @@ obj = {
             let tmp57 = tmp80Result;
             if (tmp56 === tmp80Result) {
               throwTypeErrorResult = regex;
-              throwTypeErrorResult = num;
-              throwTypeErrorResult = num;
-              if (regex.test(str8.charAt(num))) {
-                let charAtResult = str8.charAt(num);
-                num = num + 1;
+              throwTypeErrorResult = c70;
+              throwTypeErrorResult = c70;
+              if (regex.test(str8.charAt(c70))) {
+                let charAtResult = str8.charAt(c70);
+                c70 = c70 + 1;
               } else {
                 charAtResult = tmp80Result;
                 if (num === c73) {
                   charAtResult = tmp80Result;
-                  if (num >= c71) {
-                    if (tmp61 > c71) {
-                      c71 = tmp61;
+                  if (c70 >= throwTypeErrorResult) {
+                    if (tmp61 > throwTypeErrorResult) {
+                      throwTypeErrorResult = tmp61;
                       arr = [];
                     }
                     arr.push(tmp60);
@@ -247,22 +245,22 @@ obj = {
                     let arr4 = items5.push(charAtResult);
                     let tmp70 = regex;
                     let str7 = str;
-                    let tmp71 = num;
-                    if (regex.test(str.charAt(num))) {
-                      let tmp77 = num;
-                      str8 = str7.charAt(num);
-                      let tmp78 = num;
-                      num = num + 1;
+                    let tmp71 = c70;
+                    if (regex.test(str.charAt(c70))) {
+                      let tmp77 = c70;
+                      str8 = str7.charAt(c70);
+                      let tmp78 = c70;
+                      c70 = c70 + 1;
                     } else {
                       tmp80Result = obj;
                       let tmp72 = c73;
                       str8 = obj;
                       if (num === c73) {
-                        let tmp74 = num;
+                        let tmp74 = c70;
                         str8 = tmp80Result;
-                        if (num >= c71) {
-                          if (tmp74 > c71) {
-                            c71 = tmp74;
+                        if (c70 >= throwTypeErrorResult) {
+                          if (tmp74 > throwTypeErrorResult) {
+                            throwTypeErrorResult = tmp74;
                             arr = [];
                           }
                           let tmp75 = arr;
@@ -283,7 +281,7 @@ obj = {
                 tmp68 = tmp80Result;
               }
               if (substr1 !== tmp68) {
-                substr1 = str6.substring(throwTypeErrorResult, num);
+                substr1 = str6.substring(throwTypeErrorResult, c70);
               }
               tmp56 = substr1;
               str5 = str6;
@@ -292,16 +290,16 @@ obj = {
             if (tmp56 !== tmp57) {
               if (peg$parse_() !== tmp57) {
                 let num5 = 44;
-                if (44 === str5.charCodeAt(num)) {
+                if (44 === str5.charCodeAt(c70)) {
                   str8 = c11;
-                  num = num + 1;
+                  c70 = c70 + 1;
                 } else {
                   str8 = tmp57;
                   if (num === c73) {
                     str8 = tmp57;
-                    if (num >= c71) {
-                      if (tmp85 > c71) {
-                        c71 = tmp85;
+                    if (c70 >= throwTypeErrorResult) {
+                      if (tmp85 > throwTypeErrorResult) {
+                        throwTypeErrorResult = tmp85;
                         arr = [];
                       }
                       arr6 = arr.push(tmp84);
@@ -312,17 +310,17 @@ obj = {
                 if (str8 !== tmp57) {
                   tmp80Result = tmp80();
                   if (tmp80Result !== tmp57) {
-                    if (str5.substr(num, 6) === number) {
-                      throwTypeErrorResult = num;
-                      num = num + 6;
+                    if (str5.substr(c70, 6) === number) {
+                      throwTypeErrorResult = c70;
+                      c70 = c70 + 6;
                       let tmp95 = tmp93;
                     } else {
                       tmp95 = tmp57;
                       if (num === c73) {
                         tmp95 = tmp57;
-                        if (num >= c71) {
-                          if (tmp97 > c71) {
-                            c71 = tmp97;
+                        if (c70 >= throwTypeErrorResult) {
+                          if (tmp97 > throwTypeErrorResult) {
+                            throwTypeErrorResult = tmp97;
                             arr = [];
                           }
                           arr.push(tmp96);
@@ -331,20 +329,19 @@ obj = {
                       }
                     }
                     if (tmp95 === tmp57) {
-                      throwTypeErrorResult = num;
+                      throwTypeErrorResult = c70;
                       let num7 = 4;
-                      if (str5.substr(num, 4) === date) {
-                        throwTypeErrorResult = num;
-                        num = num + num7;
+                      if (str5.substr(c70, 4) === date) {
+                        throwTypeErrorResult = c70;
+                        c70 = c70 + num7;
                       } else {
                         throwTypeErrorResult = c73;
                         throwTypeErrorResult = tmp57;
                         if (num === c73) {
-                          throwTypeErrorResult = num;
+                          throwTypeErrorResult = c70;
                           throwTypeErrorResult = tmp57;
-                          if (num >= c71) {
-                            if (throwTypeErrorResult > c71) {
-                              c71 = throwTypeErrorResult;
+                          if (c70 >= throwTypeErrorResult) {
+                            if (throwTypeErrorResult > throwTypeErrorResult) {
                               arr = [];
                             }
                             throwTypeErrorResult = arr;
@@ -356,20 +353,19 @@ obj = {
                       if (throwTypeErrorResult !== tmp57) {
                         tmp95 = throwTypeErrorResult;
                       } else {
-                        throwTypeErrorResult = num;
-                        if (str5.substr(num, num7) === time) {
-                          throwTypeErrorResult = num;
-                          num7 = num + num7;
-                          num = num7;
+                        throwTypeErrorResult = c70;
+                        if (str5.substr(c70, num7) === time) {
+                          throwTypeErrorResult = c70;
+                          num7 = c70 + num7;
+                          c70 = num7;
                         } else {
                           throwTypeErrorResult = c73;
                           throwTypeErrorResult = tmp57;
                           if (num === c73) {
-                            throwTypeErrorResult = num;
+                            throwTypeErrorResult = c70;
                             throwTypeErrorResult = tmp57;
-                            if (num >= c71) {
-                              if (throwTypeErrorResult > c71) {
-                                c71 = throwTypeErrorResult;
+                            if (c70 >= throwTypeErrorResult) {
+                              if (throwTypeErrorResult > throwTypeErrorResult) {
                                 arr = [];
                               }
                               throwTypeErrorResult = arr;
@@ -382,21 +378,20 @@ obj = {
                     }
                     if (tmp95 !== tmp57) {
                       if (tmp80() !== tmp57) {
-                        throwTypeErrorResult = num;
-                        throwTypeErrorResult = num;
-                        if (num5 === str5.charCodeAt(num)) {
+                        throwTypeErrorResult = c70;
+                        throwTypeErrorResult = c70;
+                        if (num5 === str5.charCodeAt(c70)) {
                           throwTypeErrorResult = c11;
-                          throwTypeErrorResult = num;
-                          num = num + 1;
+                          throwTypeErrorResult = c70;
+                          c70 = c70 + 1;
                         } else {
                           throwTypeErrorResult = c73;
                           throwTypeErrorResult = tmp57;
                           if (num === c73) {
-                            throwTypeErrorResult = num;
+                            throwTypeErrorResult = c70;
                             throwTypeErrorResult = tmp57;
-                            if (num >= c71) {
-                              if (throwTypeErrorResult > c71) {
-                                c71 = throwTypeErrorResult;
+                            if (c70 >= throwTypeErrorResult) {
+                              if (throwTypeErrorResult > throwTypeErrorResult) {
                                 arr = [];
                               }
                               throwTypeErrorResult = arr;
@@ -460,23 +455,22 @@ obj = {
                                 obj[1] = throwTypeErrorResult;
                                 throwTypeErrorResult = obj;
                               } else {
-                                num = tmp91;
+                                c70 = tmp91;
                                 throwTypeErrorResult = obj;
                               }
                               if (throwTypeErrorResult === throwTypeErrorResult) {
-                                throwTypeErrorResult = num;
+                                throwTypeErrorResult = c70;
                                 let str11 = str;
-                                throwTypeErrorResult = num;
-                                if (str.substr(num, 6) === plural) {
-                                  throwTypeErrorResult = num;
-                                  num = num + 6;
+                                throwTypeErrorResult = c70;
+                                if (str.substr(c70, 6) === plural) {
+                                  throwTypeErrorResult = c70;
+                                  c70 = c70 + 6;
                                 } else {
                                   throwTypeErrorResult = c73;
                                   if (num === c73) {
-                                    throwTypeErrorResult = num;
-                                    if (num >= c71) {
-                                      if (throwTypeErrorResult > c71) {
-                                        c71 = throwTypeErrorResult;
+                                    throwTypeErrorResult = c70;
+                                    if (c70 >= throwTypeErrorResult) {
+                                      if (throwTypeErrorResult > throwTypeErrorResult) {
                                         arr = [];
                                       }
                                       throwTypeErrorResult = arr;
@@ -487,18 +481,17 @@ obj = {
                                 if (throwTypeErrorResult !== throwTypeErrorResult) {
                                   throwTypeErrorResult = peg$parse_;
                                   if (peg$parse_() !== throwTypeErrorResult) {
-                                    throwTypeErrorResult = num;
-                                    if (num5 === str11.charCodeAt(num)) {
+                                    throwTypeErrorResult = c70;
+                                    if (num5 === str11.charCodeAt(c70)) {
                                       throwTypeErrorResult = c11;
-                                      throwTypeErrorResult = num;
-                                      num = num + 1;
+                                      throwTypeErrorResult = c70;
+                                      c70 = c70 + 1;
                                     } else {
                                       throwTypeErrorResult = c73;
                                       if (num === c73) {
-                                        throwTypeErrorResult = num;
-                                        if (num >= c71) {
-                                          if (throwTypeErrorResult > c71) {
-                                            c71 = throwTypeErrorResult;
+                                        throwTypeErrorResult = c70;
+                                        if (c70 >= throwTypeErrorResult) {
+                                          if (throwTypeErrorResult > throwTypeErrorResult) {
                                             arr = [];
                                           }
                                           throwTypeErrorResult = arr;
@@ -521,18 +514,17 @@ obj = {
                                           obj1[3] = throwTypeErrorResult.options;
                                           throwTypeErrorResult = obj1;
                                           if (throwTypeErrorResult === throwTypeErrorResult) {
-                                            throwTypeErrorResult = num;
-                                            throwTypeErrorResult = num;
-                                            if (str11.substr(num, 13) === selectordinal) {
-                                              throwTypeErrorResult = num;
-                                              num = num + 13;
+                                            throwTypeErrorResult = c70;
+                                            throwTypeErrorResult = c70;
+                                            if (str11.substr(c70, 13) === selectordinal) {
+                                              throwTypeErrorResult = c70;
+                                              c70 = c70 + 13;
                                             } else {
                                               throwTypeErrorResult = c73;
                                               if (num === c73) {
-                                                throwTypeErrorResult = num;
-                                                if (num >= c71) {
-                                                  if (throwTypeErrorResult > c71) {
-                                                    c71 = throwTypeErrorResult;
+                                                throwTypeErrorResult = c70;
+                                                if (c70 >= throwTypeErrorResult) {
+                                                  if (throwTypeErrorResult > throwTypeErrorResult) {
                                                     arr = [];
                                                   }
                                                   throwTypeErrorResult = arr;
@@ -543,18 +535,17 @@ obj = {
                                             if (throwTypeErrorResult !== throwTypeErrorResult) {
                                               throwTypeErrorResult = peg$parse_;
                                               if (peg$parse_() !== throwTypeErrorResult) {
-                                                throwTypeErrorResult = num;
-                                                if (num5 === str11.charCodeAt(num)) {
+                                                throwTypeErrorResult = c70;
+                                                if (num5 === str11.charCodeAt(c70)) {
                                                   throwTypeErrorResult = c11;
-                                                  throwTypeErrorResult = num;
-                                                  num = num + 1;
+                                                  throwTypeErrorResult = c70;
+                                                  c70 = c70 + 1;
                                                 } else {
                                                   throwTypeErrorResult = c73;
                                                   if (num === c73) {
-                                                    throwTypeErrorResult = num;
-                                                    if (num >= c71) {
-                                                      if (throwTypeErrorResult > c71) {
-                                                        c71 = throwTypeErrorResult;
+                                                    throwTypeErrorResult = c70;
+                                                    if (c70 >= throwTypeErrorResult) {
+                                                      if (throwTypeErrorResult > throwTypeErrorResult) {
                                                         arr = [];
                                                       }
                                                       throwTypeErrorResult = arr;
@@ -577,18 +568,17 @@ obj = {
                                                       obj2[3] = throwTypeErrorResult.options;
                                                       throwTypeErrorResult = obj2;
                                                       if (throwTypeErrorResult === throwTypeErrorResult) {
-                                                        throwTypeErrorResult = num;
-                                                        throwTypeErrorResult = num;
-                                                        if (str11.substr(num, 6) === select) {
-                                                          throwTypeErrorResult = num;
-                                                          num = num + 6;
+                                                        throwTypeErrorResult = c70;
+                                                        throwTypeErrorResult = c70;
+                                                        if (str11.substr(c70, 6) === select) {
+                                                          throwTypeErrorResult = c70;
+                                                          c70 = c70 + 6;
                                                         } else {
                                                           throwTypeErrorResult = c73;
                                                           if (num === c73) {
-                                                            throwTypeErrorResult = num;
-                                                            if (num >= c71) {
-                                                              if (throwTypeErrorResult > c71) {
-                                                                c71 = throwTypeErrorResult;
+                                                            throwTypeErrorResult = c70;
+                                                            if (c70 >= throwTypeErrorResult) {
+                                                              if (throwTypeErrorResult > throwTypeErrorResult) {
                                                                 arr = [];
                                                               }
                                                               throwTypeErrorResult = arr;
@@ -599,19 +589,18 @@ obj = {
                                                         if (throwTypeErrorResult !== throwTypeErrorResult) {
                                                           throwTypeErrorResult = peg$parse_;
                                                           if (peg$parse_() !== throwTypeErrorResult) {
-                                                            throwTypeErrorResult = num;
-                                                            if (num5 === str11.charCodeAt(num)) {
+                                                            throwTypeErrorResult = c70;
+                                                            if (num5 === str11.charCodeAt(c70)) {
                                                               throwTypeErrorResult = c11;
-                                                              throwTypeErrorResult = num;
-                                                              num5 = num + 1;
-                                                              num = num5;
+                                                              throwTypeErrorResult = c70;
+                                                              num5 = c70 + 1;
+                                                              c70 = num5;
                                                             } else {
                                                               throwTypeErrorResult = c73;
                                                               if (num === c73) {
-                                                                throwTypeErrorResult = num;
-                                                                if (num >= c71) {
-                                                                  if (throwTypeErrorResult > c71) {
-                                                                    c71 = throwTypeErrorResult;
+                                                                throwTypeErrorResult = c70;
+                                                                if (c70 >= throwTypeErrorResult) {
+                                                                  if (throwTypeErrorResult > throwTypeErrorResult) {
                                                                     arr = [];
                                                                   }
                                                                   throwTypeErrorResult = arr;
@@ -648,44 +637,44 @@ obj = {
                                                                   obj3[1] = str11;
                                                                   throwTypeErrorResult = obj3;
                                                                 } else {
-                                                                  num = throwTypeErrorResult;
+                                                                  c70 = throwTypeErrorResult;
                                                                   throwTypeErrorResult = obj;
                                                                 }
                                                               } else {
-                                                                num = throwTypeErrorResult;
+                                                                c70 = throwTypeErrorResult;
                                                                 throwTypeErrorResult = obj;
                                                               }
                                                             } else {
-                                                              num = throwTypeErrorResult;
+                                                              c70 = throwTypeErrorResult;
                                                               throwTypeErrorResult = obj;
                                                             }
                                                           } else {
-                                                            num = throwTypeErrorResult;
+                                                            c70 = throwTypeErrorResult;
                                                             throwTypeErrorResult = obj;
                                                           }
                                                         } else {
-                                                          num = throwTypeErrorResult;
+                                                          c70 = throwTypeErrorResult;
                                                           throwTypeErrorResult = obj;
                                                         }
                                                       }
                                                     }
                                                   }
                                                 }
-                                                num = throwTypeErrorResult;
+                                                c70 = throwTypeErrorResult;
                                                 throwTypeErrorResult = obj;
                                               }
                                             }
-                                            num = throwTypeErrorResult;
+                                            c70 = throwTypeErrorResult;
                                             throwTypeErrorResult = obj;
                                           }
                                         }
                                       }
                                     }
-                                    num = throwTypeErrorResult;
+                                    c70 = throwTypeErrorResult;
                                     throwTypeErrorResult = obj;
                                   }
                                 }
-                                num = throwTypeErrorResult;
+                                c70 = throwTypeErrorResult;
                                 throwTypeErrorResult = obj;
                               }
                               if (throwTypeErrorResult !== throwTypeErrorResult) {
@@ -693,7 +682,7 @@ obj = {
                                 let tmp90 = throwTypeErrorResult;
                                 let tmp89 = items9;
                               } else {
-                                num = tmp81;
+                                c70 = tmp81;
                                 tmp89 = obj;
                                 tmp90 = throwTypeErrorResult;
                               }
@@ -704,21 +693,21 @@ obj = {
                                 throwTypeErrorResult = peg$parse_;
                                 if (peg$parse_() !== tmp90) {
                                   throwTypeErrorResult = str;
-                                  throwTypeErrorResult = num;
-                                  if (125 === str.charCodeAt(num)) {
+                                  throwTypeErrorResult = c70;
+                                  if (125 === str.charCodeAt(c70)) {
                                     throwTypeErrorResult = c13;
-                                    throwTypeErrorResult = num;
-                                    num = num + 1;
+                                    throwTypeErrorResult = c70;
+                                    num = c70 + 1;
+                                    c70 = num;
                                   } else {
                                     throwTypeErrorResult = c73;
                                     throwTypeErrorResult = tmp90;
                                     if (num === c73) {
                                       tmp80Result = closure_14;
-                                      throwTypeErrorResult = num;
+                                      throwTypeErrorResult = c70;
                                       throwTypeErrorResult = tmp90;
-                                      if (num >= c71) {
-                                        if (throwTypeErrorResult > c71) {
-                                          c71 = throwTypeErrorResult;
+                                      if (c70 >= throwTypeErrorResult) {
+                                        if (throwTypeErrorResult > throwTypeErrorResult) {
                                           arr = [];
                                         }
                                         throwTypeErrorResult = arr;
@@ -741,50 +730,50 @@ obj = {
                                     obj4[2] = throwTypeErrorResult;
                                     tmp54 = obj4;
                                   } else {
-                                    num = throwTypeErrorResult;
+                                    c70 = throwTypeErrorResult;
                                     tmp54 = obj;
                                   }
                                 }
                               }
-                              num = throwTypeErrorResult;
+                              c70 = throwTypeErrorResult;
                               tmp54 = obj;
                             }
                           }
                         }
-                        num = throwTypeErrorResult;
+                        c70 = throwTypeErrorResult;
                         throwTypeErrorResult = obj;
                       }
                     }
-                    num = tmp91;
+                    c70 = tmp91;
                     throwTypeErrorResult = obj;
                     throwTypeErrorResult = tmp57;
                   }
                 }
-                num = tmp81;
+                c70 = tmp81;
                 tmp89 = obj;
                 tmp90 = tmp57;
               }
             }
-            num = throwTypeErrorResult;
+            c70 = throwTypeErrorResult;
             tmp54 = obj;
           }
         }
       }
-      num = throwTypeErrorResult;
+      c70 = throwTypeErrorResult;
       tmp14 = obj;
     }
     function peg$parseoptionalFormatPattern() {
       if (peg$parse_() !== obj) {
-        if (61 === str.charCodeAt(c70)) {
+        if (61 === str.charCodeAt(closure_70)) {
           let tmp8 = c32;
-          c70 = c70 + 1;
+          closure_70 = closure_70 + 1;
         } else {
           tmp8 = tmp3;
           if (0 === c73) {
             tmp8 = tmp3;
-            if (c70 >= c71) {
-              if (tmp10 > c71) {
-                c71 = tmp10;
+            if (closure_70 >= closure_71) {
+              if (tmp10 > closure_71) {
+                closure_71 = tmp10;
                 let arr = [];
               }
               arr = arr.push(tmp9);
@@ -799,7 +788,7 @@ obj = {
             let substr = items;
           }
           if (substr !== tmp3) {
-            substr = str.substring(tmp5, c70);
+            substr = str.substring(tmp5, closure_70);
           }
           let tmp18 = tmp3;
           if (substr === tmp3) {
@@ -835,16 +824,16 @@ obj = {
           }
           if (substr !== tmp3) {
             if (tmp2() !== tmp3) {
-              if (123 === str.charCodeAt(c70)) {
+              if (123 === str.charCodeAt(closure_70)) {
                 let tmp28 = c8;
-                c70 = c70 + 1;
+                closure_70 = closure_70 + 1;
               } else {
                 tmp28 = tmp3;
                 if (0 === c73) {
                   tmp28 = tmp3;
-                  if (c70 >= c71) {
-                    if (tmp30 > c71) {
-                      c71 = tmp30;
+                  if (closure_70 >= closure_71) {
+                    if (tmp30 > closure_71) {
+                      closure_71 = tmp30;
                       arr = [];
                     }
                     arr.push(tmp29);
@@ -875,16 +864,16 @@ obj = {
                   }
                   if (tmp38 !== tmp3) {
                     if (tmp2() !== tmp3) {
-                      if (125 === obj2.charCodeAt(c70)) {
+                      if (125 === obj2.charCodeAt(closure_70)) {
                         let tmp42 = c13;
-                        c70 = c70 + 1;
+                        closure_70 = closure_70 + 1;
                       } else {
                         tmp42 = tmp3;
                         if (0 === c73) {
                           tmp42 = tmp3;
-                          if (c70 >= c71) {
-                            if (tmp44 > c71) {
-                              c71 = tmp44;
+                          if (closure_70 >= closure_71) {
+                            if (tmp44 > closure_71) {
+                              closure_71 = tmp44;
                               arr = [];
                             }
                             arr.push(tmp43);
@@ -901,40 +890,40 @@ obj = {
                         obj[2] = tmp38;
                         let tmp4 = obj;
                       } else {
-                        c70 = tmp;
+                        closure_70 = tmp;
                         tmp4 = obj;
                       }
                     }
                   }
                 }
               }
-              c70 = tmp;
+              closure_70 = tmp;
               tmp4 = obj;
               obj2 = str;
             }
           }
-          c70 = tmp;
+          closure_70 = tmp;
           tmp4 = obj;
         }
-        c70 = tmp5;
+        closure_70 = tmp5;
         substr = obj;
       } else {
-        c70 = tmp;
+        closure_70 = tmp;
         tmp4 = obj;
       }
       return tmp4;
     }
     function peg$parsepluralStyle() {
-      if (str.substr(c70, 7) === c35) {
-        c70 = c70 + 7;
+      if (str.substr(closure_70, 7) === c35) {
+        closure_70 = closure_70 + 7;
         let tmp5 = tmp2;
       } else {
         tmp5 = obj;
         if (0 === c73) {
           tmp5 = tmp3;
-          if (c70 >= c71) {
-            if (tmp7 > c71) {
-              c71 = tmp7;
+          if (closure_70 >= closure_71) {
+            if (tmp7 > closure_71) {
+              closure_71 = tmp7;
               let arr = [];
             }
             arr = arr.push(tmp6);
@@ -983,21 +972,21 @@ obj = {
                 obj[2] = tmp22;
                 let tmp17 = obj;
               } else {
-                c70 = tmp;
+                closure_70 = tmp;
                 tmp17 = obj;
               }
             } else {
-              c70 = tmp;
+              closure_70 = tmp;
               tmp17 = obj;
             }
           } else {
-            c70 = tmp;
+            closure_70 = tmp;
             tmp17 = obj;
           }
           return tmp17;
         }
       }
-      c70 = tmp;
+      closure_70 = tmp;
       tmp15 = obj;
     }
     function peg$parsews() {
@@ -1010,9 +999,9 @@ obj = {
         charAtResult = obj;
         if (0 === c73) {
           charAtResult = tmp;
-          if (closure_70 >= c71) {
-            if (tmp5 > c71) {
-              c71 = tmp5;
+          if (closure_70 >= closure_71) {
+            if (tmp5 > closure_71) {
+              closure_71 = tmp5;
               let arr = [];
             }
             arr = arr.push(tmp4);
@@ -1042,9 +1031,9 @@ obj = {
               if (0 === c73) {
                 let tmp21 = closure_70;
                 charAtResult1 = tmp17;
-                if (closure_70 >= c71) {
-                  if (tmp21 > c71) {
-                    c71 = tmp21;
+                if (closure_70 >= closure_71) {
+                  if (tmp21 > closure_71) {
+                    closure_71 = tmp21;
                     arr = [];
                   }
                   let tmp22 = arr;
@@ -1066,9 +1055,9 @@ obj = {
       c73 = diff;
       if (tmp12 === tmp13) {
         if (0 === diff) {
-          if (closure_70 >= c71) {
-            if (tmp28 > c71) {
-              c71 = tmp28;
+          if (closure_70 >= closure_71) {
+            if (tmp28 > closure_71) {
+              closure_71 = tmp28;
               arr = [];
             }
             arr.push(tmp27);
@@ -1097,9 +1086,9 @@ obj = {
       c73 = diff;
       if (items === tmp3) {
         if (0 === diff) {
-          if (c70 >= c71) {
-            if (tmp10 > c71) {
-              c71 = tmp10;
+          if (c70 >= closure_71) {
+            if (tmp10 > closure_71) {
+              closure_71 = tmp10;
               arr = [];
             }
             arr = arr.push(tmp9);
@@ -1110,16 +1099,16 @@ obj = {
     }
     function peg$parsenumber() {
       let charAtResult2;
-      if (48 === str.charCodeAt(c70)) {
+      if (48 === str.charCodeAt(closure_70)) {
         let tmp3 = c47;
-        c70 = c70 + 1;
+        closure_70 = closure_70 + 1;
       } else {
         tmp3 = obj;
         if (0 === c73) {
           tmp3 = tmp;
-          if (c70 >= c71) {
-            if (tmp5 > c71) {
-              c71 = tmp5;
+          if (closure_70 >= closure_71) {
+            if (tmp5 > closure_71) {
+              closure_71 = tmp5;
               let arr = [];
             }
             arr = arr.push(tmp4);
@@ -1129,16 +1118,16 @@ obj = {
       }
       let tmp10 = obj;
       if (tmp3 === obj) {
-        if (regex5.test(str.charAt(c70))) {
-          let charAtResult = str.charAt(c70);
-          c70 = c70 + 1;
+        if (regex5.test(str.charAt(closure_70))) {
+          let charAtResult = str.charAt(closure_70);
+          closure_70 = closure_70 + 1;
         } else {
           charAtResult = tmp9;
           if (0 === c73) {
             charAtResult = tmp9;
-            if (c70 >= c71) {
-              if (tmp14 > c71) {
-                c71 = tmp14;
+            if (closure_70 >= closure_71) {
+              if (tmp14 > closure_71) {
+                closure_71 = tmp14;
                 arr = [];
               }
               arr = arr.push(tmp13);
@@ -1147,16 +1136,16 @@ obj = {
           }
         }
         if (charAtResult !== tmp9) {
-          if (regex3.test(str.charAt(c70))) {
-            let charAtResult1 = str.charAt(c70);
-            c70 = c70 + 1;
+          if (regex3.test(str.charAt(closure_70))) {
+            let charAtResult1 = str.charAt(closure_70);
+            closure_70 = closure_70 + 1;
           } else {
             charAtResult1 = tmp9;
             if (0 === c73) {
               charAtResult1 = tmp9;
-              if (c70 >= c71) {
-                if (tmp26 > c71) {
-                  c71 = tmp26;
+              if (closure_70 >= closure_71) {
+                if (tmp26 > closure_71) {
+                  closure_71 = tmp26;
                   arr = [];
                 }
                 arr.push(tmp25);
@@ -1172,22 +1161,22 @@ obj = {
               let arr2 = items.push(charAtResult1);
               let tmp34 = regex3;
               let str3 = str;
-              let tmp35 = c70;
-              if (regex3.test(str.charAt(c70))) {
-                let tmp43 = c70;
-                charAtResult2 = str3.charAt(c70);
-                let tmp44 = c70;
-                c70 = c70 + 1;
+              let tmp35 = closure_70;
+              if (regex3.test(str.charAt(closure_70))) {
+                let tmp43 = closure_70;
+                charAtResult2 = str3.charAt(closure_70);
+                let tmp44 = closure_70;
+                closure_70 = closure_70 + 1;
               } else {
                 let tmp36 = obj;
                 let tmp37 = c73;
                 charAtResult2 = obj;
                 if (0 === c73) {
-                  let tmp40 = c70;
+                  let tmp40 = closure_70;
                   charAtResult2 = tmp36;
-                  if (c70 >= c71) {
-                    if (tmp40 > c71) {
-                      c71 = tmp40;
+                  if (closure_70 >= closure_71) {
+                    if (tmp40 > closure_71) {
+                      closure_71 = tmp40;
                       arr = [];
                     }
                     let tmp41 = arr;
@@ -1207,19 +1196,19 @@ obj = {
             let substr = items1;
             let tmp20 = tmp32;
           } else {
-            c70 = tmp49;
+            closure_70 = tmp49;
             substr = obj;
             str2 = tmp31;
             tmp20 = tmp32;
           }
         } else {
-          c70 = tmp49;
+          closure_70 = tmp49;
           substr = obj;
           str2 = str;
           tmp20 = tmp9;
         }
         if (substr !== tmp20) {
-          substr = str2.substring(tmp49, c70);
+          substr = str2.substring(tmp49, closure_70);
         }
         tmp3 = substr;
         tmp10 = tmp20;
@@ -1235,17 +1224,17 @@ obj = {
       return parsed;
     }
     function peg$parsechar() {
-      if (regex6.test(str.charAt(c70))) {
-        let charAtResult = str.charAt(c70);
-        c70 = c70 + 1;
+      if (regex6.test(str.charAt(closure_70))) {
+        let charAtResult = str.charAt(closure_70);
+        closure_70 = closure_70 + 1;
       } else {
         let throwTypeErrorResult4 = obj;
         charAtResult = obj;
         if (0 === c73) {
           charAtResult = throwTypeErrorResult4;
-          if (c70 >= c71) {
-            if (tmp5 > c71) {
-              c71 = tmp5;
+          if (closure_70 >= closure_71) {
+            if (tmp5 > closure_71) {
+              closure_71 = tmp5;
               let arr = [];
             }
             arr = arr.push(tmp4);
@@ -1254,16 +1243,16 @@ obj = {
         }
       }
       if (charAtResult === obj) {
-        if (str.substr(c70, 2) === c54) {
-          c70 = c70 + 2;
+        if (str.substr(closure_70, 2) === c54) {
+          closure_70 = closure_70 + 2;
           let str2 = tmp88;
         } else {
           str2 = tmp10;
           if (0 === c73) {
             str2 = tmp10;
-            if (c70 >= c71) {
-              if (tmp13 > c71) {
-                c71 = tmp13;
+            if (closure_70 >= closure_71) {
+              if (tmp13 > closure_71) {
+                closure_71 = tmp13;
                 arr = [];
               }
               arr = arr.push(tmp12);
@@ -1278,16 +1267,16 @@ obj = {
           }
         }
         if (str2 === tmp10) {
-          if (str.substr(c70, 2) === c57) {
-            c70 = c70 + 2;
+          if (str.substr(closure_70, 2) === c57) {
+            closure_70 = closure_70 + 2;
             let str3 = tmp91;
           } else {
             str3 = tmp10;
             if (0 === c73) {
               str3 = tmp10;
-              if (c70 >= c71) {
-                if (tmp20 > c71) {
-                  c71 = tmp20;
+              if (closure_70 >= closure_71) {
+                if (tmp20 > closure_71) {
+                  closure_71 = tmp20;
                   arr = [];
                 }
                 arr.push(tmp19);
@@ -1302,16 +1291,16 @@ obj = {
             }
           }
           if (str3 === tmp10) {
-            if (str.substr(c70, 2) === c60) {
-              c70 = c70 + 2;
+            if (str.substr(closure_70, 2) === c60) {
+              closure_70 = closure_70 + 2;
               let str4 = tmp94;
             } else {
               str4 = tmp10;
               if (0 === c73) {
                 str4 = tmp10;
-                if (c70 >= c71) {
-                  if (tmp27 > c71) {
-                    c71 = tmp27;
+                if (closure_70 >= closure_71) {
+                  if (tmp27 > closure_71) {
+                    closure_71 = tmp27;
                     arr = [];
                   }
                   arr.push(tmp26);
@@ -1326,16 +1315,16 @@ obj = {
               }
             }
             if (str4 === tmp10) {
-              if (str.substr(c70, 2) === c63) {
-                c70 = c70 + 2;
+              if (str.substr(closure_70, 2) === c63) {
+                closure_70 = closure_70 + 2;
                 let str5 = tmp97;
               } else {
                 str5 = tmp10;
                 if (0 === c73) {
                   str5 = tmp10;
-                  if (c70 >= c71) {
-                    if (tmp34 > c71) {
-                      c71 = tmp34;
+                  if (closure_70 >= closure_71) {
+                    if (tmp34 > closure_71) {
+                      closure_71 = tmp34;
                       arr = [];
                     }
                     arr.push(tmp33);
@@ -1352,17 +1341,17 @@ obj = {
               if (str5 !== tmp10) {
                 str4 = str5;
               } else {
-                throwTypeErrorResult4 = c70;
-                if (str.substr(c70, 2) === c66) {
-                  c70 = c70 + 2;
+                throwTypeErrorResult4 = closure_70;
+                if (str.substr(closure_70, 2) === c66) {
+                  closure_70 = closure_70 + 2;
                   let tmp40 = throwTypeErrorResult4;
                 } else {
                   tmp40 = tmp10;
                   if (0 === c73) {
                     tmp40 = tmp10;
-                    if (c70 >= c71) {
-                      if (tmp42 > c71) {
-                        c71 = tmp42;
+                    if (closure_70 >= closure_71) {
+                      if (tmp42 > closure_71) {
+                        closure_71 = tmp42;
                         arr = [];
                       }
                       arr.push(tmp41);
@@ -1371,18 +1360,18 @@ obj = {
                   }
                 }
                 if (tmp40 === tmp10) {
-                  c70 = tmp99;
+                  closure_70 = tmp99;
                 }
-                if (regex4.test(str.charAt(c70))) {
-                  let charAtResult1 = str.charAt(c70);
-                  c70 = c70 + 1;
+                if (regex4.test(str.charAt(closure_70))) {
+                  let charAtResult1 = str.charAt(closure_70);
+                  closure_70 = closure_70 + 1;
                 } else {
                   charAtResult1 = tmp10;
                   if (0 === c73) {
                     charAtResult1 = tmp10;
-                    if (c70 >= c71) {
-                      if (tmp51 > c71) {
-                        c71 = tmp51;
+                    if (closure_70 >= closure_71) {
+                      if (tmp51 > closure_71) {
+                        closure_71 = tmp51;
                         arr = [];
                       }
                       arr.push(tmp50);
@@ -1391,17 +1380,17 @@ obj = {
                   }
                 }
                 if (charAtResult1 !== tmp10) {
-                  throwTypeErrorResult4 = c70;
-                  if (obj.test(str.charAt(c70))) {
-                    let charAtResult2 = str.charAt(c70);
-                    c70 = c70 + 1;
+                  throwTypeErrorResult4 = closure_70;
+                  if (obj.test(str.charAt(closure_70))) {
+                    let charAtResult2 = str.charAt(closure_70);
+                    closure_70 = closure_70 + 1;
                   } else {
                     charAtResult2 = tmp10;
                     if (0 === c73) {
                       charAtResult2 = tmp10;
-                      if (c70 >= c71) {
-                        if (tmp59 > c71) {
-                          c71 = tmp59;
+                      if (closure_70 >= closure_71) {
+                        if (tmp59 > closure_71) {
+                          closure_71 = tmp59;
                           arr = [];
                         }
                         arr.push(tmp58);
@@ -1410,17 +1399,17 @@ obj = {
                     }
                   }
                   if (charAtResult2 !== tmp10) {
-                    throwTypeErrorResult4 = c70;
-                    if (obj.test(str.charAt(c70))) {
-                      let charAtResult3 = str.charAt(c70);
-                      c70 = c70 + 1;
+                    throwTypeErrorResult4 = closure_70;
+                    if (obj.test(str.charAt(closure_70))) {
+                      let charAtResult3 = str.charAt(closure_70);
+                      closure_70 = closure_70 + 1;
                     } else {
                       charAtResult3 = tmp10;
                       if (0 === c73) {
                         charAtResult3 = tmp10;
-                        if (c70 >= c71) {
-                          if (tmp67 > c71) {
-                            c71 = tmp67;
+                        if (closure_70 >= closure_71) {
+                          if (tmp67 > closure_71) {
+                            closure_71 = tmp67;
                             arr = [];
                           }
                           arr.push(tmp66);
@@ -1429,17 +1418,17 @@ obj = {
                       }
                     }
                     if (charAtResult3 !== tmp10) {
-                      throwTypeErrorResult4 = c70;
-                      if (obj.test(str.charAt(c70))) {
-                        let charAtResult4 = str.charAt(c70);
-                        c70 = c70 + 1;
+                      throwTypeErrorResult4 = closure_70;
+                      if (obj.test(str.charAt(closure_70))) {
+                        let charAtResult4 = str.charAt(closure_70);
+                        closure_70 = closure_70 + 1;
                       } else {
                         charAtResult4 = tmp10;
                         if (0 === c73) {
                           charAtResult4 = tmp10;
-                          if (c70 >= c71) {
-                            if (tmp75 > c71) {
-                              c71 = tmp75;
+                          if (closure_70 >= closure_71) {
+                            if (tmp75 > closure_71) {
+                              closure_71 = tmp75;
                               arr = [];
                             }
                             arr.push(tmp74);
@@ -1452,7 +1441,7 @@ obj = {
                         let substr = items;
                       }
                       if (substr !== tmp10) {
-                        substr = str.substring(tmp46, c70);
+                        substr = str.substring(tmp46, closure_70);
                       }
                       if (substr !== tmp10) {
                         if (typeof peg$c67 !== "function") {
@@ -1462,13 +1451,13 @@ obj = {
                         const _parseInt = parseInt;
                         let fromCharCodeResult = String.fromCharCode(parseInt(substr, 16));
                       } else {
-                        c70 = tmp99;
+                        closure_70 = tmp99;
                         fromCharCodeResult = obj;
                       }
                     }
                   }
                 }
-                c70 = tmp46;
+                closure_70 = tmp46;
                 substr = obj;
               }
             }
@@ -1516,108 +1505,108 @@ obj = {
 
     }
     const re6 = /^[^ \t\n\r,.+={}#]/;
-    let closure_7 = { type: "class", value: "[^ \\t\\n\\r,.+={}#]", description: "[^ \\t\\n\\r,.+={}#]" };
-    let c8 = "{";
-    let closure_9 = { type: "literal", value: "{", description: "\"{\"" };
-    let c10 = null;
-    let c11 = ",";
-    let closure_12 = { type: "literal", value: ",", description: "\",\"" };
-    let c13 = "}";
-    let closure_14 = { type: "literal", value: "}", description: "\"}\"" };
+    closure_7 = { type: "class", value: "[^ \\t\\n\\r,.+={}#]", description: "[^ \\t\\n\\r,.+={}#]" };
+    c8 = "{";
+    closure_9 = { type: "literal", value: "{", description: "\"{\"" };
+    c10 = null;
+    c11 = ",";
+    closure_12 = { type: "literal", value: ",", description: "\",\"" };
+    c13 = "}";
+    closure_14 = { type: "literal", value: "}", description: "\"}\"" };
     function peg$c14(arg0, arg1) {
 
     }
     const number = "number";
-    let closure_17 = { type: "literal", value: "number", description: "\"number\"" };
-    let closure_19 = { type: "literal", value: "date", description: "\"date\"" };
+    closure_17 = { type: "literal", value: "number", description: "\"number\"" };
+    closure_19 = { type: "literal", value: "date", description: "\"date\"" };
     const time = "time";
-    let closure_21 = { type: "literal", value: "time", description: "\"time\"" };
+    closure_21 = { type: "literal", value: "time", description: "\"time\"" };
     function peg$c21(arg0, arg1) {
 
     }
     const plural = "plural";
-    let closure_24 = { type: "literal", value: "plural", description: "\"plural\"" };
+    closure_24 = { type: "literal", value: "plural", description: "\"plural\"" };
     function peg$c24(arg0) {
 
     }
     const selectordinal = "selectordinal";
-    let closure_27 = { type: "literal", value: "selectordinal", description: "\"selectordinal\"" };
+    closure_27 = { type: "literal", value: "selectordinal", description: "\"selectordinal\"" };
     function peg$c27(arg0) {
 
     }
     const select = "select";
-    let closure_30 = { type: "literal", value: "select", description: "\"select\"" };
+    closure_30 = { type: "literal", value: "select", description: "\"select\"" };
     function peg$c30(arg0) {
 
     }
-    let c32 = "=";
-    let closure_33 = { type: "literal", value: "=", description: "\"=\"" };
+    c32 = "=";
+    closure_33 = { type: "literal", value: "=", description: "\"=\"" };
     function peg$c33(arg0, arg1) {
 
     }
-    let c35 = "offset:";
-    let closure_36 = { type: "literal", value: "offset:", description: "\"offset:\"" };
+    c35 = "offset:";
+    closure_36 = { type: "literal", value: "offset:", description: "\"offset:\"" };
     function peg$c36(arg0) {
 
     }
     function peg$c37(arg0, arg1) {
 
     }
-    let closure_39 = { type: "other", description: "whitespace" };
+    closure_39 = { type: "other", description: "whitespace" };
     const re40 = /^[ \t\n\r]/;
-    let closure_41 = { type: "class", value: "[ \\t\\n\\r]", description: "[ \\t\\n\\r]" };
-    let closure_42 = { type: "other", description: "optionalWhitespace" };
+    closure_41 = { type: "class", value: "[ \\t\\n\\r]", description: "[ \\t\\n\\r]" };
+    closure_42 = { type: "other", description: "optionalWhitespace" };
     const re43 = /^[0-9]/;
-    let closure_44 = { type: "class", value: "[0-9]", description: "[0-9]" };
+    closure_44 = { type: "class", value: "[0-9]", description: "[0-9]" };
     const re45 = /^[0-9a-f]/i;
-    let closure_46 = { type: "class", value: "[0-9a-f]i", description: "[0-9a-f]i" };
-    let c47 = "0";
-    let closure_48 = { type: "literal", value: "0", description: "\"0\"" };
+    closure_46 = { type: "class", value: "[0-9a-f]i", description: "[0-9a-f]i" };
+    c47 = "0";
+    closure_48 = { type: "literal", value: "0", description: "\"0\"" };
     const re49 = /^[1-9]/;
-    let closure_50 = { type: "class", value: "[1-9]", description: "[1-9]" };
+    closure_50 = { type: "class", value: "[1-9]", description: "[1-9]" };
     function peg$c50(arg0) {
 
     }
     const re52 = /^[^{}\\\0-\x1F \t\n\r]/;
-    let closure_53 = { type: "class", value: "[^{}\\\\\\0-\\x1F\u007F \\t\\n\\r]", description: "[^{}\\\\\\0-\\x1F\u007F \\t\\n\\r]" };
-    let c54 = "\\\\";
-    let closure_55 = { type: "literal", value: "\\\\", description: "\"\\\\\\\\\"" };
+    closure_53 = { type: "class", value: "[^{}\\\\\\0-\\x1F\u007F \\t\\n\\r]", description: "[^{}\\\\\\0-\\x1F\u007F \\t\\n\\r]" };
+    c54 = "\\\\";
+    closure_55 = { type: "literal", value: "\\\\", description: "\"\\\\\\\\\"" };
     function peg$c55() {
 
     }
-    let c57 = "\\#";
-    let closure_58 = { type: "literal", value: "\\#", description: "\"\\\\#\"" };
+    c57 = "\\#";
+    closure_58 = { type: "literal", value: "\\#", description: "\"\\\\#\"" };
     function peg$c58() {
 
     }
-    let c60 = "\\{";
-    let closure_61 = { type: "literal", value: "\\{", description: "\"\\\\{\"" };
+    c60 = "\\{";
+    closure_61 = { type: "literal", value: "\\{", description: "\"\\\\{\"" };
     function peg$c61() {
 
     }
-    let c63 = "\\}";
-    let closure_64 = { type: "literal", value: "\\}", description: "\"\\\\}\"" };
+    c63 = "\\}";
+    closure_64 = { type: "literal", value: "\\}", description: "\"\\\\}\"" };
     function peg$c64() {
 
     }
-    let c66 = "\\u";
-    let closure_67 = { type: "literal", value: "\\u", description: "\"\\\\u\"" };
+    c66 = "\\u";
+    closure_67 = { type: "literal", value: "\\u", description: "\"\\\\u\"" };
     function peg$c67(arg0) {
 
     }
     function peg$c68(arg0) {
 
     }
-    let c70 = 0;
-    let c71 = 0;
+    c70 = 0;
+    closure_71 = 0;
     let arr = [];
-    let c73 = 0;
+    c73 = 0;
     if ("startRule" in tmp) {
       if (tmp.startRule in obj) {
         peg$parsestart = obj[tmp.startRule];
       } else {
         const _Error = Error;
-        const error = new Error("Can't start parsing from rule \"" + tmp.startRule + "\".");
+        error = new Error("Can't start parsing from rule \"" + tmp.startRule + "\".");
         throw error;
       }
     }
@@ -1632,9 +1621,9 @@ obj = {
       tmp8 = c70 < str.length;
     }
     if (tmp8) {
-      if (c70 >= c71) {
-        if (tmp11 > c71) {
-          c71 = tmp11;
+      if (c70 >= closure_71) {
+        if (tmp11 > closure_71) {
+          closure_71 = tmp11;
           arr = [];
         }
         arr = arr.push({ type: "end", description: "end of input" });
@@ -1642,7 +1631,7 @@ obj = {
     }
     obj = { line: 1, column: 1, seenCR: false };
     let tmp15 = obj;
-    if (0 !== c71) {
+    if (0 !== closure_71) {
       if (0 > tmp14) {
         obj = { line: 1, column: 1, seenCR: false };
       }
@@ -1677,7 +1666,7 @@ obj = {
       }
     }
     let charAtResult1 = null;
-    if (c71 < str.length) {
+    if (closure_71 < str.length) {
       charAtResult1 = str.charAt(tmp14);
     }
     const sorted = arr.sort((description, description2) => {
@@ -1767,7 +1756,7 @@ obj = {
     const combined = text1 + " but " + str9 + " found.";
     ({ line, column } = tmp15);
     Object.create(closure_0.prototype);
-    let obj2 = { message: combined, expected: arr, found: charAtResult1, offset: c71, line, column, name: "SyntaxError" };
+    let obj2 = { message: combined, expected: arr, found: charAtResult1, offset: closure_71, line, column, name: "SyntaxError" };
     throw obj2;
   }
 };

@@ -1,13 +1,12 @@
 // _runtime/04121__isNativeReflectConstruct.js
-import ModuleNotFoundError from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import get_ActivityIndicator from "get ActivityIndicator";
+import _wrapNativeSuperDefault from "_wrapNativeSuper" /* 158 */;
+import ModuleNotFoundError from "_classCallCheck" /* 41 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let Platform;
-let c3;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -19,10 +18,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -51,9 +50,9 @@ class ModuleNotFoundError {
     }
     if ("expo-go" === str) {
       items = ["NitroModules are not supported in Expo Go! Use EAS (`expo prebuild`) or eject to a bare workflow instead."];
-      tmp12 = __esModule;
-      obj3 = __esModule(tmp);
-      tmp13 = __esModule;
+      tmp12 = closure_2;
+      obj3 = closure_2(tmp);
+      tmp13 = closure_1;
       tmp14 = _isNativeReflectConstruct;
       if (_isNativeReflectConstruct()) {
         tmp16 = globalThis;
@@ -89,10 +88,10 @@ class ModuleNotFoundError {
       obj = { cause: null };
       obj[0] = global;
       items2[1] = obj;
-      tmp7 = __esModule;
-      obj2 = __esModule(tmp);
+      tmp7 = closure_2;
+      obj2 = closure_2(tmp);
       tmp9 = _isNativeReflectConstruct;
-      tmp8 = __esModule;
+      tmp8 = closure_1;
       if (_isNativeReflectConstruct()) {
         tmp11 = globalThis;
         _Reflect = Reflect;
@@ -104,6 +103,6 @@ class ModuleNotFoundError {
     }
   }
 }
-importDefaultResult1(ModuleNotFoundError, require("_wrapNativeSuper")(Error));
+importDefaultResult1(ModuleNotFoundError, _wrapNativeSuperDefault(Error));
 
 export const ModuleNotFoundError = importDefaultResult(ModuleNotFoundError);

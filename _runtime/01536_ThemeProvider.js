@@ -1,13 +1,12 @@
 // _runtime/01536_ThemeProvider.js
-import "noop";
-import { jsx } from "jsxProd";
-import { context } from "01537_context.js";
+import noopAll from "noop" /* 19 */;
+import context from "context" /* 1537 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 
 export const ThemeProvider = function ThemeProvider(arg0) {
-  let children;
-  let value;
   ({ value, children } = arg0);
   return jsx(context.ThemeContext.Provider, { value, children });
 };

@@ -1,6 +1,6 @@
 // _runtime/07779_isFullFinishedSpan.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const SentrySpan = require;
 function isFullFinishedSpan(start_timestamp) {
@@ -13,7 +13,7 @@ class SentrySpan {
       obj = {};
     }
     self = this;
-    tmp = isFullFinishedSpan(this, SentrySpan);
+    tmp = closure_2(this, SentrySpan);
     traceId = obj.traceId;
     if (!traceId) {
       tmp2 = SentrySpan;
@@ -39,7 +39,7 @@ class SentrySpan {
     }
     self._startTime = startTimestamp;
     self._attributes = {};
-    obj = { [outer1_0(outer1_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "manual" };
+    obj = { [closure_1_0(closure_1_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "manual" };
     obj[require("module_7753").SEMANTIC_ATTRIBUTE_SENTRY_OP] = obj.op;
     merged = Object.assign(obj.attributes);
     setAttributesResult = self.setAttributes(obj);
@@ -106,7 +106,7 @@ let items = [
     key: "setAttributes",
     value: function setAttributes(arg0) {
       const self = this;
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const keys = Object.keys(arg0);
       const item = keys.forEach((arg0) => self.setAttribute(arg0, table[arg0]));
       return this;
@@ -149,13 +149,10 @@ let items = [
   {
     key: "getSpanJSON",
     value: function getSpanJSON() {
-      let _attributes;
       const self = this;
       let obj = SentrySpan(7744);
-      obj = { data: this._attributes, description: this._name, op: this._attributes[SentrySpan(undefined, 7753).SEMANTIC_ATTRIBUTE_SENTRY_OP], parent_span_id: this._parentSpanId, span_id: this._spanId, start_timestamp: this._startTime, status: null, timestamp: null, trace_id: null, origin: null, _metrics_summary: null, profile_id: null, exclusive_time: null, measurements: null, is_segment: null, segment_id: null };
-      obj[6] = SentrySpan(7743).getStatusMessage(this._status);
+      obj = { data: this._attributes, description: this._name, op: this._attributes[SentrySpan(undefined, 7753).SEMANTIC_ATTRIBUTE_SENTRY_OP], parent_span_id: this._parentSpanId, span_id: this._spanId, start_timestamp: this._startTime, status: SentrySpan(7743).getStatusMessage(this._status), timestamp: null, trace_id: null, origin: _attributes[SentrySpan(undefined, 7753).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN], _metrics_summary: null, profile_id: null, exclusive_time: null, measurements: null, is_segment: null, segment_id: null };
       ({ _endTime: obj2[7], _traceId: obj2[8], _attributes } = this);
-      obj[9] = _attributes[SentrySpan(undefined, 7753).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
       const obj3 = SentrySpan(7743);
       obj[10] = SentrySpan(7754).getMetricSummaryJsonForSpan(this);
       obj[11] = this._attributes[SentrySpan(undefined, 7753).SEMANTIC_ATTRIBUTE_PROFILE_ID];
@@ -343,8 +340,8 @@ let items = [
           const found = spanDescendants.filter((isStandaloneSpan) => {
             let tmp = isStandaloneSpan !== self;
             if (tmp) {
-              tmp = !(isStandaloneSpan instanceof outer1_3 && isStandaloneSpan.isStandaloneSpan());
-              const tmp3 = isStandaloneSpan instanceof outer1_3 && isStandaloneSpan.isStandaloneSpan();
+              tmp = !(isStandaloneSpan instanceof closure_1_3 && isStandaloneSpan.isStandaloneSpan());
+              const tmp3 = isStandaloneSpan instanceof closure_1_3 && isStandaloneSpan.isStandaloneSpan();
             }
             return tmp;
           });
@@ -373,7 +370,7 @@ let items = [
           }
           obj[1] = substr;
           ({ _startTime: obj16[2], _endTime: obj16[3], _name: obj16[4] } = self);
-          const obj1 = { capturedSpanScope: null, capturedSpanIsolationScope: null };
+          obj1 = { capturedSpanScope: null, capturedSpanIsolationScope: null };
           obj1[0] = scope;
           obj1[1] = capturedScopesOnSpan.isolationScope;
           const tmp3Result3 = tmp3(7743);

@@ -298,12 +298,12 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                             } else {
                               let tmp7 = "content" in obj;
                               if (tmp7) {
-                                tmp7 = closure_6(obj.content);
+                                tmp7 = callback(obj.content);
                               }
                               if (tmp7) {
                                 obj = {};
                                 let merged1 = Object.assign(obj);
-                                obj.content = closure_10(obj.content);
+                                obj.content = callback2(obj.content);
                                 tmp9 = obj;
                               }
                             }
@@ -332,27 +332,27 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                               obj.parts = parts.map(() => { ... });
                               tmp18 = obj;
                             }
-                            if (closure_6(tmp18)) {
-                              let tmp24 = closure_10(tmp18);
+                            if (callback(tmp18)) {
+                              let tmp24 = callback2(tmp18);
                             } else {
                               tmp24 = tmp18;
                               if (tmp23(obj)) {
-                                tmp24 = closure_10(obj);
+                                tmp24 = callback2(obj);
                               }
                             }
-                            tmp23 = closure_6;
+                            tmp23 = callback;
                           }
                         });
                         let tmp9 = obj;
                       } else {
                         let tmp7 = "content" in obj;
                         if (tmp7) {
-                          tmp7 = closure_6(obj.content);
+                          tmp7 = callback(obj.content);
                         }
                         if (tmp7) {
                           obj = {};
                           let merged1 = Object.assign(obj);
-                          obj.content = closure_10(obj.content);
+                          obj.content = callback2(obj.content);
                           tmp9 = obj;
                         }
                       }
@@ -407,12 +407,12 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                             } else {
                               let tmp7 = "content" in obj;
                               if (tmp7) {
-                                tmp7 = closure_6(obj.content);
+                                tmp7 = callback(obj.content);
                               }
                               if (tmp7) {
                                 obj = {};
                                 let merged1 = Object.assign(obj);
-                                obj.content = closure_10(obj.content);
+                                obj.content = callback2(obj.content);
                                 tmp9 = obj;
                               }
                             }
@@ -441,40 +441,40 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                               obj.parts = parts.map(() => { ... });
                               tmp18 = obj;
                             }
-                            if (closure_6(tmp18)) {
-                              let tmp24 = closure_10(tmp18);
+                            if (callback(tmp18)) {
+                              let tmp24 = callback2(tmp18);
                             } else {
                               tmp24 = tmp18;
                               if (tmp23(obj)) {
-                                tmp24 = closure_10(obj);
+                                tmp24 = callback2(obj);
                               }
                             }
-                            tmp23 = closure_6;
+                            tmp23 = callback;
                           }
                         });
                         tmp18 = obj;
                       }
-                      if (closure_6(tmp18)) {
-                        let tmp24 = closure_10(tmp18);
+                      if (callback(tmp18)) {
+                        let tmp24 = callback2(tmp18);
                       } else {
                         tmp24 = tmp18;
                         if (tmp23(obj)) {
-                          tmp24 = closure_10(obj);
+                          tmp24 = callback2(obj);
                         }
                       }
-                      tmp23 = closure_6;
+                      tmp23 = callback;
                     }
                   });
                   let tmp9 = obj;
                 } else {
                   let tmp7 = "content" in obj;
                   if (tmp7) {
-                    tmp7 = closure_6(obj.content);
+                    tmp7 = callback(obj.content);
                   }
                   if (tmp7) {
                     obj = {};
                     let merged1 = Object.assign(obj);
-                    obj.content = closure_10(obj.content);
+                    obj.content = callback2(obj.content);
                     tmp9 = obj;
                   }
                 }
@@ -553,12 +553,12 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                             } else {
                               let tmp7 = "content" in obj;
                               if (tmp7) {
-                                tmp7 = closure_6(obj.content);
+                                tmp7 = callback(obj.content);
                               }
                               if (tmp7) {
                                 obj = {};
                                 let merged1 = Object.assign(obj);
-                                obj.content = closure_10(obj.content);
+                                obj.content = callback2(obj.content);
                                 tmp9 = obj;
                               }
                             }
@@ -587,27 +587,27 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                               obj.parts = parts.map(() => { ... });
                               tmp18 = obj;
                             }
-                            if (closure_6(tmp18)) {
-                              let tmp24 = closure_10(tmp18);
+                            if (callback(tmp18)) {
+                              let tmp24 = callback2(tmp18);
                             } else {
                               tmp24 = tmp18;
                               if (tmp23(obj)) {
-                                tmp24 = closure_10(obj);
+                                tmp24 = callback2(obj);
                               }
                             }
-                            tmp23 = closure_6;
+                            tmp23 = callback;
                           }
                         });
                         let tmp9 = obj;
                       } else {
                         let tmp7 = "content" in obj;
                         if (tmp7) {
-                          tmp7 = closure_6(obj.content);
+                          tmp7 = callback(obj.content);
                         }
                         if (tmp7) {
                           obj = {};
                           let merged1 = Object.assign(obj);
-                          obj.content = closure_10(obj.content);
+                          obj.content = callback2(obj.content);
                           tmp9 = obj;
                         }
                       }
@@ -662,12 +662,12 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                             } else {
                               let tmp7 = "content" in obj;
                               if (tmp7) {
-                                tmp7 = closure_6(obj.content);
+                                tmp7 = callback(obj.content);
                               }
                               if (tmp7) {
                                 obj = {};
                                 let merged1 = Object.assign(obj);
-                                obj.content = closure_10(obj.content);
+                                obj.content = callback2(obj.content);
                                 tmp9 = obj;
                               }
                             }
@@ -696,53 +696,53 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                               obj.parts = parts.map(() => { ... });
                               tmp18 = obj;
                             }
-                            if (closure_6(tmp18)) {
-                              let tmp24 = closure_10(tmp18);
+                            if (callback(tmp18)) {
+                              let tmp24 = callback2(tmp18);
                             } else {
                               tmp24 = tmp18;
                               if (tmp23(obj)) {
-                                tmp24 = closure_10(obj);
+                                tmp24 = callback2(obj);
                               }
                             }
-                            tmp23 = closure_6;
+                            tmp23 = callback;
                           }
                         });
                         tmp18 = obj;
                       }
-                      if (closure_6(tmp18)) {
-                        let tmp24 = closure_10(tmp18);
+                      if (callback(tmp18)) {
+                        let tmp24 = callback2(tmp18);
                       } else {
                         tmp24 = tmp18;
                         if (tmp23(obj)) {
-                          tmp24 = closure_10(obj);
+                          tmp24 = callback2(obj);
                         }
                       }
-                      tmp23 = closure_6;
+                      tmp23 = callback;
                     }
                   });
                   tmp18 = obj;
                 }
-                if (closure_6(tmp18)) {
-                  let tmp24 = closure_10(tmp18);
+                if (callback(tmp18)) {
+                  let tmp24 = callback2(tmp18);
                 } else {
                   tmp24 = tmp18;
                   if (tmp23(obj)) {
-                    tmp24 = closure_10(obj);
+                    tmp24 = callback2(obj);
                   }
                 }
-                tmp23 = closure_6;
+                tmp23 = callback;
               }
             });
             let tmp9 = obj;
           } else {
             let tmp7 = "content" in obj;
             if (tmp7) {
-              tmp7 = closure_6(obj.content);
+              tmp7 = callback(obj.content);
             }
             if (tmp7) {
               obj = {};
               let merged1 = Object.assign(obj);
-              obj.content = closure_10(obj.content);
+              obj.content = callback2(obj.content);
               tmp9 = obj;
             }
           }
@@ -845,12 +845,12 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                             } else {
                               let tmp7 = "content" in obj;
                               if (tmp7) {
-                                tmp7 = closure_6(obj.content);
+                                tmp7 = callback(obj.content);
                               }
                               if (tmp7) {
                                 obj = {};
                                 let merged1 = Object.assign(obj);
-                                obj.content = closure_10(obj.content);
+                                obj.content = callback2(obj.content);
                                 tmp9 = obj;
                               }
                             }
@@ -879,27 +879,27 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                               obj.parts = parts.map(() => { ... });
                               tmp18 = obj;
                             }
-                            if (closure_6(tmp18)) {
-                              let tmp24 = closure_10(tmp18);
+                            if (callback(tmp18)) {
+                              let tmp24 = callback2(tmp18);
                             } else {
                               tmp24 = tmp18;
                               if (tmp23(obj)) {
-                                tmp24 = closure_10(obj);
+                                tmp24 = callback2(obj);
                               }
                             }
-                            tmp23 = closure_6;
+                            tmp23 = callback;
                           }
                         });
                         let tmp9 = obj;
                       } else {
                         let tmp7 = "content" in obj;
                         if (tmp7) {
-                          tmp7 = closure_6(obj.content);
+                          tmp7 = callback(obj.content);
                         }
                         if (tmp7) {
                           obj = {};
                           let merged1 = Object.assign(obj);
-                          obj.content = closure_10(obj.content);
+                          obj.content = callback2(obj.content);
                           tmp9 = obj;
                         }
                       }
@@ -954,12 +954,12 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                             } else {
                               let tmp7 = "content" in obj;
                               if (tmp7) {
-                                tmp7 = closure_6(obj.content);
+                                tmp7 = callback(obj.content);
                               }
                               if (tmp7) {
                                 obj = {};
                                 let merged1 = Object.assign(obj);
-                                obj.content = closure_10(obj.content);
+                                obj.content = callback2(obj.content);
                                 tmp9 = obj;
                               }
                             }
@@ -988,40 +988,40 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                               obj.parts = parts.map(() => { ... });
                               tmp18 = obj;
                             }
-                            if (closure_6(tmp18)) {
-                              let tmp24 = closure_10(tmp18);
+                            if (callback(tmp18)) {
+                              let tmp24 = callback2(tmp18);
                             } else {
                               tmp24 = tmp18;
                               if (tmp23(obj)) {
-                                tmp24 = closure_10(obj);
+                                tmp24 = callback2(obj);
                               }
                             }
-                            tmp23 = closure_6;
+                            tmp23 = callback;
                           }
                         });
                         tmp18 = obj;
                       }
-                      if (closure_6(tmp18)) {
-                        let tmp24 = closure_10(tmp18);
+                      if (callback(tmp18)) {
+                        let tmp24 = callback2(tmp18);
                       } else {
                         tmp24 = tmp18;
                         if (tmp23(obj)) {
-                          tmp24 = closure_10(obj);
+                          tmp24 = callback2(obj);
                         }
                       }
-                      tmp23 = closure_6;
+                      tmp23 = callback;
                     }
                   });
                   let tmp9 = obj;
                 } else {
                   let tmp7 = "content" in obj;
                   if (tmp7) {
-                    tmp7 = closure_6(obj.content);
+                    tmp7 = callback(obj.content);
                   }
                   if (tmp7) {
                     obj = {};
                     let merged1 = Object.assign(obj);
-                    obj.content = closure_10(obj.content);
+                    obj.content = callback2(obj.content);
                     tmp9 = obj;
                   }
                 }
@@ -1100,12 +1100,12 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                             } else {
                               let tmp7 = "content" in obj;
                               if (tmp7) {
-                                tmp7 = closure_6(obj.content);
+                                tmp7 = callback(obj.content);
                               }
                               if (tmp7) {
                                 obj = {};
                                 let merged1 = Object.assign(obj);
-                                obj.content = closure_10(obj.content);
+                                obj.content = callback2(obj.content);
                                 tmp9 = obj;
                               }
                             }
@@ -1134,27 +1134,27 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                               obj.parts = parts.map(() => { ... });
                               tmp18 = obj;
                             }
-                            if (closure_6(tmp18)) {
-                              let tmp24 = closure_10(tmp18);
+                            if (callback(tmp18)) {
+                              let tmp24 = callback2(tmp18);
                             } else {
                               tmp24 = tmp18;
                               if (tmp23(obj)) {
-                                tmp24 = closure_10(obj);
+                                tmp24 = callback2(obj);
                               }
                             }
-                            tmp23 = closure_6;
+                            tmp23 = callback;
                           }
                         });
                         let tmp9 = obj;
                       } else {
                         let tmp7 = "content" in obj;
                         if (tmp7) {
-                          tmp7 = closure_6(obj.content);
+                          tmp7 = callback(obj.content);
                         }
                         if (tmp7) {
                           obj = {};
                           let merged1 = Object.assign(obj);
-                          obj.content = closure_10(obj.content);
+                          obj.content = callback2(obj.content);
                           tmp9 = obj;
                         }
                       }
@@ -1209,12 +1209,12 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                             } else {
                               let tmp7 = "content" in obj;
                               if (tmp7) {
-                                tmp7 = closure_6(obj.content);
+                                tmp7 = callback(obj.content);
                               }
                               if (tmp7) {
                                 obj = {};
                                 let merged1 = Object.assign(obj);
-                                obj.content = closure_10(obj.content);
+                                obj.content = callback2(obj.content);
                                 tmp9 = obj;
                               }
                             }
@@ -1243,54 +1243,54 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
                               obj.parts = parts.map(() => { ... });
                               tmp18 = obj;
                             }
-                            if (closure_6(tmp18)) {
-                              let tmp24 = closure_10(tmp18);
+                            if (callback(tmp18)) {
+                              let tmp24 = callback2(tmp18);
                             } else {
                               tmp24 = tmp18;
                               if (tmp23(obj)) {
-                                tmp24 = closure_10(obj);
+                                tmp24 = callback2(obj);
                               }
                             }
-                            tmp23 = closure_6;
+                            tmp23 = callback;
                           }
                         });
                         tmp18 = obj;
                       }
-                      if (closure_6(tmp18)) {
-                        let tmp24 = closure_10(tmp18);
+                      if (callback(tmp18)) {
+                        let tmp24 = callback2(tmp18);
                       } else {
                         tmp24 = tmp18;
                         if (tmp23(obj)) {
-                          tmp24 = closure_10(obj);
+                          tmp24 = callback2(obj);
                         }
                       }
-                      tmp23 = closure_6;
+                      tmp23 = callback;
                     }
                   });
                   tmp18 = obj;
                 }
-                if (closure_6(tmp18)) {
-                  let tmp24 = closure_10(tmp18);
+                if (callback(tmp18)) {
+                  let tmp24 = callback2(tmp18);
                 } else {
                   tmp24 = tmp18;
                   if (tmp23(obj)) {
-                    tmp24 = closure_10(obj);
+                    tmp24 = callback2(obj);
                   }
                 }
-                tmp23 = closure_6;
+                tmp23 = callback;
               }
             });
             tmp18 = obj;
           }
-          if (closure_6(tmp18)) {
-            let tmp24 = closure_10(tmp18);
+          if (callback(tmp18)) {
+            let tmp24 = callback2(tmp18);
           } else {
             tmp24 = tmp18;
             if (tmp23(obj)) {
-              tmp24 = closure_10(obj);
+              tmp24 = callback2(obj);
             }
           }
-          tmp23 = closure_6;
+          tmp23 = callback;
         }
       });
       if (typeof jsonBytes !== "function") {

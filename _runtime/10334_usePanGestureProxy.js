@@ -1,6 +1,7 @@
 // _runtime/10334_usePanGestureProxy.js
-import { useMemo } from "noop";
+import noop from "noop" /* 19 */;
 
+const useMemo = noop.useMemo;
 let closure_3 = { code: "function pnpm_usePanGestureProxyTs1(e){const{userDefinedConflictGestures}=this.__closure;if(userDefinedConflictGestures.onBegin)userDefinedConflictGestures.onBegin(e);}" };
 let closure_4 = { code: "function pnpm_usePanGestureProxyTs2(e){const{onGestureStart,userDefinedConflictGestures}=this.__closure;onGestureStart(e);if(userDefinedConflictGestures.onStart)userDefinedConflictGestures.onStart(e);}" };
 let closure_5 = { code: "function pnpm_usePanGestureProxyTs3(e){const{onGestureUpdate,userDefinedConflictGestures}=this.__closure;onGestureUpdate(e);if(userDefinedConflictGestures.onUpdate)userDefinedConflictGestures.onUpdate(e);}" };
@@ -18,11 +19,6 @@ export const usePanGestureProxy = (onConfigurePanGesture) => {
   }
   const items = [onGestureStart, onGestureUpdate, onGestureEnd, onConfigurePanGesture];
   const tmp = onGestureUpdate(() => {
-    let onBegin;
-    let onEnd;
-    let onFinalize;
-    let onStart;
-    let onUpdate;
     const Gesture = onConfigurePanGesture(onGestureStart[1]).Gesture;
     const withTestIdResult = Gesture.Pan().withTestId("rnrc-gesture-handler");
     onConfigurePanGesture = withTestIdResult;
@@ -72,7 +68,7 @@ export const usePanGestureProxy = (onConfigurePanGesture) => {
     const PanResult = Gesture.Pan();
     class D {
       constructor(arg0) {
-        tmp = outer1_1(arg0);
+        tmp = closure_1(arg0);
         obj = closure_1;
         if (closure_1.onStart) {
           onStartResult = obj.onStart(arg0);
@@ -83,28 +79,28 @@ export const usePanGestureProxy = (onConfigurePanGesture) => {
     obj = { onGestureStart: obj, userDefinedConflictGestures: obj };
     D.__closure = obj;
     D.__workletHash = 2969501037173;
-    D.__initData = outer1_4;
+    D.__initData = closure_1_4;
     const onBeginResult = withTestIdResult.onBegin(C);
     const fn = function p(arg0) {
-      outer1_2(arg0);
+      closure_1_2(arg0);
       if (obj.onUpdate) {
         obj.onUpdate(arg0);
       }
     };
     fn.__closure = { onGestureUpdate, userDefinedConflictGestures: obj };
     fn.__workletHash = 14406733755860;
-    fn.__initData = outer1_5;
-    const obj1 = { onGestureUpdate, userDefinedConflictGestures: obj };
+    fn.__initData = closure_1_5;
+    obj1 = { onGestureUpdate, userDefinedConflictGestures: obj };
     const onStartResult = withTestIdResult.onBegin(C).onStart(D);
     const fn2 = function c(arg0, arg1) {
-      outer1_3(arg0, arg1);
+      closure_1_3(arg0, arg1);
       if (obj.onEnd) {
         obj.onEnd(arg0, arg1);
       }
     };
     fn2.__closure = { onGestureEnd, userDefinedConflictGestures: obj };
     fn2.__workletHash = 3800149117372;
-    fn2.__initData = outer1_6;
+    fn2.__initData = closure_1_6;
     const obj2 = { onGestureEnd, userDefinedConflictGestures: obj };
     const onUpdateResult = withTestIdResult.onBegin(C).onStart(D).onUpdate(fn);
     const fn3 = function e(arg0, arg1) {
@@ -114,7 +110,7 @@ export const usePanGestureProxy = (onConfigurePanGesture) => {
     };
     fn3.__closure = { userDefinedConflictGestures: obj };
     fn3.__workletHash = 16525776198753;
-    fn3.__initData = outer1_7;
+    fn3.__initData = closure_1_7;
     withTestIdResult.onBegin(C).onStart(D).onUpdate(fn).onEnd(fn2).onFinalize(fn3);
     return withTestIdResult;
   }, items);

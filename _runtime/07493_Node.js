@@ -1,4 +1,6 @@
 // _runtime/07493_Node.js
+import Iterator from "Iterator" /* 7494 */;
+
 class Node {
   constructor(arg0) {
     return;
@@ -288,6 +290,6 @@ class RBTree {
     }
   }
 }
-RBTree.prototype = new require("Iterator")();
+RBTree.prototype = new Iterator();
 
 export default RBTree;

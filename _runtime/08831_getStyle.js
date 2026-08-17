@@ -1,27 +1,24 @@
 // _runtime/08831_getStyle.js
-import noop from "noop";
-import { NativeEventEmitter } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import getNativeComponent from "getNativeComponent";
-import getNativeComponent from "getNativeComponent";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
+import getNativeComponent from "getNativeComponent" /* 8832 */;
 
-let c3;
-let c4;
-let obj1;
 ({ useCallback: obj1, useEffect: c3, useRef: c4 } = noop);
-getNativeComponent = getNativeComponent.getNativeComponent();
-getNativeComponent = getNativeComponent.getNativeModule();
-const memoResult = require("noop").memo((date) => {
+const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
+const jsx = jsxProd.jsx;
+const nativeComponent = getNativeComponent.getNativeComponent();
+const nativeModule = getNativeComponent.getNativeModule();
+const memoResult = noopDefault.memo((date) => {
   const _require = date;
   const current = callback3(Math.random().toString()).current;
   const items = [date, current];
   let tmp = callback((nativeEvent) => {
-    let date;
-    let id;
     nativeEvent = nativeEvent.nativeEvent;
     ({ date, id } = nativeEvent);
     if (null === id) {
-      if (typeof outer1_12 !== "function") {
+      if (typeof closure_1_12 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const _Date = Date;
@@ -53,7 +50,7 @@ const memoResult = require("noop").memo((date) => {
   const callback2 = tmp2;
   const items2 = [tmp, tmp2];
   callback2(() => {
-    const obj = new outer1_5(outer1_8);
+    const obj = new closure_1_5(closure_1_8);
     obj.addListener("dateChange", closure_2);
     obj.addListener("spinnerStateChange", closure_3);
     return () => {
@@ -115,7 +112,7 @@ const memoResult = require("noop").memo((date) => {
   if (!date.modal) {
     obj = {};
     const merged1 = Object.assign(obj);
-    tmp11 = <getNativeComponent />;
+    tmp11 = <closure_7 />;
   }
   return tmp11;
 });

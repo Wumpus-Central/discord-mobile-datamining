@@ -1,31 +1,26 @@
 // _runtime/08834_useModal.js
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import getNativeComponent from "getNativeComponent";
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import getNativeComponent from "getNativeComponent" /* 8832 */;
 
-let Platform;
-let c0;
-let c3;
-let closure_1;
-let obj1;
 ({ useCallback: c0, useEffect: closure_1, useRef: obj1 } = noop);
 ({ NativeEventEmitter: c3, Platform } = get_ActivityIndicator);
-getNativeComponent = getNativeComponent.getNativeModule();
+const nativeModule = getNativeComponent.getNativeModule();
 
 export const useModal = (props) => {
   props = props.props;
   let id = props.id;
   props = undefined;
-  let c3;
-  let closure_4;
+  closure_3 = undefined;
+  closure_4 = undefined;
   let current;
-  let c6;
-  let c7;
+  closure_6 = undefined;
+  closure_7 = undefined;
   closure_4 = props(false);
   const tmp = props();
-  c3 = tmp;
+  closure_3 = tmp;
   id(() => {
-    c3.current = props;
+    closure_3.current = props;
   });
   current = tmp.current;
   const items = [id, props];
@@ -41,7 +36,7 @@ export const useModal = (props) => {
       obj = props;
     }
   }, items);
-  c6 = tmp3;
+  closure_6 = tmp3;
   const items1 = [id, props];
   const tmp4 = props((id) => {
     id = undefined;
@@ -56,7 +51,7 @@ export const useModal = (props) => {
       obj = props;
     }
   }, items1);
-  c7 = tmp4;
+  closure_7 = tmp4;
   const items2 = [tmp4, tmp3, current, props];
   id(() => {
     let flag = false;
@@ -72,7 +67,7 @@ export const useModal = (props) => {
     }
     if (flag) {
       closure_4.current = false;
-      closure_4.openPicker(tmp, c6, c7);
+      closure_4.openPicker(tmp, closure_6, closure_7);
     }
   }, items2);
   const items3 = [current, props];
@@ -96,9 +91,9 @@ export const useModal = (props) => {
   }, items3);
   const items4 = [tmp4, tmp3];
   id(() => {
-    const obj = new c3(closure_4);
-    obj.addListener("onConfirm", c6);
-    obj.addListener("onCancel", c7);
+    const obj = new closure_3(closure_4);
+    obj.addListener("onConfirm", closure_6);
+    obj.addListener("onCancel", closure_7);
     return () => {
       obj.removeAllListeners("onConfirm");
       obj.removeAllListeners("onCancel");

@@ -1,5 +1,6 @@
 // _runtime/00098__inherits.js
-import { _setPrototypeOf } from "00099__setPrototypeOf.js";
+import _setPrototypeOf from "_setPrototypeOf" /* 99 */;
+
 
 export default function _inherits(value, fn) {
   if (typeof fn !== "function") {

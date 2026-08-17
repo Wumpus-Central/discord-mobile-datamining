@@ -1,6 +1,6 @@
 // _runtime/03869_parseJSON.js
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,10 +17,10 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function parseJSON(str) {
-  tmp5.default(1, arguments);
+  requiredArgs.default(1, arguments);
   if (typeof str === "string") {
     const match = str.match(/(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2}):(\d{2})(?:\.(\d{0,7}))?(?:Z|(.)(\d{2}):?(\d{2})?)?/);
     let _Date = Date;
@@ -52,11 +52,10 @@ export default function parseJSON(str) {
       const tmp8 = +match[2];
     } else {
       _Date = new _Date(NaN);
-      tmp5 = new.target;
     }
     return _Date;
   } else {
-    return tmp3.default(str);
+    return _typeof.default(str);
   }
 };
 export default exports.default;

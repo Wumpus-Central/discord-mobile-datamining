@@ -1,6 +1,8 @@
 // _runtime/01510_openDrawer.js
+import TabRouter from "TabRouter" /* 1511 */;
+
 let obj = {};
-let merged = Object.assign(require("TabRouter").TabActions);
+let merged = Object.assign(TabRouter.TabActions);
 obj.openDrawer = function openDrawer() {
   return { type: "OPEN_DRAWER" };
 };
@@ -17,13 +19,13 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
   if (str === undefined) {
     str = "closed";
   }
-  let dependencyMap;
+  dependencyMap = undefined;
   let isDrawerInHistory;
   let addDrawerToHistory;
   let removeDrawerFromHistory;
   let closeDrawer;
   let merged = Object.assign(defaultStatus, Object.create(null));
-  let obj = str(1512);
+  obj = str(1512);
   const SwitchRouterResult = obj.SwitchRouter(merged);
   dependencyMap = SwitchRouterResult;
   isDrawerInHistory = function isDrawerInHistory(arg0) {
@@ -36,7 +38,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
 
   };
   closeDrawer = function closeDrawer(history) {
-    let str = "open";
+    str = "open";
     if ("open" === str) {
       if (typeof addDrawerToHistory !== "function") {
         HermesBuiltin.throwTypeError();
@@ -51,7 +53,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
       }
       let tmp16 = history;
       if (!Boolean(someResult)) {
-        let obj = {};
+        obj = {};
         const merged = Object.assign(history);
         const items = [];
         if (tmp) {
@@ -92,7 +94,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
   let merged1 = Object.assign(SwitchRouterResult);
   obj.type = "drawer";
   obj.getInitialState = function getInitialState(routeNames) {
-    let obj = {};
+    obj = {};
     obj = { routeNames: routeNames.routeNames, routeParamList: routeNames.routeParamList, routeGetIdList: routeNames.routeGetIdList };
     const merged = Object.assign(_undefined.getInitialState(obj));
     obj.default = str;
@@ -105,7 +107,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
     if (false === stale.stale) {
       return stale;
     } else {
-      let obj = {};
+      obj = {};
       obj = { routeNames: null, routeParamList: null, routeGetIdList: null };
       obj[0] = tmp;
       obj[1] = tmp2;
@@ -157,7 +159,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
         }
         let tmp15 = tmp9;
         if (!Boolean(someResult2)) {
-          const obj1 = {};
+          obj1 = {};
           const merged2 = Object.assign(tmp9);
           const items = [];
           str = "open";
@@ -197,7 +199,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
         }
         let tmp57 = history;
         if (Boolean(someResult)) {
-          let obj = {};
+          obj = {};
           const merged = Object.assign(history);
           history = history.history;
           obj.history = history.filter((type) => "drawer" !== type.type);
@@ -225,7 +227,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
           if (tmp40) {
             str2 = "closed";
           }
-          const obj1 = { type: "drawer", status: null };
+          obj1 = { type: "drawer", status: null };
           obj1[1] = str2;
           items[arraySpreadResult] = obj1;
           obj.history = items;

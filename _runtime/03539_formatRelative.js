@@ -1,5 +1,5 @@
 // _runtime/03539_formatRelative.js
-import isSameUTCWeek from "isSameUTCWeek";
+import isSameUTCWeek from "isSameUTCWeek" /* 3474 */;
 
 if (!isSameUTCWeek) {
   const obj = { default: null };
@@ -8,14 +8,13 @@ if (!isSameUTCWeek) {
 } else {
   tmp3 = isSameUTCWeek;
 }
-let c0 = tmp3;
+isSameUTCWeek = tmp3;
 let closure_1 = ["domenica", "luned\u00EC", "marted\u00EC", "mercoled\u00EC", "gioved\u00EC", "venerd\u00EC", "sabato"];
 let closure_2 = {
   lastWeek(getUTCDay) {
     const uTCDay = getUTCDay.getUTCDay();
-    if (tmp3.default(getUTCDay, arg1, arg2)) {
+    if (isSameUTCWeek.default(getUTCDay, arg1, arg2)) {
       let str = `${"'" + closure_1[tmp]} alle' p`;
-      tmp3 = dependencyMap;
     } else {
       str = "'domenica scorsa alle' p";
       if (0 !== uTCDay) {
@@ -29,9 +28,8 @@ let closure_2 = {
   tomorrow: "'domani alle' p",
   nextWeek(getUTCDay) {
     const uTCDay = getUTCDay.getUTCDay();
-    if (tmp3.default(getUTCDay, arg1, arg2)) {
+    if (isSameUTCWeek.default(getUTCDay, arg1, arg2)) {
       let str = `${"'" + closure_1[tmp]} alle' p`;
-      tmp3 = dependencyMap;
     } else {
       str = "'domenica prossima alle' p";
       if (0 !== uTCDay) {

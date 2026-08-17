@@ -1,9 +1,10 @@
 // _runtime/07774_getDynamicSamplingContextFromSpan.js
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
-import { baggageHeaderToDynamicSamplingContext } from "07751_baggageHeaderToDynamicSamplingContext.js";
-import { getClient } from "07765_getClient.js";
-import { 07775__ } from "metro/07775__.js";
-const require = arg1;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+import baggageHeaderToDynamicSamplingContext from "baggageHeaderToDynamicSamplingContext" /* 7751 */;
+import getClient from "getClient" /* 7765 */;
+import _mod7775 from "module_7775" /* 7775 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function getDynamicSamplingContextFromSpan(spanContext) {
   let obj = getClient;
@@ -76,7 +77,7 @@ arg5.getDynamicSamplingContextFromClient = function getDynamicSamplingContextFro
   let obj = addNonEnumerableProperty;
   let DEFAULT_ENVIRONMENT = options.environment;
   if (!DEFAULT_ENVIRONMENT) {
-    DEFAULT_ENVIRONMENT = 07775__.DEFAULT_ENVIRONMENT;
+    DEFAULT_ENVIRONMENT = _mod7775.DEFAULT_ENVIRONMENT;
   }
   obj = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: getOptions.getDsn() || {}.publicKey, trace_id };
   const dropUndefinedKeysResult = obj.dropUndefinedKeys(obj);

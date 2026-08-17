@@ -1,21 +1,18 @@
 // _runtime/07061_useRecyclerViewManager.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 7041 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let c4;
-let c5;
 const require = arg1;
 ({ useEffect: c3, useMemo: c4, useState: c5 } = noop);
 
 export const useRecyclerViewManager = (data) => {
-  let closure_0 = data;
+  closure_0 = data;
   let recyclerViewManager = velocityTracker(callback3(() => {
     recyclerViewManager = new data(recyclerViewManager[2]).RecyclerViewManager(data);
     return recyclerViewManager;
   }), 1)[0];
   velocityTracker = velocityTracker(callback3(() => {
-    const velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
+    velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
     return velocityTracker;
   }), 1)[0];
   const items = [data];
@@ -30,7 +27,7 @@ export const useRecyclerViewManager = (data) => {
     recyclerViewManager.restoreIfNeeded();
     return () => {
       closure_1.dispose();
-      _slicedToArray.cleanUp();
+      closure_2.cleanUp();
     };
   }, []);
   return { recyclerViewManager, velocityTracker };

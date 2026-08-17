@@ -1,11 +1,12 @@
 // _runtime/00266_IntersectionObserverEntry.js
-import _classCallCheck from "_classCallCheck";
-import setPlatformObject from "setPlatformObject";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import setPlatformObject from "setPlatformObject" /* 126 */;
 
 const IntersectionObserverEntry = importDefault;
 class IntersectionObserverEntry {
   constructor(arg0, arg1) {
-    tmp = outer1_2(this, IntersectionObserverEntry);
+    tmp = closure_2(this, IntersectionObserverEntry);
     this._nativeEntry = global;
     this._target = arg1;
     return;
@@ -22,8 +23,6 @@ const items = [
   {
     key: "intersectionRatio",
     get() {
-      let boundingClientRect;
-      let intersectionRect;
       ({ intersectionRect, boundingClientRect } = this);
       if (0 !== boundingClientRect.width) {
         if (0 !== boundingClientRect.height) {
@@ -87,8 +86,8 @@ const items = [
     }
   }
 ];
-const tmp2 = require("_createClass")(IntersectionObserverEntry, items);
-let c3 = tmp2;
+const tmp2 = _createClassDefault(IntersectionObserverEntry, items);
+let closure_3 = tmp2;
 setPlatformObject.setPlatformObject(tmp2);
 
 export default tmp2;

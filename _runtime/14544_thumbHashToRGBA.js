@@ -1,5 +1,5 @@
 // _runtime/14544_thumbHashToRGBA.js
-import _slicedToArray from "_slicedToArray";
+import closure_0 from "_slicedToArray" /* 32 */;
 
 function thumbHashToRGBA(arg0) {
   let diff3 = arg0[0] | arg0[1] << 8 | arg0[2] << 16;
@@ -328,8 +328,6 @@ function thumbHashToRGBA(arg0) {
 }
 function rgbaToDataURL(w, h, rgba) {
   let sum2;
-  let tmp35;
-  let tmp36;
   const sum = 4 * w + 1;
   const sum1 = 6 + h * (5 + sum);
   const items = [137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, w >> 8, 255 & w, 0, 0, h >> 8, 255 & h, 8, 6, 0, 0, 0, 0, 0, 0, 0, sum1 >>> 24, sum1 >> 16 & 255, sum1 >> 8 & 255, 255 & sum1, 73, 68, 65, 84, 120, 1];
@@ -442,17 +440,8 @@ function rgbaToDataURL(w, h, rgba) {
 export const rgbaToThumbHash = function rgbaToThumbHash(arg0, arg1, arg2) {
   let result10;
   let result2;
-  let tmp23;
-  let tmp24;
-  let tmp25;
-  let tmp27;
-  let tmp28;
-  let tmp29;
-  let tmp31;
-  let tmp32;
-  let tmp33;
   const callback = arg0;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   if (arg0 <= 100) {
     if (arg1 <= 100) {
       const _Math = Math;
@@ -546,20 +535,20 @@ export const rgbaToThumbHash = function rgbaToThumbHash(arg0, arg1, arg2) {
             let tmp5 = num3;
             if (0 < maxResult2 * (arg2 - num)) {
               do {
-                let tmp6 = _slicedToArray;
+                let tmp6 = closure_0;
                 let tmp7 = num6;
                 let tmp8 = tmp2;
                 let tmp9 = tmp3;
                 let num7 = 0;
-                if (0 < _slicedToArray) {
+                if (0 < closure_0) {
                   do {
                     let tmp10 = cos;
                     let tmp11 = PI;
-                    let tmp12 = _slicedToArray;
-                    items1[num7] = cos(PI / _slicedToArray * num6 * (num7 + 0.5));
+                    let tmp12 = closure_0;
+                    items1[num7] = cos(PI / closure_0 * num6 * (num7 + 0.5));
                     num7 = num7 + 1;
-                    tmp6 = _slicedToArray;
-                  } while (num7 < _slicedToArray);
+                    tmp6 = closure_0;
+                  } while (num7 < closure_0);
                 }
                 let tmp13 = closure_1;
                 let num8 = 0;
@@ -570,19 +559,19 @@ export const rgbaToThumbHash = function rgbaToThumbHash(arg0, arg1, arg2) {
                     let tmp14 = cos;
                     let tmp15 = PI;
                     let tmp16 = closure_1;
-                    let tmp18 = _slicedToArray;
+                    let tmp18 = closure_0;
                     let tmp19 = num8;
                     let sum = num9;
                     let num11 = 0;
                     let tmp21 = num9;
-                    if (0 < _slicedToArray) {
+                    if (0 < closure_0) {
                       do {
-                        let tmp22 = _slicedToArray;
-                        sum = sum + items[num11 + num8 * _slicedToArray] * items1[num11] * tmp17;
+                        let tmp22 = closure_0;
+                        sum = sum + items[num11 + num8 * closure_0] * items1[num11] * tmp17;
                         num11 = num11 + 1;
                         tmp21 = sum;
-                        tmp18 = _slicedToArray;
-                      } while (num11 < _slicedToArray);
+                        tmp18 = closure_0;
+                      } while (num11 < closure_0);
                     }
                     num8 = num8 + 1;
                     tmp13 = closure_1;
@@ -669,7 +658,7 @@ export const rgbaToThumbHash = function rgbaToThumbHash(arg0, arg1, arg2) {
       const tmp42 = maxResult | round(63 * tmp29) << 3;
     }
   }
-  const error = new Error("" + arg0 + "x" + arg1 + " doesn't fit in 100x100");
+  error = new Error("" + arg0 + "x" + arg1 + " doesn't fit in 100x100");
   throw error;
 };
 export { thumbHashToRGBA };

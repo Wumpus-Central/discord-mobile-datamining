@@ -1,12 +1,14 @@
 // _runtime/06652__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
-import { 06649__ } from "metro/06649__.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/06654___INTERNAL_VIEW_CONFIG.js";
+import noopAll from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
+import _modDef6649 from "module_6649" /* 6649 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6654 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const Mask = arg1;
 function _isNativeReflectConstruct() {
@@ -20,21 +22,22 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+noopAll;
 class Mask {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Mask);
-    tmp2 = __esModule;
-    obj = __esModule(Mask);
-    tmp3 = __esModule;
+    tmp = closure_3(this, Mask);
+    tmp2 = closure_5;
+    obj = closure_5(Mask);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -48,26 +51,23 @@ class Mask {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Mask, require("_isNativeReflectConstruct"));
+_inheritsDefault(Mask, _isNativeReflectConstructDefault);
 const items = [
   {
     key: "render",
     value: function render() {
-      let maskContentUnits;
-      let maskUnits;
-      let style;
       const self = this;
       const props = this.props;
       ({ maskUnits, maskContentUnits, style } = props);
       let obj = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
       let num = 0;
       if (undefined !== maskUnits) {
-        num = 06649__[maskUnits];
+        num = _modDef6649[maskUnits];
       }
       obj[4] = num;
       let num2 = 1;
       if (undefined !== maskContentUnits) {
-        num2 = 06649__[maskContentUnits];
+        num2 = _modDef6649[maskContentUnits];
       }
       obj[5] = num2;
       let str;
@@ -91,7 +91,7 @@ const items = [
         }
       };
       const tmp5 = self;
-      const tmp8 = __INTERNAL_VIEW_CONFIG;
+      const tmp8 = __INTERNAL_VIEW_CONFIGDefault;
       const merged = Object.assign(self(6586).withoutXY(this, props));
       const merged1 = Object.assign(obj);
       obj.children = props.children;

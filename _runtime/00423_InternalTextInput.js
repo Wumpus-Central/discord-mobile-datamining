@@ -1,38 +1,17 @@
 // _runtime/00423_InternalTextInput.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _slicedToArray from "_slicedToArray";
-import closure_8 from "noop";
-import noop from "noop";
-import { jsx } from "jsxProd";
-import { default as Commands } from "Commands";
-import { Commands } from "Commands";
+import setDefault from "set" /* 144 */;
+import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
+import closure_6 from "_objectWithoutProperties" /* 109 */;
+import closure_7 from "_slicedToArray" /* 32 */;
+import closure_8 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import { default as Commands, Commands } from "Commands" /* 145 */;
 
-let c10;
-let c9;
-let closure_12;
-let map1;
-let unpackModuleId;
 function InternalTextInput(value) {
-  let accessibilityState;
-  let accessible;
-  let caretHidden;
-  let cursorColor;
-  let focusable;
-  let id;
-  let onBlur;
-  let onFocus;
-  let selection;
-  let selectionColor;
-  let selectionHandleColor;
-  let tabIndex;
-  let tmp;
-  let tmp2;
-  let tmp3;
-  let tmp4;
-  let tmp5;
-  let importDefault = value;
+  importDefault = value;
   ({ aria-busy: tmp, aria-checked: tmp2, aria-disabled: tmp3, aria-expanded: tmp4, aria-selected: tmp5, accessibilityState, id, tabIndex, selection, selectionColor, selectionHandleColor, cursorColor } = value);
-  const tmp8 = callback(null);
+  const tmp8 = callback2(null);
   let first = tmp8;
   let tmp9 = null;
   if (null != selection) {
@@ -50,25 +29,27 @@ function InternalTextInput(value) {
   } else if (typeof value.defaultValue === "string") {
     defaultValue = value.defaultValue;
   }
-  if (!Commands) {
+  if (!closure_5) {
     const multiline = value.multiline;
   }
-  let closure_2 = tmp10;
-  const tmp11 = editable(callback2(0), 2);
+  obj = tmp10;
+  const tmp11 = editable(callback3(0), 2);
   first = tmp11[0];
+  closure_3 = first;
   defaultValue = tmp11[1];
   importDefault = value;
-  closure_2 = tmp9;
-  first = tmp8;
-  Commands = tmp10;
-  let first1;
+  obj = tmp9;
+  closure_3 = tmp8;
+  closure_5 = tmp10;
+  let callback;
   editable = undefined;
   let hitSlop;
   let onPress;
-  let tmp13 = editable(callback2(value.value), 2);
-  first1 = tmp13[0];
+  let tmp13 = editable(callback3(value.value), 2);
+  const first1 = tmp13[0];
+  callback = first1;
   editable = tmp15;
-  const tmp16 = editable(callback2({ mostRecentEventCount: first, selection: { end: -1, start: -1 } }), 2);
+  const tmp16 = editable(callback3({ mostRecentEventCount: first, selection: { end: -1, start: -1 } }), 2);
   hitSlop = tmp17;
   const selection2 = tmp16[0].selection;
   onPress = selection2;
@@ -78,15 +59,15 @@ function InternalTextInput(value) {
   items[5] = tmp9;
   items[6] = selection2;
   items[7] = defaultValue;
-  items[8] = Commands;
+  items[8] = closure_5;
   onPressIn(() => {
-    let obj = {};
+    obj = {};
     if (tmp) {
       obj.text = iter.value;
       editable(iter.value);
     }
-    let tmp5 = closure_2;
-    if (closure_2) {
+    let tmp5 = obj;
+    if (obj) {
       tmp5 = onPress;
     }
     if (tmp5) {
@@ -102,10 +83,10 @@ function InternalTextInput(value) {
     }
     let tmp10 = 0 !== Object.keys(obj).length;
     if (tmp10) {
-      tmp10 = null != first.current;
+      tmp10 = null != ref.current;
     }
     if (tmp10) {
-      const current = first.current;
+      const current = ref.current;
       let num;
       if (tmp4 != null) {
         num = tmp4.start;
@@ -120,21 +101,21 @@ function InternalTextInput(value) {
       if (num2 == null) {
         num2 = -1;
       }
-      first.setTextAndSelection(current, first, defaultValue, num, num2);
-      const tmp13 = tmp15;
+      textAndSelection.setTextAndSelection(current, first, defaultValue, num, num2);
+      const tmp13 = textAndSelection;
     }
   }, items);
-  Commands = tmp15;
-  first1 = tmp17;
+  closure_5 = tmp15;
+  callback = tmp17;
   onPressIn(() => {
     const current = first.current;
     if (null != current) {
       value(first[5]).registerInput(current);
       return () => {
-        current(outer1_1[5]).unregisterInput(current);
-        const obj = current(outer1_1[5]);
+        current(closure_1_1[5]).unregisterInput(current);
+        obj = current(closure_1_1[5]);
         const tmp = current;
-        const tmp2 = outer1_1;
+        const tmp2 = closure_1_1;
         const tmp3 = current;
         if (obj2.currentlyFocusedInput() === current) {
           tmp(tmp2[6])(tmp3).blur();
@@ -143,14 +124,14 @@ function InternalTextInput(value) {
       };
     }
   }, []);
-  const items1 = [first, Commands];
-  let tmp6 = first1;
-  const tmp7 = first1(value, closure_2);
+  const items1 = [first, closure_5];
+  let tmp6 = callback;
+  const tmp7 = callback(value, obj);
   let flag = value.multiline;
   const tmp20 = onPress((current) => {
     first.current = current;
     if (null != current) {
-      let obj = value(first[5]);
+      obj = value(first[5]);
       obj.registerInput(current);
       const _Object = Object;
       obj = { clear: null, getNativeRef: null, isFocused: null, setSelection: null };
@@ -163,7 +144,7 @@ function InternalTextInput(value) {
         return closure_1.current;
       };
       obj[2] = function isFocused() {
-        const result = outer1_0(outer1_1[5]).currentlyFocusedInput();
+        const result = closure_1_0(closure_1_1[5]).currentlyFocusedInput();
         let tmp2 = null != result;
         if (tmp2) {
           tmp2 = result === closure_1.current;
@@ -213,7 +194,7 @@ function InternalTextInput(value) {
   const tmp23 = importDefault(first[7])(onPress((current) => {
     first.current = current;
     if (null != current) {
-      let obj = value(first[5]);
+      obj = value(first[5]);
       obj.registerInput(current);
       const _Object = Object;
       obj = { clear: null, getNativeRef: null, isFocused: null, setSelection: null };
@@ -226,7 +207,7 @@ function InternalTextInput(value) {
         return closure_1.current;
       };
       obj[2] = function isFocused() {
-        const result = outer1_0(outer1_1[5]).currentlyFocusedInput();
+        const result = closure_1_0(closure_1_1[5]).currentlyFocusedInput();
         let tmp2 = null != result;
         if (tmp2) {
           tmp2 = result === closure_1.current;
@@ -251,7 +232,7 @@ function InternalTextInput(value) {
       if (closure_9 != null) {
         tmp(arg0);
       }
-      let tmp4 = false !== _slicedToArray;
+      let tmp4 = false !== closure_7;
       if (tmp4) {
         tmp4 = null != ref.current;
       }
@@ -271,7 +252,7 @@ function InternalTextInput(value) {
       if (closure_9 != null) {
         tmp(arg0);
       }
-      let tmp4 = false !== _slicedToArray;
+      let tmp4 = false !== closure_7;
       if (tmp4) {
         tmp4 = null != ref.current;
       }
@@ -350,7 +331,7 @@ function InternalTextInput(value) {
     }
     let tmp40 = tmp39;
     if (null != tmp36.verticalAlign) {
-      let obj1 = tmp39;
+      obj1 = tmp39;
       if (!tmp39) {
         obj1 = {};
       }
@@ -389,7 +370,7 @@ function InternalTextInput(value) {
   let tmp47 = null != value.value;
   tmp29 = null == accessibilityState && null == tmp && null == tmp2 && null == tmp3 && null == tmp4 && null == tmp5;
   const tmp42 = value.autoCapitalize || "sentences";
-  const tmp6Result = tmp6(tmp25, first);
+  const tmp6Result = tmp6(tmp25, closure_3);
   if (tmp47) {
     tmp47 = countResult;
   }
@@ -453,7 +434,7 @@ function InternalTextInput(value) {
       obj.onChangeText(text);
     }
     if (null != first.current) {
-      tmp15(text);
+      textAndSelection(text);
       defaultValue(nativeEvent.nativeEvent.eventCount);
     }
   };
@@ -469,15 +450,15 @@ function InternalTextInput(value) {
     }
   };
   obj3.onSelectionChange = function onSelectionChange(nativeEvent) {
-    let obj = value;
+    obj = value;
     if (value.onSelectionChange) {
       obj.onSelectionChange(nativeEvent);
     }
     if (null != first.current) {
       obj = { mostRecentEventCount: null, selection: null };
-      obj[0] = first;
+      obj[0] = closure_3;
       obj[1] = nativeEvent.nativeEvent.selection;
-      first1(obj);
+      callback(obj);
     }
   };
   obj3.placeholder = str6;
@@ -517,13 +498,13 @@ class TextInput {
     }
     obj[3] = editable;
     if (enterKeyHint) {
-      tmp4 = Commands;
-      returnKeyType = Commands[enterKeyHint];
+      tmp4 = closure_16;
+      returnKeyType = closure_16[enterKeyHint];
     }
     obj[4] = returnKeyType;
     if (inputMode) {
-      tmp5 = Commands;
-      keyboardType = Commands[inputMode];
+      tmp5 = closure_17;
+      keyboardType = closure_17[inputMode];
     }
     obj[5] = keyboardType;
     if (null != inputMode) {
@@ -531,7 +512,7 @@ class TextInput {
       showSoftInputOnFocus = "none" !== inputMode;
     }
     obj[6] = showSoftInputOnFocus;
-    tmp6 = Commands[autoComplete];
+    tmp6 = closure_18[autoComplete];
     if (tmp6 == null) {
       tmp6 = autoComplete;
     }
@@ -543,9 +524,9 @@ class TextInput {
   }
 }
 TextInput.displayName = "TextInput";
-let obj = { blurTextInput: require("set").blurTextInput, currentlyFocusedField: require("set").currentlyFocusedField, currentlyFocusedInput: require("set").currentlyFocusedInput, focusTextInput: require("set").focusTextInput };
+let obj = { blurTextInput: setDefault.blurTextInput, currentlyFocusedField: setDefault.currentlyFocusedField, currentlyFocusedInput: setDefault.currentlyFocusedInput, focusTextInput: setDefault.focusTextInput };
 TextInput.State = obj;
-obj = require("get hairlineWidth").create({ multilineDefault: { paddingTop: 5 } });
+obj = get_hairlineWidthDefault.create({ multilineDefault: { paddingTop: 5 } });
 let closure_19 = { auto: "auto", bottom: "bottom", middle: "center", top: "top" };
 
 export default TextInput;

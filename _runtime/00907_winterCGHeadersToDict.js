@@ -17,8 +17,6 @@ function headersToDict(arg0) {
     const _Object = Object;
     const entries = Object.entries(arg0);
     const item = entries.forEach((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       if (typeof tmp2 === "string") {
         obj[tmp] = tmp2;
@@ -41,13 +39,13 @@ function addSpanAttribute(arg0, str, str2, arr) {
   if (!str2) {
     tmp3 = str;
   }
-  const winterCGHeadersToDict = tmp3;
+  closure_0 = tmp3;
   if (arg4) {
-    let someResult = closure_2.some((arg0) => tmp3.includes(arg0));
+    let someResult = closure_2.some((arg0) => str.includes(arg0));
   } else {
     const items = [];
     HermesBuiltin.arraySpread(closure_2, HermesBuiltin.arraySpread(closure_3, 0));
-    someResult = items.some((arg0) => tmp3.includes(arg0));
+    someResult = items.some((arg0) => str.includes(arg0));
   }
   let str4 = "[Filtered]";
   if (!someResult) {
@@ -102,8 +100,6 @@ arg5.httpHeadersToSpanAttributes = function httpHeadersToSpanAttributes(arg0) {
     const _Object = Object;
     const entries = Object.entries(arg0);
     const item = entries.forEach((arg0) => {
-      let arr;
-      let str;
       [str, arr] = arg0;
       if (null != arr) {
         const formatted = str.toLowerCase();
@@ -129,7 +125,7 @@ arg5.httpHeadersToSpanAttributes = function httpHeadersToSpanAttributes(arg0) {
             }
           }
         }
-        outer1_4(obj, formatted, "", arr, flag);
+        closure_1_4(obj, formatted, "", arr, flag);
       }
     });
     return obj;
@@ -187,8 +183,6 @@ arg5.httpRequestToRequestData = function httpRequestToRequestData(headers) {
 };
 arg5.winterCGHeadersToDict = winterCGHeadersToDict;
 arg5.winterCGRequestToRequestData = function winterCGRequestToRequestData(method) {
-  const obj = { method: method.method, url: method.url, query_string: null, headers: null };
-  obj[2] = extractQueryParamsFromUrl(method.url);
-  obj[3] = winterCGHeadersToDict(method.headers);
+  const obj = { method: method.method, url: method.url, query_string: extractQueryParamsFromUrl(method.url), headers: winterCGHeadersToDict(method.headers) };
   return obj;
 };

@@ -1,18 +1,17 @@
 // _runtime/00720_baseIteratee.js
-import { identity } from "00634_identity.js";
-import { property } from "00801_property.js";
-import { 00599__ } from "metro/00599__.js";
+import _mod599 from "module_599" /* 599 */;
+import identity from "identity" /* 634 */;
+import property from "property" /* 801 */;
+
 
 export default function baseIteratee(fn) {
-  let tmp;
-  let tmp3;
   if (typeof fn === "function") {
     return tmp;
   } else if (null == tmp) {
     let tmp8 = identity;
   } else if (typeof tmp === "object") {
     let tmp2 = require;
-    if (00599__(tmp)) {
+    if (_mod599(tmp)) {
       tmp2 = tmp2(721);
       [tmp3, tmp] = tmp;
       let tmp2Result = tmp2(tmp3, tmp);

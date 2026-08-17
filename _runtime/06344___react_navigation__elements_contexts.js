@@ -1,5 +1,5 @@
 // _runtime/06344___react_navigation__elements_contexts.js
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 let __react_navigation__elements_contexts = "__react_navigation__elements_contexts";
 __react_navigation__elements_contexts = globalThis.__react_navigation__elements_contexts;

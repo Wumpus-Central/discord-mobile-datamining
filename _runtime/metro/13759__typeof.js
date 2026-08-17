@@ -1,5 +1,5 @@
 // _runtime/metro/13759__typeof.js
-import _typeof from "_typeof";
+import _typeof from "_typeof" /* 13760 */;
 
 if (_typeof) {
   if (typeof _typeof === "object") {
@@ -499,8 +499,6 @@ if (_typeof) {
     return str2;
   };
   obj[22] = function ca(arg0, arg1) {
-    let tmp2;
-    let tmp3;
     const parts = String(arg0).split(".");
     [tmp2, tmp3] = parts;
     if (arg1) {
@@ -572,8 +570,6 @@ if (_typeof) {
   obj[26] = fn;
   obj[27] = fn;
   obj[28] = function cs(arg0, arg1) {
-    let tmp2;
-    let tmp3;
     const parts = String(arg0).split(".");
     [tmp2, tmp3] = parts;
     let str2 = "other";
@@ -756,8 +752,6 @@ if (_typeof) {
   };
   obj[39] = fn;
   obj[40] = function es(arg0, arg1) {
-    let tmp2;
-    let tmp3;
     const parts = String(arg0).split(".");
     [tmp2, tmp3] = parts;
     let str2 = "other";
@@ -828,8 +822,6 @@ if (_typeof) {
   };
   obj[47] = fn;
   obj[48] = function fr(arg0, arg1) {
-    let tmp2;
-    let tmp3;
     const parts = String(arg0).split(".");
     [tmp2, tmp3] = parts;
     if (arg1) {
@@ -983,8 +975,6 @@ if (_typeof) {
   };
   obj[56] = fn2;
   obj[57] = function gv(arg0, arg1) {
-    let arr;
-    let tmp2;
     const parts = String(arg0).split(".");
     [arr, tmp2] = parts;
     const substr = arr.slice(-1);
@@ -1029,8 +1019,6 @@ if (_typeof) {
   obj[58] = fn;
   obj[59] = fn;
   obj[60] = function he(arg0, arg1) {
-    let tmp2;
-    let tmp3;
     const parts = String(arg0).split(".");
     [tmp2, tmp3] = parts;
     let str2 = "other";
@@ -1223,8 +1211,6 @@ if (_typeof) {
     return str3;
   };
   obj[73] = function it(arg0, arg1) {
-    let tmp2;
-    let tmp3;
     const parts = String(arg0).split(".");
     [tmp2, tmp3] = parts;
     if (arg1) {
@@ -1880,8 +1866,6 @@ if (_typeof) {
   obj[138] = fn;
   obj[139] = fn3;
   obj[140] = function pl(arg0, arg1) {
-    let arr;
-    let tmp2;
     const parts = String(arg0).split(".");
     [arr, tmp2] = parts;
     const substr = arr.slice(-1);
@@ -1970,8 +1954,6 @@ if (_typeof) {
   };
   obj[142] = fn;
   obj[143] = function pt(arg0, arg1) {
-    let tmp2;
-    let tmp3;
     const parts = String(arg0).split(".");
     [tmp2, tmp3] = parts;
     let str2 = "other";
@@ -1998,8 +1980,6 @@ if (_typeof) {
     return str2;
   };
   obj[144] = function pt_PT(arg0, arg1) {
-    let tmp2;
-    let tmp3;
     const parts = String(arg0).split(".");
     [tmp2, tmp3] = parts;
     let str2 = "other";
@@ -2058,8 +2038,6 @@ if (_typeof) {
   };
   obj[147] = fn;
   obj[148] = function ru(arg0, arg1) {
-    let arr;
-    let tmp2;
     const parts = String(arg0).split(".");
     [arr, tmp2] = parts;
     const substr = arr.slice(-1);
@@ -2220,8 +2198,6 @@ if (_typeof) {
     return str;
   };
   obj[163] = function si(arg0, arg1) {
-    let str2;
-    let tmp2;
     const parts = String(arg0).split(".");
     [tmp2, str2] = parts;
     let str3 = "other";
@@ -2240,8 +2216,6 @@ if (_typeof) {
     return str3;
   };
   obj[164] = function sk(arg0, arg1) {
-    let tmp2;
-    let tmp3;
     const parts = String(arg0).split(".");
     [tmp2, tmp3] = parts;
     let str2 = "other";
@@ -2266,8 +2240,6 @@ if (_typeof) {
     return str2;
   };
   obj[165] = function sl(arg0, arg1) {
-    let arr;
-    let tmp2;
     const parts = String(arg0).split(".");
     [arr, tmp2] = parts;
     const substr = arr.slice(-2);
@@ -2493,8 +2465,6 @@ if (_typeof) {
   };
   obj[196] = fn;
   obj[197] = function uk(arg0, arg1) {
-    let arr;
-    let tmp2;
     const parts = String(arg0).split(".");
     [arr, tmp2] = parts;
     let substr1 = Number(parts[0]) == arg0;
@@ -2558,8 +2528,6 @@ if (_typeof) {
   obj[200] = fn;
   obj[201] = fn;
   obj[202] = function vec(arg0, arg1) {
-    let tmp2;
-    let tmp3;
     const parts = String(arg0).split(".");
     [tmp2, tmp3] = parts;
     if (arg1) {
@@ -2634,7 +2602,7 @@ if (_typeof) {
   let items = [obj];
   let obj64 = obj;
   let item = items.forEach((str) => {
-    let closure_0 = str;
+    closure_0 = str;
     let tmp = str;
     if (str) {
       tmp = typeof str !== "string";
@@ -2647,7 +2615,7 @@ if (_typeof) {
       let _Object = Object;
       const keys = Object.keys(str);
       const item = keys.forEach((arg0) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         if ("default" !== arg0) {
           if (!(arg0 in closure_0)) {
             const _Object = Object;
@@ -3207,7 +3175,7 @@ if (_typeof) {
   items = [obj5];
   obj64 = obj62;
   const item1 = items.forEach((str) => {
-    let closure_0 = str;
+    closure_0 = str;
     let tmp = str;
     if (str) {
       tmp = typeof str !== "string";
@@ -3220,7 +3188,7 @@ if (_typeof) {
       let _Object = Object;
       const keys = Object.keys(str);
       const item = keys.forEach((arg0) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         if ("default" !== arg0) {
           if (!(arg0 in closure_0)) {
             const _Object = Object;
@@ -3438,7 +3406,7 @@ if (_typeof) {
     obj64[0] = _default3;
     items = [obj63];
     const item2 = items.forEach((str) => {
-      let closure_0 = str;
+      closure_0 = str;
       let tmp = str;
       if (str) {
         tmp = typeof str !== "string";
@@ -3451,7 +3419,7 @@ if (_typeof) {
         let _Object = Object;
         const keys = Object.keys(str);
         const item = keys.forEach((arg0) => {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           if ("default" !== arg0) {
             if (!(arg0 in closure_0)) {
               const _Object = Object;

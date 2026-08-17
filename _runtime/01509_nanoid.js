@@ -20,7 +20,7 @@ arg5.nanoid = () => {
   return str2;
 };
 arg5.customAlphabet = (arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let num = arg1;
   if (arg1 === undefined) {
     num = 21;

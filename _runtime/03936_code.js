@@ -1,9 +1,9 @@
 // _runtime/03936_code.js
-import formatDistance from "formatDistance";
-import buildFormatLongFn from "buildFormatLongFn";
-import formatRelative from "formatRelative";
-import localeToNumber from "localeToNumber";
-import 03941__ from "metro/03941__.js";
+import formatDistance from "formatDistance" /* 3937 */;
+import buildFormatLongFn from "buildFormatLongFn" /* 3939 */;
+import formatRelative from "formatRelative" /* 3940 */;
+import localeToNumber from "localeToNumber" /* 3938 */;
+import 03941__ from "metro/03941__.js" /* 3941 */;
 
 if (!formatDistance) {
   let obj = { default: null };

@@ -1,3 +1,5 @@
 // _runtime/00487_ShareModule.js
+import getAll from "get" /* 30 */;
 
-export default require("get").get("ShareModule");
+
+export default getAll.get("ShareModule");

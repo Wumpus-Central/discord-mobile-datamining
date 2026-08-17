@@ -1,12 +1,14 @@
 // _runtime/00263_IntersectionObserver.js
-import _classCallCheck from "_classCallCheck";
-import setPlatformObject from "setPlatformObject";
+import _createClassDefault from "_createClass" /* 42 */;
+import getTargetFromInstanceHandleAll from "getTargetFromInstanceHandle" /* 264 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import setPlatformObject from "setPlatformObject" /* 126 */;
 
 const IntersectionObserver = importDefault;
 class IntersectionObserver {
   constructor(arg0, arg1) {
     self = this;
-    tmp = _classCallCheck(this, IntersectionObserver);
+    tmp = closure_3(this, IntersectionObserver);
     set = new Set();
     this._observationTargets = set;
     if (null == global) {
@@ -354,21 +356,21 @@ let items = [
   {
     key: "delay",
     get() {
-      const error = new Error("Failed to read the 'delay' property from 'IntersectionObserver': This property is not supported.");
+      error = new Error("Failed to read the 'delay' property from 'IntersectionObserver': This property is not supported.");
       throw error;
     }
   },
   {
     key: "scrollMargin",
     get() {
-      const error = new Error("Failed to read the 'scrollMargin' property from 'IntersectionObserver': This property is not supported.");
+      error = new Error("Failed to read the 'scrollMargin' property from 'IntersectionObserver': This property is not supported.");
       throw error;
     }
   },
   {
     key: "trackVisibility",
     get() {
-      const error = new Error("Failed to read the 'trackVisibility' property from 'IntersectionObserver': This property is not supported.");
+      error = new Error("Failed to read the 'trackVisibility' property from 'IntersectionObserver': This property is not supported.");
       throw error;
     }
   },
@@ -383,7 +385,7 @@ let items = [
         const self = this;
         const _observationTargets = this._observationTargets;
         if (!_observationTargets.has(arg0)) {
-          let obj = importAll(264);
+          let obj = getTargetFromInstanceHandleAll;
           obj = { intersectionObserverId: null, root: null, target: null };
           obj[0] = self._getOrCreateIntersectionObserverId();
           obj[1] = self._root;
@@ -409,7 +411,7 @@ let items = [
         if (_observationTargets.has(arg0)) {
           const _intersectionObserverId = self._intersectionObserverId;
           if (null != _intersectionObserverId) {
-            importAll(264).unobserve(_intersectionObserverId, arg0);
+            getTargetFromInstanceHandleAll.unobserve(_intersectionObserverId, arg0);
             const _observationTargets2 = self._observationTargets;
             _observationTargets2.delete(arg0);
             if (0 === self._observationTargets.size) {
@@ -417,7 +419,7 @@ let items = [
               self._intersectionObserverId = null;
               const tmp10Result = tmp10(264);
             }
-            const obj = importAll(264);
+            const obj = getTargetFromInstanceHandleAll;
             tmp10 = importAll;
           } else {
             const _console = console;
@@ -449,10 +451,10 @@ let items = [
       const self = this;
       let _intersectionObserverId = this._intersectionObserverId;
       if (null == _intersectionObserverId) {
-        const registerObserverResult = importAll(264).registerObserver(self, self._callback);
+        const registerObserverResult = getTargetFromInstanceHandleAll.registerObserver(self, self._callback);
         self._intersectionObserverId = registerObserverResult;
         _intersectionObserverId = registerObserverResult;
-        const obj = importAll(264);
+        const obj = getTargetFromInstanceHandleAll;
       }
       return _intersectionObserverId;
     }
@@ -464,7 +466,7 @@ let items = [
     }
   }
 ];
-let tmp2 = require("_createClass")(IntersectionObserver, items);
+let tmp2 = _createClassDefault(IntersectionObserver, items);
 setPlatformObject.setPlatformObject(tmp2);
 
 export default tmp2;

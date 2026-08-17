@@ -1,6 +1,7 @@
 // _runtime/04924_getDataView.js
-import { getDataView } from "04910_getDataView.js";
-const require = arg1;
+import getDataView from "getDataView" /* 4910 */;
+
+require = arg1;
 const dependencyMap = arg6;
 let c2 = 6;
 let closure_3 = ["GIF87a", "GIF89a"];

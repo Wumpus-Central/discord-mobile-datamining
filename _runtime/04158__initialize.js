@@ -1,6 +1,6 @@
 // _runtime/04158__initialize.js
-import _initialize from "asyncGeneratorStep";
-import { NitroModules } from "module_4112";
+import _initialize from "asyncGeneratorStep" /* 5 */;
+import { NitroModules } from "module_4112" /* 4112 */;
 
 let closure_1 = NitroModules.createHybridObject("RiveRuntime");
 _initialize = function _initialize() {
@@ -32,11 +32,11 @@ _initialize = function _initialize() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp4;
+            closure_1 = tmp4;
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_1.initialize();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_1.initialize();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -47,17 +47,17 @@ _initialize = function _initialize() {
           obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
-        } else if (outer1_1.isInitialized) {
+        } else if (closure_1_1.isInitialized) {
           c3 = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
         } else {
-          const initError = outer1_1.initError;
-          let c0 = initError;
+          const initError = closure_1_1.initError;
+          c0 = initError;
           if (initError == null) {
             c0 = "Unknown error";
           }
           const _HermesInternal = HermesInternal;
-          const error = new Error("Rive initialization failed: " + c0);
+          error = new Error("Rive initialization failed: " + c0);
           throw error;
         }
       } catch (tmp15) {
@@ -66,7 +66,7 @@ _initialize = function _initialize() {
       }
     }
   });
-  _initialize = tmp;
+  closure_0 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -88,9 +88,8 @@ export const RiveRuntime = {
     return applyArgumentsResult;
   },
   getStatus() {
-    const obj = { isInitialized: closure_1.isInitialized, error: null };
-    const initError = closure_1.initError;
-    obj[1] = initError;
+    const obj = { isInitialized: closure_1.isInitialized, error: initError };
+    initError = closure_1.initError;
     return obj;
   }
 };

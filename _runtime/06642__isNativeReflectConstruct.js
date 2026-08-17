@@ -1,12 +1,14 @@
 // _runtime/06642__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import { Image } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/06643___INTERNAL_VIEW_CONFIG.js";
+import noopAll from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6643 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const SvgImage = arg1;
 function _isNativeReflectConstruct() {
@@ -20,22 +22,23 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+noopAll;
 const re9 = /\s+/;
 class SvgImage {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, SvgImage);
-    tmp2 = __esModule;
-    obj = __esModule(SvgImage);
-    tmp3 = __esModule;
+    tmp = closure_3(this, SvgImage);
+    tmp2 = closure_5;
+    obj = closure_5(SvgImage);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -49,19 +52,11 @@ class SvgImage {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(SvgImage, require("_isNativeReflectConstruct"));
+_inheritsDefault(SvgImage, _isNativeReflectConstructDefault);
 const items = [
   {
     key: "render",
     value: function render() {
-      let height;
-      let href;
-      let preserveAspectRatio;
-      let tmp2;
-      let tmp3;
-      let width;
-      let x;
-      let y;
       const self = this;
       const props = this.props;
       ({ preserveAspectRatio, href } = props);
@@ -75,9 +70,8 @@ const items = [
       } else {
         parts = [];
       }
-      let obj = { x, y, width, height, onLoad: props.onLoad, meetOrSlice: null, align: null, src: null };
+      let obj = { x, y, width, height, onLoad: props.onLoad, meetOrSlice: self(6584).meetOrSliceTypes[tmp3] || 0, align: null, src: null };
       [tmp2, tmp3] = parts;
-      obj[5] = self(6584).meetOrSliceTypes[tmp3] || 0;
       const tmp6 = self(6584).meetOrSliceTypes[tmp3] || 0;
       obj[6] = self(6584).alignEnum[tmp2] || "xMidYMid";
       let assetSource = null;
@@ -97,7 +91,7 @@ const items = [
         }
       };
       const tmp7 = self(6584).alignEnum[tmp2] || "xMidYMid";
-      const tmp11 = __INTERNAL_VIEW_CONFIG;
+      const tmp11 = __INTERNAL_VIEW_CONFIGDefault;
       const merged = Object.assign(self(6586).withoutXY(this, props));
       const merged1 = Object.assign(obj);
       return <tmp11 ref={function ref(arg0) {

@@ -1,24 +1,18 @@
 // _runtime/07083_useRecyclerViewController.js
-import asyncGeneratorStep from "asyncGeneratorStep";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { I18nManager } from "get ActivityIndicator";
+import closure_2 from "asyncGeneratorStep" /* 7084 */;
+import closure_3 from "_slicedToArray" /* 7041 */;
+import noop from "noop" /* 19 */;
+import { I18nManager } from "get ActivityIndicator" /* 17 */;
 import { useUnmountFlag } from "07085_useUnmountFlag.js";
 import { useUnmountAwareTimeout } from "07086_useUnmountAwareTimeout.js";
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
-({ useCallback: c4, useImperativeHandle: c5, useMemo: closure_6, useRef: error, useState: metroImportAll } = noop);
+({ useCallback: c4, useImperativeHandle: c5, useMemo: closure_6, useRef: error, useState: closure_8 } = noop);
 
 export const useRecyclerViewController = function useRecyclerViewController(recyclerViewManager, arg1, arg2, arg3) {
-  let closure_4;
   const _require = recyclerViewManager;
-  const dependencyMap = arg2;
-  let asyncGeneratorStep = arg3;
+  dependencyMap = arg2;
+  closure_2 = arg3;
   const unmountFlag = _useUnmountFlag.useUnmountFlag();
   let obj = _useUnmountFlag;
   [r10016, closure_4] = unmountFlag(callback4(0), 2);
@@ -27,8 +21,8 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
   let tmp2 = unmountFlag(callback4(0), 2);
   _setTimeout = _useUnmountAwareTimeout.useUnmountAwareTimeout().setTimeout;
   callback4 = _setTimeout(undefined);
-  let closure_9 = _setTimeout(undefined);
-  let closure_10 = _setTimeout([]);
+  closure_9 = _setTimeout(undefined);
+  closure_10 = _setTimeout([]);
   const items = [recyclerViewManager];
   let tmp3 = callback((arg0, arg1) => {
     if (undefined !== store.updateScrollOffset(arg0)) {
@@ -39,7 +33,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
       arg1();
     }
   }, items);
-  let closure_11 = tmp3;
+  closure_11 = tmp3;
   const items1 = [recyclerViewManager];
   const computeFirstVisibleIndexForOffsetCorrection = callback(() => {
     let obj = store;
@@ -64,8 +58,6 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
   const items2 = [recyclerViewManager, arg3, arg2, _setTimeout, tmp3, computeFirstVisibleIndexForOffsetCorrection];
   const items3 = [recyclerViewManager, arg2, _setTimeout, unmountFlag, tmp3];
   const applyOffsetCorrection = callback(() => {
-    let data;
-    let horizontal;
     let obj = store;
     ({ horizontal, data } = store.props);
     let current = ref7.current;
@@ -114,7 +106,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                           if (horizontal) {
                             obj = { x: null, animated: false };
                             obj[0] = obj.getAbsoluteLastScrollOffset() + diff;
-                            let obj1 = obj;
+                            obj1 = obj;
                           } else {
                             obj1 = { y: null, animated: false };
                             obj1[0] = obj.getAbsoluteLastScrollOffset() + diff;
@@ -125,7 +117,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                           }
                         }
                         if (tmp5) {
-                          tmp3(obj.getAbsoluteLastScrollOffset() + diff, () => {
+                          callback2(obj.getAbsoluteLastScrollOffset() + diff, () => {
 
                           });
                           obj.ignoreScrollEvents = true;
@@ -150,8 +142,6 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
     let obj = {};
     Object.defineProperty(obj, "props", { get: () => store.props, set: undefined });
     obj.scrollToOffset = function scrollToOffset(animated) {
-      let offset;
-      let skipFirstItemOffset;
       ({ offset, skipFirstItemOffset } = animated);
       if (skipFirstItemOffset === undefined) {
         skipFirstItemOffset = true;
@@ -174,16 +164,16 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
             obj[1] = current;
           }
           current = scrollToResult.current;
-          let obj1 = {};
+          obj1 = {};
           const merged = Object.assign(obj);
           obj1.animated = animated.animated;
           scrollToResult = current.scrollTo(obj1);
         } else {
-          obj1 = store(outer1_1[7]);
+          obj1 = store(closure_1_1[7]);
           const firstItemOffset = obj.firstItemOffset;
           const sum = obj1.adjustOffsetForRTL(offset, obj.getChildContainerDimensions().width, obj.getWindowSize().width) + (skipFirstItemOffset ? firstItemOffset : -firstItemOffset);
         }
-        tmp3 = outer1_9.isRTL && horizontal;
+        tmp3 = closure_1_9.isRTL && horizontal;
       }
     };
     obj.clearLayoutCacheOnUpdate = function clearLayoutCacheOnUpdate() {
@@ -204,10 +194,10 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
       const current = closure_1.current;
       return current.getScrollableNode();
     };
-    let closure_0 = ref2(() => {
-      let closure_0 = arg0;
-      let c3 = 0;
-      let c4 = 0;
+    closure_0 = ref2(() => {
+      closure_0 = arg0;
+      c3 = 0;
+      c4 = 0;
       const iter = (function*() {
         if (c4 === 2) {
           c4 = 3;
@@ -235,16 +225,16 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                 obj[0] = arg1;
                 return obj;
               } else {
-                let asyncGeneratorStep = tmp5;
+                closure_2 = tmp5;
                 let data = tmp2;
                 let animated;
-                let obj1 = animated;
+                obj1 = animated;
                 if (animated === undefined) {
                   obj1 = {};
                 }
                 animated = obj1.animated;
                 data = undefined;
-                asyncGeneratorStep = undefined;
+                closure_2 = undefined;
                 c3 = 1;
                 c4 = 1;
                 return { value: "ct", done: true };
@@ -263,16 +253,16 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                   data = engagedIndices.props.data;
                   if (data) {
                     if (data.length > 0) {
-                      asyncGeneratorStep = data.length - 1;
+                      closure_2 = data.length - 1;
                       engagedIndices = engagedIndices.getEngagedIndices();
-                      if (!engagedIndices.includes(asyncGeneratorStep)) {
+                      if (!engagedIndices.includes(closure_2)) {
                         const obj3 = { index: null, animated: null };
-                        obj3[0] = asyncGeneratorStep;
+                        obj3[0] = closure_2;
                         obj3[1] = animated;
                         c3 = 2;
                         c4 = 1;
                         const obj4 = { value: null, done: false };
-                        obj4[0] = outer1_13.scrollToIndex(obj3);
+                        obj4[0] = closure_1_13.scrollToIndex(obj3);
                         return obj4;
                       }
                     }
@@ -287,7 +277,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                 obj[0] = arg1;
                 return obj;
               }
-              outer1_7(() => {
+              closure_1_7(() => {
                 const current = data.current;
                 if (current != null) {
                   const obj = { animated: null };
@@ -326,21 +316,17 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
       closure_13.scrollToOffset(obj);
     };
     obj.scrollToIndex = function scrollToIndex(arg0) {
-      let closure_0;
-      let closure_1;
-      let asyncGeneratorStep;
-      let _slicedToArray;
-      ({ index: closure_0, animated: closure_1, viewPosition: asyncGeneratorStep, viewOffset: _slicedToArray } = arg0);
+      ({ index: closure_0, animated: closure_1, viewPosition: closure_2, viewOffset: closure_3 } = arg0);
       return new Promise((arg0) => {
-        let closure_0 = arg0;
-        const horizontal = outer1_0.props.horizontal;
-        if (outer1_1.current) {
+        closure_0 = arg0;
+        const horizontal = closure_1_0.props.horizontal;
+        if (closure_1_1.current) {
           if (closure_0 >= 0) {
             if (tmp < obj.getDataLength()) {
-              outer1_5.current = true;
+              closure_1_5.current = true;
               let result = obj.setOffsetProjectionEnabled(false);
               function getFinalOffset() {
-                const size = outer2_0.getLayout(closure_0);
+                const size = closure_2_0.getLayout(closure_0);
                 const tmp2 = horizontal ? size.x : size.y;
                 if (undefined !== getFinalOffset) {
                   const size2 = obj.getWindowSize();
@@ -355,7 +341,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                 } else {
                   sum = tmp2;
                 }
-                return sum + outer2_0.firstItemOffset;
+                return sum + closure_2_0.firstItemOffset;
               }
               let setScrollDirection = obj.getAbsoluteLastScrollOffset();
               let size = obj.getWindowSize();
@@ -363,7 +349,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
               function getStartScrollOffset() {
 
               }
-              let closure_6 = getFinalOffset();
+              closure_6 = getFinalOffset();
               const finalOffset = getFinalOffset();
               if (finalOffset > setScrollDirection) {
                 let _Math2 = Math;
@@ -376,40 +362,43 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                 bound = Math.min(finalOffset + result1, setScrollDirection);
                 obj.setScrollDirection("backward");
               }
-              let closure_8 = closure_6;
+              closure_8 = closure_6;
               function performScrollStep(arg0) {
                 const callback = arg0;
-                if (outer2_3.current) {
+                if (closure_2_3.current) {
                   callback();
                 } else if (5 <= arg0) {
                   if (typeof finishScrollToIndex !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  let maxScrollOffset = getFinalOffset();
-                  maxScrollOffset = outer2_0.getMaxScrollOffset();
+                  closure_8 = getFinalOffset();
+                  const maxScrollOffset = closure_2_0.getMaxScrollOffset();
+                  if (closure_8 > maxScrollOffset) {
+                    closure_8 = maxScrollOffset;
+                  }
                   if (horizontal) {
                     let obj = { offset: null, animated: false, skipFirstItemOffset: true };
                     obj[0] = bound;
-                    outer2_13.scrollToOffset(obj);
+                    closure_2_13.scrollToOffset(obj);
                   }
                   obj = { offset: null, animated: null, skipFirstItemOffset: true };
-                  obj[0] = maxScrollOffset;
+                  obj[0] = closure_8;
                   obj[1] = horizontal;
-                  outer2_13.scrollToOffset(obj);
+                  closure_2_13.scrollToOffset(obj);
                   let num5 = 200;
                   if (horizontal) {
                     num5 = 300;
                   }
-                  outer2_7(() => { ... }, num5);
-                  const tmp22 = outer2_7;
+                  closure_2_7(() => { ... }, num5);
+                  const tmp22 = closure_2_7;
                 } else {
                   if (horizontal) {
-                    let sum = maxScrollOffset + arg0 / 4 * (bound - maxScrollOffset);
+                    let sum = closure_8 + arg0 / 4 * (bound - closure_8);
                   } else {
-                    sum = bound + arg0 / 4 * (maxScrollOffset - bound);
+                    sum = bound + arg0 / 4 * (closure_8 - bound);
                   }
-                  outer2_11(sum, () => { ... });
-                  const tmp = outer2_11;
+                  closure_2_11(sum, () => { ... });
+                  const tmp = closure_2_11;
                 }
               }
               function finishScrollToIndex() {
@@ -472,7 +461,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
     obj.prepareForLayoutAnimationRender = function prepareForLayoutAnimationRender() {
       if (!store.props.keyExtractor) {
         const _console = console;
-        console.warn(store(outer1_1[8]).WarningMessages.keyExtractorNotDefinedForAnimation);
+        console.warn(store(closure_1_1[8]).WarningMessages.keyExtractorNotDefinedForAnimation);
       }
       store.animationOptimizationsEnabled = true;
     };
@@ -481,9 +470,6 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
   const items4 = [handlerMethods, recyclerViewManager, _setTimeout];
   const items5 = [handlerMethods, arg2, recyclerViewManager];
   const applyInitialScrollIndex = callback(() => {
-    let data;
-    let horizontal;
-    let initialScrollIndexParams;
     let obj = store;
     ({ data, initialScrollIndexParams, horizontal } = store.props);
     let num = store.getInitialScrollIndex();
@@ -525,7 +511,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
             obj[0] = sum;
             num4(obj);
             point = _setTimeout(() => {
-              outer1_13.scrollToOffset({ offset: closure_0, animated: false, skipFirstItemOffset: false });
+              closure_1_13.scrollToOffset({ offset: closure_0, animated: false, skipFirstItemOffset: false });
             }, 0);
             const tmp = _setTimeout;
           }

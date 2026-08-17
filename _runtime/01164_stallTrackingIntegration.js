@@ -1,6 +1,6 @@
 // _runtime/01164_stallTrackingIntegration.js
-import _slicedToArray from "_slicedToArray";
-import { AppState } from "get ActivityIndicator";
+import closure_2 from "_slicedToArray" /* 32 */;
+import { AppState } from "get ActivityIndicator" /* 17 */;
 
 const require = arg1;
 
@@ -49,10 +49,7 @@ export const stallTrackingIntegration = () => {
       }
     },
     iteration() {
-      let num;
-      let tmp10;
-      let tmp9;
-      let obj = num(map[2]);
+      obj = num(map[2]);
       const result = 1000 * obj.timestampInSeconds();
       const diff = result - obj.lastIntervalMs;
       if (diff >= 50 + num) {
@@ -95,9 +92,9 @@ export const stallTrackingIntegration = () => {
     }
   };
   _onSpanStart = function _onSpanStart(activeSpan) {
-    let obj = num(map[3]);
+    obj = num(map[3]);
     if (obj.isRootSpan(activeSpan)) {
-      let obj1 = map;
+      obj1 = map;
       if (map.has(activeSpan)) {
         const debug = tmp(tmp2[2]).debug;
         debug.error("[StallTracking] Tried to start stall tracking on a transaction already being tracked. Measurements might be lost.");
@@ -148,7 +145,7 @@ export const stallTrackingIntegration = () => {
     }
   };
   _onSpanEnd = function _onSpanEnd(activeSpan) {
-    let obj = num(map[3]);
+    obj = num(map[3]);
     if (obj.isRootSpan(activeSpan)) {
       let value = map.get(activeSpan);
       let tmpResult = tmp(tmp2[2]);
@@ -163,7 +160,7 @@ export const stallTrackingIntegration = () => {
           obj = { value: null, unit: "none" };
           obj[0] = obj.stallCount;
           obj[0] = obj;
-          const obj1 = { value: null, unit: "millisecond" };
+          obj1 = { value: null, unit: "millisecond" };
           obj1[0] = obj.totalStallTime;
           obj[1] = obj1;
           value = obj11.get(activeSpan);
@@ -340,7 +337,7 @@ export const stallTrackingIntegration = () => {
   };
   _flushLeakedTransactions = function _flushLeakedTransactions() {
     if (map.size > 10) {
-      let num = 0;
+      num = 0;
       const diff = obj.size - 10;
       const keys = obj.keys();
       const iter = keys[Symbol.iterator]();

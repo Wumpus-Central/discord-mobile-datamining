@@ -1,23 +1,16 @@
 // _runtime/06327_StyleSheet.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-let error;
 const require = arg1;
 let closure_3 = ["backgroundColor"];
 ({ Animated: error, Platform, StyleSheet } = get_ActivityIndicator);
 const styles = StyleSheet.create({ container: { alignSelf: "flex-end", textAlign: "center", paddingHorizontal: 4, overflow: "hidden" } });
 
 export const Badge = function Badge(visible) {
-  let children;
-  let colors;
-  let fonts;
-  let style;
   let flag = visible.visible;
   ({ children, style } = visible);
   if (flag === undefined) {
@@ -30,19 +23,19 @@ export const Badge = function Badge(visible) {
   const merged = Object.assign(visible, Object.create(null));
   let first;
   let first1;
-  let c3;
+  closure_3 = undefined;
   first = callback2(React.useState(() => {
     let num = 0;
     if (flag) {
       num = 1;
     }
-    const value = new outer1_7.Value(num);
+    const value = new closure_1_7.Value(num);
     return value;
   }), 1)[0];
   const tmp2 = callback2(React.useState(flag), 2);
   first1 = tmp2[0];
-  c3 = tmp4;
-  let obj1 = flag(first1[5]);
+  closure_3 = tmp4;
+  obj1 = flag(first1[5]);
   const theme = obj1.useTheme();
   const items = [first, first1, flag];
   ({ colors, fonts } = theme);
@@ -54,7 +47,7 @@ export const Badge = function Badge(visible) {
       }
       const obj = { toValue: null, duration: 150, useNativeDriver: true };
       obj[0] = num;
-      outer1_7.timing(first, obj).start((finished) => {
+      closure_1_7.timing(first, obj).start((finished) => {
         finished = finished.finished;
         if (finished) {
           finished = !closure_0;
@@ -78,7 +71,7 @@ export const Badge = function Badge(visible) {
   if (undefined === notification) {
     notification = colors.notification;
   }
-  const tmp10 = callback(tmp9, c3);
+  const tmp10 = callback(tmp9, closure_3);
   const tmp5 = first1;
   let str = "white";
   if (obj3.isLight()) {

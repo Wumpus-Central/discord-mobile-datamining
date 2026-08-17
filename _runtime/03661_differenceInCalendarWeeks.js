@@ -1,7 +1,7 @@
 // _runtime/03661_differenceInCalendarWeeks.js
-import startOfWeek from "startOfWeek";
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
-import requiredArgs from "requiredArgs";
+import startOfWeek from "startOfWeek" /* 3631 */;
+import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!startOfWeek) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!startOfWeek) {
 } else {
   tmp3 = startOfWeek;
 }
-let c0 = tmp3;
+startOfWeek = tmp3;
 if (!getTimezoneOffsetInMilliseconds) {
   obj = { default: null };
   obj[0] = getTimezoneOffsetInMilliseconds;
@@ -18,7 +18,7 @@ if (!getTimezoneOffsetInMilliseconds) {
 } else {
   tmp5 = getTimezoneOffsetInMilliseconds;
 }
-let closure_1 = tmp5;
+getTimezoneOffsetInMilliseconds = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,15 +26,16 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 let c3 = 604800000;
 
 export default function differenceInCalendarWeeks(arg0, arg1, arg2) {
-  tmp7.default(2, arguments);
-  const defaultResult1 = tmp3.default(arg0, arg2);
-  const defaultResult2 = tmp3.default(arg1, arg2);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfWeek.default(arg0, arg2);
+  const defaultResult2 = startOfWeek.default(arg1, arg2);
   const time = defaultResult1.getTime();
-  const diff = time - tmp5.default(defaultResult1);
+  const diff = time - getTimezoneOffsetInMilliseconds.default(defaultResult1);
   const time1 = defaultResult2.getTime();
-  return Math.round((diff - (time1 - tmp5.default(defaultResult2))) / c3);
+  return Math.round((diff - (time1 - getTimezoneOffsetInMilliseconds.default(defaultResult2))) / c3);
 };
 export default exports.default;

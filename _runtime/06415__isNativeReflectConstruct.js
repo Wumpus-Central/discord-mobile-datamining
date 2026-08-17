@@ -1,10 +1,12 @@
 // _runtime/06415__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import importDefaultResult3 from "PlatformConstants";
+import noopDefault from "noop" /* 19 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6404 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import importDefaultResult3 from "PlatformConstants" /* 6416 */;
 
 const ForceTouchFallback = arg1;
 function _isNativeReflectConstruct() {
@@ -18,10 +20,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,10 +31,10 @@ function _isNativeReflectConstruct() {
 class ForceTouchFallback {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, ForceTouchFallback);
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(ForceTouchFallback);
-    tmp3 = _isNativeReflectConstruct;
+    tmp = closure_2(this, ForceTouchFallback);
+    tmp2 = closure_4;
+    obj = closure_4(ForceTouchFallback);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -46,7 +48,7 @@ class ForceTouchFallback {
     return tmp3(self, constructResult);
   }
 }
-importDefaultResult1(ForceTouchFallback, require("noop").Component);
+importDefaultResult1(ForceTouchFallback, noopDefault.Component);
 let obj = {
   key: "componentDidMount",
   value: function componentDidMount() {
@@ -75,8 +77,8 @@ if (forceTouchAvailable) {
   HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(require("items1").baseGestureHandlerProps, 0));
   obj[1] = items2;
   obj[2] = {};
-  importDefaultResultResult = require("_isNativeReflectConstruct")(obj);
-  const importDefaultResult4 = require("_isNativeReflectConstruct");
+  importDefaultResultResult = _isNativeReflectConstructDefault(obj);
+  const importDefaultResult4 = _isNativeReflectConstructDefault;
 }
 let flag;
 if (importDefaultResult3 != null) {

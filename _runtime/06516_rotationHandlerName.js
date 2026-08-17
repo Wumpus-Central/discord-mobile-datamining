@@ -1,7 +1,7 @@
 // _runtime/06516_rotationHandlerName.js
-const obj = { name: "RotationGestureHandler", allowedProps: null, config: null };
-obj[1] = require("items1").baseGestureHandlerProps;
-obj[2] = {};
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6404 */;
+
+const obj = { name: "RotationGestureHandler", allowedProps: require("items1").baseGestureHandlerProps, config: {} };
 
 export const rotationHandlerName = "RotationGestureHandler";
-export const RotationGestureHandler = require("_isNativeReflectConstruct")(obj);
+export const RotationGestureHandler = _isNativeReflectConstructDefault(obj);

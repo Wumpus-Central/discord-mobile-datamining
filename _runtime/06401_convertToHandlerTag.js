@@ -1,12 +1,9 @@
 // _runtime/06401_convertToHandlerTag.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { _isNativeReflectConstruct } from "06398__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 6398 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function convertToHandlerTag(num) {
   if (typeof num === "number") {
     return num;
@@ -45,8 +42,7 @@ export const extractGestureRelations = function extractGestureRelations(item1000
   if (found == null) {
     found = [];
   }
-  const obj = { waitFor: null, simultaneousHandlers: null, blocksHandlers: null };
-  obj[0] = Array.from(new Set(found));
+  const obj = { waitFor: Array.from(new Set(found)), simultaneousHandlers: null, blocksHandlers: null };
   const simultaneousWith = item10007.config.simultaneousWith;
   let found1;
   if (simultaneousWith != null) {
@@ -80,10 +76,10 @@ export function checkGestureCallbacksForWorklets(item10022) {
 export const useForceRender = function useForceRender() {
   const tmp = callback(callback4(false), 2);
   const first = tmp[0];
-  const dependencyMap = tmp3;
+  closure_1 = tmp3;
   const items = [first, tmp[1]];
   return callback2(() => {
-    tmp3(!first);
+    callback(!first);
   }, items);
 };
 export const useWebEventHandlers = function useWebEventHandlers() {

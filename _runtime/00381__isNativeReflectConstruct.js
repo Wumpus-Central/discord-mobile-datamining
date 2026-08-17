@@ -1,11 +1,13 @@
 // _runtime/00381__isNativeReflectConstruct.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
+import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 366 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import closure_5 from "_possibleConstructorReturn" /* 93 */;
+import closure_6 from "_getPrototypeOf" /* 95 */;
+import closure_7 from "_get" /* 96 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
 
 const AnimatedStyle = importDefault;
 function _isNativeReflectConstruct() {
@@ -19,10 +21,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -30,12 +32,12 @@ function _isNativeReflectConstruct() {
 class AnimatedStyle {
   constructor(arg0, arg1, arg2, arg3, arg4) {
     self = this;
-    tmp = outer1_4(this, AnimatedStyle);
+    tmp = closure_4(this, AnimatedStyle);
     items = [];
     items[0] = module;
-    tmp2 = outer1_6;
-    obj = outer1_6(AnimatedStyle);
-    tmp3 = outer1_5;
+    tmp2 = closure_6;
+    obj = closure_6(AnimatedStyle);
+    tmp3 = closure_5;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -50,7 +52,7 @@ class AnimatedStyle {
     return tmp3Result;
   }
 }
-require("_inherits")(AnimatedStyle, require("_isNativeReflectConstruct"));
+importDefaultResult1(AnimatedStyle, _isNativeReflectConstructDefault);
 let obj = {
   key: "__getValue",
   value: function __getValue() {
@@ -134,7 +136,7 @@ let items = [
         let obj = _nodes[num];
         let __addChildResult = obj.__addChild(self);
       }
-      let fn = callback4(callback3(self.prototype), "__attach", self);
+      fn = callback4(callback3(self.prototype), "__attach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -150,7 +152,7 @@ let items = [
         let obj = _nodes[num];
         let __removeChildResult = obj.__removeChild(self);
       }
-      let fn = callback4(callback3(self.prototype), "__detach", self);
+      fn = callback4(callback3(self.prototype), "__detach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -166,7 +168,7 @@ let items = [
         let obj = _nodes[num];
         let __makeNativeResult = obj.__makeNative(arg0);
       }
-      let fn = callback4(callback3(self.prototype), "__makeNative", self);
+      fn = callback4(callback3(self.prototype), "__makeNative", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -248,7 +250,7 @@ obj = {
           fromResult1 = tmp12(383).from(tmp2);
           const tmp12Result = tmp12(383);
         }
-        obj2 = importAll(27);
+        obj2 = javaScriptFlagGetterAll;
       }
       const items2 = [items, items1, obj];
       const arr2 = callback(items2, 3)[1];
@@ -268,11 +270,11 @@ obj = {
         } else {
           constructResult = obj5.apply(obj, items3);
         }
-        const tmp29Result = _possibleConstructorReturn(obj, constructResult);
+        const tmp29Result = closure_5(obj, constructResult);
         tmp29Result._nodeKeys = tmp19;
         tmp29Result._nodes = arr2;
         tmp29Result._style = tmp20;
-        const tmp29 = _possibleConstructorReturn;
+        const tmp29 = closure_5;
       }
       const tmp18 = callback(items2, 3);
     }

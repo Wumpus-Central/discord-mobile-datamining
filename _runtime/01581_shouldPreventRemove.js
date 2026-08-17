@@ -1,11 +1,11 @@
 // _runtime/01581_shouldPreventRemove.js
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 let closure_3 = Symbol("VISITED_ROUTE_KEYS");
 function shouldPreventRemove(emitter, beforeRemoveListeners, routes, routes2, target) {
   let tmp = target;
-  let closure_0 = routes2.map((key) => key.key);
+  closure_0 = routes2.map((key) => key.key);
   const found = routes.filter((key) => !closure_0.includes(key.key));
   let reversed = found.reverse();
   let tmp3 = closure_3;
@@ -42,7 +42,7 @@ export const useOnPreventRemove = function useOnPreventRemove(getState) {
     if (key) {
       let tmp2Result;
       if (addKeyedListener != null) {
-        tmp2Result = tmp2("beforeRemove", tmp, (arg0) => outer1_4(closure_1, noop, callback().routes, [], arg0));
+        tmp2Result = tmp2("beforeRemove", tmp, (arg0) => closure_1_4(closure_1, closure_2, callback().routes, [], arg0));
       }
       return tmp2Result;
     }

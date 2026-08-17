@@ -1,9 +1,9 @@
 // _runtime/01089_distanceToMatch.js
-import asyncGeneratorStep from "registerSpanErrorInstrumentation";
-import _slicedToArray from "_slicedToArray";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_0 from "asyncGeneratorStep" /* 5 */;
+import closure_1 from "_slicedToArray" /* 32 */;
+import closure_2 from "_objectWithoutProperties" /* 109 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_createClass" /* 42 */;
 
 function distanceToMatch(nodeType) {
   let num = arg2;
@@ -32,10 +32,10 @@ function distanceToMatch(nodeType) {
   return num3;
 }
 function hookSetter(arg0, arg1, arg2, arg3) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   let tmp = arg2;
-  let closure_2 = arg2;
+  closure_2 = arg2;
   let _window = arg4;
   if (arg4 === undefined) {
     _window = window;
@@ -45,12 +45,12 @@ function hookSetter(arg0, arg1, arg2, arg3) {
   ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(arg0, arg1);
   const _Object2 = _window.Object;
   if (!arg3) {
-    const obj = { set: null };
+    obj = { set: null };
     obj[0] = function set(arg0) {
       let self = this;
       self = this;
-      let closure_0 = arg0;
-      outer1_17(() => {
+      closure_0 = arg0;
+      closure_1_17(() => {
         const call = set.call;
         if (typeof call === "unknown") {
           const result = set(tmp2);
@@ -75,48 +75,48 @@ function hookSetter(arg0, arg1, arg2, arg3) {
   }
   _Object2.defineProperty(arg0, arg1, tmp);
   return () => {
-    let obj = ownPropertyDescriptor;
+    obj = ownPropertyDescriptor;
     if (!ownPropertyDescriptor) {
       obj = {};
     }
-    let closure_0 = tmp;
-    let closure_1 = tmp2;
+    closure_0 = tmp;
+    closure_1 = tmp2;
     ownPropertyDescriptor = undefined;
     let _Object = window.Object;
     ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
     let _Object2 = window.Object;
     _Object2.defineProperty(closure_0, closure_1, obj);
     return () => {
-      let obj = ownPropertyDescriptor;
+      obj = ownPropertyDescriptor;
       if (!ownPropertyDescriptor) {
         obj = {};
       }
-      let closure_0 = tmp;
-      let closure_1 = tmp2;
+      closure_0 = tmp;
+      closure_1 = tmp2;
       ownPropertyDescriptor = undefined;
       let _Object = window.Object;
       ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
       let _Object2 = window.Object;
       _Object2.defineProperty(closure_0, closure_1, obj);
       return () => {
-        let obj = ownPropertyDescriptor;
+        obj = ownPropertyDescriptor;
         if (!ownPropertyDescriptor) {
           obj = {};
         }
-        let closure_0 = tmp;
-        let closure_1 = tmp2;
+        closure_0 = tmp;
+        closure_1 = tmp2;
         ownPropertyDescriptor = undefined;
         let _Object = window.Object;
         ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
         let _Object2 = window.Object;
         _Object2.defineProperty(closure_0, closure_1, obj);
         return () => {
-          let obj = ownPropertyDescriptor;
+          obj = ownPropertyDescriptor;
           if (!ownPropertyDescriptor) {
             obj = {};
           }
-          let closure_0 = tmp;
-          let closure_1 = tmp2;
+          closure_0 = tmp;
+          closure_1 = tmp2;
           ownPropertyDescriptor = undefined;
           let _Object = window.Object;
           ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
@@ -129,11 +129,11 @@ function hookSetter(arg0, arg1, arg2, arg3) {
   };
 }
 function patch(arg0, arg1, arg2) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   try {
     if (arg1 in arg0) {
-      const _objectWithoutProperties = tmp2;
+      closure_2 = tmp2;
       const tmp4 = arg2(arg0[arg1]);
       if (typeof tmp4 === "function") {
         let prototype = tmp5.prototype;
@@ -142,7 +142,7 @@ function patch(arg0, arg1, arg2) {
         }
         tmp5.prototype = prototype;
         const _Object = Object;
-        let obj = { __rrweb_original__: null };
+        obj = { __rrweb_original__: null };
         obj = { enumerable: false, value: null };
         obj[1] = tmp2;
         obj[0] = obj;
@@ -165,7 +165,7 @@ function patch(arg0, arg1, arg2) {
 }
 function isBlocked(nodeType) {
   if (nodeType) {
-    const obj = (function closestElementOfNode(nodeType) {
+    obj = (function closestElementOfNode(nodeType) {
       if (nodeType) {
         try {
           let parentElement = nodeType;
@@ -181,8 +181,8 @@ function isBlocked(nodeType) {
       }
     })(nodeType);
     if (obj) {
-      let c0 = arg1;
-      let closure_1 = arg2;
+      c0 = arg1;
+      closure_1 = arg2;
       const fn = (parentNode) => {
         if (null === parentNode) {
           return false;
@@ -343,7 +343,7 @@ function getImplementation(arg0) {
     const _window = window;
     const _document = window.document;
     const _window2 = window;
-    let obj = window[arg0];
+    obj = window[arg0];
     if (_document) {
       if (typeof _document.createElement === "function") {
         try {
@@ -376,10 +376,10 @@ function setTimeout$1() {
   return getImplementation("setTimeout")(...items);
 }
 function serializeArg(buffer, arg1, arg2) {
-  let closure_0 = arg1;
-  let closure_1 = arg2;
+  closure_0 = arg1;
+  closure_1 = arg2;
   if (buffer instanceof Array) {
-    return buffer.map((arg0) => outer1_24(arg0, closure_0, closure_1));
+    return buffer.map((arg0) => closure_1_24(arg0, closure_0, closure_1));
   } else if (null === buffer) {
     return buffer;
   } else {
@@ -403,7 +403,7 @@ function serializeArg(buffer, arg1, arg2) {
                     if (!(buffer instanceof Uint8ClampedArray)) {
                       const _ArrayBuffer = ArrayBuffer;
                       if (buffer instanceof ArrayBuffer) {
-                        let obj = { rr_type: null, base64: null };
+                        obj = { rr_type: null, base64: null };
                         obj[0] = buffer.constructor.name;
                         const _Uint8Array2 = Uint8Array;
                         const uint8Array = new Uint8Array(buffer);
@@ -441,7 +441,7 @@ function serializeArg(buffer, arg1, arg2) {
                           return obj;
                         } else {
                           if (buffer instanceof globalThis.HTMLImageElement) {
-                            const obj1 = { rr_type: null, src: null };
+                            obj1 = { rr_type: null, src: null };
                             obj1[0] = buffer.constructor.name;
                             obj1[1] = buffer.src;
                             return obj1;
@@ -470,7 +470,7 @@ function serializeArg(buffer, arg1, arg2) {
                                 if (Boolean(found.find((arg0) => closure_0 instanceof dependencyMap[arg0]))) {
                                   obj = { rr_type: null, index: null };
                                   obj[0] = buffer.constructor.name;
-                                  obj[1] = callback(buffer, arg1, arg2);
+                                  obj[1] = callback2(buffer, arg1, arg2);
                                   tmp3 = obj;
                                 } else {
                                   tmp3 = buffer;
@@ -499,18 +499,18 @@ function serializeArg(buffer, arg1, arg2) {
   }
 }
 function initCanvasContextObserver(HTMLCanvasElement) {
-  let closure_0 = arg1;
-  let closure_1 = arg2;
-  let closure_2 = arg3;
-  let closure_3 = arg4;
+  closure_0 = arg1;
+  closure_1 = arg2;
+  closure_2 = arg3;
+  closure_3 = arg4;
   let items = [];
   try {
     items.push(patch(HTMLCanvasElement.HTMLCanvasElement.prototype, "getContext", (arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       return function(arg0) {
         const self = this;
         const substr = [...arguments].slice();
-        if (!outer2_13(this, callback, outer1_1, outer1_2, true)) {
+        if (!closure_2_13(this, callback, closure_1_1, closure_1_2, true)) {
           let str = "webgl";
           if ("experimental-webgl" !== arg0) {
             str = arg0;
@@ -518,8 +518,8 @@ function initCanvasContextObserver(HTMLCanvasElement) {
           if (!("__context" in self)) {
             self.__context = str;
           }
-          if (outer1_3) {
-            const items = ["webgl", "webgl2"];
+          if (closure_1_3) {
+            items = ["webgl", "webgl2"];
             if (items.includes(str)) {
               if (substr[0]) {
                 if (typeof substr[0] === "object") {
@@ -546,19 +546,19 @@ function initCanvasContextObserver(HTMLCanvasElement) {
   }
 }
 function patchGLPrototype(headers) {
-  let closure_0 = headers;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
-  let closure_3 = arg3;
-  let closure_4 = arg4;
-  let closure_5 = arg5;
-  let closure_6 = arg7;
+  closure_0 = headers;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  closure_3 = arg3;
+  closure_4 = arg4;
+  closure_5 = arg5;
+  closure_6 = arg7;
   let items = [];
   const ownPropertyNames = Object.getOwnPropertyNames(headers);
   for (const item10017 of ownPropertyNames) {
     let tmp2 = (function _loop2(item10017) {
-      const headers = item10017;
-      let items = ["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"];
+      headers = item10017;
+      items = ["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"];
       if (items.includes(item10017)) {
         return 0;
       } else {
@@ -566,24 +566,24 @@ function patchGLPrototype(headers) {
           if (typeof headers[item10017] !== "function") {
             return 0;
           } else {
-            items.push(outer1_12(tmp3, item10017, (arg0) => {
-              let closure_0 = arg0;
+            items.push(closure_1_12(tmp3, item10017, (arg0) => {
+              closure_0 = arg0;
               return function() {
                 const self = this;
-                const items = [...arguments];
+                items = [...arguments];
                 const applyResult = callback.apply(this, items);
-                outer3_23(applyResult, outer2_6, this);
+                closure_3_23(applyResult, closure_2_6, this);
                 if ("tagName" in this.canvas) {
-                  if (!outer3_13(self.canvas, outer2_3, outer2_4, outer2_5, true)) {
-                    if (typeof outer3_25 !== "function") {
+                  if (!closure_3_13(self.canvas, closure_2_3, closure_2_4, closure_2_5, true)) {
+                    if (typeof closure_3_25 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    callback = outer2_6;
-                    const obj = { type: null, property: null, args: null };
-                    obj[0] = outer2_1;
+                    callback = closure_2_6;
+                    obj = { type: null, property: null, args: null };
+                    obj[0] = closure_2_1;
                     obj[1] = callback;
-                    obj[2] = items.map((arg0) => outer1_24(arg0, closure_0, closure_1));
-                    outer2_2(self.canvas, obj);
+                    obj[2] = items.map((arg0) => closure_1_24(arg0, closure_0, closure_1));
+                    closure_2_2(self.canvas, obj);
                   }
                 }
                 return applyResult;
@@ -591,12 +591,12 @@ function patchGLPrototype(headers) {
             }));
           }
         } catch (err) {
-          let obj = { set: null };
+          obj = { set: null };
           obj[0] = function set(arg0) {
-            const items = [arg0];
-            outer1_2(this.canvas, { type: outer1_1, property: closure_0, args: items, setter: true });
+            items = [arg0];
+            closure_1_2(this.canvas, { type: closure_1_1, property: closure_0, args: items, setter: true });
           };
-          items.push(outer1_11(headers, tmp, obj));
+          items.push(closure_1_11(headers, tmp, obj));
         }
       }
     })(item10017);
@@ -613,18 +613,18 @@ let closure_8 = (() => {
   class Mirror {
     constructor() {
       self = this;
-      tmp = outer1_3(this, Mirror);
-      tmp2 = outer1_7;
+      tmp = closure_1_3(this, Mirror);
+      tmp2 = closure_1_7;
       map = new Map();
-      if (typeof outer1_7 !== "function") {
+      if (typeof closure_1_7 !== "function") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       if ("idNodeMap" in self) {
-        tmp4 = outer1_6;
+        tmp4 = closure_1_6;
         obj = { enumerable: true, configurable: true, writable: true, value: null };
         obj[3] = map;
-        tmp5 = outer1_6(self, "idNodeMap", obj);
+        tmp5 = closure_1_6(self, "idNodeMap", obj);
       } else {
         self.idNodeMap = map;
       }
@@ -634,10 +634,10 @@ let closure_8 = (() => {
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }
       if ("nodeMetaMap" in self) {
-        tmp7 = outer1_6;
+        tmp7 = closure_1_6;
         obj = { enumerable: true, configurable: true, writable: true, value: null };
         obj[3] = weakMap;
-        tmp8 = outer1_6(self, "nodeMetaMap", obj);
+        tmp8 = closure_1_6(self, "nodeMetaMap", obj);
       } else {
         self.nodeMetaMap = weakMap;
       }
@@ -740,13 +740,13 @@ let closure_8 = (() => {
     {
       key: "reset",
       value: function reset() {
-        const obj = { idNodeMap: new Map() };
+        obj = { idNodeMap: new Map() };
         const weakMap = new WeakMap();
         obj.nodeMetaMap = weakMap;
       }
     }
   ];
-  return _createClass(Mirror, items);
+  return callback(Mirror, items);
 })();
 let c10 = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.";
 let obj = {

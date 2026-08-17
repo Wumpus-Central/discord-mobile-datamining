@@ -1,6 +1,7 @@
 // _runtime/07865__optionalChain.js
 arg5._optionalChain = function _optionalChain(arg0) {
-  let first = arg0[0];
+  const first = arg0[0];
+  closure_1 = first;
   let num = 1;
   let tmp2 = first;
   let tmp3 = first;
@@ -22,11 +23,11 @@ arg5._optionalChain = function _optionalChain(arg0) {
           let tmp10 = tmp2;
           if (!tmp9) {
             let tmp5Result = tmp5(() => {
-              const items = [c0, ...HermesBuiltin.copyRestArgs()];
-              return first.call.apply(items);
+              const items = [closure_0, ...HermesBuiltin.copyRestArgs()];
+              return closure_1.call.apply(items);
             });
-            first = tmp5Result;
-            let c0;
+            closure_1 = tmp5Result;
+            closure_0 = undefined;
             tmp10 = tmp5Result;
           }
         }
@@ -34,9 +35,9 @@ arg5._optionalChain = function _optionalChain(arg0) {
         tmp2 = tmp10;
         tmp3 = tmp10;
       }
-      c0 = tmp2;
+      closure_0 = tmp2;
       tmp5Result = tmp5(tmp2);
-      first = tmp5Result;
+      closure_1 = tmp5Result;
       tmp10 = tmp5Result;
     }
   }

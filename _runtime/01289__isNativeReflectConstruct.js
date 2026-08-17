@@ -1,10 +1,11 @@
 // _runtime/01289__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import c4 from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
-import { createElement } from "noop";
+import noop from "noop" /* 19 */;
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 1278 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
 let _class = require;
 function _isNativeReflectConstruct() {
@@ -18,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -34,24 +35,25 @@ function formatReact(str) {
   }
   return bindFormatValuesResult;
 }
+const createElement = noop.createElement;
 let obj = { format: formatReact, builder: null };
 _class = exports.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
 _class = function _class(arg0) {
   const self = this;
-  _classCallCheck(this, _class);
-  const obj = _getPrototypeOf(_class);
+  callback(this, _class);
+  const obj = callback2(_class);
   if (_isNativeReflectConstruct()) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    let constructResult = Reflect.construct(obj, arguments, callback2(self).constructor);
   } else {
     constructResult = obj(...arguments);
   }
-  const tmp3Result = _possibleConstructorReturn(self, constructResult);
+  const tmp3Result = closure_4(self, constructResult);
   tmp3Result._nodeKey = 0;
   tmp3Result.result = [];
   return tmp3Result;
 };
-_inherits(_class, require("_isNativeReflectConstruct").FormatBuilder);
+_inherits(_class, _isNativeReflectConstruct2.FormatBuilder);
 obj = {
   key: "pushRichTextTag",
   value: function pushRichTextTag(arg0, arg1, arg2) {
@@ -95,18 +97,18 @@ obj[1] = _createClass(_class, items);
 export { formatReact };
 export const makeReactFormatter = function makeReactFormatter(arg0) {
   let obj = { format: formatReact, builder: null };
-  let _class = arg0;
+  _class = arg0;
   _class = function _class(arg0) {
     const self = this;
-    _classCallCheck(this, _class);
-    const obj = _getPrototypeOf(_class);
+    callback(this, _class);
+    const obj = callback2(_class);
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
-      let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+      let constructResult = Reflect.construct(obj, arguments, callback2(self).constructor);
     } else {
       constructResult = obj(...arguments);
     }
-    const tmp3Result = _possibleConstructorReturn(self, constructResult);
+    const tmp3Result = closure_4(self, constructResult);
     tmp3Result._nodeKey = 0;
     tmp3Result.result = [];
     return tmp3Result;
@@ -167,7 +169,6 @@ export const DEFAULT_REACT_RICH_TEXT_ELEMENTS = {
     return <code key={arg1}>{arg0}</code>;
   },
   $link(arg0, key) {
-    let tmp;
     [tmp] = arg2;
     return <a href={tmp} key={arg1}>{arg0}</a>;
   },

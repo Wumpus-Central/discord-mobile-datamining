@@ -1,8 +1,9 @@
 // _runtime/metro/13747__.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import { SymbolResult1 } from "../13748_SymbolResult1.js";
-import { URLImpl } from "../13749_URLImpl.js";
+import SymbolResult1 from "SymbolResult1" /* 13748 */;
+import URLImpl from "URLImpl" /* 13749 */;
+import _ from "_" /* 13756 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_createClass" /* 42 */;
 
 let obj = {
   _mixedIntoPredicates: [],
@@ -47,7 +48,7 @@ let obj = {
     return false;
   },
   convert(arg0) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -66,12 +67,12 @@ let obj = {
     }
   },
   create(arg0, arg1, arg2) {
-    if (undefined === arg0[require(undefined, 13748) /* SymbolResult1 */.ctorRegistrySymbol]) {
+    if (undefined === arg0[SymbolResult1.ctorRegistrySymbol]) {
       const _Error2 = Error;
-      const error = new Error("Internal error: invalid global object");
+      error = new Error("Internal error: invalid global object");
       throw error;
     } else {
-      const _URL = arg0[tmp(undefined, 13748).ctorRegistrySymbol].URL;
+      const _URL = arg0[SymbolResult1.ctorRegistrySymbol].URL;
       if (undefined === _URL) {
         const _Error = Error;
         const error1 = new Error("Internal error: constructor URL is not installed on the passed global object");
@@ -81,7 +82,7 @@ let obj = {
         return obj.setup(Object.create(_URL.prototype), arg0, arg1, arg2);
       }
     }
-    tmp = require;
+    const tmp = require;
   },
   createImpl(arg0, arg1, arg2) {
     obj = obj.create(arg0, arg1, arg2);
@@ -96,7 +97,7 @@ let obj = {
     if (arg2 === undefined) {
       items = [];
     }
-    let obj = arg3;
+    obj = arg3;
     if (arg3 === undefined) {
       obj = {};
     }
@@ -106,7 +107,7 @@ let obj = {
     const implementation = new URLImpl.implementation(arg1, items, obj);
     obj[0] = implementation;
     Object.defineProperty(wrapper, SymbolResult1.implSymbol, obj);
-    wrapper[require(undefined, 13748) /* SymbolResult1 */.implSymbol][SymbolResult1.wrapperSymbol] = wrapper;
+    wrapper[SymbolResult1.implSymbol][SymbolResult1.wrapperSymbol] = wrapper;
     if (URLImpl.init) {
       tmp2(13749).init(wrapper[tmp2(undefined, 13748).implSymbol], obj);
       const tmp2Result = tmp2(13749);
@@ -117,7 +118,7 @@ let obj = {
     const URL = arg0;
     class URL {
       constructor(arg0) {
-        tmp = outer2_3(this, URL);
+        tmp = closure_3(this, URL);
         if (arguments.length < 1) {
           tmp7 = globalThis;
           _TypeError = TypeError;
@@ -150,7 +151,7 @@ let obj = {
         }
       }
     }
-    let obj = {
+    obj = {
       key: "toJSON",
       value: function toJSON() {
         const self = this;
@@ -184,7 +185,7 @@ let obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              const obj = URL(13756);
+              obj = URL(13756);
               self[URL(undefined, 13748).implSymbol].href = URL(13756).USVString(arg0, { context: "Failed to set the 'href' property on 'URL': The provided value" });
             }
           }
@@ -238,7 +239,7 @@ let obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              const obj = URL(13756);
+              obj = URL(13756);
               self[URL(undefined, 13748).implSymbol].protocol = URL(13756).USVString(arg0, { context: "Failed to set the 'protocol' property on 'URL': The provided value" });
             }
           }
@@ -264,7 +265,7 @@ let obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              const obj = URL(13756);
+              obj = URL(13756);
               self[URL(undefined, 13748).implSymbol].username = URL(13756).USVString(arg0, { context: "Failed to set the 'username' property on 'URL': The provided value" });
             }
           }
@@ -290,7 +291,7 @@ let obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              const obj = URL(13756);
+              obj = URL(13756);
               self[URL(undefined, 13748).implSymbol].password = URL(13756).USVString(arg0, { context: "Failed to set the 'password' property on 'URL': The provided value" });
             }
           }
@@ -316,7 +317,7 @@ let obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              const obj = URL(13756);
+              obj = URL(13756);
               self[URL(undefined, 13748).implSymbol].host = URL(13756).USVString(arg0, { context: "Failed to set the 'host' property on 'URL': The provided value" });
             }
           }
@@ -342,7 +343,7 @@ let obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              const obj = URL(13756);
+              obj = URL(13756);
               self[URL(undefined, 13748).implSymbol].hostname = URL(13756).USVString(arg0, { context: "Failed to set the 'hostname' property on 'URL': The provided value" });
             }
           }
@@ -368,7 +369,7 @@ let obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              const obj = URL(13756);
+              obj = URL(13756);
               self[URL(undefined, 13748).implSymbol].port = URL(13756).USVString(arg0, { context: "Failed to set the 'port' property on 'URL': The provided value" });
             }
           }
@@ -394,7 +395,7 @@ let obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              const obj = URL(13756);
+              obj = URL(13756);
               self[URL(undefined, 13748).implSymbol].pathname = URL(13756).USVString(arg0, { context: "Failed to set the 'pathname' property on 'URL': The provided value" });
             }
           }
@@ -420,7 +421,7 @@ let obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              const obj = URL(13756);
+              obj = URL(13756);
               self[URL(undefined, 13748).implSymbol].search = URL(13756).USVString(arg0, { context: "Failed to set the 'search' property on 'URL': The provided value" });
             }
           }
@@ -436,7 +437,7 @@ let obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              return self(13748).getSameObject(self, "searchParams", () => self(outer1_2[2]).tryWrapperForImpl(self[self(undefined, outer1_2[2]).implSymbol].searchParams));
+              return self(13748).getSameObject(self, "searchParams", () => self(closure_1_2[2]).tryWrapperForImpl(self[self(undefined, closure_1_2[2]).implSymbol].searchParams));
             }
           }
           const typeError = new TypeError("Illegal invocation");
@@ -461,7 +462,7 @@ let obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              const obj = URL(13756);
+              obj = URL(13756);
               self[URL(undefined, 13748).implSymbol].hash = URL(13756).USVString(arg0, { context: "Failed to set the 'hash' property on 'URL': The provided value" });
             }
           }
@@ -470,7 +471,7 @@ let obj = {
         }
       }
     ];
-    const tmp = _createClass(URL, items);
+    const tmp = callback(URL, items);
     obj = { toJSON: { enumerable: true }, href: { enumerable: true }, toString: { enumerable: true }, origin: { enumerable: true }, protocol: { enumerable: true }, username: { enumerable: true }, password: { enumerable: true }, host: { enumerable: true }, hostname: { enumerable: true }, port: { enumerable: true }, pathname: { enumerable: true }, search: { enumerable: true }, searchParams: { enumerable: true }, hash: { enumerable: true } };
     obj[Symbol.toStringTag] = { value: "URL", configurable: true };
     Object.defineProperties(tmp.prototype, obj);
@@ -479,7 +480,7 @@ let obj = {
       const ctorRegistrySymbol = tmp3(13748).ctorRegistrySymbol;
       class URL {
         constructor(arg0) {
-          tmp = outer2_3(this, URL);
+          tmp = closure_3(this, URL);
           if (arguments.length < 1) {
             tmp7 = globalThis;
             _TypeError = TypeError;

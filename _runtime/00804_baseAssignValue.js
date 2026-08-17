@@ -1,5 +1,6 @@
 // _runtime/00804_baseAssignValue.js
-import { getNative } from "00805_getNative.js";
+import getNative from "getNative" /* 805 */;
+
 
 export default function baseAssignValue(arg0, arg1, arg2) {
   if ("__proto__" == arg1) {

@@ -1,14 +1,14 @@
 // _runtime/01027__lazyLoadIntegration.js
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function _lazyLoadIntegration() {
   const self = this;
-  let tmp = asyncGeneratorStep((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c5 = 0;
-    let c4 = 0;
+  let tmp = callback((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c5 = 0;
+    c4 = 0;
     return (function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
@@ -49,7 +49,7 @@ function _lazyLoadIntegration() {
                 if (typeof Sentry[tmp50] === "function") {
                   if (!("_isShim" in tmp27)) {
                     c5 = 3;
-                    const obj1 = { value: null, done: true };
+                    obj1 = { value: null, done: true };
                     obj1[0] = tmp27;
                     return obj1;
                   }
@@ -79,7 +79,7 @@ function _lazyLoadIntegration() {
                   const attr = element.setAttribute("nonce", tmp51);
                 }
                 const promise = new Promise((arg0, arg1) => {
-                  let closure_0 = arg0;
+                  closure_0 = arg0;
                   const listener = element.addEventListener("load", () => callback());
                   const listener1 = element.addEventListener("error", arg1);
                 });
@@ -97,7 +97,7 @@ function _lazyLoadIntegration() {
                 }
                 if (head) {
                   head.appendChild(element);
-                  let c4 = 1;
+                  c4 = 1;
                   table = 2;
                   c5 = 1;
                   const obj2 = { value: null, done: false };
@@ -106,7 +106,7 @@ function _lazyLoadIntegration() {
                 } else {
                   const _Error4 = Error;
                   const _HermesInternal4 = HermesInternal;
-                  const error = new Error("Could not find parent element to insert lazy-loaded " + tmp50 + " script");
+                  error = new Error("Could not find parent element to insert lazy-loaded " + tmp50 + " script");
                   throw error;
                 }
                 const tmp28 = (function getScriptURL(arg0) {
@@ -174,7 +174,7 @@ function _lazyLoadIntegration() {
       }
     })();
   });
-  const _lazyLoadIntegration = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

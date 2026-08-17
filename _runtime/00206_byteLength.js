@@ -2,7 +2,7 @@
 arg5.byteLength = function byteLength(arr) {
   if (0 < arr.length % 4) {
     const _Error = Error;
-    const error = new Error("Invalid string. Length must be a multiple of 4");
+    error = new Error("Invalid string. Length must be a multiple of 4");
     throw error;
   } else {
     let index = arr.indexOf("=");
@@ -19,11 +19,9 @@ arg5.byteLength = function byteLength(arr) {
   }
 };
 arg5.toByteArray = function toByteArray(arr) {
-  let tmp2;
-  let tmp3;
   if (0 < arr.length % 4) {
     const _Error = Error;
-    const error = new Error("Invalid string. Length must be a multiple of 4");
+    error = new Error("Invalid string. Length must be a multiple of 4");
     throw error;
   } else {
     let index = arr.indexOf("=");

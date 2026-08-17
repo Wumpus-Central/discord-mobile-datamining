@@ -1,5 +1,5 @@
 // _runtime/01621_useRoutePath.js
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 
@@ -8,7 +8,7 @@ export const useRoutePath = function useRoutePath() {
   stateForPath = options(stateForPath[2]).useStateForPath();
   if (undefined === stateForPath) {
     const _Error = Error;
-    const error = new Error("Couldn't find a state for the route object. Is your component inside a screen in a navigator?");
+    error = new Error("Couldn't find a state for the route object. Is your component inside a screen in a navigator?");
     throw error;
   } else {
     getPathFromState = undefined;

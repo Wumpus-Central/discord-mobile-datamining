@@ -1,14 +1,14 @@
 // _runtime/13640_isStructurallyValidLanguageTag.js
-import e from "e";
-import e from "e";
-import e from "e";
-import { emitUnicodeLanguageId } from "13641_emitUnicodeLanguageId.js";
-import { compareKV } from "13642_compareKV.js";
+import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 13641 */;
+import compareKV from "compareKV" /* 13642 */;
+import __exportStarResult2 from "__exportStarResult2" /* 13645 */;
+import __exportStarResult1 from "__exportStarResult1" /* 13646 */;
+import e from "e" /* 1281 */;
 import { parseUnicodeLanguageId } from "13644_parseUnicodeLanguageId.js";
 
-e.__exportStar(require("emitUnicodeLanguageId"), exports);
-e.__exportStar(require("__exportStarResult1"), exports);
-e.__exportStar(require("__exportStarResult2"), exports);
+e.__exportStar(emitUnicodeLanguageId, exports);
+e.__exportStar(__exportStarResult1, exports);
+e.__exportStar(__exportStarResult2, exports);
 
 export const getCanonicalLocales = function getCanonicalLocales(items) {
   if (undefined === items) {

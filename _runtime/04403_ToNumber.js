@@ -1,6 +1,8 @@
 // _runtime/04403_ToNumber.js
-import { isPrimitive } from "04404_isPrimitive.js";
-let closure_2 = require("getEvalledConstructor")("%Number%");
+import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
+import isPrimitive from "isPrimitive" /* 4404 */;
+
+let closure_2 = getEvalledConstructor("%Number%");
 
 export default function ToNumber(arg0) {
   let tmp3 = arg0;

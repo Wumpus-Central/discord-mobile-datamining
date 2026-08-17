@@ -1,5 +1,5 @@
 // _runtime/05318_add.js
-import Decimal from "module_1";
+import Decimal from "module_1" /* 1 */;
 
 function add(s, s2) {
   let diff2;
@@ -211,7 +211,7 @@ function exp(constructor) {
   } else if (constructor.s) {
     let tmp11;
     if (null == undefined) {
-      let c2 = false;
+      c2 = false;
       tmp11 = precision;
     }
     constructor = new constructor(0.03125);
@@ -301,7 +301,7 @@ function ln(s) {
   } else {
     let tmp2 = arg1;
     if (null == arg1) {
-      let c2 = false;
+      c2 = false;
       tmp2 = precision;
     }
     if (s.eq(10)) {
@@ -340,7 +340,7 @@ function ln(s) {
           let tmp16 = charAtResult;
           let times = str;
           if (num == charAtResult) {
-            let obj = s;
+            obj = s;
             let tmp13 = num;
             tmp14 = s;
             tmp16 = charAtResult;
@@ -719,9 +719,7 @@ function round(d) {
   }
 }
 function subtract(s, s2) {
-  let d;
   let diff3;
-  let e;
   let first;
   let tmp20;
   let tmp36;
@@ -1273,7 +1271,7 @@ const fn14 = function(arg0) {
     if (self.eq(Decimal)) {
       let constructor2 = new constructor(0);
     } else {
-      let c2 = false;
+      c2 = false;
       constructor2 = f105985(ln(self, sum), ln(constructor, sum), sum);
       c2 = true;
       round(constructor2, precision);
@@ -1303,10 +1301,10 @@ const fn16 = function(arg0) {
   constructor = new constructor(arg0);
   if (constructor.s) {
     if (self.s) {
-      let c2 = false;
+      c2 = false;
       c2 = true;
       let minusResult = self.minus(f105985(self, tmp2, 0, 1).times(constructor));
-      const obj = f105985(self, tmp2, 0, 1);
+      obj = f105985(self, tmp2, 0, 1);
     } else {
       const constructor1 = new constructor(self);
       minusResult = constructor1;
@@ -1434,7 +1432,7 @@ const fn22 = function() {
         num = result;
       } while (10 <= first);
     }
-    let c2 = false;
+    c2 = false;
     const _Math = Math;
     const str = Math.sqrt(+self);
     if (0 != str) {
@@ -1469,8 +1467,6 @@ const fn22 = function() {
 obj.sqrt = fn22;
 obj.squareRoot = fn22;
 const fn23 = function(arg0) {
-  let constructor;
-  let d;
   let tmp12;
   let tmp25;
   const self = this;
@@ -1737,7 +1733,7 @@ const fn26 = function(arg0) {
               const constructor2 = new constructor(tmp12);
               const _Math2 = Math;
               const rounded = Math.ceil(precision / 7 + 4);
-              let c2 = false;
+              c2 = false;
               let tmp26 = constructor2;
               if (tmp15 % 2) {
                 const timesResult = constructor2.times(constructor1);
@@ -1877,8 +1873,6 @@ obj.toPrecision = function(arg0, arg1) {
   return tmp3Result;
 };
 const fn27 = function(arg0, arg1) {
-  let precision;
-  let rounding;
   const self = this;
   let constructor = this.constructor;
   if (undefined === arg0) {
@@ -2448,7 +2442,7 @@ const f105985 = (s, s2) => {
   }
 };
 function clone(arg0) {
-  let obj = arg0;
+  obj = arg0;
   class Decimal {
     constructor(arg0) {
       self = this;
@@ -2490,15 +2484,15 @@ function clone(arg0) {
               }
               return tmp14;
             }
-            tmp12 = outer1_17;
-            tmp13 = outer1_17(self, str.toString());
+            tmp12 = closure_1_17;
+            tmp13 = closure_1_17(self, str.toString());
             tmp14 = self;
           }
         } else if (typeof arg0 !== "string") {
           tmp10 = globalThis;
           _Error2 = Error;
-          tmp11 = outer1_4;
-          throw Error(outer1_4 + arg0);
+          tmp11 = closure_1_4;
+          throw Error(closure_1_4 + arg0);
         } else {
           num8 = 0;
           num9 = 45;
@@ -2512,16 +2506,16 @@ function clone(arg0) {
             self.s = 1;
             substr1 = arg0;
           }
-          tmp5 = outer1_8;
-          if (outer1_8.test(substr1)) {
-            tmp8 = outer1_17;
-            tmp9 = outer1_17(self, substr1);
+          tmp5 = closure_1_8;
+          if (closure_1_8.test(substr1)) {
+            tmp8 = closure_1_17;
+            tmp9 = closure_1_17(self, substr1);
             return;
           } else {
             tmp6 = globalThis;
             _Error = Error;
-            tmp7 = outer1_4;
-            throw Error(outer1_4 + substr1);
+            tmp7 = closure_1_4;
+            throw Error(closure_1_4 + substr1);
           }
         }
       } else {
@@ -2591,15 +2585,15 @@ function clone(arg0) {
                 }
                 return tmp14;
               }
-              tmp12 = outer1_17;
-              tmp13 = outer1_17(self, str.toString());
+              tmp12 = closure_1_17;
+              tmp13 = closure_1_17(self, str.toString());
               tmp14 = self;
             }
           } else if (typeof arg0 !== "string") {
             tmp10 = globalThis;
             _Error2 = Error;
-            tmp11 = outer1_4;
-            throw Error(outer1_4 + arg0);
+            tmp11 = closure_1_4;
+            throw Error(closure_1_4 + arg0);
           } else {
             num8 = 0;
             num9 = 45;
@@ -2613,16 +2607,16 @@ function clone(arg0) {
               self.s = 1;
               substr1 = arg0;
             }
-            tmp5 = outer1_8;
-            if (outer1_8.test(substr1)) {
-              tmp8 = outer1_17;
-              tmp9 = outer1_17(self, substr1);
+            tmp5 = closure_1_8;
+            if (closure_1_8.test(substr1)) {
+              tmp8 = closure_1_17;
+              tmp9 = closure_1_17(self, substr1);
               return;
             } else {
               tmp6 = globalThis;
               _Error = Error;
-              tmp7 = outer1_4;
-              throw Error(outer1_4 + substr1);
+              tmp7 = closure_1_4;
+              throw Error(closure_1_4 + substr1);
             }
           }
         } else {
@@ -2675,15 +2669,15 @@ function clone(arg0) {
                   }
                   return tmp14;
                 }
-                tmp12 = outer1_17;
-                tmp13 = outer1_17(self, str.toString());
+                tmp12 = closure_1_17;
+                tmp13 = closure_1_17(self, str.toString());
                 tmp14 = self;
               }
             } else if (typeof arg0 !== "string") {
               tmp10 = globalThis;
               _Error2 = Error;
-              tmp11 = outer1_4;
-              throw Error(outer1_4 + arg0);
+              tmp11 = closure_1_4;
+              throw Error(closure_1_4 + arg0);
             } else {
               num8 = 0;
               num9 = 45;
@@ -2697,16 +2691,16 @@ function clone(arg0) {
                 self.s = 1;
                 substr1 = arg0;
               }
-              tmp5 = outer1_8;
-              if (outer1_8.test(substr1)) {
-                tmp8 = outer1_17;
-                tmp9 = outer1_17(self, substr1);
+              tmp5 = closure_1_8;
+              if (closure_1_8.test(substr1)) {
+                tmp8 = closure_1_17;
+                tmp9 = closure_1_17(self, substr1);
                 return;
               } else {
                 tmp6 = globalThis;
                 _Error = Error;
-                tmp7 = outer1_4;
-                throw Error(outer1_4 + substr1);
+                tmp7 = closure_1_4;
+                throw Error(closure_1_4 + substr1);
               }
             }
           } else {
@@ -2763,15 +2757,15 @@ class Decimal {
             }
             return tmp14;
           }
-          tmp12 = outer1_17;
-          tmp13 = outer1_17(self, str.toString());
+          tmp12 = closure_1_17;
+          tmp13 = closure_1_17(self, str.toString());
           tmp14 = self;
         }
       } else if (typeof global !== "string") {
         tmp10 = globalThis;
         _Error2 = Error;
-        tmp11 = outer1_4;
-        throw Error(outer1_4 + global);
+        tmp11 = closure_1_4;
+        throw Error(closure_1_4 + global);
       } else {
         num8 = 0;
         num9 = 45;
@@ -2785,16 +2779,16 @@ class Decimal {
           self.s = 1;
           substr1 = global;
         }
-        tmp5 = outer1_8;
-        if (outer1_8.test(substr1)) {
-          tmp8 = outer1_17;
-          tmp9 = outer1_17(self, substr1);
+        tmp5 = closure_1_8;
+        if (closure_1_8.test(substr1)) {
+          tmp8 = closure_1_17;
+          tmp9 = closure_1_17(self, substr1);
           return;
         } else {
           tmp6 = globalThis;
           _Error = Error;
-          tmp7 = outer1_4;
-          throw Error(outer1_4 + substr1);
+          tmp7 = closure_1_4;
+          throw Error(closure_1_4 + substr1);
         }
       }
     } else {

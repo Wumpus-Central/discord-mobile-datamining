@@ -45,7 +45,7 @@ obj = {
   getTypeSize(LONG) {
     if (undefined === obj[LONG]) {
       const _Error = Error;
-      const error = new Error("No such type found.");
+      error = new Error("No such type found.");
       throw error;
     } else {
       return obj[tmp[LONG]];

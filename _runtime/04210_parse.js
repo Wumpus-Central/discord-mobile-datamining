@@ -1,5 +1,6 @@
 // _runtime/04210_parse.js
-import { 04211__ } from "metro/04211__.js";
+import _mod4211 from "module_4211" /* 4211 */;
+
 function parse(str, delimiter) {
   str = delimiter;
   if (delimiter) {
@@ -97,7 +98,7 @@ function tokensToRegExp(arg0, items, arg2) {
   let combined;
   let str3;
   let obj = arg2;
-  if (!04211__(items)) {
+  if (!_mod4211(items)) {
     let tmp = items;
     if (!items) {
       tmp = arg2;
@@ -174,7 +175,7 @@ function tokensToRegExp(arg0, items, arg2) {
   if (obj.sensitive) {
     str10 = "";
   }
-  const regExp = new RegExp(combined2, str10);
+  regExp = new RegExp(combined2, str10);
   regExp.keys = items;
   return regExp;
 }
@@ -182,7 +183,7 @@ function pathToRegexp(source, items, arg2) {
   let length;
   let length2;
   let obj = arg2;
-  if (!04211__(items)) {
+  if (!_mod4211(items)) {
     let tmp3 = items;
     if (!items) {
       tmp3 = arg2;
@@ -210,7 +211,7 @@ function pathToRegexp(source, items, arg2) {
     source.keys = items;
     let tmp6 = source;
     const str5 = source.source;
-  } else if (04211__(source)) {
+  } else if (_mod4211(source)) {
     const items1 = [];
     let num = 0;
     if (0 < source.length) {
@@ -226,7 +227,7 @@ function pathToRegexp(source, items, arg2) {
     if (obj.sensitive) {
       str3 = "";
     }
-    const regExp = new RegExp(text + ")", str3);
+    regExp = new RegExp(text + ")", str3);
     regExp.keys = items;
     tmp6 = regExp;
   } else {
@@ -245,13 +246,12 @@ module.exports.compile = function compile(arg0, arg1) {
       let _RegExp = RegExp;
       let tmp3 = new.target;
       let tmp4 = new.target;
-      let regExp = new RegExp("^(?:" + arr[num].pattern + ")$");
+      regExp = new RegExp("^(?:" + arr[num].pattern + ")$");
       let tmp6 = regExp;
       array[num] = regExp;
     }
   }
   return (arg0, arg1) => {
-    let arr;
     let replaced;
     let tmp3;
     let obj = arg0;
@@ -263,7 +263,7 @@ module.exports.compile = function compile(arg0, arg1) {
       obj = {};
     }
     if (obj.pretty) {
-      let _encodeURIComponent = outer1_4;
+      let _encodeURIComponent = closure_1_4;
     } else {
       _encodeURIComponent = encodeURIComponent;
     }
@@ -390,7 +390,7 @@ module.exports.compile = function compile(arg0, arg1) {
   };
 };
 module.exports.tokensToFunction = function tokensToFunction(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const array = new Array(arg0.length);
   for (let num = 0; num < arg0.length; num = num + 1) {
     let tmp2 = num;
@@ -398,13 +398,12 @@ module.exports.tokensToFunction = function tokensToFunction(arg0) {
       let _RegExp = RegExp;
       let tmp3 = new.target;
       let tmp4 = new.target;
-      let regExp = new RegExp("^(?:" + arg0[num].pattern + ")$");
+      regExp = new RegExp("^(?:" + arg0[num].pattern + ")$");
       let tmp6 = regExp;
       array[num] = regExp;
     }
   }
   return (arg0, arg1) => {
-    let arr;
     let replaced;
     let tmp3;
     let obj = arg0;
@@ -416,7 +415,7 @@ module.exports.tokensToFunction = function tokensToFunction(arg0) {
       obj = {};
     }
     if (obj.pretty) {
-      let _encodeURIComponent = outer1_4;
+      let _encodeURIComponent = closure_1_4;
     } else {
       _encodeURIComponent = encodeURIComponent;
     }

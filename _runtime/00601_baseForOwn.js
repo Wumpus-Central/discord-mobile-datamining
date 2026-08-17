@@ -1,5 +1,6 @@
 // _runtime/00601_baseForOwn.js
-import createBaseEach from "createBaseEach";
+import baseForOwn from "baseForOwn" /* 613 */;
+import createBaseEach from "createBaseEach" /* 602 */;
 
 
-export default createBaseEach(require("baseForOwn"));
+export default createBaseEach(baseForOwn);

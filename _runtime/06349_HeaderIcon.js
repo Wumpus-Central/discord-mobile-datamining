@@ -1,17 +1,13 @@
 // _runtime/06349_HeaderIcon.js
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { createStandardNavigationFactories } from "01501_createStandardNavigationFactories.js";
+import jsxProd from "jsxProd" /* 21 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let Platform;
-let StyleSheet;
-let obj1;
 ({ Image: obj1, Platform, StyleSheet } = get_ActivityIndicator);
+const jsx = jsxProd.jsx;
 const styles = StyleSheet.create({ icon: { width: 24, height: 24, margin: 3 }, flip: { transform: "scaleX(-1)" } });
 
 export const HeaderIcon = function HeaderIcon(arg0) {
-  let source;
-  let style;
   ({ source, style } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   let obj = createStandardNavigationFactories;

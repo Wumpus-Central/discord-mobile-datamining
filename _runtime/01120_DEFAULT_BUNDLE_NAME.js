@@ -1,5 +1,7 @@
 // _runtime/01120_DEFAULT_BUNDLE_NAME.js
-import { Platform } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ANDROID_DEFAULT_BUNDLE_NAME from "ANDROID_DEFAULT_BUNDLE_NAME" /* 1121 */;
 
+const Platform = get_ActivityIndicator.Platform;
 
-export const DEFAULT_BUNDLE_NAME = require("ANDROID_DEFAULT_BUNDLE_NAME").ANDROID_DEFAULT_BUNDLE_NAME;
+export const DEFAULT_BUNDLE_NAME = ANDROID_DEFAULT_BUNDLE_NAME.ANDROID_DEFAULT_BUNDLE_NAME;

@@ -1,7 +1,9 @@
 // _runtime/01861_useKeyboardAnimation.js
-import { useLayoutEffect } from "noop";
-import { Platform } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noop from "noop" /* 19 */;
 
+const useLayoutEffect = noop.useLayoutEffect;
+const Platform = get_ActivityIndicator.Platform;
 const android = "android";
 let closure_4 = { code: "function pnpm_hooksTs1(e){const{isClosed,heightWhenOpened}=this.__closure;if(e.height>0){isClosed.value=false;heightWhenOpened.value=e.height;}}" };
 let closure_5 = { code: "function pnpm_hooksTs2(e){const{progress,height}=this.__closure;progress.value=e.progress;height.value=e.height;}" };

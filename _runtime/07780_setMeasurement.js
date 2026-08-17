@@ -1,8 +1,9 @@
 // _runtime/07780_setMeasurement.js
-import { spanTimeInputToSeconds } from "07743_spanTimeInputToSeconds.js";
-import { 07753__ } from "metro/07753__.js";
-import { __SENTRY_DEBUG__ } from "metro/07766___SENTRY_DEBUG__.js";
-const require = arg1;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 7743 */;
+import _mod7753 from "module_7753" /* 7753 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7766 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.setMeasurement = function setMeasurement(arg0, arg1, arg2) {
   let activeSpan = arg3;
@@ -22,8 +23,8 @@ arg5.setMeasurement = function setMeasurement(arg0, arg1, arg2) {
       logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
     }
     obj = {};
-    obj[07753__.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
-    obj[07753__.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
+    obj[_mod7753.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
+    obj[_mod7753.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
     rootSpan.addEvent(arg0, obj);
   }
 };
@@ -33,8 +34,8 @@ arg5.timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
       let obj = {};
       const item = arr.forEach((attributes) => {
         const tmp = attributes.attributes || {};
-        const tmp2 = tmp[obj(undefined, outer1_1[3]).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
-        const tmp3 = tmp[obj(undefined, outer1_1[3]).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
+        const tmp2 = tmp[obj(undefined, closure_1_1[3]).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
+        const tmp3 = tmp[obj(undefined, closure_1_1[3]).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
         let tmp4 = typeof tmp2 === "string";
         if (typeof tmp2 === "string") {
           tmp4 = typeof tmp3 === "number";

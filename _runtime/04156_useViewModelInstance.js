@@ -1,8 +1,6 @@
 // _runtime/04156_useViewModelInstance.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 
-let c3;
-let obj1;
 ({ useMemo: obj1, useRef: c3 } = noop);
 
 export const useViewModelInstance = function useViewModelInstance(arg0, instanceName) {
@@ -44,7 +42,7 @@ export const useViewModelInstance = function useViewModelInstance(arg0, instance
     onInit = instanceName.onInit;
   }
   const tmp5 = viewModelName(onInit);
-  let closure_5 = tmp5;
+  closure_5 = tmp5;
   tmp5.current = onInit;
   let obj = _require(instanceName[2]);
   const items = [arg0, instanceName, artboardName, viewModelName, flag];
@@ -86,7 +84,7 @@ export const useViewModelInstance = function useViewModelInstance(arg0, instance
             viewModelByNameResult = obj.defaultArtboardViewModel(ArtboardByNameResult);
             if (!viewModelByNameResult) {
               if (tmp2) {
-                const obj1 = { instance: null, needsDispose: false, error: null };
+                obj1 = { instance: null, needsDispose: false, error: null };
                 const _HermesInternal2 = HermesInternal;
                 obj1[2] = "Artboard '" + tmp2 + "' not found or has no ViewModel";
                 let obj2 = obj1;
@@ -142,10 +140,10 @@ export const useViewModelInstance = function useViewModelInstance(arg0, instance
     }
     let current = obj7.instance;
     if (current) {
-      current = tmp5.current;
+      current = ref.current;
     }
     if (current) {
-      tmp5.current(obj7.instance);
+      ref.current(obj7.instance);
     }
     return obj7;
   }, (needsDispose) => {
@@ -162,7 +160,7 @@ export const useViewModelInstance = function useViewModelInstance(arg0, instance
         let _HermesInternal = HermesInternal;
         str = "useViewModelInstance: " + disposableMemo.error;
       }
-      let error = new Error(str);
+      error = new Error(str);
       throw error;
     }
   }

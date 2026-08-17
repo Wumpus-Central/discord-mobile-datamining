@@ -1,16 +1,12 @@
 // _runtime/07089_useBoundDetection.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 import { useUnmountAwareTimeout } from "07086_useUnmountAwareTimeout.js";
 
-let c3;
-let c4;
-let c5;
-let obj1;
 ({ useCallback: obj1, useEffect: c3, useMemo: c4, useRef: c5 } = noop);
 
 export const useBoundDetection = function useBoundDetection(recyclerViewManager, arg1) {
   const _require = recyclerViewManager;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   const callback = callback4(false);
   const callback2 = callback4(false);
   const callback3 = callback4(false);
@@ -36,11 +32,6 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
   const items = [recyclerViewManager];
   const items1 = [_requestAnimationFrame, arg1, recyclerViewManager];
   const checkBounds = callback(() => {
-    let maintainVisibleContentPosition;
-    let onEndReached;
-    let onEndReachedThreshold;
-    let onStartReached;
-    let onStartReachedThreshold;
     closure_5.current = Date.now();
     const props = closure_0.props;
     ({ onEndReached, onStartReached, maintainVisibleContentPosition, onEndReachedThreshold, onStartReachedThreshold } = props);
@@ -99,7 +90,7 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
       }
     }
   }, items);
-  let tmp2 = callback(() => {
+  const tmp2 = callback(() => {
     let current = closure_0.isOffsetProjectionEnabled;
     if (current) {
       current = ref3.current;
@@ -127,19 +118,19 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
       });
     }
   }, items1);
-  let closure_7 = tmp2;
+  closure_7 = tmp2;
   const items2 = [data];
   callback3(() => {
     closure_2.current = false;
   }, items2);
   const items3 = [data, tmp2, num, num3];
   callback2(() => {
-    tmp2();
+    callback();
   }, items3);
   const items4 = [num2, num4, recyclerViewManager.firstItemOffset, tmp2];
   callback2(() => {
     if (Date.now() - ref4.current >= 100) {
-      tmp2 = tmp2();
+      callback();
     }
   }, items4);
   return { checkBounds };

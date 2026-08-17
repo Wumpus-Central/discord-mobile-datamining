@@ -1,5 +1,6 @@
 // _runtime/13154_Range.js
-import { Range } from "13152_Range.js";
+import Range from "Range" /* 13152 */;
+
 
 export default (arg0, arg1, arg2) => {
   try {

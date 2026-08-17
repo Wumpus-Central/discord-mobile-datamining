@@ -1,12 +1,13 @@
 // _runtime/06451_traverseAndConfigureRelations.js
-import { tagMessage } from "06382_tagMessage.js";
+import tagMessage from "tagMessage" /* 6382 */;
 import { isComposedGesture } from "06444_isComposedGesture.js";
-const require = arg1;
+
+require = arg1;
 let dependencyMap = arg6;
 function traverseAndConfigureRelations(gestures, map, set) {
   const _require = gestures;
-  const dependencyMap = map;
-  let closure_2 = set;
+  dependencyMap = map;
+  closure_2 = set;
   let items = arg3;
   if (arg3 === undefined) {
     items = [];
@@ -112,7 +113,7 @@ arg5.configureRelations = function configureRelations(externalSimultaneousHandle
 arg5.ensureNativeDetectorComponent = function ensureNativeDetectorComponent(ReanimatedNativeDetector) {
   if (!ReanimatedNativeDetector) {
     const _Error = Error;
-    const error = new Error(tagMessage.tagMessage("Gesture expects to run on the UI thread, but failed to create the Reanimated NativeDetector."));
+    error = new Error(tagMessage.tagMessage("Gesture expects to run on the UI thread, but failed to create the Reanimated NativeDetector."));
     throw error;
   }
 };

@@ -1,8 +1,8 @@
 // _runtime/03696_endOfWeek.js
-import _typeof from "_typeof";
-import toInteger from "toInteger";
-import requiredArgs from "requiredArgs";
-import { getDefaultOptions } from "03477_getDefaultOptions.js";
+import getDefaultOptions from "getDefaultOptions" /* 3477 */;
+import _typeof from "_typeof" /* 3472 */;
+import toInteger from "toInteger" /* 3476 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -11,6 +11,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
+_typeof = tmp3;
 if (!toInteger) {
   obj = { default: null };
   obj[0] = toInteger;
@@ -18,7 +19,7 @@ if (!toInteger) {
 } else {
   tmp5 = toInteger;
 }
-let c3 = tmp5;
+toInteger = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,10 +27,10 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
-let c4 = tmp7;
+requiredArgs = tmp7;
 
 export default function endOfWeek(arg0, weekStartsOn) {
-  tmp7.default(1, arguments);
+  requiredArgs.default(1, arguments);
   const defaultOptions = getDefaultOptions.getDefaultOptions();
   weekStartsOn = undefined;
   if (null != weekStartsOn) {
@@ -77,10 +78,10 @@ export default function endOfWeek(arg0, weekStartsOn) {
       num = weekStartsOn;
     }
   }
-  const defaultResult1 = tmp5.default(num);
+  const defaultResult1 = toInteger.default(num);
   if (defaultResult1 >= 0) {
     if (defaultResult1 <= 6) {
-      const defaultResult2 = tmp3.default(arg0);
+      const defaultResult2 = _typeof.default(arg0);
       const day = defaultResult2.getDay();
       let num3 = 0;
       if (day < defaultResult1) {

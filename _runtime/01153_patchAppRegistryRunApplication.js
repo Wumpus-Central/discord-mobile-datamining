@@ -1,16 +1,17 @@
 // _runtime/01153_patchAppRegistryRunApplication.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
 import { fillTyped } from "01154_fillTyped.js";
-const require = arg1;
+
+require = arg1;
 const dependencyMap = arg6;
 let AppRegistry = "AppRegistry";
 function patchAppRegistryRunApplication(arg0) {
   const _require = arg0;
-  const AppRegistry = _TurboModuleRegistry.ReactNativeLibraries.AppRegistry;
+  AppRegistry = _TurboModuleRegistry.ReactNativeLibraries.AppRegistry;
   if (AppRegistry) {
     _fillTyped.fillTyped(AppRegistry, "runApplication", (arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       return () => {
         const items = [...arguments];
         const item = lib.forEach((arg0) => arg0());
@@ -22,18 +23,18 @@ function patchAppRegistryRunApplication(arg0) {
 }
 arg5.INTEGRATION_NAME = "AppRegistry";
 arg5.appRegistryIntegration = () => {
-  let closure_0 = [];
+  closure_0 = [];
   return {
     name: AppRegistry,
     setupOnce() {
       if (!obj.isWeb()) {
-        if (typeof outer1_3 !== "function") {
+        if (typeof closure_1_3 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        const AppRegistry = tmp(tmp2[2]).ReactNativeLibraries.AppRegistry;
+        AppRegistry = tmp(tmp2[2]).ReactNativeLibraries.AppRegistry;
         if (AppRegistry) {
           tmp(tmp2[3]).fillTyped(AppRegistry, "runApplication", (arg0) => {
-            let closure_0 = arg0;
+            closure_0 = arg0;
             return () => {
               const items = [...arguments];
               const item = lib.forEach((arg0) => arg0());
@@ -48,7 +49,7 @@ arg5.appRegistryIntegration = () => {
     onRunApplication(onRunApplicationHook) {
       let arr = lib;
       if (lib.includes(onRunApplicationHook)) {
-        const debug = lib(outer1_1[1]).debug;
+        const debug = lib(closure_1_1[1]).debug;
         debug.log("[AppRegistryIntegration] Callback already registered.");
       } else {
         arr = arr.push(onRunApplicationHook);

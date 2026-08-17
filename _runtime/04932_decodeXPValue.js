@@ -119,7 +119,7 @@ obj[338] = {
 obj[339] = {
   name: "SampleFormat",
   description(arr) {
-    let closure_0 = { 1: "Unsigned", 2: "Signed", 3: "Float", 4: "Undefined", 5: "Complex int", 6: "Complex float" };
+    closure_0 = { 1: "Unsigned", 2: "Signed", 3: "Float", 4: "Undefined", 5: "Complex int", 6: "Complex float" };
     let str = "Unknown";
     if (Array.isArray(arr)) {
       const mapped = arr.map((arg0) => table[arg0] || "Unknown");

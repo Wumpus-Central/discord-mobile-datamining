@@ -1,5 +1,5 @@
 // _runtime/metro/09020__.js
-import 09021__ from "09021__.js";
+import _modDef9021 from "module_9021" /* 9021 */;
 
 
-export default module_9021({ contain: null, cover: null, stretch: null });
+export default _modDef9021({ contain: null, cover: null, stretch: null });

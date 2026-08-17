@@ -1,11 +1,9 @@
 // _runtime/01732_rigidDecay.js
-import { isValidRubberBandConfig } from "01730_isValidRubberBandConfig.js";
-const require = arg1;
+import isValidRubberBandConfig from "isValidRubberBandConfig" /* 1730 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function rigidDecay(initialVelocity, lastTimestamp, deceleration) {
-  let current;
-  let startTimestamp;
-  let velocity;
   initialVelocity = initialVelocity.initialVelocity;
   ({ startTimestamp, current, velocity } = initialVelocity);
   const bound = Math.min(Math.max(lastTimestamp - initialVelocity.lastTimestamp, 0), 64);

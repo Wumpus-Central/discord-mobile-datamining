@@ -1,8 +1,6 @@
 // _runtime/06453_useDetectorAttachmentGuard.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 
-let useEffect;
-let useRef;
 ({ useEffect, useRef } = noop);
 new Map();
 

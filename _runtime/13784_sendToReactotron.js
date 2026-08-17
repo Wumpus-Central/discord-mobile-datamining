@@ -1,29 +1,29 @@
 // _runtime/13784_sendToReactotron.js
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_0 from "asyncGeneratorStep" /* 5 */;
 
 let closure_1 = { ignore: [] };
 
 export default (arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return (asyncStorageHandler) => {
     let callback = asyncStorageHandler;
     let features = callback;
     if (!callback) {
       features = {};
     }
-    let closure_8 = Object.assign({}, outer1_1, features).ignore || outer1_1.ignore;
-    let c9 = false;
+    closure_8 = Object.assign({}, closure_1_1, features).ignore || closure_1_1.ignore;
+    c9 = false;
     function sendToReactotron(action, data) {
       closure_0.send("asyncStorage.mutation", { action, data });
     }
     callback = undefined;
     callback = callback((arg0, arg1, arg2) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let closure_2 = arg2;
-      let c7 = 0;
-      let c8 = 0;
-      let c6 = 0;
+      closure_0 = arg0;
+      closure_1 = arg1;
+      closure_2 = arg2;
+      c7 = 0;
+      c8 = 0;
+      c6 = 0;
       return (function*(arg0, arg1, arg2) {
         if (c8 === 2) {
           c8 = 3;
@@ -51,14 +51,14 @@ export default (arg0) => {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_4 = tmp3;
-                let closure_3 = tmp17;
-                let c6 = 1;
+                closure_4 = tmp3;
+                closure_3 = tmp17;
+                c6 = 1;
                 if (c8.indexOf(closure_0) < 0) {
                   obj = { key: null, value: null };
                   obj[0] = tmp26;
                   obj[1] = tmp27;
-                  outer1_10("setItem", obj);
+                  closure_1_10("setItem", obj);
                 }
                 c6 = 0;
                 tmp26 = closure_0;
@@ -70,7 +70,7 @@ export default (arg0) => {
             c8 = 3;
             tmp17 = callback(closure_0, callback, closure_2);
           } catch (tmp18) {
-            let closure_5 = tmp18;
+            closure_5 = tmp18;
             if (tmp4 === c6) {
               c8 = tmp2;
               throw tmp18;
@@ -92,11 +92,11 @@ export default (arg0) => {
       return applyArgumentsResult;
     }
     callback = callback((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let c6 = 0;
-      let c7 = 0;
-      let c5 = 0;
+      closure_0 = arg0;
+      closure_1 = arg1;
+      c6 = 0;
+      c7 = 0;
+      c5 = 0;
       return (function*(arg0, arg1) {
         if (c7 === 2) {
           c7 = 3;
@@ -124,13 +124,13 @@ export default (arg0) => {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_3 = tmp3;
-                let closure_2 = tmp16;
-                let c5 = 1;
-                if (outer1_8.indexOf(closure_0) < 0) {
+                closure_3 = tmp3;
+                closure_2 = tmp16;
+                c5 = 1;
+                if (closure_1_8.indexOf(closure_0) < 0) {
                   obj = { key: null };
                   obj[0] = tmp25;
-                  outer1_10("removeItem", obj);
+                  closure_1_10("removeItem", obj);
                 }
                 c5 = 0;
                 tmp25 = closure_0;
@@ -139,9 +139,9 @@ export default (arg0) => {
               c5 = 0;
             }
             c7 = 3;
-            tmp16 = outer1_2(closure_0, closure_1);
+            tmp16 = closure_1_2(closure_0, closure_1);
           } catch (tmp17) {
-            let closure_4 = tmp17;
+            closure_4 = tmp17;
             if (tmp4 === c5) {
               c7 = tmp2;
               throw tmp17;
@@ -163,12 +163,12 @@ export default (arg0) => {
       return applyArgumentsResult;
     }
     callback = callback((arg0, arg1, arg2) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let closure_2 = arg2;
-      let c7 = 0;
-      let c8 = 0;
-      let c6 = 0;
+      closure_0 = arg0;
+      closure_1 = arg1;
+      closure_2 = arg2;
+      c7 = 0;
+      c8 = 0;
+      c6 = 0;
       return (function*(arg0, arg1, arg2) {
         if (c8 === 2) {
           c8 = 3;
@@ -196,14 +196,14 @@ export default (arg0) => {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_4 = tmp3;
-                let closure_3 = tmp17;
-                let c6 = 1;
+                closure_4 = tmp3;
+                closure_3 = tmp17;
+                c6 = 1;
                 if (c8.indexOf(closure_0) < 0) {
                   obj = { key: null, value: null };
                   obj[0] = tmp26;
                   obj[1] = tmp27;
-                  outer1_10("mergeItem", obj);
+                  closure_1_10("mergeItem", obj);
                 }
                 c6 = 0;
                 tmp26 = closure_0;
@@ -213,9 +213,9 @@ export default (arg0) => {
               c6 = 0;
             }
             c8 = 3;
-            tmp17 = outer1_3(closure_0, closure_1, closure_2);
+            tmp17 = closure_1_3(closure_0, closure_1, closure_2);
           } catch (tmp18) {
-            let closure_5 = tmp18;
+            closure_5 = tmp18;
             if (tmp4 === c6) {
               c8 = tmp2;
               throw tmp18;
@@ -237,10 +237,10 @@ export default (arg0) => {
       return applyArgumentsResult;
     }
     callback = callback((arg0) => {
-      let closure_0 = arg0;
-      let c5 = 0;
-      let c6 = 0;
-      let c4 = 0;
+      closure_0 = arg0;
+      c5 = 0;
+      c6 = 0;
+      c4 = 0;
       return (function*(arg0) {
         if (c6 === 2) {
           c6 = 3;
@@ -268,10 +268,10 @@ export default (arg0) => {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_2 = tmp3;
-                let closure_1 = tmp16;
+                closure_2 = tmp3;
+                closure_1 = tmp16;
                 let v0 = 1;
-                outer1_10("clear");
+                closure_1_10("clear");
                 v0 = 0;
               }
             } else {
@@ -280,7 +280,7 @@ export default (arg0) => {
             c6 = 3;
             tmp16 = v0(closure_0);
           } catch (tmp17) {
-            let closure_3 = tmp17;
+            closure_3 = tmp17;
             if (tmp4 === v0) {
               c6 = tmp2;
               throw tmp17;
@@ -302,11 +302,11 @@ export default (arg0) => {
       return applyArgumentsResult;
     }
     callback = callback((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let c6 = 0;
-      let c7 = 0;
-      let c5 = 0;
+      closure_0 = arg0;
+      closure_1 = arg1;
+      c6 = 0;
+      c7 = 0;
+      c5 = 0;
       return (function*(arg0, arg1) {
         if (c7 === 2) {
           c7 = 3;
@@ -334,8 +334,8 @@ export default (arg0) => {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_3 = tmp3;
-                let closure_2 = tmp16;
+                closure_3 = tmp3;
+                closure_2 = tmp16;
                 let items = closure_0;
                 let v0 = 1;
                 if (!closure_0) {
@@ -354,7 +354,7 @@ export default (arg0) => {
                 if (found.length > 0) {
                   obj = { pairs: null };
                   obj[0] = found;
-                  outer1_10("multiSet", obj);
+                  closure_1_10("multiSet", obj);
                 }
                 v0 = 0;
               }
@@ -364,7 +364,7 @@ export default (arg0) => {
             c7 = 3;
             tmp16 = v0(closure_0, closure_1);
           } catch (tmp17) {
-            let closure_4 = tmp17;
+            closure_4 = tmp17;
             if (tmp4 === v0) {
               c7 = tmp2;
               throw tmp17;
@@ -386,11 +386,11 @@ export default (arg0) => {
       return applyArgumentsResult;
     }
     callback = callback((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let c6 = 0;
-      let c7 = 0;
-      let c5 = 0;
+      closure_0 = arg0;
+      closure_1 = arg1;
+      c6 = 0;
+      c7 = 0;
+      c5 = 0;
       return (function*(arg0, arg1) {
         if (c7 === 2) {
           c7 = 3;
@@ -418,10 +418,10 @@ export default (arg0) => {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_3 = tmp3;
-                let closure_2 = tmp16;
+                closure_3 = tmp3;
+                closure_2 = tmp16;
                 let items = closure_0;
-                let c5 = 1;
+                c5 = 1;
                 if (!closure_0) {
                   items = [];
                 }
@@ -429,7 +429,7 @@ export default (arg0) => {
                 if (found.length > 0) {
                   obj = { keys: null };
                   obj[0] = found;
-                  outer1_10("multiRemove", obj);
+                  closure_1_10("multiRemove", obj);
                 }
                 c5 = 0;
               }
@@ -439,7 +439,7 @@ export default (arg0) => {
             c7 = 3;
             tmp16 = v0(closure_0, closure_1);
           } catch (tmp17) {
-            let closure_4 = tmp17;
+            closure_4 = tmp17;
             if (tmp4 === c5) {
               c7 = tmp2;
               throw tmp17;
@@ -461,11 +461,11 @@ export default (arg0) => {
       return applyArgumentsResult;
     }
     callback = callback((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let c6 = 0;
-      let c7 = 0;
-      let c5 = 0;
+      closure_0 = arg0;
+      closure_1 = arg1;
+      c6 = 0;
+      c7 = 0;
+      c5 = 0;
       return (function*(arg0, arg1) {
         if (v0 === 2) {
           v0 = 3;
@@ -493,10 +493,10 @@ export default (arg0) => {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_3 = tmp3;
-                let closure_2 = tmp16;
+                closure_3 = tmp3;
+                closure_2 = tmp16;
                 let items = closure_0;
-                let c5 = 1;
+                c5 = 1;
                 if (!closure_0) {
                   items = [];
                 }
@@ -513,7 +513,7 @@ export default (arg0) => {
                 if (found.length > 0) {
                   obj = { pairs: null };
                   obj[0] = found;
-                  outer1_10("multiMerge", obj);
+                  closure_1_10("multiMerge", obj);
                 }
                 c5 = 0;
               }
@@ -523,7 +523,7 @@ export default (arg0) => {
             v0 = 3;
             tmp16 = v0(closure_0, closure_1);
           } catch (tmp17) {
-            let closure_4 = tmp17;
+            closure_4 = tmp17;
             if (tmp4 === c5) {
               v0 = tmp2;
               throw tmp17;
@@ -566,19 +566,19 @@ export default (arg0) => {
     features = {
       trackAsyncStorage() {
         if (!c9) {
-          const setItem = closure_0.asyncStorageHandler.setItem;
+          setItem = closure_0.asyncStorageHandler.setItem;
           closure_0.asyncStorageHandler.setItem = setItem;
-          const removeItem = closure_0.asyncStorageHandler.removeItem;
+          removeItem = closure_0.asyncStorageHandler.removeItem;
           closure_0.asyncStorageHandler.removeItem = removeItem;
-          const mergeItem = closure_0.asyncStorageHandler.mergeItem;
+          mergeItem = closure_0.asyncStorageHandler.mergeItem;
           closure_0.asyncStorageHandler.mergeItem = mergeItem;
-          const clear = closure_0.asyncStorageHandler.clear;
+          clear = closure_0.asyncStorageHandler.clear;
           closure_0.asyncStorageHandler.clear = clear;
-          const multiSet = closure_0.asyncStorageHandler.multiSet;
+          multiSet = closure_0.asyncStorageHandler.multiSet;
           closure_0.asyncStorageHandler.multiSet = multiSet;
-          const multiRemove = closure_0.asyncStorageHandler.multiRemove;
+          multiRemove = closure_0.asyncStorageHandler.multiRemove;
           closure_0.asyncStorageHandler.multiRemove = multiRemove;
-          const multiMerge = closure_0.asyncStorageHandler.multiMerge;
+          multiMerge = closure_0.asyncStorageHandler.multiMerge;
           closure_0.asyncStorageHandler.multiMerge = multiMerge;
           c9 = true;
         }

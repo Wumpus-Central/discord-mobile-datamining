@@ -1,5 +1,6 @@
 // _runtime/07082_VelocityTracker.js
-import VelocityTracker from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 7051 */;
+import VelocityTracker from "_classCallCheck" /* 7050 */;
 
 class VelocityTracker {
   constructor() {
@@ -16,7 +17,7 @@ const items = [
     value: function computeVelocity(arg0, absoluteLastScrollOffset, arg2, arg3) {
       let self = this;
       self = this;
-      let closure_0 = arg3;
+      closure_0 = arg3;
       this.cleanUp();
       const timestamp = Date.now();
       const diff = arg0 - absoluteLastScrollOffset;
@@ -55,4 +56,4 @@ const items = [
   }
 ];
 
-export const VelocityTracker = require("_createClass")(VelocityTracker, items);
+export const VelocityTracker = _createClassDefault(VelocityTracker, items);

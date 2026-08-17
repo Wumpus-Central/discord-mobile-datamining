@@ -45,7 +45,7 @@ arg5.varint64read = function varint64read() {
             let tmp17 = new.target;
             let str = "invalid varint";
             let tmp18 = new.target;
-            let error = new Error("invalid varint");
+            error = new Error("invalid varint");
             let tmp20 = error;
             throw error;
           }
@@ -263,7 +263,7 @@ arg5.varint32read = function varint32read() {
           }
           if (128 & tmp18) {
             const _Error = Error;
-            const error = new Error("invalid varint");
+            error = new Error("invalid varint");
             throw error;
           } else {
             self.assertBounds();

@@ -3,19 +3,19 @@ arg5.XHRInterceptor = undefined;
 let c8 = false;
 arg5.XHRInterceptor = {
   setOpenCallback(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
   },
   setSendCallback(onSend) {
-    let closure_1 = onSend;
+    closure_1 = onSend;
   },
   setHeaderReceivedCallback(arg0) {
-    let closure_3 = arg0;
+    closure_3 = arg0;
   },
   setResponseCallback(onResponse) {
-    let closure_4 = onResponse;
+    closure_4 = onResponse;
   },
   setRequestHeaderCallback(arg0) {
-    let closure_2 = arg0;
+    closure_2 = arg0;
   },
   isInterceptorEnabled() {
     return c8;
@@ -57,7 +57,7 @@ arg5.XHRInterceptor = {
         }
         if (self.addEventListener) {
           const listener = self.addEventListener("readystatechange", () => {
-            if (outer1_8) {
+            if (closure_1_8) {
               if (self.readyState === self.HEADERS_RECEIVED) {
                 const str2 = obj.getResponseHeader("Content-Type");
                 const responseHeader = obj.getResponseHeader("Content-Length");
@@ -68,14 +68,14 @@ arg5.XHRInterceptor = {
                   const _parseInt = parseInt;
                   const parsed = parseInt(responseHeader, 10);
                 }
-                if (outer1_3) {
+                if (closure_1_3) {
                   tmp5(first, parsed, obj.getAllResponseHeaders(), obj);
                 }
               }
               if (tmp10) {
-                outer1_4(obj.status, obj.timeout, obj.response, obj.responseURL, obj.responseType, obj);
+                closure_1_4(obj.status, obj.timeout, obj.response, obj.responseURL, obj.responseType, obj);
               }
-              tmp10 = self.readyState === self.DONE && outer1_4;
+              tmp10 = self.readyState === self.DONE && closure_1_4;
             }
           }, false);
         }
@@ -98,11 +98,11 @@ arg5.XHRInterceptor = {
       XMLHttpRequest.prototype.open = open;
       const _XMLHttpRequest3 = XMLHttpRequest;
       XMLHttpRequest.prototype.setRequestHeader = setRequestHeader;
-      let c4 = null;
-      let c0 = null;
-      let c1 = null;
-      let c3 = null;
-      let c2 = null;
+      c4 = null;
+      c0 = null;
+      c1 = null;
+      c3 = null;
+      c2 = null;
     }
   }
 };

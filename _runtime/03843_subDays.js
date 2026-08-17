@@ -1,7 +1,7 @@
 // _runtime/03843_subDays.js
-import addDays from "addDays";
-import requiredArgs from "requiredArgs";
-import toInteger from "toInteger";
+import addDays from "addDays" /* 3620 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "toInteger" /* 3476 */;
 
 if (!addDays) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!addDays) {
 } else {
   tmp3 = addDays;
 }
-let c0 = tmp3;
+addDays = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -18,7 +18,7 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 if (!toInteger) {
   obj = { default: null };
   obj[0] = toInteger;
@@ -26,9 +26,10 @@ if (!toInteger) {
 } else {
   tmp7 = toInteger;
 }
+toInteger = tmp7;
 
 export default function subDays(arg0, arg1) {
-  tmp5.default(2, arguments);
-  return tmp3.default(arg0, -tmp7.default(arg1));
+  requiredArgs.default(2, arguments);
+  return addDays.default(arg0, -toInteger.default(arg1));
 };
 export default exports.default;

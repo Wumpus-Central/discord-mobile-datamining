@@ -1,13 +1,13 @@
 // _runtime/12263_JSONSchemaGenerator.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_objectWithoutProperties" /* 109 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const JSONSchemaGenerator = require;
 let closure_4 = ["~standard"];
 class JSONSchemaGenerator {
   constructor(arg0) {
-    tmp = outer1_3(this, JSONSchemaGenerator);
+    tmp = closure_3(this, JSONSchemaGenerator);
     str = undefined;
     if (global != null) {
       str = global.target;
@@ -21,9 +21,7 @@ class JSONSchemaGenerator {
     if ("draft-7" === str) {
       str = "draft-07";
     }
-    obj = { processors: null, target: null };
-    obj[0] = require("stringProcessor").allProcessors;
-    obj[1] = str;
+    obj = { processors: require("stringProcessor").allProcessors, target: str };
     metadata = undefined;
     if (global != null) {
       metadata = global.metadata;
@@ -143,7 +141,7 @@ const items = [
         }
       }
       JSONSchemaGenerator(12261).extractDefs(self.ctx, _idmap);
-      return _objectWithoutProperties(JSONSchemaGenerator(12261).finalize(self.ctx, _idmap), closure_4);
+      return callback(JSONSchemaGenerator(12261).finalize(self.ctx, _idmap), closure_4);
     }
   }
 ];

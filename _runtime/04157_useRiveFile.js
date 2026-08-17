@@ -1,25 +1,19 @@
 // _runtime/04157_useRiveFile.js
-import callDispose from "callDispose";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { Image } from "get ActivityIndicator";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 ({ useState: c4, useEffect: c5, useMemo: closure_6, useRef: error } = noop);
 
 export const useRiveFile = function useRiveFile(src, arg1) {
-  let c1;
-  let tmp2;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
   c1 = undefined;
-  let c2;
+  closure_2 = undefined;
   let callback;
   let str2;
   let uri;
@@ -34,10 +28,6 @@ export const useRiveFile = function useRiveFile(src, arg1) {
       const _Object = Object;
       const entries = Object.entries(referencedAssets);
       const item = entries.forEach((arg0) => {
-        let fileName;
-        let path;
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg0;
         let tmp4 = null !== tmp2;
         if (tmp4) {
@@ -50,13 +40,13 @@ export const useRiveFile = function useRiveFile(src, arg1) {
           tmp4 = "HybridObject<RiveImage>" === tmp2.__type;
         }
         if (tmp4) {
-          let obj = { image: null };
+          obj = { image: null };
           obj[0] = tmp2;
           let tmp10 = obj;
         } else {
           const source = tmp2.source;
           if (typeof source === "number") {
-            const assetSource = outer1_8.resolveAssetSource(source);
+            const assetSource = closure_1_8.resolveAssetSource(source);
             if (assetSource) {
               if (assetSource.uri) {
                 obj = { sourceAssetId: null };
@@ -65,13 +55,13 @@ export const useRiveFile = function useRiveFile(src, arg1) {
               }
             }
             const _Error2 = Error;
-            const error = new Error("Invalid asset source provided.");
+            error = new Error("Invalid asset source provided.");
             throw error;
           } else {
-            const uri = source.uri;
+            uri = source.uri;
             if (typeof source === "object") {
               if (uri) {
-                const obj1 = { sourceUrl: null };
+                obj1 = { sourceUrl: null };
                 obj1[0] = uri;
                 tmp10 = obj1;
               }
@@ -99,7 +89,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
     }
     return tmp;
   }, items);
-  c2 = tmp3;
+  closure_2 = tmp3;
   callback = callback2(tmp3);
   let tmp4 = null != src && typeof src === "object";
   if (tmp4) {
@@ -119,8 +109,8 @@ export const useRiveFile = function useRiveFile(src, arg1) {
   }
   const items1 = [str2, uri];
   uri(() => {
-    let closure_0 = null;
-    closure_0 = _undefined(function*() {
+    closure_0 = null;
+    closure_0 = callback(function*() {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -128,7 +118,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -140,22 +130,22 @@ export const useRiveFile = function useRiveFile(src, arg1) {
           let tmp17Result = c4;
           if (0 !== c4) {
             if (1 === tmp17Result) {
-              let c3 = 0;
-              let outer1_0 = callDispose;
+              c3 = 0;
+              closure_0 = closure_2;
               const _console = console;
-              console.error(outer1_0);
+              console.error(closure_0);
               const _Error = Error;
-              if (outer1_0 instanceof Error) {
-                let error = outer1_0;
+              if (closure_0 instanceof Error) {
+                error = closure_0;
               } else {
                 const _Error2 = Error;
                 error = new Error("Failed to load Rive file");
               }
               obj = { riveFile: null, isLoading: false, error: null };
               obj[2] = error;
-              tmp17Result = outer2_1(obj);
+              tmp17Result = closure_2_1(obj);
               c5 = 3;
-              const tmp17 = outer2_1;
+              const tmp17 = closure_2_1;
             } else {
               if (2 === tmp17Result) {
                 if (arg0 === 1) {
@@ -164,7 +154,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
                 } else if (arg0 === 2) {
                   c3 = 0;
                   c5 = 3;
-                  const obj1 = { value: null, done: true };
+                  obj1 = { value: null, done: true };
                   obj1[0] = arg1;
                   return obj1;
                 }
@@ -191,13 +181,13 @@ export const useRiveFile = function useRiveFile(src, arg1) {
                     obj3[0] = arg1;
                     return obj3;
                   } else {
-                    outer1_0 = arg1;
+                    closure_0 = arg1;
                   }
                 } else if (arg0 === 1) {
                   c5 = 3;
                   throw arg1;
                 } else if (arg0 !== 2) {
-                  outer1_0 = arg1;
+                  closure_0 = arg1;
                 }
                 c3 = 0;
                 c5 = 3;
@@ -205,11 +195,11 @@ export const useRiveFile = function useRiveFile(src, arg1) {
                 obj[0] = arg1;
                 return obj;
               }
-              outer1_0 = arg1;
+              closure_0 = arg1;
             }
             const obj4 = { riveFile: null, isLoading: false, error: null };
-            obj4[0] = outer1_0;
-            outer2_1(obj4);
+            obj4[0] = closure_0;
+            closure_2_1(obj4);
             c3 = 0;
           }
           if (arg0 === 1) {
@@ -221,22 +211,22 @@ export const useRiveFile = function useRiveFile(src, arg1) {
             obj5[0] = arg1;
             return obj5;
           } else {
-            let closure_1 = tmp3;
-            let closure_0 = tmp17Result;
+            closure_1 = tmp3;
+            closure_0 = tmp17Result;
             c3 = 1;
-            if ("uri" === outer2_4) {
+            if ("uri" === closure_2_4) {
               const obj6 = { uri: null };
-              obj6[0] = outer2_5;
+              obj6[0] = closure_2_5;
               obj5 = obj6;
             } else {
-              obj5 = outer2_5;
+              obj5 = closure_2_5;
             }
             if (null == obj5) {
               const obj7 = { riveFile: null, isLoading: false, error: null };
               const _Error3 = Error;
               const error1 = new Error("No Rive file input provided.");
               obj7[2] = error1;
-              outer2_1(obj7);
+              closure_2_1(obj7);
               c3 = 0;
               c5 = 3;
               const obj8 = { value: null, done: true };
@@ -249,7 +239,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
                   c4 = 2;
                   c5 = 1;
                   const obj9 = { value: null, done: false };
-                  obj9[0] = RiveFileFactory3.fromResource(obj5, outer2_3.current);
+                  obj9[0] = RiveFileFactory3.fromResource(obj5, closure_2_3.current);
                   return obj9;
                 }
               }
@@ -257,7 +247,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
               c4 = 3;
               c5 = 1;
               const obj10 = { value: null, done: false };
-              obj10[0] = RiveFileFactory4.fromURL(obj5, outer2_3.current);
+              obj10[0] = RiveFileFactory4.fromURL(obj5, closure_2_3.current);
               return obj10;
             } else {
               if (typeof obj5 !== "number") {
@@ -268,7 +258,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
                     c4 = 5;
                     c5 = 1;
                     const obj11 = { value: null, done: false };
-                    obj11[0] = RiveFileFactory.fromBytes(obj5, outer2_3.current);
+                    obj11[0] = RiveFileFactory.fromBytes(obj5, closure_2_3.current);
                     return obj11;
                   }
                 }
@@ -277,12 +267,12 @@ export const useRiveFile = function useRiveFile(src, arg1) {
               c4 = 4;
               c5 = 1;
               const obj12 = { value: null, done: false };
-              obj12[0] = RiveFileFactory2.fromSource(obj5, outer2_3.current);
+              obj12[0] = RiveFileFactory2.fromSource(obj5, closure_2_3.current);
               return obj12;
             }
           }
         } catch (tmp46) {
-          callDispose = tmp46;
+          closure_2 = tmp46;
           if (tmp4 === c3) {
             c5 = tmp2;
             throw tmp46;
@@ -312,7 +302,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
   riveFile = tmp2.riveFile;
   const items2 = [tmp3, riveFile];
   uri(() => {
-    let tmp3 = ref.current !== c2;
+    let tmp3 = ref.current !== closure_2;
     if (tmp3) {
       tmp3 = riveFile;
     }
@@ -320,7 +310,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
       tmp3 = tmp2;
     }
     if (tmp3) {
-      const obj = { data: null };
+      obj = { data: null };
       obj[0] = tmp2;
       const result = riveFile.updateReferencedAssets(obj);
       ref.current = tmp2;

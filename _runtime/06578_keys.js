@@ -1,17 +1,10 @@
 // _runtime/06578_keys.js
-import { PanResponder } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const PanResponder = get_ActivityIndicator.PanResponder;
 const keys = Object.keys(PanResponder.create({}).panHandlers);
 
 export default function extractResponder(arg0, pointerEvents) {
-  let delayLongPress;
-  let delayPressIn;
-  let delayPressOut;
-  let disabled;
-  let onLongPress;
-  let onPress;
-  let onPressIn;
-  let onPressOut;
   pointerEvents = pointerEvents.pointerEvents;
   let num = 0;
   let flag = false;

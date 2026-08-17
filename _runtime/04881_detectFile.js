@@ -1,7 +1,8 @@
 // _runtime/04881_detectFile.js
-import { getFileChunk } from "04882_getFileChunk.js";
-import { 04883__ } from "metro/04883__.js";
-let require = arg1;
+import getFileChunk from "getFileChunk" /* 4882 */;
+import _mod4883 from "module_4883" /* 4883 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.detectFile = function detectFile(uint8Array, chunkSize) {
   if (chunkSize) {
@@ -42,13 +43,13 @@ arg5.detectFile = function detectFile(uint8Array, chunkSize) {
   if (0 !== fileChunk.length) {
     const items = [];
     const items1 = [];
-    for (const key10027 in 04883__.FileTypes) {
+    for (const key10027 in _mod4883.FileTypes) {
       let tmp22 = key10027;
       let _Object4 = Object;
       let call2 = hasOwnProperty2.call;
       let tmp23 = require;
       let tmp24 = dependencyMap;
-      let FileTypes5 = 04883__.FileTypes;
+      let FileTypes5 = _mod4883.FileTypes;
       if (typeof call2 === "unknown") {
         let hasOwnProperty2Result = hasOwnProperty2(key10027);
       } else {
@@ -92,7 +93,7 @@ arg5.detectFile = function detectFile(uint8Array, chunkSize) {
           return items[0];
         }
       }
-      const FileTypes4 = 04883__.FileTypes;
+      const FileTypes4 = _mod4883.FileTypes;
       const result = FileTypes4.detectTypeByAdditionalCheck(fileChunk, items);
       require = result;
       if (result) {

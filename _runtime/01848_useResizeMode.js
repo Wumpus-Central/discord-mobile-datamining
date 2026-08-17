@@ -1,10 +1,9 @@
 // _runtime/01848_useResizeMode.js
-import noop from "noop";
+import NOOP from "NOOP" /* 1847 */;
+import noop from "noop" /* 19 */;
 import { cancelAnimation } from "01654_cancelAnimation.js";
 import { NOOP } from "01847_NOOP.js";
 
-let c3;
-let obj1;
 ({ useEffect: obj1, useLayoutEffect: c3 } = noop);
 function useResizeMode() {
   callback(() => {
@@ -60,7 +59,7 @@ export const useReanimatedKeyboardAnimation = () => {
 };
 export const useGenericKeyboardHandler = function useGenericKeyboardHandler(handler, items10) {
   const _require = handler;
-  const dependencyMap = _NOOP.useKeyboardContext();
+  dependencyMap = _NOOP.useKeyboardContext();
   const obj = _NOOP;
   const obj2 = _cancelAnimation;
   const fn = function u(eventName) {
@@ -96,7 +95,7 @@ export const useGenericKeyboardHandler = function useGenericKeyboardHandler(hand
   fn.__closure = { handler };
   fn.__workletHash = 7080794218426;
   fn.__initData = closure_5;
-  let closure_2 = _cancelAnimation.useEvent(fn, ["onKeyboardMoveStart", "onKeyboardMove", "onKeyboardMoveEnd", "onKeyboardMoveInteractive"], obj2.useHandler(handler, items10).doDependenciesDiffer);
+  closure_2 = _cancelAnimation.useEvent(fn, ["onKeyboardMoveStart", "onKeyboardMove", "onKeyboardMoveEnd", "onKeyboardMoveInteractive"], obj2.useHandler(handler, items10).doDependenciesDiffer);
   callback2(() => {
     keyboardHandlers.setKeyboardHandlers(closure_2);
     return () => callback();
@@ -115,7 +114,7 @@ export const useKeyboardHandler = function useKeyboardHandler(handler, items) {
     };
   }, []);
   const _require = handler;
-  let dependencyMap;
+  dependencyMap = undefined;
   callback = undefined;
   dependencyMap = _NOOP.useKeyboardContext();
   const obj = _NOOP;
@@ -173,7 +172,7 @@ export const useReanimatedFocusedInput = function useReanimatedFocusedInput() {
 };
 export const useFocusedInputHandler = function useFocusedInputHandler(handler, items10) {
   const _require = handler;
-  const dependencyMap = _NOOP.useKeyboardContext();
+  dependencyMap = _NOOP.useKeyboardContext();
   const obj = _NOOP;
   const obj2 = _cancelAnimation;
   const fn = function l(eventName) {
@@ -195,7 +194,7 @@ export const useFocusedInputHandler = function useFocusedInputHandler(handler, i
   fn.__closure = { handler };
   fn.__workletHash = 16071593392303;
   fn.__initData = closure_6;
-  let closure_2 = _cancelAnimation.useEvent(fn, ["onFocusedInputTextChanged", "onFocusedInputSelectionChanged"], obj2.useHandler(handler, items10).doDependenciesDiffer);
+  closure_2 = _cancelAnimation.useEvent(fn, ["onFocusedInputTextChanged", "onFocusedInputSelectionChanged"], obj2.useHandler(handler, items10).doDependenciesDiffer);
   callback2(() => {
     inputHandlers.setInputHandlers(closure_2);
     return () => callback();

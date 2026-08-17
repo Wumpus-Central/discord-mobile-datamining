@@ -1,13 +1,11 @@
 // _runtime/metro/00933__addTracingHeadersToFetchRequest.js
-import { getClient } from "../00848_getClient.js";
-import { hasSpansEnabled } from "../00855_hasSpansEnabled.js";
-import { getTraceData } from "../00904_getTraceData.js";
-const require = arg1;
+import getClient from "getClient" /* 848 */;
+import hasSpansEnabled from "hasSpansEnabled" /* 855 */;
+import getTraceData from "getTraceData" /* 904 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTraceparent) {
-  let baggage;
-  let tmp5;
-  let traceparent;
   let tmp = propagateTraceparent;
   let obj = getTraceData;
   obj = { span, propagateTraceparent };
@@ -176,7 +174,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
         }
       }
     } else {
-      const obj1 = {};
+      obj1 = {};
       const merged1 = Object.assign(traceData);
       return obj1;
     }
@@ -204,8 +202,6 @@ arg5._callOnRequestSpanEnd = function _callOnRequestSpanEnd(arg0, response, obj)
   }
 };
 arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, arg2, arg3, obj) {
-  let method;
-  let url;
   if (fetchData.fetchData) {
     ({ method, url } = fetchData.fetchData);
     obj = hasSpansEnabled;
@@ -266,7 +262,7 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
     }
     let tmp9 = obj;
     if (typeof obj !== "object") {
-      const obj1 = { spanOrigin: null };
+      obj1 = { spanOrigin: null };
       obj1[0] = obj;
       tmp9 = obj1;
     }

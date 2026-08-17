@@ -1,9 +1,9 @@
 // _runtime/03670_differenceInMonths.js
-import _typeof from "_typeof";
-import differenceInCalendarMonths from "differenceInCalendarMonths";
-import compareAsc from "compareAsc";
-import requiredArgs from "requiredArgs";
-import isLastDayOfMonth from "isLastDayOfMonth";
+import _typeof from "_typeof" /* 3472 */;
+import differenceInCalendarMonths from "differenceInCalendarMonths" /* 3658 */;
+import compareAsc from "compareAsc" /* 3648 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+import isLastDayOfMonth from "isLastDayOfMonth" /* 3671 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -12,7 +12,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!differenceInCalendarMonths) {
   obj = { default: null };
   obj[0] = differenceInCalendarMonths;
@@ -20,7 +20,7 @@ if (!differenceInCalendarMonths) {
 } else {
   tmp5 = differenceInCalendarMonths;
 }
-let closure_1 = tmp5;
+differenceInCalendarMonths = tmp5;
 if (!compareAsc) {
   obj = { default: null };
   obj[0] = compareAsc;
@@ -28,15 +28,15 @@ if (!compareAsc) {
 } else {
   tmp7 = compareAsc;
 }
-let obj1 = tmp7;
+compareAsc = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c3 = tmp9;
+requiredArgs = tmp9;
 if (!isLastDayOfMonth) {
   const obj2 = { default: null };
   obj2[0] = isLastDayOfMonth;
@@ -44,17 +44,17 @@ if (!isLastDayOfMonth) {
 } else {
   tmp11 = isLastDayOfMonth;
 }
-let c4 = tmp11;
+isLastDayOfMonth = tmp11;
 
 export default function differenceInMonths(date, friendsSince) {
-  tmp9.default(2, arguments);
-  const defaultResult1 = tmp3.default(date);
-  const defaultResult2 = tmp3.default(friendsSince);
-  const defaultResult3 = tmp7.default(defaultResult1, defaultResult2);
-  const absolute = Math.abs(tmp5.default(defaultResult1, defaultResult2));
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(date);
+  const defaultResult2 = _typeof.default(friendsSince);
+  const defaultResult3 = compareAsc.default(defaultResult1, defaultResult2);
+  const absolute = Math.abs(differenceInCalendarMonths.default(defaultResult1, defaultResult2));
   let num = 0;
   if (absolute >= 1) {
-    tmp5 = 1 === defaultResult1.getMonth();
+    let tmp5 = 1 === defaultResult1.getMonth();
     if (tmp5) {
       tmp5 = defaultResult1.getDate() > 27;
     }
@@ -62,14 +62,15 @@ export default function differenceInMonths(date, friendsSince) {
       defaultResult1.setDate(30);
     }
     defaultResult1.setMonth(defaultResult1.getMonth() - defaultResult3 * absolute);
-    tmp11 = tmp11.default(tmp3.default(date)) && 1 === absolute && 1 === obj3.default(date, defaultResult2);
-    let flag = obj3.default(defaultResult1, defaultResult2) === tmp9;
+    const defaultResult4 = obj3.default(defaultResult1, defaultResult2);
+    const tmp9 = -defaultResult3;
+    let flag = defaultResult4 === tmp9;
     if (tmp11) {
       flag = false;
     }
     const _Number = Number;
     num = defaultResult3 * (absolute - Number(flag));
-    const defaultResult4 = obj3.default(defaultResult1, defaultResult2);
+    tmp11 = isLastDayOfMonth.default(_typeof.default(date)) && 1 === absolute && 1 === obj3.default(date, defaultResult2);
   }
   let num4 = 0;
   if (0 !== num) {

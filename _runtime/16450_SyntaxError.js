@@ -1,6 +1,7 @@
 // _runtime/16450_SyntaxError.js
-import { default as _default } from "SyntaxError";
+import SyntaxError from "SyntaxError" /* 16451 */;
 
+const _default = SyntaxError.default;
 _default.default = _default;
 
 export default _default;

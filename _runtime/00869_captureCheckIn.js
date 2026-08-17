@@ -1,9 +1,10 @@
 // _runtime/00869_captureCheckIn.js
-import asyncGeneratorStep from "addContextToFrame";
-import { addContextToFrame } from "00830_addContextToFrame.js";
+import _mod821 from "module_821" /* 821 */;
+import addContextToFrame from "addContextToFrame" /* 830 */;
+import getClient from "getClient" /* 848 */;
+import applyClientOptions from "applyClientOptions" /* 870 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { getClient } from "00848_getClient.js";
-import { applyClientOptions } from "00870_applyClientOptions.js";
-import { 00821__ } from "metro/00821__.js";
 
 function captureCheckIn(arg0, arg1) {
   const currentScope = getClient.getCurrentScope();
@@ -25,9 +26,9 @@ function captureCheckIn(arg0, arg1) {
 }
 function _flush() {
   const self = this;
-  const tmp = asyncGeneratorStep((arg0) => {
-    let closure_0 = arg0;
-    let c1 = 0;
+  const tmp = callback((arg0) => {
+    closure_0 = arg0;
+    c1 = 0;
     return (function*(arg0) {
       if (table === 2) {
         table = 3;
@@ -75,7 +76,7 @@ function _flush() {
       }
     })();
   });
-  const _flush = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -86,9 +87,9 @@ function _flush() {
 }
 function _close() {
   const self = this;
-  const tmp = asyncGeneratorStep((arg0) => {
-    let closure_0 = arg0;
-    let c1 = 0;
+  const tmp = callback((arg0) => {
+    closure_0 = arg0;
+    c1 = 0;
     return (function*(arg0) {
       if (table === 2) {
         table = 3;
@@ -136,7 +137,7 @@ function _close() {
       }
     })();
   });
-  const _close = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -310,9 +311,9 @@ export const startSession = function startSession(arg0) {
   const isolationScope = obj.getIsolationScope();
   const currentScope = getClient.getCurrentScope();
   const obj3 = getClient;
-  const userAgent = 00821__.GLOBAL_OBJ.navigator || {}.userAgent;
+  const userAgent = _mod821.GLOBAL_OBJ.navigator || {}.userAgent;
   let tmpResult = tmp(845);
-  const tmp3 = 00821__.GLOBAL_OBJ.navigator || {};
+  const tmp3 = _mod821.GLOBAL_OBJ.navigator || {};
   obj = { user: currentScope.getUser() || isolationScope.getUser() };
   let tmp5 = userAgent;
   if (userAgent) {
@@ -359,12 +360,11 @@ export const startSession = function startSession(arg0) {
 };
 export const withMonitor = function withMonitor(arg0, arg1, arg2) {
   const _require = arg0;
-  let dependencyMap = arg1;
-  let closure_2 = arg2;
+  dependencyMap = arg1;
+  closure_2 = arg2;
   function runCallback() {
     function finishCheckIn(ok) {
-      const obj = { monitorSlug: callback, status: ok, checkInId: callback, duration: null };
-      obj[3] = callback(838).timestampInSeconds() - dependencyMap;
+      const obj = { monitorSlug: callback, status: ok, checkInId: callback, duration: callback(838).timestampInSeconds() - dependencyMap };
       const obj2 = callback(838);
       const currentScope = callback(848).getCurrentScope();
       const obj3 = callback(848);
@@ -384,7 +384,7 @@ export const withMonitor = function withMonitor(arg0, arg1, arg2) {
       callback(830).uuid4();
     }
     callback = runCallback({ monitorSlug: callback, status: "in_progress" }, finishCheckIn);
-    const dependencyMap = callback(838).timestampInSeconds();
+    dependencyMap = callback(838).timestampInSeconds();
     try {
       const promise = dependencyMap();
       if (tmp3Result.isThenable(promise)) {

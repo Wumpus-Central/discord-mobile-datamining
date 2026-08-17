@@ -1,13 +1,14 @@
 // _runtime/00341__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import importDefaultResult from "_getPrototypeOf";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult1 from "_createClass";
-import importDefaultResult2 from "_inherits";
-import { createRef } from "noop";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_classCallCheck" /* 41 */;
+import closure_6 from "_possibleConstructorReturn" /* 93 */;
+import closure_7 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult1 from "_createClass" /* 42 */;
+import importDefaultResult2 from "_inherits" /* 98 */;
+import { createRef } from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const KeyboardAvoidingView = importDefault;
 let closure_1 = dependencyMap;
@@ -22,10 +23,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -36,12 +37,12 @@ closure_1 = undefined;
 class KeyboardAvoidingView {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, f115225);
+    tmp = closure_5(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(f115225);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_7;
+    obj = closure_7(closure_0);
+    tmp3 = closure_6;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -50,7 +51,7 @@ class KeyboardAvoidingView {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    f115225 = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result._frame = null;
     tmp3Result._keyboardEvent = null;
     tmp3Result._subscriptions = [];
@@ -64,11 +65,11 @@ class KeyboardAvoidingView {
       closure_0._keyboardEvent = null;
       const result = closure_0._updateBottomIfNecessary();
     };
-    f115225 = undefined;
-    f115225 = defineProperty((arg0) => {
-      let closure_0 = arg0;
-      let c3 = 0;
-      let c4 = 0;
+    closure_0 = undefined;
+    closure_0 = closure_4((arg0) => {
+      closure_0 = arg0;
+      c3 = 0;
+      c4 = 0;
       return (function*(arg0) {
         if (c4 === 2) {
           c4 = 3;
@@ -96,8 +97,8 @@ class KeyboardAvoidingView {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_2 = tmp5;
-                let closure_1 = tmp2;
+                closure_2 = tmp5;
+                closure_1 = tmp2;
                 closure_0.persist();
                 const _frame = closure_0._frame;
                 closure_0._frame = closure_0.nativeEvent.layout;
@@ -111,7 +112,7 @@ class KeyboardAvoidingView {
                 if (!tmp8) {
                   c3 = 1;
                   c4 = 1;
-                  const obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = closure_0._updateBottomIfNecessary();
                   return obj1;
                 }
@@ -161,9 +162,7 @@ class KeyboardAvoidingView {
         obj.setState(obj);
       }
     };
-    tmp3Result._updateBottomIfNecessary = defineProperty(function*() {
-      let c0;
-      let c1;
+    tmp3Result._updateBottomIfNecessary = closure_4(function*() {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -190,21 +189,21 @@ class KeyboardAvoidingView {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp2;
+              closure_2 = tmp2;
               c1 = tmp3;
               c0 = undefined;
               c1 = undefined;
               closure_2 = undefined;
-              if (null != outer1_0._keyboardEvent) {
-                const _keyboardEvent = outer1_0._keyboardEvent;
+              if (null != closure_1_0._keyboardEvent) {
+                const _keyboardEvent = closure_1_0._keyboardEvent;
                 ({ duration: c0, easing: c1 } = _keyboardEvent);
                 c3 = 1;
                 c4 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_0._relativeKeyboardHeight(_keyboardEvent.endCoordinates);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_0._relativeKeyboardHeight(_keyboardEvent.endCoordinates);
                 return obj1;
               } else {
-                outer1_0._setBottom(0);
+                closure_1_0._setBottom(0);
                 c4 = 3;
               }
             }
@@ -228,7 +227,7 @@ class KeyboardAvoidingView {
                 tmp7 = c1;
               }
               if (tmp7) {
-                obj = outer1_0(outer1_1[9]);
+                obj = closure_1_0(closure_1_1[9]);
                 let num3 = 10;
                 let num4 = 10;
                 if (c0 > 10) {
@@ -241,7 +240,7 @@ class KeyboardAvoidingView {
                 }
                 const obj3 = { duration: null, type: null };
                 obj3[0] = num3;
-                let str = outer1_0(outer1_1[9]).Types[c1];
+                let str = closure_1_0(closure_1_1[9]).Types[c1];
                 if (!str) {
                   str = "keyboard";
                 }
@@ -266,12 +265,12 @@ class KeyboardAvoidingView {
     return tmp3Result;
   }
 }
-importDefaultResult2(KeyboardAvoidingView, require("noop").Component);
+importDefaultResult2(KeyboardAvoidingView, noopAll.Component);
 let obj = { key: "_relativeKeyboardHeight", value: null };
 closure_1 = importDefaultResult(function(arg0) {
   const self = this;
-  let closure_1 = arg0;
-  let c3 = 0;
+  closure_1 = arg0;
+  c3 = 0;
   return (function*(arg0) {
     if (c3 === 2) {
       c3 = 3;
@@ -303,7 +302,7 @@ closure_1 = importDefaultResult(function(arg0) {
           if (num6) {
             if (tmp18) {
               const keyboardVerticalOffset = sum.props.keyboardVerticalOffset;
-              let c2 = keyboardVerticalOffset;
+              c2 = keyboardVerticalOffset;
               if (keyboardVerticalOffset == null) {
                 c2 = 0;
               }
@@ -388,12 +387,6 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let behavior;
-      let children;
-      let enabled;
-      let keyboardVerticalOffset;
-      let onLayout;
-      let style;
       const self = this;
       const props = this.props;
       ({ behavior, children, enabled } = props);
@@ -424,7 +417,7 @@ let items = [
         obj.children = children;
         return <tmp31 ref={null} style={null} onLayout={null} />;
       } else if ("position" === behavior) {
-        const obj1 = { ref: null, style: null, onLayout: null };
+        obj1 = { ref: null, style: null, onLayout: null };
         obj1[0] = self.viewRef;
         obj1[1] = style;
         obj1[2] = self._onLayout;

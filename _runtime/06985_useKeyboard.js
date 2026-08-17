@@ -1,9 +1,8 @@
 // _runtime/06985_useKeyboard.js
-import { useEffect } from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let Platform;
-let c3;
+const useEffect = noop.useEffect;
 ({ Keyboard: c3, Platform } = get_ActivityIndicator);
 const keyboardDidShow = "keyboardDidShow";
 const keyboardDidHide = "keyboardDidHide";
@@ -63,14 +62,12 @@ export const useKeyboard = (includeBottomOffset) => {
   workletCallback = includeBottomOffset(shouldHandleKeyboardEvents[2]).useWorkletCallback(fn, []);
   let items = [workletCallback];
   state(() => {
-    let closure_0 = height.addListener(animationEasing, (endCoordinates) => {
-      let duration;
-      let easing;
+    closure_0 = height.addListener(animationEasing, (endCoordinates) => {
       const obj = lib(closure_1[2]);
       ({ duration, easing } = endCoordinates);
       lib(closure_1[2]).runOnUI(closure_7)(lib(closure_1[3]).KEYBOARD_STATE.SHOWN, endCoordinates.endCoordinates.height, duration, easing, lib(closure_1[3]).SCREEN_HEIGHT - endCoordinates.endCoordinates.height - endCoordinates.endCoordinates.screenY);
     });
-    let closure_1 = height.addListener(animationDuration, (endCoordinates) => {
+    closure_1 = height.addListener(animationDuration, (endCoordinates) => {
       const obj = lib(closure_1[2]);
       lib(closure_1[2]).runOnUI(closure_7)(lib(closure_1[3]).KEYBOARD_STATE.HIDDEN, endCoordinates.endCoordinates.height, endCoordinates.duration, endCoordinates.easing);
     });

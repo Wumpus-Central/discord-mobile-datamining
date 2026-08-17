@@ -1,7 +1,8 @@
 // _runtime/06984_useBottomSheetGestureHandlers.js
-import { useContext } from "noop";
-import { createContext } from "06964_createContext.js";
+import noop from "noop" /* 19 */;
+import createContext from "createContext" /* 6964 */;
 
+const useContext = noop.useContext;
 
 export const useBottomSheetGestureHandlers = () => {
   const tmp = useContext(createContext.BottomSheetGestureHandlersContext);

@@ -1,8 +1,9 @@
 // _runtime/00830_addContextToFrame.js
-import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 822 */;
+import isMatchingPattern from "isMatchingPattern" /* 832 */;
 import { safeDateNow } from "00831_safeDateNow.js";
-import { isMatchingPattern } from "00832_isMatchingPattern.js";
-let require = arg1;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const re3 = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
@@ -99,10 +100,6 @@ arg5.checkOrSetAlreadyCaught = function checkOrSetAlreadyCaught(__sentry_capture
   }
 };
 arg5.getEventDescription = function getEventDescription(exception) {
-  let event_id;
-  let message;
-  let type;
-  let value;
   ({ message, event_id } = exception);
   if (message) {
     return message;
@@ -172,19 +169,19 @@ arg5.uuid4 = function uuid4() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = (function getCrypto() {
-      const GLOBAL_OBJ = tmp(821).GLOBAL_OBJ;
+      const GLOBAL_OBJ = lib(821).GLOBAL_OBJ;
       return GLOBAL_OBJ.crypto || GLOBAL_OBJ.msCrypto;
     })();
   }
-  const require = tmp;
+  const _require = tmp;
   try {
     let randomUUID;
     if (tmp != null) {
       randomUUID = tmp.randomUUID;
     }
     if (randomUUID) {
-      let obj = safeDateNow;
-      return safeDateNow.withRandomSafeContext(() => tmp.randomUUID()).replace(/-/g, "");
+      let obj = _safeDateNow;
+      return _safeDateNow.withRandomSafeContext(() => lib.randomUUID()).replace(/-/g, "");
     } else {
       let str3 = c2;
       if (!c2) {
@@ -192,8 +189,8 @@ arg5.uuid4 = function uuid4() {
         str3 = "10000000100040008000100000000000";
       }
       return str3.replace(/[018]/g, (arg0) => {
-        const obj = tmp(831);
-        return arg0 ^ (15 & 16 * tmp(831).safeMathRandom()) >> arg0 / 4.toString(16);
+        const obj = lib(831);
+        return arg0 ^ (15 & 16 * lib(831).safeMathRandom()) >> arg0 / 4.toString(16);
       });
     }
   } catch (err) {

@@ -1,5 +1,7 @@
 // _runtime/00511_Buffer.js
-const require = arg1;
+import read from "read" /* 512 */;
+
+require = arg1;
 const exports = arg5;
 const dependencyMap = arg6;
 class Buffer {
@@ -252,7 +254,7 @@ class Buffer {
       num = 0;
       if (0 === arg0.length) {
         tmp21 = Buffer;
-        return require("byteLength");
+        return require("module_0");
       } else {
         num5 = arg1;
         if (undefined === arg1) {
@@ -700,7 +702,7 @@ class Buffer {
     tmp = this._arr || this;
     if (typeof call === "unknown") {
       num = 0;
-      substr = require("byteLength");
+      substr = require("module_0");
     } else {
       num2 = 0;
       substr = call(tmp, 0);
@@ -2480,7 +2482,7 @@ class Buffer {
       num2 = arg0;
       if (1 === arg0.length) {
         num5 = 0;
-        charCodeAtResult = require("byteLength");
+        charCodeAtResult = require("module_0");
         str2 = "utf8";
         tmp11 = "utf8" === tmp;
         if (tmp11) {
@@ -2889,7 +2891,7 @@ function byteLength(str) {
   if (Buffer.isBuffer(str)) {
     return str.length;
   } else {
-    let byteLength = globalThis;
+    byteLength = globalThis;
     const _ArrayBuffer = ArrayBuffer;
     if (!ArrayBuffer.isView(str)) {
       let tmp2 = str instanceof ArrayBuffer;
@@ -3411,7 +3413,7 @@ function utf8ToBytes(str) {
       }
     }
     const _Error = Error;
-    const error = new Error("Invalid code point");
+    error = new Error("Invalid code point");
     throw error;
   }
   return items;

@@ -1,8 +1,10 @@
 // _runtime/03994_relativeTimeWithPlural.js
+import t from "t" /* 3975 */;
+
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      const _module = require("t");
+      const _module = t;
       const relativeTimeWithPlural2 = function relativeTimeWithPlural(arg0, arg1, arg2) {
         const result = arg0 % 100;
         let tmp2 = result >= 20;

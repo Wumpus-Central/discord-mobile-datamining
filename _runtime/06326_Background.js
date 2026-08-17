@@ -1,10 +1,11 @@
 // _runtime/06326_Background.js
-import "noop";
-import { Animated } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { createStandardNavigationFactories } from "01501_createStandardNavigationFactories.js";
+import noopAll from "noop" /* 19 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import { Animated } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 
 export const Background = function Background(style) {
   const merged = Object.assign(style, Object.create(null));

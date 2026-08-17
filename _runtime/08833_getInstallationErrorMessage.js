@@ -1,6 +1,7 @@
 // _runtime/08833_getInstallationErrorMessage.js
-import { Platform } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const Platform = get_ActivityIndicator.Platform;
 let obj = { ios: null, android: null };
 obj = { expo: null, nonExpo: null };
 const items = ["react-native-date-picker is not installed correctly. Make sure you: ", ""];

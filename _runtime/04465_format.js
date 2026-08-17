@@ -1,6 +1,6 @@
 // _runtime/04465_format.js
 let self = this;
-let global = arg0;
+const global = arg0;
 const dependencyMap = arg4;
 const exports = arg5;
 const fn = function() {
@@ -101,17 +101,17 @@ const fn = function() {
   }
   let obj = { function: true, object: true };
   let tmp = obj[typeof window] && window || this;
-  let global = tmp;
+  closure_0 = tmp;
   let tmp4 = obj[typeof closure_1] && closure_1 && !closure_1.nodeType && closure_1;
   let tmp5 = tmp2;
   if (obj[typeof re2] && re2) {
     tmp5 = tmp4;
   }
   if (tmp5) {
-    tmp5 = typeof global === "object";
+    tmp5 = typeof closure_0 === "object";
   }
   if (tmp5) {
-    tmp5 = global;
+    tmp5 = closure_0;
   }
   let tmp7 = !tmp5;
   if (tmp5) {
@@ -119,7 +119,7 @@ const fn = function() {
     let tmp8 = tmp5.global !== tmp5 && tmp5.window !== tmp5 && tmp5.self !== tmp5;
   }
   if (!tmp7) {
-    global = tmp5;
+    closure_0 = tmp5;
     tmp = tmp5;
   }
   closure_1 = Math.pow(2, 53) - 1;
@@ -127,11 +127,7 @@ const fn = function() {
   const hasOwnProperty = str.hasOwnProperty;
   const toString = str.toString;
   function parse(global) {
-    let arch;
-    let manufacturer;
-    let platform;
-    let product;
-    let c0 = global;
+    c0 = global;
     let obj = c0;
     let tmp7 = global;
     if (global) {
@@ -155,7 +151,7 @@ const fn = function() {
     if (tmp7) {
       let isMatch = tmp11.likeChrome;
     } else {
-      let obj1 = /\bChrome\b/;
+      obj1 = /\bChrome\b/;
       isMatch = obj1.test(tmp9);
       if (isMatch) {
         let obj2 = /internal|\n/i;
@@ -215,7 +211,7 @@ const fn = function() {
         versionResult = tmp23.version();
       }
       function getProduct(items2) {
-        return outer1_9(items2, (arg0, pattern) => {
+        return closure_1_9(items2, (arg0, pattern) => {
           pattern = pattern.pattern;
           if (!pattern) {
             const _String = String;
@@ -294,7 +290,7 @@ const fn = function() {
       items[7] = "KHTML";
       items[8] = "Gecko";
       const tmp28 = (function getLayout(items) {
-        return outer1_9(items, (arg0, pattern) => {
+        return closure_1_9(items, (arg0, pattern) => {
           let tmp = arg0;
           if (!arg0) {
             pattern = pattern.pattern;
@@ -316,7 +312,7 @@ const fn = function() {
       })(items);
       const items1 = ["Adobe AIR", "Arora", "Avant Browser", "Breach", "Camino", "Electron", "Epiphany", "Fennec", "Flock", "Galeon", "GreenBrowser", "iCab", "Iceweasel", "K-Meleon", "Konqueror", "Lunascape", "Maxthon", { label: "Microsoft Edge", pattern: "Edge" }, "Midori", "Nook Browser", "PaleMoon", "PhantomJS", "Raven", "Rekonq", "RockMelt", { label: "Samsung Internet", pattern: "SamsungBrowser" }, "SeaMonkey", { label: "Silk", pattern: "(?:Cloud9|Silk-Accelerated)" }, "Sleipnir", "SlimBrowser", { label: "SRWare Iron", pattern: "Iron" }, "Sunrise", "Swiftfox", "Waterfox", "WebPositive", "Opera Mini", { label: "Opera Mini", pattern: "OPiOS" }, "Opera", { label: "Opera", pattern: "OPR" }, "Chrome", { label: "Chrome Mobile", pattern: "(?:CriOS|CrMo)" }, { label: "Firefox", pattern: "(?:Firefox|Minefield)" }, { label: "Firefox for iOS", pattern: "FxiOS" }, { label: "IE", pattern: "IEMobile" }, { label: "IE", pattern: "MSIE" }, "Safari"];
       let text1 = (function getName(items1) {
-        return outer1_9(items1, (arg0, pattern) => {
+        return closure_1_9(items1, (arg0, pattern) => {
           let tmp = arg0;
           if (!arg0) {
             pattern = pattern.pattern;
@@ -338,7 +334,7 @@ const fn = function() {
       })(items1);
       const items2 = [{ label: "BlackBerry", pattern: "BB10" }, "BlackBerry", { label: "Galaxy S", pattern: "GT-I9000" }, { label: "Galaxy S2", pattern: "GT-I9100" }, { label: "Galaxy S3", pattern: "GT-I9300" }, { label: "Galaxy S4", pattern: "GT-I9500" }, { label: "Galaxy S5", pattern: "SM-G900" }, { label: "Galaxy S6", pattern: "SM-G920" }, { label: "Galaxy S6 Edge", pattern: "SM-G925" }, { label: "Galaxy S7", pattern: "SM-G930" }, { label: "Galaxy S7 Edge", pattern: "SM-G935" }, "Google TV", "Lumia", "iPad", "iPod", "iPhone", "Kindle", { label: "Kindle Fire", pattern: "(?:Cloud9|Silk-Accelerated)" }, "Nexus", "Nook", "PlayBook", "PlayStation Vita", "PlayStation", "TouchPad", "Transformer", { label: "Wii U", pattern: "WiiU" }, "Wii", "Xbox One", { label: "Xbox 360", pattern: "Xbox" }, "Xoom"];
       product = getProduct(items2);
-      let c2 = product;
+      closure_2 = product;
       obj = { Apple: null, Archos: null, Amazon: null, Asus: null, "Barnes & Noble": null, BlackBerry: null, Google: null, HP: null, HTC: null, LG: null, Microsoft: null, Motorola: null, Nintendo: null, Nokia: null, Samsung: null, Sony: null };
       obj[0] = { iPad: 1, iPhone: 1, iPod: 1 };
       obj[1] = {};
@@ -357,7 +353,7 @@ const fn = function() {
       obj[14] = { "Galaxy S": 1, "Galaxy S2": 1, "Galaxy S3": 1, "Galaxy S4": 1 };
       obj[15] = { PlayStation: 1, "PlayStation Vita": 1 };
       const tmp31 = (function getManufacturer(global) {
-        return outer1_9(global, (arg0, arg1, arg2) => {
+        return closure_1_9(global, (arg0, arg1, arg2) => {
           let tmp = arg0;
           if (!arg0) {
             let match = arg1[closure_2];
@@ -403,7 +399,7 @@ const fn = function() {
       items3[27] = "Windows 98;";
       items3[28] = "Windows ";
       const tmp32 = (function getOS(items3) {
-        return outer1_9(items3, (arg0, pattern) => {
+        return closure_1_9(items3, (arg0, pattern) => {
           pattern = pattern.pattern;
           if (!pattern) {
             const _String = String;
@@ -493,14 +489,14 @@ const fn = function() {
       if (tmp34) {
         const items5 = [tmp31];
         const product1 = getProduct(items5);
-        c2 = product1;
+        closure_2 = product1;
         product = product1;
       }
       let match = /\bGoogle TV\b/.exec(product);
       let tmp37 = product;
       if (match) {
         const first = match[0];
-        c2 = first;
+        closure_2 = first;
         tmp37 = first;
       }
       let tmp39 = tmp37;
@@ -510,7 +506,7 @@ const fn = function() {
           str75 = `${tmp37} `;
         }
         let text = `${str75}Simulator`;
-        c2 = text;
+        closure_2 = text;
         tmp39 = text;
       }
       let isMatch1 = "Opera Mini" == text1;
@@ -526,7 +522,7 @@ const fn = function() {
         if (obj10.test(tmp9)) {
           str = "";
           ({ manufacturer, product } = parse(tmp9.replace(/like iPhone OS/, "")));
-          c2 = product;
+          closure_2 = product;
           str55 = tmp32;
           let str81 = product;
           const tmp73 = parse(tmp9.replace(/like iPhone OS/, ""));
@@ -536,7 +532,7 @@ const fn = function() {
           str = "(?:Firefox|Minefield|NetFront)";
           items7[3] = "(?:Firefox|Minefield|NetFront)";
           joined = (function getVersion(items7) {
-            return outer1_9(items7, (arg0, arg1) => {
+            return closure_1_9(items7, (arg0, arg1) => {
               let tmp = arg0;
               if (!arg0) {
                 const _RegExp = RegExp;
@@ -1522,7 +1518,7 @@ const fn = function() {
                   str = manufacturer;
                   text2 = str81;
                   if (items14[1]) {
-                    c2 = null;
+                    closure_2 = null;
                     str = "BlackBerry";
                     text2 = null;
                     str = "BlackBerry";
@@ -1802,7 +1798,7 @@ const fn = function() {
               manufacturer = tmp31;
               str81 = tmp39;
               if (!tmp39) {
-                c2 = tmp67;
+                closure_2 = tmp67;
                 str55 = str89;
                 manufacturer = tmp31;
                 str81 = tmp67;

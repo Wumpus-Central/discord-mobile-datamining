@@ -15,7 +15,7 @@ arg5.default = function queueMicrotask(flush) {
       promise = resolved;
     }
     promise.then(flush).catch((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       return setTimeout(() => {
         throw closure_0;
       }, 0);

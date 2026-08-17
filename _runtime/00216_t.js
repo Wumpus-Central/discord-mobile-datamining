@@ -1,7 +1,7 @@
 // _runtime/00216_t.js
 const global = arg0;
 const fn = function t(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   class Headers {
     constructor(arg0) {
       self = this;
@@ -195,8 +195,8 @@ const fn = function t(arg0) {
               return { done: undefined === arr, value: arr };
             }
       };
-      globalThis = obj;
-      if (c3) {
+      closure_1 = obj;
+      if (closure_3) {
         tmp2 = globalThis;
         _Symbol = Symbol;
         obj[Symbol.iterator] = () => obj;
@@ -216,8 +216,8 @@ const fn = function t(arg0) {
               return { done: undefined === arr, value: arr };
             }
       };
-      globalThis = obj;
-      if (c3) {
+      closure_1 = obj;
+      if (closure_3) {
         tmp2 = globalThis;
         _Symbol = Symbol;
         obj[Symbol.iterator] = () => obj;
@@ -228,7 +228,7 @@ const fn = function t(arg0) {
       items = [];
       closure_0 = items;
       item = this.forEach((arg0, arg1) => {
-        const items = [arg1, arg0];
+        items = [arg1, arg0];
         items.push(items);
       });
       closure_0 = items;
@@ -238,8 +238,8 @@ const fn = function t(arg0) {
               return { done: undefined === arr, value: arr };
             }
       };
-      globalThis = obj;
-      if (c3) {
+      closure_1 = obj;
+      if (closure_3) {
         tmp2 = globalThis;
         _Symbol = Symbol;
         obj[Symbol.iterator] = () => obj;
@@ -251,8 +251,8 @@ const fn = function t(arg0) {
     const fileReader = new FileReader();
     const asArrayBuffer = fileReader.readAsArrayBuffer(closure_0);
     return new Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       closure_0.onload = () => {
         lib(lib.result);
       };
@@ -346,19 +346,19 @@ const fn = function t(arg0) {
         if (headers2) {
           str2 = request.method || self.method || "GET";
           formatted = str2.toUpperCase();
-          tmp24 = entries;
+          tmp24 = closure_11;
           num = -1;
-          if (entries.indexOf(formatted) > -1) {
+          if (closure_11.indexOf(formatted) > -1) {
             str2 = formatted;
           }
           self.method = str2;
           self.mode = request.mode || self.mode || null;
           tmp25 = request.signal || self.signal;
           if (!tmp25) {
-            tmp26 = globalThis;
+            tmp26 = closure_1;
             str3 = "AbortController";
             signal = undefined;
-            if ("AbortController" in globalThis) {
+            if ("AbortController" in closure_1) {
               tmp28 = globalThis;
               _AbortController = AbortController;
               tmp29 = new.target;
@@ -784,8 +784,8 @@ const fn = function t(arg0) {
                   return { done: undefined === arr, value: arr };
                 }
         };
-        globalThis = obj;
-        if (c3) {
+        closure_1 = obj;
+        if (closure_3) {
           tmp2 = globalThis;
           _Symbol = Symbol;
           obj[Symbol.iterator] = () => obj;
@@ -805,8 +805,8 @@ const fn = function t(arg0) {
                   return { done: undefined === arr, value: arr };
                 }
         };
-        globalThis = obj;
-        if (c3) {
+        closure_1 = obj;
+        if (closure_3) {
           tmp2 = globalThis;
           _Symbol = Symbol;
           obj[Symbol.iterator] = () => obj;
@@ -817,7 +817,7 @@ const fn = function t(arg0) {
         items = [];
         closure_0 = items;
         item = this.forEach((arg0, arg1) => {
-          const items = [arg1, arg0];
+          items = [arg1, arg0];
           items.push(items);
         });
         closure_0 = items;
@@ -827,8 +827,8 @@ const fn = function t(arg0) {
                   return { done: undefined === arr, value: arr };
                 }
         };
-        globalThis = obj;
-        if (c3) {
+        closure_1 = obj;
+        if (closure_3) {
           tmp2 = globalThis;
           _Symbol = Symbol;
           obj[Symbol.iterator] = () => obj;
@@ -846,7 +846,7 @@ const fn = function t(arg0) {
   if (!_globalThis) {
     _globalThis = {};
   }
-  let closure_2 = "URLSearchParams" in _globalThis;
+  closure_2 = "URLSearchParams" in _globalThis;
   if ("Symbol" in _globalThis) {
     let _Symbol = Symbol;
     class Headers {
@@ -1042,8 +1042,8 @@ const fn = function t(arg0) {
                   return { done: undefined === arr, value: arr };
                 }
         };
-        globalThis = obj;
-        if (c3) {
+        closure_1 = obj;
+        if (closure_3) {
           tmp2 = globalThis;
           _Symbol = Symbol;
           obj[Symbol.iterator] = () => obj;
@@ -1063,8 +1063,8 @@ const fn = function t(arg0) {
                   return { done: undefined === arr, value: arr };
                 }
         };
-        globalThis = obj;
-        if (c3) {
+        closure_1 = obj;
+        if (closure_3) {
           tmp2 = globalThis;
           _Symbol = Symbol;
           obj[Symbol.iterator] = () => obj;
@@ -1075,7 +1075,7 @@ const fn = function t(arg0) {
         items = [];
         closure_0 = items;
         item = this.forEach((arg0, arg1) => {
-          const items = [arg1, arg0];
+          items = [arg1, arg0];
           items.push(items);
         });
         closure_0 = items;
@@ -1085,8 +1085,8 @@ const fn = function t(arg0) {
                   return { done: undefined === arr, value: arr };
                 }
         };
-        globalThis = obj;
-        if (c3) {
+        closure_1 = obj;
+        if (closure_3) {
           tmp2 = globalThis;
           _Symbol = Symbol;
           obj[Symbol.iterator] = () => obj;
@@ -1095,7 +1095,6 @@ const fn = function t(arg0) {
       }
     }
   }
-  let closure_3 = tmp3;
   let tmp4 = "FileReader" in _globalThis;
   if (tmp4) {
     tmp4 = "Blob" in _globalThis;
@@ -1111,11 +1110,11 @@ const fn = function t(arg0) {
       }
     })();
   }
-  let closure_4 = tmp4;
-  let closure_5 = "FormData" in _globalThis;
-  let closure_6 = tmp5;
+  closure_4 = tmp4;
+  closure_5 = "FormData" in _globalThis;
+  closure_6 = tmp5;
   if ("ArrayBuffer" in _globalThis) {
-    let closure_7 = ["[object Int8Array]", "[object Uint8Array]", "[object Uint8ClampedArray]", "[object Int16Array]", "[object Uint16Array]", "[object Int32Array]", "[object Uint32Array]", "[object Float32Array]", "[object Float64Array]"];
+    closure_7 = ["[object Int8Array]", "[object Uint8Array]", "[object Uint8ClampedArray]", "[object Int16Array]", "[object Uint16Array]", "[object Int32Array]", "[object Uint32Array]", "[object Float32Array]", "[object Float64Array]"];
     let _ArrayBuffer = ArrayBuffer;
     class Headers {
       constructor(arg0) {
@@ -1310,8 +1309,8 @@ const fn = function t(arg0) {
                   return { done: undefined === arr, value: arr };
                 }
         };
-        globalThis = obj;
-        if (c3) {
+        closure_1 = obj;
+        if (closure_3) {
           tmp2 = globalThis;
           _Symbol = Symbol;
           obj[Symbol.iterator] = () => obj;
@@ -1331,8 +1330,8 @@ const fn = function t(arg0) {
                   return { done: undefined === arr, value: arr };
                 }
         };
-        globalThis = obj;
-        if (c3) {
+        closure_1 = obj;
+        if (closure_3) {
           tmp2 = globalThis;
           _Symbol = Symbol;
           obj[Symbol.iterator] = () => obj;
@@ -1343,7 +1342,7 @@ const fn = function t(arg0) {
         items = [];
         closure_0 = items;
         item = this.forEach((arg0, arg1) => {
-          const items = [arg1, arg0];
+          items = [arg1, arg0];
           items.push(items);
         });
         closure_0 = items;
@@ -1353,8 +1352,8 @@ const fn = function t(arg0) {
                   return { done: undefined === arr, value: arr };
                 }
         };
-        globalThis = obj;
-        if (c3) {
+        closure_1 = obj;
+        if (closure_3) {
           tmp2 = globalThis;
           _Symbol = Symbol;
           obj[Symbol.iterator] = () => obj;
@@ -1362,7 +1361,7 @@ const fn = function t(arg0) {
         return obj;
       }
     }
-    let closure_8 = tmp6;
+    closure_8 = tmp6;
   }
   if ("Symbol" in _globalThis) {
     const _Symbol2 = Symbol;
@@ -1483,7 +1482,7 @@ const fn = function t(arg0) {
               }
             }
       };
-      if (FileReader) {
+      if (closure_4) {
         obj.blob = function() {
           const self = this;
           if (this._noBody) {
@@ -1497,7 +1496,7 @@ const fn = function t(arg0) {
                 return Promise.resolve(blob);
               } else if (self._bodyFormData) {
                 const _Error = Error;
-                const error = new Error("could not read FormData body as blob");
+                error = new Error("could not read FormData body as blob");
                 throw error;
               } else {
                 const _Blob = Blob;
@@ -1542,7 +1541,7 @@ const fn = function t(arg0) {
           return self.blob().then(closure_10);
         } else {
           const _Error = Error;
-          const error = new Error("could not read as ArrayBuffer");
+          error = new Error("could not read as ArrayBuffer");
           throw error;
         }
       };
@@ -1556,8 +1555,8 @@ const fn = function t(arg0) {
               const _FileReader = FileReader;
               const fileReader = new FileReader();
               const promise = new Promise((arg0, arg1) => {
-                let closure_0 = arg0;
-                let closure_1 = arg1;
+                closure_0 = arg0;
+                closure_1 = arg1;
                 closure_0.onload = () => {
                   lib(lib.result);
                 };
@@ -1589,7 +1588,7 @@ const fn = function t(arg0) {
               return Promise.resolve(array.join(""));
             } else if (self._bodyFormData) {
               const _Error = Error;
-              const error = new Error("could not read FormData body as text");
+              error = new Error("could not read FormData body as text");
               throw error;
             } else {
               return Promise.resolve(self._bodyText);
@@ -1603,7 +1602,7 @@ const fn = function t(arg0) {
           self.bodyUsed = true;
         }
       };
-      if (FormData) {
+      if (closure_5) {
         obj.formData = function() {
           return this.text().then(closure_13);
         };
@@ -1614,7 +1613,7 @@ const fn = function t(arg0) {
       return obj;
     }
   }
-  let closure_11 = ["CONNECT", "DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT", "TRACE"];
+  closure_11 = ["CONNECT", "DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT", "TRACE"];
   let call = Body.call;
   let prototype = Request.prototype;
   if (typeof call === "unknown") {
@@ -1674,7 +1673,7 @@ const fn = function t(arg0) {
     obj.type = "error";
     return obj;
   };
-  let closure_15 = [301, 302, 303, 307, 308];
+  closure_15 = [301, 302, 303, 307, 308];
   Response.redirect = (arg0, arg1) => {
     if (-1 === closure_15.indexOf(arg1)) {
       const _RangeError = RangeError;

@@ -1,6 +1,6 @@
 // _runtime/03642_areIntervalsOverlapping.js
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,33 +17,33 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function areIntervalsOverlapping(start, start2, inclusive) {
-  tmp5.default(2, arguments);
+  requiredArgs.default(2, arguments);
   start = undefined;
   if (null != start) {
     start = start.start;
   }
-  const time = tmp3.default(start).getTime();
+  const time = _typeof.default(start).getTime();
   let end;
   if (null != start) {
     end = start.end;
   }
-  const defaultResult1 = tmp3.default(start);
-  const time1 = tmp3.default(end).getTime();
+  const defaultResult1 = _typeof.default(start);
+  const time1 = _typeof.default(end).getTime();
   let start1;
   if (null != start2) {
     start1 = start2.start;
   }
-  const defaultResult2 = tmp3.default(end);
-  const time2 = tmp3.default(start1).getTime();
+  const defaultResult2 = _typeof.default(end);
+  const time2 = _typeof.default(start1).getTime();
   let end1;
   if (null != start2) {
     end1 = start2.end;
   }
-  const defaultResult3 = tmp3.default(start1);
-  const time3 = tmp3.default(end1).getTime();
+  const defaultResult3 = _typeof.default(start1);
+  const time3 = _typeof.default(end1).getTime();
   if (time <= time1) {
     if (time2 <= time3) {
       if (null != inclusive) {

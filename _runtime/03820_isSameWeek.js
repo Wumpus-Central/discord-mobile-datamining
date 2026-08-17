@@ -1,6 +1,6 @@
 // _runtime/03820_isSameWeek.js
-import startOfWeek from "startOfWeek";
-import requiredArgs from "requiredArgs";
+import startOfWeek from "startOfWeek" /* 3631 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!startOfWeek) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!startOfWeek) {
 } else {
   tmp3 = startOfWeek;
 }
-let c0 = tmp3;
+startOfWeek = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,12 +17,12 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function isSameWeek(arg0, arg1, arg2) {
-  tmp5.default(2, arguments);
-  const defaultResult1 = tmp3.default(arg0, arg2);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfWeek.default(arg0, arg2);
   const time = defaultResult1.getTime();
-  return time === tmp3.default(arg1, arg2).getTime();
+  return time === startOfWeek.default(arg1, arg2).getTime();
 };
 export default exports.default;

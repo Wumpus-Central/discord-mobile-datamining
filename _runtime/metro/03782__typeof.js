@@ -1,7 +1,7 @@
 // _runtime/metro/03782__typeof.js
-import getUTCWeekYear from "getUTCWeekYear";
-import startOfUTCWeek from "startOfUTCWeek";
-import { Parser } from "Parser";
+import Parser2 from "Parser" /* 3778 */;
+import getUTCWeekYear from "getUTCWeekYear" /* 3714 */;
+import startOfUTCWeek from "startOfUTCWeek" /* 3475 */;
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -9,9 +9,9 @@ function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -31,7 +31,7 @@ function _typeof(arg0) {
   };
 }
 function _setPrototypeOf(LocalWeekYearParser, Parser) {
-  let _setPrototypeOf = Object.setPrototypeOf;
+  _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
     _setPrototypeOf = function _setPrototypeOf(LocalWeekYearParser, Parser) {
       LocalWeekYearParser.__proto__ = Parser;
@@ -43,7 +43,7 @@ function _setPrototypeOf(LocalWeekYearParser, Parser) {
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;
-    let _getPrototypeOf = Object.getPrototypeOf;
+    _getPrototypeOf = Object.getPrototypeOf;
   } else {
     _getPrototypeOf = function _getPrototypeOf(arg0) {
       let __proto__ = arg0.__proto__;
@@ -63,7 +63,7 @@ if (!getUTCWeekYear) {
 } else {
   tmp3 = getUTCWeekYear;
 }
-let c3 = tmp3;
+getUTCWeekYear = tmp3;
 if (!startOfUTCWeek) {
   obj = { default: null };
   obj[0] = startOfUTCWeek;
@@ -71,11 +71,12 @@ if (!startOfUTCWeek) {
 } else {
   tmp5 = startOfUTCWeek;
 }
-let c4 = tmp5;
+startOfUTCWeek = tmp5;
+const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
 class LocalWeekYearParser {
   constructor() {
-    if (this instanceof c1) {
+    if (this instanceof closure_1) {
       length = arguments.length;
       _Array = Array;
       tmp6 = new.target;
@@ -226,7 +227,7 @@ let items = [
   {
     key: "parse",
     value: function parse(arg0, arg1, ordinalNumber) {
-      const _createSuperInternal = arg1;
+      _createSuperInternal = arg1;
       function valueCallback(year) {
         return { year, isTwoDigitYear: "YY" === closure_0 };
       }
@@ -255,7 +256,7 @@ let items = [
       if (isTwoDigitYear.isTwoDigitYear) {
         setUTCFullYear.setUTCFullYear(_createSuperInternal(3780).normalizeTwoDigitYear(isTwoDigitYear.year, tmp), 0, firstWeekContainsDate.firstWeekContainsDate);
         setUTCFullYear.setUTCHours(0, 0, 0, 0);
-        return tmp5.default(setUTCFullYear, firstWeekContainsDate);
+        return startOfUTCWeek.default(setUTCFullYear, firstWeekContainsDate);
       } else {
         if ("era" in era) {
           if (1 !== era.era) {
@@ -263,7 +264,7 @@ let items = [
           }
           setUTCFullYear.setUTCFullYear(year, 0, firstWeekContainsDate.firstWeekContainsDate);
           setUTCFullYear.setUTCHours(0, 0, 0, 0);
-          return tmp5.default(setUTCFullYear, firstWeekContainsDate);
+          return startOfUTCWeek.default(setUTCFullYear, firstWeekContainsDate);
         }
         year = isTwoDigitYear.year;
       }

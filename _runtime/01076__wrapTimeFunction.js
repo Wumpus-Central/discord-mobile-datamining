@@ -1,27 +1,25 @@
 // _runtime/01076__wrapTimeFunction.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 
 function _wrapTimeFunction(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return function() {
     const items = [...arguments];
-    let obj = callback(outer1_1[1]);
+    let obj = callback(closure_1_1[1]);
     obj = { mechanism: null };
-    obj = { handled: false, type: null };
-    obj[1] = "auto.browser.browserapierrors." + callback(outer1_1[0]).getFunctionName(callback);
+    obj = { handled: false, type: "auto.browser.browserapierrors." + callback(closure_1_1[0]).getFunctionName(callback) };
     obj[0] = obj;
     items[0] = obj.wrap(items[0], obj);
     return callback.apply(this, items);
   };
 }
 function _wrapRAF(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return function(arg0) {
-    let obj = callback(outer1_1[1]);
+    let obj = callback(closure_1_1[1]);
     obj = { mechanism: null };
     obj = { data: null, handled: false, type: "auto.browser.browserapierrors.requestAnimationFrame" };
-    const obj1 = { handler: null };
-    obj1[0] = callback(outer1_1[0]).getFunctionName(callback);
+    obj1 = { handler: callback(closure_1_1[0]).getFunctionName(callback) };
     obj[0] = obj1;
     obj[0] = obj;
     const items = [obj.wrap(arg0, obj)];
@@ -29,24 +27,23 @@ function _wrapRAF(arg0) {
   };
 }
 function _wrapXHR(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return function() {
     const self = this;
     const items = ["onload", "onerror", "onprogress", "onreadystatechange"];
     const items1 = [...arguments];
     const item = items.forEach((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       if (tmp2) {
-        self(outer1_1[0]).fill(tmp, arg0, (arg0) => {
+        self(closure_1_1[0]).fill(tmp, arg0, (arg0) => {
           let obj = { mechanism: null };
           obj = { data: null, handled: false, type: null };
-          obj = { handler: null };
-          obj[0] = callback(outer1_1[0]).getFunctionName(arg0);
+          obj = { handler: callback(closure_1_1[0]).getFunctionName(arg0) };
           obj[0] = obj;
           obj[2] = "auto.browser.browserapierrors.xhr." + callback;
           obj[0] = obj;
-          const obj4 = callback(outer1_1[0]);
-          const originalFunction = callback(outer1_1[0]).getOriginalFunction(arg0);
+          const obj4 = callback(closure_1_1[0]);
+          const originalFunction = callback(closure_1_1[0]).getOriginalFunction(arg0);
           if (originalFunction) {
             let tmpResult = tmp(tmp2[0]);
             obj.mechanism.data.handler = tmpResult.getFunctionName(originalFunction);
@@ -54,7 +51,7 @@ function _wrapXHR(arg0) {
           tmpResult = tmp(tmp2[1]);
           return tmpResult.wrap(arg0, obj);
         });
-        let obj = self(outer1_1[0]);
+        let obj = self(closure_1_1[0]);
       }
     });
     return self.apply(this, items1);
@@ -75,36 +72,36 @@ export const browserApiErrorsIntegration = registerSpanErrorInstrumentation.defi
     name: "BrowserApiErrors",
     setupOnce() {
       if (obj.setTimeout) {
-        obj = obj(outer1_1[0]);
-        obj.fill(obj(outer1_1[1]).WINDOW, "setTimeout", outer1_3);
+        obj = obj(closure_1_1[0]);
+        obj.fill(obj(closure_1_1[1]).WINDOW, "setTimeout", closure_1_3);
       }
       if (obj.setInterval) {
-        obj(outer1_1[0]).fill(obj(outer1_1[1]).WINDOW, "setInterval", outer1_3);
-        let obj2 = obj(outer1_1[0]);
+        obj(closure_1_1[0]).fill(obj(closure_1_1[1]).WINDOW, "setInterval", closure_1_3);
+        let obj2 = obj(closure_1_1[0]);
       }
       if (obj.requestAnimationFrame) {
-        obj(outer1_1[0]).fill(obj(outer1_1[1]).WINDOW, "requestAnimationFrame", outer1_4);
-        let obj3 = obj(outer1_1[0]);
+        obj(closure_1_1[0]).fill(obj(closure_1_1[1]).WINDOW, "requestAnimationFrame", closure_1_4);
+        let obj3 = obj(closure_1_1[0]);
       }
       let _XMLHttpRequest = tmp.XMLHttpRequest;
       if (_XMLHttpRequest) {
-        _XMLHttpRequest = "XMLHttpRequest" in obj(outer1_1[1]).WINDOW;
+        _XMLHttpRequest = "XMLHttpRequest" in obj(closure_1_1[1]).WINDOW;
       }
       if (_XMLHttpRequest) {
         const _XMLHttpRequest2 = XMLHttpRequest;
-        obj(outer1_1[0]).fill(XMLHttpRequest.prototype, "send", outer1_5);
-        let obj4 = obj(outer1_1[0]);
+        obj(closure_1_1[0]).fill(XMLHttpRequest.prototype, "send", closure_1_5);
+        let obj4 = obj(closure_1_1[0]);
       }
       let eventTarget = tmp.eventTarget;
       if (eventTarget) {
         const _Array = Array;
         if (!Array.isArray(eventTarget)) {
-          eventTarget = outer1_2;
+          eventTarget = closure_1_2;
         }
         const item = eventTarget.forEach((arg0) => {
-          let closure_0 = arg0;
-          let closure_1 = closure_0;
-          const tmp3 = outer1_0(outer1_1[1]).WINDOW[arg0];
+          closure_0 = arg0;
+          closure_1 = closure_0;
+          const tmp3 = closure_1_0(closure_1_1[1]).WINDOW[arg0];
           let prototype;
           if (tmp3 != null) {
             prototype = tmp3.prototype;
@@ -119,14 +116,14 @@ export const browserApiErrorsIntegration = registerSpanErrorInstrumentation.defi
           if (hasOwnPropertyResult) {
             let tmpResult = tmp(tmp2[0]);
             tmpResult.fill(prototype, "addEventListener", (arg0) => {
-              let closure_0 = arg0;
+              closure_0 = arg0;
               return function(arg0, handleEvent) {
                 try {
                   if ((function isEventListenerObject() { ... })(handleEvent)) {
-                    let obj = callback(1028);
+                    obj = callback(1028);
                     obj = { mechanism: null };
                     obj = { data: null, handled: false, type: "auto.browser.browserapierrors.handleEvent" };
-                    const obj1 = { handler: null, target: null };
+                    obj1 = { handler: null, target: null };
                     let obj4 = callback(817);
                     obj1[0] = obj4.getFunctionName(handleEvent);
                     obj1[1] = callback;
@@ -135,7 +132,7 @@ export const browserApiErrorsIntegration = registerSpanErrorInstrumentation.defi
                     handleEvent.handleEvent = obj.wrap(handleEvent.handleEvent, obj);
                   }
                   const self = this;
-                  if (outer1_1.unregisterOriginalCallbacks) {
+                  if (closure_1_1.unregisterOriginalCallbacks) {
                     (function unregisterOriginalCallback() { ... })(self, arg0, handleEvent);
                   }
                   const items = [arg0, , ];
@@ -156,7 +153,7 @@ export const browserApiErrorsIntegration = registerSpanErrorInstrumentation.defi
             });
             tmpResult = tmp(tmp2[0]);
             tmpResult.fill(prototype, "removeEventListener", (arg0) => {
-              let closure_0 = arg0;
+              closure_0 = arg0;
               return function(arg0, __sentry_wrapped__) {
                 const self = this;
                 try {

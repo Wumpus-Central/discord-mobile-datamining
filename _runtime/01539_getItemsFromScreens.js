@@ -1,10 +1,10 @@
 // _runtime/01539_getItemsFromScreens.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
-import { useRoute } from "01540_useRoute.js";
+import useRoute from "useRoute" /* 1540 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 let closure_2 = ["screen", "if"];
 let closure_3 = ["screens", "groups"];
 let c5 = importAllResult;
@@ -16,19 +16,17 @@ const memoResult = importAllResult.memo((component) => {
 let error = memoResult;
 memoResult.displayName = "Memo(Screen)";
 function getItemsFromScreens(arg0, arg1) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const entries = Object.entries(arg1);
   return entries.map((arg0) => {
-    let obj;
-    let tmp;
     [tmp, obj] = arg0;
     let _if;
     let element;
-    let closure_2 = {};
+    closure_2 = {};
     if ("screen" in obj) {
       const screen = obj.screen;
       _if = obj.if;
-      closure_2 = outer1_4(obj, outer1_2);
+      closure_2 = items(obj, Screen);
       let flag = false;
       let component = screen;
       if (!obj3.isValidElementType(screen)) {
@@ -38,7 +36,7 @@ function getItemsFromScreens(arg0, arg1) {
           flag = true;
         }
       }
-      obj3 = callback(outer1_1[4]);
+      obj3 = Screen(closure_1_1[4]);
     } else {
       flag = false;
       component = obj;
@@ -49,12 +47,12 @@ function getItemsFromScreens(arg0, arg1) {
           flag = true;
         }
       }
-      obj2 = callback(outer1_1[4]);
+      obj2 = Screen(closure_1_1[4]);
     }
     if (null == component) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const error = new Error("Couldn't find a 'screen' property for the screen '" + tmp + "'. This can happen if you passed 'undefined'. You likely forgot to export your component from the file it's defined in, or mixed up default import and named import when importing.");
+      error = new Error("Couldn't find a 'screen' property for the screen '" + tmp + "'. This can happen if you passed 'undefined'. You likely forgot to export your component from the file it's defined in, or mixed up default import and named import when importing.");
       throw error;
     } else {
       if (flag) {
@@ -62,7 +60,7 @@ function getItemsFromScreens(arg0, arg1) {
       } else {
         obj = { component: null };
         obj[0] = component;
-        element = outer1_6(outer1_7, obj);
+        element = closure_1_6(closure_1_7, obj);
       }
       return () => {
         if (null == _if) {
@@ -72,7 +70,7 @@ function getItemsFromScreens(arg0, arg1) {
           obj.children = function children() {
             return closure_3;
           };
-          let tmp2 = outer2_6(outer1_0, obj, closure_0);
+          let tmp2 = closure_2_6(closure_1_0, obj, closure_0);
         } else {
           tmp2 = null;
         }
@@ -86,19 +84,14 @@ export function createScreenFactory() {
   return (arg0) => arg0;
 }
 export const createComponentForStaticNavigation = function createComponentForStaticNavigation(config, closure_1) {
-  let Screen;
-  let dependencyMap;
-  let groups;
-  let require;
-  let screens;
-  ({ Navigator: require, Group: dependencyMap, Screen } = config);
+  ({ Navigator: Screen, Group: dependencyMap, Screen } = config);
   config = config.config;
   ({ screens, groups } = config);
   closure_3 = items(config, closure_3);
   if (null == screens) {
     if (null == groups) {
       const _Error2 = Error;
-      const error = new Error("Couldn't find a 'screens' or 'groups' property. Make sure to define your screens under a 'screens' property in the configuration.");
+      error = new Error("Couldn't find a 'screens' or 'groups' property. Make sure to define your screens under a 'screens' property in the configuration.");
       throw error;
     }
   }
@@ -116,23 +109,20 @@ export const createComponentForStaticNavigation = function createComponentForSta
         let str3 = "Trying to call a non-function";
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
-      require = Screen;
       let _Object = Object;
       let entries = Object.entries(screens);
       let items1 = [];
       let tmp3 = items1;
       let num = 0;
       let arraySpreadResult = HermesBuiltin.arraySpread(entries.map((arg0) => {
-        let obj;
-        let tmp;
         [tmp, obj] = arg0;
         let _if;
         let element;
-        let closure_2 = {};
+        closure_2 = {};
         if ("screen" in obj) {
           const screen = obj.screen;
           _if = obj.if;
-          closure_2 = outer1_4(obj, outer1_2);
+          closure_2 = items(obj, Screen);
           let flag = false;
           let component = screen;
           if (!obj3.isValidElementType(screen)) {
@@ -142,7 +132,7 @@ export const createComponentForStaticNavigation = function createComponentForSta
               flag = true;
             }
           }
-          obj3 = callback(outer1_1[4]);
+          obj3 = Screen(closure_1_1[4]);
         } else {
           flag = false;
           component = obj;
@@ -153,12 +143,12 @@ export const createComponentForStaticNavigation = function createComponentForSta
               flag = true;
             }
           }
-          obj2 = callback(outer1_1[4]);
+          obj2 = Screen(closure_1_1[4]);
         }
         if (null == component) {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          const error = new Error("Couldn't find a 'screen' property for the screen '" + tmp + "'. This can happen if you passed 'undefined'. You likely forgot to export your component from the file it's defined in, or mixed up default import and named import when importing.");
+          error = new Error("Couldn't find a 'screen' property for the screen '" + tmp + "'. This can happen if you passed 'undefined'. You likely forgot to export your component from the file it's defined in, or mixed up default import and named import when importing.");
           throw error;
         } else {
           if (flag) {
@@ -166,7 +156,7 @@ export const createComponentForStaticNavigation = function createComponentForSta
           } else {
             obj = { component: null };
             obj[0] = component;
-            element = outer1_6(outer1_7, obj);
+            element = closure_1_6(closure_1_7, obj);
           }
           return () => {
             if (null == _if) {
@@ -176,7 +166,7 @@ export const createComponentForStaticNavigation = function createComponentForSta
               obj.children = function children() {
                 return closure_3;
               };
-              let tmp2 = outer2_6(outer1_0, obj, closure_0);
+              let tmp2 = closure_2_6(closure_1_0, obj, closure_0);
             } else {
               tmp2 = null;
             }
@@ -203,17 +193,16 @@ export const createComponentForStaticNavigation = function createComponentForSta
       let tmp10 = items2;
       let num2 = 0;
       arraySpreadResult = HermesBuiltin.arraySpread(entries1.map((arg0) => {
-        let closure_0;
-        [closure_0, ] = arg0;
-        let closure_3;
-        closure_3 = outer1_8(merged, merged.screens);
+        [Screen, ] = arg0;
+        closure_3 = undefined;
+        closure_3 = closure_1_8(merged, merged.screens);
         return () => {
           if (null == _if) {
             const obj = { navigationKey: null };
             obj[0] = closure_0;
             merged = Object.assign(merged);
             obj.children = tmp;
-            let tmp3 = outer2_6(_if, obj, closure_0);
+            let tmp3 = closure_2_6(_if, obj, closure_0);
           } else {
             tmp3 = null;
           }
@@ -229,7 +218,7 @@ export const createComponentForStaticNavigation = function createComponentForSta
     continue;
   }
   if (0 === items.length) {
-    const _Error = Error;
+    let _Error = Error;
     const error1 = new Error("Couldn't find any screens in the 'screens' or 'groups' property. Make sure to define at least one screen in the configuration.");
     throw error1;
   } else {
@@ -237,7 +226,7 @@ export const createComponentForStaticNavigation = function createComponentForSta
       constructor(arg0) {
         closure_0 = config;
         if (typeof config.screenOptions !== "function") {
-          if (typeof Group.screenOptions !== "function") {
+          if (typeof closure_3.screenOptions !== "function") {
             obj = {};
             tmp11 = obj;
             merged = Object.assign(tmp10.screenOptions);
@@ -246,7 +235,7 @@ export const createComponentForStaticNavigation = function createComponentForSta
             fn = obj;
           }
           if (typeof config.screenListeners !== "function") {
-            if (typeof Group.screenListeners !== "function") {
+            if (typeof closure_3.screenListeners !== "function") {
               obj1 = {};
               tmp16 = obj1;
               merged2 = Object.assign(tmp15.screenListeners);
@@ -254,23 +243,23 @@ export const createComponentForStaticNavigation = function createComponentForSta
               merged3 = Object.assign(config.screenListeners);
               fn2 = obj1;
             }
-            tmp2 = outer1_6;
+            tmp2 = closure_1_6;
             tmp3 = closure_0;
             obj = {};
-            tmp4 = Group;
+            tmp4 = closure_3;
             tmp5 = obj;
-            merged4 = Object.assign(Group);
+            merged4 = Object.assign(closure_3);
             tmp7 = obj;
             tmp8 = config;
             merged5 = Object.assign(config);
             obj.screenOptions = fn;
             obj.screenListeners = fn2;
             obj.children = tmp;
-            return outer1_6(closure_0, obj);
+            return closure_1_6(closure_0, obj);
           }
           fn2 = (arg0) => {
-            let obj = outer1_3;
-            if (typeof outer1_3.screenListeners === "function") {
+            let obj = closure_1_3;
+            if (typeof closure_1_3.screenListeners === "function") {
               let screenListeners = obj.screenListeners(arg0);
             } else {
               screenListeners = obj.screenListeners;
@@ -287,9 +276,9 @@ export const createComponentForStaticNavigation = function createComponentForSta
           };
         }
         fn = (arg0) => {
-          let obj = outer1_3;
-          if (typeof outer1_3.screenOptions === "function") {
-            let screenOptions = obj.screenOptions(arg0);
+          let obj = closure_1_3;
+          if (typeof closure_1_3.screenOptions === "function") {
+            screenOptions = obj.screenOptions(arg0);
           } else {
             screenOptions = obj.screenOptions;
           }
@@ -316,14 +305,14 @@ export const createComponentForStaticNavigationDeprecated = function createCompo
 };
 export const createPathConfigForStaticNavigation = function createPathConfigForStaticNavigation(config, initialRouteName, arg2) {
   let tmp = arg2;
-  let closure_0 = arg2;
-  let c2 = false;
-  let c3 = false;
+  closure_0 = arg2;
+  c2 = false;
+  c3 = false;
   function createPathConfigForTree(config, initialRouteName, arg2, arg3) {
-    let closure_0 = config;
-    let closure_1 = initialRouteName;
-    let closure_2 = arg2;
-    let closure_3 = arg3;
+    closure_0 = config;
+    let obj = initialRouteName;
+    c2 = arg2;
+    c3 = arg3;
     initialRouteName = undefined;
     if (initialRouteName != null) {
       initialRouteName = initialRouteName.initialRouteName;
@@ -351,16 +340,14 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
       if (!set.has(initialRouteName)) {
         let _Error = Error;
         let _HermesInternal = HermesInternal;
-        let error = new Error("Couldn't find a screen named '" + initialRouteName + "' to use as 'initialRouteName'.");
+        error = new Error("Couldn't find a screen named '" + initialRouteName + "' to use as 'initialRouteName'.");
         throw error;
       }
     }
     function createPathConfigForScreens(screens, initialRouteName1) {
-      let closure_0 = initialRouteName1;
+      closure_0 = initialRouteName1;
       const entries = Object.entries(screens);
       const sorted = entries.sort((arg0, arg1) => {
-        let tmp;
-        let tmp2;
         [tmp] = arg0;
         [tmp2] = arg1;
         let num = -1;
@@ -374,10 +361,8 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
         return num;
       });
       const mapped = sorted.map((arg0) => {
-        let str;
-        let tmp;
         [str, tmp] = arg0;
-        let obj = {};
+        obj = {};
         if (tmp2) {
           if (typeof tmp.linking === "string") {
             obj.path = tmp.linking;
@@ -392,7 +377,7 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
         if (obj.exact) {
           if (null == obj.path) {
             const _Error2 = Error;
-            const error = new Error("A 'path' needs to be specified when specifying 'exact: true'. If you don't want this screen in the URL, specify it as empty string, e.g. `path: ''`.");
+            error = new Error("A 'path' needs to be specified when specifying 'exact: true'. If you don't want this screen in the URL, specify it as empty string, e.g. `path: ''`.");
             throw error;
           }
         }
@@ -435,17 +420,17 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
             }
           }
         }
-        let tmp16 = outer1_2;
-        if (!outer1_2) {
+        let tmp16 = closure_1_2;
+        if (!closure_1_2) {
           let tmp17 = null != obj.path;
           if (tmp17) {
             tmp17 = "" !== obj.path;
           }
           tmp16 = tmp17;
         }
-        let tmp18 = outer1_3;
-        let tmp19 = outer1_3;
-        if (outer1_3) {
+        let tmp18 = closure_1_3;
+        let tmp19 = closure_1_3;
+        if (closure_1_3) {
           tmp19 = null == closure_0 || str === closure_0;
           const tmp20 = null == closure_0 || str === closure_0;
         }
@@ -469,13 +454,13 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
               if (null != obj.path) {
                 if (!tmp15) {
                   if ("" === obj.path) {
-                    let closure_1;
-                    let closure_3 = true;
+                    obj = undefined;
+                    c3 = true;
                     if (tmp18) {
                       tmp18 = str === closure_0;
                     }
                     if (tmp18) {
-                      let closure_2 = true;
+                      c2 = true;
                     }
                   } else {
                     let tmp39 = tmp18;
@@ -483,10 +468,10 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
                       tmp39 = str === closure_0;
                     }
                     if (tmp39) {
-                      tmp39 = null == closure_1;
+                      tmp39 = null == obj;
                     }
                     if (tmp39) {
-                      closure_2 = true;
+                      c2 = true;
                     }
                   }
                 }
@@ -500,13 +485,10 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
                   const tmp37 = null != closure_0 && str !== closure_0;
                 }
                 if (!tmp36) {
-                  tmp36 = closure_3;
+                  tmp36 = c3;
                 }
                 if (!tmp36) {
-                  tmp36 = null != closure_1;
-                }
-                if (!tmp36) {
-                  closure_1 = obj;
+                  tmp36 = null != obj;
                 }
                 const str9 = str.replace(/([a-z0-9])([A-Z])/g, "$1-$2");
                 const str10 = str.replace(/([a-z0-9])([A-Z])/g, "$1-$2").replace(/([A-Z]+)([A-Z][a-z])/g, "$1-$2");
@@ -537,12 +519,11 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
         }
       });
       return Object.fromEntries(mapped.filter((arg0) => {
-        let tmp;
         [, tmp] = arg0;
         return Object.keys(tmp).length > 0;
       }));
     }
-    let obj = {};
+    obj = {};
     for (const key10053 in arg0.config) {
       let tmp17 = key10053;
       screens = "screens" === key10053;
@@ -569,11 +550,10 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
         let _Object2 = Object;
         let entries = Object.entries(arg0.config.groups);
         let item1 = entries.forEach((arg0) => {
-          let tmp;
           [, tmp] = arg0;
           let initialRouteName;
-          if (initialRouteName != null) {
-            initialRouteName = initialRouteName.initialRouteName;
+          if (obj != null) {
+            initialRouteName = obj.initialRouteName;
           }
           if (initialRouteName == null) {
             initialRouteName = config.config.initialRouteName;

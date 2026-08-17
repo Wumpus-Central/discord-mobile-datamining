@@ -1,6 +1,6 @@
 // _runtime/00879_parseRetryAfterHeader.js
-import _slicedToArray from "_slicedToArray";
-import { safeDateNow } from "00831_safeDateNow.js";
+import safeDateNow from "safeDateNow" /* 831 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function parseRetryAfterHeader(arg0) {
   let safeDateNowResult = arg1;
@@ -59,8 +59,8 @@ export const updateRateLimits = function updateRateLimits(arg0, headers) {
     const iter = parts[Symbol.iterator]();
     const str = prop.trim();
     while (iter !== undefined) {
-      let tmp12 = _slicedToArray;
-      let tmp13 = _slicedToArray(str7.split(":", 5), 5);
+      let tmp12 = callback;
+      let tmp13 = callback(str7.split(":", 5), 5);
       let str8 = tmp13[1];
       let str9 = tmp13[4];
       let _parseInt = parseInt;

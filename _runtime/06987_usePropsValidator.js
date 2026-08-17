@@ -1,6 +1,7 @@
 // _runtime/06987_usePropsValidator.js
-import { useMemo } from "noop";
+import noop from "noop" /* 19 */;
 
+const useMemo = noop.useMemo;
 
 export const usePropsValidator = (index) => {
   index = index.index;

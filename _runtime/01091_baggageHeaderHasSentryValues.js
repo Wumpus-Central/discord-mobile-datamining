@@ -1,6 +1,7 @@
 // _runtime/01091_baggageHeaderHasSentryValues.js
-import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
-const require = arg1;
+import ignoreNextOnError from "ignoreNextOnError" /* 1028 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.baggageHeaderHasSentryValues = function baggageHeaderHasSentryValues(baggage) {

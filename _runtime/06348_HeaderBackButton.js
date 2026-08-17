@@ -1,22 +1,15 @@
 // _runtime/06348_HeaderBackButton.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import { createStandardNavigationFactories } from "01501_createStandardNavigationFactories.js";
-import { registerAsset } from "06320_registerAsset.js";
-import { HeaderButton } from "06354_HeaderButton.js";
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import registerAssetDefault from "registerAsset" /* 6320 */;
+import HeaderButton from "HeaderButton" /* 6354 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let Image;
-let Platform;
-let StyleSheet;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 ({ Animated: c5, Image, Platform, StyleSheet, View: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let c9 = 24;
 obj = { container: obj, label: { fontSize: 17, letterSpacing: 0.35 }, labelWrapper: null, icon: null, iconWithLabel: null, iconMaskContainer: null, iconMaskFillerRect: null, iconMask: null, flip: null };
 obj = { paddingHorizontal: 0, minWidth: StyleSheet.hairlineWidth, marginVertical: 3, marginHorizontal: 11 };
@@ -31,29 +24,6 @@ obj[8] = { transform: "scaleX(-1)" };
 const styles = StyleSheet.create(obj);
 
 export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
-  let allowFontScaling;
-  let backImage;
-  let c1;
-  let c2;
-  let colors;
-  let disabled;
-  let displayMode;
-  let fonts;
-  let href;
-  let label;
-  let labelStyle;
-  let onLabelLayout;
-  let pressColor;
-  let pressOpacity;
-  let require;
-  let screenLayout;
-  let style;
-  let testID;
-  let tintColor;
-  let titleLayout;
-  let tmp6;
-  let tmp8;
-  let truncatedLabel;
   ({ backImage, label, displayMode } = accessibilityLabel);
   ({ disabled, allowFontScaling, labelStyle } = accessibilityLabel);
   if (displayMode === undefined) {
@@ -75,13 +45,13 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
     }
     accessibilityLabel = str2;
   }
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   ({ testID, style, href } = accessibilityLabel);
   let obj = createStandardNavigationFactories;
   const theme = obj.useTheme();
   ({ colors, fonts } = theme);
-  let obj1 = createStandardNavigationFactories;
+  obj1 = createStandardNavigationFactories;
   const direction = obj1.useLocale().direction;
   [tmp6, c1] = callback(React.useState(null), 2);
   const tmp5 = callback(React.useState(null), 2);
@@ -113,7 +83,7 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
     let backImageResult = backImage(obj);
   } else {
     obj1 = { source: null, tintColor: null, style: null };
-    obj1[0] = registerAsset;
+    obj1[0] = registerAssetDefault;
     obj1[1] = tintColor;
     const items1 = [tmp10.icon, "minimal" !== displayMode && tmp10.iconWithLabel];
     obj1[2] = items1;

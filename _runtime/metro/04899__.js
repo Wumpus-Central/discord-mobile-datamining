@@ -1,4 +1,9 @@
 // _runtime/metro/04899__.js
+import _mod4900 from "module_4900" /* 4900 */;
+import _mod4901 from "module_4901" /* 4901 */;
+import _mod4902 from "module_4902" /* 4902 */;
+import _mod4903 from "module_4903" /* 4903 */;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -37,10 +42,10 @@ if (self2) {
     };
   }
   const _Object2 = Object;
-  fn(require("module_4900"), exports);
-  fn(require("module_4901"), exports);
-  fn(require("module_4902"), exports);
-  fn(require("module_4903"), exports);
+  fn(_mod4900, exports);
+  fn(_mod4901, exports);
+  fn(_mod4902, exports);
+  fn(_mod4903, exports);
 } else {
   let _Object = Object;
 }

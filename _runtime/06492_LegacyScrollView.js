@@ -1,30 +1,26 @@
 // _runtime/06492_LegacyScrollView.js
-import _slicedToArray from "_slicedToArray";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import tagMessage from "tagMessage" /* 6382 */;
+import itemsDefault from "items" /* 6491 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import closure_6 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let DrawerLayoutAndroid;
-let RefreshControl;
-let ScrollView;
-let Switch;
-let TextInput;
-let error;
-const require = arg1;
+require = arg1;
 let closure_2 = ["refreshControl", "waitFor"];
 let closure_3 = ["waitFor", "refreshControl"];
 ({ FlatList: error, DrawerLayoutAndroid, RefreshControl, ScrollView, Switch, TextInput } = get_ActivityIndicator);
-let closure_9 = require("items")(ScrollView, { disallowInterruption: true, shouldCancelWhenOutside: false });
+let closure_9 = itemsDefault(ScrollView, { disallowInterruption: true, shouldCancelWhenOutside: false });
 class LegacyScrollView {
   constructor(arg0) {
-    obj = noop;
-    ref = noop.useRef(null);
+    obj = closure_6;
+    ref = closure_6.useRef(null);
     ({ refreshControl, waitFor } = global);
     obj = {};
     tmp2 = jsx;
-    tmp3 = jsx;
-    merged = Object.assign(_objectWithoutProperties(global, closure_2));
+    tmp3 = closure_9;
+    merged = Object.assign(closure_5(global, closure_2));
     obj3 = require("tagMessage");
     if (waitFor == null) {
       waitFor = [];
@@ -42,17 +38,15 @@ class LegacyScrollView {
     return tmp2(tmp3, obj);
   }
 }
-const tmp3 = require("items")(RefreshControl, { disallowInterruption: true, shouldCancelWhenOutside: false });
-const tmp4 = require("items")(Switch, { shouldCancelWhenOutside: false, shouldActivateOnStart: true, disallowInterruption: true });
+const tmp3 = itemsDefault(RefreshControl, { disallowInterruption: true, shouldCancelWhenOutside: false });
+const tmp4 = itemsDefault(Switch, { shouldCancelWhenOutside: false, shouldActivateOnStart: true, disallowInterruption: true });
 
 export const LegacyRefreshControl = tmp3;
 export { LegacyScrollView };
 export const LegacySwitch = tmp4;
-export const LegacyTextInput = require("items")(TextInput);
-export const LegacyDrawerLayoutAndroid = require("items")(DrawerLayoutAndroid, { disallowInterruption: true });
+export const LegacyTextInput = itemsDefault(TextInput);
+export const LegacyDrawerLayoutAndroid = itemsDefault(DrawerLayoutAndroid, { disallowInterruption: true });
 export const LegacyFlatList = (arg0) => {
-  let dependencyMap;
-  let refreshControl;
   const ref = React.useRef(null);
   ({ waitFor: dependencyMap, refreshControl } = arg0);
   let obj = {};
@@ -79,7 +73,7 @@ export const LegacyFlatList = (arg0) => {
   obj = {};
   let merged = Object.assign(obj);
   obj.renderScrollComponent = function renderScrollComponent(arg0) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(arg0);
     const merged1 = Object.assign(obj);
     let items = closure_1;
@@ -87,13 +81,13 @@ export const LegacyFlatList = (arg0) => {
       items = [];
     }
     const items1 = [];
-    items1[HermesBuiltin.arraySpread(ref(outer1_1[6]).toArray(items), 0)] = ref;
+    items1[HermesBuiltin.arraySpread(ref(closure_1_1[6]).toArray(items), 0)] = ref;
     obj.waitFor = items1;
-    return outer1_8(outer1_10, obj);
+    return closure_1_8(closure_1_10, obj);
   };
   let cloneElementResult;
   if (refreshControl) {
-    const obj1 = { ref: null };
+    obj1 = { ref: null };
     obj1[0] = ref;
     cloneElementResult = React.cloneElement(refreshControl, obj1);
   }

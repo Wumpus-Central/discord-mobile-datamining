@@ -1,7 +1,7 @@
 // _runtime/01069_serializeFormData.js
-import _slicedToArray from "_slicedToArray";
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { __SENTRY_DEBUG__ } from "metro/01035___SENTRY_DEBUG__.js";
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1035 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function serializeFormData(fetchRequestArgBody) {
   return new URLSearchParams(fetchRequestArgBody).toString();
@@ -81,7 +81,6 @@ export const parseXhrResponseHeaders = function parseXhrResponseHeaders(xhr) {
     if (str) {
       const parts = str.split("\r\n");
       let reduced = parts.reduce((arg0, str) => {
-        let tmp2;
         [str, tmp2] = callback(str.split(": "), 2);
         if (tmp2) {
           arg0[str.toLowerCase()] = tmp2;

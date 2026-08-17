@@ -1,6 +1,7 @@
 // _runtime/01198_lazyLoadFeedbackIntegration.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-const require = arg1;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+
+require = arg1;
 const dependencyMap = arg6;
 const AutoInjectMobileFeedback = "AutoInjectMobileFeedback";
 const AutoInjectMobileFeedbackButton = "AutoInjectMobileFeedbackButton";

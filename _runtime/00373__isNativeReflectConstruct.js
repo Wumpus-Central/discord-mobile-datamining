@@ -1,9 +1,11 @@
 // _runtime/00373__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 366 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_5 from "_get" /* 96 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 const AnimatedValueXY = importDefault;
 function _isNativeReflectConstruct() {
@@ -17,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,12 +31,12 @@ let c7 = 1;
 class AnimatedValueXY {
   constructor(arg0, arg1) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, AnimatedValueXY);
+    tmp = closure_2(this, AnimatedValueXY);
     items = [];
     items[0] = arg1;
-    tmp2 = __esModule;
-    obj = __esModule(AnimatedValueXY);
-    tmp3 = __esModule;
+    tmp2 = closure_4;
+    obj = closure_4(AnimatedValueXY);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -84,7 +86,7 @@ class AnimatedValueXY {
     return;
   }
 }
-require("_inherits")(AnimatedValueXY, require("_isNativeReflectConstruct"));
+_inheritsDefault(AnimatedValueXY, _isNativeReflectConstructDefault);
 let items = [
   {
     key: "setValue",
@@ -125,8 +127,6 @@ let items = [
   {
     key: "__getValue",
     value: function __getValue() {
-      let x;
-      let y;
       ({ x, y } = this);
       return { x: x.__getValue(), y: y.__getValue() };
     }
@@ -160,12 +160,9 @@ let items = [
   {
     key: "addListener",
     value: function addListener(arg0) {
-      let _listeners;
-      let x;
-      let y;
       const self = this;
-      let closure_0 = arg0;
-      let closure_7 = tmp + 1;
+      closure_0 = arg0;
+      closure_7 = tmp + 1;
       const StringResult = String(+closure_7);
       function jointCallback(arg0) {
         callback(self.__getValue());

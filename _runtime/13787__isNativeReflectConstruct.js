@@ -1,12 +1,12 @@
 // _runtime/13787__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import FullScreenOverlay from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "noop" /* 19 */;
+import closure_4 from "get ActivityIndicator" /* 17 */;
+import closure_5 from "jsxProd" /* 21 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -19,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -90,12 +90,12 @@ let closure_6 = { container: { position: "absolute", left: 0, top: 0, right: 0, 
 class FullScreenOverlay {
   constructor(arg0) {
     self = this;
-    tmp = FullScreenOverlay(this, apply);
+    tmp = FullScreenOverlay(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_2;
+    obj = closure_2(closure_0);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -104,29 +104,23 @@ class FullScreenOverlay {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     obj = { opacity: closure_6.container.opacity, uri: null, justifyContent: "center", alignItems: "center" };
     tmp3Result.state = obj;
     emitter = global.emitter;
     onResult = emitter.on("overlay", (arg0) => {
-      const merged = Object.assign(tmp3Result.state);
+      const merged = Object.assign(state.state);
       const merged1 = Object.assign(arg0);
-      tmp3Result.setState({});
+      state.setState({});
     });
     return tmp3Result;
   }
 }
-_classCallCheck = FullScreenOverlay;
 _inherits(FullScreenOverlay, value.Component);
 obj = {
   key: "createContainerStyle",
   value: function createContainerStyle() {
-    let alignItems;
-    let height;
-    let justifyContent;
-    let opacity;
-    let width;
-    const Dimensions = get_ActivityIndicator.Dimensions;
+    const Dimensions = closure_4.Dimensions;
     ({ opacity, justifyContent, alignItems } = this.state);
     const value = Dimensions.get("window");
     const obj = {};
@@ -151,15 +145,6 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let Fragment;
-      let growToWindow;
-      let height;
-      let jsx2;
-      let jsxs;
-      let marginLeft;
-      let resizeMode;
-      let uri;
-      let width;
       const self = this;
       const state = this.state;
       ({ uri, growToWindow, marginLeft } = state);
@@ -187,11 +172,11 @@ let items = [
       obj[4] = num4;
       obj[5] = num;
       if (growToWindow) {
-        const Dimensions = get_ActivityIndicator.Dimensions;
+        const Dimensions = closure_4.Dimensions;
         const value = Dimensions.get("window");
         ({ width: obj.width, height: obj.height } = value);
       }
-      const jsx = jsxProd.jsx;
+      const jsx = React.jsx;
       if (uri) {
         obj = { source: null, style: null, resizeMode: null };
         obj = { uri: null };
@@ -211,7 +196,7 @@ let items = [
         tmp6 = tmp4;
         tmp7 = tmp3;
       }
-      const obj1 = { children: null };
+      obj1 = { children: null };
       ({ jsxs, Fragment, jsx: jsx2 } = tmp7);
       const items = [jsx2(tmp6.View, { style: self.createContainerStyle(), pointerEvents: "none", children: jsxResult }), self.renderDebug()];
       obj1[0] = items;

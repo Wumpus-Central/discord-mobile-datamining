@@ -1,9 +1,10 @@
 // _runtime/07782_forEachEnvelopeItem.js
-import _slicedToArray from "_slicedToArray";
+import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+import dsnFromString from "dsnFromString" /* 7785 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import { getGlobalSingleton } from "07739_getGlobalSingleton.js";
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
 import { normalize } from "07783_normalize.js";
-import { dsnFromString } from "07785_dsnFromString.js";
 
 function forEachEnvelopeItem(arg0, arg1) {
   for (const item10007 of tmp) {
@@ -19,7 +20,7 @@ function forEachEnvelopeItem(arg0, arg1) {
 let closure_4 = { session: "session", sessions: "session", attachment: "attachment", transaction: "transaction", event: "error", client_report: "internal", user_report: "default", profile: "profile", profile_chunk: "profile", replay_event: "replay", replay_recording: "replay", check_in: "monitor", feedback: "feedback", span: "span", statsd: "metric_bucket", raw_security: "security" };
 
 export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
-  const tmp = _slicedToArray(arg0, 2);
+  const tmp = callback(arg0, 2);
   const items = [tmp[0], ];
   const items1 = [];
   items1[HermesBuiltin.arraySpread(tmp[1], 0)] = arg1;
@@ -57,8 +58,7 @@ export function createEnvelope(arg0) {
   return items1;
 }
 export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(event_id) {
-  let obj = { event_id: event_id.event_id, sent_at: null };
-  obj[1] = new Date().toISOString();
+  let obj = { event_id: event_id.event_id, sent_at: new Date().toISOString() };
   let tmp2 = arg1;
   if (arg1) {
     obj = { sdk: null };
@@ -76,7 +76,7 @@ export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(ev
   const merged1 = Object.assign(tmp4);
   let tmp8 = tmp;
   if (event_id.sdkProcessingMetadata && event_id.sdkProcessingMetadata.dynamicSamplingContext) {
-    const obj1 = { trace: null };
+    obj1 = { trace: null };
     const obj2 = {};
     const merged2 = Object.assign(tmp);
     obj1[0] = addNonEnumerableProperty.dropUndefinedKeys(obj2);
@@ -91,7 +91,7 @@ export function createSpanEnvelopeItem(arg0) {
   return items;
 }
 export const envelopeContainsItemType = function envelopeContainsItemType(arg0, arg1) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   return forEachEnvelopeItem(arg0, (arg0, arg1) => closure_0.includes(arg1));
 };
 export const envelopeItemTypeToDataCategory = function envelopeItemTypeToDataCategory(arg0) {
@@ -116,7 +116,7 @@ export const parseEnvelope = function parseEnvelope(arr) {
       }
       const subarrayResult = lib.subarray(0, length);
       lib = lib.subarray(length + 1);
-      if (lib(outer1_1[1]).GLOBAL_OBJ.__SENTRY__) {
+      if (lib(closure_1_1[1]).GLOBAL_OBJ.__SENTRY__) {
         if (tmp3(tmp4[1]).GLOBAL_OBJ.__SENTRY__.decodePolyfill) {
           const __SENTRY__ = tmp3(tmp4[1]).GLOBAL_OBJ.__SENTRY__;
           let decodePolyfillResult = __SENTRY__.decodePolyfill(subarrayResult);
@@ -170,7 +170,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
       if (typeof json === "string") {
         let sum = arr + json;
       } else {
-        if (callback(outer1_1[1]).GLOBAL_OBJ.__SENTRY__) {
+        if (callback(closure_1_1[1]).GLOBAL_OBJ.__SENTRY__) {
           if (tmp14(tmp15[1]).GLOBAL_OBJ.__SENTRY__.encodePolyfill) {
             const __SENTRY__2 = tmp14(tmp15[1]).GLOBAL_OBJ.__SENTRY__;
             let encodePolyfillResult = __SENTRY__2.encodePolyfill(arr);
@@ -186,8 +186,8 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
       arr = arr.push(json);
     } else {
       let __SENTRY__ = callback;
-      let encodePolyfill = outer1_1;
-      if (!callback(outer1_1[1]).GLOBAL_OBJ.__SENTRY__) {
+      let encodePolyfill = closure_1_1;
+      if (!callback(closure_1_1[1]).GLOBAL_OBJ.__SENTRY__) {
         const _TextEncoder = TextEncoder;
         const textEncoder1 = new TextEncoder();
         let encodeResult = textEncoder1.encode(json);
@@ -197,7 +197,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
       encodeResult = encodePolyfill(json);
     }
   }
-  const tmp4 = _slicedToArray(arg0, 2);
+  const tmp4 = callback(arg0, 2);
   const _require = JSON.stringify(tmp4[0]);
   if (tmp5 === undefined) {
     let tmp22 = _require;
@@ -218,7 +218,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
     }
     return tmp22;
   } else {
-    const tmp8 = _slicedToArray(tmp6, 2);
+    const tmp8 = callback(tmp6, 2);
     const _JSON = JSON;
     const _HermesInternal = HermesInternal;
     append("\n" + JSON.stringify(tmp8[0]) + "\n");

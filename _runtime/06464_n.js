@@ -1,12 +1,9 @@
 // _runtime/06464_n.js
-import noop from "noop";
-import { Reanimated } from "module_6420";
+import _mod6420 from "module_6420" /* 6420 */;
+import noop from "noop" /* 19 */;
 import { handleStateChangeEvent } from "06463_handleStateChangeEvent.js";
 import { 06420__ } from "metro/06420__.js";
 
-let c3;
-let c4;
-let obj1;
 ({ useEffect: obj1, useMemo: c3, useRef: c4 } = noop);
 let closure_5 = ["onGestureHandlerReanimatedEvent", "onGestureHandlerReanimatedStateChange", "onGestureHandlerReanimatedTouchEvent"];
 let fn = function n() {
@@ -15,6 +12,7 @@ let fn = function n() {
 fn.__closure = {};
 fn.__workletHash = 763644533783;
 fn.__initData = { code: "function pnpm_useReanimatedEventHandlerTs1(){}" };
+let Reanimated = _mod6420.Reanimated;
 let mutable;
 if (Reanimated != null) {
   mutable = Reanimated.makeMutable({});
@@ -29,7 +27,7 @@ let closure_9 = { code: "function pnpm_useReanimatedEventHandlerTs3(event){const
 
 export const useReanimatedEventHandler = function useReanimatedEventHandler(handlerTag, memoizedGestureCallbacks, handler, changeEventCalculator, fillInDefaultValues) {
   const _require = handlerTag;
-  const dependencyMap = memoizedGestureCallbacks;
+  dependencyMap = memoizedGestureCallbacks;
   const callback = changeEventCalculator;
   const callback2 = fillInDefaultValues;
   const items = [memoizedGestureCallbacks];
@@ -44,13 +42,13 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
     } else {
       obj = {};
       const merged = Object.assign(tmp3);
-      obj.onUpdate = outer1_6;
+      obj.onUpdate = closure_1_6;
     }
     return obj;
   }, items);
   const callback3 = tmp;
-  const fn = function h(handlerTag) {
-    let tmp = outer1_7.value[handlerTag.handlerTag];
+  fn = function h(handlerTag) {
+    let tmp = closure_1_7.value[handlerTag.handlerTag];
     if (undefined === tmp) {
       const obj = { lastUpdateEvent: "r" };
       iter.value[handlerTag.handlerTag] = obj;
@@ -62,16 +60,16 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
   fn.__workletHash = 3272953373395;
   fn.__initData = closure_9;
   const tmp2 = callback3(handlerTag);
-  let closure_5 = tmp2;
+  closure_5 = tmp2;
   const items1 = [handlerTag];
   callback(() => {
     closure_5.current = closure_0;
     return () => {
-      const Reanimated = outer1_0(outer1_1[1]).Reanimated;
+      const Reanimated = closure_1_0(closure_1_1[1]).Reanimated;
       if (Reanimated != null) {
         const runOnUI = Reanimated.runOnUI;
         if (runOnUI != null) {
-          runOnUI(outer1_8)(closure_0);
+          runOnUI(closure_1_8)(closure_0);
         }
       }
     };

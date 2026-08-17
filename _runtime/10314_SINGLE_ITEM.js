@@ -1,6 +1,8 @@
 // _runtime/10314_SINGLE_ITEM.js
-const SINGLE_ITEM = require("DATA_LENGTH").DATA_LENGTH.SINGLE_ITEM;
-const DOUBLE_ITEM = require("DATA_LENGTH").DATA_LENGTH.DOUBLE_ITEM;
+import DATA_LENGTH from "DATA_LENGTH" /* 10315 */;
+
+const SINGLE_ITEM = DATA_LENGTH.DATA_LENGTH.SINGLE_ITEM;
+const DOUBLE_ITEM = DATA_LENGTH.DATA_LENGTH.DOUBLE_ITEM;
 function isAutoFillData(loop) {
   return loop.loop && loop.autoFillData;
 }
@@ -8,10 +10,6 @@ isAutoFillData.__closure = {};
 isAutoFillData.__workletHash = 3243810595903;
 isAutoFillData.__initData = { code: "function isAutoFillData_Pnpm_computedWithAutoFillDataTs1(params){return!!params.loop&&!!params.autoFillData;}" };
 function convertToSharedIndex(arg0) {
-  let autoFillData;
-  let index;
-  let loop;
-  let rawDataLength;
   ({ rawDataLength, index } = arg0);
   ({ loop, autoFillData } = arg0);
   if (typeof isAutoFillData !== "function") {
@@ -30,11 +28,6 @@ convertToSharedIndex.__closure = { isAutoFillData, SINGLE_ITEM, DOUBLE_ITEM };
 convertToSharedIndex.__workletHash = 6582547575185;
 convertToSharedIndex.__initData = { code: "function convertToSharedIndex_Pnpm_computedWithAutoFillDataTs2(params){const{isAutoFillData,SINGLE_ITEM,DOUBLE_ITEM}=this.__closure;const{loop:loop,rawDataLength:rawDataLength,index:index,autoFillData:autoFillData}=params;if(isAutoFillData({loop:loop,autoFillData:autoFillData})){switch(rawDataLength){case SINGLE_ITEM:return 0;case DOUBLE_ITEM:return index%2;}}return index;}" };
 function computedOffsetXValueWithAutoFillData(arg0) {
-  let autoFillData;
-  let loop;
-  let rawDataLength;
-  let size;
-  let value;
   ({ rawDataLength, value, size } = arg0);
   ({ loop, autoFillData } = arg0);
   if (typeof isAutoFillData !== "function") {
@@ -56,10 +49,6 @@ computedOffsetXValueWithAutoFillData.__initData = { code: "function computedOffs
 export { convertToSharedIndex };
 export { computedOffsetXValueWithAutoFillData };
 export const computedRealIndexWithAutoFillData = function computedRealIndexWithAutoFillData(arg0) {
-  let autoFillData;
-  let dataLength;
-  let index;
-  let loop;
   ({ index, dataLength } = arg0);
   ({ loop, autoFillData } = arg0);
   if (typeof isAutoFillData !== "function") {
@@ -75,10 +64,6 @@ export const computedRealIndexWithAutoFillData = function computedRealIndexWithA
   return index;
 };
 export const computedFillDataWithAutoFillData = function computedFillDataWithAutoFillData(arg0) {
-  let autoFillData;
-  let data;
-  let dataLength;
-  let loop;
   ({ data, dataLength } = arg0);
   ({ loop, autoFillData } = arg0);
   if (typeof isAutoFillData !== "function") {

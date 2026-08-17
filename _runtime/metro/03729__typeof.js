@@ -1,13 +1,13 @@
 // _runtime/metro/03729__typeof.js
-import requiredArgs from "requiredArgs";
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -33,13 +33,13 @@ if (!requiredArgs) {
 } else {
   tmp3 = requiredArgs;
 }
-let c0 = tmp3;
+requiredArgs = tmp3;
 
 export default function formatISODuration(years) {
-  tmp3.default(1, arguments);
+  requiredArgs.default(1, arguments);
   if ("object" !== _typeof(years)) {
     const _Error = Error;
-    const error = new Error("Duration must be an object");
+    error = new Error("Duration must be an object");
     throw error;
   } else {
     years = years.years;

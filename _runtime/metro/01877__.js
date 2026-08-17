@@ -1,12 +1,11 @@
 // _runtime/metro/01877__.js
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { TEST_ID_KEYBOARD_TOOLBAR } from "../01872_TEST_ID_KEYBOARD_TOOLBAR.js";
+import noopDefault from "noop" /* 19 */;
+import TEST_ID_KEYBOARD_TOOLBAR from "TEST_ID_KEYBOARD_TOOLBAR" /* 1872 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let StyleSheet;
-let obj1;
-const require = arg1;
+require = arg1;
+noopDefault;
 ({ StyleSheet, View: obj1 } = get_ActivityIndicator);
 const styles = StyleSheet.create({ flex: { flex: 1 } });
 

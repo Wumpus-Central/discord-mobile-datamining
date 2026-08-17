@@ -1,14 +1,14 @@
 // _runtime/07833_thirdPartyErrorFilterIntegration.js
-import setupIntegration from "setupIntegration";
+import setupIntegration from "setupIntegration" /* 7794 */;
 
 let c2 = "_sentryBundlerPluginAppKey:";
 
 export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegration((arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return {
     name: "ThirdPartyErrorsFilter",
     setup(on) {
-      let closure_0 = on;
+      closure_0 = on;
       on.on("beforeEnvelope", (arg0) => {
         options(table[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
           if ("event" === arg1) {
@@ -27,13 +27,13 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
       });
       on.on("applyFrameMetadata", (type) => {
         if (!type.type) {
-          const result = options(outer1_1[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
-          const obj = options(outer1_1[2]);
+          const result = options(closure_1_1[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
+          const obj = options(closure_1_1[2]);
         }
       });
     },
     processEvent(tags) {
-      let obj = lib(outer1_1[3]);
+      let obj = lib(closure_1_1[3]);
       const framesFromEvent = obj.getFramesFromEvent(tags);
       let mapped;
       if (framesFromEvent) {

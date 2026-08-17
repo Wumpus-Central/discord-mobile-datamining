@@ -1,6 +1,7 @@
 // _runtime/07770_hasTracingEnabled.js
-import { getClient } from "07765_getClient.js";
-const require = arg1;
+import getClient from "getClient" /* 7765 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
   if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {

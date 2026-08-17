@@ -1,28 +1,27 @@
 // _runtime/06388_Animated.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import "noop";
-import { useRef } from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import ButtonComponent from "ButtonComponent";
+import noopDefault from "noop" /* 19 */;
+import createNativeWrapperDefault from "createNativeWrapper" /* 6389 */;
+import ButtonComponentDefault from "ButtonComponent" /* 6473 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import { useRef } from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let Platform;
-let StyleSheet;
-let c10;
-let c9;
 const require = arg1;
 let closure_2 = ["onLongPress", "onPress", "onActiveStateChange", "style"];
 let closure_3 = ["children", "style", "activeOpacity", "underlayColor"];
 let closure_4 = ["children", "style", "ref"];
+noopDefault;
 const Animated = get_ActivityIndicator.Animated;
 ({ Platform, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
+let closure_11 = createNativeWrapperDefault(ButtonComponentDefault, { shouldCancelWhenOutside: false, shouldActivateOnStart: false });
 class RawButton {
   constructor(arg0) {
     obj = {};
     merged = Object.assign(global);
     obj.needsOffscreenAlphaCompositing = true;
-    return jsx(jsxs, obj);
+    return jsx(closure_11, obj);
   }
 }
 class BaseButton {
@@ -97,7 +96,7 @@ class BaseButton {
         current = ref.current;
       }
       if (!current) {
-        if (_objectWithoutProperties != null) {
+        if (closure_5 != null) {
           tmp4(canceled.pointerInside);
         }
       }
@@ -120,10 +119,7 @@ const styles = StyleSheet.create({ underlay: { position: "absolute", left: 0, ri
 export { RawButton };
 export { BaseButton };
 export const RectButton = (children) => {
-  let activeOpacity;
-  let style;
-  let underlayColor;
-  let closure_0 = children;
+  closure_0 = children;
   ({ style, activeOpacity, underlayColor } = children);
   let str = "black";
   if (undefined !== underlayColor) {
@@ -149,9 +145,7 @@ export const RectButton = (children) => {
   return callback3(BaseButton, obj);
 };
 export const BorderlessButton = (ref) => {
-  let children;
-  let style;
-  let closure_0 = ref;
+  closure_0 = ref;
   const value = new Animated.Value(1);
   const current = useRef(value).current;
   ref = ref.ref;
@@ -173,4 +167,4 @@ export const BorderlessButton = (ref) => {
   obj.children = children;
   return closure_9(closure_14, obj);
 };
-export const PureNativeButton = require("ButtonComponent");
+export const PureNativeButton = ButtonComponentDefault;

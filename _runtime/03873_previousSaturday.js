@@ -1,6 +1,6 @@
 // _runtime/03873_previousSaturday.js
-import requiredArgs from "requiredArgs";
-import previousDay from "previousDay";
+import requiredArgs from "requiredArgs" /* 3473 */;
+import previousDay from "previousDay" /* 3870 */;
 
 if (!requiredArgs) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!requiredArgs) {
 } else {
   tmp3 = requiredArgs;
 }
-let c0 = tmp3;
+requiredArgs = tmp3;
 if (!previousDay) {
   obj = { default: null };
   obj[0] = previousDay;
@@ -17,10 +17,10 @@ if (!previousDay) {
 } else {
   tmp5 = previousDay;
 }
-let closure_1 = tmp5;
+previousDay = tmp5;
 
 export default function previousSaturday(arg0) {
-  tmp3.default(1, arguments);
-  return tmp5.default(arg0, 6);
+  requiredArgs.default(1, arguments);
+  return previousDay.default(arg0, 6);
 };
 export default exports.default;

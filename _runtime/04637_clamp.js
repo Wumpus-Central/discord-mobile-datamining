@@ -1,6 +1,7 @@
 // _runtime/04637_clamp.js
-import { toNumber } from "00637_toNumber.js";
-import { baseClamp } from "04638_baseClamp.js";
+import toNumber from "toNumber" /* 637 */;
+import baseClamp from "baseClamp" /* 4638 */;
+
 
 export default function clamp(arg0, arg1, arg2) {
   let tmp = arg2;

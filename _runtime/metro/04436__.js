@@ -1,12 +1,15 @@
 // _runtime/metro/04436__.js
-import { 00541__ } from "00541__.js";
+import _mod541 from "module_541" /* 541 */;
+import _mod542 from "module_542" /* 542 */;
+import callBindBasic from "callBindBasic" /* 551 */;
+
 const obj = {};
 try {
   obj.__proto__ = null;
-  let _module = require("module_542");
+  let _module = _mod542;
   if (_module) {
     const _Object = Object;
-    _module = require("module_542")(Object.prototype, "__proto__");
+    _module = _mod542(Object.prototype, "__proto__");
   }
   let tmp6 = !("toString" in obj);
   if (tmp6) {
@@ -16,12 +19,12 @@ try {
     }
     if (setDunder) {
       const items = [_module.set];
-      setDunder = require("callBindBasic")(items);
+      setDunder = callBindBasic(items);
     }
     if (!setDunder) {
       setDunder = function setDunder(arg0, arg1) {
         if (null == arg0) {
-          const tmp6 = new 00541__("set Object.prototype.__proto__ called on null or undefined");
+          const tmp6 = new _mod541("set Object.prototype.__proto__ called on null or undefined");
           throw tmp6;
         } else {
           arg0.__proto__ = arg1;

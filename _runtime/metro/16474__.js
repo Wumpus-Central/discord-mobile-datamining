@@ -2,8 +2,6 @@
 globalThis.IntlMessageFormat.__addLocaleData({
   locale: "ru",
   pluralRuleFunction(arg0, arg1) {
-    let arr;
-    let tmp2;
     const parts = String(arg0).split(".");
     [arr, tmp2] = parts;
     const substr = arr.slice(-1);

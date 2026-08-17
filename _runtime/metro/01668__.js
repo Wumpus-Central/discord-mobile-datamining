@@ -1,9 +1,9 @@
 // _runtime/metro/01668__.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import isJest from "isJest";
-import { mockedRequestAnimationFrame } from "mockedRequestAnimationFrame";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import isJest from "isJest" /* 1657 */;
+import { mockedRequestAnimationFrame } from "mockedRequestAnimationFrame" /* 1669 */;
 
 const JSReanimated = arg1;
 if (!isJest.isJest()) {
@@ -16,34 +16,28 @@ if (!isJest.isJest()) {
   class JSReanimated {
     constructor() {
       self = this;
-      tmp = outer1_3(this, self);
+      tmp = closure_3(this, self);
       obj = { writable: true, value: require("WorkletsModule").WorkletsModule };
-      definePropertyResult = Object.defineProperty(this, workletsModule, obj);
+      definePropertyResult = Object.defineProperty(this, closure_5, obj);
       this.nextSensorId = 0;
       map = new Map();
       this.sensors = map;
       this.platform = undefined;
       this.getSensorCallback = (arg0, arg1, arg2) => {
-        let closure_0 = arg0;
-        let closure_1 = arg2;
-        if (self(outer1_1[7]).SensorType.ACCELEROMETER !== arg1) {
+        closure_0 = arg0;
+        closure_1 = arg2;
+        if (self(closure_1_1[7]).SensorType.ACCELEROMETER !== arg1) {
           if (tmp(tmp2[7]).SensorType.GRAVITY !== arg1) {
             if (tmp(tmp2[7]).SensorType.GYROSCOPE !== arg1) {
               if (tmp(tmp2[7]).SensorType.MAGNETIC_FIELD !== arg1) {
                 if (tmp(tmp2[7]).SensorType.ROTATION === arg1) {
                   return () => {
-                    let tmp2;
-                    let tmp3;
-                    let tmp4;
-                    let tmp5;
-                    let tmp6;
-                    let tmp7;
-                    [tmp2, tmp3, tmp4, tmp5] = outer2_2(closure_0.quaternion, 4);
-                    if (closure_0.platform === outer2_7.WEB_ANDROID) {
+                    [tmp2, tmp3, tmp4, tmp5] = closure_2_2(closure_0.quaternion, 4);
+                    if (closure_0.platform === closure_2_7.WEB_ANDROID) {
                       const items = [tmp5, -tmp4];
                       [tmp7, tmp6] = items;
                     }
-                    const tmp = outer2_2(closure_0.quaternion, 4);
+                    const tmp = closure_2_2(closure_0.quaternion, 4);
                     const tmp8 = -Math.atan2(2 * (tmp4 * tmp5 + tmp2 * tmp3), tmp2 * tmp2 - tmp3 * tmp3 - tmp4 * tmp4 + tmp5 * tmp5);
                     const sinResult = Math.sin(-2 * (tmp3 * tmp5 - tmp2 * tmp4));
                     callback({ qw: tmp2, qx: tmp3, qy: tmp4, qz: tmp5, yaw: tmp8, pitch: Math.sin(-2 * (tmp3 * tmp5 - tmp2 * tmp4)), roll: -Math.atan2(2 * (tmp3 * tmp4 + tmp2 * tmp5), tmp2 * tmp2 + tmp3 * tmp3 - tmp4 * tmp4 - tmp5 * tmp5), interfaceOrientation: 0 });
@@ -57,14 +51,8 @@ if (!isJest.isJest()) {
           }
         }
         return () => {
-          let tmp;
-          let tmp2;
-          let tmp3;
-          let x;
-          let y;
-          let z;
           ({ x, y, z } = closure_0);
-          if (closure_0.platform === outer2_7.WEB_ANDROID) {
+          if (closure_0.platform === closure_2_7.WEB_ANDROID) {
             const items = [-x, -y, -z];
             [tmp3, tmp2, tmp] = items;
           }

@@ -1,7 +1,7 @@
 // _runtime/02005_buildMatchPatternFn.js
 
 export default function buildMatchPatternFn(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return (str) => {
     if (arguments.length > 1) {
       if (undefined !== arguments[1]) {

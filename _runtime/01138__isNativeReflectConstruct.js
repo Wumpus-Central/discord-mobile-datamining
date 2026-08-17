@@ -1,11 +1,11 @@
 // _runtime/01138__isNativeReflectConstruct.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import c4 from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "noop" /* 19 */;
 
 let Profiler = require;
 function _isNativeReflectConstruct() {
@@ -19,10 +19,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -32,12 +32,12 @@ const unknown = "unknown";
 class Profiler {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Profiler);
+    tmp = closure_3(this, Profiler);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(Profiler);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_5;
+    obj = closure_5(Profiler);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -54,7 +54,7 @@ class Profiler {
       return tmp3Result1;
     }
     obj2 = require("feedbackAsyncIntegration");
-    obj = { name: "<" + name + ">", onlyIfParent: true, op: require("module_1139").REACT_MOUNT_OP, attributes: { [outer1_0(outer1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": name } };
+    obj = { name: "<" + name + ">", onlyIfParent: true, op: require("module_1139").REACT_MOUNT_OP, attributes: { [closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": name } };
     tmp3Result._mountSpan = obj2.startInactiveSpan(obj);
     tmp3Result1 = tmp3Result;
     return;
@@ -82,7 +82,7 @@ let items = [
         flag = true;
       }
       let found;
-      let Profiler;
+      Profiler = undefined;
       if (flag) {
         if (self._mountSpan) {
           if (updateProps !== self.props.updateProps) {
@@ -95,7 +95,7 @@ let items = [
               self._updateSpan = Profiler(updateProps[9]).withActiveSpan(self._mountSpan, () => {
                 let obj = callback(updateProps[7]);
                 obj = { name: "<" + self.props.name + ">", onlyIfParent: true, op: callback(updateProps[8]).REACT_UPDATE_OP, startTime: callback, attributes: obj };
-                obj = { [outer1_0(outer1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": self.props.name, "ui.react.changed_props": found };
+                obj = { [closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": self.props.name, "ui.react.changed_props": found };
                 return obj.startInactiveSpan(obj);
               });
               const obj2 = Profiler(updateProps[9]);
@@ -120,8 +120,6 @@ let items = [
   {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
-      let dependencyMap;
-      let includeRender;
       const self = this;
       Profiler = Profiler(817).timestampInSeconds();
       ({ name: dependencyMap, includeRender } = this.props);
@@ -131,9 +129,9 @@ let items = [
           const timestamp = tmpResult.spanToJSON(self._mountSpan).timestamp;
           tmpResult = tmp(817);
           tmpResult.withActiveSpan(self._mountSpan, () => {
-            let obj = callback(outer1_1[7]);
-            obj = { onlyIfParent: true, name: "<" + closure_1 + ">", op: callback(outer1_1[8]).REACT_RENDER_OP, startTime: timestamp, attributes: obj };
-            obj = { [outer1_0(outer1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": closure_1 };
+            let obj = callback(closure_1_1[7]);
+            obj = { onlyIfParent: true, name: "<" + closure_1 + ">", op: callback(closure_1_1[8]).REACT_RENDER_OP, startTime: timestamp, attributes: obj };
+            obj = { [closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": closure_1 };
             const startInactiveSpanResult = obj.startInactiveSpan(obj);
             if (startInactiveSpanResult) {
               startInactiveSpanResult.end(callback);
@@ -157,13 +155,13 @@ let merged = Object.assign(_moduleResult, { defaultProps: { disabled: false, inc
 export const Profiler = _moduleResult;
 export const UNKNOWN_COMPONENT = "unknown";
 export const useProfiler = function useProfiler(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = { disabled: false, hasRenderSpan: true };
   }
-  let _slicedToArray;
-  _slicedToArray = _slicedToArray(noop.useState(() => {
+  let callback;
+  callback = callback(noop.useState(() => {
     let disabled;
     if (obj != null) {
       disabled = obj.disabled;
@@ -188,31 +186,31 @@ export const useProfiler = function useProfiler(arg0) {
     return () => {
       if (closure_2) {
         if (hasRenderSpan.hasRenderSpan) {
-          let obj = outer1_0(outer1_1[9]);
-          const obj2 = outer1_0(outer1_1[9]);
-          const timestampInSecondsResult = outer1_0(outer1_1[9]).timestampInSeconds();
+          obj = closure_1_0(closure_1_1[9]);
+          const obj2 = closure_1_0(closure_1_1[9]);
+          const timestampInSecondsResult = closure_1_0(closure_1_1[9]).timestampInSeconds();
           obj = { name: null, onlyIfParent: true, op: null, startTime: null, attributes: null };
           const _HermesInternal = HermesInternal;
           obj[0] = "<" + closure_0 + ">";
-          obj[2] = outer1_0(outer1_1[8]).REACT_RENDER_OP;
+          obj[2] = closure_1_0(closure_1_1[8]).REACT_RENDER_OP;
           obj[3] = obj.spanToJSON(tmp).timestamp;
           obj = {};
-          obj[outer1_0(outer1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.react.profiler";
+          obj[closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.react.profiler";
           obj["ui.component_name"] = closure_0;
           obj[4] = obj;
-          const startInactiveSpanResult = outer1_0(outer1_1[7]).startInactiveSpan(obj);
+          const startInactiveSpanResult = closure_1_0(closure_1_1[7]).startInactiveSpan(obj);
           if (startInactiveSpanResult) {
             startInactiveSpanResult.end(timestampInSecondsResult);
           }
-          const obj3 = outer1_0(outer1_1[7]);
+          const obj3 = closure_1_0(closure_1_1[7]);
         }
       }
     };
   }, []);
 };
 export const withProfiler = function withProfiler(displayName, name) {
-  const Profiler = displayName;
-  const dependencyMap = name;
+  Profiler = displayName;
+  dependencyMap = name;
   name = undefined;
   if (name != null) {
     name = name.name;
@@ -230,11 +228,11 @@ export const withProfiler = function withProfiler(displayName, name) {
     constructor(arg0) {
       obj = {};
       merged = Object.assign(closure_1);
-      obj.name = name;
+      obj.name = closure_2;
       obj.updateProps = displayName;
       obj = {};
       merged1 = Object.assign(displayName);
-      return outer1_7.createElement(outer1_9, obj, outer1_7.createElement(closure_0, obj));
+      return closure_1_7.createElement(closure_1_9, obj, closure_1_7.createElement(closure_0, obj));
     }
   }
   Wrapped.displayName = "profiler(" + name + ")";

@@ -1,3 +1,5 @@
 // _runtime/06309_get_ActivityIndicator.js
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-export default require("get ActivityIndicator").requireNativeComponent("RNCWebViewContainer");
+
+export default get_ActivityIndicator.requireNativeComponent("RNCWebViewContainer");

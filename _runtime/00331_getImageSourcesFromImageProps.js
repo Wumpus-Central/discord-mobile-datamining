@@ -1,12 +1,8 @@
 // _runtime/00331_getImageSourcesFromImageProps.js
-import _slicedToArray from "_slicedToArray";
+import closure_2 from "_slicedToArray" /* 32 */;
 
 
 export const getImageSourcesFromImageProps = function getImageSourcesFromImageProps(source) {
-  let referrerPolicy;
-  let src;
-  let srcSet;
-  let width;
   let tmp = width(height[1])(source.source);
   ({ referrerPolicy, src, srcSet, width } = source);
   height = source.height;
@@ -20,7 +16,7 @@ export const getImageSourcesFromImageProps = function getImageSourcesFromImagePr
   if (null != srcSet) {
     const items = [];
     const parts = srcSet.split(", ");
-    let c4 = true;
+    c4 = true;
     const item = parts.forEach((str) => {
       const tmp = obj(str.split(" "), 2);
       str = "1x";
@@ -80,7 +76,7 @@ export const getImageSourcesFromImageProps = function getImageSourcesFromImagePr
         const _Object = Object;
         tmp2 = tmp;
         if (Object.keys(obj).length > 0) {
-          const obj1 = {};
+          obj1 = {};
           const merged = Object.assign(tmp);
           obj1.headers = obj;
           const items2 = [obj1];

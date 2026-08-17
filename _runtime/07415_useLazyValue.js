@@ -1,6 +1,7 @@
 // _runtime/07415_useLazyValue.js
-import { useRef } from "noop";
+import noop from "noop" /* 19 */;
 
+const useRef = noop.useRef;
 let closure_1 = {};
 
 export default function useLazyValue(arg0) {

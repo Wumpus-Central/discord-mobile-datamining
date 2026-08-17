@@ -1,8 +1,8 @@
 // _runtime/07855_makeFifoCache.js
 arg5.makeFifoCache = function makeFifoCache(arg0) {
-  let closure_0 = arg0;
-  let closure_1 = [];
-  let closure_2 = {};
+  closure_0 = arg0;
+  closure_1 = [];
+  closure_2 = {};
   return {
     add(arg0, arg1) {
       if (arr.length >= closure_0) {
@@ -24,8 +24,8 @@ arg5.makeFifoCache = function makeFifoCache(arg0) {
       dependencyMap[arg0] = arg1;
     },
     clear() {
-      let closure_2 = {};
-      let closure_1 = [];
+      closure_2 = {};
+      closure_1 = [];
     },
     get(arg0) {
       return dependencyMap[arg0];

@@ -1,7 +1,7 @@
 // _runtime/03728_formatISO9075.js
-import _typeof from "_typeof";
-import isValid from "isValid";
-import addLeadingZeros from "addLeadingZeros";
+import _typeof from "_typeof" /* 3472 */;
+import isValid from "isValid" /* 3654 */;
+import addLeadingZeros from "addLeadingZeros" /* 3715 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!isValid) {
   obj = { default: null };
   obj[0] = isValid;
@@ -18,7 +18,7 @@ if (!isValid) {
 } else {
   tmp5 = isValid;
 }
-let closure_1 = tmp5;
+isValid = tmp5;
 if (!addLeadingZeros) {
   obj = { default: null };
   obj[0] = addLeadingZeros;
@@ -26,6 +26,7 @@ if (!addLeadingZeros) {
 } else {
   tmp7 = addLeadingZeros;
 }
+addLeadingZeros = tmp7;
 
 export default function formatISO9075(arg0, format) {
   if (arguments.length < 1) {
@@ -34,8 +35,8 @@ export default function formatISO9075(arg0, format) {
     const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
     throw typeError;
   } else {
-    const defaultResult = tmp3.default(arg0);
-    if (tmp5.default(defaultResult)) {
+    const defaultResult = _typeof.default(arg0);
+    if (isValid.default(defaultResult)) {
       format = undefined;
       if (null != format) {
         format = format.format;
@@ -86,20 +87,20 @@ export default function formatISO9075(arg0, format) {
       }
       let str13 = "";
       if ("time" !== StringResult1) {
-        const defaultResult1 = tmp7.default(defaultResult.getDate(), 2);
+        const defaultResult1 = addLeadingZeros.default(defaultResult.getDate(), 2);
         const concat3 = "".concat;
-        const combined = "".concat(tmp7.default(defaultResult.getFullYear(), 4));
+        const combined = "".concat(addLeadingZeros.default(defaultResult.getFullYear(), 4));
         const combined1 = combined.concat(str10);
-        const combined2 = combined1.concat(tmp7.default(defaultResult.getMonth() + 1, 2));
+        const combined2 = combined1.concat(addLeadingZeros.default(defaultResult.getMonth() + 1, 2));
         const combined3 = combined2.concat(str10);
         str13 = combined3.concat(defaultResult1);
-        const defaultResult2 = tmp7.default(defaultResult.getMonth() + 1, 2);
+        const defaultResult2 = addLeadingZeros.default(defaultResult.getMonth() + 1, 2);
       }
       let combined10 = str13;
       if ("date" !== StringResult1) {
-        const defaultResult3 = tmp7.default(defaultResult.getHours(), 2);
+        const defaultResult3 = addLeadingZeros.default(defaultResult.getHours(), 2);
         let str14 = " ";
-        const defaultResult4 = tmp7.default(defaultResult.getMinutes(), 2);
+        const defaultResult4 = addLeadingZeros.default(defaultResult.getMinutes(), 2);
         if ("" === str13) {
           str14 = "";
         }
@@ -110,8 +111,8 @@ export default function formatISO9075(arg0, format) {
         const combined7 = combined6.concat(str11);
         const combined8 = combined7.concat(defaultResult4);
         const combined9 = combined8.concat(str11);
-        combined10 = combined9.concat(tmp7.default(defaultResult.getSeconds(), 2));
-        const defaultResult5 = tmp7.default(defaultResult.getSeconds(), 2);
+        combined10 = combined9.concat(addLeadingZeros.default(defaultResult.getSeconds(), 2));
+        const defaultResult5 = addLeadingZeros.default(defaultResult.getSeconds(), 2);
       }
       return combined10;
     } else {

@@ -1,8 +1,10 @@
 // _runtime/00763_toString.js
-import { 00599__ } from "metro/00599__.js";
+import _mod599 from "module_599" /* 599 */;
+import _mod608 from "module_608" /* 608 */;
+
 let prototype;
-if (require("module_608")) {
-  prototype = require("module_608").prototype;
+if (_mod608) {
+  prototype = _mod608.prototype;
 }
 let toString;
 if (prototype) {
@@ -11,7 +13,7 @@ if (prototype) {
 function baseToString(str) {
   if (typeof str === "string") {
     return str;
-  } else if (00599__(str)) {
+  } else if (_mod599(str)) {
     return "" + tmp5(764)(str, baseToString);
   } else if (tmp5(638)(str)) {
     if (!toString) {

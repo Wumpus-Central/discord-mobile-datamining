@@ -1,8 +1,10 @@
 // _runtime/00930__INTERNAL_addFeatureFlagToActiveSpan.js
-import { spanToJSON } from "00819_spanToJSON.js";
+import spanToJSON from "spanToJSON" /* 819 */;
+import getClient from "getClient" /* 848 */;
 import { getClient } from "00848_getClient.js";
 import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
-const require = arg1;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = "flag.evaluation.";

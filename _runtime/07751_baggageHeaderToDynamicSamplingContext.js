@@ -1,10 +1,11 @@
 // _runtime/07751_baggageHeaderToDynamicSamplingContext.js
-import { isInstanceOf } from "07745_isInstanceOf.js";
-const require = arg1;
+import isInstanceOf from "isInstanceOf" /* 7745 */;
+
+require = arg1;
 const dependencyMap = arg6;
 let c2 = "sentry-";
 const tmp2 = /^sentry-/;
-let c3 = tmp2;
+const re3 = tmp2;
 let c4 = 8192;
 arg5.BAGGAGE_HEADER_NAME = "baggage";
 arg5.MAX_BAGGAGE_STRING_LENGTH = 8192;
@@ -18,15 +19,13 @@ arg5.baggageHeaderToDynamicSamplingContext = function baggageHeaderToDynamicSamp
     const _Array2 = Array;
     if (Array.isArray(arr)) {
       let reduced = arr.reduce((arg0, str) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         let parts = str.split(",");
         const mapped = parts.map((str) => {
           const parts = str.split("=");
           return parts.map((str) => decodeURIComponent(str.trim()));
         });
         const entries = Object.entries(mapped.reduce((arg0, arg1) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg1;
           let tmp3 = tmp;
           if (tmp) {
@@ -38,8 +37,6 @@ arg5.baggageHeaderToDynamicSamplingContext = function baggageHeaderToDynamicSamp
           return arg0;
         }, {}));
         const item = entries.forEach((arg0) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg0;
           closure_0[tmp] = tmp2;
         });
@@ -52,8 +49,6 @@ arg5.baggageHeaderToDynamicSamplingContext = function baggageHeaderToDynamicSamp
         return parts.map((str) => decodeURIComponent(str.trim()));
       });
       reduced = mapped.reduce((arg0, arg1) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg1;
         let tmp3 = tmp;
         if (tmp) {
@@ -71,8 +66,6 @@ arg5.baggageHeaderToDynamicSamplingContext = function baggageHeaderToDynamicSamp
     const _Object = Object;
     let entries = Object.entries(tmp);
     const reduced1 = entries.reduce((arg0, arg1) => {
-      let str;
-      let tmp;
       [str, tmp] = arg1;
       if (str.match(closure_3)) {
         arg0[str.slice(7)] = tmp;
@@ -92,8 +85,6 @@ arg5.dynamicSamplingContextToSentryBaggageHeader = function dynamicSamplingConte
     const _Object = Object;
     const entries = Object.entries(arg0);
     const reduced = entries.reduce((arg0, arg1) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg1;
       if (tmp2) {
         const _HermesInternal = HermesInternal;
@@ -107,8 +98,6 @@ arg5.dynamicSamplingContextToSentryBaggageHeader = function dynamicSamplingConte
       const _Object3 = Object;
       const entries1 = Object.entries(reduced);
       reduced1 = entries1.reduce((arg0, arg1, arg2) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg1;
         const combined = "" + encodeURIComponent(tmp) + "=" + encodeURIComponent(tmp2);
         let combined1 = combined;
@@ -141,15 +130,13 @@ arg5.parseBaggageHeader = function parseBaggageHeader(arr) {
     const _Array2 = Array;
     if (Array.isArray(arr)) {
       let reduced = arr.reduce((arg0, str) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         let parts = str.split(",");
         const mapped = parts.map((str) => {
           const parts = str.split("=");
           return parts.map((str) => decodeURIComponent(str.trim()));
         });
         const entries = Object.entries(mapped.reduce((arg0, arg1) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg1;
           let tmp3 = tmp;
           if (tmp) {
@@ -161,8 +148,6 @@ arg5.parseBaggageHeader = function parseBaggageHeader(arr) {
           return arg0;
         }, {}));
         const item = entries.forEach((arg0) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg0;
           closure_0[tmp] = tmp2;
         });
@@ -175,8 +160,6 @@ arg5.parseBaggageHeader = function parseBaggageHeader(arr) {
         return parts.map((str) => decodeURIComponent(str.trim()));
       });
       reduced = mapped.reduce((arg0, arg1) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg1;
         let tmp3 = tmp;
         if (tmp) {

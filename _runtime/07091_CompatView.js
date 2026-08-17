@@ -1,5 +1,5 @@
 // _runtime/07091_CompatView.js
-import get_ActivityIndicator from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 
 export const CompatView = get_ActivityIndicator.View;

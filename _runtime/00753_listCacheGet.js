@@ -1,5 +1,6 @@
 // _runtime/00753_listCacheGet.js
-import { assocIndexOf } from "00751_assocIndexOf.js";
+import assocIndexOf from "assocIndexOf" /* 751 */;
+
 
 export default function listCacheGet(arg0) {
   const __data__ = this.__data__;

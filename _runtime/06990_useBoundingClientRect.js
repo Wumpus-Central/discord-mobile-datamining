@@ -1,10 +1,11 @@
 // _runtime/06990_useBoundingClientRect.js
-import { useLayoutEffect } from "noop";
+import noop from "noop" /* 19 */;
 
+const useLayoutEffect = noop.useLayoutEffect;
 
 export const useBoundingClientRect = function useBoundingClientRect(arg0, arg1) {
   const _require = arg0;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   if (obj.isFabricInstalled()) {
     useLayoutEffect(() => {
       if (closure_0) {

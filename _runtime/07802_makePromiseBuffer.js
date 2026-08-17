@@ -2,7 +2,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 arg5.makePromiseBuffer = function makePromiseBuffer(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const items = [];
   return {
     $: items,
@@ -18,13 +18,13 @@ arg5.makePromiseBuffer = function makePromiseBuffer(arg0) {
           arr = arr.push(promise);
         }
         promise.then(() => {
-          let first = outer1_1.splice(outer1_1.indexOf(promise), 1)[0];
+          let first = closure_1_1.splice(closure_1_1.indexOf(promise), 1)[0];
           if (!first) {
             first = Promise.resolve(undefined);
           }
           return first;
         }).then(null, () => {
-          let first = outer1_1.splice(outer1_1.indexOf(promise), 1)[0];
+          let first = closure_1_1.splice(closure_1_1.indexOf(promise), 1)[0];
           if (!first) {
             first = Promise.resolve(undefined);
           }
@@ -41,9 +41,9 @@ arg5.makePromiseBuffer = function makePromiseBuffer(arg0) {
     drain(arg0) {
       const callback = arg0;
       return new callback(items[0]).SyncPromise((arg0, arg1) => {
-        let closure_0 = arg0;
-        let closure_1 = arg1;
-        const length = outer1_1.length;
+        closure_0 = arg0;
+        closure_1 = arg1;
+        const length = closure_1_1.length;
         if (length) {
           const _setTimeout = setTimeout;
           const timeout = setTimeout(() => {
@@ -70,7 +70,7 @@ arg5.makePromiseBuffer = function makePromiseBuffer(arg0) {
         } else {
           return arg0(true);
         }
-        arr = outer1_1;
+        arr = closure_1_1;
       });
     }
   };

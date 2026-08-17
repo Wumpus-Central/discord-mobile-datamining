@@ -1,7 +1,7 @@
 // _runtime/03888_setDayOfYear.js
-import toInteger from "toInteger";
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import toInteger from "toInteger" /* 3476 */;
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!toInteger) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!toInteger) {
 } else {
   tmp3 = toInteger;
 }
-let c0 = tmp3;
+toInteger = tmp3;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -18,7 +18,7 @@ if (!_typeof) {
 } else {
   tmp5 = _typeof;
 }
-let closure_1 = tmp5;
+_typeof = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,12 +26,13 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function setDayOfYear(arg0, arg1) {
-  tmp7.default(2, arguments);
-  const defaultResult1 = tmp5.default(arg0);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
   defaultResult1.setMonth(0);
-  defaultResult1.setDate(tmp3.default(arg1));
+  defaultResult1.setDate(toInteger.default(arg1));
   return defaultResult1;
 };
 export default exports.default;

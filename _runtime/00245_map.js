@@ -1,7 +1,8 @@
 // _runtime/00245_map.js
-import { frozen } from "00257_frozen.js";
+import frozen from "frozen" /* 257 */;
 import { HeadlessJsTaskSupport } from "00259_HeadlessJsTaskSupport.js";
-const require = arg1;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 let closure_5 = {};
@@ -12,10 +13,10 @@ function componentProviderInstrumentationHook(arg0) {
   return arg0();
 }
 arg5.setWrapperComponentProvider = function setWrapperComponentProvider(arg0) {
-  let closure_3 = arg0;
+  closure_3 = arg0;
 };
 arg5.setRootViewStyleProvider = function setRootViewStyleProvider(arg0) {
-  let closure_4 = arg0;
+  closure_4 = arg0;
 };
 arg5.registerConfig = function registerConfig(arr) {
   const item = arr.forEach((run) => {
@@ -26,23 +27,22 @@ arg5.registerConfig = function registerConfig(arr) {
       const appKey = run.appKey;
       component = run.component;
       closure_5[appKey] = (arg0, arg1) => {
-        const obj = { RootComponent: null, initialProps: null, rootTag: null, WrapperComponent: null, rootViewStyle: null, isLogBox: null, debugName: null, displayMode: null };
-        obj[0] = outer1_9(component, component(outer1_2[2]));
+        const obj = { RootComponent: closure_1_9(component, component(closure_1_2[2])), initialProps: null, rootTag: null, WrapperComponent: null, rootViewStyle: null, isLogBox: null, debugName: null, displayMode: null };
         ({ initialProps: obj[1], rootTag: obj[2] } = arg0);
-        let tmp = outer1_3;
-        if (outer1_3) {
-          tmp = outer1_3(arg0);
+        let tmp = closure_1_3;
+        if (closure_1_3) {
+          tmp = closure_1_3(arg0);
         }
         obj[3] = tmp;
-        let tmp2 = outer1_4;
-        if (outer1_4) {
-          tmp2 = outer1_4(arg0);
+        let tmp2 = closure_1_4;
+        if (closure_1_4) {
+          tmp2 = closure_1_4(arg0);
         }
         obj[4] = tmp2;
         obj[5] = "LogBox" === appKey;
         obj[6] = appKey;
         obj[7] = arg1;
-        appKey(outer1_2[1]).default(obj);
+        appKey(closure_1_2[1]).default(obj);
       };
       if (run.section) {
         closure_6[appKey] = tmp5[appKey];
@@ -51,26 +51,25 @@ arg5.registerConfig = function registerConfig(arr) {
   });
 };
 arg5.registerComponent = function registerComponent(Discord, arg1) {
-  let closure_0 = Discord;
-  let closure_1 = arg1;
+  closure_0 = Discord;
+  closure_1 = arg1;
   closure_5[Discord] = (arg0, arg1) => {
-    const obj = { RootComponent: null, initialProps: null, rootTag: null, WrapperComponent: null, rootViewStyle: null, isLogBox: null, debugName: null, displayMode: null };
-    obj[0] = outer1_9(component, component(outer1_2[2]));
+    const obj = { RootComponent: closure_1_9(component, component(closure_1_2[2])), initialProps: null, rootTag: null, WrapperComponent: null, rootViewStyle: null, isLogBox: null, debugName: null, displayMode: null };
     ({ initialProps: obj[1], rootTag: obj[2] } = arg0);
-    let tmp = outer1_3;
-    if (outer1_3) {
-      tmp = outer1_3(arg0);
+    let tmp = closure_1_3;
+    if (closure_1_3) {
+      tmp = closure_1_3(arg0);
     }
     obj[3] = tmp;
-    let tmp2 = outer1_4;
-    if (outer1_4) {
-      tmp2 = outer1_4(arg0);
+    let tmp2 = closure_1_4;
+    if (closure_1_4) {
+      tmp2 = closure_1_4(arg0);
     }
     obj[4] = tmp2;
     obj[5] = "LogBox" === appKey;
     obj[6] = appKey;
     obj[7] = arg1;
-    appKey(outer1_2[1]).default(obj);
+    appKey(closure_1_2[1]).default(obj);
   };
   if (arg2) {
     closure_6[Discord] = tmp[Discord];
@@ -82,26 +81,25 @@ arg5.registerRunnable = function registerRunnable(Discord, arg1) {
   return Discord;
 };
 arg5.registerSection = function registerSection(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   dependencyMap[arg0] = (arg0, arg1) => {
-    const obj = { RootComponent: null, initialProps: null, rootTag: null, WrapperComponent: null, rootViewStyle: null, isLogBox: null, debugName: null, displayMode: null };
-    obj[0] = outer1_9(component, component(outer1_2[2]));
+    const obj = { RootComponent: closure_1_9(component, component(closure_1_2[2])), initialProps: null, rootTag: null, WrapperComponent: null, rootViewStyle: null, isLogBox: null, debugName: null, displayMode: null };
     ({ initialProps: obj[1], rootTag: obj[2] } = arg0);
-    let tmp = outer1_3;
-    if (outer1_3) {
-      tmp = outer1_3(arg0);
+    let tmp = closure_1_3;
+    if (closure_1_3) {
+      tmp = closure_1_3(arg0);
     }
     obj[3] = tmp;
-    let tmp2 = outer1_4;
-    if (outer1_4) {
-      tmp2 = outer1_4(arg0);
+    let tmp2 = closure_1_4;
+    if (closure_1_4) {
+      tmp2 = closure_1_4(arg0);
     }
     obj[4] = tmp2;
     obj[5] = "LogBox" === appKey;
     obj[6] = appKey;
     obj[7] = arg1;
-    appKey(outer1_2[1]).default(obj);
+    appKey(closure_1_2[1]).default(obj);
   };
   closure_6[arg0] = dependencyMap[arg0];
 };
@@ -126,7 +124,7 @@ arg5.getRegistry = function getRegistry() {
   return obj;
 };
 arg5.setComponentProviderInstrumentationHook = function setComponentProviderInstrumentationHook(arg0) {
-  let closure_9 = arg0;
+  closure_9 = arg0;
 };
 arg5.runApplication = function runApplication(name) {
   if ("LogBox" !== name) {
@@ -190,7 +188,7 @@ arg5.startHeadlessTask = function startHeadlessTask(arg0, arg1, arg2) {
       console.error(arg0);
       let tmp2 = _default;
       if (_default) {
-        tmp2 = arg0 instanceof _default(outer1_2[6]);
+        tmp2 = arg0 instanceof _default(closure_1_2[6]);
       }
       if (tmp2) {
         _default.notifyTaskRetry(closure_0).then((arg0) => {
@@ -217,7 +215,7 @@ arg5.cancelHeadlessTask = function cancelHeadlessTask(arg0, arg1) {
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("No task canceller registered for key '" + arg1 + "'");
+    error = new Error("No task canceller registered for key '" + arg1 + "'");
     throw error;
   }
 };

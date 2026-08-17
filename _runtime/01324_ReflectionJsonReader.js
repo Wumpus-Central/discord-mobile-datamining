@@ -1,12 +1,12 @@
 // _runtime/01324_ReflectionJsonReader.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const ReflectionJsonReader = require;
 class ReflectionJsonReader {
   constructor(arg0) {
-    tmp = outer1_3(this, ReflectionJsonReader);
+    tmp = closure_3(this, ReflectionJsonReader);
     this.info = global;
     return;
   }
@@ -48,7 +48,7 @@ let items = [
         const self = this;
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const error = new Error("Cannot parse JSON " + str + " for " + this.info.typeName + "#" + arg1);
+        error = new Error("Cannot parse JSON " + str + " for " + this.info.typeName + "#" + arg1);
         throw error;
       }
     }
@@ -56,15 +56,13 @@ let items = [
   {
     key: "read",
     value: function read(arg0, arg1, ignoreUnknownFields) {
-      let tmp7;
-      let tmp9;
       const self = this;
       let prepareResult = this.prepare();
       const items = [];
       const entries = Object.entries(arg0);
       while (tmp3 !== undefined) {
-        let tmp5 = _slicedToArray;
-        let tmp6 = _slicedToArray(tmp4, 2);
+        let tmp5 = callback;
+        let tmp6 = callback(tmp4, 2);
         [tmp7, tmp9] = tmp6;
         let tmp10 = self.fMap[tmp7];
         let obj = tmp10;
@@ -116,8 +114,8 @@ let items = [
               prepareResult = Object.entries(tmp9);
               let tmp62 = prepareResult;
               for (const item10165 of prepareResult) {
-                let tmp63 = _slicedToArray;
-                let tmp64 = _slicedToArray(item10165, 2);
+                let tmp63 = callback;
+                let tmp64 = callback(item10165, 2);
                 let tmp65 = tmp64[1];
                 let tmp66 = tmp65;
                 let tmp67 = tmp10;
@@ -281,7 +279,7 @@ let items = [
           let str2 = "Found unknown field while reading ";
           let tmp12 = new.target;
           let tmp13 = new.target;
-          let error = new Error("Found unknown field while reading " + self.info.typeName + " from JSON format. JSON key: " + tmp8);
+          error = new Error("Found unknown field while reading " + self.info.typeName + " from JSON format. JSON key: " + tmp8);
           let tmp15 = error;
           throw error;
         }

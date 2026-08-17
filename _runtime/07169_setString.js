@@ -1,5 +1,5 @@
 // _runtime/07169_setString.js
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 function setString(arg0) {
   const _require = arg0;
@@ -10,19 +10,17 @@ function setString(arg0) {
 const set = new Set();
 
 export const useClipboard = () => {
-  let require;
-  let tmp2;
-  const state = noop.useState("");
+  const state = React.useState("");
   [tmp2, require] = state;
-  const effect = noop.useEffect(() => {
-    const Clipboard = outer1_0(outer1_1[1]).Clipboard;
+  const effect = React.useEffect(() => {
+    const Clipboard = closure_1_0(closure_1_1[1]).Clipboard;
     const string = Clipboard.getString();
     string.then(closure_0);
   }, []);
-  const effect1 = noop.useEffect(() => {
-    outer1_3.add(closure_0);
+  const effect1 = React.useEffect(() => {
+    closure_1_3.add(closure_0);
     return () => {
-      outer1_3.delete(closure_0);
+      closure_1_3.delete(closure_0);
     };
   }, []);
   const items = [tmp2, setString];

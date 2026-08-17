@@ -1,13 +1,13 @@
 // _runtime/00453_getColorScheme.js
 import { Appearance } from "00454_Appearance.js";
-let require = arg1;
+const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 arg5.getColorScheme = function getColorScheme() {
   if (null == obj) {
     const tmp11 = new obj(89)();
-    const require = tmp11;
-    const _default = Appearance.default;
+    const _require = tmp11;
+    const _default = _Appearance.default;
     if (null == _default) {
       obj = { NativeAppearance: null, appearance: null, eventEmitter: null };
       obj[2] = tmp11;
@@ -17,9 +17,9 @@ arg5.getColorScheme = function getColorScheme() {
       obj[2] = tmp11;
       const obj2 = new tmp7(209)(_default);
       obj2.addListener("appearanceChanged", (colorScheme) => {
-        const obj = { colorScheme: colorScheme.colorScheme };
+        obj = { colorScheme: colorScheme.colorScheme };
         obj.appearance = obj;
-        tmp10.emit("change", obj.appearance);
+        closure_0.emit("change", obj.appearance);
       });
     }
     tmp7 = obj;
@@ -39,8 +39,8 @@ arg5.getColorScheme = function getColorScheme() {
 arg5.setColorScheme = function setColorScheme(arg0) {
   if (null == obj) {
     const tmp14 = new obj(89)();
-    const require = tmp14;
-    const _default = Appearance.default;
+    const _require = tmp14;
+    const _default = _Appearance.default;
     if (null == _default) {
       obj = { NativeAppearance: null, appearance: null, eventEmitter: null };
       obj[2] = tmp14;
@@ -50,9 +50,9 @@ arg5.setColorScheme = function setColorScheme(arg0) {
       obj[2] = tmp14;
       const obj2 = new tmp10(209)(_default);
       obj2.addListener("appearanceChanged", (colorScheme) => {
-        const obj = { colorScheme: colorScheme.colorScheme };
+        obj = { colorScheme: colorScheme.colorScheme };
         obj.appearance = obj;
-        tmp10.emit("change", obj.appearance);
+        closure_0.emit("change", obj.appearance);
       });
     }
     tmp10 = obj;
@@ -76,8 +76,8 @@ arg5.setColorScheme = function setColorScheme(arg0) {
 arg5.addChangeListener = function addChangeListener(onChange) {
   if (null == obj) {
     const tmp10 = new obj(89)();
-    const require = tmp10;
-    const _default = Appearance.default;
+    const _require = tmp10;
+    const _default = _Appearance.default;
     if (null == _default) {
       obj = { NativeAppearance: null, appearance: null, eventEmitter: null };
       obj[2] = tmp10;
@@ -87,9 +87,9 @@ arg5.addChangeListener = function addChangeListener(onChange) {
       obj[2] = tmp10;
       const obj2 = new tmp6(209)(_default);
       obj2.addListener("appearanceChanged", (colorScheme) => {
-        const obj = { colorScheme: colorScheme.colorScheme };
+        obj = { colorScheme: colorScheme.colorScheme };
         obj.appearance = obj;
-        tmp10.emit("change", obj.appearance);
+        closure_0.emit("change", obj.appearance);
       });
     }
     tmp6 = obj;

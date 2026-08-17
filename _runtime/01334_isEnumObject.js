@@ -1,5 +1,5 @@
 // _runtime/01334_isEnumObject.js
-import _slicedToArray from "_slicedToArray";
+import closure_0 from "_slicedToArray" /* 32 */;
 
 function isEnumObject(obj) {
   if (typeof obj === "object") {
@@ -69,16 +69,14 @@ function isEnumObject(obj) {
   return false;
 }
 function listEnumValues(arg0) {
-  let tmp13;
-  let tmp14;
   if (isEnumObject(arg0)) {
     const items = [];
     const _Object = Object;
     const entries = Object.entries(arg0);
     const tmp7 = entries[Symbol.iterator]();
     while (tmp7 !== undefined) {
-      let tmp11 = _slicedToArray;
-      let tmp12 = _slicedToArray(tmp9, 2);
+      let tmp11 = callback;
+      let tmp12 = callback(tmp9, 2);
       [tmp13, tmp14] = tmp12;
       if (typeof tmp14 === "number") {
         let obj = { name: null, number: null };
@@ -93,7 +91,7 @@ function listEnumValues(arg0) {
     return items;
   } else {
     const _Error = Error;
-    const error = new Error("not a typescript enum object");
+    error = new Error("not a typescript enum object");
     throw error;
   }
 }

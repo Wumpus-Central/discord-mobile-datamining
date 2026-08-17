@@ -1,12 +1,13 @@
 // _runtime/01725_BaseAnimationBuilder.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const BaseAnimationBuilder = arg1;
 let closure_3 = { code: "function pnpm_BaseAnimationBuilderTs1(delay,animation){const{withDelay,reduceMotion}=this.__closure;return withDelay(delay,animation,reduceMotion);}" };
 let closure_4 = { code: "function pnpm_BaseAnimationBuilderTs2(_,animation){const{getReduceMotionFromConfig,reduceMotion}=this.__closure;animation.reduceMotion=getReduceMotionFromConfig(reduceMotion);return animation;}" };
 class BaseAnimationBuilder {
   constructor() {
-    tmp = outer1_2(this, BaseAnimationBuilder);
+    tmp = closure_2(this, BaseAnimationBuilder);
     this.reduceMotionV = require("isWorkletFunction").ReduceMotion.System;
     this.randomizeDelay = false;
     this.build = () => {
@@ -97,7 +98,7 @@ const items = [
       const reduceMotion = self.getReduceMotion();
       if (tmp) {
         const fn2 = function n(arg0, arg1) {
-          return reduceMotion(outer1_1[4]).withDelay(arg0, arg1, reduceMotion);
+          return reduceMotion(closure_1_1[4]).withDelay(arg0, arg1, reduceMotion);
         };
         let obj = { withDelay: null, reduceMotion: null };
         obj[0] = reduceMotion(1726).withDelay;
@@ -108,7 +109,7 @@ const items = [
         let fn = fn2;
       } else {
         fn = function t(arg0, arg1) {
-          arg1.reduceMotion = reduceMotion(outer1_1[5]).getReduceMotionFromConfig(reduceMotion);
+          arg1.reduceMotion = reduceMotion(closure_1_1[5]).getReduceMotionFromConfig(reduceMotion);
           return arg1;
         };
         obj = { getReduceMotionFromConfig: null, reduceMotion: null };
@@ -174,4 +175,4 @@ const items1 = [
   }
 ];
 
-export const BaseAnimationBuilder = require("_createClass")(BaseAnimationBuilder, items, items1);
+export const BaseAnimationBuilder = _createClassDefault(BaseAnimationBuilder, items, items1);

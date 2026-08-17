@@ -1,15 +1,16 @@
 // _runtime/00551_callBindBasic.js
-import { bind } from "00554_bind.js";
-import { 00541__ } from "metro/00541__.js";
-import { 00552__ } from "metro/00552__.js";
-import { 00556__ } from "metro/00556__.js";
+import _mod541 from "module_541" /* 541 */;
+import _mod552 from "module_552" /* 552 */;
+import bind from "bind" /* 554 */;
+import _mod556 from "module_556" /* 556 */;
+
 
 export default function callBindBasic(items) {
   if (items.length >= 1) {
     if (typeof items[0] === "function") {
-      const tmp4 = 00552__;
-      return tmp4(bind, 00556__, items);
+      const tmp4 = _mod552;
+      return tmp4(bind, _mod556, items);
     }
   }
-  throw new 00541__("a function is required");
+  throw new _mod541("a function is required");
 };

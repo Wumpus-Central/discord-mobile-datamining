@@ -1,10 +1,9 @@
 // _runtime/01847_NOOP.js
-import noop from "noop";
-import { Animated } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noop from "noop" /* 19 */;
 
-let c0;
-let createContext;
 ({ useContext: c0, createContext } = noop);
+const Animated = get_ActivityIndicator.Animated;
 class NOOP {
   constructor() {
     return;

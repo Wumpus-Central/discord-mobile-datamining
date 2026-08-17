@@ -1,6 +1,8 @@
 // _runtime/metro/13686__.js
-import { all } from "../13698_all.js";
-let closure_3 = require("withoutSetter")("toPrimitive");
+import withoutSetter from "withoutSetter" /* 13687 */;
+import all from "all" /* 13698 */;
+
+let closure_3 = withoutSetter("toPrimitive");
 
 export default (arg0, arg1) => {
   if (all(arg0)) {

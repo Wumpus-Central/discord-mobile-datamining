@@ -4,8 +4,8 @@ let c1 = 1;
 let set = new Set();
 arg5.setImmediate = function setImmediate(closure_0) {
   const _global = closure_0;
-  let closure_1 = [...arguments].slice();
-  let set;
+  closure_1 = [...arguments].slice();
+  set = undefined;
   if (arguments.length < 1) {
     const _TypeError2 = TypeError;
     const typeError = new TypeError("setImmediate must be called with at least one argument (a function to call)");
@@ -21,8 +21,8 @@ arg5.setImmediate = function setImmediate(closure_0) {
       set.delete(tmp15);
     }
     _global.queueMicrotask(() => {
-      if (_undefined.has(_undefined)) {
-        _undefined.delete(_undefined);
+      if (set.has(set)) {
+        set.delete(set);
       } else {
         callback.apply(undefined, closure_1);
       }
@@ -30,6 +30,6 @@ arg5.setImmediate = function setImmediate(closure_0) {
     return +closure_1;
   }
 };
-arg5.clearImmediate = function clearImmediate(_updateImmediate) {
-  set.add(_updateImmediate);
+arg5.clearImmediate = function clearImmediate(closure_11) {
+  set.add(closure_11);
 };

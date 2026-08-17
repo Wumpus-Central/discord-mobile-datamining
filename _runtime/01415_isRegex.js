@@ -1,7 +1,7 @@
 // _runtime/01415_isRegex.js
-import callBoundIntrinsic from "callBoundIntrinsic";
-import { bind } from "00573_bind.js";
-import { 00542__ } from "metro/00542__.js";
+import _mod542 from "module_542" /* 542 */;
+import bind from "bind" /* 573 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
 
 if (tmp) {
   let closure_2 = callBoundIntrinsic("RegExp.prototype.exec");
@@ -20,7 +20,7 @@ if (tmp) {
   function isRegex(obj) {
     if (obj) {
       if (typeof obj === "object") {
-        const tmp8 = 00542__(obj, "lastIndex");
+        const tmp8 = _mod542(obj, "lastIndex");
         if (tmp8) {
           if (bind(tmp8, "value")) {
             try {

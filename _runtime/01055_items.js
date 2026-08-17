@@ -22,22 +22,22 @@ arg5.onINP = (arg0) => {
         const obj2 = callback(obj[3]);
         let tmp = callback;
         const tmp2 = obj;
-        let closure_2 = callback(obj[4]).initUnique(metric, callback(obj[5]).InteractionManager);
+        closure_2 = callback(obj[4]).initUnique(metric, callback(obj[5]).InteractionManager);
         function handleEntries(arg0) {
           const callback = arg0;
           callback(metric[6]).whenIdleOrHidden(() => {
             for (const item10005 of closure_0) {
-              let tmp = outer1_2;
-              let _processEntryResult = outer1_2._processEntry(item10005);
+              let tmp = closure_1_2;
+              let _processEntryResult = closure_1_2._processEntry(item10005);
               continue;
             }
-            const result = outer1_2._estimateP98LongestInteraction();
+            const result = closure_1_2._estimateP98LongestInteraction();
             let tmp4 = result;
             if (result) {
-              tmp4 = result._latency !== outer1_1.value;
+              tmp4 = result._latency !== closure_1_1.value;
             }
             if (tmp4) {
-              ({ _latency: outer1_1.value, entries: outer1_1.entries } = result);
+              ({ _latency: closure_1_1.value, entries: closure_1_1.entries } = result);
               takeRecordsResult();
             }
           });
@@ -49,7 +49,7 @@ arg5.onINP = (arg0) => {
           num = 40;
         }
         const observeResult = callback(obj[7]).observe("event", handleEntries, { durationThreshold: num });
-        let closure_4 = observeResult;
+        closure_4 = observeResult;
         const obj4 = callback(obj[7]);
         callback = tmp(tmp2[8]).bindReporter(callback, metric, closure_2, tmp5.reportAllChanges);
         if (observeResult) {
@@ -62,17 +62,17 @@ arg5.onINP = (arg0) => {
             const takeRecordsResult = observeResult.takeRecords();
             callback(metric[6]).whenIdleOrHidden(() => {
               for (const item10005 of closure_0) {
-                let tmp = outer1_2;
-                let _processEntryResult = outer1_2._processEntry(item10005);
+                let tmp = closure_1_2;
+                let _processEntryResult = closure_1_2._processEntry(item10005);
                 continue;
               }
-              const result = outer1_2._estimateP98LongestInteraction();
+              const result = closure_1_2._estimateP98LongestInteraction();
               let tmp4 = result;
               if (result) {
-                tmp4 = result._latency !== outer1_1.value;
+                tmp4 = result._latency !== closure_1_1.value;
               }
               if (tmp4) {
-                ({ _latency: outer1_1.value, entries: outer1_1.entries } = result);
+                ({ _latency: closure_1_1.value, entries: closure_1_1.entries } = result);
                 takeRecordsResult();
               }
             });

@@ -1,7 +1,7 @@
 // _runtime/03659_differenceInCalendarQuarters.js
-import getQuarter from "getQuarter";
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import getQuarter from "getQuarter" /* 3660 */;
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!getQuarter) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!getQuarter) {
 } else {
   tmp3 = getQuarter;
 }
-let c0 = tmp3;
+getQuarter = tmp3;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -18,7 +18,7 @@ if (!_typeof) {
 } else {
   tmp5 = _typeof;
 }
-let closure_1 = tmp5;
+_typeof = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,13 +26,14 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function differenceInCalendarQuarters(arg0, arg1) {
-  tmp7.default(2, arguments);
-  const defaultResult1 = tmp5.default(arg0);
-  const defaultResult2 = tmp5.default(arg1);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = _typeof.default(arg1);
   const fullYear = defaultResult1.getFullYear();
   const diff = fullYear - defaultResult2.getFullYear();
-  return 4 * diff + (tmp3.default(defaultResult1) - tmp3.default(defaultResult2));
+  return 4 * diff + (getQuarter.default(defaultResult1) - getQuarter.default(defaultResult2));
 };
 export default exports.default;

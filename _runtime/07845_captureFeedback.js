@@ -1,16 +1,10 @@
 // _runtime/07845_captureFeedback.js
-import { addNonEnumerableProperty } from "07744_addNonEnumerableProperty.js";
-import { getClient } from "07765_getClient.js";
-const require = arg1;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
+import getClient from "getClient" /* 7765 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.captureFeedback = function captureFeedback(arg0) {
-  let associatedEventId;
-  let email;
-  let message;
-  let name;
-  let source;
-  let tags;
-  let url;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -21,9 +15,8 @@ arg5.captureFeedback = function captureFeedback(arg0) {
     const obj3 = getClient;
   }
   obj = { contexts: null, type: "feedback", level: "info", tags: null };
-  obj = { feedback: null };
+  obj = { feedback: addNonEnumerableProperty.dropUndefinedKeys({ contact_email: email, name, message, url, source, associated_event_id: associatedEventId }) };
   ({ message, name, email, url, source, associatedEventId, tags } = arg0);
-  obj[0] = addNonEnumerableProperty.dropUndefinedKeys({ contact_email: email, name, message, url, source, associated_event_id: associatedEventId });
   obj[0] = obj;
   obj[3] = tags;
   let client = currentScope;

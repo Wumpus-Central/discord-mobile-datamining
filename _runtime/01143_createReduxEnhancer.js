@@ -16,14 +16,14 @@ let obj = {
   }
 };
 arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
-  let obj = {};
+  obj = {};
   const merged = Object.assign(obj);
   const merged1 = Object.assign(arg0);
   return (arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return (arg0, arg1) => {
       if (lib.attachReduxState) {
-        obj = obj(outer2_1[0]);
+        obj = obj(closure_2_1[0]);
         const globalScope = obj.getGlobalScope();
         globalScope.addEventProcessor((type, attachments) => {
           try {
@@ -37,7 +37,7 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
                 attachments = [];
               }
               const items = [];
-              const obj = { filename: "redux_state.json", data: null };
+              obj = { filename: "redux_state.json", data: null };
               const _JSON = JSON;
               obj[1] = JSON.stringify(type.contexts.state.state.value);
               items[HermesBuiltin.arraySpread(attachments, 0)] = obj;
@@ -52,7 +52,7 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
       lib = arg0;
       const tmp4 = lib((arg0, arg1) => {
         const tmp = lib(arg0, arg1);
-        let obj = lib(outer2_1[0]);
+        obj = lib(closure_2_1[0]);
         const currentScope = obj.getCurrentScope();
         const actionTransformerResult = lib.actionTransformer(arg1);
         if (null != actionTransformerResult) {
@@ -77,7 +77,7 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
             num = 3;
           }
           obj = { state: null };
-          const obj1 = { type: "redux", value: null };
+          obj1 = { type: "redux", value: null };
           obj1[1] = stateTransformerResult;
           obj[0] = obj1;
           const result = tmp2(tmp3[0]).addNonEnumerableProperty(obj, "__sentry_override_normalization_depth__", 3 + num);
@@ -94,11 +94,11 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
       }, arg1);
       obj = {
         apply(apply) {
-          let closure_0 = arg2[0];
+          closure_0 = arg2[0];
           const items = [
             (arg0, arg1) => {
               const tmp = lib(arg0, arg1);
-              let obj = lib(outer2_1[0]);
+              obj = lib(closure_2_1[0]);
               const currentScope = obj.getCurrentScope();
               const actionTransformerResult = lib.actionTransformer(arg1);
               if (null != actionTransformerResult) {
@@ -123,7 +123,7 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
                   num = 3;
                 }
                 obj = { state: null };
-                const obj1 = { type: "redux", value: null };
+                obj1 = { type: "redux", value: null };
                 obj1[1] = stateTransformerResult;
                 obj[0] = obj1;
                 const result = tmp2(tmp3[0]).addNonEnumerableProperty(obj, "__sentry_override_normalization_depth__", 3 + num);

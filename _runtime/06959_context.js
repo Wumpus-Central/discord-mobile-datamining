@@ -1,5 +1,7 @@
 // _runtime/06959_context.js
-const context = require("noop").createContext(null);
+import noop from "noop" /* 19 */;
+
+const context = noop.createContext(null);
 
 export const BottomSheetContext = context;
 export const BottomSheetProvider = context.Provider;

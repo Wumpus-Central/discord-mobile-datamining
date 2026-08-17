@@ -1,6 +1,7 @@
 // _runtime/04623_baseFlatten.js
-import { arrayPush } from "00794_arrayPush.js";
-import { isConcatSpreadable } from "04624_isConcatSpreadable.js";
+import arrayPush from "arrayPush" /* 794 */;
+import isConcatSpreadable from "isConcatSpreadable" /* 4624 */;
+
 function baseFlatten(arg0, arg1, arg2, arg3, arg4) {
   let tmp = arg2;
   if (!arg2) {

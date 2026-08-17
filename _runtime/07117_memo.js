@@ -1,29 +1,17 @@
 // _runtime/07117_memo.js
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import "noop";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let memo;
-let metroImportAll;
 const require = arg1;
-({ useCallback: c4, useEffect: c5, useMemo: closure_6, useRef: error, useState: metroImportAll, memo } = noop);
+({ useCallback: c4, useEffect: c5, useMemo: closure_6, useRef: error, useState: closure_8, memo } = noop);
+noopDefault;
 let closure_10 = { code: "function pnpm_BottomSheetBackdropTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}" };
 let closure_11 = { code: "function pnpm_BottomSheetBackdropTsx2(){const{interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity,Extrapolation}=this.__closure;return{opacity:interpolate(animatedIndex.value,[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity],Extrapolation.CLAMP)};}" };
 let closure_12 = { code: "function pnpm_BottomSheetBackdropTsx3(){const{animatedIndex,disappearsOnIndex}=this.__closure;return animatedIndex.value<=disappearsOnIndex;}" };
 let closure_13 = { code: "function pnpm_BottomSheetBackdropTsx4(shouldDisableTouchability,previous){const{runOnJS,handleContainerTouchability}=this.__closure;if(shouldDisableTouchability===previous){return;}runOnJS(handleContainerTouchability)(shouldDisableTouchability);}" };
 const memoResult = memo((animatedIndex) => {
-  let ViewComponent;
-  let appearsOnIndex;
-  let children;
-  let disappearsOnIndex;
-  let enableTouchThrough;
-  let opacity;
-  let pressBehavior;
   animatedIndex = animatedIndex.animatedIndex;
   ({ opacity, appearsOnIndex, disappearsOnIndex, enableTouchThrough, pressBehavior } = animatedIndex);
   if (pressBehavior === undefined) {
@@ -57,9 +45,9 @@ const memoResult = memo((animatedIndex) => {
   opacity = undefined;
   appearsOnIndex = undefined;
   disappearsOnIndex = undefined;
-  let closure_10;
-  let c11;
-  let c12;
+  closure_10 = undefined;
+  closure_11 = undefined;
+  closure_12 = undefined;
   let animatedStyle;
   let obj = animatedIndex(onPress[5]);
   const bottomSheet = obj.useBottomSheet();
@@ -97,7 +85,7 @@ const memoResult = memo((animatedIndex) => {
       snapToIndex(tmp3);
     }
   }, items);
-  c11 = tmp18;
+  closure_11 = tmp18;
   const tmp19 = snapToIndex((arg0) => {
     if (ref.current) {
       let str = "auto";
@@ -108,7 +96,7 @@ const memoResult = memo((animatedIndex) => {
       const tmp2 = closure_10;
     }
   }, []);
-  c12 = tmp19;
+  closure_12 = tmp19;
   let items1 = [tmp18];
   let tmp13Result = tmp13(tmp14[4]);
   class P {
@@ -116,7 +104,7 @@ const memoResult = memo((animatedIndex) => {
       obj = { opacity: null };
       obj2 = animatedIndex(onPress[4]);
       items = [-1];
-      items[1] = disappearsOnIndex;
+      items[1] = closure_9;
       items[2] = DEFAULT_APPEARS_ON_INDEX;
       items1 = [0, 0];
       items1[2] = DEFAULT_OPACITY;
@@ -127,7 +115,7 @@ const memoResult = memo((animatedIndex) => {
   obj = { interpolate: tmp13(tmp14[4]).interpolate, animatedIndex, disappearsOnIndex, appearsOnIndex, opacity, Extrapolation: tmp13(tmp14[4]).Extrapolation };
   P.__closure = obj;
   P.__workletHash = 7085425846204;
-  P.__initData = c11;
+  P.__initData = closure_11;
   const items2 = [animatedIndex, appearsOnIndex, disappearsOnIndex, opacity];
   animatedStyle = tmp13Result.useAnimatedStyle(P, items2);
   const items3 = [style, animatedStyle];
@@ -135,10 +123,10 @@ const memoResult = memo((animatedIndex) => {
   const tmp20 = callback(() => {
     const Gesture = animatedIndex(onPress[6]).Gesture;
     const fn = function n() {
-      outer1_0(outer1_2[4]).runOnJS(closure_11)();
+      closure_1_0(closure_1_2[4]).runOnJS(closure_11)();
     };
     const TapResult = Gesture.Tap();
-    fn.__closure = { runOnJS: animatedIndex(onPress[4]).runOnJS, handleOnPress: c11 };
+    fn.__closure = { runOnJS: animatedIndex(onPress[4]).runOnJS, handleOnPress: closure_11 };
     fn.__workletHash = 10704059633145;
     fn.__initData = closure_10;
     return TapResult.onEnd(fn);
@@ -146,15 +134,15 @@ const memoResult = memo((animatedIndex) => {
   tmp13Result = tmp13(tmp14[4]);
   class H {
     constructor() {
-      return animatedIndex.value <= disappearsOnIndex;
+      return animatedIndex.value <= closure_9;
     }
   }
   H.__closure = { animatedIndex, disappearsOnIndex };
   H.__workletHash = 8948110613973;
-  H.__initData = c12;
+  H.__initData = closure_12;
   let fn = function k(arg0, arg1) {
     if (arg0 !== arg1) {
-      animatedIndex(onPress[4]).runOnJS(c12)(arg0);
+      animatedIndex(onPress[4]).runOnJS(closure_12)(arg0);
       const obj = animatedIndex(onPress[4]);
     }
   };
@@ -170,21 +158,18 @@ const memoResult = memo((animatedIndex) => {
       closure_6.current = false;
     };
   }, []);
-  const obj1 = {
+  obj1 = {
     style: callback(() => {
       const items = [animatedIndex(onPress[7]).styles.backdrop, style, animatedStyle];
       return items;
     }, items3),
     pointerEvents: tmp17[0],
-    accessible: null,
-    accessibilityRole: null,
-    accessibilityLabel: null,
+    accessible: DEFAULT_ACCESSIBLE,
+    accessibilityRole: DEFAULT_ACCESSIBILITY_ROLE,
+    accessibilityLabel: DEFAULT_ACCESSIBILITY_LABEL,
     accessibilityHint: null,
     children: null
   };
-  obj1[2] = DEFAULT_ACCESSIBLE;
-  obj1[3] = DEFAULT_ACCESSIBILITY_ROLE;
-  obj1[4] = DEFAULT_ACCESSIBILITY_LABEL;
   if (!DEFAULT_ACCESSIBILITY_HINT) {
     let str2 = "move";
     if (typeof pressBehavior === "string") {

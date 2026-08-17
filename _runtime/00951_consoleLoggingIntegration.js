@@ -1,9 +1,9 @@
 // _runtime/00951_consoleLoggingIntegration.js
-import setupIntegration from "setupIntegration";
-import { 00839__ } from "metro/00839__.js";
+import _mod839 from "module_839" /* 839 */;
+import setupIntegration from "setupIntegration" /* 887 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-let closure_2 = { [00839__.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.log.console" };
+let closure_2 = { [_mod839.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.log.console" };
 
 export const consoleLoggingIntegration = setupIntegration.defineIntegration(() => {
   let obj = arg0;
@@ -18,7 +18,7 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
   obj = {
     name: "ConsoleLogs",
     setup(getOptions) {
-      let closure_0 = getOptions;
+      closure_0 = getOptions;
       const options = getOptions.getOptions();
       const normalizeDepth = options.normalizeDepth;
       let num = 3;
@@ -32,10 +32,8 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
       }
       if (options.enableLogs) {
         const result = tmp2(tmp3[3]).addConsoleInstrumentationHandler((arg0) => {
-          let args;
-          let level;
           ({ args, level } = arg0);
-          let obj = CONSOLE_LEVELS(outer2_1[4]);
+          let obj = CONSOLE_LEVELS(closure_2_1[4]);
           if (obj.getClient() === getOptions) {
             if (getOptions.includes(level)) {
               const first = args[0];
@@ -47,7 +45,7 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
                   tmp9 = !tmpResult.hasConsoleSubstitutions(args[0]);
                 }
                 obj = {};
-                const merged = Object.assign(outer2_2);
+                const merged = Object.assign(closure_2_2);
                 if (tmp9) {
                   tmpResult = tmp(tmp2[5]);
                   let consoleTemplateAttributes = tmpResult.createConsoleTemplateAttributes(first, substr);
@@ -78,9 +76,9 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
                   str2 = "Assertion failed: " + tmp(tmp2[5]).formatConsoleArgs(substr, num, num2);
                   const tmpResult3 = tmp(tmp2[5]);
                 }
-                const obj1 = { level: "error", message: null, attributes: null };
+                obj1 = { level: "error", message: null, attributes: null };
                 obj1[1] = str2;
-                obj1[2] = outer2_2;
+                obj1[2] = closure_2_2;
                 tmp(tmp2[6])._INTERNAL_captureLog(obj1);
                 const tmpResult4 = tmp(tmp2[6]);
               }
@@ -89,7 +87,7 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
         });
         const tmp2Result = tmp2(tmp3[3]);
       } else if (tmp2(tmp3[2]).DEBUG_BUILD) {
-        const debug = CONSOLE_LEVELS(outer1_1[1]).debug;
+        const debug = CONSOLE_LEVELS(closure_1_1[1]).debug;
         debug.warn("`enableLogs` is not enabled, ConsoleLogs integration disabled");
       }
     }

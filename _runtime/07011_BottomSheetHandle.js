@@ -1,14 +1,11 @@
 // _runtime/07011_BottomSheetHandle.js
-import noop from "noop";
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
 const useMemo = noop.useMemo;
+noopDefault;
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
@@ -34,7 +31,7 @@ const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
   const items1 = [indicatorStyle];
   const obj = {
     style: useMemo(() => {
-      const items = [style(indicatorStyle[4]).styles.container, outer1_3.flatten(style)];
+      const items = [style(indicatorStyle[4]).styles.container, closure_1_3.flatten(style)];
       return items;
     }, items),
     accessible: null,
@@ -45,7 +42,7 @@ const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
     children: null
   };
   const tmp9 = useMemo(() => {
-    const items = [style(indicatorStyle[4]).styles.container, outer1_3.flatten(style)];
+    const items = [style(indicatorStyle[4]).styles.container, closure_1_3.flatten(style)];
     return items;
   }, items);
   obj[1] = DEFAULT_ACCESSIBLE;
@@ -55,7 +52,7 @@ const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
   const items2 = [
     callback(closure_4, {
       style: useMemo(() => {
-        const items = [style(indicatorStyle[4]).styles.indicator, outer1_3.flatten(indicatorStyle)];
+        const items = [style(indicatorStyle[4]).styles.indicator, closure_1_3.flatten(indicatorStyle)];
         return items;
       }, items1)
     }),

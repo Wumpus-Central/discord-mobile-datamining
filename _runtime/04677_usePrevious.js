@@ -1,8 +1,6 @@
 // _runtime/04677_usePrevious.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 
-let c0;
-let closure_1;
 ({ useEffect: c0, useRef: closure_1 } = noop);
 
 export const usePrevious = function usePrevious(arg0) {

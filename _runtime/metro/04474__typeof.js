@@ -53,7 +53,7 @@ function injectScript(advancedFraudSignals) {
     return element;
   } else {
     const _Error = Error;
-    const error = new Error("Expected document.body not to be null. Stripe.js requires a <body> element.");
+    error = new Error("Expected document.body not to be null. Stripe.js requires a <body> element.");
     throw error;
   }
 }
@@ -69,16 +69,17 @@ function validateLoadParams(arg0) {
 let c15 = false;
 function loadStripe(KEY) {
   const length = arguments.length;
-  let array = new Array(length);
+  const array = new Array(length);
+  closure_0 = array;
   for (let num = 0; num < length; num = num + 1) {
     array[num] = arguments[num];
   }
-  let c15 = true;
-  let closure_1 = Date.now();
+  c15 = true;
+  closure_1 = Date.now();
   if (typeof loadScript !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  array = closure_1;
+  closure_0 = closure_1;
   let catchPromise = promise;
   if (null === promise) {
     promise = new Promise((arg0, arg1) => {
@@ -88,7 +89,7 @@ function loadStripe(KEY) {
           let _window = window;
           if (tmp4) {
             const _console = console;
-            console.warn(outer1_7);
+            console.warn(closure_1_7);
           }
           const _window2 = window;
           if (window.Stripe) {
@@ -126,40 +127,40 @@ function loadStripe(KEY) {
               })();
               let obj = tmp8;
               if (tmp8) {
-                if (array) {
+                if (closure_0) {
                   const _console2 = console;
-                  console.warn(outer1_7);
+                  console.warn(closure_1_7);
                 }
-                const outer1_12 = (function onLoad(arg0, arg1) {
-                  let closure_0 = arg0;
-                  let closure_1 = arg1;
+                closure_12 = (function onLoad(arg0, arg1) {
+                  closure_0 = arg0;
+                  closure_1 = arg1;
                   return () => {
                     if (window.Stripe) {
                       const _window = window;
                       callback(window.Stripe);
                     } else {
                       const _Error = Error;
-                      const error = new Error("Stripe.js not available");
+                      error = new Error("Stripe.js not available");
                       callback2(error);
                     }
                   };
                 })(arg0, arg1);
-                const outer1_11 = (function onError(arg0) {
-                  let closure_0 = arg0;
+                closure_11 = (function onError(arg0) {
+                  closure_0 = arg0;
                   return (cause) => {
-                    const error = new Error("Failed to load Stripe.js", { cause });
+                    error = new Error("Failed to load Stripe.js", { cause });
                     callback(error);
                   };
                 })(arg1);
-                const listener = obj.addEventListener("load", outer1_12);
-                const listener1 = obj.addEventListener("error", outer1_11);
+                const listener = obj.addEventListener("load", closure_12);
+                const listener1 = obj.addEventListener("error", closure_11);
               }
               if (obj) {
                 if (obj) {
-                  if (null !== outer1_12) {
-                    if (null !== outer1_11) {
-                      const removed = obj.removeEventListener("load", outer1_12);
-                      const removed1 = obj.removeEventListener("error", outer1_11);
+                  if (null !== closure_12) {
+                    if (null !== closure_11) {
+                      const removed = obj.removeEventListener("load", closure_12);
+                      const removed1 = obj.removeEventListener("error", closure_11);
                       const parentNode = obj.parentNode;
                       let tmp17 = null === parentNode;
                       if (!tmp17) {
@@ -168,24 +169,24 @@ function loadStripe(KEY) {
                       if (!tmp17) {
                         obj2.removeChild(obj);
                       }
-                      obj = outer1_9(array);
+                      obj = closure_1_9(closure_0);
                     }
                   }
                 }
               } else {
-                obj = outer1_9(array);
+                obj = closure_1_9(closure_0);
               }
             } catch (tmp30) {
               tmp2(tmp30);
             }
           }
-          tmp4 = window.Stripe && array;
+          tmp4 = window.Stripe && closure_0;
         }
       }
       arg0(null);
     });
     catchPromise = promise.catch((arg0) => {
-      let c10 = null;
+      c10 = null;
       return Promise.reject(arg0);
     });
   }
@@ -226,7 +227,7 @@ function loadStripe(KEY) {
   });
 }
 loadStripe.setLoadParameters = (advancedFraudSignals) => {
-  const _typeof = advancedFraudSignals;
+  _typeof = advancedFraudSignals;
   if (c15) {
     if (closure_1) {
       if (typeof validateLoadParams !== "function") {
@@ -245,7 +246,7 @@ loadStripe.setLoadParameters = (advancedFraudSignals) => {
             }
           }
           const _Error = Error;
-          const error = new Error(combined);
+          error = new Error(combined);
           throw error;
         }
       }

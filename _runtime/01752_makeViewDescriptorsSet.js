@@ -10,7 +10,7 @@ arg5.makeViewDescriptorsSet = function makeViewDescriptorsSet() {
   obj = {
     shareableViewDescriptors: mutable,
     add(item, current) {
-      const mutable = item;
+      mutable = item;
       current.add(item.tag);
       current = undefined;
       if (current != null) {
@@ -30,11 +30,11 @@ arg5.makeViewDescriptorsSet = function makeViewDescriptorsSet() {
       };
       fn.__closure = { item, updater: current };
       fn.__workletHash = 1368679644593;
-      fn.__initData = outer1_2;
+      fn.__initData = closure_1_2;
       mutable.modify(fn, false);
     },
     remove(viewTag) {
-      const mutable = viewTag;
+      mutable = viewTag;
       set.delete(viewTag);
       const fn = function c(arr) {
         const findIndexResult = arr.findIndex((tag) => tag.tag === closure_0);
@@ -45,7 +45,7 @@ arg5.makeViewDescriptorsSet = function makeViewDescriptorsSet() {
       };
       fn.__closure = { viewTag };
       fn.__workletHash = 5508648561577;
-      fn.__initData = outer1_3;
+      fn.__initData = closure_1_3;
       mutable.modify(fn, false);
     },
     has(arg0) {

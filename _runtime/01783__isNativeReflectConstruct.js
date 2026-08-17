@@ -1,8 +1,9 @@
 // _runtime/01783__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 const CurvedTransition = arg1;
 function _isNativeReflectConstruct() {
@@ -16,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,12 +30,12 @@ class CurvedTransition {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_2(this, closure_0);
     items1 = [...items];
-    tmp2 = __esModule;
-    obj = __esModule(apply);
-    tmp3 = __esModule;
+    tmp2 = closure_4;
+    obj = closure_4(closure_0);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -43,7 +44,7 @@ class CurvedTransition {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     Easing = require("linear").Easing;
     tmp3Result.easingXV = Easing.in(require("linear").Easing.ease);
     Easing2 = require("linear").Easing;
@@ -68,7 +69,7 @@ class CurvedTransition {
         let obj3 = delayFunction(callbackV[6]);
         obj[0] = delayFunction(delay, obj3.withTiming(currentOriginX.targetOriginX, { duration: num, easing: obj.easingX }));
         obj[1] = delayFunction(delay, delayFunction(callbackV[6]).withTiming(currentOriginX.targetOriginY, { duration: num, easing: obj.easingY }));
-        const obj1 = { duration: num, easing: obj.easingX };
+        obj1 = { duration: num, easing: obj.easingX };
         const obj2 = { duration: num, easing: obj.easingY };
         const obj6 = delayFunction(callbackV[6]);
         obj3 = { duration: num, easing: obj.easingWidth };
@@ -79,16 +80,16 @@ class CurvedTransition {
         obj[2] = callbackV;
         return obj;
       };
-      obj = { delayFunction, delay, withTiming: _undefined(outer1_1[6]).withTiming, duration: num, easing: obj, callback: callbackV };
+      obj = { delayFunction, delay, withTiming: callback(closure_1_1[6]).withTiming, duration: num, easing: obj, callback: callbackV };
       fn.__closure = obj;
       fn.__workletHash = 8113645568730;
-      fn.__initData = outer1_6;
+      fn.__initData = closure_1_6;
       return fn;
     };
     return tmp3Result;
   }
 }
-require("_inherits")(CurvedTransition, require("BaseAnimationBuilder").BaseAnimationBuilder);
+_inheritsDefault(CurvedTransition, require("BaseAnimationBuilder").BaseAnimationBuilder);
 let obj = {
   key: "easingX",
   value: function easingX(easingXV) {

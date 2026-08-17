@@ -1,5 +1,6 @@
 // _runtime/06411_MountRegistry.js
-import MountRegistry from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import MountRegistry from "_classCallCheck" /* 41 */;
 
 class MountRegistry {
   constructor() {
@@ -12,7 +13,7 @@ const items = [
     key: "addMountListener",
     value: function addMountListener(arg0) {
       const self = this;
-      let closure_0 = arg0;
+      closure_0 = arg0;
       let mountListeners = this.mountListeners;
       mountListeners.add(arg0);
       return () => {
@@ -25,7 +26,7 @@ const items = [
     key: "addUnmountListener",
     value: function addUnmountListener(arg0) {
       const self = this;
-      let closure_0 = arg0;
+      closure_0 = arg0;
       let unmountListeners = this.unmountListeners;
       unmountListeners.add(arg0);
       return () => {
@@ -44,7 +45,7 @@ const items = [
   {
     key: "gestureHandlerWillUnmount",
     value: function gestureHandlerWillUnmount(self) {
-      let closure_0 = self;
+      closure_0 = self;
       const unmountListeners = this.unmountListeners;
       const item = unmountListeners.forEach((arg0) => arg0(closure_0));
     }
@@ -52,7 +53,7 @@ const items = [
   {
     key: "gestureWillMount",
     value: function gestureWillMount(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const mountListeners = this.mountListeners;
       const item = mountListeners.forEach((arg0) => arg0(closure_0));
     }
@@ -60,19 +61,19 @@ const items = [
   {
     key: "gestureWillUnmount",
     value: function gestureWillUnmount(item10006) {
-      let closure_0 = item10006;
+      closure_0 = item10006;
       const unmountListeners = this.unmountListeners;
       const item = unmountListeners.forEach((arg0) => arg0(closure_0));
     }
   }
 ];
-const tmp2 = require("_createClass")(MountRegistry, null, items);
+const tmp2 = _createClassDefault(MountRegistry, null, items);
 tmp2.mountListeners = new Set();
 const obj = {
   key: "addMountListener",
   value: function addMountListener(arg0) {
     const self = this;
-    let closure_0 = arg0;
+    closure_0 = arg0;
     let mountListeners = this.mountListeners;
     mountListeners.add(arg0);
     return () => {

@@ -1,12 +1,14 @@
 // _runtime/metro/01274__.js
-import { makeDataFormatters } from "../01275_makeDataFormatters.js";
-import { dataFormatterCache } from "../01277_dataFormatterCache.js";
-import { _isNativeReflectConstruct } from "../01278__isNativeReflectConstruct.js";
-import { runtimeHashMessageKey } from "../01290_runtimeHashMessageKey.js";
-import { DEFAULT_LOCALE } from "../01292_DEFAULT_LOCALE.js";
-import { serializeAst } from "../01293_serializeAst.js";
-import { MessageLoader } from "../01294_MessageLoader.js";
-import { chainMessagesObjects } from "../01295_chainMessagesObjects.js";
+import makeDataFormatters from "makeDataFormatters" /* 1275 */;
+import dataFormatterCache from "dataFormatterCache" /* 1277 */;
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 1278 */;
+import _mod1285 from "module_1285" /* 1285 */;
+import runtimeHashMessageKey from "runtimeHashMessageKey" /* 1290 */;
+import DEFAULT_LOCALE from "DEFAULT_LOCALE" /* 1292 */;
+import serializeAst from "serializeAst" /* 1293 */;
+import MessageLoader from "MessageLoader" /* 1294 */;
+import chainMessagesObjects from "chainMessagesObjects" /* 1295 */;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -83,7 +85,7 @@ if (self2) {
     return _isNativeReflectConstruct.bindFormatValues;
   };
   Object.defineProperty(exports, "bindFormatValues", obj1);
-  fn(require("module_1285"), exports);
+  fn(_mod1285, exports);
   const _Object7 = Object;
   const obj2 = { enumerable: true, get: null };
   obj2[1] = function get() {

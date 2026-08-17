@@ -1,12 +1,12 @@
 // _runtime/07090_useSecondaryProps.js
-import get_ActivityIndicator from "get ActivityIndicator";
-import noop from "noop";
-import { useMemo } from "noop";
-import { jsx } from "jsxProd";
+import noop from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_4 from "noop" /* 19 */;
 
-let c3;
-let obj1;
 ({ Animated: obj1, RefreshControl: c3 } = get_ActivityIndicator);
+const useMemo = noop.useMemo;
+const jsx = jsxProd.jsx;
 
 export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent) {
   ListHeaderComponent = ListHeaderComponent.ListHeaderComponent;

@@ -1,23 +1,18 @@
 // _runtime/00819_spanToJSON.js
-import { unwrapScopeFromWeakRef } from "00820_unwrapScopeFromWeakRef.js";
-import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
-import { consoleSandbox } from "00824_consoleSandbox.js";
-import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
-import { generateSpanId } from "00829_generateSpanId.js";
-import { regExp } from "00834_regExp.js";
-import { dateTimestampInSeconds } from "00838_dateTimestampInSeconds.js";
-import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
-import { getAsyncContextStrategy } from "00841_getAsyncContextStrategy.js";
-const require = arg1;
+import unwrapScopeFromWeakRef from "unwrapScopeFromWeakRef" /* 820 */;
+import addNonEnumerableProperty from "addNonEnumerableProperty" /* 822 */;
+import consoleSandbox from "consoleSandbox" /* 824 */;
+import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
+import generateSpanId from "generateSpanId" /* 829 */;
+import regExp from "regExp" /* 834 */;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 838 */;
+import _mod839 from "module_839" /* 839 */;
+import getSpanStatusFromHttpCode from "getSpanStatusFromHttpCode" /* 840 */;
+import getAsyncContextStrategy from "getAsyncContextStrategy" /* 841 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function spanToJSON(getSpanJSON) {
-  let attributes;
-  let endTime;
-  let links;
-  let spanId;
-  let startTime;
-  let status;
-  let traceId;
   if (typeof getSpanJSON.getSpanJSON === "function") {
     return getSpanJSON.getSpanJSON();
   } else {
@@ -105,15 +100,12 @@ function spanToJSON(getSpanJSON) {
         tmp17 = require;
       }
       obj[7] = tmp16;
-      obj[8] = attributes[require(undefined, 839).SEMANTIC_ATTRIBUTE_SENTRY_OP];
-      obj[9] = attributes[require(undefined, 839).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
+      obj[8] = attributes[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_OP];
+      obj[9] = attributes[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
       let mapped;
       if (links) {
         if (links.length > 0) {
           mapped = links.map((attributes) => {
-            let spanId;
-            let traceFlags;
-            let traceId;
             const context = attributes.context;
             ({ spanId, traceId, traceFlags } = context);
             const merged = Object.assign(Object.assign(context, Object.create(null)));
@@ -165,9 +157,6 @@ arg5.convertSpanLinksForEnvelope = function convertSpanLinksForEnvelope(_links) 
   if (_links) {
     if (_links.length > 0) {
       mapped = _links.map((attributes) => {
-        let spanId;
-        let traceFlags;
-        let traceId;
         const context = attributes.context;
         ({ spanId, traceId, traceFlags } = context);
         const merged = Object.assign(Object.assign(context, Object.create(null)));
@@ -197,10 +186,10 @@ arg5.getSpanDescendants = function getSpanDescendants(arg0) {
   const set = new Set();
   function addSpanChildren(arg0) {
     if (!set.has(arg0)) {
-      if (outer1_4(arg0)) {
+      if (closure_1_4(arg0)) {
         set.add(arg0);
-        let tmp3 = outer1_5;
-        if (arg0[outer1_5]) {
+        let tmp3 = closure_1_5;
+        if (arg0[closure_1_5]) {
           const _Array = Array;
           let items = Array.from(arg0[tmp3]);
         } else {
@@ -273,8 +262,6 @@ arg5.spanTimeInputToSeconds = function spanTimeInputToSeconds(num) {
 };
 arg5.spanToJSON = spanToJSON;
 arg5.spanToTraceContext = function spanToTraceContext(spanContext) {
-  let isRemote;
-  let spanId;
   const spanContextResult = spanContext.spanContext();
   ({ spanId, isRemote } = spanContextResult);
   let parent_span_id = spanId;
@@ -300,22 +287,16 @@ arg5.spanToTraceContext = function spanToTraceContext(spanContext) {
   return obj;
 };
 arg5.spanToTraceHeader = function spanToTraceHeader(spanContext) {
-  let spanId;
-  let traceId;
   ({ traceId, spanId } = spanContext.spanContext());
   const spanContextResult = spanContext.spanContext();
   return regExp.generateSentryTraceHeader(traceId, spanId, 1 === spanContext.spanContext().traceFlags);
 };
 arg5.spanToTraceparentHeader = function spanToTraceparentHeader(span) {
-  let spanId;
-  let traceId;
   ({ traceId, spanId } = span.spanContext());
   const spanContextResult = span.spanContext();
   return regExp.generateTraceparentHeader(traceId, spanId, 1 === span.spanContext().traceFlags);
 };
 arg5.spanToTransactionTraceContext = function spanToTransactionTraceContext(spanContext) {
-  let spanId;
-  let traceId;
   ({ spanId, traceId } = spanContext.spanContext());
   const tmp2 = spanToJSON(spanContext);
   return { parent_span_id: tmp2.parent_span_id, span_id: spanId, trace_id: traceId, data: tmp2.data, op: tmp2.op, status: tmp2.status, origin: tmp2.origin, links: tmp2.links };

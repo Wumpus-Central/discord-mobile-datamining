@@ -5,15 +5,6 @@ let closure_2 = { butt: 0, square: 2, round: 1 };
 let closure_3 = { miter: 0, bevel: 2, round: 1 };
 let closure_4 = { none: 0, default: 0, nonScalingStroke: 1, "non-scaling-stroke": 1, inherit: 2, uri: 3 };
 arg5.default = function extractStroke(arg0, arg1, arr) {
-  let stroke;
-  let strokeDasharray;
-  let strokeDashoffset;
-  let strokeLinecap;
-  let strokeLinejoin;
-  let strokeMiterlimit;
-  let strokeOpacity;
-  let strokeWidth;
-  let vectorEffect;
   ({ stroke, strokeOpacity, strokeLinecap, strokeLinejoin, strokeDasharray, strokeWidth, strokeDashoffset, strokeMiterlimit, vectorEffect } = arg1);
   if (null != stroke) {
     arr.push("stroke");

@@ -1,8 +1,8 @@
 // _runtime/03671_isLastDayOfMonth.js
-import _typeof from "_typeof";
-import endOfDay from "endOfDay";
-import endOfMonth from "endOfMonth";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import endOfDay from "endOfDay" /* 3672 */;
+import endOfMonth from "endOfMonth" /* 3673 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -11,7 +11,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!endOfDay) {
   obj = { default: null };
   obj[0] = endOfDay;
@@ -19,7 +19,7 @@ if (!endOfDay) {
 } else {
   tmp5 = endOfDay;
 }
-let closure_1 = tmp5;
+endOfDay = tmp5;
 if (!endOfMonth) {
   obj = { default: null };
   obj[0] = endOfMonth;
@@ -27,21 +27,21 @@ if (!endOfMonth) {
 } else {
   tmp7 = endOfMonth;
 }
-let obj1 = tmp7;
+endOfMonth = tmp7;
 if (!requiredArgs) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = requiredArgs;
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
-let c3 = tmp9;
+requiredArgs = tmp9;
 
 export default function isLastDayOfMonth(arg0) {
-  tmp9.default(1, arguments);
-  const defaultResult1 = tmp3.default(arg0);
-  const time = tmp5.default(defaultResult1).getTime();
-  const defaultResult2 = tmp5.default(defaultResult1);
-  return time === tmp7.default(defaultResult1).getTime();
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = endOfDay.default(defaultResult1).getTime();
+  const defaultResult2 = endOfDay.default(defaultResult1);
+  return time === endOfMonth.default(defaultResult1).getTime();
 };
 export default exports.default;

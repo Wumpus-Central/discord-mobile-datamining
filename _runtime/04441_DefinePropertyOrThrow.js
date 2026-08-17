@@ -1,5 +1,6 @@
 // _runtime/04441_DefinePropertyOrThrow.js
-import { isObject } from "04391_isObject.js";
+import isObject from "isObject" /* 4391 */;
+
 
 export default function DefinePropertyOrThrow(arg0, arg1, arg2) {
   if (isObject(arg0)) {

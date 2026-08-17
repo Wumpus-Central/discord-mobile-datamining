@@ -1,11 +1,9 @@
 // _runtime/06540_getShadowStyle.js
-import { Platform } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const Platform = get_ActivityIndicator.Platform;
 
 export const getShadowStyle = function getShadowStyle(color) {
-  let offset;
-  let opacity;
-  let radius;
   let shadowColor = color.color;
   ({ offset, radius, opacity } = color);
   if (shadowColor === undefined) {

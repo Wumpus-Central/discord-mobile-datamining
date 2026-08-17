@@ -1,7 +1,8 @@
 // _runtime/13628___exportStarResult27.js
-import { getMultiInternalSlots } from "13582_getMultiInternalSlots.js";
-import { __exportStarResult4 } from "13587___exportStarResult4.js";
-const require = arg1;
+import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
+import __exportStarResult4 from "__exportStarResult4" /* 13587 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.SetNumberFormatUnitOptions = function SetNumberFormatUnitOptions(internalSlots, result1) {
   let obj = result1;

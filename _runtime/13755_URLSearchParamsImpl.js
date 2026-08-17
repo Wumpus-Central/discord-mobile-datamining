@@ -1,5 +1,6 @@
 // _runtime/13755_URLSearchParamsImpl.js
-import _classCallCheck from "_classCallCheck";
+import _createClass from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const URLSearchParamsImpl = require;
 class URLSearchParamsImpl {
@@ -9,7 +10,7 @@ class URLSearchParamsImpl {
       flag = false;
     }
     self = this;
-    tmp = outer1_2(this, URLSearchParamsImpl);
+    tmp = closure_2(this, URLSearchParamsImpl);
     first = require[0];
     this._list = [];
     this._url = null;
@@ -23,7 +24,7 @@ class URLSearchParamsImpl {
     substr = first;
     if (!flag) {
       num = 1;
-      substr = require("_createClass");
+      substr = require("module_1");
     }
     if (Array.isArray(substr)) {
       tmp9 = substr;
@@ -234,4 +235,4 @@ items[9] = {
   }
 };
 
-export const implementation = require("_createClass")(URLSearchParamsImpl, items);
+export const implementation = _createClass(URLSearchParamsImpl, items);

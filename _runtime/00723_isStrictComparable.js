@@ -1,5 +1,6 @@
 // _runtime/00723_isStrictComparable.js
-import { isObject } from "00606_isObject.js";
+import isObject from "isObject" /* 606 */;
+
 
 export default function isStrictComparable(arg0) {
   let tmp = arg0 == arg0;

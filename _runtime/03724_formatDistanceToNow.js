@@ -1,6 +1,6 @@
 // _runtime/03724_formatDistanceToNow.js
-import formatDistance from "formatDistance";
-import requiredArgs from "requiredArgs";
+import formatDistance from "formatDistance" /* 3720 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!formatDistance) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!formatDistance) {
 } else {
   tmp3 = formatDistance;
 }
-let c0 = tmp3;
+formatDistance = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,10 +17,10 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function formatDistanceToNow(arg0, arg1) {
-  tmp5.default(1, arguments);
-  return tmp3.default(arg0, Date.now(), arg1);
+  requiredArgs.default(1, arguments);
+  return formatDistance.default(arg0, Date.now(), arg1);
 };
 export default exports.default;

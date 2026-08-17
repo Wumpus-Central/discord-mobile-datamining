@@ -1,10 +1,14 @@
 // _runtime/metro/00188__.js
+import _mod47 from "module_47" /* 47 */;
+import toError from "toError" /* 184 */;
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 189 */;
+
 if (true !== global.RN$useAlwaysAvailableJSErrorHandling) {
-  const _default = require("_isNativeReflectConstruct").default;
-  let closure_1 = require("toError").default;
+  const _default = _isNativeReflectConstruct.default;
+  let closure_1 = toError.default;
   const result = _default.installConsoleErrorReporter();
   if (!global.__fbDisableExceptionsManager) {
-    require("module_47").default.setGlobalHandler((arg0, arg1) => {
+    _mod47.default.setGlobalHandler((arg0, arg1) => {
       try {
         _default.handleException(arg0, arg1);
       } catch (tmp5) {
@@ -13,6 +17,6 @@ if (true !== global.RN$useAlwaysAvailableJSErrorHandling) {
         throw tmp;
       }
     });
-    const _default2 = require("module_47").default;
+    const _default2 = _mod47.default;
   }
 }

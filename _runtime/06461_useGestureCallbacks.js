@@ -1,7 +1,8 @@
 // _runtime/06461_useGestureCallbacks.js
-import { isGestureEnabled } from "06445_isGestureEnabled.js";
-import { useGestureEventHandler } from "06462_useGestureEventHandler.js";
-const require = arg1;
+import isGestureEnabled from "isGestureEnabled" /* 6445 */;
+import useGestureEventHandler from "useGestureEventHandler" /* 6462 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.useGestureCallbacks = function useGestureCallbacks(handlerTag, disableReanimated) {
   const memoizedGestureCallbacks = isGestureEnabled.useMemoizedGestureCallbacks(disableReanimated);

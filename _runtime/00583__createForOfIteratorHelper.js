@@ -1,7 +1,7 @@
 // _runtime/00583__createForOfIteratorHelper.js
 let length;
-function _createForOfIteratorHelper(iterable) {
-  let closure_0 = iterable;
+let closure_0 = function _createForOfIteratorHelper(iterable) {
+  closure_0 = iterable;
   iterable = typeof Symbol !== "undefined";
   if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
@@ -12,8 +12,8 @@ function _createForOfIteratorHelper(iterable) {
   }
   let arr = iterable;
   if (iterable) {
-    let c4 = true;
-    let c5 = false;
+    c4 = true;
+    c5 = false;
     let obj = { s: null, n: null, e: null, f: null };
     obj[0] = function s() {
       const call = closure_1.call;
@@ -25,8 +25,8 @@ function _createForOfIteratorHelper(iterable) {
       return iter;
     };
     obj[2] = function e(arg0) {
-      let c5 = true;
-      let closure_3 = arg0;
+      c5 = true;
+      closure_3 = arg0;
     };
     obj[3] = function f() {
       try {
@@ -126,7 +126,7 @@ function _createForOfIteratorHelper(iterable) {
     if (arr) {
       closure_0 = arr;
     }
-    let c2 = 0;
+    c2 = 0;
     class F {
       constructor() {
         return;
@@ -150,14 +150,14 @@ function _createForOfIteratorHelper(iterable) {
     obj[3] = F;
     return obj;
   }
-}
+};
 class Agent {
   constructor() {
     this._defaults = [];
     return;
   }
   _setDefaults(arg0) {
-    obj2 = _createForOfIteratorHelper(this._defaults);
+    obj2 = closure_0(this._defaults);
     try {
       sResult = obj2.s();
       iter = obj2.n();
@@ -196,7 +196,7 @@ let num2 = 0;
 if (0 < items.length) {
   do {
     let tmp = items[num2];
-    _createForOfIteratorHelper = tmp;
+    closure_0 = tmp;
     Agent.prototype[tmp] = function() {
       const length = arguments.length;
       const array = new Array(length);

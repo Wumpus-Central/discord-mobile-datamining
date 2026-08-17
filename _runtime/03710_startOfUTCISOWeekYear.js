@@ -1,7 +1,7 @@
 // _runtime/03710_startOfUTCISOWeekYear.js
-import getUTCISOWeekYear from "getUTCISOWeekYear";
-import startOfUTCISOWeek from "startOfUTCISOWeek";
-import requiredArgs from "requiredArgs";
+import getUTCISOWeekYear from "getUTCISOWeekYear" /* 3711 */;
+import startOfUTCISOWeek from "startOfUTCISOWeek" /* 3709 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!getUTCISOWeekYear) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!getUTCISOWeekYear) {
 } else {
   tmp3 = getUTCISOWeekYear;
 }
-let c0 = tmp3;
+getUTCISOWeekYear = tmp3;
 if (!startOfUTCISOWeek) {
   obj = { default: null };
   obj[0] = startOfUTCISOWeek;
@@ -18,7 +18,7 @@ if (!startOfUTCISOWeek) {
 } else {
   tmp5 = startOfUTCISOWeek;
 }
-let closure_1 = tmp5;
+startOfUTCISOWeek = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,12 +26,13 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function startOfUTCISOWeekYear(arg0) {
-  tmp7.default(1, arguments);
+  requiredArgs.default(1, arguments);
   const date = new Date(0);
-  date.setUTCFullYear(tmp3.default(arg0), 0, 4);
+  date.setUTCFullYear(getUTCISOWeekYear.default(arg0), 0, 4);
   date.setUTCHours(0, 0, 0, 0);
-  return tmp5.default(date);
+  return startOfUTCISOWeek.default(date);
 };
 export default exports.default;

@@ -1,5 +1,6 @@
 // _runtime/00035__unsupportedIterableToArray.js
-import { _arrayLikeToArray } from "00036__arrayLikeToArray.js";
+import _arrayLikeToArray from "_arrayLikeToArray" /* 36 */;
+
 
 export default function _unsupportedIterableToArray(str) {
   if (str) {

@@ -1,10 +1,10 @@
 // _runtime/10323_useLayoutConfig.js
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 
 export const useLayoutConfig = function useLayoutConfig(size) {
-  let closure_0 = size;
+  closure_0 = size;
   size = size.size;
   const vertical = size.vertical;
   const items = [, , , ];

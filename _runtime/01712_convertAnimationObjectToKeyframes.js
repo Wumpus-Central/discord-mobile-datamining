@@ -1,12 +1,10 @@
 // _runtime/01712_convertAnimationObjectToKeyframes.js
-import _slicedToArray from "_slicedToArray";
+import closure_2 from "_slicedToArray" /* 32 */;
 import { getEasingByName } from "01713_getEasingByName.js";
 
 const require = arg1;
 
 export const convertAnimationObjectToKeyframes = function convertAnimationObjectToKeyframes(BounceIn) {
-  let tmp6;
-  let tmp8;
   let _require = "@keyframes " + BounceIn.name + " { ";
   let entries = Object.entries(BounceIn.style);
   while (tmp2 !== undefined) {
@@ -49,8 +47,8 @@ export const convertAnimationObjectToKeyframes = function convertAnimationObject
               let item = arr.forEach((arg0) => {
                 const entries = Object.entries(arg0);
                 while (tmp2 !== undefined) {
-                  let tmp4 = outer1_2;
-                  let tmp5 = outer1_2(tmp3, 2);
+                  let tmp4 = closure_1_2;
+                  let tmp5 = closure_1_2(tmp3, 2);
                   let tmp6 = closure_0;
                   let _HermesInternal = HermesInternal;
                   let str = " ";

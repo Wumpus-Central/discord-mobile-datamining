@@ -1,6 +1,6 @@
 // _runtime/03845_lastDayOfISOWeek.js
-import lastDayOfWeek from "lastDayOfWeek";
-import requiredArgs from "requiredArgs";
+import lastDayOfWeek from "lastDayOfWeek" /* 3846 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!lastDayOfWeek) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!lastDayOfWeek) {
 } else {
   tmp3 = lastDayOfWeek;
 }
-let c0 = tmp3;
+lastDayOfWeek = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,10 +17,10 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function lastDayOfISOWeek(arg0) {
-  tmp5.default(1, arguments);
-  return tmp3.default(arg0, { weekStartsOn: 1 });
+  requiredArgs.default(1, arguments);
+  return lastDayOfWeek.default(arg0, { weekStartsOn: 1 });
 };
 export default exports.default;

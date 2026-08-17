@@ -1,3 +1,5 @@
 // _runtime/00275_PlatformConstants.js
+import getAll from "get" /* 30 */;
 
-export default require("get").getEnforcing("PlatformConstants");
+
+export default getAll.getEnforcing("PlatformConstants");

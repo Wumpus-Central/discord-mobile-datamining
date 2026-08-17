@@ -1,20 +1,15 @@
 // _runtime/06953_GESTURE_SOURCE.js
-import get_ActivityIndicator from "get ActivityIndicator";
-import { Easing } from "cancelAnimation";
+import cancelAnimation from "cancelAnimation" /* 1654 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let Dimensions;
-let Platform;
-let height;
-let height2;
-let width;
-let width2;
 ({ Dimensions, Platform } = get_ActivityIndicator);
 let value = Dimensions.get("window");
 ({ height, width } = value);
 value = Dimensions.get("screen");
 const obj = { LOCKED: 0, [0]: "LOCKED", UNLOCKED: 1, [1]: "UNLOCKED", UNDETERMINED: 2, [2]: "UNDETERMINED" };
 ({ height: height2, width: width2 } = value);
-const outResult = Easing.out(require("cancelAnimation").Easing.exp);
+const Easing = cancelAnimation.Easing;
+const outResult = Easing.out(cancelAnimation.Easing.exp);
 
 export const GESTURE_SOURCE = { UNDETERMINED: 0, [0]: "UNDETERMINED", SCROLLABLE: 1, [1]: "SCROLLABLE", HANDLE: 2, [2]: "HANDLE", CONTENT: 3, [3]: "CONTENT" };
 export const SHEET_STATE = { CLOSED: 0, [0]: "CLOSED", OPENED: 1, [1]: "OPENED", EXTENDED: 2, [2]: "EXTENDED", OVER_EXTENDED: 3, [3]: "OVER_EXTENDED", FILL_PARENT: 4, [4]: "FILL_PARENT" };

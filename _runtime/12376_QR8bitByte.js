@@ -1,4 +1,6 @@
 // _runtime/12376_QR8bitByte.js
+import _mod12377 from "module_12377" /* 12377 */;
+
 class QR8bitByte {
   constructor(arg0) {
     obj = { mode: require("module_12377").MODE_8BIT_BYTE, data: global };

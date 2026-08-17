@@ -1,19 +1,17 @@
 // _runtime/10320_usePropsErrorBoundary.js
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 
 export const usePropsErrorBoundary = function usePropsErrorBoundary(arg0) {
   const React = arg0;
   const items = [arg0];
   const effect = React.useEffect(() => {
-    let dataLength;
-    let defaultIndex;
-    const size = noop;
-    ({ defaultIndex, dataLength } = noop);
+    const size = closure_0;
+    ({ defaultIndex, dataLength } = closure_0);
     if (typeof defaultIndex === "number") {
       if (dataLength > 0) {
         const _Error3 = Error;
-        const error = new Error("DefaultIndex must be in the range of data length.");
+        error = new Error("DefaultIndex must be in the range of data length.");
         throw error;
       }
     }

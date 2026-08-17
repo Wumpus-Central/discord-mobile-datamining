@@ -1,16 +1,16 @@
 // _runtime/04346_setEnabled.js
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { isRingerSilent } from "04347_isRingerSilent.js";
-import { RNHapticFeedback } from "04348_RNHapticFeedback.js";
+import isRingerSilent from "isRingerSilent" /* 4347 */;
+import RNHapticFeedbackDefault from "RNHapticFeedback" /* 4348 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
+require = arg1;
 let closure_4 = { [arg1(4347).HapticFeedbackTypes.impactLight]: 0.3, [arg1(4347).HapticFeedbackTypes.impactMedium]: 0.6, [arg1(4347).HapticFeedbackTypes.impactHeavy]: 0.8, [arg1(4347).HapticFeedbackTypes.rigid]: 1, [arg1(4347).HapticFeedbackTypes.soft]: 0.1, [arg1(4347).HapticFeedbackTypes.selection]: 0.3 };
 let closure_5 = { enableVibrateFallback: false, ignoreAndroidSystemSettings: false };
 let c6 = true;
 
 export default {
   setEnabled(arg0) {
-    let closure_6 = arg0;
+    closure_6 = arg0;
   },
   isEnabled() {
     return c6;
@@ -29,8 +29,8 @@ export default {
         obj = {};
         const merged = Object.assign(closure_5);
         const merged1 = Object.assign(obj);
-        RNHapticFeedback.trigger(selection, obj);
-        const obj2 = RNHapticFeedback;
+        RNHapticFeedbackDefault.trigger(selection, obj);
+        const obj2 = RNHapticFeedbackDefault;
       } catch (tmp12) {
         const _console = console;
         console.warn("RNReactNativeHapticFeedback: trigger failed \u2013", tmp12);
@@ -40,8 +40,8 @@ export default {
   stop() {
     if (c6) {
       try {
-        RNHapticFeedback.stop();
-        const obj = RNHapticFeedback;
+        RNHapticFeedbackDefault.stop();
+        const obj = RNHapticFeedbackDefault;
       } catch (tmp4) {
         const _console = console;
         console.warn("RNReactNativeHapticFeedback: stop failed \u2013", tmp4);
@@ -50,7 +50,7 @@ export default {
   },
   isSupported() {
     try {
-      return RNHapticFeedback.isSupported();
+      return RNHapticFeedbackDefault.isSupported();
     } catch (err) {
       return false;
     }
@@ -65,8 +65,8 @@ export default {
         obj = {};
         const merged = Object.assign(closure_5);
         const merged1 = Object.assign(obj);
-        RNHapticFeedback.triggerPattern(arg0, obj);
-        const obj2 = RNHapticFeedback;
+        RNHapticFeedbackDefault.triggerPattern(arg0, obj);
+        const obj2 = RNHapticFeedbackDefault;
       } catch (tmp11) {
         const _console = console;
         console.warn("RNReactNativeHapticFeedback: triggerPattern failed \u2013", tmp11);
@@ -76,7 +76,7 @@ export default {
   playAHAP(arg0) {
     if (c6) {
       try {
-        return RNHapticFeedback.playAHAP(arg0);
+        return RNHapticFeedbackDefault.playAHAP(arg0);
       } catch (err) {
         return Promise.resolve();
       }
@@ -108,8 +108,8 @@ export default {
         obj = {};
         const merged = Object.assign(closure_5);
         const merged1 = Object.assign(obj);
-        RNHapticFeedback.triggerPattern(items, obj);
-        const obj2 = RNHapticFeedback;
+        RNHapticFeedbackDefault.triggerPattern(items, obj);
+        const obj2 = RNHapticFeedbackDefault;
       } catch (tmp17) {
         const _console = tmp.console;
         _console.warn("RNReactNativeHapticFeedback: impact failed \u2013", tmp17);
@@ -148,7 +148,7 @@ export default {
               let obj3 = v0(table[2]);
               v0 = 2;
               c0 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj3.getSystemHapticStatus();
               return obj1;
             }

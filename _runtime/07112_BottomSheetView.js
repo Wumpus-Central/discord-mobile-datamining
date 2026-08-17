@@ -1,16 +1,14 @@
 // _runtime/07112_BottomSheetView.js
-import noop from "noop";
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let c4;
-let obj1;
 ({ useEffect: obj1, useCallback: c3, useMemo: c4 } = noop);
+noopDefault;
+const View = get_ActivityIndicator.View;
+const jsx = jsxProd.jsx;
 const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
-  let children;
-  let style;
   focusHook = focusHook.focusHook;
   if (focusHook === undefined) {
     focusHook = animatedScrollableType;

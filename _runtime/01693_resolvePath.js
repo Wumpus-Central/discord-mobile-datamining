@@ -171,7 +171,7 @@ function withStyleAnimation(animations) {
                   }
                 }
               }
-              let tmp = outer1_2;
+              let tmp = closure_1_2;
               styleAnimations = undefined;
               if (styleAnimations != null) {
                 styleAnimations = styleAnimations.styleAnimations;
@@ -185,8 +185,8 @@ function withStyleAnimation(animations) {
               if (tmp4) {
                 current = tmpResult.current;
               }
-              let tmp5 = outer1_3;
-              let tmp6 = outer1_3(current.current, iter.path, current);
+              let tmp5 = closure_1_3;
+              let tmp6 = closure_1_3(current.current, iter.path, current);
               if (typeof iter.value === "object") {
                 if (iter.value.onStart) {
                   value = iter.value;
@@ -198,9 +198,9 @@ function withStyleAnimation(animations) {
                   let onStartResult = value.onStart(value, tmp7, arg2, tmpResult);
                 }
               }
-              let tmp8 = outer1_0;
-              let tmp9 = outer1_1;
-              let obj2 = outer1_0(outer1_1[2]);
+              let tmp8 = closure_1_0;
+              let tmp9 = closure_1_1;
+              let obj2 = closure_1_0(closure_1_1[2]);
               let withTimingResult = obj2.withTiming(iter.value, { duration: 0 });
               let tmp5Result = tmp5(current.styleAnimations, iter.path, withTimingResult);
               value = withTimingResult;

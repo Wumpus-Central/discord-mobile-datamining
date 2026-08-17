@@ -1,7 +1,10 @@
 // _runtime/metro/00195__.js
-import { define } from "../00197_define.js";
+import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
+import isNativeFunction from "isNativeFunction" /* 196 */;
+import define from "define" /* 197 */;
+
 try {
-  const _module = require("isNativeFunction");
+  const _module = isNativeFunction;
   let flag = _module.hasNativeConstructor(function*() {
     if (c0 === 2) {
       c0 = 3;
@@ -38,7 +41,7 @@ try {
     }
   }, "GeneratorFunction");
   if (!flag) {
-    const _module1 = require("polyfillObjectProperty");
+    const _module1 = polyfillObjectProperty;
     _module1.polyfillGlobal("regeneratorRuntime", () => {
       delete tmp2[tmp];
       return define;

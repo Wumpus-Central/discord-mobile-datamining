@@ -1,16 +1,14 @@
 // _runtime/04153_useRiveColor.js
-import _slicedToArray from "_slicedToArray";
-import { c } from "04135_c.js";
-import { RiveColor } from "04143_RiveColor.js";
-import { useRiveProperty } from "04148_useRiveProperty.js";
+import c from "c" /* 4135 */;
+import RiveColor2 from "RiveColor" /* 4143 */;
+import useRiveProperty from "useRiveProperty" /* 4148 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-let require = arg1;
+require = arg1;
 require("noop").useCallback;
 const f29193 = (colorProperty) => colorProperty.colorProperty(arg1);
 
 export const useRiveColor = function useRiveColor(FillColor, instance) {
-  let tmp5;
-  let tmp6;
   let obj = c;
   const cResult = obj.c(8);
   const tmp4 = callback(useRiveProperty.useRiveProperty(instance, FillColor, f29193), 3);
@@ -19,7 +17,7 @@ export const useRiveColor = function useRiveColor(FillColor, instance) {
   if (cResult[0] !== tmp5) {
     let fromIntResult;
     if (undefined !== tmp5) {
-      let RiveColor = RiveColor.RiveColor;
+      let RiveColor = RiveColor2.RiveColor;
       fromIntResult = RiveColor.fromInt(tmp5);
     }
     cResult[0] = tmp5;
@@ -32,7 +30,7 @@ export const useRiveColor = function useRiveColor(FillColor, instance) {
     const fn = function p(str) {
       let fromHexStringResult = str;
       if (typeof str === "string") {
-        const RiveColor = tmp6(outer1_1[4]).RiveColor;
+        const RiveColor = tmp6(closure_1_1[4]).RiveColor;
         fromHexStringResult = RiveColor.fromHexString(str);
       }
       tmp6(fromHexStringResult.toInt());

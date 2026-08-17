@@ -1,6 +1,6 @@
 // _runtime/07055_AverageWindow.js
-import MultiTypeAverageWindow from "_classCallCheck";
-import importDefaultResult from "_createClass";
+import MultiTypeAverageWindow from "_classCallCheck" /* 7050 */;
+import importDefaultResult from "_createClass" /* 7051 */;
 
 class AverageWindow {
   constructor(arg0, arg1) {
@@ -8,7 +8,7 @@ class AverageWindow {
     tmp = MultiTypeAverageWindow(this, MultiTypeAverageWindow);
     this.nextIndex = 0;
     num = 1;
-    array = new Array(require("_createClass"));
+    array = new Array(require("module_1"));
     this.inputValues = array;
     num2 = arg1;
     if (arg1 == null) {

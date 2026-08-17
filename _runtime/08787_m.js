@@ -1232,7 +1232,7 @@ let fn = function m() {
                       let str13 = "Nth out of range: ";
                       let tmp36 = new.target;
                       let tmp37 = new.target;
-                      let error = new Error("Nth out of range: " + parsed);
+                      error = new Error("Nth out of range: " + parsed);
                       let tmp39 = error;
                       throw error;
                     }
@@ -1248,7 +1248,7 @@ let fn = function m() {
                       let tmp59 = new.target;
                       let tmp60 = new.target;
                       let tmp61 = parsed1;
-                      let date = new Date(parsed1);
+                      date = new Date(parsed1);
                       let tmp63 = date;
                       obj.until = date;
                       let tmp2 = obj;
@@ -8426,7 +8426,7 @@ let fn = function m() {
     }
     if (items.length) {
       const _Error = Error;
-      const error = new Error("Invalid options: " + items.join(", "));
+      error = new Error("Invalid options: " + items.join(", "));
       throw error;
     } else {
       return H({}, arg0);
@@ -8457,16 +8457,16 @@ let fn = function m() {
         const tmp15 = parseInt(match1[6], 10) || 0;
         const _parseInt6 = parseInt;
         const tmp16 = parseInt(match1[7], 10) || 0;
-        const date = new Date(Date.UTC(parsed, diff, parsed1, tmp14, tmp15, tmp16));
+        date = new Date(Date.UTC(parsed, diff, parsed1, tmp14, tmp15, tmp16));
         obj.dtstart = date;
         return obj;
       } else {
         const _Error = Error;
         const concat = "Invalid UNTIL value: ".concat;
-        const error = new Error("Invalid UNTIL value: ".concat(tmp3));
+        error = new Error("Invalid UNTIL value: ".concat(tmp3));
         throw error;
       }
-      const obj3 = /^(\d{4})(\d{2})(\d{2})(T(\d{2})(\d{2})(\d{2})Z?)?$/;
+      obj3 = /^(\d{4})(\d{2})(\d{2})(T(\d{2})(\d{2})(\d{2})Z?)?$/;
     } else {
       return obj;
     }
@@ -8486,16 +8486,15 @@ let fn = function m() {
               let _Error = Error;
               const concat = "Unsupported RFC prop ".concat;
               const combined = "Unsupported RFC prop ".concat(str3, " in ");
-              let error = new Error(combined.concat(replaced));
+              error = new Error(combined.concat(replaced));
               throw error;
             }
           }
         }
         const tmp14 = at(replaced.replace(/^RRULE:/i, ""));
-        let closure_1 = tmp14;
+        closure_1 = tmp14;
         let parts = replaced.replace(/^(?:RRULE|EXRULE):/i, "").split(";");
         const item = parts.forEach((str) => {
-          let tmp11;
           const parts = str.split("=");
           [str, tmp11] = parts;
           const formatted = str.toUpperCase();
@@ -9894,7 +9893,7 @@ let fn = function m() {
             break;
             default:
               const _Error = Error;
-              const error = new Error("Unknown RRULE property '" + str + "'");
+              error = new Error("Unknown RRULE property '" + str + "'");
               throw error;
           }
         });
@@ -9904,7 +9903,6 @@ let fn = function m() {
         closure_1 = tmp4;
         const parts1 = replaced.replace(/^(?:RRULE|EXRULE):/i, "").split(";");
         const item1 = parts1.forEach((str) => {
-          let tmp11;
           const parts = str.split("=");
           [str, tmp11] = parts;
           const formatted = str.toUpperCase();
@@ -11303,7 +11301,7 @@ let fn = function m() {
             break;
             default:
               const _Error = Error;
-              const error = new Error("Unknown RRULE property '" + str + "'");
+              error = new Error("Unknown RRULE property '" + str + "'");
               throw error;
           }
         });
@@ -11417,7 +11415,7 @@ let fn = function m() {
                         let obj = {};
                         if (0 === weekday[1]) {
                           const _Error = Error;
-                          const error = new Error("Can't create weekday with n == 0");
+                          error = new Error("Can't create weekday with n == 0");
                           throw error;
                         } else {
                           obj.weekday = weekday[0];
@@ -11444,7 +11442,7 @@ let fn = function m() {
                     let tmp23 = new.target;
                     let tmp24 = new.target;
                     let tmp25 = str5;
-                    let date = new Date(str5);
+                    date = new Date(str5);
                     let tmp26 = new.target;
                     if (typeof closure_55 !== "function") {
                       let str18 = "Trying to call a non-function";
@@ -11543,13 +11541,6 @@ let fn = function m() {
     return found.join("\n");
   }
   function At(getValue, count) {
-    let byhour;
-    let byminute;
-    let bysecond;
-    let bysetpos;
-    let freq;
-    let freq2;
-    let until;
     ({ freq, until, bysetpos } = count);
     if (0 !== count.count) {
       if (0 !== count.interval) {
@@ -11686,9 +11677,9 @@ let fn = function m() {
           }
           obj.gettimeset(freq2)(fromDateResult.hour, fromDateResult.minute, fromDateResult.second, fromDateResult.millisecond);
         }
-        let closure_0 = count;
+        closure_0 = count;
         const dtstart = count.dtstart;
-        let closure_1 = dtstart.getTime() % 1000;
+        closure_1 = dtstart.getTime() % 1000;
         if (count.freq < tmp3.HOURLY) {
           const items1 = [];
           byhour = count.byhour;
@@ -11699,8 +11690,8 @@ let fn = function m() {
               let bysecond = arg0;
               bysecond = bysecond.bysecond;
               const item = bysecond.forEach((second) => {
-                let num = outer2_1;
-                if (typeof outer3_49 !== "function") {
+                let num = closure_2_1;
+                if (typeof closure_3_49 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 const obj = { hour: closure_0, minute: closure_0, second };
@@ -11708,7 +11699,7 @@ let fn = function m() {
                   num = 0;
                 }
                 obj.millisecond = num;
-                outer2_2.push(obj);
+                closure_2_2.push(obj);
               });
             });
           });
@@ -11721,8 +11712,6 @@ let fn = function m() {
     return getValue.getValue();
   }
   function Bt(str) {
-    let c4;
-    let dtstart;
     let sum;
     let obj = arg1;
     if (undefined === arg1) {
@@ -11731,16 +11720,16 @@ let fn = function m() {
     let items = [];
     dtstart = items;
     const keys = Object.keys(obj);
-    let closure_1 = Object.keys(closure_73);
+    closure_1 = Object.keys(closure_73);
     let item = keys.forEach((arg0) => {
       let arr = closure_1;
-      if (typeof outer1_14 !== "function") {
+      if (typeof closure_1_14 !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof outer1_13 !== "function") {
+      if (typeof closure_1_13 !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof outer1_12 !== "function") {
+      if (typeof closure_1_12 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (typeof callResult !== "function") {
@@ -11760,19 +11749,20 @@ let fn = function m() {
     });
     if (items.length) {
       let _Error2 = Error;
-      let error = new Error("Invalid options: " + items.join(", "));
+      error = new Error("Invalid options: " + items.join(", "));
       throw error;
     } else {
       const tmp5 = H(H({}, closure_73), obj);
       dtstart = undefined;
       closure_1 = undefined;
-      let items2;
-      let i;
+      closure_2 = undefined;
+      i = undefined;
       c4 = undefined;
       const items1 = [];
       dtstart = items1;
       closure_1 = [];
-      items2 = [];
+      const items2 = [];
+      closure_2 = items2;
       i = [];
       ({ dtstart, tzid: c4 } = at(str));
       let flag = tmp5.unfold;
@@ -11816,8 +11806,6 @@ let fn = function m() {
           parts1 = split(/\s/);
         }
         let item1 = parts1.forEach((arr) => {
-          let name;
-          let value;
           if (arr) {
             if (-1 === arr.indexOf(":")) {
               let obj = { name: "RRULE", value: null };
@@ -11841,13 +11829,13 @@ let fn = function m() {
                 if (substr2.length) {
                   const _Error3 = Error;
                   const concat2 = "unsupported RRULE parm: ".concat;
-                  let error = new Error("unsupported RRULE parm: ".concat(substr2.join(",")));
+                  error = new Error("unsupported RRULE parm: ".concat(substr2.join(",")));
                   throw error;
                 } else {
                   const parts2 = arr.split("\n");
-                  const mapped = parts2.map(outer1_53);
+                  const mapped = parts2.map(closure_1_53);
                   const found = mapped.filter((arg0) => null !== arg0);
-                  dtstart.push(outer1_38(outer1_38({}, found[0]), found[1]));
+                  arr = dtstart.push(closure_1_38(closure_1_38({}, found[0]), found[1]));
                 }
               } else if ("RDATE" === formatted) {
                 let match = /RDATE(?:;TZID=([^:=]+))?/i.exec(arr);
@@ -11856,15 +11844,15 @@ let fn = function m() {
                 }
                 let tmp22 = tmp21;
                 if (match[1]) {
-                  tmp22 = !c4;
+                  tmp22 = !closure_4;
                 }
                 if (tmp22) {
-                  c4 = tmp21;
+                  closure_4 = tmp21;
                 }
                 const item = substr2.forEach((arg0) => {
                   if (!obj.test(arg0)) {
                     const _Error = Error;
-                    const error = new Error("unsupported RDATE/EXDATE parm: " + arg0);
+                    error = new Error("unsupported RDATE/EXDATE parm: " + arg0);
                     throw error;
                   }
                   obj = /(VALUE=DATE(-TIME)?)|(TZID=)/;
@@ -11889,12 +11877,12 @@ let fn = function m() {
                     const tmp10 = parseInt(match[6], 10) || 0;
                     const _parseInt6 = parseInt;
                     const tmp11 = parseInt(match[7], 10) || 0;
-                    const date = new Date(Date.UTC(parsed, diff, parsed1, tmp9, tmp10, tmp11));
+                    date = new Date(Date.UTC(parsed, diff, parsed1, tmp9, tmp10, tmp11));
                     return date;
                   } else {
                     const _Error = Error;
                     const concat = "Invalid UNTIL value: ".concat;
-                    const error = new Error("Invalid UNTIL value: ".concat(arg0));
+                    error = new Error("Invalid UNTIL value: ".concat(arg0));
                     throw error;
                   }
                   const obj = /^(\d{4})(\d{2})(\d{2})(T(\d{2})(\d{2})(\d{2})Z?)?$/;
@@ -11908,15 +11896,15 @@ let fn = function m() {
                   throw error1;
                 } else {
                   const parts4 = value.split("\n");
-                  const mapped1 = parts4.map(outer1_53);
+                  const mapped1 = parts4.map(closure_1_53);
                   const found1 = mapped1.filter((arg0) => null !== arg0);
-                  items2.push(outer1_38(outer1_38({}, found1[0]), found1[1]));
+                  arr = arr.push(closure_1_38(closure_1_38({}, found1[0]), found1[1]));
                 }
               } else if ("EXDATE" === formatted) {
                 const item1 = substr2.forEach((arg0) => {
                   if (!obj.test(arg0)) {
                     const _Error = Error;
-                    const error = new Error("unsupported RDATE/EXDATE parm: " + arg0);
+                    error = new Error("unsupported RDATE/EXDATE parm: " + arg0);
                     throw error;
                   }
                   obj = /(VALUE=DATE(-TIME)?)|(TZID=)/;
@@ -11941,12 +11929,12 @@ let fn = function m() {
                     const tmp10 = parseInt(match[6], 10) || 0;
                     const _parseInt6 = parseInt;
                     const tmp11 = parseInt(match[7], 10) || 0;
-                    const date = new Date(Date.UTC(parsed, diff, parsed1, tmp9, tmp10, tmp11));
+                    date = new Date(Date.UTC(parsed, diff, parsed1, tmp9, tmp10, tmp11));
                     return date;
                   } else {
                     const _Error = Error;
                     const concat = "Invalid UNTIL value: ".concat;
-                    const error = new Error("Invalid UNTIL value: ".concat(arg0));
+                    error = new Error("Invalid UNTIL value: ".concat(arg0));
                     throw error;
                   }
                   const obj = /^(\d{4})(\d{2})(\d{2})(T(\d{2})(\d{2})(\d{2})Z?)?$/;
@@ -11965,7 +11953,7 @@ let fn = function m() {
           }
         });
         closure_1 = c4;
-        items2 = tmp19;
+        closure_2 = tmp19;
         if (tmp5.compatible) {
           tmp5.forceset = true;
           tmp5.unfold = true;
@@ -12019,14 +12007,14 @@ let fn = function m() {
         callResult.dtstart(dtstart);
         callResult.tzid(c4);
         const item2 = items1.forEach((arg0) => {
-          new outer1_72(outer1_38(outer1_38({}, arg0), { dtstart, tzid: closure_1 }), items2);
+          new closure_1_72(closure_1_38(closure_1_38({}, arg0), { dtstart, tzid: closure_1 }), closure_2);
           callResult.rrule(new.target);
         });
         const item3 = arr8.forEach((arg0) => {
           callResult.rdate(arg0);
         });
         const item4 = items2.forEach((arg0) => {
-          new outer1_72(outer1_38(outer1_38({}, arg0), { dtstart, tzid: closure_1 }), items2);
+          new closure_1_72(closure_1_38(closure_1_38({}, arg0), { dtstart, tzid: closure_1 }), closure_2);
           callResult.exrule(new.target);
         });
         const item5 = arr9.forEach((arg0) => {
@@ -12048,7 +12036,7 @@ let fn = function m() {
     }
   }
   function Gt(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const self = this;
     return (arg0) => {
       if (undefined !== arg0) {
@@ -12185,7 +12173,7 @@ let fn = function m() {
       }
     }
   };
-  let closure_0 = obj;
+  closure_0 = obj;
   obj = {};
   obj.r(obj);
   obj = {
@@ -12209,7 +12197,7 @@ let fn = function m() {
     }
   };
   obj.d(obj, obj);
-  let closure_1 = ["MO", "TU", "WE", "TH", "FR", "SA", "SU"];
+  closure_1 = ["MO", "TU", "WE", "TH", "FR", "SA", "SU"];
   class t {
     constructor(arg0, arg1) {
       obj = {};
@@ -12288,7 +12276,7 @@ let fn = function m() {
     }
   }
   closure_0 = t;
-  let closure_2 = t;
+  closure_2 = t;
   function i(arg0) {
 
   }
@@ -12350,10 +12338,10 @@ let fn = function m() {
     }
     return new Date(Date.UTC(arg0, arg1 - 1, arg2, num, num2, num3));
   }
-  let closure_16 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-  let c17 = 86400000;
+  closure_16 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  c17 = 86400000;
   let date = new Date(Date.UTC(1970, 0, 1, 0, 0, 0));
-  let closure_19 = [6, 0, 1, 2, 3, 4, 5];
+  closure_19 = [6, 0, 1, 2, 3, 4, 5];
   function k(arg0) {
 
   }
@@ -12382,7 +12370,7 @@ let fn = function m() {
     if (typeof b !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const date = new Date(Date.UTC(arg0, arg1 + 1 - 1, 1, 0, 0, 0));
+    date = new Date(Date.UTC(arg0, arg1 + 1 - 1, 1, 0, 0, 0));
     if (typeof U !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -12558,9 +12546,9 @@ let fn = function m() {
     }
   }
   closure_0 = t;
-  let closure_36 = t;
+  closure_36 = t;
   function j(arg0, arg1) {
-    let fn = Object.setPrototypeOf;
+    fn = Object.setPrototypeOf;
     if (!fn) {
       const _Array = Array;
       let fn2 = Object.create([]) instanceof Array;
@@ -12621,7 +12609,7 @@ let fn = function m() {
       return arg0;
     });
     const self = this;
-    const H = tmp;
+    closure_38 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -12666,11 +12654,11 @@ let fn = function m() {
   }
   j(e, t);
   n.prototype = t.prototype;
-  const obj1 = Object.create(n.prototype);
+  obj1 = Object.create(n.prototype);
   obj1.constructor = e;
   e.prototype = obj1;
-  let closure_40 = e;
-  let closure_41 = { dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], tokens: { SKIP: /^[ \r\n\t]+|^\.$/, number: /^[1-9][0-9]*/, numberAsText: /^(one|two|three)/i, every: /^every/i, "day(s)": /^days?/i, "weekday(s)": /^weekdays?/i, "week(s)": /^weeks?/i, "hour(s)": /^hours?/i, "minute(s)": /^minutes?/i, "month(s)": /^months?/i, "year(s)": /^years?/i, on: /^(on|in)/i, at: /^(at)/i, the: /^the/i, first: /^first/i, second: /^second/i, third: /^third/i, nth: /^([1-9][0-9]*)(\.|th|nd|rd|st)/i, last: /^last/i, for: /^for/i, "time(s)": /^times?/i, until: /^(un)?til/i, monday: /^mo(n(day)?)?/i, tuesday: /^tu(e(s(day)?)?)?/i, wednesday: /^we(d(n(esday)?)?)?/i, thursday: /^th(u(r(sday)?)?)?/i, friday: /^fr(i(day)?)?/i, saturday: /^sa(t(urday)?)?/i, sunday: /^su(n(day)?)?/i, january: /^jan(uary)?/i, february: /^feb(ruary)?/i, march: /^mar(ch)?/i, april: /^apr(il)?/i, may: /^may/i, june: /^june?/i, july: /^july?/i, august: /^aug(ust)?/i, september: /^sep(t(ember)?)?/i, october: /^oct(ober)?/i, november: /^nov(ember)?/i, december: /^dec(ember)?/i, comma: /^(,\s*|(and|or)\s*)+/i } };
+  closure_40 = e;
+  closure_41 = { dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], tokens: { SKIP: /^[ \r\n\t]+|^\.$/, number: /^[1-9][0-9]*/, numberAsText: /^(one|two|three)/i, every: /^every/i, "day(s)": /^days?/i, "weekday(s)": /^weekdays?/i, "week(s)": /^weeks?/i, "hour(s)": /^hours?/i, "minute(s)": /^minutes?/i, "month(s)": /^months?/i, "year(s)": /^years?/i, on: /^(on|in)/i, at: /^(at)/i, the: /^the/i, first: /^first/i, second: /^second/i, third: /^third/i, nth: /^([1-9][0-9]*)(\.|th|nd|rd|st)/i, last: /^last/i, for: /^for/i, "time(s)": /^times?/i, until: /^(un)?til/i, monday: /^mo(n(day)?)?/i, tuesday: /^tu(e(s(day)?)?)?/i, wednesday: /^we(d(n(esday)?)?)?/i, thursday: /^th(u(r(sday)?)?)?/i, friday: /^fr(i(day)?)?/i, saturday: /^sa(t(urday)?)?/i, sunday: /^su(n(day)?)?/i, january: /^jan(uary)?/i, february: /^feb(ruary)?/i, march: /^mar(ch)?/i, april: /^apr(il)?/i, may: /^may/i, june: /^june?/i, july: /^july?/i, august: /^aug(ust)?/i, september: /^sep(t(ember)?)?/i, october: /^oct(ober)?/i, november: /^nov(ember)?/i, december: /^dec(ember)?/i, comma: /^(,\s*|(and|or)\s*)+/i } };
   function z(arg0, arg1) {
 
   }
@@ -12691,7 +12679,7 @@ let fn = function m() {
       }
       tmp2 = arg2;
       if (undefined === arg2) {
-        tmp2 = e;
+        tmp2 = closure_41;
       }
       tmp3 = arg3;
       if (undefined === arg3) {
@@ -12699,7 +12687,7 @@ let fn = function m() {
       }
       obj.text = [];
       if (!tmp2) {
-        tmp2 = e;
+        tmp2 = closure_41;
       }
       obj.language = tmp2;
       obj.gettext = tmp;
@@ -12866,8 +12854,8 @@ let fn = function m() {
         items = [];
         items[0] = gettext("every");
         self.text = items;
-        tmp = outer1_72;
-        tmp2 = self[outer1_72.FREQUENCIES[self.options.freq]]();
+        tmp = closure_1_72;
+        tmp2 = self[closure_1_72.FREQUENCIES[self.options.freq]]();
         if (self.options.until) {
           str7 = "until";
           addResult = self.add(gettext("until"));
@@ -13341,7 +13329,7 @@ let fn = function m() {
     }
   }
   closure_0 = t;
-  let closure_45 = t;
+  closure_45 = t;
   class t {
     constructor(arg0) {
       return;
@@ -13452,7 +13440,7 @@ let fn = function m() {
       }
     }
   }
-  let closure_46 = t;
+  closure_46 = t;
   let obj3 = { YEARLY: 0 };
   obj3[0] = "YEARLY";
   obj3.MONTHLY = 1;
@@ -13504,7 +13492,7 @@ let fn = function m() {
       return 1000 * (60 * this.hour * 60 + 60 * this.minute + this.second) + this.millisecond;
     }
   }
-  let closure_49 = t;
+  closure_49 = t;
   closure_0 = t;
   class e {
     constructor(arg0, arg1, arg2, arg3, arg4, arg5, arg6) {
@@ -13554,7 +13542,7 @@ let fn = function m() {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
-      return UTC[date.getUTCDay(date)];
+      return closure_19[date.getUTCDay(date)];
     }
     getTime() {
       date = new Date(Date.UTC(this.year, this.month - 1, this.day, this.hour, this.minute, this.second, this.millisecond));
@@ -14021,8 +14009,8 @@ let fn = function m() {
     add(arg0, arg1) {
       self = this;
       ({ freq, interval, byhour, byminute, bysecond } = arg0);
-      tmp2 = f117408;
-      if (f117408.YEARLY === freq) {
+      tmp2 = closure_39;
+      if (closure_39.YEARLY === freq) {
         return self.addYears(interval);
       } else if (tmp2.MONTHLY === freq) {
         return self.addMonths(interval);
@@ -14067,7 +14055,7 @@ let fn = function m() {
   const obj4 = Object.create(n.prototype);
   obj4.constructor = e;
   e.prototype = obj4;
-  let closure_50 = e;
+  closure_50 = e;
   class t {
     constructor(arg0, arg1) {
       obj = {};
@@ -14193,7 +14181,7 @@ let fn = function m() {
     enumerable: false,
     configurable: true
   });
-  let closure_55 = t;
+  closure_55 = t;
   class t {
     constructor() {
       return;
@@ -14293,7 +14281,7 @@ let fn = function m() {
                   tmp5 = keys[num4];
                   arr3 = arg1[tmp5];
                   arr4 = tmp3[tmp5];
-                  e = arr4;
+                  closure_0 = arr4;
                   _Array = Array;
                   tmp6 = num4;
                   if (Array.isArray(arr3)) {
@@ -14420,7 +14408,7 @@ let fn = function m() {
       return date1;
     }
   }
-  let closure_57 = t;
+  closure_57 = t;
   let items3 = [];
   let num = 31;
   let num2 = 0;
@@ -14682,7 +14670,7 @@ let fn = function m() {
       num27 = num27 + 1;
     } while (num27 < 7);
   }
-  let closure_58 = fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2([], items3, true), items5, true), items7, true), items9, true), items11, true), items13, true), items15, true), items17, true), items19, true), items21, true), items23, true), items25, true), items27, true);
+  closure_58 = fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2([], items3, true), items5, true), items7, true), items9, true), items11, true), items13, true), items15, true), items17, true), items19, true), items21, true), items23, true), items25, true), items27, true);
   const items29 = [];
   let num29 = 0;
   let num30 = 0;
@@ -14890,25 +14878,25 @@ let fn = function m() {
       num53 = num53 + 1;
     } while (num53 < 7);
   }
-  let closure_59 = fn2(fn2Result23, items53, true);
+  closure_59 = fn2(fn2Result23, items53, true);
   const fn2Result22 = fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2([], items29, true), items31, true), items33, true), items35, true), items37, true), items39, true), items41, true), items43, true), items45, true), items47, true), items49, true);
   const fnResult = fn(1, 29);
   const fnResult2 = fn(1, num);
   const fnResult3 = fn(1, 32);
   const fnResult1 = fn(1, num8);
-  let closure_60 = fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2([], fnResult3, true), fn(1, num8), true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult3.slice(0, 7), true);
+  closure_60 = fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2([], fnResult3, true), fn(1, num8), true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult3.slice(0, 7), true);
   const fn2Result24 = fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2([], fnResult3, true), fn(1, num8), true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult2, true), fnResult3, true);
-  let closure_61 = fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2([], fnResult3, true), fnResult, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult3.slice(0, 7), true);
+  closure_61 = fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2([], fnResult3, true), fnResult, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult3.slice(0, 7), true);
   const fn2Result25 = fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2([], fnResult3, true), fnResult, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult3, true), fnResult2, true), fnResult3, true), fnResult2, true), fnResult3, true);
   const fnResult4 = fn(-28, 0);
   const fnResult6 = fn(-30, 0);
   const fnResult7 = fn(-31, 0);
   const fnResult5 = fn(-29, 0);
-  let closure_62 = fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2([], fnResult7, true), fn(-29, 0), true), fnResult7, true), fnResult6, true), fnResult7, true), fnResult6, true), fnResult7, true), fnResult7, true), fnResult6, true), fnResult7, true), fnResult6, true), fnResult7, true), fnResult7.slice(0, 7), true);
+  closure_62 = fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2([], fnResult7, true), fn(-29, 0), true), fnResult7, true), fnResult6, true), fnResult7, true), fnResult6, true), fnResult7, true), fnResult7, true), fnResult6, true), fnResult7, true), fnResult6, true), fnResult7, true), fnResult7.slice(0, 7), true);
   fn2Result23 = fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2(fn2([], fnResult7, true), fnResult4, true), fnResult7, true), fnResult6, true), fnResult7, true), fnResult6, true), fnResult7, true), fnResult7, true), fnResult6, true), fnResult7, true), fnResult6, true), fnResult7, true);
-  let closure_63 = fn2(fn2Result23, fnResult7.slice(0, 7), true);
-  let closure_64 = [0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366];
-  let closure_65 = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365];
+  closure_63 = fn2(fn2Result23, fnResult7.slice(0, 7), true);
+  closure_64 = [0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366];
+  closure_65 = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365];
   items53 = [];
   num8 = 55;
   num = 0;

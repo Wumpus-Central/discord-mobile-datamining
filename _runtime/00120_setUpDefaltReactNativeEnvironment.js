@@ -1,19 +1,20 @@
 // _runtime/00120_setUpDefaltReactNativeEnvironment.js
-import { javaScriptFlagGetter } from "00027_javaScriptFlagGetter.js";
-import { env } from "00121_env.js";
-import { setUpDOM } from "00122_setUpDOM.js";
-import { NativePerformanceCxx } from "00153_NativePerformanceCxx.js";
-import { polyfillObjectProperty } from "00174_polyfillObjectProperty.js";
-import { Alert } from "00230_Alert.js";
-import { polyfillObjectProperty } from "00234_polyfillObjectProperty.js";
-import { __fetchSegment } from "00241___fetchSegment.js";
-import { AppRegistry } from "00244_AppRegistry.js";
-import { 00179__ } from "metro/00179__.js";
-import { 00188__ } from "metro/00188__.js";
-import { 00195__ } from "metro/00195__.js";
-import { 00198__ } from "metro/00198__.js";
-import { 00235__ } from "metro/00235__.js";
-const require = arg1;
+import javaScriptFlagGetter from "javaScriptFlagGetter" /* 27 */;
+import env from "env" /* 121 */;
+import setUpDOM from "setUpDOM" /* 122 */;
+import NativePerformanceCxx from "NativePerformanceCxx" /* 153 */;
+import polyfillObjectProperty from "polyfillObjectProperty" /* 174 */;
+import _mod179 from "module_179" /* 179 */;
+import _mod188 from "module_188" /* 188 */;
+import _mod195 from "module_195" /* 195 */;
+import _mod198 from "module_198" /* 198 */;
+import Alert from "Alert" /* 230 */;
+import polyfillObjectProperty2 from "polyfillObjectProperty" /* 234 */;
+import _mod235 from "module_235" /* 235 */;
+import __fetchSegment from "__fetchSegment" /* 241 */;
+import AppRegistry from "AppRegistry" /* 244 */;
+
+require = arg1;
 const dependencyMap = arg6;
 let c2 = false;
 arg5.default = function setUpDefaltReactNativeEnvironment() {
@@ -23,13 +24,13 @@ arg5.default = function setUpDefaltReactNativeEnvironment() {
     setUpDOM.default();
     NativePerformanceCxx;
     polyfillObjectProperty;
-    00179__;
-    00188__;
-    00195__;
-    00198__;
+    _mod179;
+    _mod188;
+    _mod195;
+    _mod198;
     Alert;
-    polyfillObjectProperty;
-    00235__;
+    polyfillObjectProperty2;
+    _mod235;
     __fetchSegment;
     AppRegistry;
     const obj = setUpDOM;

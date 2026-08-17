@@ -1,12 +1,12 @@
 // _runtime/00913_moduleMetadataIntegration.js
-import setupIntegration from "setupIntegration";
+import setupIntegration from "setupIntegration" /* 887 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
   name: "ModuleMetadata",
   setup(on) {
-    let closure_0 = on;
+    closure_0 = on;
     on.on("beforeEnvelope", (arg0) => {
       options(table[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
         if ("event" === arg1) {
@@ -25,8 +25,8 @@ export const moduleMetadataIntegration = setupIntegration.defineIntegration(() =
     });
     on.on("applyFrameMetadata", (type) => {
       if (!type.type) {
-        const result = options(outer1_1[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
-        const obj = options(outer1_1[2]);
+        const result = options(closure_1_1[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
+        const obj = options(closure_1_1[2]);
       }
     });
   }

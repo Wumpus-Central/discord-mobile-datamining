@@ -1,7 +1,7 @@
 // _runtime/00880__INTERNAL_captureSerializedLog.js
-import _slicedToArray from "_slicedToArray";
-import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
-import { createLogContainerEnvelopeItem } from "00884_createLogContainerEnvelopeItem.js";
+import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
+import createLogContainerEnvelopeItem from "createLogContainerEnvelopeItem" /* 884 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function _INTERNAL_captureSerializedLog(closure_0) {
   const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToLogBufferMap", () => {
@@ -28,8 +28,6 @@ function _INTERNAL_captureSerializedLog(closure_0) {
   }
 }
 function _INTERNAL_flushLogsBuffer(closure_0, value) {
-  let _metadata;
-  let tunnel;
   let items = value;
   if (value == null) {
     const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToLogBufferMap", () => {
@@ -60,21 +58,9 @@ function _INTERNAL_flushLogsBuffer(closure_0, value) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, scope) {
-  let __sentry_template_string__;
-  let __sentry_template_values__;
-  let email;
-  let enableLogs;
-  let environment;
-  let id;
-  let level;
-  let message2;
-  let name;
-  let release;
-  let username;
-  let version;
   let currentScope = scope;
   if (scope === undefined) {
-    let obj1 = beforeSendLog(obj[1]);
+    obj1 = beforeSendLog(obj[1]);
     currentScope = obj1.getCurrentScope();
   }
   let tmp3 = arg2;

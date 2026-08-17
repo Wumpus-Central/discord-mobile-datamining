@@ -1,7 +1,8 @@
 // _runtime/04888_isAVIF.js
-import { getFileChunk } from "04882_getFileChunk.js";
-import { 04883__ } from "metro/04883__.js";
-const require = arg1;
+import getFileChunk from "getFileChunk" /* 4882 */;
+import _mod4883 from "module_4883" /* 4883 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.isAVIF = undefined;
 arg5.isBMP = undefined;
@@ -20,76 +21,76 @@ arg5.isPSD = undefined;
 arg5.isWEBP = undefined;
 arg5.isAVIF = function isAVIF(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "avif") && getFileChunk.isAvifStringIncluded(fileChunk);
 };
 arg5.isBMP = function isBMP(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "bmp");
 };
 arg5.isBPG = function isBPG(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "bpg");
 };
 arg5.isCR2 = function isCR2(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "cr2");
 };
 arg5.isEXR = function isEXR(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "exr");
 };
 arg5.isGIF = function isGIF(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "gif");
 };
 arg5.isHEIC = function isHEIC(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "avif") && getFileChunk.isHeicSignatureIncluded(fileChunk);
 };
 arg5.isICO = function isICO(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "ico");
 };
 arg5.isJPEG = function isJPEG(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "jpeg");
 };
 arg5.isPBM = function isPBM(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "pbm");
 };
 arg5.isPGM = function isPGM(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "pgm");
 };
 arg5.isPNG = function isPNG(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "png");
 };
 arg5.isPPM = function isPPM(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "ppm");
 };
 arg5.isPSD = function isPSD(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "psd");
 };
 arg5.isWEBP = function isWEBP(fileChunk) {
   fileChunk = getFileChunk.getFileChunk(fileChunk);
-  const FileTypes = 04883__.FileTypes;
+  const FileTypes = _mod4883.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "webp");
 };

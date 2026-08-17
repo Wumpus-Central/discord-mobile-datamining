@@ -1,5 +1,7 @@
 // _runtime/07108_useMappingHelper.js
-require("noop").useCallback;
+import noop from "noop" /* 19 */;
+
+noop.useCallback;
 
 export const useMappingHelper = () => {
   let obj = recyclerViewContext(7060);

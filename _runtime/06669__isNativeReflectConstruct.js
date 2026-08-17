@@ -1,14 +1,16 @@
 // _runtime/06669__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import _isNativeReflectConstruct from "_isNativeReflectConstruct";
-import { jsx } from "jsxProd";
-import { extractProps } from "06586_extractProps.js";
-import { extractFont } from "06593_extractFont.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/06672___INTERNAL_VIEW_CONFIG.js";
+import noopAll from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import extractPropsDefault from "extractProps" /* 6586 */;
+import extractFontDefault from "extractFont" /* 6593 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6672 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 6670 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const Text = arg1;
 function _isNativeReflectConstruct() {
@@ -22,24 +24,25 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+noopAll;
 class Text {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_3(this, closure_0);
     items1 = [...items];
-    tmp2 = __esModule;
-    obj = __esModule(apply);
-    tmp3 = __esModule;
+    tmp2 = closure_5;
+    obj = closure_5(closure_0);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -48,30 +51,30 @@ class Text {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.setNativeProps = (matrix) => {
       let tmp = matrix;
       if (matrix) {
         tmp = !matrix.matrix;
       }
       if (tmp) {
-        tmp = outer1_1(outer1_2[8])(matrix);
+        tmp = closure_1_1(closure_1_2[8])(matrix);
       }
       if (tmp) {
         matrix.matrix = tmp;
       }
-      const propsAndStylesResult = _undefined(outer1_2[9]).propsAndStyles(matrix);
-      const obj = _undefined(outer1_2[9]);
-      const merged = Object.assign(propsAndStylesResult, _undefined(outer1_2[10]).pickNotNil(outer1_1(outer1_2[11])(propsAndStylesResult, true)));
-      if (_undefined.root) {
-        const root = _undefined.root;
+      const propsAndStylesResult = lib(closure_1_2[9]).propsAndStyles(matrix);
+      const obj = lib(closure_1_2[9]);
+      const merged = Object.assign(propsAndStylesResult, lib(closure_1_2[10]).pickNotNil(closure_1_1(closure_1_2[11])(propsAndStylesResult, true)));
+      if (lib.root) {
+        const root = lib.root;
         root.setNativeProps(propsAndStylesResult);
       }
     };
     return tmp3Result;
   }
 }
-require("_inherits")(Text, require("_isNativeReflectConstruct"));
+_inheritsDefault(Text, _isNativeReflectConstructDefault);
 let items = [
   {
     key: "render",
@@ -82,13 +85,13 @@ let items = [
       const merged = Object.assign(propsAndStylesResult);
       obj.x = null;
       obj.y = null;
-      const tmp2Result = extractProps(obj, this);
-      const merged1 = Object.assign(tmp2Result, extractFont(propsAndStylesResult, true));
+      const tmp2Result = extractPropsDefault(obj, this);
+      const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
       tmp2Result.ref = this.refMethod;
       obj = {};
-      const tmp2 = extractProps;
+      const tmp2 = extractPropsDefault;
       const merged2 = Object.assign(tmp2Result);
-      return jsx(__INTERNAL_VIEW_CONFIG, {});
+      return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
     }
   }
 ];

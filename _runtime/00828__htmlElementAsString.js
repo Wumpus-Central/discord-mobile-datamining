@@ -1,6 +1,7 @@
 // _runtime/00828__htmlElementAsString.js
-import { 00821__ } from "metro/00821__.js";
-const require = arg1;
+import _mod821 from "module_821" /* 821 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function _htmlElementAsString(tagName, arr) {
   const _require = tagName;
@@ -31,7 +32,7 @@ function _htmlElementAsString(tagName, arr) {
     if (length) {
       const found = arr.filter((arg0) => tagName.getAttribute(arg0));
       mapped = found.map((arg0) => {
-        const items = [arg0, tagName.getAttribute(arg0)];
+        items = [arg0, tagName.getAttribute(arg0)];
         return items;
       });
     }
@@ -87,7 +88,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getComponentName = function getComponentName(arg0) {
   let parentNode = arg0;
   let num = 0;
-  if (00821__.GLOBAL_OBJ.HTMLElement) {
+  if (_mod821.GLOBAL_OBJ.HTMLElement) {
     while (parentNode) {
       if (parentNode instanceof globalThis.HTMLElement) {
         let dataset = parentNode.dataset;
@@ -113,7 +114,7 @@ arg5.getComponentName = function getComponentName(arg0) {
 };
 arg5.getLocationHref = function getLocationHref() {
   try {
-    return 00821__.GLOBAL_OBJ.document.location.href;
+    return _mod821.GLOBAL_OBJ.document.location.href;
   } catch (err) {
     return "";
   }

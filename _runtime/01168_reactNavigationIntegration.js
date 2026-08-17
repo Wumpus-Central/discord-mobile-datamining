@@ -32,15 +32,15 @@ arg5.reactNavigationIntegration = () => {
   if (flag5 === undefined) {
     flag5 = false;
   }
-  let c5;
-  let c6;
-  let c7;
-  let c8;
-  let c9;
-  let c10;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  c10 = undefined;
   let defaultIdleOptions;
-  let c12;
-  let closure_13;
+  c12 = undefined;
+  closure_13 = undefined;
   let startIdleNavigationSpan;
   let updateLatestNavigationSpanWithCurrentRoute;
   let pushRecentRouteKey;
@@ -58,11 +58,11 @@ arg5.reactNavigationIntegration = () => {
     });
   }
   startIdleNavigationSpan = function startIdleNavigationSpan(data) {
-    let flag = arg1;
+    flag = arg1;
     if (arg1 === undefined) {
       flag = false;
     }
-    let closure_0;
+    closure_0 = undefined;
     if (flag4) {
       let noop;
       if (null != data) {
@@ -278,7 +278,7 @@ arg5.reactNavigationIntegration = () => {
           }
           const tmp21 = flag5;
           const tmpResult = tmp(tmp2[9]);
-          const obj1 = { category: "navigation", type: "navigation", message: null, data: null };
+          obj1 = { category: "navigation", type: "navigation", message: null, data: null };
           const _HermesInternal5 = HermesInternal;
           obj1[2] = "Navigation to " + name;
           let name3;
@@ -360,7 +360,7 @@ arg5.reactNavigationIntegration = () => {
         if (!tmp6) {
           appRegistryIntegration.onRunApplication(() => {
             if (c12) {
-              const debug = outer1_0(outer1_1[2]).debug;
+              const debug = closure_1_0(closure_1_1[2]).debug;
               debug.log("[ReactNavigationIntegration] Starting new idle navigation span based on runApplication call.");
               callback(undefined, true);
             }

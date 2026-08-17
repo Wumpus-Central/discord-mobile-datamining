@@ -1,14 +1,13 @@
 // _runtime/metro/04691___INTERNAL_VIEW_CONFIG.js
-import get_ActivityIndicator from "get ActivityIndicator";
-import weakSet from "weakSet";
-import setRuntimeConfigProvider from "setRuntimeConfigProvider";
-import { renderElement } from "../00114_renderElement.js";
+import result from "result" /* 26 */;
+import renderElement from "renderElement" /* 114 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import weakSet from "weakSet" /* 106 */;
+import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
-let codegenNativeCommands;
-let codegenNativeComponent;
 ({ codegenNativeCommands, codegenNativeComponent } = get_ActivityIndicator);
 let obj = { uiViewClassName: "RNSSearchBar", directEventTypes: { topSearchFocus: { registrationName: "onSearchFocus" }, topSearchBlur: { registrationName: "onSearchBlur" }, topSearchButtonPress: { registrationName: "onSearchButtonPress" }, topCancelButtonPress: { registrationName: "onCancelButtonPress" }, topChangeText: { registrationName: "onChangeText" }, topClose: { registrationName: "onClose" }, topOpen: { registrationName: "onOpen" } }, validAttributes: null };
-obj = { hideWhenScrolling: true, autoCapitalize: true, placeholder: true, placement: true, allowToolbarIntegration: true, obscureBackground: true, hideNavigationBar: true, cancelButtonText: true, barTintColor: require("result").colorAttribute, tintColor: require("result").colorAttribute, textColor: require("result").colorAttribute, autoFocus: true, disableBackButtonOverride: true, inputType: true, hintTextColor: require("result").colorAttribute, headerIconColor: require("result").colorAttribute, shouldShowHintSearchIcon: true };
+obj = { hideWhenScrolling: true, autoCapitalize: true, placeholder: true, placement: true, allowToolbarIntegration: true, obscureBackground: true, hideNavigationBar: true, cancelButtonText: true, barTintColor: result.colorAttribute, tintColor: result.colorAttribute, textColor: result.colorAttribute, autoFocus: true, disableBackButtonOverride: true, inputType: true, hintTextColor: result.colorAttribute, headerIconColor: result.colorAttribute, shouldShowHintSearchIcon: true };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSearchFocus: true, onSearchBlur: true, onSearchButtonPress: true, onCancelButtonPress: true, onChangeText: true, onClose: true, onOpen: true }));
 obj[2] = obj;
 obj = {

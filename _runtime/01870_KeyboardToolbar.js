@@ -1,21 +1,14 @@
 // _runtime/01870_KeyboardToolbar.js
-import _slicedToArray from "_slicedToArray";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import closure_9 from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
+import closure_9 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let StyleSheet;
-let c10;
-let closure_12;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 let closure_3 = ["children", "content", "theme", "doneText", "button", "icon", "showArrows", "onNextCallback", "onPrevCallback", "onDoneCallback", "blur", "opacity", "offset", "enabled", "insets"];
-({ useEffect: closure_6, useMemo: error, useState: metroImportAll } = noop);
+({ useEffect: closure_6, useMemo: error, useState: closure_8 } = noop);
 ({ StyleSheet, View: c10 } = get_ActivityIndicator);
 ({ jsxs: unpackModuleId, jsx: closure_12 } = jsxProd);
 class KeyboardToolbar {
@@ -23,7 +16,7 @@ class KeyboardToolbar {
     ({ children, theme } = global);
     if (undefined === theme) {
       tmp = colors;
-      tmp2 = c2;
+      tmp2 = closed;
       theme = require("colors").colors;
     }
     colors = theme;
@@ -43,7 +36,7 @@ class KeyboardToolbar {
     DEFAULT_OPACITY = global.opacity;
     if (undefined === DEFAULT_OPACITY) {
       tmp5 = colors;
-      tmp6 = c2;
+      tmp6 = closed;
       DEFAULT_OPACITY = require("TEST_ID_KEYBOARD_TOOLBAR").DEFAULT_OPACITY;
     }
     offset = global.offset;
@@ -55,28 +48,28 @@ class KeyboardToolbar {
     if (undefined !== closed) {
       num = closed;
     }
-    c2 = num;
+    closed = num;
     opened = offset.opened;
     num2 = 0;
     if (undefined !== opened) {
       num2 = opened;
     }
-    c3 = num2;
+    opened = num2;
     enabled = global.enabled;
     tmp7 = undefined === enabled || enabled;
     insets = global.insets;
-    tmp8 = _objectWithoutProperties(global, c3);
+    tmp8 = closure_5(global, opened);
     tmp9 = colors;
-    tmp10 = c2;
+    tmp10 = closed;
     obj2 = require("useResizeMode");
     keyboardState = obj2.useKeyboardState((appearance) => appearance.appearance);
-    _objectWithoutProperties = keyboardState;
-    tmp12 = insets(useState({ current: 0, count: 0 }), 2);
-    [tmp13, f71453] = tmp12;
+    closure_5 = keyboardState;
+    tmp12 = insets(closure_8({ current: 0, count: 0 }), 2);
+    [tmp13, closure_6] = tmp12;
     tmp14 = 0 === tmp13.current;
-    useMemo = tmp14;
+    closure_7 = tmp14;
     tmp15 = tmp13.current === tmp13.count - 1;
-    useState = tmp15;
+    closure_8 = tmp15;
     if (button == null) {
       tmp16 = DEFAULT_OPACITY;
       button = require("disabled");
@@ -85,7 +78,7 @@ class KeyboardToolbar {
       tmp17 = DEFAULT_OPACITY;
       icon = require("items");
     }
-    tmp18 = f71453(() => {
+    tmp18 = closure_6(() => {
       const FocusedInputEvents = theme(num[10]).FocusedInputEvents;
       return FocusedInputEvents.addListener("focusDidSet", (arg0) => {
         callback(arg0);
@@ -96,10 +89,10 @@ class KeyboardToolbar {
     items[1] = DEFAULT_OPACITY;
     items[2] = theme;
     items[3] = insets;
-    tmp19 = useMemo;
+    tmp19 = closure_7;
     items1 = [];
     items1[0] = insets;
-    tmp20 = useMemo(() => {
+    tmp20 = closure_7(() => {
       const items = [_null2.toolbar, , , ];
       let obj = { backgroundColor: "" + theme[keyboardState].background + DEFAULT_OPACITY };
       items[1] = obj;
@@ -130,7 +123,7 @@ class KeyboardToolbar {
     items2 = [, ];
     items2[0] = num;
     items2[1] = num2;
-    tmp21 = useMemo(() => {
+    tmp21 = closure_7(() => {
       const items = [_null2.sticky, ];
       let tmp = null;
       if (theme(num[6]).KEYBOARD_HAS_ROUNDED_CORNERS) {
@@ -157,7 +150,7 @@ class KeyboardToolbar {
       items[1] = tmp;
       return items;
     }, items1);
-    tmp22 = useMemo(() => ({ closed: num + theme(num[6]).KEYBOARD_TOOLBAR_HEIGHT, opened: num2 + theme(num[6]).OPENED_OFFSET }), items2);
+    tmp22 = closure_7(() => ({ closed: num + theme(num[6]).KEYBOARD_TOOLBAR_HEIGHT, opened: num2 + theme(num[6]).OPENED_OFFSET }), items2);
     if (children) {
       c9 = null;
       c10 = null;
@@ -170,15 +163,15 @@ class KeyboardToolbar {
         if (_null.isValidElement(type)) {
           type = type.type;
           if (type === theme(num[11]).Background) {
-            let closure_13 = type;
+            closure_13 = type;
           } else if (type === tmp(tmp2[11]).Content) {
-            let closure_11 = type;
+            closure_11 = type;
           } else if (type === tmp(tmp2[11]).Prev) {
-            let closure_9 = type;
+            closure_9 = type;
           } else if (type === tmp(tmp2[11]).Next) {
-            let closure_10 = type;
+            closure_10 = type;
           } else if (type === tmp(tmp2[11]).Done) {
-            let closure_12 = type;
+            closure_12 = type;
           }
         }
       });

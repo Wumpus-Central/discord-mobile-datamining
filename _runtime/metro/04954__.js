@@ -1,18 +1,19 @@
 // _runtime/metro/04954__.js
-import { getDataView } from "../04910_getDataView.js";
-import { readTag } from "../04930_readTag.js";
-import { importDefaultResult1 } from "../04931_importDefaultResult1.js";
-const require = arg1;
+import getDataView from "getDataView" /* 4910 */;
+import readTag from "readTag" /* 4930 */;
+import importDefaultResult1 from "importDefaultResult1" /* 4931 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 let obj = { K3_III: 78420 };
 obj = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
 arg5.default = {
   read(byteLength) {
-    let obj = module(4915);
+    obj = module(4915);
     const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
     const sum = arg1 + arg2;
-    let obj1 = readTag;
+    obj1 = readTag;
     const ifd = obj1.readIfd(byteLength, importDefaultResult1.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
     let LevelInfo = ifd.PentaxModelID;
     if (LevelInfo) {

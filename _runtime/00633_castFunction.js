@@ -1,5 +1,6 @@
 // _runtime/00633_castFunction.js
-import { identity } from "00634_identity.js";
+import identity from "identity" /* 634 */;
+
 
 export default function castFunction(fn) {
   let tmp = fn;

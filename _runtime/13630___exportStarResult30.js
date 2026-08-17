@@ -1,6 +1,7 @@
 // _runtime/13630___exportStarResult30.js
-import { getMultiInternalSlots } from "13582_getMultiInternalSlots.js";
-const require = arg1;
+import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.PartitionPattern = function PartitionPattern(arr) {
   const items = [];

@@ -3,7 +3,7 @@ const require = arg1;
 const dependencyMap = arg6;
 const map = new Map();
 arg5.getHybridObjectConstructor = function getHybridObjectConstructor(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let obj = map;
   if (map.has(arg0)) {
     return obj.get(arg0);

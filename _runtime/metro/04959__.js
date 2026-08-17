@@ -23,7 +23,7 @@ arg5.default = {
     if (2 & byteAt) {
       num2 = 1;
     }
-    const obj1 = { value: num2, description: null };
+    obj1 = { value: num2, description: null };
     if (2 & byteAt) {
       str = "Yes";
     }

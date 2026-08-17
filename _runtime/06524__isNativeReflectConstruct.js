@@ -1,18 +1,13 @@
 // _runtime/06524__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import importAllResult from "noop";
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-let Platform;
-let StyleSheet;
-let c5;
-let c9;
-let metroImportAll;
 let CardStack = arg1;
 function _isNativeReflectConstruct() {
   try {
@@ -25,17 +20,17 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 ({ Animated: c5, Platform, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let obj = { default: require("SlideFromRightIOS").DefaultTransition, fade: require("SlideFromRightIOS").ModalFadeTransition, fade_from_bottom: require("SlideFromRightIOS").FadeFromBottomAndroid, fade_from_right: require("SlideFromRightIOS").FadeFromRightAndroid, none: require("SlideFromRightIOS").DefaultTransition, reveal_from_bottom: require("SlideFromRightIOS").RevealFromBottomAndroid, scale_from_center: require("SlideFromRightIOS").ScaleFromCenterAndroid, slide_from_left: require("SlideFromRightIOS").SlideFromLeftIOS, slide_from_right: require("SlideFromRightIOS").SlideFromRightIOS, slide_from_bottom: require("SlideFromRightIOS").BottomSheetAndroid };
 let closure_12 = Object.freeze({ options: {} });
 function getInterpolationIndex(arg0, arg1) {
@@ -94,12 +89,12 @@ function getProgressFromGesture(arg0, arg1, arg2, arg3) {
 class CardStack {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, apply);
+    tmp = closure_2(this, closure_0);
     items = [];
     items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
+    tmp2 = closure_4;
+    obj = closure_4(closure_0);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -108,25 +103,22 @@ class CardStack {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.handleLayout = (nativeEvent) => {
       const layout = nativeEvent.nativeEvent.layout;
       let height = layout.height;
       const width = layout.width;
-      let _classCallCheck = { width, height };
+      closure_2 = { width, height };
       height.setState((layout) => {
-        let insets;
-        let isParentHeaderShown;
-        let isParentModal;
         if (scenes !== layout.layout.height) {
-          const obj = { layout: null, headerHeights: null };
+          obj = { layout: null, headerHeights: null };
           obj[0] = isParentHeaderShown;
           scenes = layout.scenes;
           ({ insets, isParentHeaderShown, isParentModal } = arg1);
-          if (typeof outer1_16 !== "function") {
+          if (typeof closure_1_16 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          let _getPrototypeOf = isParentHeaderShown;
+          closure_4 = isParentHeaderShown;
           const headerHeights = layout.headerHeights;
           obj[1] = scenes.reduce((arg0, descriptor) => {
             const options = descriptor.descriptor.options;
@@ -142,12 +134,12 @@ class CardStack {
             if (!headerStyle) {
               headerStyle = {};
             }
-            const flattenResult = outer1_6.flatten(headerStyle);
+            const flattenResult = closure_1_6.flatten(headerStyle);
             if ("height" in flattenResult) {
               if (typeof flattenResult.height === "number") {
-                let height = flattenResult.height;
+                height = flattenResult.height;
               }
-              if (typeof outer1_13 !== "function") {
+              if (typeof closure_1_13 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let diff = arg2 - 1;
@@ -175,13 +167,13 @@ class CardStack {
                   }
                 }
               }
-              if (typeof outer1_15 !== "function") {
+              if (typeof closure_1_15 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let flag = true;
               if (!isParentModal) {
                 const cardStyleInterpolator = descriptor.descriptor.options.cardStyleInterpolator;
-                if (typeof outer1_14 !== "function") {
+                if (typeof closure_1_14 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp20 = cardStyleInterpolator === scenes(insets[9]).forModalPresentationIOS;
@@ -194,7 +186,7 @@ class CardStack {
                 flag = tmp20;
               }
               if (typeof height !== "number") {
-                height = scenes(insets[10]).getDefaultHeaderHeight(_getPrototypeOf, flag, headerStatusBarHeight);
+                height = scenes(insets[10]).getDefaultHeaderHeight(closure_4, flag, headerStatusBarHeight);
                 const obj2 = scenes(insets[10]);
               }
               arg0[descriptor.route.key] = height;
@@ -211,14 +203,12 @@ class CardStack {
       });
     };
     tmp3Result.handleHeaderLayout = (arg0) => {
-      let closure_0;
-      let closure_1;
       ({ route: closure_0, height: closure_1 } = arg0);
-      tmp3Result.setState((headerHeights) => {
+      state.setState((headerHeights) => {
         headerHeights = headerHeights.headerHeights;
         let tmp3 = null;
         if (headerHeights[key.key] !== closure_1) {
-          let obj = { headerHeights: null };
+          obj = { headerHeights: null };
           obj = {};
           const merged = Object.assign(headerHeights);
           obj[tmp.key] = tmp2;
@@ -229,7 +219,7 @@ class CardStack {
       });
     };
     tmp3Result.getFocusedRoute = () => {
-      const state = tmp3Result.props.state;
+      state = state.props.state;
       return state.routes[state.index];
     };
     tmp3Result.getPreviousScene = (route) => {
@@ -239,53 +229,33 @@ class CardStack {
       if (previousRoute) {
         return scenes.find((descriptor) => descriptor.descriptor.route.key === previousRoute.key);
       }
-      const obj = { route: route.route };
+      obj = { route: route.route };
     };
     obj = { routes: [], scenes: [], gestures: {}, layout: require("Background").SafeAreaProviderCompat.initialMetrics.frame, descriptors: tmp3Result.props.descriptors, activeStates: [], headerHeights: {} };
     tmp3Result.state = obj;
     return tmp3Result;
   }
 }
-importDefaultResult1(CardStack, require("noop").Component);
+importDefaultResult1(CardStack, importAllResult.Component);
 obj = {
   key: "render",
   value: function render() {
-    let StyleSheet;
-    let View;
-    let _isNativeReflectConstruct;
-    let closure_12;
-    let closure_19;
-    let closure_20;
-    let _getPrototypeOf;
-    let closure_5;
-    let closure_9;
-    let dependencyMap;
-    let detachInactiveScreens;
-    let getInterpolationIndex;
-    let getIsModal;
-    let getIsModalPresentation;
-    let headerHeights;
-    let obj;
-    let renderHeader;
-    let state;
     let self = this;
     self = this;
     const props = this.props;
     ({ insets: dependencyMap, state } = props);
     const routes = props.routes;
-    ({ openingRouteKeys: _getPrototypeOf, closingRouteKeys: closure_5, onOpenRoute: StyleSheet, onCloseRoute: View, renderHeader } = props);
+    ({ openingRouteKeys: closure_4, closingRouteKeys: closure_5, onOpenRoute: StyleSheet, onCloseRoute: View, renderHeader } = props);
     ({ isParentHeaderShown: closure_9, isParentModal: _isNativeReflectConstruct, onTransitionStart: obj, onTransitionEnd: closure_12, onGestureStart: getInterpolationIndex, onGestureEnd: getIsModalPresentation, onGestureCancel: getIsModal, detachInactiveScreens } = props);
-    const getHeaderHeights = tmp;
+    closure_16 = tmp;
     const state2 = self.state;
     let scenes = state2.scenes;
     const layout = state2.layout;
     ({ gestures: closure_19, activeStates: closure_20, headerHeights } = state2);
-    let closure_22 = tmp2;
+    closure_22 = tmp2;
     scenes = self.state.scenes;
     const substr = scenes.slice(-2);
     let someResult = substr.some((descriptor) => {
-      let headerShown;
-      let headerTransparent;
       let options = descriptor.descriptor.options;
       if (options == null) {
         options = {};
@@ -301,12 +271,12 @@ obj = {
       }
       return !tmp;
     });
-    const CardStack = someResult;
+    CardStack = someResult;
     obj = { style: closure_19.container, children: null };
     obj = { mode: "float", layout, scenes, getPreviousScene: self.getPreviousScene, getFocusedRoute: self.getFocusedRoute, contentHeight: headerHeights[tmp2.key], onContentHeightChange: self.handleHeaderLayout, style: null };
     let items = [closure_19.floating, ];
     if (someResult) {
-      const obj1 = { height: null };
+      obj1 = { height: null };
       obj1[0] = headerHeights[tmp2.key];
       const items1 = [obj1, tmp6.absolute];
       someResult = items1;
@@ -318,13 +288,6 @@ obj = {
     const items3 = [];
     HermesBuiltin.arraySpread(state.preloadedRoutes, HermesBuiltin.arraySpread(routes, 0));
     obj2[3] = items3.map((key, index) => {
-      let autoHideHomeIndicator;
-      let bottom;
-      let freezeOnBlur;
-      let headerTransparent;
-      let left;
-      let right;
-      let top;
       const preloadedRoutes = state.preloadedRoutes;
       let hasItem = preloadedRoutes.includes(key);
       if (hasItem) {
@@ -347,7 +310,7 @@ obj = {
       if (false !== tmp6) {
         num = headerHeights[key.key];
       }
-      if (typeof outer1_13 !== "function") {
+      if (typeof closure_1_13 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let diff = index - 1;
@@ -375,16 +338,16 @@ obj = {
           }
         }
       }
-      if (typeof outer1_15 !== "function") {
+      if (typeof closure_1_15 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let flag = true;
       if (!closure_10) {
         const cardStyleInterpolator = tmp2.descriptor.options.cardStyleInterpolator;
-        if (typeof outer1_14 !== "function") {
+        if (typeof closure_1_14 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        let tmp18 = cardStyleInterpolator === someResult(outer1_1[9]).forModalPresentationIOS;
+        let tmp18 = cardStyleInterpolator === someResult(closure_1_1[9]).forModalPresentationIOS;
         if (!tmp18) {
           tmp18 = "forModalPresentationIOS" === cardStyleInterpolator.name;
         }
@@ -405,29 +368,15 @@ obj = {
       if (!hasItem) {
         num4 = table2[index];
       }
-      let obj = { style: items, enabled: closure_16, active: num4, freezeOnBlur, shouldFreeze: null, homeIndicatorHidden: null, pointerEvents: "box-none", children: null };
-      items = [outer1_6.absoluteFill];
+      obj = { style: items, enabled: closure_16, active: num4, freezeOnBlur, shouldFreeze: null, homeIndicatorHidden: null, pointerEvents: "box-none", children: null };
+      items = [closure_1_6.absoluteFill];
       let tmp27 = 0 === num4;
       if (tmp27) {
         tmp27 = !hasItem;
       }
       obj[4] = tmp27;
       obj[5] = autoHideHomeIndicator;
-      obj = { index, interpolationIndex: num3, modal: flag, active: index === routes.length - 1, focused: scenes[index].key === key.key, opening: null, closing: null, layout: null, gesture: null, scene: null, safeAreaInsetTop: null, safeAreaInsetRight: null, safeAreaInsetBottom: null, safeAreaInsetLeft: null, onGestureStart: null, onGestureCancel: null, onGestureEnd: null, headerHeight: null, isParentHeaderShown: null, onHeaderHeightChange: null, getPreviousScene: null, getFocusedRoute: null, hasAbsoluteFloatHeader: null, renderHeader: null, onOpenRoute: null, onCloseRoute: null, onTransitionStart: null, onTransitionEnd: null, isNextScreenTransparent: null, detachCurrentScreen: null, preloaded: null };
-      obj[5] = _getPrototypeOf.includes(key.key);
-      obj[6] = closure_5.includes(key.key);
-      obj[7] = layout;
-      obj[8] = table[key.key];
-      obj[9] = scenes[index];
-      obj[10] = top;
-      obj[11] = right;
-      obj[12] = bottom;
-      obj[13] = left;
-      obj[14] = closure_13;
-      obj[15] = closure_15;
-      obj[16] = closure_14;
-      obj[17] = num;
-      obj[18] = closure_9;
+      obj = { index, interpolationIndex: num3, modal: flag, active: index === routes.length - 1, focused: key.key === key.key, opening: closure_4.includes(key.key), closing: closure_5.includes(key.key), layout, gesture: table[key.key], scene: tmp2, safeAreaInsetTop: top, safeAreaInsetRight: right, safeAreaInsetBottom: bottom, safeAreaInsetLeft: left, onGestureStart: closure_13, onGestureCancel: closure_15, onGestureEnd: closure_14, headerHeight: num, isParentHeaderShown: closure_9, onHeaderHeightChange: null, getPreviousScene: null, getFocusedRoute: null, hasAbsoluteFloatHeader: null, renderHeader: null, onOpenRoute: null, onCloseRoute: null, onTransitionStart: null, onTransitionEnd: null, isNextScreenTransparent: null, detachCurrentScreen: null, preloaded: null };
       ({ handleHeaderLayout: obj2[19], getPreviousScene: obj2[20], getFocusedRoute: obj2[21] } = self);
       let tmp29 = closure_0;
       if (closure_0) {
@@ -442,8 +391,8 @@ obj = {
       obj[28] = "transparentModal" === presentation;
       obj[29] = false !== detachPreviousScreen;
       obj[30] = hasItem;
-      obj[7] = renderHeader(someResult(outer1_1[13]).CardContainer, obj);
-      return renderHeader(someResult(outer1_1[12]).MaybeScreen, obj, key.key);
+      obj[7] = renderHeader(someResult(closure_1_1[13]).CardContainer, obj);
+      return renderHeader(someResult(closure_1_1[12]).MaybeScreen, obj, key.key);
     });
     items2[1] = renderHeader(CardStack(6531).MaybeScreenContainer, obj2);
     obj[1] = items2;
@@ -454,11 +403,6 @@ let items = [obj];
 obj = {
   key: "getDerivedStateFromProps",
   value: function getDerivedStateFromProps(routes, routes2) {
-    let headerHeights;
-    let insets;
-    let isParentHeaderShown;
-    let isParentModal;
-    let layout;
     let mapped = routes;
     insets = routes2;
     if (routes.routes === routes2.routes) {
@@ -490,14 +434,14 @@ obj = {
         if (tmp2 != null) {
           options1 = tmp2.options;
         }
-        num = outer1_17(tmp3.layout, options1, "rtl" === tmp.direction);
-        const tmp6 = outer1_17;
+        num = closure_1_17(tmp3.layout, options1, "rtl" === tmp.direction);
+        const tmp6 = closure_1_17;
       }
       arg0[key.key] = value;
       return arg0;
     }, {});
     isParentHeaderShown = reduced;
-    let obj = mapped(insets[14]);
+    obj = mapped(insets[14]);
     let items1 = [...routes.state.preloadedRoutes];
     obj = {};
     let merged = Object.assign(routes.descriptors);
@@ -516,9 +460,9 @@ obj = {
         tmp4 = arg2[arg1 + 1];
       }
       mapped = tmp6;
-      let obj = isParentHeaderShown[key.key];
+      obj = isParentHeaderShown[key.key];
       if (tmp3) {
-        let obj1 = tmp7[tmp3.key];
+        obj1 = tmp7[tmp3.key];
       }
       if (tmp4) {
         let obj2 = tmp7[tmp4.key];
@@ -583,7 +527,7 @@ obj = {
             str3 = "default";
           }
           if ("default" !== str2) {
-            let ModalTransition = outer1_11[str2];
+            let ModalTransition = closure_1_11[str2];
           } else if ("transparentModal" === options.presentation) {
             ModalTransition = mapped(insets[8]).ModalFadeTransition;
           } else {
@@ -613,7 +557,7 @@ obj = {
             if (undefined === cardOverlayEnabled) {
               let tmp38 = "transparentModal" !== options.presentation;
               if (!tmp38) {
-                if (typeof outer1_14 !== "function") {
+                if (typeof closure_1_14 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp42 = cardStyleInterpolator === mapped(insets[9]).forModalPresentationIOS;
@@ -646,7 +590,7 @@ obj = {
               }
               str10 = "screen";
               if (tmp43) {
-                if (typeof outer1_14 !== "function") {
+                if (typeof closure_1_14 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 str10 = "screen";
@@ -672,8 +616,8 @@ obj = {
             obj1.headerMode = str10;
             obj.options = obj1;
             obj[1] = obj;
-            const layout = tmp5.layout;
-            if (typeof outer1_18 !== "function") {
+            layout = tmp5.layout;
+            if (typeof closure_1_18 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             obj2 = { width: null, height: null };
@@ -681,7 +625,7 @@ obj = {
             obj2[0] = Math.max(1, layout.width);
             const _Math2 = Math;
             obj2[1] = Math.max(1, layout.height);
-            const tmp58 = outer1_17(obj2, tmp8.options, "rtl" === tmp.direction);
+            const tmp58 = closure_1_17(obj2, tmp8.options, "rtl" === tmp.direction);
             if (tmp58 > 0) {
               const obj3 = { inputRange: null, outputRange: null };
               const items = [0, tmp58];
@@ -738,7 +682,7 @@ obj = {
               if (tmp6) {
                 const __memo = obj.__memo;
                 tmp68 = obj;
-                if (__memo.every((arg0, arg1) => tmp6.__memo[arg1] === arg0)) {
+                if (__memo.every((arg0, arg1) => __memo.__memo[arg1] === arg0)) {
                   tmp68 = tmp6;
                 }
               }
@@ -854,7 +798,7 @@ obj = {
           }
           if (layout[arg2.length - 1]) {
             const current = tmp3.progress.current;
-            const obj = { inputRange: null, outputRange: null, extrapolate: "clamp" };
+            obj = { inputRange: null, outputRange: null, extrapolate: "clamp" };
             obj[0] = [0, 0.99999, 1];
             const items = [1, 1, num3];
             obj[1] = items;
@@ -887,12 +831,12 @@ obj = {
       if (!headerStyle) {
         headerStyle = {};
       }
-      const flattenResult = outer1_6.flatten(headerStyle);
+      const flattenResult = closure_1_6.flatten(headerStyle);
       if ("height" in flattenResult) {
         if (typeof flattenResult.height === "number") {
-          let height = flattenResult.height;
+          height = flattenResult.height;
         }
-        if (typeof outer1_13 !== "function") {
+        if (typeof closure_1_13 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let diff = arg2 - 1;
@@ -920,13 +864,13 @@ obj = {
             }
           }
         }
-        if (typeof outer1_15 !== "function") {
+        if (typeof closure_1_15 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let flag = true;
         if (!isParentModal) {
           const cardStyleInterpolator = descriptor.descriptor.options.cardStyleInterpolator;
-          if (typeof outer1_14 !== "function") {
+          if (typeof closure_1_14 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let tmp20 = cardStyleInterpolator === scenes(insets[9]).forModalPresentationIOS;
@@ -939,7 +883,7 @@ obj = {
           flag = tmp20;
         }
         if (typeof height !== "number") {
-          height = scenes(insets[10]).getDefaultHeaderHeight(_getPrototypeOf, flag, headerStatusBarHeight);
+          height = scenes(insets[10]).getDefaultHeaderHeight(closure_4, flag, headerStatusBarHeight);
           const obj2 = scenes(insets[10]);
         }
         arg0[descriptor.route.key] = height;

@@ -1,7 +1,7 @@
 // _runtime/02002_buildLocalizeFn.js
 
 export default function buildLocalizeFn(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return (arg0, context) => {
     let str = "standalone";
     if (null != context) {

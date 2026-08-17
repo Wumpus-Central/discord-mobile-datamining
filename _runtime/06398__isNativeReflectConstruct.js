@@ -1,9 +1,9 @@
 // _runtime/06398__isNativeReflectConstruct.js
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_inherits";
-import importDefaultResult1 from "_createClass";
-import _classCallCheck from "_classCallCheck";
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_inherits" /* 98 */;
+import importDefaultResult1 from "_createClass" /* 42 */;
+import closure_4 from "_classCallCheck" /* 41 */;
 
 let ContinousBaseGesture = arg1;
 function _isNativeReflectConstruct() {
@@ -17,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -28,19 +28,19 @@ function _isNativeReflectConstruct() {
 let obj = { UNDEFINED: 0, BEGAN: 1, START: 2, UPDATE: 3, CHANGE: 4, END: 5, FINALIZE: 6, TOUCHES_DOWN: 7, TOUCHES_MOVE: 8, TOUCHES_UP: 9, TOUCHES_CANCEL: 10 };
 class Gesture {
   constructor() {
-    tmp = _classCallCheck(this, Gesture);
+    tmp = closure_4(this, Gesture);
     return;
   }
 }
 const importDefaultResult1Result = importDefaultResult1(Gesture);
-let c7 = 0;
+let closure_7 = 0;
 class BaseGesture {
   constructor() {
     self = this;
-    tmp = _classCallCheck(this, ContinousBaseGesture);
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(ContinousBaseGesture);
-    tmp3 = _isNativeReflectConstruct;
+    tmp = closure_4(this, ContinousBaseGesture);
+    tmp2 = closure_3;
+    obj = closure_3(ContinousBaseGesture);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -54,8 +54,8 @@ class BaseGesture {
     tmp3Result.handlerName = "";
     tmp3Result.config = {};
     tmp3Result.handlers = { gestureId: -1, handlerTag: -1, isWorklet: [] };
-    tmp7 = +c7;
-    c7 = tmp7 + 1;
+    tmp7 = +closure_7;
+    closure_7 = tmp7 + 1;
     tmp3Result.gestureId = tmp7;
     tmp3Result.handlers.gestureId = tmp3Result.gestureId;
     return tmp3Result;
@@ -270,7 +270,7 @@ let items = [
     key: "initialize",
     value: function initialize() {
       const self = this;
-      let obj = ContinousBaseGesture(6399);
+      obj = ContinousBaseGesture(6399);
       this.handlerTag = obj.getNextHandlerTag();
       obj = {};
       const merged = Object.assign(this.handlers);
@@ -304,7 +304,7 @@ let items = [
       }
       if (tmp) {
         tmp = !ContinousBaseGesture(6382).isRemoteDebuggingEnabled();
-        const obj = ContinousBaseGesture(6382);
+        obj = ContinousBaseGesture(6382);
       }
       return tmp;
     }
@@ -314,10 +314,10 @@ const importDefaultResult1Result1 = importDefaultResult1(BaseGesture, items);
 class ContinousBaseGesture {
   constructor() {
     self = this;
-    tmp = _classCallCheck(this, ContinousBaseGesture);
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(ContinousBaseGesture);
-    tmp3 = _isNativeReflectConstruct;
+    tmp = closure_4(this, ContinousBaseGesture);
+    tmp2 = closure_3;
+    obj = closure_3(ContinousBaseGesture);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;

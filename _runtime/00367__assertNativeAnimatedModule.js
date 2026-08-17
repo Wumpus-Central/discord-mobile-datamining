@@ -1,16 +1,16 @@
 // _runtime/00367__assertNativeAnimatedModule.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const AnimatedNode = importDefault;
 let c3 = 1;
 function _assertNativeAnimatedModule() {
   const result = AnimatedNode(357).assertNativeAnimatedModule();
-  let c4 = null;
+  c4 = null;
 }
 class AnimatedNode {
   constructor(arg0) {
-    tmp = outer1_2(this, AnimatedNode);
+    tmp = closure_2(this, AnimatedNode);
     this._platformConfig = undefined;
     this.__isNative = false;
     this.__nativeTag = undefined;
@@ -89,7 +89,7 @@ const items = [
   {
     key: "addListener",
     value: function addListener(arg0) {
-      let closure_3 = tmp + 1;
+      closure_3 = tmp + 1;
       const StringResult = String(+closure_3);
       const _listeners = this._listeners;
       const result = _listeners.set(StringResult, arg0);
@@ -168,7 +168,7 @@ const items = [
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
-      const error = new Error("This JS animated node type cannot be used as native animated node");
+      error = new Error("This JS animated node type cannot be used as native animated node");
       throw error;
     }
   },
@@ -198,4 +198,4 @@ const items = [
   }
 ];
 
-export default _createClass(AnimatedNode, items);
+export default _createClassDefault(AnimatedNode, items);

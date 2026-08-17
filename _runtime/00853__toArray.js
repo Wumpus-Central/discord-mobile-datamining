@@ -1,8 +1,9 @@
 // _runtime/00853__toArray.js
-import { _arrayWithHoles } from "00033__arrayWithHoles.js";
-import { _unsupportedIterableToArray } from "00035__unsupportedIterableToArray.js";
-import { _nonIterableRest } from "00037__nonIterableRest.js";
-import { _iterableToArray } from "00854__iterableToArray.js";
+import _arrayWithHoles from "_arrayWithHoles" /* 33 */;
+import _unsupportedIterableToArray from "_unsupportedIterableToArray" /* 35 */;
+import _nonIterableRest from "_nonIterableRest" /* 37 */;
+import _iterableToArray from "_iterableToArray" /* 854 */;
+
 
 export default function _toArray(arg0) {
   return _arrayWithHoles(arg0) || _iterableToArray(arg0) || _unsupportedIterableToArray(arg0) || _nonIterableRest();

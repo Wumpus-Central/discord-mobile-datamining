@@ -1,9 +1,10 @@
 // _runtime/00598_forEach.js
-import { castFunction } from "00633_castFunction.js";
-import { 00599__ } from "metro/00599__.js";
+import _mod599 from "module_599" /* 599 */;
+import castFunction from "castFunction" /* 633 */;
+
 
 export default function forEach(arg0, arg1) {
-  if (00599__(arg0)) {
+  if (_mod599(arg0)) {
     let tmpResult = tmp(600);
   } else {
     tmpResult = tmp(601);

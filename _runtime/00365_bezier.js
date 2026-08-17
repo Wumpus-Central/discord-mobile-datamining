@@ -2,10 +2,10 @@
 let c0 = 0.1;
 let closure_1 = typeof Float32Array === "function";
 arg5.default = function bezier(arg0, arg1, arg2, arg3) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
-  let closure_3 = arg3;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  closure_3 = arg3;
   if (arg0 >= 0) {
     if (arg0 <= 1) {
       if (arg2 >= 0) {
@@ -124,6 +124,6 @@ arg5.default = function bezier(arg0, arg1, arg2, arg3) {
       }
     }
   }
-  const error = new Error("bezier x values must be in [0, 1] range");
+  error = new Error("bezier x values must be in [0, 1] range");
   throw error;
 };

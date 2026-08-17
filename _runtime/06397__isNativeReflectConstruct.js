@@ -1,9 +1,9 @@
 // _runtime/06397__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult1 from "_inherits";
+import closure_2 from "_classCallCheck" /* 41 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
 
 let ExclusiveGesture = arg1;
 function _isNativeReflectConstruct() {
@@ -17,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,10 +29,10 @@ class ComposedGesture {
   constructor() {
     self = this;
     items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, ExclusiveGesture);
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(ExclusiveGesture);
-    tmp3 = _isNativeReflectConstruct;
+    tmp = closure_2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -123,10 +123,10 @@ const importDefaultResultResult = importDefaultResult(ComposedGesture, items);
 class SimultaneousGesture {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, ExclusiveGesture);
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(ExclusiveGesture);
-    tmp3 = _isNativeReflectConstruct;
+    tmp = closure_2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -162,10 +162,10 @@ let items1 = [obj];
 class ExclusiveGesture {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, ExclusiveGesture);
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(ExclusiveGesture);
-    tmp3 = _isNativeReflectConstruct;
+    tmp = closure_2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;

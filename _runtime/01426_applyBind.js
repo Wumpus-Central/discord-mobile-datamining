@@ -1,9 +1,10 @@
 // _runtime/01426_applyBind.js
-import { bind } from "00554_bind.js";
-import { 00552__ } from "metro/00552__.js";
-import { 00557__ } from "metro/00557__.js";
+import _mod552 from "module_552" /* 552 */;
+import bind from "bind" /* 554 */;
+import _mod557 from "module_557" /* 557 */;
+
 
 export default function applyBind() {
-  const tmp = 00552__;
-  return tmp(bind, 00557__, arguments);
+  const tmp = _mod552;
+  return tmp(bind, _mod557, arguments);
 };

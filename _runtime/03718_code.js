@@ -1,5 +1,5 @@
 // _runtime/03718_code.js
-import code from "code";
+import code from "code" /* 1996 */;
 
 if (!code) {
   const obj = { default: null };

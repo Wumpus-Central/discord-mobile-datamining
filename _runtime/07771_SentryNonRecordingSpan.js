@@ -1,6 +1,6 @@
 // _runtime/07771_SentryNonRecordingSpan.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 const SentryNonRecordingSpan = require;
 class SentryNonRecordingSpan {
@@ -10,7 +10,7 @@ class SentryNonRecordingSpan {
       obj = {};
     }
     self = this;
-    tmp = outer1_2(this, SentryNonRecordingSpan);
+    tmp = closure_2(this, SentryNonRecordingSpan);
     traceId = obj.traceId;
     if (!traceId) {
       tmp2 = SentryNonRecordingSpan;

@@ -1,22 +1,30 @@
 // _runtime/04931_importDefaultResult1.js
-import getDataView from "getDataView";
-import objectAssignResult from "decodeXPValue";
+import _modDef4913 from "module_4913" /* 4913 */;
+import decodeXPValueDefault from "decodeXPValue" /* 4932 */;
+import _modDef4934 from "module_4934" /* 4934 */;
+import _modDef4936 from "module_4936" /* 4936 */;
+import getStringValueDefault from "getStringValue" /* 4937 */;
+import getStringValueDefault2 from "getStringValue" /* 4938 */;
+import _modDef4939 from "module_4939" /* 4939 */;
+import _modDef4940 from "module_4940" /* 4940 */;
+import getDataView from "getDataView" /* 4910 */;
 
-const obj = { "0th": objectAssignResult, "1st": require("decodeXPValue"), exif: objectAssignResult, gps: require("module_4936"), interoperability: require("getStringValue"), mpf: null, canon: null, pentax: null };
-if (require("module_4913").USE_MPF) {
-  let importDefaultResult1 = require("getStringValue");
+const objectAssignResult = getDataView.objectAssign({}, decodeXPValueDefault, _modDef4934);
+const obj = { "0th": objectAssignResult, "1st": decodeXPValueDefault, exif: objectAssignResult, gps: _modDef4936, interoperability: getStringValueDefault, mpf: null, canon: null, pentax: null };
+if (_modDef4913.USE_MPF) {
+  let importDefaultResult1 = getStringValueDefault2;
 } else {
   importDefaultResult1 = {};
 }
 obj[5] = importDefaultResult1;
-if (require("module_4913").USE_MAKER_NOTES) {
-  let importDefaultResult2 = require("module_4939");
+if (_modDef4913.USE_MAKER_NOTES) {
+  let importDefaultResult2 = _modDef4939;
 } else {
   importDefaultResult2 = {};
 }
 obj[6] = importDefaultResult2;
-if (require("module_4913").USE_MAKER_NOTES) {
-  let importDefaultResult3 = require("module_4940");
+if (_modDef4913.USE_MAKER_NOTES) {
+  let importDefaultResult3 = _modDef4940;
 } else {
   importDefaultResult3 = {};
 }

@@ -1,5 +1,5 @@
 // _runtime/01582_useOnRouteFocus.js
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 

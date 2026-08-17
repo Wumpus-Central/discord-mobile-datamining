@@ -1,6 +1,7 @@
 // _runtime/14427_uniqBy.js
-import { baseIteratee } from "00720_baseIteratee.js";
-import { baseUniq } from "05030_baseUniq.js";
+import baseIteratee from "baseIteratee" /* 720 */;
+import baseUniq from "baseUniq" /* 5030 */;
+
 
 export default function uniqBy(arg0, arg1) {
   if (arg0) {

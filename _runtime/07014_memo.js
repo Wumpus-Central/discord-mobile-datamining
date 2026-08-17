@@ -1,18 +1,12 @@
 // _runtime/07014_memo.js
-import noop from "noop";
-import "noop";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let c4;
-let c5;
-let memo;
 ({ useCallback: c3, useMemo: c4, useRef: c5, memo } = noop);
+noopDefault;
+const jsx = jsxProd.jsx;
 const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneousHandlers) {
-  let animatedIndex;
-  let animatedPosition;
-  let handleIndicatorStyle;
-  let handleStyle;
   simultaneousHandlers = simultaneousHandlers.simultaneousHandlers;
   let DEFAULT_ENABLE_HANDLE_PANNING_GESTURE = simultaneousHandlers.enableHandlePanningGesture;
   ({ animatedIndex, animatedPosition } = simultaneousHandlers);
@@ -28,7 +22,7 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
   let waitFor;
   let simultaneousHandlers2;
   let handlePanGestureHandler;
-  let c10;
+  closure_10 = undefined;
   ({ handleStyle, handleIndicatorStyle } = simultaneousHandlers);
   const tmp3 = failOffsetX(null);
   let obj = simultaneousHandlers(handleHeight[3]);
@@ -59,7 +53,7 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
     }
     return items;
   }, items);
-  c10 = tmp7;
+  closure_10 = tmp7;
   let items1 = [activeOffsetX, activeOffsetY, DEFAULT_ENABLE_HANDLE_PANNING_GESTURE, failOffsetX, failOffsetY, tmp7, waitFor, , , , ];
   ({ handleOnChange: arr2[7], handleOnEnd: arr2[8], handleOnFinalize: arr2[9], handleOnStart: arr2[10] } = handlePanGestureHandler);
   const items2 = [handleHeight];
@@ -80,7 +74,7 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
       result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
     }
     let result2 = result1;
-    if (c10) {
+    if (closure_10) {
       result2 = result1.simultaneousWithExternalGesture(tmp2);
     }
     let activeOffsetXResult = result2;
@@ -112,8 +106,7 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
     handleComponent = DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(tmp5[5]);
   }
   obj = { gesture: tmp8, children: null };
-  obj = { ref: tmp3, onLayout: tmp9, children: null };
-  obj[2] = failOffsetY(handleComponent, { animatedIndex, animatedPosition, style: handleStyle, indicatorStyle: handleIndicatorStyle });
+  obj = { ref: tmp3, onLayout: tmp9, children: failOffsetY(handleComponent, { animatedIndex, animatedPosition, style: handleStyle, indicatorStyle: handleIndicatorStyle }) };
   obj[1] = failOffsetY(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(handleHeight[6]).View, obj, "BottomSheetHandleContainer");
   return failOffsetY(tmp4(handleHeight[4]).GestureDetector, obj);
 });

@@ -1,10 +1,11 @@
 // _runtime/00085_AssetSourceResolver.js
-import _classCallCheck from "_classCallCheck";
+import _createClassDefault from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const AssetSourceResolver = arg1;
 class AssetSourceResolver {
   constructor(arg0, arg1, arg2) {
-    tmp = outer1_2(this, AssetSourceResolver);
+    tmp = closure_2(this, AssetSourceResolver);
     this.serverUrl = global;
     this.jsbundleUrl = arg1;
     this.asset = importDefault;
@@ -77,7 +78,7 @@ const items = [
         const _JSON2 = JSON;
         const text1 = `${`Don't know how to get asset via provided resolver: ${resolver}`}
       Asset: ${JSON.stringify(self.asset, null, "\t")}`;
-        const error = new Error(text1 + "\nPossible resolvers are:" + JSON.stringify(["android", "generic"], null, "\t"));
+        error = new Error(text1 + "\nPossible resolvers are:" + JSON.stringify(["android", "generic"], null, "\t"));
         throw error;
       }
     }
@@ -85,9 +86,6 @@ const items = [
   {
     key: "assetServerURL",
     value: function assetServerURL() {
-      let asset;
-      let fromSource;
-      let serverUrl;
       const self = this;
       AssetSourceResolver(38)(null != this.serverUrl, "need server to load from");
       ({ asset, fromSource, serverUrl } = this);
@@ -172,7 +170,7 @@ const items = [
     }
   }
 ];
-const tmp2 = require("_createClass")(AssetSourceResolver, items);
+const tmp2 = _createClassDefault(AssetSourceResolver, items);
 tmp2.pickScale = require("pickScale").pickScale;
 
 export default tmp2;

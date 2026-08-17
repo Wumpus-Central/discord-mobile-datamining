@@ -1,7 +1,7 @@
 // _runtime/03675_differenceInSeconds.js
-import differenceInMilliseconds from "differenceInMilliseconds";
-import requiredArgs from "requiredArgs";
-import { getRoundingMethod } from "03666_getRoundingMethod.js";
+import getRoundingMethod from "getRoundingMethod" /* 3666 */;
+import differenceInMilliseconds from "differenceInMilliseconds" /* 3665 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!differenceInMilliseconds) {
   let obj = { default: null };
@@ -10,6 +10,7 @@ if (!differenceInMilliseconds) {
 } else {
   tmp3 = differenceInMilliseconds;
 }
+differenceInMilliseconds = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,11 +18,11 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let c3 = tmp5;
+requiredArgs = tmp5;
 
 export default function differenceInSeconds(arg0, arg1, roundingMethod) {
-  tmp5.default(2, arguments);
-  const result = tmp3.default(arg0, arg1) / 1000;
+  requiredArgs.default(2, arguments);
+  const result = differenceInMilliseconds.default(arg0, arg1) / 1000;
   roundingMethod = undefined;
   if (null != roundingMethod) {
     roundingMethod = roundingMethod.roundingMethod;

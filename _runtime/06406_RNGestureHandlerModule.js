@@ -1,3 +1,5 @@
 // _runtime/06406_RNGestureHandlerModule.js
+import RNGestureHandlerModuleDefault from "RNGestureHandlerModule" /* 6407 */;
 
-export { default } from "RNGestureHandlerModule";
+
+export default RNGestureHandlerModuleDefault;

@@ -1,17 +1,12 @@
 // _runtime/15306_toNativeHorizontalOffset.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let Platform;
-let closure_14;
-let forwardRef;
-let map1;
-let memo;
-get_ActivityIndicator = require;
+let ScrollAdjustHandler = require;
 let obj = dependencyMap;
 function toNativeHorizontalOffset(state7, arg1, clearTimeoutResult) {
   if (state7) {
@@ -101,19 +96,19 @@ function toNativeHorizontalOffset(state7, arg1, clearTimeoutResult) {
   return arg1;
 }
 function StateProvider(children) {
-  return <redux.Provider value={_slicedToArray(frozen.useState(() => {
+  return <redux.Provider value={callback3(frozen.useState(() => {
     if (typeof closure_16 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj = { animatedScrollY: null, columnWrapperStyle: "e", containerLayoutTriggers: "Array", contextNum: 0, listeners: "r", mapViewabilityAmountCallbacks: "TokenizeCreditCardForPayPalConnect", mapViewabilityAmountValues: "M14 5h-3v1h3V5Z", mapViewabilityCallbacks: null, mapViewabilityConfigStates: "Channels Sidebar", mapViewabilityValues: "M1 1H0v1h1V1ZM4 3H3v1h1V3ZM5 6H4v1h1V6ZM15 1h-1v1h1V1ZM16 2h-1v3h1V2Z", pendingContainerIds: "#000", positionListeners: "M15 2h-1v3h1V2Z", scrollAxisGap: null, state: "bottom", values: null, viewRefs: null };
+    obj = { animatedScrollY: null, columnWrapperStyle: "e", containerLayoutTriggers: "Array", contextNum: 0, listeners: "r", mapViewabilityAmountCallbacks: "TokenizeCreditCardForPayPalConnect", mapViewabilityAmountValues: "M14 5h-3v1h3V5Z", mapViewabilityCallbacks: null, mapViewabilityConfigStates: "Channels Sidebar", mapViewabilityValues: "M1 1H0v1h1V1ZM4 3H3v1h1V3ZM5 6H4v1h1V6ZM15 1h-1v1h1V1ZM16 2h-1v3h1V2Z", pendingContainerIds: "#000", positionListeners: "M15 2h-1v3h1V2Z", scrollAxisGap: null, state: "bottom", values: null, viewRefs: null };
     const value = new Animated.Animated.Value(0);
     obj[0] = value;
     obj[2] = new Map();
-    let closure_18 = tmp3 + 1;
+    closure_18 = tmp3 + 1;
     obj[3] = +closure_18;
-    const map = new Map();
+    map = new Map();
     obj[4] = new Map();
-    const map1 = new Map();
+    map1 = new Map();
     obj[5] = new Map();
     const map2 = new Map();
     obj[6] = new Map();
@@ -147,11 +142,11 @@ function StateProvider(children) {
   }), 1)[0]}>{arg0.children}</redux.Provider>;
 }
 function listen$(listeners) {
-  let closure_0 = arg2;
+  closure_0 = arg2;
   listeners = listeners.listeners;
   const value = listeners.get(arg1);
-  let set = value;
-  let obj = value;
+  set = value;
+  obj = value;
   if (!value) {
     const _Set = Set;
     set = new Set();
@@ -166,8 +161,6 @@ function peek$(state, containerLayoutEpoch) {
   return values.get(containerLayoutEpoch);
 }
 function set$(ctx, totalSize, clearTimeoutResult) {
-  let listeners;
-  let values;
   ({ listeners, values } = ctx);
   if (values.get(totalSize) !== clearTimeoutResult) {
     const result = values.set(totalSize, clearTimeoutResult);
@@ -191,8 +184,6 @@ function notifyPosition$(positionListeners, arg1, sum2) {
   }
 }
 function getContentInsetEnd(state) {
-  let contentInset;
-  let horizontal;
   state = state.state;
   let props = state.props;
   ({ horizontal, contentInset } = props);
@@ -300,8 +291,6 @@ function getContentInsetEnd(state) {
   }
 }
 function getContentSize(context) {
-  let state;
-  let values;
   ({ values, state } = context);
   const tmp = values.get("stylePaddingTop") || 0;
   const tmp2 = state.props.stylePaddingBottom || 0;
@@ -326,8 +315,6 @@ function createContainerItemMetadata(dataChangeEpoch, itemIndex, itemData, itemT
   return { dataChangeEpoch: dataChangeEpoch.dataChangeEpoch, getFixedItemSize: dataChangeEpoch.props.getFixedItemSize, getItemType: dataChangeEpoch.props.getItemType, itemData, itemIndex, itemType };
 }
 function resolveContainerItemMetadata(state, containerId, itemIndex, itemData) {
-  let getFixedItemSize;
-  let getItemType;
   ({ getFixedItemSize, getItemType } = state.props);
   const containerItemMetadata = state.containerItemMetadata;
   let value = containerItemMetadata.get(containerId);
@@ -367,7 +354,7 @@ function resolveContainerItemMetadata(state, containerId, itemIndex, itemData) {
     }
     tmp3 = str;
   }
-  const obj = { dataChangeEpoch: state.dataChangeEpoch, getFixedItemSize: state.props.getFixedItemSize, getItemType: state.props.getItemType, itemData, itemIndex, itemType: tmp3 };
+  obj = { dataChangeEpoch: state.dataChangeEpoch, getFixedItemSize: state.props.getFixedItemSize, getItemType: state.props.getItemType, itemData, itemIndex, itemType: tmp3 };
   const containerItemMetadata2 = state.containerItemMetadata;
   const result = containerItemMetadata2.set(containerId, obj);
   value = obj;
@@ -384,8 +371,6 @@ function invalidateContainerFixedItemSizes(containerItemMetadata) {
   }
 }
 function ensureInitialScrollSessionCompletion(initialScrollSession, kind) {
-  let completion;
-  let previousDataLength;
   let tmp = kind;
   if (kind === undefined) {
     initialScrollSession = initialScrollSession.initialScrollSession;
@@ -407,7 +392,7 @@ function ensureInitialScrollSessionCompletion(initialScrollSession, kind) {
       const completion2 = initialScrollSession.initialScrollSession.completion;
       const previousDataLength2 = initialScrollSession.initialScrollSession.previousDataLength;
       if ("offset" === tmp) {
-        let obj = { completion: null, kind: null, previousDataLength: null };
+        obj = { completion: null, kind: null, previousDataLength: null };
         obj[0] = completion2;
         obj[1] = tmp;
         obj[2] = previousDataLength2;
@@ -426,7 +411,7 @@ function ensureInitialScrollSessionCompletion(initialScrollSession, kind) {
     obj[1] = tmp;
     ({ completion, kind, previousDataLength } = obj);
     if ("offset" === kind) {
-      const obj1 = { completion: null, kind: null, previousDataLength: null };
+      obj1 = { completion: null, kind: null, previousDataLength: null };
       obj1[0] = completion;
       obj1[1] = kind;
       obj1[2] = previousDataLength;
@@ -447,7 +432,7 @@ function ensureInitialScrollSessionCompletion(initialScrollSession, kind) {
   return initialScrollSession.initialScrollSession.completion;
 }
 function setInitialScrollSession(current, arg1) {
-  let obj = arg1;
+  obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
@@ -587,16 +572,9 @@ function hasActiveInitialScroll(initialScroll) {
   return initialScroll && !initialScroll.didFinishInitialScroll;
 }
 function checkAtBottom(state, arg1, arg2) {
-  let endReachedSnapshot;
-  let isEndReached;
-  let maintainingScrollAtEnd;
-  let props;
-  let queuedInitialLayout;
-  let scroll;
-  let scrollLength;
-  let closure_0 = state;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
+  closure_0 = state;
+  closure_1 = arg1;
+  closure_2 = arg2;
   state = state.state;
   if (state) {
     ({ scrollLength, scroll, props } = state);
@@ -630,7 +608,7 @@ function checkAtBottom(state, arg1, arg2) {
         if (!tmp18) {
           const result = onEndReachedThreshold * scrollLength;
           ({ isEndReached, endReachedSnapshot } = state);
-          let obj = { contentSize: null, dataLength: null, scrollPosition: null };
+          obj = { contentSize: null, dataLength: null, scrollPosition: null };
           obj[0] = tmp2;
           const data = state.props.data;
           let length;
@@ -654,7 +632,7 @@ function checkAtBottom(state, arg1, arg2) {
               const onEndReached = props.onEndReached;
               if (null != onEndReached) {
                 const call = onEndReached.call;
-                const obj = { distanceFromEnd: null };
+                obj = { distanceFromEnd: null };
                 obj[0] = arg0;
                 if (typeof call === "unknown") {
                   onEndReached(obj);
@@ -674,15 +652,10 @@ function checkAtBottom(state, arg1, arg2) {
   }
 }
 function checkThresholds(state, arg1) {
-  let isStartReached;
-  let props;
-  let scroll;
-  let startReachedSnapshot;
-  let totalSize;
   checkAtBottom(state, arg1, !state.state.edgeReachedGate);
-  let closure_0 = state;
-  let closure_1 = arg1;
-  const _classCallCheck = tmp;
+  closure_0 = state;
+  closure_1 = arg1;
+  closure_2 = tmp;
   state = undefined;
   state = undefined;
   if (null != state) {
@@ -716,7 +689,7 @@ function checkThresholds(state, arg1) {
       initialScroll = state.initialScroll;
     }
     if (!tmp12) {
-      let obj = { contentSize: null, dataLength: null, scrollPosition: null };
+      obj = { contentSize: null, dataLength: null, scrollPosition: null };
       obj[0] = totalSize;
       obj[1] = length;
       obj[2] = scroll;
@@ -735,7 +708,7 @@ function checkThresholds(state, arg1) {
           const onStartReached = props.onStartReached;
           if (null != onStartReached) {
             const call = onStartReached.call;
-            const obj = { distanceFromStart: null };
+            obj = { distanceFromStart: null };
             obj[0] = arg0;
             if (typeof call === "unknown") {
               onStartReached(obj);
@@ -752,7 +725,7 @@ function checkThresholds(state, arg1) {
   }
 }
 function scheduleAdaptiveRenderExit(state, arg1) {
-  let closure_0 = state;
+  closure_0 = state;
   state = state.state;
   const state2 = state.state;
   const timeoutAdaptiveRender = state2.timeoutAdaptiveRender;
@@ -789,7 +762,7 @@ function scheduleAdaptiveRenderExit(state, arg1) {
       state.timeoutAdaptiveRender = undefined;
       const values = state.values;
       if (values.get("adaptiveRender") !== "normal") {
-        outer1_22(tmp2, "adaptiveRender", "normal");
+        closure_1_22(tmp2, "adaptiveRender", "normal");
         const adaptiveRender = tmp2.state.props.adaptiveRender;
         let onChange;
         if (null != adaptiveRender) {
@@ -936,7 +909,7 @@ function setInitialRenderState(state, didLayout) {
     if (!state.didLoad) {
       state.didLoad = true;
       if (onLoad) {
-        const obj = { elapsedTimeInMs: null };
+        obj = { elapsedTimeInMs: null };
         const _Date = Date;
         obj[0] = Date.now() - state.loadStartTime;
         onLoad(obj);
@@ -946,8 +919,8 @@ function setInitialRenderState(state, didLayout) {
   }
 }
 function finishInitialScroll(state, resolvedOffset) {
-  let closure_0 = state;
-  let closure_1 = resolvedOffset;
+  closure_0 = state;
+  closure_1 = resolvedOffset;
   state = state.state;
   if (undefined !== resolvedOffset.resolvedOffset) {
     resolvedOffset = resolvedOffset.resolvedOffset;
@@ -991,11 +964,11 @@ function finishInitialScroll(state, resolvedOffset) {
     if (null == scrollPending) {
       const scroll = state.scroll;
     }
-    outer1_37.clear(state);
+    closure_1_37.clear(state);
     if (resolvedOffset.preserveTarget) {
       if (tmp4.initialScroll) {
         tmp4.clearPreservedInitialScrollOnNextFinish = undefined;
-        outer1_38(tmp4);
+        closure_1_38(tmp4);
         if (undefined !== tmp4.timeoutPreservedInitialScrollClear) {
           const _clearTimeout2 = clearTimeout;
           clearTimeout(tmp4.timeoutPreservedInitialScrollClear);
@@ -1025,13 +998,13 @@ function finishInitialScroll(state, resolvedOffset) {
               }
               tmp.clearPreservedInitialScrollOnNextFinish = undefined;
               tmp.initialScroll = undefined;
-              outer1_38(tmp);
+              closure_1_38(tmp);
             }
           }, 2000);
         }
       }
       if (!tmp.recalculateItems) {
-        outer1_47(state, { didInitialScroll: true });
+        closure_1_47(state, { didInitialScroll: true });
         const onFinished = tmp.onFinished;
         if (null != onFinished) {
           const call2 = onFinished.call;
@@ -1052,15 +1025,15 @@ function finishInitialScroll(state, resolvedOffset) {
           triggerCalculateItemsInView = state.triggerCalculateItemsInView;
           if (null != triggerCalculateItemsInView) {
             const call = triggerCalculateItemsInView.call;
-            let obj = { forceFullItemPositions: true };
+            obj = { forceFullItemPositions: true };
             if (typeof call !== "unknown") {
               call(state, obj);
             }
           }
           const result = triggerCalculateItemsInView(obj);
         }
-        obj = outer1_43;
-        outer1_43(state);
+        obj = closure_1_43;
+        closure_1_43(state);
         const tmp14 = state;
       }
     }
@@ -1071,7 +1044,7 @@ function finishInitialScroll(state, resolvedOffset) {
     }
     state.clearPreservedInitialScrollOnNextFinish = undefined;
     state.initialScroll = undefined;
-    outer1_38(state);
+    closure_1_38(state);
   }
   if (resolvedOffset.waitForCompletionFrame) {
     const _requestAnimationFrame = requestAnimationFrame;
@@ -1081,8 +1054,6 @@ function finishInitialScroll(state, resolvedOffset) {
   }
 }
 function getId(props) {
-  let data;
-  let keyExtractor;
   ({ data, keyExtractor } = props.props);
   if (data) {
     let tmp2 = null;
@@ -1100,8 +1071,6 @@ function getId(props) {
   }
 }
 function updateContentMetricsState(state) {
-  let state2;
-  let values2;
   const values = state.values;
   state = state.state;
   let num = 0;
@@ -1148,7 +1117,7 @@ function updateContentMetricsState(state) {
   }
 }
 function setSize(state, itemKey, result, arg3) {
-  let flag = arg3;
+  flag = arg3;
   if (arg3 === undefined) {
     flag = true;
   }
@@ -1275,10 +1244,6 @@ function findContainerId(state, key) {
   }
 }
 function getKnownOrFixedItemSize(state, sum1) {
-  let data;
-  let getFixedItemSize;
-  let getItemType;
-  let keyExtractor;
   state = state.state;
   ({ data, keyExtractor } = state.props);
   let str = "";
@@ -1329,13 +1294,6 @@ function getKnownOrFixedItemSize(state, sum1) {
   return tmp5;
 }
 function getItemSize(state, itemKey, clearTimeoutResult, arg3, arg4, arg5, arg6, itemType) {
-  let averageSizes;
-  let getFixedItemSize;
-  let getItemType2;
-  let props;
-  let scrollingTo;
-  let sizes;
-  let sizesKnown;
   state = state.state;
   ({ sizes, props } = state);
   const getItemType = props.getItemType;
@@ -1460,11 +1418,6 @@ function getItemSize(state, itemKey, clearTimeoutResult, arg3, arg4, arg5, arg6,
   }
 }
 function calculateOffsetWithOffsetPosition(ctx, offset, scrollingTo) {
-  let data;
-  let index;
-  let keyExtractor;
-  let viewOffset;
-  let viewPosition;
   const state = ctx.state;
   ({ index, viewOffset, viewPosition } = scrollingTo);
   let diff = offset;
@@ -1532,8 +1485,6 @@ function calculateOffsetWithOffsetPosition(ctx, offset, scrollingTo) {
   return sum3;
 }
 function finishScrollTo(state) {
-  let totalSize;
-  let totalSize2;
   state = state.state;
   let scrollingTo;
   if (null != state) {
@@ -1587,7 +1538,7 @@ function finishScrollTo(state) {
           const triggerCalculateItemsInView = state2.triggerCalculateItemsInView;
           if (null != triggerCalculateItemsInView) {
             const call = triggerCalculateItemsInView.call;
-            let obj = { forceFullItemPositions: true };
+            obj = { forceFullItemPositions: true };
             if (typeof call === "unknown") {
               const result = triggerCalculateItemsInView(obj);
             } else {
@@ -1696,10 +1647,6 @@ function shouldFinishInitialScrollWithoutNativeProgress(state, scrollingTo) {
   return false;
 }
 function getResolvedScrollCompletionState(state, index) {
-  let offset;
-  let scrollAdjustHandler;
-  let scrollPending;
-  let viewOffset;
   ({ scrollPending, scrollAdjustHandler } = state.state);
   index = index.index;
   let tmp2 = index.index === state.state.props.data.length - 1;
@@ -1783,12 +1730,12 @@ function getResolvedScrollCompletionState(state, index) {
     const _Math11 = Math;
     const absolute = Math.abs(scrollPending - bound2);
     const animated = index.animated;
-    let flag = !animated;
+    flag = !animated;
     const absolute1 = Math.abs(scrollPending - (bound2 + adjust));
     if (animated) {
       flag = false;
     }
-    const obj = { clampedTargetOffset: null, isAtResolvedTarget: null };
+    obj = { clampedTargetOffset: null, isAtResolvedTarget: null };
     obj[0] = bound2;
     const _Math12 = Math;
     let tmp27 = Math.abs(scrollPending - bound5) < 1;
@@ -1845,7 +1792,7 @@ function getResolvedScrollCompletionState(state, index) {
   }
 }
 function checkFinishedScrollFallback(state) {
-  let closure_0 = state;
+  closure_0 = state;
   state = state.state;
   let scrollingTo = state.scrollingTo;
   const state2 = state.state;
@@ -1875,7 +1822,7 @@ function checkFinishedScrollFallback(state) {
   if (result) {
     result = !state.hasScrolled;
   }
-  const _classCallCheck = result;
+  closure_2 = result;
   let tmp7 = undefined !== scrollingTo;
   if (tmp7) {
     tmp7 = shouldFinishInitialScrollWithoutNativeProgress(state, scrollingTo);
@@ -1909,19 +1856,19 @@ function checkFinishedScrollFallback(state) {
     }
   }
   state.timeoutCheckFinishedScrollFallback = setTimeout(() => {
-    let c0 = 0;
+    c0 = 0;
     function checkHasScrolled() {
       checkHasScrolled.timeoutCheckFinishedScrollFallback = undefined;
       const scrollingTo = checkHasScrolled.scrollingTo;
       if (scrollingTo) {
         num11 = num11 + 1;
-        let obj = outer2_37;
-        let value = outer2_37.get(tmp);
+        obj = closure_2_37;
+        let value = closure_2_37.get(tmp);
         if (null != value) {
           let targetOffset = value.targetOffset;
         }
         const didFinishInitialScroll = tmp.didFinishInitialScroll;
-        let result = !didFinishInitialScroll;
+        result = !didFinishInitialScroll;
         if (!didFinishInitialScroll) {
           result = obj.hasNonZeroTargetOffset(targetOffset);
         }
@@ -1930,7 +1877,7 @@ function checkFinishedScrollFallback(state) {
         }
         let num2 = 5;
         let num3 = 5;
-        if (!outer1_2) {
+        if (!closure_1_2) {
           if (result) {
             num2 = 20;
           }
@@ -1947,14 +1894,14 @@ function checkFinishedScrollFallback(state) {
           tmp9 = state.props.data.length > 0;
         }
         if (tmp9) {
-          tmp9 = outer2_25(tmp7) <= state.scrollLength;
+          tmp9 = closure_2_25(tmp7) <= state.scrollLength;
         }
         if (tmp9) {
           tmp9 = state.scrollPending <= 1;
         }
-        const tmp14 = outer2_62(state, scrollingTo);
+        const tmp14 = closure_2_62(state, scrollingTo);
         let isAtResolvedTarget = tmp6;
-        if (outer1_2) {
+        if (closure_1_2) {
           isAtResolvedTarget = tmp14.isAtResolvedTarget;
         }
         if (isAtResolvedTarget) {
@@ -1962,7 +1909,7 @@ function checkFinishedScrollFallback(state) {
         }
         let tmp16 = isAtResolvedTarget;
         if (isAtResolvedTarget) {
-          tmp16 = !outer2_36.didRetrySilentInitialScroll(tmp);
+          tmp16 = !closure_2_36.didRetrySilentInitialScroll(tmp);
         }
         let hasScrolled = tmp.hasScrolled;
         if (hasScrolled) {
@@ -1991,7 +1938,7 @@ function checkFinishedScrollFallback(state) {
             num11 = targetOffset;
           }
           const tmp31 = num11 >= 1 ? num11 - 1 : num11 + 1;
-          const result1 = outer2_36.markSilentInitialScrollRetry(tmp);
+          const result1 = closure_2_36.markSilentInitialScrollRetry(tmp);
           const current2 = tmp7.state.refScroller.current;
           if (null != current2) {
             let num12 = 0;
@@ -2015,7 +1962,7 @@ function checkFinishedScrollFallback(state) {
               if (tmp.state.props.horizontal) {
                 num = tmp2;
               }
-              const obj = { animated: false, x: null, y: null };
+              obj = { animated: false, x: null, y: null };
               obj[1] = num;
               let num2 = 0;
               if (!tmp.state.props.horizontal) {
@@ -2080,18 +2027,16 @@ function checkFinishedScrollFallback(state) {
               }
             }
           }
-          outer2_60(tmp7);
+          closure_2_60(tmp7);
         }
-        tmp12 = outer2_61(tmp, scrollingTo);
+        tmp12 = closure_2_61(tmp, scrollingTo);
       }
     }
     checkHasScrolled();
   }, num5);
 }
 function doMaintainScrollAtEnd(state) {
-  let didContainersLayout;
-  let pendingNativeMVCPAdjust;
-  let closure_0 = state;
+  closure_0 = state;
   state = state.state;
   const refScroller = state.refScroller;
   const maintainScrollAtEnd = state.props.maintainScrollAtEnd;
@@ -2141,12 +2086,12 @@ function doMaintainScrollAtEnd(state) {
                   rtl = props.rtl;
                 }
                 if (null == rtl) {
-                  rtl = outer1_11.I18nManager.isRTL;
+                  rtl = closure_1_11.I18nManager.isRTL;
                 }
                 tmp9 = rtl;
               }
               if (tmp9) {
-                const tmp14 = outer1_25(state);
+                const tmp14 = closure_1_25(state);
                 const _Number = Number;
                 if (Number.isFinite(tmp14)) {
                   const _Number2 = Number;
@@ -2156,7 +2101,7 @@ function doMaintainScrollAtEnd(state) {
                       let bound = Math.max(0, tmp14 - tmp2.scrollLength);
                     }
                     if (null != current) {
-                      let obj = { animated: null, x: null, y: 0 };
+                      obj = { animated: null, x: null, y: 0 };
                       obj[0] = maintainScrollAtEnd.animated;
                       obj[1] = tmp18;
                       current.scrollTo(obj);
@@ -2181,7 +2126,7 @@ function doMaintainScrollAtEnd(state) {
                 if (obj.maintainingScrollAtEnd === closure_5) {
                   tmp.maintainingScrollAtEnd = undefined;
                   if (tmp.pendingMaintainScrollAtEnd) {
-                    outer1_64(closure_0);
+                    closure_1_64(closure_0);
                   }
                 }
               }, num4);
@@ -2204,8 +2149,8 @@ function doMaintainScrollAtEnd(state) {
   const tmp = values.get("isWithinMaintainScrollAtEndThreshold") && maintainScrollAtEnd && didContainersLayout;
 }
 function requestAdjust(state) {
-  let closure_0 = state;
-  let closure_1 = arg1;
+  closure_0 = state;
+  closure_1 = arg1;
   state = state.state;
   if (Math.abs(arg1) > 0.1) {
     let tmp = !closure_27;
@@ -2215,10 +2160,10 @@ function requestAdjust(state) {
     if (tmp) {
       tmp = state.scroll <= arg1;
     }
-    const _objectWithoutProperties = tmp;
+    closure_3 = tmp;
     function doit() {
       if (closure_3) {
-        let obj = { horizontal: null, offset: null };
+        obj = { horizontal: null, offset: null };
         obj[0] = state.props.horizontal;
         obj[1] = state.scroll;
         state = state.state;
@@ -2227,7 +2172,7 @@ function requestAdjust(state) {
         if (current) {
           const horizontal = obj.horizontal;
           if (horizontal) {
-            const tmp10 = outer1_25(tmp4);
+            const tmp10 = closure_1_25(tmp4);
           }
           obj = { animated: null, x: null, y: null };
           obj[0] = !tmp7;
@@ -2243,13 +2188,13 @@ function requestAdjust(state) {
           obj[2] = num4;
           current.scrollTo(obj);
           if (tmp6) {
-            const result = outer1_36.markInitialScrollNativeDispatch(state);
+            const result = closure_1_36.markInitialScrollNativeDispatch(state);
           }
           if (!!tmp7) {
             state.scroll = offset;
-            outer1_63(tmp4);
+            closure_1_63(tmp4);
           }
-          tmp9 = outer1_15;
+          tmp9 = closure_1_15;
         }
       } else {
         const adjust = state.scrollAdjustHandler.requestAdjust(closure_1);
@@ -2283,7 +2228,6 @@ function requestAdjust(state) {
       }
       const _setTimeout = setTimeout;
       state.ignoreScrollFromMVCPTimeout = setTimeout(() => {
-        let reprocessCurrentScroll;
         state.ignoreScrollFromMVCP = undefined;
         let ignoreScrollFromMVCPIgnored = state.ignoreScrollFromMVCPIgnored;
         if (ignoreScrollFromMVCPIgnored) {
@@ -2350,14 +2294,8 @@ function maybeApplyPredictedNativeMVCPAdjust(state) {
   }
 }
 function prepareMVCP(state) {
-  let closure_7;
-  let data2;
-  let idsInView;
-  let keyExtractor;
-  let positions;
-  let size;
-  let closure_0 = state;
-  let closure_1 = arg1;
+  closure_0 = state;
+  closure_1 = arg1;
   state = state.state;
   ({ idsInView, positions } = state);
   const maintainVisibleContentPosition = state.props.maintainVisibleContentPosition;
@@ -2388,13 +2326,13 @@ function prepareMVCP(state) {
     }
     tmp5 = num4 > 0;
   }
-  const frozen = tmp5;
+  closure_12 = tmp5;
   if (arg1) {
     size = data;
   }
   const indexByKey = state.indexByKey;
   const scroll = state.scroll;
-  let closure_15 = getContentSize(state);
+  closure_15 = getContentSize(state);
   if (size) {
     if (state.pendingNativeMVCPAdjust) {
       if (undefined === index) {
@@ -2441,7 +2379,7 @@ function prepareMVCP(state) {
             if (undefined !== value) {
               let tmp16 = positions[value];
               if (undefined !== tmp16) {
-                let obj = { id: null, position: null };
+                obj = { id: null, position: null };
                 obj[0] = tmp13;
                 obj[1] = tmp16;
                 let arr = items.push(obj);
@@ -2454,13 +2392,13 @@ function prepareMVCP(state) {
     if (undefined !== tmp7) {
       value = indexByKey.get(tmp7);
       if (undefined !== value) {
-        let closure_2 = positions[value];
+        closure_2 = positions[value];
       }
     }
     return () => {
       let position;
       let tmp16;
-      const data = state.props.data;
+      data = state.props.data;
       let tmp = closure_1;
       if (closure_1) {
         tmp = data;
@@ -2469,7 +2407,7 @@ function prepareMVCP(state) {
         tmp = undefined === index;
       }
       if (tmp) {
-        let flag = true;
+        flag = true;
         if (undefined !== found) {
           let value = indexByKey.get(tmp3);
           let tmp6 = undefined === value;
@@ -2522,7 +2460,7 @@ function prepareMVCP(state) {
           }
           tmp20 = num;
           if (undefined !== tmp22) {
-            const tmp64 = outer1_25(state);
+            const tmp64 = closure_1_25(state);
             const diff = tmp22 - diff1;
             let num4 = diff;
             if (0 !== diff) {
@@ -2551,7 +2489,7 @@ function prepareMVCP(state) {
       if (viewPosition) {
         sum1 = tmp20;
         if (tmp28 > 0) {
-          const tmp36 = outer1_58(state, tmp19, index, state.props.data[index]);
+          const tmp36 = closure_1_58(state, tmp19, index, state.props.data[index]);
           if (null != scrollingTo) {
             const itemSize = tmp37.itemSize;
           }
@@ -2587,17 +2525,17 @@ function prepareMVCP(state) {
       if (!tmp45) {
         const _Math3 = Math;
         const diff3 = tmp42 - tmp43 - tmp41.scrollLength;
-        tmp46 = diff3 < Math.abs(sum1) - outer1_66;
+        tmp46 = diff3 < Math.abs(sum1) - closure_1_66;
       }
       if (tmp46) {
-        const obj = { amount: null, furthestProgressTowardAmount: 0, manualApplied: 0, startScroll: null };
+        obj = { amount: null, furthestProgressTowardAmount: 0, manualApplied: 0, startScroll: null };
         obj[0] = sum1;
         obj[3] = tmp43;
         tmp41.pendingNativeMVCPAdjust = obj;
-        outer1_67(state);
+        closure_1_67(state);
       } else {
         const _Math4 = Math;
-        if (Math.abs(sum1) > outer1_66) {
+        if (Math.abs(sum1) > closure_1_66) {
           let value2 = "pending-animated" === tmp41.maintainingScrollAtEnd;
           if (!value2) {
             value2 = "animated" === tmp41.maintainingScrollAtEnd;
@@ -2610,8 +2548,8 @@ function prepareMVCP(state) {
             if (tmp40) {
               tmp40 = data;
             }
-            outer1_65(state, sum1, tmp40);
-            const tmp54 = outer1_65;
+            closure_1_65(state, sum1, tmp40);
+            const tmp54 = closure_1_65;
             const tmp55 = state;
           }
         }
@@ -2622,14 +2560,6 @@ function prepareMVCP(state) {
   }
 }
 function updateScroll(state, bound2, arg2, markHasScrolled) {
-  let gt;
-  let ignoreScrollFromMVCP;
-  let lastScrollAdjustForHistory;
-  let lt;
-  let scroll;
-  let scrollAdjustHandler;
-  let scrollHistory;
-  let scrollingTo;
   state = state.state;
   ({ ignoreScrollFromMVCP, lastScrollAdjustForHistory, scrollAdjustHandler, scrollHistory, scrollingTo, scroll } = state);
   markHasScrolled = undefined;
@@ -2660,7 +2590,7 @@ function updateScroll(state, bound2, arg2, markHasScrolled) {
     tmp6 = tmp4;
   }
   if (!tmp6) {
-    let obj = { scroll: null, time: null };
+    obj = { scroll: null, time: null };
     obj[0] = bound2;
     obj[1] = timestamp;
     scrollHistory.push(obj);
@@ -2869,7 +2799,7 @@ function updateScroll(state, bound2, arg2, markHasScrolled) {
     state.pendingNativeMVCPAdjust = undefined;
     obj = { keys: null };
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     obj[0] = set;
     state.userScrollAnchorReset = obj;
     if (undefined !== state.queuedMVCPRecalculate) {
@@ -2912,7 +2842,7 @@ function updateScroll(state, bound2, arg2, markHasScrolled) {
     }
     tmp56 = state6.props.drawDistance <= 50 || undefined !== state6.queuedFullDrawDistancePrewarm;
   } else {
-    const obj1 = { doMVCP: null, scrollVelocity: null };
+    obj1 = { doMVCP: null, scrollVelocity: null };
     obj1[0] = tmp5;
     obj1[1] = tmp31;
     if (tmp30) {
@@ -2949,8 +2879,6 @@ function updateScroll(state, bound2, arg2, markHasScrolled) {
   state.lastScrollDelta = 0;
 }
 function getItemBottom(state, bound5) {
-  let data;
-  let keyExtractor;
   if (undefined !== state.state.positions[bound5]) {
     let tmp3Result;
     if (undefined !== bound5) {
@@ -2987,18 +2915,11 @@ function getItemBottom(state, bound5) {
   }
 }
 function scrollTo(state) {
-  let animated;
   let diff1;
-  let forceScroll;
-  let isInitialScroll;
-  let noScrollingTo;
-  let offset;
-  let precomputedWithViewOffset;
   let sum;
-  let waitForInitialScrollCompletionFrame;
   state = state.state;
   ({ noScrollingTo, forceScroll } = arg1);
-  const tmp2 = _objectWithoutProperties(arg1, closure_5);
+  const tmp2 = callback2(arg1, closure_5);
   ({ animated, isInitialScroll, offset, precomputedWithViewOffset, waitForInitialScrollCompletionFrame } = tmp2);
   if (state.animFrameCheckFinishedScroll) {
     const _cancelAnimationFrame = cancelAnimationFrame;
@@ -3061,7 +2982,7 @@ function scrollTo(state) {
     const _Object = Object;
     let tmp21;
     if (0 !== Object.keys(state.averageSizes).length) {
-      let obj = {};
+      obj = {};
       tmp21 = obj;
       const keys = Object.keys();
       if (keys !== undefined) {
@@ -3078,7 +2999,7 @@ function scrollTo(state) {
     if (tmp21) {
       obj = { averageSizeSnapshot: null };
       obj[0] = tmp21;
-      let obj1 = obj;
+      obj1 = obj;
     } else {
       obj1 = {};
     }
@@ -3311,15 +3232,11 @@ function scrollTo(state) {
   }
 }
 function scrollToIndex(state, animated) {
-  let data;
-  let index;
-  let keyExtractor;
-  let viewOffset;
   ({ index, viewOffset } = animated);
   if (viewOffset === undefined) {
     viewOffset = 0;
   }
-  let flag = animated.animated;
+  flag = animated.animated;
   if (flag === undefined) {
     flag = true;
   }
@@ -3353,7 +3270,7 @@ function scrollToIndex(state, animated) {
       num = 1;
     }
     state.scrollForNextCalculateItemsInView = undefined;
-    const obj = { animated: null, forceScroll: null, index: null, isInitialScroll: null, itemSize: null, offset: null, viewOffset: null, viewPosition: null };
+    obj = { animated: null, forceScroll: null, index: null, isInitialScroll: null, itemSize: null, offset: null, viewOffset: null, viewPosition: null };
     obj[0] = flag;
     obj[1] = tmp;
     obj[2] = -1;
@@ -3377,11 +3294,6 @@ function scrollToIndex(state, animated) {
   }
 }
 function dispatchInitialScroll(state, target) {
-  let data;
-  let forceScroll;
-  let keyExtractor;
-  let resolvedOffset;
-  let waitForCompletionFrame;
   target = target.target;
   const index = target.index;
   let num;
@@ -3398,7 +3310,7 @@ function dispatchInitialScroll(state, target) {
       }
     }
   }
-  const obj = { animated: false, forceScroll, index: null, isInitialScroll: true, itemSize: null, offset: null, precomputedWithViewOffset: true, viewOffset: null, viewPosition: null, waitForInitialScrollCompletionFrame: null };
+  obj = { animated: false, forceScroll, index: null, isInitialScroll: true, itemSize: null, offset: null, precomputedWithViewOffset: true, viewOffset: null, viewPosition: null, waitForInitialScrollCompletionFrame: null };
   let tmp3;
   if (undefined !== num) {
     if (num >= 0) {
@@ -3490,15 +3402,6 @@ function resolveInitialScrollOffset(state, initialScroll) {
   return bound2;
 }
 function advanceCurrentInitialScrollSession(state, forceScroll) {
-  let didFinishInitialScroll;
-  let initialScroll;
-  let initialScroll2;
-  let initialScroll3;
-  let isInitialScrollInProgress;
-  let queuedInitialLayout;
-  let queuedInitialLayout2;
-  let scrollingTo;
-  let scrollingTo2;
   const initialScrollSession = state.state.initialScrollSession;
   let kind;
   if (null != initialScrollSession) {
@@ -3521,7 +3424,7 @@ function advanceCurrentInitialScrollSession(state, forceScroll) {
       if (!flag5) {
         if (!didFinishInitialScroll) {
           if (!scrollingTo2) {
-            let obj = { initialScroll: null, isInitialScrollInProgress: null, queuedInitialLayout: null, scrollingTo: null };
+            obj = { initialScroll: null, isInitialScrollInProgress: null, queuedInitialLayout: null, scrollingTo: null };
             obj[0] = initialScroll3;
             obj[1] = tmp32;
             obj[2] = queuedInitialLayout2;
@@ -3575,7 +3478,7 @@ function advanceCurrentInitialScrollSession(state, forceScroll) {
     if (null != scrollingTo) {
       isInitialScroll1 = scrollingTo.isInitialScroll;
     }
-    let flag2 = true;
+    flag2 = true;
     if (flag2) {
       flag2 = !queuedInitialLayout;
     }
@@ -3660,7 +3563,7 @@ function advanceCurrentInitialScrollSession(state, forceScroll) {
           tmp18 = "offset" !== kind1;
         }
         if (tmp18) {
-          const obj1 = {};
+          obj1 = {};
           const merged = Object.assign(initialScroll2);
           obj1.contentOffset = tmp8;
           const state2 = state.state;
@@ -3714,7 +3617,7 @@ function checkAllSizesKnown(state, startBuffered, endBuffered) {
     if (null != endBuffered) {
       if (startBuffered >= 0) {
         if (endBuffered >= startBuffered) {
-          let flag = false;
+          flag = false;
           const containerItemKeys = state.containerItemKeys;
           const keys = containerItemKeys.keys();
           for (const item10007 of keys) {
@@ -3760,7 +3663,7 @@ function abortBootstrapRevealIfNeeded(state, maxFrames) {
   if (undefined !== maxPasses) {
     num2 = maxPasses;
   }
-  let flag = maxFrames.mountFrameCount >= num || maxFrames.passCount >= num2;
+  flag = maxFrames.mountFrameCount >= num || maxFrames.passCount >= num2;
   if (flag) {
     if (closure_31) {
       const _console = console;
@@ -3816,7 +3719,7 @@ function abortBootstrapRevealIfNeeded(state, maxFrames) {
             if (null != initialScrollSession4) {
               kind3 = initialScrollSession4.kind;
             }
-            let obj = { bootstrap: null, kind: null };
+            obj = { bootstrap: null, kind: null };
             obj[1] = kind3;
             setInitialScrollSession(state, obj);
             obj = { forceScroll: true, resolvedOffset: null, target: null, waitForCompletionFrame: false };
@@ -3899,7 +3802,7 @@ function abortBootstrapRevealIfNeeded(state, maxFrames) {
       }
       tmp35 = 1 === viewPosition;
     }
-    const obj1 = { preserveTarget: null, recalculateItems: true, resolvedOffset: null, schedulePreservedTargetClear: null };
+    obj1 = { preserveTarget: null, recalculateItems: true, resolvedOffset: null, schedulePreservedTargetClear: null };
     obj1[0] = tmp35;
     obj1[2] = num5;
     obj1[3] = tmp35;
@@ -3910,7 +3813,6 @@ function abortBootstrapRevealIfNeeded(state, maxFrames) {
   return flag;
 }
 function startBootstrapInitialScrollSession(state, scroll) {
-  let seedContentOffset;
   const initialScrollSession = state.initialScrollSession;
   let kind;
   if (null != initialScrollSession) {
@@ -3924,7 +3826,7 @@ function startBootstrapInitialScrollSession(state, scroll) {
   if (null != bootstrap) {
     frameHandle = bootstrap.frameHandle;
   }
-  const obj = { frameHandle, mountFrameCount: null, passCount: 0, previousResolvedOffset: "a", scroll: "ct", seedContentOffset: "Array", targetIndexSeed: 0, visibleIndices: false };
+  obj = { frameHandle, mountFrameCount: null, passCount: 0, previousResolvedOffset: "a", scroll: "ct", seedContentOffset: "Array", targetIndexSeed: 0, visibleIndices: false };
   let mountFrameCount;
   if (null != bootstrap) {
     mountFrameCount = bootstrap.mountFrameCount;
@@ -3978,7 +3880,7 @@ function rearmBootstrapInitialScroll(state, scroll) {
     }
     bootstrap.targetIndexSeed = targetIndexSeed;
     bootstrap.visibleIndices = undefined;
-    let obj = { bootstrap: null, kind: "bootstrap" };
+    obj = { bootstrap: null, kind: "bootstrap" };
     obj[0] = bootstrap;
     setInitialScrollSession(state, obj);
   } else if (undefined !== scroll.scroll) {
@@ -4012,9 +3914,9 @@ function rearmBootstrapInitialScroll(state, scroll) {
         if (bootstrap) {
           bootstrap.frameHandle = undefined;
           bootstrap.mountFrameCount = bootstrap.mountFrameCount + 1;
-          const obj = { mountFrameCount: null, passCount: null };
+          obj = { mountFrameCount: null, passCount: null };
           ({ mountFrameCount: obj[0], passCount: obj[1] } = bootstrap);
-          if (!outer1_78(closure_0, obj)) {
+          if (!closure_1_78(closure_0, obj)) {
             closure_0 = tmp5;
             state = tmp5.state;
             const initialScrollSession2 = state.initialScrollSession;
@@ -4042,9 +3944,9 @@ function rearmBootstrapInitialScroll(state, scroll) {
                   if (bootstrap) {
                     bootstrap.frameHandle = undefined;
                     bootstrap.mountFrameCount = bootstrap.mountFrameCount + 1;
-                    const obj = { mountFrameCount: null, passCount: null };
+                    obj = { mountFrameCount: null, passCount: null };
                     ({ mountFrameCount: obj[0], passCount: obj[1] } = bootstrap);
-                    if (!outer1_78(closure_0, obj)) {
+                    if (!closure_1_78(closure_0, obj)) {
                       closure_0 = tmp5;
                       state = tmp5.state;
                       const initialScrollSession2 = state.initialScrollSession;
@@ -4072,9 +3974,9 @@ function rearmBootstrapInitialScroll(state, scroll) {
                             if (bootstrap) {
                               bootstrap.frameHandle = undefined;
                               bootstrap.mountFrameCount = bootstrap.mountFrameCount + 1;
-                              const obj = { mountFrameCount: null, passCount: null };
+                              obj = { mountFrameCount: null, passCount: null };
                               ({ mountFrameCount: obj[0], passCount: obj[1] } = bootstrap);
-                              if (!outer1_78(closure_0, obj)) {
+                              if (!closure_1_78(closure_0, obj)) {
                                 closure_0 = tmp5;
                                 state = tmp5.state;
                                 const initialScrollSession2 = state.initialScrollSession;
@@ -4102,9 +4004,9 @@ function rearmBootstrapInitialScroll(state, scroll) {
                                       if (bootstrap) {
                                         bootstrap.frameHandle = undefined;
                                         bootstrap.mountFrameCount = bootstrap.mountFrameCount + 1;
-                                        const obj = { mountFrameCount: null, passCount: null };
+                                        obj = { mountFrameCount: null, passCount: null };
                                         ({ mountFrameCount: obj[0], passCount: obj[1] } = bootstrap);
-                                        if (!outer1_78(closure_0, obj)) {
+                                        if (!closure_1_78(closure_0, obj)) {
                                           closure_0 = tmp5;
                                           state = tmp5.state;
                                           const initialScrollSession2 = state.initialScrollSession;
@@ -4157,7 +4059,7 @@ function rearmBootstrapInitialScroll(state, scroll) {
       const triggerCalculateItemsInView = tmp.triggerCalculateItemsInView;
       if (null != triggerCalculateItemsInView) {
         const call = triggerCalculateItemsInView.call;
-        const obj = { forceFullItemPositions: true };
+        obj = { forceFullItemPositions: true };
         if (typeof call === "unknown") {
           const result = triggerCalculateItemsInView(obj);
         } else {
@@ -4168,8 +4070,6 @@ function rearmBootstrapInitialScroll(state, scroll) {
   });
 }
 function clearPendingInitialScrollFooterLayout(state, target) {
-  let dataLength;
-  let stylePaddingBottom;
   target = target.target;
   let prop;
   ({ dataLength, stylePaddingBottom } = target);
@@ -4177,7 +4077,7 @@ function clearPendingInitialScrollFooterLayout(state, target) {
     prop = target.preserveForFooterLayout;
   }
   if (prop) {
-    let obj = { contentOffset: "Array", index: true, preserveForBottomPadding: null, preserveForFooterLayout: null, viewOffset: 1, viewPosition: "result" };
+    obj = { contentOffset: "Array", index: true, preserveForBottomPadding: null, preserveForFooterLayout: null, viewOffset: 1, viewPosition: "result" };
     const _Math = Math;
     obj[1] = Math.max(0, dataLength - 1);
     obj[3] = undefined;
@@ -4294,12 +4194,6 @@ function getPreservedEndAnchorOffsetDiff(state) {
   }
 }
 function evaluateBootstrapInitialScroll(state) {
-  let data;
-  let data2;
-  let keyExtractor;
-  let keyExtractor2;
-  let previousResolvedOffset;
-  let visibleIndices;
   state = state.state;
   let initialScrollSession = state.initialScrollSession;
   let kind;
@@ -4326,7 +4220,7 @@ function evaluateBootstrapInitialScroll(state) {
         }
         if (!isInitialScroll) {
           bootstrap.passCount = bootstrap.passCount + 1;
-          let obj = { mountFrameCount: null, passCount: null };
+          obj = { mountFrameCount: null, passCount: null };
           ({ mountFrameCount: obj[0], passCount: obj[1] } = bootstrap);
           if (!abortBootstrapRevealIfNeeded(state, obj)) {
             if (tmp6) {
@@ -4478,7 +4372,7 @@ function evaluateBootstrapInitialScroll(state) {
                   const triggerCalculateItemsInView = tmp.triggerCalculateItemsInView;
                   if (null != triggerCalculateItemsInView) {
                     const call = triggerCalculateItemsInView.call;
-                    const obj = { forceFullItemPositions: true };
+                    obj = { forceFullItemPositions: true };
                     if (typeof call === "unknown") {
                       const result = triggerCalculateItemsInView(obj);
                     } else {
@@ -4492,7 +4386,7 @@ function evaluateBootstrapInitialScroll(state) {
                 if (undefined !== previousResolvedOffset) {
                   const _Math4 = Math;
                   if (Math.abs(previousResolvedOffset - tmp8) <= 1) {
-                    let flag = false;
+                    flag = false;
                     if (visibleIndices) {
                       flag = false;
                       if (visibleIndices.length === items.length) {
@@ -4568,7 +4462,7 @@ function evaluateBootstrapInitialScroll(state) {
                     const triggerCalculateItemsInView = tmp.triggerCalculateItemsInView;
                     if (null != triggerCalculateItemsInView) {
                       const call = triggerCalculateItemsInView.call;
-                      const obj = { forceFullItemPositions: true };
+                      obj = { forceFullItemPositions: true };
                       if (typeof call === "unknown") {
                         const result = triggerCalculateItemsInView(obj);
                       } else {
@@ -4580,8 +4474,6 @@ function evaluateBootstrapInitialScroll(state) {
               }
             }
             tmp41 = items.length > 0 && items.every((arg0) => {
-              let data;
-              let keyExtractor;
               let tmp2 = state.idCache[arg0];
               if (null == tmp2) {
                 ({ data, keyExtractor } = tmp.props);
@@ -4613,17 +4505,17 @@ function retargetActiveInitialScrollAtEnd(state) {
   state = state.state;
   const initialScroll = state.initialScroll;
   if (state.didFinishInitialScroll) {
-    let flag = false;
+    flag = false;
     if (undefined !== getPreservedEndAnchorOffsetDiff(state)) {
-      const obj = {};
-      let closure_0 = state;
+      obj = {};
+      closure_0 = state;
       const state2 = state.state;
       state2.preservedEndAnchorCorrection = obj;
       const _requestAnimationFrame = requestAnimationFrame;
       const animationFrame = requestAnimationFrame(() => {
         const preservedEndAnchorCorrection = state.preservedEndAnchorCorrection;
-        if (preservedEndAnchorCorrection === obj1) {
-          const tmp10 = outer1_83(closure_0);
+        if (preservedEndAnchorCorrection === closure_1) {
+          const tmp10 = closure_1_83(closure_0);
           if (undefined !== tmp10) {
             const _Math = Math;
             if (Math.abs(tmp10) > 1) {
@@ -4640,16 +4532,17 @@ function retargetActiveInitialScrollAtEnd(state) {
               if (tmp4) {
                 const _Date = Date;
                 preservedEndAnchorCorrection.lastRequestTime = Date.now();
-                outer1_65(tmp9, tmp10);
+                closure_1_65(tmp9, tmp10);
               }
               closure_0 = tmp9;
+              closure_1 = tmp2;
               state = tmp9.state;
               state.preservedEndAnchorCorrection = tmp2;
               const _requestAnimationFrame = requestAnimationFrame;
               const animationFrame = requestAnimationFrame(() => {
                 const preservedEndAnchorCorrection = state.preservedEndAnchorCorrection;
-                if (preservedEndAnchorCorrection === obj1) {
-                  const tmp10 = outer1_83(closure_0);
+                if (preservedEndAnchorCorrection === closure_1) {
+                  const tmp10 = closure_1_83(closure_0);
                   if (undefined !== tmp10) {
                     const _Math = Math;
                     if (Math.abs(tmp10) > 1) {
@@ -4666,16 +4559,17 @@ function retargetActiveInitialScrollAtEnd(state) {
                       if (tmp4) {
                         const _Date = Date;
                         preservedEndAnchorCorrection.lastRequestTime = Date.now();
-                        outer1_65(tmp9, tmp10);
+                        closure_1_65(tmp9, tmp10);
                       }
                       closure_0 = tmp9;
+                      closure_1 = tmp2;
                       state = tmp9.state;
                       state.preservedEndAnchorCorrection = tmp2;
                       const _requestAnimationFrame = requestAnimationFrame;
                       const animationFrame = requestAnimationFrame(() => {
                         const preservedEndAnchorCorrection = state.preservedEndAnchorCorrection;
-                        if (preservedEndAnchorCorrection === obj1) {
-                          const tmp10 = outer1_83(closure_0);
+                        if (preservedEndAnchorCorrection === closure_1) {
+                          const tmp10 = closure_1_83(closure_0);
                           if (undefined !== tmp10) {
                             const _Math = Math;
                             if (Math.abs(tmp10) > 1) {
@@ -4692,16 +4586,17 @@ function retargetActiveInitialScrollAtEnd(state) {
                               if (tmp4) {
                                 const _Date = Date;
                                 preservedEndAnchorCorrection.lastRequestTime = Date.now();
-                                outer1_65(tmp9, tmp10);
+                                closure_1_65(tmp9, tmp10);
                               }
                               closure_0 = tmp9;
+                              closure_1 = tmp2;
                               state = tmp9.state;
                               state.preservedEndAnchorCorrection = tmp2;
                               const _requestAnimationFrame = requestAnimationFrame;
                               const animationFrame = requestAnimationFrame(() => {
                                 const preservedEndAnchorCorrection = state.preservedEndAnchorCorrection;
-                                if (preservedEndAnchorCorrection === obj1) {
-                                  const tmp10 = outer1_83(closure_0);
+                                if (preservedEndAnchorCorrection === closure_1) {
+                                  const tmp10 = closure_1_83(closure_0);
                                   if (undefined !== tmp10) {
                                     const _Math = Math;
                                     if (Math.abs(tmp10) > 1) {
@@ -4718,9 +4613,10 @@ function retargetActiveInitialScrollAtEnd(state) {
                                       if (tmp4) {
                                         const _Date = Date;
                                         preservedEndAnchorCorrection.lastRequestTime = Date.now();
-                                        outer1_65(tmp9, tmp10);
+                                        closure_1_65(tmp9, tmp10);
                                       }
                                       closure_0 = tmp9;
+                                      closure_1 = tmp2;
                                       state = tmp9.state;
                                       state.preservedEndAnchorCorrection = tmp2;
                                       const _requestAnimationFrame = requestAnimationFrame;
@@ -4787,7 +4683,7 @@ function scheduleContainerLayout(pendingContainerIds, items) {
     if (pendingContainerIds) {
       if (typeof items === "number") {
         pendingContainerIds.add(items);
-        let set = pendingContainerIds;
+        set = pendingContainerIds;
       } else {
         const tmp23 = items[Symbol.iterator]();
         set = pendingContainerIds;
@@ -4817,11 +4713,6 @@ function scheduleContainerLayout(pendingContainerIds, items) {
   }
 }
 function syncMountedContainer(state, arg1, clearTimeoutResult, updateLayout) {
-  let data;
-  let data2;
-  let itemsAreEqual;
-  let keyExtractor;
-  let keyExtractor2;
   state = state.state;
   ({ data, itemsAreEqual, keyExtractor } = state.props);
   if (undefined === data[clearTimeoutResult]) {
@@ -4846,7 +4737,7 @@ function syncMountedContainer(state, arg1, clearTimeoutResult, updateLayout) {
       tmp7 = str;
     }
     updateLayout = updateLayout.updateLayout;
-    let flag = false;
+    flag = false;
     if (tmp9) {
       let num = tmp3[clearTimeoutResult];
       if (undefined === num) {
@@ -4914,7 +4805,7 @@ function syncMountedContainer(state, arg1, clearTimeoutResult, updateLayout) {
         if (tmp33) {
           tmp33 = bound !== value1;
         }
-        let flag2 = false;
+        flag2 = false;
         if (tmp33) {
           const _HermesInternal4 = HermesInternal;
           set$(state, "containerPosition" + arg1, bound);
@@ -4992,7 +4883,7 @@ function syncMountedContainer(state, arg1, clearTimeoutResult, updateLayout) {
                   const itemsAreEqualResult = itemsAreEqual(value4, tmp4, clearTimeoutResult, data);
                   if (!tmp59) {
                     if (state.previousData) {
-                      let obj = { byIndex: null, nextData: null, previousData: null };
+                      obj = { byIndex: null, nextData: null, previousData: null };
                       obj[0] = [];
                       obj[1] = data;
                       obj[2] = state.previousData;
@@ -5038,37 +4929,7 @@ function syncMountedContainer(state, arg1, clearTimeoutResult, updateLayout) {
   }
 }
 function updateItemPositions(context, arg1, sum) {
-  let columnSpans;
-  let columns;
-  let data;
-  let data2;
-  let data3;
-  let data4;
-  let data5;
-  let data6;
-  let doMVCP;
-  let forceFullUpdate;
-  let indexByKey;
-  let keyExtractor;
-  let keyExtractor2;
-  let keyExtractor3;
-  let keyExtractor4;
-  let keyExtractor5;
-  let overrideItemLayout;
-  let positions;
-  let props;
-  let scrollVelocity;
-  let sizesKnown;
-  let startIndex;
-  let state2;
-  let totalSize;
-  let totalSize2;
-  let totalSize3;
-  let totalSize4;
-  let totalSize5;
-  let totalSize6;
-  let values4;
-  let obj = sum;
+  obj = sum;
   if (sum === undefined) {
     obj = { doMVCP: false, forceFullUpdate: false, optimizeForVisibleWindow: false, scrollBottomBuffered: -1, startIndex: 0 };
   }
@@ -5076,7 +4937,7 @@ function updateItemPositions(context, arg1, sum) {
   if (forceFullUpdate === undefined) {
     forceFullUpdate = false;
   }
-  let flag = obj.optimizeForVisibleWindow;
+  flag = obj.optimizeForVisibleWindow;
   if (flag === undefined) {
     flag = false;
   }
@@ -5093,7 +4954,7 @@ function updateItemPositions(context, arg1, sum) {
   }
   if (closure_31) {
     const _Map = Map;
-    const map = new Map();
+    map = new Map();
   }
   values = context.values;
   value = values.get("extraData");
@@ -5643,13 +5504,13 @@ function ensureViewabilityState(mapViewabilityConfigStates, id) {
   mapViewabilityConfigStates = mapViewabilityConfigStates.mapViewabilityConfigStates;
   if (!mapViewabilityConfigStates) {
     const _Map = Map;
-    const map = new Map();
+    map = new Map();
     mapViewabilityConfigStates.mapViewabilityConfigStates = map;
     mapViewabilityConfigStates = map;
   }
   let value = mapViewabilityConfigStates.get(id);
   if (!value) {
-    const obj = { end: -1, endBuffered: -1, previousEnd: -1, previousStart: -1, start: -1, startBuffered: -1, viewableItems: null };
+    obj = { end: -1, endBuffered: -1, previousEnd: -1, previousStart: -1, start: -1, startBuffered: -1, viewableItems: null };
     obj[6] = [];
     const result = mapViewabilityConfigStates.set(id, obj);
     value = obj;
@@ -5657,39 +5518,39 @@ function ensureViewabilityState(mapViewabilityConfigStates, id) {
   return value;
 }
 function updateViewableItems(timeouts) {
-  let closure_0 = timeouts;
-  let closure_1 = arg1;
-  let closure_2 = arg3;
-  let closure_3 = arg4;
-  let closure_4 = arg5;
+  closure_0 = timeouts;
+  closure_1 = arg1;
+  closure_2 = arg3;
+  closure_3 = arg4;
+  closure_4 = arg5;
   let tmp = arg6;
   if (arg6 === undefined) {
     tmp = arg4;
   }
-  let closure_5 = tmp;
+  closure_5 = tmp;
   let tmp2 = arg7;
   if (arg7 === undefined) {
     tmp2 = arg5;
   }
-  let closure_6 = tmp2;
+  closure_6 = tmp2;
   timeouts = undefined;
   let data;
   timeouts = timeouts.timeouts;
   data = timeouts.props.data;
   function _loop(iter) {
-    let closure_0 = iter;
+    closure_0 = iter;
     const id = iter.viewabilityConfig.id;
     let mapViewabilityConfigStates = timerId.mapViewabilityConfigStates;
     if (!mapViewabilityConfigStates) {
       const _Map = Map;
-      const map = new Map();
+      map = new Map();
       tmp.mapViewabilityConfigStates = map;
       mapViewabilityConfigStates = map;
     }
     const value = mapViewabilityConfigStates.get(id);
     let tmp8 = value;
     if (!value) {
-      const obj = { end: -1, endBuffered: -1, previousEnd: -1, previousStart: -1, start: -1, startBuffered: -1, viewableItems: null };
+      obj = { end: -1, endBuffered: -1, previousEnd: -1, previousStart: -1, start: -1, startBuffered: -1, viewableItems: null };
       obj[6] = [];
       const result = mapViewabilityConfigStates.set(id, obj);
       tmp8 = obj;
@@ -5701,12 +5562,12 @@ function updateViewableItems(timeouts) {
     if (iter.viewabilityConfig.minimumViewTime) {
       const _setTimeout = setTimeout;
       timerId = setTimeout(() => {
-        outer1_7.delete(timerId);
-        outer2_92(outer1_8, closure_0, closure_0, timerId, outer1_2);
+        closure_1_7.delete(timerId);
+        closure_2_92(closure_1_8, closure_0, closure_0, timerId, closure_1_2);
       }, iter.viewabilityConfig.minimumViewTime);
       timeouts.add(timerId);
     } else {
-      outer1_92(data, iter, closure_0, tmp, closure_2);
+      closure_1_92(data, iter, closure_0, tmp, closure_2);
     }
   }
   const iter = arg2[Symbol.iterator]();
@@ -5716,16 +5577,7 @@ function updateViewableItems(timeouts) {
   }
 }
 function updateViewableItemsWithConfig(arg0, arg1, indexByKey, mapViewabilityAmountValues) {
-  let end;
-  let endBuffered;
   let length;
-  let onViewableItemsChanged;
-  let start;
-  let startBuffered;
-  let tmp6;
-  let tmp8;
-  let viewabilityConfig;
-  let viewableItems;
   let items;
   ({ viewabilityConfig, onViewableItemsChanged } = arg1);
   const id = viewabilityConfig.id;
@@ -5733,8 +5585,8 @@ function updateViewableItemsWithConfig(arg0, arg1, indexByKey, mapViewabilityAmo
   ({ viewableItems, start, end } = tmp);
   ({ startBuffered, endBuffered } = tmp);
   while (tmp2 !== undefined) {
-    let tmp4 = _slicedToArray;
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback3;
+    let tmp5 = callback3(tmp3, 2);
     [tmp6, tmp8] = tmp5;
     let tmp9 = computeViewability;
     let num = 0;
@@ -5756,7 +5608,7 @@ function updateViewableItemsWithConfig(arg0, arg1, indexByKey, mapViewabilityAmo
     continue;
   }
   const items1 = [];
-  const set = new Set();
+  set = new Set();
   if (viewableItems) {
     const iter = viewableItems[Symbol.iterator]();
     const nextResult = iter.next();
@@ -5775,7 +5627,7 @@ function updateViewableItemsWithConfig(arg0, arg1, indexByKey, mapViewabilityAmo
       let tmp30 = findContainerId;
       let tmp31 = nextResult;
       let tmp32 = findContainerId(mapViewabilityAmountValues, tmp23.key);
-      let flag2 = false;
+      flag2 = false;
       let tmp33 = value;
       let tmp34 = undefined !== tmp26;
       if (tmp34) {
@@ -5845,7 +5697,7 @@ function updateViewableItemsWithConfig(arg0, arg1, indexByKey, mapViewabilityAmo
         let tmp67 = tmp54;
         let tmp68 = sum;
         if (checkIsViewable(indexByKey, mapViewabilityAmountValues, viewabilityConfig, tmp59, tmp57, arg4, tmp54, tmp55)) {
-          let obj = { containerId: null, index: null, isViewable: true, item: null, key: null };
+          obj = { containerId: null, index: null, isViewable: true, item: null, key: null };
           obj[0] = tmp59;
           obj[1] = sum;
           obj[3] = tmp54;
@@ -5877,7 +5729,7 @@ function updateViewableItemsWithConfig(arg0, arg1, indexByKey, mapViewabilityAmo
       } while (num5 < length);
     }
     if (onViewableItemsChanged) {
-      const obj1 = { changed: null, end: null, endBuffered: null, start: null, startBuffered: null, viewableItems: null };
+      obj1 = { changed: null, end: null, endBuffered: null, start: null, startBuffered: null, viewableItems: null };
       obj1[0] = items1;
       obj1[1] = end;
       obj1[2] = endBuffered;
@@ -5909,8 +5761,6 @@ function areViewabilityAmountTokensEqual(mapViewabilityAmountValues, containerId
   return mapViewabilityAmountValues && mapViewabilityAmountValues.containerId === containerId2.containerId && mapViewabilityAmountValues.index === containerId2.index && mapViewabilityAmountValues.isViewable === containerId2.isViewable && mapViewabilityAmountValues.item === containerId2.item && mapViewabilityAmountValues.key === containerId2.key && mapViewabilityAmountValues.percentOfScroller === containerId2.percentOfScroller && mapViewabilityAmountValues.percentVisible === containerId2.percentVisible && mapViewabilityAmountValues.scrollSize === containerId2.scrollSize && mapViewabilityAmountValues.size === containerId2.size && mapViewabilityAmountValues.sizeVisible === containerId2.sizeVisible;
 }
 function computeViewability(sizes, mapViewabilityAmountValues, viewabilityConfig, arg3, key, arg5, item, index) {
-  let itemVisiblePercentThreshold;
-  let viewAreaCoveragePercentThreshold;
   sizes = sizes.sizes;
   let values = mapViewabilityAmountValues.values;
   values = mapViewabilityAmountValues.values;
@@ -5926,7 +5776,7 @@ function computeViewability(sizes, mapViewabilityAmountValues, viewabilityConfig
   const diff = sizes.scroll - sum1;
   const tmp9 = sizes.get(key) || 0;
   if (undefined === sizes.positions[index]) {
-    let obj = { containerId: null, index: null, isViewable: false, item: null, key: null, percentOfScroller: 0, percentVisible: 0, scrollSize: null, size: null, sizeVisible: -1 };
+    obj = { containerId: null, index: null, isViewable: false, item: null, key: null, percentOfScroller: 0, percentVisible: 0, scrollSize: null, size: null, sizeVisible: -1 };
     obj[0] = arg3;
     obj[1] = index;
     obj[3] = item;
@@ -6028,8 +5878,8 @@ function comparatorByDistance(distance, distance2) {
 }
 function isStickyIndexActive(state) {
   state = state.state;
-  let flag = false;
-  const obj = state.stickyContainerPool[Symbol.iterator]();
+  flag = false;
+  obj = state.stickyContainerPool[Symbol.iterator]();
   while (obj !== undefined) {
     let tmp2 = peek$;
     let _HermesInternal = HermesInternal;
@@ -6067,9 +5917,9 @@ function trackVisibleRange(startNoBuffer, startNoBuffer2) {
   if (tmp3) {
     startNoBuffer.firstFullyOnScreenIndex = startNoBuffer2;
   }
-  let flag = false;
+  flag = false;
   if (null !== startNoBuffer.startNoBuffer) {
-    let flag2 = true;
+    flag2 = true;
     if (arg2 <= arg5) {
       startNoBuffer.endNoBuffer = startNoBuffer2;
       flag2 = false;
@@ -6079,8 +5929,6 @@ function trackVisibleRange(startNoBuffer, startNoBuffer2) {
   return flag;
 }
 function getIdsInVisibleRange(props, firstFullyOnScreenIndex) {
-  let data;
-  let keyExtractor;
   let startNoBuffer = firstFullyOnScreenIndex.firstFullyOnScreenIndex;
   if (null == startNoBuffer) {
     startNoBuffer = firstFullyOnScreenIndex.startNoBuffer;
@@ -6118,8 +5966,6 @@ function getIdsInVisibleRange(props, firstFullyOnScreenIndex) {
   return items;
 }
 function maybeEmitFirstVisibleItemChanged(props) {
-  let data;
-  let keyExtractor;
   const onFirstVisibleItemChanged = props.props.onFirstVisibleItemChanged;
   if (onFirstVisibleItemChanged) {
     if (null !== arg1) {
@@ -6148,7 +5994,7 @@ function maybeEmitFirstVisibleItemChanged(props) {
             index = lastFirstVisibleItemCallback.index;
           }
           if (!tmp7) {
-            let obj = { index: null, key: null };
+            obj = { index: null, key: null };
             obj[0] = arg1;
             obj[1] = tmp5;
             props.lastFirstVisibleItemCallback = obj;
@@ -6165,13 +6011,6 @@ function maybeEmitFirstVisibleItemChanged(props) {
   }
 }
 function maybeUpdateAnchoredEndSpace(state) {
-  let anchorIndex2;
-  let anchorMaxSize;
-  let anchorOffset;
-  let anchoredEndSpaceReadyAnchorIndex;
-  let anchoredEndSpaceReadyAnchorKey;
-  let data;
-  let keyExtractor;
   state = state.state;
   const anchoredEndSpace = state.props.anchoredEndSpace;
   let values = state.values;
@@ -6181,7 +6020,7 @@ function maybeUpdateAnchoredEndSpace(state) {
     const anchorIndex = anchoredEndSpace.anchorIndex;
   }
   let num = 0;
-  let flag = true;
+  flag = true;
   if (anchoredEndSpace) {
     ({ anchorIndex: anchorIndex2, anchorMaxSize, anchorOffset } = anchoredEndSpace);
     let num2 = 0;
@@ -6208,7 +6047,7 @@ function maybeUpdateAnchoredEndSpace(state) {
           }
           values = state.values;
           values.get("footerSize") || 0;
-          let flag2 = false;
+          flag2 = false;
           let sum1 = anchorIndex2;
           let num3 = 0;
           let flag3 = false;
@@ -6309,7 +6148,7 @@ function maybeUpdateAnchoredEndSpace(state) {
     }
     if (null != onReady) {
       const call2 = onReady.call;
-      const obj = { anchorIndex: null, anchorKey: null, size: null };
+      obj = { anchorIndex: null, anchorKey: null, size: null };
       obj[0] = anchorIndex;
       obj[1] = tmp2;
       obj[2] = num;
@@ -6342,36 +6181,11 @@ function flushItemSizeUpdates(state, needsRecalculate) {
     state.scrollForNextCalculateItemsInView = undefined;
     const state2 = state.state;
     if (undefined !== state2.userScrollAnchorReset) {
-      let closure_0 = state;
-      let closure_1 = {};
+      closure_0 = state;
+      closure_1 = {};
       state = state.state;
       fn(() => {
-        let alwaysRenderIndicesArr;
-        let bottom;
-        let closure_4;
-        let dataChanged;
-        let doMVCP;
-        let enableScrollForNextCalculateItemsInView;
-        let endNoBuffer;
-        let forceFullItemPositions;
-        let getItemType;
-        let idCache;
-        let indexByKey;
-        let initialScroll;
-        let keyExtractor;
-        let minIndexSizeChanged;
-        let positions;
-        let props;
-        let queuedInitialLayout;
-        let scrollForNextCalculateItemsInView;
-        let scrollLength;
         let set2;
-        let sizes;
-        let startBufferedId;
-        let startNoBuffer;
-        let state;
-        let top;
-        let viewabilityConfigCallbackPairs;
         let addResult = state;
         let containerItemKeys = state.containerItemKeys;
         ({ enableScrollForNextCalculateItemsInView, idCache } = state);
@@ -6390,7 +6204,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
           let _Set = Set;
           stickyHeaderIndicesSet = new Set();
         }
-        let tmp9 = outer1_46(containerItemKeys, idCache.drawDistanceMode);
+        let tmp9 = closure_1_46(containerItemKeys, idCache.drawDistanceMode);
         ({ dataChanged, doMVCP, forceFullItemPositions } = idCache);
         let initialScrollSession = tmp2.initialScrollSession;
         let kind;
@@ -6401,18 +6215,18 @@ function flushItemSizeUpdates(state, needsRecalculate) {
         if ("bootstrap" === kind) {
           bootstrap = tmp2.initialScrollSession.bootstrap;
         }
-        let tmp16 = outer1_21(containerItemKeys, "numContainers");
+        let tmp16 = closure_1_21(containerItemKeys, "numContainers");
         if (data) {
           if (0 !== scrollLength) {
             if (tmp16) {
-              let closure_8 = outer1_25(tmp7);
+              closure_8 = closure_1_25(tmp7);
               let tmp15Result = tmp15(tmp7, "stylePaddingTop");
               let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-              let closure_9 = sum + tmp15(tmp7, "headerSize");
+              closure_9 = sum + tmp15(tmp7, "headerSize");
               tmp15Result = tmp15(tmp7, "numColumns");
               let scrollVelocity = idCache.scrollVelocity;
               if (null == scrollVelocity) {
-                scrollVelocity = outer1_69(tmp2);
+                scrollVelocity = closure_1_69(tmp2);
               }
               ({ initialScroll, queuedInitialLayout } = tmp2);
               if (!tmp13) {
@@ -6425,31 +6239,31 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 }
               } else {
                 if (!queuedInitialLayout) {
-                  if (outer1_41(tmp2)) {
+                  if (closure_1_41(tmp2)) {
                     if (initialScroll) {
-                      scroll = outer1_75(tmp7, initialScroll);
+                      scroll = closure_1_75(tmp7, initialScroll);
                     }
                   }
                 }
                 scroll = tmp2.scroll;
               }
-              let c10 = 0;
-              let c11 = 0;
-              let c12 = 0;
-              let c13 = 0;
-              let c14 = 0;
-              let c15 = 0;
+              c10 = 0;
+              c11 = 0;
+              c12 = 0;
+              c13 = 0;
+              c14 = 0;
+              c15 = 0;
               function updateScroll2(scroll) {
-                let closure_16 = scroll;
+                closure_16 = scroll;
                 const values = containerItemKeys.values;
                 const value = values.get("scrollAdjustPending");
                 let num = 0;
                 if (null != value) {
                   num = value;
                 }
-                let closure_11 = num - closure_9;
+                closure_11 = num - closure_9;
                 const rounded = Math.round(scroll + closure_11);
-                let closure_12 = rounded;
+                closure_12 = rounded;
                 if (rounded + scrollLength > closure_8) {
                   const _Math = Math;
                   closure_12 = Math.max(0, tmp4 - tmp3);
@@ -6457,7 +6271,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               }
               updateScroll2(scroll);
               const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
-              let closure_17 = tmp15Result1;
+              closure_17 = tmp15Result1;
               function resolveStickyState() {
                 let num = -1;
                 let num2 = -1;
@@ -6493,17 +6307,17 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   tmp8 = tmp9 >= 0;
                 }
                 if (tmp8) {
-                  outer2_22(containerItemKeys, "activeStickyIndex", num);
+                  closure_2_22(containerItemKeys, "activeStickyIndex", num);
                 }
-                let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
-                let fn;
+                obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
+                fn = undefined;
                 if (closure_4) {
                   if (arr.length > 0) {
                     if (tmp9 !== num) {
                       fn = () => {
-                        if (undefined !== outer1_6[num]) {
-                          if (null != outer1_4) {
-                            const obj = { index: null, item: null };
+                        if (undefined !== closure_1_6[num]) {
+                          if (null != closure_1_4) {
+                            obj = { index: null, item: null };
                             obj[0] = tmp;
                             obj[1] = tmp2;
                             tmp3(obj);
@@ -6542,7 +6356,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   num6 = 0;
                   if (!tmp25) {
                     num6 = 0;
-                    if (!outer1_41(tmp2)) {
+                    if (!closure_1_41(tmp2)) {
                       num6 = 0;
                       if (!tmp2.scrollingTo) {
                         num6 = 0;
@@ -6570,9 +6384,9 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               }
               function updateScrollRange() {
                 const bound = Math.max(0, c12);
-                let closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
-                let closure_13 = bound - result2 + num6;
-                let closure_15 = closure_14 + result3 + num6;
+                closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
+                closure_13 = bound - result2 + num6;
+                closure_15 = closure_14 + result3 + num6;
               }
               updateScrollRange();
               if (0 !== num6) {
@@ -6619,12 +6433,6 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         if (null === top) {
                           if (viewabilityConfigCallbackPairs) {
                             (function updateViewabilityForCachedRange(state, viewabilityConfigCallbackPairs, scrollLength, c12, c14) {
-                              let data;
-                              let data2;
-                              let keyExtractor;
-                              let keyExtractor2;
-                              let sizes;
-                              let startBuffered;
                               state = state.state;
                               const endBuffered = state.endBuffered;
                               data = state.props.data;
@@ -6685,9 +6493,9 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                                               tmp12 = tmp6;
                                             }
                                             let tmp26 = tmp13;
-                                            let flag = false;
+                                            flag = false;
                                             if (null !== tmp11) {
-                                              let flag2 = true;
+                                              flag2 = true;
                                               if (tmp23 <= c14) {
                                                 tmp13 = tmp6;
                                                 flag2 = false;
@@ -6723,7 +6531,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                                           }
                                         }
                                       }
-                                      const obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
+                                      obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
                                       obj[0] = tmp9;
                                       obj[1] = sum1;
                                       if (null == sum1) {
@@ -6773,11 +6581,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                               }
                             })(tmp7, viewabilityConfigCallbackPairs, scrollLength, c12, c14);
                           } else if (tmp2.props.onFirstVisibleItemChanged) {
-                            outer1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
-                              let data;
-                              let keyExtractor;
-                              let sizes;
-                              let startBuffered;
+                            closure_1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
                               state = state.state;
                               const endBuffered = state.endBuffered;
                               data = state.props.data;
@@ -6855,11 +6659,11 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               let tmp73;
               if (doMVCP) {
                 if (!tmp25) {
-                  tmp73 = outer1_68(tmp7, dataChanged);
+                  tmp73 = closure_1_68(tmp7, dataChanged);
                 }
               }
               if (dataChanged) {
-                outer1_86(tmp2);
+                closure_1_86(tmp2);
               }
               let num8 = 0;
               if (!forceFullItemPositions) {
@@ -6876,7 +6680,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   num8 = num9;
                 }
               }
-              let obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
+              obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
               obj[0] = doMVCP;
               obj[1] = forceFullItemPositions;
               let tmp82 = !forceFullItemPositions;
@@ -6893,8 +6697,8 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               obj[3] = c15;
               obj[4] = scrollVelocity;
               obj[5] = num8;
-              outer1_89(tmp7, dataChanged, obj);
-              const tmp17Result = outer1_25(tmp7);
+              closure_1_89(tmp7, dataChanged, obj);
+              const tmp17Result = closure_1_25(tmp7);
               closure_8 = tmp17Result;
               if (undefined !== minIndexSizeChanged) {
                 tmp2.minIndexSizeChanged = undefined;
@@ -6906,7 +6710,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                       if (tmp2.idsInView.length > 0) {
                         const shouldRestorePosition = tmp2.props.maintainVisibleContentPosition.shouldRestorePosition;
                         const _Set2 = Set;
-                        let set = new Set();
+                        set = new Set();
                         const idsInView = tmp2.idsInView;
                         for (const item10226 of idsInView) {
                           let tmp99 = item10226;
@@ -6930,11 +6734,11 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               }
               addResult = state;
               addResult = state;
-              addResult = outer1_21;
-              addResult = outer1_21;
+              addResult = closure_1_21;
+              addResult = closure_1_21;
               addResult = containerItemKeys;
               addResult = containerItemKeys;
-              addResult = outer1_21(containerItemKeys, "scrollAdjustPending");
+              addResult = closure_1_21(containerItemKeys, "scrollAdjustPending");
               let num11 = 0;
               if (null != addResult) {
                 num11 = addResult;
@@ -6985,19 +6789,19 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 while (true) {
                   addResult = idCache[addResult];
                   if (null == addResult) {
-                    addResult = outer1_49;
+                    addResult = closure_1_49;
                     addResult = state;
                     addResult = state;
-                    addResult = outer1_49(state, addResult);
+                    addResult = closure_1_49(state, addResult);
                   }
                   addResult = sizes.get(addResult);
                   if (null == addResult) {
-                    addResult = outer1_58;
+                    addResult = closure_1_58;
                     addResult = containerItemKeys;
                     addResult = containerItemKeys;
                     let num14 = 0;
                     addResult = containerItemKeys;
-                    addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                    addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                   }
                   addResult = c13;
                   if (positions[addResult] + addResult <= c13) {
@@ -7031,12 +6835,12 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               let num18 = 0;
               if (0 < tmp16) {
                 do {
-                  addResult = outer1_21;
-                  addResult = outer1_21;
+                  addResult = closure_1_21;
+                  addResult = closure_1_21;
                   addResult = containerItemKeys;
                   addResult = containerItemKeys;
                   let _HermesInternal = HermesInternal;
-                  addResult = outer1_21(containerItemKeys, "containerItemKey" + num16);
+                  addResult = closure_1_21(containerItemKeys, "containerItemKey" + num16);
                   addResult = num16;
                   addResult = num17;
                   addResult = num17;
@@ -7065,29 +6869,29 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   addResult = idCache[addResult];
                   addResult = flag3;
                   if (null == addResult) {
-                    addResult = outer1_49;
+                    addResult = closure_1_49;
                     addResult = state;
                     addResult = state;
-                    addResult = outer1_49(state, addResult);
+                    addResult = closure_1_49(state, addResult);
                   }
                   addResult = sizes.get(addResult);
                   if (null == addResult) {
-                    addResult = outer1_58;
+                    addResult = closure_1_58;
                     addResult = containerItemKeys;
                     addResult = containerItemKeys;
                     let num19 = 0;
                     addResult = containerItemKeys;
-                    addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                    addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                   }
                   addResult = positions[addResult];
                   addResult = flag3;
                   if (!flag3) {
-                    addResult = outer1_100;
+                    addResult = closure_1_100;
                     addResult = c12;
                     addResult = c14;
                     let num20 = 0;
                     addResult = obj;
-                    addResult = outer1_100(obj, addResult, addResult, addResult, c12, c14);
+                    addResult = closure_1_100(obj, addResult, addResult, addResult, c12, c14);
                     addResult = null === addResult;
                     if (addResult) {
                       addResult = c13;
@@ -7130,13 +6934,13 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 }
               }
               const _Object = Object;
-              let obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
+              obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
               obj1[0] = addResult;
               ({ endNoBuffer: obj5[1], firstFullyOnScreenIndex: obj5[2] } = obj);
-              addResult = outer1_101;
+              addResult = closure_1_101;
               addResult = state;
               addResult = state;
-              obj1[3] = outer1_101(state, obj);
+              obj1[3] = closure_1_101(state, obj);
               obj1[4] = addResult;
               obj1[5] = addResult;
               obj1[6] = obj.startNoBuffer;
@@ -7148,9 +6952,9 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 enableScrollForNextCalculateItemsInView = undefined !== addResult;
               }
               if (enableScrollForNextCalculateItemsInView) {
-                addResult = outer1_54;
-                if (!outer1_54(addResult)) {
-                  let obj2 = { bottom: null, top: null };
+                addResult = closure_1_54;
+                if (!closure_1_54(addResult)) {
+                  obj2 = { bottom: null, top: null };
                   obj2[0] = addResult;
                   obj2[1] = addResult;
                   addResult = obj2;
@@ -7161,12 +6965,12 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               let items = [];
               if (dataChanged) {
                 for (let num21 = 0; num21 < addResult; num21 = num21 + 1) {
-                  addResult = outer1_21;
-                  addResult = outer1_21;
+                  addResult = closure_1_21;
+                  addResult = closure_1_21;
                   addResult = containerItemKeys;
                   addResult = containerItemKeys;
                   let _HermesInternal2 = HermesInternal;
-                  addResult = outer1_21(containerItemKeys, "containerItemKey" + num21);
+                  addResult = closure_1_21(containerItemKeys, "containerItemKey" + num21);
                   addResult = !keyExtractor;
                   addResult = num21;
                   if (keyExtractor) {
@@ -7182,8 +6986,8 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               addResult = state;
               addResult = state;
               const scrollTargetPinnedRange = state.scrollTargetPinnedRange;
-              let c22 = 0;
-              let c23 = -1;
+              c22 = 0;
+              c23 = -1;
               let num23 = -1;
               let num24 = 0;
               if (scrollTargetPinnedRange) {
@@ -7200,7 +7004,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 num24 = addResult;
               }
               addResult = num24 <= num23;
-              let closure_24 = addResult;
+              closure_24 = addResult;
               function isPinnedRenderIndex(addResult) {
                 let hasItem = set.has(addResult);
                 if (!hasItem) {
@@ -7223,13 +7027,11 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   addResult = new.target;
                   const set1 = new Set();
                   function addPinnedIndex(item10471) {
-                    let data;
-                    let keyExtractor;
                     if (item10471 >= 0) {
                       if (item10471 < length) {
                         let tmp4 = idCache[item10471];
                         if (null == tmp4) {
-                          ({ data, keyExtractor } = outer1_2.props);
+                          ({ data, keyExtractor } = closure_1_2.props);
                           let str = "";
                           if (data) {
                             let tmp2 = null;
@@ -7247,7 +7049,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         }
                         const value = containerItemKeys.get(tmp4);
                         if (undefined !== value) {
-                          const stickyContainerPool = outer1_2.stickyContainerPool;
+                          const stickyContainerPool = closure_1_2.stickyContainerPool;
                           stickyContainerPool.add(value);
                         } else {
                           let hasItem = null == tmp4;
@@ -7267,10 +7069,10 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                     do {
                       addResult = idCache[addResult];
                       if (null == addResult) {
-                        addResult = outer1_49;
+                        addResult = closure_1_49;
                         addResult = state;
                         addResult = state;
-                        addResult = outer1_49(state, addResult);
+                        addResult = closure_1_49(state, addResult);
                       }
                       if (!containerItemKeys.has(addResult)) {
                         addResult = set1.add(addResult);
@@ -7309,9 +7111,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                     addResult = items1;
                     addResult = set1;
                     addResult = (function handleStickyActivation(addResult, prop, arg2, items1, addResult2, addResult3, addResult4) {
-                      let data;
-                      let keyExtractor;
-                      const state = addResult.state;
+                      state = addResult.state;
                       let num = -1;
                       if (arg2 >= 0) {
                         num = prop[arg2];
@@ -7345,7 +7145,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                             }
                             let tmp8 = tmp5;
                             if (tmp5) {
-                              let containerItemKeys = state.containerItemKeys;
+                              containerItemKeys = state.containerItemKeys;
                               tmp8 = !containerItemKeys.has(tmp5);
                             }
                             if (tmp8) {
@@ -7365,14 +7165,14 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                       } while (num2 <= 1);
                     })(addResult, prop, num25, items1, addResult, addResult, addResult);
                   } else if (-1 !== tmp15Result1) {
-                    addResult = outer1_22;
-                    addResult = outer1_22;
+                    addResult = closure_1_22;
+                    addResult = closure_1_22;
                     addResult = containerItemKeys;
                     addResult = containerItemKeys;
-                    addResult = outer1_22(containerItemKeys, "activeStickyIndex", -1);
+                    addResult = closure_1_22(containerItemKeys, "activeStickyIndex", -1);
                   }
                   if (items1.length > 0) {
-                    let fn;
+                    fn = undefined;
                     if (getItemType) {
                       fn = (arg0) => {
                         const tmp = getItemType(data[arg0], arg0);
@@ -7392,22 +7192,20 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                     addResult = fn;
                     addResult = tmp88;
                     addResult = (function findAvailableContainers(containerItemKeys, items1, addResult, addResult2, items, fn, has) {
-                      let closure_2;
-                      let stickyContainerPool;
-                      let closure_0 = fn;
+                      closure_0 = fn;
                       if (0 === items1.length) {
                         return [];
                       } else {
                         const tmp56 = length(containerItemKeys, "numContainers");
-                        const state = containerItemKeys.state;
+                        state = containerItemKeys.state;
                         ({ containerItemMetadata: closure_2, stickyContainerPool } = state);
-                        let set;
+                        set = undefined;
                         if (items.length > 0) {
                           const _Set = Set;
                           set = new Set(items);
                         }
                         const mapped = items1.map((itemIndex) => {
-                          const obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
+                          obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
                           stickyHeaderIndicesSet = state.props.stickyHeaderIndicesSet;
                           let tmp;
                           if (null != callback) {
@@ -7450,7 +7248,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                             if (stickyContainerPool.has(num2)) {
                               let tmp22 = undefined === tmp13 || tmp18;
                               if (tmp22) {
-                                let obj = { containerIndex: null, distance: null };
+                                obj = { containerIndex: null, distance: null };
                                 obj[0] = num2;
                                 let _Number2 = Number;
                                 obj[1] = Number.POSITIVE_INFINITY;
@@ -7485,7 +7283,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         const _Array = Array;
                         const array = new Array(length);
                         let sum = tmp56;
-                        let c5 = false;
+                        c5 = false;
                         function assign(itemIndex, containerIndex) {
                           array[itemIndex.order] = { containerIndex, itemIndex: itemIndex.itemIndex, itemType: itemIndex.itemType };
                           let deleteResult;
@@ -7493,35 +7291,35 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                             deleteResult = set.delete(containerIndex);
                           }
                           if (deleteResult) {
-                            let c5 = true;
+                            c5 = true;
                           }
                         }
                         function assignMatching(found, items, arg2) {
-                          let closure_0 = items;
-                          let closure_1 = arg2;
+                          closure_0 = items;
+                          closure_1 = arg2;
                           function _loop2(iter) {
-                            const items = iter;
-                            if (outer1_4[iter.order]) {
+                            items = iter;
+                            if (closure_1_4[iter.order]) {
                               return 1;
                             } else {
                               const findIndexResult = items.findIndex(() => { ... });
                               if (-1 !== findIndexResult) {
                                 const containerIndex = array(items.splice(findIndexResult, 1), 1)[0].containerIndex;
-                                if (typeof outer1_6 !== "function") {
+                                if (typeof closure_1_6 !== "function") {
                                   HermesBuiltin.throwTypeError();
                                 }
-                                const obj = { containerIndex: null, itemIndex: null, itemType: null };
+                                obj = { containerIndex: null, itemIndex: null, itemType: null };
                                 obj[0] = containerIndex;
                                 ({ itemIndex: obj[1], itemType: obj[2] } = iter);
                                 tmp[iter.order] = obj;
                                 let deleteResult;
-                                if (null != outer1_3) {
+                                if (null != closure_1_3) {
                                   deleteResult = obj2.delete(containerIndex);
                                 }
                                 if (deleteResult) {
-                                  const outer1_5 = true;
+                                  c5 = true;
                                 }
-                                obj2 = outer1_3;
+                                obj2 = closure_1_3;
                               }
                             }
                           }
@@ -7562,7 +7360,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                             }
                             let tmp43 = item10099;
                             let tmp44 = tmp38;
-                            let obj1 = assign(tmp36, tmp39);
+                            obj1 = assign(tmp36, tmp39);
                           }
                           continue;
                         }
@@ -7583,7 +7381,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                           }
                           if (sum > POSITIVE_INFINITY) {
                             const _console = console;
-                            let obj2 = { debugInfo: null };
+                            obj2 = { debugInfo: null };
                             const obj3 = { numContainers: null, numContainersPooled: null, numNeeded: null, stillNeeded: null };
                             obj3[0] = tmp56;
                             obj3[1] = POSITIVE_INFINITY;
@@ -7605,19 +7403,19 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                       let containerIndex = addResult.containerIndex;
                       addResult = idCache[itemIndex];
                       if (null == addResult) {
-                        addResult = outer1_49;
+                        addResult = closure_1_49;
                         addResult = state;
                         addResult = state;
                         addResult = itemIndex;
-                        addResult = outer1_49(state, addResult);
+                        addResult = closure_1_49(state, addResult);
                       }
                       addResult = containerItemKeys;
                       addResult = containerItemKeys;
                       addResult = containerIndex;
                       let _HermesInternal3 = HermesInternal;
-                      addResult = outer1_21;
-                      addResult = outer1_21;
-                      addResult = outer1_21(containerItemKeys, "containerItemKey" + containerIndex);
+                      addResult = closure_1_21;
+                      addResult = closure_1_21;
+                      addResult = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                       if (addResult) {
                         addResult = addResult !== addResult;
                       }
@@ -7644,23 +7442,23 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         }
                         state.containerItemGenerations[containerIndex] = num28 + 1;
                       }
-                      addResult = outer1_22;
-                      addResult = outer1_22;
+                      addResult = closure_1_22;
+                      addResult = closure_1_22;
                       addResult = containerIndex;
                       let _HermesInternal4 = HermesInternal;
-                      addResult = outer1_22(addResult, "containerItemKey" + containerIndex, addResult);
+                      addResult = closure_1_22(addResult, "containerItemKey" + containerIndex, addResult);
                       let _HermesInternal5 = HermesInternal;
                       addResult = itemIndex;
-                      addResult = outer1_22(addResult, "containerItemIndex" + containerIndex, addResult);
+                      addResult = closure_1_22(addResult, "containerItemIndex" + containerIndex, addResult);
                       let _HermesInternal6 = HermesInternal;
-                      addResult = outer1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
+                      addResult = closure_1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
                       addResult = state;
                       addResult = state;
                       let containerItemMetadata = state.containerItemMetadata;
-                      addResult = outer1_28;
+                      addResult = closure_1_28;
                       let num29 = 0;
                       addResult = state;
-                      addResult = containerItemMetadata.set(containerIndex, outer1_28(state, itemIndex, data[addResult], addResult.itemType));
+                      addResult = containerItemMetadata.set(containerIndex, closure_1_28(state, itemIndex, data[addResult], addResult.itemType));
                       addResult = containerItemKeys.set(addResult, containerIndex);
                       let userScrollAnchorReset = state.userScrollAnchorReset;
                       if (null != userScrollAnchorReset) {
@@ -7700,14 +7498,14 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                       continue;
                     }
                     if (addResult !== tmp16) {
-                      addResult = outer1_22;
-                      addResult = outer1_22;
+                      addResult = closure_1_22;
+                      addResult = closure_1_22;
                       addResult = containerItemKeys;
                       addResult = containerItemKeys;
-                      addResult = outer1_22(containerItemKeys, "numContainers", addResult);
-                      addResult = outer1_21;
-                      addResult = outer1_21;
-                      if (addResult > outer1_21(containerItemKeys, "numContainersPooled")) {
+                      addResult = closure_1_22(containerItemKeys, "numContainers", addResult);
+                      addResult = closure_1_21;
+                      addResult = closure_1_21;
+                      if (addResult > closure_1_21(containerItemKeys, "numContainersPooled")) {
                         addResult = addResult(addResult, "numContainersPooled", (function getExpandedContainerPoolSize(length, addResult) {
                           let num = 0;
                           if (length > 0) {
@@ -7756,7 +7554,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 addResult = items;
                 addResult = isPinnedRenderIndex;
                 addResult = (function handleStickyRecycling(addResult, prop, addResult2, arg3, arg4, items, isPinnedRenderIndex) {
-                  const state = addResult.state;
+                  state = addResult.state;
                   const iter = state.stickyContainerPool[Symbol.iterator]();
                   const nextResult = iter.next();
                   while (iter !== undefined) {
@@ -7782,7 +7580,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                           if (tmp11 < arg4 - 1) {
                             let tmp18 = index;
                             let tmp19 = prop[tmp11 + 1];
-                            let flag = false;
+                            flag = false;
                             if (tmp19) {
                               let tmp44 = tmp19;
                               let tmp45 = state.positions[tmp20];
@@ -7865,12 +7663,12 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               let flag5 = false;
               if (0 < addResult) {
                 do {
-                  addResult = outer1_21;
-                  addResult = outer1_21;
+                  addResult = closure_1_21;
+                  addResult = closure_1_21;
                   addResult = containerItemKeys;
                   addResult = containerItemKeys;
                   let _HermesInternal8 = HermesInternal;
-                  addResult = outer1_21(containerItemKeys, "containerItemKey" + num32);
+                  addResult = closure_1_21(containerItemKeys, "containerItemKey" + num32);
                   addResult = flag5;
                   addResult = undefined;
                   addResult = num32;
@@ -7904,41 +7702,41 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                     addResult = containerItemMetadata2.delete(num32);
                     let stickyContainerPool3 = state.stickyContainerPool;
                     if (stickyContainerPool3.has(num32)) {
-                      addResult = outer1_22;
-                      addResult = outer1_22;
+                      addResult = closure_1_22;
+                      addResult = closure_1_22;
                       let _HermesInternal9 = HermesInternal;
-                      addResult = outer1_22(addResult, "containerSticky" + num32, false);
+                      addResult = closure_1_22(addResult, "containerSticky" + num32, false);
                       let stickyContainerPool4 = addResult.stickyContainerPool;
                       addResult = stickyContainerPool4.delete(num32);
                     }
-                    addResult = outer1_22;
-                    addResult = outer1_22;
+                    addResult = closure_1_22;
+                    addResult = closure_1_22;
                     let _HermesInternal10 = HermesInternal;
-                    addResult = outer1_22(addResult, "containerItemKey" + num32, undefined);
+                    addResult = closure_1_22(addResult, "containerItemKey" + num32, undefined);
                     let _HermesInternal11 = HermesInternal;
-                    addResult = outer1_22(addResult, "containerItemIndex" + num32, undefined);
+                    addResult = closure_1_22(addResult, "containerItemIndex" + num32, undefined);
                     let _HermesInternal12 = HermesInternal;
-                    addResult = outer1_22(addResult, "containerItemData" + num32, undefined);
+                    addResult = closure_1_22(addResult, "containerItemData" + num32, undefined);
                     let _HermesInternal13 = HermesInternal;
-                    addResult = outer1_32;
-                    addResult = outer1_22(addResult, "containerPosition" + num32, outer1_32);
+                    addResult = closure_1_32;
+                    addResult = closure_1_22(addResult, "containerPosition" + num32, closure_1_32);
                     let _HermesInternal14 = HermesInternal;
-                    addResult = outer1_22(addResult, "containerColumn" + num32, -1);
+                    addResult = closure_1_22(addResult, "containerColumn" + num32, -1);
                     let _HermesInternal15 = HermesInternal;
-                    addResult = outer1_22(addResult, "containerSpan" + num32, 1);
+                    addResult = closure_1_22(addResult, "containerSpan" + num32, 1);
                     addResult = flag5;
                   } else {
                     addResult = indexByKey.get(addResult);
                     addResult = flag5;
                     if (undefined !== addResult) {
-                      addResult = outer1_88;
+                      addResult = closure_1_88;
                       let obj3 = { scrollAdjustPending: null, updateLayout: true };
                       addResult = c10;
                       obj3[0] = c10;
                       let num35 = 0;
                       addResult = num32;
                       addResult = obj3;
-                      addResult = outer1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
+                      addResult = closure_1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
                     }
                   }
                   num32 = num32 + 1;
@@ -7947,29 +7745,29 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               }
               addResult = set2;
               if (set2) {
-                addResult = outer1_27;
+                addResult = closure_1_27;
               }
               if (addResult) {
-                addResult = outer1_87;
+                addResult = closure_1_87;
                 addResult = containerItemKeys;
                 addResult = containerItemKeys;
-                addResult = outer1_87(containerItemKeys, set2);
+                addResult = closure_1_87(containerItemKeys, set2);
               }
               if (!tmp13) {
-                addResult = outer1_84;
+                addResult = closure_1_84;
                 addResult = containerItemKeys;
                 addResult = containerItemKeys;
-                addResult = outer1_84(containerItemKeys);
+                addResult = closure_1_84(containerItemKeys);
               } else {
-                addResult = outer1_102;
+                addResult = closure_1_102;
                 addResult = state;
                 addResult = state;
-                addResult = outer1_102(state, obj.startNoBuffer);
+                addResult = closure_1_102(state, obj.startNoBuffer);
                 if (!queuedInitialLayout) {
                   if (!addResult.didContainersLayout) {
-                    addResult = outer1_41;
-                    addResult = outer1_77;
-                    if (outer1_41(addResult)) {
+                    addResult = closure_1_41;
+                    addResult = closure_1_77;
+                    if (closure_1_41(addResult)) {
                       addResult = addResult(addResult, addResult.startBuffered, addResult.endBuffered);
                     } else {
                       addResult = addResult(addResult, addResult.startNoBuffer, addResult.endNoBuffer);
@@ -7986,7 +7784,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         callback2(containerItemKeys, { didLayout: true });
                       })(containerItemKeys);
                       addResult = (function handleInitialScrollLayoutReady(containerItemKeys) {
-                        let closure_0 = containerItemKeys;
+                        closure_0 = containerItemKeys;
                         if (containerItemKeys.state.initialScroll) {
                           callback6(containerItemKeys, { forceScroll: true });
                           const initialScrollSession = containerItemKeys.state.initialScrollSession;
@@ -7997,7 +7795,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                           if ("offset" !== kind) {
                             const _requestAnimationFrame = requestAnimationFrame;
                             const animationFrame = requestAnimationFrame(function runScroll() {
-                              return outer1_76(closure_0, { forceScroll: true });
+                              return closure_1_76(closure_0, { forceScroll: true });
                             });
                           }
                           closure_0 = containerItemKeys;
@@ -8025,7 +7823,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   addResult = containerItemKeys;
                   state = containerItemKeys.state;
                   ({ startNoBuffer, endNoBuffer } = obj);
-                  addResult = outer1_91;
+                  addResult = closure_1_91;
                   if (null == addResult) {
                     addResult = obj.startNoBuffer;
                   }
@@ -8052,8 +7850,8 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   }
                 }
               }
-              let tmp17 = outer1_25;
-              const tmp80 = outer1_89;
+              let tmp17 = closure_1_25;
+              const tmp80 = closure_1_89;
             }
           }
         }
@@ -8071,32 +7869,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
       closure_1 = { doMVCP: true };
       state = state.state;
       fn(() => {
-        let alwaysRenderIndicesArr;
-        let bottom;
-        let closure_4;
-        let dataChanged;
-        let doMVCP;
-        let enableScrollForNextCalculateItemsInView;
-        let endNoBuffer;
-        let forceFullItemPositions;
-        let getItemType;
-        let idCache;
-        let indexByKey;
-        let initialScroll;
-        let keyExtractor;
-        let minIndexSizeChanged;
-        let positions;
-        let props;
-        let queuedInitialLayout;
-        let scrollForNextCalculateItemsInView;
-        let scrollLength;
         let set2;
-        let sizes;
-        let startBufferedId;
-        let startNoBuffer;
-        let state;
-        let top;
-        let viewabilityConfigCallbackPairs;
         let addResult = state;
         let containerItemKeys = state.containerItemKeys;
         ({ enableScrollForNextCalculateItemsInView, idCache } = state);
@@ -8115,7 +7888,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
           let _Set = Set;
           stickyHeaderIndicesSet = new Set();
         }
-        let tmp9 = outer1_46(containerItemKeys, idCache.drawDistanceMode);
+        let tmp9 = closure_1_46(containerItemKeys, idCache.drawDistanceMode);
         ({ dataChanged, doMVCP, forceFullItemPositions } = idCache);
         let initialScrollSession = tmp2.initialScrollSession;
         let kind;
@@ -8126,18 +7899,18 @@ function flushItemSizeUpdates(state, needsRecalculate) {
         if ("bootstrap" === kind) {
           bootstrap = tmp2.initialScrollSession.bootstrap;
         }
-        let tmp16 = outer1_21(containerItemKeys, "numContainers");
+        let tmp16 = closure_1_21(containerItemKeys, "numContainers");
         if (data) {
           if (0 !== scrollLength) {
             if (tmp16) {
-              let closure_8 = outer1_25(tmp7);
+              closure_8 = closure_1_25(tmp7);
               let tmp15Result = tmp15(tmp7, "stylePaddingTop");
               let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-              let closure_9 = sum + tmp15(tmp7, "headerSize");
+              closure_9 = sum + tmp15(tmp7, "headerSize");
               tmp15Result = tmp15(tmp7, "numColumns");
               let scrollVelocity = idCache.scrollVelocity;
               if (null == scrollVelocity) {
-                scrollVelocity = outer1_69(tmp2);
+                scrollVelocity = closure_1_69(tmp2);
               }
               ({ initialScroll, queuedInitialLayout } = tmp2);
               if (!tmp13) {
@@ -8150,31 +7923,31 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 }
               } else {
                 if (!queuedInitialLayout) {
-                  if (outer1_41(tmp2)) {
+                  if (closure_1_41(tmp2)) {
                     if (initialScroll) {
-                      scroll = outer1_75(tmp7, initialScroll);
+                      scroll = closure_1_75(tmp7, initialScroll);
                     }
                   }
                 }
                 scroll = tmp2.scroll;
               }
-              let c10 = 0;
-              let c11 = 0;
-              let c12 = 0;
-              let c13 = 0;
-              let c14 = 0;
-              let c15 = 0;
+              c10 = 0;
+              c11 = 0;
+              c12 = 0;
+              c13 = 0;
+              c14 = 0;
+              c15 = 0;
               function updateScroll2(scroll) {
-                let closure_16 = scroll;
+                closure_16 = scroll;
                 const values = containerItemKeys.values;
                 const value = values.get("scrollAdjustPending");
                 let num = 0;
                 if (null != value) {
                   num = value;
                 }
-                let closure_11 = num - closure_9;
+                closure_11 = num - closure_9;
                 const rounded = Math.round(scroll + closure_11);
-                let closure_12 = rounded;
+                closure_12 = rounded;
                 if (rounded + scrollLength > closure_8) {
                   const _Math = Math;
                   closure_12 = Math.max(0, tmp4 - tmp3);
@@ -8182,7 +7955,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               }
               updateScroll2(scroll);
               const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
-              let closure_17 = tmp15Result1;
+              closure_17 = tmp15Result1;
               function resolveStickyState() {
                 let num = -1;
                 let num2 = -1;
@@ -8218,17 +7991,17 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   tmp8 = tmp9 >= 0;
                 }
                 if (tmp8) {
-                  outer2_22(containerItemKeys, "activeStickyIndex", num);
+                  closure_2_22(containerItemKeys, "activeStickyIndex", num);
                 }
-                let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
-                let fn;
+                obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
+                fn = undefined;
                 if (closure_4) {
                   if (arr.length > 0) {
                     if (tmp9 !== num) {
                       fn = () => {
-                        if (undefined !== outer1_6[num]) {
-                          if (null != outer1_4) {
-                            const obj = { index: null, item: null };
+                        if (undefined !== closure_1_6[num]) {
+                          if (null != closure_1_4) {
+                            obj = { index: null, item: null };
                             obj[0] = tmp;
                             obj[1] = tmp2;
                             tmp3(obj);
@@ -8267,7 +8040,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   num6 = 0;
                   if (!tmp25) {
                     num6 = 0;
-                    if (!outer1_41(tmp2)) {
+                    if (!closure_1_41(tmp2)) {
                       num6 = 0;
                       if (!tmp2.scrollingTo) {
                         num6 = 0;
@@ -8295,9 +8068,9 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               }
               function updateScrollRange() {
                 const bound = Math.max(0, c12);
-                let closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
-                let closure_13 = bound - result2 + num6;
-                let closure_15 = closure_14 + result3 + num6;
+                closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
+                closure_13 = bound - result2 + num6;
+                closure_15 = closure_14 + result3 + num6;
               }
               updateScrollRange();
               if (0 !== num6) {
@@ -8344,12 +8117,6 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         if (null === top) {
                           if (viewabilityConfigCallbackPairs) {
                             (function updateViewabilityForCachedRange(state, viewabilityConfigCallbackPairs, scrollLength, c12, c14) {
-                              let data;
-                              let data2;
-                              let keyExtractor;
-                              let keyExtractor2;
-                              let sizes;
-                              let startBuffered;
                               state = state.state;
                               const endBuffered = state.endBuffered;
                               data = state.props.data;
@@ -8410,9 +8177,9 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                                               tmp12 = tmp6;
                                             }
                                             let tmp26 = tmp13;
-                                            let flag = false;
+                                            flag = false;
                                             if (null !== tmp11) {
-                                              let flag2 = true;
+                                              flag2 = true;
                                               if (tmp23 <= c14) {
                                                 tmp13 = tmp6;
                                                 flag2 = false;
@@ -8448,7 +8215,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                                           }
                                         }
                                       }
-                                      const obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
+                                      obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
                                       obj[0] = tmp9;
                                       obj[1] = sum1;
                                       if (null == sum1) {
@@ -8498,11 +8265,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                               }
                             })(tmp7, viewabilityConfigCallbackPairs, scrollLength, c12, c14);
                           } else if (tmp2.props.onFirstVisibleItemChanged) {
-                            outer1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
-                              let data;
-                              let keyExtractor;
-                              let sizes;
-                              let startBuffered;
+                            closure_1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
                               state = state.state;
                               const endBuffered = state.endBuffered;
                               data = state.props.data;
@@ -8580,11 +8343,11 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               let tmp73;
               if (doMVCP) {
                 if (!tmp25) {
-                  tmp73 = outer1_68(tmp7, dataChanged);
+                  tmp73 = closure_1_68(tmp7, dataChanged);
                 }
               }
               if (dataChanged) {
-                outer1_86(tmp2);
+                closure_1_86(tmp2);
               }
               let num8 = 0;
               if (!forceFullItemPositions) {
@@ -8601,7 +8364,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   num8 = num9;
                 }
               }
-              let obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
+              obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
               obj[0] = doMVCP;
               obj[1] = forceFullItemPositions;
               let tmp82 = !forceFullItemPositions;
@@ -8618,8 +8381,8 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               obj[3] = c15;
               obj[4] = scrollVelocity;
               obj[5] = num8;
-              outer1_89(tmp7, dataChanged, obj);
-              const tmp17Result = outer1_25(tmp7);
+              closure_1_89(tmp7, dataChanged, obj);
+              const tmp17Result = closure_1_25(tmp7);
               closure_8 = tmp17Result;
               if (undefined !== minIndexSizeChanged) {
                 tmp2.minIndexSizeChanged = undefined;
@@ -8631,7 +8394,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                       if (tmp2.idsInView.length > 0) {
                         const shouldRestorePosition = tmp2.props.maintainVisibleContentPosition.shouldRestorePosition;
                         const _Set2 = Set;
-                        let set = new Set();
+                        set = new Set();
                         const idsInView = tmp2.idsInView;
                         for (const item10226 of idsInView) {
                           let tmp99 = item10226;
@@ -8655,11 +8418,11 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               }
               addResult = state;
               addResult = state;
-              addResult = outer1_21;
-              addResult = outer1_21;
+              addResult = closure_1_21;
+              addResult = closure_1_21;
               addResult = containerItemKeys;
               addResult = containerItemKeys;
-              addResult = outer1_21(containerItemKeys, "scrollAdjustPending");
+              addResult = closure_1_21(containerItemKeys, "scrollAdjustPending");
               let num11 = 0;
               if (null != addResult) {
                 num11 = addResult;
@@ -8710,19 +8473,19 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 while (true) {
                   addResult = idCache[addResult];
                   if (null == addResult) {
-                    addResult = outer1_49;
+                    addResult = closure_1_49;
                     addResult = state;
                     addResult = state;
-                    addResult = outer1_49(state, addResult);
+                    addResult = closure_1_49(state, addResult);
                   }
                   addResult = sizes.get(addResult);
                   if (null == addResult) {
-                    addResult = outer1_58;
+                    addResult = closure_1_58;
                     addResult = containerItemKeys;
                     addResult = containerItemKeys;
                     let num14 = 0;
                     addResult = containerItemKeys;
-                    addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                    addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                   }
                   addResult = c13;
                   if (positions[addResult] + addResult <= c13) {
@@ -8756,12 +8519,12 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               let num18 = 0;
               if (0 < tmp16) {
                 do {
-                  addResult = outer1_21;
-                  addResult = outer1_21;
+                  addResult = closure_1_21;
+                  addResult = closure_1_21;
                   addResult = containerItemKeys;
                   addResult = containerItemKeys;
                   let _HermesInternal = HermesInternal;
-                  addResult = outer1_21(containerItemKeys, "containerItemKey" + num16);
+                  addResult = closure_1_21(containerItemKeys, "containerItemKey" + num16);
                   addResult = num16;
                   addResult = num17;
                   addResult = num17;
@@ -8790,29 +8553,29 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   addResult = idCache[addResult];
                   addResult = flag3;
                   if (null == addResult) {
-                    addResult = outer1_49;
+                    addResult = closure_1_49;
                     addResult = state;
                     addResult = state;
-                    addResult = outer1_49(state, addResult);
+                    addResult = closure_1_49(state, addResult);
                   }
                   addResult = sizes.get(addResult);
                   if (null == addResult) {
-                    addResult = outer1_58;
+                    addResult = closure_1_58;
                     addResult = containerItemKeys;
                     addResult = containerItemKeys;
                     let num19 = 0;
                     addResult = containerItemKeys;
-                    addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                    addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                   }
                   addResult = positions[addResult];
                   addResult = flag3;
                   if (!flag3) {
-                    addResult = outer1_100;
+                    addResult = closure_1_100;
                     addResult = c12;
                     addResult = c14;
                     let num20 = 0;
                     addResult = obj;
-                    addResult = outer1_100(obj, addResult, addResult, addResult, c12, c14);
+                    addResult = closure_1_100(obj, addResult, addResult, addResult, c12, c14);
                     addResult = null === addResult;
                     if (addResult) {
                       addResult = c13;
@@ -8855,13 +8618,13 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 }
               }
               const _Object = Object;
-              let obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
+              obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
               obj1[0] = addResult;
               ({ endNoBuffer: obj5[1], firstFullyOnScreenIndex: obj5[2] } = obj);
-              addResult = outer1_101;
+              addResult = closure_1_101;
               addResult = state;
               addResult = state;
-              obj1[3] = outer1_101(state, obj);
+              obj1[3] = closure_1_101(state, obj);
               obj1[4] = addResult;
               obj1[5] = addResult;
               obj1[6] = obj.startNoBuffer;
@@ -8873,9 +8636,9 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 enableScrollForNextCalculateItemsInView = undefined !== addResult;
               }
               if (enableScrollForNextCalculateItemsInView) {
-                addResult = outer1_54;
-                if (!outer1_54(addResult)) {
-                  let obj2 = { bottom: null, top: null };
+                addResult = closure_1_54;
+                if (!closure_1_54(addResult)) {
+                  obj2 = { bottom: null, top: null };
                   obj2[0] = addResult;
                   obj2[1] = addResult;
                   addResult = obj2;
@@ -8886,12 +8649,12 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               let items = [];
               if (dataChanged) {
                 for (let num21 = 0; num21 < addResult; num21 = num21 + 1) {
-                  addResult = outer1_21;
-                  addResult = outer1_21;
+                  addResult = closure_1_21;
+                  addResult = closure_1_21;
                   addResult = containerItemKeys;
                   addResult = containerItemKeys;
                   let _HermesInternal2 = HermesInternal;
-                  addResult = outer1_21(containerItemKeys, "containerItemKey" + num21);
+                  addResult = closure_1_21(containerItemKeys, "containerItemKey" + num21);
                   addResult = !keyExtractor;
                   addResult = num21;
                   if (keyExtractor) {
@@ -8907,8 +8670,8 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               addResult = state;
               addResult = state;
               const scrollTargetPinnedRange = state.scrollTargetPinnedRange;
-              let c22 = 0;
-              let c23 = -1;
+              c22 = 0;
+              c23 = -1;
               let num23 = -1;
               let num24 = 0;
               if (scrollTargetPinnedRange) {
@@ -8925,7 +8688,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 num24 = addResult;
               }
               addResult = num24 <= num23;
-              let closure_24 = addResult;
+              closure_24 = addResult;
               function isPinnedRenderIndex(addResult) {
                 let hasItem = set.has(addResult);
                 if (!hasItem) {
@@ -8948,13 +8711,11 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   addResult = new.target;
                   const set1 = new Set();
                   function addPinnedIndex(item10471) {
-                    let data;
-                    let keyExtractor;
                     if (item10471 >= 0) {
                       if (item10471 < length) {
                         let tmp4 = idCache[item10471];
                         if (null == tmp4) {
-                          ({ data, keyExtractor } = outer1_2.props);
+                          ({ data, keyExtractor } = closure_1_2.props);
                           let str = "";
                           if (data) {
                             let tmp2 = null;
@@ -8972,7 +8733,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         }
                         const value = containerItemKeys.get(tmp4);
                         if (undefined !== value) {
-                          const stickyContainerPool = outer1_2.stickyContainerPool;
+                          const stickyContainerPool = closure_1_2.stickyContainerPool;
                           stickyContainerPool.add(value);
                         } else {
                           let hasItem = null == tmp4;
@@ -8992,10 +8753,10 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                     do {
                       addResult = idCache[addResult];
                       if (null == addResult) {
-                        addResult = outer1_49;
+                        addResult = closure_1_49;
                         addResult = state;
                         addResult = state;
-                        addResult = outer1_49(state, addResult);
+                        addResult = closure_1_49(state, addResult);
                       }
                       if (!containerItemKeys.has(addResult)) {
                         addResult = set1.add(addResult);
@@ -9034,9 +8795,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                     addResult = items1;
                     addResult = set1;
                     addResult = (function handleStickyActivation(addResult, prop, arg2, items1, addResult2, addResult3, addResult4) {
-                      let data;
-                      let keyExtractor;
-                      const state = addResult.state;
+                      state = addResult.state;
                       let num = -1;
                       if (arg2 >= 0) {
                         num = prop[arg2];
@@ -9070,7 +8829,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                             }
                             let tmp8 = tmp5;
                             if (tmp5) {
-                              let containerItemKeys = state.containerItemKeys;
+                              containerItemKeys = state.containerItemKeys;
                               tmp8 = !containerItemKeys.has(tmp5);
                             }
                             if (tmp8) {
@@ -9090,14 +8849,14 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                       } while (num2 <= 1);
                     })(addResult, prop, num25, items1, addResult, addResult, addResult);
                   } else if (-1 !== tmp15Result1) {
-                    addResult = outer1_22;
-                    addResult = outer1_22;
+                    addResult = closure_1_22;
+                    addResult = closure_1_22;
                     addResult = containerItemKeys;
                     addResult = containerItemKeys;
-                    addResult = outer1_22(containerItemKeys, "activeStickyIndex", -1);
+                    addResult = closure_1_22(containerItemKeys, "activeStickyIndex", -1);
                   }
                   if (items1.length > 0) {
-                    let fn;
+                    fn = undefined;
                     if (getItemType) {
                       fn = (arg0) => {
                         const tmp = getItemType(data[arg0], arg0);
@@ -9117,22 +8876,20 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                     addResult = fn;
                     addResult = tmp88;
                     addResult = (function findAvailableContainers(containerItemKeys, items1, addResult, addResult2, items, fn, has) {
-                      let closure_2;
-                      let stickyContainerPool;
-                      let closure_0 = fn;
+                      closure_0 = fn;
                       if (0 === items1.length) {
                         return [];
                       } else {
                         const tmp56 = length(containerItemKeys, "numContainers");
-                        const state = containerItemKeys.state;
+                        state = containerItemKeys.state;
                         ({ containerItemMetadata: closure_2, stickyContainerPool } = state);
-                        let set;
+                        set = undefined;
                         if (items.length > 0) {
                           const _Set = Set;
                           set = new Set(items);
                         }
                         const mapped = items1.map((itemIndex) => {
-                          const obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
+                          obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
                           stickyHeaderIndicesSet = state.props.stickyHeaderIndicesSet;
                           let tmp;
                           if (null != callback) {
@@ -9175,7 +8932,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                             if (stickyContainerPool.has(num2)) {
                               let tmp22 = undefined === tmp13 || tmp18;
                               if (tmp22) {
-                                let obj = { containerIndex: null, distance: null };
+                                obj = { containerIndex: null, distance: null };
                                 obj[0] = num2;
                                 let _Number2 = Number;
                                 obj[1] = Number.POSITIVE_INFINITY;
@@ -9210,7 +8967,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         const _Array = Array;
                         const array = new Array(length);
                         let sum = tmp56;
-                        let c5 = false;
+                        c5 = false;
                         function assign(itemIndex, containerIndex) {
                           array[itemIndex.order] = { containerIndex, itemIndex: itemIndex.itemIndex, itemType: itemIndex.itemType };
                           let deleteResult;
@@ -9218,35 +8975,35 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                             deleteResult = set.delete(containerIndex);
                           }
                           if (deleteResult) {
-                            let c5 = true;
+                            c5 = true;
                           }
                         }
                         function assignMatching(found, items, arg2) {
-                          let closure_0 = items;
-                          let closure_1 = arg2;
+                          closure_0 = items;
+                          closure_1 = arg2;
                           function _loop2(iter) {
-                            const items = iter;
-                            if (outer1_4[iter.order]) {
+                            items = iter;
+                            if (closure_1_4[iter.order]) {
                               return 1;
                             } else {
                               const findIndexResult = items.findIndex(() => { ... });
                               if (-1 !== findIndexResult) {
                                 const containerIndex = array(items.splice(findIndexResult, 1), 1)[0].containerIndex;
-                                if (typeof outer1_6 !== "function") {
+                                if (typeof closure_1_6 !== "function") {
                                   HermesBuiltin.throwTypeError();
                                 }
-                                const obj = { containerIndex: null, itemIndex: null, itemType: null };
+                                obj = { containerIndex: null, itemIndex: null, itemType: null };
                                 obj[0] = containerIndex;
                                 ({ itemIndex: obj[1], itemType: obj[2] } = iter);
                                 tmp[iter.order] = obj;
                                 let deleteResult;
-                                if (null != outer1_3) {
+                                if (null != closure_1_3) {
                                   deleteResult = obj2.delete(containerIndex);
                                 }
                                 if (deleteResult) {
-                                  const outer1_5 = true;
+                                  c5 = true;
                                 }
-                                obj2 = outer1_3;
+                                obj2 = closure_1_3;
                               }
                             }
                           }
@@ -9287,7 +9044,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                             }
                             let tmp43 = item10099;
                             let tmp44 = tmp38;
-                            let obj1 = assign(tmp36, tmp39);
+                            obj1 = assign(tmp36, tmp39);
                           }
                           continue;
                         }
@@ -9308,7 +9065,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                           }
                           if (sum > POSITIVE_INFINITY) {
                             const _console = console;
-                            let obj2 = { debugInfo: null };
+                            obj2 = { debugInfo: null };
                             const obj3 = { numContainers: null, numContainersPooled: null, numNeeded: null, stillNeeded: null };
                             obj3[0] = tmp56;
                             obj3[1] = POSITIVE_INFINITY;
@@ -9330,19 +9087,19 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                       let containerIndex = addResult.containerIndex;
                       addResult = idCache[itemIndex];
                       if (null == addResult) {
-                        addResult = outer1_49;
+                        addResult = closure_1_49;
                         addResult = state;
                         addResult = state;
                         addResult = itemIndex;
-                        addResult = outer1_49(state, addResult);
+                        addResult = closure_1_49(state, addResult);
                       }
                       addResult = containerItemKeys;
                       addResult = containerItemKeys;
                       addResult = containerIndex;
                       let _HermesInternal3 = HermesInternal;
-                      addResult = outer1_21;
-                      addResult = outer1_21;
-                      addResult = outer1_21(containerItemKeys, "containerItemKey" + containerIndex);
+                      addResult = closure_1_21;
+                      addResult = closure_1_21;
+                      addResult = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                       if (addResult) {
                         addResult = addResult !== addResult;
                       }
@@ -9369,23 +9126,23 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         }
                         state.containerItemGenerations[containerIndex] = num28 + 1;
                       }
-                      addResult = outer1_22;
-                      addResult = outer1_22;
+                      addResult = closure_1_22;
+                      addResult = closure_1_22;
                       addResult = containerIndex;
                       let _HermesInternal4 = HermesInternal;
-                      addResult = outer1_22(addResult, "containerItemKey" + containerIndex, addResult);
+                      addResult = closure_1_22(addResult, "containerItemKey" + containerIndex, addResult);
                       let _HermesInternal5 = HermesInternal;
                       addResult = itemIndex;
-                      addResult = outer1_22(addResult, "containerItemIndex" + containerIndex, addResult);
+                      addResult = closure_1_22(addResult, "containerItemIndex" + containerIndex, addResult);
                       let _HermesInternal6 = HermesInternal;
-                      addResult = outer1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
+                      addResult = closure_1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
                       addResult = state;
                       addResult = state;
                       let containerItemMetadata = state.containerItemMetadata;
-                      addResult = outer1_28;
+                      addResult = closure_1_28;
                       let num29 = 0;
                       addResult = state;
-                      addResult = containerItemMetadata.set(containerIndex, outer1_28(state, itemIndex, data[addResult], addResult.itemType));
+                      addResult = containerItemMetadata.set(containerIndex, closure_1_28(state, itemIndex, data[addResult], addResult.itemType));
                       addResult = containerItemKeys.set(addResult, containerIndex);
                       let userScrollAnchorReset = state.userScrollAnchorReset;
                       if (null != userScrollAnchorReset) {
@@ -9425,14 +9182,14 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                       continue;
                     }
                     if (addResult !== tmp16) {
-                      addResult = outer1_22;
-                      addResult = outer1_22;
+                      addResult = closure_1_22;
+                      addResult = closure_1_22;
                       addResult = containerItemKeys;
                       addResult = containerItemKeys;
-                      addResult = outer1_22(containerItemKeys, "numContainers", addResult);
-                      addResult = outer1_21;
-                      addResult = outer1_21;
-                      if (addResult > outer1_21(containerItemKeys, "numContainersPooled")) {
+                      addResult = closure_1_22(containerItemKeys, "numContainers", addResult);
+                      addResult = closure_1_21;
+                      addResult = closure_1_21;
+                      if (addResult > closure_1_21(containerItemKeys, "numContainersPooled")) {
                         addResult = addResult(addResult, "numContainersPooled", (function getExpandedContainerPoolSize(length, addResult) {
                           let num = 0;
                           if (length > 0) {
@@ -9481,7 +9238,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 addResult = items;
                 addResult = isPinnedRenderIndex;
                 addResult = (function handleStickyRecycling(addResult, prop, addResult2, arg3, arg4, items, isPinnedRenderIndex) {
-                  const state = addResult.state;
+                  state = addResult.state;
                   const iter = state.stickyContainerPool[Symbol.iterator]();
                   const nextResult = iter.next();
                   while (iter !== undefined) {
@@ -9507,7 +9264,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                           if (tmp11 < arg4 - 1) {
                             let tmp18 = index;
                             let tmp19 = prop[tmp11 + 1];
-                            let flag = false;
+                            flag = false;
                             if (tmp19) {
                               let tmp44 = tmp19;
                               let tmp45 = state.positions[tmp20];
@@ -9590,12 +9347,12 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               let flag5 = false;
               if (0 < addResult) {
                 do {
-                  addResult = outer1_21;
-                  addResult = outer1_21;
+                  addResult = closure_1_21;
+                  addResult = closure_1_21;
                   addResult = containerItemKeys;
                   addResult = containerItemKeys;
                   let _HermesInternal8 = HermesInternal;
-                  addResult = outer1_21(containerItemKeys, "containerItemKey" + num32);
+                  addResult = closure_1_21(containerItemKeys, "containerItemKey" + num32);
                   addResult = flag5;
                   addResult = undefined;
                   addResult = num32;
@@ -9629,41 +9386,41 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                     addResult = containerItemMetadata2.delete(num32);
                     let stickyContainerPool3 = state.stickyContainerPool;
                     if (stickyContainerPool3.has(num32)) {
-                      addResult = outer1_22;
-                      addResult = outer1_22;
+                      addResult = closure_1_22;
+                      addResult = closure_1_22;
                       let _HermesInternal9 = HermesInternal;
-                      addResult = outer1_22(addResult, "containerSticky" + num32, false);
+                      addResult = closure_1_22(addResult, "containerSticky" + num32, false);
                       let stickyContainerPool4 = addResult.stickyContainerPool;
                       addResult = stickyContainerPool4.delete(num32);
                     }
-                    addResult = outer1_22;
-                    addResult = outer1_22;
+                    addResult = closure_1_22;
+                    addResult = closure_1_22;
                     let _HermesInternal10 = HermesInternal;
-                    addResult = outer1_22(addResult, "containerItemKey" + num32, undefined);
+                    addResult = closure_1_22(addResult, "containerItemKey" + num32, undefined);
                     let _HermesInternal11 = HermesInternal;
-                    addResult = outer1_22(addResult, "containerItemIndex" + num32, undefined);
+                    addResult = closure_1_22(addResult, "containerItemIndex" + num32, undefined);
                     let _HermesInternal12 = HermesInternal;
-                    addResult = outer1_22(addResult, "containerItemData" + num32, undefined);
+                    addResult = closure_1_22(addResult, "containerItemData" + num32, undefined);
                     let _HermesInternal13 = HermesInternal;
-                    addResult = outer1_32;
-                    addResult = outer1_22(addResult, "containerPosition" + num32, outer1_32);
+                    addResult = closure_1_32;
+                    addResult = closure_1_22(addResult, "containerPosition" + num32, closure_1_32);
                     let _HermesInternal14 = HermesInternal;
-                    addResult = outer1_22(addResult, "containerColumn" + num32, -1);
+                    addResult = closure_1_22(addResult, "containerColumn" + num32, -1);
                     let _HermesInternal15 = HermesInternal;
-                    addResult = outer1_22(addResult, "containerSpan" + num32, 1);
+                    addResult = closure_1_22(addResult, "containerSpan" + num32, 1);
                     addResult = flag5;
                   } else {
                     addResult = indexByKey.get(addResult);
                     addResult = flag5;
                     if (undefined !== addResult) {
-                      addResult = outer1_88;
+                      addResult = closure_1_88;
                       let obj3 = { scrollAdjustPending: null, updateLayout: true };
                       addResult = c10;
                       obj3[0] = c10;
                       let num35 = 0;
                       addResult = num32;
                       addResult = obj3;
-                      addResult = outer1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
+                      addResult = closure_1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
                     }
                   }
                   num32 = num32 + 1;
@@ -9672,29 +9429,29 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               }
               addResult = set2;
               if (set2) {
-                addResult = outer1_27;
+                addResult = closure_1_27;
               }
               if (addResult) {
-                addResult = outer1_87;
+                addResult = closure_1_87;
                 addResult = containerItemKeys;
                 addResult = containerItemKeys;
-                addResult = outer1_87(containerItemKeys, set2);
+                addResult = closure_1_87(containerItemKeys, set2);
               }
               if (!tmp13) {
-                addResult = outer1_84;
+                addResult = closure_1_84;
                 addResult = containerItemKeys;
                 addResult = containerItemKeys;
-                addResult = outer1_84(containerItemKeys);
+                addResult = closure_1_84(containerItemKeys);
               } else {
-                addResult = outer1_102;
+                addResult = closure_1_102;
                 addResult = state;
                 addResult = state;
-                addResult = outer1_102(state, obj.startNoBuffer);
+                addResult = closure_1_102(state, obj.startNoBuffer);
                 if (!queuedInitialLayout) {
                   if (!addResult.didContainersLayout) {
-                    addResult = outer1_41;
-                    addResult = outer1_77;
-                    if (outer1_41(addResult)) {
+                    addResult = closure_1_41;
+                    addResult = closure_1_77;
+                    if (closure_1_41(addResult)) {
                       addResult = addResult(addResult, addResult.startBuffered, addResult.endBuffered);
                     } else {
                       addResult = addResult(addResult, addResult.startNoBuffer, addResult.endNoBuffer);
@@ -9711,7 +9468,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         callback2(containerItemKeys, { didLayout: true });
                       })(containerItemKeys);
                       addResult = (function handleInitialScrollLayoutReady(containerItemKeys) {
-                        let closure_0 = containerItemKeys;
+                        closure_0 = containerItemKeys;
                         if (containerItemKeys.state.initialScroll) {
                           callback6(containerItemKeys, { forceScroll: true });
                           const initialScrollSession = containerItemKeys.state.initialScrollSession;
@@ -9722,7 +9479,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                           if ("offset" !== kind) {
                             const _requestAnimationFrame = requestAnimationFrame;
                             const animationFrame = requestAnimationFrame(function runScroll() {
-                              return outer1_76(closure_0, { forceScroll: true });
+                              return closure_1_76(closure_0, { forceScroll: true });
                             });
                           }
                           closure_0 = containerItemKeys;
@@ -9750,7 +9507,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   addResult = containerItemKeys;
                   state = containerItemKeys.state;
                   ({ startNoBuffer, endNoBuffer } = obj);
-                  addResult = outer1_91;
+                  addResult = closure_1_91;
                   if (null == addResult) {
                     addResult = obj.startNoBuffer;
                   }
@@ -9777,8 +9534,8 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   }
                 }
               }
-              let tmp17 = outer1_25;
-              const tmp80 = outer1_89;
+              let tmp17 = closure_1_25;
+              const tmp80 = closure_1_89;
             }
           }
         }
@@ -9804,7 +9561,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
 }
 function updateItemSizesBatch(state, items) {
   state = state.state;
-  const obj = {};
+  obj = {};
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -9858,21 +9615,6 @@ function updateItemSizesBatch(state, items) {
   flushItemSizeUpdates(state, obj);
 }
 function applyItemSize(state, itemKey, size, didResolveFixedItemSize) {
-  let averageSizes;
-  let data;
-  let didContainersLayout;
-  let getFixedItemSize;
-  let getFixedItemSize2;
-  let getItemType;
-  let getItemType2;
-  let horizontal;
-  let indexByKey2;
-  let maintainScrollAtEnd;
-  let onItemSizeChanged;
-  let props;
-  let props2;
-  let sizesKnown;
-  let sizesKnown3;
   state = state.state;
   const userScrollAnchorReset = state.userScrollAnchorReset;
   let deleteResult;
@@ -9888,7 +9630,7 @@ function applyItemSize(state, itemKey, size, didResolveFixedItemSize) {
     let tmp6 = didResolveFixedItemSize;
     if (getFixedItemSize) {
       if (undefined === value) {
-        let obj = { didMeasureUserScrollAnchorResetItem: null };
+        obj = { didMeasureUserScrollAnchorResetItem: null };
         obj[0] = tmp2;
         return obj;
       } else if (undefined === state.props.data[value]) {
@@ -9917,7 +9659,7 @@ function applyItemSize(state, itemKey, size, didResolveFixedItemSize) {
             }
             itemType = str2;
           }
-          const obj1 = { didResolveFixedItemSize: true, fixedItemSize: null, itemType: null };
+          obj1 = { didResolveFixedItemSize: true, fixedItemSize: null, itemType: null };
           obj1[1] = getFixedItemSize(tmp66, value, itemType);
           obj1[2] = itemType;
           tmp8 = obj1;
@@ -9946,7 +9688,7 @@ function applyItemSize(state, itemKey, size, didResolveFixedItemSize) {
         }
       }
     }
-    let flag = !didContainersLayout;
+    flag = !didContainersLayout;
     const sizesKnown2 = state.sizesKnown;
     const value1 = sizesKnown2.get(itemKey);
     ({ indexByKey: indexByKey2, sizesKnown: sizesKnown3, averageSizes, props: props2 } = state.state);
@@ -10050,7 +9792,7 @@ function applyItemSize(state, itemKey, size, didResolveFixedItemSize) {
     }
     const _Math4 = Math;
     const result2 = Math.floor(8 * (horizontal ? size.width : size.height)) / 8;
-    let flag2 = false;
+    flag2 = false;
     let tmp44 = flag;
     let tmp45;
     if (0 !== num2) {
@@ -10137,17 +9879,17 @@ function applyItemSize(state, itemKey, size, didResolveFixedItemSize) {
   }
 }
 function measureContainersInLayoutEffect(state) {
-  let closure_0 = state;
+  closure_0 = state;
   let keys = arg1;
   if (arg1 === undefined) {
     keys = null;
   }
-  let c1;
-  let c2;
-  let c3;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
   state = undefined;
   let items;
-  let c6;
+  c6 = undefined;
   state = state.state;
   items = [];
   c6 = true;
@@ -10156,17 +9898,17 @@ function measureContainersInLayoutEffect(state) {
     keys = viewRefs.keys();
   }
   function _loop3(iter) {
-    let state = iter;
+    state = iter;
     const viewRefs = state.viewRefs;
     let value = viewRefs.get(iter);
     const values = state.values;
     value = values.get("containerItemKey" + iter);
-    let c1 = value;
+    closure_1 = value;
     if (undefined !== value) {
-      c1 = tmp22;
+      closure_1 = tmp22;
       let num = 0;
       if (null != state.containerItemGenerations[iter]) {
-        num = c1;
+        num = closure_1;
       }
       const sum = num + 1;
       let current = sum;
@@ -10180,7 +9922,7 @@ function measureContainersInLayoutEffect(state) {
         if (props.getFixedItemSize) {
           if (undefined !== value1) {
             if (undefined !== data[value1]) {
-              const tmp13 = outer1_29(state, iter, value1, tmp7);
+              const tmp13 = closure_1_29(state, iter, value1, tmp7);
               let fixedItemSize;
               if (null != tmp13) {
                 fixedItemSize = tmp13.fixedItemSize;
@@ -10217,24 +9959,24 @@ function measureContainersInLayoutEffect(state) {
         }
         if (null != measure) {
           const call = measure.call;
-          const fn = (arg0, arg1, arg2, arg3) => {
+          fn = (arg0, arg1, arg2, arg3) => {
             let num = 0;
             if (null != iter.state.containerItemGenerations[iter]) {
               num = tmp3;
             }
             if (num === current) {
-              let obj = { containerId: null, itemKey: null, size: null };
+              obj = { containerId: null, itemKey: null, size: null };
               obj[0] = iter;
               obj[1] = closure_1;
               obj = { height: null, width: null };
               obj[0] = arg3;
               obj[1] = arg2;
               obj[2] = obj;
-              if (outer1_6) {
-                outer1_5.push(obj);
+              if (closure_1_6) {
+                closure_1_5.push(obj);
               } else {
-                const items = [obj];
-                outer2_107(iter, items);
+                items = [obj];
+                closure_2_107(iter, items);
               }
             }
           };
@@ -10260,8 +10002,8 @@ function measureContainersInLayoutEffect(state) {
   }
 }
 function useValue$(totalSize, arg1) {
-  let closure_0 = totalSize;
-  let obj = arg1;
+  closure_0 = totalSize;
+  obj = arg1;
   if (!arg1) {
     obj = {};
   }
@@ -10280,7 +10022,7 @@ function useValue$(totalSize, arg1) {
     num = value;
   }
   const first = getNewValue(noop.useState(() => {
-    const value = new outer1_11.Animated.Value(num);
+    const value = new closure_1_11.Animated.Value(num);
     return value;
   }), 1)[0];
   const items = [first, context, totalSize];
@@ -10296,7 +10038,7 @@ function useValue$(totalSize, arg1) {
       } else {
         tmp2Result = value;
       }
-      let num = 0;
+      num = 0;
       if (null != tmp2Result) {
         num = tmp2Result;
       }
@@ -10304,8 +10046,8 @@ function useValue$(totalSize, arg1) {
     }
     const listeners = context.listeners;
     let value = listeners.get(syncCurrentValue);
-    let set = value;
-    let obj = value;
+    set = value;
+    obj = value;
     if (!value) {
       const _Set = Set;
       set = new Set();
@@ -10323,19 +10065,17 @@ function useValue$(totalSize, arg1) {
     } else {
       tmp12Result = value;
     }
-    let num = 0;
+    num = 0;
     if (null != tmp12Result) {
       num = tmp12Result;
     }
-    const fn = () => set.delete(closure_0);
+    fn = () => set.delete(closure_0);
     first.setValue(num);
     return fn;
   }, items);
   return first;
 }
 function useContainerItemSignals(context) {
-  let tmp6;
-  let tmp7;
   let containerId;
   if (null != context) {
     containerId = context.containerId;
@@ -10347,7 +10087,7 @@ function useContainerItemSignals(context) {
   const items = ["containerItemKey" + num, "containerItemIndex" + num, "containerItemData" + num];
   context = undefined;
   let first;
-  let obj = frozen;
+  obj = frozen;
   context = frozen.useContext(closure_17);
   if (1 === items.length) {
     first = items[0];
@@ -10357,15 +10097,15 @@ function useContainerItemSignals(context) {
   const items1 = [context, first];
   const memo = obj.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -10387,11 +10127,11 @@ function useContainerItemSignals(context) {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -10404,7 +10144,7 @@ function useContainerItemSignals(context) {
     };
   }, items1);
   const get = memo.get;
-  const tmp5 = _slicedToArray(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 3);
+  const tmp5 = callback3(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 3);
   [tmp6, tmp7] = tmp5;
   obj = { hasItemInfo: context && undefined !== tmp6 && undefined !== tmp7, item: tmp5[2], itemIndex: tmp7, itemKey: tmp6 };
   return obj;
@@ -10434,15 +10174,15 @@ function useIsLastItem() {
   const items1 = [context1, first];
   const memo = obj.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -10464,11 +10204,11 @@ function useIsLastItem() {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -10481,22 +10221,22 @@ function useIsLastItem() {
     };
   }, items1);
   const get = memo.get;
-  get2 = _slicedToArray(context2(get2[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
+  get2 = callback3(context2(get2[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
   context2 = undefined;
   get2 = undefined;
   context2 = obj.useContext(closure_17);
   const items2 = [context2, "lastItemKeys"];
   const memo1 = obj.useMemo(() => {
     let items = ["lastItemKeys"];
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -10518,11 +10258,11 @@ function useIsLastItem() {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -10538,7 +10278,7 @@ function useIsLastItem() {
   const items3 = [
     get2,
     (arr) => {
-      let flag = context2;
+      flag = context2;
       if (context2) {
         flag = null != get2;
       }
@@ -10557,7 +10297,7 @@ function useIsLastItem() {
   ];
   const callback = obj.useCallback(() => {
     const first = get2()[0];
-    let flag = context2;
+    flag = context2;
     if (context2) {
       flag = null != get2;
     }
@@ -10578,25 +10318,16 @@ function useIsLastItem() {
   return context2(get2[6]).useSyncExternalStore(memo1.subscribe, callback, callback);
 }
 function Separator(arg0) {
-  let ItemSeparatorComponent;
-  let leadingItem;
   ({ ItemSeparatorComponent, leadingItem } = arg0);
   let element = null;
   if (!useIsLastItem()) {
-    const obj = { leadingItem: null };
+    obj = { leadingItem: null };
     obj[0] = leadingItem;
     element = <ItemSeparatorComponent leadingItem={null} />;
   }
   return element;
 }
 function ContainerSlotBase(arg0) {
-  let ContainerComponent;
-  let ItemSeparatorComponent;
-  let getRenderedItem;
-  let horizontal;
-  let id;
-  let recycleItems;
-  let stickyHeaderConfig;
   ({ id, ContainerComponent } = arg0);
   ({ horizontal, recycleItems, ItemSeparatorComponent, getRenderedItem, stickyHeaderConfig } = arg0);
   if (ContainerComponent === undefined) {
@@ -10605,7 +10336,7 @@ function ContainerSlotBase(arg0) {
   const items = ["containerItemKey" + id];
   let context;
   let first;
-  let obj = frozen;
+  obj = frozen;
   context = frozen.useContext(closure_17);
   if (1 === items.length) {
     first = items[0];
@@ -10615,15 +10346,15 @@ function ContainerSlotBase(arg0) {
   const items1 = [context, first];
   const memo = obj.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -10645,11 +10376,11 @@ function ContainerSlotBase(arg0) {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -10662,7 +10393,7 @@ function ContainerSlotBase(arg0) {
     };
   }, items1);
   const get = memo.get;
-  const first1 = _slicedToArray(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
+  const first1 = callback3(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
   let element = null;
   if (undefined !== first1) {
     obj = { getRenderedItem: null, horizontal: null, ItemSeparatorComponent: null, id: null, itemKey: null, recycleItems: null, stickyHeaderConfig: null };
@@ -10692,15 +10423,15 @@ function ScrollAdjust() {
   const items1 = [context1, first];
   const memo = style.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -10722,11 +10453,11 @@ function ScrollAdjust() {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -10739,7 +10470,7 @@ function ScrollAdjust() {
     };
   }, items1);
   const get = memo.get;
-  const tmp5 = _slicedToArray(context1(first[6]).useSyncExternalStore(memo.subscribe, get, get), 2);
+  const tmp5 = callback3(context1(first[6]).useSyncExternalStore(memo.subscribe, get, get), 2);
   const sum = (tmp5[0] || 0) + (tmp5[1] || 0) + 10000000;
   const state = context.state;
   let horizontal;
@@ -10759,13 +10490,7 @@ function ScrollAdjust() {
   return <get ActivityIndicator.View style={style} />;
 }
 function doInitialAllocateContainers(state) {
-  let data;
-  let estimatedItemSize;
-  let getFixedItemSize;
-  let getItemType;
-  let props;
-  let scrollLength;
-  let closure_0 = state;
+  closure_0 = state;
   state = state.state;
   ({ scrollLength, props } = state);
   ({ data, getFixedItemSize, getItemType, estimatedItemSize } = props);
@@ -10867,35 +10592,10 @@ function doInitialAllocateContainers(state) {
           if (state.initialScroll) {
             const _requestAnimationFrame = requestAnimationFrame;
             const animationFrame = requestAnimationFrame(() => {
-              let closure_1 = { dataChanged: true, doMVCP: true };
+              closure_1 = { dataChanged: true, doMVCP: true };
               state = state.state;
-              outer1_97(() => {
-                let alwaysRenderIndicesArr;
-                let bottom;
-                let closure_4;
-                let dataChanged;
-                let doMVCP;
-                let enableScrollForNextCalculateItemsInView;
-                let endNoBuffer;
-                let forceFullItemPositions;
-                let getItemType;
-                let idCache;
-                let indexByKey;
-                let initialScroll;
-                let keyExtractor;
-                let minIndexSizeChanged;
-                let positions;
-                let props;
-                let queuedInitialLayout;
-                let scrollForNextCalculateItemsInView;
-                let scrollLength;
+              closure_1_97(() => {
                 let set2;
-                let sizes;
-                let startBufferedId;
-                let startNoBuffer;
-                let state;
-                let top;
-                let viewabilityConfigCallbackPairs;
                 let addResult = state;
                 let containerItemKeys = state.containerItemKeys;
                 ({ enableScrollForNextCalculateItemsInView, idCache } = state);
@@ -10914,7 +10614,7 @@ function doInitialAllocateContainers(state) {
                   let _Set = Set;
                   stickyHeaderIndicesSet = new Set();
                 }
-                let tmp9 = outer1_46(containerItemKeys, idCache.drawDistanceMode);
+                let tmp9 = closure_1_46(containerItemKeys, idCache.drawDistanceMode);
                 ({ dataChanged, doMVCP, forceFullItemPositions } = idCache);
                 let initialScrollSession = tmp2.initialScrollSession;
                 let kind;
@@ -10925,18 +10625,18 @@ function doInitialAllocateContainers(state) {
                 if ("bootstrap" === kind) {
                   bootstrap = tmp2.initialScrollSession.bootstrap;
                 }
-                let tmp16 = outer1_21(containerItemKeys, "numContainers");
+                let tmp16 = closure_1_21(containerItemKeys, "numContainers");
                 if (data) {
                   if (0 !== scrollLength) {
                     if (tmp16) {
-                      let closure_8 = outer1_25(tmp7);
+                      closure_8 = closure_1_25(tmp7);
                       let tmp15Result = tmp15(tmp7, "stylePaddingTop");
                       let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-                      let closure_9 = sum + tmp15(tmp7, "headerSize");
+                      closure_9 = sum + tmp15(tmp7, "headerSize");
                       tmp15Result = tmp15(tmp7, "numColumns");
                       let scrollVelocity = idCache.scrollVelocity;
                       if (null == scrollVelocity) {
-                        scrollVelocity = outer1_69(tmp2);
+                        scrollVelocity = closure_1_69(tmp2);
                       }
                       ({ initialScroll, queuedInitialLayout } = tmp2);
                       if (!tmp13) {
@@ -10949,31 +10649,31 @@ function doInitialAllocateContainers(state) {
                         }
                       } else {
                         if (!queuedInitialLayout) {
-                          if (outer1_41(tmp2)) {
+                          if (closure_1_41(tmp2)) {
                             if (initialScroll) {
-                              scroll = outer1_75(tmp7, initialScroll);
+                              scroll = closure_1_75(tmp7, initialScroll);
                             }
                           }
                         }
                         scroll = tmp2.scroll;
                       }
-                      let c10 = 0;
-                      let c11 = 0;
-                      let c12 = 0;
-                      let c13 = 0;
-                      let c14 = 0;
-                      let c15 = 0;
+                      c10 = 0;
+                      c11 = 0;
+                      c12 = 0;
+                      c13 = 0;
+                      c14 = 0;
+                      c15 = 0;
                       function updateScroll2(scroll) {
-                        let closure_16 = scroll;
+                        closure_16 = scroll;
                         const values = containerItemKeys.values;
                         const value = values.get("scrollAdjustPending");
                         let num = 0;
                         if (null != value) {
                           num = value;
                         }
-                        let closure_11 = num - closure_9;
+                        closure_11 = num - closure_9;
                         const rounded = Math.round(scroll + closure_11);
-                        let closure_12 = rounded;
+                        closure_12 = rounded;
                         if (rounded + scrollLength > closure_8) {
                           const _Math = Math;
                           closure_12 = Math.max(0, tmp4 - tmp3);
@@ -10981,7 +10681,7 @@ function doInitialAllocateContainers(state) {
                       }
                       updateScroll2(scroll);
                       const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
-                      let closure_17 = tmp15Result1;
+                      closure_17 = tmp15Result1;
                       function resolveStickyState() {
                         let num = -1;
                         let num2 = -1;
@@ -11017,17 +10717,17 @@ function doInitialAllocateContainers(state) {
                           tmp8 = tmp9 >= 0;
                         }
                         if (tmp8) {
-                          outer2_22(containerItemKeys, "activeStickyIndex", num);
+                          closure_2_22(containerItemKeys, "activeStickyIndex", num);
                         }
-                        let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
-                        let fn;
+                        obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
+                        fn = undefined;
                         if (closure_4) {
                           if (arr.length > 0) {
                             if (tmp9 !== num) {
                               fn = () => {
-                                if (undefined !== outer1_6[num]) {
-                                  if (null != outer1_4) {
-                                    const obj = { index: null, item: null };
+                                if (undefined !== closure_1_6[num]) {
+                                  if (null != closure_1_4) {
+                                    obj = { index: null, item: null };
                                     obj[0] = tmp;
                                     obj[1] = tmp2;
                                     tmp3(obj);
@@ -11066,7 +10766,7 @@ function doInitialAllocateContainers(state) {
                           num6 = 0;
                           if (!tmp25) {
                             num6 = 0;
-                            if (!outer1_41(tmp2)) {
+                            if (!closure_1_41(tmp2)) {
                               num6 = 0;
                               if (!tmp2.scrollingTo) {
                                 num6 = 0;
@@ -11094,9 +10794,9 @@ function doInitialAllocateContainers(state) {
                       }
                       function updateScrollRange() {
                         const bound = Math.max(0, c12);
-                        let closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
-                        let closure_13 = bound - result2 + num6;
-                        let closure_15 = closure_14 + result3 + num6;
+                        closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
+                        closure_13 = bound - result2 + num6;
+                        closure_15 = closure_14 + result3 + num6;
                       }
                       updateScrollRange();
                       if (0 !== num6) {
@@ -11143,12 +10843,6 @@ function doInitialAllocateContainers(state) {
                                 if (null === top) {
                                   if (viewabilityConfigCallbackPairs) {
                                     (function updateViewabilityForCachedRange(state, viewabilityConfigCallbackPairs, scrollLength, c12, c14) {
-                                      let data;
-                                      let data2;
-                                      let keyExtractor;
-                                      let keyExtractor2;
-                                      let sizes;
-                                      let startBuffered;
                                       state = state.state;
                                       const endBuffered = state.endBuffered;
                                       data = state.props.data;
@@ -11209,9 +10903,9 @@ function doInitialAllocateContainers(state) {
                                                       tmp12 = tmp6;
                                                     }
                                                     let tmp26 = tmp13;
-                                                    let flag = false;
+                                                    flag = false;
                                                     if (null !== tmp11) {
-                                                      let flag2 = true;
+                                                      flag2 = true;
                                                       if (tmp23 <= c14) {
                                                         tmp13 = tmp6;
                                                         flag2 = false;
@@ -11247,7 +10941,7 @@ function doInitialAllocateContainers(state) {
                                                   }
                                                 }
                                               }
-                                              const obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
+                                              obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
                                               obj[0] = tmp9;
                                               obj[1] = sum1;
                                               if (null == sum1) {
@@ -11297,11 +10991,7 @@ function doInitialAllocateContainers(state) {
                                       }
                                     })(tmp7, viewabilityConfigCallbackPairs, scrollLength, c12, c14);
                                   } else if (tmp2.props.onFirstVisibleItemChanged) {
-                                    outer1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
-                                      let data;
-                                      let keyExtractor;
-                                      let sizes;
-                                      let startBuffered;
+                                    closure_1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
                                       state = state.state;
                                       const endBuffered = state.endBuffered;
                                       data = state.props.data;
@@ -11379,11 +11069,11 @@ function doInitialAllocateContainers(state) {
                       let tmp73;
                       if (doMVCP) {
                         if (!tmp25) {
-                          tmp73 = outer1_68(tmp7, dataChanged);
+                          tmp73 = closure_1_68(tmp7, dataChanged);
                         }
                       }
                       if (dataChanged) {
-                        outer1_86(tmp2);
+                        closure_1_86(tmp2);
                       }
                       let num8 = 0;
                       if (!forceFullItemPositions) {
@@ -11400,7 +11090,7 @@ function doInitialAllocateContainers(state) {
                           num8 = num9;
                         }
                       }
-                      let obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
+                      obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
                       obj[0] = doMVCP;
                       obj[1] = forceFullItemPositions;
                       let tmp82 = !forceFullItemPositions;
@@ -11417,8 +11107,8 @@ function doInitialAllocateContainers(state) {
                       obj[3] = c15;
                       obj[4] = scrollVelocity;
                       obj[5] = num8;
-                      outer1_89(tmp7, dataChanged, obj);
-                      const tmp17Result = outer1_25(tmp7);
+                      closure_1_89(tmp7, dataChanged, obj);
+                      const tmp17Result = closure_1_25(tmp7);
                       closure_8 = tmp17Result;
                       if (undefined !== minIndexSizeChanged) {
                         tmp2.minIndexSizeChanged = undefined;
@@ -11430,7 +11120,7 @@ function doInitialAllocateContainers(state) {
                               if (tmp2.idsInView.length > 0) {
                                 const shouldRestorePosition = tmp2.props.maintainVisibleContentPosition.shouldRestorePosition;
                                 const _Set2 = Set;
-                                let set = new Set();
+                                set = new Set();
                                 const idsInView = tmp2.idsInView;
                                 for (const item10226 of idsInView) {
                                   let tmp99 = item10226;
@@ -11454,11 +11144,11 @@ function doInitialAllocateContainers(state) {
                       }
                       addResult = state;
                       addResult = state;
-                      addResult = outer1_21;
-                      addResult = outer1_21;
+                      addResult = closure_1_21;
+                      addResult = closure_1_21;
                       addResult = containerItemKeys;
                       addResult = containerItemKeys;
-                      addResult = outer1_21(containerItemKeys, "scrollAdjustPending");
+                      addResult = closure_1_21(containerItemKeys, "scrollAdjustPending");
                       let num11 = 0;
                       if (null != addResult) {
                         num11 = addResult;
@@ -11509,19 +11199,19 @@ function doInitialAllocateContainers(state) {
                         while (true) {
                           addResult = idCache[addResult];
                           if (null == addResult) {
-                            addResult = outer1_49;
+                            addResult = closure_1_49;
                             addResult = state;
                             addResult = state;
-                            addResult = outer1_49(state, addResult);
+                            addResult = closure_1_49(state, addResult);
                           }
                           addResult = sizes.get(addResult);
                           if (null == addResult) {
-                            addResult = outer1_58;
+                            addResult = closure_1_58;
                             addResult = containerItemKeys;
                             addResult = containerItemKeys;
                             let num14 = 0;
                             addResult = containerItemKeys;
-                            addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                            addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                           }
                           addResult = c13;
                           if (positions[addResult] + addResult <= c13) {
@@ -11555,12 +11245,12 @@ function doInitialAllocateContainers(state) {
                       let num18 = 0;
                       if (0 < tmp16) {
                         do {
-                          addResult = outer1_21;
-                          addResult = outer1_21;
+                          addResult = closure_1_21;
+                          addResult = closure_1_21;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
                           let _HermesInternal = HermesInternal;
-                          addResult = outer1_21(containerItemKeys, "containerItemKey" + num16);
+                          addResult = closure_1_21(containerItemKeys, "containerItemKey" + num16);
                           addResult = num16;
                           addResult = num17;
                           addResult = num17;
@@ -11589,29 +11279,29 @@ function doInitialAllocateContainers(state) {
                           addResult = idCache[addResult];
                           addResult = flag3;
                           if (null == addResult) {
-                            addResult = outer1_49;
+                            addResult = closure_1_49;
                             addResult = state;
                             addResult = state;
-                            addResult = outer1_49(state, addResult);
+                            addResult = closure_1_49(state, addResult);
                           }
                           addResult = sizes.get(addResult);
                           if (null == addResult) {
-                            addResult = outer1_58;
+                            addResult = closure_1_58;
                             addResult = containerItemKeys;
                             addResult = containerItemKeys;
                             let num19 = 0;
                             addResult = containerItemKeys;
-                            addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                            addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                           }
                           addResult = positions[addResult];
                           addResult = flag3;
                           if (!flag3) {
-                            addResult = outer1_100;
+                            addResult = closure_1_100;
                             addResult = c12;
                             addResult = c14;
                             let num20 = 0;
                             addResult = obj;
-                            addResult = outer1_100(obj, addResult, addResult, addResult, c12, c14);
+                            addResult = closure_1_100(obj, addResult, addResult, addResult, c12, c14);
                             addResult = null === addResult;
                             if (addResult) {
                               addResult = c13;
@@ -11654,13 +11344,13 @@ function doInitialAllocateContainers(state) {
                         }
                       }
                       const _Object = Object;
-                      let obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
+                      obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
                       obj1[0] = addResult;
                       ({ endNoBuffer: obj5[1], firstFullyOnScreenIndex: obj5[2] } = obj);
-                      addResult = outer1_101;
+                      addResult = closure_1_101;
                       addResult = state;
                       addResult = state;
-                      obj1[3] = outer1_101(state, obj);
+                      obj1[3] = closure_1_101(state, obj);
                       obj1[4] = addResult;
                       obj1[5] = addResult;
                       obj1[6] = obj.startNoBuffer;
@@ -11672,9 +11362,9 @@ function doInitialAllocateContainers(state) {
                         enableScrollForNextCalculateItemsInView = undefined !== addResult;
                       }
                       if (enableScrollForNextCalculateItemsInView) {
-                        addResult = outer1_54;
-                        if (!outer1_54(addResult)) {
-                          let obj2 = { bottom: null, top: null };
+                        addResult = closure_1_54;
+                        if (!closure_1_54(addResult)) {
+                          obj2 = { bottom: null, top: null };
                           obj2[0] = addResult;
                           obj2[1] = addResult;
                           addResult = obj2;
@@ -11685,12 +11375,12 @@ function doInitialAllocateContainers(state) {
                       let items = [];
                       if (dataChanged) {
                         for (let num21 = 0; num21 < addResult; num21 = num21 + 1) {
-                          addResult = outer1_21;
-                          addResult = outer1_21;
+                          addResult = closure_1_21;
+                          addResult = closure_1_21;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
                           let _HermesInternal2 = HermesInternal;
-                          addResult = outer1_21(containerItemKeys, "containerItemKey" + num21);
+                          addResult = closure_1_21(containerItemKeys, "containerItemKey" + num21);
                           addResult = !keyExtractor;
                           addResult = num21;
                           if (keyExtractor) {
@@ -11706,8 +11396,8 @@ function doInitialAllocateContainers(state) {
                       addResult = state;
                       addResult = state;
                       const scrollTargetPinnedRange = state.scrollTargetPinnedRange;
-                      let c22 = 0;
-                      let c23 = -1;
+                      c22 = 0;
+                      c23 = -1;
                       let num23 = -1;
                       let num24 = 0;
                       if (scrollTargetPinnedRange) {
@@ -11724,7 +11414,7 @@ function doInitialAllocateContainers(state) {
                         num24 = addResult;
                       }
                       addResult = num24 <= num23;
-                      let closure_24 = addResult;
+                      closure_24 = addResult;
                       function isPinnedRenderIndex(addResult) {
                         let hasItem = set.has(addResult);
                         if (!hasItem) {
@@ -11747,13 +11437,11 @@ function doInitialAllocateContainers(state) {
                           addResult = new.target;
                           const set1 = new Set();
                           function addPinnedIndex(item10471) {
-                            let data;
-                            let keyExtractor;
                             if (item10471 >= 0) {
                               if (item10471 < length) {
                                 let tmp4 = idCache[item10471];
                                 if (null == tmp4) {
-                                  ({ data, keyExtractor } = outer1_2.props);
+                                  ({ data, keyExtractor } = closure_1_2.props);
                                   let str = "";
                                   if (data) {
                                     let tmp2 = null;
@@ -11771,7 +11459,7 @@ function doInitialAllocateContainers(state) {
                                 }
                                 const value = containerItemKeys.get(tmp4);
                                 if (undefined !== value) {
-                                  const stickyContainerPool = outer1_2.stickyContainerPool;
+                                  const stickyContainerPool = closure_1_2.stickyContainerPool;
                                   stickyContainerPool.add(value);
                                 } else {
                                   let hasItem = null == tmp4;
@@ -11791,10 +11479,10 @@ function doInitialAllocateContainers(state) {
                             do {
                               addResult = idCache[addResult];
                               if (null == addResult) {
-                                addResult = outer1_49;
+                                addResult = closure_1_49;
                                 addResult = state;
                                 addResult = state;
-                                addResult = outer1_49(state, addResult);
+                                addResult = closure_1_49(state, addResult);
                               }
                               if (!containerItemKeys.has(addResult)) {
                                 addResult = set1.add(addResult);
@@ -11833,9 +11521,7 @@ function doInitialAllocateContainers(state) {
                             addResult = items1;
                             addResult = set1;
                             addResult = (function handleStickyActivation(addResult, prop, arg2, items1, addResult2, addResult3, addResult4) {
-                              let data;
-                              let keyExtractor;
-                              const state = addResult.state;
+                              state = addResult.state;
                               let num = -1;
                               if (arg2 >= 0) {
                                 num = prop[arg2];
@@ -11869,7 +11555,7 @@ function doInitialAllocateContainers(state) {
                                     }
                                     let tmp8 = tmp5;
                                     if (tmp5) {
-                                      let containerItemKeys = state.containerItemKeys;
+                                      containerItemKeys = state.containerItemKeys;
                                       tmp8 = !containerItemKeys.has(tmp5);
                                     }
                                     if (tmp8) {
@@ -11889,14 +11575,14 @@ function doInitialAllocateContainers(state) {
                               } while (num2 <= 1);
                             })(addResult, prop, num25, items1, addResult, addResult, addResult);
                           } else if (-1 !== tmp15Result1) {
-                            addResult = outer1_22;
-                            addResult = outer1_22;
+                            addResult = closure_1_22;
+                            addResult = closure_1_22;
                             addResult = containerItemKeys;
                             addResult = containerItemKeys;
-                            addResult = outer1_22(containerItemKeys, "activeStickyIndex", -1);
+                            addResult = closure_1_22(containerItemKeys, "activeStickyIndex", -1);
                           }
                           if (items1.length > 0) {
-                            let fn;
+                            fn = undefined;
                             if (getItemType) {
                               fn = (arg0) => {
                                 const tmp = getItemType(data[arg0], arg0);
@@ -11916,22 +11602,20 @@ function doInitialAllocateContainers(state) {
                             addResult = fn;
                             addResult = tmp88;
                             addResult = (function findAvailableContainers(containerItemKeys, items1, addResult, addResult2, items, fn, has) {
-                              let closure_2;
-                              let stickyContainerPool;
-                              let closure_0 = fn;
+                              closure_0 = fn;
                               if (0 === items1.length) {
                                 return [];
                               } else {
                                 const tmp56 = length(containerItemKeys, "numContainers");
-                                const state = containerItemKeys.state;
+                                state = containerItemKeys.state;
                                 ({ containerItemMetadata: closure_2, stickyContainerPool } = state);
-                                let set;
+                                set = undefined;
                                 if (items.length > 0) {
                                   const _Set = Set;
                                   set = new Set(items);
                                 }
                                 const mapped = items1.map((itemIndex) => {
-                                  const obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
+                                  obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
                                   stickyHeaderIndicesSet = state.props.stickyHeaderIndicesSet;
                                   let tmp;
                                   if (null != callback) {
@@ -11974,7 +11658,7 @@ function doInitialAllocateContainers(state) {
                                     if (stickyContainerPool.has(num2)) {
                                       let tmp22 = undefined === tmp13 || tmp18;
                                       if (tmp22) {
-                                        let obj = { containerIndex: null, distance: null };
+                                        obj = { containerIndex: null, distance: null };
                                         obj[0] = num2;
                                         let _Number2 = Number;
                                         obj[1] = Number.POSITIVE_INFINITY;
@@ -12009,7 +11693,7 @@ function doInitialAllocateContainers(state) {
                                 const _Array = Array;
                                 const array = new Array(length);
                                 let sum = tmp56;
-                                let c5 = false;
+                                c5 = false;
                                 function assign(itemIndex, containerIndex) {
                                   array[itemIndex.order] = { containerIndex, itemIndex: itemIndex.itemIndex, itemType: itemIndex.itemType };
                                   let deleteResult;
@@ -12017,12 +11701,12 @@ function doInitialAllocateContainers(state) {
                                     deleteResult = set.delete(containerIndex);
                                   }
                                   if (deleteResult) {
-                                    let c5 = true;
+                                    c5 = true;
                                   }
                                 }
                                 function assignMatching(found, items, arg2) {
-                                  let closure_0 = items;
-                                  let closure_1 = arg2;
+                                  closure_0 = items;
+                                  closure_1 = arg2;
                                   function _loop2() { ... }
                                   const iter = found[Symbol.iterator]();
                                   while (iter !== undefined) {
@@ -12055,7 +11739,7 @@ function doInitialAllocateContainers(state) {
                                     }
                                     let tmp43 = item10099;
                                     let tmp44 = tmp38;
-                                    let obj1 = assign(tmp36, tmp39);
+                                    obj1 = assign(tmp36, tmp39);
                                   }
                                   continue;
                                 }
@@ -12076,7 +11760,7 @@ function doInitialAllocateContainers(state) {
                                   }
                                   if (sum > POSITIVE_INFINITY) {
                                     const _console = console;
-                                    let obj2 = { debugInfo: null };
+                                    obj2 = { debugInfo: null };
                                     const obj3 = { numContainers: null, numContainersPooled: null, numNeeded: null, stillNeeded: null };
                                     obj3[0] = tmp56;
                                     obj3[1] = POSITIVE_INFINITY;
@@ -12098,19 +11782,19 @@ function doInitialAllocateContainers(state) {
                               let containerIndex = addResult.containerIndex;
                               addResult = idCache[itemIndex];
                               if (null == addResult) {
-                                addResult = outer1_49;
+                                addResult = closure_1_49;
                                 addResult = state;
                                 addResult = state;
                                 addResult = itemIndex;
-                                addResult = outer1_49(state, addResult);
+                                addResult = closure_1_49(state, addResult);
                               }
                               addResult = containerItemKeys;
                               addResult = containerItemKeys;
                               addResult = containerIndex;
                               let _HermesInternal3 = HermesInternal;
-                              addResult = outer1_21;
-                              addResult = outer1_21;
-                              addResult = outer1_21(containerItemKeys, "containerItemKey" + containerIndex);
+                              addResult = closure_1_21;
+                              addResult = closure_1_21;
+                              addResult = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                               if (addResult) {
                                 addResult = addResult !== addResult;
                               }
@@ -12137,23 +11821,23 @@ function doInitialAllocateContainers(state) {
                                 }
                                 state.containerItemGenerations[containerIndex] = num28 + 1;
                               }
-                              addResult = outer1_22;
-                              addResult = outer1_22;
+                              addResult = closure_1_22;
+                              addResult = closure_1_22;
                               addResult = containerIndex;
                               let _HermesInternal4 = HermesInternal;
-                              addResult = outer1_22(addResult, "containerItemKey" + containerIndex, addResult);
+                              addResult = closure_1_22(addResult, "containerItemKey" + containerIndex, addResult);
                               let _HermesInternal5 = HermesInternal;
                               addResult = itemIndex;
-                              addResult = outer1_22(addResult, "containerItemIndex" + containerIndex, addResult);
+                              addResult = closure_1_22(addResult, "containerItemIndex" + containerIndex, addResult);
                               let _HermesInternal6 = HermesInternal;
-                              addResult = outer1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
+                              addResult = closure_1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
                               addResult = state;
                               addResult = state;
                               let containerItemMetadata = state.containerItemMetadata;
-                              addResult = outer1_28;
+                              addResult = closure_1_28;
                               let num29 = 0;
                               addResult = state;
-                              addResult = containerItemMetadata.set(containerIndex, outer1_28(state, itemIndex, data[addResult], addResult.itemType));
+                              addResult = containerItemMetadata.set(containerIndex, closure_1_28(state, itemIndex, data[addResult], addResult.itemType));
                               addResult = containerItemKeys.set(addResult, containerIndex);
                               let userScrollAnchorReset = state.userScrollAnchorReset;
                               if (null != userScrollAnchorReset) {
@@ -12193,14 +11877,14 @@ function doInitialAllocateContainers(state) {
                               continue;
                             }
                             if (addResult !== tmp16) {
-                              addResult = outer1_22;
-                              addResult = outer1_22;
+                              addResult = closure_1_22;
+                              addResult = closure_1_22;
                               addResult = containerItemKeys;
                               addResult = containerItemKeys;
-                              addResult = outer1_22(containerItemKeys, "numContainers", addResult);
-                              addResult = outer1_21;
-                              addResult = outer1_21;
-                              if (addResult > outer1_21(containerItemKeys, "numContainersPooled")) {
+                              addResult = closure_1_22(containerItemKeys, "numContainers", addResult);
+                              addResult = closure_1_21;
+                              addResult = closure_1_21;
+                              if (addResult > closure_1_21(containerItemKeys, "numContainersPooled")) {
                                 addResult = addResult(addResult, "numContainersPooled", (function getExpandedContainerPoolSize(length, addResult) {
                                   let num = 0;
                                   if (length > 0) {
@@ -12249,7 +11933,7 @@ function doInitialAllocateContainers(state) {
                         addResult = items;
                         addResult = isPinnedRenderIndex;
                         addResult = (function handleStickyRecycling(addResult, prop, addResult2, arg3, arg4, items, isPinnedRenderIndex) {
-                          const state = addResult.state;
+                          state = addResult.state;
                           const iter = state.stickyContainerPool[Symbol.iterator]();
                           const nextResult = iter.next();
                           while (iter !== undefined) {
@@ -12275,7 +11959,7 @@ function doInitialAllocateContainers(state) {
                                   if (tmp11 < arg4 - 1) {
                                     let tmp18 = index;
                                     let tmp19 = prop[tmp11 + 1];
-                                    let flag = false;
+                                    flag = false;
                                     if (tmp19) {
                                       let tmp44 = tmp19;
                                       let tmp45 = state.positions[tmp20];
@@ -12358,12 +12042,12 @@ function doInitialAllocateContainers(state) {
                       let flag5 = false;
                       if (0 < addResult) {
                         do {
-                          addResult = outer1_21;
-                          addResult = outer1_21;
+                          addResult = closure_1_21;
+                          addResult = closure_1_21;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
                           let _HermesInternal8 = HermesInternal;
-                          addResult = outer1_21(containerItemKeys, "containerItemKey" + num32);
+                          addResult = closure_1_21(containerItemKeys, "containerItemKey" + num32);
                           addResult = flag5;
                           addResult = undefined;
                           addResult = num32;
@@ -12397,41 +12081,41 @@ function doInitialAllocateContainers(state) {
                             addResult = containerItemMetadata2.delete(num32);
                             let stickyContainerPool3 = state.stickyContainerPool;
                             if (stickyContainerPool3.has(num32)) {
-                              addResult = outer1_22;
-                              addResult = outer1_22;
+                              addResult = closure_1_22;
+                              addResult = closure_1_22;
                               let _HermesInternal9 = HermesInternal;
-                              addResult = outer1_22(addResult, "containerSticky" + num32, false);
+                              addResult = closure_1_22(addResult, "containerSticky" + num32, false);
                               let stickyContainerPool4 = addResult.stickyContainerPool;
                               addResult = stickyContainerPool4.delete(num32);
                             }
-                            addResult = outer1_22;
-                            addResult = outer1_22;
+                            addResult = closure_1_22;
+                            addResult = closure_1_22;
                             let _HermesInternal10 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerItemKey" + num32, undefined);
+                            addResult = closure_1_22(addResult, "containerItemKey" + num32, undefined);
                             let _HermesInternal11 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerItemIndex" + num32, undefined);
+                            addResult = closure_1_22(addResult, "containerItemIndex" + num32, undefined);
                             let _HermesInternal12 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerItemData" + num32, undefined);
+                            addResult = closure_1_22(addResult, "containerItemData" + num32, undefined);
                             let _HermesInternal13 = HermesInternal;
-                            addResult = outer1_32;
-                            addResult = outer1_22(addResult, "containerPosition" + num32, outer1_32);
+                            addResult = closure_1_32;
+                            addResult = closure_1_22(addResult, "containerPosition" + num32, closure_1_32);
                             let _HermesInternal14 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerColumn" + num32, -1);
+                            addResult = closure_1_22(addResult, "containerColumn" + num32, -1);
                             let _HermesInternal15 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerSpan" + num32, 1);
+                            addResult = closure_1_22(addResult, "containerSpan" + num32, 1);
                             addResult = flag5;
                           } else {
                             addResult = indexByKey.get(addResult);
                             addResult = flag5;
                             if (undefined !== addResult) {
-                              addResult = outer1_88;
+                              addResult = closure_1_88;
                               let obj3 = { scrollAdjustPending: null, updateLayout: true };
                               addResult = c10;
                               obj3[0] = c10;
                               let num35 = 0;
                               addResult = num32;
                               addResult = obj3;
-                              addResult = outer1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
+                              addResult = closure_1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
                             }
                           }
                           num32 = num32 + 1;
@@ -12440,29 +12124,29 @@ function doInitialAllocateContainers(state) {
                       }
                       addResult = set2;
                       if (set2) {
-                        addResult = outer1_27;
+                        addResult = closure_1_27;
                       }
                       if (addResult) {
-                        addResult = outer1_87;
+                        addResult = closure_1_87;
                         addResult = containerItemKeys;
                         addResult = containerItemKeys;
-                        addResult = outer1_87(containerItemKeys, set2);
+                        addResult = closure_1_87(containerItemKeys, set2);
                       }
                       if (!tmp13) {
-                        addResult = outer1_84;
+                        addResult = closure_1_84;
                         addResult = containerItemKeys;
                         addResult = containerItemKeys;
-                        addResult = outer1_84(containerItemKeys);
+                        addResult = closure_1_84(containerItemKeys);
                       } else {
-                        addResult = outer1_102;
+                        addResult = closure_1_102;
                         addResult = state;
                         addResult = state;
-                        addResult = outer1_102(state, obj.startNoBuffer);
+                        addResult = closure_1_102(state, obj.startNoBuffer);
                         if (!queuedInitialLayout) {
                           if (!addResult.didContainersLayout) {
-                            addResult = outer1_41;
-                            addResult = outer1_77;
-                            if (outer1_41(addResult)) {
+                            addResult = closure_1_41;
+                            addResult = closure_1_77;
+                            if (closure_1_41(addResult)) {
                               addResult = addResult(addResult, addResult.startBuffered, addResult.endBuffered);
                             } else {
                               addResult = addResult(addResult, addResult.startNoBuffer, addResult.endNoBuffer);
@@ -12479,7 +12163,7 @@ function doInitialAllocateContainers(state) {
                                 callback2(containerItemKeys, { didLayout: true });
                               })(containerItemKeys);
                               addResult = (function handleInitialScrollLayoutReady(containerItemKeys) {
-                                let closure_0 = containerItemKeys;
+                                closure_0 = containerItemKeys;
                                 if (containerItemKeys.state.initialScroll) {
                                   callback6(containerItemKeys, { forceScroll: true });
                                   const initialScrollSession = containerItemKeys.state.initialScrollSession;
@@ -12490,7 +12174,7 @@ function doInitialAllocateContainers(state) {
                                   if ("offset" !== kind) {
                                     const _requestAnimationFrame = requestAnimationFrame;
                                     const animationFrame = requestAnimationFrame(function runScroll() {
-                                      return outer1_76(closure_0, { forceScroll: true });
+                                      return closure_1_76(closure_0, { forceScroll: true });
                                     });
                                   }
                                   closure_0 = containerItemKeys;
@@ -12518,7 +12202,7 @@ function doInitialAllocateContainers(state) {
                           addResult = containerItemKeys;
                           state = containerItemKeys.state;
                           ({ startNoBuffer, endNoBuffer } = obj);
-                          addResult = outer1_91;
+                          addResult = closure_1_91;
                           if (null == addResult) {
                             addResult = obj.startNoBuffer;
                           }
@@ -12545,8 +12229,8 @@ function doInitialAllocateContainers(state) {
                           }
                         }
                       }
-                      let tmp17 = outer1_25;
-                      const tmp80 = outer1_89;
+                      let tmp17 = closure_1_25;
+                      const tmp80 = closure_1_89;
                     }
                   }
                 }
@@ -12554,35 +12238,10 @@ function doInitialAllocateContainers(state) {
             });
           } else {
             closure_0 = state;
-            let closure_1 = { dataChanged: true, doMVCP: true };
+            closure_1 = { dataChanged: true, doMVCP: true };
             state = state.state;
             fn(() => {
-              let alwaysRenderIndicesArr;
-              let bottom;
-              let closure_4;
-              let dataChanged;
-              let doMVCP;
-              let enableScrollForNextCalculateItemsInView;
-              let endNoBuffer;
-              let forceFullItemPositions;
-              let getItemType;
-              let idCache;
-              let indexByKey;
-              let initialScroll;
-              let keyExtractor;
-              let minIndexSizeChanged;
-              let positions;
-              let props;
-              let queuedInitialLayout;
-              let scrollForNextCalculateItemsInView;
-              let scrollLength;
               let set2;
-              let sizes;
-              let startBufferedId;
-              let startNoBuffer;
-              let state;
-              let top;
-              let viewabilityConfigCallbackPairs;
               let addResult = state;
               let containerItemKeys = state.containerItemKeys;
               ({ enableScrollForNextCalculateItemsInView, idCache } = state);
@@ -12601,7 +12260,7 @@ function doInitialAllocateContainers(state) {
                 let _Set = Set;
                 stickyHeaderIndicesSet = new Set();
               }
-              let tmp9 = outer1_46(containerItemKeys, idCache.drawDistanceMode);
+              let tmp9 = closure_1_46(containerItemKeys, idCache.drawDistanceMode);
               ({ dataChanged, doMVCP, forceFullItemPositions } = idCache);
               let initialScrollSession = tmp2.initialScrollSession;
               let kind;
@@ -12612,18 +12271,18 @@ function doInitialAllocateContainers(state) {
               if ("bootstrap" === kind) {
                 bootstrap = tmp2.initialScrollSession.bootstrap;
               }
-              let tmp16 = outer1_21(containerItemKeys, "numContainers");
+              let tmp16 = closure_1_21(containerItemKeys, "numContainers");
               if (data) {
                 if (0 !== scrollLength) {
                   if (tmp16) {
-                    let closure_8 = outer1_25(tmp7);
+                    closure_8 = closure_1_25(tmp7);
                     let tmp15Result = tmp15(tmp7, "stylePaddingTop");
                     let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-                    let closure_9 = sum + tmp15(tmp7, "headerSize");
+                    closure_9 = sum + tmp15(tmp7, "headerSize");
                     tmp15Result = tmp15(tmp7, "numColumns");
                     let scrollVelocity = idCache.scrollVelocity;
                     if (null == scrollVelocity) {
-                      scrollVelocity = outer1_69(tmp2);
+                      scrollVelocity = closure_1_69(tmp2);
                     }
                     ({ initialScroll, queuedInitialLayout } = tmp2);
                     if (!tmp13) {
@@ -12636,31 +12295,31 @@ function doInitialAllocateContainers(state) {
                       }
                     } else {
                       if (!queuedInitialLayout) {
-                        if (outer1_41(tmp2)) {
+                        if (closure_1_41(tmp2)) {
                           if (initialScroll) {
-                            scroll = outer1_75(tmp7, initialScroll);
+                            scroll = closure_1_75(tmp7, initialScroll);
                           }
                         }
                       }
                       scroll = tmp2.scroll;
                     }
-                    let c10 = 0;
-                    let c11 = 0;
-                    let c12 = 0;
-                    let c13 = 0;
-                    let c14 = 0;
-                    let c15 = 0;
+                    c10 = 0;
+                    c11 = 0;
+                    c12 = 0;
+                    c13 = 0;
+                    c14 = 0;
+                    c15 = 0;
                     function updateScroll2(scroll) {
-                      let closure_16 = scroll;
+                      closure_16 = scroll;
                       const values = containerItemKeys.values;
                       const value = values.get("scrollAdjustPending");
                       let num = 0;
                       if (null != value) {
                         num = value;
                       }
-                      let closure_11 = num - closure_9;
+                      closure_11 = num - closure_9;
                       const rounded = Math.round(scroll + closure_11);
-                      let closure_12 = rounded;
+                      closure_12 = rounded;
                       if (rounded + scrollLength > closure_8) {
                         const _Math = Math;
                         closure_12 = Math.max(0, tmp4 - tmp3);
@@ -12668,7 +12327,7 @@ function doInitialAllocateContainers(state) {
                     }
                     updateScroll2(scroll);
                     const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
-                    let closure_17 = tmp15Result1;
+                    closure_17 = tmp15Result1;
                     function resolveStickyState() {
                       let num = -1;
                       let num2 = -1;
@@ -12704,17 +12363,17 @@ function doInitialAllocateContainers(state) {
                         tmp8 = tmp9 >= 0;
                       }
                       if (tmp8) {
-                        outer2_22(containerItemKeys, "activeStickyIndex", num);
+                        closure_2_22(containerItemKeys, "activeStickyIndex", num);
                       }
-                      let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
-                      let fn;
+                      obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
+                      fn = undefined;
                       if (closure_4) {
                         if (arr.length > 0) {
                           if (tmp9 !== num) {
                             fn = () => {
-                              if (undefined !== outer1_6[num]) {
-                                if (null != outer1_4) {
-                                  const obj = { index: null, item: null };
+                              if (undefined !== closure_1_6[num]) {
+                                if (null != closure_1_4) {
+                                  obj = { index: null, item: null };
                                   obj[0] = tmp;
                                   obj[1] = tmp2;
                                   tmp3(obj);
@@ -12753,7 +12412,7 @@ function doInitialAllocateContainers(state) {
                         num6 = 0;
                         if (!tmp25) {
                           num6 = 0;
-                          if (!outer1_41(tmp2)) {
+                          if (!closure_1_41(tmp2)) {
                             num6 = 0;
                             if (!tmp2.scrollingTo) {
                               num6 = 0;
@@ -12781,9 +12440,9 @@ function doInitialAllocateContainers(state) {
                     }
                     function updateScrollRange() {
                       const bound = Math.max(0, c12);
-                      let closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
-                      let closure_13 = bound - result2 + num6;
-                      let closure_15 = closure_14 + result3 + num6;
+                      closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
+                      closure_13 = bound - result2 + num6;
+                      closure_15 = closure_14 + result3 + num6;
                     }
                     updateScrollRange();
                     if (0 !== num6) {
@@ -12830,12 +12489,6 @@ function doInitialAllocateContainers(state) {
                               if (null === top) {
                                 if (viewabilityConfigCallbackPairs) {
                                   (function updateViewabilityForCachedRange(state, viewabilityConfigCallbackPairs, scrollLength, c12, c14) {
-                                    let data;
-                                    let data2;
-                                    let keyExtractor;
-                                    let keyExtractor2;
-                                    let sizes;
-                                    let startBuffered;
                                     state = state.state;
                                     const endBuffered = state.endBuffered;
                                     data = state.props.data;
@@ -12896,9 +12549,9 @@ function doInitialAllocateContainers(state) {
                                                     tmp12 = tmp6;
                                                   }
                                                   let tmp26 = tmp13;
-                                                  let flag = false;
+                                                  flag = false;
                                                   if (null !== tmp11) {
-                                                    let flag2 = true;
+                                                    flag2 = true;
                                                     if (tmp23 <= c14) {
                                                       tmp13 = tmp6;
                                                       flag2 = false;
@@ -12934,7 +12587,7 @@ function doInitialAllocateContainers(state) {
                                                 }
                                               }
                                             }
-                                            const obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
+                                            obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
                                             obj[0] = tmp9;
                                             obj[1] = sum1;
                                             if (null == sum1) {
@@ -12984,11 +12637,7 @@ function doInitialAllocateContainers(state) {
                                     }
                                   })(tmp7, viewabilityConfigCallbackPairs, scrollLength, c12, c14);
                                 } else if (tmp2.props.onFirstVisibleItemChanged) {
-                                  outer1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
-                                    let data;
-                                    let keyExtractor;
-                                    let sizes;
-                                    let startBuffered;
+                                  closure_1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
                                     state = state.state;
                                     const endBuffered = state.endBuffered;
                                     data = state.props.data;
@@ -13066,11 +12715,11 @@ function doInitialAllocateContainers(state) {
                     let tmp73;
                     if (doMVCP) {
                       if (!tmp25) {
-                        tmp73 = outer1_68(tmp7, dataChanged);
+                        tmp73 = closure_1_68(tmp7, dataChanged);
                       }
                     }
                     if (dataChanged) {
-                      outer1_86(tmp2);
+                      closure_1_86(tmp2);
                     }
                     let num8 = 0;
                     if (!forceFullItemPositions) {
@@ -13087,7 +12736,7 @@ function doInitialAllocateContainers(state) {
                         num8 = num9;
                       }
                     }
-                    let obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
+                    obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
                     obj[0] = doMVCP;
                     obj[1] = forceFullItemPositions;
                     let tmp82 = !forceFullItemPositions;
@@ -13104,8 +12753,8 @@ function doInitialAllocateContainers(state) {
                     obj[3] = c15;
                     obj[4] = scrollVelocity;
                     obj[5] = num8;
-                    outer1_89(tmp7, dataChanged, obj);
-                    const tmp17Result = outer1_25(tmp7);
+                    closure_1_89(tmp7, dataChanged, obj);
+                    const tmp17Result = closure_1_25(tmp7);
                     closure_8 = tmp17Result;
                     if (undefined !== minIndexSizeChanged) {
                       tmp2.minIndexSizeChanged = undefined;
@@ -13117,7 +12766,7 @@ function doInitialAllocateContainers(state) {
                             if (tmp2.idsInView.length > 0) {
                               const shouldRestorePosition = tmp2.props.maintainVisibleContentPosition.shouldRestorePosition;
                               const _Set2 = Set;
-                              let set = new Set();
+                              set = new Set();
                               const idsInView = tmp2.idsInView;
                               for (const item10226 of idsInView) {
                                 let tmp99 = item10226;
@@ -13141,11 +12790,11 @@ function doInitialAllocateContainers(state) {
                     }
                     addResult = state;
                     addResult = state;
-                    addResult = outer1_21;
-                    addResult = outer1_21;
+                    addResult = closure_1_21;
+                    addResult = closure_1_21;
                     addResult = containerItemKeys;
                     addResult = containerItemKeys;
-                    addResult = outer1_21(containerItemKeys, "scrollAdjustPending");
+                    addResult = closure_1_21(containerItemKeys, "scrollAdjustPending");
                     let num11 = 0;
                     if (null != addResult) {
                       num11 = addResult;
@@ -13196,19 +12845,19 @@ function doInitialAllocateContainers(state) {
                       while (true) {
                         addResult = idCache[addResult];
                         if (null == addResult) {
-                          addResult = outer1_49;
+                          addResult = closure_1_49;
                           addResult = state;
                           addResult = state;
-                          addResult = outer1_49(state, addResult);
+                          addResult = closure_1_49(state, addResult);
                         }
                         addResult = sizes.get(addResult);
                         if (null == addResult) {
-                          addResult = outer1_58;
+                          addResult = closure_1_58;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
                           let num14 = 0;
                           addResult = containerItemKeys;
-                          addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                          addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                         }
                         addResult = c13;
                         if (positions[addResult] + addResult <= c13) {
@@ -13242,12 +12891,12 @@ function doInitialAllocateContainers(state) {
                     let num18 = 0;
                     if (0 < tmp16) {
                       do {
-                        addResult = outer1_21;
-                        addResult = outer1_21;
+                        addResult = closure_1_21;
+                        addResult = closure_1_21;
                         addResult = containerItemKeys;
                         addResult = containerItemKeys;
                         let _HermesInternal = HermesInternal;
-                        addResult = outer1_21(containerItemKeys, "containerItemKey" + num16);
+                        addResult = closure_1_21(containerItemKeys, "containerItemKey" + num16);
                         addResult = num16;
                         addResult = num17;
                         addResult = num17;
@@ -13276,29 +12925,29 @@ function doInitialAllocateContainers(state) {
                         addResult = idCache[addResult];
                         addResult = flag3;
                         if (null == addResult) {
-                          addResult = outer1_49;
+                          addResult = closure_1_49;
                           addResult = state;
                           addResult = state;
-                          addResult = outer1_49(state, addResult);
+                          addResult = closure_1_49(state, addResult);
                         }
                         addResult = sizes.get(addResult);
                         if (null == addResult) {
-                          addResult = outer1_58;
+                          addResult = closure_1_58;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
                           let num19 = 0;
                           addResult = containerItemKeys;
-                          addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                          addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                         }
                         addResult = positions[addResult];
                         addResult = flag3;
                         if (!flag3) {
-                          addResult = outer1_100;
+                          addResult = closure_1_100;
                           addResult = c12;
                           addResult = c14;
                           let num20 = 0;
                           addResult = obj;
-                          addResult = outer1_100(obj, addResult, addResult, addResult, c12, c14);
+                          addResult = closure_1_100(obj, addResult, addResult, addResult, c12, c14);
                           addResult = null === addResult;
                           if (addResult) {
                             addResult = c13;
@@ -13341,13 +12990,13 @@ function doInitialAllocateContainers(state) {
                       }
                     }
                     const _Object = Object;
-                    let obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
+                    obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
                     obj1[0] = addResult;
                     ({ endNoBuffer: obj5[1], firstFullyOnScreenIndex: obj5[2] } = obj);
-                    addResult = outer1_101;
+                    addResult = closure_1_101;
                     addResult = state;
                     addResult = state;
-                    obj1[3] = outer1_101(state, obj);
+                    obj1[3] = closure_1_101(state, obj);
                     obj1[4] = addResult;
                     obj1[5] = addResult;
                     obj1[6] = obj.startNoBuffer;
@@ -13359,9 +13008,9 @@ function doInitialAllocateContainers(state) {
                       enableScrollForNextCalculateItemsInView = undefined !== addResult;
                     }
                     if (enableScrollForNextCalculateItemsInView) {
-                      addResult = outer1_54;
-                      if (!outer1_54(addResult)) {
-                        let obj2 = { bottom: null, top: null };
+                      addResult = closure_1_54;
+                      if (!closure_1_54(addResult)) {
+                        obj2 = { bottom: null, top: null };
                         obj2[0] = addResult;
                         obj2[1] = addResult;
                         addResult = obj2;
@@ -13372,12 +13021,12 @@ function doInitialAllocateContainers(state) {
                     let items = [];
                     if (dataChanged) {
                       for (let num21 = 0; num21 < addResult; num21 = num21 + 1) {
-                        addResult = outer1_21;
-                        addResult = outer1_21;
+                        addResult = closure_1_21;
+                        addResult = closure_1_21;
                         addResult = containerItemKeys;
                         addResult = containerItemKeys;
                         let _HermesInternal2 = HermesInternal;
-                        addResult = outer1_21(containerItemKeys, "containerItemKey" + num21);
+                        addResult = closure_1_21(containerItemKeys, "containerItemKey" + num21);
                         addResult = !keyExtractor;
                         addResult = num21;
                         if (keyExtractor) {
@@ -13393,8 +13042,8 @@ function doInitialAllocateContainers(state) {
                     addResult = state;
                     addResult = state;
                     const scrollTargetPinnedRange = state.scrollTargetPinnedRange;
-                    let c22 = 0;
-                    let c23 = -1;
+                    c22 = 0;
+                    c23 = -1;
                     let num23 = -1;
                     let num24 = 0;
                     if (scrollTargetPinnedRange) {
@@ -13411,7 +13060,7 @@ function doInitialAllocateContainers(state) {
                       num24 = addResult;
                     }
                     addResult = num24 <= num23;
-                    let closure_24 = addResult;
+                    closure_24 = addResult;
                     function isPinnedRenderIndex(addResult) {
                       let hasItem = set.has(addResult);
                       if (!hasItem) {
@@ -13434,13 +13083,11 @@ function doInitialAllocateContainers(state) {
                         addResult = new.target;
                         const set1 = new Set();
                         function addPinnedIndex(item10471) {
-                          let data;
-                          let keyExtractor;
                           if (item10471 >= 0) {
                             if (item10471 < length) {
                               let tmp4 = idCache[item10471];
                               if (null == tmp4) {
-                                ({ data, keyExtractor } = outer1_2.props);
+                                ({ data, keyExtractor } = closure_1_2.props);
                                 let str = "";
                                 if (data) {
                                   let tmp2 = null;
@@ -13458,7 +13105,7 @@ function doInitialAllocateContainers(state) {
                               }
                               const value = containerItemKeys.get(tmp4);
                               if (undefined !== value) {
-                                const stickyContainerPool = outer1_2.stickyContainerPool;
+                                const stickyContainerPool = closure_1_2.stickyContainerPool;
                                 stickyContainerPool.add(value);
                               } else {
                                 let hasItem = null == tmp4;
@@ -13478,10 +13125,10 @@ function doInitialAllocateContainers(state) {
                           do {
                             addResult = idCache[addResult];
                             if (null == addResult) {
-                              addResult = outer1_49;
+                              addResult = closure_1_49;
                               addResult = state;
                               addResult = state;
-                              addResult = outer1_49(state, addResult);
+                              addResult = closure_1_49(state, addResult);
                             }
                             if (!containerItemKeys.has(addResult)) {
                               addResult = set1.add(addResult);
@@ -13520,9 +13167,7 @@ function doInitialAllocateContainers(state) {
                           addResult = items1;
                           addResult = set1;
                           addResult = (function handleStickyActivation(addResult, prop, arg2, items1, addResult2, addResult3, addResult4) {
-                            let data;
-                            let keyExtractor;
-                            const state = addResult.state;
+                            state = addResult.state;
                             let num = -1;
                             if (arg2 >= 0) {
                               num = prop[arg2];
@@ -13556,7 +13201,7 @@ function doInitialAllocateContainers(state) {
                                   }
                                   let tmp8 = tmp5;
                                   if (tmp5) {
-                                    let containerItemKeys = state.containerItemKeys;
+                                    containerItemKeys = state.containerItemKeys;
                                     tmp8 = !containerItemKeys.has(tmp5);
                                   }
                                   if (tmp8) {
@@ -13576,14 +13221,14 @@ function doInitialAllocateContainers(state) {
                             } while (num2 <= 1);
                           })(addResult, prop, num25, items1, addResult, addResult, addResult);
                         } else if (-1 !== tmp15Result1) {
-                          addResult = outer1_22;
-                          addResult = outer1_22;
+                          addResult = closure_1_22;
+                          addResult = closure_1_22;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
-                          addResult = outer1_22(containerItemKeys, "activeStickyIndex", -1);
+                          addResult = closure_1_22(containerItemKeys, "activeStickyIndex", -1);
                         }
                         if (items1.length > 0) {
-                          let fn;
+                          fn = undefined;
                           if (getItemType) {
                             fn = (arg0) => {
                               const tmp = getItemType(data[arg0], arg0);
@@ -13603,22 +13248,20 @@ function doInitialAllocateContainers(state) {
                           addResult = fn;
                           addResult = tmp88;
                           addResult = (function findAvailableContainers(containerItemKeys, items1, addResult, addResult2, items, fn, has) {
-                            let closure_2;
-                            let stickyContainerPool;
-                            let closure_0 = fn;
+                            closure_0 = fn;
                             if (0 === items1.length) {
                               return [];
                             } else {
                               const tmp56 = length(containerItemKeys, "numContainers");
-                              const state = containerItemKeys.state;
+                              state = containerItemKeys.state;
                               ({ containerItemMetadata: closure_2, stickyContainerPool } = state);
-                              let set;
+                              set = undefined;
                               if (items.length > 0) {
                                 const _Set = Set;
                                 set = new Set(items);
                               }
                               const mapped = items1.map((itemIndex) => {
-                                const obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
+                                obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
                                 stickyHeaderIndicesSet = state.props.stickyHeaderIndicesSet;
                                 let tmp;
                                 if (null != callback) {
@@ -13661,7 +13304,7 @@ function doInitialAllocateContainers(state) {
                                   if (stickyContainerPool.has(num2)) {
                                     let tmp22 = undefined === tmp13 || tmp18;
                                     if (tmp22) {
-                                      let obj = { containerIndex: null, distance: null };
+                                      obj = { containerIndex: null, distance: null };
                                       obj[0] = num2;
                                       let _Number2 = Number;
                                       obj[1] = Number.POSITIVE_INFINITY;
@@ -13696,7 +13339,7 @@ function doInitialAllocateContainers(state) {
                               const _Array = Array;
                               const array = new Array(length);
                               let sum = tmp56;
-                              let c5 = false;
+                              c5 = false;
                               function assign(itemIndex, containerIndex) {
                                 array[itemIndex.order] = { containerIndex, itemIndex: itemIndex.itemIndex, itemType: itemIndex.itemType };
                                 let deleteResult;
@@ -13704,35 +13347,35 @@ function doInitialAllocateContainers(state) {
                                   deleteResult = set.delete(containerIndex);
                                 }
                                 if (deleteResult) {
-                                  let c5 = true;
+                                  c5 = true;
                                 }
                               }
                               function assignMatching(found, items, arg2) {
-                                let closure_0 = items;
-                                let closure_1 = arg2;
+                                closure_0 = items;
+                                closure_1 = arg2;
                                 function _loop2(iter) {
-                                  const items = iter;
-                                  if (outer1_4[iter.order]) {
+                                  items = iter;
+                                  if (closure_1_4[iter.order]) {
                                     return 1;
                                   } else {
                                     const findIndexResult = items.findIndex(() => { ... });
                                     if (-1 !== findIndexResult) {
                                       const containerIndex = array(items.splice(findIndexResult, 1), 1)[0].containerIndex;
-                                      if (typeof outer1_6 !== "function") {
+                                      if (typeof closure_1_6 !== "function") {
                                         HermesBuiltin.throwTypeError();
                                       }
-                                      const obj = { containerIndex: null, itemIndex: null, itemType: null };
+                                      obj = { containerIndex: null, itemIndex: null, itemType: null };
                                       obj[0] = containerIndex;
                                       ({ itemIndex: obj[1], itemType: obj[2] } = iter);
                                       tmp[iter.order] = obj;
                                       let deleteResult;
-                                      if (null != outer1_3) {
+                                      if (null != closure_1_3) {
                                         deleteResult = obj2.delete(containerIndex);
                                       }
                                       if (deleteResult) {
-                                        const outer1_5 = true;
+                                        c5 = true;
                                       }
-                                      obj2 = outer1_3;
+                                      obj2 = closure_1_3;
                                     }
                                   }
                                 }
@@ -13773,7 +13416,7 @@ function doInitialAllocateContainers(state) {
                                   }
                                   let tmp43 = item10099;
                                   let tmp44 = tmp38;
-                                  let obj1 = assign(tmp36, tmp39);
+                                  obj1 = assign(tmp36, tmp39);
                                 }
                                 continue;
                               }
@@ -13794,7 +13437,7 @@ function doInitialAllocateContainers(state) {
                                 }
                                 if (sum > POSITIVE_INFINITY) {
                                   const _console = console;
-                                  let obj2 = { debugInfo: null };
+                                  obj2 = { debugInfo: null };
                                   const obj3 = { numContainers: null, numContainersPooled: null, numNeeded: null, stillNeeded: null };
                                   obj3[0] = tmp56;
                                   obj3[1] = POSITIVE_INFINITY;
@@ -13816,19 +13459,19 @@ function doInitialAllocateContainers(state) {
                             let containerIndex = addResult.containerIndex;
                             addResult = idCache[itemIndex];
                             if (null == addResult) {
-                              addResult = outer1_49;
+                              addResult = closure_1_49;
                               addResult = state;
                               addResult = state;
                               addResult = itemIndex;
-                              addResult = outer1_49(state, addResult);
+                              addResult = closure_1_49(state, addResult);
                             }
                             addResult = containerItemKeys;
                             addResult = containerItemKeys;
                             addResult = containerIndex;
                             let _HermesInternal3 = HermesInternal;
-                            addResult = outer1_21;
-                            addResult = outer1_21;
-                            addResult = outer1_21(containerItemKeys, "containerItemKey" + containerIndex);
+                            addResult = closure_1_21;
+                            addResult = closure_1_21;
+                            addResult = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                             if (addResult) {
                               addResult = addResult !== addResult;
                             }
@@ -13855,23 +13498,23 @@ function doInitialAllocateContainers(state) {
                               }
                               state.containerItemGenerations[containerIndex] = num28 + 1;
                             }
-                            addResult = outer1_22;
-                            addResult = outer1_22;
+                            addResult = closure_1_22;
+                            addResult = closure_1_22;
                             addResult = containerIndex;
                             let _HermesInternal4 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerItemKey" + containerIndex, addResult);
+                            addResult = closure_1_22(addResult, "containerItemKey" + containerIndex, addResult);
                             let _HermesInternal5 = HermesInternal;
                             addResult = itemIndex;
-                            addResult = outer1_22(addResult, "containerItemIndex" + containerIndex, addResult);
+                            addResult = closure_1_22(addResult, "containerItemIndex" + containerIndex, addResult);
                             let _HermesInternal6 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
+                            addResult = closure_1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
                             addResult = state;
                             addResult = state;
                             let containerItemMetadata = state.containerItemMetadata;
-                            addResult = outer1_28;
+                            addResult = closure_1_28;
                             let num29 = 0;
                             addResult = state;
-                            addResult = containerItemMetadata.set(containerIndex, outer1_28(state, itemIndex, data[addResult], addResult.itemType));
+                            addResult = containerItemMetadata.set(containerIndex, closure_1_28(state, itemIndex, data[addResult], addResult.itemType));
                             addResult = containerItemKeys.set(addResult, containerIndex);
                             let userScrollAnchorReset = state.userScrollAnchorReset;
                             if (null != userScrollAnchorReset) {
@@ -13911,14 +13554,14 @@ function doInitialAllocateContainers(state) {
                             continue;
                           }
                           if (addResult !== tmp16) {
-                            addResult = outer1_22;
-                            addResult = outer1_22;
+                            addResult = closure_1_22;
+                            addResult = closure_1_22;
                             addResult = containerItemKeys;
                             addResult = containerItemKeys;
-                            addResult = outer1_22(containerItemKeys, "numContainers", addResult);
-                            addResult = outer1_21;
-                            addResult = outer1_21;
-                            if (addResult > outer1_21(containerItemKeys, "numContainersPooled")) {
+                            addResult = closure_1_22(containerItemKeys, "numContainers", addResult);
+                            addResult = closure_1_21;
+                            addResult = closure_1_21;
+                            if (addResult > closure_1_21(containerItemKeys, "numContainersPooled")) {
                               addResult = addResult(addResult, "numContainersPooled", (function getExpandedContainerPoolSize(length, addResult) {
                                 let num = 0;
                                 if (length > 0) {
@@ -13967,7 +13610,7 @@ function doInitialAllocateContainers(state) {
                       addResult = items;
                       addResult = isPinnedRenderIndex;
                       addResult = (function handleStickyRecycling(addResult, prop, addResult2, arg3, arg4, items, isPinnedRenderIndex) {
-                        const state = addResult.state;
+                        state = addResult.state;
                         const iter = state.stickyContainerPool[Symbol.iterator]();
                         const nextResult = iter.next();
                         while (iter !== undefined) {
@@ -13993,7 +13636,7 @@ function doInitialAllocateContainers(state) {
                                 if (tmp11 < arg4 - 1) {
                                   let tmp18 = index;
                                   let tmp19 = prop[tmp11 + 1];
-                                  let flag = false;
+                                  flag = false;
                                   if (tmp19) {
                                     let tmp44 = tmp19;
                                     let tmp45 = state.positions[tmp20];
@@ -14076,12 +13719,12 @@ function doInitialAllocateContainers(state) {
                     let flag5 = false;
                     if (0 < addResult) {
                       do {
-                        addResult = outer1_21;
-                        addResult = outer1_21;
+                        addResult = closure_1_21;
+                        addResult = closure_1_21;
                         addResult = containerItemKeys;
                         addResult = containerItemKeys;
                         let _HermesInternal8 = HermesInternal;
-                        addResult = outer1_21(containerItemKeys, "containerItemKey" + num32);
+                        addResult = closure_1_21(containerItemKeys, "containerItemKey" + num32);
                         addResult = flag5;
                         addResult = undefined;
                         addResult = num32;
@@ -14115,41 +13758,41 @@ function doInitialAllocateContainers(state) {
                           addResult = containerItemMetadata2.delete(num32);
                           let stickyContainerPool3 = state.stickyContainerPool;
                           if (stickyContainerPool3.has(num32)) {
-                            addResult = outer1_22;
-                            addResult = outer1_22;
+                            addResult = closure_1_22;
+                            addResult = closure_1_22;
                             let _HermesInternal9 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerSticky" + num32, false);
+                            addResult = closure_1_22(addResult, "containerSticky" + num32, false);
                             let stickyContainerPool4 = addResult.stickyContainerPool;
                             addResult = stickyContainerPool4.delete(num32);
                           }
-                          addResult = outer1_22;
-                          addResult = outer1_22;
+                          addResult = closure_1_22;
+                          addResult = closure_1_22;
                           let _HermesInternal10 = HermesInternal;
-                          addResult = outer1_22(addResult, "containerItemKey" + num32, undefined);
+                          addResult = closure_1_22(addResult, "containerItemKey" + num32, undefined);
                           let _HermesInternal11 = HermesInternal;
-                          addResult = outer1_22(addResult, "containerItemIndex" + num32, undefined);
+                          addResult = closure_1_22(addResult, "containerItemIndex" + num32, undefined);
                           let _HermesInternal12 = HermesInternal;
-                          addResult = outer1_22(addResult, "containerItemData" + num32, undefined);
+                          addResult = closure_1_22(addResult, "containerItemData" + num32, undefined);
                           let _HermesInternal13 = HermesInternal;
-                          addResult = outer1_32;
-                          addResult = outer1_22(addResult, "containerPosition" + num32, outer1_32);
+                          addResult = closure_1_32;
+                          addResult = closure_1_22(addResult, "containerPosition" + num32, closure_1_32);
                           let _HermesInternal14 = HermesInternal;
-                          addResult = outer1_22(addResult, "containerColumn" + num32, -1);
+                          addResult = closure_1_22(addResult, "containerColumn" + num32, -1);
                           let _HermesInternal15 = HermesInternal;
-                          addResult = outer1_22(addResult, "containerSpan" + num32, 1);
+                          addResult = closure_1_22(addResult, "containerSpan" + num32, 1);
                           addResult = flag5;
                         } else {
                           addResult = indexByKey.get(addResult);
                           addResult = flag5;
                           if (undefined !== addResult) {
-                            addResult = outer1_88;
+                            addResult = closure_1_88;
                             let obj3 = { scrollAdjustPending: null, updateLayout: true };
                             addResult = c10;
                             obj3[0] = c10;
                             let num35 = 0;
                             addResult = num32;
                             addResult = obj3;
-                            addResult = outer1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
+                            addResult = closure_1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
                           }
                         }
                         num32 = num32 + 1;
@@ -14158,29 +13801,29 @@ function doInitialAllocateContainers(state) {
                     }
                     addResult = set2;
                     if (set2) {
-                      addResult = outer1_27;
+                      addResult = closure_1_27;
                     }
                     if (addResult) {
-                      addResult = outer1_87;
+                      addResult = closure_1_87;
                       addResult = containerItemKeys;
                       addResult = containerItemKeys;
-                      addResult = outer1_87(containerItemKeys, set2);
+                      addResult = closure_1_87(containerItemKeys, set2);
                     }
                     if (!tmp13) {
-                      addResult = outer1_84;
+                      addResult = closure_1_84;
                       addResult = containerItemKeys;
                       addResult = containerItemKeys;
-                      addResult = outer1_84(containerItemKeys);
+                      addResult = closure_1_84(containerItemKeys);
                     } else {
-                      addResult = outer1_102;
+                      addResult = closure_1_102;
                       addResult = state;
                       addResult = state;
-                      addResult = outer1_102(state, obj.startNoBuffer);
+                      addResult = closure_1_102(state, obj.startNoBuffer);
                       if (!queuedInitialLayout) {
                         if (!addResult.didContainersLayout) {
-                          addResult = outer1_41;
-                          addResult = outer1_77;
-                          if (outer1_41(addResult)) {
+                          addResult = closure_1_41;
+                          addResult = closure_1_77;
+                          if (closure_1_41(addResult)) {
                             addResult = addResult(addResult, addResult.startBuffered, addResult.endBuffered);
                           } else {
                             addResult = addResult(addResult, addResult.startNoBuffer, addResult.endNoBuffer);
@@ -14197,7 +13840,7 @@ function doInitialAllocateContainers(state) {
                               callback2(containerItemKeys, { didLayout: true });
                             })(containerItemKeys);
                             addResult = (function handleInitialScrollLayoutReady(containerItemKeys) {
-                              let closure_0 = containerItemKeys;
+                              closure_0 = containerItemKeys;
                               if (containerItemKeys.state.initialScroll) {
                                 callback6(containerItemKeys, { forceScroll: true });
                                 const initialScrollSession = containerItemKeys.state.initialScrollSession;
@@ -14208,7 +13851,7 @@ function doInitialAllocateContainers(state) {
                                 if ("offset" !== kind) {
                                   const _requestAnimationFrame = requestAnimationFrame;
                                   const animationFrame = requestAnimationFrame(function runScroll() {
-                                    return outer1_76(closure_0, { forceScroll: true });
+                                    return closure_1_76(closure_0, { forceScroll: true });
                                   });
                                 }
                                 closure_0 = containerItemKeys;
@@ -14236,7 +13879,7 @@ function doInitialAllocateContainers(state) {
                         addResult = containerItemKeys;
                         state = containerItemKeys.state;
                         ({ startNoBuffer, endNoBuffer } = obj);
-                        addResult = outer1_91;
+                        addResult = closure_1_91;
                         if (null == addResult) {
                           addResult = obj.startNoBuffer;
                         }
@@ -14263,8 +13906,8 @@ function doInitialAllocateContainers(state) {
                         }
                       }
                     }
-                    let tmp17 = outer1_25;
-                    const tmp80 = outer1_89;
+                    let tmp17 = closure_1_25;
+                    const tmp80 = closure_1_89;
                   }
                 }
               }
@@ -14287,7 +13930,7 @@ function normalizeMaintainScrollAtEndOn(on, arg1) {
     tmp2 = null != dataChange && dataChange;
     const tmp5 = null != dataChange && dataChange;
   }
-  const obj = { animated: false, onDataChange: tmp2, onFooterLayout: null, onItemLayout: null, onLayout: null };
+  obj = { animated: false, onDataChange: tmp2, onFooterLayout: null, onItemLayout: null, onLayout: null };
   let tmp6 = tmp;
   if (arg1) {
     let footerLayout;
@@ -14324,7 +13967,7 @@ let closure_6 = ["index"];
 let closure_7 = ["children", "data", "renderItem"];
 let closure_8 = ["alignItemsAtEnd", "anchoredEndSpace", "alwaysRender", "columnWrapperStyle", "contentContainerStyle", "contentInset", "data", "dataKey", "dataVersion", "drawDistance", "contentInsetEndAdjustment", "estimatedItemSize", "estimatedListSize", "extraData", "getFixedItemSize", "getItemType", "horizontal", "rtl", "estimatedHeaderSize", "initialScrollAtEnd", "initialScrollIndex", "initialScrollOffset", "experimental_adaptiveRender", "itemsAreEqual", "keyExtractor", "ListEmptyComponent", "ListFooterComponent", "ListFooterComponentStyle", "ListHeaderComponent", "maintainScrollAtEnd", "maintainScrollAtEndThreshold", "maintainVisibleContentPosition", "numColumns", "overrideItemLayout", "onEndReached", "onEndReachedThreshold", "onItemSizeChanged", "onMetricsChange", "onLayout", "onLoad", "onMomentumScrollEnd", "onRefresh", "onScroll", "onScrollBeginDrag", "onStartReached", "onStartReachedThreshold", "onStickyHeaderChange", "onFirstVisibleItemChanged", "onViewableItemsChanged", "progressViewOffset", "recycleItems", "refreshControl", "refreshing", "refScrollView", "renderScrollComponent", "renderItem", "scrollEventThrottle", "snapToIndices", "stickyHeaderIndices", "style", "useWindowScroll", "viewabilityConfig", "viewabilityConfigCallbackPairs"];
 let closure_9 = ["positionComponentInternal", "stickyPositionComponentInternal"];
-get_ActivityIndicator = noop;
+ScrollAdjustHandler = noop;
 obj = undefined;
 if (!noop) {
   let _Object = Object;
@@ -14333,12 +13976,12 @@ if (!noop) {
     const _Object2 = Object;
     let keys = Object.keys(noop);
     let item = keys.forEach((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       if ("default" !== arg0) {
         const _Object = Object;
         let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(closure_0, arg0);
         if (!ownPropertyDescriptor.get) {
-          const obj = { enumerable: true, get: null };
+          obj = { enumerable: true, get: null };
           obj[1] = function get() {
             return table[table];
           };
@@ -14355,6 +13998,7 @@ if (!noop) {
 } else {
   frozen = noop;
 }
+ScrollAdjustHandler = get_ActivityIndicator;
 obj = undefined;
 if (!get_ActivityIndicator) {
   const _Object4 = Object;
@@ -14363,12 +14007,12 @@ if (!get_ActivityIndicator) {
     const _Object5 = Object;
     const keys1 = Object.keys(get_ActivityIndicator);
     const item1 = keys1.forEach((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       if ("default" !== arg0) {
         const _Object = Object;
         let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(closure_0, arg0);
         if (!ownPropertyDescriptor.get) {
-          const obj = { enumerable: true, get: null };
+          obj = { enumerable: true, get: null };
           obj[1] = function get() {
             return table[table];
           };
@@ -14395,9 +14039,7 @@ function DebugRow(children) {
   return <closure_13 style={{ alignItems: "center", flexDirection: "row", justifyContent: "space-between" }}>{arg0.children}</closure_13>;
 }
 frozen.memo(function DebugView2() {
-  let createElement;
-  let createElement2;
-  let obj = frozen;
+  obj = frozen;
   const items = ["totalSize", "scrollAdjust", "debugRawScroll", "debugComputedScroll", "numContainers", "numContainersPooled", "isAtEnd"];
   let f96611;
   let first;
@@ -14412,15 +14054,15 @@ frozen.memo(function DebugView2() {
   const items1 = [context1, first];
   const memo = obj.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -14442,11 +14084,11 @@ frozen.memo(function DebugView2() {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -14459,7 +14101,7 @@ frozen.memo(function DebugView2() {
     };
   }, items1);
   const get = memo.get;
-  const tmp6 = _slicedToArray(f96611(first[6]).useSyncExternalStore(memo.subscribe, get, get), 7);
+  const tmp6 = callback3(f96611(first[6]).useSyncExternalStore(memo.subscribe, get, get), 7);
   const first1 = tmp6[0];
   let num = 0;
   if (undefined !== first1) {
@@ -14479,7 +14121,7 @@ frozen.memo(function DebugView2() {
   }
   const obj2 = f96611(first[6]);
   const tmp12 = undefined !== tmp6[6] && tmp6[6];
-  const tmp5 = _slicedToArray;
+  const tmp5 = callback3;
   f96611 = tmp5(noop.useReducer((arg0) => arg0 + 1, 0), 2)[1];
   f96611 = (arg0) => {
     f96611();
@@ -14615,7 +14257,7 @@ let closure_37 = {
     if (tmp) {
       let tmp7;
       if (arg1) {
-        const obj = { startScroll: null, targetOffset: null };
+        obj = { startScroll: null, targetOffset: null };
         ({ startScroll: obj[0], targetOffset: obj[1] } = arg1);
         tmp7 = obj;
       }
@@ -14666,7 +14308,7 @@ function checkThreshold(scroll, arg1, result, isStartReached, startReachedSnapsh
           tmp11 = startReachedSnapshot.dataLength !== contentSize.dataLength;
         }
         if (tmp11) {
-          let obj = { atThreshold: null, contentSize: null, dataLength: null, scrollPosition: null };
+          obj = { atThreshold: null, contentSize: null, dataLength: null, scrollPosition: null };
           obj[0] = arg1;
           ({ contentSize: obj2[1], dataLength: obj2[2], scrollPosition: obj2[3] } = contentSize);
           arg7(obj);
@@ -14675,7 +14317,7 @@ function checkThreshold(scroll, arg1, result, isStartReached, startReachedSnapsh
       return true;
     }
   } else {
-    let flag = tmp2;
+    flag = tmp2;
     if (flag) {
       arg6(scroll);
       obj = { atThreshold: null, contentSize: null, dataLength: null, scrollPosition: null };
@@ -14789,15 +14431,15 @@ let closure_110 = memo(function ContainerLayoutCoordinatorComponent(children) {
   const items1 = [context1, first];
   const memo = obj.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -14819,11 +14461,11 @@ let closure_110 = memo(function ContainerLayoutCoordinatorComponent(children) {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -14836,9 +14478,9 @@ let closure_110 = memo(function ContainerLayoutCoordinatorComponent(children) {
     };
   }, items1);
   const get = memo.get;
-  const items2 = [context, _slicedToArray(context1(first[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0]];
+  const items2 = [context, callback3(context1(first[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0]];
   const layoutEffect = obj.useLayoutEffect(() => {
-    if (outer1_27) {
+    if (closure_1_27) {
       const tmp2 = (function getContainerLayoutEffectScope(context1) {
         const pendingContainerIds = context1.pendingContainerIds;
         context1.pendingContainerIds = undefined;
@@ -14854,7 +14496,7 @@ let closure_110 = memo(function ContainerLayoutCoordinatorComponent(children) {
             tmp = pendingContainerIds;
             if (size) {
               const _Set = Set;
-              const set = new Set(pendingContainerIds);
+              set = new Set(pendingContainerIds);
               const keys = state.userScrollAnchorReset.keys;
               tmp = set;
               for (const item10023 of keys) {
@@ -14872,7 +14514,7 @@ let closure_110 = memo(function ContainerLayoutCoordinatorComponent(children) {
         }
       })(context1);
       if (undefined !== tmp2) {
-        outer1_109(tmp, tmp2);
+        closure_1_109(tmp, tmp2);
       }
       tmp = context1;
     }
@@ -14891,13 +14533,9 @@ function getComponent(icon) {
   return tmp;
 }
 let memoResult2 = memo(function PositionViewAnimated2(arg0) {
-  let horizontal;
-  let id;
-  let refView;
-  let style;
   ({ id, horizontal, style, refView } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = {
+  obj = {
     getValue(arg0) {
       let tmp = arg0;
       if (null == arg0) {
@@ -14919,9 +14557,6 @@ let memoResult2 = memo(function PositionViewAnimated2(arg0) {
   return frozen.createElement(get_ActivityIndicator.Animated.View, { ref: refView, style: items });
 });
 let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
-  let context1;
-  let id;
-  let style;
   ({ id, horizontal: context1, style } = animatedScrollY);
   let first = style;
   animatedScrollY = animatedScrollY.animatedScrollY;
@@ -14932,11 +14567,11 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
   let num;
   let num2;
   let num3;
-  let c9;
-  let c10;
+  closure_9 = undefined;
+  closure_10 = undefined;
   let memo1;
   let memo2;
-  let obj = memo2;
+  obj = memo2;
   context = memo2.useContext(closure_17);
   let items = ["containerPosition" + id, "alignItemsAtEndPadding", "headerSize", "stylePaddingTop", "containerItemKey" + id, "containerItemIndex" + id, "totalSize"];
   context1 = undefined;
@@ -14950,15 +14585,15 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
   let items1 = [context1, first];
   const memo = obj.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -14980,11 +14615,11 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -15014,8 +14649,8 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
   if (undefined !== tmp6[3]) {
     num3 = tmp10;
   }
-  c9 = tmp11;
-  c10 = tmp12;
+  closure_9 = tmp11;
+  closure_10 = tmp12;
   let num4 = 0;
   if (undefined !== tmp6[6]) {
     num4 = tmp13;
@@ -15024,7 +14659,7 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
   memo1 = obj.useMemo(() => {
     const state = context.state;
     let diff;
-    if (c9) {
+    if (closure_9) {
       const sizes = state.sizes;
       const value = sizes.get(tmp2);
       if (value) {
@@ -15050,13 +14685,13 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
   }
   items3[6] = offset;
   memo2 = obj.useMemo(() => {
-    let obj = animatedScrollY;
+    obj = animatedScrollY;
     if (animatedScrollY) {
       let offset;
       if (null != stickyHeaderConfig) {
         offset = stickyHeaderConfig.offset;
       }
-      let num = 0;
+      num = 0;
       if (null != offset) {
         num = offset;
       }
@@ -15081,7 +14716,7 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
         interpolateResult1 = obj.interpolate(obj);
       }
       if (context1) {
-        const obj1 = { translateX: null };
+        obj1 = { translateX: null };
         obj1[0] = interpolateResult1;
         const items4 = [obj1];
         let items5 = items4;
@@ -15097,7 +14732,7 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
   let backdropComponent;
   const memo3 = obj.useMemo(() => {
     const items = [first, , ];
-    let obj = { zIndex: c10 + 1000 };
+    obj = { zIndex: closure_10 + 1000 };
     items[1] = obj;
     obj = { transform: memo2 };
     items[2] = obj;
@@ -15115,7 +14750,7 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
     }
     let element1 = null;
     if (backdropComponent) {
-      let obj = memo2;
+      obj = memo2;
       obj = { style: null };
       obj[0] = { inset: 0, pointerEvents: "none", position: "absolute" };
       let backdropComponent1;
@@ -15134,7 +14769,7 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
         tmp7 = element;
       }
       element1 = <memo1.View style={null}>{tmp7}</memo1.View>;
-      tmp5 = outer1_112;
+      tmp5 = closure_1_112;
     }
     return element1;
   }, items5);
@@ -15150,20 +14785,14 @@ noop = function noop() {
 };
 let map = new Map();
 let closure_121 = memo(function Container2(id) {
-  let ItemSeparatorComponent;
-  let c0;
-  let measureInLayoutEffect;
-  let onLayoutChange;
-  let recycleItems;
-  let stickyHeaderConfig;
   id = id.id;
-  let getActivityIndicator = id;
+  ScrollAdjustHandler = id;
   let itemKey = id.itemKey;
   measureInLayoutEffect = itemKey;
   let horizontal = id.horizontal;
   let onLayoutProp = horizontal;
   ({ getRenderedItem: onLayoutChange, ItemSeparatorComponent } = id);
-  let _slicedToArray = ItemSeparatorComponent;
+  let callback3 = ItemSeparatorComponent;
   let callback1;
   let columnWrapperStyle;
   let num3;
@@ -15171,7 +14800,7 @@ let closure_121 = memo(function Container2(id) {
   callback1 = undefined;
   let num6;
   let I18nManager;
-  let obj = frozen;
+  obj = frozen;
   ({ recycleItems, stickyHeaderConfig } = id);
   const context = frozen.useContext(closure_17);
   callback1 = context;
@@ -15199,10 +14828,10 @@ let closure_121 = memo(function Container2(id) {
   let positionComponentInternal = context.state.props.positionComponentInternal;
   let stickyPositionComponentInternal = context.state.props.stickyPositionComponentInternal;
   let items = ["containerColumn" + id, "containerSpan" + id, "containerItemData" + id, "numColumns", "extraData", "containerSticky" + id];
-  getActivityIndicator = undefined;
+  ScrollAdjustHandler = undefined;
   measureInLayoutEffect = undefined;
   const context1 = obj.useContext(closure_17);
-  getActivityIndicator = context1;
+  ScrollAdjustHandler = context1;
   if (1 === items.length) {
     let first = items[0];
   } else {
@@ -15212,15 +14841,15 @@ let closure_121 = memo(function Container2(id) {
   const items1 = [context1, first];
   const memo = obj.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -15242,11 +14871,11 @@ let closure_121 = memo(function Container2(id) {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -15259,8 +14888,8 @@ let closure_121 = memo(function Container2(id) {
     };
   }, items1);
   const get = memo.get;
-  let obj1 = getActivityIndicator(measureInLayoutEffect[6]);
-  const tmp12 = _slicedToArray(obj1.useSyncExternalStore(memo.subscribe, get, get), 6);
+  obj1 = ScrollAdjustHandler(measureInLayoutEffect[6]);
+  const tmp12 = callback3(obj1.useSyncExternalStore(memo.subscribe, get, get), 6);
   const first1 = tmp12[0];
   let num = 0;
   if (undefined !== first1) {
@@ -15276,24 +14905,24 @@ let closure_121 = memo(function Container2(id) {
   }
   let obj2 = num6;
   ref = num6.useRef(null);
-  getActivityIndicator = id;
+  ScrollAdjustHandler = id;
   measureInLayoutEffect = context;
   onLayoutProp = ref;
   onLayoutChange = undefined;
-  _slicedToArray = undefined;
+  callback3 = undefined;
   callback1 = undefined;
   const ref1 = num6.useRef({ didLayout: false, horizontal, itemKey });
   onLayoutChange = ref1;
   ref1.current.horizontal = horizontal;
   ref1.current.itemKey = itemKey;
-  const tmp11Result = _slicedToArray(num6.useState(0), 2);
-  _slicedToArray = tmp11Result[1];
+  const tmp11Result = callback3(num6.useState(0), 2);
+  callback3 = tmp11Result[1];
   const items2 = [id, context, ref];
   const items3 = [id, context];
   const callback = num6.useCallback((arg0) => {
     const current = itemKey.current;
     itemKey = undefined;
-    let closure_4;
+    closure_4 = undefined;
     let f118688;
     itemKey = current.itemKey;
     current.didLayout = true;
@@ -15312,7 +14941,7 @@ let closure_121 = memo(function Container2(id) {
     f118688 = () => {
 
     };
-    if (!outer1_27) {
+    if (!closure_1_27) {
       if (0 >= result) {
         const current2 = current.current;
         let measure;
@@ -15321,15 +14950,15 @@ let closure_121 = memo(function Container2(id) {
         }
         if (null != measure) {
           const call = measure.call;
-          const fn = (arg0, arg1, width, height) => {
-            let obj = { height, width };
+          fn = (arg0, arg1, width, height) => {
+            obj = { height, width };
             if (typeof f118688 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             current.lastSize = obj;
             obj = { containerId: closure_0, itemKey, size: obj };
             const items = [obj];
-            outer1_107(closure_1, items);
+            closure_1_107(closure_1, items);
           };
           if (typeof call === "unknown") {
             measure(fn);
@@ -15341,11 +14970,11 @@ let closure_121 = memo(function Container2(id) {
     }
     current.lastSize = closure_4;
     let items = [{ containerId: closure_0, itemKey, size: closure_4 }];
-    outer1_107(measureInLayoutEffect, items);
+    closure_1_107(measureInLayoutEffect, items);
   }, items2);
   callback1 = num6.useCallback(() => {
-    if (outer1_27) {
-      outer1_87(measureInLayoutEffect, c0);
+    if (closure_1_27) {
+      closure_1_87(measureInLayoutEffect, c0);
     } else {
       callback((arg0) => arg0 + 1);
     }
@@ -15355,7 +14984,7 @@ let closure_121 = memo(function Container2(id) {
     let containerLayoutTriggers = measureInLayoutEffect.containerLayoutTriggers;
     const result = containerLayoutTriggers.set(c0, callback1);
     return () => {
-      outer1_120.delete(ref.current);
+      closure_1_120.delete(ref.current);
       const containerLayoutTriggers = obj.containerLayoutTriggers;
       if (containerLayoutTriggers.get(closure_0) === closure_5) {
         const containerLayoutTriggers2 = obj.containerLayoutTriggers;
@@ -15364,13 +14993,13 @@ let closure_121 = memo(function Container2(id) {
     };
   }, items4);
   const layoutEffect1 = num6.useLayoutEffect(() => {
-    if (outer1_27) {
-      outer1_87(measureInLayoutEffect, c0);
+    if (closure_1_27) {
+      closure_1_87(measureInLayoutEffect, c0);
     }
   });
   obj = { measureInLayoutEffect: !closure_27, onLayoutChange: callback, ref };
   const items5 = [itemKey, tmp11Result[0]];
-  getActivityIndicator = undefined;
+  ScrollAdjustHandler = undefined;
   measureInLayoutEffect = undefined;
   onLayoutProp = undefined;
   onLayoutChange = undefined;
@@ -15391,7 +15020,7 @@ let closure_121 = memo(function Container2(id) {
     const items7 = [measureInLayoutEffect];
     HermesBuiltin.arraySpread(items5, 1);
     const layoutEffect2 = obj2.useLayoutEffect(() => {
-      let current = horizontal;
+      current = horizontal;
       if (horizontal) {
         current = stickyHeaderIndices.current;
       }
@@ -15405,7 +15034,7 @@ let closure_121 = memo(function Container2(id) {
   }
   const items8 = [id, context, itemKey];
   const effect = obj2.useEffect(() => {
-    if (!outer1_27) {
+    if (!closure_1_27) {
       onLayoutChange.current.didLayout = false;
       const _setTimeout = setTimeout;
       const timeout = setTimeout(() => {
@@ -15416,11 +15045,11 @@ let closure_121 = memo(function Container2(id) {
           lastSize = current.lastSize;
         }
         if (lastSize) {
-          const obj = { containerId: null, itemKey: null, size: null };
+          obj = { containerId: null, itemKey: null, size: null };
           obj[0] = closure_0;
           ({ itemKey: obj[1], lastSize: obj[2] } = current);
           const items = [obj];
-          outer1_107(closure_1, items);
+          closure_1_107(closure_1, items);
           current.didLayout = true;
         }
       }, 16);
@@ -15449,9 +15078,6 @@ let closure_121 = memo(function Container2(id) {
   const items9 = [horizontal, tmp5, num6, text, columnWrapperStyle, context.state.props.contentContainerAlignItems, num3, ItemSeparatorComponent];
   const items10 = [itemKey, tmp12[2], tmp12[4]];
   const memo1 = obj2.useMemo(() => {
-    let columnGap;
-    let gap;
-    let rowGap;
     if (!columnWrapperStyle) {
       if (tmp4) {
         let num11;
@@ -15460,7 +15086,7 @@ let closure_121 = memo(function Container2(id) {
             num11 = 0;
           }
         }
-        let obj = { bottom: null, boxSizing: null, direction: "r", flexDirection: 0, height: "absolute", left: null, position: 24, top: 36 };
+        obj = { bottom: null, boxSizing: null, direction: "r", flexDirection: 0, height: "absolute", left: null, position: 24, top: 36 };
         obj[0] = num11;
         let str3;
         if (obj) {
@@ -15495,7 +15121,7 @@ let closure_121 = memo(function Container2(id) {
         }
         obj[3] = tmp14;
         obj[5] = tmp7;
-        let obj1 = obj;
+        obj1 = obj;
         if (!obj) {
           obj1 = {};
         }
@@ -15625,14 +15251,8 @@ let closure_123 = memo(function ContainerSlot2(arg0) {
   return <ContainerSlotBase />;
 });
 let closure_124 = memo(function ContainersLayer2(horizontal) {
-  let columnGap;
-  let gap;
-  let rowGap;
-  let tmp6;
-  let tmp7;
-  let tmp8;
   horizontal = horizontal.horizontal;
-  let obj = frozen;
+  obj = frozen;
   const columnWrapperStyle = frozen.useContext(closure_17).columnWrapperStyle;
   const tmp = useValue$("totalSize");
   const items = ["readyToRender", "numColumns", "otherAxisSize"];
@@ -15647,15 +15267,15 @@ let closure_124 = memo(function ContainersLayer2(horizontal) {
   const items1 = [context, first];
   const memo = obj.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -15677,11 +15297,11 @@ let closure_124 = memo(function ContainersLayer2(horizontal) {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -15695,7 +15315,7 @@ let closure_124 = memo(function ContainersLayer2(horizontal) {
   }, items1);
   const get = memo.get;
   const obj2 = context(first[6]);
-  [tmp6, tmp7, tmp8] = _slicedToArray(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 3);
+  [tmp6, tmp7, tmp8] = callback3(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 3);
   let num = 0;
   if (undefined !== tmp8) {
     num = tmp8;
@@ -15765,15 +15385,11 @@ let closure_124 = memo(function ContainersLayer2(horizontal) {
   return obj.createElement(get_ActivityIndicator.Animated.View, { style: obj }, <closure_110>{arg0.children}</closure_110>);
 });
 let closure_125 = memo(function Containers2(horizontal) {
-  let ItemSeparatorComponent;
-  let getRenderedItem;
-  let recycleItems;
-  let stickyHeaderConfig;
   horizontal = horizontal.horizontal;
   const items = ["numContainersPooled"];
   let context;
   let first;
-  let obj = frozen;
+  obj = frozen;
   ({ recycleItems, ItemSeparatorComponent, stickyHeaderConfig, getRenderedItem } = horizontal);
   context = frozen.useContext(closure_17);
   if (1 === items.length) {
@@ -15784,15 +15400,15 @@ let closure_125 = memo(function Containers2(horizontal) {
   const items1 = [context, first];
   const memo = obj.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -15814,11 +15430,11 @@ let closure_125 = memo(function Containers2(horizontal) {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -15831,7 +15447,7 @@ let closure_125 = memo(function Containers2(horizontal) {
     };
   }, items1);
   const get = memo.get;
-  const first1 = _slicedToArray(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
+  const first1 = callback3(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
   const items2 = [];
   let num = 0;
   if (0 < first1) {
@@ -15859,7 +15475,7 @@ let closure_128 = frozen.forwardRef(function SnapWrapperInner(ScrollComponent, r
   const items = ["snapToOffsets"];
   let context;
   let first;
-  let obj = frozen;
+  obj = frozen;
   context = frozen.useContext(closure_17);
   if (1 === items.length) {
     first = items[0];
@@ -15869,15 +15485,15 @@ let closure_128 = frozen.forwardRef(function SnapWrapperInner(ScrollComponent, r
   const items1 = [context, first];
   const memo = obj.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -15899,11 +15515,11 @@ let closure_128 = frozen.forwardRef(function SnapWrapperInner(ScrollComponent, r
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -15919,20 +15535,19 @@ let closure_128 = frozen.forwardRef(function SnapWrapperInner(ScrollComponent, r
   obj = {};
   const merged1 = Object.assign(merged);
   obj.ref = ref;
-  obj.snapToOffsets = _slicedToArray(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
+  obj.snapToOffsets = callback3(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
   return obj.createElement(ScrollComponent.ScrollComponent, {});
 });
 function LayoutView(onLayoutChange) {
-  let measureInLayoutEffect;
   const refView = onLayoutChange.refView;
   const merged = Object.assign(onLayoutChange, Object.create(null));
-  let obj = noop;
+  obj = noop;
   let ref = noop.useRef(null);
   if (null != refView) {
     ref = refView;
   }
   obj = { onLayoutChange: onLayoutChange.onLayoutChange, ref };
-  ({ ref: get_ActivityIndicator, measureInLayoutEffect } = obj);
+  ({ ref: ScrollAdjustHandler, measureInLayoutEffect } = obj);
   if (measureInLayoutEffect === undefined) {
     measureInLayoutEffect = true;
   }
@@ -15949,7 +15564,7 @@ function LayoutView(onLayoutChange) {
     const items1 = [measureInLayoutEffect];
     HermesBuiltin.arraySpread([], 1);
     const layoutEffect = obj.useLayoutEffect(() => {
-      let current = horizontal;
+      current = horizontal;
       if (horizontal) {
         current = stickyHeaderIndices.current;
       }
@@ -15971,7 +15586,7 @@ let closure_130 = memo(function AlignItemsAtEndSpacer2(horizontal) {
   const items = ["alignItemsAtEndPadding"];
   let context;
   let first;
-  let obj = frozen;
+  obj = frozen;
   context = frozen.useContext(closure_17);
   if (1 === items.length) {
     first = items[0];
@@ -15981,15 +15596,15 @@ let closure_130 = memo(function AlignItemsAtEndSpacer2(horizontal) {
   const items1 = [context, first];
   const memo = obj.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -16011,11 +15626,11 @@ let closure_130 = memo(function AlignItemsAtEndSpacer2(horizontal) {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -16028,8 +15643,8 @@ let closure_130 = memo(function AlignItemsAtEndSpacer2(horizontal) {
     };
   }, items1);
   const get = memo.get;
-  let obj1 = context(first[6]);
-  const first1 = _slicedToArray(obj1.useSyncExternalStore(memo.subscribe, get, get), 1)[0];
+  obj1 = context(first[6]);
+  const first1 = callback3(obj1.useSyncExternalStore(memo.subscribe, get, get), 1)[0];
   let num = 0;
   if (undefined !== first1) {
     num = first1;
@@ -16051,31 +15666,6 @@ let closure_130 = memo(function AlignItemsAtEndSpacer2(horizontal) {
   }
 });
 let closure_131 = memo(function ListComponent2(ListFooterComponent) {
-  let ItemSeparatorComponent;
-  let ListEmptyComponent;
-  let ListFooterComponentStyle;
-  let ListHeaderComponent;
-  let ListHeaderComponentStyle;
-  let alignItemsAtEnd;
-  let canRender;
-  let contentContainerStyle;
-  let getRenderedItem;
-  let horizontal;
-  let initialContentOffset;
-  let onInternalScrollBeginDrag;
-  let onInternalScrollEnd;
-  let onLayout;
-  let onLayoutFooter;
-  let onScroll;
-  let recycleItems;
-  let refScrollView;
-  let renderScrollComponent;
-  let scrollAdjustHandler;
-  let snapToIndices;
-  let stickyHeaderConfig;
-  let stickyHeaderIndices;
-  let style;
-  let useWindowScroll;
   ({ canRender, style, horizontal } = ListFooterComponent);
   let ref = horizontal;
   ({ initialContentOffset, alignItemsAtEnd, ListHeaderComponent } = ListFooterComponent);
@@ -16087,7 +15677,7 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
   let merged = Object.assign(ListFooterComponent, Object.create(null));
   let context;
   let callback;
-  let obj = frozen;
+  obj = frozen;
   context = frozen.useContext(closure_17);
   const maintainVisibleContentPosition = context.state.props.maintainVisibleContentPosition;
   const items = ["otherAxisSize"];
@@ -16104,15 +15694,15 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
   const items1 = [context1, first];
   const memo = obj.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -16134,11 +15724,11 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -16151,7 +15741,7 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
     };
   }, items1);
   const get = memo.get;
-  let obj1 = ref(ref1[6]);
+  obj1 = ref(ref1[6]);
   const first1 = context(obj1.useSyncExternalStore(memo.subscribe, get, get), 1)[0];
   let num = 0;
   if (undefined !== first1) {
@@ -16171,8 +15761,8 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
       }
     }
   }
-  const fn = (arg0, ref) => {
-    const obj = {};
+  fn = (arg0, ref) => {
+    obj = {};
     const merged = Object.assign(arg0);
     obj.ref = ref;
     return obj;
@@ -16182,7 +15772,7 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
   ref1 = obj.useRef(fn);
   ref1.current = fn;
   const items2 = [ref1, ref];
-  let memo1 = obj.useMemo(() => outer1_12.forwardRef((AUTO_DISMISS, current) => {
+  let memo1 = obj.useMemo(() => closure_1_12.forwardRef((AUTO_DISMISS, current) => {
     current = ref.current;
     if (null == current) {
       return null;
@@ -16204,8 +15794,8 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
     const values = context.values;
     let tmp2 = values.get("footerSize") !== arg0;
     if (tmp2) {
-      outer1_22(tmp, "footerSize", arg0);
-      outer1_50(tmp);
+      closure_1_22(tmp, "footerSize", arg0);
+      closure_1_50(tmp);
     }
     if (null != arg1) {
       arg1();
@@ -16219,28 +15809,21 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
       tmp2 = onFooterLayout;
     }
     if (tmp2) {
-      outer1_64(tmp);
+      closure_1_64(tmp);
     }
   }, items3);
   const items4 = [ListHeaderComponent, ListFooterComponent, context, callback];
   const layoutEffect = noop.useLayoutEffect(() => {
-    let didContainersLayout;
-    let didFinishInitialScroll;
-    let props;
-    let scroll;
-    let scrollingTo;
-    let state;
-    let values;
     if (!ref1) {
       ({ state, values } = context);
       const tmp2 = values.get("headerSize") || 0;
-      let flag = state.didMeasureHeader;
+      flag = state.didMeasureHeader;
       if (!flag) {
         flag = tmp2 > 0.1;
       }
       if (tmp2 !== 0) {
-        outer1_22(tmp, "headerSize", 0);
-        outer1_50(tmp);
+        closure_1_22(tmp, "headerSize", 0);
+        closure_1_50(tmp);
         if (flag) {
           ({ didContainersLayout, didFinishInitialScroll, props, scroll, scrollingTo } = tmp.state);
           if (props.horizontal) {
@@ -16252,7 +15835,7 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
           }
         }
         if (flag) {
-          outer1_65(tmp, 0 - tmp2);
+          closure_1_65(tmp, 0 - tmp2);
         }
       }
       state.didMeasureHeader = true;
@@ -16264,26 +15847,19 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
   const items5 = [context, horizontal];
   const items6 = [horizontal, onLayoutFooter, callback];
   const callback1 = noop.useCallback((arg0) => {
-    let didContainersLayout;
-    let didFinishInitialScroll;
-    let props;
-    let scroll;
-    let scrollingTo;
-    let state;
-    let values;
     let str = "height";
     if (ref) {
       str = "width";
     }
     ({ state, values } = context);
     const tmp3 = values.get("headerSize") || 0;
-    let flag = state.didMeasureHeader;
+    flag = state.didMeasureHeader;
     if (!flag) {
       flag = tmp3 > 0.1;
     }
     if (tmp3 !== arg0[str]) {
-      outer1_22(tmp2, "headerSize", tmp);
-      outer1_50(tmp2);
+      closure_1_22(tmp2, "headerSize", tmp);
+      closure_1_50(tmp2);
       if (flag) {
         ({ didContainersLayout, didFinishInitialScroll, props, scroll, scrollingTo } = tmp2.state);
         if (props.horizontal) {
@@ -16295,21 +15871,21 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
         }
       }
       if (flag) {
-        outer1_65(tmp2, tmp - tmp3);
+        closure_1_65(tmp2, tmp - tmp3);
       }
     }
     state.didMeasureHeader = true;
   }, items5);
   obj1 = {};
   const callback2 = noop.useCallback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     let str = "height";
     if (closure_0) {
       str = "width";
     }
     callback(arg0[str], () => {
-      if (null != outer1_3) {
+      if (null != closure_1_3) {
         tmp(closure_0, closure_1);
       }
     });
@@ -16437,12 +16013,12 @@ let closure_132 = tmp16 ? (function useDevChecksImpl(childrenMode) {
       tmp = renderScrollComponent;
     }
     if (tmp) {
-      let tmp2 = outer1_31;
-      if (outer1_31) {
-        tmp2 = !outer1_53.has("useWindowScrollRenderScrollComponent");
+      let tmp2 = closure_1_31;
+      if (closure_1_31) {
+        tmp2 = !closure_1_53.has("useWindowScrollRenderScrollComponent");
       }
       if (tmp2) {
-        outer1_53.add("useWindowScrollRenderScrollComponent");
+        closure_1_53.add("useWindowScrollRenderScrollComponent");
         const _console = console;
         const _HermesInternal = HermesInternal;
         console.warn("[legend-list] " + "useWindowScroll is not supported when renderScrollComponent is provided.");
@@ -16462,12 +16038,12 @@ let closure_132 = tmp16 ? (function useDevChecksImpl(childrenMode) {
       isFirst = childrenMode;
     }
     if (!isFirst) {
-      let tmp3 = outer1_31;
-      if (outer1_31) {
-        tmp3 = !outer1_53.has("keyExtractor");
+      let tmp3 = closure_1_31;
+      if (closure_1_31) {
+        tmp3 = !closure_1_53.has("keyExtractor");
       }
       if (tmp3) {
-        outer1_53.add("keyExtractor");
+        closure_1_53.add("keyExtractor");
         const _console = console;
         const _HermesInternal = HermesInternal;
         console.warn("[legend-list] " + "Changing data without a keyExtractor can cause slow performance and resetting scroll. If your list data can change you should use a keyExtractor with a unique id for best performance and behavior.");
@@ -16483,14 +16059,13 @@ let closure_132 = tmp16 ? (function useDevChecksImpl(childrenMode) {
 });
 class ScrollAdjustHandler {
   constructor(arg0) {
-    tmp = normalizeMaintainScrollAtEndOn(this, ScrollAdjustHandler);
+    tmp = closure_2(this, ScrollAdjustHandler);
     this.appliedAdjust = 0;
     this.pendingAdjust = 0;
     this.ctx = global;
     return;
   }
 }
-get_ActivityIndicator = ScrollAdjustHandler;
 let items = [
   {
     key: "requestAdjust",
@@ -16511,11 +16086,11 @@ let items = [
           const scrollingTo2 = ctx.state.scrollingTo;
           const _requestAnimationFrame = requestAnimationFrame;
           ctx.state.animFrameCheckFinishedScroll = requestAnimationFrame(() => {
-            const scrollingTo = tmp.state.scrollingTo;
+            const scrollingTo = state.state.scrollingTo;
             if (scrollingTo) {
-              const state = tmp.state;
+              state = tmp.state;
               state.animFrameCheckFinishedScroll = undefined;
-              const tmp3 = outer1_62(tmp, scrollingTo);
+              const tmp3 = closure_1_62(tmp, scrollingTo);
               let isAtResolvedTarget = tmp3.isAtResolvedTarget;
               if (isAtResolvedTarget) {
                 const isInitialScroll = scrollingTo.isInitialScroll;
@@ -16529,7 +16104,7 @@ let items = [
                 isAtResolvedTarget = hasScrolled;
               }
               if (isAtResolvedTarget) {
-                outer1_60(tmp);
+                closure_1_60(tmp);
               }
             }
           });
@@ -16637,36 +16212,11 @@ let items = [
         }
         set$(self.ctx, "scrollAdjustPending", 0);
         const ctx2 = self.ctx;
-        let closure_1 = {};
+        closure_1 = {};
         state = undefined;
         state = ctx2.state;
         fn(() => {
-          let alwaysRenderIndicesArr;
-          let bottom;
-          let closure_4;
-          let dataChanged;
-          let doMVCP;
-          let enableScrollForNextCalculateItemsInView;
-          let endNoBuffer;
-          let forceFullItemPositions;
-          let getItemType;
-          let idCache;
-          let indexByKey;
-          let initialScroll;
-          let keyExtractor;
-          let minIndexSizeChanged;
-          let positions;
-          let props;
-          let queuedInitialLayout;
-          let scrollForNextCalculateItemsInView;
-          let scrollLength;
           let set2;
-          let sizes;
-          let startBufferedId;
-          let startNoBuffer;
-          let state;
-          let top;
-          let viewabilityConfigCallbackPairs;
           let addResult = state;
           let containerItemKeys = state.containerItemKeys;
           ({ enableScrollForNextCalculateItemsInView, idCache } = state);
@@ -16685,7 +16235,7 @@ let items = [
             let _Set = Set;
             stickyHeaderIndicesSet = new Set();
           }
-          let tmp9 = outer1_46(containerItemKeys, idCache.drawDistanceMode);
+          let tmp9 = closure_1_46(containerItemKeys, idCache.drawDistanceMode);
           ({ dataChanged, doMVCP, forceFullItemPositions } = idCache);
           let initialScrollSession = tmp2.initialScrollSession;
           let kind;
@@ -16696,18 +16246,18 @@ let items = [
           if ("bootstrap" === kind) {
             bootstrap = tmp2.initialScrollSession.bootstrap;
           }
-          let tmp16 = outer1_21(containerItemKeys, "numContainers");
+          let tmp16 = closure_1_21(containerItemKeys, "numContainers");
           if (data) {
             if (0 !== scrollLength) {
               if (tmp16) {
-                let closure_8 = outer1_25(tmp7);
+                closure_8 = closure_1_25(tmp7);
                 let tmp15Result = tmp15(tmp7, "stylePaddingTop");
                 let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-                let closure_9 = sum + tmp15(tmp7, "headerSize");
+                closure_9 = sum + tmp15(tmp7, "headerSize");
                 tmp15Result = tmp15(tmp7, "numColumns");
                 let scrollVelocity = idCache.scrollVelocity;
                 if (null == scrollVelocity) {
-                  scrollVelocity = outer1_69(tmp2);
+                  scrollVelocity = closure_1_69(tmp2);
                 }
                 ({ initialScroll, queuedInitialLayout } = tmp2);
                 if (!tmp13) {
@@ -16720,31 +16270,31 @@ let items = [
                   }
                 } else {
                   if (!queuedInitialLayout) {
-                    if (outer1_41(tmp2)) {
+                    if (closure_1_41(tmp2)) {
                       if (initialScroll) {
-                        scroll = outer1_75(tmp7, initialScroll);
+                        scroll = closure_1_75(tmp7, initialScroll);
                       }
                     }
                   }
                   scroll = tmp2.scroll;
                 }
-                let c10 = 0;
-                let c11 = 0;
-                let c12 = 0;
-                let c13 = 0;
-                let c14 = 0;
-                let c15 = 0;
+                c10 = 0;
+                c11 = 0;
+                c12 = 0;
+                c13 = 0;
+                c14 = 0;
+                c15 = 0;
                 function updateScroll2(scroll) {
-                  let closure_16 = scroll;
+                  closure_16 = scroll;
                   const values = containerItemKeys.values;
                   const value = values.get("scrollAdjustPending");
                   let num = 0;
                   if (null != value) {
                     num = value;
                   }
-                  let closure_11 = num - closure_9;
+                  closure_11 = num - closure_9;
                   const rounded = Math.round(scroll + closure_11);
-                  let closure_12 = rounded;
+                  closure_12 = rounded;
                   if (rounded + scrollLength > closure_8) {
                     const _Math = Math;
                     closure_12 = Math.max(0, tmp4 - tmp3);
@@ -16752,7 +16302,7 @@ let items = [
                 }
                 updateScroll2(scroll);
                 const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
-                let closure_17 = tmp15Result1;
+                closure_17 = tmp15Result1;
                 function resolveStickyState() {
                   let num = -1;
                   let num2 = -1;
@@ -16788,17 +16338,17 @@ let items = [
                     tmp8 = tmp9 >= 0;
                   }
                   if (tmp8) {
-                    outer2_22(containerItemKeys, "activeStickyIndex", num);
+                    closure_2_22(containerItemKeys, "activeStickyIndex", num);
                   }
-                  let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
-                  let fn;
+                  obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
+                  fn = undefined;
                   if (closure_4) {
                     if (arr.length > 0) {
                       if (tmp9 !== num) {
                         fn = () => {
-                          if (undefined !== outer1_6[num]) {
-                            if (null != outer1_4) {
-                              const obj = { index: null, item: null };
+                          if (undefined !== closure_1_6[num]) {
+                            if (null != closure_1_4) {
+                              obj = { index: null, item: null };
                               obj[0] = tmp;
                               obj[1] = tmp2;
                               tmp3(obj);
@@ -16837,7 +16387,7 @@ let items = [
                     num6 = 0;
                     if (!tmp25) {
                       num6 = 0;
-                      if (!outer1_41(tmp2)) {
+                      if (!closure_1_41(tmp2)) {
                         num6 = 0;
                         if (!tmp2.scrollingTo) {
                           num6 = 0;
@@ -16865,9 +16415,9 @@ let items = [
                 }
                 function updateScrollRange() {
                   const bound = Math.max(0, c12);
-                  let closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
-                  let closure_13 = bound - result2 + num6;
-                  let closure_15 = closure_14 + result3 + num6;
+                  closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
+                  closure_13 = bound - result2 + num6;
+                  closure_15 = closure_14 + result3 + num6;
                 }
                 updateScrollRange();
                 if (0 !== num6) {
@@ -16914,12 +16464,6 @@ let items = [
                           if (null === top) {
                             if (viewabilityConfigCallbackPairs) {
                               (function updateViewabilityForCachedRange(state, viewabilityConfigCallbackPairs, scrollLength, c12, c14) {
-                                let data;
-                                let data2;
-                                let keyExtractor;
-                                let keyExtractor2;
-                                let sizes;
-                                let startBuffered;
                                 state = state.state;
                                 const endBuffered = state.endBuffered;
                                 data = state.props.data;
@@ -16980,9 +16524,9 @@ let items = [
                                                 tmp12 = tmp6;
                                               }
                                               let tmp26 = tmp13;
-                                              let flag = false;
+                                              flag = false;
                                               if (null !== tmp11) {
-                                                let flag2 = true;
+                                                flag2 = true;
                                                 if (tmp23 <= c14) {
                                                   tmp13 = tmp6;
                                                   flag2 = false;
@@ -17018,7 +16562,7 @@ let items = [
                                             }
                                           }
                                         }
-                                        const obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
+                                        obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
                                         obj[0] = tmp9;
                                         obj[1] = sum1;
                                         if (null == sum1) {
@@ -17068,11 +16612,7 @@ let items = [
                                 }
                               })(tmp7, viewabilityConfigCallbackPairs, scrollLength, c12, c14);
                             } else if (tmp2.props.onFirstVisibleItemChanged) {
-                              outer1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
-                                let data;
-                                let keyExtractor;
-                                let sizes;
-                                let startBuffered;
+                              closure_1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
                                 state = state.state;
                                 const endBuffered = state.endBuffered;
                                 data = state.props.data;
@@ -17150,11 +16690,11 @@ let items = [
                 let tmp73;
                 if (doMVCP) {
                   if (!tmp25) {
-                    tmp73 = outer1_68(tmp7, dataChanged);
+                    tmp73 = closure_1_68(tmp7, dataChanged);
                   }
                 }
                 if (dataChanged) {
-                  outer1_86(tmp2);
+                  closure_1_86(tmp2);
                 }
                 let num8 = 0;
                 if (!forceFullItemPositions) {
@@ -17171,7 +16711,7 @@ let items = [
                     num8 = num9;
                   }
                 }
-                let obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
+                obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
                 obj[0] = doMVCP;
                 obj[1] = forceFullItemPositions;
                 let tmp82 = !forceFullItemPositions;
@@ -17188,8 +16728,8 @@ let items = [
                 obj[3] = c15;
                 obj[4] = scrollVelocity;
                 obj[5] = num8;
-                outer1_89(tmp7, dataChanged, obj);
-                const tmp17Result = outer1_25(tmp7);
+                closure_1_89(tmp7, dataChanged, obj);
+                const tmp17Result = closure_1_25(tmp7);
                 closure_8 = tmp17Result;
                 if (undefined !== minIndexSizeChanged) {
                   tmp2.minIndexSizeChanged = undefined;
@@ -17201,7 +16741,7 @@ let items = [
                         if (tmp2.idsInView.length > 0) {
                           const shouldRestorePosition = tmp2.props.maintainVisibleContentPosition.shouldRestorePosition;
                           const _Set2 = Set;
-                          let set = new Set();
+                          set = new Set();
                           const idsInView = tmp2.idsInView;
                           for (const item10226 of idsInView) {
                             let tmp99 = item10226;
@@ -17225,11 +16765,11 @@ let items = [
                 }
                 addResult = state;
                 addResult = state;
-                addResult = outer1_21;
-                addResult = outer1_21;
+                addResult = closure_1_21;
+                addResult = closure_1_21;
                 addResult = containerItemKeys;
                 addResult = containerItemKeys;
-                addResult = outer1_21(containerItemKeys, "scrollAdjustPending");
+                addResult = closure_1_21(containerItemKeys, "scrollAdjustPending");
                 let num11 = 0;
                 if (null != addResult) {
                   num11 = addResult;
@@ -17280,19 +16820,19 @@ let items = [
                   while (true) {
                     addResult = idCache[addResult];
                     if (null == addResult) {
-                      addResult = outer1_49;
+                      addResult = closure_1_49;
                       addResult = state;
                       addResult = state;
-                      addResult = outer1_49(state, addResult);
+                      addResult = closure_1_49(state, addResult);
                     }
                     addResult = sizes.get(addResult);
                     if (null == addResult) {
-                      addResult = outer1_58;
+                      addResult = closure_1_58;
                       addResult = containerItemKeys;
                       addResult = containerItemKeys;
                       let num14 = 0;
                       addResult = containerItemKeys;
-                      addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                      addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                     }
                     addResult = c13;
                     if (positions[addResult] + addResult <= c13) {
@@ -17326,12 +16866,12 @@ let items = [
                 let num18 = 0;
                 if (0 < tmp16) {
                   do {
-                    addResult = outer1_21;
-                    addResult = outer1_21;
+                    addResult = closure_1_21;
+                    addResult = closure_1_21;
                     addResult = containerItemKeys;
                     addResult = containerItemKeys;
                     let _HermesInternal = HermesInternal;
-                    addResult = outer1_21(containerItemKeys, "containerItemKey" + num16);
+                    addResult = closure_1_21(containerItemKeys, "containerItemKey" + num16);
                     addResult = num16;
                     addResult = num17;
                     addResult = num17;
@@ -17360,29 +16900,29 @@ let items = [
                     addResult = idCache[addResult];
                     addResult = flag3;
                     if (null == addResult) {
-                      addResult = outer1_49;
+                      addResult = closure_1_49;
                       addResult = state;
                       addResult = state;
-                      addResult = outer1_49(state, addResult);
+                      addResult = closure_1_49(state, addResult);
                     }
                     addResult = sizes.get(addResult);
                     if (null == addResult) {
-                      addResult = outer1_58;
+                      addResult = closure_1_58;
                       addResult = containerItemKeys;
                       addResult = containerItemKeys;
                       let num19 = 0;
                       addResult = containerItemKeys;
-                      addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                      addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                     }
                     addResult = positions[addResult];
                     addResult = flag3;
                     if (!flag3) {
-                      addResult = outer1_100;
+                      addResult = closure_1_100;
                       addResult = c12;
                       addResult = c14;
                       let num20 = 0;
                       addResult = obj;
-                      addResult = outer1_100(obj, addResult, addResult, addResult, c12, c14);
+                      addResult = closure_1_100(obj, addResult, addResult, addResult, c12, c14);
                       addResult = null === addResult;
                       if (addResult) {
                         addResult = c13;
@@ -17425,13 +16965,13 @@ let items = [
                   }
                 }
                 const _Object = Object;
-                let obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
+                obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
                 obj1[0] = addResult;
                 ({ endNoBuffer: obj5[1], firstFullyOnScreenIndex: obj5[2] } = obj);
-                addResult = outer1_101;
+                addResult = closure_1_101;
                 addResult = state;
                 addResult = state;
-                obj1[3] = outer1_101(state, obj);
+                obj1[3] = closure_1_101(state, obj);
                 obj1[4] = addResult;
                 obj1[5] = addResult;
                 obj1[6] = obj.startNoBuffer;
@@ -17443,9 +16983,9 @@ let items = [
                   enableScrollForNextCalculateItemsInView = undefined !== addResult;
                 }
                 if (enableScrollForNextCalculateItemsInView) {
-                  addResult = outer1_54;
-                  if (!outer1_54(addResult)) {
-                    let obj2 = { bottom: null, top: null };
+                  addResult = closure_1_54;
+                  if (!closure_1_54(addResult)) {
+                    obj2 = { bottom: null, top: null };
                     obj2[0] = addResult;
                     obj2[1] = addResult;
                     addResult = obj2;
@@ -17456,12 +16996,12 @@ let items = [
                 let items = [];
                 if (dataChanged) {
                   for (let num21 = 0; num21 < addResult; num21 = num21 + 1) {
-                    addResult = outer1_21;
-                    addResult = outer1_21;
+                    addResult = closure_1_21;
+                    addResult = closure_1_21;
                     addResult = containerItemKeys;
                     addResult = containerItemKeys;
                     let _HermesInternal2 = HermesInternal;
-                    addResult = outer1_21(containerItemKeys, "containerItemKey" + num21);
+                    addResult = closure_1_21(containerItemKeys, "containerItemKey" + num21);
                     addResult = !keyExtractor;
                     addResult = num21;
                     if (keyExtractor) {
@@ -17477,8 +17017,8 @@ let items = [
                 addResult = state;
                 addResult = state;
                 const scrollTargetPinnedRange = state.scrollTargetPinnedRange;
-                let c22 = 0;
-                let c23 = -1;
+                c22 = 0;
+                c23 = -1;
                 let num23 = -1;
                 let num24 = 0;
                 if (scrollTargetPinnedRange) {
@@ -17495,7 +17035,7 @@ let items = [
                   num24 = addResult;
                 }
                 addResult = num24 <= num23;
-                let closure_24 = addResult;
+                closure_24 = addResult;
                 function isPinnedRenderIndex(addResult) {
                   let hasItem = set.has(addResult);
                   if (!hasItem) {
@@ -17518,13 +17058,11 @@ let items = [
                     addResult = new.target;
                     const set1 = new Set();
                     function addPinnedIndex(item10471) {
-                      let data;
-                      let keyExtractor;
                       if (item10471 >= 0) {
                         if (item10471 < length) {
                           let tmp4 = idCache[item10471];
                           if (null == tmp4) {
-                            ({ data, keyExtractor } = outer1_2.props);
+                            ({ data, keyExtractor } = closure_1_2.props);
                             let str = "";
                             if (data) {
                               let tmp2 = null;
@@ -17542,7 +17080,7 @@ let items = [
                           }
                           const value = containerItemKeys.get(tmp4);
                           if (undefined !== value) {
-                            const stickyContainerPool = outer1_2.stickyContainerPool;
+                            const stickyContainerPool = closure_1_2.stickyContainerPool;
                             stickyContainerPool.add(value);
                           } else {
                             let hasItem = null == tmp4;
@@ -17562,10 +17100,10 @@ let items = [
                       do {
                         addResult = idCache[addResult];
                         if (null == addResult) {
-                          addResult = outer1_49;
+                          addResult = closure_1_49;
                           addResult = state;
                           addResult = state;
-                          addResult = outer1_49(state, addResult);
+                          addResult = closure_1_49(state, addResult);
                         }
                         if (!containerItemKeys.has(addResult)) {
                           addResult = set1.add(addResult);
@@ -17604,9 +17142,7 @@ let items = [
                       addResult = items1;
                       addResult = set1;
                       addResult = (function handleStickyActivation(addResult, prop, arg2, items1, addResult2, addResult3, addResult4) {
-                        let data;
-                        let keyExtractor;
-                        const state = addResult.state;
+                        state = addResult.state;
                         let num = -1;
                         if (arg2 >= 0) {
                           num = prop[arg2];
@@ -17640,7 +17176,7 @@ let items = [
                               }
                               let tmp8 = tmp5;
                               if (tmp5) {
-                                let containerItemKeys = state.containerItemKeys;
+                                containerItemKeys = state.containerItemKeys;
                                 tmp8 = !containerItemKeys.has(tmp5);
                               }
                               if (tmp8) {
@@ -17660,14 +17196,14 @@ let items = [
                         } while (num2 <= 1);
                       })(addResult, prop, num25, items1, addResult, addResult, addResult);
                     } else if (-1 !== tmp15Result1) {
-                      addResult = outer1_22;
-                      addResult = outer1_22;
+                      addResult = closure_1_22;
+                      addResult = closure_1_22;
                       addResult = containerItemKeys;
                       addResult = containerItemKeys;
-                      addResult = outer1_22(containerItemKeys, "activeStickyIndex", -1);
+                      addResult = closure_1_22(containerItemKeys, "activeStickyIndex", -1);
                     }
                     if (items1.length > 0) {
-                      let fn;
+                      fn = undefined;
                       if (getItemType) {
                         fn = (arg0) => {
                           const tmp = getItemType(data[arg0], arg0);
@@ -17687,22 +17223,20 @@ let items = [
                       addResult = fn;
                       addResult = tmp88;
                       addResult = (function findAvailableContainers(containerItemKeys, items1, addResult, addResult2, items, fn, has) {
-                        let closure_2;
-                        let stickyContainerPool;
-                        let closure_0 = fn;
+                        closure_0 = fn;
                         if (0 === items1.length) {
                           return [];
                         } else {
                           const tmp56 = length(containerItemKeys, "numContainers");
-                          const state = containerItemKeys.state;
+                          state = containerItemKeys.state;
                           ({ containerItemMetadata: closure_2, stickyContainerPool } = state);
-                          let set;
+                          set = undefined;
                           if (items.length > 0) {
                             const _Set = Set;
                             set = new Set(items);
                           }
                           const mapped = items1.map((itemIndex) => {
-                            const obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
+                            obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
                             stickyHeaderIndicesSet = state.props.stickyHeaderIndicesSet;
                             let tmp;
                             if (null != callback) {
@@ -17745,7 +17279,7 @@ let items = [
                               if (stickyContainerPool.has(num2)) {
                                 let tmp22 = undefined === tmp13 || tmp18;
                                 if (tmp22) {
-                                  let obj = { containerIndex: null, distance: null };
+                                  obj = { containerIndex: null, distance: null };
                                   obj[0] = num2;
                                   let _Number2 = Number;
                                   obj[1] = Number.POSITIVE_INFINITY;
@@ -17780,7 +17314,7 @@ let items = [
                           const _Array = Array;
                           const array = new Array(length);
                           let sum = tmp56;
-                          let c5 = false;
+                          c5 = false;
                           function assign(itemIndex, containerIndex) {
                             array[itemIndex.order] = { containerIndex, itemIndex: itemIndex.itemIndex, itemType: itemIndex.itemType };
                             let deleteResult;
@@ -17788,35 +17322,35 @@ let items = [
                               deleteResult = set.delete(containerIndex);
                             }
                             if (deleteResult) {
-                              let c5 = true;
+                              c5 = true;
                             }
                           }
                           function assignMatching(found, items, arg2) {
-                            let closure_0 = items;
-                            let closure_1 = arg2;
+                            closure_0 = items;
+                            closure_1 = arg2;
                             function _loop2(iter) {
-                              const items = iter;
-                              if (outer1_4[iter.order]) {
+                              items = iter;
+                              if (closure_1_4[iter.order]) {
                                 return 1;
                               } else {
                                 const findIndexResult = items.findIndex(() => { ... });
                                 if (-1 !== findIndexResult) {
                                   const containerIndex = array(items.splice(findIndexResult, 1), 1)[0].containerIndex;
-                                  if (typeof outer1_6 !== "function") {
+                                  if (typeof closure_1_6 !== "function") {
                                     HermesBuiltin.throwTypeError();
                                   }
-                                  const obj = { containerIndex: null, itemIndex: null, itemType: null };
+                                  obj = { containerIndex: null, itemIndex: null, itemType: null };
                                   obj[0] = containerIndex;
                                   ({ itemIndex: obj[1], itemType: obj[2] } = iter);
                                   tmp[iter.order] = obj;
                                   let deleteResult;
-                                  if (null != outer1_3) {
+                                  if (null != closure_1_3) {
                                     deleteResult = obj2.delete(containerIndex);
                                   }
                                   if (deleteResult) {
-                                    const outer1_5 = true;
+                                    c5 = true;
                                   }
-                                  obj2 = outer1_3;
+                                  obj2 = closure_1_3;
                                 }
                               }
                             }
@@ -17857,7 +17391,7 @@ let items = [
                               }
                               let tmp43 = item10099;
                               let tmp44 = tmp38;
-                              let obj1 = assign(tmp36, tmp39);
+                              obj1 = assign(tmp36, tmp39);
                             }
                             continue;
                           }
@@ -17878,7 +17412,7 @@ let items = [
                             }
                             if (sum > POSITIVE_INFINITY) {
                               const _console = console;
-                              let obj2 = { debugInfo: null };
+                              obj2 = { debugInfo: null };
                               const obj3 = { numContainers: null, numContainersPooled: null, numNeeded: null, stillNeeded: null };
                               obj3[0] = tmp56;
                               obj3[1] = POSITIVE_INFINITY;
@@ -17900,19 +17434,19 @@ let items = [
                         let containerIndex = addResult.containerIndex;
                         addResult = idCache[itemIndex];
                         if (null == addResult) {
-                          addResult = outer1_49;
+                          addResult = closure_1_49;
                           addResult = state;
                           addResult = state;
                           addResult = itemIndex;
-                          addResult = outer1_49(state, addResult);
+                          addResult = closure_1_49(state, addResult);
                         }
                         addResult = containerItemKeys;
                         addResult = containerItemKeys;
                         addResult = containerIndex;
                         let _HermesInternal3 = HermesInternal;
-                        addResult = outer1_21;
-                        addResult = outer1_21;
-                        addResult = outer1_21(containerItemKeys, "containerItemKey" + containerIndex);
+                        addResult = closure_1_21;
+                        addResult = closure_1_21;
+                        addResult = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                         if (addResult) {
                           addResult = addResult !== addResult;
                         }
@@ -17939,23 +17473,23 @@ let items = [
                           }
                           state.containerItemGenerations[containerIndex] = num28 + 1;
                         }
-                        addResult = outer1_22;
-                        addResult = outer1_22;
+                        addResult = closure_1_22;
+                        addResult = closure_1_22;
                         addResult = containerIndex;
                         let _HermesInternal4 = HermesInternal;
-                        addResult = outer1_22(addResult, "containerItemKey" + containerIndex, addResult);
+                        addResult = closure_1_22(addResult, "containerItemKey" + containerIndex, addResult);
                         let _HermesInternal5 = HermesInternal;
                         addResult = itemIndex;
-                        addResult = outer1_22(addResult, "containerItemIndex" + containerIndex, addResult);
+                        addResult = closure_1_22(addResult, "containerItemIndex" + containerIndex, addResult);
                         let _HermesInternal6 = HermesInternal;
-                        addResult = outer1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
+                        addResult = closure_1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
                         addResult = state;
                         addResult = state;
                         let containerItemMetadata = state.containerItemMetadata;
-                        addResult = outer1_28;
+                        addResult = closure_1_28;
                         let num29 = 0;
                         addResult = state;
-                        addResult = containerItemMetadata.set(containerIndex, outer1_28(state, itemIndex, data[addResult], addResult.itemType));
+                        addResult = containerItemMetadata.set(containerIndex, closure_1_28(state, itemIndex, data[addResult], addResult.itemType));
                         addResult = containerItemKeys.set(addResult, containerIndex);
                         let userScrollAnchorReset = state.userScrollAnchorReset;
                         if (null != userScrollAnchorReset) {
@@ -17995,14 +17529,14 @@ let items = [
                         continue;
                       }
                       if (addResult !== tmp16) {
-                        addResult = outer1_22;
-                        addResult = outer1_22;
+                        addResult = closure_1_22;
+                        addResult = closure_1_22;
                         addResult = containerItemKeys;
                         addResult = containerItemKeys;
-                        addResult = outer1_22(containerItemKeys, "numContainers", addResult);
-                        addResult = outer1_21;
-                        addResult = outer1_21;
-                        if (addResult > outer1_21(containerItemKeys, "numContainersPooled")) {
+                        addResult = closure_1_22(containerItemKeys, "numContainers", addResult);
+                        addResult = closure_1_21;
+                        addResult = closure_1_21;
+                        if (addResult > closure_1_21(containerItemKeys, "numContainersPooled")) {
                           addResult = addResult(addResult, "numContainersPooled", (function getExpandedContainerPoolSize(length, addResult) {
                             let num = 0;
                             if (length > 0) {
@@ -18051,7 +17585,7 @@ let items = [
                   addResult = items;
                   addResult = isPinnedRenderIndex;
                   addResult = (function handleStickyRecycling(addResult, prop, addResult2, arg3, arg4, items, isPinnedRenderIndex) {
-                    const state = addResult.state;
+                    state = addResult.state;
                     const iter = state.stickyContainerPool[Symbol.iterator]();
                     const nextResult = iter.next();
                     while (iter !== undefined) {
@@ -18077,7 +17611,7 @@ let items = [
                             if (tmp11 < arg4 - 1) {
                               let tmp18 = index;
                               let tmp19 = prop[tmp11 + 1];
-                              let flag = false;
+                              flag = false;
                               if (tmp19) {
                                 let tmp44 = tmp19;
                                 let tmp45 = state.positions[tmp20];
@@ -18160,12 +17694,12 @@ let items = [
                 let flag5 = false;
                 if (0 < addResult) {
                   do {
-                    addResult = outer1_21;
-                    addResult = outer1_21;
+                    addResult = closure_1_21;
+                    addResult = closure_1_21;
                     addResult = containerItemKeys;
                     addResult = containerItemKeys;
                     let _HermesInternal8 = HermesInternal;
-                    addResult = outer1_21(containerItemKeys, "containerItemKey" + num32);
+                    addResult = closure_1_21(containerItemKeys, "containerItemKey" + num32);
                     addResult = flag5;
                     addResult = undefined;
                     addResult = num32;
@@ -18199,41 +17733,41 @@ let items = [
                       addResult = containerItemMetadata2.delete(num32);
                       let stickyContainerPool3 = state.stickyContainerPool;
                       if (stickyContainerPool3.has(num32)) {
-                        addResult = outer1_22;
-                        addResult = outer1_22;
+                        addResult = closure_1_22;
+                        addResult = closure_1_22;
                         let _HermesInternal9 = HermesInternal;
-                        addResult = outer1_22(addResult, "containerSticky" + num32, false);
+                        addResult = closure_1_22(addResult, "containerSticky" + num32, false);
                         let stickyContainerPool4 = addResult.stickyContainerPool;
                         addResult = stickyContainerPool4.delete(num32);
                       }
-                      addResult = outer1_22;
-                      addResult = outer1_22;
+                      addResult = closure_1_22;
+                      addResult = closure_1_22;
                       let _HermesInternal10 = HermesInternal;
-                      addResult = outer1_22(addResult, "containerItemKey" + num32, undefined);
+                      addResult = closure_1_22(addResult, "containerItemKey" + num32, undefined);
                       let _HermesInternal11 = HermesInternal;
-                      addResult = outer1_22(addResult, "containerItemIndex" + num32, undefined);
+                      addResult = closure_1_22(addResult, "containerItemIndex" + num32, undefined);
                       let _HermesInternal12 = HermesInternal;
-                      addResult = outer1_22(addResult, "containerItemData" + num32, undefined);
+                      addResult = closure_1_22(addResult, "containerItemData" + num32, undefined);
                       let _HermesInternal13 = HermesInternal;
-                      addResult = outer1_32;
-                      addResult = outer1_22(addResult, "containerPosition" + num32, outer1_32);
+                      addResult = closure_1_32;
+                      addResult = closure_1_22(addResult, "containerPosition" + num32, closure_1_32);
                       let _HermesInternal14 = HermesInternal;
-                      addResult = outer1_22(addResult, "containerColumn" + num32, -1);
+                      addResult = closure_1_22(addResult, "containerColumn" + num32, -1);
                       let _HermesInternal15 = HermesInternal;
-                      addResult = outer1_22(addResult, "containerSpan" + num32, 1);
+                      addResult = closure_1_22(addResult, "containerSpan" + num32, 1);
                       addResult = flag5;
                     } else {
                       addResult = indexByKey.get(addResult);
                       addResult = flag5;
                       if (undefined !== addResult) {
-                        addResult = outer1_88;
+                        addResult = closure_1_88;
                         let obj3 = { scrollAdjustPending: null, updateLayout: true };
                         addResult = c10;
                         obj3[0] = c10;
                         let num35 = 0;
                         addResult = num32;
                         addResult = obj3;
-                        addResult = outer1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
+                        addResult = closure_1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
                       }
                     }
                     num32 = num32 + 1;
@@ -18242,29 +17776,29 @@ let items = [
                 }
                 addResult = set2;
                 if (set2) {
-                  addResult = outer1_27;
+                  addResult = closure_1_27;
                 }
                 if (addResult) {
-                  addResult = outer1_87;
+                  addResult = closure_1_87;
                   addResult = containerItemKeys;
                   addResult = containerItemKeys;
-                  addResult = outer1_87(containerItemKeys, set2);
+                  addResult = closure_1_87(containerItemKeys, set2);
                 }
                 if (!tmp13) {
-                  addResult = outer1_84;
+                  addResult = closure_1_84;
                   addResult = containerItemKeys;
                   addResult = containerItemKeys;
-                  addResult = outer1_84(containerItemKeys);
+                  addResult = closure_1_84(containerItemKeys);
                 } else {
-                  addResult = outer1_102;
+                  addResult = closure_1_102;
                   addResult = state;
                   addResult = state;
-                  addResult = outer1_102(state, obj.startNoBuffer);
+                  addResult = closure_1_102(state, obj.startNoBuffer);
                   if (!queuedInitialLayout) {
                     if (!addResult.didContainersLayout) {
-                      addResult = outer1_41;
-                      addResult = outer1_77;
-                      if (outer1_41(addResult)) {
+                      addResult = closure_1_41;
+                      addResult = closure_1_77;
+                      if (closure_1_41(addResult)) {
                         addResult = addResult(addResult, addResult.startBuffered, addResult.endBuffered);
                       } else {
                         addResult = addResult(addResult, addResult.startNoBuffer, addResult.endNoBuffer);
@@ -18281,7 +17815,7 @@ let items = [
                           callback2(containerItemKeys, { didLayout: true });
                         })(containerItemKeys);
                         addResult = (function handleInitialScrollLayoutReady(containerItemKeys) {
-                          let closure_0 = containerItemKeys;
+                          closure_0 = containerItemKeys;
                           if (containerItemKeys.state.initialScroll) {
                             callback6(containerItemKeys, { forceScroll: true });
                             const initialScrollSession = containerItemKeys.state.initialScrollSession;
@@ -18292,7 +17826,7 @@ let items = [
                             if ("offset" !== kind) {
                               const _requestAnimationFrame = requestAnimationFrame;
                               const animationFrame = requestAnimationFrame(function runScroll() {
-                                return outer1_76(closure_0, { forceScroll: true });
+                                return closure_1_76(closure_0, { forceScroll: true });
                               });
                             }
                             closure_0 = containerItemKeys;
@@ -18320,7 +17854,7 @@ let items = [
                     addResult = containerItemKeys;
                     state = containerItemKeys.state;
                     ({ startNoBuffer, endNoBuffer } = obj);
-                    addResult = outer1_91;
+                    addResult = closure_1_91;
                     if (null == addResult) {
                       addResult = obj.startNoBuffer;
                     }
@@ -18347,8 +17881,8 @@ let items = [
                     }
                   }
                 }
-                let tmp17 = outer1_25;
-                const tmp80 = outer1_89;
+                let tmp17 = closure_1_25;
+                const tmp80 = closure_1_89;
               }
             }
           }
@@ -18370,15 +17904,15 @@ function useArr$(items) {
   items = [context, first];
   const memo = frozen.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -18400,11 +17934,11 @@ function useArr$(items) {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -18449,7 +17983,7 @@ function useStableRenderComponent(renderScrollComponent, current2) {
   const ref1 = frozen.useRef(current2);
   ref1.current = current2;
   const items = [ref1, ref];
-  return frozen.useMemo(() => outer1_12.forwardRef((AUTO_DISMISS, current) => {
+  return frozen.useMemo(() => closure_1_12.forwardRef((AUTO_DISMISS, current) => {
     current = ref.current;
     if (null == current) {
       return null;
@@ -18469,10 +18003,10 @@ function useCombinedRef(animatedRef, forwardedRef) {
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (nextResult) {
-        let tmp4 = outer1_52;
+        let tmp4 = closure_1_52;
         let tmp5 = nextResult;
         let tmp6 = nextResult;
-        if (outer1_52(tmp3)) {
+        if (closure_1_52(tmp3)) {
           let tmp3Result = tmp3(current);
         } else {
           tmp3.current = current;
@@ -18509,16 +18043,13 @@ function addIndex(add) {
   }
 }
 memoResult1 = memo(function PositionViewState2(id) {
-  let horizontal;
-  let refView;
-  let style;
   id = id.id;
   ({ horizontal, style, refView } = id);
   const merged = Object.assign(id, Object.create(null));
   const items = ["containerPosition" + id, "containerItemKey" + id];
   let context;
   let first;
-  let obj = frozen;
+  obj = frozen;
   context = frozen.useContext(closure_17);
   if (1 === items.length) {
     first = items[0];
@@ -18528,15 +18059,15 @@ memoResult1 = memo(function PositionViewState2(id) {
   const items1 = [context, first];
   const memo = obj.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -18558,11 +18089,11 @@ memoResult1 = memo(function PositionViewState2(id) {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -18575,8 +18106,8 @@ memoResult1 = memo(function PositionViewState2(id) {
     };
   }, items1);
   const get = memo.get;
-  let obj1 = context(first[6]);
-  let first1 = _slicedToArray(obj1.useSyncExternalStore(memo.subscribe, get, get), 2)[0];
+  obj1 = context(first[6]);
+  let first1 = callback3(obj1.useSyncExternalStore(memo.subscribe, get, get), 2)[0];
   if (undefined === first1) {
     first1 = c32;
   }
@@ -18614,11 +18145,11 @@ let obj1 = {
         const scrollingTo2 = ctx.state.scrollingTo;
         const _requestAnimationFrame = requestAnimationFrame;
         ctx.state.animFrameCheckFinishedScroll = requestAnimationFrame(() => {
-          const scrollingTo = tmp.state.scrollingTo;
+          const scrollingTo = state.state.scrollingTo;
           if (scrollingTo) {
-            const state = tmp.state;
+            state = tmp.state;
             state.animFrameCheckFinishedScroll = undefined;
-            const tmp3 = outer1_62(tmp, scrollingTo);
+            const tmp3 = closure_1_62(tmp, scrollingTo);
             let isAtResolvedTarget = tmp3.isAtResolvedTarget;
             if (isAtResolvedTarget) {
               const isInitialScroll = scrollingTo.isInitialScroll;
@@ -18632,7 +18163,7 @@ let obj1 = {
               isAtResolvedTarget = hasScrolled;
             }
             if (isAtResolvedTarget) {
-              outer1_60(tmp);
+              closure_1_60(tmp);
             }
           }
         });
@@ -18643,76 +18174,7 @@ let obj1 = {
   }
 };
 let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
-  let ListEmptyComponent;
-  let ListFooterComponent;
-  let ListFooterComponentStyle;
-  let ListHeaderComponent;
-  let animatedPropsInternal;
-  let columnGap;
-  let columnWrapperStyle;
-  let contentContainerStyle;
-  let contentInset;
-  let contentInsetEndAdjustment;
-  let createElement;
-  let createElement2;
-  let data;
-  let dataKey;
-  let dataVersion;
-  let drawDistance;
-  let estimatedHeaderSize;
-  let estimatedItemSize;
-  let estimatedListSize;
-  let experimental_adaptiveRender;
-  let extraData;
-  let gap;
-  let getFixedItemSize;
-  let getItemType;
-  let horizontal;
-  let initialScrollAtEnd;
-  let initialScrollIndex;
-  let initialScrollOffset;
-  let itemsAreEqual;
-  let itemsAreEqual2;
-  let keyExtractor;
-  let keyExtractor2;
-  let listen$;
-  let maintainVisibleContentPosition;
-  let measureInLayoutEffect;
-  let numColumns;
-  let onEndReachedThreshold;
-  let onFirstVisibleItemChanged;
-  let onItemSizeChanged;
-  let onLayout;
-  let onLoad;
-  let onMomentumScrollEnd;
-  let onRefresh;
-  let onScroll;
-  let onScrollBeginDrag;
-  let onStartReached;
-  let onStartReachedThreshold;
-  let onStickyHeaderChange;
-  let overrideItemLayout;
-  let positionComponentInternal;
-  let positionComponentInternal2;
-  let progressViewOffset;
-  let refScrollView;
-  let refreshControl;
-  let refreshing;
-  let renderItem;
-  let renderScrollComponent;
-  let rowGap;
-  let rtl;
-  let scrollEventThrottle;
-  let size;
-  let snapToIndices;
-  let stickyHeaderIndices;
-  let stickyPositionComponentInternal;
-  let stickyPositionComponentInternal2;
-  let style;
-  let tmp67;
-  let useWindowScroll;
-  let viewabilityConfig;
-  let obj = snapToIndices;
+  obj = snapToIndices;
   let callback = snapToIndices.useCallback((arg0) => {
 
   }, []);
@@ -18753,7 +18215,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
   ({ getFixedItemSize, getItemType, horizontal } = recycleItems);
   callback = horizontal;
   ({ rtl, estimatedHeaderSize, initialScrollAtEnd } = recycleItems);
-  let closure_5 = tmp9;
+  closure_5 = tmp9;
   ({ initialScrollIndex, initialScrollOffset, experimental_adaptiveRender, keyExtractor, ListFooterComponent } = recycleItems);
   let maintainScrollAtEnd = recycleItems.maintainScrollAtEnd;
   let tmp10 = undefined !== maintainScrollAtEnd;
@@ -18797,7 +18259,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
   ({ positionComponentInternal: positionComponentInternal2, stickyPositionComponentInternal: stickyPositionComponentInternal2 } = tmp12);
   ({ animatedPropsInternal, positionComponentInternal, stickyPositionComponentInternal } = recycleItems);
   let tmp13 = onScroll(tmp12, onViewableItemsChanged);
-  let obj1 = StyleSheet;
+  obj1 = StyleSheet;
   const flattenResult = StyleSheet.flatten(contentContainerStyle);
   let tmp15 = tmp8;
   if (undefined !== alignItemsAtEnd && alignItemsAtEnd) {
@@ -18836,9 +18298,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
       obj1 = {};
       const merged3 = Object.assign(obj1.flatten(style));
       let tmp38 = extractPadding(obj1, obj, "Top");
-      let closure_13 = tmp38;
+      closure_13 = tmp38;
       let tmp39 = extractPadding(obj1, obj, "Bottom");
-      let closure_14 = tmp39;
+      closure_14 = tmp39;
       if (!tmp10) {
         if (true === maintainVisibleContentPosition) {
           let obj2 = { data: true, size: true };
@@ -18875,7 +18337,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           }
           tmp55 = tmp56;
         }
-        const createAnimatedValue = tmp55;
+        isRTL = tmp55;
         let tmp59 = !tmp9;
         if (!tmp9) {
           tmp59 = !tmp53;
@@ -18886,12 +18348,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           }
           tmp59 = tmp54;
         }
-        let closure_17 = tmp59;
+        isRTL = tmp59;
         let tmp60 = tmp9;
         if (!tmp9) {
           tmp60 = tmp53;
         }
-        let c18 = tmp60;
+        closure_18 = tmp60;
         if (tmp9) {
           let obj4 = { index: null, preserveForBottomPadding: true, viewOffset: null, viewPosition: 1 };
           let _Math = Math;
@@ -18946,11 +18408,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           obj7[0] = num9;
           tmp61 = obj7;
         }
-        const StateProvider = tmp61;
+        obj7 = tmp61;
         let obj13 = viewabilityConfigCallbackPairs;
-        [tmp67, listen$] = callback(viewabilityConfigCallbackPairs.useState(!closure_27), 2);
-        let closure_21 = callback(viewabilityConfigCallbackPairs.useReducer((arg0) => arg0 + 1, 0), 2)[1];
-        context = viewabilityConfigCallbackPairs.useContext(closure_17);
+        [tmp67, listen$] = callback(viewabilityConfigCallbackPairs.useState(!overrideItemLayout), 2);
+        closure_21 = callback(viewabilityConfigCallbackPairs.useReducer((arg0) => arg0 + 1, 0), 2)[1];
+        context = viewabilityConfigCallbackPairs.useContext(isRTL);
         if (!columnWrapperStyle) {
           ({ gap, columnGap, rowGap } = obj);
           obj.gap = undefined;
@@ -18999,13 +18461,13 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           }
         }
         ref = obj.useRef(null);
-        let fn = keyExtractor;
-        const tmp64 = closure_27;
-        const tmp66 = callback(viewabilityConfigCallbackPairs.useState(!closure_27), 2);
+        fn = keyExtractor;
+        const tmp64 = overrideItemLayout;
+        const tmp66 = callback(viewabilityConfigCallbackPairs.useState(!overrideItemLayout), 2);
         if (null == keyExtractor) {
           fn = (arg0, arg1) => arg1.toString();
         }
-        let closure_25 = obj.useRef(undefined);
+        closure_25 = obj.useRef(undefined);
         let anchorIndex;
         if (null != anchoredEndSpace) {
           anchorIndex = anchoredEndSpace.anchorIndex;
@@ -19054,7 +18516,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               return [];
             } else {
               const _Set2 = Set;
-              const set = new Set();
+              set = new Set();
               let length = arg1.length;
               top = undefined;
               if (null != top) {
@@ -19124,7 +18586,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 const _Set = Set;
                 const set1 = new Set(top.keys);
                 if (0 < length) {
-                  let num4 = 0;
+                  num4 = 0;
                   if (set1.size > 0) {
                     while (true) {
                       let tmp26 = arg2(arg1[num4], num4);
@@ -19171,13 +18633,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               return arr;
             }
           })(horizontal, context, fn, anchorIndex);
-          const obj = { arr: tmp5, set: null };
-          obj[1] = new Set(tmp5);
+          obj = { arr: tmp5, set: new Set(tmp5) };
           return obj;
         }, items);
         const ref1 = obj.useRef(undefined);
-        closure_27 = tmp88;
-        let closure_28 = obj.useRef(tmp88);
+        overrideItemLayout = tmp88;
+        closure_28 = obj.useRef(tmp88);
         if (!ref1.current) {
           if (!context.state) {
             if (null != estimatedListSize) {
@@ -19201,7 +18662,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               obj9[2] = [];
               obj9[3] = [];
               const _Map = Map;
-              const map = new Map();
+              map = new Map();
               obj9[4] = map;
               const _Map2 = Map;
               callback = new.target;
@@ -19271,39 +18732,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               context.state = obj9;
               let state = context.state;
               state.triggerCalculateItemsInView = (arg0) => {
-                let obj = arg0;
-                let closure_0 = context;
+                obj = arg0;
+                closure_0 = context;
                 if (arg0 === undefined) {
                   obj = {};
                 }
-                const state = context.state;
-                outer1_97(() => {
-                  let alwaysRenderIndicesArr;
-                  let bottom;
-                  let closure_4;
-                  let dataChanged;
-                  let doMVCP;
-                  let enableScrollForNextCalculateItemsInView;
-                  let endNoBuffer;
-                  let forceFullItemPositions;
-                  let getItemType;
-                  let idCache;
-                  let indexByKey;
-                  let initialScroll;
-                  let keyExtractor;
-                  let minIndexSizeChanged;
-                  let positions;
-                  let props;
-                  let queuedInitialLayout;
-                  let scrollForNextCalculateItemsInView;
-                  let scrollLength;
+                state = context.state;
+                closure_1_97(() => {
                   let set2;
-                  let sizes;
-                  let startBufferedId;
-                  let startNoBuffer;
-                  let state;
-                  let top;
-                  let viewabilityConfigCallbackPairs;
                   let addResult = state;
                   let containerItemKeys = state.containerItemKeys;
                   ({ enableScrollForNextCalculateItemsInView, idCache } = state);
@@ -19322,7 +18758,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     let _Set = Set;
                     stickyHeaderIndicesSet = new Set();
                   }
-                  let tmp9 = outer1_46(containerItemKeys, idCache.drawDistanceMode);
+                  let tmp9 = closure_1_46(containerItemKeys, idCache.drawDistanceMode);
                   ({ dataChanged, doMVCP, forceFullItemPositions } = idCache);
                   let initialScrollSession = tmp2.initialScrollSession;
                   let kind;
@@ -19333,18 +18769,18 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   if ("bootstrap" === kind) {
                     bootstrap = tmp2.initialScrollSession.bootstrap;
                   }
-                  let tmp16 = outer1_21(containerItemKeys, "numContainers");
+                  let tmp16 = closure_1_21(containerItemKeys, "numContainers");
                   if (data) {
                     if (0 !== scrollLength) {
                       if (tmp16) {
-                        let closure_8 = outer1_25(tmp7);
+                        closure_8 = closure_1_25(tmp7);
                         let tmp15Result = tmp15(tmp7, "stylePaddingTop");
                         let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-                        let closure_9 = sum + tmp15(tmp7, "headerSize");
+                        closure_9 = sum + tmp15(tmp7, "headerSize");
                         tmp15Result = tmp15(tmp7, "numColumns");
                         let scrollVelocity = idCache.scrollVelocity;
                         if (null == scrollVelocity) {
-                          scrollVelocity = outer1_69(tmp2);
+                          scrollVelocity = closure_1_69(tmp2);
                         }
                         ({ initialScroll, queuedInitialLayout } = tmp2);
                         if (!tmp13) {
@@ -19357,31 +18793,31 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           }
                         } else {
                           if (!queuedInitialLayout) {
-                            if (outer1_41(tmp2)) {
+                            if (closure_1_41(tmp2)) {
                               if (initialScroll) {
-                                scroll = outer1_75(tmp7, initialScroll);
+                                scroll = closure_1_75(tmp7, initialScroll);
                               }
                             }
                           }
                           scroll = tmp2.scroll;
                         }
-                        let c10 = 0;
-                        let c11 = 0;
-                        let c12 = 0;
-                        let c13 = 0;
-                        let c14 = 0;
-                        let c15 = 0;
+                        c10 = 0;
+                        c11 = 0;
+                        c12 = 0;
+                        c13 = 0;
+                        c14 = 0;
+                        c15 = 0;
                         function updateScroll2(scroll) {
-                          let closure_16 = scroll;
+                          closure_16 = scroll;
                           const values = containerItemKeys.values;
                           const value = values.get("scrollAdjustPending");
                           let num = 0;
                           if (null != value) {
                             num = value;
                           }
-                          let closure_11 = num - closure_9;
+                          closure_11 = num - closure_9;
                           const rounded = Math.round(scroll + closure_11);
-                          let closure_12 = rounded;
+                          closure_12 = rounded;
                           if (rounded + scrollLength > closure_8) {
                             const _Math = Math;
                             closure_12 = Math.max(0, tmp4 - tmp3);
@@ -19389,7 +18825,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         }
                         updateScroll2(scroll);
                         const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
-                        let closure_17 = tmp15Result1;
+                        closure_17 = tmp15Result1;
                         function resolveStickyState() {
                           let num = -1;
                           let num2 = -1;
@@ -19425,17 +18861,17 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             tmp8 = tmp9 >= 0;
                           }
                           if (tmp8) {
-                            outer2_22(containerItemKeys, "activeStickyIndex", num);
+                            closure_2_22(containerItemKeys, "activeStickyIndex", num);
                           }
-                          let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
-                          let fn;
+                          obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
+                          fn = undefined;
                           if (closure_4) {
                             if (arr.length > 0) {
                               if (tmp9 !== num) {
                                 fn = () => {
-                                  if (undefined !== outer1_6[num]) {
-                                    if (null != outer1_4) {
-                                      const obj = { index: null, item: null };
+                                  if (undefined !== closure_1_6[num]) {
+                                    if (null != closure_1_4) {
+                                      obj = { index: null, item: null };
                                       obj[0] = tmp;
                                       obj[1] = tmp2;
                                       tmp3(obj);
@@ -19474,7 +18910,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             num6 = 0;
                             if (!tmp25) {
                               num6 = 0;
-                              if (!outer1_41(tmp2)) {
+                              if (!closure_1_41(tmp2)) {
                                 num6 = 0;
                                 if (!tmp2.scrollingTo) {
                                   num6 = 0;
@@ -19502,9 +18938,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         }
                         function updateScrollRange() {
                           const bound = Math.max(0, c12);
-                          let closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
-                          let closure_13 = bound - result2 + num6;
-                          let closure_15 = closure_14 + result3 + num6;
+                          closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
+                          closure_13 = bound - result2 + num6;
+                          closure_15 = closure_14 + result3 + num6;
                         }
                         updateScrollRange();
                         if (0 !== num6) {
@@ -19551,12 +18987,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   if (null === top) {
                                     if (viewabilityConfigCallbackPairs) {
                                       (function updateViewabilityForCachedRange(state, viewabilityConfigCallbackPairs, scrollLength, c12, c14) {
-                                        let data;
-                                        let data2;
-                                        let keyExtractor;
-                                        let keyExtractor2;
-                                        let sizes;
-                                        let startBuffered;
                                         state = state.state;
                                         const endBuffered = state.endBuffered;
                                         data = state.props.data;
@@ -19617,9 +19047,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                                         tmp12 = tmp6;
                                                       }
                                                       let tmp26 = tmp13;
-                                                      let flag = false;
+                                                      flag = false;
                                                       if (null !== tmp11) {
-                                                        let flag2 = true;
+                                                        flag2 = true;
                                                         if (tmp23 <= c14) {
                                                           tmp13 = tmp6;
                                                           flag2 = false;
@@ -19655,7 +19085,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                                     }
                                                   }
                                                 }
-                                                const obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
+                                                obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
                                                 obj[0] = tmp9;
                                                 obj[1] = sum1;
                                                 if (null == sum1) {
@@ -19705,11 +19135,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                         }
                                       })(tmp7, viewabilityConfigCallbackPairs, scrollLength, c12, c14);
                                     } else if (tmp2.props.onFirstVisibleItemChanged) {
-                                      outer1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
-                                        let data;
-                                        let keyExtractor;
-                                        let sizes;
-                                        let startBuffered;
+                                      closure_1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
                                         state = state.state;
                                         const endBuffered = state.endBuffered;
                                         data = state.props.data;
@@ -19787,11 +19213,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         let tmp73;
                         if (doMVCP) {
                           if (!tmp25) {
-                            tmp73 = outer1_68(tmp7, dataChanged);
+                            tmp73 = closure_1_68(tmp7, dataChanged);
                           }
                         }
                         if (dataChanged) {
-                          outer1_86(tmp2);
+                          closure_1_86(tmp2);
                         }
                         let num8 = 0;
                         if (!forceFullItemPositions) {
@@ -19808,7 +19234,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             num8 = num9;
                           }
                         }
-                        let obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
+                        obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
                         obj[0] = doMVCP;
                         obj[1] = forceFullItemPositions;
                         let tmp82 = !forceFullItemPositions;
@@ -19825,8 +19251,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         obj[3] = c15;
                         obj[4] = scrollVelocity;
                         obj[5] = num8;
-                        outer1_89(tmp7, dataChanged, obj);
-                        const tmp17Result = outer1_25(tmp7);
+                        closure_1_89(tmp7, dataChanged, obj);
+                        const tmp17Result = closure_1_25(tmp7);
                         closure_8 = tmp17Result;
                         if (undefined !== minIndexSizeChanged) {
                           tmp2.minIndexSizeChanged = undefined;
@@ -19838,7 +19264,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 if (tmp2.idsInView.length > 0) {
                                   const shouldRestorePosition = tmp2.props.maintainVisibleContentPosition.shouldRestorePosition;
                                   const _Set2 = Set;
-                                  let set = new Set();
+                                  set = new Set();
                                   const idsInView = tmp2.idsInView;
                                   for (const item10226 of idsInView) {
                                     let tmp99 = item10226;
@@ -19862,11 +19288,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         }
                         addResult = state;
                         addResult = state;
-                        addResult = outer1_21;
-                        addResult = outer1_21;
+                        addResult = closure_1_21;
+                        addResult = closure_1_21;
                         addResult = containerItemKeys;
                         addResult = containerItemKeys;
-                        addResult = outer1_21(containerItemKeys, "scrollAdjustPending");
+                        addResult = closure_1_21(containerItemKeys, "scrollAdjustPending");
                         let num11 = 0;
                         if (null != addResult) {
                           num11 = addResult;
@@ -19917,19 +19343,19 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           while (true) {
                             addResult = idCache[addResult];
                             if (null == addResult) {
-                              addResult = outer1_49;
+                              addResult = closure_1_49;
                               addResult = state;
                               addResult = state;
-                              addResult = outer1_49(state, addResult);
+                              addResult = closure_1_49(state, addResult);
                             }
                             addResult = sizes.get(addResult);
                             if (null == addResult) {
-                              addResult = outer1_58;
+                              addResult = closure_1_58;
                               addResult = containerItemKeys;
                               addResult = containerItemKeys;
                               let num14 = 0;
                               addResult = containerItemKeys;
-                              addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                              addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                             }
                             addResult = c13;
                             if (positions[addResult] + addResult <= c13) {
@@ -19963,12 +19389,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         let num18 = 0;
                         if (0 < tmp16) {
                           do {
-                            addResult = outer1_21;
-                            addResult = outer1_21;
+                            addResult = closure_1_21;
+                            addResult = closure_1_21;
                             addResult = containerItemKeys;
                             addResult = containerItemKeys;
                             let _HermesInternal = HermesInternal;
-                            addResult = outer1_21(containerItemKeys, "containerItemKey" + num16);
+                            addResult = closure_1_21(containerItemKeys, "containerItemKey" + num16);
                             addResult = num16;
                             addResult = num17;
                             addResult = num17;
@@ -19997,29 +19423,29 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             addResult = idCache[addResult];
                             addResult = flag3;
                             if (null == addResult) {
-                              addResult = outer1_49;
+                              addResult = closure_1_49;
                               addResult = state;
                               addResult = state;
-                              addResult = outer1_49(state, addResult);
+                              addResult = closure_1_49(state, addResult);
                             }
                             addResult = sizes.get(addResult);
                             if (null == addResult) {
-                              addResult = outer1_58;
+                              addResult = closure_1_58;
                               addResult = containerItemKeys;
                               addResult = containerItemKeys;
                               let num19 = 0;
                               addResult = containerItemKeys;
-                              addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                              addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                             }
                             addResult = positions[addResult];
                             addResult = flag3;
                             if (!flag3) {
-                              addResult = outer1_100;
+                              addResult = closure_1_100;
                               addResult = c12;
                               addResult = c14;
                               let num20 = 0;
                               addResult = obj;
-                              addResult = outer1_100(obj, addResult, addResult, addResult, c12, c14);
+                              addResult = closure_1_100(obj, addResult, addResult, addResult, c12, c14);
                               addResult = null === addResult;
                               if (addResult) {
                                 addResult = c13;
@@ -20062,13 +19488,13 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           }
                         }
                         const _Object = Object;
-                        let obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
+                        obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
                         obj1[0] = addResult;
                         ({ endNoBuffer: obj5[1], firstFullyOnScreenIndex: obj5[2] } = obj);
-                        addResult = outer1_101;
+                        addResult = closure_1_101;
                         addResult = state;
                         addResult = state;
-                        obj1[3] = outer1_101(state, obj);
+                        obj1[3] = closure_1_101(state, obj);
                         obj1[4] = addResult;
                         obj1[5] = addResult;
                         obj1[6] = obj.startNoBuffer;
@@ -20080,9 +19506,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           enableScrollForNextCalculateItemsInView = undefined !== addResult;
                         }
                         if (enableScrollForNextCalculateItemsInView) {
-                          addResult = outer1_54;
-                          if (!outer1_54(addResult)) {
-                            let obj2 = { bottom: null, top: null };
+                          addResult = closure_1_54;
+                          if (!closure_1_54(addResult)) {
+                            obj2 = { bottom: null, top: null };
                             obj2[0] = addResult;
                             obj2[1] = addResult;
                             addResult = obj2;
@@ -20093,12 +19519,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         let items = [];
                         if (dataChanged) {
                           for (let num21 = 0; num21 < addResult; num21 = num21 + 1) {
-                            addResult = outer1_21;
-                            addResult = outer1_21;
+                            addResult = closure_1_21;
+                            addResult = closure_1_21;
                             addResult = containerItemKeys;
                             addResult = containerItemKeys;
                             let _HermesInternal2 = HermesInternal;
-                            addResult = outer1_21(containerItemKeys, "containerItemKey" + num21);
+                            addResult = closure_1_21(containerItemKeys, "containerItemKey" + num21);
                             addResult = !keyExtractor;
                             addResult = num21;
                             if (keyExtractor) {
@@ -20114,8 +19540,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         addResult = state;
                         addResult = state;
                         const scrollTargetPinnedRange = state.scrollTargetPinnedRange;
-                        let c22 = 0;
-                        let c23 = -1;
+                        c22 = 0;
+                        c23 = -1;
                         let num23 = -1;
                         let num24 = 0;
                         if (scrollTargetPinnedRange) {
@@ -20132,7 +19558,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           num24 = addResult;
                         }
                         addResult = num24 <= num23;
-                        let closure_24 = addResult;
+                        closure_24 = addResult;
                         function isPinnedRenderIndex(addResult) {
                           let hasItem = set.has(addResult);
                           if (!hasItem) {
@@ -20155,13 +19581,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             addResult = new.target;
                             const set1 = new Set();
                             function addPinnedIndex(item10471) {
-                              let data;
-                              let keyExtractor;
                               if (item10471 >= 0) {
                                 if (item10471 < length) {
                                   let tmp4 = idCache[item10471];
                                   if (null == tmp4) {
-                                    ({ data, keyExtractor } = outer1_2.props);
+                                    ({ data, keyExtractor } = closure_1_2.props);
                                     let str = "";
                                     if (data) {
                                       let tmp2 = null;
@@ -20179,7 +19603,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   }
                                   const value = containerItemKeys.get(tmp4);
                                   if (undefined !== value) {
-                                    const stickyContainerPool = outer1_2.stickyContainerPool;
+                                    const stickyContainerPool = closure_1_2.stickyContainerPool;
                                     stickyContainerPool.add(value);
                                   } else {
                                     let hasItem = null == tmp4;
@@ -20199,10 +19623,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               do {
                                 addResult = idCache[addResult];
                                 if (null == addResult) {
-                                  addResult = outer1_49;
+                                  addResult = closure_1_49;
                                   addResult = state;
                                   addResult = state;
-                                  addResult = outer1_49(state, addResult);
+                                  addResult = closure_1_49(state, addResult);
                                 }
                                 if (!containerItemKeys.has(addResult)) {
                                   addResult = set1.add(addResult);
@@ -20241,9 +19665,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               addResult = items1;
                               addResult = set1;
                               addResult = (function handleStickyActivation(addResult, prop, arg2, items1, addResult2, addResult3, addResult4) {
-                                let data;
-                                let keyExtractor;
-                                const state = addResult.state;
+                                state = addResult.state;
                                 let num = -1;
                                 if (arg2 >= 0) {
                                   num = prop[arg2];
@@ -20277,7 +19699,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                       }
                                       let tmp8 = tmp5;
                                       if (tmp5) {
-                                        let containerItemKeys = state.containerItemKeys;
+                                        containerItemKeys = state.containerItemKeys;
                                         tmp8 = !containerItemKeys.has(tmp5);
                                       }
                                       if (tmp8) {
@@ -20297,14 +19719,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 } while (num2 <= 1);
                               })(addResult, prop, num25, items1, addResult, addResult, addResult);
                             } else if (-1 !== tmp15Result1) {
-                              addResult = outer1_22;
-                              addResult = outer1_22;
+                              addResult = closure_1_22;
+                              addResult = closure_1_22;
                               addResult = containerItemKeys;
                               addResult = containerItemKeys;
-                              addResult = outer1_22(containerItemKeys, "activeStickyIndex", -1);
+                              addResult = closure_1_22(containerItemKeys, "activeStickyIndex", -1);
                             }
                             if (items1.length > 0) {
-                              let fn;
+                              fn = undefined;
                               if (getItemType) {
                                 fn = (arg0) => {
                                   const tmp = getItemType(data[arg0], arg0);
@@ -20324,22 +19746,20 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               addResult = fn;
                               addResult = tmp88;
                               addResult = (function findAvailableContainers(containerItemKeys, items1, addResult, addResult2, items, fn, has) {
-                                let closure_2;
-                                let stickyContainerPool;
-                                let closure_0 = fn;
+                                closure_0 = fn;
                                 if (0 === items1.length) {
                                   return [];
                                 } else {
                                   const tmp56 = length(containerItemKeys, "numContainers");
-                                  const state = containerItemKeys.state;
+                                  state = containerItemKeys.state;
                                   ({ containerItemMetadata: closure_2, stickyContainerPool } = state);
-                                  let set;
+                                  set = undefined;
                                   if (items.length > 0) {
                                     const _Set = Set;
                                     set = new Set(items);
                                   }
                                   const mapped = items1.map((itemIndex) => {
-                                    const obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
+                                    obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
                                     stickyHeaderIndicesSet = state.props.stickyHeaderIndicesSet;
                                     let tmp;
                                     if (null != callback) {
@@ -20382,7 +19802,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                       if (stickyContainerPool.has(num2)) {
                                         let tmp22 = undefined === tmp13 || tmp18;
                                         if (tmp22) {
-                                          let obj = { containerIndex: null, distance: null };
+                                          obj = { containerIndex: null, distance: null };
                                           obj[0] = num2;
                                           let _Number2 = Number;
                                           obj[1] = Number.POSITIVE_INFINITY;
@@ -20417,7 +19837,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   const _Array = Array;
                                   const array = new Array(length);
                                   let sum = tmp56;
-                                  let c5 = false;
+                                  c5 = false;
                                   function assign(itemIndex, containerIndex) {
                                     array[itemIndex.order] = { containerIndex, itemIndex: itemIndex.itemIndex, itemType: itemIndex.itemType };
                                     let deleteResult;
@@ -20425,12 +19845,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                       deleteResult = set.delete(containerIndex);
                                     }
                                     if (deleteResult) {
-                                      let c5 = true;
+                                      c5 = true;
                                     }
                                   }
                                   function assignMatching(found, items, arg2) {
-                                    let closure_0 = items;
-                                    let closure_1 = arg2;
+                                    closure_0 = items;
+                                    closure_1 = arg2;
                                     function _loop2() { ... }
                                     const iter = found[Symbol.iterator]();
                                     while (iter !== undefined) {
@@ -20463,7 +19883,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                       }
                                       let tmp43 = item10099;
                                       let tmp44 = tmp38;
-                                      let obj1 = assign(tmp36, tmp39);
+                                      obj1 = assign(tmp36, tmp39);
                                     }
                                     continue;
                                   }
@@ -20484,7 +19904,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                     }
                                     if (sum > POSITIVE_INFINITY) {
                                       const _console = console;
-                                      let obj2 = { debugInfo: null };
+                                      obj2 = { debugInfo: null };
                                       const obj3 = { numContainers: null, numContainersPooled: null, numNeeded: null, stillNeeded: null };
                                       obj3[0] = tmp56;
                                       obj3[1] = POSITIVE_INFINITY;
@@ -20506,19 +19926,19 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 let containerIndex = addResult.containerIndex;
                                 addResult = idCache[itemIndex];
                                 if (null == addResult) {
-                                  addResult = outer1_49;
+                                  addResult = closure_1_49;
                                   addResult = state;
                                   addResult = state;
                                   addResult = itemIndex;
-                                  addResult = outer1_49(state, addResult);
+                                  addResult = closure_1_49(state, addResult);
                                 }
                                 addResult = containerItemKeys;
                                 addResult = containerItemKeys;
                                 addResult = containerIndex;
                                 let _HermesInternal3 = HermesInternal;
-                                addResult = outer1_21;
-                                addResult = outer1_21;
-                                addResult = outer1_21(containerItemKeys, "containerItemKey" + containerIndex);
+                                addResult = closure_1_21;
+                                addResult = closure_1_21;
+                                addResult = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                                 if (addResult) {
                                   addResult = addResult !== addResult;
                                 }
@@ -20545,23 +19965,23 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   }
                                   state.containerItemGenerations[containerIndex] = num28 + 1;
                                 }
-                                addResult = outer1_22;
-                                addResult = outer1_22;
+                                addResult = closure_1_22;
+                                addResult = closure_1_22;
                                 addResult = containerIndex;
                                 let _HermesInternal4 = HermesInternal;
-                                addResult = outer1_22(addResult, "containerItemKey" + containerIndex, addResult);
+                                addResult = closure_1_22(addResult, "containerItemKey" + containerIndex, addResult);
                                 let _HermesInternal5 = HermesInternal;
                                 addResult = itemIndex;
-                                addResult = outer1_22(addResult, "containerItemIndex" + containerIndex, addResult);
+                                addResult = closure_1_22(addResult, "containerItemIndex" + containerIndex, addResult);
                                 let _HermesInternal6 = HermesInternal;
-                                addResult = outer1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
+                                addResult = closure_1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
                                 addResult = state;
                                 addResult = state;
                                 let containerItemMetadata = state.containerItemMetadata;
-                                addResult = outer1_28;
+                                addResult = closure_1_28;
                                 let num29 = 0;
                                 addResult = state;
-                                addResult = containerItemMetadata.set(containerIndex, outer1_28(state, itemIndex, data[addResult], addResult.itemType));
+                                addResult = containerItemMetadata.set(containerIndex, closure_1_28(state, itemIndex, data[addResult], addResult.itemType));
                                 addResult = containerItemKeys.set(addResult, containerIndex);
                                 let userScrollAnchorReset = state.userScrollAnchorReset;
                                 if (null != userScrollAnchorReset) {
@@ -20601,14 +20021,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 continue;
                               }
                               if (addResult !== tmp16) {
-                                addResult = outer1_22;
-                                addResult = outer1_22;
+                                addResult = closure_1_22;
+                                addResult = closure_1_22;
                                 addResult = containerItemKeys;
                                 addResult = containerItemKeys;
-                                addResult = outer1_22(containerItemKeys, "numContainers", addResult);
-                                addResult = outer1_21;
-                                addResult = outer1_21;
-                                if (addResult > outer1_21(containerItemKeys, "numContainersPooled")) {
+                                addResult = closure_1_22(containerItemKeys, "numContainers", addResult);
+                                addResult = closure_1_21;
+                                addResult = closure_1_21;
+                                if (addResult > closure_1_21(containerItemKeys, "numContainersPooled")) {
                                   addResult = addResult(addResult, "numContainersPooled", (function getExpandedContainerPoolSize(length, addResult) {
                                     let num = 0;
                                     if (length > 0) {
@@ -20657,7 +20077,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           addResult = items;
                           addResult = isPinnedRenderIndex;
                           addResult = (function handleStickyRecycling(addResult, prop, addResult2, arg3, arg4, items, isPinnedRenderIndex) {
-                            const state = addResult.state;
+                            state = addResult.state;
                             const iter = state.stickyContainerPool[Symbol.iterator]();
                             const nextResult = iter.next();
                             while (iter !== undefined) {
@@ -20683,7 +20103,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                     if (tmp11 < arg4 - 1) {
                                       let tmp18 = index;
                                       let tmp19 = prop[tmp11 + 1];
-                                      let flag = false;
+                                      flag = false;
                                       if (tmp19) {
                                         let tmp44 = tmp19;
                                         let tmp45 = state.positions[tmp20];
@@ -20766,12 +20186,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         let flag5 = false;
                         if (0 < addResult) {
                           do {
-                            addResult = outer1_21;
-                            addResult = outer1_21;
+                            addResult = closure_1_21;
+                            addResult = closure_1_21;
                             addResult = containerItemKeys;
                             addResult = containerItemKeys;
                             let _HermesInternal8 = HermesInternal;
-                            addResult = outer1_21(containerItemKeys, "containerItemKey" + num32);
+                            addResult = closure_1_21(containerItemKeys, "containerItemKey" + num32);
                             addResult = flag5;
                             addResult = undefined;
                             addResult = num32;
@@ -20805,41 +20225,41 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               addResult = containerItemMetadata2.delete(num32);
                               let stickyContainerPool3 = state.stickyContainerPool;
                               if (stickyContainerPool3.has(num32)) {
-                                addResult = outer1_22;
-                                addResult = outer1_22;
+                                addResult = closure_1_22;
+                                addResult = closure_1_22;
                                 let _HermesInternal9 = HermesInternal;
-                                addResult = outer1_22(addResult, "containerSticky" + num32, false);
+                                addResult = closure_1_22(addResult, "containerSticky" + num32, false);
                                 let stickyContainerPool4 = addResult.stickyContainerPool;
                                 addResult = stickyContainerPool4.delete(num32);
                               }
-                              addResult = outer1_22;
-                              addResult = outer1_22;
+                              addResult = closure_1_22;
+                              addResult = closure_1_22;
                               let _HermesInternal10 = HermesInternal;
-                              addResult = outer1_22(addResult, "containerItemKey" + num32, undefined);
+                              addResult = closure_1_22(addResult, "containerItemKey" + num32, undefined);
                               let _HermesInternal11 = HermesInternal;
-                              addResult = outer1_22(addResult, "containerItemIndex" + num32, undefined);
+                              addResult = closure_1_22(addResult, "containerItemIndex" + num32, undefined);
                               let _HermesInternal12 = HermesInternal;
-                              addResult = outer1_22(addResult, "containerItemData" + num32, undefined);
+                              addResult = closure_1_22(addResult, "containerItemData" + num32, undefined);
                               let _HermesInternal13 = HermesInternal;
-                              addResult = outer1_32;
-                              addResult = outer1_22(addResult, "containerPosition" + num32, outer1_32);
+                              addResult = closure_1_32;
+                              addResult = closure_1_22(addResult, "containerPosition" + num32, closure_1_32);
                               let _HermesInternal14 = HermesInternal;
-                              addResult = outer1_22(addResult, "containerColumn" + num32, -1);
+                              addResult = closure_1_22(addResult, "containerColumn" + num32, -1);
                               let _HermesInternal15 = HermesInternal;
-                              addResult = outer1_22(addResult, "containerSpan" + num32, 1);
+                              addResult = closure_1_22(addResult, "containerSpan" + num32, 1);
                               addResult = flag5;
                             } else {
                               addResult = indexByKey.get(addResult);
                               addResult = flag5;
                               if (undefined !== addResult) {
-                                addResult = outer1_88;
+                                addResult = closure_1_88;
                                 let obj3 = { scrollAdjustPending: null, updateLayout: true };
                                 addResult = c10;
                                 obj3[0] = c10;
                                 let num35 = 0;
                                 addResult = num32;
                                 addResult = obj3;
-                                addResult = outer1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
+                                addResult = closure_1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
                               }
                             }
                             num32 = num32 + 1;
@@ -20848,29 +20268,29 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         }
                         addResult = set2;
                         if (set2) {
-                          addResult = outer1_27;
+                          addResult = closure_1_27;
                         }
                         if (addResult) {
-                          addResult = outer1_87;
+                          addResult = closure_1_87;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
-                          addResult = outer1_87(containerItemKeys, set2);
+                          addResult = closure_1_87(containerItemKeys, set2);
                         }
                         if (!tmp13) {
-                          addResult = outer1_84;
+                          addResult = closure_1_84;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
-                          addResult = outer1_84(containerItemKeys);
+                          addResult = closure_1_84(containerItemKeys);
                         } else {
-                          addResult = outer1_102;
+                          addResult = closure_1_102;
                           addResult = state;
                           addResult = state;
-                          addResult = outer1_102(state, obj.startNoBuffer);
+                          addResult = closure_1_102(state, obj.startNoBuffer);
                           if (!queuedInitialLayout) {
                             if (!addResult.didContainersLayout) {
-                              addResult = outer1_41;
-                              addResult = outer1_77;
-                              if (outer1_41(addResult)) {
+                              addResult = closure_1_41;
+                              addResult = closure_1_77;
+                              if (closure_1_41(addResult)) {
                                 addResult = addResult(addResult, addResult.startBuffered, addResult.endBuffered);
                               } else {
                                 addResult = addResult(addResult, addResult.startNoBuffer, addResult.endNoBuffer);
@@ -20887,7 +20307,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   callback2(containerItemKeys, { didLayout: true });
                                 })(containerItemKeys);
                                 addResult = (function handleInitialScrollLayoutReady(containerItemKeys) {
-                                  let closure_0 = containerItemKeys;
+                                  closure_0 = containerItemKeys;
                                   if (containerItemKeys.state.initialScroll) {
                                     callback6(containerItemKeys, { forceScroll: true });
                                     const initialScrollSession = containerItemKeys.state.initialScrollSession;
@@ -20898,7 +20318,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                     if ("offset" !== kind) {
                                       const _requestAnimationFrame = requestAnimationFrame;
                                       const animationFrame = requestAnimationFrame(function runScroll() {
-                                        return outer1_76(closure_0, { forceScroll: true });
+                                        return closure_1_76(closure_0, { forceScroll: true });
                                       });
                                     }
                                     closure_0 = containerItemKeys;
@@ -20926,7 +20346,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             addResult = containerItemKeys;
                             state = containerItemKeys.state;
                             ({ startNoBuffer, endNoBuffer } = obj);
-                            addResult = outer1_91;
+                            addResult = closure_1_91;
                             if (null == addResult) {
                               addResult = obj.startNoBuffer;
                             }
@@ -20953,15 +20373,15 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             }
                           }
                         }
-                        let tmp17 = outer1_25;
-                        const tmp80 = outer1_89;
+                        let tmp17 = closure_1_25;
+                        const tmp80 = closure_1_89;
                       }
                     }
                   }
                 });
               };
               state.reprocessCurrentScroll = () => {
-                outer1_70(context, state.scroll, true);
+                closure_1_70(context, state.scroll, true);
               };
               callback = context;
               callback = context(context, "maintainVisibleContentPosition", obj2);
@@ -21156,7 +20576,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         };
         const items2 = ["throttle"];
         context = snapToIndices.useCallback((arg0, arg1) => {
-          const stickyHeaderIndices = arg0;
+          stickyHeaderIndices = arg0;
           const substr = [...arguments].slice();
           const timestamp = Date.now();
           context.current = substr;
@@ -21184,9 +20604,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             }
             const _setTimeout = setTimeout;
             stickyHeaderIndices.current = setTimeout(() => {
-              if (outer1_2.current) {
+              if (closure_1_2.current) {
                 const _Date = Date;
-                outer1_1.current = Date.now();
+                closure_1_1.current = Date.now();
                 const items = [];
                 HermesBuiltin.arraySpread(tmp.current, 0);
                 HermesBuiltin.apply(items, undefined);
@@ -21237,7 +20657,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         stickyHeaderIndices = getFixedItemSize;
         const items3 = [getFixedItemSize];
         obj16[16] = obj22.useMemo(() => {
-          let fn;
+          fn = undefined;
           if (stickyHeaderIndices) {
             fn = (arg0, arg1, arg2) => {
               let tmp;
@@ -21254,7 +20674,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         stickyHeaderIndices = getItemType;
         const items4 = [getItemType];
         obj16[17] = obj22.useMemo(() => {
-          let fn;
+          fn = undefined;
           if (stickyHeaderIndices) {
             fn = (arg0, arg1, arg2) => {
               let tmp;
@@ -21273,7 +20693,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         stickyHeaderIndices = fn;
         const items5 = [fn];
         obj16[20] = obj22.useMemo(() => {
-          let fn;
+          fn = undefined;
           if (stickyHeaderIndices) {
             fn = (arg0, arg1, arg2) => {
               let tmp;
@@ -21359,12 +20779,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         const memo1 = obj.useMemo(() => {
           if (context.length) {
             const _Array = Array;
-            const obj = { length: null };
+            obj = { length: null };
             const _Math = Math;
             obj[0] = Math.min(num4, items.length);
             items = Array.from(obj, (arg0, arg1) => {
-              let data;
-              let keyExtractor;
               const diff = length.length - 1 - arg1;
               ({ data, keyExtractor } = props.props);
               let str = "";
@@ -21392,26 +20810,26 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           context(context, "numColumns", num4);
           let values = context.values;
           const value = values.get("stylePaddingTop");
-          let closure_0 = context;
-          let c1;
+          closure_0 = context;
+          closure_1 = undefined;
           if (undefined !== closure_13) {
             values = tmp2.values;
             const tmp8 = values.get("stylePaddingTop") || 0;
-            c1 = tmp8;
+            closure_1 = tmp8;
             if (tmp6 < tmp8) {
               values = tmp2.values;
               tmp(tmp2, "totalSize", (values.get("totalSize") || 0) + tmp8);
               const _setTimeout = setTimeout;
               tmp7.timeoutSetPaddingTop = setTimeout(() => {
                 values = values.values;
-                outer1_22(values, "totalSize", (values.get("totalSize") || 0) - c1);
+                closure_1_22(values, "totalSize", (values.get("totalSize") || 0) - closure_1);
               }, 16);
               const tmp9 = values.get("totalSize") || 0;
             }
             tmp(tmp2, "stylePaddingTop", tmp6);
           }
           ref1.current.props.stylePaddingBottom = closure_14;
-          outer1_50(context);
+          closure_1_50(context);
           if (arg0) {
             const size = obj2.size;
           }
@@ -21433,7 +20851,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           if (initialScroll) {
             let contentOffset = initialScroll.contentOffset;
             if (null == contentOffset) {
-              contentOffset = outer1_75(context, initialScroll);
+              contentOffset = closure_1_75(context, initialScroll);
             }
             if (closure_18) {
               const initialScrollSession = tmp.initialScrollSession;
@@ -21445,8 +20863,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           }
         }, items9);
         callback = obj.useLayoutEffect(() => {
-          let tmp2 = closure_16;
-          let state = context.state;
+          let tmp2 = isRTL;
+          state = context.state;
           const initialScroll = state.initialScroll;
           let num = 0;
           if (null != callback) {
@@ -21477,7 +20895,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             tmp7 = tmp8;
           }
           if (tmp7) {
-            let obj = {};
+            obj = {};
             const merged = Object.assign(initialScroll);
             obj.contentOffset = num;
             obj.preserveForFooterLayout = tmp6;
@@ -21500,8 +20918,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             }
             obj = { kind: null };
             obj[0] = str2;
-            outer1_38(state2, obj);
-            const tmp16 = outer1_38;
+            closure_1_38(state2, obj);
+            const tmp16 = closure_1_38;
           }
           if (closure_18) {
             if (initialScroll) {
@@ -21513,7 +20931,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               if ("offset" !== kind2) {
                 const initialScroll2 = state.initialScroll;
                 const state3 = tmp.state;
-                const tmp27 = outer1_75(tmp, initialScroll2);
+                const tmp27 = closure_1_75(tmp, initialScroll2);
                 if (!(0 === tmp27 && !tmp4)) {
                   if (tmp28) {
                     const initialScrollSession8 = state3.initialScrollSession;
@@ -21548,11 +20966,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     }
                     obj = { bootstrap: null, kind: null };
                     obj[1] = kind4;
-                    outer1_38(state3, obj);
-                    const obj1 = { resolvedOffset: null };
+                    closure_1_38(state3, obj);
+                    obj1 = { resolvedOffset: null };
                     obj1[0] = tmp27;
-                    outer1_48(tmp, obj1);
-                    const tmp58 = outer1_38;
+                    closure_1_48(tmp, obj1);
+                    const tmp58 = closure_1_38;
                   } else if (tmp34) {
                     const initialScrollSession6 = state3.initialScrollSession;
                     let kind5;
@@ -21584,20 +21002,20 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     if (null != initialScrollSession7) {
                       kind6 = initialScrollSession7.kind;
                     }
-                    const obj2 = { bootstrap: null, kind: null };
+                    obj2 = { bootstrap: null, kind: null };
                     obj2[1] = kind6;
-                    outer1_38(state3, obj2);
+                    closure_1_38(state3, obj2);
                     const obj3 = { preserveTarget: true, resolvedOffset: null };
                     obj3[1] = tmp27;
-                    outer1_48(tmp, obj3);
-                    const tmp46 = outer1_38;
+                    closure_1_48(tmp, obj3);
+                    const tmp46 = closure_1_38;
                   } else {
                     const obj4 = { scroll: null, seedContentOffset: null, targetIndexSeed: null };
                     obj4[0] = tmp27;
                     obj4[1] = tmp27;
                     obj4[2] = initialScroll2.index;
-                    outer1_79(state3, obj4);
-                    const stickyHeaderIndices = tmp;
+                    closure_1_79(state3, obj4);
+                    closure_0 = tmp;
                     let state4;
                     state4 = tmp.state;
                     const initialScrollSession5 = state4.initialScrollSession;
@@ -21625,9 +21043,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           if (bootstrap) {
                             bootstrap.frameHandle = undefined;
                             bootstrap.mountFrameCount = bootstrap.mountFrameCount + 1;
-                            const obj = { mountFrameCount: null, passCount: null };
+                            obj = { mountFrameCount: null, passCount: null };
                             ({ mountFrameCount: obj[0], passCount: obj[1] } = bootstrap);
-                            if (!outer1_78(closure_0, obj)) {
+                            if (!closure_1_78(closure_0, obj)) {
                               closure_0 = tmp5;
                               state = tmp5.state;
                               const initialScrollSession2 = state.initialScrollSession;
@@ -21655,9 +21073,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                     if (bootstrap) {
                                       bootstrap.frameHandle = undefined;
                                       bootstrap.mountFrameCount = bootstrap.mountFrameCount + 1;
-                                      const obj = { mountFrameCount: null, passCount: null };
+                                      obj = { mountFrameCount: null, passCount: null };
                                       ({ mountFrameCount: obj[0], passCount: obj[1] } = bootstrap);
-                                      if (!outer1_78(closure_0, obj)) {
+                                      if (!closure_1_78(closure_0, obj)) {
                                         closure_0 = tmp5;
                                         state = tmp5.state;
                                         const initialScrollSession2 = state.initialScrollSession;
@@ -21685,9 +21103,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                               if (bootstrap) {
                                                 bootstrap.frameHandle = undefined;
                                                 bootstrap.mountFrameCount = bootstrap.mountFrameCount + 1;
-                                                const obj = { mountFrameCount: null, passCount: null };
+                                                obj = { mountFrameCount: null, passCount: null };
                                                 ({ mountFrameCount: obj[0], passCount: obj[1] } = bootstrap);
-                                                if (!outer1_78(closure_0, obj)) {
+                                                if (!closure_1_78(closure_0, obj)) {
                                                   closure_0 = tmp5;
                                                   state = tmp5.state;
                                                   const initialScrollSession2 = state.initialScrollSession;
@@ -21777,10 +21195,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               if (!tmp4) {
                 const obj5 = { resolvedOffset: null };
                 obj5[0] = num;
-                outer1_48(tmp, obj5);
+                closure_1_48(tmp, obj5);
               }
             }
-            outer1_47(tmp, { didInitialScroll: true });
+            closure_1_47(tmp, { didInitialScroll: true });
           }
         }, []);
         let didColumnsChange = isFirst;
@@ -21810,19 +21228,18 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           }
         }
         if (callback) {
-          callback = callback(recycleItems);
+          callback = callback4;
+          callback = callback4(recycleItems);
         }
         const items10 = [data.length, dataKey, callback, hasHadNonEmptyData, tmp9, tmp39, tmp60];
         callback = obj.useLayoutEffect(() => {
-          let initialScroll;
-          let initialScrollSession4;
           let tmp2 = callback;
           let str = "bootstrap";
           let str2 = "bootstrap";
-          if (closure_17) {
+          if (isRTL) {
             str2 = "offset";
           }
-          const state = tmp.state;
+          state = tmp.state;
           const initialScrollSession = state.initialScrollSession;
           let previousDataLength;
           if (null != initialScrollSession) {
@@ -21834,7 +21251,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           }
           let tmp9 = length > 0;
           if (tmp9) {
-            const hasHadNonEmptyData = state.hasHadNonEmptyData;
+            hasHadNonEmptyData = state.hasHadNonEmptyData;
             let tmp10 = !hasHadNonEmptyData;
             if (hasHadNonEmptyData) {
               tmp10 = hasHadNonEmptyData;
@@ -21863,14 +21280,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               if ("offset" === kind) {
                 str4 = "offset";
               }
-              let obj = { kind: null };
+              obj = { kind: null };
               obj[0] = str4;
-              outer1_38(state2, obj);
+              closure_1_38(state2, obj);
               obj = { kind: null, previousDataLength: null };
               obj[0] = str2;
               obj[1] = num;
-              outer1_38(state, obj);
-              const tmp17 = outer1_38;
+              closure_1_38(state, obj);
+              const tmp17 = closure_1_38;
             } else {
               if (undefined !== state.timeoutPreservedInitialScrollClear) {
                 const _clearTimeout = clearTimeout;
@@ -21879,13 +21296,13 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               }
               state.clearPreservedInitialScrollOnNextFinish = undefined;
               state.initialScroll = undefined;
-              outer1_38(state);
+              closure_1_38(state);
             }
           }
           if (state.initialScrollSession) {
             state.initialScrollSession.previousDataLength = length;
           }
-          outer1_38(state);
+          closure_1_38(state);
           if (closure_18) {
             const state4 = tmp.state;
             ({ initialScroll, initialScrollSession: initialScrollSession4 } = state4);
@@ -21917,7 +21334,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             }
                             state4.clearPreservedInitialScrollOnNextFinish = undefined;
                             state4.initialScroll = undefined;
-                            outer1_38(state4);
+                            closure_1_38(state4);
                           }
                         }
                       }
@@ -21979,7 +21396,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         state6.didFinishInitialScroll = false;
                       }
                       context(tmp, "readyToRender", false);
-                      outer1_45(tmp);
+                      closure_1_45(tmp);
                     }
                     const initialScrollSession6 = state5.initialScrollSession;
                     let kind3;
@@ -21990,15 +21407,15 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     if ("offset" === kind3) {
                       str10 = "offset";
                     }
-                    const obj1 = { kind: null };
+                    obj1 = { kind: null };
                     obj1[0] = str10;
-                    outer1_38(state5, obj1);
-                    const obj2 = { scroll: null, seedContentOffset: null, targetIndexSeed: null };
-                    obj2[0] = outer1_75(tmp, initialScroll);
+                    closure_1_38(state5, obj1);
+                    obj2 = { scroll: null, seedContentOffset: null, targetIndexSeed: null };
+                    obj2[0] = closure_1_75(tmp, initialScroll);
                     let tmp75;
                     if (tmp36) {
                       if (!bootstrap) {
-                        const current = state4.refScroller.current;
+                        current = state4.refScroller.current;
                         let prop2;
                         if (null != current) {
                           prop2 = current.getCurrentScrollOffset;
@@ -22025,9 +21442,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     }
                     obj2[1] = tmp75;
                     obj2[2] = initialScroll.index;
-                    outer1_80(tmp, obj2);
-                    const tmp70 = outer1_38;
-                    const tmp73 = outer1_80;
+                    closure_1_80(tmp, obj2);
+                    const tmp70 = closure_1_38;
+                    const tmp73 = closure_1_80;
                   }
                 } else {
                   const values = tmp.values;
@@ -22078,12 +21495,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     const tmp50 = !prop4;
                   }
                   if (!tmp36) {
-                    if (outer1_82(tmp, initialScroll)) {
+                    if (closure_1_82(tmp, initialScroll)) {
                       const obj5 = { dataLength: null, stylePaddingBottom: null, target: null };
                       obj5[0] = length;
                       obj5[1] = tmp6;
                       obj5[2] = initialScroll;
-                      outer1_81(tmp, obj5);
+                      closure_1_81(tmp, obj5);
                     }
                   }
                   const state7 = tmp.state;
@@ -22105,7 +21522,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       state8.didFinishInitialScroll = false;
                     }
                     context(tmp, "readyToRender", false);
-                    outer1_45(tmp);
+                    closure_1_45(tmp);
                   }
                   const initialScrollSession7 = state7.initialScrollSession;
                   let kind4;
@@ -22115,11 +21532,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   if ("offset" === kind4) {
                     str = "offset";
                   }
-                  const obj7 = { kind: null };
+                  obj7 = { kind: null };
                   obj7[0] = str;
-                  outer1_38(state7, obj7);
+                  closure_1_38(state7, obj7);
                   const obj8 = { scroll: null, seedContentOffset: null, targetIndexSeed: null };
-                  obj8[0] = outer1_75(tmp, obj4);
+                  obj8[0] = closure_1_75(tmp, obj4);
                   let tmp91;
                   if (tmp36) {
                     if (!bootstrap) {
@@ -22150,10 +21567,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   }
                   obj8[1] = tmp91;
                   obj8[2] = obj4.index;
-                  outer1_80(tmp, obj8);
+                  closure_1_80(tmp, obj8);
                   const tmp62 = initialScroll.index === obj4.index && initialScroll.preserveForBottomPadding === obj4.preserveForBottomPadding && initialScroll.preserveForFooterLayout === obj4.preserveForFooterLayout && initialScroll.viewOffset === obj4.viewOffset && initialScroll.viewPosition === obj4.viewPosition;
-                  const tmp86 = outer1_38;
-                  const tmp89 = outer1_80;
+                  const tmp86 = closure_1_38;
+                  const tmp89 = closure_1_80;
                 }
                 const tmp33 = state4.didFinishInitialScroll && 0 === num && length > 0 && undefined !== initialScroll.index;
                 const tmp34 = !(state4.didFinishInitialScroll && 0 === num && length > 0 && undefined !== initialScroll.index);
@@ -22208,9 +21625,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   state3.didFinishInitialScroll = false;
                 }
                 context(tmp, "readyToRender", false);
-                outer1_45(tmp);
+                closure_1_45(tmp);
               }
-              outer1_76(tmp);
+              closure_1_76(tmp);
             }
           }
         }, items10);
@@ -22246,7 +21663,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             }
             tmp = current;
           }
-          outer1_103(context);
+          closure_1_103(context);
         }, items11);
         const items12 = [context, undefined];
         callback = obj.useLayoutEffect(() => {
@@ -22254,14 +21671,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           const diff = stickyHeaderIndices(context) - stickyHeaderIndices(context, ref.current);
           if (0 !== diff) {
             const values = tmp.values;
-            outer1_70(tmp, context.state.scroll, true, { markHasScrolled: false });
-            const tmp9 = outer1_85(tmp);
+            closure_1_70(tmp, context.state.scroll, true, { markHasScrolled: false });
+            const tmp9 = closure_1_85(tmp);
             let tmp10 = !tmp9;
             if (!tmp9) {
               tmp10 = !tmp4;
             }
             if (tmp10) {
-              outer1_65(tmp, diff);
+              closure_1_65(tmp, diff);
             }
             tmp4 = !values.get("isWithinMaintainScrollAtEndThreshold");
           }
@@ -22269,10 +21686,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         const items13 = [data.length, tmp9, horizontal, tmp39, tmp60];
         const items14 = [data.length, tmp9, tmp39, tmp60];
         callback = obj.useCallback((arg0) => {
-          let initialScroll;
-          let initialScrollSession;
           if (closure_18) {
-            const state = tmp.state;
+            state = tmp.state;
             if (closure_5) {
               ({ initialScroll, initialScrollSession } = state);
               let kind;
@@ -22293,12 +21708,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       bootstrap = state.initialScrollSession.bootstrap;
                     }
                     if (bootstrap) {
-                      if (outer1_82(tmp, initialScroll)) {
-                        let obj = { dataLength: null, stylePaddingBottom: null, target: null };
+                      if (closure_1_82(tmp, initialScroll)) {
+                        obj = { dataLength: null, stylePaddingBottom: null, target: null };
                         obj[0] = length;
                         obj[1] = tmp7;
                         obj[2] = initialScroll;
-                        outer1_81(tmp, obj);
+                        closure_1_81(tmp, obj);
                       } else {
                         let prop;
                         if (null != initialScroll) {
@@ -22316,7 +21731,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               obj[0] = length;
                               obj[1] = tmp7;
                               obj[2] = initialScroll;
-                              outer1_81(tmp, obj);
+                              closure_1_81(tmp, obj);
                             }
                           }
                         }
@@ -22329,7 +21744,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         }
                         state2.initialScroll = obj;
                         if (!tmp19) {
-                          const obj1 = { resetInitialScroll: true };
+                          obj1 = { resetInitialScroll: true };
                           const state3 = tmp.state;
                           if (obj1.resetLayout) {
                             state3.didContainersLayout = false;
@@ -22339,7 +21754,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             state3.didFinishInitialScroll = false;
                           }
                           context(tmp, "readyToRender", false);
-                          outer1_45(tmp);
+                          closure_1_45(tmp);
                         }
                         const initialScrollSession3 = state2.initialScrollSession;
                         let kind2;
@@ -22349,16 +21764,16 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         if ("offset" === kind2) {
                           str3 = "offset";
                         }
-                        const obj2 = { kind: null };
+                        obj2 = { kind: null };
                         obj2[0] = str3;
-                        outer1_38(state2, obj2);
+                        closure_1_38(state2, obj2);
                         const obj3 = { scroll: null, targetIndexSeed: null };
-                        obj3[0] = outer1_75(tmp, obj);
+                        obj3[0] = closure_1_75(tmp, obj);
                         obj3[1] = obj.index;
-                        outer1_80(tmp, obj3);
+                        closure_1_80(tmp, obj3);
                         const tmp15 = !prop;
                         tmp19 = !state.didFinishInitialScroll;
-                        const tmp25 = outer1_38;
+                        const tmp25 = closure_1_38;
                       }
                     } else {
                       let prop1;
@@ -22374,11 +21789,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         }, items13);
         const obj17 = { onLayoutChange: null, onLayoutProp: null, ref: null };
         obj17[0] = obj.useCallback((arg0, arg1) => {
-          let initialScroll;
-          let initialScrollSession;
-          let otherAxisSize;
-          let scrollLength;
-          let state = context.state;
+          state = context.state;
           const props = state.props;
           const maintainScrollAtEnd = props.maintainScrollAtEnd;
           let str = "height";
@@ -22395,7 +21806,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           if (props.useWindowScroll) {
             const Dimensions = viewabilityConfig.Dimensions;
             let value = Dimensions.get("window");
-            let obj = { height: null, width: null };
+            obj = { height: null, width: null };
             ({ height: obj[0], width: obj[1] } = value);
             let tmp7 = arg0;
             if (obj[str2] > 0) {
@@ -22427,44 +21838,19 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           if (tmp14) {
             state.scrollLength = scrollLength2;
             state.otherAxisSize = tmp12;
-            outer1_50(tmp2);
+            closure_1_50(tmp2);
             let _Date = Date;
             state.lastBatchingAction = Date.now();
             state.scrollForNextCalculateItemsInView = undefined;
             if (scrollLength2 > 0) {
-              outer1_133(tmp2);
+              closure_1_133(tmp2);
             }
             if (tmp13) {
-              let stickyHeaderIndices = tmp2;
-              let obj1 = { doMVCP: true };
+              closure_0 = tmp2;
+              obj1 = { doMVCP: true };
               let state3 = tmp2.state;
-              outer1_97(() => {
-                let alwaysRenderIndicesArr;
-                let bottom;
-                let closure_4;
-                let dataChanged;
-                let doMVCP;
-                let enableScrollForNextCalculateItemsInView;
-                let endNoBuffer;
-                let forceFullItemPositions;
-                let getItemType;
-                let idCache;
-                let indexByKey;
-                let initialScroll;
-                let keyExtractor;
-                let minIndexSizeChanged;
-                let positions;
-                let props;
-                let queuedInitialLayout;
-                let scrollForNextCalculateItemsInView;
-                let scrollLength;
+              closure_1_97(() => {
                 let set2;
-                let sizes;
-                let startBufferedId;
-                let startNoBuffer;
-                let state;
-                let top;
-                let viewabilityConfigCallbackPairs;
                 let addResult = state;
                 let containerItemKeys = state.containerItemKeys;
                 ({ enableScrollForNextCalculateItemsInView, idCache } = state);
@@ -22483,7 +21869,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   let _Set = Set;
                   stickyHeaderIndicesSet = new Set();
                 }
-                let tmp9 = outer1_46(containerItemKeys, idCache.drawDistanceMode);
+                let tmp9 = closure_1_46(containerItemKeys, idCache.drawDistanceMode);
                 ({ dataChanged, doMVCP, forceFullItemPositions } = idCache);
                 let initialScrollSession = tmp2.initialScrollSession;
                 let kind;
@@ -22494,18 +21880,18 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 if ("bootstrap" === kind) {
                   bootstrap = tmp2.initialScrollSession.bootstrap;
                 }
-                let tmp16 = outer1_21(containerItemKeys, "numContainers");
+                let tmp16 = closure_1_21(containerItemKeys, "numContainers");
                 if (data) {
                   if (0 !== scrollLength) {
                     if (tmp16) {
-                      let closure_8 = outer1_25(tmp7);
+                      closure_8 = closure_1_25(tmp7);
                       let tmp15Result = tmp15(tmp7, "stylePaddingTop");
                       let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-                      let closure_9 = sum + tmp15(tmp7, "headerSize");
+                      closure_9 = sum + tmp15(tmp7, "headerSize");
                       tmp15Result = tmp15(tmp7, "numColumns");
                       let scrollVelocity = idCache.scrollVelocity;
                       if (null == scrollVelocity) {
-                        scrollVelocity = outer1_69(tmp2);
+                        scrollVelocity = closure_1_69(tmp2);
                       }
                       ({ initialScroll, queuedInitialLayout } = tmp2);
                       if (!tmp13) {
@@ -22518,31 +21904,31 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         }
                       } else {
                         if (!queuedInitialLayout) {
-                          if (outer1_41(tmp2)) {
+                          if (closure_1_41(tmp2)) {
                             if (initialScroll) {
-                              scroll = outer1_75(tmp7, initialScroll);
+                              scroll = closure_1_75(tmp7, initialScroll);
                             }
                           }
                         }
                         scroll = tmp2.scroll;
                       }
-                      let c10 = 0;
-                      let c11 = 0;
-                      let c12 = 0;
-                      let c13 = 0;
-                      let c14 = 0;
-                      let c15 = 0;
+                      c10 = 0;
+                      c11 = 0;
+                      c12 = 0;
+                      c13 = 0;
+                      c14 = 0;
+                      c15 = 0;
                       function updateScroll2(scroll) {
-                        let closure_16 = scroll;
+                        closure_16 = scroll;
                         const values = containerItemKeys.values;
                         const value = values.get("scrollAdjustPending");
                         let num = 0;
                         if (null != value) {
                           num = value;
                         }
-                        let closure_11 = num - closure_9;
+                        closure_11 = num - closure_9;
                         const rounded = Math.round(scroll + closure_11);
-                        let closure_12 = rounded;
+                        closure_12 = rounded;
                         if (rounded + scrollLength > closure_8) {
                           const _Math = Math;
                           closure_12 = Math.max(0, tmp4 - tmp3);
@@ -22550,7 +21936,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       }
                       updateScroll2(scroll);
                       const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
-                      let closure_17 = tmp15Result1;
+                      closure_17 = tmp15Result1;
                       function resolveStickyState() {
                         let num = -1;
                         let num2 = -1;
@@ -22586,17 +21972,17 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           tmp8 = tmp9 >= 0;
                         }
                         if (tmp8) {
-                          outer2_22(containerItemKeys, "activeStickyIndex", num);
+                          closure_2_22(containerItemKeys, "activeStickyIndex", num);
                         }
-                        let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
-                        let fn;
+                        obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
+                        fn = undefined;
                         if (closure_4) {
                           if (arr.length > 0) {
                             if (tmp9 !== num) {
                               fn = () => {
-                                if (undefined !== outer1_6[num]) {
-                                  if (null != outer1_4) {
-                                    const obj = { index: null, item: null };
+                                if (undefined !== closure_1_6[num]) {
+                                  if (null != closure_1_4) {
+                                    obj = { index: null, item: null };
                                     obj[0] = tmp;
                                     obj[1] = tmp2;
                                     tmp3(obj);
@@ -22635,7 +22021,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           num6 = 0;
                           if (!tmp25) {
                             num6 = 0;
-                            if (!outer1_41(tmp2)) {
+                            if (!closure_1_41(tmp2)) {
                               num6 = 0;
                               if (!tmp2.scrollingTo) {
                                 num6 = 0;
@@ -22663,9 +22049,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       }
                       function updateScrollRange() {
                         const bound = Math.max(0, c12);
-                        let closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
-                        let closure_13 = bound - result2 + num6;
-                        let closure_15 = closure_14 + result3 + num6;
+                        closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
+                        closure_13 = bound - result2 + num6;
+                        closure_15 = closure_14 + result3 + num6;
                       }
                       updateScrollRange();
                       if (0 !== num6) {
@@ -22712,12 +22098,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 if (null === top) {
                                   if (viewabilityConfigCallbackPairs) {
                                     (function updateViewabilityForCachedRange(state, viewabilityConfigCallbackPairs, scrollLength, c12, c14) {
-                                      let data;
-                                      let data2;
-                                      let keyExtractor;
-                                      let keyExtractor2;
-                                      let sizes;
-                                      let startBuffered;
                                       state = state.state;
                                       const endBuffered = state.endBuffered;
                                       data = state.props.data;
@@ -22778,9 +22158,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                                       tmp12 = tmp6;
                                                     }
                                                     let tmp26 = tmp13;
-                                                    let flag = false;
+                                                    flag = false;
                                                     if (null !== tmp11) {
-                                                      let flag2 = true;
+                                                      flag2 = true;
                                                       if (tmp23 <= c14) {
                                                         tmp13 = tmp6;
                                                         flag2 = false;
@@ -22816,7 +22196,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                                   }
                                                 }
                                               }
-                                              const obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
+                                              obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
                                               obj[0] = tmp9;
                                               obj[1] = sum1;
                                               if (null == sum1) {
@@ -22866,11 +22246,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                       }
                                     })(tmp7, viewabilityConfigCallbackPairs, scrollLength, c12, c14);
                                   } else if (tmp2.props.onFirstVisibleItemChanged) {
-                                    outer1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
-                                      let data;
-                                      let keyExtractor;
-                                      let sizes;
-                                      let startBuffered;
+                                    closure_1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
                                       state = state.state;
                                       const endBuffered = state.endBuffered;
                                       data = state.props.data;
@@ -22948,11 +22324,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       let tmp73;
                       if (doMVCP) {
                         if (!tmp25) {
-                          tmp73 = outer1_68(tmp7, dataChanged);
+                          tmp73 = closure_1_68(tmp7, dataChanged);
                         }
                       }
                       if (dataChanged) {
-                        outer1_86(tmp2);
+                        closure_1_86(tmp2);
                       }
                       let num8 = 0;
                       if (!forceFullItemPositions) {
@@ -22969,7 +22345,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           num8 = num9;
                         }
                       }
-                      let obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
+                      obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
                       obj[0] = doMVCP;
                       obj[1] = forceFullItemPositions;
                       let tmp82 = !forceFullItemPositions;
@@ -22986,8 +22362,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       obj[3] = c15;
                       obj[4] = scrollVelocity;
                       obj[5] = num8;
-                      outer1_89(tmp7, dataChanged, obj);
-                      const tmp17Result = outer1_25(tmp7);
+                      closure_1_89(tmp7, dataChanged, obj);
+                      const tmp17Result = closure_1_25(tmp7);
                       closure_8 = tmp17Result;
                       if (undefined !== minIndexSizeChanged) {
                         tmp2.minIndexSizeChanged = undefined;
@@ -22999,7 +22375,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               if (tmp2.idsInView.length > 0) {
                                 const shouldRestorePosition = tmp2.props.maintainVisibleContentPosition.shouldRestorePosition;
                                 const _Set2 = Set;
-                                let set = new Set();
+                                set = new Set();
                                 const idsInView = tmp2.idsInView;
                                 for (const item10226 of idsInView) {
                                   let tmp99 = item10226;
@@ -23023,11 +22399,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       }
                       addResult = state;
                       addResult = state;
-                      addResult = outer1_21;
-                      addResult = outer1_21;
+                      addResult = closure_1_21;
+                      addResult = closure_1_21;
                       addResult = containerItemKeys;
                       addResult = containerItemKeys;
-                      addResult = outer1_21(containerItemKeys, "scrollAdjustPending");
+                      addResult = closure_1_21(containerItemKeys, "scrollAdjustPending");
                       let num11 = 0;
                       if (null != addResult) {
                         num11 = addResult;
@@ -23078,19 +22454,19 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         while (true) {
                           addResult = idCache[addResult];
                           if (null == addResult) {
-                            addResult = outer1_49;
+                            addResult = closure_1_49;
                             addResult = state;
                             addResult = state;
-                            addResult = outer1_49(state, addResult);
+                            addResult = closure_1_49(state, addResult);
                           }
                           addResult = sizes.get(addResult);
                           if (null == addResult) {
-                            addResult = outer1_58;
+                            addResult = closure_1_58;
                             addResult = containerItemKeys;
                             addResult = containerItemKeys;
                             let num14 = 0;
                             addResult = containerItemKeys;
-                            addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                            addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                           }
                           addResult = c13;
                           if (positions[addResult] + addResult <= c13) {
@@ -23124,12 +22500,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       let num18 = 0;
                       if (0 < tmp16) {
                         do {
-                          addResult = outer1_21;
-                          addResult = outer1_21;
+                          addResult = closure_1_21;
+                          addResult = closure_1_21;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
                           let _HermesInternal = HermesInternal;
-                          addResult = outer1_21(containerItemKeys, "containerItemKey" + num16);
+                          addResult = closure_1_21(containerItemKeys, "containerItemKey" + num16);
                           addResult = num16;
                           addResult = num17;
                           addResult = num17;
@@ -23158,29 +22534,29 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           addResult = idCache[addResult];
                           addResult = flag3;
                           if (null == addResult) {
-                            addResult = outer1_49;
+                            addResult = closure_1_49;
                             addResult = state;
                             addResult = state;
-                            addResult = outer1_49(state, addResult);
+                            addResult = closure_1_49(state, addResult);
                           }
                           addResult = sizes.get(addResult);
                           if (null == addResult) {
-                            addResult = outer1_58;
+                            addResult = closure_1_58;
                             addResult = containerItemKeys;
                             addResult = containerItemKeys;
                             let num19 = 0;
                             addResult = containerItemKeys;
-                            addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                            addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                           }
                           addResult = positions[addResult];
                           addResult = flag3;
                           if (!flag3) {
-                            addResult = outer1_100;
+                            addResult = closure_1_100;
                             addResult = c12;
                             addResult = c14;
                             let num20 = 0;
                             addResult = obj;
-                            addResult = outer1_100(obj, addResult, addResult, addResult, c12, c14);
+                            addResult = closure_1_100(obj, addResult, addResult, addResult, c12, c14);
                             addResult = null === addResult;
                             if (addResult) {
                               addResult = c13;
@@ -23223,13 +22599,13 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         }
                       }
                       const _Object = Object;
-                      let obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
+                      obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
                       obj1[0] = addResult;
                       ({ endNoBuffer: obj5[1], firstFullyOnScreenIndex: obj5[2] } = obj);
-                      addResult = outer1_101;
+                      addResult = closure_1_101;
                       addResult = state;
                       addResult = state;
-                      obj1[3] = outer1_101(state, obj);
+                      obj1[3] = closure_1_101(state, obj);
                       obj1[4] = addResult;
                       obj1[5] = addResult;
                       obj1[6] = obj.startNoBuffer;
@@ -23241,9 +22617,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         enableScrollForNextCalculateItemsInView = undefined !== addResult;
                       }
                       if (enableScrollForNextCalculateItemsInView) {
-                        addResult = outer1_54;
-                        if (!outer1_54(addResult)) {
-                          let obj2 = { bottom: null, top: null };
+                        addResult = closure_1_54;
+                        if (!closure_1_54(addResult)) {
+                          obj2 = { bottom: null, top: null };
                           obj2[0] = addResult;
                           obj2[1] = addResult;
                           addResult = obj2;
@@ -23254,12 +22630,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       let items = [];
                       if (dataChanged) {
                         for (let num21 = 0; num21 < addResult; num21 = num21 + 1) {
-                          addResult = outer1_21;
-                          addResult = outer1_21;
+                          addResult = closure_1_21;
+                          addResult = closure_1_21;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
                           let _HermesInternal2 = HermesInternal;
-                          addResult = outer1_21(containerItemKeys, "containerItemKey" + num21);
+                          addResult = closure_1_21(containerItemKeys, "containerItemKey" + num21);
                           addResult = !keyExtractor;
                           addResult = num21;
                           if (keyExtractor) {
@@ -23275,8 +22651,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       addResult = state;
                       addResult = state;
                       const scrollTargetPinnedRange = state.scrollTargetPinnedRange;
-                      let c22 = 0;
-                      let c23 = -1;
+                      c22 = 0;
+                      c23 = -1;
                       let num23 = -1;
                       let num24 = 0;
                       if (scrollTargetPinnedRange) {
@@ -23293,7 +22669,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         num24 = addResult;
                       }
                       addResult = num24 <= num23;
-                      let closure_24 = addResult;
+                      closure_24 = addResult;
                       function isPinnedRenderIndex(addResult) {
                         let hasItem = set.has(addResult);
                         if (!hasItem) {
@@ -23316,13 +22692,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           addResult = new.target;
                           const set1 = new Set();
                           function addPinnedIndex(item10471) {
-                            let data;
-                            let keyExtractor;
                             if (item10471 >= 0) {
                               if (item10471 < length) {
                                 let tmp4 = idCache[item10471];
                                 if (null == tmp4) {
-                                  ({ data, keyExtractor } = outer1_2.props);
+                                  ({ data, keyExtractor } = closure_1_2.props);
                                   let str = "";
                                   if (data) {
                                     let tmp2 = null;
@@ -23340,7 +22714,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 }
                                 const value = containerItemKeys.get(tmp4);
                                 if (undefined !== value) {
-                                  const stickyContainerPool = outer1_2.stickyContainerPool;
+                                  const stickyContainerPool = closure_1_2.stickyContainerPool;
                                   stickyContainerPool.add(value);
                                 } else {
                                   let hasItem = null == tmp4;
@@ -23360,10 +22734,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             do {
                               addResult = idCache[addResult];
                               if (null == addResult) {
-                                addResult = outer1_49;
+                                addResult = closure_1_49;
                                 addResult = state;
                                 addResult = state;
-                                addResult = outer1_49(state, addResult);
+                                addResult = closure_1_49(state, addResult);
                               }
                               if (!containerItemKeys.has(addResult)) {
                                 addResult = set1.add(addResult);
@@ -23402,9 +22776,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             addResult = items1;
                             addResult = set1;
                             addResult = (function handleStickyActivation(addResult, prop, arg2, items1, addResult2, addResult3, addResult4) {
-                              let data;
-                              let keyExtractor;
-                              const state = addResult.state;
+                              state = addResult.state;
                               let num = -1;
                               if (arg2 >= 0) {
                                 num = prop[arg2];
@@ -23438,7 +22810,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                     }
                                     let tmp8 = tmp5;
                                     if (tmp5) {
-                                      let containerItemKeys = state.containerItemKeys;
+                                      containerItemKeys = state.containerItemKeys;
                                       tmp8 = !containerItemKeys.has(tmp5);
                                     }
                                     if (tmp8) {
@@ -23458,14 +22830,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               } while (num2 <= 1);
                             })(addResult, prop, num25, items1, addResult, addResult, addResult);
                           } else if (-1 !== tmp15Result1) {
-                            addResult = outer1_22;
-                            addResult = outer1_22;
+                            addResult = closure_1_22;
+                            addResult = closure_1_22;
                             addResult = containerItemKeys;
                             addResult = containerItemKeys;
-                            addResult = outer1_22(containerItemKeys, "activeStickyIndex", -1);
+                            addResult = closure_1_22(containerItemKeys, "activeStickyIndex", -1);
                           }
                           if (items1.length > 0) {
-                            let fn;
+                            fn = undefined;
                             if (getItemType) {
                               fn = (arg0) => {
                                 const tmp = getItemType(data[arg0], arg0);
@@ -23485,22 +22857,20 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             addResult = fn;
                             addResult = tmp88;
                             addResult = (function findAvailableContainers(containerItemKeys, items1, addResult, addResult2, items, fn, has) {
-                              let closure_2;
-                              let stickyContainerPool;
-                              let closure_0 = fn;
+                              closure_0 = fn;
                               if (0 === items1.length) {
                                 return [];
                               } else {
                                 const tmp56 = length(containerItemKeys, "numContainers");
-                                const state = containerItemKeys.state;
+                                state = containerItemKeys.state;
                                 ({ containerItemMetadata: closure_2, stickyContainerPool } = state);
-                                let set;
+                                set = undefined;
                                 if (items.length > 0) {
                                   const _Set = Set;
                                   set = new Set(items);
                                 }
                                 const mapped = items1.map((itemIndex) => {
-                                  const obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
+                                  obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
                                   stickyHeaderIndicesSet = state.props.stickyHeaderIndicesSet;
                                   let tmp;
                                   if (null != callback) {
@@ -23543,7 +22913,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                     if (stickyContainerPool.has(num2)) {
                                       let tmp22 = undefined === tmp13 || tmp18;
                                       if (tmp22) {
-                                        let obj = { containerIndex: null, distance: null };
+                                        obj = { containerIndex: null, distance: null };
                                         obj[0] = num2;
                                         let _Number2 = Number;
                                         obj[1] = Number.POSITIVE_INFINITY;
@@ -23578,7 +22948,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 const _Array = Array;
                                 const array = new Array(length);
                                 let sum = tmp56;
-                                let c5 = false;
+                                c5 = false;
                                 function assign(itemIndex, containerIndex) {
                                   array[itemIndex.order] = { containerIndex, itemIndex: itemIndex.itemIndex, itemType: itemIndex.itemType };
                                   let deleteResult;
@@ -23586,12 +22956,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                     deleteResult = set.delete(containerIndex);
                                   }
                                   if (deleteResult) {
-                                    let c5 = true;
+                                    c5 = true;
                                   }
                                 }
                                 function assignMatching(found, items, arg2) {
-                                  let closure_0 = items;
-                                  let closure_1 = arg2;
+                                  closure_0 = items;
+                                  closure_1 = arg2;
                                   function _loop2() { ... }
                                   const iter = found[Symbol.iterator]();
                                   while (iter !== undefined) {
@@ -23624,7 +22994,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                     }
                                     let tmp43 = item10099;
                                     let tmp44 = tmp38;
-                                    let obj1 = assign(tmp36, tmp39);
+                                    obj1 = assign(tmp36, tmp39);
                                   }
                                   continue;
                                 }
@@ -23645,7 +23015,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   }
                                   if (sum > POSITIVE_INFINITY) {
                                     const _console = console;
-                                    let obj2 = { debugInfo: null };
+                                    obj2 = { debugInfo: null };
                                     const obj3 = { numContainers: null, numContainersPooled: null, numNeeded: null, stillNeeded: null };
                                     obj3[0] = tmp56;
                                     obj3[1] = POSITIVE_INFINITY;
@@ -23667,19 +23037,19 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               let containerIndex = addResult.containerIndex;
                               addResult = idCache[itemIndex];
                               if (null == addResult) {
-                                addResult = outer1_49;
+                                addResult = closure_1_49;
                                 addResult = state;
                                 addResult = state;
                                 addResult = itemIndex;
-                                addResult = outer1_49(state, addResult);
+                                addResult = closure_1_49(state, addResult);
                               }
                               addResult = containerItemKeys;
                               addResult = containerItemKeys;
                               addResult = containerIndex;
                               let _HermesInternal3 = HermesInternal;
-                              addResult = outer1_21;
-                              addResult = outer1_21;
-                              addResult = outer1_21(containerItemKeys, "containerItemKey" + containerIndex);
+                              addResult = closure_1_21;
+                              addResult = closure_1_21;
+                              addResult = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                               if (addResult) {
                                 addResult = addResult !== addResult;
                               }
@@ -23706,23 +23076,23 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 }
                                 state.containerItemGenerations[containerIndex] = num28 + 1;
                               }
-                              addResult = outer1_22;
-                              addResult = outer1_22;
+                              addResult = closure_1_22;
+                              addResult = closure_1_22;
                               addResult = containerIndex;
                               let _HermesInternal4 = HermesInternal;
-                              addResult = outer1_22(addResult, "containerItemKey" + containerIndex, addResult);
+                              addResult = closure_1_22(addResult, "containerItemKey" + containerIndex, addResult);
                               let _HermesInternal5 = HermesInternal;
                               addResult = itemIndex;
-                              addResult = outer1_22(addResult, "containerItemIndex" + containerIndex, addResult);
+                              addResult = closure_1_22(addResult, "containerItemIndex" + containerIndex, addResult);
                               let _HermesInternal6 = HermesInternal;
-                              addResult = outer1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
+                              addResult = closure_1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
                               addResult = state;
                               addResult = state;
                               let containerItemMetadata = state.containerItemMetadata;
-                              addResult = outer1_28;
+                              addResult = closure_1_28;
                               let num29 = 0;
                               addResult = state;
-                              addResult = containerItemMetadata.set(containerIndex, outer1_28(state, itemIndex, data[addResult], addResult.itemType));
+                              addResult = containerItemMetadata.set(containerIndex, closure_1_28(state, itemIndex, data[addResult], addResult.itemType));
                               addResult = containerItemKeys.set(addResult, containerIndex);
                               let userScrollAnchorReset = state.userScrollAnchorReset;
                               if (null != userScrollAnchorReset) {
@@ -23762,14 +23132,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               continue;
                             }
                             if (addResult !== tmp16) {
-                              addResult = outer1_22;
-                              addResult = outer1_22;
+                              addResult = closure_1_22;
+                              addResult = closure_1_22;
                               addResult = containerItemKeys;
                               addResult = containerItemKeys;
-                              addResult = outer1_22(containerItemKeys, "numContainers", addResult);
-                              addResult = outer1_21;
-                              addResult = outer1_21;
-                              if (addResult > outer1_21(containerItemKeys, "numContainersPooled")) {
+                              addResult = closure_1_22(containerItemKeys, "numContainers", addResult);
+                              addResult = closure_1_21;
+                              addResult = closure_1_21;
+                              if (addResult > closure_1_21(containerItemKeys, "numContainersPooled")) {
                                 addResult = addResult(addResult, "numContainersPooled", (function getExpandedContainerPoolSize(length, addResult) {
                                   let num = 0;
                                   if (length > 0) {
@@ -23818,7 +23188,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         addResult = items;
                         addResult = isPinnedRenderIndex;
                         addResult = (function handleStickyRecycling(addResult, prop, addResult2, arg3, arg4, items, isPinnedRenderIndex) {
-                          const state = addResult.state;
+                          state = addResult.state;
                           const iter = state.stickyContainerPool[Symbol.iterator]();
                           const nextResult = iter.next();
                           while (iter !== undefined) {
@@ -23844,7 +23214,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   if (tmp11 < arg4 - 1) {
                                     let tmp18 = index;
                                     let tmp19 = prop[tmp11 + 1];
-                                    let flag = false;
+                                    flag = false;
                                     if (tmp19) {
                                       let tmp44 = tmp19;
                                       let tmp45 = state.positions[tmp20];
@@ -23927,12 +23297,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       let flag5 = false;
                       if (0 < addResult) {
                         do {
-                          addResult = outer1_21;
-                          addResult = outer1_21;
+                          addResult = closure_1_21;
+                          addResult = closure_1_21;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
                           let _HermesInternal8 = HermesInternal;
-                          addResult = outer1_21(containerItemKeys, "containerItemKey" + num32);
+                          addResult = closure_1_21(containerItemKeys, "containerItemKey" + num32);
                           addResult = flag5;
                           addResult = undefined;
                           addResult = num32;
@@ -23966,41 +23336,41 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             addResult = containerItemMetadata2.delete(num32);
                             let stickyContainerPool3 = state.stickyContainerPool;
                             if (stickyContainerPool3.has(num32)) {
-                              addResult = outer1_22;
-                              addResult = outer1_22;
+                              addResult = closure_1_22;
+                              addResult = closure_1_22;
                               let _HermesInternal9 = HermesInternal;
-                              addResult = outer1_22(addResult, "containerSticky" + num32, false);
+                              addResult = closure_1_22(addResult, "containerSticky" + num32, false);
                               let stickyContainerPool4 = addResult.stickyContainerPool;
                               addResult = stickyContainerPool4.delete(num32);
                             }
-                            addResult = outer1_22;
-                            addResult = outer1_22;
+                            addResult = closure_1_22;
+                            addResult = closure_1_22;
                             let _HermesInternal10 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerItemKey" + num32, undefined);
+                            addResult = closure_1_22(addResult, "containerItemKey" + num32, undefined);
                             let _HermesInternal11 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerItemIndex" + num32, undefined);
+                            addResult = closure_1_22(addResult, "containerItemIndex" + num32, undefined);
                             let _HermesInternal12 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerItemData" + num32, undefined);
+                            addResult = closure_1_22(addResult, "containerItemData" + num32, undefined);
                             let _HermesInternal13 = HermesInternal;
-                            addResult = outer1_32;
-                            addResult = outer1_22(addResult, "containerPosition" + num32, outer1_32);
+                            addResult = closure_1_32;
+                            addResult = closure_1_22(addResult, "containerPosition" + num32, closure_1_32);
                             let _HermesInternal14 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerColumn" + num32, -1);
+                            addResult = closure_1_22(addResult, "containerColumn" + num32, -1);
                             let _HermesInternal15 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerSpan" + num32, 1);
+                            addResult = closure_1_22(addResult, "containerSpan" + num32, 1);
                             addResult = flag5;
                           } else {
                             addResult = indexByKey.get(addResult);
                             addResult = flag5;
                             if (undefined !== addResult) {
-                              addResult = outer1_88;
+                              addResult = closure_1_88;
                               let obj3 = { scrollAdjustPending: null, updateLayout: true };
                               addResult = c10;
                               obj3[0] = c10;
                               let num35 = 0;
                               addResult = num32;
                               addResult = obj3;
-                              addResult = outer1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
+                              addResult = closure_1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
                             }
                           }
                           num32 = num32 + 1;
@@ -24009,29 +23379,29 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       }
                       addResult = set2;
                       if (set2) {
-                        addResult = outer1_27;
+                        addResult = closure_1_27;
                       }
                       if (addResult) {
-                        addResult = outer1_87;
+                        addResult = closure_1_87;
                         addResult = containerItemKeys;
                         addResult = containerItemKeys;
-                        addResult = outer1_87(containerItemKeys, set2);
+                        addResult = closure_1_87(containerItemKeys, set2);
                       }
                       if (!tmp13) {
-                        addResult = outer1_84;
+                        addResult = closure_1_84;
                         addResult = containerItemKeys;
                         addResult = containerItemKeys;
-                        addResult = outer1_84(containerItemKeys);
+                        addResult = closure_1_84(containerItemKeys);
                       } else {
-                        addResult = outer1_102;
+                        addResult = closure_1_102;
                         addResult = state;
                         addResult = state;
-                        addResult = outer1_102(state, obj.startNoBuffer);
+                        addResult = closure_1_102(state, obj.startNoBuffer);
                         if (!queuedInitialLayout) {
                           if (!addResult.didContainersLayout) {
-                            addResult = outer1_41;
-                            addResult = outer1_77;
-                            if (outer1_41(addResult)) {
+                            addResult = closure_1_41;
+                            addResult = closure_1_77;
+                            if (closure_1_41(addResult)) {
                               addResult = addResult(addResult, addResult.startBuffered, addResult.endBuffered);
                             } else {
                               addResult = addResult(addResult, addResult.startNoBuffer, addResult.endNoBuffer);
@@ -24048,7 +23418,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 callback2(containerItemKeys, { didLayout: true });
                               })(containerItemKeys);
                               addResult = (function handleInitialScrollLayoutReady(containerItemKeys) {
-                                let closure_0 = containerItemKeys;
+                                closure_0 = containerItemKeys;
                                 if (containerItemKeys.state.initialScroll) {
                                   callback6(containerItemKeys, { forceScroll: true });
                                   const initialScrollSession = containerItemKeys.state.initialScrollSession;
@@ -24059,7 +23429,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   if ("offset" !== kind) {
                                     const _requestAnimationFrame = requestAnimationFrame;
                                     const animationFrame = requestAnimationFrame(function runScroll() {
-                                      return outer1_76(closure_0, { forceScroll: true });
+                                      return closure_1_76(closure_0, { forceScroll: true });
                                     });
                                   }
                                   closure_0 = containerItemKeys;
@@ -24087,7 +23457,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           addResult = containerItemKeys;
                           state = containerItemKeys.state;
                           ({ startNoBuffer, endNoBuffer } = obj);
-                          addResult = outer1_91;
+                          addResult = closure_1_91;
                           if (null == addResult) {
                             addResult = obj.startNoBuffer;
                           }
@@ -24114,8 +23484,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           }
                         }
                       }
-                      let tmp17 = outer1_25;
-                      const tmp80 = outer1_89;
+                      let tmp17 = closure_1_25;
+                      const tmp80 = closure_1_89;
                     }
                   }
                 }
@@ -24134,9 +23504,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               onLayout = maintainScrollAtEnd.onLayout;
             }
             if (onLayout) {
-              outer1_64(tmp2);
+              closure_1_64(tmp2);
             }
-            outer1_43(tmp2);
+            closure_1_43(tmp2);
             if (!state) {
               let tmp34 = callback;
               let tmp35 = callback;
@@ -24150,10 +23520,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 const _HermesInternal = HermesInternal;
                 const combined = "List " + str + " is 0. You may need to set a style or `flex: ` for the list, because children are absolutely positioned.";
                 if (tmp34) {
-                  tmp34 = !outer1_53.has("height0");
+                  tmp34 = !closure_1_53.has("height0");
                 }
                 if (tmp34) {
-                  outer1_53.add("height0");
+                  closure_1_53.add("height0");
                   const _console = console;
                   const _HermesInternal2 = HermesInternal;
                   console.warn("[legend-list] " + combined);
@@ -24174,7 +23544,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             }
           }
           closure_20(true);
-          outer1_103(context);
+          closure_1_103(context);
           let tmp45 = closure_18;
           if (closure_18) {
             tmp45 = !arg1;
@@ -24201,7 +23571,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 }
                 if ("offset" !== kind1) {
                   if (bootstrap) {
-                    const tmp51 = outer1_75(tmp2, initialScroll);
+                    const tmp51 = closure_1_75(tmp2, initialScroll);
                     const scrollingTo = state2.scrollingTo;
                     let isInitialScroll;
                     if (null != scrollingTo) {
@@ -24229,7 +23599,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             if (null == scroll) {
                               scroll = state2.scroll;
                             }
-                            let num4 = 0;
+                            num4 = 0;
                             if (null != scroll) {
                               num4 = scroll;
                             }
@@ -24246,16 +23616,16 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       let _Math = Math;
                       if (Math.abs(diff) > 1) {
                         if (state2.didFinishInitialScroll) {
-                          if (undefined !== outer1_83(tmp2)) {
+                          if (undefined !== closure_1_83(tmp2)) {
                             obj1 = {};
-                            stickyHeaderIndices = tmp2;
+                            closure_0 = tmp2;
                             state3 = tmp2.state;
                             state3.preservedEndAnchorCorrection = obj1;
                             let _requestAnimationFrame = requestAnimationFrame;
                             let animationFrame = requestAnimationFrame(() => {
                               const preservedEndAnchorCorrection = state.preservedEndAnchorCorrection;
-                              if (preservedEndAnchorCorrection === obj1) {
-                                const tmp10 = outer1_83(closure_0);
+                              if (preservedEndAnchorCorrection === closure_1) {
+                                const tmp10 = closure_1_83(closure_0);
                                 if (undefined !== tmp10) {
                                   const _Math = Math;
                                   if (Math.abs(tmp10) > 1) {
@@ -24272,16 +23642,17 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                     if (tmp4) {
                                       const _Date = Date;
                                       preservedEndAnchorCorrection.lastRequestTime = Date.now();
-                                      outer1_65(tmp9, tmp10);
+                                      closure_1_65(tmp9, tmp10);
                                     }
                                     closure_0 = tmp9;
+                                    closure_1 = tmp2;
                                     state = tmp9.state;
                                     state.preservedEndAnchorCorrection = tmp2;
                                     const _requestAnimationFrame = requestAnimationFrame;
                                     const animationFrame = requestAnimationFrame(() => {
                                       const preservedEndAnchorCorrection = state.preservedEndAnchorCorrection;
-                                      if (preservedEndAnchorCorrection === obj1) {
-                                        const tmp10 = outer1_83(closure_0);
+                                      if (preservedEndAnchorCorrection === closure_1) {
+                                        const tmp10 = closure_1_83(closure_0);
                                         if (undefined !== tmp10) {
                                           const _Math = Math;
                                           if (Math.abs(tmp10) > 1) {
@@ -24298,16 +23669,17 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                             if (tmp4) {
                                               const _Date = Date;
                                               preservedEndAnchorCorrection.lastRequestTime = Date.now();
-                                              outer1_65(tmp9, tmp10);
+                                              closure_1_65(tmp9, tmp10);
                                             }
                                             closure_0 = tmp9;
+                                            closure_1 = tmp2;
                                             state = tmp9.state;
                                             state.preservedEndAnchorCorrection = tmp2;
                                             const _requestAnimationFrame = requestAnimationFrame;
                                             const animationFrame = requestAnimationFrame(() => {
                                               const preservedEndAnchorCorrection = state.preservedEndAnchorCorrection;
-                                              if (preservedEndAnchorCorrection === obj1) {
-                                                const tmp10 = outer1_83(closure_0);
+                                              if (preservedEndAnchorCorrection === closure_1) {
+                                                const tmp10 = closure_1_83(closure_0);
                                                 if (undefined !== tmp10) {
                                                   const _Math = Math;
                                                   if (Math.abs(tmp10) > 1) {
@@ -24324,9 +23696,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                                     if (tmp4) {
                                                       const _Date = Date;
                                                       preservedEndAnchorCorrection.lastRequestTime = Date.now();
-                                                      outer1_65(tmp9, tmp10);
+                                                      closure_1_65(tmp9, tmp10);
                                                     }
                                                     closure_0 = tmp9;
+                                                    closure_1 = tmp2;
                                                     state = tmp9.state;
                                                     state.preservedEndAnchorCorrection = tmp2;
                                                     const _requestAnimationFrame = requestAnimationFrame;
@@ -24348,10 +23721,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             });
                           }
                         } else if (scrollingTo2) {
-                          value = outer1_37.get(state2);
+                          value = closure_1_37.get(state2);
                           scrollingTo2.offset = tmp51;
                           scrollingTo2.targetOffset = tmp51;
-                          const obj2 = {};
+                          obj2 = {};
                           const merged1 = Object.assign(initialScroll);
                           obj2.contentOffset = tmp51;
                           state2.initialScroll = obj2;
@@ -24366,22 +23739,22 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           const obj3 = { startScroll: null, targetOffset: null };
                           obj3[0] = startScroll;
                           obj3[1] = tmp51;
-                          const result = outer1_37.set(state2, obj3);
-                          outer1_65(tmp2, diff);
+                          const result = closure_1_37.set(state2, obj3);
+                          closure_1_65(tmp2, diff);
                         }
                       }
                     }
                     const obj4 = { scroll: null, targetIndexSeed: null };
                     obj4[0] = tmp51;
                     obj4[1] = initialScroll.index;
-                    outer1_80(tmp2, obj4);
+                    closure_1_80(tmp2, obj4);
                   }
                 }
               }
             }
           }
           if (!closure_18) {
-            outer1_76(tmp2);
+            closure_1_76(tmp2);
           }
         }, items14);
         obj17[1] = onLayout;
@@ -24400,19 +23773,19 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         const onLayoutChange = obj17.onLayoutChange;
         onScroll = onLayoutChange;
         const items15 = [onLayoutChange, onLayoutProp];
-        callback = closure_27;
+        callback = overrideItemLayout;
         callback = obj22.useCallback((nativeEvent) => {
           onScroll(nativeEvent.nativeEvent.layout, false);
           if (null != context) {
             context(nativeEvent);
           }
         }, items15);
-        if (closure_27) {
+        if (overrideItemLayout) {
           const items16 = [measureInLayoutEffect];
           callback = items16;
           callback = HermesBuiltin.arraySpread([], 1);
           callback = obj22.useLayoutEffect(() => {
-            let current = horizontal;
+            current = horizontal;
             if (horizontal) {
               current = stickyHeaderIndices.current;
             }
@@ -24427,10 +23800,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         callback = ref;
         const items17 = [snapToIndices];
         callback = obj.useLayoutEffect(() => {
-          let data;
-          let keyExtractor;
           if (snapToIndices) {
-            const state = context.state;
+            state = context.state;
             snapToIndices = state.props.snapToIndices;
             if (state.props.horizontal) {
               const tmp2 = ref(tmp);
@@ -24464,13 +23835,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         }, items18);
         const items19 = [data, dataKey, dataVersion, num4, num15];
         callback = obj.useLayoutEffect(() => {
-          let didColumnsChange;
-          let didDataChange;
           ({ didColumnsChange, didDataChange } = current);
           let data = current.props.data;
           let isFirst = data.length > 0;
           if (isFirst) {
-            isFirst = outer1_133(context);
+            isFirst = closure_1_133(context);
           }
           if (!isFirst) {
             isFirst = current.isFirst;
@@ -24483,13 +23852,13 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             isFirst = tmp8;
           }
           if (!isFirst) {
-            let obj = { didColumnsChange: null };
+            obj = { didColumnsChange: null };
             obj[0] = didColumnsChange;
-            let flag = obj.didColumnsChange;
+            flag = obj.didColumnsChange;
             if (flag === undefined) {
               flag = false;
             }
-            let state = tmp9.state;
+            state = tmp9.state;
             const previousData = state.previousData;
             const maintainScrollAtEnd = state.props.maintainScrollAtEnd;
             if (flag) {
@@ -24507,36 +23876,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               state.minIndexSizeChanged = 0;
               state.scrollForNextCalculateItemsInView = undefined;
             }
-            const stickyHeaderIndices = tmp9;
-            let closure_1 = { dataChanged: true, doMVCP: true };
+            closure_0 = tmp9;
+            closure_1 = { dataChanged: true, doMVCP: true };
             state = tmp9.state;
-            outer1_97(() => {
-              let alwaysRenderIndicesArr;
-              let bottom;
-              let closure_4;
-              let dataChanged;
-              let doMVCP;
-              let enableScrollForNextCalculateItemsInView;
-              let endNoBuffer;
-              let forceFullItemPositions;
-              let getItemType;
-              let idCache;
-              let indexByKey;
-              let initialScroll;
-              let keyExtractor;
-              let minIndexSizeChanged;
-              let positions;
-              let props;
-              let queuedInitialLayout;
-              let scrollForNextCalculateItemsInView;
-              let scrollLength;
+            closure_1_97(() => {
               let set2;
-              let sizes;
-              let startBufferedId;
-              let startNoBuffer;
-              let state;
-              let top;
-              let viewabilityConfigCallbackPairs;
               let addResult = state;
               let containerItemKeys = state.containerItemKeys;
               ({ enableScrollForNextCalculateItemsInView, idCache } = state);
@@ -24555,7 +23899,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 let _Set = Set;
                 stickyHeaderIndicesSet = new Set();
               }
-              let tmp9 = outer1_46(containerItemKeys, idCache.drawDistanceMode);
+              let tmp9 = closure_1_46(containerItemKeys, idCache.drawDistanceMode);
               ({ dataChanged, doMVCP, forceFullItemPositions } = idCache);
               let initialScrollSession = tmp2.initialScrollSession;
               let kind;
@@ -24566,18 +23910,18 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               if ("bootstrap" === kind) {
                 bootstrap = tmp2.initialScrollSession.bootstrap;
               }
-              let tmp16 = outer1_21(containerItemKeys, "numContainers");
+              let tmp16 = closure_1_21(containerItemKeys, "numContainers");
               if (data) {
                 if (0 !== scrollLength) {
                   if (tmp16) {
-                    let closure_8 = outer1_25(tmp7);
+                    closure_8 = closure_1_25(tmp7);
                     let tmp15Result = tmp15(tmp7, "stylePaddingTop");
                     let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-                    let closure_9 = sum + tmp15(tmp7, "headerSize");
+                    closure_9 = sum + tmp15(tmp7, "headerSize");
                     tmp15Result = tmp15(tmp7, "numColumns");
                     let scrollVelocity = idCache.scrollVelocity;
                     if (null == scrollVelocity) {
-                      scrollVelocity = outer1_69(tmp2);
+                      scrollVelocity = closure_1_69(tmp2);
                     }
                     ({ initialScroll, queuedInitialLayout } = tmp2);
                     if (!tmp13) {
@@ -24590,31 +23934,31 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       }
                     } else {
                       if (!queuedInitialLayout) {
-                        if (outer1_41(tmp2)) {
+                        if (closure_1_41(tmp2)) {
                           if (initialScroll) {
-                            scroll = outer1_75(tmp7, initialScroll);
+                            scroll = closure_1_75(tmp7, initialScroll);
                           }
                         }
                       }
                       scroll = tmp2.scroll;
                     }
-                    let c10 = 0;
-                    let c11 = 0;
-                    let c12 = 0;
-                    let c13 = 0;
-                    let c14 = 0;
-                    let c15 = 0;
+                    c10 = 0;
+                    c11 = 0;
+                    c12 = 0;
+                    c13 = 0;
+                    c14 = 0;
+                    c15 = 0;
                     function updateScroll2(scroll) {
-                      let closure_16 = scroll;
+                      closure_16 = scroll;
                       const values = containerItemKeys.values;
                       const value = values.get("scrollAdjustPending");
                       let num = 0;
                       if (null != value) {
                         num = value;
                       }
-                      let closure_11 = num - closure_9;
+                      closure_11 = num - closure_9;
                       const rounded = Math.round(scroll + closure_11);
-                      let closure_12 = rounded;
+                      closure_12 = rounded;
                       if (rounded + scrollLength > closure_8) {
                         const _Math = Math;
                         closure_12 = Math.max(0, tmp4 - tmp3);
@@ -24622,7 +23966,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     }
                     updateScroll2(scroll);
                     const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
-                    let closure_17 = tmp15Result1;
+                    closure_17 = tmp15Result1;
                     function resolveStickyState() {
                       let num = -1;
                       let num2 = -1;
@@ -24658,17 +24002,17 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         tmp8 = tmp9 >= 0;
                       }
                       if (tmp8) {
-                        outer2_22(containerItemKeys, "activeStickyIndex", num);
+                        closure_2_22(containerItemKeys, "activeStickyIndex", num);
                       }
-                      let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
-                      let fn;
+                      obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
+                      fn = undefined;
                       if (closure_4) {
                         if (arr.length > 0) {
                           if (tmp9 !== num) {
                             fn = () => {
-                              if (undefined !== outer1_6[num]) {
-                                if (null != outer1_4) {
-                                  const obj = { index: null, item: null };
+                              if (undefined !== closure_1_6[num]) {
+                                if (null != closure_1_4) {
+                                  obj = { index: null, item: null };
                                   obj[0] = tmp;
                                   obj[1] = tmp2;
                                   tmp3(obj);
@@ -24707,7 +24051,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         num6 = 0;
                         if (!tmp25) {
                           num6 = 0;
-                          if (!outer1_41(tmp2)) {
+                          if (!closure_1_41(tmp2)) {
                             num6 = 0;
                             if (!tmp2.scrollingTo) {
                               num6 = 0;
@@ -24735,9 +24079,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     }
                     function updateScrollRange() {
                       const bound = Math.max(0, c12);
-                      let closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
-                      let closure_13 = bound - result2 + num6;
-                      let closure_15 = closure_14 + result3 + num6;
+                      closure_14 = Math.max(bound, c12 + scrollLength + Math.max(0, -scroll));
+                      closure_13 = bound - result2 + num6;
+                      closure_15 = closure_14 + result3 + num6;
                     }
                     updateScrollRange();
                     if (0 !== num6) {
@@ -24784,12 +24128,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               if (null === top) {
                                 if (viewabilityConfigCallbackPairs) {
                                   (function updateViewabilityForCachedRange(state, viewabilityConfigCallbackPairs, scrollLength, c12, c14) {
-                                    let data;
-                                    let data2;
-                                    let keyExtractor;
-                                    let keyExtractor2;
-                                    let sizes;
-                                    let startBuffered;
                                     state = state.state;
                                     const endBuffered = state.endBuffered;
                                     data = state.props.data;
@@ -24850,9 +24188,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                                     tmp12 = tmp6;
                                                   }
                                                   let tmp26 = tmp13;
-                                                  let flag = false;
+                                                  flag = false;
                                                   if (null !== tmp11) {
-                                                    let flag2 = true;
+                                                    flag2 = true;
                                                     if (tmp23 <= c14) {
                                                       tmp13 = tmp6;
                                                       flag2 = false;
@@ -24888,7 +24226,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                                 }
                                               }
                                             }
-                                            const obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
+                                            obj = { endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startNoBuffer: null };
                                             obj[0] = tmp9;
                                             obj[1] = sum1;
                                             if (null == sum1) {
@@ -24938,11 +24276,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                     }
                                   })(tmp7, viewabilityConfigCallbackPairs, scrollLength, c12, c14);
                                 } else if (tmp2.props.onFirstVisibleItemChanged) {
-                                  outer1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
-                                    let data;
-                                    let keyExtractor;
-                                    let sizes;
-                                    let startBuffered;
+                                  closure_1_102(tmp2, (function findFirstVisibleIndexInCachedRange(state, c12) {
                                     state = state.state;
                                     const endBuffered = state.endBuffered;
                                     data = state.props.data;
@@ -25020,11 +24354,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     let tmp73;
                     if (doMVCP) {
                       if (!tmp25) {
-                        tmp73 = outer1_68(tmp7, dataChanged);
+                        tmp73 = closure_1_68(tmp7, dataChanged);
                       }
                     }
                     if (dataChanged) {
-                      outer1_86(tmp2);
+                      closure_1_86(tmp2);
                     }
                     let num8 = 0;
                     if (!forceFullItemPositions) {
@@ -25041,7 +24375,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         num8 = num9;
                       }
                     }
-                    let obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
+                    obj = { doMVCP: null, forceFullUpdate: null, optimizeForVisibleWindow: null, scrollBottomBuffered: null, scrollVelocity: null, startIndex: null };
                     obj[0] = doMVCP;
                     obj[1] = forceFullItemPositions;
                     let tmp82 = !forceFullItemPositions;
@@ -25058,8 +24392,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     obj[3] = c15;
                     obj[4] = scrollVelocity;
                     obj[5] = num8;
-                    outer1_89(tmp7, dataChanged, obj);
-                    const tmp17Result = outer1_25(tmp7);
+                    closure_1_89(tmp7, dataChanged, obj);
+                    const tmp17Result = closure_1_25(tmp7);
                     closure_8 = tmp17Result;
                     if (undefined !== minIndexSizeChanged) {
                       tmp2.minIndexSizeChanged = undefined;
@@ -25071,7 +24405,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             if (tmp2.idsInView.length > 0) {
                               const shouldRestorePosition = tmp2.props.maintainVisibleContentPosition.shouldRestorePosition;
                               const _Set2 = Set;
-                              let set = new Set();
+                              set = new Set();
                               const idsInView = tmp2.idsInView;
                               for (const item10226 of idsInView) {
                                 let tmp99 = item10226;
@@ -25095,11 +24429,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     }
                     addResult = state;
                     addResult = state;
-                    addResult = outer1_21;
-                    addResult = outer1_21;
+                    addResult = closure_1_21;
+                    addResult = closure_1_21;
                     addResult = containerItemKeys;
                     addResult = containerItemKeys;
-                    addResult = outer1_21(containerItemKeys, "scrollAdjustPending");
+                    addResult = closure_1_21(containerItemKeys, "scrollAdjustPending");
                     let num11 = 0;
                     if (null != addResult) {
                       num11 = addResult;
@@ -25150,19 +24484,19 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       while (true) {
                         addResult = idCache[addResult];
                         if (null == addResult) {
-                          addResult = outer1_49;
+                          addResult = closure_1_49;
                           addResult = state;
                           addResult = state;
-                          addResult = outer1_49(state, addResult);
+                          addResult = closure_1_49(state, addResult);
                         }
                         addResult = sizes.get(addResult);
                         if (null == addResult) {
-                          addResult = outer1_58;
+                          addResult = closure_1_58;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
                           let num14 = 0;
                           addResult = containerItemKeys;
-                          addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                          addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                         }
                         addResult = c13;
                         if (positions[addResult] + addResult <= c13) {
@@ -25196,12 +24530,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     let num18 = 0;
                     if (0 < tmp16) {
                       do {
-                        addResult = outer1_21;
-                        addResult = outer1_21;
+                        addResult = closure_1_21;
+                        addResult = closure_1_21;
                         addResult = containerItemKeys;
                         addResult = containerItemKeys;
                         let _HermesInternal = HermesInternal;
-                        addResult = outer1_21(containerItemKeys, "containerItemKey" + num16);
+                        addResult = closure_1_21(containerItemKeys, "containerItemKey" + num16);
                         addResult = num16;
                         addResult = num17;
                         addResult = num17;
@@ -25230,29 +24564,29 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         addResult = idCache[addResult];
                         addResult = flag3;
                         if (null == addResult) {
-                          addResult = outer1_49;
+                          addResult = closure_1_49;
                           addResult = state;
                           addResult = state;
-                          addResult = outer1_49(state, addResult);
+                          addResult = closure_1_49(state, addResult);
                         }
                         addResult = sizes.get(addResult);
                         if (null == addResult) {
-                          addResult = outer1_58;
+                          addResult = closure_1_58;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
                           let num19 = 0;
                           addResult = containerItemKeys;
-                          addResult = outer1_58(containerItemKeys, addResult, addResult, data[addResult]);
+                          addResult = closure_1_58(containerItemKeys, addResult, addResult, data[addResult]);
                         }
                         addResult = positions[addResult];
                         addResult = flag3;
                         if (!flag3) {
-                          addResult = outer1_100;
+                          addResult = closure_1_100;
                           addResult = c12;
                           addResult = c14;
                           let num20 = 0;
                           addResult = obj;
-                          addResult = outer1_100(obj, addResult, addResult, addResult, c12, c14);
+                          addResult = closure_1_100(obj, addResult, addResult, addResult, c12, c14);
                           addResult = null === addResult;
                           if (addResult) {
                             addResult = c13;
@@ -25295,13 +24629,13 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       }
                     }
                     const _Object = Object;
-                    let obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
+                    obj1 = { endBuffered: null, endNoBuffer: null, firstFullyOnScreenIndex: null, idsInView: null, startBuffered: null, startBufferedId: null, startNoBuffer: null };
                     obj1[0] = addResult;
                     ({ endNoBuffer: obj5[1], firstFullyOnScreenIndex: obj5[2] } = obj);
-                    addResult = outer1_101;
+                    addResult = closure_1_101;
                     addResult = state;
                     addResult = state;
-                    obj1[3] = outer1_101(state, obj);
+                    obj1[3] = closure_1_101(state, obj);
                     obj1[4] = addResult;
                     obj1[5] = addResult;
                     obj1[6] = obj.startNoBuffer;
@@ -25313,9 +24647,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       enableScrollForNextCalculateItemsInView = undefined !== addResult;
                     }
                     if (enableScrollForNextCalculateItemsInView) {
-                      addResult = outer1_54;
-                      if (!outer1_54(addResult)) {
-                        let obj2 = { bottom: null, top: null };
+                      addResult = closure_1_54;
+                      if (!closure_1_54(addResult)) {
+                        obj2 = { bottom: null, top: null };
                         obj2[0] = addResult;
                         obj2[1] = addResult;
                         addResult = obj2;
@@ -25326,12 +24660,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     let items = [];
                     if (dataChanged) {
                       for (let num21 = 0; num21 < addResult; num21 = num21 + 1) {
-                        addResult = outer1_21;
-                        addResult = outer1_21;
+                        addResult = closure_1_21;
+                        addResult = closure_1_21;
                         addResult = containerItemKeys;
                         addResult = containerItemKeys;
                         let _HermesInternal2 = HermesInternal;
-                        addResult = outer1_21(containerItemKeys, "containerItemKey" + num21);
+                        addResult = closure_1_21(containerItemKeys, "containerItemKey" + num21);
                         addResult = !keyExtractor;
                         addResult = num21;
                         if (keyExtractor) {
@@ -25347,8 +24681,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     addResult = state;
                     addResult = state;
                     const scrollTargetPinnedRange = state.scrollTargetPinnedRange;
-                    let c22 = 0;
-                    let c23 = -1;
+                    c22 = 0;
+                    c23 = -1;
                     let num23 = -1;
                     let num24 = 0;
                     if (scrollTargetPinnedRange) {
@@ -25365,7 +24699,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       num24 = addResult;
                     }
                     addResult = num24 <= num23;
-                    let closure_24 = addResult;
+                    closure_24 = addResult;
                     function isPinnedRenderIndex(addResult) {
                       let hasItem = set.has(addResult);
                       if (!hasItem) {
@@ -25388,13 +24722,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         addResult = new.target;
                         const set1 = new Set();
                         function addPinnedIndex(item10471) {
-                          let data;
-                          let keyExtractor;
                           if (item10471 >= 0) {
                             if (item10471 < length) {
                               let tmp4 = idCache[item10471];
                               if (null == tmp4) {
-                                ({ data, keyExtractor } = outer1_2.props);
+                                ({ data, keyExtractor } = closure_1_2.props);
                                 let str = "";
                                 if (data) {
                                   let tmp2 = null;
@@ -25412,7 +24744,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               }
                               const value = containerItemKeys.get(tmp4);
                               if (undefined !== value) {
-                                const stickyContainerPool = outer1_2.stickyContainerPool;
+                                const stickyContainerPool = closure_1_2.stickyContainerPool;
                                 stickyContainerPool.add(value);
                               } else {
                                 let hasItem = null == tmp4;
@@ -25432,10 +24764,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           do {
                             addResult = idCache[addResult];
                             if (null == addResult) {
-                              addResult = outer1_49;
+                              addResult = closure_1_49;
                               addResult = state;
                               addResult = state;
-                              addResult = outer1_49(state, addResult);
+                              addResult = closure_1_49(state, addResult);
                             }
                             if (!containerItemKeys.has(addResult)) {
                               addResult = set1.add(addResult);
@@ -25474,9 +24806,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           addResult = items1;
                           addResult = set1;
                           addResult = (function handleStickyActivation(addResult, prop, arg2, items1, addResult2, addResult3, addResult4) {
-                            let data;
-                            let keyExtractor;
-                            const state = addResult.state;
+                            state = addResult.state;
                             let num = -1;
                             if (arg2 >= 0) {
                               num = prop[arg2];
@@ -25510,7 +24840,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   }
                                   let tmp8 = tmp5;
                                   if (tmp5) {
-                                    let containerItemKeys = state.containerItemKeys;
+                                    containerItemKeys = state.containerItemKeys;
                                     tmp8 = !containerItemKeys.has(tmp5);
                                   }
                                   if (tmp8) {
@@ -25530,14 +24860,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             } while (num2 <= 1);
                           })(addResult, prop, num25, items1, addResult, addResult, addResult);
                         } else if (-1 !== tmp15Result1) {
-                          addResult = outer1_22;
-                          addResult = outer1_22;
+                          addResult = closure_1_22;
+                          addResult = closure_1_22;
                           addResult = containerItemKeys;
                           addResult = containerItemKeys;
-                          addResult = outer1_22(containerItemKeys, "activeStickyIndex", -1);
+                          addResult = closure_1_22(containerItemKeys, "activeStickyIndex", -1);
                         }
                         if (items1.length > 0) {
-                          let fn;
+                          fn = undefined;
                           if (getItemType) {
                             fn = (arg0) => {
                               const tmp = getItemType(data[arg0], arg0);
@@ -25557,22 +24887,20 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           addResult = fn;
                           addResult = tmp88;
                           addResult = (function findAvailableContainers(containerItemKeys, items1, addResult, addResult2, items, fn, has) {
-                            let closure_2;
-                            let stickyContainerPool;
-                            let closure_0 = fn;
+                            closure_0 = fn;
                             if (0 === items1.length) {
                               return [];
                             } else {
                               const tmp56 = length(containerItemKeys, "numContainers");
-                              const state = containerItemKeys.state;
+                              state = containerItemKeys.state;
                               ({ containerItemMetadata: closure_2, stickyContainerPool } = state);
-                              let set;
+                              set = undefined;
                               if (items.length > 0) {
                                 const _Set = Set;
                                 set = new Set(items);
                               }
                               const mapped = items1.map((itemIndex) => {
-                                const obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
+                                obj = { isSticky: stickyHeaderIndicesSet.has(itemIndex), itemIndex, itemType: null, order: null };
                                 stickyHeaderIndicesSet = state.props.stickyHeaderIndicesSet;
                                 let tmp;
                                 if (null != callback) {
@@ -25615,7 +24943,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   if (stickyContainerPool.has(num2)) {
                                     let tmp22 = undefined === tmp13 || tmp18;
                                     if (tmp22) {
-                                      let obj = { containerIndex: null, distance: null };
+                                      obj = { containerIndex: null, distance: null };
                                       obj[0] = num2;
                                       let _Number2 = Number;
                                       obj[1] = Number.POSITIVE_INFINITY;
@@ -25650,7 +24978,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               const _Array = Array;
                               const array = new Array(length);
                               let sum = tmp56;
-                              let c5 = false;
+                              c5 = false;
                               function assign(itemIndex, containerIndex) {
                                 array[itemIndex.order] = { containerIndex, itemIndex: itemIndex.itemIndex, itemType: itemIndex.itemType };
                                 let deleteResult;
@@ -25658,12 +24986,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   deleteResult = set.delete(containerIndex);
                                 }
                                 if (deleteResult) {
-                                  let c5 = true;
+                                  c5 = true;
                                 }
                               }
                               function assignMatching(found, items, arg2) {
-                                let closure_0 = items;
-                                let closure_1 = arg2;
+                                closure_0 = items;
+                                closure_1 = arg2;
                                 function _loop2() { ... }
                                 const iter = found[Symbol.iterator]();
                                 while (iter !== undefined) {
@@ -25696,7 +25024,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   }
                                   let tmp43 = item10099;
                                   let tmp44 = tmp38;
-                                  let obj1 = assign(tmp36, tmp39);
+                                  obj1 = assign(tmp36, tmp39);
                                 }
                                 continue;
                               }
@@ -25717,7 +25045,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 }
                                 if (sum > POSITIVE_INFINITY) {
                                   const _console = console;
-                                  let obj2 = { debugInfo: null };
+                                  obj2 = { debugInfo: null };
                                   const obj3 = { numContainers: null, numContainersPooled: null, numNeeded: null, stillNeeded: null };
                                   obj3[0] = tmp56;
                                   obj3[1] = POSITIVE_INFINITY;
@@ -25739,19 +25067,19 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             let containerIndex = addResult.containerIndex;
                             addResult = idCache[itemIndex];
                             if (null == addResult) {
-                              addResult = outer1_49;
+                              addResult = closure_1_49;
                               addResult = state;
                               addResult = state;
                               addResult = itemIndex;
-                              addResult = outer1_49(state, addResult);
+                              addResult = closure_1_49(state, addResult);
                             }
                             addResult = containerItemKeys;
                             addResult = containerItemKeys;
                             addResult = containerIndex;
                             let _HermesInternal3 = HermesInternal;
-                            addResult = outer1_21;
-                            addResult = outer1_21;
-                            addResult = outer1_21(containerItemKeys, "containerItemKey" + containerIndex);
+                            addResult = closure_1_21;
+                            addResult = closure_1_21;
+                            addResult = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                             if (addResult) {
                               addResult = addResult !== addResult;
                             }
@@ -25778,23 +25106,23 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               }
                               state.containerItemGenerations[containerIndex] = num28 + 1;
                             }
-                            addResult = outer1_22;
-                            addResult = outer1_22;
+                            addResult = closure_1_22;
+                            addResult = closure_1_22;
                             addResult = containerIndex;
                             let _HermesInternal4 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerItemKey" + containerIndex, addResult);
+                            addResult = closure_1_22(addResult, "containerItemKey" + containerIndex, addResult);
                             let _HermesInternal5 = HermesInternal;
                             addResult = itemIndex;
-                            addResult = outer1_22(addResult, "containerItemIndex" + containerIndex, addResult);
+                            addResult = closure_1_22(addResult, "containerItemIndex" + containerIndex, addResult);
                             let _HermesInternal6 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
+                            addResult = closure_1_22(addResult, "containerItemData" + containerIndex, data[addResult]);
                             addResult = state;
                             addResult = state;
                             let containerItemMetadata = state.containerItemMetadata;
-                            addResult = outer1_28;
+                            addResult = closure_1_28;
                             let num29 = 0;
                             addResult = state;
-                            addResult = containerItemMetadata.set(containerIndex, outer1_28(state, itemIndex, data[addResult], addResult.itemType));
+                            addResult = containerItemMetadata.set(containerIndex, closure_1_28(state, itemIndex, data[addResult], addResult.itemType));
                             addResult = containerItemKeys.set(addResult, containerIndex);
                             let userScrollAnchorReset = state.userScrollAnchorReset;
                             if (null != userScrollAnchorReset) {
@@ -25834,14 +25162,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             continue;
                           }
                           if (addResult !== tmp16) {
-                            addResult = outer1_22;
-                            addResult = outer1_22;
+                            addResult = closure_1_22;
+                            addResult = closure_1_22;
                             addResult = containerItemKeys;
                             addResult = containerItemKeys;
-                            addResult = outer1_22(containerItemKeys, "numContainers", addResult);
-                            addResult = outer1_21;
-                            addResult = outer1_21;
-                            if (addResult > outer1_21(containerItemKeys, "numContainersPooled")) {
+                            addResult = closure_1_22(containerItemKeys, "numContainers", addResult);
+                            addResult = closure_1_21;
+                            addResult = closure_1_21;
+                            if (addResult > closure_1_21(containerItemKeys, "numContainersPooled")) {
                               addResult = addResult(addResult, "numContainersPooled", (function getExpandedContainerPoolSize(length, addResult) {
                                 let num = 0;
                                 if (length > 0) {
@@ -25890,7 +25218,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       addResult = items;
                       addResult = isPinnedRenderIndex;
                       addResult = (function handleStickyRecycling(addResult, prop, addResult2, arg3, arg4, items, isPinnedRenderIndex) {
-                        const state = addResult.state;
+                        state = addResult.state;
                         const iter = state.stickyContainerPool[Symbol.iterator]();
                         const nextResult = iter.next();
                         while (iter !== undefined) {
@@ -25916,7 +25244,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 if (tmp11 < arg4 - 1) {
                                   let tmp18 = index;
                                   let tmp19 = prop[tmp11 + 1];
-                                  let flag = false;
+                                  flag = false;
                                   if (tmp19) {
                                     let tmp44 = tmp19;
                                     let tmp45 = state.positions[tmp20];
@@ -25999,12 +25327,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     let flag5 = false;
                     if (0 < addResult) {
                       do {
-                        addResult = outer1_21;
-                        addResult = outer1_21;
+                        addResult = closure_1_21;
+                        addResult = closure_1_21;
                         addResult = containerItemKeys;
                         addResult = containerItemKeys;
                         let _HermesInternal8 = HermesInternal;
-                        addResult = outer1_21(containerItemKeys, "containerItemKey" + num32);
+                        addResult = closure_1_21(containerItemKeys, "containerItemKey" + num32);
                         addResult = flag5;
                         addResult = undefined;
                         addResult = num32;
@@ -26038,41 +25366,41 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           addResult = containerItemMetadata2.delete(num32);
                           let stickyContainerPool3 = state.stickyContainerPool;
                           if (stickyContainerPool3.has(num32)) {
-                            addResult = outer1_22;
-                            addResult = outer1_22;
+                            addResult = closure_1_22;
+                            addResult = closure_1_22;
                             let _HermesInternal9 = HermesInternal;
-                            addResult = outer1_22(addResult, "containerSticky" + num32, false);
+                            addResult = closure_1_22(addResult, "containerSticky" + num32, false);
                             let stickyContainerPool4 = addResult.stickyContainerPool;
                             addResult = stickyContainerPool4.delete(num32);
                           }
-                          addResult = outer1_22;
-                          addResult = outer1_22;
+                          addResult = closure_1_22;
+                          addResult = closure_1_22;
                           let _HermesInternal10 = HermesInternal;
-                          addResult = outer1_22(addResult, "containerItemKey" + num32, undefined);
+                          addResult = closure_1_22(addResult, "containerItemKey" + num32, undefined);
                           let _HermesInternal11 = HermesInternal;
-                          addResult = outer1_22(addResult, "containerItemIndex" + num32, undefined);
+                          addResult = closure_1_22(addResult, "containerItemIndex" + num32, undefined);
                           let _HermesInternal12 = HermesInternal;
-                          addResult = outer1_22(addResult, "containerItemData" + num32, undefined);
+                          addResult = closure_1_22(addResult, "containerItemData" + num32, undefined);
                           let _HermesInternal13 = HermesInternal;
-                          addResult = outer1_32;
-                          addResult = outer1_22(addResult, "containerPosition" + num32, outer1_32);
+                          addResult = closure_1_32;
+                          addResult = closure_1_22(addResult, "containerPosition" + num32, closure_1_32);
                           let _HermesInternal14 = HermesInternal;
-                          addResult = outer1_22(addResult, "containerColumn" + num32, -1);
+                          addResult = closure_1_22(addResult, "containerColumn" + num32, -1);
                           let _HermesInternal15 = HermesInternal;
-                          addResult = outer1_22(addResult, "containerSpan" + num32, 1);
+                          addResult = closure_1_22(addResult, "containerSpan" + num32, 1);
                           addResult = flag5;
                         } else {
                           addResult = indexByKey.get(addResult);
                           addResult = flag5;
                           if (undefined !== addResult) {
-                            addResult = outer1_88;
+                            addResult = closure_1_88;
                             let obj3 = { scrollAdjustPending: null, updateLayout: true };
                             addResult = c10;
                             obj3[0] = c10;
                             let num35 = 0;
                             addResult = num32;
                             addResult = obj3;
-                            addResult = outer1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
+                            addResult = closure_1_88(addResult, addResult, addResult, obj3).didChangePosition || flag5;
                           }
                         }
                         num32 = num32 + 1;
@@ -26081,29 +25409,29 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     }
                     addResult = set2;
                     if (set2) {
-                      addResult = outer1_27;
+                      addResult = closure_1_27;
                     }
                     if (addResult) {
-                      addResult = outer1_87;
+                      addResult = closure_1_87;
                       addResult = containerItemKeys;
                       addResult = containerItemKeys;
-                      addResult = outer1_87(containerItemKeys, set2);
+                      addResult = closure_1_87(containerItemKeys, set2);
                     }
                     if (!tmp13) {
-                      addResult = outer1_84;
+                      addResult = closure_1_84;
                       addResult = containerItemKeys;
                       addResult = containerItemKeys;
-                      addResult = outer1_84(containerItemKeys);
+                      addResult = closure_1_84(containerItemKeys);
                     } else {
-                      addResult = outer1_102;
+                      addResult = closure_1_102;
                       addResult = state;
                       addResult = state;
-                      addResult = outer1_102(state, obj.startNoBuffer);
+                      addResult = closure_1_102(state, obj.startNoBuffer);
                       if (!queuedInitialLayout) {
                         if (!addResult.didContainersLayout) {
-                          addResult = outer1_41;
-                          addResult = outer1_77;
-                          if (outer1_41(addResult)) {
+                          addResult = closure_1_41;
+                          addResult = closure_1_77;
+                          if (closure_1_41(addResult)) {
                             addResult = addResult(addResult, addResult.startBuffered, addResult.endBuffered);
                           } else {
                             addResult = addResult(addResult, addResult.startNoBuffer, addResult.endNoBuffer);
@@ -26120,7 +25448,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               callback2(containerItemKeys, { didLayout: true });
                             })(containerItemKeys);
                             addResult = (function handleInitialScrollLayoutReady(containerItemKeys) {
-                              let closure_0 = containerItemKeys;
+                              closure_0 = containerItemKeys;
                               if (containerItemKeys.state.initialScroll) {
                                 callback6(containerItemKeys, { forceScroll: true });
                                 const initialScrollSession = containerItemKeys.state.initialScrollSession;
@@ -26131,7 +25459,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 if ("offset" !== kind) {
                                   const _requestAnimationFrame = requestAnimationFrame;
                                   const animationFrame = requestAnimationFrame(function runScroll() {
-                                    return outer1_76(closure_0, { forceScroll: true });
+                                    return closure_1_76(closure_0, { forceScroll: true });
                                   });
                                 }
                                 closure_0 = containerItemKeys;
@@ -26159,7 +25487,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         addResult = containerItemKeys;
                         state = containerItemKeys.state;
                         ({ startNoBuffer, endNoBuffer } = obj);
-                        addResult = outer1_91;
+                        addResult = closure_1_91;
                         if (null == addResult) {
                           addResult = obj.startNoBuffer;
                         }
@@ -26186,8 +25514,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         }
                       }
                     }
-                    let tmp17 = outer1_25;
-                    const tmp80 = outer1_89;
+                    let tmp17 = closure_1_25;
+                    const tmp80 = closure_1_89;
                   }
                 }
               }
@@ -26201,7 +25529,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               tmp16 = onDataChange;
             }
             if (tmp16) {
-              tmp16 = outer1_64(tmp9);
+              tmp16 = closure_1_64(tmp9);
             }
             let tmp20 = !tmp16;
             if (!tmp16) {
@@ -26214,7 +25542,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               state.isEndReached = false;
             }
             if (!tmp16) {
-              outer1_43(tmp9);
+              closure_1_43(tmp9);
             }
             delete tmp2[tmp];
           }
@@ -26228,10 +25556,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         const items20 = [extraData, overrideItemLayout, num4];
         callback = obj.useLayoutEffect(() => {
           context(context, "extraData", onScroll);
-          ref2.current = closure_27;
-          let tmp2 = closure_27;
-          if (!closure_27) {
-            tmp2 = ref2.current !== closure_27;
+          ref2.current = overrideItemLayout;
+          let tmp2 = overrideItemLayout;
+          if (!overrideItemLayout) {
+            tmp2 = ref2.current !== overrideItemLayout;
           }
           if (tmp2) {
             tmp2 = num4 > 1;
@@ -26240,7 +25568,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             const triggerCalculateItemsInView = current.triggerCalculateItemsInView;
             if (null != triggerCalculateItemsInView) {
               const call = triggerCalculateItemsInView.call;
-              const obj = { forceFullItemPositions: true };
+              obj = { forceFullItemPositions: true };
               if (typeof call === "unknown") {
                 const result = triggerCalculateItemsInView(obj);
               } else {
@@ -26254,7 +25582,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         callback = obj.useEffect(() => {
           if (onMetricsChange) {
             let values = context.values;
-            let obj = { footerSize: null, headerSize: null };
+            obj = { footerSize: null, headerSize: null };
             obj[0] = values.get("footerSize") || 0;
             values = tmp2.values;
             const tmp3 = values.get("footerSize") || 0;
@@ -26271,10 +25599,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               tmp(obj);
             }
             emitMetrics = function emitMetrics() {
-              let values = outer1_22.values;
-              const obj = { footerSize: values.get("footerSize") || 0, headerSize: null };
-              values = outer1_22.values;
-              const tmp = outer1_22;
+              let values = closure_1_22.values;
+              obj = { footerSize: values.get("footerSize") || 0, headerSize: null };
+              values = closure_1_22.values;
+              const tmp = closure_1_22;
               const tmp2 = values.get("footerSize") || 0;
               obj[1] = values.get("headerSize") || 0;
               let tmp4 = obj;
@@ -26285,16 +25613,16 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 tmp4 = obj.footerSize === obj.footerSize;
               }
               if (!tmp4) {
-                outer1_8(obj);
+                closure_1_8(obj);
               }
             };
             const listeners = tmp2.listeners;
             let value = listeners.get("headerSize");
             let items = value;
-            let obj2 = value;
+            obj2 = value;
             if (!value) {
               const _Set = Set;
-              const set = new Set();
+              set = new Set();
               items = set;
               const result = listeners.set("headerSize", set);
               obj2 = set;
@@ -26325,7 +25653,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         }, items21);
         const items22 = [viewabilityConfig, viewabilityConfigCallbackPairs, onViewableItemsChanged];
         callback = obj.useEffect(() => {
-          let obj = viewabilityConfig;
+          obj = viewabilityConfig;
           let tmp3 = viewabilityConfig;
           if (!viewabilityConfig) {
             tmp3 = tmp;
@@ -26354,21 +25682,21 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           }
         }, items22);
         stickyHeaderIndices = () => {
-          if (!closure_27) {
-            outer1_133(context);
+          if (!overrideItemLayout) {
+            closure_1_133(context);
           }
         };
         callback = obj22.useState(() => f96670());
         callback = obj.useImperativeHandle(ref, () => {
-          let closure_0 = context;
-          let closure_1 = closure_21;
-          let state = context.state;
-          let c3 = 0;
+          closure_0 = context;
+          closure_1 = closure_21;
+          state = context.state;
+          c3 = 0;
           function isSettlingAfterDataChange() {
 
           }
           function isScrollToIndexReady(arg0) {
-            let flag = arg1;
+            flag = arg1;
             if (arg1 === undefined) {
               flag = false;
             }
@@ -26383,10 +25711,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 let tmp2 = undefined === anchorIndex || anchorIndex < 0 || anchorIndex >= length || arg0 < anchorIndex;
                 if (!tmp2) {
                   const diff = length - 1;
-                  let flag2 = true;
+                  flag2 = true;
                   if (anchorIndex <= diff) {
                     flag2 = false;
-                    while (undefined !== outer1_57(tmp3, anchorIndex)) {
+                    while (undefined !== closure_1_57(tmp3, anchorIndex)) {
                       anchorIndex = anchorIndex + 1;
                       flag2 = true;
                       if (anchorIndex > diff) {
@@ -26403,9 +25731,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             return flag;
           }
           function runScrollRequest(token, resolve, arg2, arg3) {
-            let closure_0 = token;
-            let fn = resolve;
-            let state = arg2;
+            closure_0 = token;
+            fn = resolve;
+            state = arg2;
             fn = arg3;
             if (arg3 === undefined) {
               fn = function r() {
@@ -26486,12 +25814,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               if (pendingScrollToEnd.token === c3) {
                 runScrollRequest(pendingScrollToEnd.token, pendingScrollToEnd.resolve, () => {
                   const options = pendingScrollToEnd.options;
-                  const state = pendingScrollToEnd.state;
+                  state = pendingScrollToEnd.state;
                   const diff = state.props.data.length - 1;
-                  let flag = false;
+                  flag = false;
                   if (-1 !== diff) {
                     const values = tmp.values;
-                    const obj = {};
+                    obj = {};
                     const merged = Object.assign(options);
                     obj.index = diff;
                     let num;
@@ -26504,11 +25832,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     }
                     obj.viewOffset = diff1 + num;
                     obj.viewPosition = 1;
-                    outer2_73(tmp, obj);
+                    closure_2_73(tmp, obj);
                     flag = true;
                     const tmp3 = state.props.stylePaddingBottom || 0;
                     const tmp4 = values.get("footerSize") || 0;
-                    const tmp5 = outer2_73;
+                    const tmp5 = closure_2_73;
                   }
                   return flag;
                 }, () => callback(props.props.data.length - 1, true));
@@ -26533,7 +25861,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               sizes.clear();
               const sizesKnown = state.sizesKnown;
               sizesKnown.clear();
-              outer1_30(state);
+              closure_1_30(state);
               for (const key10019 in state.averageSizes) {
                 let tmp13 = key10019;
                 let tmp14 = state;
@@ -26545,7 +25873,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               state.scrollForNextCalculateItemsInView = undefined;
               state.pendingTotalSize = undefined;
               state.totalSize = 0;
-              outer1_22(closure_0, "totalSize", 0);
+              closure_1_22(closure_0, "totalSize", 0);
               if ("full" === str) {
                 const indexByKey = tmp7.indexByKey;
                 indexByKey.clear();
@@ -26569,7 +25897,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               const triggerCalculateItemsInView = tmp7.triggerCalculateItemsInView;
               if (null != triggerCalculateItemsInView) {
                 const call = triggerCalculateItemsInView.call;
-                const obj = { forceFullItemPositions: true };
+                obj = { forceFullItemPositions: true };
                 if (typeof call === "unknown") {
                   const result = triggerCalculateItemsInView(obj);
                 } else {
@@ -26578,11 +25906,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               }
             },
             flashScrollIndicators() {
-              const current = refScroller.current;
+              current = refScroller.current;
               return current.flashScrollIndicators();
             },
             getAnimatableRef() {
-              const current = refScroller.current;
+              current = refScroller.current;
               const getNativeScrollRef = current.getNativeScrollRef;
               if (null == getNativeScrollRef) {
                 if (null == current2) {
@@ -26598,11 +25926,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               return refScroller.current;
             },
             getScrollableNode() {
-              const current = refScroller.current;
+              current = refScroller.current;
               return current.getScrollableNode();
             },
             getScrollResponder() {
-              const current = refScroller.current;
+              current = refScroller.current;
               return current.getScrollResponder();
             },
             getState() {
@@ -26614,11 +25942,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               const values3 = closure_0.values;
               return {
                 activeStickyIndex: values.get("activeStickyIndex"),
-                contentLength: outer1_25(closure_0),
+                contentLength: closure_1_25(closure_0),
                 data: state.props.data,
                 elementAtIndex(arg0) {
-                  let data;
-                  let keyExtractor;
                   const viewRefs = closure_0.viewRefs;
                   ({ data, keyExtractor } = closure_2.props);
                   let str = "";
@@ -26634,7 +25960,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     tmp2.idCache[arg0] = tmp4;
                     str = tmp4;
                   }
-                  const state = tmp.state;
+                  state = tmp.state;
                   let containerItemKeys;
                   if (null != state) {
                     containerItemKeys = state.containerItemKeys;
@@ -26663,7 +25989,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     }
                   }
                   value = viewRefs.get(num);
-                  let current;
+                  current = undefined;
                   if (null != value) {
                     current = value.current;
                   }
@@ -26672,7 +25998,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 end: state.endNoBuffer,
                 endBuffered: state.endBuffered,
                 getAverageItemSizes() {
-                  let obj = {};
+                  obj = {};
                   for (const key10005 in closure_2.averageSizes) {
                     let str = key10005;
                     let tmp2 = tmp.averageSizes[key10005];
@@ -26699,11 +26025,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 isStartReached: state.isStartReached,
                 isWithinMaintainScrollAtEndThreshold: values3.get("isWithinMaintainScrollAtEndThreshold"),
                 listen(arg0, arg1) {
-                  let closure_0 = arg1;
+                  closure_0 = arg1;
                   const listeners = closure_0.listeners;
                   const value = listeners.get(arg0);
-                  let set = value;
-                  let obj = value;
+                  set = value;
+                  obj = value;
                   if (!value) {
                     const _Set = Set;
                     set = new Set();
@@ -26714,11 +26040,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   return () => set.delete(closure_0);
                 },
                 listenToPosition(arg0, arg1) {
-                  let closure_0 = arg1;
+                  closure_0 = arg1;
                   const positionListeners = closure_0.positionListeners;
                   const value = positionListeners.get(arg0);
-                  let set = value;
-                  let obj = value;
+                  set = value;
+                  obj = value;
                   if (!value) {
                     const _Set = Set;
                     set = new Set();
@@ -26742,12 +26068,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 },
                 scroll: state.scroll,
                 scrollLength: state.scrollLength,
-                scrollVelocity: outer1_69(state),
+                scrollVelocity: closure_1_69(state),
                 sizeAtIndex(arg0) {
-                  let data;
-                  let keyExtractor;
-                  let props;
-                  let sizesKnown;
                   ({ sizesKnown, props } = closure_2);
                   ({ data, keyExtractor } = props);
                   let str = "";
@@ -26771,7 +26093,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               };
             },
             reportContentInset(arg0) {
-              const state = closure_0.state;
+              state = closure_0.state;
               let tmp2;
               if (null != arg0) {
                 tmp2 = arg0;
@@ -26807,7 +26129,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 if (null != tmp2) {
                   bottom1 = tmp2.bottom;
                 }
-                let num4 = 0;
+                num4 = 0;
                 if (null != bottom1) {
                   num4 = bottom1;
                 }
@@ -26853,11 +26175,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               }
               state.contentInsetOverride = tmp2;
               if (!tmp5) {
-                outer1_50(tmp);
+                closure_1_50(tmp);
               }
-              outer1_70(closure_0, state.scroll, true, { markHasScrolled: false });
+              closure_1_70(closure_0, state.scroll, true, { markHasScrolled: false });
               if (!tmp5) {
-                outer1_85(tmp);
+                closure_1_85(tmp);
               }
             },
             scrollIndexIntoView(arg0) {
@@ -26866,16 +26188,16 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 HermesBuiltin.throwTypeError();
               }
               f112226 = () => {
-                if (typeof outer1_9 !== "function") {
+                if (typeof closure_1_9 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                let flag = false;
-                if (outer1_2) {
+                flag = false;
+                if (closure_1_2) {
                   const index = tmp.index;
-                  const tmp5 = outer1_3(tmp, outer1_6);
-                  const startNoBuffer = outer1_2.startNoBuffer;
+                  const tmp5 = closure_1_3(tmp, closure_1_6);
+                  const startNoBuffer = closure_1_2.startNoBuffer;
                   if (index < startNoBuffer) {
-                    const obj = {};
+                    obj = {};
                     const merged = Object.assign(tmp5);
                     obj.index = index;
                     let num = 1;
@@ -26883,9 +26205,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       num = 0;
                     }
                     obj.viewPosition = num;
-                    outer1_73(f112226, obj);
+                    closure_1_73(f112226, obj);
                     flag = true;
-                    const tmp7 = outer1_73;
+                    const tmp7 = closure_1_73;
                     const tmp8 = f112226;
                   } else {
                     flag = false;
@@ -26897,13 +26219,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 return true;
               }
               return new Promise((pendingScrollResolve) => {
-                if (typeof outer1_7 !== "function") {
+                if (typeof closure_1_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                const sum = outer1_3 + 1;
-                outer1_3 = sum;
-                outer1_2.pendingScrollToEnd = undefined;
-                pendingScrollResolve = outer1_2.pendingScrollResolve;
+                sum = sum + 1;
+                closure_1_2.pendingScrollToEnd = undefined;
+                pendingScrollResolve = closure_1_2.pendingScrollResolve;
                 if (null != pendingScrollResolve) {
                   const call = pendingScrollResolve.call;
                   if (typeof call === "unknown") {
@@ -26912,8 +26233,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     call(tmp2);
                   }
                 }
-                outer1_2.pendingScrollResolve = pendingScrollResolve;
-                outer1_6(sum, pendingScrollResolve, f112232, t);
+                closure_1_2.pendingScrollResolve = pendingScrollResolve;
+                closure_1_6(sum, pendingScrollResolve, f112232, t);
               });
             },
             scrollItemIntoView(item) {
@@ -26923,20 +26244,20 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 HermesBuiltin.throwTypeError();
               }
               f112227 = () => {
-                const data = outer1_2.props.data;
+                const data = closure_1_2.props.data;
                 let index = data.indexOf(f112227);
-                let flag = -1 !== index;
+                flag = -1 !== index;
                 if (flag) {
-                  let obj = { index: null };
+                  obj = { index: null };
                   obj[0] = index;
                   const merged = Object.assign(t);
-                  if (typeof outer1_9 !== "function") {
+                  if (typeof closure_1_9 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   flag = true;
                   if (tmp) {
                     index = obj.index;
-                    const tmp9 = outer1_3(obj, outer1_6);
+                    const tmp9 = closure_1_3(obj, closure_1_6);
                     const startNoBuffer = tmp.startNoBuffer;
                     if (index < startNoBuffer) {
                       obj = {};
@@ -26947,9 +26268,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         num = 0;
                       }
                       obj.viewPosition = num;
-                      outer1_73(f112227, obj);
+                      closure_1_73(f112227, obj);
                       flag = true;
-                      const tmp11 = outer1_73;
+                      const tmp11 = closure_1_73;
                       const tmp12 = f112227;
                     } else {
                       flag = true;
@@ -26962,13 +26283,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 return true;
               };
               return new Promise((pendingScrollResolve) => {
-                if (typeof outer1_7 !== "function") {
+                if (typeof closure_1_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                const sum = outer1_3 + 1;
-                outer1_3 = sum;
-                outer1_2.pendingScrollToEnd = undefined;
-                pendingScrollResolve = outer1_2.pendingScrollResolve;
+                sum = sum + 1;
+                closure_1_2.pendingScrollToEnd = undefined;
+                pendingScrollResolve = closure_1_2.pendingScrollResolve;
                 if (null != pendingScrollResolve) {
                   const call = pendingScrollResolve.call;
                   if (typeof call === "unknown") {
@@ -26977,20 +26297,19 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     call(tmp2);
                   }
                 }
-                outer1_2.pendingScrollResolve = pendingScrollResolve;
-                outer1_6(sum, pendingScrollResolve, f112232, t);
+                closure_1_2.pendingScrollResolve = pendingScrollResolve;
+                closure_1_6(sum, pendingScrollResolve, f112232, t);
               });
             },
             scrollToEnd(arg0) {
-              let closure_0 = arg0;
+              closure_0 = arg0;
               return new Promise((pendingScrollResolve) => {
-                if (typeof outer1_7 !== "function") {
+                if (typeof closure_1_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                const sum = outer1_3 + 1;
-                outer1_3 = sum;
-                outer1_2.pendingScrollToEnd = undefined;
-                pendingScrollResolve = outer1_2.pendingScrollResolve;
+                sum = sum + 1;
+                closure_1_2.pendingScrollToEnd = undefined;
+                pendingScrollResolve = closure_1_2.pendingScrollResolve;
                 if (null != pendingScrollResolve) {
                   const call = pendingScrollResolve.call;
                   if (typeof call === "unknown") {
@@ -26999,10 +26318,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     call(tmp2);
                   }
                 }
-                outer1_2.pendingScrollResolve = pendingScrollResolve;
-                outer1_2.pendingScrollToEnd = { options: closure_0, resolve: pendingScrollResolve, token: sum };
-                if (outer1_1) {
-                  outer1_1();
+                closure_1_2.pendingScrollResolve = pendingScrollResolve;
+                closure_1_2.pendingScrollToEnd = { options: closure_0, resolve: pendingScrollResolve, token: sum };
+                if (closure_1_1) {
+                  closure_1_1();
                 } else {
                   const runPendingScrollToEnd = tmp2.runPendingScrollToEnd;
                   if (null != runPendingScrollToEnd) {
@@ -27018,15 +26337,15 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             },
             scrollToIndex(index) {
               let f112229 = index;
-              let fn;
+              fn = undefined;
               if (index.index >= 0) {
-                fn = () => outer1_5(f112229.index);
+                fn = () => closure_1_5(f112229.index);
               }
               if (typeof runScrollWithPromise !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               f112229 = () => {
-                outer2_73(f112229, f112229);
+                closure_2_73(f112229, f112229);
                 return true;
               };
               if (fn === undefined) {
@@ -27035,13 +26354,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 };
               }
               return new Promise((pendingScrollResolve) => {
-                if (typeof outer1_7 !== "function") {
+                if (typeof closure_1_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                const sum = outer1_3 + 1;
-                outer1_3 = sum;
-                outer1_2.pendingScrollToEnd = undefined;
-                pendingScrollResolve = outer1_2.pendingScrollResolve;
+                sum = sum + 1;
+                closure_1_2.pendingScrollToEnd = undefined;
+                pendingScrollResolve = closure_1_2.pendingScrollResolve;
                 if (null != pendingScrollResolve) {
                   const call = pendingScrollResolve.call;
                   if (typeof call === "unknown") {
@@ -27050,8 +26368,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     call(tmp2);
                   }
                 }
-                outer1_2.pendingScrollResolve = pendingScrollResolve;
-                outer1_6(sum, pendingScrollResolve, f112232, t);
+                closure_1_2.pendingScrollResolve = pendingScrollResolve;
+                closure_1_6(sum, pendingScrollResolve, f112232, t);
               });
             },
             scrollToItem(item) {
@@ -27061,14 +26379,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 HermesBuiltin.throwTypeError();
               }
               f112231 = () => {
-                const data = outer1_2.props.data;
+                const data = closure_1_2.props.data;
                 const index = data.indexOf(f112231);
-                let flag = -1 !== index;
+                flag = -1 !== index;
                 if (flag) {
-                  const obj = { index: null };
+                  obj = { index: null };
                   obj[0] = index;
                   const merged = Object.assign(t);
-                  outer2_73(f112231, obj);
+                  closure_2_73(f112231, obj);
                   flag = true;
                 }
                 return flag;
@@ -27077,13 +26395,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 return true;
               };
               return new Promise((pendingScrollResolve) => {
-                if (typeof outer1_7 !== "function") {
+                if (typeof closure_1_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                const sum = outer1_3 + 1;
-                outer1_3 = sum;
-                outer1_2.pendingScrollToEnd = undefined;
-                pendingScrollResolve = outer1_2.pendingScrollResolve;
+                sum = sum + 1;
+                closure_1_2.pendingScrollToEnd = undefined;
+                pendingScrollResolve = closure_1_2.pendingScrollResolve;
                 if (null != pendingScrollResolve) {
                   const call = pendingScrollResolve.call;
                   if (typeof call === "unknown") {
@@ -27092,8 +26409,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     call(tmp2);
                   }
                 }
-                outer1_2.pendingScrollResolve = pendingScrollResolve;
-                outer1_6(sum, pendingScrollResolve, f112232, t);
+                closure_1_2.pendingScrollResolve = pendingScrollResolve;
+                closure_1_6(sum, pendingScrollResolve, f112232, t);
               });
             },
             scrollToOffset(arg0) {
@@ -27102,20 +26419,19 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 HermesBuiltin.throwTypeError();
               }
               f112232 = () => {
-                outer2_72(f112232, f112232);
+                closure_2_72(f112232, f112232);
                 return true;
               };
               function t() {
                 return true;
               }
               return new Promise((pendingScrollResolve) => {
-                if (typeof outer1_7 !== "function") {
+                if (typeof closure_1_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                const sum = outer1_3 + 1;
-                outer1_3 = sum;
-                outer1_2.pendingScrollToEnd = undefined;
-                pendingScrollResolve = outer1_2.pendingScrollResolve;
+                sum = sum + 1;
+                closure_1_2.pendingScrollToEnd = undefined;
+                pendingScrollResolve = closure_1_2.pendingScrollResolve;
                 if (null != pendingScrollResolve) {
                   const call = pendingScrollResolve.call;
                   if (typeof call === "unknown") {
@@ -27124,13 +26440,13 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     call(tmp2);
                   }
                 }
-                outer1_2.pendingScrollResolve = pendingScrollResolve;
-                outer1_6(sum, pendingScrollResolve, f112232, t);
+                closure_1_2.pendingScrollResolve = pendingScrollResolve;
+                closure_1_6(sum, pendingScrollResolve, f112232, t);
               });
             },
             setItemSize(itemKey, size) {
               const items = [{ itemKey, size }];
-              outer1_107(closure_0, items);
+              closure_1_107(closure_0, items);
             },
             setScrollProcessingEnabled(scrollProcessingEnabled) {
               state.scrollProcessingEnabled = scrollProcessingEnabled;
@@ -27142,7 +26458,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 tmp = fn(values.get("scrollAdjustUserOffset") || 0);
                 const tmp2 = values.get("scrollAdjustUserOffset") || 0;
               }
-              outer1_22(closure_0, "scrollAdjustUserOffset", tmp);
+              closure_1_22(closure_0, "scrollAdjustUserOffset", tmp);
             }
           };
         }, []);
@@ -27178,12 +26494,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         }, items24);
         callback = obj.useMemo(() => ({
           getRenderedItem(arg0) {
-            let data;
-            let getItemType;
-            let indexByKey;
-            let props;
-            let renderItem;
-            const state = closure_22.state;
+            state = closure_22.state;
             let tmp2 = null;
             if (state) {
               ({ indexByKey, props } = state);
@@ -27199,7 +26510,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 }
                 let renderItemResult = null;
                 if (tmp5) {
-                  let obj = { data: null, extraData: null, index: null, item: null, type: null };
+                  obj = { data: null, extraData: null, index: null, item: null, type: null };
                   obj[0] = data;
                   obj[1] = value;
                   obj[2] = value;
@@ -27225,16 +26536,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             return tmp2;
           },
           onMomentumScrollEnd(arg0) {
-            outer1_63(closure_22);
+            closure_1_63(closure_22);
             if (closure_30.props.onMomentumScrollEnd) {
               const props = tmp2.props;
               props.onMomentumScrollEnd(arg0);
             }
           },
           onScroll(nativeEvent) {
-            let didFinishInitialScroll2;
-            let initialScroll2;
-            let state = closure_22.state;
+            state = closure_22.state;
             if (false !== state.scrollProcessingEnabled) {
               const nativeEvent2 = nativeEvent.nativeEvent;
               let contentSize;
@@ -27251,7 +26560,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 if (null != nativeEvent) {
                   contentInset = nativeEvent.contentInset;
                 }
-                let flag = false;
+                flag = false;
                 if (contentInset) {
                   contentInset = nativeEvent.nativeEvent.contentInset;
                   const nativeContentInset = state.nativeContentInset;
@@ -27299,7 +26608,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     if (state.scrollingTo.offset >= bound4) {
                       const scrollingTo3 = state.scrollingTo;
                       const state3 = tmp.state;
-                      const tmp65 = outer1_25(tmp);
+                      const tmp65 = closure_1_25(tmp);
                       const _Number7 = Number;
                       let bound1 = bound4;
                       if (Number.isFinite(tmp65)) {
@@ -27331,17 +26640,17 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       if (bound4 !== bound2) {
                         const _Math16 = Math;
                         if (Math.abs(bound4 - bound2) > 1) {
-                          let obj = { forceScroll: true, isInitialScroll: true, noScrollingTo: true, offset: null };
+                          obj = { forceScroll: true, isInitialScroll: true, noScrollingTo: true, offset: null };
                           obj[3] = bound2;
-                          outer1_72(tmp, obj);
+                          closure_1_72(tmp, obj);
                         }
                       }
                     }
                   }
                   state.scrollPending = bound4;
-                  outer1_70(tmp, tmp8, flag, { fromNativeScrollEvent: true });
-                  obj = outer1_37;
-                  let value = outer1_37.get(state);
+                  closure_1_70(tmp, tmp8, flag, { fromNativeScrollEvent: true });
+                  obj = closure_1_37;
+                  let value = closure_1_37.get(state);
                   if (value) {
                     if (obj.didReachTarget(bound4, value)) {
                       obj.clear(state);
@@ -27368,7 +26677,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       preservedEndAnchorCorrection = state2.preservedEndAnchorCorrection;
                     }
                     if (!preservedEndAnchorCorrection) {
-                      if (outer1_82(tmp, initialScroll2)) {
+                      if (closure_1_82(tmp, initialScroll2)) {
                         let tmp46 = !initialScroll2;
                         if (initialScroll2) {
                           tmp46 = 1 !== initialScroll2.viewPosition;
@@ -27408,8 +26717,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             }
                             obj[1] = num10;
                             obj[2] = initialScroll2;
-                            outer1_81(tmp, obj);
-                            const tmp56 = outer1_81;
+                            closure_1_81(tmp, obj);
+                            const tmp56 = closure_1_81;
                           } else {
                             if (undefined !== state2.timeoutPreservedInitialScrollClear) {
                               const _clearTimeout = clearTimeout;
@@ -27418,21 +26727,21 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             }
                             state2.clearPreservedInitialScrollOnNextFinish = undefined;
                             state2.initialScroll = undefined;
-                            outer1_38(state2);
+                            closure_1_38(state2);
                           }
                         }
                       }
                     }
                     if (state.scrollingTo) {
-                      let closure_0 = tmp;
+                      closure_0 = tmp;
                       const scrollingTo2 = tmp.state.scrollingTo;
                       const _requestAnimationFrame = requestAnimationFrame;
                       tmp.state.animFrameCheckFinishedScroll = requestAnimationFrame(() => {
-                        const scrollingTo = tmp.state.scrollingTo;
+                        const scrollingTo = state.state.scrollingTo;
                         if (scrollingTo) {
-                          const state = tmp.state;
+                          state = tmp.state;
                           state.animFrameCheckFinishedScroll = undefined;
-                          const tmp3 = outer1_62(tmp, scrollingTo);
+                          const tmp3 = closure_1_62(tmp, scrollingTo);
                           let isAtResolvedTarget = tmp3.isAtResolvedTarget;
                           if (isAtResolvedTarget) {
                             const isInitialScroll = scrollingTo.isInitialScroll;
@@ -27446,7 +26755,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             isAtResolvedTarget = hasScrolled;
                           }
                           if (isAtResolvedTarget) {
-                            outer1_60(tmp);
+                            closure_1_60(tmp);
                           }
                         }
                       });
@@ -27460,7 +26769,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     state.hasScrolled = false;
                     ({ startScroll: obj2[0], targetOffset: obj2[1] } = value);
                     const result = obj.set(state, { startScroll: null, targetOffset: null });
-                    const obj1 = { startScroll: null, targetOffset: null };
+                    obj1 = { startScroll: null, targetOffset: null };
                   }
                 } else {
                   const contentSize2 = nativeEvent.nativeEvent.contentSize;
@@ -27471,7 +26780,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   if (null != state) {
                     props = state.props;
                   }
-                  let horizontal;
+                  horizontal = undefined;
                   if (null != props) {
                     horizontal = props.horizontal;
                   }
@@ -27482,7 +26791,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       rtl = props.rtl;
                     }
                     if (null == rtl) {
-                      rtl = outer1_11.I18nManager.isRTL;
+                      rtl = closure_1_11.I18nManager.isRTL;
                     }
                     tmp11 = rtl;
                   }
@@ -27641,14 +26950,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               if (horizontal) {
                 str = "x";
               }
-              let obj = { nativeEvent: null };
+              obj = { nativeEvent: null };
               obj = { contentOffset: null };
               obj = {};
               obj[str] = context.animatedScrollY;
               obj[0] = obj;
               obj[0] = obj;
               const items = [obj];
-              const obj1 = { listener: null, useNativeDriver: true };
+              obj1 = { listener: null, useNativeDriver: true };
               obj1[0] = onScroll;
               return Animated.event(items, obj1);
             }
@@ -27757,15 +27066,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
 });
 
 export const LegendList = memo(forwardRef(function LegendList2(renderItem, ref) {
-  let children;
-  let createElement;
-  let createElement2;
-  let data;
   ({ children, data } = renderItem);
-  const tmp = _objectWithoutProperties(renderItem, closure_7);
+  const tmp = callback2(renderItem, closure_7);
   if (undefined !== children) {
     if (undefined === data) {
-      let obj = {};
+      obj = {};
       const merged = Object.assign(tmp);
       obj.childrenMode = true;
       const _Array = Array;
@@ -27807,15 +27112,15 @@ export const useAdaptiveRender = function useAdaptiveRender() {
   const items1 = [context, first];
   const memo = frozen.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -27837,11 +27142,11 @@ export const useAdaptiveRender = function useAdaptiveRender() {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -27854,7 +27159,7 @@ export const useAdaptiveRender = function useAdaptiveRender() {
     };
   }, items1);
   const get = memo.get;
-  return _slicedToArray(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
+  return callback3(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
 };
 export const useAdaptiveRenderChange = function useAdaptiveRenderChange(current) {
   const context = frozen.useContext(closure_17);
@@ -27870,11 +27175,11 @@ export const useAdaptiveRenderChange = function useAdaptiveRenderChange(current)
         set.current(AUTO_DISMISS);
       }
     };
-    let set;
+    set = undefined;
     const listeners = fn.listeners;
     const value = listeners.get("adaptiveRender");
     set = value;
-    let obj = value;
+    obj = value;
     if (!value) {
       const _Set = Set;
       set = new Set();
@@ -27897,15 +27202,15 @@ export const useListScrollSize = function useListScrollSize() {
   const items1 = [context, first];
   const memo = frozen.useMemo(() => {
     closure_1 = closure_1.split("\0");
-    let closure_2 = [];
-    let closure_3 = [];
+    closure_2 = [];
+    closure_3 = [];
     return {
       get() {
         let arr2;
-        const items = [];
+        items = [];
         let num = 0;
-        let flag = false;
-        let flag2 = false;
+        flag = false;
+        flag2 = false;
         if (0 < items.length) {
           do {
             let tmp = values;
@@ -27927,11 +27232,11 @@ export const useListScrollSize = function useListScrollSize() {
         return items;
       },
       subscribe(arg0) {
-        const items = [];
+        items = [];
         while (tmp2 !== undefined) {
-          let tmp4 = outer1_20;
+          let tmp4 = closure_1_20;
           let tmp5 = items;
-          let arr = items.push(outer1_20(items, tmp3, arg0));
+          let arr = items.push(closure_1_20(items, tmp3, arg0));
           continue;
         }
         return () => {
@@ -27944,21 +27249,21 @@ export const useListScrollSize = function useListScrollSize() {
     };
   }, items1);
   const get = memo.get;
-  return _slicedToArray(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
+  return callback3(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
 };
 export const useRecyclingEffect = function useRecyclingEffect(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const tmp = useContainerItemSignals(noop.useContext(closure_115));
   const hasItemInfo = tmp.hasItemInfo;
   const item = tmp.item;
   const itemIndex = tmp.itemIndex;
-  let closure_4 = noop.useRef(undefined);
+  closure_4 = noop.useRef(undefined);
   const items = [arg0, hasItemInfo, itemIndex, item, tmp.itemKey];
   const effect = noop.useEffect(() => {
     if (hasItemInfo) {
       let tmp2;
       if (ref.current) {
-        let obj = { index: null, item: null, prevIndex: null, prevItem: null };
+        obj = { index: null, item: null, prevIndex: null, prevItem: null };
         obj[0] = itemIndex;
         obj[1] = item;
         obj[2] = tmp.current.index;
@@ -27974,8 +27279,8 @@ export const useRecyclingEffect = function useRecyclingEffect(arg0) {
   }, items);
 };
 export const useRecyclingState = function useRecyclingState(fn) {
-  let closure_0 = fn;
-  let obj = noop;
+  closure_0 = fn;
+  obj = noop;
   const context = noop.useContext(closure_115);
   const tmp2 = useContainerItemSignals(context);
   const hasItemInfo = tmp2.hasItemInfo;
@@ -27992,7 +27297,7 @@ export const useRecyclingState = function useRecyclingState(fn) {
     if (typeof closure_0 !== "function") {
       return tmp;
     } else if (hasItemInfo) {
-      const obj = { index: null, item: null, prevIndex: "r", prevItem: "HermesInternal" };
+      obj = { index: null, item: null, prevIndex: "r", prevItem: "HermesInternal" };
       obj[0] = itemIndex;
       obj[1] = item;
       let tmpResult = tmp(obj);
@@ -28000,7 +27305,7 @@ export const useRecyclingState = function useRecyclingState(fn) {
       tmpResult = tmp();
     }
   }), 2);
-  let closure_5 = tmp4;
+  closure_5 = tmp4;
   let tmp5 = null;
   if (hasItemInfo) {
     tmp5 = itemKey;
@@ -28030,9 +27335,9 @@ export const useRecyclingState = function useRecyclingState(fn) {
   const items = [tmp3[0], ];
   const items1 = [triggerLayout];
   items[1] = obj.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     if (triggerLayout) {
-      tmp4((arg0) => {
+      callback((arg0) => {
         let tmpResult = closure_0;
         if (typeof closure_0 === "function") {
           tmpResult = tmp(arg0);
@@ -28056,7 +27361,7 @@ export const useSyncLayout = function useSyncLayout() {
 };
 export const useViewability = function useViewability(arg0, arg1) {
   let f96668 = arg0;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   const context = frozen.useContext(closure_17);
   const context1 = noop.useContext(closure_115);
   f96668 = () => {
@@ -28081,10 +27386,10 @@ export const useViewability = function useViewability(arg0, arg1) {
         str = closure_1;
       }
       const sum = context1.containerId + str;
-      const f96668 = sum;
+      f96668 = sum;
       const result = context.mapViewabilityCallbacks.set(sum, f96668);
       return () => {
-        outer1_2.mapViewabilityCallbacks.delete(closure_0);
+        closure_1_2.mapViewabilityCallbacks.delete(closure_0);
       };
     }
   }, items);
@@ -28109,7 +27414,7 @@ export const useViewabilityAmount = function useViewabilityAmount(arg0) {
       const containerId = context1.containerId;
       const result = context.mapViewabilityAmountCallbacks.set(containerId, containerId);
       return () => {
-        outer1_1.mapViewabilityAmountCallbacks.delete(containerId);
+        closure_1_1.mapViewabilityAmountCallbacks.delete(containerId);
       };
     }
   }, items);

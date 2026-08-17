@@ -1,11 +1,10 @@
 // _runtime/13598___exportStarResult21.js
-import { getMultiInternalSlots } from "13582_getMultiInternalSlots.js";
-import { TEN } from "13584_TEN.js";
-const require = arg1;
+import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
+import TEN from "TEN" /* 13584 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.FormatNumericToString = function FormatNumericToString(roundingType, timesResult) {
-  let formattedString;
-  let roundedNumber;
   if (timesResult.isZero()) {
     if (timesResult.isNegative()) {
       let ZERO = TEN.ZERO;

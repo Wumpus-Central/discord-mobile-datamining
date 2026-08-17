@@ -1,18 +1,18 @@
 // _runtime/06404__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { transformIntoHandlerTags } from "06408_transformIntoHandlerTags.js";
-import { 06409__ } from "metro/06409__.js";
+import map from "map" /* 6381 */;
+import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6408 */;
+import _mod6409 from "module_6409" /* 6409 */;
+import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 6412 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_createClass" /* 42 */;
+import closure_5 from "_possibleConstructorReturn" /* 93 */;
+import closure_6 from "_getPrototypeOf" /* 95 */;
+import closure_7 from "_inherits" /* 98 */;
+import closure_8 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let DeviceEventEmitter;
-let Platform;
-const require = arg1;
+require = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,10 +24,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -37,8 +37,6 @@ require("customDirectEventTypes").customDirectEventTypes.topGestureHandlerEvent 
 let closure_10 = { [arg1(6383).State.UNDETERMINED]: undefined, [arg1(6383).State.BEGAN]: "onBegan", [arg1(6383).State.FAILED]: "onFailed", [arg1(6383).State.CANCELLED]: "onCancelled", [arg1(6383).State.ACTIVE]: "onActivated", [arg1(6383).State.END]: "onEnded" };
 
 export default function createHandler(name) {
-  let _classCallCheck;
-  let customNativeProps;
   name = name.name;
   const Handler = name;
   let allowedProps = name.allowedProps;
@@ -49,19 +47,19 @@ export default function createHandler(name) {
   if (config === undefined) {
     config = {};
   }
-  ({ transformProps: _classCallCheck, customNativeProps } = name);
+  ({ transformProps: closure_3, customNativeProps } = name);
   if (customNativeProps === undefined) {
     customNativeProps = [];
   }
   class Handler {
     constructor(arg0) {
       self = this;
-      tmp = _isNativeReflectConstruct(this, apply);
+      tmp = closure_3(this, closure_0);
       items = [];
       items[0] = name;
-      tmp2 = _isNativeReflectConstruct;
-      obj = _isNativeReflectConstruct(apply);
-      tmp3 = _isNativeReflectConstruct;
+      tmp2 = closure_6;
+      obj = closure_6(closure_0);
+      tmp3 = closure_5;
       if (_isNativeReflectConstruct()) {
         tmp5 = globalThis;
         _Reflect = Reflect;
@@ -70,10 +68,10 @@ export default function createHandler(name) {
         constructResult = obj.apply(self, items);
       }
       tmp3Result = tmp3(self, constructResult);
-      apply = tmp3Result;
+      closure_0 = tmp3Result;
       tmp3Result.handlerTag = -1;
       tmp3Result.onGestureHandlerEvent = (nativeEvent) => {
-        if (nativeEvent.nativeEvent.handlerTag === tmp3Result.handlerTag) {
+        if (nativeEvent.nativeEvent.handlerTag === closure_0.handlerTag) {
           if (typeof tmp.props.onGestureEvent === "function") {
             const props2 = tmp.props;
             const onGestureEvent = props2.onGestureEvent;
@@ -89,7 +87,7 @@ export default function createHandler(name) {
         }
       };
       tmp3Result.onGestureHandlerStateChange = (nativeEvent) => {
-        if (nativeEvent.nativeEvent.handlerTag === tmp3Result.handlerTag) {
+        if (nativeEvent.nativeEvent.handlerTag === closure_0.handlerTag) {
           if (typeof tmp.props.onHandlerStateChange === "function") {
             const props2 = tmp.props;
             if (props2.onHandlerStateChange != null) {
@@ -97,7 +95,7 @@ export default function createHandler(name) {
             }
           }
           let tmp7 = tmp6;
-          if (outer2_10[nativeEvent.nativeEvent.state]) {
+          if (closure_2_10[nativeEvent.nativeEvent.state]) {
             tmp7 = tmp.props[tmp6];
           }
           let tmp8 = tmp7;
@@ -115,9 +113,9 @@ export default function createHandler(name) {
         }
       };
       tmp3Result.refHandler = (viewNode) => {
-        tmp3Result.viewNode = viewNode;
-        const Children = outer2_8.Children;
-        const props = Children.only(tmp3Result.props.children).props;
+        closure_0.viewNode = viewNode;
+        const Children = closure_2_8.Children;
+        const props = Children.only(closure_0.props.children).props;
         let ref;
         if (props != null) {
           ref = props.ref;
@@ -131,20 +129,20 @@ export default function createHandler(name) {
         }
       };
       tmp3Result.createGestureHandler = (config) => {
-        tmp3Result.handlerTag = Handler(config[10]).getNextHandlerTag();
-        tmp3Result.config = config;
+        closure_0.handlerTag = Handler(config[10]).getNextHandlerTag();
+        closure_0.config = config;
         const obj = Handler(config[10]);
-        allowedProps(config[11]).createGestureHandler(tmp3Result, tmp3Result.handlerTag, config);
+        allowedProps(config[11]).createGestureHandler(closure_0, closure_0.handlerTag, config);
         const obj2 = allowedProps(config[11]);
         const obj3 = allowedProps(config[11]);
-        obj3.configureRelations(tmp3Result.handlerTag, Handler(config[12]).selectProperties(config, ["waitFor", "simultaneousHandlers", "blocksHandlers"]));
+        obj3.configureRelations(closure_0.handlerTag, Handler(config[12]).selectProperties(config, ["waitFor", "simultaneousHandlers", "blocksHandlers"]));
       };
       tmp3Result.attachGestureHandler = (viewTag) => {
-        tmp3Result.viewTag = viewTag;
+        closure_0.viewTag = viewTag;
         let obj = Handler(config[13]);
-        obj = { onGestureEvent: tmp3Result.onGestureHandlerEvent, onGestureStateChange: tmp3Result.onGestureHandlerStateChange };
-        let result = obj.registerOldGestureHandler(tmp3Result.handlerTag, obj);
-        const props = tmp3Result.props;
+        obj = { onGestureEvent: closure_0.onGestureHandlerEvent, onGestureStateChange: closure_0.onGestureHandlerStateChange };
+        let result = obj.registerOldGestureHandler(closure_0.handlerTag, obj);
+        const props = closure_0.props;
         let onGestureEvent;
         if (props != null) {
           onGestureEvent = props.onGestureEvent;
@@ -172,24 +170,24 @@ export default function createHandler(name) {
           const result1 = tmp2Result.scheduleFlushOperations();
           tmp2Result = tmp2(tmp3[15]);
           tmp2Result.ghQueueMicrotask(() => {
-            const MountRegistry = callback(outer2_2[16]).MountRegistry;
+            const MountRegistry = callback(closure_2_2[16]).MountRegistry;
             const result = MountRegistry.gestureHandlerWillMount(callback);
           });
         }
         REANIMATED_WORKLET = tmp2(tmp3[14]).ActionType.REANIMATED_WORKLET;
       };
       tmp3Result.setGestureHandlerConfig = (config) => {
-        tmp3Result.config = config;
-        const result = allowedProps(config[11]).setGestureHandlerConfig(tmp3Result.handlerTag, config);
+        closure_0.config = config;
+        const result = allowedProps(config[11]).setGestureHandlerConfig(closure_0.handlerTag, config);
         const obj = allowedProps(config[11]);
         const obj2 = allowedProps(config[11]);
-        obj2.configureRelations(tmp3Result.handlerTag, Handler(config[12]).selectProperties(config, ["waitFor", "simultaneousHandlers", "blocksHandlers"]));
+        obj2.configureRelations(closure_0.handlerTag, Handler(config[12]).selectProperties(config, ["waitFor", "simultaneousHandlers", "blocksHandlers"]));
         const obj3 = Handler(config[12]);
         const result1 = Handler(config[12]).scheduleFlushOperations();
       };
       tmp3Result.config = {};
-      tmp3Result.propsRef = noop.createRef();
-      tmp3Result.isMountedRef = noop.createRef();
+      tmp3Result.propsRef = closure_8.createRef();
+      tmp3Result.isMountedRef = closure_8.createRef();
       tmp3Result.state = { allowTouches: true };
       if (name.id) {
         tmp7 = closure_0;
@@ -237,25 +235,25 @@ export default function createHandler(name) {
         }
         if (someResult) {
           if (someResult) {
-            06409__.ghQueueMicrotask(() => {
+            _mod6409.ghQueueMicrotask(() => {
               self.update(1);
             });
-            const obj = 06409__;
+            const obj = _mod6409;
           }
           const props2 = self.props;
           const items = [];
           const obj2 = transformIntoHandlerTags;
           HermesBuiltin.arraySpread(customNativeProps, HermesBuiltin.arraySpread(allowedProps, 0));
-          self.createGestureHandler(obj2.filterConfig(outer1_3 ? outer1_3(props2) : props2, items, config));
+          self.createGestureHandler(obj2.filterConfig(closure_1_3 ? closure_1_3(props2) : props2, items, config));
           if (self.viewNode) {
-            self.attachGestureHandler(require("06412_get_ActivityIndicator.js") /* get ActivityIndicator */(self.viewNode));
+            self.attachGestureHandler(get_ActivityIndicatorDefault(self.viewNode));
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            const error = new Error("[Gesture Handler] Failed to obtain view for " + self.displayName + ". Note that old API doesn't support functional components.");
+            error = new Error("[Gesture Handler] Failed to obtain view for " + self.displayName + ". Note that old API doesn't support functional components.");
             throw error;
           }
-          const tmp11 = outer1_3 ? outer1_3(props2) : props2;
+          const tmp11 = closure_1_3 ? closure_1_3(props2) : props2;
         } else {
           const waitFor = props.waitFor;
           const _Array = Array;
@@ -314,7 +312,7 @@ export default function createHandler(name) {
       value: function update(arg0) {
         let self = this;
         self = this;
-        let closure_0 = arg0;
+        closure_0 = arg0;
         if (this.isMountedRef.current) {
           const props = self.props;
           const _Array = Array;
@@ -392,14 +390,6 @@ export default function createHandler(name) {
     {
       key: "render",
       value: function render() {
-        let onGestureEvent;
-        let onGestureHandlerEvent;
-        let onGestureHandlerEvent2;
-        let onGestureHandlerStateChange;
-        let onGestureHandlerStateChange2;
-        let onHandlerStateChange;
-        let props;
-        let props2;
         const self = this;
         ({ onGestureHandlerEvent, props } = this);
         ({ onGestureEvent, onGestureHandlerEvent: onGestureHandlerEvent2 } = props);
@@ -408,7 +398,7 @@ export default function createHandler(name) {
             let tmp2 = onGestureEvent;
             if (onGestureHandlerEvent2) {
               const _Error3 = Error;
-              const error = new Error("Nesting touch handlers with native animated driver is not supported yet");
+              error = new Error("Nesting touch handlers with native animated driver is not supported yet");
               throw error;
             }
           }
@@ -436,8 +426,8 @@ export default function createHandler(name) {
             obj[1] = tmp5;
             self.propsRef.current = obj;
             try {
-              let obj1 = outer1_8;
-              const Children = outer1_8.Children;
+              obj1 = closure_1_8;
+              const Children = closure_1_8.Children;
               const onlyResult = Children.only(self.props.children);
               obj = { ref: null, collapsable: false };
               obj[0] = self.refHandler;

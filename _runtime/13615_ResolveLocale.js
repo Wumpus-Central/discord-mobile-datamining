@@ -1,21 +1,18 @@
 // _runtime/13615_ResolveLocale.js
-import { LookupMatcher } from "13616_LookupMatcher.js";
-import { isMatched } from "13617_isMatched.js";
-import { BestFitMatcher } from "13621_BestFitMatcher.js";
-let require = arg1;
+const require = arg1;
 const dependencyMap = arg6;
 arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {
-  let require;
+  let str;
   if ("lookup" === localeMatcher.localeMatcher) {
     const _Array2 = Array;
-    let LookupMatcherResult = LookupMatcher.LookupMatcher(Array.from(arg0), arg1, arg5);
-    let tmp5 = require;
-    let tmp7 = require;
+    let LookupMatcherResult = str(13616).LookupMatcher(Array.from(arg0), arg1, arg5);
+    let tmp5 = str;
+    let tmp7 = str;
   } else {
     const _Array = Array;
-    tmp5 = require;
-    tmp7 = require;
-    LookupMatcherResult = BestFitMatcher.BestFitMatcher(Array.from(arg0), arg1, arg5);
+    tmp5 = str;
+    tmp7 = str;
+    LookupMatcherResult = str(13621).BestFitMatcher(Array.from(arg0), arg1, arg5);
   }
   if (null == LookupMatcherResult) {
     let obj = { locale: null, extension: "" };
@@ -33,8 +30,7 @@ arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {
   let num = 0;
   if (0 < arg3.length) {
     do {
-      let str = arg3[num];
-      require = str;
+      str = arg3[num];
       let tmp13 = num;
       let items1;
       if (null != tmp12) {
@@ -43,20 +39,20 @@ arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {
       if (null === items1) {
         items1 = [];
       }
-      let tmp14 = require;
+      let tmp14 = str;
       let tmp15 = dependencyMap;
       let _Array3 = Array;
       let concat = "keyLocaleData for ".concat;
       let isArray = Array.isArray(items1);
-      let invariantResult = isMatched.invariant(isArray, "keyLocaleData for ".concat(str, " must be an array"));
+      let invariantResult = str(13617).invariant(isArray, "keyLocaleData for ".concat(str, " must be an array"));
       let first = items1[0];
       let tmp19 = undefined === first;
       let tmp20 = items1;
       if (!tmp19) {
         tmp19 = typeof first === "string";
       }
-      let invariantResult1 = isMatched.invariant(tmp19, "value must be a string or undefined");
-      let iter = keywords.find((key) => key.key === closure_0);
+      let invariantResult1 = str(13617).invariant(tmp19, "value must be a string or undefined");
+      let iter = keywords.find((key) => key.key === str);
       let tmp22;
       let str2 = first;
       if (iter) {
@@ -73,7 +69,7 @@ arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {
         } else {
           str2 = first;
           if (items1.indexOf("true") > -1) {
-            let obj1 = { key: null, value: "true" };
+            obj1 = { key: null, value: "true" };
             obj1[0] = str;
             tmp22 = obj1;
             str2 = "true";

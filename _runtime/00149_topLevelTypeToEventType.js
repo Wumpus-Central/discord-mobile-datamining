@@ -1,6 +1,7 @@
 // _runtime/00149_topLevelTypeToEventType.js
-import { map } from "00066_map.js";
-const require = arg1;
+import map from "map" /* 66 */;
+
+require = arg1;
 const dependencyMap = arg6;
 let closure_2 = {};
 arg5.topLevelTypeToEventType = function topLevelTypeToEventType(str) {

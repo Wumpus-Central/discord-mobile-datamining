@@ -219,7 +219,7 @@ class peg$SyntaxError {
             return description.description;
           }
     };
-    peg$SyntaxError = obj;
+    closure_0 = obj;
     mapped = global.map(function describeExpectation(arg0) {
       return obj[arg0.type](arg0);
     });
@@ -486,7 +486,7 @@ obj = {
                 obj[0] = tmp67;
               } else {
                 obj = { translate: null };
-                const items1 = [tmp67, tmp66Result];
+                items1 = [tmp67, tmp66Result];
                 obj[0] = items1;
               }
             } else {
@@ -583,7 +583,7 @@ obj = {
               }
               throwTypeErrorResult = null;
               if (null == throwTypeErrorResult) {
-                const obj1 = { scale: null };
+                obj1 = { scale: null };
                 obj1[0] = throwTypeErrorResult;
                 let items2 = obj1;
               } else {
@@ -1188,7 +1188,7 @@ obj = {
         let tmp56 = str2;
         let tmp57 = tmp8;
         if (tmp46 !== tmp8) {
-          const items1 = [];
+          items1 = [];
           tmp53 = tmp19;
           tmp54 = items1;
           tmp55 = obj;
@@ -1462,10 +1462,10 @@ obj = {
           let items = [tmp9, tmp2Result];
           let tmp11 = items;
         } else {
-          let closure_50 = tmp7;
+          closure_50 = tmp7;
           tmp11 = tmp4;
         }
-        const items1 = [];
+        items1 = [];
         let tmp12 = tmp4;
         if (tmp11 !== tmp4) {
           do {
@@ -1487,19 +1487,19 @@ obj = {
             tmp12 = tmp19;
           } while (tmp20 !== tmp19);
         }
-        let closure_51 = tmp;
+        closure_51 = tmp;
         if (typeof peg$f0 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const _Array = Array;
         let tmp23 = tmp3;
         if (!Array.isArray(tmp3)) {
-          const items3 = [tmp3];
+          let items3 = [tmp3];
           tmp23 = items3;
         }
-        let closure_0 = tmp23;
+        items3 = tmp23;
         const item = items1.forEach((arg0) => {
-          const push = tmp23.push;
+          const push = items3.push;
           if (Array.isArray(arg0[1])) {
             const items = [];
             HermesBuiltin.arraySpread(tmp2, 0);
@@ -1546,45 +1546,45 @@ obj = {
     }
     const grammarSource = obj.grammarSource;
     obj = { start: peg$parsestart };
-    let c3 = "matrix(";
-    let c4 = ")";
-    let c5 = "translate(";
-    let c6 = "scale(";
-    let c7 = "rotate(";
-    let c8 = "skewX(";
-    let c9 = "skewY(";
-    let c10 = ".";
+    c3 = "matrix(";
+    c4 = ")";
+    c5 = "translate(";
+    c6 = "scale(";
+    c7 = "rotate(";
+    c8 = "skewX(";
+    c9 = "skewY(";
+    c10 = ".";
     const e = "e";
     const re12 = /^[ \t\n\r,]/;
     const re13 = /^[ \t\n\r]/;
     const re14 = /^[+\-]/;
     const re15 = /^[0-9]/;
-    let closure_16 = { type: "other", description: "transform functions" };
-    let closure_17 = { type: "other", description: "transformFunctions" };
-    let closure_18 = { type: "other", description: "transform function" };
-    let closure_19 = { type: "other", description: "matrix" };
-    let closure_20 = { type: "literal", text: "matrix(", ignoreCase: false };
-    let closure_21 = { type: "literal", text: ")", ignoreCase: false };
-    let closure_22 = { type: "other", description: "translate" };
-    let closure_23 = { type: "literal", text: "translate(", ignoreCase: false };
-    let closure_24 = { type: "other", description: "scale" };
-    let closure_25 = { type: "literal", text: "scale(", ignoreCase: false };
-    let closure_26 = { type: "other", description: "rotate" };
-    let closure_27 = { type: "literal", text: "rotate(", ignoreCase: false };
-    let closure_28 = { type: "other", description: "x, y" };
-    let closure_29 = { type: "other", description: "skewX" };
-    let closure_30 = { type: "literal", text: "skewX(", ignoreCase: false };
-    let closure_31 = { type: "other", description: "skewY" };
-    let closure_32 = { type: "literal", text: "skewY(", ignoreCase: false };
-    let closure_33 = { type: "other", description: "space or comma" };
-    let closure_34 = { type: "class", parts: [" ", "\t", "\n", "\r", ","], inverted: false, ignoreCase: false };
-    let closure_35 = { type: "other", description: "whitespace" };
-    let closure_36 = { type: "class", parts: [" ", "\t", "\n", "\r"], inverted: false, ignoreCase: false };
-    let closure_37 = { type: "class", parts: ["+", "-"], inverted: false, ignoreCase: false };
+    closure_16 = { type: "other", description: "transform functions" };
+    closure_17 = { type: "other", description: "transformFunctions" };
+    closure_18 = { type: "other", description: "transform function" };
+    closure_19 = { type: "other", description: "matrix" };
+    closure_20 = { type: "literal", text: "matrix(", ignoreCase: false };
+    closure_21 = { type: "literal", text: ")", ignoreCase: false };
+    closure_22 = { type: "other", description: "translate" };
+    closure_23 = { type: "literal", text: "translate(", ignoreCase: false };
+    closure_24 = { type: "other", description: "scale" };
+    closure_25 = { type: "literal", text: "scale(", ignoreCase: false };
+    closure_26 = { type: "other", description: "rotate" };
+    closure_27 = { type: "literal", text: "rotate(", ignoreCase: false };
+    closure_28 = { type: "other", description: "x, y" };
+    closure_29 = { type: "other", description: "skewX" };
+    closure_30 = { type: "literal", text: "skewX(", ignoreCase: false };
+    closure_31 = { type: "other", description: "skewY" };
+    closure_32 = { type: "literal", text: "skewY(", ignoreCase: false };
+    closure_33 = { type: "other", description: "space or comma" };
+    closure_34 = { type: "class", parts: [" ", "\t", "\n", "\r", ","], inverted: false, ignoreCase: false };
+    closure_35 = { type: "other", description: "whitespace" };
+    closure_36 = { type: "class", parts: [" ", "\t", "\n", "\r"], inverted: false, ignoreCase: false };
+    closure_37 = { type: "class", parts: ["+", "-"], inverted: false, ignoreCase: false };
     let items = [["0", "9"]];
-    let closure_38 = { type: "class", parts: items, inverted: false, ignoreCase: false };
-    let closure_39 = { type: "literal", text: ".", ignoreCase: false };
-    let closure_40 = { type: "literal", text: "e", ignoreCase: false };
+    closure_38 = { type: "class", parts: items, inverted: false, ignoreCase: false };
+    closure_39 = { type: "literal", text: ".", ignoreCase: false };
+    closure_40 = { type: "literal", text: "e", ignoreCase: false };
     function peg$f0(arg0, arg1) {
 
     }
@@ -1612,24 +1612,24 @@ obj = {
     function peg$f8() {
 
     }
-    let closure_50 = tmp;
-    let closure_51 = tmp;
+    closure_50 = tmp;
+    closure_51 = tmp;
     let items1 = [{ line: 1, column: 1 }];
-    let closure_53 = tmp;
+    closure_53 = tmp;
     let arr = obj.peg$maxFailExpected || [];
-    let closure_55 = obj.peg$silentFails | 0;
+    closure_55 = obj.peg$silentFails | 0;
     if (obj.startRule) {
       if (obj.startRule in obj) {
         peg$parsestart = obj[obj.startRule];
       } else {
         const _Error = Error;
-        const error = new Error("Can't start parsing from rule \"" + obj.startRule + "\".");
+        error = new Error("Can't start parsing from rule \"" + obj.startRule + "\".");
         throw error;
       }
     }
     const result = peg$parsestart();
     if (obj.peg$library) {
-      let obj1 = { peg$result: null, peg$currPos: null, peg$FAILED: null, peg$maxFailExpected: null, peg$maxFailPos: null };
+      obj1 = { peg$result: null, peg$currPos: null, peg$FAILED: null, peg$maxFailExpected: null, peg$maxFailPos: null };
       obj1[0] = result;
       obj1[1] = closure_50;
       obj1[2] = obj;
@@ -1678,7 +1678,7 @@ obj = {
               tmp5 = items1;
             }
           }
-          let obj = { line: null, column: null };
+          obj = { line: null, column: null };
           ({ line: obj[0], column: obj[1] } = tmp5[diff]);
           if (diff < closure_53) {
             do {

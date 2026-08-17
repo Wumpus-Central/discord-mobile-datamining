@@ -1,5 +1,5 @@
 // _runtime/03580_buildFormatLongFn.js
-import buildFormatLongFn from "buildFormatLongFn";
+import buildFormatLongFn from "buildFormatLongFn" /* 1999 */;
 
 if (!buildFormatLongFn) {
   let obj = { default: null };

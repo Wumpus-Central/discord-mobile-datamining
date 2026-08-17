@@ -1,5 +1,6 @@
 // _runtime/01819_AnimatedText.js
-import createAnimatedComponent from "createAnimatedComponent";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import createAnimatedComponent from "createAnimatedComponent" /* 1688 */;
 
 
-export const AnimatedText = createAnimatedComponent.createAnimatedComponent(require("get ActivityIndicator").Text);
+export const AnimatedText = createAnimatedComponent.createAnimatedComponent(get_ActivityIndicator.Text);

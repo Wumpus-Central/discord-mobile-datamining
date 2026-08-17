@@ -1,6 +1,6 @@
 // _runtime/03658_differenceInCalendarMonths.js
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -9,7 +9,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -17,12 +17,12 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function differenceInCalendarMonths(arg0, arg1) {
-  tmp5.default(2, arguments);
-  const defaultResult1 = tmp3.default(arg0);
-  const defaultResult2 = tmp3.default(arg1);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = _typeof.default(arg1);
   const fullYear = defaultResult1.getFullYear();
   const diff = fullYear - defaultResult2.getFullYear();
   const month = defaultResult1.getMonth();

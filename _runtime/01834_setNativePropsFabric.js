@@ -1,8 +1,7 @@
 // _runtime/01834_setNativePropsFabric.js
-import isJest from "isJest";
-import isJest from "isJest";
-import { addLogBoxLog } from "01658_addLogBoxLog.js";
-import { call } from "01697_call.js";
+import addLogBoxLog from "addLogBoxLog" /* 1658 */;
+import call from "call" /* 1697 */;
+import isJest from "isJest" /* 1657 */;
 
 function setNativePropsFabric(arg0, arg1) {
   if (globalThis._WORKLET) {
@@ -19,7 +18,7 @@ function setNativePropsFabric(arg0, arg1) {
     logger.warn("setNativeProps() can only be used on the UI runtime.");
   }
 }
-let obj = { logger: require("addLogBoxLog").logger, processColorsInProps: require("call").processColorsInProps };
+let obj = { logger: addLogBoxLog.logger, processColorsInProps: call.processColorsInProps };
 setNativePropsFabric.__closure = obj;
 setNativePropsFabric.__workletHash = 13825557000530;
 setNativePropsFabric.__initData = { code: "function setNativePropsFabric_Pnpm_setNativePropsTs1(animatedRef,updates){const{logger,processColorsInProps}=this.__closure;if(!_WORKLET){logger.warn('setNativeProps() can only be used on the UI runtime.');return;}const shadowNodeWrapper=animatedRef();processColorsInProps(updates);global._updatePropsFabric([{shadowNodeWrapper:shadowNodeWrapper,updates:updates}]);}" };
@@ -46,7 +45,7 @@ function setNativePropsPaper(viewName) {
     logger.warn("setNativeProps() can only be used on the UI runtime.");
   }
 }
-obj = { logger: require("addLogBoxLog").logger, processColorsInProps: require("call").processColorsInProps };
+obj = { logger: addLogBoxLog.logger, processColorsInProps: call.processColorsInProps };
 setNativePropsPaper.__closure = obj;
 setNativePropsPaper.__workletHash = 9895881337862;
 setNativePropsPaper.__initData = { code: "function setNativePropsPaper_Pnpm_setNativePropsTs2(animatedRef,updates){const{logger,processColorsInProps}=this.__closure;var _viewName$value,_viewName;if(!_WORKLET){logger.warn('setNativeProps() can only be used on the UI runtime.');return;}const tag=animatedRef();const name=(_viewName$value=(_viewName=animatedRef.viewName)===null||_viewName===void 0?void 0:_viewName.value)!==null&&_viewName$value!==void 0?_viewName$value:null;processColorsInProps(updates);global._updatePropsPaper([{tag:tag,name:name,updates:updates}]);}" };
@@ -58,7 +57,7 @@ if (isJest) {
       logger.warn("setNativeProps() is not supported with Jest.");
     }
   } else {
-    const _module2 = require("isJest");
+    const _module2 = isJest;
     setNativePropsJest = _module2.isChromeDebugger() ? (function setNativePropsChromeDebugger() {
       const logger = addLogBoxLog.logger;
       logger.warn("setNativeProps() is not supported with Chrome Debugger.");

@@ -18,7 +18,7 @@ const exports = arg5;
     }
   }
 })((arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   function md5cycle(items, items2) {
     let sum47 = items[1];
     const sum = items[0] + ((sum47 & tmp2 | ~sum47 & tmp3) + items2[0] - 680876936 | 0);
@@ -131,7 +131,7 @@ const exports = arg5;
     items[3] = sum47 + items[3] | 0;
   }
   function md51(hello) {
-    const items = [1732584193, -271733879, -1732584194, 271733878];
+    items = [1732584193, -271733879, -1732584194, 271733878];
     let num = 64;
     let num2 = 64;
     if (64 <= hello.length) {
@@ -466,7 +466,7 @@ const exports = arg5;
     let num2 = 64;
     if (64 <= uint8Array.length) {
       const subarrayResult = uint8Array.subarray(num - 64, num);
-      const items = [];
+      items = [];
       let num3 = 0;
       do {
         do {
@@ -495,7 +495,7 @@ const exports = arg5;
     let diff;
     const self = this;
     const _buff = this._buff;
-    const items = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    items = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     for (let num = 0; num < length; num = num + 1) {
       let tmp = num >> 2;
       items[tmp] = items[tmp] | _buff[num] << (num % 4 << 3);
@@ -572,7 +572,7 @@ const exports = arg5;
   SparkMD5.ArrayBuffer.hash = (arg0, arg1) => {
     let diff1;
     const uint8Array = new Uint8Array(arg0);
-    const items = [1732584193, -271733879, -1732584194, 271733878];
+    items = [1732584193, -271733879, -1732584194, 271733878];
     let num = 64;
     let num2 = 64;
     if (64 <= uint8Array.length) {

@@ -1,14 +1,12 @@
 // _runtime/00997_TurboModuleRegistry.js
-import get_ActivityIndicator from "get ActivityIndicator";
-import { polyfillObjectProperty } from "00123_polyfillObjectProperty.js";
-import { parseErrorStack } from "00190_parseErrorStack.js";
-import { _symbolicateStackTrace } from "00998__symbolicateStackTrace.js";
-import { getDevServer } from "00999_getDevServer.js";
+import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
+import _mod175 from "finally" /* 175 */;
+import parseErrorStack from "parseErrorStack" /* 190 */;
+import _symbolicateStackTrace from "_symbolicateStackTrace" /* 998 */;
+import getDevServer from "getDevServer" /* 999 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let AppRegistry;
-let Platform;
-let TurboModuleRegistry;
-obj = { Devtools: obj, Promise: require("finally"), Utilities: obj, ReactNativeVersion: null, TurboModuleRegistry: null, AppRegistry: null, ReactNative: null };
+obj = { Devtools: obj, Promise: _mod175, Utilities: obj, ReactNativeVersion: null, TurboModuleRegistry: null, AppRegistry: null, ReactNative: null };
 obj = {
   parseErrorStack(arg0) {
     const obj = parseErrorStack;
@@ -59,7 +57,7 @@ obj[4] = TurboModuleRegistry;
 obj[5] = AppRegistry;
 obj[6] = {
   requireNativeComponent(APNGStickerView, importDefaultResultResult, arg2) {
-    return require("00017_get_ActivityIndicator.js") /* get ActivityIndicator */ /* get ActivityIndicator */.requireNativeComponent(APNGStickerView);
+    return get_ActivityIndicator.requireNativeComponent(APNGStickerView);
   }
 };
 

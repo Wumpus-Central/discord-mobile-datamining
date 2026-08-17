@@ -1,4 +1,7 @@
 // _runtime/metro/12272__.js
+import _mod12199 from "module_12199" /* 12199 */;
+import _mod12265 from "module_12265" /* 12265 */;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -67,8 +70,8 @@ if (self2) {
     exports.date = function date(enc) {
       return closure_2._coercedDate(closure_3.ZodDate, enc);
     };
-    let closure_2 = fn(require("module_12199"));
-    let closure_3 = fn(require("module_12265"));
+    let closure_2 = fn(_mod12199);
+    let closure_3 = fn(_mod12265);
   } else {
     const _Object2 = Object;
   }

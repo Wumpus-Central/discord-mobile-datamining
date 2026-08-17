@@ -1,6 +1,6 @@
 // _runtime/01587_useNavigationCache.js
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "noop" /* 19 */;
 
 const require = arg1;
 let closure_2 = ["emit"];
@@ -12,18 +12,18 @@ export const useNavigationCache = function useNavigationCache(getState) {
   const router = getState.router;
   const emitter = getState.emitter;
   let base;
-  let closure_6;
+  closure_6 = undefined;
   let navigations;
   const stackRef = emitter.useContext(getState(navigation[2]).NavigationBuilderContext).stackRef;
   let items = [navigation, router.actionCreators];
   base = emitter.useMemo(() => {
     const tmp = router(dispatch, setOptions);
-    const getState = tmp;
+    closure_0 = tmp;
     let obj = {};
     const merged = Object.assign(router.actionCreators);
     const merged1 = Object.assign(getState(navigation[3]).CommonActions);
     dispatch = function dispatch() {
-      const error = new Error("Actions cannot be dispatched from a placeholder screen.");
+      error = new Error("Actions cannot be dispatched from a placeholder screen.");
       throw error;
     };
     const keys = Object.keys(obj);
@@ -45,15 +45,15 @@ export const useNavigationCache = function useNavigationCache(getState) {
     obj.dispatch = dispatch;
     obj.getParent = function getParent(arg0) {
       if (undefined !== arg0) {
-        if (arg0 === tmp.getId()) {
-          let parent = outer1_5;
+        if (arg0 === store.getId()) {
+          let parent = closure_1_5;
         }
         return parent;
       }
-      parent = tmp.getParent(arg0);
+      parent = store.getParent(arg0);
     };
     obj.setOptions = function setOptions() {
-      const error = new Error("Options cannot be set from a placeholder screen.");
+      error = new Error("Options cannot be set from a placeholder screen.");
       throw error;
     };
     obj.isFocused = function isFocused() {
@@ -65,8 +65,8 @@ export const useNavigationCache = function useNavigationCache(getState) {
   closure_6 = emitter.useMemo(() => ({ current: {} }), items1);
   const routes = getState.state.routes;
   navigations = routes.reduce((arg0, key) => {
-    let closure_0 = arg0;
-    let closure_1 = key;
+    closure_0 = arg0;
+    closure_1 = key;
     if (ref.current[key.key]) {
       arg0[key.key] = tmp;
     } else {
@@ -82,13 +82,13 @@ export const useNavigationCache = function useNavigationCache(getState) {
       const _Object = Object;
       const keys = Object.keys(obj);
       const reduced = keys.reduce((arg0, arg1) => {
-        let closure_0 = arg1;
+        closure_0 = arg1;
         arg0[arg1] = () => {
-          let closure_0 = [...arguments];
-          outer1_3(() => {
+          closure_0 = [...arguments];
+          closure_1_3(() => {
             const items = [...closure_0];
-            const applyResult = outer2_4[args].apply(items);
-            if (typeof outer2_2 !== "function") {
+            const applyResult = closure_2_4[args].apply(items);
+            if (typeof closure_2_2 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let applyResultResult = applyResult;
@@ -96,10 +96,10 @@ export const useNavigationCache = function useNavigationCache(getState) {
               applyResultResult = applyResult(args());
             }
             if (null != applyResultResult) {
-              const obj = { source: null };
-              obj[0] = outer2_1.key;
+              obj = { source: null };
+              obj[0] = closure_2_1.key;
               const merged = Object.assign(applyResultResult);
-              outer1_1.dispatch(obj);
+              closure_1_1.dispatch(obj);
             }
           });
         };
@@ -110,9 +110,9 @@ export const useNavigationCache = function useNavigationCache(getState) {
       const merged3 = Object.assign(reduced);
       const merged4 = Object.assign(obj.create(key.key));
       obj.dispatch = function dispatch(arg0) {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         withStack(() => {
-          if (typeof outer1_2 !== "function") {
+          if (typeof closure_1_2 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let tmpResult = tmp;
@@ -120,36 +120,36 @@ export const useNavigationCache = function useNavigationCache(getState) {
             tmpResult = tmp(callback());
           }
           if (null != tmpResult) {
-            const obj = { source: null };
-            obj[0] = outer1_1.key;
+            obj = { source: null };
+            obj[0] = closure_1_1.key;
             const merged = Object.assign(tmpResult);
-            outer1_1.dispatch(obj);
+            closure_1_1.dispatch(obj);
           }
         });
       };
       obj.getParent = function getParent(arg0) {
         if (undefined !== arg0) {
-          if (arg0 === outer1_5.getId()) {
+          if (arg0 === closure_1_5.getId()) {
             let parent = table[key.key];
           }
           return parent;
         }
-        parent = outer1_5.getParent(arg0);
+        parent = closure_1_5.getParent(arg0);
       };
       obj.setOptions = function setOptions(arg0) {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         dispatch((arg0) => {
-          let obj = {};
+          obj = {};
           const merged = Object.assign(arg0);
           obj = {};
-          const merged1 = Object.assign(arg0[outer1_1.key]);
+          const merged1 = Object.assign(arg0[closure_1_1.key]);
           const merged2 = Object.assign(closure_0);
-          obj[outer1_1.key] = obj;
+          obj[closure_1_1.key] = obj;
           return obj;
         });
       };
       obj.isFocused = function isFocused() {
-        const state = outer1_5.getState();
+        const state = closure_1_5.getState();
         let tmp2 = state.routes[state.index].key === key.key;
         if (tmp2) {
           let isFocusedResult = !key;

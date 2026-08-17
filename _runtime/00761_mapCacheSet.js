@@ -1,5 +1,6 @@
 // _runtime/00761_mapCacheSet.js
-import { getMapData } from "00757_getMapData.js";
+import getMapData from "getMapData" /* 757 */;
+
 
 export default function mapCacheSet(arg0, arg1) {
   const self = this;

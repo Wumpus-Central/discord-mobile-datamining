@@ -10,8 +10,6 @@ arg5.getNumberOfUrlSegments = function getNumberOfUrlSegments(str) {
   }).length;
 };
 arg5.getSanitizedUrlString = function getSanitizedUrlString(path) {
-  let host;
-  let protocol;
   ({ protocol, host } = path);
   let str = "";
   if (protocol) {

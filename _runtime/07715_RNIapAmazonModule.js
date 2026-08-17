@@ -1,17 +1,13 @@
 // _runtime/07715_RNIapAmazonModule.js
-import importDefaultResult from "asyncGeneratorStep";
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
 let closure_0 = arg1;
 const RNIapAmazonModule = require("get ActivityIndicator").NativeModules.RNIapAmazonModule;
 closure_0 = importDefaultResult((arg0) => {
-  let closure_0 = arg0;
-  let c3 = 0;
-  let c4 = 0;
+  closure_0 = arg0;
+  c3 = 0;
+  c4 = 0;
   const iter = (function*(arg0) {
-    let c0;
-    let c1;
-    let c2;
-    let useSandbox;
     if (c4 === 2) {
       c4 = 3;
       HermesBuiltin.throwTypeError();
@@ -60,7 +56,7 @@ closure_0 = importDefaultResult((arg0) => {
             throw arg1;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
@@ -70,7 +66,7 @@ closure_0 = importDefaultResult((arg0) => {
             }
             const _HermesInternal = HermesInternal;
             c4 = "https://appstore-sdk.amazon.com/" + str + "version/1.0/verifyReceiptId/developer/" + c0 + "/user/" + c1 + "/receiptId/" + c2;
-            let obj2 = callback(outer1_1[2]);
+            let obj2 = callback(closure_1_1[2]);
             c3 = 2;
             c4 = 1;
             obj2 = { value: null, done: false };
@@ -128,7 +124,7 @@ closure_0 = importDefaultResult(function*() {
       } else {
         c0 = 3;
         obj = { value: null, done: true };
-        obj[0] = outer1_2.verifyLicense();
+        obj[0] = closure_1_2.verifyLicense();
         return obj;
       }
     } catch (tmp5) {
@@ -138,9 +134,9 @@ closure_0 = importDefaultResult(function*() {
   }
 });
 closure_0 = importDefaultResult((arg0) => {
-  let closure_0 = arg0;
-  let c3 = 0;
-  let c4 = 0;
+  closure_0 = arg0;
+  c3 = 0;
+  c4 = 0;
   const iter = (function*(arg0) {
     if (c4 === 2) {
       c4 = 3;
@@ -168,8 +164,8 @@ closure_0 = importDefaultResult((arg0) => {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_2 = tmp5;
-            let closure_1 = tmp2;
+            closure_2 = tmp5;
+            closure_1 = tmp2;
             let isAmazonDevice;
             isAmazonDevice = isAmazonDevice.isAmazonDevice;
             c3 = 1;
@@ -181,13 +177,13 @@ closure_0 = importDefaultResult((arg0) => {
           throw arg1;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj1 = { value: null, done: true };
+          obj1 = { value: null, done: true };
           obj1[0] = arg1;
           return obj1;
         } else {
           c4 = 3;
           obj = { value: null, done: true };
-          obj[0] = outer1_2.deepLinkToSubscriptions(isAmazonDevice);
+          obj[0] = closure_1_2.deepLinkToSubscriptions(isAmazonDevice);
           return obj;
         }
       } catch (tmp11) {

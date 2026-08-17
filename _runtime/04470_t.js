@@ -1,12 +1,14 @@
 // _runtime/04470_t.js
+import noop from "noop" /* 19 */;
+
 let fn = function t(exports, React) {
-  let c0 = React;
+  c0 = React;
   let emptyFunction = function _objectSpread2(prototype) {
-    let closure_0 = prototype;
+    closure_0 = prototype;
     for (let num = 1; num < arguments.length; num = num + 1) {
       let tmp = num;
       let tmp2 = null != arguments[num] ? arguments[num] : {};
-      let emptyFunction = tmp2;
+      closure_1 = tmp2;
       let _Object = Object;
       if (num % 2) {
         let _ObjectResult = _Object(tmp2);
@@ -290,7 +292,7 @@ let fn = function t(exports, React) {
     function shim(arg0, arg1, arg2, arg3, arg4, arg5) {
       if (arg5 !== shim) {
         const _Error = Error;
-        const error = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+        error = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
         error.name = "Invariant Violation";
         throw error;
       }
@@ -329,7 +331,7 @@ let fn = function t(exports, React) {
   function isUnknownObject(arg0) {
 
   }
-  let c9 = "[object Object]";
+  c9 = "[object Object]";
   function isEqual(arg0, arg1) {
     let length;
     let length2;
@@ -397,10 +399,10 @@ let fn = function t(exports, React) {
               if (keys2.length !== keys.length) {
                 return false;
               } else {
-                let closure_0 = arg0;
-                let closure_1 = arg1;
+                closure_0 = arg0;
+                closure_1 = arg1;
                 return keys2.every(function pred(arg0) {
-                  return outer1_27(table[arg0], table2[arg0]);
+                  return closure_1_27(table[arg0], table2[arg0]);
                 });
               }
             }
@@ -414,7 +416,7 @@ let fn = function t(exports, React) {
   function extractAllowedOptionsUpdates(arg0, arg1, arg2) {
 
   }
-  let c12 = "Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.";
+  c12 = "Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.";
   function validateStripe(elements, arg1) {
     if (arguments.length > 1) {
       if (undefined !== arguments[1]) {
@@ -442,7 +444,7 @@ let fn = function t(exports, React) {
         }
         if (!tmp4) {
           const _Error = Error;
-          const error = new Error(tmp);
+          error = new Error(tmp);
           throw error;
         }
       }
@@ -455,7 +457,7 @@ let fn = function t(exports, React) {
       if (undefined !== arguments[1]) {
         let tmp = arguments[1];
       }
-      let c0 = tmp;
+      closure_0 = tmp;
       if (typeof isUnknownObject !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -470,7 +472,7 @@ let fn = function t(exports, React) {
         let obj = { tag: "async", stripePromise: null };
         const resolved = Promise.resolve(elements);
         obj[1] = resolved.then((arg0) => {
-          outer1_13(arg0, closure_0);
+          closure_1_13(arg0, closure_0);
           return arg0;
         });
         return obj;
@@ -500,13 +502,13 @@ let fn = function t(exports, React) {
       stripe = exports.stripe;
       options = stripe;
       options = exports.options;
-      useRef = options;
+      closure_1 = options;
       obj = options;
       items = [];
       items[0] = stripe;
-      memo = options.useMemo(() => outer1_14(options), items);
-      f105362 = memo;
-      tmp2 = useMemo(options.useState(() => {
+      memo = options.useMemo(() => closure_1_14(options), items);
+      closure_2 = memo;
+      tmp2 = closure_4(options.useState(() => {
         let stripe = null;
         if ("sync" === memo.tag) {
           stripe = tmp.stripe;
@@ -521,8 +523,8 @@ let fn = function t(exports, React) {
         return obj;
       }), 2);
       first = tmp2[0];
-      f105363 = first;
-      useMemo = tmp2[1];
+      closure_3 = first;
+      closure_4 = tmp2[1];
       items1 = [, , ];
       items1[0] = memo;
       items1[1] = first;
@@ -538,12 +540,12 @@ let fn = function t(exports, React) {
               }
               if (tmp) {
                 closure_0 = arg0;
-                outer1_4((stripe) => {
+                closure_1_4((stripe) => {
                   let tmp = stripe;
                   if (!stripe.stripe) {
                     const obj = { stripe: null, elements: null };
                     obj[0] = closure_0;
-                    obj[1] = closure_0.elements(outer1_1);
+                    obj[1] = closure_0.elements(closure_1_1);
                     tmp = obj;
                   }
                   return tmp;
@@ -553,7 +555,7 @@ let fn = function t(exports, React) {
             const stripePromise = tmp.stripePromise;
           }
           return () => {
-            let c0 = false;
+            c0 = false;
           };
         }
         stripe = "sync" !== tmp.tag;
@@ -567,7 +569,7 @@ let fn = function t(exports, React) {
             if (!stripe.stripe) {
               const obj = { stripe: null, elements: null };
               obj[0] = closure_0;
-              obj[1] = closure_0.elements(outer1_1);
+              obj[1] = closure_0.elements(closure_1_1);
               tmp = obj;
             }
             return tmp;
@@ -581,7 +583,7 @@ let fn = function t(exports, React) {
       }
       options = stripe;
       ref = obj.useRef(stripe);
-      useRef = ref;
+      closure_1 = ref;
       items2 = [];
       items2[0] = stripe;
       effect1 = obj.useEffect(() => {
@@ -606,7 +608,7 @@ let fn = function t(exports, React) {
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }
       ref1 = obj.useRef(options);
-      useRef = ref1;
+      closure_1 = ref1;
       items4 = [];
       items4[0] = options;
       effect3 = obj.useEffect(() => {
@@ -620,12 +622,13 @@ let fn = function t(exports, React) {
       items5[2] = first.elements;
       effect4 = obj.useEffect(() => {
         if (value.elements) {
-          if (typeof outer1_11 !== "function") {
+          if (typeof closure_1_11 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          const options = tmp3;
-          let closure_2 = ["clientSecret", "fonts"];
-          if (typeof outer1_8 !== "function") {
+          closure_0 = tmp3;
+          closure_1 = current2;
+          closure_2 = ["clientSecret", "fonts"];
+          if (typeof closure_1_8 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let tmp7 = null !== tmp3;
@@ -637,7 +640,7 @@ let fn = function t(exports, React) {
             const _Object = Object;
             const keys = Object.keys(tmp3);
             reduced = keys.reduce((arg0, arg1) => {
-              if (typeof outer1_8 !== "function") {
+              if (typeof closure_1_8 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let tmp2 = null !== tmp;
@@ -646,7 +649,7 @@ let fn = function t(exports, React) {
               }
               let tmp4 = !tmp2;
               if (tmp2) {
-                tmp4 = !outer1_10(tmp3[arg1], tmp[arg1]);
+                tmp4 = !closure_1_10(dependencyMap[arg1], tmp[arg1]);
               }
               if (lib.includes(arg1)) {
                 let tmp7 = arg0;
@@ -668,7 +671,7 @@ let fn = function t(exports, React) {
                   obj = {};
                   if (arg1 in obj) {
                     const _Object = Object;
-                    const obj1 = { value: null, enumerable: true, configurable: true, writable: true };
+                    obj1 = { value: null, enumerable: true, configurable: true, writable: true };
                     obj1[0] = tmp11;
                     Object.defineProperty(obj, arg1, obj1);
                   } else {
@@ -684,7 +687,6 @@ let fn = function t(exports, React) {
             const elements = tmp.elements;
             elements.update(reduced);
           }
-          const ref1 = current2;
           const tmp4 = current2;
         }
       }, items5);
@@ -692,7 +694,7 @@ let fn = function t(exports, React) {
       items6[0] = first.stripe;
       effect5 = obj.useEffect(() => {
         const stripe = value.stripe;
-        if (typeof outer1_15 !== "function") {
+        if (typeof closure_1_15 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let registerAppInfo = stripe;
@@ -707,7 +709,7 @@ let fn = function t(exports, React) {
           stripe.registerAppInfo({ name: "react-stripe-js", version: "3.7.0", url: "https://stripe.com/docs/stripe-js/react" });
         }
       }, items6);
-      return obj.createElement(c16.Provider, { value: first }, exports.children);
+      return obj.createElement(closure_16.Provider, { value: first }, exports.children);
     }
   }
   Elements.propTypes = { stripe: _default.any, options: _default.object };
@@ -720,7 +722,7 @@ let fn = function t(exports, React) {
         str4 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
-      context = c0.useContext(c16);
+      context = c0.useContext(closure_16);
       if (typeof parseElementsContext !== "function") {
         str5 = "Trying to call a non-function";
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
@@ -743,7 +745,7 @@ let fn = function t(exports, React) {
     }
   }
   ElementsConsumer.propTypes = { children: _default.func.isRequired };
-  let closure_19 = ["on", "session"];
+  closure_19 = ["on", "session"];
   let context1 = React.createContext(null);
   context1.displayName = "CheckoutSdkContext";
   function parseCheckoutSdkContext(arg0, arg1) {
@@ -756,18 +758,18 @@ let fn = function t(exports, React) {
       stripe = exports.stripe;
       checkoutSdk = stripe;
       options = exports.options;
-      useRef = options;
+      closure_1 = options;
       obj = checkoutSdk;
       items = [];
       items[0] = stripe;
-      memo = checkoutSdk.useMemo(() => outer1_14(checkoutSdk, "Invalid prop `stripe` supplied to `CheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details."), items);
-      emptyFunctionWithReset = memo;
-      tmp2 = useState(checkoutSdk.useState(null), 2);
+      memo = checkoutSdk.useMemo(() => closure_1_14(checkoutSdk, "Invalid prop `stripe` supplied to `CheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details."), items);
+      closure_2 = memo;
+      tmp2 = closure_4(checkoutSdk.useState(null), 2);
       first = tmp2[0];
-      _objectWithoutProperties = first;
+      closure_3 = first;
       tmp4 = tmp2[1];
-      useState = tmp4;
-      tmp5 = useState(checkoutSdk.useState(() => {
+      closure_4 = tmp4;
+      tmp5 = closure_4(checkoutSdk.useState(() => {
         let stripe = null;
         if ("sync" === memo.tag) {
           stripe = memo.stripe;
@@ -775,40 +777,40 @@ let fn = function t(exports, React) {
         return { stripe, checkoutSdk: null };
       }), 2);
       first1 = tmp5[0];
-      f105369 = first1;
-      useAttachEvent = tmp5[1];
+      closure_5 = first1;
+      closure_6 = tmp5[1];
       safeSetContext = function safeSetContext(arg0, arg1) {
 
       };
-      useRef = checkoutSdk.useRef(false);
+      closure_8 = checkoutSdk.useRef(false);
       items1 = [, , , ];
       items1[0] = memo;
       items1[1] = first1;
       items1[2] = options;
       items1[3] = tmp4;
       effect = checkoutSdk.useEffect(() => {
-        let c0 = true;
+        c0 = true;
         if ("async" === memo.tag) {
           if (!first1.stripe) {
             tmp.stripePromise.then((initCheckout) => {
-              let closure_0 = initCheckout;
+              closure_0 = initCheckout;
               let tmp = initCheckout;
               if (initCheckout) {
                 tmp = closure_0;
               }
               if (tmp) {
-                tmp = !outer1_8.current;
+                tmp = !closure_1_8.current;
               }
               if (tmp) {
-                outer1_8.current = true;
-                const checkout = initCheckout.initCheckout(outer1_1);
+                closure_1_8.current = true;
+                const checkout = initCheckout.initCheckout(closure_1_1);
                 checkout.then((on) => {
                   if (on) {
-                    if (typeof outer1_7 !== "function") {
+                    if (typeof closure_1_7 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    let closure_1 = on;
-                    outer1_6((stripe) => {
+                    closure_1 = on;
+                    closure_1_6((stripe) => {
                       let tmp = stripe;
                       if (!stripe.stripe) {
                         const obj = { stripe: null, checkoutSdk: null };
@@ -818,7 +820,7 @@ let fn = function t(exports, React) {
                       }
                       return tmp;
                     });
-                    on.on("change", outer1_4);
+                    on.on("change", closure_1_4);
                     const tmp2 = closure_0;
                   }
                 });
@@ -827,7 +829,7 @@ let fn = function t(exports, React) {
             const stripePromise = tmp.stripePromise;
           }
           return () => {
-            let c0 = false;
+            c0 = false;
           };
         }
         let tmp4 = "sync" === tmp.tag && tmp.stripe;
@@ -844,7 +846,7 @@ let fn = function t(exports, React) {
                 HermesBuiltin.throwTypeError();
               }
               stripe = stripe.stripe;
-              let closure_1 = on;
+              closure_1 = on;
               callback((stripe) => {
                 let tmp = stripe;
                 if (!stripe.stripe) {
@@ -867,7 +869,7 @@ let fn = function t(exports, React) {
       }
       checkoutSdk = stripe;
       ref = obj.useRef(stripe);
-      useRef = ref;
+      closure_1 = ref;
       items2 = [];
       items2[0] = stripe;
       effect1 = obj.useEffect(() => {
@@ -893,7 +895,7 @@ let fn = function t(exports, React) {
       }
       checkoutSdk = options;
       ref1 = obj.useRef(options);
-      useRef = ref1;
+      closure_1 = ref1;
       items4 = [];
       items4[0] = options;
       effect3 = obj.useEffect(() => {
@@ -907,7 +909,7 @@ let fn = function t(exports, React) {
         throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
       }
       ref2 = obj.useRef(checkoutSdk);
-      useRef = ref2;
+      closure_1 = ref2;
       items5 = [];
       items5[0] = checkoutSdk;
       effect4 = obj.useEffect(() => {
@@ -942,7 +944,7 @@ let fn = function t(exports, React) {
           }
           const tmp6 = current2(appearance1, appearance);
           let tmp7 = !tmp6;
-          let checkoutSdk = !current3;
+          checkoutSdk = !current3;
           if (!current3) {
             checkoutSdk = tmp.checkoutSdk;
           }
@@ -963,7 +965,7 @@ let fn = function t(exports, React) {
       items7[0] = first1.stripe;
       effect6 = obj.useEffect(() => {
         const stripe = first1.stripe;
-        if (typeof outer1_15 !== "function") {
+        if (typeof closure_1_15 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let registerAppInfo = stripe;
@@ -983,13 +985,13 @@ let fn = function t(exports, React) {
       items8[1] = first;
       element = null;
       if (first1.checkoutSdk) {
-        tmp20 = isRequired;
+        tmp20 = closure_20;
         obj = { value: null };
         obj[0] = first1;
-        tmp21 = isRequired;
+        tmp21 = closure_22;
         obj1 = { value: null };
         obj1[0] = tmp18;
-        element = obj.createElement(isRequired.Provider, obj, obj.createElement(isRequired.Provider, obj1, exports.children));
+        element = obj.createElement(closure_20.Provider, obj, obj.createElement(closure_22.Provider, obj1, exports.children));
       }
       return element;
     }
@@ -1000,34 +1002,34 @@ let fn = function t(exports, React) {
   function useElementsOrCheckoutSdkContextWithUseCase(arg0) {
 
   }
-  let closure_24 = ["mode"];
+  closure_24 = ["mode"];
   const context3 = React.createContext(null);
   context3.displayName = "EmbeddedCheckoutProviderContext";
   function useEmbeddedCheckoutContext() {
 
   }
   function createElementComponent(address, arg1) {
-    let closure_0 = address;
+    closure_0 = address;
     const formatted = address.charAt(0).toUpperCase();
     let combined = "".concat(formatted + address.slice(1), "Element");
     const tmp3 = arg1 ? (function ServerElement(id) {
       combined = "mounts <".concat(combined, ">");
-      if (typeof outer1_23 !== "function") {
+      if (typeof closure_1_23 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let obj = address;
-      const context = address.useContext(outer1_20);
-      const context1 = address.useContext(outer1_16);
+      context = address.useContext(closure_1_20);
+      context1 = address.useContext(closure_1_16);
       if (context) {
         if (context1) {
           const _Error3 = Error;
           const concat3 = "You cannot wrap the part of your app that ".concat;
-          const error = new Error("You cannot wrap the part of your app that ".concat(combined, " in both <CheckoutProvider> and <Elements> providers."));
+          error = new Error("You cannot wrap the part of your app that ".concat(combined, " in both <CheckoutProvider> and <Elements> providers."));
           throw error;
         }
       }
       if (context) {
-        if (typeof outer1_21 !== "function") {
+        if (typeof closure_1_21 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (!context) {
@@ -1037,7 +1039,7 @@ let fn = function t(exports, React) {
           throw error1;
         }
       } else {
-        if (typeof outer1_17 !== "function") {
+        if (typeof closure_1_17 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (!context1) {
@@ -1050,21 +1052,6 @@ let fn = function t(exports, React) {
       obj = { id: id.id, className: id.className };
       return <div id={arg0.id} className={arg0.className} />;
     }) : (function ClientElement(options) {
-      let className;
-      let id;
-      let onBlur;
-      let onCancel;
-      let onChange;
-      let onClick;
-      let onConfirm;
-      let onEscape;
-      let onFocus;
-      let onLoadError;
-      let onLoaderStart;
-      let onNetworksChange;
-      let onReady;
-      let onShippingAddressChange;
-      let onShippingRateChange;
       options = options.options;
       ({ id, className } = options);
       if (undefined === options) {
@@ -1073,22 +1060,22 @@ let fn = function t(exports, React) {
       ({ onBlur, onFocus, onReady } = options);
       let ref14 = onReady;
       ({ onChange, onEscape, onClick, onLoadError, onLoaderStart, onNetworksChange, onConfirm, onCancel, onShippingAddressChange, onShippingRateChange } = options);
-      let combined = "mounts <".concat(ref14, ">");
-      if (typeof outer1_23 !== "function") {
+      combined = "mounts <".concat(ref14, ">");
+      if (typeof closure_1_23 !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      const context = address.useContext(outer1_20);
-      let context1 = address.useContext(outer1_16);
+      context = address.useContext(closure_1_20);
+      context1 = address.useContext(closure_1_16);
       if (context) {
         if (context1) {
           let _Error3 = Error;
           const concat3 = "You cannot wrap the part of your app that ".concat;
-          let error = new Error("You cannot wrap the part of your app that ".concat(combined, " in both <CheckoutProvider> and <Elements> providers."));
+          error = new Error("You cannot wrap the part of your app that ".concat(combined, " in both <CheckoutProvider> and <Elements> providers."));
           throw error;
         }
       }
       if (context) {
-        if (typeof outer1_21 !== "function") {
+        if (typeof closure_1_21 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         context1 = context;
@@ -1099,7 +1086,7 @@ let fn = function t(exports, React) {
           throw error1;
         }
       } else {
-        if (typeof outer1_17 !== "function") {
+        if (typeof closure_1_17 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (!context1) {
@@ -1113,37 +1100,38 @@ let fn = function t(exports, React) {
       if ("elements" in context1) {
         elements = context1.elements;
       }
-      onChange = elements;
+      onReady = elements;
       let checkoutSdk = null;
       if ("checkoutSdk" in context1) {
         checkoutSdk = context1.checkoutSdk;
       }
-      const tmp18 = outer1_4(address.useState(null), 2);
+      onReady = checkoutSdk;
+      const tmp18 = closure_1_4(address.useState(null), 2);
       const first = tmp18[0];
       let ref13 = first;
-      let closure_5 = tmp18[1];
-      let closure_6 = obj2.useRef(null);
+      closure_5 = tmp18[1];
+      closure_6 = obj2.useRef(null);
       const ref = obj2.useRef(null);
-      if (typeof outer1_6 !== "function") {
+      if (typeof closure_1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "blur";
-      onChange = onBlur;
-      checkoutSdk = tmp22;
+      onReady = onBlur;
+      onReady = tmp22;
       const ref1 = address.useRef(onBlur);
       ref13 = ref1;
       const items = [onBlur];
       const effect = obj2.useEffect(() => {
-        ref13.current = onChange;
+        ref13.current = onReady;
       }, items);
       const items1 = [onBlur, "blur", first, ref1];
       const effect1 = obj2.useEffect(() => {
-        if (checkoutSdk) {
+        if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                const current = tmp.current;
+                current = tmp.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
                   HermesBuiltin.applyArguments(tmp);
@@ -1154,7 +1142,7 @@ let fn = function t(exports, React) {
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(outer1_1, decoratedCb);
+              decoratedCb.off(closure_1_1, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1163,26 +1151,26 @@ let fn = function t(exports, React) {
 
         };
       }, items1);
-      if (typeof outer1_6 !== "function") {
+      if (typeof closure_1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "focus";
-      onChange = onFocus;
-      checkoutSdk = tmp26;
+      onReady = onFocus;
+      onReady = tmp26;
       const ref2 = address.useRef(onFocus);
       ref13 = ref2;
       const items2 = [onFocus];
       const effect2 = obj2.useEffect(() => {
-        ref13.current = onChange;
+        ref13.current = onReady;
       }, items2);
       const items3 = [onFocus, "focus", first, ref2];
       const effect3 = obj2.useEffect(() => {
-        if (checkoutSdk) {
+        if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                const current = tmp.current;
+                current = tmp.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
                   HermesBuiltin.applyArguments(tmp);
@@ -1193,7 +1181,7 @@ let fn = function t(exports, React) {
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(outer1_1, decoratedCb);
+              decoratedCb.off(closure_1_1, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1202,26 +1190,26 @@ let fn = function t(exports, React) {
 
         };
       }, items3);
-      if (typeof outer1_6 !== "function") {
+      if (typeof closure_1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "escape";
-      onChange = onEscape;
-      checkoutSdk = tmp30;
+      onReady = onEscape;
+      onReady = tmp30;
       const ref3 = address.useRef(onEscape);
       ref13 = ref3;
       const items4 = [onEscape];
       const effect4 = obj2.useEffect(() => {
-        ref13.current = onChange;
+        ref13.current = onReady;
       }, items4);
       const items5 = [onEscape, "escape", first, ref3];
       const effect5 = obj2.useEffect(() => {
-        if (checkoutSdk) {
+        if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                const current = tmp.current;
+                current = tmp.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
                   HermesBuiltin.applyArguments(tmp);
@@ -1232,7 +1220,7 @@ let fn = function t(exports, React) {
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(outer1_1, decoratedCb);
+              decoratedCb.off(closure_1_1, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1241,26 +1229,26 @@ let fn = function t(exports, React) {
 
         };
       }, items5);
-      if (typeof outer1_6 !== "function") {
+      if (typeof closure_1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "click";
-      onChange = onClick;
-      checkoutSdk = tmp34;
+      onReady = onClick;
+      onReady = tmp34;
       const ref4 = address.useRef(onClick);
       ref13 = ref4;
       const items6 = [onClick];
       const effect6 = obj2.useEffect(() => {
-        ref13.current = onChange;
+        ref13.current = onReady;
       }, items6);
       const items7 = [onClick, "click", first, ref4];
       const effect7 = obj2.useEffect(() => {
-        if (checkoutSdk) {
+        if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                const current = tmp.current;
+                current = tmp.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
                   HermesBuiltin.applyArguments(tmp);
@@ -1271,7 +1259,7 @@ let fn = function t(exports, React) {
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(outer1_1, decoratedCb);
+              decoratedCb.off(closure_1_1, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1280,26 +1268,26 @@ let fn = function t(exports, React) {
 
         };
       }, items7);
-      if (typeof outer1_6 !== "function") {
+      if (typeof closure_1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "loaderror";
-      onChange = onLoadError;
-      checkoutSdk = tmp38;
+      onReady = onLoadError;
+      onReady = tmp38;
       const ref5 = address.useRef(onLoadError);
       ref13 = ref5;
       const items8 = [onLoadError];
       const effect8 = obj2.useEffect(() => {
-        ref13.current = onChange;
+        ref13.current = onReady;
       }, items8);
       const items9 = [onLoadError, "loaderror", first, ref5];
       const effect9 = obj2.useEffect(() => {
-        if (checkoutSdk) {
+        if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                const current = tmp.current;
+                current = tmp.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
                   HermesBuiltin.applyArguments(tmp);
@@ -1310,7 +1298,7 @@ let fn = function t(exports, React) {
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(outer1_1, decoratedCb);
+              decoratedCb.off(closure_1_1, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1319,26 +1307,26 @@ let fn = function t(exports, React) {
 
         };
       }, items9);
-      if (typeof outer1_6 !== "function") {
+      if (typeof closure_1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "loaderstart";
-      onChange = onLoaderStart;
-      checkoutSdk = tmp42;
+      onReady = onLoaderStart;
+      onReady = tmp42;
       const ref6 = address.useRef(onLoaderStart);
       ref13 = ref6;
       const items10 = [onLoaderStart];
       const effect10 = obj2.useEffect(() => {
-        ref13.current = onChange;
+        ref13.current = onReady;
       }, items10);
       const items11 = [onLoaderStart, "loaderstart", first, ref6];
       const effect11 = obj2.useEffect(() => {
-        if (checkoutSdk) {
+        if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                const current = tmp.current;
+                current = tmp.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
                   HermesBuiltin.applyArguments(tmp);
@@ -1349,7 +1337,7 @@ let fn = function t(exports, React) {
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(outer1_1, decoratedCb);
+              decoratedCb.off(closure_1_1, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1358,26 +1346,26 @@ let fn = function t(exports, React) {
 
         };
       }, items11);
-      if (typeof outer1_6 !== "function") {
+      if (typeof closure_1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "networkschange";
-      onChange = onNetworksChange;
-      checkoutSdk = tmp46;
+      onReady = onNetworksChange;
+      onReady = tmp46;
       const ref7 = address.useRef(onNetworksChange);
       ref13 = ref7;
       const items12 = [onNetworksChange];
       const effect12 = obj2.useEffect(() => {
-        ref13.current = onChange;
+        ref13.current = onReady;
       }, items12);
       const items13 = [onNetworksChange, "networkschange", first, ref7];
       const effect13 = obj2.useEffect(() => {
-        if (checkoutSdk) {
+        if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                const current = tmp.current;
+                current = tmp.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
                   HermesBuiltin.applyArguments(tmp);
@@ -1388,7 +1376,7 @@ let fn = function t(exports, React) {
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(outer1_1, decoratedCb);
+              decoratedCb.off(closure_1_1, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1397,26 +1385,26 @@ let fn = function t(exports, React) {
 
         };
       }, items13);
-      if (typeof outer1_6 !== "function") {
+      if (typeof closure_1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "confirm";
-      onChange = onConfirm;
-      checkoutSdk = tmp50;
+      onReady = onConfirm;
+      onReady = tmp50;
       const ref8 = address.useRef(onConfirm);
       ref13 = ref8;
       const items14 = [onConfirm];
       const effect14 = obj2.useEffect(() => {
-        ref13.current = onChange;
+        ref13.current = onReady;
       }, items14);
       const items15 = [onConfirm, "confirm", first, ref8];
       const effect15 = obj2.useEffect(() => {
-        if (checkoutSdk) {
+        if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                const current = tmp.current;
+                current = tmp.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
                   HermesBuiltin.applyArguments(tmp);
@@ -1427,7 +1415,7 @@ let fn = function t(exports, React) {
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(outer1_1, decoratedCb);
+              decoratedCb.off(closure_1_1, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1436,26 +1424,26 @@ let fn = function t(exports, React) {
 
         };
       }, items15);
-      if (typeof outer1_6 !== "function") {
+      if (typeof closure_1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "cancel";
-      onChange = onCancel;
-      checkoutSdk = tmp54;
+      onReady = onCancel;
+      onReady = tmp54;
       const ref9 = address.useRef(onCancel);
       ref13 = ref9;
       const items16 = [onCancel];
       const effect16 = obj2.useEffect(() => {
-        ref13.current = onChange;
+        ref13.current = onReady;
       }, items16);
       const items17 = [onCancel, "cancel", first, ref9];
       const effect17 = obj2.useEffect(() => {
-        if (checkoutSdk) {
+        if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                const current = tmp.current;
+                current = tmp.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
                   HermesBuiltin.applyArguments(tmp);
@@ -1466,7 +1454,7 @@ let fn = function t(exports, React) {
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(outer1_1, decoratedCb);
+              decoratedCb.off(closure_1_1, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1475,26 +1463,26 @@ let fn = function t(exports, React) {
 
         };
       }, items17);
-      if (typeof outer1_6 !== "function") {
+      if (typeof closure_1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "shippingaddresschange";
-      onChange = onShippingAddressChange;
-      checkoutSdk = tmp58;
+      onReady = onShippingAddressChange;
+      onReady = tmp58;
       const ref10 = address.useRef(onShippingAddressChange);
       ref13 = ref10;
       const items18 = [onShippingAddressChange];
       const effect18 = obj2.useEffect(() => {
-        ref13.current = onChange;
+        ref13.current = onReady;
       }, items18);
       const items19 = [onShippingAddressChange, "shippingaddresschange", first, ref10];
       const effect19 = obj2.useEffect(() => {
-        if (checkoutSdk) {
+        if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                const current = tmp.current;
+                current = tmp.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
                   HermesBuiltin.applyArguments(tmp);
@@ -1505,7 +1493,7 @@ let fn = function t(exports, React) {
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(outer1_1, decoratedCb);
+              decoratedCb.off(closure_1_1, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1514,26 +1502,26 @@ let fn = function t(exports, React) {
 
         };
       }, items19);
-      if (typeof outer1_6 !== "function") {
+      if (typeof closure_1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "shippingratechange";
-      onChange = onShippingRateChange;
-      checkoutSdk = tmp62;
+      onReady = onShippingRateChange;
+      onReady = tmp62;
       const ref11 = address.useRef(onShippingRateChange);
       ref13 = ref11;
       const items20 = [onShippingRateChange];
       const effect20 = obj2.useEffect(() => {
-        ref13.current = onChange;
+        ref13.current = onReady;
       }, items20);
       const items21 = [onShippingRateChange, "shippingratechange", first, ref11];
       const effect21 = obj2.useEffect(() => {
-        if (checkoutSdk) {
+        if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                const current = tmp.current;
+                current = tmp.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
                   HermesBuiltin.applyArguments(tmp);
@@ -1544,7 +1532,7 @@ let fn = function t(exports, React) {
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(outer1_1, decoratedCb);
+              decoratedCb.off(closure_1_1, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1553,25 +1541,26 @@ let fn = function t(exports, React) {
 
         };
       }, items21);
-      if (typeof outer1_6 !== "function") {
+      if (typeof closure_1_6 !== "function") {
         combined = HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "change";
-      checkoutSdk = tmp66;
+      onReady = onChange;
+      onReady = tmp66;
       const ref12 = address.useRef(onChange);
       ref13 = ref12;
       const items22 = [onChange];
       const effect22 = obj2.useEffect(() => {
-        ref13.current = onChange;
+        ref13.current = onReady;
       }, items22);
       const items23 = [onChange, "change", first, ref12];
       const effect23 = obj2.useEffect(() => {
-        if (checkoutSdk) {
+        if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                const current = tmp.current;
+                current = tmp.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
                   HermesBuiltin.applyArguments(tmp);
@@ -1582,7 +1571,7 @@ let fn = function t(exports, React) {
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(outer1_1, decoratedCb);
+              decoratedCb.off(closure_1_1, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1600,25 +1589,25 @@ let fn = function t(exports, React) {
         }
         tmp70 = onReady;
       }
-      if (typeof outer1_6 !== "function") {
+      if (typeof closure_1_6 !== "function") {
         combined = HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "ready";
-      onChange = tmp70;
-      checkoutSdk = tmp72;
+      onReady = tmp70;
+      onReady = tmp72;
       ref13 = obj2.useRef(tmp70);
       const items24 = [tmp70];
       const effect24 = obj2.useEffect(() => {
-        ref13.current = onChange;
+        ref13.current = onReady;
       }, items24);
       const items25 = [tmp70, "ready", first, ref13];
       const effect25 = obj2.useEffect(() => {
-        if (checkoutSdk) {
+        if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                const current = tmp.current;
+                current = tmp.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
                   HermesBuiltin.applyArguments(tmp);
@@ -1629,7 +1618,7 @@ let fn = function t(exports, React) {
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(outer1_1, decoratedCb);
+              decoratedCb.off(closure_1_1, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1642,19 +1631,19 @@ let fn = function t(exports, React) {
       const layoutEffect = obj2.useLayoutEffect(() => {
         if (null === ref.current) {
           if (null !== ref.current) {
-            if (onChange) {
-              if (checkoutSdk) {
+            if (onReady) {
+              if (onReady) {
                 if ("payment" === options) {
                   let paymentElement = obj.createPaymentElement(options);
                 } else if ("address" === tmp6) {
                   if ("mode" in options) {
                     const mode = tmp14.mode;
-                    const tmp22 = outer2_3(tmp14, outer2_24);
+                    const tmp22 = closure_2_3(tmp14, closure_2_24);
                     if ("shipping" === mode) {
                       paymentElement = obj.createShippingAddressElement(tmp22);
                     } else if ("billing" !== mode) {
                       const _Error3 = Error;
-                      const error = new Error("Invalid options.mode. mode must be 'billing' or 'shipping'.");
+                      error = new Error("Invalid options.mode. mode must be 'billing' or 'shipping'.");
                       throw error;
                     } else {
                       paymentElement = obj.createBillingAddressElement(tmp22);
@@ -1689,7 +1678,7 @@ let fn = function t(exports, React) {
           }
         }
       }, items26);
-      if (typeof outer1_7 !== "function") {
+      if (typeof closure_1_7 !== "function") {
         combined = HermesBuiltin.throwTypeError();
       }
       ref14 = obj2.useRef(options);
@@ -1701,24 +1690,25 @@ let fn = function t(exports, React) {
       const items28 = [options, current];
       const effect27 = obj2.useEffect(() => {
         if (ref.current) {
-          if (typeof outer2_11 !== "function") {
+          if (typeof closure_2_11 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          const options = tmp3;
-          let closure_2 = ["paymentRequest"];
-          if (typeof outer2_8 !== "function") {
+          closure_0 = tmp3;
+          closure_1 = current;
+          closure_2 = ["paymentRequest"];
+          if (typeof closure_2_8 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let tmp7 = null !== tmp3;
           if (tmp7) {
-            tmp7 = "object" === outer2_2(tmp3);
+            tmp7 = "object" === closure_2_2(tmp3);
           }
           let reduced = null;
           if (tmp7) {
             let _Object = Object;
             const keys = Object.keys(tmp3);
             reduced = keys.reduce((arg0, arg1) => {
-              if (typeof outer1_8 !== "function") {
+              if (typeof closure_1_8 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let tmp2 = null !== tmp;
@@ -1727,7 +1717,7 @@ let fn = function t(exports, React) {
               }
               let tmp4 = !tmp2;
               if (tmp2) {
-                tmp4 = !outer1_10(tmp3[arg1], tmp[arg1]);
+                tmp4 = !closure_1_10(dependencyMap[arg1], tmp[arg1]);
               }
               if (lib.includes(arg1)) {
                 let tmp7 = arg0;
@@ -1749,7 +1739,7 @@ let fn = function t(exports, React) {
                   obj = {};
                   if (arg1 in obj) {
                     const _Object = Object;
-                    const obj1 = { value: null, enumerable: true, configurable: true, writable: true };
+                    obj1 = { value: null, enumerable: true, configurable: true, writable: true };
                     obj1[0] = tmp11;
                     Object.defineProperty(obj, arg1, obj1);
                   } else {
@@ -1766,7 +1756,7 @@ let fn = function t(exports, React) {
             tmp11 = "update" in tmp.current;
           }
           if (tmp11) {
-            const current = tmp.current;
+            current = tmp.current;
             current.update(reduced);
           }
           let tmp4 = current;
@@ -1776,7 +1766,7 @@ let fn = function t(exports, React) {
         if (ref.current) {
           if (typeof tmp.current.destroy === "function") {
             try {
-              const current = tmp.current;
+              current = tmp.current;
               current.destroy();
               tmp.current = null;
             } catch (err) {
@@ -1823,8 +1813,6 @@ let fn = function t(exports, React) {
   exports.Elements = Elements;
   exports.ElementsConsumer = ElementsConsumer;
   exports.EmbeddedCheckout = typeof window === "undefined" ? (function EmbeddedCheckoutServerElement(arg0) {
-    let className;
-    let id;
     ({ id, className } = arg0);
     if (typeof useEmbeddedCheckoutContext !== "function") {
       HermesBuiltin.throwTypeError();
@@ -1837,21 +1825,19 @@ let fn = function t(exports, React) {
       return <div id={null} className={null} />;
     } else {
       const _Error = Error;
-      const error = new Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
+      error = new Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
       throw error;
     }
   }) : (function EmbeddedCheckoutClientElement(arg0) {
-    let className;
-    let id;
     ({ id, className } = arg0);
     if (typeof useEmbeddedCheckoutContext !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let obj = embeddedCheckout;
-    const context = embeddedCheckout.useContext(context3);
+    context = embeddedCheckout.useContext(context3);
     if (context) {
       embeddedCheckout = context.embeddedCheckout;
-      let closure_1 = obj.useRef(false);
+      closure_1 = obj.useRef(false);
       const ref = obj.useRef(null);
       const items = [embeddedCheckout];
       const layoutEffect = obj.useLayoutEffect(() => {
@@ -1887,7 +1873,7 @@ let fn = function t(exports, React) {
       return <div ref={null} id={null} className={null} />;
     } else {
       const _Error = Error;
-      const error = new Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
+      error = new Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
       throw error;
     }
   });
@@ -1897,12 +1883,12 @@ let fn = function t(exports, React) {
     options = stripe.options;
     let ref2 = options;
     const items = [stripe];
-    const memo = options.useMemo(() => outer1_14(options, "Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details."), items);
-    let closure_3 = options.useRef(null);
+    const memo = options.useMemo(() => closure_1_14(options, "Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details."), items);
+    closure_3 = options.useRef(null);
     const ref = options.useRef(null);
     const tmp3 = ref(options.useState({ embeddedCheckout: null }), 2);
     const value = tmp3[0];
-    let closure_6 = tmp3[1];
+    closure_6 = tmp3[1];
     const items1 = [memo, options, value, ref];
     const effect = options.useEffect(() => {
       if (!ref.current) {
@@ -1917,15 +1903,15 @@ let fn = function t(exports, React) {
                   if (typeof setStripeAndInitEmbeddedCheckout !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  current = outer1_4.current;
+                  current = closure_1_4.current;
                   if (!current) {
-                    current = outer1_3.current;
+                    current = closure_1_3.current;
                   }
                   if (!current) {
                     tmp2.current = current;
-                    const current2 = tmp2.current;
-                    const embeddedCheckout = current2.initEmbeddedCheckout(outer1_1);
-                    outer1_3.current = embeddedCheckout.then((embeddedCheckout) => {
+                    current2 = tmp2.current;
+                    const embeddedCheckout = current2.initEmbeddedCheckout(closure_1_1);
+                    closure_1_3.current = embeddedCheckout.then((embeddedCheckout) => {
                       callback({ embeddedCheckout });
                     });
                   }
@@ -1944,13 +1930,13 @@ let fn = function t(exports, React) {
             tmp5 = tmp6;
           }
           if (!tmp5) {
-            let current = tmp.current;
+            current = tmp.current;
             if (!current) {
               current = tmp2.current;
             }
             if (!current) {
               tmp.current = tmp3.stripe;
-              let current2 = tmp.current;
+              current2 = tmp.current;
               let embeddedCheckout = current2.initEmbeddedCheckout(ref2);
               tmp2.current = embeddedCheckout.then((embeddedCheckout) => {
                 callback({ embeddedCheckout });
@@ -1967,7 +1953,7 @@ let fn = function t(exports, React) {
         embeddedCheckout = tmp.embeddedCheckout;
         embeddedCheckout.destroy();
       } else if (tmp2.current) {
-        const current = tmp2.current;
+        current = tmp2.current;
         current.then(() => {
           closure_3.current = null;
           if (closure_5.embeddedCheckout) {
@@ -1979,7 +1965,7 @@ let fn = function t(exports, React) {
     }, items2);
     const items3 = [ref];
     const effect2 = options.useEffect(() => {
-      if (typeof outer1_15 !== "function") {
+      if (typeof closure_1_15 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let registerAppInfo = obj;
@@ -2079,7 +2065,7 @@ let fn = function t(exports, React) {
   exports.PaymentRequestButtonElement = elementComponent13;
   exports.ShippingAddressElement = elementComponent16;
   exports.useCheckout = function useCheckout() {
-    const context = React.useContext(context1);
+    context = React.useContext(context1);
     if (typeof parseCheckoutSdkContext !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -2089,7 +2075,7 @@ let fn = function t(exports, React) {
         return context1;
       } else {
         const _Error2 = Error;
-        const error = new Error("Could not find Checkout Context; You need to wrap the part of your app that calls useCheckout() in an <CheckoutProvider> provider.");
+        error = new Error("Could not find Checkout Context; You need to wrap the part of your app that calls useCheckout() in an <CheckoutProvider> provider.");
         throw error;
       }
     } else {
@@ -2113,7 +2099,7 @@ let fn = function t(exports, React) {
     } else {
       const _Error = Error;
       const concat = "Could not find Elements context; You need to wrap the part of your app that ".concat;
-      const error = new Error("Could not find Elements context; You need to wrap the part of your app that ".concat("calls useElements()", " in an <Elements> provider."));
+      error = new Error("Could not find Elements context; You need to wrap the part of your app that ".concat("calls useElements()", " in an <Elements> provider."));
       throw error;
     }
   };
@@ -2121,13 +2107,13 @@ let fn = function t(exports, React) {
     if (typeof useElementsOrCheckoutSdkContextWithUseCase !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const context = React.useContext(context1);
+    context = React.useContext(context1);
     context1 = React.useContext(context);
     if (context) {
       if (context1) {
         const _Error3 = Error;
         const concat3 = "You cannot wrap the part of your app that ".concat;
-        const error = new Error("You cannot wrap the part of your app that ".concat("calls useStripe()", " in both <CheckoutProvider> and <Elements> providers."));
+        error = new Error("You cannot wrap the part of your app that ".concat("calls useStripe()", " in both <CheckoutProvider> and <Elements> providers."));
         throw error;
       }
     }
@@ -2158,7 +2144,7 @@ let fn = function t(exports, React) {
 };
 if (typeof exports === "object") {
   if (undefined !== module) {
-    fn(exports, require("noop"));
+    fn(exports, noop);
   }
 }
 if (typeof globalThis.define === "function") {

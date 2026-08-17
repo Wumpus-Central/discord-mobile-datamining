@@ -1,12 +1,10 @@
 // _runtime/13799_repl.js
 arg5.default = function repl() {
   return (arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = {};
+    closure_0 = arg0;
+    closure_1 = {};
     obj = {
       onCommand(arg0) {
-        let payload;
-        let type;
         ({ type, payload } = arg0);
         if ("repl." === type.substr(0, 5)) {
           const substr = type.substr(5);
@@ -44,7 +42,7 @@ arg5.default = function repl() {
         if (arg0) {
           if (table[arg0]) {
             const _Error2 = Error;
-            const error = new Error("You are already REPLing an item with that name");
+            error = new Error("You are already REPLing an item with that name");
             throw error;
           } else {
             tmp6[arg0] = arg1;

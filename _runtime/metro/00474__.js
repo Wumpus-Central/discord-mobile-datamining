@@ -1,10 +1,12 @@
 // _runtime/metro/00474__.js
-let closure_0 = require("module_475").default.currentCentroidXOfTouchesChangedAfter;
-let closure_1 = require("module_475").default.currentCentroidYOfTouchesChangedAfter;
-let closure_2 = require("module_475").default.previousCentroidXOfTouchesChangedAfter;
-let closure_3 = require("module_475").default.previousCentroidYOfTouchesChangedAfter;
-const currentCentroidX = require("module_475").default.currentCentroidX;
-const currentCentroidY = require("module_475").default.currentCentroidY;
+import _mod475 from "module_475" /* 475 */;
+
+let closure_0 = _mod475.default.currentCentroidXOfTouchesChangedAfter;
+let closure_1 = _mod475.default.currentCentroidYOfTouchesChangedAfter;
+let closure_2 = _mod475.default.previousCentroidXOfTouchesChangedAfter;
+let closure_3 = _mod475.default.previousCentroidYOfTouchesChangedAfter;
+const currentCentroidX = _mod475.default.currentCentroidX;
+const currentCentroidY = _mod475.default.currentCentroidY;
 let obj = {
   _initializeGestureState(arg0) {
     arg0.moveX = 0;
@@ -35,8 +37,8 @@ let obj = {
     _accountsForMovesUpTo._accountsForMovesUpTo = touchHistory.mostRecentTimeStamp;
   },
   create(arg0) {
-    let closure_0 = arg0;
-    let obj = { stateID: Math.random(), moveX: 0, moveY: 0, x0: 0, y0: 0, dx: 0, dy: 0, vx: 0, vy: 0, numberActiveTouches: 0, _accountsForMovesUpTo: 0 };
+    closure_0 = arg0;
+    obj = { stateID: Math.random(), moveX: 0, moveY: 0, x0: 0, y0: 0, dx: 0, dy: 0, vx: 0, vy: 0, numberActiveTouches: 0, _accountsForMovesUpTo: 0 };
     obj = {
       panHandlers: obj,
       getInteractionHandle() {
@@ -60,7 +62,7 @@ let obj = {
       },
       onStartShouldSetResponderCapture(nativeEvent) {
         if (1 === nativeEvent.nativeEvent.touches.length) {
-          const result = outer1_6._initializeGestureState(obj);
+          const result = closure_1_6._initializeGestureState(obj);
         }
         obj.numberActiveTouches = nativeEvent.touchHistory.numberActiveTouches;
         return null != closure_0.onStartShouldSetPanResponderCapture && closure_0.onStartShouldSetPanResponderCapture(nativeEvent, tmp4);
@@ -69,15 +71,15 @@ let obj = {
         touchHistory = touchHistory.touchHistory;
         let tmp2 = obj._accountsForMovesUpTo !== touchHistory.mostRecentTimeStamp;
         if (tmp2) {
-          const result = outer1_6._updateGestureStateOnMove(tmp, touchHistory);
+          const result = closure_1_6._updateGestureStateOnMove(tmp, touchHistory);
           tmp2 = closure_0.onMoveShouldSetPanResponderCapture && closure_0.onMoveShouldSetPanResponderCapture(touchHistory, tmp);
           const tmp5 = closure_0.onMoveShouldSetPanResponderCapture && closure_0.onMoveShouldSetPanResponderCapture(touchHistory, tmp);
         }
         return tmp2;
       },
       onResponderGrant(touchHistory) {
-        obj.x0 = outer1_4(touchHistory.touchHistory);
-        obj.y0 = outer1_5(touchHistory.touchHistory);
+        obj.x0 = closure_1_4(touchHistory.touchHistory);
+        obj.y0 = closure_1_5(touchHistory.touchHistory);
         obj.dx = 0;
         obj.dy = 0;
         if (closure_0.onPanResponderGrant) {
@@ -106,7 +108,7 @@ let obj = {
             call(undefined, arg0, tmp2);
           }
         }
-        const result1 = outer1_6._initializeGestureState(obj);
+        const result1 = closure_1_6._initializeGestureState(obj);
       },
       onResponderStart(touchHistory) {
         obj.numberActiveTouches = touchHistory.touchHistory.numberActiveTouches;
@@ -117,7 +119,7 @@ let obj = {
       onResponderMove(touchHistory) {
         touchHistory = touchHistory.touchHistory;
         if (obj._accountsForMovesUpTo !== touchHistory.mostRecentTimeStamp) {
-          const result = outer1_6._updateGestureStateOnMove(tmp, touchHistory);
+          const result = closure_1_6._updateGestureStateOnMove(tmp, touchHistory);
           if (closure_0.onPanResponderMove) {
             obj.onPanResponderMove(touchHistory, tmp);
           }
@@ -145,7 +147,7 @@ let obj = {
             call(undefined, arg0, tmp2);
           }
         }
-        const result1 = outer1_6._initializeGestureState(obj);
+        const result1 = closure_1_6._initializeGestureState(obj);
       },
       onResponderTerminationRequest(arg0) {
         let result = null == closure_0.onPanResponderTerminationRequest;

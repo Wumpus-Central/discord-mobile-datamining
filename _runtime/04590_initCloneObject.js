@@ -1,5 +1,6 @@
 // _runtime/04590_initCloneObject.js
-import { isPrototype } from "00630_isPrototype.js";
+import isPrototype from "isPrototype" /* 630 */;
+
 
 export default function initCloneObject(arg0) {
   if (typeof arg0.constructor === "function") {

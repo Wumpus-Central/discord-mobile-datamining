@@ -1,20 +1,13 @@
 // _runtime/01205__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importAllResult from "noop";
-import get_ActivityIndicator from "_isNativeReflectConstruct";
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-let FeedbackWidget = arg1;
+const FeedbackWidget = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,31 +19,31 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
-({ Appearance: error, Image: metroImportAll, Keyboard: c9, Text: c10, TextInput: unpackModuleId, TouchableOpacity: closure_12, TouchableWithoutFeedback: map1, View: closure_14 } = get_ActivityIndicator);
+({ Appearance: error, Image: closure_8, Keyboard: c9, Text: c10, TextInput: unpackModuleId, TouchableOpacity: closure_12, TouchableWithoutFeedback: map1, View: closure_14 } = get_ActivityIndicator);
 let fn = this;
 if (this) {
   fn = this.__awaiter;
 }
 if (!fn) {
   fn = (arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     let _Promise = arg2;
-    let _classCallCheck = arg3;
+    closure_3 = arg3;
     if (!arg2) {
       _Promise = Promise;
     }
     _Promise = new _Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function fulfilled(arg0) {
         try {
           step(iter.next(arg0));
@@ -106,13 +99,13 @@ if (!fn) {
 class FeedbackWidget {
   constructor(arg0) {
     self = this;
-    tmp = apply;
-    tmp2 = _isNativeReflectConstruct(this, apply);
+    tmp = closure_0;
+    tmp2 = closure_3(this, closure_0);
     items = [];
     items[0] = global;
-    tmp3 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp4 = _isNativeReflectConstruct;
+    tmp3 = closure_5;
+    obj = closure_5(closure_0);
+    tmp4 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp6 = globalThis;
       _Reflect = Reflect;
@@ -121,19 +114,14 @@ class FeedbackWidget {
       constructResult = obj.apply(self, items);
     }
     tmp4Result = tmp4(self, constructResult);
-    apply = tmp4Result;
+    closure_0 = tmp4Result;
     tmp4Result._didSubmitForm = false;
     tmp4Result.handleFeedbackSubmit = () => {
-      let description;
-      let email;
-      let name;
-      let onFormSubmitted;
-      let onSubmitError;
-      let obj = tmp4Result;
-      ({ name, email, description } = tmp4Result.state);
-      const props = tmp4Result.props;
+      let obj = lib;
+      ({ name, email, description } = lib.state);
+      const props = lib.props;
       ({ onSubmitError, onFormSubmitted } = props);
-      const props2 = tmp4Result.props;
+      const props2 = lib.props;
       if (null != name) {
         const trimmed = name.trim();
       }
@@ -174,7 +162,7 @@ class FeedbackWidget {
               }
               let tmp19;
               if (tmp13) {
-                let obj1 = { attachments: null };
+                obj1 = { attachments: null };
                 obj1[0] = tmp13;
                 tmp19 = obj1;
               }
@@ -184,7 +172,7 @@ class FeedbackWidget {
               obj2[1] = trimmed1;
               obj2[2] = trimmed2;
               obj2[3] = tmp13;
-              tmp4Result = tmp4(obj2);
+              tmp4(obj2);
               const obj8 = FeedbackWidget(817);
               FeedbackWidget(1196).feedbackAlertDialog(props2.successMessageText, "");
               onFormSubmitted();
@@ -193,7 +181,7 @@ class FeedbackWidget {
             } catch (tmp26) {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
-              const error = new Error("Feedback form submission failed: " + tmp26);
+              error = new Error("Feedback form submission failed: " + tmp26);
               tmp3(error);
               FeedbackWidget(1196).feedbackAlertDialog(tmp2.errorTitle, tmp2.genericError);
               const debug = FeedbackWidget(817).debug;
@@ -210,8 +198,8 @@ class FeedbackWidget {
     };
     tmp4Result.onScreenshotButtonPress = () => fn(closure_0, undefined, undefined, function() {
       const self = this;
-      let c4 = 0;
-      let c5 = 0;
+      c4 = 0;
+      c5 = 0;
       return (function*() {
         if (uri === 2) {
           uri = 3;
@@ -229,7 +217,7 @@ class FeedbackWidget {
         } else {
           try {
             uri = 2;
-            let num2 = 0;
+            num2 = 0;
             if (0 === fileName2) {
               if (arg0 === 1) {
                 uri = 3;
@@ -244,18 +232,18 @@ class FeedbackWidget {
                 let state = uri;
                 let first1 = num2;
                 let fileName = tmp2;
-                let closure_13 = uri;
+                closure_13 = uri;
                 fileName = undefined;
                 first1 = undefined;
                 state = undefined;
                 fileName2 = undefined;
                 uri = undefined;
                 num2 = undefined;
-                let closure_7;
+                closure_7 = undefined;
                 let fileName1;
-                let c9;
+                c9 = undefined;
                 let base64;
-                let c11;
+                c11 = undefined;
                 fileName = undefined;
                 uri = undefined;
                 if (uri._hasScreenshot()) {
@@ -264,7 +252,7 @@ class FeedbackWidget {
                   num2 = debug.props.imagePicker;
                   if (num2) {
                     if (num2.launchImageLibraryAsync) {
-                      let fn = () => {
+                      fn = () => {
                         const launchImageLibraryAsync = num2.launchImageLibraryAsync;
                         if (null !== launchImageLibraryAsync) {
                           if (undefined !== launchImageLibraryAsync) {
@@ -297,11 +285,11 @@ class FeedbackWidget {
                     if (fn) {
                       fileName2 = 1;
                       uri = 1;
-                      let obj1 = { value: null, done: false };
+                      obj1 = { value: null, done: false };
                       obj1[0] = fn();
                       return obj1;
                     } else {
-                      const debug2 = outer2_0(outer2_2[8]).debug;
+                      const debug2 = closure_2_0(closure_2_2[8]).debug;
                       debug2.warn("No compatible image picker library found. Please provide a valid image picker library.");
                       uri = 3;
                       let obj2 = { value: null, done: true };
@@ -311,8 +299,8 @@ class FeedbackWidget {
                   } else {
                     const _Object = Object;
                     const _Object2 = Object;
-                    Object.assign(Object.assign({}, outer2_0(outer2_2[11]).defaultConfiguration), debug.props).onAddScreenshot((arg0) => {
-                      let closure_0 = arg0;
+                    Object.assign(Object.assign({}, closure_2_0(closure_2_2[11]).defaultConfiguration), debug.props).onAddScreenshot((arg0) => {
+                      closure_0 = arg0;
                       const dataFromUri = uri(first1[10]).getDataFromUri(arg0);
                       let obj = uri(first1[10]);
                       dataFromUri.then((arg0) => {
@@ -320,14 +308,14 @@ class FeedbackWidget {
                           const obj = { filename: "feedback_screenshot", attachment: null, attachmentUri: null };
                           obj[1] = arg0;
                           obj[2] = closure_0;
-                          outer1_13.setState(obj);
+                          closure_1_13.setState(obj);
                         } else {
-                          const result = outer1_13._showImageRetrievalDevelopmentNote();
+                          const result = closure_1_13._showImageRetrievalDevelopmentNote();
                           const debug = uri(first1[8]).debug;
                           debug.error("Failed to read image data from uri:", closure_0);
                         }
                       }).catch((arg0) => {
-                        const result = outer1_13._showImageRetrievalDevelopmentNote();
+                        const result = closure_1_13._showImageRetrievalDevelopmentNote();
                         const debug = uri(first1[8]).debug;
                         debug.error("Failed to read image data from uri:", closure_0, "error: ", arg0);
                       });
@@ -352,9 +340,8 @@ class FeedbackWidget {
               }
               if (assets) {
                 if (closure_7.assets.length > num2) {
-                  num2 = outer2_7.assets[0];
+                  num2 = closure_2_7.assets[0];
                   if (!obj9.isWeb()) {
-                    const outer2_4 = num2;
                     fileName = undefined;
                     if (tmp54 !== num2) {
                       if (debug !== fileName2) {
@@ -370,7 +357,7 @@ class FeedbackWidget {
                       }
                     }
                     if (uri) {
-                      obj = outer2_0(outer2_2[10]);
+                      obj = closure_2_0(closure_2_2[10]);
                       let dataFromUri = obj.getDataFromUri(uri);
                       dataFromUri.then((arg0) => {
                         if (null != arg0) {
@@ -404,9 +391,8 @@ class FeedbackWidget {
                       });
                     }
                   }
-                  obj9 = outer2_0(outer2_2[9]);
+                  obj9 = closure_2_0(closure_2_2[9]);
                 }
-                const outer2_1 = num2;
                 fileName1 = undefined;
                 if (tmp54 !== num2) {
                   if (debug !== fileName) {
@@ -414,38 +400,35 @@ class FeedbackWidget {
                   }
                 }
                 first1 = closure_7.assets[0];
-                let uri1;
+                uri1 = undefined;
                 if (tmp54 !== first1) {
-                  if (debug !== outer2_2) {
-                    uri1 = outer2_2.uri;
+                  if (debug !== closure_2_2) {
+                    uri1 = closure_2_2.uri;
                   }
                 }
-                const outer2_9 = uri1;
-                const first2 = outer2_7.assets[0];
-                const outer2_3 = first2;
+                first2 = closure_2_7.assets[0];
                 base64 = undefined;
                 if (tmp54 !== first2) {
                   if (debug !== state) {
                     base64 = state.base64;
                   }
                 }
-                let base64ToUint8ArrayResult;
+                base64ToUint8ArrayResult = undefined;
                 if (base64) {
-                  obj1 = outer2_0(outer2_2[7]);
+                  obj1 = closure_2_0(closure_2_2[7]);
                   base64ToUint8ArrayResult = obj1.base64ToUint8Array(base64);
                 }
                 tmp54 = fileName;
-                const outer2_11 = base64ToUint8ArrayResult;
-                if (outer2_11) {
+                if (base64ToUint8ArrayResult) {
                   debug = state;
                   const obj4 = { filename: null, attachment: null, attachmentUri: null };
-                  obj4[0] = outer2_8;
-                  obj4[1] = outer2_11;
-                  tmp54 = outer2_9;
-                  obj4[2] = outer2_9;
+                  obj4[0] = closure_2_8;
+                  obj4[1] = base64ToUint8ArrayResult;
+                  tmp54 = uri1;
+                  obj4[2] = uri1;
                   state.setState(obj4);
                 } else {
-                  debug = outer2_0(outer2_2[8]).debug;
+                  debug = closure_2_0(closure_2_2[8]).debug;
                   debug.error("Failed to read image data on the web");
                 }
               }
@@ -459,7 +442,7 @@ class FeedbackWidget {
       })();
     });
     tmp4Result._setCapturedScreenshot = (data) => {
-      let closure_0 = data;
+      closure_0 = data;
       if (null != data.data) {
         const debug2 = FeedbackWidget(817).debug;
         debug2.log("Setting captured screenshot:", data.filename);
@@ -498,14 +481,14 @@ class FeedbackWidget {
       }
     };
     tmp4Result._saveFormState = () => {
-      tmp4Result._savedState = Object.assign({}, tmp4Result.state);
+      lib._savedState = Object.assign({}, lib.state);
     };
     tmp4Result._clearFormState = () => {
       closure_0._savedState = { name: "", email: "", description: "", filename: "Boolean", attachment: "disabled", attachmentUri: "isArray" };
     };
-    tmp4Result._hasScreenshot = () => undefined !== tmp4Result.state.filename && undefined !== tmp4Result.state.attachment && undefined !== tmp4Result.state.attachmentUri;
+    tmp4Result._hasScreenshot = () => undefined !== lib.state.filename && undefined !== lib.state.attachment && undefined !== lib.state.attachmentUri;
     tmp4Result._getUser = () => {
-      const currentScope = tmp4Result(817).getCurrentScope();
+      const currentScope = lib(817).getCurrentScope();
       const user = currentScope.getUser();
       if (user) {
         return user;
@@ -520,12 +503,12 @@ class FeedbackWidget {
         }
         return user1;
       }
-      const obj = tmp4Result(817);
+      const obj = lib(817);
     };
     tmp4Result._showImageRetrievalDevelopmentNote = () => {
       if (obj.isExpoGo()) {
-        tmp4Result(1196).feedbackAlertDialog("Development note", "The feedback widget cannot retrieve image data in Expo Go. Please build your app to test this functionality.");
-        const tmpResult = tmp4Result(1196);
+        lib(1196).feedbackAlertDialog("Development note", "The feedback widget cannot retrieve image data in Expo Go. Please build your app to test this functionality.");
+        const tmpResult = lib(1196);
       }
     };
     props = tmp4Result.props;
@@ -592,7 +575,7 @@ class FeedbackWidget {
     return tmp4Result;
   }
 }
-require("_inherits")(FeedbackWidget, importAllResult.Component);
+_inheritsDefault(FeedbackWidget, importAllResult.Component);
 let obj = {
   key: "componentDidMount",
   value: function componentDidMount() {
@@ -623,17 +606,6 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let createElement;
-      let createElement2;
-      let createElement3;
-      let createElement4;
-      let createElement5;
-      let createElement6;
-      let description;
-      let email;
-      let name;
-      let props;
-      let props2;
       let self = this;
       self = this;
       let obj = onCancel(props2[13]);
@@ -654,7 +626,7 @@ let items = [
         const capturedScreenshot = tmpResult.getCapturedScreenshot();
         if ("ErrorCapturingScreenshot" === capturedScreenshot) {
           const _setTimeout = setTimeout;
-          const timerId = setTimeout(() => outer1_16(self, undefined, undefined, function*() {
+          const timerId = setTimeout(() => closure_1_16(self, undefined, undefined, function*() {
             if (v0 === 2) {
               v0 = 3;
               HermesBuiltin.throwTypeError();
@@ -680,8 +652,8 @@ let items = [
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  obj = v0(outer1_2[7]);
-                  obj.feedbackAlertDialog(outer1_2.errorTitle, outer1_2.captureScreenshotError);
+                  obj = v0(closure_1_2[7]);
+                  obj.feedbackAlertDialog(closure_1_2.errorTitle, closure_1_2.captureScreenshotError);
                   v0 = 3;
                   return { value: "HermesInternal", done: "HermesInternal" };
                 }
@@ -704,7 +676,7 @@ let items = [
         obj[0] = dismiss;
         obj = { style: null };
         obj[0] = merged.container;
-        const obj1 = { style: null };
+        obj1 = { style: null };
         obj1[0] = merged.titleContainer;
         obj2 = { style: null, testID: "sentry-feedback-form-title" };
         obj2[0] = merged.title;

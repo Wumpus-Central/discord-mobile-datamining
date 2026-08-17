@@ -1,24 +1,12 @@
 // _runtime/00871_mergeScopeData.js
-import { spanToJSON } from "00819_spanToJSON.js";
-import { merge } from "00846_merge.js";
-import { getClient } from "00848_getClient.js";
-import { getDynamicSamplingContextFromSpan } from "00857_getDynamicSamplingContextFromSpan.js";
-const require = arg1;
+import spanToJSON from "spanToJSON" /* 819 */;
+import merge from "merge" /* 846 */;
+import getClient from "getClient" /* 848 */;
+import getDynamicSamplingContextFromSpan from "getDynamicSamplingContextFromSpan" /* 857 */;
+
+require = arg1;
 const dependencyMap = arg6;
 function mergeScopeData(extra) {
-  let attachments;
-  let attributes;
-  let breadcrumbs;
-  let contexts;
-  let eventProcessors;
-  let fingerprint;
-  let level;
-  let propagationContext;
-  let sdkProcessingMetadata;
-  let span;
-  let tags;
-  let transactionName;
-  let user;
   ({ level, breadcrumbs, fingerprint, eventProcessors, attachments, propagationContext, transactionName, span } = arg1);
   ({ extra, tags, attributes, user, contexts, sdkProcessingMetadata } = arg1);
   let obj = merge;
@@ -68,15 +56,6 @@ function mergeScopeData(extra) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
-  let breadcrumbs;
-  let contexts;
-  let fingerprint;
-  let level;
-  let sdkProcessingMetadata;
-  let span;
-  let tags;
-  let transactionName;
-  let user;
   ({ fingerprint, span, breadcrumbs, sdkProcessingMetadata, extra, tags, user, contexts, level, transactionName } = arg1);
   if (Object.keys(extra).length) {
     let obj = {};
@@ -97,7 +76,7 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     extra.user = obj;
   }
   if (Object.keys(contexts).length) {
-    const obj1 = {};
+    obj1 = {};
     const merged6 = Object.assign(contexts);
     const merged7 = Object.assign(extra.contexts);
     extra.contexts = obj1;

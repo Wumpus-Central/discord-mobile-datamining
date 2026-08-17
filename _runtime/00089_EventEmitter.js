@@ -1,14 +1,15 @@
 // _runtime/00089_EventEmitter.js
-import EventEmitter from "_classCallCheck";
-import _classPrivateFieldBase from "_classPrivateFieldBase";
-import _createClass from "_createClass";
+import _createClassDefault from "_createClass" /* 42 */;
+import _classPrivateFieldKeyDefault from "_classPrivateFieldKey" /* 91 */;
+import EventEmitter from "_classCallCheck" /* 41 */;
+import closure_1 from "_classPrivateFieldBase" /* 90 */;
 
-let closure_2 = require("_classPrivateFieldKey")("registry");
+let closure_2 = _classPrivateFieldKeyDefault("registry");
 class EventEmitter {
   constructor() {
     tmp = EventEmitter(this, EventEmitter);
-    definePropertyResult = Object.defineProperty(this, registry, { writable: true, value: "a" });
-    __esModule(this, registry)[registry] = {};
+    definePropertyResult = Object.defineProperty(this, closure_2, { writable: true, value: "a" });
+    closure_1(this, closure_2)[closure_2] = {};
     return;
   }
 }
@@ -82,4 +83,4 @@ const items = [
   }
 ];
 
-export default _createClass(EventEmitter, items);
+export default _createClassDefault(EventEmitter, items);

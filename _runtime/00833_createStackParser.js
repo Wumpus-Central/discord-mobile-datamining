@@ -1,7 +1,7 @@
 // _runtime/00833_createStackParser.js
 function createStackParser() {
   let items = [...arguments];
-  let closure_0;
+  closure_0 = undefined;
   const sorted = items.sort((arg0, arg1) => arg0[0] - arg1[0]);
   closure_0 = sorted.map((arg0) => arg0[1]);
   return (str) => {
@@ -56,7 +56,7 @@ function createStackParser() {
         break;
       }
     }
-    return outer1_3(items.slice(num2));
+    return closure_1_3(items.slice(num2));
   };
 }
 function stripSentryFramesAndReverse(arg0) {
@@ -78,7 +78,7 @@ function stripSentryFramesAndReverse(arg0) {
     }
     if (regex.test(tmp5)) {
       arr = arr.pop();
-      let obj1 = arr[arr.length - 1];
+      obj1 = arr[arr.length - 1];
       if (!obj1) {
         obj1 = {};
       }

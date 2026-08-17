@@ -1,8 +1,8 @@
 // _runtime/03897_setWeek.js
-import getWeek from "getWeek";
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
-import toInteger from "toInteger";
+import getWeek from "getWeek" /* 3753 */;
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "toInteger" /* 3476 */;
 
 if (!getWeek) {
   let obj = { default: null };
@@ -11,7 +11,7 @@ if (!getWeek) {
 } else {
   tmp3 = getWeek;
 }
-let c0 = tmp3;
+getWeek = tmp3;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;
@@ -19,7 +19,7 @@ if (!_typeof) {
 } else {
   tmp5 = _typeof;
 }
-let closure_1 = tmp5;
+_typeof = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -27,20 +27,20 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
-let obj1 = tmp7;
+requiredArgs = tmp7;
 if (!toInteger) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = toInteger;
   let tmp9 = obj1;
 } else {
   tmp9 = toInteger;
 }
-let c3 = tmp9;
+toInteger = tmp9;
 
 export default function setWeek(arg0, arg1, arg2) {
-  tmp7.default(2, arguments);
-  const defaultResult1 = tmp5.default(arg0);
-  const diff = tmp3.default(defaultResult1, arg2) - tmp9.default(arg1);
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = getWeek.default(defaultResult1, arg2) - toInteger.default(arg1);
   defaultResult1.setDate(defaultResult1.getDate() - 7 * diff);
   return defaultResult1;
 };

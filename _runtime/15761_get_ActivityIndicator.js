@@ -1,3 +1,5 @@
 // _runtime/15761_get_ActivityIndicator.js
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-export default require("get ActivityIndicator").NativeModules.RNViewShot;
+
+export default get_ActivityIndicator.NativeModules.RNViewShot;

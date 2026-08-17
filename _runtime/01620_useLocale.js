@@ -1,14 +1,14 @@
 // _runtime/01620_useLocale.js
-import noop from "noop";
-import { context } from "01611_context.js";
+import context2 from "context" /* 1611 */;
+import closure_2 from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 
 export const useLocale = function useLocale() {
-  const context = React.useContext(context.LocaleDirContext);
+  const context = React.useContext(context2.LocaleDirContext);
   if (undefined === context) {
     const _Error = Error;
-    const error = new Error("Couldn't determine the text direction. Is your component inside NavigationContainer?");
+    error = new Error("Couldn't determine the text direction. Is your component inside NavigationContainer?");
     throw error;
   } else {
     const obj = { direction: null };

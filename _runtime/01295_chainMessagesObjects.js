@@ -32,7 +32,7 @@ arg5.chainMessagesObjects = function chainMessagesObjects(importDefaultResult, $
   }
 };
 arg5.makeMessagesProxy = function makeMessagesProxy(loader) {
-  let closure_0 = loader;
+  closure_0 = loader;
   let obj = {};
   obj = {
     ownKeys(arg0) {
@@ -40,7 +40,7 @@ arg5.makeMessagesProxy = function makeMessagesProxy(loader) {
     },
     getOwnPropertyDescriptor(arg0, arg1) {
       if (!arg0[arg1]) {
-        let closure_0 = arg1;
+        closure_0 = arg1;
         arg0[arg1] = (arg0) => closure_0.get(closure_0, arg0);
       }
       return Reflect.getOwnPropertyDescriptor(arg0, arg1);
@@ -52,7 +52,7 @@ arg5.makeMessagesProxy = function makeMessagesProxy(loader) {
         let str2 = "IntlMessagesProxy";
         if (arg1 !== Symbol.toStringTag) {
           if (!arg0[arg1]) {
-            let closure_0 = arg1;
+            closure_0 = arg1;
             arg0[arg1] = (arg0) => closure_0.get(closure_0, arg0);
           }
           str2 = arg0[arg1];

@@ -1,6 +1,6 @@
 // _runtime/12208_Doc.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
+import Doc from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
 class Doc {
   constructor() {
@@ -17,7 +17,6 @@ class Doc {
     return;
   }
 }
-_classCallCheck = Doc;
 let items = [
   {
     key: "indented",
@@ -42,7 +41,7 @@ let items = [
         const items = [];
         HermesBuiltin.arraySpread(found.map((str) => str.length - str.trimStart().length), 0);
         const _Math2 = Math;
-        let closure_0 = HermesBuiltin.apply(items, Math);
+        closure_0 = HermesBuiltin.apply(items, Math);
         const mapped = found.map((arr) => arr.slice(closure_0));
         const mapped1 = mapped.map((arg0) => " ".repeat(2 * self.indent) + arg0);
         for (const item10003 of mapped1) {

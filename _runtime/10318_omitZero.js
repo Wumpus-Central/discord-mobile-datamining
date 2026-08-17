@@ -10,11 +10,6 @@ omitZero.__closure = {};
 omitZero.__workletHash = 6139220182928;
 omitZero.__initData = { code: "function omitZero_Pnpm_computeOffsetIfDataChangedTs1(a,b){if(a===0)return 0;return b;}" };
 function computeOffsetIfDataChanged(arg0) {
-  let currentLength;
-  let direction;
-  let handlerOffset;
-  let previousLength;
-  let size;
   ({ direction, handlerOffset, size, previousLength, currentLength } = arg0);
   const absolute = Math.abs(handlerOffset);
   if (direction < 0) {

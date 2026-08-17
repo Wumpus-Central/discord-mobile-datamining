@@ -12,14 +12,14 @@ arg5.useScrollHandler = (arg0, onScroll, onScrollBeginDrag, onScrollEndDrag) => 
     useScrollEventsHandlersDefault = _useScrollEventsHandlersDefault.useScrollEventsHandlersDefault;
   }
   _require = onScroll;
-  const dependencyMap = onScrollBeginDrag;
-  let closure_2 = onScrollEndDrag;
+  dependencyMap = onScrollBeginDrag;
+  closure_2 = onScrollEndDrag;
   let workletNoop;
   let workletNoop2;
   let workletNoop3;
   let obj = _cancelAnimation;
   const animatedRef = obj.useAnimatedRef();
-  let obj1 = _cancelAnimation;
+  obj1 = _cancelAnimation;
   const sharedValue = obj1.useSharedValue(0);
   const scrollEventsHandlersDefault = useScrollEventsHandlersDefault(animatedRef, sharedValue, arg4);
   workletNoop = scrollEventsHandlersDefault.handleOnScroll;

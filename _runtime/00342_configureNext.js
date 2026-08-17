@@ -1,9 +1,12 @@
 // _runtime/00342_configureNext.js
+import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
+import get_VersionDefault from "get Version" /* 273 */;
 import { getFabricUIManager } from "00071_getFabricUIManager.js";
+
 const require = arg1;
 function configureNext(duration) {
   const _global = arg1;
-  if (!require("00273_get_Version.js") /* get Version */.isDisableAnimations) {
+  if (!get_VersionDefault.isDisableAnimations) {
     if (closure_4) {
       const _require = false;
       let num = duration.duration;
@@ -60,7 +63,7 @@ function configureNext(duration) {
     }
   }
 }
-let closure_4 = require("javaScriptFlagGetter").isLayoutAnimationEnabled();
+let closure_4 = javaScriptFlagGetterAll.isLayoutAnimationEnabled();
 let obj = { easeInEaseOut: { duration: 300, create: { type: "easeInEaseOut", property: "opacity" }, update: { type: "easeInEaseOut" }, delete: { type: "easeInEaseOut", property: "opacity" } }, linear: { duration: 500, create: { type: "linear", property: "opacity" }, update: { type: "linear" }, delete: { type: "linear", property: "opacity" } }, spring: { duration: 700, create: { type: "linear", property: "opacity" }, update: { type: "spring", springDamping: 0.4 }, delete: { type: "linear", property: "opacity" } } };
 obj = {
   configureNext,

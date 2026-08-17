@@ -1,7 +1,8 @@
 // _runtime/05032_baseIndexOf.js
-import { baseFindIndex } from "04555_baseFindIndex.js";
-import { strictIndexOf } from "05033_strictIndexOf.js";
-import { baseIsNaN } from "05034_baseIsNaN.js";
+import baseFindIndex from "baseFindIndex" /* 4555 */;
+import strictIndexOf from "strictIndexOf" /* 5033 */;
+import baseIsNaN from "baseIsNaN" /* 5034 */;
+
 
 export default function baseIndexOf(arg0, arg1, arg2) {
   if (arg1 == arg1) {

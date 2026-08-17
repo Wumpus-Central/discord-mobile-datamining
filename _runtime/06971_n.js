@@ -1,13 +1,10 @@
 // _runtime/06971_n.js
-import { GESTURE_SOURCE } from "06953_GESTURE_SOURCE.js";
-const require = arg1;
+import cancelAnimation from "cancelAnimation" /* 1654 */;
+import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6953 */;
+
+require = arg1;
 const dependencyMap = arg6;
 const fn = function n(arg0) {
-  let configs;
-  let onComplete;
-  let overrideReduceMotion;
-  let point;
-  let velocity;
   ({ point, configs, velocity } = arg0);
   if (velocity === undefined) {
     velocity = 0;
@@ -24,11 +21,11 @@ const fn = function n(arg0) {
       let tmp3 = require;
       let TIMING = GESTURE_SOURCE.ANIMATION_METHOD.SPRING;
     }
-    if (TIMING === tmp3(6953).ANIMATION_METHOD.TIMING) {
-      let tmp3Result = tmp3(1654);
+    if (TIMING === GESTURE_SOURCE.ANIMATION_METHOD.TIMING) {
+      let tmp3Result = cancelAnimation;
       let withTimingResult = tmp3Result.withTiming(point, configs, onComplete);
     } else {
-      tmp3Result = tmp3(1654);
+      tmp3Result = cancelAnimation;
       const _Object = Object;
       const obj = { velocity: null };
       obj[0] = velocity;

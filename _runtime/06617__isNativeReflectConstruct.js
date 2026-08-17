@@ -1,8 +1,10 @@
 // _runtime/06617__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6610 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 const FeDiffuseLighting = arg1;
 function _isNativeReflectConstruct() {
@@ -16,10 +18,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -27,10 +29,10 @@ function _isNativeReflectConstruct() {
 class FeDiffuseLighting {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeDiffuseLighting);
-    tmp2 = __esModule;
-    obj = __esModule(FeDiffuseLighting);
-    tmp3 = __esModule;
+    tmp = closure_2(this, FeDiffuseLighting);
+    tmp2 = closure_4;
+    obj = closure_4(FeDiffuseLighting);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -44,7 +46,7 @@ class FeDiffuseLighting {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FeDiffuseLighting, require("_isNativeReflectConstruct"));
+_inheritsDefault(FeDiffuseLighting, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {

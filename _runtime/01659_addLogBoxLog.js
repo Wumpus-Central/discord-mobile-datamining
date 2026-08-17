@@ -1,6 +1,7 @@
 // _runtime/01659_addLogBoxLog.js
-import { LogBox } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const LogBox = get_ActivityIndicator.LogBox;
 let fn;
 if (LogBox != null) {
   const addLog = LogBox.addLog;

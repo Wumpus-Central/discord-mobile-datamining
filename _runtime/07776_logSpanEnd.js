@@ -1,6 +1,7 @@
 // _runtime/07776_logSpanEnd.js
-import { __SENTRY_DEBUG__ } from "metro/07766___SENTRY_DEBUG__.js";
-const require = arg1;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7766 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.logSpanEnd = function logSpanEnd(spanContext) {
   if (__SENTRY_DEBUG__.DEBUG_BUILD) {
@@ -29,8 +30,6 @@ arg5.logSpanEnd = function logSpanEnd(spanContext) {
   }
 };
 arg5.logSpanStart = function logSpanStart(spanContext) {
-  let description2;
-  let op2;
   if (__SENTRY_DEBUG__.DEBUG_BUILD) {
     let tmpResult = tmp(7743);
     const spanToJSONResult = tmpResult.spanToJSON(spanContext);

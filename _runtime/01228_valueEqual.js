@@ -1,7 +1,7 @@
 // _runtime/01228_valueEqual.js
 function valueEqual(state, state2) {
-  const valueEqual = state;
-  let closure_1 = state2;
+  valueEqual = state;
+  closure_1 = state2;
   if (state === state2) {
     return true;
   } else {

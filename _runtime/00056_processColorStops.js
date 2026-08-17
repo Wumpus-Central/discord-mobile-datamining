@@ -1,8 +1,8 @@
 // _runtime/00056_processColorStops.js
-import _slicedToArray from "_slicedToArray";
-import { processColor } from "00050_processColor.js";
+import processColor from "processColor" /* 50 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function processColorStops(nextResult) {
   const items = [];
   let num = 0;
@@ -57,7 +57,7 @@ function processColorStops(nextResult) {
             }
           }
         }
-        let obj1 = { color: null, position: null };
+        obj1 = { color: null, position: null };
         obj1[0] = defaultResult;
         let arr1 = items.push(obj1);
       }
@@ -485,7 +485,7 @@ function parseRadialGradientCSSString(str) {
       }
       if (null != tmp23) {
         if (null != tmp22) {
-          const obj1 = { top: null, left: null };
+          obj1 = { top: null, left: null };
           obj1[0] = tmp23;
           obj1[1] = tmp22;
           flag4 = flag;
@@ -632,10 +632,6 @@ function parseLinearGradientCSSString(str) {
   return tmp16;
 }
 function parseColorStopsCSSString(items) {
-  let obj5;
-  let obj8;
-  let tmp12;
-  let tmp18;
   items = [];
   const parts = items.join(",").split(closure_5);
   let num = 0;
@@ -698,7 +694,7 @@ function parseColorStopsCSSString(items) {
         } else if (null == parsed2) {
           return null;
         } else {
-          let obj1 = { color: null, position: null };
+          obj1 = { color: null, position: null };
           obj1[0] = defaultResult1;
           obj1[1] = parsed2;
           let arr1 = items.push(obj1);
@@ -983,7 +979,7 @@ export default function processBackgroundImage(str) {
               if ("radial-gradient" === tmp5.type) {
                 let shape = ellipse;
                 let size = c13;
-                let obj1 = {};
+                obj1 = {};
                 let tmp57 = closure_14;
                 let tmp58 = obj1;
                 let merged = Object.assign(closure_14);

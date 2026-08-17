@@ -1,12 +1,10 @@
 // _runtime/00301_usePressability.js
-import noop from "noop";
+import noop from "noop" /* 19 */;
 
-let c3;
-let obj1;
 ({ useInsertionEffect: obj1, useRef: c3 } = noop);
 
 export default function usePressability(arg0) {
-  const importDefault = arg0;
+  importDefault = arg0;
   const tmp = callback2(null);
   if (tmp2) {
     const tmp8 = new importDefault(current[1])(arg0);

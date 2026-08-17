@@ -1,7 +1,8 @@
 // _runtime/metro/04693___INTERNAL_VIEW_CONFIG.js
-import { codegenNativeComponent } from "get ActivityIndicator";
-import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
+const codegenNativeComponent = get_ActivityIndicator.codegenNativeComponent;
 const obj = { uiViewClassName: "RNSScreenContainer", validAttributes: {} };
 
 export default setRuntimeConfigProvider.get("RNSScreenContainer", () => obj);

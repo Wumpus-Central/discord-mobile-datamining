@@ -1,14 +1,15 @@
 // _runtime/01807_useAnimatedReaction.js
-import { useEffect } from "noop";
+import noop from "noop" /* 19 */;
 import { isJest } from "01657_isJest.js";
 import { useSharedValue } from "01806_useSharedValue.js";
 
+let useEffect = noop.useEffect;
 let closure_3 = { code: "function pnpm_useAnimatedReactionTs1(){const{prepare,react,previous}=this.__closure;const input=prepare();react(input,previous.value);previous.value=input;}" };
 
 export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items1) {
   const _require = fn;
-  const dependencyMap = fn2;
-  const useEffect = _useSharedValue.useSharedValue(null);
+  dependencyMap = fn2;
+  useEffect = _useSharedValue.useSharedValue(null);
   let __closure = fn.__closure;
   if (__closure == null) {
     __closure = {};
@@ -45,7 +46,7 @@ export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items1)
     arr2.push(fn.__workletHash, fn2.__workletHash);
   }
   useEffect(() => {
-    const fn = function t() {
+    fn = function t() {
       const tmp = callback();
       dependencyMap(tmp, value.value);
       value.value = tmp;

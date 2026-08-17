@@ -1,9 +1,10 @@
 // _runtime/04349_useHaptics.js
-import { useMemo } from "noop";
+import noop from "noop" /* 19 */;
 
+const useMemo = noop.useMemo;
 
 export const useHaptics = function useHaptics(enableVibrateFallback) {
-  let closure_0 = enableVibrateFallback;
+  closure_0 = enableVibrateFallback;
   let prop;
   if (enableVibrateFallback != null) {
     prop = enableVibrateFallback.enableVibrateFallback;
@@ -15,14 +16,14 @@ export const useHaptics = function useHaptics(enableVibrateFallback) {
   const items = [prop, prop1];
   return useMemo(() => ({
     trigger(arg0, arg1) {
-      let obj = outer1_1(outer1_2[1]);
+      let obj = closure_1_1(closure_1_2[1]);
       obj = {};
       const merged = Object.assign(closure_0);
       const merged1 = Object.assign(arg1);
       obj.trigger(arg0, obj);
     },
     triggerPattern(arg0, arg1) {
-      let obj = outer1_1(outer1_2[1]);
+      let obj = closure_1_1(closure_1_2[1]);
       obj = {};
       const merged = Object.assign(closure_0);
       const merged1 = Object.assign(arg1);
@@ -35,22 +36,22 @@ export const useHaptics = function useHaptics(enableVibrateFallback) {
       return callback(4346).isSupported();
     },
     playHaptic(arg0, arg1, arg2) {
-      let obj = outer1_0(outer1_2[2]);
+      let obj = closure_1_0(closure_1_2[2]);
       obj = {};
       const merged = Object.assign(closure_0);
       const merged1 = Object.assign(arg2);
       return obj.playHaptic(arg0, arg1, obj);
     },
     impact(arg0, arg1, arg2) {
-      let obj = outer1_1(outer1_2[1]);
+      let obj = closure_1_1(closure_1_2[1]);
       obj = {};
       const merged = Object.assign(closure_0);
       const merged1 = Object.assign(arg2);
       obj.impact(arg0, arg1, obj);
     },
-    setEnabled: outer1_1(outer1_2[1]).setEnabled,
-    isEnabled: outer1_1(outer1_2[1]).isEnabled,
-    getSystemHapticStatus: outer1_1(outer1_2[1]).getSystemHapticStatus,
-    playAHAP: outer1_1(outer1_2[1]).playAHAP
+    setEnabled: closure_1_1(closure_1_2[1]).setEnabled,
+    isEnabled: closure_1_1(closure_1_2[1]).isEnabled,
+    getSystemHapticStatus: closure_1_1(closure_1_2[1]).getSystemHapticStatus,
+    playAHAP: closure_1_1(closure_1_2[1]).playAHAP
   }), items);
 };

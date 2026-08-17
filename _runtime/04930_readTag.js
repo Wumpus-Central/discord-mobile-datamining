@@ -1,21 +1,22 @@
 // _runtime/04930_readTag.js
-import { importDefaultResult1 } from "04931_importDefaultResult1.js";
-import { 04913__ } from "metro/04913__.js";
-import { 04927__ } from "metro/04927__.js";
-const require = arg1;
+import _modDef4913 from "module_4913" /* 4913 */;
+import _modDef4927 from "module_4927" /* 4927 */;
+import importDefaultResult1 from "importDefaultResult1" /* 4931 */;
+
+require = arg1;
 function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
-  let obj = 04927__;
+  obj = _modDef4927;
   const typeSize = obj.getTypeSize("SHORT");
-  sum = typeSize + 04927__.getTypeSize("SHORT");
-  const obj2 = 04927__;
-  const sum1 = sum + 04927__.getTypeSize("LONG");
-  const obj3 = 04927__;
-  const shortAt = 04927__.getShortAt(byteLength, sum, byteOrder);
-  const obj4 = 04927__;
-  const shortAt1 = 04927__.getShortAt(byteLength, sum + typeSize, byteOrder);
-  const obj5 = 04927__;
-  const longAt = 04927__.getLongAt(byteLength, sum + sum, byteOrder);
-  if (undefined !== 04927__.typeSizes[shortAt1]) {
+  sum = typeSize + _modDef4927.getTypeSize("SHORT");
+  const obj2 = _modDef4927;
+  const sum1 = sum + _modDef4927.getTypeSize("LONG");
+  const obj3 = _modDef4927;
+  const shortAt = _modDef4927.getShortAt(byteLength, sum, byteOrder);
+  const obj4 = _modDef4927;
+  const shortAt1 = _modDef4927.getShortAt(byteLength, sum + typeSize, byteOrder);
+  const obj5 = _modDef4927;
+  const longAt = _modDef4927.getLongAt(byteLength, sum + sum, byteOrder);
+  if (undefined !== _modDef4927.typeSizes[shortAt1]) {
     if ((function tagValueFitsInOffsetSlot(shortAt1, longAt) {
       const result = callback(4927).typeSizes[shortAt1] * longAt;
       return result <= callback(4927).getTypeSize("LONG");
@@ -110,8 +111,8 @@ function getTagValue(byteLength, sum2, shortAt1, longAt, byteOrder, arg5) {
   let result = longAt;
   let BYTE = shortAt1;
   if (flag) {
-    result = longAt * 04927__.typeSizes[shortAt1];
-    BYTE = 04927__.tagTypes.BYTE;
+    result = longAt * _modDef4927.typeSizes[shortAt1];
+    BYTE = _modDef4927.tagTypes.BYTE;
   }
   let sum = sum2;
   const items = [];
@@ -120,11 +121,11 @@ function getTagValue(byteLength, sum2, shortAt1, longAt, byteOrder, arg5) {
     let arr = items.push(obj[BYTE](byteLength, sum, byteOrder));
     let tmp7 = importDefault;
     let tmp8 = dependencyMap;
-    sum = sum + 04927__.typeSizes[BYTE];
+    sum = sum + _modDef4927.typeSizes[BYTE];
   }
-  if (BYTE === 04927__.tagTypes.ASCII) {
-    let asciiValue = 04927__.getAsciiValue(items);
-    const tmp9Result = 04927__;
+  if (BYTE === _modDef4927.tagTypes.ASCII) {
+    let asciiValue = _modDef4927.getAsciiValue(items);
+    const tmp9Result = _modDef4927;
   } else {
     asciiValue = items;
     if (1 === items.length) {
@@ -140,17 +141,17 @@ function getDescriptionFromTagValue(join) {
   }
   return joined;
 }
-let obj = { 1: null, 2: require("module_4927").getByteAt, 3: require("module_4927").getAsciiAt, 4: require("module_4927").getShortAt, 5: require("module_4927").getLongAt, 7: require("module_4927").getRationalAt, 9: null, 10: require("module_4927").getUndefinedAt, 13: null };
-obj[9] = require("module_4927").getSlongAt;
-obj[10] = require("module_4927").getSrationalAt;
-obj[13] = require("module_4927").getIfdPointerAt;
+let obj = { 1: null, 2: _modDef4927.getByteAt, 3: _modDef4927.getAsciiAt, 4: _modDef4927.getShortAt, 5: _modDef4927.getLongAt, 7: _modDef4927.getRationalAt, 9: null, 10: _modDef4927.getUndefinedAt, 13: null };
+obj[9] = _modDef4927.getSlongAt;
+obj[10] = _modDef4927.getSrationalAt;
+obj[13] = _modDef4927.getIfdPointerAt;
 function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5, arg6) {
-  let obj = 04927__;
+  obj = _modDef4927;
   const typeSize = obj.getTypeSize("SHORT");
   let num = 0;
   if (sum + obj2.getTypeSize("SHORT") <= byteLength.byteLength) {
-    num = 04927__.getShortAt(byteLength, sum, byteOrder);
-    const tmpResult = 04927__;
+    num = _modDef4927.getShortAt(byteLength, sum, byteOrder);
+    const tmpResult = _modDef4927;
   }
   obj = {};
   sum = sum + typeSize;
@@ -203,7 +204,7 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5, arg6) {
       }
     }
   }
-  if (04913__.USE_THUMBNAIL) {
+  if (_modDef4913.USE_THUMBNAIL) {
     let tmp23Result = tmp23(4927);
     if (tmp5 < byteLength.byteLength - tmp23Result.getTypeSize("LONG")) {
       tmp23Result = tmp23(4927);
@@ -221,6 +222,6 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5, arg6) {
 }
 
 export const get0thIfdOffset = function get0thIfdOffset(buffer, sum, byteOrder) {
-  return sum + 04927__.getLongAt(buffer, sum + 4, byteOrder);
+  return sum + _modDef4927.getLongAt(buffer, sum + 4, byteOrder);
 };
 export { readIfd };

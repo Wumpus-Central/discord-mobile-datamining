@@ -72,7 +72,7 @@ exports.exports.parse = (arg0) => {
       items6 = parts4;
       const str9 = match[8];
     }
-    const obj1 = { language: null, script: null, region: null, variant: null, extension: null, privateuse: null };
+    obj1 = { language: null, script: null, region: null, variant: null, extension: null, privateuse: null };
     const obj2 = { language: null, extlang: null };
     obj2[0] = arr;
     obj2[1] = items;

@@ -1,7 +1,7 @@
 // _runtime/03842_isYesterday.js
-import isSameDay from "isSameDay";
-import subDays from "subDays";
-import requiredArgs from "requiredArgs";
+import isSameDay from "isSameDay" /* 3653 */;
+import subDays from "subDays" /* 3843 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 if (!isSameDay) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!isSameDay) {
 } else {
   tmp3 = isSameDay;
 }
-let c0 = tmp3;
+isSameDay = tmp3;
 if (!subDays) {
   obj = { default: null };
   obj[0] = subDays;
@@ -18,7 +18,7 @@ if (!subDays) {
 } else {
   tmp5 = subDays;
 }
-let closure_1 = tmp5;
+subDays = tmp5;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -26,9 +26,10 @@ if (!requiredArgs) {
 } else {
   tmp7 = requiredArgs;
 }
+requiredArgs = tmp7;
 
 export default function isYesterday(arg0) {
-  tmp7.default(1, arguments);
-  return tmp3.default(arg0, tmp5.default(Date.now(), 1));
+  requiredArgs.default(1, arguments);
+  return isSameDay.default(arg0, subDays.default(Date.now(), 1));
 };
 export default exports.default;

@@ -1,11 +1,13 @@
 // _runtime/04406_ToPrimitive.js
-import { apply } from "01421_apply.js";
-import { isPrimitive } from "04407_isPrimitive.js";
+import apply from "apply" /* 1421 */;
+import isPrimitive from "isPrimitive" /* 4407 */;
+
 let tmp = typeof Symbol === "function";
 if (typeof Symbol === "function") {
   let _Symbol = Symbol;
   tmp = typeof Symbol.iterator === "symbol";
 }
+let closure_2 = tmp;
 
 export default function ToPrimitive(arg0) {
   let tmp22;

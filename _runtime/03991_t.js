@@ -1,8 +1,10 @@
 // _runtime/03991_t.js
+import t from "t" /* 3975 */;
+
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      const _module = require("t");
+      const _module = t;
       let obj = { months: null, monthsShort: null, monthsParseExact: true, weekdays: null, weekdaysShort: null, weekdaysMin: null, weekdaysParseExact: true, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: "%d.", week: null };
       const split = "januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember".split;
       obj[0] = "januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember".split("_");

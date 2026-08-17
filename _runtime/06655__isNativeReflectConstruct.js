@@ -1,11 +1,13 @@
 // _runtime/06655__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/06656___INTERNAL_VIEW_CONFIG.js";
+import noopAll from "noop" /* 19 */;
+import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6656 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const Path = arg1;
 function _isNativeReflectConstruct() {
@@ -19,21 +21,22 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
+noopAll;
 class Path {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Path);
-    tmp2 = __esModule;
-    obj = __esModule(Path);
-    tmp3 = __esModule;
+    tmp = closure_3(this, Path);
+    tmp2 = closure_5;
+    obj = closure_5(Path);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -47,7 +50,7 @@ class Path {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Path, require("_isNativeReflectConstruct"));
+_inheritsDefault(Path, _isNativeReflectConstructDefault);
 const items = [
   {
     key: "render",
@@ -64,7 +67,7 @@ const items = [
       };
       const obj2 = self(6586);
       const merged1 = Object.assign(obj);
-      return jsx(__INTERNAL_VIEW_CONFIG, {
+      return jsx(__INTERNAL_VIEW_CONFIGDefault, {
         ref(arg0) {
           return self.refMethod(arg0);
         }

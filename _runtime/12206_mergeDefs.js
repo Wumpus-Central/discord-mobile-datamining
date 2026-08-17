@@ -1,4 +1,6 @@
 // _runtime/12206_mergeDefs.js
+import mergeDefs from "mergeDefs" /* 12203 */;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -160,7 +162,7 @@ if (self2) {
         return regExp;
       }
     };
-    let closure_2 = fn(require("mergeDefs"));
+    let closure_2 = fn(mergeDefs);
     exports.cuid = /^[cC][^\s-]{8,}$/;
     exports.cuid2 = /^[0-9a-z]+$/;
     exports.ulid = /^[0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{26}$/;

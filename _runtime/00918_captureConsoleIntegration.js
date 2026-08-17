@@ -1,5 +1,5 @@
 // _runtime/00918_captureConsoleIntegration.js
-import setupIntegration from "setupIntegration";
+import setupIntegration from "setupIntegration" /* 887 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -21,11 +21,9 @@ export const captureConsoleIntegration = setupIntegration.defineIntegration(() =
   obj = {
     name: "CaptureConsole",
     setup(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       if ("console" in CONSOLE_LEVELS(flag[1]).GLOBAL_OBJ) {
         let result = CONSOLE_LEVELS(flag[2]).addConsoleInstrumentationHandler((arg0) => {
-          let args;
-          let level;
           ({ args, level } = arg0);
           let obj = CONSOLE_LEVELS(flag[3]);
           let hasItem = obj.getClient() === args;
@@ -33,11 +31,11 @@ export const captureConsoleIntegration = setupIntegration.defineIntegration(() =
             hasItem = closure_0.includes(level);
           }
           if (hasItem) {
-            let closure_2 = outer1_1;
+            closure_2 = closure_1_1;
             let tmpResult = tmp(tmp2[5]);
-            let closure_3 = tmpResult.severityLevelFromString(level);
+            closure_3 = tmpResult.severityLevelFromString(level);
             const _Error = Error;
-            const error = new Error();
+            error = new Error();
             obj = { level: null, extra: null };
             tmpResult = tmp(tmp2[5]);
             obj[0] = tmpResult.severityLevelFromString(level);
@@ -47,7 +45,7 @@ export const captureConsoleIntegration = setupIntegration.defineIntegration(() =
             tmp(tmp2[3]).withScope((addEventProcessor) => {
               addEventProcessor.addEventProcessor((arg0) => {
                 arg0.logger = "console";
-                let obj = outer1_0(outer1_1[6]);
+                obj = closure_1_0(closure_1_1[6]);
                 obj = { handled: closure_2, type: "auto.core.capture_console" };
                 const result = obj.addExceptionMechanism(arg0, obj);
                 return arg0;

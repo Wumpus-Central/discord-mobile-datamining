@@ -1,10 +1,10 @@
 // _runtime/12200__isNativeReflectConstruct.js
-import _wrapNativeSuper from "_wrapNativeSuper";
-import _createClass from "_createClass";
-import _classCallCheck from "_classCallCheck";
-import c3 from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import _inherits from "_inherits";
+import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
+import _createClass from "_createClass" /* 42 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
 let $ZodEncodeError = exports;
 function _isNativeReflectConstruct() {
@@ -18,41 +18,41 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 export function $ZodAsyncError() {
   const self = this;
-  _classCallCheck(this, $ZodEncodeError);
+  callback(this, $ZodEncodeError);
   const items = ["Encountered Promise during synchronous parse. Use .parseAsync() instead."];
-  const obj = _getPrototypeOf($ZodEncodeError);
+  const obj = callback2($ZodEncodeError);
   if (_isNativeReflectConstruct()) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+    let constructResult = Reflect.construct(obj, items, callback2(self).constructor);
   } else {
     constructResult = obj.apply(self, items);
   }
-  return _possibleConstructorReturn(self, constructResult);
+  return closure_3(self, constructResult);
 }
 $ZodEncodeError = $ZodAsyncError;
 _inherits($ZodAsyncError, _wrapNativeSuper(Error));
 $ZodEncodeError = function $ZodEncodeError(name) {
   const self = this;
-  _classCallCheck(this, $ZodEncodeError);
+  callback(this, $ZodEncodeError);
   const items = ["Encountered unidirectional transform during encode: " + name];
-  const obj = _getPrototypeOf($ZodEncodeError);
+  const obj = callback2($ZodEncodeError);
   if (_isNativeReflectConstruct()) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+    let constructResult = Reflect.construct(obj, items, callback2(self).constructor);
   } else {
     constructResult = obj.apply(self, items);
   }
-  const tmp3Result = _possibleConstructorReturn(self, constructResult);
+  const tmp3Result = closure_3(self, constructResult);
   tmp3Result.name = "ZodEncodeError";
   return tmp3Result;
 };
@@ -60,8 +60,8 @@ _inherits($ZodEncodeError, _wrapNativeSuper(Error));
 
 export const $constructor = function $constructor(ZodError, initializer, Parent) {
   const Definition = ZodError;
-  const _createClass = initializer;
-  let closure_2 = Parent;
+  _createClass = initializer;
+  closure_2 = Parent;
   function init(_zod) {
     if (!_zod._zod) {
       const _Object = Object;
@@ -124,10 +124,10 @@ export const $constructor = function $constructor(ZodError, initializer, Parent)
     constructor() {
       self = this;
       tmp = closure_2(this, Definition);
-      tmp2 = outer1_4;
-      obj = outer1_4(Definition);
+      tmp2 = closure_4;
+      obj = closure_4(Definition);
       tmp3 = init;
-      if (outer1_6()) {
+      if (closure_1_6()) {
         tmp7 = globalThis;
         _Reflect = Reflect;
         tmp8 = arguments;
@@ -141,14 +141,14 @@ export const $constructor = function $constructor(ZodError, initializer, Parent)
     }
   }
   fn(Definition, Parent);
-  let tmp4 = _createClass(Definition);
-  const _getPrototypeOf = tmp4;
+  const tmp4 = _createClass(Definition);
+  closure_4 = tmp4;
   let obj = { value: ZodError };
   Object.defineProperty(tmp4, "name", obj);
   Object.defineProperty(fn, "init", { value: init });
   obj = {
     value(_zod) {
-      let Parent;
+      Parent = undefined;
       if (closure_2 != null) {
         Parent = tmp.Parent;
       }

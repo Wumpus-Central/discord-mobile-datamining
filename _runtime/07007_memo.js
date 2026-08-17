@@ -1,13 +1,11 @@
 // _runtime/07007_memo.js
-import noop from "noop";
-import "noop";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let c4;
-let c5;
-let memo;
 ({ useCallback: c3, useMemo: c4, useRef: c5, memo } = noop);
+noopDefault;
+const jsx = jsxProd.jsx;
 let closure_7 = { code: "function pnpm_BottomSheetFooterTsx1(){const{animatedFooterPosition,animatedKeyboardState,KEYBOARD_STATE,bottomInset}=this.__closure;let footerTranslateY=animatedFooterPosition.get();if(animatedKeyboardState.get()!==KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-bottomInset;}return{transform:[{translateY:Math.max(0,footerTranslateY)}]};}" };
 const memoResult = memo(function BottomSheetFooterComponent(animatedFooterPosition) {
   animatedFooterPosition = animatedFooterPosition.animatedFooterPosition;

@@ -1,6 +1,9 @@
 // _runtime/13744_BlobModule.js
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import parseURL from "parseURL" /* 13745 */;
+
 let closure_0 = null;
-const BlobModule = require("get ActivityIndicator").NativeModules.BlobModule;
+const BlobModule = get_ActivityIndicator.NativeModules.BlobModule;
 let tmp2 = BlobModule;
 if (BlobModule) {
   tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
@@ -12,18 +15,18 @@ if (tmp2) {
     closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
   }
 }
-require("parseURL").URL.createObjectURL = function createObjectURL(data) {
+parseURL.URL.createObjectURL = function createObjectURL(data) {
   if (null === closure_0) {
     const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
+    error = new Error("Cannot create URL for blob!");
     throw error;
   } else {
     const _HermesInternal = HermesInternal;
     return "" + tmp + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
   }
 };
-require("parseURL").URL.revokeObjectURL = function revokeObjectURL(arg0) {
+parseURL.URL.revokeObjectURL = function revokeObjectURL(arg0) {
 
 };
 
-export const URL = require("parseURL").URL;
+export const URL = parseURL.URL;

@@ -1,9 +1,9 @@
 // _runtime/03714_getUTCWeekYear.js
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
-import startOfUTCWeek from "startOfUTCWeek";
-import toInteger from "toInteger";
-import { getDefaultOptions } from "03477_getDefaultOptions.js";
+import getDefaultOptions from "getDefaultOptions" /* 3477 */;
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+import startOfUTCWeek from "startOfUTCWeek" /* 3475 */;
+import toInteger from "toInteger" /* 3476 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -12,7 +12,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let obj1 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -20,7 +20,7 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let c3 = tmp5;
+requiredArgs = tmp5;
 if (!startOfUTCWeek) {
   obj = { default: null };
   obj[0] = startOfUTCWeek;
@@ -28,19 +28,19 @@ if (!startOfUTCWeek) {
 } else {
   tmp7 = startOfUTCWeek;
 }
-let c4 = tmp7;
+startOfUTCWeek = tmp7;
 if (!toInteger) {
-  obj1 = { default: null };
+  const obj1 = { default: null };
   obj1[0] = toInteger;
   let tmp9 = obj1;
 } else {
   tmp9 = toInteger;
 }
-let c5 = tmp9;
+toInteger = tmp9;
 
 export default function getUTCWeekYear(arg0, firstWeekContainsDate) {
-  tmp5.default(1, arguments);
-  const defaultResult1 = tmp3.default(arg0);
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
   const uTCFullYear = defaultResult1.getUTCFullYear();
   const defaultOptions = getDefaultOptions.getDefaultOptions();
   let prop;
@@ -89,7 +89,7 @@ export default function getUTCWeekYear(arg0, firstWeekContainsDate) {
       num = prop;
     }
   }
-  const defaultResult2 = tmp9.default(num);
+  const defaultResult2 = toInteger.default(num);
   if (defaultResult2 >= 1) {
     if (defaultResult2 <= 7) {
       const _Date = Date;
@@ -100,8 +100,7 @@ export default function getUTCWeekYear(arg0, firstWeekContainsDate) {
       const date1 = new Date(0);
       date1.setUTCFullYear(uTCFullYear, 0, defaultResult2);
       date1.setUTCHours(0, 0, 0, 0);
-      const defaultResult3 = tmp7.default(date, firstWeekContainsDate);
-      tmp9 = globalThis;
+      const defaultResult3 = startOfUTCWeek.default(date, firstWeekContainsDate);
       const time = defaultResult1.getTime();
       if (time >= defaultResult3.getTime()) {
         let sum = uTCFullYear + 1;

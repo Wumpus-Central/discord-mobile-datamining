@@ -1,7 +1,8 @@
 // _runtime/00190_parseErrorStack.js
-import { parse } from "00191_parse.js";
+import parse from "parse" /* 191 */;
+
 const global = arg0;
-const require = arg1;
+require = arg1;
 const dependencyMap = arg6;
 arg5.default = function parseErrorStack(arg0) {
   if (null == arg0) {

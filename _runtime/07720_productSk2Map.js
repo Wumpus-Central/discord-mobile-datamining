@@ -1,24 +1,15 @@
 // _runtime/07720_productSk2Map.js
-import { 07708__ } from "metro/07708__.js";
-const require = arg1;
+import _mod7708 from "module_7708" /* 7708 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.productSk2Map = (displayName) => {
-  let currency;
-  let description;
-  let displayPrice;
-  let price;
   ({ description, price, currency, displayPrice } = displayName);
   return { title: displayName.displayName, productId: String(displayName.id), description, type: "iap", price: String(price), localizedPrice: displayPrice, currency };
 };
 arg5.subscriptionSk2Map = (subscription) => {
-  let currency;
-  let description;
-  let displayName;
-  let displayPrice;
-  let id;
-  let price;
   subscription = subscription.subscription;
-  const obj = { platform: 07708__.SubscriptionPlatform.ios, title: displayName, productId: String(id), description, type: "subs", price: String(price), localizedPrice: displayPrice, currency, subscriptionPeriodNumberIOS: null, subscriptionPeriodUnitIOS: null, introductoryPriceAsAmountIOS: null, introductoryPricePaymentModeIOS: null, introductoryPriceNumberOfPeriodsIOS: null, introductoryPriceSubscriptionPeriodIOS: null };
+  const obj = { platform: _mod7708.SubscriptionPlatform.ios, title: displayName, productId: String(id), description, type: "subs", price: String(price), localizedPrice: displayPrice, currency, subscriptionPeriodNumberIOS: null, subscriptionPeriodUnitIOS: null, introductoryPriceAsAmountIOS: null, introductoryPricePaymentModeIOS: null, introductoryPriceNumberOfPeriodsIOS: null, introductoryPriceSubscriptionPeriodIOS: null };
   ({ id, description, displayName, price, currency, displayPrice } = subscription);
   let value;
   if (subscription != null) {
@@ -79,8 +70,6 @@ arg5.subscriptionSk2Map = (subscription) => {
   return obj;
 };
 arg5.transactionSk2ToPurchaseMap = (arg0) => {
-  let appAccountToken;
-  let verificationResult;
   ({ verificationResult, appAccountToken } = arg0);
   try {
     const _JSON = JSON;
@@ -109,7 +98,6 @@ arg5.transactionSk2ToPurchaseMap = (arg0) => {
   }
 };
 arg5.offerSk2Map = (arg0) => {
-  let timestamp;
   if (arg0) {
     const obj = { offerID: null, keyID: null, nonce: null, signature: null, timestamp: null };
     ({ identifier: obj[0], keyIdentifier: obj[1], nonce: obj[2], signature: obj[3], timestamp } = arg0);

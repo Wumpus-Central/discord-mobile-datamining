@@ -1,7 +1,9 @@
 // _runtime/01885_useExtraContentPadding.js
-import { Platform } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noop from "noop" /* 19 */;
 
-require("noop").useCallback;
+noop.useCallback;
+const Platform = get_ActivityIndicator.Platform;
 let closure_4 = { code: "function pnpm_indexTs1(target){const{contentOffsetY,IS_FABRIC,Platform,scrollTo,scrollViewRef}=this.__closure;if(contentOffsetY&&IS_FABRIC){contentOffsetY.value=target;}else if(Platform.OS===\"android\"){requestAnimationFrame(function(){scrollTo(scrollViewRef,0,target,false);});}else{scrollTo(scrollViewRef,0,target,false);}}" };
 let closure_5 = { code: "function pnpm_indexTs2(){const{extraContentPadding}=this.__closure;return extraContentPadding.value;}" };
 let closure_6 = { code: "function pnpm_indexTs3(current,previous){const{freeze,blankSpace,keyboardPadding,isScrollAtEnd,scroll,layout,size,inverted,keyboardLiftBehavior,shouldShiftContent,scrollToTarget}=this.__closure;if(freeze.value||previous===null){return;}const rawDelta=current-previous;if(rawDelta===0){return;}const previousTotal=Math.max(blankSpace.value,keyboardPadding.value+previous);const currentTotal=Math.max(blankSpace.value,keyboardPadding.value+current);const effectiveDelta=currentTotal-previousTotal;if(effectiveDelta===0){return;}const atEnd=isScrollAtEnd(scroll.value,layout.value.height,size.value.height,inverted);if(keyboardLiftBehavior===\"persistent\"&&effectiveDelta<0&&!atEnd){return;}if(!shouldShiftContent(keyboardLiftBehavior,atEnd)){return;}if(inverted){const target=Math.max(scroll.value-effectiveDelta,-currentTotal);scrollToTarget(target);}else{const maxScroll=Math.max(size.value.height-layout.value.height+currentTotal,0);const target=Math.min(scroll.value+effectiveDelta,maxScroll);scrollToTarget(target);}}" };
@@ -19,7 +21,7 @@ export const useExtraContentPadding = function useExtraContentPadding(scrollView
   const keyboardLiftBehavior = scrollViewRef.keyboardLiftBehavior;
   const freeze = scrollViewRef.freeze;
   const fn = function u(value) {
-    let closure_0 = value;
+    closure_0 = value;
     if (contentOffsetY) {
       if (scrollViewRef(extraContentPadding[2]).IS_FABRIC) {
         tmp.value = value;
@@ -35,7 +37,7 @@ export const useExtraContentPadding = function useExtraContentPadding(scrollView
   fn.__initData = scroll;
   const items = [scrollViewRef, contentOffsetY];
   const tmp = keyboardPadding(fn, items);
-  let closure_11 = tmp;
+  closure_11 = tmp;
   const fn2 = function v() {
     return extraContentPadding.value;
   };
@@ -57,10 +59,10 @@ export const useExtraContentPadding = function useExtraContentPadding(scrollView
             if (tmp14Result.shouldShiftContent(tmp20, isScrollAtEndResult)) {
               const _Math = Math;
               if (tmp16) {
-                tmp(max(iter.value - diff, -bound1));
+                callback(max(iter.value - diff, -bound1));
               } else {
                 const _Math2 = Math;
-                tmp(Math.min(iter.value + diff, max(iter3.value.height - iter2.value.height + bound1, 0)));
+                callback(Math.min(iter.value + diff, max(iter3.value.height - iter2.value.height + bound1, 0)));
               }
             }
             iter2 = layout;

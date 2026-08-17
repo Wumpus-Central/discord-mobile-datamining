@@ -1,4 +1,7 @@
 // _runtime/12202_toDotPath.js
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 12200 */;
+import mergeDefs from "mergeDefs" /* 12203 */;
+
 const self = this;
 function toDotPath(path) {
   const items = [];
@@ -158,7 +161,7 @@ if (self2) {
           let tmp4 = nextResult;
           if ("invalid_key" === tmp2.code) {
             let tmp32 = processError;
-            let obj = { issues: null };
+            obj = { issues: null };
             let tmp33 = nextResult;
             obj[0] = tmp2.issues;
             let tmp34 = processError(obj);
@@ -192,7 +195,7 @@ if (self2) {
                       let tmp12 = tmp7;
                       let tmp13 = tmp21[tmp7];
                       if (!tmp13) {
-                        let obj1 = { _errors: null };
+                        obj1 = { _errors: null };
                         obj1[0] = [];
                         tmp13 = obj1;
                       }
@@ -244,22 +247,20 @@ if (self2) {
         if (arg1 === undefined) {
           items = [];
         }
-        let c1;
-        let c2;
+        c1 = undefined;
+        c2 = undefined;
         function _loop(iter) {
-          let _undefined;
-          let _undefined2;
-          let closure_0 = iter;
+          closure_0 = iter;
           if ("invalid_union" === iter.code) {
             if (iter.errors.length) {
               const errors = iter.errors;
               const mapped = errors.map((issues) => {
-                outer1_2({ issues }, iter.path);
+                items({ issues }, iter.path);
               });
             }
           }
           if ("invalid_key" === iter.code) {
-            let obj = { issues: null };
+            obj = { issues: null };
             obj[0] = iter.issues;
             _undefined2(obj, iter.path);
           } else if ("invalid_element" === iter.code) {
@@ -267,7 +268,7 @@ if (self2) {
             obj[0] = iter.issues;
             _undefined2(obj, iter.path);
           } else {
-            let items = [];
+            items = [];
             HermesBuiltin.arraySpread(iter.path, HermesBuiltin.arraySpread(closure_0, 0));
             if (0 === items.length) {
               const errors1 = _undefined.errors;
@@ -287,12 +288,11 @@ if (self2) {
                       tmp10.properties = {};
                     }
                     let properties = tmp10.properties;
-                    _undefined = properties;
                     if (properties[tmp] == null) {
-                      let tmp7 = _undefined;
-                      let obj1 = { errors: null };
+                      let tmp7 = properties;
+                      obj1 = { errors: null };
                       obj1[0] = [];
-                      _undefined[tmp] = obj1;
+                      properties[tmp] = obj1;
                     }
                     let tmp6 = tmp10.properties[tmp];
                   } else {
@@ -300,12 +300,11 @@ if (self2) {
                       tmp10.items = [];
                     }
                     items = tmp10.items;
-                    _undefined2 = items;
                     if (items[tmp] == null) {
-                      let tmp5 = _undefined2;
+                      let tmp5 = items;
                       obj = { errors: null };
                       obj[0] = [];
-                      _undefined2[tmp] = obj;
+                      items[tmp] = obj;
                     }
                     tmp6 = tmp10.items[tmp];
                   }
@@ -366,9 +365,9 @@ if (self2) {
       }
       return items.join("\n");
     };
-    let closure_2 = fn(require("mergeDefs"));
+    let closure_2 = fn(mergeDefs);
     function initializer(_zod, value) {
-      let closure_0 = _zod;
+      closure_0 = _zod;
       _zod.name = "$ZodError";
       let obj = { value: _zod._zod, enumerable: false };
       Object.defineProperty(_zod, "_zod", obj);
@@ -383,11 +382,11 @@ if (self2) {
       };
       Object.defineProperty(_zod, "toString", obj);
     }
-    exports.$ZodError = require("_isNativeReflectConstruct").$constructor("$ZodError", initializer);
+    exports.$ZodError = _isNativeReflectConstruct.$constructor("$ZodError", initializer);
     let obj = { Parent: null };
     const _Error = Error;
     obj[0] = Error;
-    exports.$ZodRealError = require("_isNativeReflectConstruct").$constructor("$ZodError", initializer, obj);
+    exports.$ZodRealError = _isNativeReflectConstruct.$constructor("$ZodError", initializer, obj);
   } else {
     const _Object2 = Object;
   }

@@ -1,5 +1,5 @@
 // _runtime/metro/03810__typeof.js
-import { Parser } from "Parser";
+import Parser2 from "Parser" /* 3778 */;
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -7,9 +7,9 @@ function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -29,7 +29,7 @@ function _typeof(arg0) {
   };
 }
 function _setPrototypeOf(FractionOfSecondParser, Parser) {
-  let _setPrototypeOf = Object.setPrototypeOf;
+  _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
     _setPrototypeOf = function _setPrototypeOf(FractionOfSecondParser, Parser) {
       FractionOfSecondParser.__proto__ = Parser;
@@ -41,7 +41,7 @@ function _setPrototypeOf(FractionOfSecondParser, Parser) {
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;
-    let _getPrototypeOf = Object.getPrototypeOf;
+    _getPrototypeOf = Object.getPrototypeOf;
   } else {
     _getPrototypeOf = function _getPrototypeOf(arg0) {
       let __proto__ = arg0.__proto__;
@@ -54,10 +54,11 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
 class FractionOfSecondParser {
   constructor() {
-    if (this instanceof c1) {
+    if (this instanceof closure_1) {
       length = arguments.length;
       _Array = Array;
       tmp6 = new.target;
@@ -207,7 +208,7 @@ _createSuperInternal = function _createSuperInternal() {
 obj = {
   key: "parse",
   value: function parse(arg0, arg1) {
-    const _createSuperInternal = arg1;
+    _createSuperInternal = arg1;
     return _createSuperInternal(3780).mapValue(_createSuperInternal(3780).parseNDigits(arg1.length, arg0), function valueCallback(arg0) {
       return Math.floor(arg0 * Math.pow(10, 3 - length.length));
     });

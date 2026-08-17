@@ -15,13 +15,13 @@ function asyncGeneratorStep(arg0, arg1, arg2, arg3, arg4, arg5, arg6) {
 }
 
 export default function _asyncToGenerator(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return function() {
     const self = this;
-    let closure_1 = arguments;
+    closure_1 = arguments;
     return new Promise((arg0, arg1) => {
       const _self = arg0;
-      let closure_1 = arg1;
+      closure_1 = arg1;
       function _next(arg0) {
         callback(closure_2, callback, closure_1, _next, _throw, "next", arg0);
       }
@@ -29,7 +29,7 @@ export default function _asyncToGenerator(arg0) {
         callback(closure_2, callback, closure_1, _next, _throw, "throw", arg0);
       }
       const applyResult = self.apply(_self, closure_1);
-      let closure_2 = applyResult;
+      closure_2 = applyResult;
       _self(applyResult, arg0, arg1, _next, _throw, "next", undefined);
     });
   };

@@ -1,7 +1,7 @@
 // _runtime/00476_PermissionsAndroidImpl.js
-import importDefaultResult from "DialogManagerAndroid";
-import PermissionsAndroidImpl from "_classCallCheck";
-import importDefaultResult1 from "_createClass";
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import PermissionsAndroidImpl from "_classCallCheck" /* 41 */;
+import importDefaultResult1 from "_createClass" /* 42 */;
 
 let closure_0 = importDefault;
 let closure_1 = dependencyMap;
@@ -12,7 +12,7 @@ closure_1 = undefined;
 class PermissionsAndroidImpl {
   constructor() {
     tmp = PermissionsAndroidImpl(this, PermissionsAndroidImpl);
-    this.PERMISSIONS = outer1_4;
+    this.PERMISSIONS = closure_4;
     this.RESULTS = closure_3;
     return;
   }
@@ -43,10 +43,10 @@ const items = [
 obj = { key: "requestPermission", value: null };
 closure_1 = importDefaultResult(function(arg0, arg1) {
   const self = this;
-  let closure_1 = arg0;
-  let closure_2 = arg1;
-  let c4 = 0;
-  let c5 = 0;
+  closure_1 = arg0;
+  closure_2 = arg1;
+  c4 = 0;
+  c5 = 0;
   return (function*(arg0, arg1) {
     const constants = self;
     const _console = console;
@@ -68,10 +68,10 @@ obj[1] = function requestPermission(arg0, arg1) {
 items[2] = obj;
 obj = { key: "request", value: null };
 closure_0 = importDefaultResult((arg0, arg1) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let c4 = 0;
-  let c5 = 0;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  c4 = 0;
+  c5 = 0;
   return (function*(arg0, arg1) {
     if (c5 === 2) {
       c5 = 3;
@@ -99,13 +99,13 @@ closure_0 = importDefaultResult((arg0, arg1) => {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_3 = tmp5;
-            let closure_2 = tmp2;
+            closure_3 = tmp5;
+            closure_2 = tmp2;
             callback(38)(callback(477), "PermissionsAndroid is not installed correctly.");
             if (dependencyMap) {
               c4 = 1;
               c5 = 1;
-              let obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = callback(477).shouldShowRequestPermissionRationale(tmp28);
               return obj1;
             } else {
@@ -127,7 +127,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
                 const table = arg1;
                 const merged = Object.assign(table);
                 callback(table[5]).showAlert({}, () => {
-                  const error = new Error("Error showing rationale");
+                  error = new Error("Error showing rationale");
                   return dependencyMap(error);
                 }, () => callback(callback(477).requestPermission(callback)));
               });
@@ -165,4 +165,4 @@ items[4] = {
   }
 };
 
-export default new require("_createClass")(PermissionsAndroidImpl, items)();
+export default new importDefaultResult1(PermissionsAndroidImpl, items)();

@@ -1,13 +1,15 @@
 // _runtime/07719_purchaseUpdatedListener.js
-import { NativeEventEmitter } from "get ActivityIndicator";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod7709 from "module_7709" /* 7709 */;
 import { NativeModules } from "07707_NativeModules.js";
 import { 07709__ } from "metro/07709__.js";
 
+const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 
 export const purchaseUpdatedListener = (arg0, arg1) => {
   let fn = arg0;
   const _require = arg0;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   const obj = _07709__;
   const obj2 = new NativeEventEmitter(_07709__.getNativeModule());
   if (obj3.isIosStorekit2()) {
@@ -31,12 +33,12 @@ export const purchaseUpdatedListener = (arg0, arg1) => {
   return obj2.addListener("purchase-updated", fn);
 };
 export const purchaseErrorListener = (arg0) => {
-  const obj = 07709__;
-  return new NativeEventEmitter(07709__.getNativeModule()).addListener("purchase-error", arg0);
+  const obj = _mod7709;
+  return new NativeEventEmitter(_mod7709.getNativeModule()).addListener("purchase-error", arg0);
 };
 export const promotedProductListener = (arg0) => {
   let addListenerResult = null;
-  if (07709__.isIos) {
+  if (_mod7709.isIos) {
     let tmpResult = tmp(7707);
     addListenerResult = null;
     if (!tmpResult.isIosStorekit2()) {
@@ -49,7 +51,7 @@ export const promotedProductListener = (arg0) => {
 };
 export const transactionListener = (arg0) => {
   let addListenerResult = null;
-  if (07709__.isIos) {
+  if (_mod7709.isIos) {
     let tmpResult = tmp(7707);
     addListenerResult = null;
     if (tmpResult.isIosStorekit2()) {

@@ -1,8 +1,9 @@
 // _runtime/01786__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
+import _inheritsDefault from "_inherits" /* 98 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 const JumpingTransition = arg1;
 function _isNativeReflectConstruct() {
@@ -16,10 +17,10 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
@@ -29,12 +30,12 @@ class JumpingTransition {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    closure_0 = undefined;
+    tmp = closure_2(this, closure_0);
     items1 = [...items];
-    tmp2 = __esModule;
-    obj = __esModule(apply);
-    tmp3 = __esModule;
+    tmp2 = closure_4;
+    obj = closure_4(closure_0);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -43,7 +44,7 @@ class JumpingTransition {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
+    closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
       const callbackV = delayFunction.callbackV;
@@ -53,7 +54,7 @@ class JumpingTransition {
         num = 300;
       }
       const result = num / 2;
-      let _possibleConstructorReturn = result;
+      closure_3 = result;
       let obj = { duration: num };
       const fn = function n(originX) {
         const absolute = Math.abs(originX.targetOriginX - originX.currentOriginX);
@@ -64,7 +65,7 @@ class JumpingTransition {
         obj[0] = delayFunction(delay, delayFunction(callbackV[5]).withTiming(originX.targetOriginX, obj));
         const obj4 = delayFunction(callbackV[5]);
         const obj5 = delayFunction(callbackV[5]);
-        const obj1 = { duration: _possibleConstructorReturn, easing: null };
+        obj1 = { duration: closure_3, easing: null };
         const diff = Math.min(originX.targetOriginY, originX.currentOriginY) - bound;
         const Easing = delayFunction(callbackV[6]).Easing;
         obj1[1] = Easing.out(delayFunction(callbackV[6]).Easing.exp);
@@ -72,7 +73,7 @@ class JumpingTransition {
         const withTimingResult = delayFunction(callbackV[5]).withTiming(diff, obj1);
         const obj2 = {};
         const merged = Object.assign(obj);
-        obj2.duration = _possibleConstructorReturn;
+        obj2.duration = closure_3;
         obj2.easing = delayFunction(callbackV[6]).Easing.bounce;
         obj[1] = delayFunction(delay, obj5.withSequence(withTimingResult, delayFunction(callbackV[5]).withTiming(originX.targetOriginY, obj2)));
         const obj8 = delayFunction(callbackV[5]);
@@ -83,16 +84,16 @@ class JumpingTransition {
         obj[2] = callbackV;
         return obj;
       };
-      obj = { delayFunction, delay, withTiming: _undefined(outer1_1[5]).withTiming, config: obj, withSequence: _undefined(outer1_1[5]).withSequence, halfDuration: result, Easing: _undefined(outer1_1[6]).Easing, callback: callbackV };
+      obj = { delayFunction, delay, withTiming: callback(closure_1_1[5]).withTiming, config: obj, withSequence: callback(closure_1_1[5]).withSequence, halfDuration: result, Easing: callback(closure_1_1[6]).Easing, callback: callbackV };
       fn.__closure = obj;
       fn.__workletHash = 11549153259849;
-      fn.__initData = outer1_6;
+      fn.__initData = closure_1_6;
       return fn;
     };
     return tmp3Result;
   }
 }
-require("_inherits")(JumpingTransition, require("BaseAnimationBuilder").BaseAnimationBuilder);
+_inheritsDefault(JumpingTransition, require("BaseAnimationBuilder").BaseAnimationBuilder);
 let items = [
   {
     key: "createInstance",

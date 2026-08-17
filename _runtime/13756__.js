@@ -12,16 +12,16 @@ function _(arg0, context) {
 }
 function createIntegerConversion(exponent, unsigned) {
   unsigned = unsigned.unsigned;
-  let closure_2 = !unsigned;
+  closure_2 = !unsigned;
   if (64 === exponent) {
     let _Math4 = Math;
-    let closure_1 = Math.pow(2, 53) - 1;
+    closure_1 = Math.pow(2, 53) - 1;
     let num9 = 0;
     if (!unsigned) {
       let _Math5 = Math;
       num9 = 1 - Math.pow(2, 53);
     }
-    let closure_0 = num9;
+    closure_0 = num9;
   } else if (unsigned) {
     closure_0 = 0;
     let _Math3 = Math;
@@ -33,8 +33,8 @@ function createIntegerConversion(exponent, unsigned) {
     let _Math2 = Math;
     closure_1 = Math.pow(2, diff) - 1;
   }
-  let closure_3 = Math.pow(2, exponent);
-  let closure_4 = Math.pow(2, exponent - 1);
+  closure_3 = Math.pow(2, exponent);
+  closure_4 = Math.pow(2, exponent - 1);
   return (arg0, arg1) => {
     let obj = arg1;
     if (undefined === arg1) {

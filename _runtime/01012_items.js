@@ -8,7 +8,7 @@ do {
 arg5.base64StringFromByteArray = function base64StringFromByteArray(arr2) {
   let sum;
   const result = length % 3;
-  const items = [];
+  items = [];
   const diff = length - result;
   let num = 0;
   if (0 < diff) {

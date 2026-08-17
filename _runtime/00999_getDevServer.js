@@ -5,7 +5,7 @@ arg5.default = function getDevServer() {
   let str = first;
   if (undefined === first) {
     let obj = module(82);
-    const str2 = obj.getConstants().scriptURL;
+    let str2 = obj.getConstants().scriptURL;
     const match = str2.match(/^https?:\/\/.*?\//);
     first = null;
     if (match) {
@@ -15,12 +15,12 @@ arg5.default = function getDevServer() {
     if (match) {
       tmp5 = str2;
     }
-    let closure_3 = tmp5;
+    str2 = tmp5;
     str = first;
   }
   if (str == null) {
     str = "http://localhost:8081/";
   }
-  obj = { url: str, fullBundleUrl: closure_3, bundleLoadedFromServer: null !== first };
+  obj = { url: str, fullBundleUrl: str2, bundleLoadedFromServer: null !== first };
   return obj;
 };

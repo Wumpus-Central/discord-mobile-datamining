@@ -1,10 +1,12 @@
 // _runtime/04945__isNativeReflectConstruct.js
-import _slicedToArray from "_slicedToArray";
-import _classCallCheck from "_classCallCheck";
-import _possibleConstructorReturn from "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import { calculateGPSValue } from "04948_calculateGPSValue.js";
+import _inheritsDefault from "_inherits" /* 98 */;
+import _wrapNativeSuperDefault from "_wrapNativeSuper" /* 158 */;
+import calculateGPSValueDefault from "calculateGPSValue" /* 4948 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import closure_5 from "_possibleConstructorReturn" /* 93 */;
+import closure_6 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_createClass" /* 42 */;
 
 const ParseError = arg1;
 function _isNativeReflectConstruct() {
@@ -18,17 +20,15 @@ function _isNativeReflectConstruct() {
     } else {
       callResult = call(constructResult);
     }
-    let closure_0 = !callResult;
-    function _isNativeReflectConstruct() {
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
-    }
+    };
     return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
 function readTags(_raw, dataView, arg2) {
-  let doc;
-  let raw;
   try {
     let str = _raw._raw;
     ({ doc, raw } = (function getDocument(dataView, arg1) {
@@ -48,7 +48,7 @@ function readTags(_raw, dataView, arg2) {
         const _console = console;
         console.warn("Warning: DOMParser is not available. It is needed to be able to parse XMP tags.");
         const _Error = Error;
-        const error = new Error();
+        error = new Error();
         throw error;
       }
       tmp = table;
@@ -74,7 +74,7 @@ function readTags(_raw, dataView, arg2) {
         const _console = console;
         console.warn("Warning: DOMParser is not available. It is needed to be able to parse XMP tags.");
         const _Error = Error;
-        const error = new Error();
+        error = new Error();
         throw error;
       }
       tmp = table;
@@ -121,7 +121,7 @@ function getRDF(doc) {
     }
     return getRDF(doc.childNodes[num]);
   }
-  const error = new Error();
+  error = new Error();
   throw error;
 }
 function convertToObject(childNodes, arg1) {
@@ -171,7 +171,7 @@ function convertToObject(childNodes, arg1) {
         }
         obj = { attributes: null, value: null };
         obj[0] = obj;
-        obj[1] = outer1_12(nodeName);
+        obj[1] = closure_1_12(nodeName);
         if (undefined !== nodeValue[nodeName.nodeName]) {
           const _Array = Array;
           if (!Array.isArray(tmp3[nodeName.nodeName])) {
@@ -203,11 +203,11 @@ function parseXMPObject(str) {
         arr2 = items;
       }
       let item = arr2.forEach((attributes) => {
-        obj = obj(outer1_2[7]);
-        obj.objectAssign(obj, outer1_14(attributes.attributes));
+        obj = obj(closure_1_2[7]);
+        obj.objectAssign(obj, closure_1_14(attributes.attributes));
         if (typeof attributes.value === "object") {
-          obj(outer1_2[7]).objectAssign(obj, outer1_19(attributes.value));
-          const tmpResult = obj(outer1_2[7]);
+          obj(closure_1_2[7]).objectAssign(obj, closure_1_19(attributes.value));
+          const tmpResult = obj(closure_1_2[7]);
         }
       });
       continue;
@@ -271,7 +271,7 @@ function getDescription(arr) {
     let tmp12 = tmp11;
     if (tmp2) {
       tmp12 = tmp11;
-      if (typeof calculateGPSValue[tmp2] === "function") {
+      if (typeof calculateGPSValueDefault[tmp2] === "function") {
         tmp12 = tmp13(4948)[tmp2](arr, tmp11);
         const tmp13Result = tmp13(4948);
       }
@@ -325,9 +325,9 @@ function getDescription(arr) {
   } else {
     try {
       if (tmp2) {
-        if (typeof calculateGPSValue[tmp2] === "function") {
-          let decodeURIComponentResult = calculateGPSValue[tmp2](arr);
-          const tmp4Result = calculateGPSValue;
+        if (typeof calculateGPSValueDefault[tmp2] === "function") {
+          let decodeURIComponentResult = calculateGPSValueDefault[tmp2](arr);
+          const tmp4Result = calculateGPSValueDefault;
         }
         return decodeURIComponentResult;
       }
@@ -424,7 +424,7 @@ function parseNodeAsTag(attributes, key10005) {
                 if (tmp10) {
                   continue;
                 } else {
-                  let obj1 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
+                  obj1 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
                   let str9 = "RatingPercent";
                   if (!obj1.test(key10070)) {
                     str9 = key10070.split(":")[1];
@@ -455,7 +455,7 @@ function parseNodeAsTag(attributes, key10005) {
                   const tmp3 = undefined !== attributes.value["rdf:Description"] && undefined !== attributes.value["rdf:Description"].value["rdf:value"];
                 }
                 if (tmp2) {
-                  let value = outer1_21(attributes);
+                  let value = closure_1_21(attributes);
                 } else {
                   let tmp4 = "Resource" === attributes.attributes["rdf:parseType"];
                   if (!tmp4) {
@@ -463,7 +463,7 @@ function parseNodeAsTag(attributes, key10005) {
                     const tmp5 = undefined !== attributes.value["rdf:Description"] && undefined === attributes.value["rdf:Description"].value["rdf:value"];
                   }
                   if (tmp4) {
-                    value = outer1_22(attributes).value;
+                    value = closure_1_22(attributes).value;
                   } else {
                     const _Object = Object;
                     let tmp7 = 0 === Object.keys(attributes.value).length;
@@ -474,11 +474,11 @@ function parseNodeAsTag(attributes, key10005) {
                       tmp7 = undefined === attributes.attributes["rdf:resource"];
                     }
                     if (tmp7) {
-                      const tmp10 = outer1_14(attributes.attributes);
-                      outer1_18(tmp10, undefined);
+                      const tmp10 = closure_1_14(attributes.attributes);
+                      closure_1_18(tmp10, undefined);
                       value = tmp10;
                     } else {
-                      value = outer1_23(attributes);
+                      value = closure_1_23(attributes);
                     }
                   }
                 }
@@ -515,7 +515,7 @@ function parseNodeAsSimpleRdfDescription(attributes, key10005) {
     if (tmp) {
       continue;
     } else {
-      let obj1 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
+      obj1 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
       let str = "RatingPercent";
       if (!obj1.test(key10009)) {
         str = key10009.split(":")[1];
@@ -635,11 +635,11 @@ function parseNodeAsSimpleValue(attributes, key10005) {
             arr2 = items;
           }
           let item = arr2.forEach((attributes) => {
-            obj = obj(outer1_2[7]);
-            obj.objectAssign(obj, outer1_14(attributes.attributes));
+            obj = obj(closure_1_2[7]);
+            obj.objectAssign(obj, closure_1_14(attributes.attributes));
             if (typeof attributes.value === "object") {
-              obj(outer1_2[7]).objectAssign(obj, outer1_19(attributes.value));
-              const tmpResult = obj(outer1_2[7]);
+              obj(closure_1_2[7]).objectAssign(obj, closure_1_19(attributes.value));
+              const tmpResult = obj(closure_1_2[7]);
             }
           });
           continue;
@@ -779,12 +779,12 @@ let obj = {
 class ParseError {
   constructor(arg0) {
     self = this;
-    tmp = parseNodeAsSimpleValue(this, ParseError);
+    tmp = closure_4(this, ParseError);
     items = [];
     items[0] = global;
-    tmp2 = parseNodeAsSimpleValue;
-    obj = parseNodeAsSimpleValue(ParseError);
-    tmp3 = parseNodeAsSimpleValue;
+    tmp2 = closure_6;
+    obj = closure_6(ParseError);
+    tmp3 = closure_5;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -797,7 +797,7 @@ class ParseError {
     return tmp3Result;
   }
 }
-require("_inherits")(ParseError, require("_wrapNativeSuper")(Error));
+_inheritsDefault(ParseError, _wrapNativeSuperDefault(Error));
 let closure_8 = importDefaultResult(ParseError);
 
 export default obj;

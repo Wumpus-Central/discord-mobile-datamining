@@ -4,7 +4,7 @@ arg5.createSyntheticError = function createSyntheticError() {
   if (arg0 === undefined) {
     num = 0;
   }
-  const error = new Error();
+  error = new Error();
   error.framesToPop = num + 3;
   return error;
 };

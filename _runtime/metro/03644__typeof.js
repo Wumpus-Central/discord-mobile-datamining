@@ -1,14 +1,14 @@
 // _runtime/metro/03644__typeof.js
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -34,7 +34,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -42,10 +42,10 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 
 export default function max(arg0) {
-  tmp5.default(1, arguments);
+  requiredArgs.default(1, arguments);
   if (!arg0) {
     if ("object" === _typeof(arg0)) {
       if (null !== arg0) {
@@ -61,7 +61,7 @@ export default function max(arg0) {
     arr = arg0;
   }
   const item = arr.forEach((arg0) => {
-    const defaultResult = outer1_0.default(arg0);
+    const defaultResult = closure_1_0.default(arg0);
     let isNaNResult = undefined === closure_0 || closure_0 < defaultResult;
     if (!isNaNResult) {
       const _isNaN = isNaN;
@@ -72,8 +72,8 @@ export default function max(arg0) {
       closure_0 = defaultResult;
     }
   });
-  let date1 = closure_0;
-  if (!closure_0) {
+  let date1 = _typeof;
+  if (!_typeof) {
     const _Date2 = Date;
     date1 = new Date(NaN);
   }

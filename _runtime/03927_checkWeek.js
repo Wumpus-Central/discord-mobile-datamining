@@ -1,5 +1,5 @@
 // _runtime/03927_checkWeek.js
-import isSameUTCWeek from "isSameUTCWeek";
+import isSameUTCWeek from "isSameUTCWeek" /* 3474 */;
 
 if (!isSameUTCWeek) {
   const obj = { default: null };
@@ -10,7 +10,7 @@ if (!isSameUTCWeek) {
 }
 function checkWeek(getTime, getTime2) {
   let str = "eeee p";
-  if (!tmp3.default(getTime, getTime2, arg2)) {
+  if (!isSameUTCWeek.default(getTime, getTime2, arg2)) {
     const time = getTime.getTime();
     let str2 = "'\u4E0A\u4E2A'eeee p";
     if (time > getTime2.getTime()) {
@@ -20,7 +20,7 @@ function checkWeek(getTime, getTime2) {
   }
   return str;
 }
-let c0 = tmp3;
+isSameUTCWeek = tmp3;
 let closure_1 = { lastWeek: checkWeek, yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: checkWeek, other: "PP p" };
 
 export default function formatRelative(arg0, arg1, arg2, arg3) {

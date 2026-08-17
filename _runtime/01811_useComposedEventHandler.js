@@ -12,8 +12,8 @@ arg5.useComposedEventHandler = function useComposedEventHandler(substr) {
     if (workletEventHandler instanceof obj(set[0]).WorkletEventHandler) {
       const eventNames = workletEventHandler.eventNames;
       const item = eventNames.forEach((arg0) => {
-        outer1_1.add(arg0);
-        if (outer1_2[arg0]) {
+        closure_1_1.add(arg0);
+        if (closure_1_2[arg0]) {
           tmp2[arg0].push(workletEventHandler.worklet);
           let tmp3 = workletEventHandler;
           const arr2 = tmp2[arg0];
@@ -22,13 +22,13 @@ arg5.useComposedEventHandler = function useComposedEventHandler(substr) {
           const items = [workletEventHandler.worklet];
           tmp2[arg0] = items;
         }
-        workletEventHandler[arg0 + "" + outer1_2[arg0].length] = tmp3.worklet;
+        workletEventHandler[arg0 + "" + closure_1_2[arg0].length] = tmp3.worklet;
       });
     }
   });
   const obj3 = obj(set[1]);
   const fn = function v(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     if (obj[arg0.eventName]) {
       const item = tmp[arg0.eventName].forEach((arg0) => arg0(closure_0));
       const arr = tmp[arg0.eventName];

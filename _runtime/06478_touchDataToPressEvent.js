@@ -50,9 +50,6 @@ arg5.gestureToPressableEvent = (handlerTag) => {
   return { nativeEvent };
 };
 arg5.gestureTouchToPressableEvent = (handlerTag) => {
-  let allTouches;
-  let allTouches2;
-  let changedTouches;
   const timestamp = Date.now();
   const nativeEvent = {
     touches: allTouches.map((id) => {

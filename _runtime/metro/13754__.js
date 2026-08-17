@@ -1,25 +1,22 @@
 // _runtime/metro/13754__.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import _slicedToArray from "_slicedToArray";
-import { SymbolResult1 } from "../13748_SymbolResult1.js";
-import { URLSearchParamsImpl } from "../13755_URLSearchParamsImpl.js";
+import SymbolResult1 from "SymbolResult1" /* 13748 */;
+import URLSearchParamsImpl from "URLSearchParamsImpl" /* 13755 */;
+import _ from "_" /* 13756 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_createClass" /* 42 */;
+import closure_5 from "_slicedToArray" /* 32 */;
 
 obj = { next: obj };
 obj = {
   value: function next() {
-    let index;
-    let kind;
-    let tmp7;
-    let tmp8;
-    const tmp3 = this[require(undefined, 13748) /* SymbolResult1 */.iterInternalSymbol];
+    const tmp3 = this[SymbolResult1.iterInternalSymbol];
     ({ kind, index } = tmp3);
-    const arr = Array.from(tmp3.target[require(undefined, 13748) /* SymbolResult1 */.implSymbol]);
+    const arr = Array.from(tmp3.target[SymbolResult1.implSymbol]);
     if (index >= arr.length) {
       return { value: "HermesInternal", done: "HermesInternal" };
     } else {
       tmp3.index = index + 1;
-      [tmp7, tmp8] = _slicedToArray(arr[index].map(tmp(13748).tryWrapperForImpl), 2);
+      [tmp7, tmp8] = callback2(arr[index].map(SymbolResult1.tryWrapperForImpl), 2);
       if ("key" === kind) {
         let tmp4 = tmp7;
       } else if ("value" === kind) {
@@ -28,18 +25,18 @@ obj = {
         const items = [tmp7, tmp8];
         tmp4 = items;
       }
-      const obj = { value: null, done: false };
+      obj = { value: null, done: false };
       obj[0] = tmp4;
       return obj;
     }
-    tmp = require;
+    const tmp = require;
   },
   writable: true,
   enumerable: true,
   configurable: true
 };
 obj[Symbol.toStringTag] = { value: "URLSearchParams Iterator", configurable: true };
-let closure_6 = Object.create(require("SymbolResult1").IteratorPrototype, obj);
+let closure_6 = Object.create(SymbolResult1.IteratorPrototype, obj);
 obj = {
   _mixedIntoPredicates: [],
   is(arg0) {
@@ -83,7 +80,7 @@ obj = {
     return false;
   },
   convert(arg0) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -102,18 +99,18 @@ obj = {
     }
   },
   createDefaultIterator(self, key) {
-    let obj = Object.create(closure_6);
+    obj = Object.create(closure_6);
     obj = { target: self, kind: key, index: 0 };
     Object.defineProperty(obj, SymbolResult1.iterInternalSymbol, { value: obj, configurable: true });
     return obj;
   },
   create(arg0, arg1, arg2) {
-    if (undefined === arg0[require(undefined, 13748) /* SymbolResult1 */.ctorRegistrySymbol]) {
+    if (undefined === arg0[SymbolResult1.ctorRegistrySymbol]) {
       const _Error2 = Error;
-      const error = new Error("Internal error: invalid global object");
+      error = new Error("Internal error: invalid global object");
       throw error;
     } else {
-      const _URLSearchParams = arg0[tmp(undefined, 13748).ctorRegistrySymbol].URLSearchParams;
+      const _URLSearchParams = arg0[SymbolResult1.ctorRegistrySymbol].URLSearchParams;
       if (undefined === _URLSearchParams) {
         const _Error = Error;
         const error1 = new Error("Internal error: constructor URLSearchParams is not installed on the passed global object");
@@ -123,7 +120,7 @@ obj = {
         return obj.setup(Object.create(_URLSearchParams.prototype), arg0, arg1, arg2);
       }
     }
-    tmp = require;
+    const tmp = require;
   },
   createImpl(arg0, arg1, arg2) {
     obj = obj.create(arg0, arg1, arg2);
@@ -138,7 +135,7 @@ obj = {
     if (arg2 === undefined) {
       items = [];
     }
-    let obj = arg3;
+    obj = arg3;
     if (arg3 === undefined) {
       obj = {};
     }
@@ -148,7 +145,7 @@ obj = {
     const implementation = new URLSearchParamsImpl.implementation(arg1, items, obj);
     obj[0] = implementation;
     Object.defineProperty(wrapper, SymbolResult1.implSymbol, obj);
-    wrapper[require(undefined, 13748) /* SymbolResult1 */.implSymbol][SymbolResult1.wrapperSymbol] = wrapper;
+    wrapper[SymbolResult1.implSymbol][SymbolResult1.wrapperSymbol] = wrapper;
     if (URLSearchParamsImpl.init) {
       tmp2(13755).init(wrapper[tmp2(undefined, 13748).implSymbol], obj);
       const tmp2Result = tmp2(13755);
@@ -159,7 +156,7 @@ obj = {
     const URLSearchParams = arg0;
     class URLSearchParams {
       constructor() {
-        tmp = outer2_3(this, URLSearchParams);
+        tmp = closure_3(this, URLSearchParams);
         first = arguments[0];
         str = "";
         if (undefined !== first) {
@@ -281,7 +278,7 @@ obj = {
         return closure_7.setup(Object.create(this.constructor.prototype), URLSearchParams, items2);
       }
     }
-    let obj = {
+    obj = {
       key: "append",
       value: function append(arg0, arg1) {
         const self = this;
@@ -295,7 +292,7 @@ obj = {
             } else {
               const items = [];
               items.push(URLSearchParams(13756).USVString(arguments[0], { context: "Failed to execute 'append' on 'URLSearchParams': parameter 1" }));
-              const obj = URLSearchParams(13756);
+              obj = URLSearchParams(13756);
               items.push(URLSearchParams(13756).USVString(arguments[1], { context: "Failed to execute 'append' on 'URLSearchParams': parameter 2" }));
               const tmp12 = self[URLSearchParams(undefined, 13748).implSymbol];
               const append = tmp12.append;
@@ -377,7 +374,7 @@ obj = {
               } else {
                 const items = [];
                 items.push(URLSearchParams(13756).USVString(arguments[0], { context: "Failed to execute 'getAll' on 'URLSearchParams': parameter 1" }));
-                const obj = URLSearchParams(13756);
+                obj = URLSearchParams(13756);
                 const tmp11 = self[URLSearchParams(undefined, 13748).implSymbol];
                 const getAll = tmp11.getAll;
                 const items1 = [];
@@ -430,7 +427,7 @@ obj = {
               } else {
                 const items = [];
                 items.push(URLSearchParams(13756).USVString(arguments[0], { context: "Failed to execute 'set' on 'URLSearchParams': parameter 1" }));
-                const obj = URLSearchParams(13756);
+                obj = URLSearchParams(13756);
                 items.push(URLSearchParams(13756).USVString(arguments[1], { context: "Failed to execute 'set' on 'URLSearchParams': parameter 2" }));
                 const tmp12 = self[URLSearchParams(undefined, 13748).implSymbol];
                 const items1 = [];
@@ -522,8 +519,6 @@ obj = {
       {
         key: "forEach",
         value: function forEach(fn) {
-          let tmp7;
-          let tmp8;
           const self = this;
           if (this) {
             const _exports = closure_1.exports;
@@ -547,8 +542,8 @@ obj = {
                     arr = tmp11[num2];
                     let tmp3 = URLSearchParams;
                     let tmp4 = dependencyMap;
-                    let tmp5 = callback;
-                    let tmp6 = callback(arr.map(URLSearchParams(13748).tryWrapperForImpl), 2);
+                    let tmp5 = callback2;
+                    let tmp6 = callback2(arr.map(URLSearchParams(13748).tryWrapperForImpl), 2);
                     [tmp7, tmp8] = tmp6;
                     let call = fn.call;
                     let tmp9 = num2;
@@ -576,7 +571,7 @@ obj = {
         }
       }
     ];
-    let tmp = _createClass(URLSearchParams, items);
+    let tmp = callback(URLSearchParams, items);
     obj = { append: { enumerable: true }, delete: { enumerable: true }, get: { enumerable: true }, getAll: { enumerable: true }, has: { enumerable: true }, set: { enumerable: true }, sort: { enumerable: true }, toString: { enumerable: true }, keys: { enumerable: true }, values: { enumerable: true }, entries: { enumerable: true }, forEach: { enumerable: true } };
     obj[Symbol.toStringTag] = { value: "URLSearchParams", configurable: true };
     obj[Symbol.iterator] = { value: tmp.prototype.entries, configurable: true, writable: true };
@@ -586,7 +581,7 @@ obj = {
       const ctorRegistrySymbol = tmp3(13748).ctorRegistrySymbol;
       class URLSearchParams {
         constructor() {
-          tmp = outer2_3(this, URLSearchParams);
+          tmp = closure_3(this, URLSearchParams);
           first = arguments[0];
           str = "";
           if (undefined !== first) {

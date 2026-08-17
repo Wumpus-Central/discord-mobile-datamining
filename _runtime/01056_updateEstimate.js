@@ -1,6 +1,7 @@
 // _runtime/01056_updateEstimate.js
-import { observe } from "01046_observe.js";
-const require = arg1;
+import observe from "observe" /* 1046 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c3 = 0;
@@ -31,7 +32,7 @@ arg5.getInteractionCount = () => {
 };
 arg5.initInteractionCountPolyfill = () => {
   if (!tmp) {
-    let closure_2 = observe.observe("event", updateEstimate, { type: "event", buffered: true, durationThreshold: 0 });
+    closure_2 = observe.observe("event", updateEstimate, { type: "event", buffered: true, durationThreshold: 0 });
     const obj = observe;
   }
 };

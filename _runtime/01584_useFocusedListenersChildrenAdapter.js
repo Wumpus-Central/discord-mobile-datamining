@@ -1,5 +1,5 @@
 // _runtime/01584_useFocusedListenersChildrenAdapter.js
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 

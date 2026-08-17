@@ -1,9 +1,8 @@
 // _runtime/00574_callBoundIntrinsic.js
-import callBindBasic from "callBindBasic";
-import { getEvalledConstructor } from "00540_getEvalledConstructor.js";
-import { callBindBasic } from "00551_callBindBasic.js";
+import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
+import callBindBasic from "callBindBasic" /* 551 */;
 
-let items = [require("getEvalledConstructor")("%String.prototype.indexOf%")];
+let items = [getEvalledConstructor("%String.prototype.indexOf%")];
 let closure_2 = callBindBasic(items);
 
 export default function callBoundIntrinsic(arg0) {

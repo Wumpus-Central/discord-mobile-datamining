@@ -1,17 +1,18 @@
 // _runtime/12271_convertBaseSchema.js
-import _slicedToArray from "_slicedToArray";
-import { $output } from "12259__output.js";
+import $output from "$output" /* 12259 */;
+import _mod12265 from "module_12265" /* 12265 */;
+import _mod12266 from "module_12266" /* 12266 */;
+import _mod12267 from "module_12267" /* 12267 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 const self = this;
 function convertBaseSchema(not, refs) {
-  let items;
   let length;
-  let prefixItems;
-  let closure_0 = not;
-  let closure_1 = refs;
+  closure_0 = not;
+  closure_1 = refs;
   if (undefined !== not.not) {
     if (typeof not.not === "object") {
-      let error = globalThis;
+      error = globalThis;
       const _Object5 = Object;
       if (0 === Object.keys(not.not).length) {
         error = obj;
@@ -64,7 +65,7 @@ function convertBaseSchema(not, refs) {
                       } else {
                         const _Error = Error;
                         const _HermesInternal = HermesInternal;
-                        const error = new Error("Circular reference not resolved: " + tmp2);
+                        error = new Error("Circular reference not resolved: " + tmp2);
                         throw error;
                       }
                       tmp = refs;
@@ -94,7 +95,7 @@ function convertBaseSchema(not, refs) {
                             }
                             const _Error3 = Error;
                             const _HermesInternal2 = HermesInternal;
-                            const error = new Error("Reference not found: " + $ref);
+                            error = new Error("Reference not found: " + $ref);
                             throw error;
                           } else {
                             const _Error2 = Error;
@@ -168,10 +169,10 @@ function convertBaseSchema(not, refs) {
                 const _Array3 = Array;
                 if (Array.isArray(type)) {
                   const mapped1 = type.map((type) => {
-                    const obj = {};
+                    obj = {};
                     const merged = Object.assign(closure_0);
                     obj.type = type;
-                    return outer1_7(obj, closure_1);
+                    return closure_1_7(obj, closure_1);
                   });
                   if (0 === mapped1.length) {
                     error = obj;
@@ -285,7 +286,7 @@ function convertBaseSchema(not, refs) {
                           if (!required) {
                             required = [];
                           }
-                          const set = new Set(required);
+                          set = new Set(required);
                           const _Object = Object;
                           const entries = Object.entries(not.properties || {});
                           const tmp29 = entries[Symbol.iterator]();
@@ -394,7 +395,7 @@ function convertBaseSchema(not, refs) {
                             const _Array = Array;
                             if (Array.isArray(prefixItems)) {
                               let tmp18;
-                              const mapped2 = prefixItems.map((arg0) => outer1_8(arg0, closure_1));
+                              const mapped2 = prefixItems.map((arg0) => closure_1_8(arg0, closure_1));
                               if (items) {
                                 if (typeof items === "object") {
                                   const _Array4 = Array;
@@ -424,7 +425,7 @@ function convertBaseSchema(not, refs) {
                           const _Array2 = Array;
                           if (Array.isArray(items)) {
                             let tmp15;
-                            const mapped3 = items.map((arg0) => outer1_8(arg0, closure_1));
+                            const mapped3 = items.map((arg0) => closure_1_8(arg0, closure_1));
                             if (not.additionalItems) {
                               if (typeof not.additionalItems === "object") {
                                 error = convertSchema;
@@ -543,7 +544,7 @@ function convertBaseSchema(not, refs) {
 }
 function convertSchema(items, version) {
   let length;
-  let closure_0 = version;
+  closure_0 = version;
   if (typeof items === "boolean") {
     if (items) {
       let anyResult = obj4.any();
@@ -559,7 +560,7 @@ function convertSchema(items, version) {
       tmp2 = tmp40;
       if (Array.isArray(items.anyOf)) {
         const anyOf = items.anyOf;
-        const unionResult = obj.union(anyOf.map((arg0) => outer1_8(arg0, closure_0)));
+        const unionResult = obj.union(anyOf.map((arg0) => closure_1_8(arg0, closure_0)));
         let intersectionResult = unionResult;
         if (tmp) {
           intersectionResult = obj.intersection(tmp40, unionResult);
@@ -573,7 +574,7 @@ function convertSchema(items, version) {
       anyResult1 = tmp2;
       if (Array.isArray(items.oneOf)) {
         const oneOf = items.oneOf;
-        const xorResult = obj.xor(oneOf.map((arg0) => outer1_8(arg0, closure_0)));
+        const xorResult = obj.xor(oneOf.map((arg0) => closure_1_8(arg0, closure_0)));
         let intersectionResult1 = xorResult;
         if (tmp) {
           intersectionResult1 = obj2.intersection(tmp2, xorResult);
@@ -688,7 +689,7 @@ if (self2) {
             return __esModule;
           }
         }
-        const obj = {};
+        obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
             let tmp8 = key10009;
@@ -745,14 +746,14 @@ if (self2) {
             }
           }
         }
-        const obj = { version: null, defs: null, refs: null, processing: null, rootSchema: null, registry: null };
+        obj = { version: null, defs: null, refs: null, processing: null, rootSchema: null, registry: null };
         obj[0] = str4;
         obj[1] = flag.$defs || flag.definitions || {};
         const _Map = Map;
         const map = new Map();
         obj[2] = map;
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         obj[3] = set;
         obj[4] = flag;
         let registry;
@@ -766,11 +767,11 @@ if (self2) {
         return convertSchema(flag, obj);
       }
     };
-    const fnResult = fn(require("module_12266"));
+    const fnResult = fn(_mod12266);
     let obj = {};
-    let merged = Object.assign(fn(require("module_12265")));
+    let merged = Object.assign(fn(_mod12265));
     const merged1 = Object.assign(fnResult);
-    obj.iso = fn(require("module_12267"));
+    obj.iso = fn(_mod12267);
     let _Set = Set;
     let set = new Set(["$schema", "$ref", "$defs", "definitions", "$id", "id", "$comment", "$anchor", "$vocabulary", "$dynamicRef", "$dynamicAnchor", "type", "enum", "const", "anyOf", "oneOf", "allOf", "not", "properties", "required", "additionalProperties", "patternProperties", "propertyNames", "minProperties", "maxProperties", "items", "prefixItems", "additionalItems", "minItems", "maxItems", "uniqueItems", "contains", "minContains", "maxContains", "minLength", "maxLength", "pattern", "format", "minimum", "maximum", "exclusiveMinimum", "exclusiveMaximum", "multipleOf", "description", "default", "contentEncoding", "contentMediaType", "contentSchema", "unevaluatedItems", "unevaluatedProperties", "if", "then", "else", "dependentSchemas", "dependentRequired", "nullable", "readOnly"]);
   } else {

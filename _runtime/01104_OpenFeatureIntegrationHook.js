@@ -1,13 +1,13 @@
 // _runtime/01104_OpenFeatureIntegrationHook.js
-import _classCallCheck from "_classCallCheck";
-import _createClass from "_createClass";
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
+import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 
 const OpenFeatureIntegrationHook = require;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class OpenFeatureIntegrationHook {
   constructor() {
-    tmp = outer1_2(this, OpenFeatureIntegrationHook);
+    tmp = closure_2(this, OpenFeatureIntegrationHook);
     return;
   }
 }

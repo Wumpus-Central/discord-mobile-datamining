@@ -1,8 +1,8 @@
 // _runtime/01664__makeShareableClone.js
-import _slicedToArray from "_slicedToArray";
-import { t } from "01665_t.js";
+import t from "t" /* 1665 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 global._makeShareableClone = () => {
   const reanimatedError = new t.ReanimatedError("`_makeShareableClone` should never be called from React runtime.");
   throw reanimatedError;
@@ -71,7 +71,7 @@ export const _updatePropsJS = (arg0, getAnimatableRef) => {
       animatableRef.previousStyle = obj;
       const setNativeProps2 = animatableRef.setNativeProps;
       if (setNativeProps2 != null) {
-        const obj1 = { style: null };
+        obj1 = { style: null };
         obj1[0] = obj;
         setNativeProps2(obj1);
       }

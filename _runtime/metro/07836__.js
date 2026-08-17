@@ -1,6 +1,7 @@
 // _runtime/metro/07836__.js
-import { getClient } from "../07765_getClient.js";
-const require = arg1;
+import getClient from "getClient" /* 7765 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg5.profiler = {
   startProfiler() {

@@ -1,7 +1,7 @@
 // _runtime/03711_getUTCISOWeekYear.js
-import _typeof from "_typeof";
-import requiredArgs from "requiredArgs";
-import startOfUTCISOWeek from "startOfUTCISOWeek";
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+import startOfUTCISOWeek from "startOfUTCISOWeek" /* 3709 */;
 
 if (!_typeof) {
   let obj = { default: null };
@@ -10,7 +10,7 @@ if (!_typeof) {
 } else {
   tmp3 = _typeof;
 }
-let c0 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: null };
   obj[0] = requiredArgs;
@@ -18,7 +18,7 @@ if (!requiredArgs) {
 } else {
   tmp5 = requiredArgs;
 }
-let closure_1 = tmp5;
+requiredArgs = tmp5;
 if (!startOfUTCISOWeek) {
   obj = { default: null };
   obj[0] = startOfUTCISOWeek;
@@ -26,10 +26,11 @@ if (!startOfUTCISOWeek) {
 } else {
   tmp7 = startOfUTCISOWeek;
 }
+startOfUTCISOWeek = tmp7;
 
 export default function getUTCISOWeekYear(arg0) {
-  tmp5.default(1, arguments);
-  const defaultResult1 = tmp3.default(arg0);
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
   const uTCFullYear = defaultResult1.getUTCFullYear();
   const date = new Date(0);
   date.setUTCFullYear(uTCFullYear + 1, 0, 4);
@@ -37,7 +38,7 @@ export default function getUTCISOWeekYear(arg0) {
   const date1 = new Date(0);
   date1.setUTCFullYear(uTCFullYear, 0, 4);
   date1.setUTCHours(0, 0, 0, 0);
-  const defaultResult2 = tmp7.default(date);
+  const defaultResult2 = startOfUTCISOWeek.default(date);
   const time = defaultResult1.getTime();
   if (time >= defaultResult2.getTime()) {
     let sum = uTCFullYear + 1;

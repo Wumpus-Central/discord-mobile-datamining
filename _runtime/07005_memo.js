@@ -1,14 +1,12 @@
 // _runtime/07005_memo.js
-import noop from "noop";
-import "noop";
-import { jsx } from "jsxProd";
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop from "noop" /* 19 */;
 
-let c3;
-let memo;
 ({ useMemo: c3, memo } = noop);
+noopDefault;
+const jsx = jsxProd.jsx;
 const memoResult = memo((nativeGestureRef) => {
-  let children;
-  let style;
   nativeGestureRef = nativeGestureRef.nativeGestureRef;
   const refreshControlGestureRef = nativeGestureRef.refreshControlGestureRef;
   ({ style, children } = nativeGestureRef);
@@ -21,7 +19,7 @@ const memoResult = memo((nativeGestureRef) => {
   let failOffsetX;
   let failOffsetY;
   let contentPanGestureHandler;
-  let c10;
+  closure_10 = undefined;
   let obj = nativeGestureRef(enableContentPanningGesture[2]);
   const bottomSheetInternal = obj.useBottomSheetInternal();
   enableContentPanningGesture = bottomSheetInternal.enableContentPanningGesture;
@@ -31,7 +29,7 @@ const memoResult = memo((nativeGestureRef) => {
   activeOffsetY = bottomSheetInternal.activeOffsetY;
   failOffsetX = bottomSheetInternal.failOffsetX;
   failOffsetY = bottomSheetInternal.failOffsetY;
-  let obj1 = nativeGestureRef(enableContentPanningGesture[2]);
+  obj1 = nativeGestureRef(enableContentPanningGesture[2]);
   contentPanGestureHandler = obj1.useBottomSheetGestureHandlers().contentPanGestureHandler;
   let items = [simultaneousHandlers, nativeGestureRef, refreshControlGestureRef];
   const tmp3 = simultaneousHandlers(() => {
@@ -55,7 +53,7 @@ const memoResult = memo((nativeGestureRef) => {
     }
     return items;
   }, items);
-  c10 = tmp3;
+  closure_10 = tmp3;
   let items1 = [activeOffsetX, activeOffsetY, enableContentPanningGesture, failOffsetX, failOffsetY, tmp3, waitFor, , , , ];
   ({ handleOnChange: arr2[7], handleOnEnd: arr2[8], handleOnFinalize: arr2[9], handleOnStart: arr2[10] } = contentPanGestureHandler);
   const tmp4 = simultaneousHandlers(() => {
@@ -72,7 +70,7 @@ const memoResult = memo((nativeGestureRef) => {
       result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
     }
     let result2 = result1;
-    if (c10) {
+    if (closure_10) {
       result2 = result1.simultaneousWithExternalGesture(tmp2);
     }
     let activeOffsetXResult = result2;
